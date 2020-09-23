@@ -14,23 +14,27 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: 162bd71eaebdf55f6be89e0c5dce7acc1b975d79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 95bafcaca98e1a0fbdd62a550291c8ece932c1ba
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403303"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075030"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
+
 Variablen und Eigenschaften stellen Werte dar, auf die Sie zugreifen können. Es gibt jedoch Unterschiede bei der Speicherung und Implementierung.  
   
 ## <a name="variables"></a>Variables  
+
  Eine *Variable* entspricht direkt einem Speicherort. Sie definieren eine Variable mit einer einzelnen Deklarations Anweisung. Eine Variable kann eine *lokale Variable*sein, die innerhalb einer Prozedur definiert ist und nur innerhalb dieser Prozedur verfügbar ist. Sie kann auch eine Element *Variable*sein, die in einem Modul, einer Klasse oder einer Struktur definiert ist, aber nicht in einer Prozedur. Eine Member-Variable wird auch als *Feld*bezeichnet.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Eine *Eigenschaft* ist ein Datenelement, das für ein Modul, eine Klasse oder eine Struktur definiert ist. Sie definieren eine Eigenschaft mit einem Codeblock zwischen der `Property` -Anweisung und der- `End Property` Anweisung. Der Codeblock enthält eine `Get` Prozedur, eine `Set` Prozedur oder beides. Diese Prozeduren werden als *Eigenschaften Prozeduren* oder *Eigenschaften Accessoren*bezeichnet. Zusätzlich zum Abrufen oder Speichern des Eigenschafts Werts können auch benutzerdefinierte Aktionen durchgeführt werden, z. b. das Aktualisieren eines Zugriffs Zählers.  
   
 ## <a name="differences"></a>Unterschiede  
+
  In der folgenden Tabelle werden einige wichtige Unterschiede zwischen Variablen und Eigenschaften angezeigt.  
   
 |Differenz Punkt|Variable|Eigenschaft|  
@@ -44,7 +48,7 @@ Variablen und Eigenschaften stellen Werte dar, auf die Sie zugreifen können. Es
   
  <sup>1</sup> im Gegensatz zu einer Variablen entspricht der Wert einer Eigenschaft möglicherweise nicht direkt einem einzelnen Speicher Element. Der Speicher kann aus Gründen der Sicherheit oder der Sicherheit in Teile aufgeteilt werden, oder der Wert kann in verschlüsselter Form gespeichert werden. In diesen Fällen würde die Prozedur die Teile zusammenstellen `Get` oder den gespeicherten Wert entschlüsseln, und die `Set` Prozedur würde den neuen Wert verschlüsseln oder in den enthaltenen Speicher aufteilen. Ein Eigenschafts Wert kann kurzlebig sein, wie z. b. die Tageszeit. in diesem Fall `Get` würde die Prozedur Sie bei jedem Zugriff auf die Eigenschaft bei der Ausführung berechnen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
