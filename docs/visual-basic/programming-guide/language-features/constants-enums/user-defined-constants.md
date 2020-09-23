@@ -9,19 +9,21 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 14f3de39eb8d8e6820e2b40792a8e8e57217e410
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 351bdb6963e278341c13e53ef19aea0876010aa9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414375"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095641"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Benutzerdefinierte Konstanten (Visual Basic)
+
 Eine Konstante ist ein sinnvoller Name, der den Speicherort einer Zahl oder Zeichenfolge annimmt, der sich nicht ändert. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung konstant bleiben. Sie können Konstanten verwenden, die von den Steuerelementen oder Komponenten definiert werden, mit denen Sie arbeiten, oder Sie können eine eigene erstellen. Die von Ihnen selbst erstellten Konstanten werden als *Benutzer definiert*beschrieben.  
   
  Sie deklarieren eine Konstante mit der- `Const` Anweisung, wobei Sie die gleichen Richtlinien verwenden, die Sie zum Erstellen eines Variablen namens verwenden würden. Wenn `Option Strict` ist `On` , müssen Sie den Konstantentyp explizit deklarieren.  
   
 ## <a name="const-statement-usage"></a>Verwendung der Konstanten Anweisung  
+
  Eine- `Const` Anweisung kann eine mathematische oder Datums-/Uhrzeitmenge darstellen:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
@@ -35,6 +37,7 @@ Eine Konstante ist ein sinnvoller Name, der den Speicherort einer Zahl oder Zeic
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
 ## <a name="scope-of-user-defined-constants"></a>Bereich von benutzerdefinierten Konstanten  
+
  Der Gültigkeits `Const` Bereich einer Anweisung ist identisch mit der einer Variablen, die am gleichen Speicherort deklariert wurde. Der Bereich kann auf eine der folgenden Arten angegeben werden:  
   
 - Um eine Konstante zu erstellen, die nur innerhalb einer Prozedur vorhanden ist, deklarieren Sie Sie in dieser Prozedur.  
@@ -48,6 +51,7 @@ Eine Konstante ist ein sinnvoller Name, der den Speicherort einer Zahl oder Zeic
  Weitere Informationen finden Sie unter Gewusst [wie: Deklarieren einer Konstanten](how-to-declare-a-constant.md).  
   
 ### <a name="avoiding-circular-references"></a>Vermeiden von Zirkel verweisen  
+
  Da Konstanten in Bezug auf andere Konstanten definiert werden können, ist es möglich, versehentlich einen *Cycle*oder Zirkel Verweis zwischen mindestens zwei Konstanten zu erstellen. Ein Durchlauf tritt auf, wenn Sie über zwei oder mehr öffentliche Konstanten verfügen, von denen jede in Bezug auf die andere definiert ist, wie im folgenden Beispiel gezeigt:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
@@ -55,7 +59,7 @@ Eine Konstante ist ein sinnvoller Name, der den Speicherort einer Zahl oder Zeic
   
  Wenn eine Zyklen auftritt, generiert Visual Basic einen Compilerfehler.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Const-Anweisung](../../../language-reference/statements/const-statement.md)
 - [Konstanten und literale Datentypen](constant-and-literal-data-types.md)
