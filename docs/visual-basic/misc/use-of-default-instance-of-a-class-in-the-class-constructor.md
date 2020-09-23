@@ -2,14 +2,15 @@
 title: Die Verwendung der Standardinstanz einer Klasse im Klassenkonstruktor kann zu einem unendlichen rekursiven Aufruf führen.
 ms.date: 07/20/2015
 ms.assetid: 9645b47f-7de5-46d0-bb45-d5fdaa8aaa2a
-ms.openlocfilehash: cec3d3d462822ca571cab59a2e4d7e730d2aec46
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5d239fdb7dcc5c488bf0341043b810ec7dadc083
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664369"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100320"
 ---
 # <a name="use-of-default-instance-of-a-class-in-the-class-constructor-could-lead-to-infinite-recursive-call"></a>Die Verwendung der Standardinstanz einer Klasse im Klassenkonstruktor kann zu einem unendlichen rekursiven Aufruf führen.
+
 Eine Standardinstanz einer Klasse wurde im Konstruktor der Klasse verwendet. Dies kann zu einem unendlichen rekursiven Aufruf, auch bekannt als Endlosschleife, führen.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

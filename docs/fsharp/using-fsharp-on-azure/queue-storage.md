@@ -3,12 +3,13 @@ title: Erste Schritte mit Azure Queue Storage mit F#
 description: Azure-Warteschlangen ermöglichen zuverlässiges, asynchrones Messaging zwischen Anwendungskomponenten. Das Cloud-Messaging ermöglicht Ihren Anwendungskomponenten die unabhängige Skalierung.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548363"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100086"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Einstieg in Azure Queue Storage mit F\#
 

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: c3eb1eb57b3d76e762ed53edb3b168ad96abec39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403264"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098968"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Bedingte Kompilierung in Visual Basic
+
 Bei der *bedingten Kompilierung*werden bestimmte Code Blöcke in einem Programm selektiv kompiliert, während andere ignoriert werden.  
   
  Beispielsweise können Sie Debuganweisungen schreiben, die die Geschwindigkeit verschiedener Ansätze mit derselben Programmieraufgabe vergleichen, oder Sie möchten eine Anwendung für mehrere Sprachen lokalisieren. Bedingte Kompilierungs Anweisungen sind so konzipiert, dass Sie zur Kompilierzeit und nicht zur Laufzeit ausgeführt werden.  
@@ -27,6 +28,7 @@ Bei der *bedingten Kompilierung*werden bestimmte Code Blöcke in einem Programm 
 > Die automatische Vervollständigung funktioniert nicht, wenn Code bearbeitet und bedingte Kompilierungs Direktiven verwendet werden, wenn der Code nicht Teil der aktuellen Verzweigung ist.  
   
 ## <a name="declaring-conditional-compilation-constants"></a>Deklarieren bedingter Kompilierungs Konstanten  
+
  Sie können auf eine von drei Arten bedingte Kompilierungs Konstanten festlegen:  
   
 - Im **Projekt-Designer**  
@@ -41,7 +43,7 @@ Bei der *bedingten Kompilierung*werden bestimmte Code Blöcke in einem Programm 
 |---|---|  
 |**Projekt-Designer**|Öffentlich für alle Dateien im Projekt|  
 |Befehlszeile|Öffentlich für alle Dateien, die an den Befehlszeilen Compiler übermittelt werden|  
-|`#Const`Anweisung im Code|Privat für die Datei, in der Sie deklariert ist|  
+|`#Const` Anweisung im Code|Privat für die Datei, in der Sie deklariert ist|  
   
 |So legen Sie Konstanten im Projekt-Designer fest|  
 |---|  
@@ -61,7 +63,8 @@ Bei der *bedingten Kompilierung*werden bestimmte Code Blöcke in einem Programm 
 |---|---|  
 |[Programmstruktur und Codekonventionen](program-structure-and-code-conventions.md)|Bietet Vorschläge, wie Sie Ihren Code auf einfache Weise lesen und warten können.|  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
+
  [#Const-Anweisung](../../language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else-Anweisungen](../../language-reference/directives/if-then-else-directives.md)  

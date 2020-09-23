@@ -3,12 +3,13 @@ title: Erste Schritte mit Azure File Storage mit F#
 description: Speichern Sie Dateidaten mit Azure File Storage in der Cloud, und stellen Sie Ihre Clouddateifreigabe über eine virtuelle Azure-Maschine (VM) oder eine lokale Anwendung mit Windows bereit.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548461"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100125"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Einstieg in Azure File Storage mit F\#
 
@@ -146,7 +147,7 @@ Weitere Informationen zu Azure File Storage finden Sie unter diesen Links.
 - [Verwenden von AzCopy mit Microsoft Azure Storage](/azure/storage/storage-use-azcopy)
 - [Erstellen, Herunterladen und Auflisten von Blobs mit der Azure-Befehlszeilenschnittstelle](/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Verweis
+### <a name="reference"></a>Referenz
 
 - [Referenz zur Storage-Clientbibliothek für .NET](/dotnet/api/overview/azure/storage)
 - [Referenz zur REST-API des Dateidiensts](/rest/api/storageservices/fileservices/File-Service-REST-API)

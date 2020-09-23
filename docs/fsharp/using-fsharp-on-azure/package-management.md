@@ -1,14 +1,15 @@
 ---
-title: Verwenden von Paketverwaltung F# mit für Azure
-description: Verwenden von Paket oder nuget zum F# Verwalten von Azure-Abhängigkeiten
+title: 'Verwenden von Paketverwaltung mit F # für Azure'
+description: 'Verwenden von Paket oder nuget zum Verwalten von F #-Azure-Abhängigkeiten'
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 4aa32ace91f30d0e43b9c40067f5f0f456cc4069
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214226"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100112"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Verwalten von Paketen für F#-Azure-Abhängigkeiten
 
@@ -16,7 +17,7 @@ Das Abrufen von Paketen für die Azure-Entwicklung ist einfach, wenn Sie einen P
 
 ## <a name="using-paket"></a>Verwenden von Paket
 
-Wenn Sie " [Paket](https://fsprojects.github.io/Paket/) " als Abhängigkeits-Manager verwenden, können Sie `paket.exe` das Tool verwenden, um Azure-Abhängigkeiten hinzuzufügen. Beispiel:
+Wenn Sie " [Paket](https://fsprojects.github.io/Paket/) " als Abhängigkeits-Manager verwenden, können Sie das Tool verwenden, `paket.exe` um Azure-Abhängigkeiten hinzuzufügen. Beispiel:
 
 ```console
 > paket add nuget WindowsAzure.Storage
@@ -28,7 +29,7 @@ Oder wenn Sie [Mono](https://www.mono-project.com/) für die plattformübergreif
 > mono paket.exe add nuget WindowsAzure.Storage
 ```
 
-Dadurch wird Ihrem `WindowsAzure.Storage` Satz von Paketabhängigkeiten für das Projekt im aktuellen Verzeichnis hinzugefügt, die `paket.dependencies` Datei geändert und das Paket heruntergeladen. Wenn Sie zuvor Abhängigkeiten eingerichtet haben oder mit einem Projekt arbeiten, in dem Abhängigkeiten von einem anderen Entwickler eingerichtet wurden, können Sie Abhängigkeiten wie folgt lokal auflösen und installieren:
+Dadurch wird `WindowsAzure.Storage` Ihrem Satz von Paketabhängigkeiten für das Projekt im aktuellen Verzeichnis hinzugefügt, die Datei geändert `paket.dependencies` und das Paket heruntergeladen. Wenn Sie zuvor Abhängigkeiten eingerichtet haben oder mit einem Projekt arbeiten, in dem Abhängigkeiten von einem anderen Entwickler eingerichtet wurden, können Sie Abhängigkeiten wie folgt lokal auflösen und installieren:
 
 ```console
 > paket install
@@ -54,7 +55,7 @@ Oder für die Mono-Entwicklung:
 
 ## <a name="using-nuget"></a>Verwenden von nuget
 
-Wenn Sie [nuget](https://www.nuget.org/) als Abhängigkeits-Manager verwenden, können Sie das `nuget.exe` Tool verwenden, um Azure-Abhängigkeiten hinzuzufügen. Beispiel:
+Wenn Sie [nuget](https://www.nuget.org/) als Abhängigkeits-Manager verwenden, können Sie das Tool verwenden, `nuget.exe` um Azure-Abhängigkeiten hinzuzufügen. Beispiel:
 
 ```console
 > nuget install WindowsAzure.Storage -ExcludeVersion
@@ -66,7 +67,7 @@ Oder für die Mono-Entwicklung:
 > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 ```
 
-Dadurch wird Ihrem `WindowsAzure.Storage` Satz von Paketabhängigkeiten für das Projekt im aktuellen Verzeichnis hinzugefügt, und das Paket wird heruntergeladen. Wenn Sie zuvor Abhängigkeiten eingerichtet haben oder mit einem Projekt arbeiten, in dem Abhängigkeiten von einem anderen Entwickler eingerichtet wurden, können Sie Abhängigkeiten wie folgt lokal auflösen und installieren:
+Dadurch wird `WindowsAzure.Storage` Ihrem Satz von Paketabhängigkeiten für das Projekt im aktuellen Verzeichnis hinzugefügt, und das Paket wird heruntergeladen. Wenn Sie zuvor Abhängigkeiten eingerichtet haben oder mit einem Projekt arbeiten, in dem Abhängigkeiten von einem anderen Entwickler eingerichtet wurden, können Sie Abhängigkeiten wie folgt lokal auflösen und installieren:
 
 ```console
 > nuget restore
@@ -92,7 +93,7 @@ Oder für die Mono-Entwicklung:
 
 ## <a name="referencing-assemblies"></a>Referenzierende Assemblys
 
-Um die Pakete in Ihrem F# Skript verwenden zu können, müssen Sie mit einer `#r` -Direktive auf die Assemblys verweisen, die in den Paketen enthalten sind. Beispiel:
+Um die Pakete im F #-Skript verwenden zu können, müssen Sie mit einer-Direktive auf die Assemblys verweisen, die in den Paketen enthalten sind `#r` . Beispiel:
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
