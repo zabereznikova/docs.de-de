@@ -8,20 +8,22 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: dbd24065a954e5611663963371d5a9f4bbbaea68
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393493"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084085"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strukturen und andere Programmierelemente (Visual Basic)
+
 Sie können Strukturen in Verbindung mit Arrays, Objekten und Prozeduren sowie untereinander verwenden. Die Interaktionen verwenden die gleiche Syntax wie diese Elemente einzeln verwenden.  
   
 > [!NOTE]
 > Sie können keines der Structure-Elemente in der Struktur Deklaration initialisieren. Sie können Werte nur Elementen einer Variablen zuweisen, die als Strukturtyp deklariert wurde.  
   
 ## <a name="structures-and-arrays"></a>Strukturen und Arrays  
+
  Eine Struktur kann ein Array als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
@@ -56,6 +58,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Strukturen und Objekte  
+
  Eine Struktur kann ein Objekt als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
@@ -69,6 +72,7 @@ End Structure
  Sie sollten eine bestimmte Objektklasse in einer solchen Deklaration anstelle von verwenden `Object` .  
   
 ## <a name="structures-and-procedures"></a>Strukturen und Prozeduren  
+
  Sie können eine Struktur als Prozedur Argument übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
@@ -97,6 +101,7 @@ End Function
 ```  
   
 ## <a name="structures-within-structures"></a>Strukturen innerhalb von Strukturen  
+
  Strukturen können andere Strukturen enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
@@ -122,7 +127,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  Strukturen können andere Strukturen in beliebiger Tiefe enthalten.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](index.md)
 - [Elementare Datentypen](elementary-data-types.md)

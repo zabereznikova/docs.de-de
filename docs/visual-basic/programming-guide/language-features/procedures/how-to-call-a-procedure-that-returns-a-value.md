@@ -7,14 +7,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53589f84c6675d1e7ae2a593341e5dac747132a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388763"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083976"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Gewusst wie: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
+
 Eine `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Sie werden aufgerufen, indem Sie den Namen und die Argumente entweder auf der rechten Seite einer Zuweisungsanweisung oder in einem Ausdruck einschließen.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>So greifen Sie eine Funktions Prozedur innerhalb eines Ausdrucks an  
@@ -40,11 +41,12 @@ Eine `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Sie we
 4. Der von der Prozedur zurückgegebene Wert wird in der Variablen oder der Eigenschaft auf der linken Seite der Zuweisungsanweisung gespeichert.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der Visual Basic aufgerufen <xref:Microsoft.VisualBasic.Interaction.Environ%2A> , um den Wert einer Betriebssystem-Umgebungsvariablen abzurufen. Die erste Zeile ruft `Environ` innerhalb eines Ausdrucks auf, und die zweite Zeile ruft Sie in einer Zuweisungsanweisung auf. `Environ`nimmt den Variablennamen als das einzige Argument an. Der Wert der Variablen wird an den aufrufenden Code zurückgegeben.  
+
+ Im folgenden Beispiel wird der Visual Basic aufgerufen <xref:Microsoft.VisualBasic.Interaction.Environ%2A> , um den Wert einer Betriebssystem-Umgebungsvariablen abzurufen. Die erste Zeile ruft `Environ` innerhalb eines Ausdrucks auf, und die zweite Zeile ruft Sie in einer Zuweisungsanweisung auf. `Environ` nimmt den Variablennamen als das einzige Argument an. Der Wert der Variablen wird an den aufrufenden Code zurückgegeben.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Function-Prozeduren](./function-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

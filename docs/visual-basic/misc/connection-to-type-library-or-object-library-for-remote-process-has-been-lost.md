@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID442
 ms.assetid: 9e3544e2-cfc9-463a-8c0c-ed82e5e6462f
-ms.openlocfilehash: d442d582f392ea4e2a074136740f9705d50b8d55
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5d94c20688e6fc2efda6b0febc3d89d0039214c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84376767"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084488"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>Die Verbindung zur Typen- oder Objektbibliothek für den Remoteprozess ist nicht mehr verfügbar.
+
 Sie haben die Verbindung zur Objekt- oder Typenbibliothek für den Remoteprozess verloren.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -24,6 +25,6 @@ Sie haben die Verbindung zur Objekt- oder Typenbibliothek für den Remoteprozess
   
 4. Aktivieren Sie um Dialogfeld **Verweise** das Kontrollkästchen für das `Application` -Objekt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Fehlertypen](../programming-guide/language-features/error-types.md)

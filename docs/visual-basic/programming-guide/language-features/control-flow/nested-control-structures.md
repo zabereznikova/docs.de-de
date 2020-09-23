@@ -10,17 +10,19 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 290366d9d9428cefee108ac472fbe7c0eb66d82e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414388"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084163"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Geschachtelte Steuerungsstrukturen (Visual Basic)
+
 Sie können Steuerungs Anweisungen in andere Steuerungs Anweisungen einfügen, z. b `If...Then...Else` . einen-Block in einer- `For...Next` Schleife. Eine in einer anderen Steuerelement Anweisung *positionierte*Steuerelement Anweisung wird als geschachtelt bezeichnet.  
   
 ## <a name="nesting-levels"></a>Schachtelungs Ebenen  
+
  Steuerungsstrukturen in Visual Basic können beliebig viele Ebenen aufweisen. Es ist üblich, dass Sie die lesbaren Strukturen besser lesbar machen, indem Sie den Text der einzelnen einrücken. Der integrierte Entwicklungsumgebung (IDE)-Editor führt dies automatisch aus.  
   
  Im folgenden Beispiel fügt die Prozedur `sumRows` die positiven Elemente der einzelnen Zeilen der Matrix hinzu.  
@@ -47,6 +49,7 @@ End Sub
 > Wenn Sie für viele Steuerungsstrukturen auf ein Schlüsselwort klicken, werden alle Schlüsselwörter in der Struktur hervorgehoben. Wenn Sie beispielsweise auf `If` eine Konstruktion klicken `If...Then...Else` , werden alle Instanzen von `If` , `Then` , `ElseIf` , `Else` und `End If` in der Konstruktion hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu wechseln, drücken Sie STRG + UMSCHALT + nach-unten oder STRG + UMSCHALT + nach-oben-Taste.  
   
 ## <a name="nesting-different-kinds-of-control-structures"></a>Schachteln verschiedener Arten von Steuerungsstrukturen  
+
  Sie können eine Art von Steuerelement Struktur in einer anderen Art Schachteln. Im folgenden Beispiel wird ein `With` -Block innerhalb einer `For Each` -Schleife und geschachtelte `If` Blöcke innerhalb des- `With` Blocks verwendet.  
   
 ```vb
@@ -65,15 +68,16 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Überlappende Steuerungsstrukturen  
+
  Sie können die Steuerelement Strukturen nicht überlappen. Dies bedeutet, dass jede geschachtelte Struktur vollständig in der nächsten innersten Struktur enthalten sein muss. Beispielsweise ist die folgende Anordnung ungültig, da die- `For` Schleife beendet wird, bevor der innere- `With` Block beendet wird.  
   
  ![Das Diagramm zeigt ein Beispiel für eine ungültige Schachtelung.](./media/nested-control-structures/example-invalid-nesting.gif)
   
  Der Visual Basic-Compiler erkennt solche überlappenden Steuerungsstrukturen und signalisiert einen Kompilierzeitfehler.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Ablauf Steuerung](index.md)
+- [Ablaufsteuerung](index.md)
 - [Entscheidungsstrukturen](decision-structures.md)
 - [Schleifenstrukturen](loop-structures.md)
 - [Weitere Steuerungsstrukturen](other-control-structures.md)

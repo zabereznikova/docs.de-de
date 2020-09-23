@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
-ms.openlocfilehash: 28cdb5d9a4a08111150770fbac1f367b271a0798
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdd853ddcf5958326711b180ab1d57b44ea19c90
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394777"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084449"
 ---
 # <a name="disk-not-ready"></a>Das Laufwerk ist nicht bereit
+
 Für das angegebene Laufwerk ist kein Datenträger eingelegt oder die Laufwerksverriegelung ist geöffnet.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
@@ -20,6 +21,6 @@ Für das angegebene Laufwerk ist kein Datenträger eingelegt oder die Laufwerksv
   
 2. Schließen Sie die Laufwerksverriegelung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Fehlertypen](../programming-guide/language-features/error-types.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: a148d8b726da78261eda152fcaafdd64ea01bb24
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e397ccd6fe21caaeb9d56ff3b0cc1ce16032639a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404977"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084007"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Gewusst wie: Suchen des minimalen oder maximalen Werts in einem Abfrageergebnis mithilfe von LINQ (Visual Basic)
+
 Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformationen und das Ausführen von Abfragen.  
   
  Im folgenden Beispiel wird gezeigt, wie eine neue Anwendung erstellt wird, die Abfragen für eine SQL Server Datenbank ausführt. Im Beispiel werden die Mindest-und Maximalwerte für die Ergebnisse mithilfe der `Aggregate` -Klausel und der- `Group By` Klausel bestimmt. Weitere Informationen finden Sie unter [Aggregat Klausel](../../../language-reference/queries/aggregate-clause.md) und [Group By-Klausel](../../../language-reference/queries/group-by-clause.md).  
@@ -40,7 +41,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>So fügen Sie ein Projekt hinzu, das eine LINQ to SQL Datei enthält  
   
-1. Zeigen Sie in Visual Studio im Menü **Datei** auf **neu** , und klicken Sie dann auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms Anwendung** als Projekttyp aus.  
   
 2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die Element Vorlage **LINQ to SQL Klassen** aus.  
   
@@ -76,7 +77,7 @@ Language-Integrated Query (LINQ) vereinfacht den Zugriff auf Datenbankinformatio
   
 4. Drücken Sie **F5** , um das Projekt auszuführen und die Ergebnisse anzuzeigen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [LINQ](index.md)
 - [Abfragen](../../../language-reference/queries/index.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 2e2cbac6fad5e1686b7383c44619b8c6f5326483
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396803"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083292"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Gewusst wie: Verweisen auf COM-Objekte aus Visual Basic
+
 In Visual Basic erfordert das Hinzufügen von Verweisen auf COM-Objekte, die über Typbibliotheken verfügen, das Erstellen einer Interop-Assembly für die com-Bibliothek. Verweise auf die Member des COM-Objekts werden an die Interop-Assembly weitergeleitet und dann an das tatsächliche com-Objekt weitergeleitet. Antworten aus dem COM-Objekt werden an die Interop-Assembly weitergeleitet und an Ihre .NET Framework Anwendung weitergeleitet.  
   
  Sie können auf ein COM-Objekt verweisen, ohne eine Interopassembly zu verwenden, indem Sie die Typinformationen für das COM-Objekt in eine .NET-Assembly einbetten. Um Typinformationen einzubetten, legen Sie die- `Embed Interop Types` Eigenschaft `True` für den Verweis auf das COM-Objekt auf fest. Wenn Sie mithilfe des Befehlszeilen Compilers kompilieren, verwenden Sie die- `/link` Option, um auf die com-Bibliothek zu verweisen. Weitere Informationen finden Sie unter [Link (Visual Basic)](../../reference/command-line-compiler/link.md).  
@@ -52,7 +53,7 @@ In Visual Basic erfordert das Hinzufügen von Verweisen auf COM-Objekte, die üb
   
      Mit Tlbimp können Sie Interop-Assemblys für Typbibliotheken erstellen, auch für nicht registrierte COM-Objekte. Die COM-Objekte, auf die von Interopassemblys verwiesen wird, müssen jedoch auf dem Computer, auf dem Sie verwendet werden sollen, ordnungsgemäß registriert werden. Sie können ein COM-Objekt registrieren, indem Sie das im Windows-Betriebssystem enthaltene regsvr32-Hilfsprogramm verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [COM-Interop](index.md)
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
