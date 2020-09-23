@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-ms.openlocfilehash: 1fb378253c9840d480b6932758e8cd3c029b8b8e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3ec7e78638f83bb63b573e3541769963bc2bec47
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84361059"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078709"
 ---
 # <a name="stop-statement-encountered"></a>Eine Stop-Anweisung wurde gefunden.
+
 Eine `Stop` -Anweisung, die die Ausführung unterbricht, wurde gefunden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
 1. Entfernen Sie die `Stop` -Anweisung.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Stop-Anweisung](../language-reference/statements/stop-statement.md)
 - [Ablaufsteuerung: Zusammenfassung](../language-reference/keywords/control-flow-summary.md)

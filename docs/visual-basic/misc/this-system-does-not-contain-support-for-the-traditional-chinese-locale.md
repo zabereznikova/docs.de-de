@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_TCNotSupported
 ms.assetid: 95bace92-c7b9-4641-b71f-c088ddb418c9
-ms.openlocfilehash: 8332a82ef2c2e16786b0d3c843ade0aa01cb2ef6
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 486dd294f580313f78145da4b939a6d74f74c6cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198078"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078436"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>Dieses System unterstützt das Gebietsschema für Chinesisch (traditionell) nicht.
+
 Sie haben versucht, den `VbStrConv.TraditionalChinese` -Enumerationsmember zu verwenden, aber Ihr System unterstützt das Gebietsschema für Chinesisch (traditionell) nicht.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

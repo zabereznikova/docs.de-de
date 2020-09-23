@@ -15,15 +15,16 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 92ac5beb70526795eb140bd794e47981cebfea93
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6f4c58b15c33d8d2007069df88b2984e692df0a8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410915"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078371"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Grundlegende Abfrageoperationen (Visual Basic)
-Dieses Thema bietet eine kurze Einführung in LINQ (Language-Integrated Query)-Ausdrücke in Visual Basic sowie einige typische Arten von Vorgängen, die Sie in einer Abfrage ausführen. Weitere Informationen finden Sie in den folgenden Themen:  
+
+Dieses Thema bietet eine kurze Einführung in LINQ (Language-Integrated Query)-Ausdrücke in Visual Basic sowie einige typische Arten von Vorgängen, die Sie in einer Abfrage ausführen. Weitere Informationen finden Sie unter den folgenden Themen:  
   
  [Einführung in LINQ in Visual Basic](../../language-features/linq/introduction-to-linq.md)  
   
@@ -32,6 +33,7 @@ Dieses Thema bietet eine kurze Einführung in LINQ (Language-Integrated Query)-A
  [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Angeben der Datenquelle (von)  
+
  In einer LINQ-Abfrage besteht der erste Schritt darin, die Datenquelle anzugeben, die Sie Abfragen möchten. Daher wird die- `From` Klausel in einer Abfrage immer zuerst angezeigt. Abfrage Operatoren wählen und strukturieren das Ergebnis basierend auf dem Typ der Quelle.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
@@ -41,6 +43,7 @@ Dieses Thema bietet eine kurze Einführung in LINQ (Language-Integrated Query)-A
  Weitere Informationen zur Verwendung der- `From` Klausel in Visual Basic finden Sie unter [from-Klausel](../../../language-reference/queries/from-clause.md).  
   
 ## <a name="filtering-data-where"></a>Filtern von Daten (wobei)  
+
  Der häufigste Abfrage Vorgang ist wahrscheinlich das Anwenden eines Filters in Form eines booleschen Ausdrucks. Die Abfrage gibt dann nur die Elemente zurück, für die der Ausdruck "true" ist. Eine- `Where` Klausel wird verwendet, um die Filterung durchzuführen. Der Filter gibt an, welche Elemente in der Datenquelle in die resultierende Sequenz eingeschlossen werden sollen. Im folgenden Beispiel sind nur die Kunden enthalten, die eine Adresse in London haben.  
   
  [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
@@ -60,6 +63,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Weitere Informationen zur Verwendung der- `Where` Klausel in Visual Basic finden Sie unter [WHERE-Klausel](../../../language-reference/queries/where-clause.md).  
   
 ## <a name="ordering-data-order-by"></a>Sortieren von Daten (Order by)  
+
  Häufig ist es praktisch, die zurückgegebenen Daten in eine bestimmte Reihenfolge zu sortieren. Die- `Order By` Klausel bewirkt, dass die Elemente in der zurückgegebenen Sequenz nach einem angegebenen Feld oder Feldern sortiert werden. Mit der folgenden Abfrage werden z. b. die Ergebnisse auf der Grundlage der- `Name` Eigenschaft sortiert. Da `Name` eine Zeichenfolge ist, werden die zurückgegebenen Daten alphabetisch sortiert, von a bis Z.  
   
  [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
@@ -69,6 +73,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Weitere Informationen zur Verwendung der- `Order By` Klausel in Visual Basic finden Sie unter [Order By-Klausel](../../../language-reference/queries/order-by-clause.md).  
   
 ## <a name="selecting-data-select"></a>Auswählen von Daten (auswählen)  
+
  Die `Select` -Klausel gibt die Form und den Inhalt der zurückgegebenen Elemente an. Beispielsweise können Sie angeben, ob die Ergebnisse aus kompletten `Customer` Objekten, nur einer `Customer` Eigenschaft, einer Teilmenge von Eigenschaften, einer Kombination von Eigenschaften aus verschiedenen Datenquellen oder einem neuen Ergebnistyp basierend auf einer Berechnung bestehen sollen. Wenn die `Select`-Klausel etwas anderes als eine Kopie des Quellelements erzeugt, wird dieser Vorgang als *Projektion* bezeichnet.  
   
  Zum Abrufen einer Sammlung, die aus kompletten `Customer` Objekten besteht, wählen Sie die Bereichs Variable selbst aus:  
@@ -87,7 +92,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#6)]  
   
-     Oder  
+     - oder -  
   
 - Definieren Sie einen benannten Typ, der die Felder enthält, die Sie in das Ergebnis einschließen möchten, und erstellen und initialisieren Sie Instanzen des Typs in der- `Select` Klausel. Verwenden Sie diese Option nur, wenn Sie einzelne Ergebnisse außerhalb der Sammlung verwenden müssen, in der Sie zurückgegeben werden, oder wenn Sie Sie als Parameter in Methoden aufrufen übergeben müssen. Der Typ von `londonCusts5` im folgenden Beispiel ist IEnumerable (of NamePhone).  
   
@@ -98,6 +103,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Weitere Informationen zur Verwendung der- `Select` Klausel in Visual Basic finden [Sie unter SELECT-Klausel](../../../language-reference/queries/select-clause.md).  
   
 ## <a name="joining-data-join-and-group-join"></a>Verknüpfen von Daten (Join und Group Join)  
+
  Sie können mehr als eine Datenquelle in der- `From` Klausel auf verschiedene Weise kombinieren. Im folgenden Code werden z. b. zwei Datenquellen verwendet und implizit Eigenschaften beider Datenquellen im Ergebnis kombiniert. Die Abfrage wählt Studenten aus, deren Nachnamen mit einem vowel beginnen.  
   
  [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
@@ -109,9 +115,10 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join`kombiniert Auflistungen in einer einzelnen hierarchischen Auflistung, ebenso wie `LEFT JOIN` in SQL. Weitere Informationen finden Sie unter [Join-Klausel](../../../language-reference/queries/join-clause.md) und [Group Join-Klausel](../../../language-reference/queries/group-join-clause.md).  
+ `Group Join` kombiniert Auflistungen in einer einzelnen hierarchischen Auflistung, ebenso wie `LEFT JOIN` in SQL. Weitere Informationen finden Sie unter [Join-Klausel](../../../language-reference/queries/join-clause.md) und [Group Join-Klausel](../../../language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Gruppieren von Daten (Gruppieren nach)  
+
  Sie können eine- `Group By` Klausel hinzufügen, um die Elemente in einem Abfrageergebnis nach einem oder mehreren Feldern der Elemente zu gruppieren. Im folgenden Code werden z. b. Schüler und Studenten nach Class Year gruppiert.  
   
  [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
@@ -152,7 +159,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Weitere Informationen zu `Group By` finden Sie unter [Group By-Klausel](../../../language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Erste Schritte mit LINQ in Visual Basic](getting-started-with-linq.md)

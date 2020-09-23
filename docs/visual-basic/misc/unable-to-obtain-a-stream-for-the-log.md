@@ -4,17 +4,18 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887356fac3abe5c9d28751f7c4d3b1908ed35acb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922537"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078384"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>Für das Protokoll kann kein Stream abgerufen werden
-Für das Protokoll kann kein Stream abgerufen werden. Auf basierenden potenziellen Dateinamen \<Name > werden bereits verwendet.  
+
+Für das Protokoll kann kein Stream abgerufen werden. Mögliche Dateinamen, die auf basieren, \<name> werden bereits verwendet.  
   
- Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse konnte keine neue Protokolldatei erstellt, da alle potenziellen Protokolldateinamen anhand \<Name > werden bereits verwendet.  
+ Die <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasse konnte keine neue Protokolldatei erstellen, da alle möglichen Protokoll Dateinamen, die auf basieren, \<name> bereits verwendet werden.  
   
  Eine zu große Anzahl von Protokolldateien kann auf ein Architekturproblem der Anwendung hinweisen. Weitere Informationen finden Sie in der Dokumentation zur <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> -Klasse.  
   
@@ -28,5 +29,5 @@ Für das Protokoll kann kein Stream abgerufen werden. Auf basierenden potenziell
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My. Application. log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My. Application. info. directoriypath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

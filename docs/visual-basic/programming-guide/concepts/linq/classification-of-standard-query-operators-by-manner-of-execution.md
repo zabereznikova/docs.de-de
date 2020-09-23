@@ -2,33 +2,39 @@
 title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsart
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: e1ba5d8bdc2b7a521a11ca5c055323fde4bcb9d9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0628565fc0406c88aac814a05275cccdc61c44fe
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410902"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078358"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klassifizierung von Standard Abfrage Operatoren nach Ausführungs Arten (Visual Basic)
+
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
   
 ## <a name="manners-of-execution"></a>Arten der Ausführung  
   
 ### <a name="immediate"></a>Direkt  
+
  Direkte Ausführung bedeutet, dass die Datenquelle gelesen wird und die Operation an dem Zeitpunkt im Code ausgeführt wird, an dem die Abfrage deklariert wird. Alle Standardabfrageoperatoren, die ein einzelnes, nicht aufzählbares Ergebnis zurückgeben, werden sofort ausgeführt.  
   
 ### <a name="deferred"></a>Zurückgestellt  
+
  Zurückgestellte Ausführung bedeutet, dass der Vorgang nicht zum Zeitpunkt im Code ausgeführt wird, an dem die Abfrage deklariert wird. Der Vorgang erfolgt nur, wenn die Abfragevariable aufgezählt wird, z.B. durch Verwendung einer `For Each`-Anweisung. Dies bedeutet, dass die Ergebnisse der Ausführung der Abfrage vom Inhalt der Datenquelle zum Zeitpunkt der Abfrageausführung, nicht der Abfragedefinition abhängen. Wenn die Abfragevariable mehrfach aufgezählt wird, können die Ergebnisse jedes Mal abweichen. Fast alle Standardabfrageoperatoren, deren Rückgabetyp <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Linq.IOrderedEnumerable%601> ist, werden verzögert ausgeführt.  
   
  Abfrageoperatoren, die die verzögerte Ausführung verwenden, können zusätzlich als Streaming und Nicht-Streaming klassifiziert werden.  
   
 #### <a name="streaming"></a>Streaming  
+
  Streaming-Operatoren müssen nicht alle Quelldaten lesen, bevor sie Elemente liefern. Zum Zeitpunkt der Ausführung führt ein Streaming-Operator seine Operation auf jedem Quellelement aus, während es gelesen wird, und liefert ggf. die Elemente. Ein Streaming-Operator liest weiterhin Quellelemente, bis ein Ergebniselement erzeugt werden kann. Dies bedeutet, dass mehr als ein Quellelement womöglich gelesen werden kann, um ein Ergebniselement zu erzeugen.  
   
 #### <a name="non-streaming"></a>Nicht-Streaming  
+
  Nicht-Streaming-Operatoren müssen alle Quelldaten lesen, bevor sie ein Ergebniselement liefern können. Vorgänge wie das Sortieren oder Gruppieren fallen unter diese Kategorie. Zum Zeitpunkt der Ausführung lesen Nicht-Streaming-Operatoren alle Quelldaten, fügen sie in eine Datenstruktur ein, führen den Vorgang aus und liefern die Elemente, die sich ergeben.  
   
 ## <a name="classification-table"></a>Klassifizierungstabelle  
+
  In der folgenden Tabelle wird jede Standardabfrageoperator-Methode laut der Ausführungsmethode klassifiziert.  
   
 > [!NOTE]
@@ -87,7 +93,7 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.Enumerable>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)

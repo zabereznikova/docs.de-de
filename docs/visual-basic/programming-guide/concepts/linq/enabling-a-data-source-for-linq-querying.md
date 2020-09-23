@@ -2,12 +2,12 @@
 title: Aktivieren einer Datenquelle für LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 4ab0e2a2fc3d04eb375a4646e4133e6e5cbb47db
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a60527f0594964ec9642cdd565fd06eb5d46cf85
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375303"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078345"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 
@@ -26,12 +26,15 @@ In diesem Thema werden diese Möglichkeiten erläutert.
 ## <a name="how-to-enable-linq-querying-of-your-data-source"></a>Aktivieren von LINQ-Abfragen für eine Datenquelle
 
 ### <a name="in-memory-data"></a>Daten im Arbeitsspeicher
+
  Es gibt zwei Möglichkeiten, LINQ-Abfragen von Daten im Arbeitsspeicher zu aktivieren. Wenn die Daten über einen Typ verfügen, der <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie sie mithilfe von LINQ to Objects abfragen. Wenn es nicht sinnvoll ist, die Enumeration des Typs durch Implementierung der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle zu aktivieren, können Sie LINQ-Standardabfrageoperator-Methoden in diesem Typ definieren oder LINQ-Standardabfrageoperator-Methoden erstellen, die den Typ erweitern. Benutzerdefinierte Implementierungen der Standardabfrageoperatoren sollten zur Rückgabe der Ergebnisse eine verzögerte Ausführung verwenden.
 
 ### <a name="remote-data"></a>Remotedaten
+
  Die beste Möglichkeit zur Aktivierung von LINQ-Abfragen für eine Remotedatenquelle besteht darin, die <xref:System.Linq.IQueryable%601>-Schnittstelle zu implementieren. Dieser Ansatz unterscheidet sich jedoch vom Erweitern eines Anbieters wie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] für eine Datenquelle. Es stehen keine Anbietermodelle zum Erweitern vorhandener LINQ-Technologien (etwa [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) auf andere Datenquellentypen in Visual Studio 2008 zur Verfügung.
 
 ## <a name="iqueryable-linq-providers"></a>LINQ-Anbieter "IQueryable"
+
  LINQ-Anbieter, die <xref:System.Linq.IQueryable%601> implementieren, können in ihrer Komplexität große Unterschiede aufweisen. In diesem Abschnitt werden die verschiedenen Komplexitätsstufen erläutert.
 
  Ein weniger komplexer `IQueryable`-Anbieter erstellt möglicherweise eine Schnittstelle mit einer einzelnen Methode eines Webdiensts. Dieser Anbietertyp ist sehr spezifisch, da er erwartet, dass in den von ihm verarbeiteten Abfragen bestimmte Informationen enthalten sind. Er verfügt über ein geschlossenes Typsystem und macht möglicherweise nur einen einzelnen Ergebnistyp verfügbar. Ein Großteil der Abfrageverarbeitung erfolgt lokal, beispielsweise unter Verwendung der <xref:System.Linq.Enumerable>-Implementierungen der Standardabfrageoperatoren. Ein weniger komplexer Anbieter überprüft u. U. nur einen Ausdruck des Methodenaufrufs in der Ausdrucksbaumstruktur, die die Abfrage darstellt, und lässt die übrige Abfragelogik von einer anderen Instanz behandeln.
@@ -40,7 +43,7 @@ In diesem Thema werden diese Möglichkeiten erläutert.
 
  Ein komplexer `IQueryable`-Anbieter, wie z. B. der [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Anbieter, kann möglicherweise vollständige LINQ-Abfragen in eine ausdrucksbasierte Abfragesprache wie SQL übersetzen. Ein komplexer Anbieter arbeitet universeller als ein weniger komplexer Anbieter, da er eine größere Bandbreite von Fragen in der Abfrage verarbeiten kann. Außerdem verfügt er über ein offenes Typsystem und benötigt daher eine umfassende Infrastruktur für die Zuordnung benutzerdefinierter Typen. Die Entwicklung eines komplexen Anbieters ist ziemlich arbeitsaufwändig.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.IQueryable%601>
 - <xref:System.Collections.Generic.IEnumerable%601>

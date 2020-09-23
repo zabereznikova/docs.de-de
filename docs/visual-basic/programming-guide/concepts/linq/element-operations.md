@@ -2,14 +2,15 @@
 title: Elementvorgänge
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: 73d8b5b308b4d1cb8863f38592647a71e62dd15a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c082bf18f19e29485cc80a0c9c86e09c270ecb25
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375290"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078319"
 ---
 # <a name="element-operations-visual-basic"></a>Element Vorgänge (Visual Basic)
+
 Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zurückgegeben.  
   
  Die Methoden des Standardabfrageoperators, die Elementvorgänge ausführen, sind im folgenden Abschnitt aufgeführt.  
@@ -27,7 +28,7 @@ Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zu
 |Single|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|Gibt das einzige Element einer Auflistung oder das einzige Element, das eine Bedingung erfüllt, zurück. Gibt einen Standardwert zurück, wenn kein solches Element vorhanden ist oder die Auflistung nicht genau ein Element enthält.|Nicht zutreffend.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)
