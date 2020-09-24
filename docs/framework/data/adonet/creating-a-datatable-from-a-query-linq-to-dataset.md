@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 064688f173e375481373e9a33d66c64666e1583f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287011"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148360"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
+
 Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Wenn die Datenoperationen ausgeführt wurden, wird die neue <xref:System.Data.DataTable> wieder mit der ursprünglichen <xref:System.Data.DataTable> zusammengeführt.  
   
  Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode verwendet den folgenden Prozess, um aus einer Abfrage eine <xref:System.Data.DataTable> zu erstellen:  
@@ -38,6 +39,7 @@ Das Aufrufen der- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Meth
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>Erstellen einer benutzerdefinierten copydedatdatababel- \<T> Methode  
+
  Die vorhandenen <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methoden arbeiten nur mit einer <xref:System.Collections.Generic.IEnumerable%601>-Quelle, bei der der generische Parameter `T` den Typ <xref:System.Data.DataRow> aufweist. Obwohl dies hilfreich ist, können Tabellen dabei nicht aus einer Sequenz von Skalartypen, aus Abfragen, die anonyme Typen zurückgeben, oder aus Abfragen, die Tabellenjoins durchführen, erstellt werden. Ein Beispiel für die Implementierung von zwei benutzerdefinierten `CopyToDataTable` Methoden, die eine Tabelle aus einer Sequenz von skalaren oder anonymen Typen laden, finden Sie unter Gewusst [wie: Implementieren von copytodatable, \<T> wobei der generische Typ T keine DataRow s ist](implement-copytodatatable-where-type-not-a-datarow.md).  
   
  Für die Beispiele in diesem Abschnitt werden die folgenden benutzerdefinierten Typen verwendet:  
@@ -46,36 +48,41 @@ Das Aufrufen der- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Meth
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>Beispiel  
+
  In diesem Beispiel werden die Tabellen `SalesOrderHeader` und `SalesOrderDetail` durch eine JOIN-Operation miteinander verknüpft, um die Onlinebestellungen für den Monat August abzurufen und aus der Abfrage eine Tabelle zu erstellen.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Auflistung für Artikel abgefragt, deren Preis mehr als $ 9,99 beträgt, und eine Tabelle aus den Abfrageergebnissen erstellt.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Auflistung für Artikel abgefragt, deren Preis mehr als $ 9,99 beträgt, und anschließend werden die Ergebnisse dargestellt. Die zurückgegebene Sequenz anonymer Typen wird in eine bestehende Tabelle geladen.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Auflistung für Artikel abgefragt, deren Preis mehr als $ 9,99 beträgt, und anschließend werden die Ergebnisse dargestellt. Die zurückgegebene Sequenz anonymer Typen wird in eine bestehende Tabelle geladen. Das Tabellenschema wird automatisch erweitert, da die Typen `Book` und `Movies` vom `Item`-Typ abgeleitet sind.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Auflistung für Artikel abgefragt, deren Preis mehr als $ 9,99 beträgt, und eine Sequenz von <xref:System.Double> zurückgegeben, die in eine neue Tabelle geladen wird.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Programmierhandbuch](programming-guide-linq-to-dataset.md)
 - [Generische Field- und SetField-Methoden](generic-field-and-setfield-methods-linq-to-dataset.md)

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 2f4486998f347bf1db6d22433e6e48b553609c18
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: f46c22294da4db017eceb0bfd0b5cb2bb093c0b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141823"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147410"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
+
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Im Thema eintragen von [Ressourcen als Teilnehmer in einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md) wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in eine Transaktion eingetragen werden kann. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  
   
  Am Ende der Transaktion fordert die Anwendung die Transaktion auf, entweder einen Commit oder Rollback auszuführen. Der Transaktions-Manager muss Risiken verhindern, wie sie beispielsweise entstehen, wenn einige Ressourcen-Manager für einen Commit und andere für ein Rollback stimmen.  
@@ -25,6 +26,7 @@ Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager
  Wenn Sie lediglich über das Ergebnis einer Transaktion informiert werden, aber am Abstimmen nicht teilnehmen möchten, können Sie sich für das <xref:System.Transactions.Transaction.TransactionCompleted>-Ereignis anmelden.  
   
 ## <a name="two-phase-commit-2pc"></a>Zweiphasencommit (2PC)  
+
  In der ersten Transaktionsphase fragt der Transaktions-Manager jede Ressource ab, um zu ermitteln, ob ein Commit oder ein Rollback für eine Transaktion ausgeführt werden sollte. In der zweiten Transaktionsphase informiert der Transaktions-Manager alle Ressourcen über das Ergebnis seiner Abfragen und ermöglicht ihnen so die Durchführung eventuell erforderlicher Bereinigungen.  
   
  Um an einer solchen Transaktion teilnehmen zu können, muss ein Ressourcen-Manager die <xref:System.Transactions.IEnlistmentNotification>-Schnittstelle implementieren, die Methoden bereitstellt, die vom TM während eines 2PC als Benachrichtigungen aufgerufen werden.  Es folgt ein Beispiel für eine solche Implementierung.  
@@ -33,6 +35,7 @@ Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager
  [!code-vb[Tx_Enlist#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/tx_enlist/vb/enlist.vb#2)]  
   
 ### <a name="prepare-phase-phase-1"></a>Vorbereitungsphase (Phase 1)  
+
  Bei Erhalt einer <xref:System.Transactions.CommittableTransaction.Commit%2A>-Anforderung von einer Anwendung initiiert der Transaktions-Manager die Vorbereitungsphase aller eingetragenen Teilnehmer, indem er die <xref:System.Transactions.IEnlistmentNotification.Prepare%2A>-Methode für jede eingetragene Ressource aufruft, um von jeder Ressource ein Abstimmungsergebnis zur Transaktion zu erhalten.  
   
  Der Ressourcen-Manager, der die <xref:System.Transactions.IEnlistmentNotification>-Schnittstelle implementiert, sollte zuerst die <xref:System.Transactions.IEnlistmentNotification.Prepare%28System.Transactions.PreparingEnlistment%29>-Methode implementieren, wie das folgende einfache Beispiel zeigt.  
@@ -70,6 +73,7 @@ public void Prepare(PreparingEnlistment preparingEnlistment)
  Nachdem alle Ressourcen-Manager <xref:System.Transactions.PreparingEnlistment.Prepared%2A> gestimmt haben, wird der Anwendung mitgeteilt, dass das Commit der Transaktion erfolgreich war.  
   
 ### <a name="commit-phase-phase-2"></a>Commitphase (Phase 2)  
+
  Wenn der TM in der zweiten Phase der Transaktion erfolgreiche Vorbereitungsergebnisse von allen RMs erhält (alle RMs haben am Ende von Phase 1 <xref:System.Transactions.PreparingEnlistment.Prepared%2A> aufgerufen), ruft er die <xref:System.Transactions.IEnlistmentNotification.Commit%2A>-Methode für jeden Ressourcen-Manager auf. Die Ressourcen-Manager können dann die Änderungen dauerhaft übernehmen und den Commit abschließen.  
   
  Informiert einer der RMs über das Fehlschlagen der Vorbereitung in Phase 1, ruft der TM die <xref:System.Transactions.IEnlistmentNotification.Rollback%2A>-Methode für jeden RM auf und gibt der Anwendung das Fehlschlagen des Commit bekannt.  
@@ -97,6 +101,7 @@ public void Rollback (Enlistment enlistment)
  Der RM muss auf der Grundlage des Benachrichtigungstyps alle zum Abschließen der Transaktion erforderlichen Aktionen ausführen und den TM durch Aufrufen der <xref:System.Transactions.Enlistment.Done%2A>-Methode für den <xref:System.Transactions.Enlistment>-Parameter darüber informieren, dass er bereit ist. Diese Aufgabe kann als Arbeitsthread ausgeführt werden. Die Benachrichtigungen der Phase 2 können inline im gleichen Thread erfolgen, mit dem die <xref:System.Transactions.PreparingEnlistment.Prepared%2A>-Methode in Phase 1 aufgerufen wurde. Daher sollten Sie nach dem <xref:System.Transactions.PreparingEnlistment.Prepared%2A>-Aufruf keine Aufgaben mehr ausführen (z. B. Freigeben von Sperren), die vor dem Empfang der Benachrichtigungen aus Phase 2 abgeschlossen sein müssen.  
   
 ### <a name="implementing-indoubt"></a>Implementieren von InDoubt  
+
  Schließlich sollten Sie die <xref:System.Transactions.IEnlistmentNotification.InDoubt%2A>-Methode für den flüchtigen Ressourcen-Manager implementieren. Diese Methode wird aufgerufen, wenn der Transaktions-Manager den Kontakt zu einem oder mehreren Teilnehmern verliert und ihren Status deshalb nicht kennt. Wenn dieser Fall eintritt, sollten Sie ihn protokollieren, damit Sie später prüfen können, ob einer der Transaktionsteilnehmer in einem inkonsistenten Zustand geblieben ist.  
   
 ```csharp
@@ -108,9 +113,10 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>Optimierung des Einphasencommit  
+
  Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Weitere Informationen zu diesem Protokoll finden Sie unter [Optimization using Single Phase Commit and Promotable Single Phase Notification](optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung](optimization-spc-and-promotable-spn.md)
 - [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](enlisting-resources-as-participants-in-a-transaction.md)
