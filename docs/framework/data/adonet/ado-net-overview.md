@@ -3,14 +3,15 @@ title: Übersicht
 description: Ausführliche Erläuterungen und Beispiele finden Sie in der Übersicht über ADO.net in .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 459e4a548a4d1358b196dc41ec495921833728d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287154"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153494"
 ---
 # <a name="adonet-overview"></a>Übersicht über ADO.NET
+
 ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden. Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  
   
  ADO.NET trennt den Datenzugriff von der Datenbearbeitung in einzelne Komponenten, die separat oder zusammen verwendet werden können. ADO.NET schließt .NET Framework-Datenanbieter zum Verbinden mit einer Datenbank, zum Ausführen von Befehlen und zum Abrufen von Ergebnissen ein. Diese Ergebnisse werden entweder direkt verarbeitet oder in einem ADO.NET-<xref:System.Data.DataSet>-Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen oder um sie an eine andere Ebene zu übergeben. Das `DataSet`-Objekt kann auch unabhängig von einem .NET Framework-Datenanbieter verwendet werden, um Daten zu verwalten, die für die Anwendung lokal sind oder aus einer XML-Datenquelle beschafft werden.  
@@ -21,9 +22,10 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
   
  ADO.NET stellt die direkteste Methode des Datenzugriffs innerhalb von .NET Framework bereit. Eine Abstraktion auf höherer Ebene, die es Anwendungen ermöglicht, anstelle des zugrunde liegenden Speicher Modells mit einem konzeptionellen Modell zu arbeiten, finden Sie unter [ADO.NET Entity Framework](./ef/index.md).  
   
- **Datenschutzerklärung**: "System. Data. dll", System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll und System. Data. DataSetExtensions. dll-Assemblys unterscheiden sich nicht zwischen den privaten Daten eines Benutzers und nicht privaten Daten.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
+ **Datenschutzbestimmungen**: die Assemblys "System.Data.dll", "System.Data.Design.dll", "System.Data.OracleClient.dll", "System.Data.SqlXml.dll", "System.Data.Linq.dll", "System.Data.SqlServerCe.dll" und "System.Data.DataSetExtensions.dll" unterscheiden nicht zwischen den privaten und nicht privaten Daten  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ADO.NET-Architektur](ado-net-architecture.md)  
  Stellt eine Übersicht der Architektur und der Komponenten von ADO.NET bereit.  
   
@@ -46,6 +48,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
  Enthält Codebeispiele, die zum Abrufen von Daten ADO.NET-Datenanbieter verwenden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Neues in ADO.NET](whats-new.md)  
  Enthält eine Einführung in neue Funktionen von ADO.NET.  
   
@@ -58,7 +61,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
  [Abrufen und Ändern von Daten in ADO.NET](retrieving-and-modifying-data.md)  
  Beschreibt das Herstellen von Verbindungen mit einer Datenquelle, das Abrufen von Daten und das Ändern von Daten. Dazu gehören auch `DataReaders` und `DataAdapters`.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET](index.md)
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

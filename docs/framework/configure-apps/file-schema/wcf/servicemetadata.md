@@ -2,14 +2,15 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: c421273d1d08db047a51f1f1e4f9d6c908f12986
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2236361316254d065abd1fb62fd2e509be289a4c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84201785"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153858"
 ---
 # \<serviceMetadata>
+
 Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informationen an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |externalMetadataLocation|Ein URI, der den Speicherort einer WSDL-Datei enthält, die dem Benutzer als Antwort auf WSDL- und MEX-Anforderungen statt der automatisch generierten WSDL-Datei zurückgegeben wird. Wenn dieses Attribut nicht festgelegt wird, wird die WSDL-Standarddatei zurückgegeben. Der Standardwert ist eine leere Zeichenfolge.|  
 |httpGetBinding|Eine Zeichenfolge, die den Typ der Bindung angibt, die für den Abruf von Metadaten mit HTTP GET verwendet wird. Diese Einstellung ist optional. Wenn nicht angegeben, werden die Standardbindungen verwendet.<br /><br /> Nur Bindungen mit inneren Bindungselementen, die <xref:System.ServiceModel.Channels.IReplyChannel> unterstützen, werden unterstützt. Darüber hinaus muss die <xref:System.ServiceModel.Channels.MessageVersion>-Eigenschaft der Bindung <xref:System.ServiceModel.Channels.MessageVersion.None%2A> lauten.|  
@@ -53,6 +55,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 |policyVersion|Eine Zeichenfolge, die angibt, welche Version der WS-Policy-Spezifikation verwendet wird. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Description.PolicyVersion>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -62,6 +65,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Mit diesem Konfigurationselement können Sie die Metadatenveröffentlichungs-Funktionen eines Diensts steuern. Um eine unbeabsichtigte Offenlegung von potenziell sensiblen Dienst Metadaten zu verhindern, wird die Metadatenveröffentlichung durch die Standardkonfiguration für Windows Communication Foundation (WCF)-Dienste deaktiviert. Dieses Verhalten ist in der Standardeinstellung sicher, bedeutet aber auch, dass man den zum Aufrufen des Diensts erforderlichen Clientcode nicht mithilfe eines Tools zum Importieren von Metadaten (wie Svcutil.exe) generieren kann. Dies ist nur dann möglich, wenn das Verhalten des Diensts zum Veröffentlichen von Metadaten in der Konfiguration explizit aktiviert ist. Wenn Sie dieses Konfigurationselement verwenden, können Sie dieses Veröffentlichungsverhalten für Ihren Dienst aktivieren.  
   
  Ein ausführliches Beispiel für die Konfiguration dieses Verhaltens finden Sie unter [Verhalten beim Veröffentlichen von Metadaten](../../../wcf/samples/metadata-publishing-behavior.md).  
@@ -82,6 +86,7 @@ Gibt die Veröffentlichung der Dienstmetadaten und der zugeordneten Informatione
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird ein Dienst so konfiguriert, dass Metadaten mithilfe des-Elements verfügbar gemacht werden \<serviceMetadata> . Es wird auch ein Endpunkt konfiguriert, mit dem der `IMetadataExchange`-Vertrag als Implementierung eines WS-MetadataExchange (MEX)-Protokolls verfügbar gemacht wird. In dem Beispiel wird `mexHttpBinding` verwendet, eine benutzerfreundliche Standardbindung, die `wsHttpBinding` entspricht und für die der Sicherheitsmodus auf `None` festgelegt ist. Im Endpunkt wird eine relative Adresse von "Mex" verwendet, die nach der Auflösung für die Basisadresse der Dienste zu einer Endpunkt Adresse von führt `http://localhost/servicemodelsamples/service.svc/mex` .  
   
 ```xml  

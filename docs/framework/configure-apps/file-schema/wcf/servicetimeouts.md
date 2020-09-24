@@ -2,14 +2,15 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 801a7aaf1f0d0fa267fa8cca3d2e7fd02919c475
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 92d3de42daf6f7baf288e3e74242381a60e76618
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399548"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153598"
 ---
 # \<serviceTimeouts>
+
 Gibt den Timeout für einen Dienst an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -25,19 +26,22 @@ Gibt den Timeout für einen Dienst an.
 <serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem eine Transaktion vom Client an den Server weitergegeben werden muss. Der Standardwert ist "00:00:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

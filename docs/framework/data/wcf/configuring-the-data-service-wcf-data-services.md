@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 57830421eee3c94f9785a2c603eb31b96f99f4d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552842"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152792"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurieren des Datendiensts (WCF Data Services)
+
 Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol-Feeds (odata) verfügbar machen. Die Daten dieser Feeds können aus einer Vielzahl von Datenquellen stammen. WCF Data Services verwendet Datenanbieter, um diese Daten als odata-Feed verfügbar zu machen. Diese Anbieter schließen einen Entity Framework-Anbieter, einen Reflektionsanbieter und einen Schnittstellensatz für benutzerdefinierter Datendienstanbieter ein. Die Anbieterimplementierung definiert das Datenmodell für den Dienst. Weitere Informationen finden Sie unter [Data Services-Anbietern](data-services-providers-wcf-data-services.md).  
   
  In WCF Data Services ist ein Datendienst eine Klasse, die von der-Klasse erbt <xref:System.Data.Services.DataService%601> , wobei der Typ des Daten diensdienstanbieter der Entitäts Container des Datenmodells ist. Dieser Entitätscontainer verfügt über mindestens eine Eigenschaft, die einen <xref:System.Linq.IQueryable%601> zurückgibt und die für den Zugriff auf Entitätenmengen im Datenmodell verwendet wird.  
@@ -25,9 +26,10 @@ Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol
 [!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>Konfigurationseinstellungen des Datendiensts  
+
  Mit der <xref:System.Data.Services.DataServiceConfiguration>-Klasse können Sie das folgende Datendienstverhalten angeben:  
   
-|Mitglied|Verhalten|  
+|Member|Verhalten|  
 |------------|--------------|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Ermöglicht das Deaktivieren von Count-Anforderungen, die mit dem `$count`-Pfadsegment und der `$inlinecount`-Abfrageoption an den Datendienst gesendet werden. Weitere Informationen finden Sie unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
 |<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Ermöglicht das Deaktivieren der Unterstützung der Datenprojektion in Anforderungen, die mit der `$select`-Abfrageoption an den Datendienst gesendet werden. Weitere Informationen finden Sie unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
@@ -48,7 +50,9 @@ Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Diese Konfigurationseigenschaft ermöglicht es Ihnen, die Problembehandlung in einem Datendienst zu vereinfachen, indem mehr Informationen in der Fehlerantwortnachricht zurückgegeben werden. Diese Option ist nicht für die Verwendung in einer Produktionsumgebung vorgesehen. Weitere Informationen finden Sie unter [entwickeln und](developing-and-deploying-wcf-data-services.md)Bereitstellen von WCF Data Services.|  
   
 <a name="accessRequirements"></a>
+
 ## <a name="minimum-resource-access-requirements"></a>Minimale Ressourcenzugriffsanforderungen  
+
  In der folgenden Tabelle sind die minimalen Rechte für Entitätenmengen aufgelistet, die gewährt werden müssen, um einen bestimmten Vorgang auszuführen. Pfad Beispiele basieren auf dem Northwind-Datendienst, der beim Abschluss des [Schnellstarts](quickstart-wcf-data-services.md)erstellt wird. Da sowohl die <xref:System.Data.Services.EntitySetRights>-Enumeration als auch die <xref:System.Data.Services.ServiceOperationRights>-Enumeration mit dem <xref:System.FlagsAttribute> definiert werden, können Sie mithilfe eines logischen OR-Operators mehrere Berechtigungen für eine Entitätenmenge oder einen Vorgang angeben. Weitere Informationen finden Sie unter Gewusst [wie: Aktivieren des Zugriffs auf den Datendienst](how-to-enable-access-to-the-data-service-wcf-data-services.md).  
   
 |Pfad/Aktion|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
@@ -65,7 +69,7 @@ Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol
 |`/Customers('ALFKI')/ContactName`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteMerge>|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers('ALFKI')/Address/StreetAddress/$value`<sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
 |`/Customers('ALFKI')/ContactName/$value`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.WriteMerge>|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/$value` <sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')/$value`<sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nicht unterstützt|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
   
@@ -74,7 +78,9 @@ Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol
  <sup>2</sup> dieser URI wird unterstützt, wenn eine Eigenschaft, die einen Binary Large Object (BLOB) zurückgibt, als Medien Ressource definiert ist, die zu einer Entität gehört, die ein Medien Link Eintrag ist (in diesem Fall) `Customers` . Weitere Informationen finden Sie unter [streaminganbieter](streaming-provider-wcf-data-services.md).  
   
 <a name="versioning"></a>
+
 ## <a name="versioning-requirements"></a>Versionsanforderungen  
+
  Die folgenden Datendienst-Konfigurations Verhalten erfordern Version 2 des odata-Protokolls oder spätere Versionen:  
   
 - Unterstützung von Count-Anforderungen  
@@ -83,7 +89,7 @@ Mit WCF Data Services können Sie Datendienste erstellen, die Open Data Protocol
   
  Weitere Informationen finden Sie unter [Data Service Versioning](data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Definieren von WCF Data Services](defining-wcf-data-services.md)
 - [Hosten des Datendiensts](hosting-the-data-service-wcf-data-services.md)

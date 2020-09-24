@@ -2,17 +2,19 @@
 title: Zusammenstellen verschachtelter Entity SQL-Abfragen
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b28c46ba9a89ffffe8cd95ad55eb502eb8ea48a6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0c9a6a99ff49cfa847f4c1e7ea693fbb2611debd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541095"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153065"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Zusammenstellen verschachtelter Entity SQL-Abfragen
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine umfangreiche funktionale Sprache. Der Baustein von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist ein Ausdruck. Im Gegensatz zu herkömmlichem SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist nicht auf ein tabellarisches Resultset beschränkt: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt das Verfassen komplexer Ausdrücke, die Literale, Parameter oder unterstützte Ausdrücke aufweisen können. Ein Wert im Ausdruck kann parametrisiert sein oder aus einem anderen Ausdruck bestehen.  
   
 ## <a name="nested-expressions"></a>Geschachtelte Ausdrücke  
+
  Ein geschachtelter Ausdruck kann an jeder Stelle verwendet werden, an der der Wert des Rückgabetyps zulässig ist. Zum Beispiel:  
   
 ```sql  
@@ -49,6 +51,7 @@ FROM … );
  Im folgenden Beispiel wird veranschaulicht, wie Ausdrücke ordnungsgemäß geschachtelt werden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] : Gewusst [wie: Sortieren der Union von zwei Abfragen](/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
+
  Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Bei einigen Back-End-Servern, einschließlich SQL Server, kann dies dazu führen, dass die tempdb-Tabelle sehr groß wird, was sich negativ auf die Server Leistung auswirken kann.  
   
  Das folgende Beispiel zeigt eine Abfrage dieser Art:  
@@ -58,6 +61,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="ordering-nested-queries"></a>Reihenfolge geschachtelter Abfragen  
+
  In Entity Framework kann ein geschachtelter Ausdruck an einer beliebigen Stelle in die Abfrage eingefügt werden. Da Entity SQL große Flexibilität beim Schreiben von Abfragen zulässt, kann eine Abfrage mit einer Reihe von geschachtelten Abfragen geschrieben werden. Die Reihenfolge einer geschachtelten Abfrage wird jedoch nicht beibehalten.  
   
 ```sql  
@@ -75,6 +79,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Entity SQL](entity-sql-overview.md)

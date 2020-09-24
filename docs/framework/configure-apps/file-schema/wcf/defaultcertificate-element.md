@@ -2,14 +2,15 @@
 title: <defaultCertificate>-Element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400427"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153897"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate>-Element
+
 Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,13 +32,14 @@ Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|findValue|Eine Zeichenfolge. Der zu suchende Wert.|  
+|findValue|Zeichenfolge. Der zu suchende Wert.|  
 |x509FindType|Enumeration. Eines der zu durchsuchenden Zertifikatfelder.|  
 |storeLocation|Enumeration. Einer der zwei zu durchsuchenden Systemspeicherorte.|  
 |storeName|Enumeration. Einer der zu durchsuchenden Systemspeicher.|  
@@ -50,23 +52,24 @@ Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein 
   
 ## <a name="x509findtype-attribute"></a>x509FindType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Enumeration|Zu den gültigen Werten gehören: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName, FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Enumeration|CurrentUser oder LocalMachine.|  
   
 ## <a name="storename-attribute"></a>storeName-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Enumeration|Zu den gültigen Werten gehören: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -76,9 +79,11 @@ Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein 
 |[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Client verwenden können.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Bei Bindungen mit Zertifikat-basierter Nachrichtensicherheit wird das durch dieses Konfigurationselement angegebene Zertifikat zum Verschlüsseln von Nachrichten für den Dienst sowie für die Signierung von Antworten an den Client verwendet. Es speichert ein einzelnes Zertifikat, das verwendent werden soll, wenn kein Zertifikat von einem Dienst angegeben wird.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel gibt ein Zertifikat an, das für Endpunkte verwendet wird, deren URI mit beginnt, `http://www.contoso.com` und ein Zertifikat, das für alle anderen Endpunkte verwendet werden soll, die keine Zertifikats Aushandlung ausführen.  
   
 ```xml  

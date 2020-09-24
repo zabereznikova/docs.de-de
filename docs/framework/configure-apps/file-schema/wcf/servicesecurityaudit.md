@@ -2,14 +2,15 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 10888f26053014ffb1fec49d1dfe87c7fd09ab54
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cec3373dae3127f16bb8a418a91a684554f2b0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399579"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153663"
 ---
 # \<serviceSecurityAudit>
+
 Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen während der Dienstvorgänge ermöglichen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,11 +30,12 @@ Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen währen
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |auditLogLocation|Gibt den Speicherort des Überwachungsprotokolls an. Gültige Werte sind:<br /><br /> -Standard: Sicherheitsereignisse werden in das Anwendungsprotokoll unter Windows XP und in das Ereignisprotokoll unter Windows Server 2003 und Windows Vista geschrieben.<br />-Anwendung: Überwachungs Ereignisse werden in das Anwendungs Ereignisprotokoll geschrieben.<br />-Security: Überwachungs Ereignisse werden in das Sicherheits Ereignisprotokoll geschrieben.<br /><br /> Der Standardwert ist Default. Weitere Informationen finden Sie unter <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Boolescher Wert, der das Verhalten für das Unterdrücken von Fehlern beim Schreiben in das Überwachungsprotokoll angibt.<br /><br /> Anwendungen sollten über Schreibfehler im Überwachungsprotokoll benachrichtigt werden. Wenn die Anwendung nicht für das Verarbeiten von Überwachungsfehlern ausgelegt ist, sollten Sie dieses Attribut verwenden, um Fehler beim Schreiben in das Überwachungsprotokoll zu unterdrücken.<br /><br /> Wenn dieses Attribut den Wert `true` hat, werden Ausnahmen (außer OutOfMemoryException, StackOverFlowException, ThreadAbortException und ArgumentException), die aus Versuchen, Überwachungsereignisse zu schreiben, hervorgehen, vom System verarbeitet und nicht an die Anwendung weitergegeben. Wenn dieses Attribut den Wert `false` hat, werden alle Ausnahmen, die aus Versuchen, Überwachungsereignisse zu schreiben, hervorgehen, an die Anwendung weitergegeben.<br /><br /> Der Standardwert lautet `true`.|  
@@ -41,6 +43,7 @@ Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen währen
 |messageAuthenticationAuditLevel|Gibt den Typ der protokollierten Nachrichtenauthentifizierungs-Überwachungsereignisse an. Gültige Werte sind:<br /><br /> -None: Es werden keine Überwachungs Ereignisse generiert.<br />-Erfolg: Es werden nur erfolgreiche Sicherheitsereignisse (vollständige Validierung einschließlich Validierung der Nachrichten Signatur, Chiffre Validierung und tokenüberprüfung) protokolliert.<br />-Fehler: nur Fehlerereignisse werden protokolliert.<br />-Erfolgreiorfailure: sowohl Erfolgs-als auch Fehlerereignisse werden protokolliert.<br /><br /> Der Standardwert lautet „Keine“. Weitere Informationen finden Sie unter <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -50,6 +53,7 @@ Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen währen
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Konfigurationselement wird verwendet, um Windows Communication Foundation (WCF)-Authentifizierungs Ereignisse zu überwachen. Ist die Überwachung aktiviert, können entweder erfolgreiche oder fehlgeschlagene Authentifizierungsversuche (oder beides) überwacht werden. Die Ereignisse werden in eines der drei Ereignisprotokolle geschrieben: das Anwendungs-, Sicherheits- oder Standardprotokoll für die Betriebssystemversion. Die Ereignisprotokolle können alle mit der Windows-Ereignisanzeige angezeigt werden.  
   
  Ein ausführliches Beispiel für die Verwendung dieses Konfigurations Elements finden Sie unter [Service Auditing Behavior](../../../wcf/samples/service-auditing-behavior.md).  
@@ -84,6 +88,6 @@ Legt Einstellungen fest, die die Überwachung von Sicherheitsereignissen währen
 - <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Sicherheitsverhalten](../../../wcf/feature-details/security-behaviors-in-wcf.md)
-- [Auditing](../../../wcf/feature-details/auditing-security-events.md)
+- [Überwachung](../../../wcf/feature-details/auditing-security-events.md)
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [Dienstüberwachungsverhalten](../../../wcf/samples/service-auditing-behavior.md)
