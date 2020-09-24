@@ -1,5 +1,5 @@
 ---
-title: <clear>-Element für <listeners> für<trace>
+title: <clear> -Element für <listeners> für <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 905dad8274fede80f4809ff3c7a014049f9df450
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2d301d588e33b0eea4164a6bf62dedd7b0c450ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153541"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149269"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<clear>-Element für \<listeners> für\<trace>
+# <a name="clear-element-for-listeners-for-trace"></a>\<clear> -Element für \<listeners> für \<trace>
+
 Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,17 +31,20 @@ Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
@@ -48,16 +52,18 @@ Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.
 |`listeners`|Enthält Listener, die Nachrichten erfassen, speichern und weiterleiten. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `<clear>` Element entfernt alle Listener aus der-Auflistung für die Ablauf `Listeners` Verfolgung. Sie können das- `<clear>` Element verwenden, bevor Sie das- `<add>` Element verwenden, um sicher zu sein, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
   
  Sie können die Auflistung Programm gesteuert löschen, `Listeners` indem Sie die- <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die- <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Eigenschaft ( `System.Diagnostics.Trace.Listeners.Clear()` ) aufrufen.  
   
- Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine.config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 > [!NOTE]
 > Das- `<clear>` Element entfernt das <xref:System.Diagnostics.DefaultTraceListener> -Element aus der-Auflistung `Listeners` und ändert das Verhalten der <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> Methoden,, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . Wenn eine-Methode oder eine-Methode aufgerufen wird, wird `Assert` `Fail` normalerweise ein Meldungs Feld angezeigt. Das Meldungs Feld wird jedoch nicht angezeigt, wenn <xref:System.Diagnostics.DefaultTraceListener> sich nicht in der Auflistung befindet `Listeners` .  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie das-Element verwendet wird, bevor das-Element verwendet wird, um der-Auflistung für die Ablauf `<clear>` `<add>` Verfolgung den Listener hinzuzufügen `console` `Listeners` .  
   
 ```xml  

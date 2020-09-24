@@ -8,14 +8,15 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 7e006adb86886d22ec08dc61fa092bf677b4da96
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9374fbaf7ceb61e5b72335417d32a08525477e0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544738"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149633"
 ---
 # <a name="provideroption-element"></a>\<providerOption>-Element
+
 Gibt die compilerversions-Attribute für einen Sprachanbieter an.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Gibt die compilerversions-Attribute für einen Sprachanbieter an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -44,6 +46,7 @@ Gibt die compilerversions-Attribute für einen Sprachanbieter an.
 |`value`|Erforderliches Attribut.<br /><br /> Gibt den Wert für die Option an. Beispiel: "v 3.5".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -55,7 +58,8 @@ Gibt die compilerversions-Attribute für einen Sprachanbieter an.
 |[\<compilers>-Element](compilers-element.md)|Container für Compilerkonfigurationselemente; enthält 0 (null) oder mehr- `<compiler>` Elemente.|  
 |[\<compiler>-Element](compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  In der .NET Framework Version 3,5 können Code Document Object Model (CodeDom)-Code Anbieter anbieterspezifische Optionen mithilfe des-Elements unterstützen `<providerOption>` .  
   
  Der .NET Framework 3,5 umfasst aktualisierte .NET Framework 2,0-Assemblys und stellt neue Version 3,5-Assemblys bereit, die neue Typen enthalten. Die Microsoft c#-und Visual Basic-Code Anbieter sind in .NET Framework 2,0-Assemblys enthalten, wurden jedoch aktualisiert, um Compiler der Version 3,5 zu unterstützen. Standardmäßig generieren die aktualisierten Code Anbieter Code für Compiler der Version 2,0. Sie können das- `<providerOption>` Element verwenden, um die Ziel-Compilerversion in 3,5 zu ändern. Geben Sie hierzu "Compilerversion" für das `name` -Attribut und "v 3.5" für das- `value` Attribut an. Sie müssen der Versionsnummer einen Kleinbuchstaben "v" voranstellen.  
@@ -65,6 +69,7 @@ Gibt die compilerversions-Attribute für einen Sprachanbieter an.
  CodeDOM-Code Anbieter Implementierer können benutzerdefinierte Optionen verarbeiten, indem Sie einen Konstruktor bereitstellen, `providerOptions` der einen Parameter vom Typ annimmt <xref:System.Collections.Generic.IDictionary%602> .  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie angegeben wird, dass Version 3,5 des c#-Code Anbieters verwendet werden soll.  
   
 ```xml  

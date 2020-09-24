@@ -1,5 +1,5 @@
 ---
-title: <clear>-Element für <listeners> für<source>
+title: <clear> -Element für <listeners> für <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 7f9ddd93d27c3619119702c82c9e8752dab1af7b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d3e76496c82b508feabf8a46cf7bce7e3d54e8cf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153580"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149282"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear>-Element für \<listeners> für\<source>
+# <a name="clear-element-for-listeners-for-source"></a>\<clear> -Element für \<listeners> für \<source>
+
 Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,17 +32,20 @@ Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
@@ -50,12 +54,15 @@ Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.
 |`listeners`|Gibt Listener an, die Nachrichten erfassen, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `<clear>` Element entfernt alle Listener aus der-Auflistung `Listeners` für eine Ablauf Verfolgungs Quelle, einschließlich der <xref:System.Diagnostics.DefaultTraceListener> . Sie können das- `<clear>` Element verwenden, bevor Sie das- `<add>` Element verwenden, um sicher zu sein, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
+
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine.config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie das `<clear>` -Element verwendet wird, bevor die `<add>` -Elemente zum Hinzufügen der Listener `console` und der-Auflistung `textListener` `Listeners` für die Ablauf Verfolgungs Quelle `TraceSourceApp` verwendet werden.  
   
 ```xml  

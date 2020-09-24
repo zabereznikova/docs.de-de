@@ -1,15 +1,16 @@
 ---
-title: <state>von WCF,<workflowInstanceQuery>
+title: <state> von WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854951"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148892"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<state>von WCF,\<workflowInstanceQuery>
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state> von WCF, \<workflowInstanceQuery>
+
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
   
  Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -51,7 +52,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="attributes"></a>Attribute
 
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`name`|Eine Zeichenfolge, die bei der Erstellung eines Nachverfolgungsdatensatzes einen abonnierten Zustand der nachverfolgten Workflowinstanz angibt.|  
   
@@ -61,7 +62,7 @@ Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<states>](states-of-wcf-workflowinstancequery.md)|Eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz bei der Erstellung von Nachverfolgungsdatensätzen.|  
   
@@ -71,20 +72,20 @@ Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Au
   
 Mögliche Zustands Werte werden in der folgenden Tabelle beschrieben:
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Aborted|Die Workflowinstanz wurde abgebrochen.|  
 |Abgeschlossen|Die Workflowinstanz wurde abgeschlossen.|  
-|Gelöscht|Die Workflowinstanz wurde gelöscht.|  
+|Deleted|Die Workflowinstanz wurde gelöscht.|  
 |Idle|Die Workflowinstanz ist im Leerlauf.|  
-|Persisted|Die Workflowinstanz wurde beibehalten.|  
+|Persistent|Die Workflowinstanz wurde beibehalten.|  
 |Resumed|Die Workflowinstanz wurde wiederaufgenommen.|  
-|Started|Die Workflowinstanz wurde gestartet.|  
+|Gestartet|Die Workflowinstanz wurde gestartet.|  
 |UnhandledException|In der Workflowinstanz ist eine nicht behandelte Ausnahme aufgetreten.|  
 |Nicht Geladen|Die Workflowinstanz wurde entladen.|  
 |Canceled|Die Workflowinstanz wurde abgebrochen.|  
 |Ausgesetzt|Die Workflowinstanz wurde unterbrochen.|  
-|Terminated|Die Workflowinstanz wurde beendet.|  
+|Beendet|Die Workflowinstanz wurde beendet.|  
 |Unsuspended|Die Workflowinstanz wurde fortgesetzt.|  
   
 ## <a name="example"></a>Beispiel

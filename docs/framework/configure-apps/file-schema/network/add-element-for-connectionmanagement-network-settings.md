@@ -10,14 +10,15 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155010"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149477"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<add>-Element für connectionManagement (Netzwerkeinstellungen)
+
 Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -45,6 +47,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 |`maxconnection`|Die maximale Anzahl von Verbindungen, die für einen Server zulässig sind. Wenn keine Angabe erfolgt, wird der Standardwert "2" verwendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -54,14 +57,17 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der Wert des `address`-Attributs muss entweder ein Sternchen zur Angabe aller Verbindungen oder eine Zeichenfolge im Format `<schema>://<idn_hostname>[:<port>]` sein.  
   
  Enthält der an HTTP-APIs übergebene URI Unicode, wird der Name intern mit <xref:System.Uri.DnsSafeHost%2A> umgewandelt, wodurch möglicherweise eine Punycode-Zeichenfolge zurückgegeben wird (das Verhalten ist von der aktuellen IDN-Konfiguration abhängig).  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
@@ -79,4 +85,4 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

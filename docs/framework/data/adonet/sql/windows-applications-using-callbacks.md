@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 571904d36293caa6d4330b2ffda2cff5aca8e6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de925afd071a5c92dfa3f6a5e35e62a8ba734cd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174458"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147618"
 ---
 # <a name="windows-applications-using-callbacks"></a>Verwenden von Rückrufen in Windows-Anwendungen
+
 In den meisten asynchronen Verarbeitungsszenarien möchten Sie einen Datenbankvorgang starten und andere Prozesse fortsetzen, ohne auf den Abschluss des Datenbankvorgangs warten zu müssen. In vielen Szenarien muss jedoch nach Abschluss des Datenbankvorgangs noch etwas erfolgen. In einer Windows-Anwendung beispielsweise ermöglicht das Delegieren des Vorgangs mit langer Ausführungszeit an einen Hintergrundthread, dass der Benutzeroberflächenthread reaktionsfähig bleibt. Wenn der Datenbankvorgang jedoch abgeschlossen ist, möchten Sie die Ergebnisse zum Ausfüllen des Formulars verwenden. Diese Art von Szenario lässt sich am besten mit einem Rückruf umsetzen.  
   
  Sie definieren einen Rückruf, indem Sie in der Methode <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> oder <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> einen <xref:System.AsyncCallback>-Delegaten angeben. Der Delegat wird aufgerufen, wenn der Vorgang abgeschlossen ist. Sie können an den Delegaten einen Verweis auf den <xref:System.Data.SqlClient.SqlCommand> selbst übergeben, wodurch der Zugriff auf das <xref:System.Data.SqlClient.SqlCommand>-Objekt und der Aufruf der entsprechenden `End`-Methode problemlos möglich ist, ohne dass eine globale Variable verwendet werden muss.  
   
 ## <a name="example"></a>Beispiel  
+
  Die folgende Windows-Anwendung veranschaulicht die Verwendung der <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>-Methode, bei der (zum Emulieren eines Befehls mit langer Ausführungszeit) eine Transact-SQL-Anweisung mit einer Verzögerung von einigen Sekunden ausgeführt wird.  
   
  Dieses Beispiel veranschaulicht eine Reihe wichtiger Techniken, einschließlich des Aufrufs einer Methode, die in einem separaten Thread mit dem Formular interagiert. Darüber hinaus zeigt dieses Beispiel, wie Sie die gleichzeitige Ausführung eines Befehls durch Benutzer mehrmals blockieren und wie sicherstellen müssen, dass das Formular nicht geschlossen wird, bevor die Rückrufprozedur aufgerufen wird.  

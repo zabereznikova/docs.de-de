@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 927a43f352fd776d9e6ba52ebea6ba2a1ccd4d48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155076"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149490"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<add>-Element für bypasslist (Netzwerkeinstellungen)
+
 Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -35,6 +36,7 @@ Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -44,6 +46,7 @@ Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.
 |**address**|Einen regulären Ausdruck, der eine IP-Adresse oder einen DNS-Namen beschreibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -53,6 +56,7 @@ Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.
 |[bypasslist](bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das `add` -Element fügt reguläre Ausdrücke, die IP-Adressen oder DNS-Servernamen beschreiben, in die Liste der Adressen ein, die einen Proxy Server umgehen.  
   
  Der Wert des `address` -Attributs muss ein regulärer Ausdruck sein, der einen Satz von IP-Adressen oder Hostnamen beschreibt.  
@@ -62,9 +66,11 @@ Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.
  Weitere Informationen zu regulären Ausdrücken finden Sie unter. [.NET Framework reguläre Ausdrücke](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden der Umgehungs Liste zwei Adressen hinzugefügt. Der erste umgeht den Proxy für alle Server in der contoso.com-Domäne. mit dem zweiten wird der Proxy für alle Server umgangen, deren IP-Adresse mit 192,168 beginnt.  
   
 ```xml  
@@ -83,4 +89,4 @@ Fügt der Proxy Umgehungs Liste eine IP-Adresse oder einen DNS-Namen hinzu.
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

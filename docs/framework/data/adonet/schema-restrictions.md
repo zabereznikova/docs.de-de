@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 17c42c5131252993d1f16e4a2f7a6450f0984d11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a3cafef45341cd95fa0a4f65c818129e120e44
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149010"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147823"
 ---
 # <a name="schema-restrictions"></a>Schemaeinschränkungen
-Der zweite optionale Parameter der **GetSchema-Methode** sind die Einschränkungen, die verwendet werden, um die Menge der zurückgegebenen Schemainformationen zu begrenzen, und sie werden als Array von Zeichenfolgen an die **GetSchema-Methode** übergeben. Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
+
+Der zweite optionale Parameter der **GetSchema** -Methode sind die Einschränkungen, die verwendet werden, um die Menge der zurückgegebenen Schema Informationen einzuschränken, und Sie werden als Zeichen folgen Array an die **GetSchema** -Methode übergeben. Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
   
  In der folgenden Tabelle werden beispielsweise die Einschränkungen beschrieben, die von der Schemaauflistung "Tables" mithilfe des .NET Framework-Datenanbieters für SQL Server unterstützt werden. Zusätzliche Einschränkungen für SQL Server-Schemaauflistungen werden am Ende dieses Themas aufgeführt.  
   
@@ -25,7 +26,8 @@ Der zweite optionale Parameter der **GetSchema-Methode** sind die Einschränkung
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Angeben der Einschränkungswerte  
- Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Um beispielsweise die von der **GetSchema-Methode** zurückgegebenen Tabellen auf nur diese Tabellen im Schema "Sales" zu beschränken, legen Sie das zweite Element des Arrays auf "Sales" fest, bevor Sie es an die **GetSchema-Methode** übergeben.  
+
+ Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Um beispielsweise die von der **GetSchema** -Methode zurückgegebenen Tabellen nur auf die Tabellen im "Sales"-Schema zu beschränken, legen Sie das zweite Element des Arrays auf "Sales" fest, bevor Sie es an die **GetSchema** -Methode übergeben.  
   
 > [!NOTE]
 > Die Einschränkungsauflistungen für den `SqlClient` und den `OracleClient` verfügen über eine zusätzliche `ParameterName`-Spalte. Die Spalte für den Einschränkungsstandard ist zwar aus Gründen der Abwärtskompatibilität vorhanden, wird aber derzeit ignoriert. Verwenden Sie Abfragen mit Parametern statt Zeichenfolgenersetzungen, um das Risiko eines SQL-Injection-Angriffs beim Angeben der Einschränkungswerte zu minimieren.  
@@ -33,10 +35,11 @@ Der zweite optionale Parameter der **GetSchema-Methode** sind die Einschränkung
 > [!NOTE]
 > Die Anzahl der Elementen im Array muss kleiner oder gleich der Anzahl der Einschränkungen sein, die für die angegebene Schemaauflistung unterstützt werden, da sonst eine <xref:System.ArgumentException> ausgelöst wird. Es können weniger Elemente als die maximale Anzahl der Einschränkungen vorhanden sein. Es wird davon ausgegangen, dass die fehlenden Einschränkungen NULL (uneingeschränkt) sind.  
   
- Sie können einen verwalteten .NET Framework-Anbieter abfragen, um die Liste der unterstützten Einschränkungen zu ermitteln, indem Sie die **GetSchema-Methode** mit dem Namen der Einschränkungsschemaauflistung aufrufen, die "Einschränkungen" lautet. Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
+ Sie können einen .NET Framework verwalteten Anbieter Abfragen, um die Liste der unterstützten Einschränkungen zu ermitteln, indem Sie die **GetSchema** -Methode mit dem Namen der Einschränkungs Schema Auflistung aufrufen. Dies ist "Einschränkungen". Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
- In den folgenden Beispielen <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> wird veranschaulicht, wie die Methode <xref:System.Data.SqlClient.SqlConnection> des .NET Framework-Datenanbieters für die SQL Server-Klasse verwendet wird, um Schemainformationen zu allen Tabellen in der **AdventureWorks-Beispieldatenbank** abzurufen und die zurückgegebenen Informationen auf diese Tabellen im Schema "Sales" zu beschränken:  
+
+ In den folgenden Beispielen wird veranschaulicht, wie die <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> -Methode der .NET Framework Datenanbieter für die SQL Server- <xref:System.Data.SqlClient.SqlConnection> Klasse zum Abrufen von Schema Informationen zu allen in der **AdventureWorks** -Beispieldatenbank enthaltenen Tabellen und zum Einschränken der zurückgegebenen Informationen auf die Tabellen im "Sales"-Schema verwendet wird:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -131,6 +134,7 @@ class Program
 ```  
   
 ## <a name="sql-server-schema-restrictions"></a>SQL Server-Schemabeschränkungen  
+
  In den folgenden Tabellen sind die Beschränkungen für SQL Server-Schemaauflistungen aufgeführt.  
   
 ### <a name="users"></a>Benutzer  
@@ -205,7 +209,7 @@ class Program
 |Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
 |Name|@Name|SPECIFIC_NAME|3|  
-|type|@Type|ROUTINE_TYPE|4|  
+|Typ|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
@@ -242,6 +246,7 @@ class Program
 |Name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008-Schemabeschränkungen  
+
  In den folgenden Tabellen sind die Beschränkungen für SQL Server 2008-Schemaauflistungen aufgeführt. Diese Beschränkungen gelten ab Version 3.5 SP1 von .NET Framework und SQL Server 2008. Sie werden in früheren Versionen von .NET Framework und SQL Server nicht unterstützt.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  

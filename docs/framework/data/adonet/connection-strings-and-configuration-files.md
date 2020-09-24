@@ -6,21 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2bea3d962998b2778d22e232e7f7062cfda3143
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556550"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148404"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 
 Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
   
 ## <a name="working-with-application-configuration-files"></a>Arbeiten mit Anwendungskonfigurationsdateien  
+
  Anwendungskonfigurationsdateien enthalten anwendungsspezifische Einstellungen. Eine ASP.NET-Anwendung kann beispielsweise mindestens eine **web.config**-Datei enthalten, und eine Windows-Anwendung kann eine optionale **app.config**-Datei enthalten. Konfigurationsdateien haben etliche Elemente gemein, auch wenn sich der Name und der Speicherort der Konfigurationsdateien abhängig vom jeweiligen Host der Anwendung ändert.  
   
 ### <a name="the-connectionstrings-section"></a>Der "connectionStrings"-Abschnitt  
+
  Verbindungszeichenfolgen können als Schlüssel/Wert-Paare im Abschnitt **connectionStrings** des **configuration**-Elements einer Anwendungskonfigurationsdatei gespeichert werden. Zu den untergeordneten Elementen gehören **add**, **clear** und **remove**.  
   
  Das folgende Konfigurationsdateifragment zeigt das Schema und die Syntax für das Speichern einer Verbindungszeichenfolge. Das **name**-Attribut ist ein Name, den Sie zum eindeutigen Identifizieren einer Verbindungszeichenfolge angeben, damit diese zur Laufzeit abgerufen werden kann. **providerName** ist der unveränderliche Name des .NET Framework-Datenanbieters, der in der Datei „machine.config“ registriert ist.  
@@ -41,6 +43,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 > Sie können einen Teil der Verbindungszeichenfolge in einer Konfigurationsdatei speichern und zur Vervollständigung zur Laufzeit die <xref:System.Data.Common.DbConnectionStringBuilder>-Klasse verwenden. Diese Vorgehensweise empfiehlt sich in Szenarien, in denen Ihnen die Elemente der Verbindungszeichenfolge vorab nicht bekannt sind oder wenn Sie sicherheitsrelevante Informationen nicht in einer Konfigurationsdatei speichern möchten. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Verwenden externer Konfigurationsdateien  
+
  Externe Konfigurationsdateien sind separate Dateien, die ein aus einem einzigen Abschnitt bestehendes Fragment einer Konfigurationsdatei enthalten. Auf die externe Konfigurationsdatei wird dann von der Hauptkonfigurationsdatei verwiesen. Das Speichern des Abschnitts **connectionStrings** in einer separaten Datei empfiehlt sich, wenn die Verbindungszeichenfolgen auch nach der Bereitstellung der Anwendung noch geändert werden können. ASP.NET verhält sich z. B. standardmäßig so, dass nach Änderungen an Konfigurationsdateien eine Anwendung neu gestartet wird, wodurch Statusinformationen verloren gehen. Änderungen an einer externen Konfigurationsdatei hingegen führen nicht zum Neustart der Anwendung. Externe Konfigurationsdateien sind nicht auf ASP.NET beschränkt und können auch von Windows-Anwendungen verwendet werden. Außerdem kann der Zugriff auf externe Konfigurationsdateien auch durch Dateizugriffssicherheit und Berechtigungen eingeschränkt werden. Der Einsatz externer Konfigurationsdateien zur Laufzeit ist transparent und erfordert keine besondere Codierung.  
   
  Wenn Sie Verbindungszeichenfolgen in einer externen Konfigurationsdatei speichern möchten, erstellen Sie eine separate Datei, die ausschließlich den **connectionStrings**-Abschnitt enthält. Nehmen Sie in diese Datei keine zusätzlichen Elemente, Abschnitte oder Attribute auf. Das folgende Beispiel zeigt die Syntax für eine externe Konfigurationsdatei.  
@@ -63,12 +66,14 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>Abrufen von Verbindungszeichenfolgen zur Laufzeit  
+
  Mit .NET Framework 2.0 wurden neue Klassen im <xref:System.Configuration>-Namespace eingeführt, um das Abrufen von Verbindungszeichenfolgen aus Konfigurationsdateien zur Laufzeit zu vereinfachen. Sie können programmgesteuert eine Verbindungszeichenfolge nach Namen oder Anbieternamen abrufen.  
   
 > [!NOTE]
 > Die Datei **machine.config** enthält auch einen **connectionStrings**-Abschnitt, der von Visual Studio verwendete Verbindungszeichenfolgen enthält. Beim Abrufen von Verbindungs Zeichenfolgen nach Anbieter Name aus der **app.config** Datei in einer Windows-Anwendung werden die Verbindungs Zeichenfolgen in **machine.config** zuerst geladen, und dann die Einträge aus **app.config**. Das Hinzufügen von **Clear** direkt nach dem **connectionStrings** -Element entfernt alle geerbten Verweise aus der Datenstruktur im Arbeitsspeicher, sodass nur die Verbindungs Zeichenfolgen berücksichtigt werden, die in der lokalen **app.config** Datei definiert sind.  
   
 ### <a name="working-with-the-configuration-classes"></a>Arbeiten mit den Konfigurationsklassen  
+
  Ab .NET Framework 2.0 wird bei der Arbeit mit Konfigurationsdateien auf dem lokalen Computer der <xref:System.Configuration.ConfigurationManager> verwendet, der die <xref:System.Configuration.ConfigurationSettings> ersetzt. Für die Arbeit mit ASP.NET-Konfigurationsdateien kommt der <xref:System.Web.Configuration.WebConfigurationManager> zum Einsatz. Er wurde für die Verwendung mit den auf einem Webserver befindlichen Konfigurationsdateien entwickelt und erlaubt den programmgesteuerten Zugriff auf Konfigurationsdateiabschnitte, wie z.B. **system.web**.  
   
 > [!NOTE]
@@ -76,13 +81,14 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
   
  Zum Abrufen von Verbindungszeichenfolgen aus Anwendungskonfigurationsdateien können Sie die <xref:System.Configuration.ConnectionStringSettingsCollection> verwenden. Sie enthält eine Auflistung von <xref:System.Configuration.ConnectionStringSettings>-Objekten, wobei jedes Objekt für einen einzelnen Eintrag im **connectionStrings**-Abschnitt steht. Ihre Eigenschaften werden entsprechenden Verbindungszeichenfolgenattributen zugeordnet, sodass es möglich ist, Verbindungszeichenfolgen nach dem Namen oder dem Anbieternamen abzurufen.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|Name der Verbindungszeichenfolge: Wird dem **name**-Attribut zugeordnet.|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|Vollqualifizierter Anbietername: Wird dem **providerName**-Attribut zugeordnet.|  
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Verbindungszeichenfolge. Wird dem **connectionString**-Attribut zugeordnet.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Beispiel: Auflisten aller Verbindungszeichenfolgen  
+
  In diesem Beispiel werden die durchlaufen <xref:System.Configuration.ConnectionStringSettingsCollection> und die <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> Eigenschaften, und <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> im Konsolenfenster angezeigt.  
   
 > [!NOTE]
@@ -92,18 +98,21 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach dem Namen  
+
  In diesem Beispiel wird gezeigt, wie eine Verbindungszeichenfolge aus einer Konfigurationsdatei durch Angabe ihres Namens abgerufen werden kann. Der Code erstellt ein <xref:System.Configuration.ConnectionStringSettings>-Objekt, das den bereitgestellten Eingabeparameter mit dem <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>-Namen abgleicht. Wird kein übereinstimmender Name gefunden, gibt die Funktion `null` (`Nothing` in Visual Basic) zurück.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach dem Anbieternamen  
+
  In diesem Beispiel wird gezeigt, wie eine Verbindungszeichenfolge durch Angabe des unveränderlichen Anbieternamens im Format *System.Daten.ProviderName* abgerufen werden kann. Der Code durchläuft die <xref:System.Configuration.ConnectionStringSettingsCollection> und gibt die Verbindungszeichenfolge für den ersten gefundenen <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>-Eintrag zurück. Wird kein Anbietername gefunden, gibt die Funktion `null` (`Nothing` in Visual Basic) zurück.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Verschlüsseln von Konfigurationsdateiabschnitten mit geschützter Konfiguration  
+
  In ASP.NET 2.0 wurde mit der *geschützten Konfiguration* ein neues Feature eingeführt, mit dem Sie sicherheitsrelevante Informationen in einer Konfigurationsdatei verschlüsseln können. Die geschützte Konfiguration wurde zwar primär für ASP.NET entwickelt, sie kann aber auch zum Verschlüsseln von Konfigurationsdateiabschnitten in Windows-Anwendungen verwendet werden. Eine ausführliche Beschreibung der Funktionen der geschützten Konfiguration finden Sie unter [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
  Das folgende Konfigurationsdateifragment zeigt den **connectionStrings**-Abschnitt nach der Verschlüsselung. **configProtectionProvider** gibt den Anbieter für die geschützte Konfiguration an, der zum Verschlüsseln und Entschlüsseln der Verbindungszeichenfolgen verwendet wird. Der **EncryptedData**-Abschnitt enthält den Verschlüsselungstext.  
@@ -121,6 +130,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  Wenn die verschlüsselte Verbindungszeichenfolge zur Laufzeit abgerufen wird, verwendet .NET Framework den angegebenen Anbieter, um den **CipherValue** zu entschlüsseln und ihn für Ihre Anwendung zur Verfügung zu stellen. Sie müssen für die Verwaltung des Entschlüsselungsprozesses keinen zusätzlichen Code schreiben.  
   
 ### <a name="protected-configuration-providers"></a>Anbieter für die geschützte Konfiguration  
+
  Die Anbieter für die geschützte Konfiguration werden im **configProtectedData**-Abschnitt der Datei **machine.config** auf dem lokalen Computer registriert, wie dies im folgenden Fragment dargestellt ist. Das Fragment enthält die beiden Anbieter für die geschützte Konfiguration in .NET Framework. Die hier gezeigten Werte wurden aus Gründen der besseren Lesbarkeit gekürzt.  
   
 ```xml  
@@ -144,12 +154,14 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  Beide Anbieter bieten eine starke Verschlüsselung der Daten. Wenn Sie aber beabsichtigen, ein und dieselbe verschlüsselte Konfigurationsdatei auf mehreren Servern, z. B. in einer Webfarm, zu verwenden, müssen Sie den <xref:System.Configuration.RsaProtectedConfigurationProvider> verwenden, da nur er die Möglichkeit bietet, die zum Verschlüsseln der Daten verwendeten Verschlüsselungsschlüssel zu exportieren und sie auf einem anderen Server zu importieren. Weitere Informationen finden Sie unter [Importieren und Exportieren von RSA-Schlüsselcontainern mit geschützter Konfiguration](/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Verwenden der Konfigurationsklassen  
+
  Der <xref:System.Configuration>-Namespace stellt Klassen zum programmgesteuerten Arbeiten mit Konfigurationseinstellungen bereit. Die <xref:System.Configuration.ConfigurationManager>-Klasse ermöglicht den Zugriff auf Computer-, Anwendungs- und Benutzerkonfigurationsdateien. Wenn Sie eine ASP.NET-Anwendung erstellen, können Sie die- <xref:System.Web.Configuration.WebConfigurationManager> Klasse verwenden, die die gleiche Funktionalität bereitstellt, während Sie auch auf Einstellungen zugreifen können, die für ASP.NET-Anwendungen eindeutig sind, wie z. b. die in **\<system.web>** .  
   
 > [!NOTE]
 > Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>"App.config"-Beispiel  
+
  In diesem Beispiel wird gezeigt, wie Sie die Verschlüsselung des Abschnitts **connectionStrings** in der Datei **app.config** einer Windows-Anwendung aktivieren und deaktivieren können. In diesem Beispiel übernimmt die Prozedur den Namen der Anwendung, z. B. MyApplication.exe, als Argument. Die Datei **app.config** wird dann verschlüsselt und in den Ordner kopiert, der die ausführbare Datei mit dem Namen „MyApplication.exe.config“ enthält.  
   
 > [!NOTE]
@@ -164,6 +176,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
 ### <a name="webconfig-example"></a>"Web.config"-Beispiel  
+
  Das folgende Beispiel verwendet die <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A>-Methode `WebConfigurationManager`. Beachten Sie, dass Sie in diesem Fall den relativen Pfad zur Datei **Web.config** mit einer Tilde angeben können. Der Code benötigt einen Verweis auf die `System.Web.Configuration`-Klasse.  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
@@ -171,7 +184,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
   
  Weitere Informationen zum Sichern von ASP.NET-Anwendungen finden Sie unter [Sichern von ASP.net](/previous-versions/aspnet/91f66yxt(v=vs.100))-Websites.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verbindungszeichenfolgen-Generatoren](connection-string-builders.md)
 - [Schützen von Verbindungsinformationen](protecting-connection-information.md)

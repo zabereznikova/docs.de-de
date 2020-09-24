@@ -2,15 +2,16 @@
 title: Übersicht über Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: b4fe852847d8b1b4bc0b80e3ba8e1f5b4aae9ff7
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: e9a5117984380938e48e0cd1113107c74389480f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202250"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148126"
 ---
 # <a name="entity-sql-overview"></a>Übersicht über Entity SQL
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]ist eine SQL-ähnliche Sprache, die es Ihnen ermöglicht, konzeptionelle Modelle in der Entity Framework abzufragen. Konzeptionelle Modelle stellen Daten als Entitäten und Beziehungen dar und [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ermöglichen es Ihnen, diese Entitäten und Beziehungen in einem Format abzufragen, das den Benutzern, die SQL verwendet haben, vertraut ist.  
+
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine SQL-ähnliche Sprache, die es Ihnen ermöglicht, konzeptionelle Modelle in der Entity Framework abzufragen. Konzeptionelle Modelle stellen Daten als Entitäten und Beziehungen dar und [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ermöglichen es Ihnen, diese Entitäten und Beziehungen in einem Format abzufragen, das den Benutzern, die SQL verwendet haben, vertraut ist.  
 
  Der Entity Framework arbeitet mit Speicher spezifischen Datenanbietern zusammen, um generische [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in Speicher spezifische Abfragen zu übersetzen. Der EntityClient-Anbieter bietet die Möglichkeit, einen [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Befehl für ein Entitätenmodell auszuführen und vielfältige Datentypen, einschließlich skalarer Ergebnisse, Resultsets und Objektdiagrammen, zurückzugeben. Wenn Sie <xref:System.Data.EntityClient.EntityCommand>-Objekte erstellen, können Sie den Namen einer gespeicherten Prozedur oder den Text einer Abfrage angeben, indem Sie der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Eigenschaft eine <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType>-Abfragezeichenfolge zuweisen. Der <xref:System.Data.EntityClient.EntityDataReader> stellt die Ergebnisse eines für ein EDM ausgeführten <xref:System.Data.EntityClient.EntityCommand> zur Verfügung. Zum Ausführen des Befehls, das den <xref:System.Data.EntityClient.EntityDataReader> zurückgibt, rufen Sie <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> auf.  
   
@@ -19,6 +20,7 @@ ms.locfileid: "84202250"
  In diesem Abschnitt werden konzeptionelle Informationen zu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bereitgestellt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Unterschiede zwischen Entity SQL und Transact-SQL](how-entity-sql-differs-from-transact-sql.md)  
   
  [Entity SQL-Kurzreferenz](entity-sql-quick-reference.md)  
@@ -47,11 +49,11 @@ ms.locfileid: "84202250"
   
  [Eingabezeichensatz](input-character-set-entity-sql.md)  
   
- [Abfrage Ausdrücke](query-expressions-entity-sql.md)  
+ [Abfrageausdrücke](query-expressions-entity-sql.md)  
   
  [Funktionen](functions-entity-sql.md)  
   
- [Operator Rangfolge](operator-precedence-entity-sql.md)  
+ [Operatorrangfolge](operator-precedence-entity-sql.md)  
   
  [Paging](paging-entity-sql.md)  
   
@@ -61,7 +63,7 @@ ms.locfileid: "84202250"
   
  [Strukturierte Typen, die NULL-Werte zulassen](nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entity SQL-Referenz](entity-sql-reference.md)
 - [Entity SQL-Sprache](entity-sql-language.md)

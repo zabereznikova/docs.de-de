@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: a28eaf68fe1e6ab3f26592eee5ae2d0f2e7a3256
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6c57810389acbd58e6d2e05277a6f26fa0aac8c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155166"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149516"
 ---
 # <a name="oidmap-element"></a>\<oidMap>-Element
+
 Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,26 +32,29 @@ Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<oidEntry>](oidentry-element.md)|Ordnet eine ASN. 1-OID einem anzeigen Amen zu.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
 |`mscorlib`|Enthält das- `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie das-Element verwendet wird **\<oidMap>** , um eine Zuordnung einer OID für den RIPEMD-160-Hash Algorithmus zu einer Implementierung dieses Hash Algorithmus zu enthalten.  
   
 ```xml  
@@ -77,6 +81,6 @@ Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.
 
 - [Konfigurationsdateischema](../index.md)
 - [Schema für Kryptografieeinstellungen](index.md)
-- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../map-object-identifiers-to-cryptography-algorithms.md)

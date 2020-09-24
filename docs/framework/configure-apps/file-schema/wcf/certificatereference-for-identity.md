@@ -2,14 +2,15 @@
 title: <certificateReference> für <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
-ms.openlocfilehash: 93a6290d780ff61756f7315cd0c32f0e199ca00f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3daa2dcdf9b464b51cfb9c883cbb828bccb42df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70849987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148996"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference> für \<identity>
+
 Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Ein Secure Windows Communication Foundation (WCF)-Client, der eine Verbindung mit einem Endpunkt mit dieser Identität herstellt, stellt sicher, dass die vom Server dargestellten Ansprüche den Identitäts Anspruch enthalten, der zum Erstellen dieser Identität verwendet wurde.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Ein Secure W
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |findValue|Legt den Wert fest, nach dem im X.509-Zertifikatspeicher gesucht werden soll. Der in diesem Attribut enthaltene Typ muss den Anforderungen des angegebenen `X509FindType`-Werts entsprechen. Der Standardwert ist eine leere Zeichenfolge.|  
 |isChainIncluded|Ein boolescher Wert, der angibt, ob die Validierung mithilfe einer Zertifikatkette durchgeführt wird.|  
@@ -44,6 +46,7 @@ Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Ein Secure W
 |X509FindType|Gibt den Typ der auszuführenden X.509-Suche an. Der im `findValue`-Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen.<br /><br /> Gültige Werte sind:<br /><br /> -FindByThumbprint<br />-Findbysubjetname<br />-Findbysubjeterkennbare shedname<br />-FindByIssuerName<br />-Findbyissuerissushedname<br />-Findbyserialnumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-Findbytemplatename<br />-Findbyapplicationpolicy<br />-Findbycertificatepolicy<br />-Findbyextension<br />-Findbykeyusage<br />-Findbysubjetkeyidentifier<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

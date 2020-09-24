@@ -3,14 +3,15 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 56a44fdb62062903ca3ad00f8105a66ccab02cca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d6c86d02e14a38c2a35ba4858c4abfea73268fd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151961"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148710"
 ---
 # \<sqlWorkflowInstanceStore>
+
 Ein Dienstverhalten, das es ermöglicht, die Funktion <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zu konfigurieren, die das Beibehalten von Zustandsinformationen für Workflowdienstinstanzen in eine SQL Server 2005- oder SQL Server 2008-Datenbank unterstützt. Weitere Informationen zu diesem Feature finden Sie unter [SQL-workflowinstanzspeicher](../../../windows-workflow-foundation/sql-workflow-instance-store.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,11 +39,12 @@ Ein Dienstverhalten, das es ermöglicht, die Funktion <xref:System.Activities.Du
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |connectionString|Eine Zeichenfolge, die die Verbindungszeichenfolge enthält, mithilfe derer eine Verbindung mit einer zugrunde liegenden Persistenzdatenbank hergestellt wird.|  
 |connectionStringName|Eine Zeichenfolge, die eine benannte Verbindungszeichenfolge zum Datenbankserver enthält. Ein Beispiel für eine benannte Verbindungs Zeichenfolge ist "defaultconnectionstring".|  
@@ -53,13 +55,14 @@ Ein Dienstverhalten, das es ermöglicht, die Funktion <xref:System.Activities.Du
 |runnableInstancesDetectionPeriod||  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>Natürlich\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Gibt ein Verhaltenselement an.|  
+|[\<behavior> von \<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="see-also"></a>Weitere Informationen
 

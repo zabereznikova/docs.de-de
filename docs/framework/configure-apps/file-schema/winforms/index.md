@@ -2,14 +2,15 @@
 title: Konfigurationsabschnitt für Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d518ec03602580f3c5d00ef2901ff7d7ac1d81b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546907"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148502"
 ---
 # <a name="windows-forms-configuration-section"></a>Konfigurationsabschnitt für Windows Forms
+
 Konfigurationseinstellungen für Windows Forms ermöglichen einer Windows Forms-App das Speichern und Abrufen von Informationen über benutzerdefinierte Anwendungseinstellungen wie z.B. Unterstützung mehrerer Monitore, Unterstützung für hohe DPI-Werte sowie weitere vorab definierte Konfigurationseinstellungen.
 
 Windows Forms-Anwendungskonfigurationseinstellungen werden im `System.Windows.Forms.ApplicationConfigurationSection`-Element der Anwendungskonfigurationsdatei gespeichert.
@@ -34,17 +35,17 @@ Keine
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Element  |BESCHREIBUNG |
+Element  |Beschreibung |
 ---------|---------|
 [`<add>`](windows-forms-add-configuration-element.md) | Fügt einen Konfigurationseinstellungsschlüssel mit einem angegebenen Wert hinzu. |
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-Element  |BESCHREIBUNG |
+Element  |Beschreibung |
 ---------|---------|
 [\<configuration>](../configuration-element.md) | Das Stammelement in jeder von der Common Language Runtime und Windows Forms-Anwendungen verwendeten Konfigurationsdatei. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
