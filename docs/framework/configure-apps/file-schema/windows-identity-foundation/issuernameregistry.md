@@ -3,14 +3,15 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: 209e702da80f2569f2b6c068f50f1af4489157f6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9991430f09cb6a63d0a3cdde24a4ff03d3dd746d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165051"
 ---
 # \<issuerNameRegistry>
+
 Konfiguriert die Aussteller Namen Registrierung, die von Handlern in der Auflistung der Tokenhandler verwendet wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Konfiguriert die Aussteller Namen Registrierung, die von Handlern in der Auflist
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -58,6 +60,7 @@ Konfiguriert die Aussteller Namen Registrierung, die von Handlern in der Auflist
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheitstokenhandlern bereit.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Alle Aussteller Token werden mithilfe der Aussteller Namen Registrierung überprüft. Dies ist ein Objekt, das von der-Klasse abgeleitet wird <xref:System.IdentityModel.Tokens.IssuerNameRegistry> . Die Aussteller Namen Registrierung wird verwendet, um einem kryptografiematerial, das zum Überprüfen der Signaturen von Token, die vom entsprechenden Aussteller erstellt werden, einen mnetmonischen Namen zuzuordnen. Die Aussteller Namen Registrierung verwaltet eine Liste der Aussteller, die von der Anwendung der vertrauenden Seite als vertrauenswürdig eingestuft werden. Der Typ der Aussteller Namen Registrierung wird mithilfe des- `type` Attributs angegeben. Das- `<issuerNameRegistry>` Element kann ein oder mehrere untergeordnete-Elemente aufweisen, die die Konfiguration für den angegebenen Typ bereitstellen. Die Logik, die diese untergeordneten Elemente verarbeitet, wird durch Überschreiben der-Methode bereitgestellt <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> .  
   
  WIF bietet standardmäßig einen Registrierungs Typ für einen einzelnen Aussteller Namen, die- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse. Diese Klasse verwendet einen Satz vertrauenswürdiger Aussteller Zertifikate, die in der Konfiguration angegeben sind. Hierfür ist ein untergeordnetes Konfigurationselement erforderlich, `<trustedIssuers>` unter dem die Sammlung vertrauenswürdiger Aussteller Zertifikate konfiguriert ist. Vertrauenswürdige Zertifikate werden mithilfe der ASN. 1-codierten Form des Zertifikat Fingerabdrucks angegeben und der Auflistung mithilfe der `<add>` Elemente, oder hinzugefügt bzw. daraus entfernt `<clear>` `<remove>` .  
@@ -68,6 +71,7 @@ Konfiguriert die Aussteller Namen Registrierung, die von Handlern in der Auflist
 > Die Angabe des- `<issuerNameRegistry>` Elements als untergeordnetes Element des-Elements wurde als [\<identityConfiguration>](identityconfiguration.md) veraltet markiert, wird jedoch aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Die Einstellungen für das- `<securityTokenHandlerConfiguration>` Element überschreiben die für das- `<identityConfiguration>` Element.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende XML-Code zeigt, wie die konfigurationsbasierte Aussteller Namen Registrierung angegeben wird.  
   
 ```xml  

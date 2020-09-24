@@ -2,15 +2,16 @@
 title: Ableiten von Elementtext
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7389e24f39902edf041c3cd3502303b17fd008ba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784543"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164687"
 ---
 # <a name="inferring-element-text"></a>Ableiten von Elementtext
-Wenn ein Element Text enthält und keine untergeordneten Elemente als Tabellen abgeleitet werden sollen (z. b. Elemente mit Attributen oder wiederholten Elementen), wird der Tabelle eine neue Spalte mit dem Namen **TableName_Text** hinzugefügt, die für das Element abgeleitet wird. Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert. Die **ColumnMapping** -Eigenschaft der neuen Spalte wird auf **MappingType. SimpleContent**festgelegt.  
+
+Wenn ein Element Text enthält und es keine untergeordneten Elemente gibt, die als Tabellen abgeleitet werden sollen (z. b. Elemente mit Attributen oder wiederholten Elementen), wird eine neue Spalte mit dem Namen **TableName_Text** der Tabelle hinzugefügt, die für das Element abgeleitet wird. Der in dem Element enthaltene Text wird einer Tabellenzeile hinzugefügt und in der neuen Spalte gespeichert. Die **ColumnMapping** -Eigenschaft der neuen Spalte wird auf **MappingType. SimpleContent**festgelegt.  
   
  Betrachten Sie beispielsweise den folgenden XML-Code:  
   
@@ -22,9 +23,9 @@ Wenn ein Element Text enthält und keine untergeordneten Elemente als Tabellen a
   
  Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen **Element1** mit zwei Spalten: **attr1** und **Element1_Text**. Die **ColumnMapping** -Eigenschaft der **attr1** -Spalte wird auf **MappingType. Attribute**festgelegt. Die **ColumnMapping** -Eigenschaft der **Element1_Text** -Spalte wird auf **MappingType. SimpleContent**festgelegt.  
   
- **DataSet** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Glaub** Element1  
+ **Tabelle:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -42,19 +43,19 @@ Wenn ein Element Text enthält und keine untergeordneten Elemente als Tabellen a
   
  Der Rückschluss Prozess erzeugt eine Tabelle mit dem Namen " **Element1** " mit einer Spalte mit dem Namen " **ChildElement1**". Der Text für das **ChildElement1** -Element wird in eine Zeile in der Tabelle eingeschlossen. Der restliche Text wird ignoriert. Die **ColumnMapping** -Eigenschaft der **ChildElement1** -Spalte wird auf **MappingType. Element**festgelegt.  
   
- **DataSet** DocumentElement  
+ **DataSet:** DocumentElement  
   
- **Glaub** Element1  
+ **Tabelle:** Element1  
   
 |ChildElement1|  
 |-------------------|  
 |Text2|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](inferring-dataset-relational-structure-from-xml.md)
-- [Laden eines DataSet aus XML](loading-a-dataset-from-xml.md)
+- [Laden eines "DataSets" aus XML](loading-a-dataset-from-xml.md)
 - [Laden von DataSet-Schemainformationen aus XML](loading-dataset-schema-information-from-xml.md)
 - [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
-- [DataSets, DataTables und DataViews](index.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

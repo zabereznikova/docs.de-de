@@ -2,16 +2,16 @@
 title: 'Anhang: GrpC für WCF-Entwickler'
 description: Erörterung verteilter Transaktionen und ihrer Implementierung in modernen microservicesarchitekturen.
 ms.date: 09/02/2019
-ms.openlocfilehash: 9931681727f921e007c2f80852ad0e69cd7288de
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f60899463a13e9f740f6ae63150d18eab3069124
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711470"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165857"
 ---
 # <a name="appendix-a---transactions"></a>Anhang A-Transaktionen
 
-Windows Communication Foundation (WCF) unterstützt verteilte Transaktionen, sodass Sie atomarische Vorgänge über mehrere Dienste hinweg ausführen können. Diese Funktionalität basiert auf der [Microsoft-Distributed Transaction Coordinator](https://docs.microsoft.com/previous-versions/windows/desktop/ms684146(v=vs.85)).
+Windows Communication Foundation (WCF) unterstützt verteilte Transaktionen, sodass Sie atomarische Vorgänge über mehrere Dienste hinweg ausführen können. Diese Funktionalität basiert auf der [Microsoft-Distributed Transaction Coordinator](/previous-versions/windows/desktop/ms684146(v=vs.85)).
 
 In der neueren Umgebung für die mikrodienste ist diese Art der automatisierten Verarbeitung verteilter Transaktionen nicht möglich. Es sind zu viele verschiedene Technologien beteiligt, darunter relationale Datenbanken, nosql-Datenspeicher und Messaging Systeme. Möglicherweise gibt es auch eine Mischung aus Betriebssystemen, Programmiersprachen und Frameworks, die in einer einzigen Umgebung verwendet werden.
 
@@ -21,7 +21,7 @@ Wenn möglich, ist es am besten, verteilte Transaktionen vollständig zu vermeid
 
 Wenn dies nicht möglich ist, besteht eine Alternative darin, das [Saga-Muster](https://microservices.io/patterns/data/saga.html)zu verwenden. In einer Saga werden Updates sequenziell verarbeitet. Wenn jedes Update erfolgreich ist, wird das nächste Update ausgelöst. Diese Trigger können von Dienst zu Dienst oder von einem Saga-Koordinator oder Orchestrator verwaltet werden. Wenn ein Update zu einem beliebigen Zeitpunkt während des Prozesses fehlschlägt, wenden die Dienste, die Ihre Updates bereits abgeschlossen haben, bestimmte Logik an, um Sie umzukehren.
 
-Eine weitere Möglichkeit ist die Verwendung von Domain-gesteuertem Design (DDD) und Command/Query Responsibility Segregation (cqrs), wie im [e-book für .net-mikrodienste](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)beschrieben. Insbesondere kann die Verwendung von Domänen Ereignissen oder der [Ereignis Beschaffung](https://martinfowler.com/eaaDev/EventSourcing.html) dabei helfen, sicherzustellen, dass Updates konsistent sind, wenn Sie nicht sofort angewendet werden.
+Eine weitere Möglichkeit ist die Verwendung von Domain-gesteuertem Design (DDD) und Command/Query Responsibility Segregation (cqrs), wie im [e-book für .net-mikrodienste](../microservices/microservice-ddd-cqrs-patterns/index.md)beschrieben. Insbesondere kann die Verwendung von Domänen Ereignissen oder der [Ereignis Beschaffung](https://martinfowler.com/eaaDev/EventSourcing.html) dabei helfen, sicherzustellen, dass Updates konsistent sind, wenn Sie nicht sofort angewendet werden.
 
 >[!div class="step-by-step"]
->[Vorheriges](application-performance-management.md)
+>[Vorherige](application-performance-management.md)

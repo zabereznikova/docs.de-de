@@ -2,12 +2,12 @@
 title: DevOps
 description: Devops-Überlegungen für Native Cloud-Anwendungen
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614115"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163998"
 ---
 # <a name="devops"></a>DevOps
 
@@ -154,7 +154,7 @@ Die Phasen in den Boards sind nicht das einzige Organisations Tool. Abhängig vo
 
 Das Beschreibungsfeld unterstützt die normalen Formate, die Sie erwarten (Fett, kursiv und durchgestrichen), sowie die Möglichkeit zum Einfügen von Bildern. Dadurch ist es ein leistungsfähiges Tool, das beim Angeben von Arbeit oder Fehlern verwendet werden kann.
 
-Aufgaben können in Funktionen eingeführt werden, die eine größere Arbeitseinheit definieren. Funktionen können wiederum in [EPICS hoch](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)Gefahren werden. Durch die Klassifizierung von Aufgaben in dieser Hierarchie wird deutlich leichter zu verstehen, wie das Rollout eines großen Features das Rollout ermöglicht.
+Aufgaben können in Funktionen eingeführt werden, die eine größere Arbeitseinheit definieren. Funktionen können wiederum in [EPICS hoch](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)Gefahren werden. Durch die Klassifizierung von Aufgaben in dieser Hierarchie wird deutlich leichter zu verstehen, wie das Rollout eines großen Features das Rollout ermöglicht.
 
 ![Abbildung 10-6 standardmäßig konfigurierte Arbeits Elementtypen in der grundlegenden Prozess Vorlage](./media/board-issue-types.png)
 

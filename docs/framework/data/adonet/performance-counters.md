@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4f645a51996078f8dd80b6c455c420633db36155
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557904"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164598"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
+
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  
   
 ## <a name="available-performance-counters"></a>Verfügbare Leistungsindikatoren  
+
  Derzeit sind für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient> 14 verschiedene Leistungsindikatoren verfügbar (siehe Beschreibung in der folgenden Tabelle). Die Indikatoren behalten in allen lokalisierten Microsoft .NET Framework-Versionen ihre englischen Namen.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -37,10 +39,13 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
 |`SoftDisconnectsPerSecond`|Anzahl der aktiven Verbindungen, die an den Verbindungspool zurückgegeben werden **Hinweis:**  Dieser Leistungswert ist standardmäßig nicht aktiviert. Informationen zum Aktivieren dieses Leistungsindikators finden Sie unter [Aktivieren von Standard](#ActivatingOffByDefault)mäßigen Leistungsindikatoren.|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Verbindungspoolgruppen und Verbindungspools  
+
  Bei der Verwendung der Windows-Authentifizierung (integrierte Sicherheit) müssen die folgenden beiden Leistungsindikatoren überwacht werden: `NumberOfActiveConnectionPoolGroups` und `NumberOfActiveConnectionPools`. Dies liegt daran, dass Verbindungspoolgruppen eindeutigen Verbindungszeichenfolgen zugeordnet werden. Bei Verwendung der integrierten Sicherheit werden die Verbindungspools den Verbindungszeichenfolgen zugeordnet, und zusätzlich werden separate Pools für einzelne Windows-Identitäten erstellt. Wenn Fred und Julie z. B. innerhalb derselben Anwendungsdomäne beide die `"Data Source=MySqlServer;Integrated Security=true"`-Verbindungszeichenfolge verwenden, wird für die Verbindungszeichenfolge eine Verbindungspoolgruppe erstellt, und es werden zwei zusätzliche Pools erstellt: einer für Fred und einer für Julie. Wenn John und Martha eine Verbindungs Zeichenfolge mit einem identischen SQL Server-Anmelde Namen verwenden, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` wird nur ein einzelner Pool für die **lowPrivUser** -Identität erstellt.  
   
 <a name="ActivatingOffByDefault"></a>
+
 ### <a name="activating-off-by-default-counters"></a>Aktivieren von Indikatoren, die standardmäßig deaktiviert sind  
+
  Die Leistungsindikatoren `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond` und `SoftConnectsPerSecond` sind standardmäßig deaktiviert. Fügen Sie zum Aktivieren dieser Indikatoren in der Konfigurationsdatei der Anwendung folgende Informationen hinzu:  
   
 ```xml  
@@ -53,6 +58,7 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>Abrufen von Leistungsindikatorwerten  
+
  Die folgende Konsolenanwendung zeigt, wie Sie in Ihrer Anwendung Leistungsindikatorwerte abrufen können. Die Verbindungen müssen offen und aktiv sein, damit Informationen für alle ADO.NET-Leistungsindikatoren zurückgegeben werden.  
   
 > [!NOTE]
@@ -395,7 +401,7 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Herstellen der Verbindung mit einer Datenquelle](connecting-to-a-data-source.md)
 - [OLE DB-, ODBC- und Oracle-Verbindungspooling](ole-db-odbc-and-oracle-connection-pooling.md)

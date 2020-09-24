@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794139"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164297"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Verzögertes im Vergleich zu unmittelbarem Laden
-Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Objekt abgerufen. Die *verknüpften Objekte werden* nicht automatisch gleichzeitig abgerufen. (Weitere Informationen finden Sie unter [Beziehungs übergreifende Abfragen](querying-across-relationships.md).) Für Sie ist nicht erkennbar, dass verwandte Objekte nicht bereits geladen sind, da der Versuch, auf diese Objekte zuzugreifen, eine Abfrage erzeugt, die diese Objekte abruft.  
+
+Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Objekt abgerufen. Die *verknüpften Objekte werden* nicht automatisch gleichzeitig abgerufen. (Weitere Informationen finden Sie unter [Beziehungs übergreifende Abfragen](querying-across-relationships.md).) Die Tatsache, dass die verknüpften Objekte nicht bereits geladen sind, wird nicht angezeigt, da der Versuch, darauf zuzugreifen, eine Anforderung erzeugt, mit der Sie abgerufen werden.  
   
  Beispielsweise können Sie eine Abfrage nach einem bestimmten Satz von Bestellungen durchsuchen und dann nur gelegentlich eine e-Mail-Benachrichtigung an bestimmte Kunden senden. Sie müssen nicht notwendigerweise zunächst alle Kundendaten zu jeder Bestellung abrufen. Sie können mithilfe von verzögertem Laden weitere Informationen erst dann abrufen, wenn Sie diese benötigen. Betrachten Sie das folgende Beispiel:  
   
@@ -33,6 +34,6 @@ Wenn Sie eine Abfrage für ein Objekt durchführen, wird nur das angeforderte Ob
   
 - Die <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A>-Methode zum Filtern abgerufener Objekte nach einer bestimmten Beziehung.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfragekonzepte](query-concepts.md)

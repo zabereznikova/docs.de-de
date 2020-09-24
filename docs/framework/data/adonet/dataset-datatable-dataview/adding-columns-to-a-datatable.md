@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7f220f5d8cbc4b1c12dec018a4497c6bc492f3c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286946"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164882"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Hinzufügen von Spalten zu einer "DataTable"
+
 Eine <xref:System.Data.DataTable> enthält eine Auflistung von-Objekten, auf <xref:System.Data.DataColumn> die von der **Columns** -Eigenschaft der Tabelle verwiesen wird. Diese Auflistung von Spalten, zusammen mit allen Einschränkungen, definiert das Schema oder die Struktur der Tabelle.  
   
  Sie erstellen **datacolenn** -Objekte innerhalb einer Tabelle mithilfe des **datacolumschlag** -Konstruktors oder durch Aufrufen der **Add** -Methode der **Columns** -Eigenschaft der Tabelle, bei der es sich um eine handelt <xref:System.Data.DataColumnCollection> . Die **Add** -Methode akzeptiert optionale **ColumnName**-, **DataType**-und **Expression** -Argumente und erstellt eine neue **datacolenn** als Member der Auflistung. Außerdem akzeptiert Sie ein vorhandenes **datacolenumn** -Objekt und fügt es der Collection hinzu und gibt bei Bedarf einen Verweis auf die hinzugefügte **datacolenn** zurück. Da **Daten** Tabelle nicht spezifisch für Datenquellen ist, werden .NET Framework Typen beim Angeben des Datentyps einer **datacolenumn**verwendet.  
@@ -52,7 +53,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
   
  Wenn Sie das <xref:System.Xml.Linq.XElement>-Element als <xref:System.Data.DataColumn.DataType%2A> einer <xref:System.Data.DataColumn> in der <xref:System.Data.DataTable> verwenden, funktioniert die XML-Serialisierung beim Einlesen von Daten nicht. Wenn Sie beispielsweise ein <xref:System.Xml.XmlDocument> mit der `DataTable.WriteXml`-Methode schreiben, wird bei der Serialisierung in XML ein zusätzlicher übergeordneter Knoten im <xref:System.Xml.Linq.XElement>-Element hinzugefügt. Um dieses Problem zu umgehen, verwenden Sie den <xref:System.Data.SqlTypes.SqlXml>-Typ statt des <xref:System.Xml.Linq.XElement>-Elements. `ReadXml` und `WriteXml` funktionieren mit <xref:System.Data.SqlTypes.SqlXml> ordnungsgemäß.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>

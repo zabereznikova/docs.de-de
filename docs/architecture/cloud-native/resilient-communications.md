@@ -3,12 +3,12 @@ title: Resiliente Kommunikation
 description: Architektur von Cloud Native .net-apps für Azure | Robuste Kommunikation
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613745"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166039"
 ---
 # <a name="resilient-communications"></a>Robuste Kommunikation
 
@@ -20,7 +20,7 @@ In diesem Buch haben wir einen auf microservices basierenden Architekturansatz e
 
 - *Resilienz.* Wie verwalten Sie kurzlebige Ausfälle, und halten Sie das System stabil?
 
-- *Lastenausgleich.* Wie wird eingehender Datenverkehr auf mehrere Instanzen eines-mikrodienstanzen verteilt?
+- *Lastenausgleich:* Wie wird eingehender Datenverkehr auf mehrere Instanzen eines-mikrodienstanzen verteilt?
 
 - *Sicherheit.* Wie werden Sicherheitsprobleme wie die Verschlüsselung auf Transport Ebene und die Zertifikat Verwaltung erzwungen?
 
@@ -30,7 +30,7 @@ Sie können diese Probleme mit verschiedenen Bibliotheken und Frameworks beheben
 
 ## <a name="service-mesh"></a>Dienst Gitter
 
-Ein besserer Ansatz ist eine sich entwickelnde Technologie mit dem *Dienst Mesh*. Ein [Dienst Netz](https://www.nginx.com/blog/what-is-a-service-mesh/) ist eine konfigurierbare Infrastruktur Schicht mit integrierten Funktionen für die Dienst Kommunikation und die anderen oben genannten Herausforderungen. Sie entkoppelt diese Probleme, indem Sie Sie in einen Dienst Proxy verschieben. Der Proxy wird in einem separaten Prozess (als [Sidecar](https://docs.microsoft.com/azure/architecture/patterns/sidecar)bezeichnet) bereitgestellt, um die Isolation von Geschäfts Code bereitzustellen. Der Sidecar ist jedoch mit dem Dienst verknüpft, und er wird mit dem Dienst erstellt und hat seinen Lebenszyklus gemeinsam. In Abbildung 6-7 wird dieses Szenario veranschaulicht.
+Ein besserer Ansatz ist eine sich entwickelnde Technologie mit dem *Dienst Mesh*. Ein [Dienst Netz](https://www.nginx.com/blog/what-is-a-service-mesh/) ist eine konfigurierbare Infrastruktur Schicht mit integrierten Funktionen für die Dienst Kommunikation und die anderen oben genannten Herausforderungen. Sie entkoppelt diese Probleme, indem Sie Sie in einen Dienst Proxy verschieben. Der Proxy wird in einem separaten Prozess (als [Sidecar](/azure/architecture/patterns/sidecar)bezeichnet) bereitgestellt, um die Isolation von Geschäfts Code bereitzustellen. Der Sidecar ist jedoch mit dem Dienst verknüpft, und er wird mit dem Dienst erstellt und hat seinen Lebenszyklus gemeinsam. In Abbildung 6-7 wird dieses Szenario veranschaulicht.
 
 ![Dienst Netz mit einem seitigen Fahrzeug](./media/service-mesh-with-side-car.png)
 
@@ -74,28 +74,28 @@ Wie bereits erwähnt, wird der Gesandte als Sidecar für jeden der einzelnen mik
 
 Die Azure-Cloud bietet istio an und bietet direkten Support für Sie in Azure Kubernetes Services. Die folgenden Links helfen Ihnen beim Einstieg:
 
-- [Installieren von istio in AKS](https://docs.microsoft.com/azure/aks/istio-install)
-- [Verwenden von AKS und istio](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [Installieren von istio in AKS](/azure/aks/istio-install)
+- [Verwenden von AKS und istio](/azure/aks/istio-scenario-routing)
 
-### <a name="references"></a>Referenzen
+### <a name="references"></a>References
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [Wiederholungsmuster](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [Wiederholungsmuster](/azure/architecture/patterns/retry)
 
-- [Trennschalter-Muster](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- [Trennschalter-Muster](/azure/architecture/patterns/circuit-breaker)
 
 - [Whitepaper zur Resilienz in Azure](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [Netzwerk Latenz](https://www.techopedia.com/definition/8553/network-latency)
 
-- [Redundanz](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [Redundanz](/azure/architecture/guide/design-principles/redundancy)
 
-- [georeplikation](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [georeplikation](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 
-- [Anleitungen für die automatische Skalierung](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [Anleitungen für die automatische Skalierung](/azure/architecture/best-practices/auto-scaling)
 
 - [Istio](https://istio.io/docs/concepts/what-is-istio/)
 

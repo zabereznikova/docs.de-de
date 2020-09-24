@@ -3,12 +3,12 @@ title: Service Mesh-Kommunikationsinfrastruktur
 description: Erfahren Sie, wie Service Mesh-Technologien die cloudbasierte mikroservicekommunikation optimieren.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 1b11024cd029433c756812850e2665b7836a13d3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 39dc1ded06eb0b92a2a1b40cfe981d9bd49bf381
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613685"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165948"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Service Mesh-Kommunikationsinfrastruktur
 
@@ -18,7 +18,7 @@ Wir haben unterschiedliche Ansätze für die Implementierung von synchroner HTTP
 
 Ein modernerer Ansatz für die Kommunikation zwischen den microservices ist eine neue und schnell weiterentwickelnde Technologie mit dem *Service Mesh*. Ein [Dienst Netz](https://www.nginx.com/blog/what-is-a-service-mesh/) ist eine konfigurierbare Infrastruktur Schicht mit integrierten Funktionen für die Kommunikation zwischen Dienst und Dienst, Resilienz und viele übergreifende Aspekte. Dadurch wird die Verantwortung für diese Belange von den-und in der Service Mesh-Schicht verlagert. Die Kommunikation wird von Ihren-Diensten abstrahiert.
 
-Eine Schlüsselkomponente eines Dienst Netzes ist ein Proxy. In einer cloudanwendung wird in der Regel eine Instanz eines Proxys mit jedem-mikrodienst zusammengestellt. Während Sie in separaten Prozessen ausgeführt werden, sind die beiden eng miteinander verknüpft und haben denselben Lebenszyklus gemeinsam. Dieses Muster, das als [Sidecar-Muster](https://docs.microsoft.com/azure/architecture/patterns/sidecar)bezeichnet wird, ist in Abbildung 4-24 dargestellt.
+Eine Schlüsselkomponente eines Dienst Netzes ist ein Proxy. In einer cloudanwendung wird in der Regel eine Instanz eines Proxys mit jedem-mikrodienst zusammengestellt. Während Sie in separaten Prozessen ausgeführt werden, sind die beiden eng miteinander verknüpft und haben denselben Lebenszyklus gemeinsam. Dieses Muster, das als [Sidecar-Muster](/azure/architecture/patterns/sidecar)bezeichnet wird, ist in Abbildung 4-24 dargestellt.
 
 ![Dienst Netz mit einem seitigen Fahrzeug](./media/service-mesh-with-side-car.png)
 
@@ -40,21 +40,21 @@ In diesem Kapitel haben wir die cloudbasierten Kommunikationsmuster erläutert. 
 
 Besonderes Augenmerk lag auf verwalteten Azure-Diensten, die bei der Implementierung von Kommunikation in cloudbasierten Systemen helfen können:
 
-- [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
+- [Azure Application Gateway](/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
 - [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
-- [Azure Storage-Warteschlangen](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure Storage-Warteschlangen](/azure/storage/queues/storage-queues-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Event Grid](/azure/event-grid/overview)
 - [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
 
 Wir wechseln als nächstes zu verteilten Daten in cloudbasierten Systemen und den Vorteilen und Herausforderungen, die es bietet.
 
-### <a name="references"></a>Referenzen
+### <a name="references"></a>References
 
 - [.Net-microservices: Architektur für .NET-Container Anwendungen](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Entwerfen der Kommunikation zwischen Diensten für-Dienste](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
+- [Entwerfen der Kommunikation zwischen Diensten für-Dienste](/azure/architecture/microservices/design/interservice-communication)
 
 - [Azure signalr Service, ein vollständig verwalteter Dienst zum Hinzufügen von Echtzeitfunktionen](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
@@ -64,9 +64,9 @@ Wir wechseln als nächstes zu verteilten Daten in cloudbasierten Systemen und de
 
 - [Dokumentation zu GrpC](https://grpc.io/docs/guides/)
 
-- [gRPC für WCF-Entwickler](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
+- [gRPC für WCF-Entwickler](../grpc-for-wcf-developers/index.md)
 
-- [Vergleichen von GrpC-Diensten mit http-APIs](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [Vergleichen von GrpC-Diensten mit http-APIs](/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 - [Entwickeln von GrpC-Diensten mit .net-Video](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 

@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c00e5e42508160a210d16f058c46afbf62ae0ee0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786261"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164726"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
+
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  
   
-|event|Beschreibung|  
+|Ereignis|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Tritt ein, nachdem die <xref:System.Data.DataTable.EndInit%2A>-Methode einer `DataTable` aufgerufen wurde. Dieses Ereignis ist hauptsächlich zur Unterstützung von Szenarien zur Entwurfszeit gedacht.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Tritt ein, nachdem ein Wert in einer <xref:System.Data.DataColumn> erfolgreich geändert wurde.|  
@@ -36,6 +37,7 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
 > Wenn Daten in einem `DataSet` geändert werden, über das das `RowChanged`-Ereignis ausgelöst wird, können Daten beschädigt werden. Bei einer solchen Datenbeschädigung wird keine Ausnahme ausgelöst.  
   
 ## <a name="additional-related-events"></a>Weitere verwandte Ereignisse  
+
  Die <xref:System.Data.DataTable.Constraints%2A>-Eigenschaft enthält eine <xref:System.Data.ConstraintCollection>-Instanz. Die <xref:System.Data.ConstraintCollection>-Klasse macht ein <xref:System.Data.ConstraintCollection.CollectionChanged>-Ereignis verfügbar. Dieses Ereignis wird ausgelöst, wenn eine Einschränkung hinzugefügt, geändert oder aus der `ConstraintCollection` entfernt wird.  
   
  Die <xref:System.Data.DataTable.Columns%2A>-Eigenschaft enthält eine <xref:System.Data.DataColumnCollection>-Instanz. Die `DataColumnCollection`-Klasse macht ein <xref:System.Data.DataColumnCollection.CollectionChanged>-Ereignis verfügbar. Dieses Ereignis wird ausgelöst, wenn eine `DataColumn` hinzugefügt, geändert oder aus der `DataColumnCollection` entfernt wird. Zu den Änderungen, die das Ereignis auslösen, gehören Änderungen des Namens, des Typs, des Ausdrucks oder der Ordinalposition einer Spalte.  
@@ -45,6 +47,7 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
  Änderungen an `DataRows` können auch Ereignisse für eine verknüpfte <xref:System.Data.DataView> auslösen. Die `DataView`-Klasse macht ein <xref:System.Data.DataView.ListChanged>-Ereignis verfügbar, das ausgelöst wird, wenn sich ein `DataColumn`-Wert ändert oder wenn sich die Zusammensetzung oder Sortierreihenfolge der Ansicht ändert. Die <xref:System.Data.DataRowView>-Klasse macht ein <xref:System.Data.DataRowView.PropertyChanged>-Ereignis verfügbar, das ausgelöst wird, wenn sich ein verknüpfter `DataColumn`-Wert ändert.  
   
 ## <a name="sequence-of-operations"></a>Abfolge der Vorgänge  
+
  Beim Hinzufügen, Ändern oder Löschen einer `DataRow` laufen die Vorgänge in der folgenden Reihenfolge ab:  
   
 1. Der vorgeschlagene Datensatz wird erstellt, und alle Änderungen werden übernommen.  
@@ -74,14 +77,15 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
 > Lösen Sie keine <xref:System.NullReferenceException> im `RowChanged`-Ereignishandler aus. Wenn eine <xref:System.NullReferenceException> im `RowChanged`-Ereignis einer `DataTable` ausgelöst wird, führt dies zur Beschädigung der `DataTable`.  
   
 ### <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie Ereignishandler für die Ereignisse `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared` und `TableClearing` erstellt werden können. Jeder Ereignishandler zeigt die Ausgabe beim Auslösen der Ereignisse im Konsolenfenster an.  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer "DataTable"](manipulating-data-in-a-datatable.md)
 - [Behandeln von DataAdapter-Ereignissen](../handling-dataadapter-events.md)
-- [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](handling-dataset-events.md)
+- [Behandeln von DataSet-Ereignissen](handling-dataset-events.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

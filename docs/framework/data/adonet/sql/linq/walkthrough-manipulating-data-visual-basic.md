@@ -4,21 +4,23 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: dbf18273e69ff0977f5d16ff179b8659865ef696
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003394"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164050"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)
+
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Hinzufügen, Ändern und Löschen von Daten in einer Datenbank bereit. Sie werden eine Kopie der Beispieldatenbank Northwind verwenden, um einen Kunden hinzuzufügen, den Namen des Kunden zu ändern und eine Bestellung zu löschen.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
+
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
 - Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest2") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
@@ -36,9 +38,10 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Übersicht  
+
  Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:  
   
-- Erstellen der Projekt Mappe "[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]" in Visual Studio  
+- Erstellen der Projekt Mappe [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in Visual Studio  
   
 - Hinzufügen der Datenbank-Codedatei zum Projekt.  
   
@@ -51,7 +54,8 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 - Übergeben dieser Änderungen an der Datenbank Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
- In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projekt Mappe, die die erforderlichen Verweise enthält, um ein [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Projekt zu erstellen und auszuführen.  
+
+ In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projekt Mappe, die die erforderlichen Verweise zum Erstellen und Ausführen eines [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekts enthält.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
@@ -66,7 +70,8 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 5. Klicken Sie auf **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Hinzufügen von LINQ-Verweisen und Anweisungen  
- Diese exemplarische Vorgehensweise verwendet Assemblys, die im Projekt u. U. nicht standardmäßig installiert sind. Wenn `System.Data.Linq` nicht als Verweis in Ihrem Projekt aufgeführt ist (Klicken Sie auf **alle Dateien** in **Projektmappen-Explorer** anzeigen, und erweitern Sie den Knoten **Verweise** ), fügen Sie ihn hinzu, wie in den folgenden Schritten erläutert.  
+
+ Diese exemplarische Vorgehensweise verwendet Assemblys, die im Projekt u. U. nicht standardmäßig installiert sind. Wenn `System.Data.Linq` in Ihrem Projekt nicht als Verweis aufgeführt ist (Klicken Sie in **Projektmappen-Explorer** auf **alle Dateien anzeigen** , und erweitern Sie den Knoten **Verweise** ), fügen Sie ihn hinzu, wie in den folgenden Schritten erläutert.  
   
 #### <a name="to-add-systemdatalinq"></a>So fügen Sie System.Data.Linq hinzu  
   
@@ -81,6 +86,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Hinzufügen der Northwind-Codedatei zum Projekt.  
+
  Bei diesen Schritten wird davon ausgegangen, dass Sie das SQLMetal-Tool zum Erzeugen einer Codedatei aus der Beispieldatenbank Northwind verwendet haben. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen weiter oben in dieser exemplarischen Vorgehensweise.  
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>So fügen Sie die Northwind-Codedatei dem Projekt hinzu.  
@@ -92,6 +98,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      Die Datei northwind.vb wird dem Projekt hinzugefügt.  
   
 ## <a name="setting-up-the-database-connection"></a>Einrichten der Datenverbindungen  
+
  Testen Sie zuerst die Verbindung zur Datenbank. Beachten Sie vor allem, dass der Name der Datenbank, Northwnd, kein i-Zeichen hat. Sollten im nächsten Schritt Fehler auftreten, prüfen Sie in der Datei northwind.vb die Schreibweise der partiellen Klasse Northwind.  
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>So richten Sie die Datenbankverbindung ein und testen diese  
@@ -107,6 +114,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      Schließen Sie die Anwendung, indem Sie im **Konsolen** Fenster die EINGABETASTE drücken, oder klicken Sie im Visual Studio-Menü **Debuggen** auf **Debuggen beenden** .  
   
 ## <a name="creating-a-new-entity"></a>Erstellen einer neuen Entität  
+
  Eine neue Entität zu erstellen, ist einfach. Sie können Objekte (z. B. `Customer`) erstellen, indem Sie das `New`-Schlüsselwort verwenden.  
   
  In diesem und den folgenden Abschnitten nehmen Sie Änderungen nur am lokalen Cache vor. Es werden keine Änderungen an die Datenbank gesendet, bis Sie zum Ende dieser exemplarischen Vorgehensweise <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen.  
@@ -132,6 +140,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 3. Drücken Sie im **Konsolen** Fenster die EINGABETASTE, um das Debugging zu verhindern.  
   
 ## <a name="updating-an-entity"></a>Aktualisieren einer Entität  
+
  In den folgenden Schritten rufen Sie ein `Customer`-Objekt ab und ändern eine seiner Eigenschaften.  
   
 #### <a name="to-change-the-name-of-a-customer"></a>So ändern Sie den Namen eines Kunden  
@@ -141,6 +150,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
 ## <a name="deleting-an-entity"></a>Löschen einer Entität  
+
  Unter Verwendung des gleichen Kundenobjekts können Sie die erste Bestellung löschen.  
   
  Der folgende Code zeigt, wie Beziehungen zwischen Zeilen getrennt werden und wie eine Zeile aus der Datenbank Northwind gelöscht wird.  
@@ -152,6 +162,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   
 ## <a name="submitting-changes-to-the-database"></a>Übergeben von Änderungen an die Datenbank  
+
  Der letzte Schritt beim Erstellen, Aktualisieren und Löschen von Objekten besteht in der eigentlichen Übergabe der Änderungen an die Datenbank. Ohne diesen Schritt sind die Änderungen nur lokal und werden nicht in Abfrageergebnissen angezeigt.  
   
 #### <a name="to-submit-changes-to-the-database"></a>So übergeben Sie die Änderungen an die Datenbank  
@@ -186,6 +197,6 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 > [!NOTE]
 > Wenn Sie den neuen Kunden durch Übergeben der Änderungen hinzugefügt haben, können Sie diese Lösung nicht einfach wieder ausführen, da Sie den gleichen Kunden nicht erneut hinzufügen können. Um die Lösung erneut auszuführen, ändern Sie den Wert der hinzuzufügenden Kunden-ID.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Lernen durch exemplarische Vorgehensweisen](learning-by-walkthroughs.md)

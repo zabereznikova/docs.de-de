@@ -4,24 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ce5323b4ecd7bd0c4337d4632eff209e4d0ebd42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792140"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163985"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)
-Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Verwendung von *Zuordnungen* , um Fremdschlüssel Beziehungen in der Datenbank darzustellen.  
+
+Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* , um Fremdschlüssel Beziehungen in der Datenbank darzustellen.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
- Sie müssen die exemplarische Vorgehensweise abgeschlossen [haben: Einfaches Objektmodell und Abfrage (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md). Diese exemplarische Vorgehensweise basiert auf diesem Schritt und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest.  
+## <a name="prerequisites"></a>Voraussetzungen  
+
+ Sie müssen Exemplarische Vorgehensweise [: einfaches Objektmodell und Abfrage (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)abgeschlossen haben. Diese exemplarische Vorgehensweise basiert auf diesem Schritt und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest.  
   
 ## <a name="overview"></a>Übersicht  
+
  Diese exemplarische Vorgehensweise umfasst drei Hauptaufgaben:  
   
 - Hinzufügen einer Entitätsklasse zur Darstellung der Orders-Tabelle in der Beispieldatenbank Northwind.  
@@ -31,6 +34,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
 - Erstellen und Ausführen einer Abfrage, um das Abrufen von `Order`-Informationen unter Verwendung der `Customer`-Klasse zu testen.  
   
 ## <a name="mapping-relationships-across-tables"></a>Zuordnen von Beziehungen über Tabellen hinweg  
+
  Erstellen Sie nach der Definition der `Customer`-Klasse die Definition der `Order`-Entitätsklasse, die den folgenden Code enthält. Dieser gibt an, dass `Orders.Customer` ein Fremdschlüssel zu `Customers.CustomerID` ist.  
   
 #### <a name="to-add-the-order-entity-class"></a>So fügen Sie die Order-Entitätsklasse hinzu  
@@ -40,6 +44,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
      [!code-vb[DLinqWalk2VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#1)]  
   
 ## <a name="annotating-the-customer-class"></a>Hinzufügen von Anmerkungen zu einer Customer-Klasse  
+
  In diesem Schritt fügen Sie der `Customer`-Klasse Anmerkungen hinzu, um deren Beziehung zur `Order`-Klasse anzugeben. (Diese Ergänzung ist nicht unbedingt erforderlich, da die Definition der Beziehungen in beide Richtungen zum Erstellen der Verbindung ausreicht. Mithilfe dieser Anmerkung können Sie jedoch leicht in allen Richtungen zwischen den Objekten navigieren.)  
   
 #### <a name="to-annotate-the-customer-class"></a>So fügen Sie der Customer-Klasse Anmerkungen hinzu  
@@ -49,6 +54,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Erstellen und Ausführen einer Abfrage über die Customer-Order-Beziehung hinweg  
+
  Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie benötigen keinen expliziten *Join* zwischen Kunden und Bestellungen.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
@@ -64,6 +70,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
 3. Schließen Sie das Meldungsfeld, um das Debuggen zu beenden.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Erstellen einer Datenbankansicht mit strikter Typbindung  
+
  Es ist viel leichter, mit einer Datenbankansicht mit strikter Typbindung zu beginnen. Bei strikter Typbindung des <xref:System.Data.Linq.DataContext>-Objekts benötigen Sie keine Aufrufe von <xref:System.Data.Linq.DataContext.GetTable%2A>. Sie können Tabellen mit strikter Typbindung in allen Abfragen verwenden, wenn Sie das <xref:System.Data.Linq.DataContext>-Objekt mit strikter Typbindung verwenden.  
   
  In den folgenden Schritten erstellen Sie `Customers` als Tabelle mit strikter Typbindung und Zuordnung zur Customers-Tabelle in der Datenbank.  
@@ -89,8 +96,9 @@ Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../
 5. Klicken Sie im Menü **Datei** auf **Alle speichern** , wenn Sie diese Anwendung speichern möchten.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die nächste exemplarische Vorgehens[Weise (Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic](walkthrough-manipulating-data-visual-basic.md))) veranschaulicht, wie Daten geändert werden. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
+
+ In der nächsten exemplarischen Vorgehensweise (Exemplarische Vorgehensweise: Bearbeiten von[Daten (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)) wird veranschaulicht, wie Daten geändert werden. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Lernen durch exemplarische Vorgehensweisen](learning-by-walkthroughs.md)

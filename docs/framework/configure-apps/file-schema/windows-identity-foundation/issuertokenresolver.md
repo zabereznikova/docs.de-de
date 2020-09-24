@@ -3,14 +3,15 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 67d7e0aa5b6b05bfe8b17a1b1efebb1fbddbb0eb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 946ae8601e1e4563becd0b346b6c792724405a45
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152670"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165038"
 ---
 # \<issuerTokenResolver>
+
 Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerauflistung verwendet wird. Der Aussteller-tokenresolver wird verwendet, um das Signatur Token für eingehende Token und Nachrichten aufzulösen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerau
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -45,6 +47,7 @@ Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerau
 |type|Gibt den Typ des Aussteller-tokenresolvers an. Muss entweder die- <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse oder ein Typ sein, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Tokens.IssuerTokenResolver> . Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -54,6 +57,7 @@ Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerau
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheitstokenhandlern bereit.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der Aussteller-tokenresolver wird verwendet, um das Signatur Token für eingehende Token und Nachrichten aufzulösen. Sie wird verwendet, um das kryptografische Material abzurufen, das zum Überprüfen der Signatur verwendet wird. Sie müssen das- `type` Attribut angeben. Der angegebene Typ kann entweder <xref:System.IdentityModel.Tokens.IssuerTokenResolver> oder ein benutzerdefinierter Typ sein, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Tokens.IssuerTokenResolver> .  
   
  Einige Tokenhandler ermöglichen es Ihnen, Einstellungen für Aussteller-tokenresolver in der Konfiguration anzugeben. Einstellungen in einzelnen tokenhandlern überschreiben die in der Auflistung der Sicherheitstokenhandler angegebenen.  
@@ -62,6 +66,7 @@ Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerau
 > Die Angabe des- `<issuerTokenResolver>` Elements als untergeordnetes Element des-Elements wurde als [\<identityConfiguration>](identityconfiguration.md) veraltet markiert, wird jedoch aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Die Einstellungen für das- `<securityTokenHandlerConfiguration>` Element überschreiben die für das- `<identityConfiguration>` Element.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende XML-Code zeigt die Konfiguration für einen Aussteller-tokenresolver, der auf einer benutzerdefinierten Klasse basiert, die von abgeleitet wird <xref:System.IdentityModel.Tokens.IssuerTokenResolver> . Der tokenresolver verwaltet ein Wörterbuch von Audience-Key-Paaren, die von einem benutzerdefinierten Konfigurationselement () initialisiert werden, das `<AddAudienceKeyPair>` für die Klasse definiert ist. Die-Klasse überschreibt die- <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> Methode, um dieses Element zu verarbeiten. Die außer Kraft setzung wird im folgenden Beispiel gezeigt. die Methoden, die Sie aufruft, werden jedoch nicht aus Gründen der Kürze angezeigt. Das gesamte Beispiel finden Sie im Beispiel `CustomToken` .  
   
 ```xml  

@@ -3,12 +3,12 @@ title: Kommunikation zwischen Dienst und Dienst
 description: Erfahren Sie, wie Back-End-cloudnative-mikrodienste mit anderen Back-End-Webdiensten kommunizieren.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539805"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166078"
 ---
 # <a name="service-to-service-communication"></a>Kommunikation zwischen Dienst und Dienst
 
@@ -54,7 +54,7 @@ Der große Grad an Kopplung in der vorherigen Abbildung deutet darauf hin, dass 
 
 ### <a name="materialized-view-pattern"></a>Muster für materialisierte Sichten
 
-Eine beliebte Option zum Entfernen der Verbindung mit dem mikroservice ist das [materialisierte Ansichts Muster](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Bei diesem Muster speichert ein-Dienst seine eigene lokale, denormalisierte Kopie von Daten, die sich im Besitz anderer Dienste befinden. Anstelle des waren Korb-microservice, der den Produktkatalog und die Preise für microservices abfragt, behält er seine eigene lokale Kopie dieser Daten bei. Dieses Muster eliminiert unnötige Kopplung und verbessert die Zuverlässigkeit und die Reaktionszeit. Der gesamte Vorgang wird innerhalb eines einzelnen Prozesses ausgeführt. Wir untersuchen dieses Muster und andere Daten Aspekte in Kapitel 5.
+Eine beliebte Option zum Entfernen der Verbindung mit dem mikroservice ist das [materialisierte Ansichts Muster](/azure/architecture/patterns/materialized-view). Bei diesem Muster speichert ein-Dienst seine eigene lokale, denormalisierte Kopie von Daten, die sich im Besitz anderer Dienste befinden. Anstelle des waren Korb-microservice, der den Produktkatalog und die Preise für microservices abfragt, behält er seine eigene lokale Kopie dieser Daten bei. Dieses Muster eliminiert unnötige Kopplung und verbessert die Zuverlässigkeit und die Reaktionszeit. Der gesamte Vorgang wird innerhalb eines einzelnen Prozesses ausgeführt. Wir untersuchen dieses Muster und andere Daten Aspekte in Kapitel 5.
 
 ### <a name="service-aggregator-pattern"></a>Dienst Aggregator-Muster
 
@@ -94,7 +94,7 @@ In Kapitel 1 haben wir uns mit dem *Sichern von Diensten*beschäftigt. Unterstü
 
 Azure Storage-Warteschlangen bieten eine einfache Warteschlangen Infrastruktur, die schnell, kostengünstig und durch Azure-Speicher Konten unterstützt wird.
 
-[Azure Storage Warteschlangen](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction) verfügen über einen Rest-basierten Warteschlangenmechanismus mit zuverlässigem und permanentem Messaging. Sie bieten einen minimalen Funktionsumfang, sind aber kostengünstig und speichern Millionen von Nachrichten. Ihre Kapazität reicht von bis zu 500 TB. Eine einzelne Nachricht kann bis zu 64 KB groß sein.
+[Azure Storage Warteschlangen](/azure/storage/queues/storage-queues-introduction) verfügen über einen Rest-basierten Warteschlangenmechanismus mit zuverlässigem und permanentem Messaging. Sie bieten einen minimalen Funktionsumfang, sind aber kostengünstig und speichern Millionen von Nachrichten. Ihre Kapazität reicht von bis zu 500 TB. Eine einzelne Nachricht kann bis zu 64 KB groß sein.
 
 Sie können über authentifizierte Aufrufe mithilfe von http oder HTTPS von überall auf der Welt auf Nachrichten zugreifen. Speicher Warteschlangen können auf eine große Anzahl von gleichzeitigen Clients horizontal hochskaliert werden, um Datenverkehrs Spitzen
 
@@ -122,13 +122,13 @@ Azure Storage Warteschlangen sind eine wirtschaftliche Option zum Implementieren
 
 Wenn Sie komplexere Messaging Anforderungen wünschen, sollten Sie Azure Service Bus Warteschlangen beachten.
 
-Wenn Sie über eine robuste Nachrichten Infrastruktur verfügen, [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) ein *Broker Messaging-Modell*unterstützt. Nachrichten werden zuverlässig in einem Broker (der Warteschlange) gespeichert, bis Sie vom Consumer empfangen werden. Die Warteschlange garantiert eine FIFO-Nachrichtenübermittlung (First in/First Out) und respektiert dabei die Reihenfolge, in der Nachrichten zur Warteschlange hinzugefügt wurden.
+Wenn Sie über eine robuste Nachrichten Infrastruktur verfügen, [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) ein *Broker Messaging-Modell*unterstützt. Nachrichten werden zuverlässig in einem Broker (der Warteschlange) gespeichert, bis Sie vom Consumer empfangen werden. Die Warteschlange garantiert eine FIFO-Nachrichtenübermittlung (First in/First Out) und respektiert dabei die Reihenfolge, in der Nachrichten zur Warteschlange hinzugefügt wurden.
 
-Die Größe einer Nachricht kann viel größer sein, bis zu 256 KB. Nachrichten werden für einen unbegrenzten Zeitraum in der Warteschlange gespeichert. Service Bus unterstützt nicht nur HTTP-basierte Aufrufe, sondern bietet auch vollständige Unterstützung für das [AMQP-Protokoll](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-amqp-overview). AMQP ist ein cloudübergreifender Open-Standard-Anbieter, der ein binäres Protokoll und ein höheres Maß an Zuverlässigkeit unterstützt.
+Die Größe einer Nachricht kann viel größer sein, bis zu 256 KB. Nachrichten werden für einen unbegrenzten Zeitraum in der Warteschlange gespeichert. Service Bus unterstützt nicht nur HTTP-basierte Aufrufe, sondern bietet auch vollständige Unterstützung für das [AMQP-Protokoll](/azure/service-bus-messaging/service-bus-amqp-overview). AMQP ist ein cloudübergreifender Open-Standard-Anbieter, der ein binäres Protokoll und ein höheres Maß an Zuverlässigkeit unterstützt.
 
-Service Bus stellt einen umfangreichen Satz von Funktionen bereit, einschließlich der [Transaktionsunterstützung](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions) und einer [Funktion zur doppelten Erkennung](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection). Die Warteschlange garantiert "höchstens einmal Übermittlung" pro Nachricht. Eine Nachricht, die bereits gesendet wurde, wird automatisch verworfen. Wenn ein Producer zweifelhaft ist, kann er dieselbe Nachricht erneut senden und Service Bus sicherstellen, dass nur eine Kopie verarbeitet wird. Durch die Duplikaterkennung müssen Sie keine zusätzlichen Infrastrukturen der Infrastruktur erstellen.
+Service Bus stellt einen umfangreichen Satz von Funktionen bereit, einschließlich der [Transaktionsunterstützung](/azure/service-bus-messaging/service-bus-transactions) und einer [Funktion zur doppelten Erkennung](/azure/service-bus-messaging/duplicate-detection). Die Warteschlange garantiert "höchstens einmal Übermittlung" pro Nachricht. Eine Nachricht, die bereits gesendet wurde, wird automatisch verworfen. Wenn ein Producer zweifelhaft ist, kann er dieselbe Nachricht erneut senden und Service Bus sicherstellen, dass nur eine Kopie verarbeitet wird. Durch die Duplikaterkennung müssen Sie keine zusätzlichen Infrastrukturen der Infrastruktur erstellen.
 
-Zwei weitere Unternehmens Features sind Partitionierung und Sitzungen. Eine konventionelle Service Bus Warteschlange wird von einem einzelnen Nachrichten Broker behandelt und in einem einzelnen Nachrichtenspeicher gespeichert. Allerdings wird die Warteschlange durch [Service Bus Partitionierung](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) auf mehrere Nachrichten Broker und Nachrichtenspeicher verteilt. Der Gesamtdurchsatz ist nicht mehr durch die Leistung eines einzelnen Nachrichten Brokers oder Messaging Speicher beschränkt. Bei einem temporären Ausfall eines Messaging Stores wird eine partitionierte Warteschlange nicht verfügbar.
+Zwei weitere Unternehmens Features sind Partitionierung und Sitzungen. Eine konventionelle Service Bus Warteschlange wird von einem einzelnen Nachrichten Broker behandelt und in einem einzelnen Nachrichtenspeicher gespeichert. Allerdings wird die Warteschlange durch [Service Bus Partitionierung](/azure/service-bus-messaging/service-bus-partitioning) auf mehrere Nachrichten Broker und Nachrichtenspeicher verteilt. Der Gesamtdurchsatz ist nicht mehr durch die Leistung eines einzelnen Nachrichten Brokers oder Messaging Speicher beschränkt. Bei einem temporären Ausfall eines Messaging Stores wird eine partitionierte Warteschlange nicht verfügbar.
 
 [Service Bus Sitzungen](https://codingcanvas.com/azure-service-bus-sessions/) bieten eine Möglichkeit zum Gruppieren verwandter Nachrichten. Stellen Sie sich ein Workflow Szenario vor, in dem Nachrichten zusammenverarbeitet und der Vorgang am Ende abgeschlossen werden muss. Um die Vorteile zu nutzen, müssen Sitzungen explizit für die Warteschlange aktiviert sein, und jede zugehörige mestzung muss dieselbe Sitzungs-ID enthalten.
 
@@ -148,7 +148,7 @@ Message queuate ist eine effektive Methode zum Implementieren der Kommunikation,
 
 Um dieses Szenario zu beheben, wechseln wir zum dritten Typ der Nachrichten Interaktion, dem- *Ereignis*. Ein-mikrodienst gibt an, dass eine Aktion aufgetreten ist. Andere, bei Interesse, reagieren auf die Aktion oder das Ereignis.
 
-Das Ereignis ist ein zweistufiger Prozess. Bei einer bestimmten Zustandsänderung veröffentlicht ein-Dienst ein Ereignis in einem Nachrichten Broker, sodass es für jeden anderen interessierten-Dienst verfügbar ist. Der interessierte-mikrodienst wird benachrichtigt, indem er das-Ereignis im Nachrichten Broker abonniert. Sie verwenden das [Veröffentlichen/Abonnieren-](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) Muster zum Implementieren der [ereignisbasierten Kommunikation](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
+Das Ereignis ist ein zweistufiger Prozess. Bei einer bestimmten Zustandsänderung veröffentlicht ein-Dienst ein Ereignis in einem Nachrichten Broker, sodass es für jeden anderen interessierten-Dienst verfügbar ist. Der interessierte-mikrodienst wird benachrichtigt, indem er das-Ereignis im Nachrichten Broker abonniert. Sie verwenden das [Veröffentlichen/Abonnieren-](/azure/architecture/patterns/publisher-subscriber) Muster zum Implementieren der [ereignisbasierten Kommunikation](/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
 
 Abbildung 4-15 zeigt einen waren Korb-microservice, der ein Ereignis veröffentlicht, das zwei andere microservices abonniert hat.
 
@@ -158,7 +158,7 @@ Abbildung 4-15 zeigt einen waren Korb-microservice, der ein Ereignis veröffentl
 
 Beachten Sie die *Ereignisbus* Komponente, die sich in der Mitte des Kommunikationskanals befindet. Dabei handelt es sich um eine benutzerdefinierte Klasse, die den Nachrichten Broker kapselt und ihn von der zugrunde liegenden Anwendung entkoppelt. Die microservices für die Reihenfolge und Inventur betreiben unabhängig das Ereignis ohne Kenntnis der anderen und des microservices waren Korb. Wenn das registrierte Ereignis im Ereignisbus veröffentlicht wird, werden Sie darauf reagieren.
 
-Mit Eventing wechseln wir von der Warteschlangen Technologie zu *Themen*. Ein [Thema](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) ähnelt einer Warteschlange, unterstützt jedoch ein 1: n-Nachrichten Muster. Ein-mikrodienst veröffentlicht eine Nachricht. Mehrere abonnierte-mikrodienste können diese Nachricht empfangen und auf diese reagieren. Abbildung 4-16 zeigt eine Themen Architektur.
+Mit Eventing wechseln wir von der Warteschlangen Technologie zu *Themen*. Ein [Thema](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) ähnelt einer Warteschlange, unterstützt jedoch ein 1: n-Nachrichten Muster. Ein-mikrodienst veröffentlicht eine Nachricht. Mehrere abonnierte-mikrodienste können diese Nachricht empfangen und auf diese reagieren. Abbildung 4-16 zeigt eine Themen Architektur.
 
 ![Themen Architektur](./media/topic-architecture.png)
 
@@ -170,17 +170,17 @@ Die Azure-Cloud unterstützt zwei verschiedene Themen Dienste: Azure Service Bus
 
 ### <a name="azure-service-bus-topics"></a>Azure Service Bus-Themen
 
-Auf dem gleichen robusten Broker Nachrichten Modell Azure Service Bus Warteschlangen finden Sie [Azure Service Bus Themen](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Ein Thema kann Nachrichten von mehreren unabhängigen Verlegern empfangen und Nachrichten an bis zu 2.000 Abonnenten senden. Abonnements können zur Laufzeit dynamisch hinzugefügt oder entfernt werden, ohne das System zu beenden oder das Thema neu zu erstellen.
+Auf dem gleichen robusten Broker Nachrichten Modell Azure Service Bus Warteschlangen finden Sie [Azure Service Bus Themen](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Ein Thema kann Nachrichten von mehreren unabhängigen Verlegern empfangen und Nachrichten an bis zu 2.000 Abonnenten senden. Abonnements können zur Laufzeit dynamisch hinzugefügt oder entfernt werden, ohne das System zu beenden oder das Thema neu zu erstellen.
 
-Viele erweiterte Features aus Azure Service Bus Warteschlangen sind auch für Themen verfügbar, einschließlich [Duplikaterkennung](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) und [Transaktionsunterstützung](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions). Standardmäßig werden Service Bus Themen von einem einzelnen Nachrichten Broker behandelt und in einem einzelnen Nachrichtenspeicher gespeichert. [Service Bus Partitionierung](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) skaliert jedoch ein Thema, indem es auf viele Nachrichten Broker und Nachrichtenspeicher verteilt wird.
+Viele erweiterte Features aus Azure Service Bus Warteschlangen sind auch für Themen verfügbar, einschließlich [Duplikaterkennung](/azure/service-bus-messaging/duplicate-detection) und [Transaktionsunterstützung](/azure/service-bus-messaging/service-bus-transactions). Standardmäßig werden Service Bus Themen von einem einzelnen Nachrichten Broker behandelt und in einem einzelnen Nachrichtenspeicher gespeichert. [Service Bus Partitionierung](/azure/service-bus-messaging/service-bus-partitioning) skaliert jedoch ein Thema, indem es auf viele Nachrichten Broker und Nachrichtenspeicher verteilt wird.
 
-Bei der [geplanten Übermittlung](https://docs.microsoft.com/azure/service-bus-messaging/message-sequencing) von Nachrichten wird eine Nachricht mit einem bestimmten Zeitpunkt für die Verarbeitung markiert. Die Meldung wird vor diesem Zeitpunkt nicht im Thema angezeigt. Mithilfe der [Nachrichten Verzögerung](https://docs.microsoft.com/azure/service-bus-messaging/message-deferral) können Sie das Abrufen einer Nachricht zu einem späteren Zeitpunkt verzögern. Beide werden häufig in Workflow Verarbeitungs Szenarien verwendet, in denen Vorgänge in einer bestimmten Reihenfolge verarbeitet werden. Sie können die Verarbeitung empfangener Nachrichten verschieben, bis die vorherige Arbeit abgeschlossen ist.
+Bei der [geplanten Übermittlung](/azure/service-bus-messaging/message-sequencing) von Nachrichten wird eine Nachricht mit einem bestimmten Zeitpunkt für die Verarbeitung markiert. Die Meldung wird vor diesem Zeitpunkt nicht im Thema angezeigt. Mithilfe der [Nachrichten Verzögerung](/azure/service-bus-messaging/message-deferral) können Sie das Abrufen einer Nachricht zu einem späteren Zeitpunkt verzögern. Beide werden häufig in Workflow Verarbeitungs Szenarien verwendet, in denen Vorgänge in einer bestimmten Reihenfolge verarbeitet werden. Sie können die Verarbeitung empfangener Nachrichten verschieben, bis die vorherige Arbeit abgeschlossen ist.
 
 Service Bus Themen sind eine robuste und bewährte Technologie zum Aktivieren der Kommunikation zwischen veröffentlichen und abonnieren in ihren cloudbasierten Systemen.
 
 ### <a name="azure-event-grid"></a>Azure Event Grid
 
-Obwohl es sich bei Azure Service Bus um einen in der Praxis getesteten Messaging Broker mit einem vollständigen Satz von Enterprise-Features handelt, ist [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) das neue Kind auf dem Block.
+Obwohl es sich bei Azure Service Bus um einen in der Praxis getesteten Messaging Broker mit einem vollständigen Satz von Enterprise-Features handelt, ist [Azure Event Grid](/azure/event-grid/overview) das neue Kind auf dem Block.
 
 Auf den ersten Blick können Event Grid wie ein anderes themenbasiertes Messaging System aussehen. Dies unterscheidet sich jedoch in vielerlei Hinsicht. Der Schwerpunkt auf ereignisgesteuerten Workloads ist die Echt Zeit Ereignisverarbeitung, die umfassende Azure-Integration sowie eine offene Plattform für die Server lose Infrastruktur. Es ist für moderne cloudbasierte und Server lose Anwendungen konzipiert.
 
@@ -206,9 +206,9 @@ Event Grid ist ein vollständig verwalteter Server loser clouddienst. Die Skalie
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Streaming von Nachrichten in der Azure-Cloud
 
-Azure Service Bus und Event Grid bieten hervorragend Unterstützung für Anwendungen, die einzelne, diskrete Ereignisse wie ein neues Dokument verfügbar machen, das in eine Cosmos DB eingefügt wurde. Aber was geschieht, wenn Ihr System eigenes System einen *Stream verwandter Ereignisse*verarbeiten muss? [Ereignisstreams](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) sind komplexer. Sie sind in der Regel zeitlich geordnet, interverwandt und müssen als Gruppe verarbeitet werden.
+Azure Service Bus und Event Grid bieten hervorragend Unterstützung für Anwendungen, die einzelne, diskrete Ereignisse wie ein neues Dokument verfügbar machen, das in eine Cosmos DB eingefügt wurde. Aber was geschieht, wenn Ihr System eigenes System einen *Stream verwandter Ereignisse*verarbeiten muss? [Ereignisstreams](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) sind komplexer. Sie sind in der Regel zeitlich geordnet, interverwandt und müssen als Gruppe verarbeitet werden.
 
-[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) ist eine datenstreamingplattform und ein Ereignis Erfassungs Dienst, der Ereignisse sammelt, transformiert und speichert. Sie ist darauf abgestimmt, Streamingdaten zu erfassen, wie z. b. kontinuierliche Ereignis Benachrichtigungen, die von einem telemetriekontext ausgegeben werden. Der Dienst ist hochgradig skalierbar und kann [Millionen von Ereignissen pro Sekunde](https://docs.microsoft.com/azure/event-hubs/event-hubs-about)speichern und verarbeiten. In Abbildung 4-18 ist es häufig eine Tür für eine Ereignis Pipeline, bei der der Erfassungsdaten Strom vom Ereignis Verbrauch entkoppelt wird.
+[Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) ist eine datenstreamingplattform und ein Ereignis Erfassungs Dienst, der Ereignisse sammelt, transformiert und speichert. Sie ist darauf abgestimmt, Streamingdaten zu erfassen, wie z. b. kontinuierliche Ereignis Benachrichtigungen, die von einem telemetriekontext ausgegeben werden. Der Dienst ist hochgradig skalierbar und kann [Millionen von Ereignissen pro Sekunde](/azure/event-hubs/event-hubs-about)speichern und verarbeiten. In Abbildung 4-18 ist es häufig eine Tür für eine Ereignis Pipeline, bei der der Erfassungsdaten Strom vom Ereignis Verbrauch entkoppelt wird.
 
 ![Azure Event Hub](./media/azure-event-hub.png)
 
@@ -216,9 +216,9 @@ Azure Service Bus und Event Grid bieten hervorragend Unterstützung für Anwendu
 
 Event Hub unterstützt niedrige Latenz und konfigurierbare Zeit Aufbewahrung. Im Gegensatz zu Warteschlangen und Themen Event Hubs die Ereignisdaten beibehalten, nachdem Sie von einem Consumer gelesen wurden. Mit dieser Funktion können andere Datenanalyse Dienste (sowohl intern als auch extern) die Daten zur weiteren Analyse wiedergeben. Ereignisse, die in Event Hub gespeichert werden, werden nur nach Ablauf der Beibehaltungs Dauer gelöscht, was standardmäßig ein Tag ist, aber konfigurierbar ist.
 
-Event Hub unterstützt allgemeine Ereignis Veröffentlichungs Protokolle, einschließlich HTTPS und AMQP. Außerdem wird Kafka 1,0 unterstützt. [Vorhandene Kafka-Anwendungen können mit dem Event Hub](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) über das Kafka-Protokoll kommunizieren, das eine Alternative zur Verwaltung großer Kafka-Cluster bereitstellt. Viele Open-Source-cloudnative Systeme nehmen Kafka vor.
+Event Hub unterstützt allgemeine Ereignis Veröffentlichungs Protokolle, einschließlich HTTPS und AMQP. Außerdem wird Kafka 1,0 unterstützt. [Vorhandene Kafka-Anwendungen können mit dem Event Hub](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) über das Kafka-Protokoll kommunizieren, das eine Alternative zur Verwaltung großer Kafka-Cluster bereitstellt. Viele Open-Source-cloudnative Systeme nehmen Kafka vor.
 
-Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub besteht. Neu eingehende Ereignisse werden am Ende dieser Sequenz hinzugefügt.Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
+Event Hubs implementiert das Nachrichten Streaming über ein [partitioniertes consumermodell](/azure/event-hubs/event-hubs-features) , in dem jeder Consumer nur eine bestimmte Teilmenge oder Partition des nachrichtenstreams liest. Dieses Muster ermöglicht enorme horizontale Skalierung für die Ereignisverarbeitung und stellt weitere datenstromorientierte Features zur Verfügung, die in Warteschlangen und Themen nicht verfügbar sind. Eine Partition ist eine geordnete Sequenz von Ereignissen, die in einem Event Hub besteht. Neu eingehende Ereignisse werden am Ende dieser Sequenz hinzugefügt.Abbildung 4-19 zeigt die Partitionierung in einem Event Hub.
 
 ![Event Hub-Partitionierung](./media/event-hub-partitioning.png)
 

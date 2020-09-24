@@ -2,12 +2,12 @@
 title: Überwachen in Azure Kubernetes Services
 description: Überwachen in Azure Kubernetes Services
 ms.date: 05/13/2020
-ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3900f169b9be4f807e72392da38a1224d6ce28e3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613823"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163699"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Überwachen in Azure Kubernetes Services
 
@@ -15,16 +15,16 @@ Die integrierte Protokollierung in Kubernetes ist primitiv. Es gibt jedoch einig
 
 ## <a name="azure-monitor-for-containers"></a>Azure Monitor für Container
 
-[Azure Monitor für Container](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) unterstützt die Nutzung von Protokollen von nicht nur Kubernetes sondern auch von anderen Orchestrierungs Modulen wie DC/OS, docker Swarm und red hat openshift.
+[Azure Monitor für Container](/azure/azure-monitor/insights/container-insights-overview) unterstützt die Nutzung von Protokollen von nicht nur Kubernetes sondern auch von anderen Orchestrierungs Modulen wie DC/OS, docker Swarm und red hat openshift.
 
 ![Verarbeiten von Protokollen aus verschiedenen Containern in ](./media/containers-diagram.png)
  **Abbildung 7-10**. Verarbeiten von Protokollen aus verschiedenen Containern
 
-[Prometheus](https://prometheus.io/) ist eine beliebte Open-Source-metriküberwachungglösung. Es ist Teil der Cloud Native Compute Foundation. In der Regel erfordert die Verwendung von Prometheus die Verwaltung eines Prometheus-Servers mit seinem eigenen Geschäft. [Azure Monitor für Container bietet jedoch eine direkte Integration mit Prometheus-metrikendpunkten](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), sodass kein separater Server erforderlich ist.
+[Prometheus](https://prometheus.io/) ist eine beliebte Open-Source-metriküberwachungglösung. Es ist Teil der Cloud Native Compute Foundation. In der Regel erfordert die Verwendung von Prometheus die Verwaltung eines Prometheus-Servers mit seinem eigenen Geschäft. [Azure Monitor für Container bietet jedoch eine direkte Integration mit Prometheus-metrikendpunkten](/azure/azure-monitor/insights/container-insights-prometheus-integration), sodass kein separater Server erforderlich ist.
 
 Protokoll-und metrikinformationen werden nicht nur aus den Containern, die im Cluster ausgeführt werden, sondern auch aus den Cluster Hosts selbst gesammelt. Er ermöglicht das korrelieren von Protokollinformationen aus den beiden, wodurch es wesentlich einfacher ist, einen Fehler zu finden.
 
-Die Installation der Protokoll Sammler unterscheidet sich in [Windows](https://docs.microsoft.com/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) -und [Linux](https://docs.microsoft.com/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) -Clustern. In beiden Fällen wird die Protokoll Sammlung jedoch als Kubernetes- [daemonset](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)implementiert, was bedeutet, dass der Protokoll Sammler als Container auf jedem Knoten ausgeführt wird.
+Die Installation der Protokoll Sammler unterscheidet sich in [Windows](/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) -und [Linux](/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) -Clustern. In beiden Fällen wird die Protokoll Sammlung jedoch als Kubernetes- [daemonset](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)implementiert, was bedeutet, dass der Protokoll Sammler als Container auf jedem Knoten ausgeführt wird.
 
 Unabhängig davon, welcher Orchestrator oder das Betriebssystem den Azure Monitor Daemon ausführen, werden die Protokollinformationen an dieselben Azure Monitor Tools weitergeleitet, mit denen Benutzer vertraut sind. Dies sorgt für eine parallele Umgebung in Umgebungen, in denen verschiedene Protokoll Quellen, z. b. eine hybride Kubernetes/Azure Functions Umgebung, gemischt werden.
 

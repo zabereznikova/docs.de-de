@@ -3,14 +3,15 @@ title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 0f651377346b1f14a4226128cd5cf7059543adca
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 36d727f97597df816779da1c1f7ed5da1a1697f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251913"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164934"
 ---
 # \<roleClaimType>
+
 Gibt den Anspruchstyp an, der die Rollen Typen Ansprüche in der Auflistung von-Objekten definiert, die <xref:System.Security.Claims.ClaimsIdentity> von der- <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode des tokenhandlers zurückgegeben werden.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,6 +40,7 @@ Gibt den Anspruchstyp an, der die Rollen Typen Ansprüche in der Auflistung von-
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -48,6 +50,7 @@ Gibt den Anspruchstyp an, der die Rollen Typen Ansprüche in der Auflistung von-
 |value|Eine Zeichenfolge, die den URI angibt, der den Anspruchstyp des Anspruchs darstellt, der für den Rollen Anspruchstyp verwendet werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -57,6 +60,7 @@ Gibt den Anspruchstyp an, der die Rollen Typen Ansprüche in der Auflistung von-
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Klasse, die- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse einer dieser Klassen bereit.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `<roleClaimType>` Element legt die-Eigenschaft fest, <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> Wenn ein- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> Objekt aus der Konfiguration initialisiert wird.  
   
 ## <a name="example"></a>Beispiel  

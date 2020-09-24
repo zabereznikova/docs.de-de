@@ -2,12 +2,12 @@
 title: 'Anwendungs Leistungsverwaltung: GrpC für WCF-Entwickler'
 description: Protokollierung, Metriken und Ablauf Verfolgung für ASP.net Core GrpC-Anwendungen.
 ms.date: 09/02/2019
-ms.openlocfilehash: 98da6c5391f021011e281a57e8f775709fa128ef
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740969"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165909"
 ---
 # <a name="application-performance-management"></a>Application Performance Management
 
@@ -25,7 +25,7 @@ Bei der *Protokollierung* werden Textnachrichten behandelt, in denen ausführlic
 
 ## <a name="logging-in-aspnet-core-grpc"></a>Anmelden ASP.net Core GrpC
 
-ASP.net Core bietet integrierte Unterstützung für die Protokollierung in Form des [Microsoft. Extensions. Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) -nuget-Pakets. Die Kernteile dieser Bibliothek sind im Web-SDK enthalten, sodass es nicht erforderlich ist, es manuell zu installieren. Standardmäßig werden Protokollmeldungen in die Standardausgabe ("Console") und in einen beliebigen angefügten Debugger geschrieben. Wenn Sie Protokolle in persistente externe Datenspeicher schreiben möchten, müssen Sie möglicherweise [optionale Protokollierungs-senkenpakete](https://docs.microsoft.com/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)importieren.
+ASP.net Core bietet integrierte Unterstützung für die Protokollierung in Form des [Microsoft. Extensions. Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) -nuget-Pakets. Die Kernteile dieser Bibliothek sind im Web-SDK enthalten, sodass es nicht erforderlich ist, es manuell zu installieren. Standardmäßig werden Protokollmeldungen in die Standardausgabe ("Console") und in einen beliebigen angefügten Debugger geschrieben. Wenn Sie Protokolle in persistente externe Datenspeicher schreiben möchten, müssen Sie möglicherweise [optionale Protokollierungs-senkenpakete](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)importieren.
 
 Das ASP.net Core GrpC-Framework schreibt ausführliche Diagnose Protokollierungs Meldungen in dieses Protokollierungs Framework, sodass Sie zusammen mit den eigenen Nachrichten Ihrer Anwendung verarbeitet und gespeichert werden können.
 
@@ -47,13 +47,13 @@ public class StockData : Stocks.StocksBase
 
 Viele Protokollmeldungen, wie z. b. Anforderungen und Ausnahmen, werden von den ASP.net Core-und GrpC-Framework-Komponenten bereitgestellt. Fügen Sie eigene Protokollnachrichten hinzu, um Details und Kontext zur Anwendungslogik bereitzustellen, anstatt Probleme auf niedrigerer Ebene zu bieten.
 
-Weitere Informationen zum Schreiben von Protokollmeldungen und verfügbaren Protokollierungs senken und-Zielen finden Sie unter [Protokollierung in .net Core und ASP.net Core](/aspnet/core/fundamentals/logging/).
+Weitere Informationen zum Schreiben von Protokollmeldungen und verfügbaren Protokollierungs senken und-Zielen finden Sie unter  [Protokollierung in .net Core und ASP.net Core](/aspnet/core/fundamentals/logging/).
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>Metriken in ASP.net Core GrpC
 
-Die .net Core-Laufzeit stellt eine Reihe von Komponenten zum ausgeben und beobachten von Metriken bereit. Dies schließt APIs ein, z. b. die Klassen <xref:System.Diagnostics.Tracing.EventSource> und <xref:System.Diagnostics.Tracing.EventCounter>. Diese APIs können grundlegende numerische Daten ausgeben, die von externen Prozessen wie dem [globalen dotnet-Counters-Tool](../../core/diagnostics/dotnet-counters.md)oder der Ereignis Ablauf Verfolgung für Windows genutzt werden können. Weitere Informationen zum Verwenden von `EventCounter` in Ihrem eigenen Code finden Sie unter [Einführung in eventcounter](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+Die .net Core-Laufzeit stellt eine Reihe von Komponenten zum ausgeben und beobachten von Metriken bereit. Hierzu gehören APIs wie die <xref:System.Diagnostics.Tracing.EventSource> -Klasse und die- <xref:System.Diagnostics.Tracing.EventCounter> Klasse. Diese APIs können grundlegende numerische Daten ausgeben, die von externen Prozessen wie dem [globalen dotnet-Counters-Tool](../../core/diagnostics/dotnet-counters.md)oder der Ereignis Ablauf Verfolgung für Windows genutzt werden können. Weitere Informationen zur Verwendung von `EventCounter` in Ihrem eigenen Code finden Sie unter [Einführung in eventcounter](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
-Für erweiterte Metriken und zum Schreiben von Metrikdaten in eine größere Anzahl von Daten speichern können Sie ein Open Source-Projekt mit dem Namen " [App-Metriken](https://www.app-metrics.io)" ausprobieren. Diese Sammlung von Bibliotheken bietet einen umfangreichen Satz von Typen, um Ihren Code zu instrumentieren. Außerdem werden Pakete zum Schreiben von Metriken in verschiedene Arten von Zielen angeboten, die Zeitreihen Datenbanken, wie z. b. Prometheus und Einfluss xdb, und [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)enthalten. Das nuget-Paket [app. Metrics. aspnetcore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) fügt sogar einen umfassenden Satz grundlegender Metriken hinzu, die automatisch über die Integration in das ASP.net Core Framework generiert werden. Die Projektwebsite stellt [Vorlagen](https://www.app-metrics.io/samples/grafana/) zum Anzeigen dieser Metriken mit der [grafana](https://grafana.com/) -Visualisierungsplattform bereit.
+Für erweiterte Metriken und zum Schreiben von Metrikdaten in eine größere Anzahl von Daten speichern können Sie ein Open Source-Projekt mit dem Namen " [App-Metriken](https://www.app-metrics.io)" ausprobieren. Diese Sammlung von Bibliotheken bietet einen umfangreichen Satz von Typen, um Ihren Code zu instrumentieren. Außerdem werden Pakete zum Schreiben von Metriken in verschiedene Arten von Zielen angeboten, die Zeitreihen Datenbanken, wie z. b. Prometheus und Einfluss xdb, und [Application Insights](/azure/azure-monitor/app/app-insights-overview)enthalten. Das nuget-Paket [app. Metrics. aspnetcore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) fügt sogar einen umfassenden Satz grundlegender Metriken hinzu, die automatisch über die Integration in das ASP.net Core Framework generiert werden. Die Projektwebsite stellt [Vorlagen](https://www.app-metrics.io/samples/grafana/) zum Anzeigen dieser Metriken mit der [grafana](https://grafana.com/) -Visualisierungsplattform bereit.
 
 ### <a name="produce-metrics"></a>Metriken
 
@@ -62,12 +62,12 @@ Die meisten metrikplattformen unterstützen die folgenden Typen:
 | Metriktyp | Beschreibung |
 | ----------- | ----------- |
 | Zähler     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen und Fehler. |
-| Messgerät       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
-| Histogramm   | Misst eine Verteilung von Werten über beliebige Grenzen hinweg. Ein Histogramm kann z. b. die Größe des Datasets verfolgen und zählen, wie viele < 10 Datensätze enthalten sind, wie viele enthaltene 11-100-Einträge, wie viele enthaltene 101-1000-Einträge und wie viele > 1000 Datensätze enthalten sind. |
-| Messen       | Misst die Rate, mit der ein Ereignis in verschiedenen Zeitspannen auftritt. |
-| Timer       | Verfolgt die Dauer der Ereignisse und die Rate, mit der es eintritt, als Histogramm gespeichert. |
+| Maßstab       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
+| Histogramm   | Misst eine Verteilung von Werten über beliebige Grenzen hinweg. Ein Histogramm kann z. b. die Größe des Datasets verfolgen und zählen, wie viele <10 Datensätze enthalten sind, wie viele enthaltene 11-100-Einträge, wie viele enthaltene 101-1000-Einträge und wie viele >1000-Einträge enthalten sind. |
+| Zähler       | Misst die Rate, mit der ein Ereignis in verschiedenen Zeitspannen auftritt. |
+| Zeitgeber       | Verfolgt die Dauer der Ereignisse und die Rate, mit der es eintritt, als Histogramm gespeichert. |
 
-Mithilfe von *App-Metriken*kann eine `IMetrics` Schnittstelle über die Abhängigkeitsinjektion abgerufen und zum Aufzeichnen dieser Metriken für einen GrpC-Dienst verwendet werden. Im folgenden Beispiel wird gezeigt, wie die Anzahl von `Get` Anforderungen gezählt wird, die im Laufe der Zeit ausgeführt wurden:
+Mithilfe von *App-Metriken* `IMetrics` kann eine Schnittstelle über eine Abhängigkeitsinjektion abgerufen und zum Aufzeichnen dieser Metriken für einen GrpC-Dienst verwendet werden. Im folgenden Beispiel wird gezeigt, wie die Anzahl der `Get` im Laufe der Zeit erfolgten Anforderungen gezählt wird:
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -98,7 +98,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="store-and-visualize-metrics-data"></a>Speichern und Visualisieren von Metrikdaten
 
-Die beste Möglichkeit zum Speichern von Metrikdaten befindet sich in einer *Zeitreihen Datenbank*, einem speziellen Datenspeicher, der für die Aufzeichnung numerischer Datenreihen konzipiert ist, die mit Zeitstempeln markiert sind. Die beliebtesten dieser Datenbanken sind [Prometheus](https://prometheus.io/) und [Einfluss xdb](https://www.influxdata.com/products/influxdb-overview/). Microsoft Azure bietet auch dedizierten metrikspeicher über den [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) -Dienst.
+Die beste Möglichkeit zum Speichern von Metrikdaten befindet sich in einer *Zeitreihen Datenbank*, einem speziellen Datenspeicher, der für die Aufzeichnung numerischer Datenreihen konzipiert ist, die mit Zeitstempeln markiert sind. Die beliebtesten dieser Datenbanken sind [Prometheus](https://prometheus.io/) und [Einfluss xdb](https://www.influxdata.com/products/influxdb-overview/). Microsoft Azure bietet auch dedizierten metrikspeicher über den [Azure Monitor](/azure/azure-monitor/overview) -Dienst.
 
 Die aktuelle Lösung für die Visualisierung von Metrikdaten ist [grafana](https://grafana.com), die mit einer Vielzahl von Speicheranbietern funktioniert. Die folgende Abbildung zeigt ein Beispiel für ein grafana-Dashboard, das Metriken aus dem linkerd-dienstmesh anzeigt, das das StockData-Beispiel enthält:
 
@@ -120,16 +120,16 @@ Die verteilte Ablauf Verfolgung basiert auf dem Konzept der *Spannen*: benannte,
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Verteilte Ablauf Verfolgung mit `DiagnosticSource`
 
-.Net Core verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen zuordnet: [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource`-Modul verfügt über das Konzept einer *Aktivität*und bietet eine einfache Möglichkeit, die Diagnose innerhalb eines Prozesses zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.Net Core verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen zuordnet: [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource` Modul verfügt über das Konzept einer *Aktivität*und bietet eine einfache Möglichkeit, die Diagnose in einem Prozess zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des- `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
-Da `DiagnosticSource` Teil des Kern-Frameworks ist, wird es von mehreren Kernkomponenten unterstützt. Hierzu gehören <xref:System.Net.Http.HttpClient>, Entity Framework Core und ASP.net Core, einschließlich expliziter Unterstützung im GrpC-Framework. Wenn ASP.net Core eine Anforderung empfängt, überprüft er, ob ein paar von HTTP-Headern mit dem W3C-Ablauf [Verfolgungs Kontext](https://www.w3.org/TR/trace-context) Standard übereinstimmt. Wenn die Header gefunden werden, wird eine Aktivität mithilfe der Identitäts Werte und des Kontexts aus den Headern gestartet. Wenn keine Header gefunden werden, wird eine Aktivität mit generierten Identitäts Werten gestartet, die dem Standardformat entsprechen. Alle Diagnosen, die während der Lebensdauer dieser Aktivität vom Framework oder Anwendungscode generiert werden, können mit der Ablauf Verfolgung und den spannen Bezeichner gekennzeichnet werden. Die `HttpClient`-Unterstützung erweitert dies, indem bei jeder Anforderung eine aktuelle Aktivität überprüft und die Ablauf Verfolgungs Header der ausgehenden Anforderung automatisch hinzugefügt werden.
+Da `DiagnosticSource` Teil des Kern-Frameworks ist, wird es von mehreren Kernkomponenten unterstützt. Hierzu gehören <xref:System.Net.Http.HttpClient> , Entity Framework Core und ASP.net Core, einschließlich expliziter Unterstützung im GrpC-Framework. Wenn ASP.net Core eine Anforderung empfängt, überprüft er, ob ein paar von HTTP-Headern mit dem W3C-Ablauf [Verfolgungs Kontext](https://www.w3.org/TR/trace-context) Standard übereinstimmt. Wenn die Header gefunden werden, wird eine Aktivität mithilfe der Identitäts Werte und des Kontexts aus den Headern gestartet. Wenn keine Header gefunden werden, wird eine Aktivität mit generierten Identitäts Werten gestartet, die dem Standardformat entsprechen. Alle Diagnosen, die während der Lebensdauer dieser Aktivität vom Framework oder Anwendungscode generiert werden, können mit der Ablauf Verfolgung und den spannen Bezeichner gekennzeichnet werden. Die `HttpClient` Unterstützung erweitert dies, indem bei jeder Anforderung eine aktuelle Aktivität überprüft und der ausgehenden Anforderung automatisch die Ablauf Verfolgungs Header hinzugefügt werden.
 
-Die ASP.net Core GrpC-Client-und-Server Bibliotheken enthalten explizite Unterstützung für `DiagnosticSource` und `Activity`sowie für die Erstellung von Aktivitäten sowie für die automatische Anwendung und Verwendung von Header Informationen.
+Die ASP.net Core GrpC-Client und-Server Bibliotheken umfassen explizite Unterstützung für `DiagnosticSource` und `Activity` und erstellen Aktivitäten und übernehmen und verwenden Header Informationen automatisch.
 
 > [!NOTE]
 > All dies geschieht nur, wenn ein Listener die Diagnoseinformationen nutzt. Wenn kein Listener vorhanden ist, werden keine Diagnosen geschrieben, und es werden keine Aktivitäten erstellt.
 
-### <a name="add-your-own-diagnosticsource-and-activity"></a>Fügen Sie Ihre eigenen `DiagnosticSource` und `Activity`
+### <a name="add-your-own-diagnosticsource-and-activity"></a>Fügen Sie eigene `DiagnosticSource` und `Activity`
 
 Informationen zum Hinzufügen Ihrer eigenen Diagnose oder zum Erstellen von expliziten Spannen innerhalb des Anwendungs Codes finden Sie im Benutzerhandbuch zu [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) und [Aktivitäts Benutzerhandbuch](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage).
 
@@ -141,7 +141,7 @@ Die opentrace-API wird im folgenden Abschnitt beschrieben. Wenn Sie stattdessen 
 
 #### <a name="use-the-opentracing-package-to-store-distributed-trace-data"></a>Verwenden des opentracing-Pakets zum Speichern verteilter Ablauf Verfolgungs Daten
 
-Das [opentrace-nuget-Paket](https://www.nuget.org/packages/OpenTracing/) unterstützt alle opentrace-kompatiblen Back-Ends (die unabhängig von `DiagnosticSource`verwendet werden können). Es gibt ein zusätzliches Paket aus dem opentrace-API-Beitrags Projekt, [opentracing. contrib. Netcore](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/). Mit diesem Paket wird ein `DiagnosticSource` Listener hinzugefügt und Ereignisse und Aktivitäten automatisch in ein Back-End geschrieben. Das Aktivieren dieses Pakets ist so einfach wie das Installieren von nuget und das Hinzufügen als Dienst in ihrer `Startup`-Klasse.
+Das [opentrace-nuget-Paket](https://www.nuget.org/packages/OpenTracing/) unterstützt alle opentrace-kompatiblen Back-Ends (die unabhängig von verwendet werden können `DiagnosticSource` ). Es gibt ein zusätzliches Paket aus dem opentrace-API-Beitrags Projekt, [opentracing. contrib. Netcore](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/). Mit diesem Paket wird ein Listener hinzugefügt `DiagnosticSource` und Ereignisse und Aktivitäten automatisch in ein Back-End geschrieben. Das Aktivieren dieses Pakets ist so einfach wie das Installieren von nuget und das Hinzufügen als Dienst in Ihrer `Startup` Klasse.
 
 ```csharp
 public class Startup
@@ -155,12 +155,12 @@ public class Startup
 
 Das opentracing-Paket ist eine Abstraktionsschicht und erfordert daher eine spezifische Implementierung für das Back-End. Opentrace-API-Implementierungen sind für die folgenden Open Source-Back-Ends verfügbar.
 
-| -Name | Package | Website |
+| Name | Paket | Website |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | Elastisches apm | [Elastisches apm. netcoreall](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |
 
-Weitere Informationen zur opentrace-API für .net finden Sie unter [opentracing für C# ](https://github.com/opentracing/opentracing-csharp) und [opentracing contrib C#/.net kernrepository](https://github.com/opentracing-contrib/csharp-netcore) auf GitHub.
+Weitere Informationen zur opentrace-API für .net finden Sie unter [opentracing für c#](https://github.com/opentracing/opentracing-csharp) und [opentrace contrib c#/.net kernrepository](https://github.com/opentracing-contrib/csharp-netcore) auf GitHub.
 
 >[!div class="step-by-step"]
 >[Zurück](load-balancing.md)

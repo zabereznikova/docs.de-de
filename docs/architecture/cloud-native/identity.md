@@ -1,15 +1,15 @@
 ---
-title: Identität
+title: Identity
 description: Architektur von Cloud Native .net-apps für Azure | Identity
 ms.date: 05/13/2020
-ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66ff29947093d7c4fe57b11039190836dc37db08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614018"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163751"
 ---
-# <a name="identity"></a>Identität
+# <a name="identity"></a>Identity
 
 Die meisten Softwareanwendungen müssen über Kenntnisse über den Benutzer oder den Prozess verfügen, von dem Sie aufgerufen werden. Der Benutzer oder Prozess, der mit einer Anwendung interagiert, wird als Sicherheits Prinzipal bezeichnet, und der Prozess der Authentifizierung und autorialisierung dieser Prinzipale wird als Identitätsverwaltung oder einfach als *Identität*bezeichnet. Einfache Anwendungen können Ihre gesamte Identitätsverwaltung in der Anwendung beinhalten. dieser Ansatz ist jedoch nicht gut mit vielen Anwendungen und vielen Arten von Sicherheits Prinzipale skalierbar. Windows unterstützt die Verwendung von Active Directory, um eine zentralisierte Authentifizierung und Autorisierung zu ermöglichen.
 
@@ -25,9 +25,9 @@ Moderne cloudbasierte Identitätslösungen nutzen in der Regel Zugriffs Token, d
 
 Der STS ist in der Regel nur für die Authentifizierung des Prinzipals verantwortlich. Die Bestimmung des Zugriffs Niveaus auf Ressourcen wird anderen Teilen der Anwendung überlassen.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
-- [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft Identity Platform](/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Zurück](azure-monitor.md)

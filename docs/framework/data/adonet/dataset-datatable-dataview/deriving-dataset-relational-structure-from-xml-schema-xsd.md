@@ -2,19 +2,20 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: d32b5cb86bc5a138f9a5f438629d8e231be4ba94
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 878e39af575328fb0abba096c327d36203a52231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151168"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164804"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
-Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen wird `complexType` für jedes untergeordnete Element eines Schemaelements `DataSet`eine Tabelle im generiert. Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden in `DataSet` der für Elemente der obersten Ebene im Schema erstellt. Eine Tabelle wird jedoch nur für `complexType` ein Element `complexType` der obersten Ebene `complexType` erstellt, wenn das `complexType` Element in einem `DataTable` anderen `DataSet`Element verschachtelt ist.  
+
+Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen wird für jedes untergeordnete `complexType` Element eines Schema Elements eine Tabelle in generiert `DataSet` . Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden in `DataSet` für Elemente der obersten Ebene im Schema erstellt. Allerdings wird eine Tabelle nur für ein Element der obersten Ebene erstellt `complexType` , wenn das `complexType` Element in einem anderen Element geschachtelt ist `complexType` . in diesem Fall wird das geschachtelte `complexType` Element einem in `DataTable` der zugeordnet `DataSet` .  
   
- Weitere Informationen zum XSD finden Sie im [XML-Schema-Teil 0: Primer-Schema-Teil 0: Primer-Schema](https://www.w3.org/TR/xmlschema-0/), [im XML-Schema Teil 1: Structures-Empfehlung](https://www.w3.org/TR/xmlschema-1/)und in der [XML-Schema-Empfehlung 2: Datentypen-](https://www.w3.org/TR/xmlschema-2/)  
+ Weitere Informationen zu XSD finden Sie in der Empfehlung zum XML- [Schema Part 0: Primer](https://www.w3.org/TR/xmlschema-0/)(World Wide Web Consortium (W3C), der Empfehlung zu [XML-Schema Teil 1: Strukturen](https://www.w3.org/TR/xmlschema-1/)und der [Empfehlung XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/).  
   
- Im folgenden Beispiel wird `customers` ein XML-Schema `MyDataSet` veranschaulicht, bei dem es sich um das untergeordnete Element des Elements handelt, bei dem es sich um ein **DataSet-Element** handelt.  
+ Im folgenden Beispiel wird ein XML-Schema veranschaulicht `customers` , wobei das untergeordnete Element des- `MyDataSet` Elements ist, bei dem es sich um ein **DataSet** -Element handelt.  
   
 ```xml  
 <xs:schema id="SomeID"
@@ -50,9 +51,9 @@ Customers (CustomerID, CompanyName, Phone)
  Der Datentyp jeder Spalte in der Tabelle wird aus dem XML-Schematyp des entsprechenden angegebenen Elements oder Attributs abgeleitet.  
   
 > [!NOTE]
-> Wenn das `customers` Element aus einem einfachen XML-Schema-Datentyp wie **Ganzzahl**ist, wird keine Tabelle generiert. Tabellen werden nur für Elemente auf oberster Ebene erstellt, bei denen es sich um komplexe Typen handelt.  
+> Wenn das Element `customers` einen einfachen XML-Schema Datentyp wie " **Integer**" hat, wird keine Tabelle generiert. Tabellen werden nur für Elemente auf oberster Ebene erstellt, bei denen es sich um komplexe Typen handelt.  
   
- Im folgenden XML-Schema enthält das **Schemaelement** zwei untergeordnete Elementelemente `InStateCustomers` und `OutOfStateCustomers`.  
+ Im folgenden XML-Schema verfügt das **Schema** Element über zwei untergeordnete Elemente, `InStateCustomers` und `OutOfStateCustomers` .  
   
 ```xml  
 <xs:schema id="SomeID"
@@ -75,7 +76,7 @@ Customers (CustomerID, CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Die beiden untergeordneten Elemente `InStateCustomers` und `OutOfStateCustomers` sind Elemente komplexen Typs (`customerType`). Daher generiert der Zuordnungsprozess die folgenden `DataSet`beiden identischen Tabellen im .  
+ Die beiden untergeordneten Elemente `InStateCustomers` und `OutOfStateCustomers` sind Elemente komplexen Typs (`customerType`). Aus diesem Grund generiert der Mapping-Prozess die folgenden beiden identischen Tabellen in `DataSet` .  
   
 ```text  
 InStateCustomers (CustomerID, CompanyName, Phone)  
@@ -83,18 +84,20 @@ OutOfStateCustomers (CustomerID, CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Beschreibt die XML-Schemaelemente, die zum Erstellen `DataSet`eindeutiger und Fremdschlüsseleinschränkungen in einem verwendet werden.  
+ Beschreibt die XML-Schema Elemente, die zum Erstellen von Unique-und FOREIGN KEY-Einschränkungen in einer verwendet werden `DataSet` .  
   
  [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
- Beschreibt die XML-Schemaelemente, die zum `DataSet`Erstellen von Beziehungen zwischen Tabellenspalten in einem verwendet werden.  
+ Beschreibt die XML-Schema Elemente, die zum Erstellen von Beziehungen zwischen Tabellen Spalten in einem verwendet werden `DataSet` .  
   
  [XML-Schemaeinschränkungen und -beziehungen](xml-schema-constraints-and-relationships.md)  
- Beschreibt, wie Beziehungen implizit erstellt werden, wenn XML-Schemaelemente zum Erstellen von Einschränkungen in einem `DataSet`erstellt werden.  
+ Beschreibt, wie Beziehungen implizit erstellt werden, wenn XML-Schema Elemente zum Erstellen von Einschränkungen in verwendet werden `DataSet` .  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Verwenden von XML in einem "DataSet"](using-xml-in-a-dataset.md)  
- Beschreibt das Laden und Beibehalten der relationalen Struktur und der Daten in einem `DataSet` als XML-Daten.  
+
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)  
+ Beschreibt, wie die relationale Struktur und die Daten in als XML-Daten geladen und persistent gespeichert werden `DataSet` .  
   
 ## <a name="see-also"></a>Weitere Informationen
 
