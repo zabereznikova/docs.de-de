@@ -2,17 +2,19 @@
 title: Programmierhandbuch (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: dc13af06cf6c439d739d76904f206ebc50ba3187
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 720d9a90583a0dcf3453689a362f6043157a326c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634806"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161558"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programmierhandbuch (LINQ to DataSet)
+
 Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Programmierung mit LINQ to DataSet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Abfragen in LINQ to DataSet](queries-in-linq-to-dataset.md)  
  Enthält Informationen zum Schreiben von LINQ to DataSet-Abfragen.  
   
@@ -23,9 +25,9 @@ Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Pr
  Beschreibt die Vorgehensweise bei der Verwendung des <xref:System.Data.DataRowComparer>-Objekts zum Vergleichen von Datenzeilen.  
   
  [Erstellen einer DataTable aus einer Abfrage](creating-a-datatable-from-a-query-linq-to-dataset.md)  
- Bietet Informationen zum Erstellen einer <xref:System.Data.DataTable> aus einer LINQ to DataSet Abfrage mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode.  
+ Stellt Informationen zum Erstellen einer <xref:System.Data.DataTable> aus einer LINQ to DataSet Abfrage mithilfe der- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Methode bereit.  
   
- [Gewusst wie: Implementieren von "copydedatable\<t >", wobei der generische Typ "t" keine "DataRow" ist](implement-copytodatatable-where-type-not-a-datarow.md)  
+ [Gewusst wie: Implementieren von "copydedatable", \<T> wobei der generische Typ "T" keine "DataRow" ist](implement-copytodatatable-where-type-not-a-datarow.md)  
  Beschreibt die Implementierung einer benutzerdefinierten `CopyToDataTable<T>`-Methode, wobei der generische Parameter T nicht den Typ <xref:System.Data.DataRow> aufweist.  
   
  [Generische Field- und SetField-Methoden](generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -44,6 +46,7 @@ Dieser Abschnitt enthält konzeptionelle Informationen und Beispiele für die Pr
  Enthält Abfragebeispiele, in denen die LINQ-Operatoren verwendet werden.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  

@@ -3,12 +3,12 @@ title: Kandidaten-Apps für die native Cloud
 description: Erfahren Sie, welche Arten von Anwendungen von einem cloudbasierten Ansatz profitieren.
 author: robvet
 ms.date: 05/14/2020
-ms.openlocfilehash: b907a17b2351bc4ffe49fd6eb6f5963b209d00db
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614239"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160943"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Kandidaten-Apps für die native Cloud
 
@@ -40,7 +40,7 @@ Das kostenlose e-Book von Microsoft zur [Modernisierung vorhandener .NET-Anwendu
 
 Monolithische apps, die nicht schwerwiegend sind, profitieren größtenteils von einer schnellen Lift-and-Shift-Migration ([cloudinfrastructure-Ready](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). Hier wird die lokale Arbeitsauslastung ohne Änderungen erneut auf einem cloudbasierten virtuellen Computer gehostet. Bei diesem Ansatz wird das [IaaS-Modell (Infrastructure-as-a-Service)](https://azure.microsoft.com/overview/what-is-iaas/)verwendet. Azure umfasst mehrere Tools, wie z. b. [Azure migrate](https://azure.microsoft.com/services/azure-migrate/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)und [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) , um eine solche Verschiebung zu vereinfachen. Wenngleich diese Strategie zu Kosteneinsparungen führen kann, sind solche Anwendungen in der Regel nicht so entworfen, dass Sie die Vorteile von Cloud Computing entsperren und nutzen können.
 
-Monolithische apps, die für das Unternehmen von entscheidender Bedeutung sind, profitieren von einer verbesserten Lift-and-Shift-Migration (*cloudoptimiert*). Diese Vorgehensweise umfasst Bereitstellungs Optimierungen, die wichtige Clouddienste ermöglichen, ohne die Kernarchitektur der Anwendung zu ändern. Beispielsweise können Sie die Anwendung [containerisieren](https://docs.microsoft.com/virtualization/windowscontainers/about/) und in einem containerorchestrator wie [Azure Kubernetes Services bereitstellen](https://azure.microsoft.com/services/kubernetes-service/), der weiter unten in diesem Buch erläutert wird. In der Cloud kann die Anwendung andere Clouddienste nutzen, wie z. b. Datenbanken, Nachrichten Warteschlangen, Überwachung und verteiltes Zwischenspeichern.
+Monolithische apps, die für das Unternehmen von entscheidender Bedeutung sind, profitieren von einer verbesserten Lift-and-Shift-Migration (*cloudoptimiert*). Diese Vorgehensweise umfasst Bereitstellungs Optimierungen, die wichtige Clouddienste ermöglichen, ohne die Kernarchitektur der Anwendung zu ändern. Beispielsweise können Sie die Anwendung [containerisieren](/virtualization/windowscontainers/about/) und in einem containerorchestrator wie [Azure Kubernetes Services bereitstellen](https://azure.microsoft.com/services/kubernetes-service/), der weiter unten in diesem Buch erläutert wird. In der Cloud kann die Anwendung andere Clouddienste nutzen, wie z. b. Datenbanken, Nachrichten Warteschlangen, Überwachung und verteiltes Zwischenspeichern.
 
 Schließlich können monolithische apps, die strategische Unternehmensfunktionen durchführen, am besten von einem *cloudbasierten* Ansatz profitieren, dem Betreff dieses Buchs. Dieser Ansatz bietet Agilität und Geschwindigkeit. Allerdings entstehen Kosten für die Neuplatzierung, Umgestaltung und Neuerstellung von Code.
 
@@ -68,7 +68,7 @@ In diesem Kapitel haben wir das Native Cloud-Computing eingeführt. Wir haben ei
 
 Mit der Einführung hinter sehen wir uns nun einen ausführlicheren Überblick über die Cloud Native an.
 
-### <a name="references"></a>Referenzen
+### <a name="references"></a>References
 
 - [Cloud Native Computing Foundation](https://www.cncf.io/)
 
@@ -80,7 +80,7 @@ Mit der Einführung hinter sehen wir uns nun einen ausführlicheren Überblick �
 
 - [Über die zwölfstufige Anwendung hinaus](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
-- [Was ist Infrastructure als Code?](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
+- [Was ist Infrastructure als Code?](/azure/devops/learn/what-is-infrastructure-as-code)
 
 - [Microbereitstellung von uber Engineering: tägliche Bereitstellung mit Vertrauen](https://eng.uber.com/micro-deploy/)
 

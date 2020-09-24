@@ -2,14 +2,15 @@
 title: Codegenerierung in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 551322637e6e04b9be7d558c51e063fead7f84f4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: f58448e0fc0c22795005b55a737b42374a750ec3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70247957"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161528"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Codegenerierung in LINQ to SQL
+
 Sie können Code generieren, um eine Datenbank mit dem-objektrelationaler Designer oder dem SQLMetal-Befehlszeilen Tool darzustellen. Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:  
   
 1. Der *DBML-Extraktor* extrahiert Schema Informationen aus der Datenbank und teilt die Informationen in eine XML-formatierte DBML-Datei auf.  
@@ -21,18 +22,21 @@ Sie können Code generieren, um eine Datenbank mit dem-objektrelationaler Design
  Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Entwickler, die Visual Studio verwenden, können auch den objektrelationaler Designer verwenden, um Code zu generieren. Weitere Informationen finden Sie [unter LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>DBML-Extrahierungsprogramm  
- Der DBML-Extraktor ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Komponente, die Daten Bank Metadaten als Eingabe annimmt und eine DBML-Datei als Ausgabe erzeugt.  
+
+ Der DBML-Extraktor ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Komponente, die Daten Bank Metadaten als Eingabe annimmt und eine DBML-Datei als Ausgabe erzeugt.  
   
 ## <a name="code-generator"></a>Code-Generator  
- Der Code-Generator ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Komponente, die DBML-Dateien in C#Visual Basic-,-oder-XML-Mapping-Dateien übersetzt.  
+
+ Der Code-Generator ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Komponente, die DBML-Dateien in Visual Basic-, c#-oder XML-Mapping-Dateien übersetzt.  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
+
  Die DBML-Datei muss gegenüber der folgenden Schemadefinition als XSD-Datei gültig sein.  
   
  Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird. Weitere Informationen finden Sie unter [externe Zuordnung](external-mapping.md).  
   
 > [!NOTE]
-> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "DbmlSchema. xsd". Informationen zur korrekten Verwendung der XSD-Datei zum Validieren einer DBML- [Datei finden Sie unter Gewusst wie: Validieren von DBML-und](how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
+> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "DbmlSchema. xsd". Informationen zur korrekten Verwendung der XSD-Datei zum Validieren einer DBML-Datei finden Sie unter Gewusst wie: Überprüfen von [DBML-und externen Mapping-Dateien](how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -243,6 +247,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Beispiel einer DBML-Datei  
+
  Der folgende Code entspricht einem Auszug aus der DBML-Datei, die aus der Beispieldatenbank Northwind erzeugt wurde. Sie können die gesamte Datei generieren, indem Sie SQLMetal mit der **/XML** -Option verwenden. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
@@ -269,10 +274,10 @@ elementFormDefault="qualified" >
 </Database>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hintergrundinformationen](background-information.md)
 - [External Mapping (Externe Zuordnung)](external-mapping.md)
 - [Vorgehensweise: Generieren des Objektmodells als externe Datei](how-to-generate-the-object-model-as-an-external-file.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](downloading-sample-databases.md)
+- [Herunterladen von Beispieldatenbanken](downloading-sample-databases.md)
 - [Verweis](reference.md)

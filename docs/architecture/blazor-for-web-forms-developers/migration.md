@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557541"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161203"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrieren von ASP.net Web Forms zu Blazor
 
@@ -636,7 +636,7 @@ Da Blazor auf .net Core basiert, müssen bei der Unterstützung von .net Core un
 - Codezugriffssicherheit (Code Access Security, CAS)
 - Sicherheitstransparenz
 
-Weitere Informationen zu Techniken zur Identifizierung der erforderlichen Änderungen für die Unterstützung von unter .net Core finden [Sie unter Portieren von Code aus .NET Framework zu .net Core](/dotnet/core/porting).
+Weitere Informationen zu Techniken zur Identifizierung der erforderlichen Änderungen für die Unterstützung von unter .net Core finden [Sie unter Portieren von Code aus .NET Framework zu .net Core](../../core/porting/index.md).
 
 ASP.net Core ist eine neue Version von ASP.net und weist einige Änderungen auf, die möglicherweise nicht anfänglich offensichtlich erscheinen. Die Haupt Änderungen lauten:
 
@@ -651,4 +651,4 @@ Viele Vorgänge in ASP.net Core sind asynchron, wodurch das Laden von e/a-gebund
 An diesem Punkt haben Sie viele Beispiele dafür gesehen, wie ein Web Forms Projekt in verschoben wird Blazor . Ein vollständiges Beispiel finden Sie im [eshopon Blazor ](https://github.com/dotnet-architecture/eShopOnBlazor) -Projekt.
 
 >[!div class="step-by-step"]
->[Zurück](security-authentication-authorization.md)
+>[Vorherige](security-authentication-authorization.md)

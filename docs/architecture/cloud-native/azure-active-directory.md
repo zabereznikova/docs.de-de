@@ -2,12 +2,12 @@
 title: Azure Active Directory
 description: Architektur von Cloud Native .net-apps für Azure | Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 55787f3565fc15bb25cf1a101aa5c1e3ddefe5e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614278"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161112"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -17,9 +17,9 @@ Azure AD für die Cloud erstellt. Es handelt sich tatsächlich um eine cloudbasi
 
 Azure Ad unterstützt Unternehmens Branding-Anmelde Bildschirme, Multi-Factory-Authentifizierung und cloudbasierte Anwendungs Proxys, die verwendet werden, um SSO für Lokal gehostete Anwendungen bereitzustellen. Sie bietet verschiedene Arten von Sicherheitsberichten und Warnungs Funktionen.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
-- [Microsoft Identity Platform](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft Identity Platform](/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Zurück](authentication-authorization.md)

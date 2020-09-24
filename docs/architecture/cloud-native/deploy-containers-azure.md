@@ -2,12 +2,12 @@
 title: Bereitstellen von Containern in Azure
 description: Bereitstellen von Containern in Azure mit Azure Container Registry, Azure Kubernetes Service und Azure dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: ba2854323ee0f1394a3cff0dd3756cb3c7c32d5b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d848a146a2bdb5d8d02543f57f19d6a39c9699e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614148"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160774"
 ---
 # <a name="deploying-containers-in-azure"></a>Bereitstellen von Containern in Azure
 
@@ -23,7 +23,7 @@ Beim containerialisieren eines microservice müssen Sie zuerst einen Build-Conta
 
 Nach der Erstellung werden Container Images in Container Registrierungen gespeichert. Sie ermöglichen Ihnen das Erstellen, speichern und Verwalten von Container Images. Es sind zahlreiche Registrierungen verfügbar (öffentlich und privat). Azure Container Registry (ACR) ist ein vollständig verwalteter Container Registrierungsdienst in der Azure-Cloud. Sie speichert Ihre Images innerhalb des Azure-Netzwerks und verkürzt die Zeit für die Bereitstellung auf Azure-Container Hosts. Sie können diese auch mit denselben Sicherheits-und Identitäts Prozeduren sichern, die Sie auch für andere Azure-Ressourcen verwenden.
 
-Sie erstellen eine Azure Container Registry mithilfe der Tools [Azure-Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal), [Azure CLI](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli)oder [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Das Erstellen einer Registrierung in Azure ist einfach. Hierfür sind ein Azure-Abonnement, eine Ressourcengruppe und ein eindeutiger Name erforderlich. In Abbildung 3-11 werden die grundlegenden Optionen zum Erstellen einer Registrierung gezeigt, die unter gehostet wird `registryname.azurecr.io` .
+Sie erstellen eine Azure Container Registry mithilfe der Tools [Azure-Portal](/azure/container-registry/container-registry-get-started-portal), [Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli)oder [PowerShell](/azure/container-registry/container-registry-get-started-powershell). Das Erstellen einer Registrierung in Azure ist einfach. Hierfür sind ein Azure-Abonnement, eine Ressourcengruppe und ein eindeutiger Name erforderlich. In Abbildung 3-11 werden die grundlegenden Optionen zum Erstellen einer Registrierung gezeigt, die unter gehostet wird `registryname.azurecr.io` .
 
 ![Erstellen einer Containerregistrierung](./media/create-container-registry.png)
 
@@ -57,7 +57,7 @@ Als bewährte Verfahrensweise sollten Entwickler Images nicht manuell in eine Co
 
 ## <a name="acr-tasks"></a>ACR-Aufgaben
 
-[ACR-Aufgaben](https://docs.microsoft.com/azure/container-registry/container-registry-tasks-overview) sind eine Reihe von Funktionen, die im Azure Container Registry verfügbar sind. Es erweitert den [Entwicklungs Durchlauf der inneren Schleife](https://docs.microsoft.com/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow) durch das entwickeln und Verwalten von Container Images in der Azure-Cloud. Anstatt einen `docker build` und `docker push` lokal auf dem Entwicklungs Computer aufzurufen, werden diese automatisch von ACR-Aufgaben in der Cloud verarbeitet.
+[ACR-Aufgaben](/azure/container-registry/container-registry-tasks-overview) sind eine Reihe von Funktionen, die im Azure Container Registry verfügbar sind. Es erweitert den [Entwicklungs Durchlauf der inneren Schleife](../containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow.md) durch das entwickeln und Verwalten von Container Images in der Azure-Cloud. Anstatt einen `docker build` und `docker push` lokal auf dem Entwicklungs Computer aufzurufen, werden diese automatisch von ACR-Aufgaben in der Cloud verarbeitet.
 
 Mit dem folgenden Befehl AZ CLI wird ein Container Image erstellt und per Push an ACR übertragen:
 
@@ -75,7 +75,7 @@ Wie Sie aus dem vorherigen Befehls Block sehen können, ist es nicht erforderlic
 
 In diesem Kapitel wurde Azure Kubernetes Service (AKS) ausführlich erläutert. Wir haben gesehen, dass es sich um den de-facto-containerorchestrator handelt, der Container in der Cloud native Anwendungen verwaltet.
 
-Nachdem Sie ein Abbild in einer Registrierung wie ACR bereitgestellt haben, können Sie AKS so konfigurieren, dass es automatisch per Pull und bereitgestellt wird. Wenn eine CI/CD-Pipeline vorhanden ist, können Sie eine [Canary-Release](https://martinfowler.com/bliki/CanaryRelease.html) -Strategie konfigurieren, um das Risiko bei der schnellen Bereitstellung von Updates zu minimieren. Die neue Version der APP wird anfänglich in der Produktion konfiguriert, ohne dass Datenverkehr an Sie weitergeleitet wird. Anschließend leitet das System einen kleinen Prozentsatz der Benutzer an die neu bereitgestellte Version weiter. Wenn das Team Vertrauen in die neue Version erhält, kann es mehr Instanzen einführen und das alte abkoppeln. AKS unterstützt diese Art der Bereitstellung problemlos.
+Nachdem Sie ein Abbild in einer Registrierung wie ACR bereitgestellt haben, können Sie AKS so konfigurieren, dass es automatisch per Pull und bereitgestellt wird. Wenn eine CI/CD-Pipeline vorhanden ist, können Sie eine  [Canary-Release](https://martinfowler.com/bliki/CanaryRelease.html) -Strategie konfigurieren, um das Risiko bei der schnellen Bereitstellung von Updates zu minimieren. Die neue Version der APP wird anfänglich in der Produktion konfiguriert, ohne dass Datenverkehr an Sie weitergeleitet wird. Anschließend leitet das System einen kleinen Prozentsatz der Benutzer an die neu bereitgestellte Version weiter. Wenn das Team Vertrauen in die neue Version erhält, kann es mehr Instanzen einführen und das alte abkoppeln. AKS unterstützt diese Art der Bereitstellung problemlos.
 
 Wie bei den meisten Ressourcen in Azure können Sie einen Azure Kubernetes Service-Cluster erstellen, indem Sie das Portal, die Befehlszeile oder die Automatisierungstools wie Helm oder TERRAFORM verwenden. Um mit einem neuen Cluster zu beginnen, müssen Sie die folgenden Informationen angeben:
 
@@ -86,7 +86,7 @@ Wie bei den meisten Ressourcen in Azure können Sie einen Azure Kubernetes Servi
 - Kubernetes-Version
 - DNS-Namenspräfix
 - Knotengröße
-- Knotenanzahl
+- Anzahl der Knoten
 
 Diese Informationen sind für den Einstieg ausreichend. Im Rahmen des Erstellungs Prozesses in der Azure-Portal können Sie auch Optionen für die folgenden Features Ihres Clusters konfigurieren:
 
@@ -94,9 +94,9 @@ Diese Informationen sind für den Einstieg ausreichend. Im Rahmen des Erstellung
 - Authentifizierung
 - Netzwerk
 - Überwachung
-- Tags
+- `Tags`
 
-In dieser Schnellstartanleitung wird die Bereitstellung [eines AKS-Clusters mithilfe der Azure-Portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)erläutert.
+In dieser Schnellstartanleitung wird die Bereitstellung [eines AKS-Clusters mithilfe der Azure-Portal](/azure/aks/kubernetes-walkthrough-portal)erläutert.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
@@ -116,7 +116,7 @@ Der Prozess zum Arbeiten mit Azure dev Spaces umfasst die folgenden Schritte:
 3. Konfigurieren Sie einen untergeordneten Entwicklungsbereich (für Ihre eigene Version des Systems).
 4. Stellen Sie eine Verbindung mit dem Entwicklungsbereich her.
 
-Alle diese Schritte können mit dem Azure CLI und den neuen `azds` Befehlszeilen Tools ausgeführt werden. Wenn Sie z. b. einen neuen Azure dev-Speicher für einen bestimmten Kubernetes-Cluster erstellen möchten, verwenden Sie einen Befehl wie den folgenden:
+Alle diese Schritte können mit dem Azure CLI und den neuen  `azds` Befehlszeilen Tools ausgeführt werden. Wenn Sie z. b. einen neuen Azure dev-Speicher für einen bestimmten Kubernetes-Cluster erstellen möchten, verwenden Sie einen Befehl wie den folgenden:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster

@@ -2,14 +2,15 @@
 title: <transport> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60e8758d653848176ca3f287e253bd7990e78470
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732760"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162048"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<transport> von \<ws2007HttpBinding>
+
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,15 +29,17 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
            realm="string" />
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`clientCredentialType`|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Gibt die Anmeldeinformationen an, die verwendet werden, um den Client bei einem Domänenproxy zu authentifizieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -44,7 +47,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Basic|Verwendet die Standardauthentifizierung.|  
@@ -55,7 +58,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Basic|Verwendet die Standardauthentifizierung.|  
@@ -65,6 +68,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 |Zertifikat|Verwendet X.509-Zertifikate zum Authentifizieren des Clients.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

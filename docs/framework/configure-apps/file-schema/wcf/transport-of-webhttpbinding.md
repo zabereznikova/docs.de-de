@@ -2,14 +2,15 @@
 title: <transport> von <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: e8016eb9058f132722587368f1f8c7c03220af4a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b9efc732832a8862373b14f657796a59fb52c1a1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732785"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162113"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<transport> von \<webHttpBinding>
+
 Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpunkt, der zum Empfangen von HTTP-Anforderungen konfiguriert wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,15 +41,17 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`clientCredentialType`|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Gibt die Anmeldeinformationen an, die verwendet werden, um den Client bei einem Domänenproxy zu authentifizieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -57,7 +60,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`None`|Die Sicherheitsfunktionen sind deaktiviert.|  
 |`Basic`|Verwendet die Standardauthentifizierung.|  
@@ -68,7 +71,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`None`|Die Sicherheitsfunktionen sind deaktiviert.|  
 |`Basic`|Verwendet die Standardauthentifizierung.|  
@@ -77,6 +80,7 @@ Definiert die Sicherheitseinstellungen auf Transportebene für einen Dienstendpu
 |`Windows`|Verwendet die integrierte Windows-Authentifizierung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

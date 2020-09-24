@@ -3,12 +3,12 @@ title: Anwendungsresilienzmuster
 description: Architektur von Cloud Native .net-apps für Azure | Anwendungsresilienzmuster
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614322"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161151"
 ---
 # <a name="application-resiliency-patterns"></a>Anwendungsresilienzmuster
 
@@ -16,7 +16,7 @@ Die erste Verteidigungslinie ist anwendungsresilienz.
 
 Obwohl Sie viel Zeit für das Schreiben Ihres eigenen resilienzframe Works investieren konnten, sind solche Produkte bereits vorhanden. [Polly](http://www.thepollyproject.org/) ist eine umfassende Bibliothek für .net-Resilienz und vorübergehende Fehlerbehandlung, mit der Entwickler Richtlinien für Resilienz auf eine fließende und Thread sichere Weise ausdrücken können. Für Anwendungen, die entweder mit dem .NET Framework oder mit .net Core erstellt wurden, werden diese abgerufen. In der folgenden Tabelle werden die resilienzfeatures namens beschrieben `policies` , die in der Polly-Bibliothek verfügbar sind. Sie können einzeln oder gruppiert angewendet werden.
 
-| Policy | Erfahrung |
+| Richtlinie | Erfahrung |
 | :-------- | :-------- |
 | Erneut versuchen | Konfiguriert Wiederholungs Vorgänge für bestimmte Vorgänge. |
 | Trennschalter | Blockiert angeforderte Vorgänge für einen vordefinierten Zeitraum, wenn Fehler einen konfigurierten Schwellenwert überschreiten |
@@ -46,7 +46,7 @@ Als nächstes erweitern wir die Muster für Wiederholungs-und Trennschalter.
 
 In einer verteilten cloudbasierten Umgebung können Aufrufe von Diensten und cloudressourcen aufgrund vorübergehender (kurzlebiger) Fehler fehlschlagen, die sich in der Regel nach kurzer Zeit beheben. Durch das Implementieren einer Wiederholungs Strategie können solche Szenarien durch einen cloudbasierten Dienst minimiert werden.
 
-Das [Wiederholungsmuster](https://docs.microsoft.com/azure/architecture/patterns/retry) ermöglicht einem Dienst, einen fehlgeschlagenen Anforderungs Vorgang (konfigurierbar) mit einer exponentiell zunehmenden Wartezeit zu wiederholen. In Abbildung 6-2 wird ein Wiederholungsversuch in Aktion gezeigt.
+Das [Wiederholungsmuster](/azure/architecture/patterns/retry) ermöglicht einem Dienst, einen fehlgeschlagenen Anforderungs Vorgang (konfigurierbar) mit einer exponentiell zunehmenden Wartezeit zu wiederholen. In Abbildung 6-2 wird ein Wiederholungsversuch in Aktion gezeigt.
 
 ![Wiederholungsmuster in Aktion](./media/retry-pattern.png)
 
@@ -70,7 +70,7 @@ Um etwas Schlimmeres zu machen, können Sie durch das Ausführen von kontinuierl
 
 In diesen Fällen wäre es vorzuziehen, dass der Vorgang sofort fehlschlägt, und nur versuchen, den Dienst aufzurufen, wenn er wahrscheinlich erfolgreich ist.
 
-Das Trenn [Schalter-Muster](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) kann verhindern, dass eine Anwendung wiederholt versucht, einen Vorgang auszuführen, der wahrscheinlich fehlschlägt. Nach einer vordefinierten Anzahl von fehlgeschlagenen aufrufen wird der gesamte Datenverkehr an den Dienst blockiert. In regelmäßigen Abständen kann ein Test aufrufsvorgang ermitteln, ob der Fehler behoben wurde. In Abbildung 6-3 wird das Trennschalter-Muster in Aktion gezeigt.
+Das Trenn [Schalter-Muster](/azure/architecture/patterns/circuit-breaker) kann verhindern, dass eine Anwendung wiederholt versucht, einen Vorgang auszuführen, der wahrscheinlich fehlschlägt. Nach einer vordefinierten Anzahl von fehlgeschlagenen aufrufen wird der gesamte Datenverkehr an den Dienst blockiert. In regelmäßigen Abständen kann ein Test aufrufsvorgang ermitteln, ob der Fehler behoben wurde. In Abbildung 6-3 wird das Trennschalter-Muster in Aktion gezeigt.
 
 ![Trennschalter-Muster in Aktion](./media/circuit-breaker-pattern.png)
 

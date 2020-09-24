@@ -6,14 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 1cc82b14a940465c26377f9181a2e20b46b0783f
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 690e559617e4961c3cf3262a6d2d48a6bfac67cd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161294"
 ---
-# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>Sicherheit: Authentifizierung und Autorisierung in ASP.net Web Forms und Blazor
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms-and-no-locblazor"></a>Sicherheit: Authentifizierung und Autorisierung in ASP.NET Web Forms und Blazor 
 
 Das Migrieren von einer ASP.net-Web Forms Anwendung zu Blazor erfordert fast sicherlich die Aktualisierung der Authentifizierung und Autorisierung, vorausgesetzt, die Anwendung hätte die Authentifizierung konfiguriert. In diesem Kapitel wird erläutert, wie Sie aus dem ASP.net Web Forms Universal Provider-Modell (für Mitgliedschaften, Rollen und Benutzerprofile) migrieren und wie Sie mit ASP.net Core Identität von Blazor apps arbeiten. In diesem Kapitel werden allgemeine Schritte und Überlegungen behandelt, die ausführlichen Schritte und Skripts finden Sie in der Dokumentation, auf die verwiesen wird.
 
@@ -21,7 +21,7 @@ Das Migrieren von einer ASP.net-Web Forms Anwendung zu Blazor erfordert fast sic
 
 Seit ASP.NET 2,0 hat die ASP.net-Web Forms Plattform ein Anbieter Modell für eine Vielzahl von Features unterstützt, einschließlich der Mitgliedschaft. Der universelle Mitgliedschafts Anbieter wird zusammen mit dem optionalen Rollen Anbieter häufig mit ASP.net-Web Forms Anwendungen bereitgestellt. Er bietet eine robuste und sichere Möglichkeit zum Verwalten der Authentifizierung und Autorisierung, die noch heute gut funktionieren. Das aktuelle Angebot dieser universellen Anbieter steht als nuget-Paket [Microsoft. Aspnet. Providers](https://www.nuget.org/packages/Microsoft.AspNet.Providers)zur Verfügung.
 
-Die universelle Anbieter arbeiten mit einem SQL-Datenbankschema, das Tabellen wie `aspnet_Applications` ,, `aspnet_Membership` und enthält `aspnet_Roles` `aspnet_Users` . Bei der Konfiguration durch Ausführen des [aspnet_regsql.exe Befehls](https://docs.microsoft.com/previous-versions/ms229862(v=vs.140))installieren die Anbieter Tabellen und gespeicherte Prozeduren, die alle erforderlichen Abfragen und Befehle bereitstellen, die für die Arbeit mit den zugrunde liegenden Daten erforderlich sind. Das Datenbankschema und diese gespeicherten Prozeduren sind nicht mit neueren ASP.net Identity und ASP.net Core Identitäts Systemen kompatibel, sodass vorhandene Daten in das neue System migriert werden müssen. Abbildung 1 zeigt ein Beispiel für ein Tabellen Schema, das für universelle Anbieter konfiguriert wurde.
+Die universelle Anbieter arbeiten mit einem SQL-Datenbankschema, das Tabellen wie `aspnet_Applications` ,, `aspnet_Membership` und enthält `aspnet_Roles` `aspnet_Users` . Bei der Konfiguration durch Ausführen des [aspnet_regsql.exe Befehls](/previous-versions/ms229862(v=vs.140))installieren die Anbieter Tabellen und gespeicherte Prozeduren, die alle erforderlichen Abfragen und Befehle bereitstellen, die für die Arbeit mit den zugrunde liegenden Daten erforderlich sind. Das Datenbankschema und diese gespeicherten Prozeduren sind nicht mit neueren ASP.net Identity und ASP.net Core Identitäts Systemen kompatibel, sodass vorhandene Daten in das neue System migriert werden müssen. Abbildung 1 zeigt ein Beispiel für ein Tabellen Schema, das für universelle Anbieter konfiguriert wurde.
 
 ![Schema für universelle Anbieter](./media/security/membership-tables.png)
 
@@ -111,7 +111,7 @@ In der Regel konfigurieren ASP.net Web Forms Anwendungen die Sicherheit innerhal
 
 ## <a name="aspnet-core-identity"></a>ASP.NET Core-Identität
 
-Obwohl die Authentifizierung und Autorisierung weiterhin verwendet wird, verwendet ASP.net Core Identität im Vergleich zu den universellen Anbietern einen anderen Satz Abstraktionen und Annahmen. Beispielsweise unterstützt das neue Identitäts Modell die Authentifizierung von Drittanbietern, sodass sich Benutzer mit einem Social Media-Konto oder einem anderen vertrauenswürdigen Authentifizierungs Anbieter authentifizieren können. ASP.net Core Identity unterstützt die Benutzeroberfläche für häufig benötigte Seiten wie Login, Logout und Register. Er nutzt EF Core für den Datenzugriff und verwendet EF Core Migrationen, um das erforderliche Schema zu generieren, das für die Unterstützung des Datenmodells erforderlich ist. Diese [Einführung in die Identität auf ASP.net Core](https://docs.microsoft.com/aspnet/core/security/authentication/identity) bietet einen guten Überblick darüber, was in ASP.net Core Identity enthalten ist und wie Sie mit der Arbeit beginnen können. Wenn Sie nicht bereits ASP.net Core Identität in Ihrer Anwendung und der zugehörigen Datenbank eingerichtet haben, wird Ihnen der Einstieg erleichtern.
+Obwohl die Authentifizierung und Autorisierung weiterhin verwendet wird, verwendet ASP.net Core Identität im Vergleich zu den universellen Anbietern einen anderen Satz Abstraktionen und Annahmen. Beispielsweise unterstützt das neue Identitäts Modell die Authentifizierung von Drittanbietern, sodass sich Benutzer mit einem Social Media-Konto oder einem anderen vertrauenswürdigen Authentifizierungs Anbieter authentifizieren können. ASP.net Core Identity unterstützt die Benutzeroberfläche für häufig benötigte Seiten wie Login, Logout und Register. Er nutzt EF Core für den Datenzugriff und verwendet EF Core Migrationen, um das erforderliche Schema zu generieren, das für die Unterstützung des Datenmodells erforderlich ist. Diese [Einführung in die Identität auf ASP.net Core](/aspnet/core/security/authentication/identity) bietet einen guten Überblick darüber, was in ASP.net Core Identity enthalten ist und wie Sie mit der Arbeit beginnen können. Wenn Sie nicht bereits ASP.net Core Identität in Ihrer Anwendung und der zugehörigen Datenbank eingerichtet haben, wird Ihnen der Einstieg erleichtern.
 
 ### <a name="roles-claims-and-policies"></a>Rollen, Ansprüche und Richtlinien
 
@@ -130,7 +130,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-[Weitere Informationen zum Erstellen von benutzerdefinierten Richtlinien finden Sie in der-Dokumentation](https://docs.microsoft.com/aspnet/core/security/authorization/policies).
+[Weitere Informationen zum Erstellen von benutzerdefinierten Richtlinien finden Sie in der-Dokumentation](/aspnet/core/security/authorization/policies).
 
 Unabhängig davon, ob Sie Richtlinien oder Rollen verwenden, können Sie angeben, dass eine bestimmte Seite in Blazor der Anwendung eine Rolle oder Richtlinie mit dem- `[Authorize]` Attribut erfordert, das mit der- `@attribute` Direktive angewendet wird.
 
@@ -146,7 +146,7 @@ Das Verlangen einer Richtlinie muss erfüllt sein:
 @attribute [Authorize(Policy ="CanadiansOnly")]
 ```
 
-Wenn Sie Zugriff auf den Authentifizierungs Zustand, die Rollen oder Ansprüche eines Benutzers in Ihrem Code benötigen, gibt es zwei Möglichkeiten, dies zu erreichen. Der erste besteht darin, den Authentifizierungs Status als kaskadierenden Parameter zu empfangen. Die zweite besteht darin, mithilfe eines eingefügten auf den Zustand zuzugreifen `AuthenticationStateProvider` . Die Details zu den einzelnen Ansätzen werden in der Dokumentation zur [ Blazor Sicherheit](https://docs.microsoft.com/aspnet/core/blazor/security/)beschrieben.
+Wenn Sie Zugriff auf den Authentifizierungs Zustand, die Rollen oder Ansprüche eines Benutzers in Ihrem Code benötigen, gibt es zwei Möglichkeiten, dies zu erreichen. Der erste besteht darin, den Authentifizierungs Status als kaskadierenden Parameter zu empfangen. Die zweite besteht darin, mithilfe eines eingefügten auf den Zustand zuzugreifen `AuthenticationStateProvider` . Die Details zu den einzelnen Ansätzen werden in der Dokumentation zur [ Blazor Sicherheit](/aspnet/core/blazor/security/)beschrieben.
 
 Der folgende Code zeigt, wie der `AuthenticationState` als kaskadierenden Parameter empfangen wird:
 
@@ -215,7 +215,7 @@ Wenn Sie mit Rollen arbeiten müssen, gehen Sie wie folgt vor. Möglicherweise m
 
 **Hinweis:** In Blazor Webassembly-Projekten müssen Sie Server-APIs bereitstellen, um diese Vorgänge auszuführen (anstatt `UserManager<T>` oder direkt zu verwenden `RoleManager<T>` ). Eine Blazor webassemblyclientanwendung verwaltet Ansprüche und/oder Rollen durch sicheres Aufrufen von API-Endpunkten, die für diesen Zweck verfügbar gemacht werden.
 
-### <a name="migration-guide"></a>Migrationsleitfaden
+### <a name="migration-guide"></a>Migrationshandbuch
 
 Die Migration von ASP.net Web Forms und universellen Anbietern zu ASP.net Core Identity erfordert mehrere Schritte:
 
@@ -252,7 +252,7 @@ Wenn Sie ein Skript zum Anwenden des neuen Schemas auf eine vorhandene Datenbank
 dotnet ef migrations script -o auth.sql
 ```
 
-Dadurch wird ein SQL-Skript in der Ausgabedatei erstellt `auth.sql` , das dann für die gewünschte Datenbank ausgeführt werden kann. Wenn Sie Probleme beim Ausführen von `dotnet ef` Befehlen haben, [Stellen Sie sicher, dass Sie die EF Core Tools auf Ihrem System installiert haben](https://docs.microsoft.com/ef/core/miscellaneous/cli/dotnet).
+Dadurch wird ein SQL-Skript in der Ausgabedatei erstellt `auth.sql` , das dann für die gewünschte Datenbank ausgeführt werden kann. Wenn Sie Probleme beim Ausführen von `dotnet ef` Befehlen haben, [Stellen Sie sicher, dass Sie die EF Core Tools auf Ihrem System installiert haben](/ef/core/miscellaneous/cli/dotnet).
 
 Wenn Sie über zusätzliche Spalten in ihren Quell Tabellen verfügen, müssen Sie den besten Speicherort für diese Spalten im neuen Schema angeben. Im Allgemeinen sollten in der Tabelle gefundene Spalten `aspnet_Membership` der Tabelle zugeordnet werden `AspNetUsers` . Spalten in `aspnet_Roles` sollten zugeordnet werden `AspNetRoles` . Alle weiteren Spalten in der `aspnet_UsersInRoles` Tabelle werden der Tabelle hinzugefügt `AspNetUserRoles` .
 
@@ -260,9 +260,9 @@ Außerdem sollten Sie erwägen, zusätzliche Spalten in separaten Tabellen zu pl
 
 ### <a name="migrating-data-from-universal-providers-to-aspnet-core-identity"></a>Migrieren von Daten von universellen Anbietern in ASP.net Core Identität
 
-Wenn das Ziel Tabellen Schema vorhanden ist, besteht der nächste Schritt darin, die Benutzer-und Rollen Einträge zum neuen Schema zu migrieren. Eine komplette Liste der Schema Unterschiede, einschließlich der Spalten, denen neue Spalten zugeordnet werden, finden Sie [hier](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity).
+Wenn das Ziel Tabellen Schema vorhanden ist, besteht der nächste Schritt darin, die Benutzer-und Rollen Einträge zum neuen Schema zu migrieren. Eine komplette Liste der Schema Unterschiede, einschließlich der Spalten, denen neue Spalten zugeordnet werden, finden Sie [hier](/aspnet/core/migration/proper-to-2x/membership-to-core-identity).
 
-Wenn Sie Ihre Benutzer von der Mitgliedschaft zu den neuen Identitäts Tabellen migrieren möchten, sollten Sie [die in der Dokumentation beschriebenen Schritte](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)ausführen. Nachdem Sie diese Schritte und das bereitgestellte Skript ausgeführt haben, müssen die Benutzer Ihr Kennwort bei der nächsten Anmeldung ändern.
+Wenn Sie Ihre Benutzer von der Mitgliedschaft zu den neuen Identitäts Tabellen migrieren möchten, sollten Sie [die in der Dokumentation beschriebenen Schritte](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)ausführen. Nachdem Sie diese Schritte und das bereitgestellte Skript ausgeführt haben, müssen die Benutzer Ihr Kennwort bei der nächsten Anmeldung ändern.
 
 Es ist möglich, Benutzer Kennwörter zu migrieren, aber der Prozess ist viel mehr beteiligt. Wenn Sie möchten, dass Benutzer ihre Kenn Wörter im Rahmen des Migrations Vorgangs aktualisieren, und Sie dazu ermutigen, neue, eindeutige Kenn Wörter zu verwenden, ist es wahrscheinlich, dass die Gesamtsicherheit der Anwendung erhöht wird.
 
@@ -341,7 +341,7 @@ Wenn Sie den Zugriff mit Ausnahme der Benutzer, die zu einer bestimmten Rolle ge
 
 Beachten Sie, dass das- `[Authorize]` Attribut nur für `@page` Komponenten funktioniert, die über den Router erreicht werden Blazor . Das-Attribut funktioniert nicht mit untergeordneten Komponenten, die stattdessen verwenden sollten `AuthorizeView` .
 
-Wenn Sie über Logik innerhalb des Seiten Markups verfügen, um zu bestimmen, ob Code für einen bestimmten Benutzer angezeigt werden soll, können Sie dies durch die `AuthorizeView` Komponente ersetzen. Die [Autorität "Autorität](https://docs.microsoft.com/aspnet/core/blazor/security#authorizeview-component) anzeigen" zeigt selektiv die Benutzeroberfläche an, je nachdem, ob der Benutzer autorisiert ist, Sie anzuzeigen. Außerdem wird eine Variable verfügbar gemacht `context` , die für den Zugriff auf Benutzerinformationen verwendet werden kann.
+Wenn Sie über Logik innerhalb des Seiten Markups verfügen, um zu bestimmen, ob Code für einen bestimmten Benutzer angezeigt werden soll, können Sie dies durch die `AuthorizeView` Komponente ersetzen. Die [Autorität "Autorität](/aspnet/core/blazor/security#authorizeview-component) anzeigen" zeigt selektiv die Benutzeroberfläche an, je nachdem, ob der Benutzer autorisiert ist, Sie anzuzeigen. Außerdem wird eine Variable verfügbar gemacht `context` , die für den Zugriff auf Benutzerinformationen verwendet werden kann.
 
 ```razor
 <AuthorizeView>
@@ -416,10 +416,10 @@ Blazor verwendet das gleiche Sicherheitsmodell wie ASP.net Core, das ASP.net Cor
 
 ## <a name="references"></a>References
 
-- [Einführung in die Identität auf ASP.net Core](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
-- [Migrieren von der ASP.net-Mitgliedschafts Authentifizierung zu ASP.net Core 2,0-Identität](https://docs.microsoft.com/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
-- [Migrieren von Authentifizierung und Identität zu ASP.net Core](https://docs.microsoft.com/aspnet/core/migration/identity)
-- [ASP.net Core Blazor Authentifizierung und Autorisierung](https://docs.microsoft.com/aspnet/core/blazor/security/)
+- [Einführung in die Identität auf ASP.net Core](/aspnet/core/security/authentication/identity)
+- [Migrieren von der ASP.net-Mitgliedschafts Authentifizierung zu ASP.net Core 2,0-Identität](/aspnet/core/migration/proper-to-2x/membership-to-core-identity)
+- [Migrieren von Authentifizierung und Identität zu ASP.net Core](/aspnet/core/migration/identity)
+- [ASP.net Core Blazor Authentifizierung und Autorisierung](/aspnet/core/blazor/security/)
 
 >[!div class="step-by-step"]
 >[Zurück](config.md)

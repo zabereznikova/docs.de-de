@@ -2,24 +2,26 @@
 title: Externe Zuordnung
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: ba5af75ae34b233354fec6e9074f3cc96d924c7f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 79427cde0784746480e851cf1be56c8bce854919
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003044"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161385"
 ---
 # <a name="external-mapping"></a>Externe Zuordnung
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt *externe Zuordnung*, einen Prozess, mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell anzugeben. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
   
 - Sie können den Zuordnungscode vom Anwendungscode trennen. Hierdurch wird die Übersichtlichkeit des Anwendungscodes verbessert.  
   
 - Eine externe Zuordnungsdatei kann in etwa wie eine Konfigurationsdatei behandelt werden. Beispielsweise können Sie das Anwendungsverhalten aktualisieren, nachdem die Binärdateien bereits ausgeliefert wurden, indem Sie einfach die externe Zuordnungsdatei austauschen.  
   
-## <a name="requirements"></a>Voraussetzungen  
- Die Zuordnungsdatei muss eine XML-Datei sein, und die Datei muss anhand einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Schema Definitionsdatei (. xsd) überprüft werden.  
+## <a name="requirements"></a>Anforderungen  
+
+ Die Zuordnungsdatei muss eine XML-Datei sein, und die Datei muss anhand einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Schema Definitionsdatei (. xsd) überprüft werden.  
   
- Dabei gelten folgende Regeln:  
+ Es gelten die folgenden Regeln:  
   
 - Die Zuordnungsdatei muss eine XML-Datei sein.  
   
@@ -27,9 +29,10 @@ ms.locfileid: "72003044"
   
 - Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die Hybrid Verwendung der beiden zuder Zuordnung (Attribut basiert und extern).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und extern).  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
+
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  
   
  Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](code-generation-in-linq-to-sql.md)).  
@@ -141,7 +144,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Codegenerierung in LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Verweis](reference.md)

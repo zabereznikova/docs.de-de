@@ -2,12 +2,12 @@
 title: Zentralisierte Konfiguration
 description: Zentralisieren der Konfiguration für Native Cloud-Anwendungen mit Azure-App-Konfiguration und azurekey Vault.
 ms.date: 05/13/2020
-ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614226"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160878"
 ---
 # <a name="centralized-configuration"></a>Zentralisierte Konfiguration
 
@@ -19,7 +19,7 @@ Die Azure-Cloud bietet einige hervorragend Optionen.
 
 ## <a name="azure-app-configuration"></a>Azure App Configuration
 
-[Azure-App Konfiguration](https://docs.microsoft.com/azure/azure-app-configuration/overview) ist ein vollständig verwalteter Azure-Dienst, der nicht geheime Konfigurationseinstellungen an einem sicheren, zentralisierten Speicherort speichert. Gespeicherte Werte können von mehreren Diensten und Anwendungen gemeinsam genutzt werden.
+[Azure-App Konfiguration](/azure/azure-app-configuration/overview) ist ein vollständig verwalteter Azure-Dienst, der nicht geheime Konfigurationseinstellungen an einem sicheren, zentralisierten Speicherort speichert. Gespeicherte Werte können von mehreren Diensten und Anwendungen gemeinsam genutzt werden.
 
 Der Dienst ist einfach zu verwenden und bietet mehrere Vorteile:
 
@@ -33,9 +33,9 @@ Bei der Azure-App Konfiguration werden die Änderungen an den Schlüsselwert Ein
 
 Bei der APP-Konfiguration werden automatisch alle Einstellungen zwischengespeichert, um übermäßige Aufrufe des Konfigurations Speichers zu vermeiden. Beim Aktualisierungsvorgang wird abgewartet, bis der zwischengespeicherte Wert einer Einstellung abgelaufen ist, bevor die Einstellung aktualisiert wird. Dies gilt auch, wenn sich der zugehörige Wert im Konfigurationsspeicher ändert. Die Standarddauer für den Ablauf des Caches beträgt 30 Sekunden. Sie können die Ablaufzeit außer Kraft setzen.
 
-In der APP-Konfiguration werden alle Konfigurationswerte während der Übertragung und im Ruhezustand verschlüsselt. Schlüsselnamen und Bezeichnungen werden als Indizes zum Abrufen von Konfigurationsdaten verwendet und sind nicht verschlüsselt.
+In der APP-Konfiguration werden alle Konfigurationswerte während der Übertragung und im Ruhezustand verschlüsselt. Schlüsselnamen und Bezeichnungen werden als Indizes zum Abrufen von Konfigurationsdaten verwendet und nicht verschlüsselt.
 
-Obwohl die APP-Konfiguration Sicherheits-und Sicherheits Sicherheit bietet, ist Azure Key Vault immer noch der beste Ort zum Speichern von Anwendungs Geheimnissen Key Vault bietet Verschlüsselung auf Hardwareebene, differenzierte Zugriffsrichtlinien und Verwaltungsvorgänge, wie z. b. die Zertifikats Rotation. Sie können APP-Konfigurationswerte erstellen, die auf in einem Key Vault gespeicherte Geheimnisse verweisen.
+Obwohl die APP-Konfiguration Sicherheits-und Sicherheits Sicherheit bietet, ist Azure Key Vault immer noch der beste Ort zum Speichern von Anwendungs Geheimnissen Key Vault bietet Verschlüsselung auf Hardwareebene, granulare Zugriffsrichtlinien und Verwaltungsvorgänge wie die Zertifikatsrotation. Sie können APP-Konfigurationswerte erstellen, die auf in einem Key Vault gespeicherte Geheimnisse verweisen.
 
 ## <a name="azure-key-vault"></a>Azure-Schlüsseltresor
 
@@ -54,16 +54,16 @@ Die eshoponcontainers-Anwendung enthält lokale Anwendungseinstellungs-Dateien m
 ## <a name="references"></a>References
 
 - [Die eshoponcontainers-Architektur](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Übersicht über Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit](../microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+- [Azure API Management](/azure/api-management/api-management-key-concepts)
+- [Übersicht über Azure SQL-Datenbank](/azure/sql-database/sql-database-technical-overview)
 - [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
-- [MongoDB-API von Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Monitor – Übersicht](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [MongoDB-API von Azure Cosmos DB](/azure/cosmos-db/mongodb-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Azure Monitor – Übersicht](/azure/azure-monitor/overview)
 - [eshoponcontainers: Erstellen eines Kubernetes-Clusters in AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eshoponcontainers: Azure dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+- [Azure Dev Spaces](/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[Zurück](deploy-eshoponcontainers-azure.md)

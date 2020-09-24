@@ -3,12 +3,12 @@ title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427033"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160904"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
@@ -32,8 +32,8 @@ Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert ha
 
 | Company | Erfahrung |
 | :-------- | :-------- |
-| [Stream](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
-| [Räuber](https://eng.uber.com/micro-deploy/) | Hat in der Produktion 1000 Dienste. Stellt mehrere tausend Male pro Woche bereit. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Umfasst 600 Dienste in der Produktionsumgebung. Wird hundert Mal pro Tag bereitgestellt. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Hat in der Produktion 1000 Dienste. Stellt mehrere tausend Male pro Woche bereit. |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Verfügt über 3000 Dienste in der Produktionsumgebung. Stellt 1.000 Mal täglich bereit. |
 
 Wie Sie sehen, machen Netflix, uber und WeChat Systeme verfügbar, die aus Hunderten von unabhängigen mikrodiensten bestehen. Dieser Architekturstil ermöglicht es Ihnen, schnell auf Marktbedingungen zu reagieren. Sie können kleine Bereiche einer aktiven, komplexen Anwendung sofort aktualisieren und diese Bereiche bei Bedarf einzeln skalieren.
@@ -42,7 +42,7 @@ Die Geschwindigkeit und Agilität von Cloud Native ist von einer Reihe von Fakto
 
 ![In der Cloud Native grundlegende Säulen](./media/cloud-native-foundational-pillars.png)
 
-**Abbildung 1-3**. In der Cloud Native grundlegende Säulen
+**Abbildung 1–3**. In der Cloud Native grundlegende Säulen
 
 Nehmen wir etwas Zeit, um die Bedeutung der einzelnen Säulen besser zu verstehen.
 
@@ -95,7 +95,7 @@ Im Buch [über die zwölfstufige App hinaus](https://content.pivotal.io/blog/be
 | :-------- | :-------- | :-------- |
 | 13 | API First | Machen Sie alles als Dienst. Nehmen Sie an, dass Ihr Code von einem Front-End-Client,-Gateway oder einem anderen Dienst verwendet wird. |
 | 14 | Telemetrie | Auf einer Arbeitsstation haben Sie umfassende Einblicke in Ihre Anwendung und ihr Verhalten. In der Cloud ist das nicht der einzige. Stellen Sie sicher, dass Ihr Entwurf die Erfassung von Überwachungs-, domänenspezifischen und Integritäts-/Systemdaten umfasst. |
-| 15 | Authentifizierung/Autorisierung  | Implementieren Sie die Identität von Anfang an. Beachten Sie die [RBAC-Features (rollenbasierte Zugriffs Steuerung)](https://docs.microsoft.com/azure/role-based-access-control/overview) , die in öffentlichen Clouds verfügbar sind.  |
+| 15 | Authentifizierung/Autorisierung  | Implementieren Sie die Identität von Anfang an. Beachten Sie die [RBAC-Features (rollenbasierte Zugriffs Steuerung)](/azure/role-based-access-control/overview) , die in öffentlichen Clouds verfügbar sind.  |
 
 Wir verweisen auf viele der 12 +-Faktoren in diesem Kapitel und im Buch.
 
@@ -276,21 +276,21 @@ Cloudanbieter stellen APIs bereit, mit denen Sie mit ihren proprietären Unterst
 
 Unterstützende Dienste werden in Kapitel 5, in der *Cloud Native Datenmuster*und in Kapitel 4, in der *Cloud Native Kommunikationsmuster*erläutert.
 
-## <a name="automation"></a>Automatisierung
+## <a name="automation"></a>Automation
 
 Wie Sie gesehen haben, sind in der Cloud Native Systeme zum Erreichen von Geschwindigkeit und Agilität für die Entwicklung von Funktionen, Containern und modernen System Entwürfen konzipiert. Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden? Wie werden App-Features und Updates schnell bereitgestellt? Wie wird das vollständige Bild abgerundet?
 
-Geben Sie die allgemein akzeptierte [Infrastruktur als Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)oder IAC ein.
+Geben Sie die allgemein akzeptierte [Infrastruktur als Code](/azure/devops/learn/what-is-infrastructure-as-code)oder IAC ein.
 
 Mit IAC automatisieren Sie die Platt Form Bereitstellung und die Anwendungs Bereitstellung. Sie wenden im Wesentlichen Software Entwicklungsverfahren wie Tests und Versionsverwaltung auf Ihre devops-Verfahren an. Ihre Infrastruktur und bereit Stellungen sind automatisiert, konsistent und wiederholbar.
 
 ### <a name="automating-infrastructure"></a>Automatisieren der Infrastruktur
 
-Tools wie [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), TERRAFORM und die [Azure CLI](https://docs.microsoft.com/cli/azure/)ermöglichen es Ihnen, deklarativ Skripts für die erforderliche cloudinfrastruktur zu erstellen. Ressourcennamen, Speicherorte, Kapazitäten und Geheimnisse sind parametrisiert und dynamisch. Das Skript wird mit Versions Angabe versehen und als Element des Projekts in die Quell Code Verwaltung eingecheckt. Sie rufen das Skript auf, um eine konsistente und wiederholbare Infrastruktur in Systemumgebungen bereitzustellen, wie z. b. QA, Staging und Produktion.
+Tools wie [Azure Resource Manager](/azure/azure-resource-manager/management/overview), TERRAFORM und die [Azure CLI](/cli/azure/)ermöglichen es Ihnen, deklarativ Skripts für die erforderliche cloudinfrastruktur zu erstellen. Ressourcennamen, Speicherorte, Kapazitäten und Geheimnisse sind parametrisiert und dynamisch. Das Skript wird mit Versions Angabe versehen und als Element des Projekts in die Quell Code Verwaltung eingecheckt. Sie rufen das Skript auf, um eine konsistente und wiederholbare Infrastruktur in Systemumgebungen bereitzustellen, wie z. b. QA, Staging und Produktion.
 
 Im Hintergrund ist IAC idempotent, d. h., Sie können das gleiche Skript immer wieder ausführen, ohne Nebeneffekte zu haben. Wenn das Team eine Änderung vornehmen muss, wird das Skript bearbeitet und erneut ausgeführt. Nur die aktualisierten Ressourcen sind betroffen.
 
-Im Artikel [Was ist Infrastructure as Code, wird](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)der Autor Sam Guckenheimer beschrieben, wie "Teams, die IAC implementieren, schnelle und skalierbare Umgebungen bereitstellt. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem Sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastruktur Bereitstellungen mit IAC sind wiederholbar und verhindern Lauf Zeit Probleme, die durch Konfigurations Abweichung oder fehlende Abhängigkeiten verursacht werden. Devops-Teams können mit einem einheitlichen Satz von Methoden und Tools zusammenarbeiten, um Anwendungen und deren unterstützende Infrastruktur schnell, zuverlässig und skalierbar bereitzustellen. "
+Im Artikel [Was ist Infrastructure as Code, wird](/azure/devops/learn/what-is-infrastructure-as-code)der Autor Sam Guckenheimer beschrieben, wie "Teams, die IAC implementieren, schnelle und skalierbare Umgebungen bereitstellt. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem Sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastruktur Bereitstellungen mit IAC sind wiederholbar und verhindern Lauf Zeit Probleme, die durch Konfigurations Abweichung oder fehlende Abhängigkeiten verursacht werden. Devops-Teams können mit einem einheitlichen Satz von Methoden und Tools zusammenarbeiten, um Anwendungen und deren unterstützende Infrastruktur schnell, zuverlässig und skalierbar bereitzustellen. "
 
 ### <a name="automating-deployments"></a>Automatisieren von bereit Stellungen
 

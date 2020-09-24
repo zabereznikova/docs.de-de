@@ -2,14 +2,15 @@
 title: Transportprotokolle
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 54d320213dbf330ad19077b523a77ea86d29e1ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69941149"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162009"
 ---
 # <a name="transports"></a>Transportprotokolle
+
 Die Transportschicht befindet sich auf der niedrigsten Ebene des Kanalstapels. Die in Windows Communication Foundation (WCF) verwendeten Haupt Transporte sind http, HTTPS, TCP und Named Pipes. In diesem Abschnitt werden alle Konfigurationselemente aufgelistet, mit denen Sie verschiedene Transporttypen konfigurieren können.  
   
 ## <a name="see-also"></a>Weitere Informationen
