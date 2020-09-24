@@ -3,14 +3,15 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e759f86e7746eaf3fdd72ed923612b24ef9b0c23
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398619"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150816"
 ---
 # \<states>
+
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
   
  Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -43,45 +44,49 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<state>](states.md)|Ein abonnierter Zustand der verfolgten Workflowinstanz, wenn der Nachverfolgungsdatensatz erstellt wird.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|Eine Abfrage, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Auflistung gefiltert.  
   
  Eine Beschreibung der möglichen Zustandswerte finden Sie in der folgenden Tabelle.  
   
-|Staat|BESCHREIBUNG|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Aborted|Die Workflowinstanz wurde abgebrochen.|  
 |Abgeschlossen|Die Workflowinstanz wurde abgeschlossen.|  
-|Gelöscht|Die Workflowinstanz wurde gelöscht.|  
+|Deleted|Die Workflowinstanz wurde gelöscht.|  
 |Idle|Die Workflowinstanz ist im Leerlauf.|  
-|Persisted|Die Workflowinstanz wurde beibehalten.|  
+|Persistent|Die Workflowinstanz wurde beibehalten.|  
 |Resumed|Die Workflowinstanz wurde wiederaufgenommen.|  
-|Started|Die Workflowinstanz wurde gestartet.|  
+|Gestartet|Die Workflowinstanz wurde gestartet.|  
 |UnhandledException|In der Workflowinstanz ist eine nicht behandelte Ausnahme aufgetreten.|  
 |Nicht Geladen|Die Workflowinstanz wurde entladen.|  
 |Canceled|Die Workflowinstanz wurde abgebrochen.|  
 |Ausgesetzt|Die Workflowinstanz wurde unterbrochen.|  
-|Terminated|Die Workflowinstanz wurde beendet.|  
+|Beendet|Die Workflowinstanz wurde beendet.|  
 |Unsuspended|Die Workflowinstanz wurde fortgesetzt.|  
   
 ## <a name="example"></a>Beispiel  
+
  In der folgende Konfiguration werden mithilfe einer Abfrage Workflownachverfolgungsdatensätze auf Instanzebene für den `Started`-Instanzzustand abonniert.  
   
 ```xml  

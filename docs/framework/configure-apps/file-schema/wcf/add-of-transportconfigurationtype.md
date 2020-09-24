@@ -2,14 +2,15 @@
 title: <add> von <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9bef44ed39ee892080342058206f779b38fb460d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850319"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151154"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> von \<transportConfigurationType>
+
 Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transports identifiziert.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,16 +31,18 @@ Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transp
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Erforderliches Zeichenfolgeattribut.<br /><br /> Enthält einen benutzerdefinierten Schlüssel, mit dem der Transporttyp eindeutig identifiziert wird.|  
 |transportConfigurationType|Eine Zeichenfolge, die den Typ enthält, mit dem der Transport implementiert wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
