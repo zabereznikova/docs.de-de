@@ -2,14 +2,15 @@
 title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: dab8505a9ddb348a6f7fe16ae9acb3a0119a8b06
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3c82bd81bd0fabf10f2dd835188b346f62d038b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735894"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167079"
 ---
 # \<windowsStreamSecurity>
+
 Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefinierte Bindung an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,15 +27,17 @@ Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefiniert
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |protectionLevel|Definiert die Sicherheit auf Nachrichtenebene. Das Signieren von Nachrichten verringert das Risiko, dass Nachrichten während der Übertragung durch Dritte manipuliert werden. Mit der Verschlüsselung können Daten während des Transports geschützt werden. Gültige Werte sind:<br /><br /> -None: kein Schutz.<br />-Sign: Nachrichten werden signiert.<br />-Verschlüsseltandsign: Nachrichten werden signiert und verschlüsselt.<br /><br /> Der Standardwert ist EncryptAndSign.<br /><br /> Dieses Attribut ist vom Typ <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -44,6 +47,7 @@ Geben Sie Einstellungen für Windows-Streamsicherheit für die benutzerdefiniert
 |[\<binding>](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Transporte, die ein streamorientiertes Protokoll wie TCP und Named Pipes verwenden, unterstützen streambasierte Transportupgrades. Vor allem WCF bietet Sicherheitsupgrades. Die Konfiguration dieser Transportsicherheit wird durch dieses Konfigurationselement und durch gekapselt [\<sslStreamSecurity>](sslstreamsecurity.md) , die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können.  
   
 ## <a name="see-also"></a>Weitere Informationen

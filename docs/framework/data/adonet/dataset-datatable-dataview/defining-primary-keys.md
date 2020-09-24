@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 159b23eb4ef5ca38ebce6e488080d315ec3be081
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94b033d58061e3d2e48a352d782eec7c4202fa43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151181"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166832"
 ---
 # <a name="defining-primary-keys"></a>Definieren von Primärschlüsseln
+
 Eine Datenbanktabelle enthält i. d. R. eine Spalte oder eine Gruppe von Spalten, die jede Zeile in der Tabelle eindeutig identifiziert. Diese identifizierende Spalte oder Spaltengruppe wird als Primärschlüssel bezeichnet.  
   
- Wenn Sie eine <xref:System.Data.DataColumn> Single <xref:System.Data.DataTable.PrimaryKey%2A> als <xref:System.Data.DataTable>für eine identifizieren, legt die Tabelle <xref:System.Data.DataColumn.AllowDBNull%2A> die Eigenschaft der Spalte automatisch auf **false** und die <xref:System.Data.DataColumn.Unique%2A> Eigenschaft auf **true**fest. Bei mehrspaltigen Primärschlüsseln wird nur die **AllowDBNull-Eigenschaft** automatisch auf **false**festgelegt.  
+ Wenn Sie einen einzelnen <xref:System.Data.DataColumn> als <xref:System.Data.DataTable.PrimaryKey%2A> für einen identifizieren <xref:System.Data.DataTable> , wird die-Eigenschaft der Spalte von der Tabelle automatisch auf false festgelegt, <xref:System.Data.DataColumn.AllowDBNull%2A> und die-Eigenschaft wird **false** <xref:System.Data.DataColumn.Unique%2A> auf **true**festgelegt. Bei mehrspaltigen primär Schlüsseln wird nur die **AllowDBNull** -Eigenschaft automatisch auf **false**festgelegt.  
   
- Die **PrimaryKey-Eigenschaft** eines <xref:System.Data.DataTable> empfängt als Wert ein Array eines oder mehrerer **DataColumn-Objekte,** wie in den folgenden Beispielen gezeigt. Im ersten Beispiel wird eine einzelne Spalte als Primärschlüssel definiert.  
+ Die **PrimaryKey** -Eigenschaft eines <xref:System.Data.DataTable> empfängt als Wert ein Array aus einem oder mehreren **datacolenumn** -Objekten, wie in den folgenden Beispielen gezeigt. Im ersten Beispiel wird eine einzelne Spalte als Primärschlüssel definiert.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  

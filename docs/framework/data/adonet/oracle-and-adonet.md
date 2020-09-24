@@ -7,14 +7,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 736b8dc5179a15ec219c1dae06b9ee6b5d6c3ef3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166624"
 ---
 # <a name="oracle-and-adonet"></a>Oracle und ADO.NET
+
 > [!NOTE]
 > Die Typen in <xref:System.Data.OracleClient> sind veraltet. Die Typen werden in der aktuellen .NET Framework-Version weiterhin unterstützt, die Unterstützung wird jedoch in einem zukünftigen Release eingestellt. Microsoft empfiehlt, einen anderen Oracle-Anbieter zu verwenden.  
   
@@ -39,6 +40,7 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Systemanforderungen](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Beschreibt die Anforderungen für die Verwendung der .NET Framework Datenanbieter für Oracle und beschreibt eine Reihe von Problemen, die bei der Verwendung von zu beachten sind.  
   
@@ -64,6 +66,7 @@ csc /r:System.Data.OracleClient.dll
  Beschreibt, wie das <xref:System.Data.OracleClient.OracleConnection>-Objekt automatisch in einer vorhandenen verteilten Transaktion aufgelistet wird, wenn es ermittelt, dass eine Transaktion aktiv ist.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Sichern von ADO.NET-Anwendungen](securing-ado-net-applications.md)  
  Beschreibt sichere Programmiermethoden für ADO.NET.  
   
@@ -79,7 +82,7 @@ csc /r:System.Data.OracleClient.dll
  [DbProviderFactories](dbproviderfactories.md)  
  Beschreibt generische Klassen, mit deren Hilfe in ADO.NET anbieterunabhängiger Code geschrieben werden kann.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET](index.md)
 - [Übersicht über ADO.NET](ado-net-overview.md)

@@ -2,14 +2,15 @@
 title: <EnableAmPmParseAdjustment>-Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167228"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment>-Element
+
 Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regeln zum Analysieren von Datums Zeichenfolgen verwenden, die einen Tag, einen Monat, eine Stunde und einen am/pm-Kenn Zeichner enthalten.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -23,22 +24,24 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regeln zum Analysieren von Datums Zeichenfolgen verwenden, die nur einen Tag, einen Monat, eine Stunde und einen am/pm-Kenn Zeichner enthalten.|  
   
 ### <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Datums-und Uhrzeit-Analyse-Methoden verwenden keine angepassten Regeln für das Parsen von Datums Zeichenfolgen, die nur einen Tag, einen Monat, eine Stunde und am/pm-Kenn Zeichner enthalten.|  
 |1|Datums-und Uhrzeit-Analyse-Methoden verwenden angepasste Regeln zum Parsen von Datums Zeichenfolgen, die nur einen Tag, einen Monat, eine Stunde und am/pm-Kenn Zeichner enthalten.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -49,6 +52,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `<EnableAmPmParseAdjustment>` Element steuert, wie die folgenden Methoden eine Datums Zeichenfolge analysieren, die einen numerischen Tag und Monat gefolgt von einer Stunde und einem am/pm-Kenn Zeichner (z. b. "4/10 6 am") enthält:  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
@@ -63,7 +67,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
   
  Es sind keine anderen Muster betroffen.  
   
- Das `<EnableAmPmParseAdjustment>` -Element hat keine Auswirkung auf <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> die <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> Methoden,, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
+ Das `<EnableAmPmParseAdjustment>` -Element hat keine Auswirkung auf  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> die  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> Methoden,, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
 > In .net Core und .net Native sind die angepassten am/pm-Analyse-Regeln standardmäßig aktiviert.  
@@ -79,7 +83,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
 |de-DE|1/5/2017 4:00:00 Uhr|4/10/2017 6:00:00 Uhr|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [\<runtime>Gewisses](runtime-element.md)
-- [\<configuration>Gewisses](../configuration-element.md)
+- [\<runtime>-Element](runtime-element.md)
+- [\<configuration>-Element](../configuration-element.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fe0b9eccd1c429c0041fcfab06b0cc20a20aa2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089118"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167274"
 ---
 # <a name="settings-element-network-settings"></a>\<settings>-Element (Netzwerkeinstellungen)
+
 Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -37,14 +38,16 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[httpListener](httplistener-element-network-settings.md)|Passt Parameter an, die von der-Klasse verwendet werden <xref:System.Net.HttpListener> .|  
 |[HttpWebRequest](httpwebrequest-element-network-settings.md)|Passt Webanforderungs Parameter an.|  
@@ -56,16 +59,17 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

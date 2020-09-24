@@ -1,18 +1,19 @@
 ---
-title: 'Gewusst wie: Zuordnen von Vererbungshierarchien'
+title: 'Vorgehensweise: Zuordnen von Vererbungshierarchien'
 ms.date: 03/30/2017
 ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 737cb8743d8fd9c93cd46ebf50fba3fe554a35f2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: c0709fde96a5d2f39f04a08ccd24ddf90c782f30
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634663"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166416"
 ---
-# <a name="how-to-map-inheritance-hierarchies"></a>Gewusst wie: Zuordnen von Vererbungshierarchien
+# <a name="how-to-map-inheritance-hierarchies"></a>Vorgehensweise: Zuordnen von Vererbungshierarchien
+
 Zum Implementieren der Vererbungs Zuordnung in LINQ müssen Sie die Attribute und Attribut Eigenschaften in der Stamm Klasse der Vererbungs Hierarchie angeben, wie in den folgenden Schritten beschrieben. Entwickler, die Visual Studio verwenden, können den objektrelationaler Designer verwenden, um Vererbungs Hierarchien zuzuordnen. Weitere Informationen finden Sie unter Gewusst [wie: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
   
 > [!NOTE]
@@ -45,12 +46,12 @@ Zum Implementieren der Vererbungs Zuordnung in LINQ müssen Sie die Attribute un
 > [!NOTE]
 > Wenn Sie Visual Studio verwenden, können Sie das objektrelationaler Designer verwenden, um die Vererbung zu konfigurieren. Weitere Informationen finden Sie unter Gewusst [wie: Konfigurieren der Vererbung mit dem O/R-Designer](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
- Im folgenden Codebeispiel wird `Vehicle` als Stamm Klasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für LINQ zu beschreiben.  
+ Im folgenden Codebeispiel `Vehicle` wird als Stamm Klasse definiert, und die vorherigen Schritte wurden implementiert, um die Hierarchie für LINQ zu beschreiben.  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Unterstützung von Vererbung](inheritance-support.md)
 - [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)

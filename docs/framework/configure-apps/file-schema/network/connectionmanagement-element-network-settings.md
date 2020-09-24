@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 4ceec06fb0e21bfae67038efe0ce758d3d5b708f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 52b780c739a00cb53694b547ee1a33c1b5d98c86
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504614"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167313"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement>-Element (Netzwerkeinstellungen)
+
 Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -51,12 +54,15 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 |[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `connectionManagement` Element definiert die maximale Anzahl von Verbindungen mit einem Server oder einer Gruppe von Servern.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
@@ -70,8 +76,8 @@ Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
