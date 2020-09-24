@@ -3,12 +3,12 @@ title: Featureflags
 description: Implementieren von featureflags in Cloud-native Anwendungen mit Azure-app config
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540464"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158096"
 ---
 # <a name="feature-flags"></a>Featureflags
 
@@ -43,9 +43,9 @@ Beachten Sie, dass diese Vorgehensweise die Entscheidungs Logik von dem Funktion
 
 In Kapitel 1 wurde erläutert `Twelve-Factor App` . Es wird empfohlen, Konfigurationseinstellungen Extern aus dem ausführbaren Code der Anwendung zu speichern. Bei Bedarf können die Einstellungen aus der externen Quelle gelesen werden. Merkmals Flag-Konfigurationswerte sollten auch unabhängig von Ihrer Codebasis sein. Durch externalisieren der Flag-Konfiguration in einem separaten Repository können Sie den Flag-Status ändern, ohne die Anwendung zu ändern und erneut bereitzustellen.
 
-[Azure-App Konfiguration](https://docs.microsoft.com/azure/azure-app-configuration/overview) stellt ein zentralisiertes Repository für Merkmals Flags bereit. Mit dieser Funktion definieren Sie verschiedene Arten von featureflags und ändern ihre Zustände schnell und zuverlässig. Sie fügen der Anwendung die Client Bibliotheken für die APP-Konfiguration hinzu, um Feature-Flag-Funktionen zu aktivieren. Verschiedene Frameworks für Programmiersprachen werden unterstützt.
+[Azure-App Konfiguration](/azure/azure-app-configuration/overview) stellt ein zentralisiertes Repository für Merkmals Flags bereit. Mit dieser Funktion definieren Sie verschiedene Arten von featureflags und ändern ihre Zustände schnell und zuverlässig. Sie fügen der Anwendung die Client Bibliotheken für die APP-Konfiguration hinzu, um Feature-Flag-Funktionen zu aktivieren. Verschiedene Frameworks für Programmiersprachen werden unterstützt.
 
-Merkmals Flags können problemlos in einem [ASP.net Core-Dienst](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core)implementiert werden. Durch die Installation der .net-funktionsverwaltungs-Bibliotheken und des App-Konfigurations Anbieters können Sie Ihrem Code deklarativ Merkmals Flags hinzufügen. Sie aktivieren `FeatureGate` Attribute, sodass Sie nicht manuell if-Anweisungen in Ihre CodeBase schreiben müssen.
+Merkmals Flags können problemlos in einem [ASP.net Core-Dienst](/azure/azure-app-configuration/use-feature-flags-dotnet-core)implementiert werden. Durch die Installation der .net-funktionsverwaltungs-Bibliotheken und des App-Konfigurations Anbieters können Sie Ihrem Code deklarativ Merkmals Flags hinzufügen. Sie aktivieren `FeatureGate` Attribute, sodass Sie nicht manuell if-Anweisungen in Ihre CodeBase schreiben müssen.
 
 Nachdem Sie in der Startup-Klasse konfiguriert wurde, können Sie Feature-Flag-Funktionalität auf Controller-, Aktions-oder Middleware-Ebene hinzufügen. In Abbildung 10-12 wird die Implementierung von Controller und Aktion dargestellt:
 

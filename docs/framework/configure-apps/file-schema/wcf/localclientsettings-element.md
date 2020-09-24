@@ -2,14 +2,15 @@
 title: <localClientSettings>-Element
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: 3ec0394943c030a8866087c98a912682a2a2112e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19eaea71fdaad1b945524cca5cf15634e0b0fa14
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158733"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings>-Element
+
 Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,11 +40,12 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`cacheCookies`|Ein boolescher Wert, der angibt, ob die Cookiezwischenspeicherung aktiviert ist. Der Standardwert lautet `false`.|  
 |`cookieRenewalThresholdPercentage`|Eine ganze Zahl, die den maximalen Prozentsatz an Cookies angibt, die erneuert werden können. Dieser Wert sollte zwischen 0 und einschließlich 100 liegen. Der Standard ist 90.|  
@@ -58,6 +60,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
 |`timestampValidityDuration`|Eine positive <xref:System.TimeSpan>, die die Dauer angibt, in der ein Zeitstempel gültig ist. Der Standardwert ist "00:15:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -68,6 +71,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Gibt die Standardwerte an, die zum Initiieren eines sicheren Konversationsdiensts verwendet werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die Einstellungen sind lokal, da sie nicht von der Sicherheitsrichtlinie des Diensts abgeleitet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen

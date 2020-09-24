@@ -6,20 +6,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914893"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158083"
 ---
 # <a name="grpc"></a>gRPC
 
-Bisher haben wir uns in diesem Buch auf die [Rest-basierte](https://docs.microsoft.com/azure/architecture/best-practices/api-design) Kommunikation konzentriert. Wir haben gesehen, dass Rest ein flexibler Architekturstil ist, der CRUD-basierte Vorgänge für Entitäts Ressourcen definiert. Clients interagieren mit Ressourcen über HTTP mit einem Anforderungs-/Antwort-Kommunikationsmodell. Auch wenn Rest weit verbreitet ist, hat eine neuere Kommunikationstechnologie (GrpC) in der Cloud-Native Community enorme Dynamik erzielt.
+Bisher haben wir uns in diesem Buch auf die [Rest-basierte](/azure/architecture/best-practices/api-design) Kommunikation konzentriert. Wir haben gesehen, dass Rest ein flexibler Architekturstil ist, der CRUD-basierte Vorgänge für Entitäts Ressourcen definiert. Clients interagieren mit Ressourcen über HTTP mit einem Anforderungs-/Antwort-Kommunikationsmodell. Auch wenn Rest weit verbreitet ist, hat eine neuere Kommunikationstechnologie (GrpC) in der Cloud-Native Community enorme Dynamik erzielt.
 
 ## <a name="what-is-grpc"></a>Was ist GrpC?
 
-GrpC ist ein modernes Hochleistungs Framework, das das alte RPC-Protokoll [(Remote Procedure callage)](https://en.wikipedia.org/wiki/Remote_procedure_call) weiterentwickelt. Auf Anwendungsebene optimiert GrpC das Messaging zwischen Clients und Back-End-Diensten. GrpC stammt von Google und ist Open Source und Bestandteil des Ökosystems der Cloud [native Computing Foundation (cncf)](https://www.cncf.io/) der cloudbasierten Angebote. Cncf betrachtet GrpC als [Projekt](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc), das ein Projekt umfasst. Das Auffüllen bedeutet, dass Endbenutzer die Technologie in Produktionsanwendungen verwenden und dass das Projekt eine fehlerfreie Anzahl von Mitwirkenden hat.
+GrpC ist ein modernes Hochleistungs Framework, das das alte RPC-Protokoll [(Remote Procedure callage)](https://en.wikipedia.org/wiki/Remote_procedure_call) weiterentwickelt. Auf Anwendungsebene optimiert GrpC das Messaging zwischen Clients und Back-End-Diensten. GrpC stammt von Google und ist Open Source und Bestandteil des Ökosystems der Cloud  [native Computing Foundation (cncf)](https://www.cncf.io/) der cloudbasierten Angebote. Cncf betrachtet GrpC als [Projekt](https://github.com/cncf/toc/blob/master/process/graduation_criteria.adoc), das ein Projekt umfasst. Das Auffüllen bedeutet, dass Endbenutzer die Technologie in Produktionsanwendungen verwenden und dass das Projekt eine fehlerfreie Anzahl von Mitwirkenden hat.
 
 Eine typische GrpC-Client-App macht eine lokale, in-Process-Funktion verfügbar, die einen Geschäftsvorgang implementiert. Im Untertitel ruft diese lokale Funktion eine andere Funktion auf einem Remote Computer auf. Was als lokaler-Befehl erscheint, wird im Wesentlichen zu einem transparenten Prozess internen Aufrufe eines Remote Dienstanbieter. Die RPC-Grundlagen abstrahiert die Punkt-zu-Punkt-Netzwerkkommunikation,-Serialisierung und-Ausführung zwischen Computern.
 
@@ -37,7 +37,7 @@ GrpC verwendet http/2 für das Transportprotokoll. Obwohl http/2 mit HTTP 1,1 ko
 - Integriertes Streaming, das Anforderungen und Antworten zum asynchronen streamen großer Datasets ermöglicht.
 - Header Komprimierung, die die Netzwerk Auslastung reduziert.
 
-GrpC ist einfach und leistungsstark. Es kann bis zu 8-mal schneller als die JSON-Serialisierung mit Nachrichten von 60-80% kleiner sein. In der Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) -Sprache überschreitet die GrpC-Leistung die Geschwindigkeit und Effizienz der stark optimierten [NetTcp-Bindungen](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als NetTcp, das den Microsoft Stack bevorzugt, ist GrpC plattformübergreifend.
+GrpC ist einfach und leistungsstark. Es kann bis zu 8-mal schneller als die JSON-Serialisierung mit Nachrichten von 60-80% kleiner sein. In der Microsoft [Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md) -Sprache überschreitet die GrpC-Leistung die Geschwindigkeit und Effizienz der stark optimierten [NetTcp-Bindungen](/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8). Anders als NetTcp, das den Microsoft Stack bevorzugt, ist GrpC plattformübergreifend.
 
 ## <a name="protocol-buffers"></a>Protokollpuffer
 
@@ -51,7 +51,7 @@ Wenn Sie die Datei "proto" verwenden, generiert der protobuf-compiler `protoc` s
 
 Zur Laufzeit wird jede Nachricht als standardmäßige protobuf-Darstellung serialisiert und zwischen dem Client und dem Remote Dienst ausgetauscht. Im Gegensatz zu JSON oder XML werden protobuf-Nachrichten als kompilierte Binär Bytes serialisiert.
 
-Das Buch, [GrpC für WCF-Entwickler](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/), das auf der Microsoft-Architektur Website verfügbar ist, bietet eine ausführliche Abdeckung der GrpC-und Protokollpuffer.
+Das Buch, [GrpC für WCF-Entwickler](../grpc-for-wcf-developers/index.md), das auf der Microsoft-Architektur Website verfügbar ist, bietet eine ausführliche Abdeckung der GrpC-und Protokollpuffer.
 
 ## <a name="grpc-support-in-net"></a>GrpC-Unterstützung in .net
 
@@ -99,7 +99,7 @@ Die microservice Reference Architecture, [eShop on Containers](https://github.co
 
 **Abbildung 4-22.** Back-End-Architektur für den eShop in Containern
 
-Beachten Sie in der obigen Abbildung, wie der eShop das Back-End [für Front](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) -End-Muster (BFF) durch Bereitstellen mehrerer API-Gateways einnimmt. Wir haben das BFF-Muster bereits weiter oben in diesem Kapitel erläutert. Achten Sie auf den Aggregator-mikroservice (grau), der zwischen dem Web-Shopping-API-Gateway und den Back-End-Einkaufs-Webdiensten liegt. Der Aggregator empfängt eine einzelne Anforderung von einem Client, verteilt ihn an verschiedene mikrodienste, aggregiert die Ergebnisse und sendet Sie an den anfordernden Client zurück. Diese Vorgänge erfordern in der Regel eine synchrone Kommunikation, die eine sofortige Antwort erzeugt. Im eShop werden Back-End-Aufrufe vom Aggregator mithilfe von GrpC ausgeführt, wie in Abbildung 4-23 dargestellt.
+Beachten Sie in der obigen Abbildung, wie der eShop das Back-End [für Front](/azure/architecture/patterns/backends-for-frontends) -End-Muster (BFF) durch Bereitstellen mehrerer API-Gateways einnimmt. Wir haben das BFF-Muster bereits weiter oben in diesem Kapitel erläutert. Achten Sie auf den Aggregator-mikroservice (grau), der zwischen dem Web-Shopping-API-Gateway und den Back-End-Einkaufs-Webdiensten liegt. Der Aggregator empfängt eine einzelne Anforderung von einem Client, verteilt ihn an verschiedene mikrodienste, aggregiert die Ergebnisse und sendet Sie an den anfordernden Client zurück. Diese Vorgänge erfordern in der Regel eine synchrone Kommunikation, die eine sofortige Antwort erzeugt. Im eShop werden Back-End-Aufrufe vom Aggregator mithilfe von GrpC ausgeführt, wie in Abbildung 4-23 dargestellt.
 
 ![GrpC in eShop in Containern](./media/grpc-implementation.png)
 

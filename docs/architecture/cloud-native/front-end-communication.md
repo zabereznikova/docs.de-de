@@ -3,18 +3,18 @@ title: Front-End-Clientkommunikation
 description: Erfahren Sie, wie Front-End-Clients mit cloudbasierten Systemen kommunizieren.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614057"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158109"
 ---
 # <a name="front-end-client-communication"></a>Front-End-Clientkommunikation
 
 In einem systemeigenen cloudsystem erfordern Front-End-Clients (Mobile, Web-und Desktop Anwendungen) einen Kommunikationskanal für die Interaktion mit unabhängigen Back-End-Webdiensten.  
 
-Welche Optionen sind verfügbar?
+Wie lauten die Optionen?
 
 Um dies zu gewährleisten, könnte ein Front-End-Client direkt mit den Back-End-Diensten *kommunizieren* , wie in Abbildung 4-2 dargestellt.
 
@@ -41,7 +41,7 @@ Beachten Sie in der obigen Abbildung, wie der API-Gatewaydienst die Back-End-ker
 
 Das Gateway isoliert den Client von der internen Dienst Partitionierung und Refactoring. Wenn Sie einen Back-End-Dienst ändern, können Sie ihn im Gateway speichern, ohne den Client zu unterbrechen. Es ist auch Ihre erste Verteidigungslinie für übergreifende Aspekte wie Identität, Zwischenspeicherung, Resilienz, Messung und Drosselung. Viele dieser übergreifenden Aspekte können aus den Back-End-Kerndiensten auf das Gateway entladen werden und die Back-End-Dienste vereinfachen.
 
-Sie müssen sorgfältig vorgehen, um das API-Gateway einfach und schnell zu halten. In der Regel wird die Geschäftslogik vom Gateway beibehalten. Ein komplexes Gateway ist ein Engpass und schließlich eine monolithische Gefahr. Größere Systeme machen häufig mehrere API-Gateways verfügbar, die nach Clienttyp (Mobil, Web, Desktop) oder Back-End-Funktionalität segmentiert sind. Das Back-End [für Front-Ends](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) -Muster bietet die Richtung für die Implementierung mehrerer Gateways. Das Muster ist in Abbildung 4-4 dargestellt.
+Sie müssen sorgfältig vorgehen, um das API-Gateway einfach und schnell zu halten. In der Regel wird die Geschäftslogik vom Gateway beibehalten. Ein komplexes Gateway ist ein Engpass und schließlich eine monolithische Gefahr. Größere Systeme machen häufig mehrere API-Gateways verfügbar, die nach Clienttyp (Mobil, Web, Desktop) oder Back-End-Funktionalität segmentiert sind. Das Back-End [für Front-Ends](/azure/architecture/patterns/backends-for-frontends) -Muster bietet die Richtung für die Implementierung mehrerer Gateways. Das Muster ist in Abbildung 4-4 dargestellt.
 
 ![API-gatewaymuster](./media/backend-for-frontend-pattern.png)
 
@@ -60,7 +60,7 @@ Wie jedes beliebige API-Gateway besteht seine primäre Funktionalität darin, ei
 |Ocelot-Funktionen  | |
 | :-------- | :-------- |
 | Routing | Authentifizierung |
-| Aggregations Anforderung | Autorisierung |
+| Aggregations Anforderung | Authorization |
 | Dienst Ermittlung (mit Konsul und EUREKA) | Drosselung |
 | Lastenausgleich | Protokollierung, Ablauf Verfolgung |
 | Caching | Header/Abfrage Zeichenfolgen-Transformation |
@@ -75,7 +75,7 @@ Sie sollten Ocelot für einfache, cloudbasierte Anwendungen in Erwägung nehmen,
 
 ## <a name="azure-application-gateway"></a>Azure Application Gateway
 
-Bei Anforderungen an einfache Gateways können Sie [Azure-Anwendung Gateway](https://docs.microsoft.com/azure/application-gateway/overview)in Erwägung gezogen. Es ist als Azure- [Dienst](https://azure.microsoft.com/overview/what-is-paas/)für die Bereitstellung verfügbar und umfasst grundlegende Gatewayfeatures wie URL-Routing, SSL-Beendigung und eine Web Application Firewall. Der-Dienst unterstützt [Lasten Ausgleichs Funktionen auf Ebene 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Mit Layer 7 können Sie Anforderungen basierend auf dem tatsächlichen Inhalt einer HTTP-Nachricht, nicht nur auf Low-Level-TCP-Netzwerk Paketen, weiterleiten.
+Bei Anforderungen an einfache Gateways können Sie [Azure-Anwendung Gateway](/azure/application-gateway/overview)in Erwägung gezogen. Es ist als Azure- [Dienst](https://azure.microsoft.com/overview/what-is-paas/)für die Bereitstellung verfügbar und umfasst grundlegende Gatewayfeatures wie URL-Routing, SSL-Beendigung und eine Web Application Firewall. Der-Dienst unterstützt [Lasten Ausgleichs Funktionen auf Ebene 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Mit Layer 7 können Sie Anforderungen basierend auf dem tatsächlichen Inhalt einer HTTP-Nachricht, nicht nur auf Low-Level-TCP-Netzwerk Paketen, weiterleiten.
 
 In diesem Buch veröffentlichen wir das Hosting von cloudbasierten Systemen in [Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html). Ein containerorchestrator, Kubernetes, automatisiert die Bereitstellung, Skalierung und Betriebsprobleme von containerisierten Workloads. Azure-Anwendung Gateway kann als API-Gateway für den [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) -Cluster konfiguriert werden.
 
@@ -99,7 +99,7 @@ Zum Starten stellt API Management einen Gatewayserver zur Verfügung, der den ko
 
 Für Entwickler bietet API Management ein Entwickler Portal, das den Zugriff auf Dienste, Dokumentationen und Beispielcode zum Aufrufen ermöglicht. Entwickler können die Swagger/Open-API verwenden, um Dienst Endpunkte zu überprüfen und Ihre Nutzung zu analysieren. Der Dienst funktioniert auf den wichtigsten Entwicklungsplattformen: .net, Java, golang und mehr.
 
-Das Herausgeber Portal macht ein Management-Dashboard verfügbar, auf dem Administratoren APIs verfügbar machen und ihr Verhalten verwalten Dienst Zugriff kann erteilt werden, überwachte Dienst Integrität und Dienst Telemetrie. Administratoren wenden *Richtlinien* für jeden Endpunkt an, um das Verhalten zu beeinflussen. [Richtlinien](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) sind vorgefertigte Anweisungen, die sequenziell für jeden Dienst-aufruter ausgeführt werden.  Richtlinien werden für einen eingehenden oder ausgehenden Aufruf konfiguriert oder bei einem Fehler aufgerufen. Richtlinien können auf verschiedene Dienstbereiche angewendet werden, um die deterministische Reihenfolge beim Kombinieren von Richtlinien zu aktivieren. Das Produkt wird mit einer großen Anzahl von vordefinierten [Richtlinien](https://docs.microsoft.com/azure/api-management/api-management-policies)ausgeliefert.
+Das Herausgeber Portal macht ein Management-Dashboard verfügbar, auf dem Administratoren APIs verfügbar machen und ihr Verhalten verwalten Dienst Zugriff kann erteilt werden, überwachte Dienst Integrität und Dienst Telemetrie. Administratoren wenden *Richtlinien* für jeden Endpunkt an, um das Verhalten zu beeinflussen. [Richtlinien](/azure/api-management/api-management-howto-policies) sind vorgefertigte Anweisungen, die sequenziell für jeden Dienst-aufruter ausgeführt werden.  Richtlinien werden für einen eingehenden oder ausgehenden Aufruf konfiguriert oder bei einem Fehler aufgerufen. Richtlinien können auf verschiedene Dienstbereiche angewendet werden, um die deterministische Reihenfolge beim Kombinieren von Richtlinien zu aktivieren. Das Produkt wird mit einer großen Anzahl von vordefinierten [Richtlinien](/azure/api-management/api-management-policies)ausgeliefert.
 
 Hier finden Sie Beispiele dafür, wie sich Richtlinien auf das Verhalten ihrer cloudbasierten Dienste auswirken können:  
 
@@ -120,19 +120,19 @@ Azure-API Management ist in [vier verschiedenen](https://azure.microsoft.com/pri
 - Standard
 - Premium
 
-Der Entwickler-Arbeitsbereich ist für nicht produktive Workloads und die Auswertung vorgesehen. Die anderen Tarife bieten progressivere Stromversorgung, Features und höhere Vereinbarungen zum Service Level (Service Level Agreements, SLAs). Der Premium-Tarif bietet Unterstützung für [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) und [mehrere Regionen](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region). Alle Ebenen haben einen festes Preis pro Stunde.
+Der Entwickler-Arbeitsbereich ist für nicht produktive Workloads und die Auswertung vorgesehen. Die anderen Tarife bieten progressivere Stromversorgung, Features und höhere Vereinbarungen zum Service Level (Service Level Agreements, SLAs). Der Premium-Tarif bietet Unterstützung für [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) und [mehrere Regionen](/azure/api-management/api-management-howto-deploy-multi-region). Alle Ebenen haben einen festes Preis pro Stunde.
 
 Die Azure-Cloud bietet auch eine [Server lose Ebene](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) für Azure API Management. Der Dienst wird als *Verbrauchs*Tarif bezeichnet und ist eine Variante von API Management, die für das Server lose Computing-Modell entwickelt wurde. Im Gegensatz zu den zuvor gezeigten Preisstufen "vorab zugewiesen" bietet die Verbrauchs Stufe "sofortige Bereitstellung" und "nutzungsbasierte Bezahlung".
 
 Sie ermöglicht API-Gatewayfeatures für die folgenden Anwendungsfälle:
 
-- Mit Server losen Technologien (z. b. [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) und [Azure Logic apps](https://azure.microsoft.com/services/logic-apps/)implementierte mikrodienste.
+- Mit Server losen Technologien (z. b. [Azure Functions](/azure/azure-functions/functions-overview) und [Azure Logic apps](https://azure.microsoft.com/services/logic-apps/)implementierte mikrodienste.
 - Azure-Sicherungsdienst Ressourcen wie Service Bus Warteschlangen und Themen, Azure Storage und andere.
 - Bei der-Datenverkehrs Kontrolle sind gelegentlich große Spitzen Mengen aufgetreten, aber der Großteil der Zeit bleibt gering.
 
 Die Verbrauchs Ebene verwendet die gleichen zugrunde liegenden Service API Management-Komponenten, verwendet aber eine ganz andere Architektur, die auf dynamisch zugeordneten Ressourcen basiert. Es richtet sich perfekt an das Server lose Computing-Modell:
 
-- Keine zu verwaltende Infrastruktur.
+- Es muss keine Infrastruktur verwaltet werden.
 - Keine Leerlauf Kapazität.
 - Hohe Verfügbarkeit.
 - Automatische Skalierung.

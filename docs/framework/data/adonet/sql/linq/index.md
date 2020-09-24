@@ -3,14 +3,15 @@ title: LINQ to SQL
 description: LINQ to SQL ist eine Komponente des .NET Framework, die eine Lauf Zeit Infrastruktur zum Verwalten relationaler Daten als Objekte bereitstellt.
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: d6fadecf17cae21527cec2180b6d6c5b5e85d0cc
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 961e0713de714d0e75417f93e84e0ab748fd9a42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551313"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158317"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist eine Komponente von .NET Framework Version 3,5, die eine Lauf Zeit Infrastruktur zum Verwalten relationaler Daten als Objekte bereitstellt.  
   
 > [!NOTE]
@@ -23,6 +24,7 @@ ms.locfileid: "90551313"
  Die Dokumentation zu diesem Release von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] beschreibt die grundlegenden Bausteine, Verfahren und Techniken zur Erstellung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen. Sie können auch Microsoft-Dokumentation auf bestimmte Probleme durchsuchen, und Sie können am [LINQ-Forum](https://social.msdn.microsoft.com/forums/home?forum=linqtosql)teilnehmen, in dem Sie komplexere Themen ausführlich mit Experten erörtern können. Zum Schluss ist die [LINQ to SQL: .NET Language-Integrated Query for Relational Data](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) Whitepaper Details [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Technology, Complete with Visual Basic und c# Code examples (in englischer Sprache).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Erste Schritte](getting-started.md)  
  Bietet eine komprimierte Übersicht über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sowie Informationen zu den ersten Schritten mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
@@ -36,6 +38,7 @@ ms.locfileid: "90551313"
  Enthält Links zu Visual Basic-und c#-Beispielen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Language-Integrated Query (LINQ)-C #](../../../../../csharp/programming-guide/concepts/linq/index.md)\
  Bietet Übersichten von LINQ-Technologien in c#.
 

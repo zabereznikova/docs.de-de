@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 44966ed9ee3abb3d1babdf09dd44f087376ada55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243957"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158681"
 ---
 # \<system.serviceModel>
+
 Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemente Windows Communication Foundation (WCF).  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -56,14 +57,16 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|In diesem Abschnitt werden zwei untergeordnete Auflistungen mit den Namen `endpointBehaviors` und `serviceBehaviors` definiert.  Jede Auflistung definiert von Endpunkten und Diensten verwendete Verhaltenselemente. Jedes Verhaltenselement wird durch seinen eindeutigen `name` identifiziert.|  
 |[\<bindings>](bindings.md)|Dieser Abschnitt enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen. Jeder Eintrag wird durch seinen eindeutigen `name` identifiziert. Dienste verwenden Bindungen, indem sie sie mithilfe des `name` verknüpfen.|  
@@ -81,11 +84,12 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |\<configuration>|Das Stammelement für alle Konfigurationselemente in einer Konfigurationsdatei.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  WCF fügt den Konfigurations Abschnitten anderer Produkte keine Elemente hinzu.  
   
  WCF-Dienste werden im- `services` Abschnitt der Konfigurationsdatei definiert. Eine Assembly kann eine beliebige Anzahl von Diensten enthalten. Jeder Dienst hat seinen eigenen `service`-Konfigurationsabschnitt. Dieser Abschnitt und sein Inhalt definieren den Dienstvertrag, das Verhalten und die Endpunkte des Diensts.  
@@ -99,6 +103,7 @@ Dieser Konfigurations Abschnitt enthält alle Service Model-Konfigurationselemen
  Bindungen sind durch die Kombination aus `name`-Attribut und `bindingConfiguration`-Attribut mit Endpunkten verknüpft. Das `binding`-Attribut definiert, in welchem Abschnitt die Bindung definiert ist. Das `bindingConfiguration`-Attribut legt fest, welche konfigurierte Bindung innerhalb des Bindungsabschnitts verwendet wird. Ein Bindungsabschnitt kann verschiedene konfigurierte Bindungen definieren.  
   
 ## <a name="example"></a>Beispiel  
+
  Hier sehen Sie ein Beispiel einer WCF-Konfigurationsdatei.  
   
 ```xml  

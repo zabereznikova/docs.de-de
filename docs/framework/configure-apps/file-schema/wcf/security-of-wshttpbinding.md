@@ -2,14 +2,15 @@
 title: <security> von <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: b66b5228cab9dbc35502a13a2d0fe56ce4c6a18d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f984759fb52242bf8030a101b567c14627dd314
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738583"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158694"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> von \<wsHttpBinding>
+
 Stellt die Sicherheitsfunktionen des dar [\<wsHttpBinding>](wshttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,17 +38,18 @@ Stellt die Sicherheitsfunktionen des dar [\<wsHttpBinding>](wshttpbinding.md) .
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |Modus|Optionale. Gibt den angewendeten Sicherheitstyp an. Der Standardwert lautet `Message`.<br />: Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode> .|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Der Dienst muss mit SSL-Zertifikaten konfiguriert werden. Die Nachricht wird vollständig über HTTPS gesichert und wird vom Client über das SSL-Zertifikat des Diensts authentifiziert. Die Clientauthentifizierung wird durch das `ClientCredentials`-Attribut von [\<transport>](transport-of-wshttpbinding.md) .|  
@@ -68,6 +70,7 @@ Stellt die Sicherheitsfunktionen des dar [\<wsHttpBinding>](wshttpbinding.md) .
 |[\<wsHttpBinding>](wshttpbinding.md)|Eine sichere Bindung für HTTP-Transportanwendungen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die WSHttpBinding-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS.  
   
 ## <a name="see-also"></a>Weitere Informationen

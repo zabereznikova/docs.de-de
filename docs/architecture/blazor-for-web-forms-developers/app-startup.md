@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Start Logik für Ihre APP definieren.
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267697"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158187"
 ---
 # <a name="app-startup"></a>App-Start
 
@@ -79,7 +79,7 @@ public class Startup
 
 Wie bei den restlichen ASP.net Core wird die Startup-Klasse mit den Prinzipien der Abhängigkeitsinjektion erstellt.  `IConfiguration`Wird für den Konstruktor bereitgestellt und für den späteren Zugriff während der Konfiguration in einer öffentlichen Eigenschaft gezischt.
 
-Die `ConfigureServices` in ASP.net Core eingeführte-Methode ermöglicht die Konfiguration der verschiedenen ASP.net Core Framework-Dienste für den integrierten Abhängigkeits Injection-Container des Frameworks.  Mit den verschiedenen `services.Add*` Methoden werden Dienste hinzugefügt, die Funktionen wie Authentifizierung, Razor-Seiten, MVC-Controller Routing, signalr-und blazor-Server Interaktionen unter vielen anderen Funktionen ermöglichen.  Diese Methode wurde in Web Forms nicht benötigt, da die Verarbeitung und Behandlung der ASPX-, ASCX-, ashx-und ASMX-Dateien durch Verweisen auf ASP.net in der web.config Konfigurationsdatei definiert wurde.  Weitere Informationen zur Abhängigkeitsinjektion in ASP.net Core finden Sie in der [Online Dokumentation](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection).
+Die `ConfigureServices` in ASP.net Core eingeführte-Methode ermöglicht die Konfiguration der verschiedenen ASP.net Core Framework-Dienste für den integrierten Abhängigkeits Injection-Container des Frameworks.  Mit den verschiedenen `services.Add*` Methoden werden Dienste hinzugefügt, die Funktionen wie Authentifizierung, Razor-Seiten, MVC-Controller Routing, signalr-und blazor-Server Interaktionen unter vielen anderen Funktionen ermöglichen.  Diese Methode wurde in Web Forms nicht benötigt, da die Verarbeitung und Behandlung der ASPX-, ASCX-, ashx-und ASMX-Dateien durch Verweisen auf ASP.net in der web.config Konfigurationsdatei definiert wurde.  Weitere Informationen zur Abhängigkeitsinjektion in ASP.net Core finden Sie in der [Online Dokumentation](/aspnet/core/fundamentals/dependency-injection).
 
 Mit der- `Configure` Methode wird das Konzept der HTTP-Pipeline zum ASP.net Core eingeführt.  Bei dieser Methode deklarieren wir von oben nach unten die [Middleware](middleware.md) , die jede Anforderung verarbeitet, die an die Anwendung gesendet wird. Die meisten dieser Features in der Standardkonfiguration waren in den Web Forms-Konfigurationsdateien verstreut und sind nun an einem Ort, um die Referenz zu vereinfachen.
 
@@ -103,7 +103,7 @@ Die Befehlszeilen Tools "Grunt", "Gulp" und "WebPack" und die zugehörigen Konfi
 </Target>
 ```
 
-Weitere Informationen zu beiden Strategien zum Verwalten Ihrer CSS-und JavaScript-Dateien finden Sie in den Paketen [und minimieren static Assets in ASP.net Core](https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification) Dokumentation.
+Weitere Informationen zu beiden Strategien zum Verwalten Ihrer CSS-und JavaScript-Dateien finden Sie in den Paketen [und minimieren static Assets in ASP.net Core](/aspnet/core/client-side/bundling-and-minification) Dokumentation.
 
 >[!div class="step-by-step"]
 >[Zurück](project-structure.md)

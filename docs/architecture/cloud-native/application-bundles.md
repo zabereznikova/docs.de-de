@@ -2,12 +2,12 @@
 title: Bundles von cloudbasierten Anwendungen
 description: Architektur von Cloud Native .net-apps für Azure | Native Cloud-Anwendungs Bündel
 ms.date: 05/13/2020
-ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7f1fcd448f3299a31043bf269717f7b777329c62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614343"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158122"
 ---
 # <a name="cloud-native-application-bundles"></a>Bundles von cloudbasierten Anwendungen
 
@@ -78,12 +78,12 @@ Das cnab-Format ist auch flexibel, sodass es für jede beliebige Cloud verwendet
 
 Heutzutage gibt es viele großartige Tools im devops-Raum und sogar noch mehr fantastische Bücher und Beiträge zum Erfolg. Ein bevorzugtes Buch für den Einstieg in die devops-Reise ist [das Phoenix-Projekt](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), das die Transformation eines fiktiven Unternehmens von noops zu devops befolgt. Ein wichtiger Punkt ist, dass devops bei der Bereitstellung komplexer, nativer Cloud-Anwendungen nicht mehr "schön ist". Dies ist eine Anforderung und sollte am Anfang jedes Projekts geplant und erstellt werden.
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
-- [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)
+- [Azure Resource Manager](/azure/azure-resource-manager/management/overview)
 - [Terraform](https://www.terraform.io/)
-- [Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/cli/azure/)
+- [Azure-Befehlszeilenschnittstelle](/cli/azure/)
 
 >[!div class="step-by-step"]
 >[Zurück](infrastructure-as-code.md)

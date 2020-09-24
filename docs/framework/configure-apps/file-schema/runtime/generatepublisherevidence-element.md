@@ -5,14 +5,15 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541783"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158772"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence>-Element
+
 Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Code Zugriffssicherheit (CAS) erstellt.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -37,22 +39,23 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`false`|Erstellt keine <xref:System.Security.Policy.Publisher> Beweise.|  
-|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweise. Dies ist die Standardoption.|  
+|`true`|Erstellt <xref:System.Security.Policy.Publisher> Beweise. Dies ist die Standardeinstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]
 > In der .NET Framework 4 und höher hat dieses Element keine Auswirkung auf die assemblyladezeiten. Weitere Informationen finden Sie im Abschnitt "Vereinfachung der Sicherheitsrichtlinie" unter " [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes)".  
@@ -63,9 +66,11 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
 > Wir empfehlen, dass Dienste das- `<generatePublisherEvidence>` Element verwenden, um die Startleistung zu verbessern.  Mithilfe dieses Elements können auch Verzögerungen vermieden werden, die einen Timeout und den Abbruch des Dienst Starts verursachen können.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
+
  Dieses Element kann nur in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie das- `<generatePublisherEvidence>` Element verwendet wird, um die Überprüfung der CAS-Herausgeber Richtlinie für eine Anwendung zu deaktivieren  
   
 ```xml  
@@ -76,7 +81,7 @@ Gibt an, ob die Laufzeit <xref:System.Security.Policy.Publisher> Beweise für Co
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Lauf Zeit Einstellungs Schema](index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)

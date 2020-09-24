@@ -9,14 +9,15 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a146874acc21f52507b37b1751c648792e23c8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504562"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158850"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings>-Element (Netzwerkeinstellungen)
+
 Konfiguriert E-Mail-Sendeoptionen.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,14 +33,16 @@ Konfiguriert E-Mail-Sendeoptionen.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |[\<smtp>-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert die Optionen des Simple Mail-Transport Protokolls.|  
   
@@ -50,6 +53,7 @@ Konfiguriert E-Mail-Sendeoptionen.
 |[\<system.Net>-Element (Netzwerkeinstellungen)](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden die entsprechenden SMTP-Parameter zum Senden von e-Mails mit den standardmäßigen Netzwerk Anmelde Informationen angegeben.  
   
 ```xml  
@@ -68,7 +72,7 @@ Konfiguriert E-Mail-Sendeoptionen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
