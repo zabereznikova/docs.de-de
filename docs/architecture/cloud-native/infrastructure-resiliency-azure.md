@@ -3,12 +3,12 @@ title: Resilienz der Azure-Plattform
 description: Architektur von Cloud Native .net-apps für Azure | Resilienz der cloudinfrastruktur mit Azure
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 752f1320d9dfa18e52b078763d221a787da15e8e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88634bc60df15cc93b1769a85879795ae383757a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163764"
 ---
 # <a name="azure-platform-resiliency"></a>Resilienz der Azure-Plattform
 
@@ -39,7 +39,7 @@ Wir haben gesagt, dass die Resilienz Ihrer Anwendung ermöglicht, auf einen Fehl
 
 Der Umfang und die Auswirkungen von Fehlern variieren. Ein Hardwarefehler (z. b. ein fehlerhafter Datenträger) kann sich auf einen einzelnen Knoten in einem Cluster auswirken. Ein fehlerhafter Netzwerkswitch kann sich auf ein gesamtes Serverrack auswirken. Weniger häufige Fehler, wie z. b. Stromausfälle, könnten ein gesamtes Rechenzentrum stören. In selten Fällen kommt es vor, dass eine gesamte Region nicht mehr verfügbar ist.
 
-[Redundanz](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) ist eine Möglichkeit zum Bereitstellen von Anwendungs Resilienz. Die genaue erforderliche Redundanz ist abhängig von Ihren geschäftlichen Anforderungen und wirkt sich sowohl auf die Kosten als auch auf die Komplexität Ihres Systems aus. Beispielsweise ist eine Bereitstellung in mehreren Regionen teurer und komplexer zu verwalten als eine Bereitstellung in einer einzelnen Region. Sie benötigen betriebliche Verfahren zum Verwalten von Failover und Failback. Die zusätzlichen Kosten und die Komplexität können für einige Geschäftsszenarien, aber nicht für andere gerechtfertigt werden.
+[Redundanz](/azure/architecture/guide/design-principles/redundancy) ist eine Möglichkeit zum Bereitstellen von Anwendungs Resilienz. Die genaue erforderliche Redundanz ist abhängig von Ihren geschäftlichen Anforderungen und wirkt sich sowohl auf die Kosten als auch auf die Komplexität Ihres Systems aus. Beispielsweise ist eine Bereitstellung in mehreren Regionen teurer und komplexer zu verwalten als eine Bereitstellung in einer einzelnen Region. Sie benötigen betriebliche Verfahren zum Verwalten von Failover und Failback. Die zusätzlichen Kosten und die Komplexität können für einige Geschäftsszenarien, aber nicht für andere gerechtfertigt werden.
 
 Um Redundanz zu entwerfen, müssen Sie die kritischen Pfade in der Anwendung identifizieren und dann bestimmen, ob an jedem Punkt im Pfad Redundanz vorliegt? Wenn bei einem Subsystem ein Fehler auftritt, führt die Anwendung ein Failover zu einem anderen aus? Schließlich benötigen Sie ein klares Verständnis der in der Azure-cloudplattform integrierten Features, die Sie nutzen können, um Ihre Redundanz Anforderungen zu erfüllen. Im folgenden finden Sie Empfehlungen für die Architektur der Redundanz:
 
@@ -49,13 +49,13 @@ Um Redundanz zu entwerfen, müssen Sie die kritischen Pfade in der Anwendung ide
 
 - *Planen Sie die Bereitstellung in mehreren Regionen.* Wenn Sie Ihre Anwendung in einer einzelnen Region bereitstellen und diese Region nicht mehr verfügbar ist, wird Ihre Anwendung ebenfalls nicht mehr verfügbar sein. Dies ist unter den Bedingungen der Vereinbarungen zum Service Level Ihrer Anwendung möglicherweise nicht akzeptabel. Sie sollten stattdessen die Anwendung und die zugehörigen Dienste in mehreren Regionen bereitstellen. Beispielsweise wird ein Azure Kubernetes Service-Cluster (AKS) in einer einzelnen Region bereitgestellt. Um Ihr System vor einem regionalen Ausfall zu schützen, können Sie Ihre Anwendung in mehreren AKS-Clustern in unterschiedlichen Regionen bereitstellen und das Feature " [Regions](https://buildazure.com/2017/01/06/azure-region-pairs-explained/) Paare" verwenden, um Platt Form Updates zu koordinieren und den Wiederherstellungs Aufwand zu priorisieren.
 
-- *Aktivieren Sie die [georeplikation](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication).* Bei der georeplikation für Dienste wie Azure SQL-Datenbank und Cosmos DB werden sekundäre Replikate Ihrer Daten in mehreren Regionen erstellt. Obwohl beide Dienste automatisch Daten innerhalb derselben Region replizieren, schützt die georeplikation Sie vor einem regionalen Ausfall, da Sie ein Failover auf eine sekundäre Region durchführen können. Eine weitere bewährte Vorgehensweise für die georeplikation ist das Speichern von Container Images. Zum Bereitstellen eines Diensts in AKS müssen Sie das Image speichern und aus einem Repository abrufen. Azure Container Registry in AKS integrieren und Container Images sicher speichern können. Um die Leistung und Verfügbarkeit zu verbessern, sollten Sie Ihre Images in einer Registrierung in jeder Region, in der Sie einen AKS-Cluster besitzen, georeplizieren. Jeder AKS-Cluster ruft dann Container Images aus der lokalen Container Registrierung in seiner Region ab, wie in Abbildung 6-4 dargestellt:
+- *Aktivieren Sie die [georeplikation](/azure/sql-database/sql-database-active-geo-replication).* Bei der georeplikation für Dienste wie Azure SQL-Datenbank und Cosmos DB werden sekundäre Replikate Ihrer Daten in mehreren Regionen erstellt. Obwohl beide Dienste automatisch Daten innerhalb derselben Region replizieren, schützt die georeplikation Sie vor einem regionalen Ausfall, da Sie ein Failover auf eine sekundäre Region durchführen können. Eine weitere bewährte Vorgehensweise für die georeplikation ist das Speichern von Container Images. Zum Bereitstellen eines Diensts in AKS müssen Sie das Image speichern und aus einem Repository abrufen. Azure Container Registry in AKS integrieren und Container Images sicher speichern können. Um die Leistung und Verfügbarkeit zu verbessern, sollten Sie Ihre Images in einer Registrierung in jeder Region, in der Sie einen AKS-Cluster besitzen, georeplizieren. Jeder AKS-Cluster ruft dann Container Images aus der lokalen Container Registrierung in seiner Region ab, wie in Abbildung 6-4 dargestellt:
 
 ![Regions übergreifende replizierte Ressourcen](./media/replicated-resources.png)
 
 **Abbildung 6-4**. Regions übergreifende replizierte Ressourcen
 
-- *Implementieren Sie einen Lastenausgleich für den DNS-Datenverkehr.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) bietet hohe Verfügbarkeit für kritische Anwendungen durch Lastenausgleich auf DNS-Ebene. Er kann Datenverkehr an verschiedene Regionen weiterleiten, basierend auf Geografie, Cluster Antwortzeit und sogar der Integrität des Anwendungs Endpunkts. Beispielsweise kann Azure Traffic Manager Kunden an die nächstgelegene AKS-Cluster-und Anwendungs Instanz weiterleiten. Wenn Sie mehrere AKS-Cluster in verschiedenen Regionen bereitgestellt haben, steuern Sie die Weiterleitung des Datenverkehrs an die in jedem Cluster ausgeführten Anwendungen mit Traffic Manager. In Abbildung 6-5 wird dieses Szenario veranschaulicht.
+- *Implementieren Sie einen Lastenausgleich für den DNS-Datenverkehr.* [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) bietet hohe Verfügbarkeit für kritische Anwendungen durch Lastenausgleich auf DNS-Ebene. Er kann Datenverkehr an verschiedene Regionen weiterleiten, basierend auf Geografie, Cluster Antwortzeit und sogar der Integrität des Anwendungs Endpunkts. Beispielsweise kann Azure Traffic Manager Kunden an die nächstgelegene AKS-Cluster-und Anwendungs Instanz weiterleiten. Wenn Sie mehrere AKS-Cluster in verschiedenen Regionen bereitgestellt haben, steuern Sie die Weiterleitung des Datenverkehrs an die in jedem Cluster ausgeführten Anwendungen mit Traffic Manager. In Abbildung 6-5 wird dieses Szenario veranschaulicht.
 
 ![AKS und Azure-Traffic Manager](./media/aks-traffic-manager.png)
 
@@ -79,7 +79,7 @@ Die Cloud gedeiht bei der Skalierung. Die Möglichkeit, Systemressourcen zu verg
 
 - *Vermeiden Sie Affinität.* Eine bewährte Vorgehensweise besteht darin sicherzustellen, dass ein Knoten keine lokale Affinität erfordert, die *häufig als "* Kurznotiz" bezeichnet wird. Eine Anforderung sollte an eine beliebige Instanz weitergeleitet werden können. Wenn Sie den Zustand beibehalten müssen, sollte er in einem verteilten Cache gespeichert werden, z. b. [Azure redis Cache](https://azure.microsoft.com/services/cache/).
 
-- *Nutzen Sie Features der automatischen Plattformskalierung.* Verwenden Sie die integrierten Features für die automatische Skalierung, wann immer möglich, anstelle von benutzerdefinierten oder Drittanbieter Mechanismen. Verwenden Sie nach Möglichkeit geplante Skalierungs Regeln, um sicherzustellen, dass Ressourcen ohne Startverzögerung verfügbar sind, und fügen Sie den Regeln nach Bedarf eine reaktive automatische Skalierung hinzu, um unerwartete Änderungen an der Nachfrage zu bewältigen. Weitere Informationen finden Sie im [Leitfaden für die automatische Skalierung](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
+- *Nutzen Sie Features der automatischen Plattformskalierung.* Verwenden Sie die integrierten Features für die automatische Skalierung, wann immer möglich, anstelle von benutzerdefinierten oder Drittanbieter Mechanismen. Verwenden Sie nach Möglichkeit geplante Skalierungs Regeln, um sicherzustellen, dass Ressourcen ohne Startverzögerung verfügbar sind, und fügen Sie den Regeln nach Bedarf eine reaktive automatische Skalierung hinzu, um unerwartete Änderungen an der Nachfrage zu bewältigen. Weitere Informationen finden Sie im [Leitfaden für die automatische Skalierung](/azure/architecture/best-practices/auto-scaling).
 
 - *Horizontales hochskalieren.* Eine abschließende Vorgehensweise wäre das horizontale hochskalieren, sodass Sie schnell unmittelbare Spitzen im Datenverkehr erreichen können, ohne das Geschäft zu verlieren. Und dann skalieren (d. h. nicht benötigte Instanzen entfernen), um das System stabil zu halten. Eine einfache Möglichkeit, dies zu implementieren, besteht darin, den kühl Zeitraum festzulegen. Dies ist die Zeit, die zwischen Skalierungs Vorgängen gewartet werden soll, auf fünf Minuten für das Hinzufügen von Ressourcen und bis zu 15 Minuten zum Entfernen von Instanzen.
 
@@ -93,7 +93,7 @@ Wir haben empfohlen, programmatische Wiederholungs Vorgänge in einem früheren 
 
 - *Azure Service Bus.* Der Service Bus-Client stellt eine [retrypolicy-Klasse](xref:Microsoft.ServiceBus.RetryPolicy) zur Verfügung, die mit einem Backoff-Intervall, einer Wiederholungs Anzahl und einem-Wert konfiguriert werden kann, der <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A> die maximale Zeit angibt, die ein Vorgang dauern kann. Die Standard Richtlinie ist neun maximale Wiederholungs Versuche mit einem Backoff-Zeitraum von 30 Sekunden zwischen den versuchen.
 
-- *Azure SQL-Datenbank.* Wiederholungs Unterstützung wird bei Verwendung der [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) Bibliothek bereitgestellt.
+- *Azure SQL-Datenbank* Wiederholungs Unterstützung wird bei Verwendung der [Entity Framework Core](/ef/core/miscellaneous/connection-resiliency) Bibliothek bereitgestellt.
 
 - *Azure Storage*: Die Speicher Client Bibliothek unterstützt Wiederholungs Vorgänge. Die Strategien variieren in Azure Storage-Tabellen,-BLOB-und-Warteschlangen. Außerdem wechseln Alternative Wiederholungen zwischen primären und sekundären Speicherdienst Standorten, wenn das Feature für die georedundanz aktiviert ist.
 

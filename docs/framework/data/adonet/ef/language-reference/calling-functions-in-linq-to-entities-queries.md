@@ -3,14 +3,15 @@ title: Aufrufen von Funktionen in LINQ to Entities-Abfragen
 description: Verwenden Sie diese Artikel, um zu erfahren, wie die Klassen EntityFunctions und SqlFunctions Zugriff auf kanonische Funktionen und Datenbankfunktionen als Teil der Entity Framework bereitstellen.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546047"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177487"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Aufrufen von Funktionen in LINQ to Entities-Abfragen
+
 In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to Entities-Abfragen aufgerufen werden.  
   
  Die <xref:System.Data.Objects.EntityFunctions>-Klasse und die <xref:System.Data.Objects.SqlClient.SqlFunctions>-Klasse bieten im Rahmen des Entity Framework Zugriff auf kanonische Funktionen und Datenbankfunktionen. Weitere Informationen finden Sie unter Gewusst [wie: Abrufen von kanonischen Funktionen](how-to-call-canonical-functions.md) und Gewusst [wie: Abrufen von Datenbankfunktionen](how-to-call-database-functions.md).  
@@ -26,6 +27,7 @@ In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to En
  Weitere Informationen hierzu finden Sie in diesem Abschnitt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Aufrufen kanonischer Funktionen](how-to-call-canonical-functions.md)  
   
  [Vorgehensweise: Aufrufen von Datenbankfunktionen](how-to-call-database-functions.md)  
@@ -36,7 +38,7 @@ In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to En
   
  [Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfragen in LINQ to Entities](queries-in-linq-to-entities.md)
 - [Kanonische Funktionen](canonical-functions.md)

@@ -2,14 +2,15 @@
 title: <endpoint>-Element
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: befebc090900576b1e0f7ca679e1f5f5cd15af9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183805"
 ---
 # <a name="endpoint-element"></a>\<endpoint>-Element
+
 Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -52,7 +54,7 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 |contract|Eine Zeichenfolge, die angibt, welche Verträge von diesem Endpunkt verfügbar gemacht werden. Die Assembly muss den Vertragstyp implementieren. Wenn eine Dienstimplementierung einen einzelnen Vertragstyp implementiert, kann diese Eigenschaft ausgelassen werden. Der Standardwert ist eine leere Zeichenfolge.|  
 |endpointConfiguration|Eine Zeichenfolge, die den Namen des Standardendpunkts angibt, der mit dem `kind`-Attribut festgelegt wird, das auf die zusätzlichen Konfigurationsinformationen dieses Standardendpunkts verweist. Der gleiche Name muss im Abschnitt `<standardEndpoints>` definiert werden.|  
 |isSystemEndpoint|Ein boolescher Wert, der angibt, ob ein Endpunkt ein Infrastrukturendpunkt ist.|  
-|kind|Eine Zeichenfolge, die den Typ des angewendeten Standardendpunkts angibt. Der Typ muss im `<extensions>` Abschnitt oder in Machine. config registriert werden. Wenn nichts angegeben wird, wird ein allgemeiner Dienst Endpunkt erstellt.|  
+|kind|Eine Zeichenfolge, die den Typ des angewendeten Standardendpunkts angibt. Der Typ muss im Abschnitt `<extensions>` oder in machine.config registriert werden. Wenn kein Wert angegeben wird, wird ein allgemeiner Dienstendpunkt erstellt.|  
 |listenUriMode|Gibt an, wie der Transport die `ListenUri` verarbeitet, die für die Überwachung durch den Dienst bereitgestellt wurde. Folgende Werte sind gültig:<br /><br /> -Explizit<br />-Eindeutig<br /><br /> Der Standardwert ist Explicit.|  
 |listenUri|Eine Zeichenfolge mit dem URI, an dem der Dienstendpunkt lauscht. Der Standardwert ist eine leere Zeichenfolge.|  
 |name|Optionales Attribut. Eine Zeichenfolge, die den Namen des Dienstendpunkts angibt. Der Standardwert ist die Verkettung des Bindungsnamen und des Vertragsbeschreibungsnamens. Dienste haben möglicherweise mehrere Endpunkte, sodass das `name`-Attribut des Endpunkts sich vom Namen des Diensts unterscheidet.|  
@@ -71,6 +73,7 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 |[\<service>](service.md)|Ein Konfigurationsabschnitt, der eine Liste mit Endpunkten definiert, zu denen ein Client eine Verbindung herstellen kann.|  
   
 ## <a name="example"></a>Beispiel  
+
  Dies ist ein Beispiel für eine Dienstendpunkt-Konfiguration.  
   
 ```xml  

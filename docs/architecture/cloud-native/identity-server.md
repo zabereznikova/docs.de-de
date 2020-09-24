@@ -2,12 +2,12 @@
 title: Identityserver für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | IdentityServer
 ms.date: 05/13/2020
-ms.openlocfilehash: 2128001f0d25b1edd795dd9676e0d76018c1fa3a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: bdf193aac348b54f2ebf5b537beef5d61a1d5a1e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163829"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>Identityserver für Native Cloud-Anwendungen
 
@@ -100,7 +100,7 @@ Viele Cloud-native Anwendungen nutzen serverseitige APIs und umfassende Client A
 ## <a name="references"></a>References
 
 - [Identityserver-Dokumentation](https://docs.identityserver.io/en/latest/)
-- [Anwendungstypen](https://docs.microsoft.com/azure/active-directory/develop/app-types)
+- [Anwendungstypen](/azure/active-directory/develop/app-types)
 - [JavaScript-oidc-Client](https://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]

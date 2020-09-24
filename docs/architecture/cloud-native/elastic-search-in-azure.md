@@ -3,12 +3,12 @@ title: Elasticsearch in Cloud-native Anwendungen
 description: Erfahren Sie mehr über das Hinzufügen elastischer Suchfunktionen zu cloudbasierten Anwendungen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271801"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155379"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch in einer cloudbasierten App
 
@@ -36,25 +36,25 @@ Aus dem Microsoft Azure Marketplace können Entwickler vorkonfigurierte Vorlagen
 
 In diesem Kapitel wurde eine ausführliche Betrachtung der Daten in Cloud-Native-Systemen vorgestellt. Wir haben damit begonnen, Datenspeicherung in monolithischen Anwendungen mit Daten Speicherungs Mustern in cloudbasierten Systemen zu vergleichen. Wir haben uns mit Datenmustern beschäftigt, die in cloudbasierten Systemen implementiert sind, einschließlich Dienst übergreifender Abfragen, verteilter Transaktionen und Mustern zum Umgang mit Systemen mit hohem Volumen. Wir haben gegen SQL mit nosql-Daten verglichen. Wir haben uns mit den in Azure verfügbaren Datenspeicher Optionen beschäftigt, die sowohl Microsoft-zentrierte als auch Open-Source-Optionen enthalten. Schließlich haben wir das Caching und elasticsearch in einer Cloud-native Anwendung erläutert.
 
-### <a name="references"></a>Referenzen
+### <a name="references"></a>References
 
-- [Cqrs-Muster (Command and Query Responsibility Segregation)](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [Cqrs-Muster (Command and Query Responsibility Segregation)](/azure/architecture/patterns/cqrs)
 
-- [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Muster „Ereignissourcing“](/azure/architecture/patterns/event-sourcing)
 
 - [Warum ist RDBMS im Cap-Theorem nicht tolerant und warum ist es verfügbar?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [Materialisierte Sicht](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [Materialisierte Sicht](/azure/architecture/patterns/materialized-view)
 
 - [Alles, was Sie wirklich über Open Source-Datenbanken wissen müssen](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [Muster „Kompensierende Transaktion“](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Muster „Kompensierende Transaktion“](/azure/architecture/patterns/compensating-transaction)
 
 - [Saga-Muster](https://microservices.io/patterns/data/saga.html)
 
 - [Saga-Muster | Implementieren von Geschäftstransaktionen mithilfe von microservices](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [Muster „Kompensierende Transaktion“](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Muster „Kompensierende Transaktion“](/azure/architecture/patterns/compensating-transaction)
 
 - [Die folgenden 9-Ball-Cosmos DB Konsistenz Ebenen werden näher erläutert.](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

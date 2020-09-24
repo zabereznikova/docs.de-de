@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153814"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183922"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions>-Element
+
 Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden soll.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,22 +31,24 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob der laufende Prozess durch nicht behandelte Aufgaben Ausnahmen beendet werden soll.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`false`|Beendet den laufenden Prozess für eine nicht behandelte Task Ausnahme nicht. Dies ist die Standardeinstellung.|  
 |`true`|Beendet den laufenden Prozess für eine nicht behandelte Task Ausnahme.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -57,6 +60,7 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 |||  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn eine Ausnahme, die einem zugeordnet ist <xref:System.Threading.Tasks.Task> , nicht beobachtet wurde, gibt es keinen <xref:System.Threading.Tasks.Task.Wait%2A> Vorgang, das übergeordnete Element ist nicht angefügt, und die <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> Eigenschaft wurde nicht gelesen. die Task Ausnahme wird als nicht beobachtet betrachtet.  
   
  Standardmäßig löst der Finalizer standardmäßig eine Ausnahme aus und beendet den Prozess, wenn in der .NET Framework 4 eine Garbage Collection mit einer <xref:System.Threading.Tasks.Task> nicht beobachteten Ausnahme erfolgt. Die Beendigung des Prozesses wird durch die zeitliche Steuerung von Garbage Collection und Finalisierung bestimmt.  
@@ -72,6 +76,7 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 - Durch Festlegen des DWORD-Registrierungs Werts throwunobservedtaskexceptions = 1 im HKEY_LOCAL_MACHINE \Software\Microsoft \\ . NETFramework-Schlüssel.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie das Auslösen von Ausnahmen in Aufgaben mithilfe einer Anwendungs Konfigurationsdatei aktiviert wird.  
   
 ```xml  
@@ -83,6 +88,7 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie eine nicht beobachtete Ausnahme von einem Task ausgelöst wird. Der Code muss als freigegebene Programm ausgeführt werden, damit er ordnungsgemäß funktioniert.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]

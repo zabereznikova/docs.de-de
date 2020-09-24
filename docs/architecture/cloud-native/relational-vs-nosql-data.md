@@ -3,12 +3,12 @@ title: Vergleich der relationalen und NoSQL-Daten
 description: Weitere Informationen zu relationalen und nosql-Daten in Cloud-native Anwendungen
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613784"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163634"
 ---
 # <a name="relational-vs-nosql-data"></a>Vergleich der relationalen und NoSQL-Daten
 
@@ -26,12 +26,12 @@ Nosql-Datenbanken enthalten mehrere verschiedene Modelle für den Zugriff und di
 
 **Abbildung 5-9**: Datenmodelle für nosql-Datenbanken
 
-| Modell | Merkmale |
+| Modellieren | Merkmale |
 | :-------- | :-------- |
-| Dokument Speicher | Daten und Metadaten werden hierarchisch in JSON-basierten Dokumenten in der Datenbank gespeichert. |
+| Dokumentspeicher | Daten und Metadaten werden hierarchisch in JSON-basierten Dokumenten in der Datenbank gespeichert. |
 | Schlüsselwert Speicher | Die einfachste der nosql-Datenbanken, Daten werden als eine Auflistung von Schlüssel-Wert-Paaren dargestellt. |
 | Breit spaltige Speicherung | Verknüpfte Daten werden als eine Reihe von geschachtelten Schlüssel-Wert-Paaren in einer einzelnen Spalte gespeichert. |
-| Graph-Speicher | Daten werden in einer Diagramm Struktur als Knoten-, Edge-und Daten Eigenschaften gespeichert. |
+| Graphspeicher | Daten werden in einer Diagramm Struktur als Knoten-, Edge-und Daten Eigenschaften gespeichert. |
 
 ## <a name="the-cap-theorem"></a>Das Cap-Theorem
 
@@ -53,7 +53,7 @@ Relationale Datenbanken bieten in der Regel Konsistenz und Verfügbarkeit, aber 
 
 Viele relationale Datenbanksysteme unterstützen integrierte Replikations Funktionen, bei denen Kopien der primären Datenbank auf anderen sekundären Server Instanzen erstellt werden können. Schreibvorgänge werden an der primären Instanz durchgeführt und in jedem der sekundären Replikate repliziert. Bei einem Fehler kann für die primäre Instanz ein Failover zu einem sekundären ausgeführt werden, um Hochverfügbarkeit zu gewährleisten. Sekundäre Datenbanken können auch zum Verteilen von Lesevorgängen verwendet werden. Während Schreibvorgänge immer für das primäre Replikat durchlaufen werden, können Lesevorgänge an alle sekundären Replikate weitergeleitet werden, um die System Auslastung zu reduzieren.
 
-Daten können auch horizontal über mehrere Knoten hinweg partitioniert werden, z. b. mit [Sharding](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction). Sharding erhöht jedoch den operativen Aufwand erheblich, indem Daten über viele Teile hinweg hervorgegangen werden, die nicht problemlos miteinander kommunizieren können. Die Verwaltung kann kostspielig und zeitaufwändig sein. Dies kann zu einer Beeinträchtigung der Leistung, der Tabellen Joins und der referenziellen Integrität werden.
+Daten können auch horizontal über mehrere Knoten hinweg partitioniert werden, z. b. mit [Sharding](/azure/sql-database/sql-database-elastic-scale-introduction). Sharding erhöht jedoch den operativen Aufwand erheblich, indem Daten über viele Teile hinweg hervorgegangen werden, die nicht problemlos miteinander kommunizieren können. Die Verwaltung kann kostspielig und zeitaufwändig sein. Dies kann zu einer Beeinträchtigung der Leistung, der Tabellen Joins und der referenziellen Integrität werden.
 
 Wenn Daten Replikate die Netzwerk Konnektivität in einem "hochgradig konsistenten" relationalen Datenbankcluster verlieren, können Sie nicht in die Datenbank schreiben. Das System würde den Schreibvorgang ablehnen, da diese Änderung nicht auf das andere Daten Replikat repliziert werden kann. Alle Daten Replikate müssen aktualisiert werden, bevor die Transaktion abgeschlossen werden kann.
 
@@ -109,15 +109,15 @@ Sie können eine Azure-Datenbank innerhalb weniger Minuten bereitstellen, indem 
 
 ## <a name="azure-sql-database"></a>Azure SQL-Datenbank
 
-Entwicklungsteams mit Fachkenntnissen in Microsoft SQL Server sollten [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/)in Erwägung gezogen. Es handelt sich um eine vollständig verwaltete relationale Datenbank-as-a-Service (dbaas), die auf dem Microsoft SQL Server Datenbank-Engine basiert. Der Dienst nutzt viele Features, die in der lokalen Version von SQL Server vorhanden sind, und führt die neueste stabile Version der SQL Server Datenbank-Engine aus.
+Entwicklungsteams mit Fachkenntnissen in Microsoft SQL Server sollten [Azure SQL-Datenbank](/azure/sql-database/)in Erwägung gezogen. Es handelt sich um eine vollständig verwaltete relationale Datenbank-as-a-Service (dbaas), die auf dem Microsoft SQL Server Datenbank-Engine basiert. Der Dienst nutzt viele Features, die in der lokalen Version von SQL Server vorhanden sind, und führt die neueste stabile Version der SQL Server Datenbank-Engine aus.
 
 Für die Verwendung mit einem cloudbasierten-mikrodienst steht Azure SQL-Datenbank mit drei Bereitstellungs Optionen zur Verfügung:
 
-- Eine Einzeldatenbank die eine vollständig verwaltete SQL-Datenbank darstellt, die auf einem [Azure SQL-Datenbankserver](https://docs.microsoft.com/azure/sql-database/sql-database-servers) in der Azure-Cloud ausgeführt wird Die Datenbank wird als [*enthalten*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) betrachtet, da Sie keine Konfigurations Abhängigkeiten vom zugrunde liegenden Datenbankserver aufweist.
+- Eine Einzeldatenbank die eine vollständig verwaltete SQL-Datenbank darstellt, die auf einem [Azure SQL-Datenbankserver](/azure/sql-database/sql-database-servers) in der Azure-Cloud ausgeführt wird Die Datenbank wird als [*enthalten*](/sql/relational-databases/databases/contained-databases) betrachtet, da Sie keine Konfigurations Abhängigkeiten vom zugrunde liegenden Datenbankserver aufweist.
   
-- Bei einem [verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) handelt es sich um eine vollständig verwaltete Instanz der Microsoft SQL Server Datenbank-Engine, die eine Kompatibilität von nahezu 100% mit einem lokalen SQL Server ermöglicht. Diese Option unterstützt größere Datenbanken (bis zu 35 TB) und wird in einem [Azure-Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) zur besseren Isolation platziert.
+- Bei einem [verwaltete Instanz](/azure/sql-database/sql-database-managed-instance) handelt es sich um eine vollständig verwaltete Instanz der Microsoft SQL Server Datenbank-Engine, die eine Kompatibilität von nahezu 100% mit einem lokalen SQL Server ermöglicht. Diese Option unterstützt größere Datenbanken (bis zu 35 TB) und wird in einem [Azure-Virtual Network](/azure/virtual-network/virtual-networks-overview) zur besseren Isolation platziert.
 
-- Die [Server lose Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) ist eine COMPUTE-Ebene für eine einzelne Datenbank, die basierend auf der workloadnachfrage automatisch skaliert wird. Er wird nur für die Menge der pro Sekunde genutzten computekapazität abgerechnet. Der Dienst eignet sich gut für Workloads mit zeitweiligen, unvorhersehbaren Verwendungs Mustern, die mit Zeiträume der Inaktivität vermischt werden. Die Server lose Compute-Ebene hält Datenbanken auch automatisch während inaktiver Zeiträume an, sodass nur Speicher Gebühren abgerechnet werden. Er wird automatisch fortgesetzt, wenn die Aktivität zurückkehrt.
+- Die [Server lose Azure SQL-Datenbank](/azure/sql-database/sql-database-serverless) ist eine COMPUTE-Ebene für eine einzelne Datenbank, die basierend auf der workloadnachfrage automatisch skaliert wird. Er wird nur für die Menge der pro Sekunde genutzten computekapazität abgerechnet. Der Dienst eignet sich gut für Workloads mit zeitweiligen, unvorhersehbaren Verwendungs Mustern, die mit Zeiträume der Inaktivität vermischt werden. Die Server lose Compute-Ebene hält Datenbanken auch automatisch während inaktiver Zeiträume an, sodass nur Speicher Gebühren abgerechnet werden. Er wird automatisch fortgesetzt, wenn die Aktivität zurückkehrt.
 
 Neben dem herkömmlichen Microsoft SQL Server Stapel bietet Azure auch verwaltete Versionen von drei gängigen Open-Source-Datenbanken.
 
@@ -151,7 +151,7 @@ MariaDB verfügt über eine starke Community und wird von vielen großen Unterne
 
 Azure Database for PostgreSQL ist mit zwei Bereitstellungs Optionen verfügbar:
 
-- Die Bereitstellungs Option " [einzelner Server](https://docs.microsoft.com/azure/postgresql/concepts-servers) " ist ein zentraler Verwaltungspunkt für mehrere Datenbanken, auf die Sie viele Datenbanken bereitstellen können. Die Preise sind basierend auf Kernen und Speicher pro Server strukturiert.
+- Die Bereitstellungs Option " [einzelner Server](/azure/postgresql/concepts-servers) " ist ein zentraler Verwaltungspunkt für mehrere Datenbanken, auf die Sie viele Datenbanken bereitstellen können. Die Preise sind basierend auf Kernen und Speicher pro Server strukturiert.
 
 - Die [Option für die hyperskalierung (Citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) basiert auf der Citus-datentechnologie. Dies ermöglicht eine hohe Leistung durch *horizontales Skalieren* einer einzelnen Datenbank über Hunderte von Knoten hinweg, um eine schnelle Leistung und Skalierbarkeit zu erzielen. Diese Option ermöglicht es der Engine, mehr Daten in den Arbeitsspeicher zu integrieren, Abfragen über Hunderte von Knoten zu parallelisieren und Daten schneller zu indizieren.
 
@@ -175,7 +175,7 @@ Sie können Cosmos-Datenbanken Regions übergreifend oder auf der ganzen Welt ve
 
 Cosmos DB unterstützt das [aktive/aktive](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) Clustering auf globaler Ebene, sodass Sie beliebige Daten Bank Regionen so konfigurieren können, dass *sowohl Schreib-als auch Lesevorgänge*unterstützt werden.
 
-Das [multimasterprotokoll](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits) ist ein wichtiges Feature in Cosmos DB, das die folgenden Funktionen ermöglicht:
+Das [multimasterprotokoll](/azure/cosmos-db/multi-master-benefits) ist ein wichtiges Feature in Cosmos DB, das die folgenden Funktionen ermöglicht:
 
 - Unbegrenzte elastische Schreib und Leseskalierbarkeit.
 
@@ -183,13 +183,13 @@ Das [multimasterprotokoll](https://docs.microsoft.com/azure/cosmos-db/multi-mast
 
 - Eine garantierte Verarbeitung von Lese-/Schreibvorgängen in weniger als 10 Millisekunden im 99. Perzentil.
 
-Mit den Cosmos DB [Multihosting-APIs](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)kennt Ihr-Dienst automatisch die nächstgelegene Azure-Region und sendet Anforderungen an ihn. Die nächstgelegene Region wird durch Cosmos DB ohne Änderungen an der Konfiguration identifiziert. Wenn eine Region nicht mehr verfügbar ist, leitet das Multihosting-Feature automatisch Anforderungen an die nächstgelegene verfügbare Region weiter.
+Mit den Cosmos DB [Multihosting-APIs](/azure/cosmos-db/distribute-data-globally)kennt Ihr-Dienst automatisch die nächstgelegene Azure-Region und sendet Anforderungen an ihn. Die nächstgelegene Region wird durch Cosmos DB ohne Änderungen an der Konfiguration identifiziert. Wenn eine Region nicht mehr verfügbar ist, leitet das Multihosting-Feature automatisch Anforderungen an die nächstgelegene verfügbare Region weiter.
 
 ### <a name="multi-model-support"></a>Unterstützung für mehrere Modelle
 
 Beim neuplatzieren monolithischer Anwendungen in eine Cloud-Native Architektur müssen Entwicklungsteams manchmal Open Source-nosql-Datenspeicher migrieren. Mithilfe von Cosmos DB können Sie Ihre Investition in diese nosql-Datenspeicher mit der Datenplattform mit *mehreren Modellen* Verb wahren. Die folgende Tabelle zeigt die unterstützten nosql- [Kompatibilitäts-APIs](https://www.wikiwand.com/en/Cosmos_DB).
 
-| Anbieter | BESCHREIBUNG  |
+| Anbieter | Beschreibung  |
 | :-------- | :-------- |
 | SQL-API | Proprietäre API, die JSON-Dokumente und SQL-basierte Abfragen unterstützt |
 | Mongo DB-API | Unterstützung für Mongo DB-APIs und JSON-Dokumente|
@@ -202,9 +202,9 @@ Entwicklungsteams können vorhandene Mongo-, Gremlin-oder Cassandra-Datenbanken 
 
 > Intern speichert Cosmos die Daten in einem einfachen Struktur Format, das aus primitiven Datentypen besteht. Für jede Anforderung übersetzt die Datenbank-Engine die primitiven Daten in die Modell Darstellung, die Sie ausgewählt haben.
 
-Beachten Sie in der vorherigen Tabelle die [Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) -Option. Diese API ist eine Weiterentwicklung von Azure-Table Storage. Beide weisen das gleiche zugrunde liegende Tabellen Modell auf, aber die Cosmos DB Tabellen-API fügt Premium-Erweiterungen hinzu, die in der Azure Storage-API nicht verfügbar sind. In der folgenden Tabelle sind die-Funktionen gegenübersteht.
+Beachten Sie in der vorherigen Tabelle die [Tabellen-API](/azure/cosmos-db/table-introduction) -Option. Diese API ist eine Weiterentwicklung von Azure-Table Storage. Beide weisen das gleiche zugrunde liegende Tabellen Modell auf, aber die Cosmos DB Tabellen-API fügt Premium-Erweiterungen hinzu, die in der Azure Storage-API nicht verfügbar sind. In der folgenden Tabelle sind die-Funktionen gegenübersteht.
 
-|  | Azure Table Storage  | Azure Cosmos DB  |
+|  | Azure-Tabellenspeicher  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
 | Latency | Fast | Latenz bei einstelligen Millisekunden für Lese-und Schreibvorgänge weltweit |
 | Throughput | Limit von 20.000 Vorgängen pro Tabelle | 10 Millionen Vorgänge pro Tabelle |
@@ -214,13 +214,13 @@ Beachten Sie in der vorherigen Tabelle die [Tabellen-API](https://docs.microsoft
 
 Durch die Nutzung von Azure Table Storage können Sie auf einfache Weise zu den Cosmos DB Tabellen-API migrieren. Es sind keine Codeänderungen erforderlich.
 
-### <a name="tunable-consistency"></a>Anpassbare Konsistenz
+### <a name="tunable-consistency"></a>Einstellbare Konsistenz
 
 Weiter oben im Abschnitt *relationaler Vergleich mit nosql* wurde der Betreff der *Datenkonsistenz*erläutert. Datenkonsistenz bezieht sich auf die *Integrität* Ihrer Daten. Native Clouddienste mit verteilten Daten basieren auf der Replikation und müssen einen grundlegenden Kompromiss zwischen Lese Konsistenz, Verfügbarkeit und Latenz bilden.
 
 Die meisten verteilten Datenbanken ermöglichen es Entwicklern, zwischen zwei Konsistenz Modellen auszuwählen: starke Konsistenz und letztliche Konsistenz. *Hohe Konsistenz* ist der goldene Standard der Daten Programmierbarkeit. Dadurch wird sichergestellt, dass eine Abfrage immer die aktuellsten Daten zurückgibt. Dies gilt auch dann, wenn das Systemlatenz Zeiten verursachen muss, die auf die Replikation eines Updates über alle Daten Bank Kopien warten Eine Datenbank, die für die *letztliche Konsistenz* konfiguriert ist, gibt Daten sofort zurück, auch wenn diese Daten nicht die aktuellste Kopie sind. Die zweite Option ermöglicht eine höhere Verfügbarkeit, eine größere Skalierung und eine höhere Leistung.
 
-Azure Cosmos DB bietet fünf wohl definierte [Konsistenz Modelle](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) , wie in Abbildung 5-13 dargestellt.
+Azure Cosmos DB bietet fünf wohl definierte [Konsistenz Modelle](/azure/cosmos-db/consistency-levels) , wie in Abbildung 5-13 dargestellt.
 
 ![Cosmos DB Konsistenz Diagramm](./media/cosmos-consistency-level-graph.png)
 
@@ -228,19 +228,19 @@ Azure Cosmos DB bietet fünf wohl definierte [Konsistenz Modelle](https://docs.m
 
  Diese Optionen ermöglichen es Ihnen, genaue Auswahlmöglichkeiten und präzisere Kompromisse hinsichtlich Konsistenz, Verfügbarkeit und Leistung für Ihre Daten zu treffen. Die Ebenen werden in der folgenden Tabelle dargestellt.
 
-| Konsistenzebene | BESCHREIBUNG  |
+| Konsistenzebene | Beschreibung  |
 | :-------- | :-------- |
-| Letztlich (Eventual) | Keine Reihenfolge Garantie für Lesevorgänge. Replikate werden schließlich konvergiert. |
+| Letztlich | Keine Reihenfolge Garantie für Lesevorgänge. Replikate werden schließlich konvergiert. |
 | Konstantes Präfix | Lesevorgänge sind noch immer möglich, aber die Daten werden in der Reihenfolge zurückgegeben, in der Sie geschrieben wurden. |
 | Sitzung | Gewährleistet, dass Sie alle während der aktuellen Sitzung geschriebenen Daten lesen können. Dies ist die Standard Konsistenz Ebene. |
-| Begrenzte Veraltung (Bounded staleness) | Liest die Schreibweise von Schreibvorgängen nach dem angegebenen Intervall. |  
+| Begrenzte Veraltung | Liest die Schreibweise von Schreibvorgängen nach dem angegebenen Intervall. |  
 | STARK (Strong)  | Bei Lesevorgängen wird sichergestellt, dass die zuletzt mit einem Commit ausgeführten Version eines Elements Einem Client wird nie ein Commit oder ein Teil Lesevorgang angezeigt. |  
 
 In dem Artikel, [der die 9-Ball-Cosmos DB Konsistenz Ebenen erläutert](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), bietet Microsoft Program Manager Jeremy Likness eine ausgezeichnete Erläuterung der fünf Modelle.
 
 ### <a name="partitioning"></a>Partitionierung
 
-Azure Cosmos DB umfasst die automatische [Partitionierung](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) zum Skalieren einer Datenbank, um die Leistungsanforderungen Ihrer cloudbasierten Dienste zu erfüllen.
+Azure Cosmos DB umfasst die automatische [Partitionierung](/azure/cosmos-db/partitioning-overview) zum Skalieren einer Datenbank, um die Leistungsanforderungen Ihrer cloudbasierten Dienste zu erfüllen.
 
 Sie verwalten Daten in Cosmos DB Daten, indem Sie Datenbanken, Container und Elemente erstellen.
 
@@ -254,15 +254,15 @@ Um den Container zu partitionieren, werden Elemente in verschiedene Teilmengen u
 
 Beachten Sie in der vorherigen Abbildung, wie jedes Element den Partitions Schlüssel "City" oder "Flughafen" enthält. Der Schlüssel bestimmt die logische Partition des Elements. Elemente mit einem Ortscode werden dem Container auf der linken Seite und Elementen mit einem Flughafencode in den Container auf der rechten Seite zugewiesen. Wenn Sie den Partitions Schlüsselwert mit dem ID-Wert kombinieren, wird der Index eines Elements erstellt, der das Element eindeutig identifiziert.
 
-Intern verwaltet Cosmos DB automatisch die Platzierung [logischer Partitionen](https://docs.microsoft.com/azure/cosmos-db/partition-data) auf physischen Partitionen, um den Skalierbarkeits-und Leistungsanforderungen des Containers gerecht zu werden. Wenn der Anwendungs Durchsatz und die Speicheranforderungen zunehmen, verteilt Azure Cosmos DB logische Partitionen auf eine größere Anzahl von Servern. Weitergabevorgänge werden von Cosmos DB verwaltet und ohne Unterbrechung und Ausfallzeiten aufgerufen.
+Intern verwaltet Cosmos DB automatisch die Platzierung [logischer Partitionen](/azure/cosmos-db/partition-data) auf physischen Partitionen, um den Skalierbarkeits-und Leistungsanforderungen des Containers gerecht zu werden. Wenn der Anwendungs Durchsatz und die Speicheranforderungen zunehmen, verteilt Azure Cosmos DB logische Partitionen auf eine größere Anzahl von Servern. Weitergabevorgänge werden von Cosmos DB verwaltet und ohne Unterbrechung und Ausfallzeiten aufgerufen.
 
-## <a name="newsql-databases"></a>Newsql-Datenbanken
+## <a name="newsql-databases"></a>NewSQL-Datenbanken
 
 *Newsql*   ist eine neue Datenbanktechnologie, die die verteilte Skalierbarkeit von nosql mit den Acid-Garantien einer relationalen Datenbank kombiniert. Newsql-Datenbanken sind für Geschäftssysteme wichtig, die große Datenmengen in verteilten Umgebungen mit vollständiger Transaktionsunterstützung und Acid-Konformität verarbeiten müssen. Obwohl eine nosql-Datenbank eine enorme Skalierbarkeit bereitstellen kann, gewährleistet Sie keine Datenkonsistenz. Zeitweilig auftretende Probleme aufgrund inkonsistenter Daten können das Entwicklungsteam belasten. Entwickler müssen Sicherheitsvorkehrungen in Ihrem Code für den Mikro Dienst erstellen, um Probleme zu verwalten, die durch inkonsistente Daten verursacht
 
 Die Cloud Native Computing Foundation (cncf) umfasst mehrere newsql-Datenbankprojekte.
 
-| Project | Merkmale |
+| Projekt | Merkmale |
 | :-------- | :-------- |
 | Cockroach-DB |Eine Acid-kompatible relationale Datenbank, die Global skaliert wird. Fügen Sie einem Cluster einen neuen Knoten hinzu, und mit "cockroachdb" können Sie die Daten über Instanzen und geografische Regionen hinweg ausgleichen. Replikate werden erstellt, verwaltet und verteilt, um die Zuverlässigkeit zu gewährleisten. Es ist Open Source und kostenlos verfügbar.  |
 | Tidb | Eine Open-Source-Datenbank, die hybride transaktionale und analytische Workloads (HTAP) unterstützt. Es ist MySQL-kompatibel und bietet horizontale Skalierbarkeit, starke Konsistenz und hohe Verfügbarkeit.  Tidb verhält sich wie ein MySQL-Server. Sie können weiterhin vorhandene MySQL-Client Bibliotheken verwenden, ohne dass umfassende Codeänderungen an Ihrer Anwendung erforderlich sind. |

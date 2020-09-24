@@ -5,14 +5,15 @@ helpviewer_keywords:
 - appDomainManagerType element
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
-ms.openlocfilehash: 8eb6129b3fafaeb81a94d5a4078e41a16583a226
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e21384de6ca07c637a79ee54207d1e3ddfbf20e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154424"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170310"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType>-Element
+
 Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsdomäne dient.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,15 +28,17 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`value`|Erforderliches Attribut. Gibt den Namen des Typs einschließlich des Namespace an, der als Anwendungs Domänen-Manager für die Standard Anwendungsdomäne im Prozess dient.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -46,6 +49,7 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Um den Typ des Anwendungs Domänen-Managers anzugeben, müssen Sie sowohl dieses Element als auch das- [\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md) Element angeben. Wenn keines dieser Elemente angegeben ist, wird das andere ignoriert.  
   
  Wenn die Standard Anwendungsdomäne geladen wird, <xref:System.TypeLoadException> wird ausgelöst, wenn der angegebene Typ in der Assembly, die vom-Element angegeben ist, nicht vorhanden ist [\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md) . der Prozess kann nicht gestartet werden.  
@@ -59,6 +63,7 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
  Dieses Konfigurationselement ist nur in den .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass der Anwendungs Domänen-Manager für die Standard Anwendungsdomäne eines Prozesses der `MyMgr` Typ in der `AdMgrExample` Assembly ist.  
   
 ```xml  
@@ -71,11 +76,11 @@ Gibt den Typ an, der als Anwendungsdomänen-Manager für die Standardanwendungsd
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerAssembly>Gewisses](appdomainmanagerassembly-element.md)
+- [\<appDomainManagerAssembly>-Element](appdomainmanagerassembly-element.md)
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [SetAppDomainManagerType-Methode](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

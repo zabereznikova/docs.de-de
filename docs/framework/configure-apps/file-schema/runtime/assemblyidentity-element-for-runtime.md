@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154308"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170180"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity>-Element für \<runtime>
+
 Enthält identifizierende Informationen über die Assembly.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,11 +36,12 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`name`|Erforderliches Attribut.<br /><br /> Der Name der Assembly.|  
 |`culture`|Optionales Attribut.<br /><br /> Eine Zeichenfolge, die die Sprache und das Land/die Region der Assembly angibt.|  
@@ -48,7 +50,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>ProcessorArchitecture-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`amd64`|Nur AMD x86-64-Architektur.|  
 |`ia64`|Nur Intel Itanium-Architektur.|  
@@ -56,6 +58,7 @@ culture="assembly culture"/>
 |`x86`|Ein 32-Bit-x86-Prozessor, entweder System eigen oder in der WOW-Umgebung (Windows on Windows) auf einer 64-Bit-Plattform.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -68,6 +71,7 @@ culture="assembly culture"/>
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Jedes **\<dependentAssembly>** Element muss über ein untergeordnetes **\<assemblyIdentity>** Element verfügen.  
   
  Wenn das- `processorArchitecture` Attribut vorhanden ist, `<assemblyIdentity>` gilt das-Element nur für die Assembly mit der entsprechenden Prozessorarchitektur. Wenn das- `processorArchitecture` Attribut nicht vorhanden ist, `<assemblyIdentity>` kann das-Element auf eine Assembly mit beliebiger Prozessorarchitektur angewendet werden.  
@@ -102,6 +106,7 @@ culture="assembly culture"/>
  Wenn eine Konfigurationsdatei ein `<assemblyIdentity>` Element `processorArchitecture` ohne Attribut enthält und kein Element enthält, das mit der Plattform übereinstimmt, wird das-Element ohne das- `processorArchitecture` Attribut verwendet.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie Informationen zu einer Assembly bereitgestellt werden.  
   
 ```xml  

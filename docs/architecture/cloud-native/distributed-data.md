@@ -3,12 +3,12 @@ title: Verteilte Daten
 description: Vergleichen Sie die Datenspeicherung in monolithischen und cloudbasierten Anwendungen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144395"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163933"
 ---
 # <a name="distributed-data"></a>Verteilte Daten
 
@@ -22,7 +22,7 @@ In Abbildung 5-1 werden die Unterschiede dargestellt.
 
 Erfahrene Entwickler können die Architektur auf der linken Seite der Abbildung 5-1 leicht erkennen. In dieser *monolithischen Anwendung*werden die Geschäfts Dienst Komponenten gemeinsam in einer gemeinsamen Dienst Ebene zusammengefasst, wobei Daten aus einer einzelnen relationalen Datenbank gemeinsam genutzt werden.
 
-In vielerlei Hinsicht sorgt eine einzelne Datenbank für eine einfache Datenverwaltung. Das Abfragen von Daten über mehrere Tabellen hinweg ist einfach. Änderungen am Datenupdate oder alle Rollbacks. [ACID-Transaktionen](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) garantieren hohe und unmittelbare Konsistenz.
+In vielerlei Hinsicht sorgt eine einzelne Datenbank für eine einfache Datenverwaltung. Das Abfragen von Daten über mehrere Tabellen hinweg ist einfach. Änderungen am Datenupdate oder alle Rollbacks. [ACID-Transaktionen](/windows/desktop/cossdk/acid-properties) garantieren hohe und unmittelbare Konsistenz.
 
 Der Entwurf für die cloudbasierte, wir Unternehmen einen anderen Ansatz. Beachten Sie auf der rechten Seite der Abbildung 5-1, wie Geschäftsfunktionen in kleine, unabhängige microservices aufgeteilt werden. Jeder microservice kapselt eine bestimmte Geschäftsfunktion und eigene Daten. Die monolithische Datenbank zerlegt in ein verteiltes Datenmodell mit vielen kleineren Datenbanken, die jeweils mit einem-mikrodienst ausgerichtet sind. Wenn der Rauch gelöscht wird, entsteht ein Entwurf, der eine *Datenbank pro Microsoft-Dienst*verfügbar macht.
 
@@ -68,7 +68,7 @@ Eine in Kapitel 4 erörterte Option ist ein [direkter http-Rückruf](service-to-
 Wir könnten auch ein Anforderungs-Antwort-Muster mit separaten eingehenden und ausgehenden Warteschlangen für jeden Dienst implementieren. Dieses Muster ist jedoch kompliziert und erfordert, dass Sie Anforderungs-und Antwort Nachrichten korrelieren.
 Während die Back-End-Webdienst Aufrufe abgekoppelt werden, muss der aufrufende Dienst trotzdem synchron auf den Abschluss des Aufrufs warten. Netzwerk Überlastung, vorübergehende Fehler oder ein überladener mikrodienst und können zu Fehlern mit langer Ausführungszeit und sogar zu Fehlern führen.
 
-Stattdessen ist ein häufig akzeptiertes Muster zum Entfernen von Dienst übergreifenden Abhängigkeiten das [materialisierte Ansichts Muster](https://docs.microsoft.com/azure/architecture/patterns/materialized-view), das in Abbildung 5-4 dargestellt wird.
+Stattdessen ist ein häufig akzeptiertes Muster zum Entfernen von Dienst übergreifenden Abhängigkeiten das [materialisierte Ansichts Muster](/azure/architecture/patterns/materialized-view), das in Abbildung 5-4 dargestellt wird.
 
 ![Muster für materialisierte Sichten](./media/materialized-view-pattern.png)
 
@@ -92,7 +92,7 @@ In der obigen Abbildung nehmen fünf unabhängige-mikrodienste an einer verteilt
 
 Stattdessen müssen Sie diese verteilte Transaktion *Programm*gesteuert erstellen.
 
-Ein gängiges Muster für das Hinzufügen verteilter Transaktionsunterstützung ist das Saga-Muster. Sie wird implementiert, indem lokale Transaktionen Programm gesteuert gruppiert und nacheinander nacheinander aufgerufen werden. Wenn eine der lokalen Transaktionen fehlschlägt, bricht die Saga den Vorgang ab und Ruft einen Satz [kompensierender Transaktionen](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)auf. Die kompensierenden Transaktionen machen die von den vorangehenden lokalen Transaktionen vorgenommenen Änderungen rückgängig und stellen Datenkonsistenz wieder her. In Abbildung 5-6 wird eine Transaktion mit dem Muster "Saga" angezeigt.
+Ein gängiges Muster für das Hinzufügen verteilter Transaktionsunterstützung ist das Saga-Muster. Sie wird implementiert, indem lokale Transaktionen Programm gesteuert gruppiert und nacheinander nacheinander aufgerufen werden. Wenn eine der lokalen Transaktionen fehlschlägt, bricht die Saga den Vorgang ab und Ruft einen Satz [kompensierender Transaktionen](/azure/architecture/patterns/compensating-transaction)auf. Die kompensierenden Transaktionen machen die von den vorangehenden lokalen Transaktionen vorgenommenen Änderungen rückgängig und stellen Datenkonsistenz wieder her. In Abbildung 5-6 wird eine Transaktion mit dem Muster "Saga" angezeigt.
 
 ![Rollback im Saga-Muster](./media/saga-rollback-operation.png)
 
@@ -108,7 +108,7 @@ Große cloudnative Anwendungen unterstützen häufig Datenanforderungen mit hohe
 
 ### <a name="cqrs"></a>CQRS-Architektur
 
-[Cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)ist ein Architekturmuster, das dazu beiträgt, die Leistung, Skalierbarkeit und Sicherheit zu maximieren. Das Muster trennt Vorgänge, die Daten aus den Vorgängen lesen, die Daten schreiben.
+[Cqrs](/azure/architecture/patterns/cqrs)ist ein Architekturmuster, das dazu beiträgt, die Leistung, Skalierbarkeit und Sicherheit zu maximieren. Das Muster trennt Vorgänge, die Daten aus den Vorgängen lesen, die Daten schreiben.
 
 In normalen Szenarien werden das gleiche Entitäts Modell und das gleiche Datenrepository-Objekt *sowohl* für Lese-als auch für Schreibvorgänge verwendet.
 
@@ -124,11 +124,11 @@ In der vorherigen Abbildung werden separate Befehls-und Abfrage Modelle implemen
 
 Diese Trennung ermöglicht die unabhängige Skalierung von Lese-und Schreibvorgängen. Lesevorgänge verwenden ein Schema, das für Abfragen optimiert ist, während die Schreibvorgänge ein Schema verwenden, das für Updates optimiert ist. Lese Abfragen gelten für Denormalisierte Daten, während komplexe Geschäftslogik auf das schreibmodell angewendet werden kann. Außerdem können Sie eine strengere Sicherheit bei Schreibvorgängen erzwingen als bei der Bereitstellung von Lesevorgängen.
 
-Das Implementieren von cqrs kann die Anwendungsleistung für Native Clouddienste verbessern. Dies führt jedoch zu einem komplexeren Design. Wenden Sie dieses Prinzip sorgfältig und strategisch auf die Abschnitte ihrer cloudanwendung an, die davon profitieren werden. Weitere Informationen zu cqrs finden Sie unter Microsoft Book [.net microservices: Architecture for containerized .NET Applications](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
+Das Implementieren von cqrs kann die Anwendungsleistung für Native Clouddienste verbessern. Dies führt jedoch zu einem komplexeren Design. Wenden Sie dieses Prinzip sorgfältig und strategisch auf die Abschnitte ihrer cloudanwendung an, die davon profitieren werden. Weitere Informationen zu cqrs finden Sie unter Microsoft Book [.net microservices: Architecture for containerized .NET Applications](../microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md).
 
 ### <a name="event-sourcing"></a>Ereignissourcing
 
-Ein weiterer Ansatz zur Optimierung von Szenarien mit hohem Datenvolumen umfasst die [Ereignis Beschaffung](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+Ein weiterer Ansatz zur Optimierung von Szenarien mit hohem Datenvolumen umfasst die [Ereignis Beschaffung](/azure/architecture/patterns/event-sourcing).
 
 Ein System speichert in der Regel den aktuellen Status einer Daten Entität. Wenn ein Benutzer beispielsweise seine Telefonnummer ändert, wird der Kundendaten Satz mit der neuen Nummer aktualisiert. Der aktuelle Zustand einer Daten Entität ist immer bekannt, aber jedes Update überschreibt den vorherigen Zustand.
 

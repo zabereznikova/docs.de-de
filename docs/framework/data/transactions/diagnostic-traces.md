@@ -3,19 +3,21 @@ title: Ablaufverfolgungen zur Diagnose
 description: Erfahren Sie mehr Überdiagnose Ablauf Verfolgungen in .net. Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die während der Anwendungsausführung generiert werden.
 ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-ms.openlocfilehash: 5de8fdf7b95cf01b119118dac75d373c32949dcd
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 1999cd922b9e7299cbf3c10a702eb4d2dc6c3fbb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141810"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177240"
 ---
 # <a name="diagnostic-traces"></a>Ablaufverfolgungen zur Diagnose
+
 Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die während der Anwendungsausführung generiert werden. Wenn Sie mit der Ablaufverfolgung arbeiten, müssen Sie einen Mechanismus zum Sammeln und Aufzeichnen der gesendeten Meldungen einrichten. Ablaufverfolgungsmeldungen werden von Listenern empfangen. Der Zweck eines Listeners ist das Sammeln, Speichern und Weiterleiten von Ablaufverfolgungsmeldungen. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, beispielsweise ein Protokoll, ein Fenster oder eine Textdatei.  
   
  Ein solcher Listener, der <xref:System.Diagnostics.DefaultTraceListener>, wird bei Aktivierung der Ablaufverfolgung automatisch erstellt und initialisiert. Wenn die Ausgabe der Ablaufverfolgung an zusätzliche Quellen geleitet werden soll, müssen Sie zusätzliche Ablaufverfolgungslistener erstellen und initialisieren. Erstellen Sie Listener, die auf Ihre individuellen Anforderungen abgestimmt sind. Beispiel: Sie brauchen ein Textprotokoll der gesamten Ablaufverfolgungsausgabe. In diesem Fall erstellen Sie einen Listener, der die gesamte Ausgabe in eine neue Textdatei schreibt, sobald er aktiviert wird. Oft ist die Anzeige der Ausgabe jedoch nur während der Anwendungsausführung erwünscht. In diesem Fall erstellen Sie einen Listener, der die gesamte Ausgabe an ein Konsolenfenster leitet. Der <xref:System.Diagnostics.EventLogTraceListener> kann die Ablaufverfolgungsausgabe an ein Ereignisprotokoll leiten, und der <xref:System.Diagnostics.TextWriterTraceListener> kann die Ablaufverfolgungsausgabe in einen Datenstrom schreiben.  
   
 ## <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung  
+
  Um die Ablaufverfolgung während der Transaktionsverarbeitung zu aktivieren, müssen Sie die Konfigurationsdatei der Anwendung bearbeiten. Im Folgenden finden Sie ein Beispiel.  
   
 ```xml  
@@ -46,6 +48,7 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
 |Information|Meldungen, die bei der Überwachung und Diagnose des Systemstatus, der Leistungsmessung oder Profilerstellung nützlich sind. Dazu gehören Transaktions- und Eintragungslebensdauer-Ereignisse wie beispielsweise eine Transaktion, die erstellt oder für die ein Commit ausgeführt wird, das Überschreiten einer wichtigen Begrenzung oder die Speicherbelegung bedeutender Ressourcen. Ein Entwickler kann dann solche Informationen zur Kapazitätsplanung und Leistungsverwaltung nutzen.|  
   
 ## <a name="trace-codes"></a>Ablaufverfolgungscodes  
+
  In der folgenden Tabelle sind die Ablaufverfolgungscodes aufgeführt, die von der <xref:System.Transactions>-Infrastruktur generiert werden. In der Tabelle sind der Bezeichner für den Ablauf Verfolgungs Code, die <xref:System.Diagnostics.EventTypeFilter.EventType%2A> enumerationsstufe für die Ablauf Verfolgung und die zusätzlichen Daten, die im **TraceRecord** für die Ablauf Verfolgung enthalten sind. Darüber hinaus wird auch die entsprechende Ablauf Verfolgungs Ebene der Ablauf Verfolgung im **TraceRecord**gespeichert.  
   
 |TraceCode|EventType|Zusätzliche Daten in TraceRecord|  
@@ -78,6 +81,7 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
  Das XML-Schema für jedes der vorangehenden zusätzlichen Datenelemente hat das folgende Format.  
   
 ### <a name="transactiontraceidentifier"></a>TransactionTraceIdentifier  
+
  `<TransactionTraceIdentifier>`  
   
  `<TransactionIdentifier >`  
@@ -95,6 +99,7 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
  `</TransactionTraceIdentifier>`  
   
 ### <a name="enlistmenttraceidentifier"></a>EnlistmentTraceIdentifier  
+
  `<EnlistmentTraceIdentifier>`  
   
  `<ResourceManagerId>`  
@@ -128,6 +133,7 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
  `</EnlistmentTraceIdentifier>`  
   
 ### <a name="resource-manager-identifier"></a>Ressourcen-Manager-Bezeichner  
+
  `<ResourceManagerId>`  
   
  `string form of guid`  
@@ -135,4 +141,5 @@ Ablaufverfolgung bedeutet das Veröffentlichen spezifischer Meldungen, die währ
  `</ResourceManagerId>`  
   
 ## <a name="security-issues-for-tracing"></a>Sicherheitsprobleme bei der Ablaufverfolgung  
+
  Wenn Sie als Administrator die Ablaufverfolgung aktivieren, könnten vertrauliche Informationen in ein Ablaufverfolgungsprotokoll geschrieben werden, auf das standardmäßig öffentlich zugegriffen werden kann. Um mögliche Sicherheitsrisiken zu mindern, sollten Sie das Ablaufverfolgungsprotokoll an einem sicheren Ort speichern, der durch Zugriffsberechtigungen für Freigaben und Dateisysteme kontrolliert wird.

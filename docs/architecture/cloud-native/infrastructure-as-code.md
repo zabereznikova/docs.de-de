@@ -2,24 +2,24 @@
 title: Infrastructure-as-Code
 description: Einbeziehen von Infrastructure-as-Code (IAC) mit cloudbasierten Anwendungen
 ms.date: 05/13/2020
-ms.openlocfilehash: cfc9e1f0b2733048d5921de5a0400998c282b1fa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d130705e19e0d3d7a9e15c73f4758a22ee8ecd43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613953"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163738"
 ---
 # <a name="infrastructure-as-code"></a>Infrastructure-as-Code
 
 In der Cloud systemeigene Systeme sind zum Erreichen von Geschwindigkeit und Agilität das Erstellen von Funktionen, Containern und modernen System Entwürfen. Sie bieten automatisierte Build-und releasephasen, um konsistenten und qualitativ hochwertigen Code sicherzustellen Aber das ist nur ein Teil der Story. Wie stellen Sie die cloudumgebungen bereit, auf denen diese Systeme ausgeführt werden?
 
-Moderne Native Cloud-Anwendungen nutzen die weit verbreitete [Infrastruktur als Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)oder `IaC` .  Mit IAC automatisieren Sie die Platt Form Bereitstellung. Sie wenden im Wesentlichen Software Entwicklungsverfahren wie Tests und Versionsverwaltung auf Ihre devops-Verfahren an. Ihre Infrastruktur und bereit Stellungen sind automatisiert, konsistent und wiederholbar. Ebenso wie Continuous Delivery das herkömmliche Modell manueller bereit Stellungen automatisiert, wird Infrastructure as Code (IAC) weiterentwickelt, wie Anwendungsumgebungen verwaltet werden.
+Moderne Native Cloud-Anwendungen nutzen die weit verbreitete [Infrastruktur als Code](/azure/devops/learn/what-is-infrastructure-as-code)oder `IaC` .  Mit IAC automatisieren Sie die Platt Form Bereitstellung. Sie wenden im Wesentlichen Software Entwicklungsverfahren wie Tests und Versionsverwaltung auf Ihre devops-Verfahren an. Ihre Infrastruktur und bereit Stellungen sind automatisiert, konsistent und wiederholbar. Ebenso wie Continuous Delivery das herkömmliche Modell manueller bereit Stellungen automatisiert, wird Infrastructure as Code (IAC) weiterentwickelt, wie Anwendungsumgebungen verwaltet werden.
 
 Tools wie Azure Resource Manager (Arm), TERRAFORM und die Azure-Befehlszeilenschnittstelle (CLI) ermöglichen Ihnen die deklarative Skripterstellung für die erforderliche cloudinfrastruktur.
 
-## <a name="azure-resource-manager-templates"></a>Azure-Ressourcen-Manager-Vorlagen
+## <a name="azure-resource-manager-templates"></a>Azure Resource Manager-Vorlagen
 
-Arm steht für [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/). Dabei handelt es sich um eine API-Bereitstellungs-Engine, die in Azure integriert ist und als API-Dienst verfügbar gemacht wird. Mit Arm können Sie die in der Azure-Ressourcengruppe enthaltenen Ressourcen in einem einzigen, koordinierten Vorgang bereitstellen, aktualisieren, löschen und verwalten. Sie stellen der Engine eine JSON-basierte Vorlage bereit, die die benötigten Ressourcen und deren Konfiguration angibt. Arm orchestriert die Bereitstellung automatisch in der richtigen Reihenfolge, in der Abhängigkeiten berücksichtigt werden. Die Engine stellt Idempotenz sicher. Wenn eine gewünschte Ressource bereits mit derselben Konfiguration vorhanden ist, wird die Bereitstellung ignoriert.
+Arm steht für [Azure Resource Manager](/azure/azure-resource-manager/management/overview). Dabei handelt es sich um eine API-Bereitstellungs-Engine, die in Azure integriert ist und als API-Dienst verfügbar gemacht wird. Mit Arm können Sie die in der Azure-Ressourcengruppe enthaltenen Ressourcen in einem einzigen, koordinierten Vorgang bereitstellen, aktualisieren, löschen und verwalten. Sie stellen der Engine eine JSON-basierte Vorlage bereit, die die benötigten Ressourcen und deren Konfiguration angibt. Arm orchestriert die Bereitstellung automatisch in der richtigen Reihenfolge, in der Abhängigkeiten berücksichtigt werden. Die Engine stellt Idempotenz sicher. Wenn eine gewünschte Ressource bereits mit derselben Konfiguration vorhanden ist, wird die Bereitstellung ignoriert.
 
 Azure Resource Manager Vorlagen sind eine JSON-basierte Sprache zum Definieren verschiedener Ressourcen in Azure. Das grundlegende Schema sieht in etwa wie in Abbildung 10-14 aus.
 
@@ -102,7 +102,7 @@ Manchmal geben TERRAFORM-und Arm-Vorlagen sinnvolle Werte aus, z. b. eine Verbin
 
 ## <a name="azure-cli-scripts-and-tasks"></a>Skripts und Aufgaben Azure CLI
 
-Zum Schluss können Sie [Azure CLI](https://docs.microsoft.com/cli/azure/) für die deklarative Skripterstellung für Ihre cloudinfrastruktur nutzen. Azure CLI Skripts können erstellt, gefunden und freigegeben werden, um nahezu jede Azure-Ressource bereitzustellen und zu konfigurieren. Die CLI ist einfach zu verwenden, und zwar mit einer sanften Lernkurve. Skripts werden entweder in PowerShell oder in bash ausgeführt. Sie sind auch unkompliziert zu debuggen, besonders im Vergleich zu arm-Vorlagen.
+Zum Schluss können Sie [Azure CLI](/cli/azure/) für die deklarative Skripterstellung für Ihre cloudinfrastruktur nutzen. Azure CLI Skripts können erstellt, gefunden und freigegeben werden, um nahezu jede Azure-Ressource bereitzustellen und zu konfigurieren. Die CLI ist einfach zu verwenden, und zwar mit einer sanften Lernkurve. Skripts werden entweder in PowerShell oder in bash ausgeführt. Sie sind auch unkompliziert zu debuggen, besonders im Vergleich zu arm-Vorlagen.
 
 Azure CLI Skripts funktionieren gut, wenn Sie Ihre Infrastruktur abbrechen und erneut bereitstellen müssen. Das Aktualisieren einer vorhandenen Umgebung kann knifflig sein. Viele CLI-Befehle sind nicht idempotent. Dies bedeutet, dass Sie die Ressource jedes Mal neu erstellen, wenn Sie ausgeführt wird, auch wenn die Ressource bereits vorhanden ist. Es ist immer möglich, Code hinzuzufügen, der überprüft, ob jede Ressource vorhanden ist, bevor Sie erstellt wird. Allerdings kann Ihr Skript mit einem blobverhalten und schwer zu verwalten werden.
 
@@ -124,7 +124,7 @@ In Abbildung 10-17 wird ein YAML-Code Ausschnitt gezeigt, der die Version von Az
 
 **Abbildung 10-17** -Azure CLI Skript
 
-Im Artikel [Was ist Infrastructure as Code, wird](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)der Autor Sam Guckenheimer beschrieben, wie "Teams, die IAC implementieren, schnelle und skalierbare Umgebungen bereitstellt. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem Sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastruktur Bereitstellungen mit IAC sind wiederholbar und verhindern Lauf Zeit Probleme, die durch Konfigurations Abweichung oder fehlende Abhängigkeiten verursacht werden. Devops-Teams können mit einem einheitlichen Satz von Methoden und Tools zusammenarbeiten, um Anwendungen und deren unterstützende Infrastruktur schnell, zuverlässig und skalierbar bereitzustellen. "
+Im Artikel [Was ist Infrastructure as Code, wird](/azure/devops/learn/what-is-infrastructure-as-code)der Autor Sam Guckenheimer beschrieben, wie "Teams, die IAC implementieren, schnelle und skalierbare Umgebungen bereitstellt. Teams vermeiden die manuelle Konfiguration von Umgebungen und erzwingen Konsistenz, indem Sie den gewünschten Zustand ihrer Umgebungen über Code darstellen. Infrastruktur Bereitstellungen mit IAC sind wiederholbar und verhindern Lauf Zeit Probleme, die durch Konfigurations Abweichung oder fehlende Abhängigkeiten verursacht werden. Devops-Teams können mit einem einheitlichen Satz von Methoden und Tools zusammenarbeiten, um Anwendungen und deren unterstützende Infrastruktur schnell, zuverlässig und skalierbar bereitzustellen. "
 
 >[!div class="step-by-step"]
 >[Zurück](feature-flags.md)

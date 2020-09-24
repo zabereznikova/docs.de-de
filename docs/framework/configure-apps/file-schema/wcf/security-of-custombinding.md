@@ -2,14 +2,15 @@
 title: <security> von <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 454113f66007ddd69f8455bb532e9cbd12fcefb7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb661864e2540a9b9f5f217402d37515043c862a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738699"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170115"
 ---
 # <a name="security-of-custombinding"></a>\<security> von \<customBinding>
+
 Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,23 +43,24 @@ Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|allowSerializedSigningTokenOnReply|(Optional) Ein boolescher Wert, der angibt, ob ein serialisiertes Token für eine Antwort verwendet werden kann. Der Standardwert ist `false`. Bei Verwendung einer Dualbindung ist `true` die Standardeinstellung, und vorgenommene Einstellungen werden ignoriert.|  
-|authenticationMode|(Optional) Gibt den Authentifizierungsmodus an, der zwischen Initiator und Beantworter verwendet wird. Unten werden alle Werte aufgeführt.<br /><br /> Der Standardwert lautet `sspiNegotiated`.|  
-|defaultAlgorithmSuite|(Optional) Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen sind den Algorithmen in der Spezifikation der Sicherheitsrichtliniensprache (WS-SecurityPolicy) zugeordnet.<br /><br /> Mögliche Werte werden unten gezeigt. Der Standardwert ist `Basic256`.<br /><br /> Dieses Attribut wird verwendet, wenn mit einer anderen Plattform gearbeitet wird, die eine Reihe von Nicht-Standardalgorithmen verwendet. Sie sollten die Stärken und Schwächen der relevanten Algorithmen kennen, wenn Sie Änderungen an dieser Einstellung vornehmen. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
+|allowSerializedSigningTokenOnReply|Dies ist optional. Ein boolescher Wert, der angibt, ob ein serialisiertes Token für eine Antwort verwendet werden kann. Standardwert: `false`. Bei Verwendung einer Dualbindung ist `true` die Standardeinstellung, und vorgenommene Einstellungen werden ignoriert.|  
+|authenticationMode|Dies ist optional. Gibt den Authentifizierungsmodus an, der zwischen Initiator und Beantworter verwendet wird. Unten werden alle Werte aufgeführt.<br /><br /> Der Standardwert lautet `sspiNegotiated`.|  
+|defaultAlgorithmSuite|Dies ist optional. Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen sind den Algorithmen in der Spezifikation der Sicherheitsrichtliniensprache (WS-SecurityPolicy) zugeordnet.<br /><br /> Mögliche Werte werden unten gezeigt. Standardwert: `Basic256`.<br /><br /> Dieses Attribut wird verwendet, wenn mit einer anderen Plattform gearbeitet wird, die eine Reihe von Nicht-Standardalgorithmen verwendet. Sie sollten die Stärken und Schwächen der relevanten Algorithmen kennen, wenn Sie Änderungen an dieser Einstellung vornehmen. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
 |includeTimestamp|Ein boolescher Wert, der angibt, ob jede Nachricht einen Zeitstempel enthält. Der Standardwert lautet `true`.|  
 |keyEntropyMode|Gibt an, wie Schlüssel für das Sichern von Nachrichten berechnet werden. Schlüssel können nur auf dem Schlüsselmaterial des Clients, des Diensts oder auf einer Kombination von beiden basiert werden. Folgende Werte sind gültig:<br /><br /> -   `ClientEntropy`: Der Sitzungsschlüssel basiert auf Schlüsseldaten, die vom Client bereitgestellt werden.<br />-   `ServerEntropy`: Der Sitzungsschlüssel basiert auf Schlüsseldaten, die vom Server bereitgestellt werden.<br />-   `CombinedEntropy`: Der Sitzungsschlüssel basiert auf den Schlüsseldaten, die vom Client und vom Dienst bereitgestellt werden.<br /><br /> Der Standardwert lautet `CombinedEntropy`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
 |messageProtectionOrder|Legt die Reihenfolge fest, in der Sicherheitsalgorithmen der Nachrichtenebene auf die Nachricht angewendet werden. Gültige Werte sind:<br /><br /> -   `SignBeforeEncrypt`: Zuerst signieren, dann verschlüsseln.<br />-   `SignBeforeEncryptAndEncryptSignature`: Zuerst signieren, verschlüsseln und dann die Signatur verschlüsseln.<br />-   `EncryptBeforeSign`: Zuerst verschlüsseln, dann signieren.<br /><br /> Der Standardwert hängt von der verwendeten Version von WS-Security ab. Der Standardwert ist `SignBeforeEncryptAndEncryptSignature`, wenn WS-Security 1,1 verwendet wird. Der Standardwert ist `SignBeforeEncrypt`, wenn WS-Security 1.0 verwendet wird.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
-|messageSecurityVersion|(Optional) Legt die verwendete Version von WS-Security fest. Gültige Werte sind:<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Der Standardwert ist WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 und kann in XML durch `Default` ausgedrückt werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageSecurityVersion>.|  
+|messageSecurityVersion|Dies ist optional. Legt die verwendete Version von WS-Security fest. Gültige Werte sind:<br /><br /> - WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11<br />- WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br />- WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10<br /><br /> Der Standardwert ist WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11 und kann in XML durch `Default` ausgedrückt werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |requireDerivedKeys|Ein boolescher Wert, der angibt, ob Schlüssel von den Originalprüfschlüsseln abgeleitet werden können. Der Standardwert lautet `true`.|  
-|requireSecurityContextCancellation|(Optional) Ein boolescher Wert, der angibt, ob ein Sicherheitskontext abgebrochen und beendet werden soll, wenn er nicht mehr benötigt wird. Der Standardwert lautet `true`.|  
-|requireSignatureConfirmation|(Optional) Ein boolescher Wert, der angibt, ob die WS-Security-Signaturbestätigung aktiviert ist. Bei der Einstellung `true` werden Nachrichtensignaturen vom Beantworter bestätigt.  Wenn die benutzerdefinierte Bindung für gegenseitige Zertifikate oder für die Verwendung ausgestellter Token konfiguriert ist (WSS 1.1-Bindungen), ist dieses Attribut standardmäßig `true`. Andernfalls ist der Standardwert `false`.<br /><br /> Mit der Signaturbestätigung wird bestätigt, dass der Dienst unter vollständiger Berücksichtigung einer Anforderung antwortet.|  
-|securityHeaderLayout|(Optional) Gibt die Reihenfolge der Elemente im Sicherheitsheader an. Folgende Werte sind gültig:<br /><br /> -   `Strict`: Elemente werden dem Sicherheits Header gemäß dem allgemeinen Prinzip "Declare before use" hinzugefügt.<br />-   `Lax`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, in der WSS: SOAP Message Security bestätigt wird.<br />-   `LaxWithTimestampFirst`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, die WSS: SOAP Message Security bestätigt, mit der Ausnahme, dass das erste Element im Sicherheits Header ein wsse: Timestamp-Element sein muss.<br />-   `LaxWithTimestampLast`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, die WSS: SOAP Message Security bestätigt, außer dass das letzte Element im Sicherheits Header ein wsse: Timestamp-Element sein muss.<br /><br /> Der Standardwert lautet `Strict`.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|requireSecurityContextCancellation|Dies ist optional. Ein boolescher Wert, der angibt, ob ein Sicherheitskontext abgebrochen und beendet werden soll, wenn er nicht mehr benötigt wird. Der Standardwert lautet `true`.|  
+|requireSignatureConfirmation|Dies ist optional. Ein boolescher Wert, der angibt, ob die WS-Security-Signaturbestätigung aktiviert ist. Bei der Einstellung `true` werden Nachrichtensignaturen vom Beantworter bestätigt.  Wenn die benutzerdefinierte Bindung für gegenseitige Zertifikate oder für die Verwendung ausgestellter Token konfiguriert ist (WSS 1.1-Bindungen), ist dieses Attribut standardmäßig `true`. Andernfalls ist der Standardwert `false`.<br /><br /> Mit der Signaturbestätigung wird bestätigt, dass der Dienst unter vollständiger Berücksichtigung einer Anforderung antwortet.|  
+|securityHeaderLayout|Dies ist optional. Gibt die Reihenfolge der Elemente im Sicherheitsheader an. Folgende Werte sind gültig:<br /><br /> -   `Strict`: Elemente werden dem Sicherheits Header gemäß dem allgemeinen Prinzip "Declare before use" hinzugefügt.<br />-   `Lax`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, in der WSS: SOAP Message Security bestätigt wird.<br />-   `LaxWithTimestampFirst`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, die WSS: SOAP Message Security bestätigt, mit der Ausnahme, dass das erste Element im Sicherheits Header ein wsse: Timestamp-Element sein muss.<br />-   `LaxWithTimestampLast`: Elemente werden dem Sicherheits Header in beliebiger Reihenfolge hinzugefügt, die WSS: SOAP Message Security bestätigt, außer dass das letzte Element im Sicherheits Header ein wsse: Timestamp-Element sein muss.<br /><br /> Der Standardwert lautet `Strict`.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode-Attribut  
   
@@ -89,7 +91,7 @@ Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Gibt ein aktuell ausgegebenes Token an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings>](localclientsettings-element.md)|Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
@@ -98,14 +100,16 @@ Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Weitere Informationen zur Verwendung dieses Elements finden Sie unter [SecurityBindingElement-Authentifizierungs Modi](../../../wcf/feature-details/securitybindingelement-authentication-modes.md) und Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie die Sicherheitsfunktion mit einer benutzerdefinierten Bindung konfiguriert wird. Es zeigt, wie Sicherheit auf Nachrichtenebene und ein sicherer Transport mithilfe einer benutzerdefinierten Bindung aktiviert wird. Dies ist hilfreich, wenn ein sicherer Transport zum Übertragen von Nachrichten zwischen Client und Dienst erforderlich ist und daher die Nachrichten auf Nachrichtenebene gesichert werden müssen. Diese Konfiguration wird nicht von Bindungen unterstützt, die vom System bereitgestellt werden.  
   
  Die Dienstkonfiguration definiert eine benutzerdefinierte Bindung, die die durch das TLS/SSL-Protokoll und die Windows-Nachrichtensicherheit gesicherte TCP-Kommunikation unterstützt. Die benutzerdefinierte Bindung verwendet ein Dienstzertifikat zum Authentifizieren des Diensts auf Transportebene und zum Sichern der Nachrichten während der Übertragung zwischen Client und Dienst. Dies wird durch das [\<sslStreamSecurity>](sslstreamsecurity.md) Bindungs Element erreicht. Das Dienstzertifikat wird mithilfe eines Dienstverhaltens konfiguriert.  

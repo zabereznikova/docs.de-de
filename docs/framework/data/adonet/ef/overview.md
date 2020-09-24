@@ -3,12 +3,12 @@ title: Übersicht über Entity Framework
 description: Der Entity Framework in ADO.NET unterstützt die Entwicklung Daten orientierter Anwendungen, die auf einer höheren Abstraktions Ebene als herkömmliche Anwendungen funktionieren.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e38670678a6f9985bc36de5586760450a880cb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557982"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177500"
 ---
 # <a name="entity-framework-overview"></a>Übersicht über Entity Framework
 
@@ -17,6 +17,7 @@ Der Entity Framework ist eine Reihe von Technologien in ADO.net, die die Entwick
 Der Entity Framework ermöglicht Entwicklern die Arbeit mit Daten in Form von domänenspezifischen Objekten und Eigenschaften, wie z. b. Kunden und Kundenadressen, ohne sich mit den zugrunde liegenden Datenbanktabellen und-Spalten befassen zu müssen, in denen diese Daten gespeichert sind. Mit Entity Framework können Entwickler beim Umgang mit Daten auf einer höheren Abstraktionsebene arbeiten und datenorientierte Anwendungen mit weniger Code als in herkömmlichen Anwendungen erstellen und verwalten. Da der Entity Framework eine Komponente des .NET Framework ist, können Entity Framework Anwendungen auf allen Computern ausgeführt werden, auf denen der .NET Framework ab Version 3,5 SP1 installiert ist.
 
 ## <a name="give-life-to-models"></a>Leben von Modellen
+
  Ein seit langem befolgter und verbreiteter Entwurfsansatz beim Erstellen einer Anwendung oder eines Dienstes besteht darin, die Anwendung oder den Dienst in drei Teile aufzuspalten: in ein Domänenmodell, ein logisches Modell und ein physisches Modell. Das Domänenmodell definiert die Entitäten und Beziehungen in dem zu modellierenden System. Das logische Modell für eine relationale Datenbank normalisiert die Entitäten und Beziehungen in Tabellen mit Fremdschlüsseleinschränkungen. Das physische Modell bezieht sich auf die Funktionen einer bestimmten Daten-Engine und gibt die Speicherdetails, wie z.B. Partitionierung und Indizierung, an.
 
  Das physische Modell wird zur Steigerung der Leistung von Datenbankadministratoren verfeinert, während sich Programmierer, die Anwendungscode schreiben, in erster Linie auf die Arbeit mit dem logischen Modell beschränken, indem sie SQL-Abfragen schreiben und gespeicherte Prozeduren aufrufen. Domänenmodelle werden im Allgemeinen als Werkzeuge zum Erfassen und Kommunizieren der Anwendungsanforderungen, häufig als statische Diagramme, verwendet, die in einer frühen Projektphase betrachtet und diskutiert und dann abgelegt werden. Viele Entwicklungsteams lassen das Erstellen eines konzeptionellen Modells aus und beginnen, indem sie Tabellen, Spalten und Schlüssel in einer relationalen Datenbank festlegen.
@@ -38,6 +39,7 @@ Das Speichermodell und die Zuordnungen können sich bei Bedarf ändern, ohne das
 Der Entity Framework verwendet diese Modell-und Zuordnungsdateien zum Erstellen, lesen, aktualisieren und Löschen von Vorgängen für Entitäten und Beziehungen im konzeptionellen Modell zu äquivalenten Vorgängen in der Datenquelle. Der Entity Framework unterstützt sogar das Mapping von Entitäten im konzeptionellen Modell zu gespeicherten Prozeduren in der Datenquelle. Weitere Informationen finden Sie unter [CSDL-, SSDL-und MSL-Spezifikationen](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Zuordnen von Objekten zu Daten
+
  Die objektorientierte Programmierung stellt eine Herausforderung für die Interaktion mit Datenspeichersystemen dar. Obwohl die Organisation der Klassen häufig den Aufbau relationaler Datenbanktabellen sehr genau widerspiegelt, passen diese Strukturen nicht perfekt zusammen. Häufig entsprechen mehrere normalisierte Tabellen einer einzigen Klasse, und Beziehungen zwischen Klassen werden oft anders dargestellt als Beziehungen zwischen Tabellen. Um beispielsweise den Kunden für einen Auftrag darzustellen, verwendet die `Order`-Klasse möglicherweise eine Eigenschaft, die einen Verweis auf eine Instanz einer `Customer`-Klasse enthält, während eine Zeile in der `Order`-Tabelle in einer Datenbank jedoch eine Fremdschlüsselspalte (oder mehrere Spalten als Fremdschlüssel) mit einem Wert enthält, der einem Primärschlüsselwert in der `Customer`-Tabelle entspricht. Eine `Customer`-Klasse kann über eine Eigenschaft mit dem Namen `Orders` verfügen, die eine Auflistung von Instanzen der `Order`-Klasse enthält, während die `Customer`-Tabelle in einer Datenbank nicht über eine vergleichbare Spalte verfügt. Der Entity Framework bietet Entwicklern die Flexibilität, Beziehungen auf diese Weise darzustellen, oder um Beziehungen genauer zu modellieren, wie Sie in der Datenbank dargestellt werden.
 
  Vorhandene Lösungen haben versucht, diese Lücke, oft als "Impedance Mismatch" bezeichnet, zu füllen, indem nur objektorientierte Klassen und Eigenschaften relationalen Tabellen und Spalten zugeordnet wurden. Anstatt diesen herkömmlichen Ansatz zu verwenden, ordnet die Entity Framework relationale Tabellen, Spalten und Fremdschlüssel Einschränkungen in logischen Modellen Entitäten und Beziehungen in konzeptionellen Modellen zu. Dadurch wird sowohl die Definition von Objekten als auch die Optimierung des logischen Modells viel flexibler. Die Entity Data Model-Tools generieren erweiterbare Daten Klassen, die auf dem konzeptionellen Modell basieren. Diese Klassen sind partielle Klassen, die mit zusätzlichen, vom Entwickler hinzuzufügenden Membern erweitert werden können. Die für ein bestimmtes konzeptionelles Modell erzeugten Klassen werden standardmäßig von Basisklassen abgeleitet, die Dienste zur Umsetzung von Entitäten in Objekte und zum Nachverfolgen und Speichern von Änderungen zur Verfügung stellen. Entwickler können diese Klassen verwenden, um die Entitäten und Beziehungen als Objekte zu behandeln, die durch Zuordnungen verknüpft sind. Entwickler können die für ein konzeptionelles Modell generierten Klassen auch anpassen. Weitere Informationen finden Sie unter [Arbeiten mit Objekten](working-with-objects.md).
@@ -78,6 +80,6 @@ Erste Schritte: enthält Informationen zum [schnellen Einstieg in](getting-start
 
 [Entity Framework Ressourcen](resources.md) : enthält Links zu konzeptionellen Themen und Links zu externen Themen und Ressourcen zum Entwickeln von Entity Framework Anwendungen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET Entity Framework](index.md)
