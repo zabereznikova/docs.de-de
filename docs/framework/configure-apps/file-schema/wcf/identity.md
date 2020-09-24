@@ -2,14 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855153"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157381"
 ---
 # \<identity>
+
 Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwartete Identität des Diensts angeben. Beim Hand Shake Prozess zwischen Client und Dienst stellt die Windows Communication Foundation (WCF)-Infrastruktur sicher, dass die Identität des erwarteten Dienstanbieter mit den Werten dieses Elements übereinstimmt und somit authentifiziert werden kann. Weitere Informationen finden Sie unter [Dienst Identität und-Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,14 +37,16 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |Zertifikat|Gibt die Einstellungen eines X.509-Zertifikats an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CertificateElement>. Es enthält ein `encodedValue`-Attribut, das eine Zeichenfolge ist, die den von diesem Zertifikat codierten Wert angibt.|  
 |certificateReference|Legt die Einstellungen für die X.509-Zertifikatüberprüfung fest. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CertificateReferenceElement>.|  
@@ -54,11 +57,11 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<custom>](custom.md)|Gibt einen benutzerdefinierten Peerresolver für eine netPeerTcpBinding an.|  
 |[\<endpoint>](endpoint-element.md)|Konfiguriert Dienst Endpunkte.|  
-|[\<endpoint>Natürlich\<client>](endpoint-of-client.md)|Konfiguriert Kanal Endpunkte.|  
+|[\<endpoint> von \<client>](endpoint-of-client.md)|Konfiguriert Kanal Endpunkte.|  
 |[\<issuer>](issuer.md)|Gibt den Sicherheitstokendienst (STS) für den Verbunddienst an.|  
 |[\<issuerMetadata>](issuermetadata.md)|Gibt den Metadatenendpunkt für den Sicherheitstokendienst (STS) eines Verbunddiensts an.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Definiert Parameter für ein ausgestelltes Token in einer benutzerdefinierten Bindung.|  

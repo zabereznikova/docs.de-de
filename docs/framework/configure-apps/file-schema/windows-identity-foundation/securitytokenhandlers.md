@@ -3,14 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d892fbd802ed366ca7af9b85fbf5c23d4d27e0f1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251876"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157004"
 ---
 # \<securityTokenHandlers>
+
 Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,11 +31,12 @@ Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registri
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Gibt den Namen einer tokenhandlerauflistung an. Die einzigen Werte, die vom Framework erkannt werden, sind "ACTAS" und "onbehalfof". Wenn tokenhandlerauflistungen mit einem dieser Namen angegeben werden, wird die Auflistung verwendet, wenn ACTAS bzw. onbehalfof-Token verarbeitet werden.|  
   
@@ -54,6 +56,7 @@ Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registri
 |[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitäts Einstellungen auf Dienst Ebene an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Sie können eine oder mehrere benannte Sammlungen von Sicherheitstokenhandlern in einer Dienst Konfiguration angeben. Mithilfe des-Attributs können Sie einen Namen für eine Sammlung angeben `name` . Die einzigen Namen, die das Framework behandelt, sind "ACTAS" und "onbehalfof". Wenn Handler in diesen Auflistungen vorhanden sind, werden Sie bei der Verarbeitung von `ActAs` -und-Token von einem Sicherheitstokendienst (STS) anstelle von Standard Handlern verwendet `OnBehalfOf` .  
   
  Standardmäßig wird die Auflistung mit den folgenden Handlertypen aufgefüllt: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> und <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler> . Sie können die Sammlung mithilfe der `<add>` `<remove>` Elemente, und ändern `<clear>` . Sie müssen sicherstellen, dass nur ein einzelner Handler eines bestimmten Typs in der Auflistung vorhanden ist. Wenn Sie z. b. einen Handler von der- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse ableiten, kann entweder der Handler oder der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> in einer einzelnen Auflistung konfiguriert werden, aber nicht beides.  

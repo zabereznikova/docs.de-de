@@ -2,14 +2,15 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 8432463ff62e4b5e54a491b574cc6a5285efe220
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397959"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157316"
 ---
 # \<issuedTokenParameters>
+
 Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sicherheitsszenario ausgegeben wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,15 +40,17 @@ Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sich
 </issuedTokenParameters>
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |defaultMessageSecurityVersion|Gibt die Versionen der Sicherheitsspezifikationen (WS-Security, WS-Trust, WS-Secure Conversation und WS-Security Policy) an, die von der Bindung unterstützt werden müssen. Dieser Wert ist vom Typ <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |inclusionMode|Gibt die Tokeneinschlussanforderungen an. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  

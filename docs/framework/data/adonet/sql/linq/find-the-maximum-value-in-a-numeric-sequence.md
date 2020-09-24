@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70d7c058-0280-4815-a008-6f290093591a
-ms.openlocfilehash: ebef8cb373da4021fd68fd7ce38de8cb06eb81ec
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b70b94338ca7bdbb600bac697d3a36ff117d757e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782175"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156003"
 ---
 # <a name="find-the-maximum-value-in-a-numeric-sequence"></a>Suchen des maximalen Werts in einer numerischen Sequenz
+
 Verwenden Sie den <xref:System.Linq.Enumerable.Max%2A>-Operator, um den höchsten Wert in einer Sequenz numerischer Werte zu ermitteln.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird das letzte Datum des Arbeitsverhältnisses aller Mitarbeiter gesucht.  
   
  Wenn Sie diese Abfrage mit der Beispieldatenbank Northwind ausführen, lautet die Ausgabe `11/15/1994 12:00:00 AM`.  
@@ -24,6 +26,7 @@ Verwenden Sie den <xref:System.Linq.Enumerable.Max%2A>-Operator, um den höchste
  [!code-vb[DLinqQueryExamples#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#6)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der höchste Lagerbestand für jedes Produkt gesucht.  
   
  Wenn Sie diese Abfrage mit der Beispieldatenbank Northwind ausführen, lautet die Ausgabe `125`.  
@@ -32,6 +35,7 @@ Verwenden Sie den <xref:System.Linq.Enumerable.Max%2A>-Operator, um den höchste
  [!code-vb[DLinqQueryExamples#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#7)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden mit Max die `Products` (Produkte) ermittelt, die in jeder Kategorie den höchsten Einzelpreis aufweisen. Die Ausgabe führt dann die Ergebnisse nach Kategorie auf.  
   
  [!code-csharp[DLinqQueryExamples#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#8)]
@@ -71,7 +75,7 @@ Verwenden Sie den <xref:System.Linq.Enumerable.Max%2A>-Operator, um den höchste
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Aggregatabfragen](aggregate-queries.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](downloading-sample-databases.md)
+- [Herunterladen von Beispieldatenbanken](downloading-sample-databases.md)

@@ -3,14 +3,15 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 0983380e553acfe246d6b987784d818b8ae85b17
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3ea9684245bd1c1c3b9ce171a045fff49d0ba592
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152579"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156913"
 ---
 # \<serviceTokenResolver>
+
 Registriert den diensttokenresolver, der von Handlern in der tokenhandlerauflistung verwendet wird. Der diensttokenresolver wird verwendet, um das Verschlüsselungs Token für eingehende Token und Nachrichten aufzulösen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Registriert den diensttokenresolver, der von Handlern in der tokenhandlerauflist
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -45,6 +47,7 @@ Registriert den diensttokenresolver, der von Handlern in der tokenhandlerauflist
 |type|Gibt den Typ des diensttokenresolvers an. Entweder der <xref:System.IdentityModel.Selectors.SecurityTokenResolver> Typ oder ein Typ, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Selectors.SecurityTokenResolver> . Weitere Informationen zum Angeben des- `type` Attributs finden Sie unter [Custom Type References]. Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -54,6 +57,7 @@ Registriert den diensttokenresolver, der von Handlern in der tokenhandlerauflist
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheitstokenhandlern bereit.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der diensttokenresolver kann verwendet werden, um das Verschlüsselungs Token für eingehende Token und Nachrichten aufzulösen. Sie wird verwendet, um den Schlüssel abzurufen, der zum Entschlüsseln eingehender Token verwendet werden soll. Sie müssen das- `type` Attribut angeben. Der angegebene Typ kann entweder <xref:System.IdentityModel.Selectors.SecurityTokenResolver> oder ein benutzerdefinierter Typ sein, der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Selectors.SecurityTokenResolver> .  
   
  Mit einigen tokenhandlern können Sie Einstellungen für den diensttokenresolver in der Konfiguration angeben. Einstellungen in einzelnen tokenhandlern überschreiben die in der Auflistung der Sicherheitstokenhandler angegebenen.  

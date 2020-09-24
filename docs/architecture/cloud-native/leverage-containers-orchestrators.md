@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540542"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155548"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -214,7 +214,7 @@ Das Standardverhalten, wenn die app ausgeführt wird, ist so konfiguriert, dass 
 
 **Abbildung 3-7**. Visual Studio-docker-Lauf Optionen
 
-Neben der lokalen Entwicklung bietet [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) eine bequeme Möglichkeit für mehrere Entwickler, mit ihren eigenen Kubernetes-Konfigurationen in Azure zu arbeiten. Wie Sie in Abbildung 3-7 sehen können, können Sie die Anwendung auch in Azure dev Spaces ausführen.
+Neben der lokalen Entwicklung bietet [Azure dev Spaces](/azure/dev-spaces/) eine bequeme Möglichkeit für mehrere Entwickler, mit ihren eigenen Kubernetes-Konfigurationen in Azure zu arbeiten. Wie Sie in Abbildung 3-7 sehen können, können Sie die Anwendung auch in Azure dev Spaces ausführen.
 
 Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und **fügen**Sie  >  **docker-Unterstützung**hinzu, wie in Abbildung 3-8 dargestellt.
 

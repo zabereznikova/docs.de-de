@@ -2,12 +2,12 @@
 title: Nutzen von serverlosen Funktionen
 description: Nutzen von Server losen und Azure Functions in cloudbasierten Anwendungen
 ms.date: 05/13/2020
-ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8e5c60d29cd8d635f79f42c232b33f060949e2b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613862"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155366"
 ---
 # <a name="leveraging-serverless-functions"></a>Nutzen von serverlosen Funktionen
 
@@ -40,7 +40,7 @@ In der Regel werden in der Regel von einer Schnittstelle auf Anforderungen reagi
 
 Server lose macht einzelne Funktionen mit kurzer Laufzeit verfügbar, die als Reaktion auf einen-ausgelöst aufgerufen werden. Dies macht Sie ideal für die Verarbeitung von Hintergrundaufgaben.
 
-Möglicherweise muss eine Anwendung eine e-Mail als Schritt in einem Workflow senden. Anstatt die Benachrichtigung als Teil einer Anforderung eines-Webdiensts zu senden, platzieren Sie die Nachrichten Details in eine Warteschlange. Eine Azure-Funktion kann die Nachricht aus der Warteschlange entfernen und Sie asynchron senden. Dies könnte die Leistung und Skalierbarkeit des-Dienstanbieter verbessern. [Warteschlangen basierter Lasten](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling) Ausgleich kann implementiert werden, um Engpässe im Zusammenhang mit dem Senden der e-Mails zu vermeiden. Außerdem kann dieser eigenständige Dienst als Dienstprogramm für viele verschiedene Anwendungen wieder verwendet werden.
+Möglicherweise muss eine Anwendung eine e-Mail als Schritt in einem Workflow senden. Anstatt die Benachrichtigung als Teil einer Anforderung eines-Webdiensts zu senden, platzieren Sie die Nachrichten Details in eine Warteschlange. Eine Azure-Funktion kann die Nachricht aus der Warteschlange entfernen und Sie asynchron senden. Dies könnte die Leistung und Skalierbarkeit des-Dienstanbieter verbessern. [Warteschlangen basierter Lasten](/azure/architecture/patterns/queue-based-load-leveling) Ausgleich kann implementiert werden, um Engpässe im Zusammenhang mit dem Senden der e-Mails zu vermeiden. Außerdem kann dieser eigenständige Dienst als Dienstprogramm für viele verschiedene Anwendungen wieder verwendet werden.
 
 Asynchrones Messaging aus Warteschlangen und Themen ist ein gängiges Muster, um Server lose Funktionen zu initiieren. Azure Functions können jedoch durch andere Ereignisse ausgelöst werden, z. b. Änderungen an Azure BLOB Storage. Ein Dienst, der Bild Uploads unterstützt, kann über eine Azure-Funktion verfügen, die für die Optimierung der Image Größe zuständig Die-Funktion kann direkt durch Einfügungen in Azure BLOB Storage ausgelöst werden, sodass die Komplexität der Vorgänge im-Betrieb gewahrt bleibt.
 
@@ -55,9 +55,9 @@ In Abbildung 3-10 wird ein kalt Start Muster gezeigt. Beachten Sie die zusätzli
 ![Kalt und warm Start ](./media/cold-start-warm-start.png)
  **Abbildung 3-10**. Kaltstart im Vergleich zum warmen Start.
 
-Um zu vermeiden, dass Kaltstarts vollständig ausgeführt werden, können Sie von einem [Verbrauchs Plan zu einem dedizierten Plan](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)wechseln. Sie können auch eine oder mehrere [vorerwärmte Instanzen](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) mit der Premium-Plan Aktualisierung konfigurieren. Wenn Sie in diesen Fällen eine weitere Instanz hinzufügen müssen, ist Sie bereits einsatzbereit. Diese Optionen können dabei helfen, das Problem mit dem Kaltstart bei Server losem Computing zu verringern.
+Um zu vermeiden, dass Kaltstarts vollständig ausgeführt werden, können Sie von einem [Verbrauchs Plan zu einem dedizierten Plan](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)wechseln. Sie können auch eine oder mehrere [vorerwärmte Instanzen](/azure/azure-functions/functions-premium-plan#pre-warmed-instances) mit der Premium-Plan Aktualisierung konfigurieren. Wenn Sie in diesen Fällen eine weitere Instanz hinzufügen müssen, ist Sie bereits einsatzbereit. Diese Optionen können dabei helfen, das Problem mit dem Kaltstart bei Server losem Computing zu verringern.
 
-Die Abrechnung von cloudanbietern basierend auf der computeausführungszeit und dem verbrauchten Arbeitsspeicher. Vorgänge mit langer Ausführungsdauer oder Arbeits Auslastungen mit hohem Arbeitsspeicher sind nicht immer die besten Kandidaten für Server lose. Server lose Funktionen bevorzugen kleine Arbeitsblöcke, die schnell ausgeführt werden können. Die meisten Server losen Plattformen erfordern, dass einzelne Funktionen innerhalb weniger Minuten abgeschlossen werden. Azure Functions ist standardmäßig auf eine Dauer von 5 Minuten festgelegt, die bis zu 10 Minuten konfiguriert werden kann. Der Plan "Azure Functions Premium" kann dieses Problem ebenfalls mindern, wobei Timeouts auf 30 Minuten festgelegt werden, wobei eine unbegrenzte Grenze erreicht wird, die konfiguriert werden kann. Die COMPUTE-Zeit ist keine Kalenderzeit. Erweiterte Funktionen mit [Azure Durable Functions Framework](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) können die Ausführung über mehrere Tage anhalten. Die Abrechnung basiert auf der tatsächlichen Ausführungszeit, wenn die Funktion aktiviert wird und die Verarbeitung fortgesetzt wird.
+Die Abrechnung von cloudanbietern basierend auf der computeausführungszeit und dem verbrauchten Arbeitsspeicher. Vorgänge mit langer Ausführungsdauer oder Arbeits Auslastungen mit hohem Arbeitsspeicher sind nicht immer die besten Kandidaten für Server lose. Server lose Funktionen bevorzugen kleine Arbeitsblöcke, die schnell ausgeführt werden können. Die meisten Server losen Plattformen erfordern, dass einzelne Funktionen innerhalb weniger Minuten abgeschlossen werden. Azure Functions ist standardmäßig auf eine Dauer von 5 Minuten festgelegt, die bis zu 10 Minuten konfiguriert werden kann. Der Plan "Azure Functions Premium" kann dieses Problem ebenfalls mindern, wobei Timeouts auf 30 Minuten festgelegt werden, wobei eine unbegrenzte Grenze erreicht wird, die konfiguriert werden kann. Die COMPUTE-Zeit ist keine Kalenderzeit. Erweiterte Funktionen mit [Azure Durable Functions Framework](/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) können die Ausführung über mehrere Tage anhalten. Die Abrechnung basiert auf der tatsächlichen Ausführungszeit, wenn die Funktion aktiviert wird und die Verarbeitung fortgesetzt wird.
 
 Wenn Sie Azure Functions für Anwendungsaufgaben nutzen, wird die Komplexität erhöht. Es ist ratsam, die Anwendung zunächst mit einem modularen, locker gekoppelten Design zu erstellen. Stellen Sie dann fest, ob die Vorteile von Server losen angeboten werden, die die zusätzliche Komplexität rechtfertigen würden.
 

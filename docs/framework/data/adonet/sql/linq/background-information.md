@@ -2,14 +2,15 @@
 title: Hintergrundinformationen
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156094"
 ---
 # <a name="background-information"></a>Hintergrundinformationen
+
 Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die über die Grundlagen der Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hinausgehen.  
   
  Führen Sie diese Schritte aus, um weitere Beispiele für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Code und -Anwendungen zu erhalten:  
@@ -21,6 +22,7 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
 - Lesen Sie das Whitepaper mit Details zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Technologie, die mit Visual Basic-und c#-Codebeispielen vervollständigt werden. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ADO.NET und LINQ to SQL](ado-net-and-linq-to-sql.md)  
  Beschreibt die Beziehung zwischen ADO.net und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
@@ -82,5 +84,6 @@ Die Themen in diesem Abschnitt beziehen sich auf Konzepte und Prozeduren, die ü
  Beschreibt, wie benutzerdefinierte Prozeduren zur Entwurfszeit zugeordnet und wie sie von der Anwendung aufgerufen werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Programmierhandbuch](programming-guide.md)  
  Umfasst Links zu Abschnitten, die verschiedene Aspekte von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erläutern.

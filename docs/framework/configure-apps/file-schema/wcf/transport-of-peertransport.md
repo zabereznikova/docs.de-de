@@ -2,14 +2,15 @@
 title: <transport> von <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399288"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157069"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> von \<peerTransport>
+
 Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,22 +31,24 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|credentialType|(Optional) Gibt den Typ von Anmeldeinformationen an, die zum Überprüfen von über den Peertransport gesendeten Nachrichten verwendet werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Dies ist optional. Gibt den Typ von Anmeldeinformationen an, die zum Überprüfen von über den Peertransport gesendeten Nachrichten verwendet werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Zertifikat|Zur Authentifizierung des Peerkanaltransports ist ein X509-Zertifikat erforderlich.|  
 |Kennwort|Zur Authentifizierung des Peerkanaltransports ist ein korrektes Kennwort erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -55,6 +58,7 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 |[\<security>](security-of-peertransport.md)|Definiert die Sicherheitseinstellungen für einen Peertransport.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Element wird nur festgelegt, wenn das Mode-Attribut von [\<security>](security-of-peertransport.md) auf oder festgelegt ist `Transport` `TransportWithMessageCredential` .  
   
 ## <a name="see-also"></a>Weitere Informationen

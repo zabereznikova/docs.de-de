@@ -2,12 +2,12 @@
 title: Protokollierung mit Elastic Stack
 description: Protokollierung mithilfe von Elastic Stack, logstash und kibana
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811170"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155340"
 ---
 # <a name="logging-with-elastic-stack"></a>Protokollierung mit Elastic Stack
 
@@ -105,15 +105,15 @@ Die letzte Komponente des Stapels ist kibana. Mit diesem Tool werden interaktive
 
 ## <a name="installing-elastic-stack-on-azure"></a>Installieren des elastischen Stapels in Azure
 
-Der elastische Stapel kann auf verschiedene Weise auf Azure installiert werden. Wie immer ist es möglich, [virtuelle Computer bereitzustellen und elastischen Stapel direkt auf Ihnen zu installieren](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Diese Option wird von einigen erfahrenen Benutzern bevorzugt, da Sie den höchsten Grad an Anpassungsmöglichkeiten bietet. Durch die Bereitstellung von Infrastructure-as-a-Service wird ein erheblicher Verwaltungsaufwand eingeführt, bei dem die Mitarbeiter, die diesen Weg nehmen, den Besitz aller Aufgaben übernehmen, die mit der Infrastruktur als Dienst verbunden sind, z. b. das Sichern der Computer und das aktuelle aufbewahren
+Der elastische Stapel kann auf verschiedene Weise auf Azure installiert werden. Wie immer ist es möglich, [virtuelle Computer bereitzustellen und elastischen Stapel direkt auf Ihnen zu installieren](/azure/virtual-machines/linux/tutorial-elasticsearch). Diese Option wird von einigen erfahrenen Benutzern bevorzugt, da Sie den höchsten Grad an Anpassungsmöglichkeiten bietet. Durch die Bereitstellung von Infrastructure-as-a-Service wird ein erheblicher Verwaltungsaufwand eingeführt, bei dem die Mitarbeiter, die diesen Weg nehmen, den Besitz aller Aufgaben übernehmen, die mit der Infrastruktur als Dienst verbunden sind, z. b. das Sichern der Computer und das aktuelle aufbewahren
 
 Eine Option mit weniger Aufwand besteht darin, einen der vielen docker-Container zu verwenden, auf denen der elastische Stapel bereits konfiguriert wurde. Diese Container können in einem vorhandenen Kubernetes-Cluster abgelegt und neben Anwendungscode ausgeführt werden. Der Container [sebp/Elk](https://elk-docker.readthedocs.io/) ist ein gut dokumentierter und getesteter Container für elastische Datenbanken.
 
 Eine andere Möglichkeit ist ein [kürzlich kündigter Elk-as-a-Service-Angebot](https://devops.com/logz-io-unveils-azure-open-source-elk-monitoring-solution/).
 
-## <a name="references"></a>Referenzen
+## <a name="references"></a>References
 
-- [Installieren des elastischen Stapels in Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [Installieren des elastischen Stapels in Azure](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[Zurück](observability-patterns.md)

@@ -3,14 +3,15 @@ title: <samlSecurityTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-ms.openlocfilehash: b27f337189a7d0b66ffd38e032b5eb864e5094a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f93ec0007b537e306a570b166eaa4cd2fe7f81e2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152631"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157030"
 ---
 # \<samlSecurityTokenRequirement>
+
 Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Klasse, die- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse einer dieser Klassen bereit. Wird von der- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> Klasse dargestellt.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -43,11 +44,12 @@ Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurit
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |mapToWindows|Gibt an, ob der Tokenhandler das Validierungs Token einem Windows-Konto zuordnen soll, indem der eingehende UPN-Anspruch verwendet wird. Der Standardwert lautet "false".|  
 |issuercertificaterevocationmode|Ein- <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Wert, der den Sperrmodus angibt, der für das X. 509-Zertifikat verwendet werden soll. Der Standardwert ist "Online".|  
@@ -69,6 +71,7 @@ Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurit
 |[\<add>](add.md)|Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das `<samlSecurityTokenRequirement>` -Element wird durch die <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> -Klasse im Objektmodell dargestellt und zum Konfigurieren der- `SamlSecurityTokenRequirement` Eigenschaft in einem <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> oder einem verwendet <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> .  
   
 ## <a name="example"></a>Beispiel  

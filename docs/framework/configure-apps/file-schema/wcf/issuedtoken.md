@@ -2,14 +2,15 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 56439748926ada642018f48a5787634a50d0f180
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9f3feb11fbe45cbb4b952c70feaa99f9c481dd2b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72846859"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157368"
 ---
 # \<issuedToken>
+
 Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients be
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`cacheIssuedTokens`|Optionales boolesches Attribut, das angibt, ob Token zwischengespeichert werden. Der Standardwert lautet `true`.|  
 |`defaultKeyEntropyMode`|Optionales Zeichenfolgenattribut, das angibt, welche Zufallsvariablen (Entropien) für Handshakevorgänge verwendet werden. Zu den Werten zählen `ClientEntropy`, `ServerEntropy` und `CombinedEntropy`. Die Standardeinstellung lautet `CombinedEntropy`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
@@ -60,6 +62,7 @@ Gibt ein benutzerdefiniertes Token an, das zum Authentifizieren eines Clients be
 |[\<clientCredentials>](clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Ein ausgestelltes Token ist ein benutzerdefinierter Anmeldeinformationstyp, zum Beispiel für die Authentifizierung mit einem Secure Token Service (STS) in einem Verbundszenario. Standardmäßig ist das Token ein SAML-Token. Weitere Informationen finden Sie unter Verbund [-und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md)und Verbund [-und ausgestellte Token](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
  Dieser Abschnitt enthält die Elemente, die zum Konfigurieren eines lokalen Tokenausstellers verwendet werden, bzw. die mit einem Sicherheitstokendienst verwendeten Verhalten. Anweisungen zum Konfigurieren eines Clients für die Verwendung eines lokalen Ausstellers finden Sie unter Vorgehens [Weise: Konfigurieren eines lokalen Ausstellers](../../../wcf/feature-details/how-to-configure-a-local-issuer.md).  

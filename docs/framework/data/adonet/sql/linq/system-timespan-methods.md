@@ -2,19 +2,21 @@
 title: System.TimeSpan-Methoden
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15b6c8bd5c9cce8e6d1bac030c6b7f6b40df6cd4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781042"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155587"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan-Methoden
+
 Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithType> ist stark abhängig von den verwendeten Versionen von .NET Framework und Microsoft SQL Server.  
   
  Wenn eine Methode, ein Operator oder eine Eigenschaft nicht unterstützt wird, kann das Element von LINQ to SQL nicht für die Ausführung auf dem SQL-Server übersetzt werden. Diese Elemente können im Code möglicherweise dennoch verwendet werden. Sie müssen jedoch ausgewertet werden, bevor die Abfrage in Transact-SQL übersetzt wird oder nachdem die Ergebnisse aus der Datenbank abgerufen wurden.  
   
 ## <a name="previous-limitations"></a>Einschränkungen vorheriger Versionen  
+
  Wenn LINQ to SQL mit Versionen von .NET Framework verwendet wird, die älter sind als .NET Framework 3.5 SP1, können die Datenbankfelder von SQL Server nicht <xref:System.TimeSpan?displayProperty=nameWithType>-Werten zugeordnet werden. Dennoch werden Operationen für <xref:System.TimeSpan> unterstützt, da <xref:System.TimeSpan>-Werte von <xref:System.DateTime>-Subtraktionen zurückgegeben oder als Literal oder gebundene Variable in einen Ausdruck integriert werden können.  
   
 ## <a name="supported-systemtimespan-member-support"></a>Unterstützte Unterstützung für System. TimeSpan-Member
@@ -34,9 +36,10 @@ Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithTyp
 > Zum Zuordnen von <xref:System.TimeSpan?displayProperty=nameWithType>-Elementen zu einer SQL `TIME`-Spalte mit LINQ to SQL ist .NET Framework 3.5 SP1 oder höher erforderlich. Der SQL-`TIME`-Datentyp ist nur in Microsoft SQL Server 2008 und höher verfügbar.  
   
 ### <a name="addition-and-subtraction"></a>Addition und Subtraktion  
+
  Vom CLR-<xref:System.TimeSpan?displayProperty=nameWithType>-Typ werden Additionen und Subtraktionen unterstützt, vom SQL-`TIME`-Typ jedoch nicht. Ihre LINQ to SQL-Abfragen werden bei Additionen und Subtraktionen daher Fehler verursachen, wenn sie dem SQL-`TIME`-Typ zugeordnet sind. Weitere Überlegungen zum Arbeiten mit SQL-Datums-und Uhrzeittypen finden Sie unter [SQL-CLR-Typzuordnung](sql-clr-type-mapping.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfragekonzepte](query-concepts.md)
 - [Erstellen des Objektmodells](creating-the-object-model.md)
