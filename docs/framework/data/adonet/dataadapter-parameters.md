@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 74b6787162b48f83a48127257dc8e23e31a859b7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286985"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177711"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter-Parameter
+
 Der <xref:System.Data.Common.DbDataAdapter> verfügt über vier Eigenschaften, die zum Abrufen von Daten aus einer Datenquelle und zum Aktualisieren der Daten in der Datenquelle verwendet werden: die <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A>-Eigenschaft gibt die Daten aus der Datenquelle zurück, und die Eigenschaften <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> und <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> dienen zum Verwalten von Änderungen in der Datenquelle. Die `SelectCommand`-Eigenschaft muss vor dem Aufrufen der `Fill`-Methode des `DataAdapter` festgelegt werden. Die Eigenschaft `InsertCommand`, `UpdateCommand` oder `DeleteCommand` (abhängig von der Art der Änderungen in der `Update`) muss vor dem Aufruf der `DataAdapter`-Methode des <xref:System.Data.DataTable> festgelegt werden. Wenn beispielsweise Zeilen hinzugefügt wurden, muss vor dem Aufrufen von `InsertCommand` das `Update` festgelegt werden. Wenn `Update` eine eingefügte, aktualisierte oder gelöschte Zeile verarbeitet, verwendet der `DataAdapter` die entsprechende `Command`-Eigenschaft, um die Aktion zu verarbeiten. Aktuelle Informationen zur geänderten Zeile werden über die `Command`-Auflistung an das `Parameters`-Objekt übergeben.  
   
  Wenn Sie eine Zeile in der Datenquelle aktualisieren, wird die Update-Anweisung aufgerufen, die einen eindeutigen Bezeichner verwendet, um die Zeile in der zu aktualisierenden Tabelle zu identifizieren. Der eindeutige Bezeichner ist im Allgemeinen der Wert eines Primärschlüsselfelds. Die UPDATE-Anweisung verwendet Parameter, die sowohl den eindeutigen Bezeichner als auch die Spalten und Werte enthalten, die aktualisiert werden sollen, wie in der folgenden Transact-SQL-Anweisung dargestellt.  
@@ -43,11 +44,12 @@ parameter.SourceVersion = DataRowVersion.Original
 > Sowohl für die `Fill` `DataAdapter` -als auch die- `Get` Methode der-Methode `DataReader` wird der .NET Framework-Typ von dem Typ abgeleitet, der vom .NET Framework Datenanbieter zurückgegeben wird. Die .NET Framework Typen und Accessormethoden für Microsoft SQL Server-, OLE DB-und ODBC-Datentypen werden unter [Datentyp Zuordnungen in ADO.net](data-type-mappings-in-ado-net.md)beschrieben.  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
+
  Die `SourceColumn` und die `SourceVersion` können als Argumente an den `Parameter`-Konstruktor übergeben oder als Eigenschaften eines vorhandenen `Parameter` festgelegt werden. Die `SourceColumn` ist der Name der <xref:System.Data.DataColumn> aus der <xref:System.Data.DataRow>, aus der der Wert des `Parameter` abgerufen wird. Die `SourceVersion` gibt die `DataRow`-Version an, die der `DataAdapter` zum Abrufen des Werts verwendet.  
   
  Die folgende Tabelle zeigt die <xref:System.Data.DataRowVersion>-Enumerationswerte an, die für die Verwendung mit `SourceVersion` zur Verfügung stehen.  
   
-|DataRowVersion-Enumeration|BESCHREIBUNG|  
+|DataRowVersion-Enumeration|Beschreibung|  
 |--------------------------------|-----------------|  
 |`Current`|Der Parameter verwendet den aktuellen Wert der Spalte. Dies ist die Standardeinstellung.|  
 |`Default`|Der Parameter verwendet den `DefaultValue` der Spalte.|  
@@ -57,12 +59,14 @@ parameter.SourceVersion = DataRowVersion.Original
  Das `SqlClient`-Codebeispiel im nächsten Abschnitt definiert einen Parameter für einen <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, bei dem die `CustomerID`-Spalte als `SourceColumn` für die folgenden beiden Parameter verwendet wird: `@CustomerID` (`SET CustomerID = @CustomerID`) und `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Der `@CustomerID` -Parameter wird verwendet, um die **CustomerID-** Spalte auf den aktuellen Wert in der zu aktualisieren `DataRow` . Folglich `CustomerID` `SourceColumn` wird der mit einer `SourceVersion` von `Current` verwendet. Der- `@OldCustomerID` Parameter wird verwendet, um die aktuelle Zeile in der Datenquelle zu identifizieren. Da sich der passende Spaltenwert in der `Original`-Version der Zeile befindet, wird die gleiche `SourceColumn` (`CustomerID`) mit einer `SourceVersion` von `Original` verwendet.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Verwenden von "SqlClient"-Parametern  
+
  Im folgenden Beispiel wird gezeigt, wie Sie einen <xref:System.Data.SqlClient.SqlDataAdapter> erstellen und für die <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A><xref:System.Data.MissingSchemaAction.AddWithKey> festlegen können, um zusätzliche Schemainformationen aus der Datenbank abzurufen. Die Eigenschaften <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> und <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> werden festgelegt, und die zugehörigen <xref:System.Data.SqlClient.SqlParameter>-Objekte werden der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzugefügt. Die Methode gibt ein `SqlDataAdapter`-Objekt zurück.  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
 ## <a name="oledb-parameter-placeholders"></a>"OleDb"-Parameterplatzhalter  
+
  Für das <xref:System.Data.OleDb.OleDbDataAdapter>-Objekt und das <xref:System.Data.Odbc.OdbcDataAdapter>-Objekt müssen zum Identifizieren der Parameter Fragezeichenplatzhalter (?) verwendet werden.  
   
 ```vb  
@@ -165,7 +169,7 @@ adapter.Fill(customers, "Customers");
 > [!NOTE]
 > Wenn für einen Parameter kein Parameter Name angegeben wird, erhält der Parameter den inkrementellen Standardnamen des Parameters*N* *,* beginnend mit "parameter1". Wenn Sie einen Parameternamen angeben, empfiehlt es sich, den Parameter*N* zu vermeiden, wenn Sie einen Parameternamen angeben, da der von Ihnen bereitgestellte Name möglicherweise mit einem vorhandenen Standard Parameter Namen in in Konflikt steht `ParameterCollection` . Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - ["DataAdapters" und "DataReaders"](dataadapters-and-datareaders.md)
 - [Befehle und Parameter](commands-and-parameters.md)

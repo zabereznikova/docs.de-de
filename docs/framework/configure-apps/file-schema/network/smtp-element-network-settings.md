@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58f496b4a07f7d5531df897dd54bb6176111f1c4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504510"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178319"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp>-Element (Netzwerkeinstellungen)
+
 Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absenderadresse für das Senden von e-Mails.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absen
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`deliveryFormat`|Gibt das Übermittlungs Format für ausgehende e-Mails an. Zulässige Werte sind "SevenBit" und "International".|  
 |`deliveryMethod`|Gibt die Übermittlungs Methode für e-Mails an. Zulässige Werte sind Network, pickupdirectoriyfromiis und SpecifiedPickupDirectory.|  
@@ -49,7 +51,7 @@ Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absen
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.|  
 |`network`|Konfiguriert die Netzwerkoptionen für einen externen SMTP-Server.|  
@@ -61,6 +63,7 @@ Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absen
 |[\<mailSettings>-Element (Netzwerkeinstellungen)](mailsettings-element-network-settings.md)|Konfiguriert E-Mail-Sendeoptionen.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden die entsprechenden SMTP-Parameter zum Senden von e-Mails mit den standardmäßigen Netzwerk Anmelde Informationen angegeben.  
   
 ```xml  
@@ -79,10 +82,10 @@ Konfiguriert das Übermittlungs Format, die Übermittlungs Methode und die Absen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpDeliveryFormat>
 - <xref:System.Net.Mail.SmtpDeliveryMethod>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

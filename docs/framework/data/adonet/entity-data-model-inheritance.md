@@ -2,14 +2,15 @@
 title: 'Entity Data Model: Vererbung'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: 4c4abc371000006d40ede3d904b0437f3f85e3e7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 057040eee411988c46adc9c4cabcfe5f5a185e1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738449"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175459"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model: Vererbung
+
 Der Entity Data Model (EDM) unterstützt die Vererbung von [Entitäts Typen](entity-type.md). Vererbung im EDM ist ähnlich wie Vererbung für Klassen in objektorientierten Programmiersprachen. Wie bei Klassen in objektorientierten Sprachen können Sie in einem konzeptionellen Modell einen Entitätstyp (einen *abgeleiteten Typ*) definieren, der von einem anderen Entitätstyp (dem *Basistyp*) erbt. Im Gegensatz zu Klassen in der objektorientierten Programmierung erbt der abgeleitete Typ in einem konzeptionellen Modell immer alle [Eigenschaften](property.md) und [Navigations Eigenschaften](navigation-property.md) des Basistyps. Geerbte Eigenschaften in einem abgeleiteten Typ können nicht überschrieben werden.  
   
  In einem konzeptionellen Modell können Sie Vererbungshierarchien erstellen, in denen ein abgeleiteter Typ von einem anderen abgeleiteten Typ erbt. Der Typ am oberen Rand der Hierarchie (der einzige Typ in der Hierarchie, der kein abgeleiteter Typ ist) wird als *Stammtyp*bezeichnet. In einer Vererbungs Hierarchie muss der [Entitäts Schlüssel](entity-key.md) für den Stammtyp definiert werden.  
@@ -18,7 +19,7 @@ Der Entity Data Model (EDM) unterstützt die Vererbung von [Entitäts Typen](ent
   
 ## <a name="example"></a>Beispiel  
 
-Das folgende Diagramm zeigt ein konzeptionelles Modell mit vier Entitäts Typen: `Book`, `FictionBook`, `Publisher`und `Author`. Der `FictionBook`-Entitätstyp ist ein abgeleiteter Typ, der vom `Book`-Entitätstyp erbt. Der `FictionBook`-Typ erbt die Eigenschaften `ISBN (Key)`, `Title` und `Revision`, und definiert die zusätzliche Eigenschaft `Genre`.  
+Das folgende Diagramm zeigt ein konzeptionelles Modell mit vier Entitäts Typen: `Book` , `FictionBook` , `Publisher` und `Author` . Der `FictionBook`-Entitätstyp ist ein abgeleiteter Typ, der vom `Book`-Entitätstyp erbt. Der `FictionBook`-Typ erbt die Eigenschaften `ISBN (Key)`, `Title` und `Revision`, und definiert die zusätzliche Eigenschaft `Genre`.  
   
  ![Das Diagramm zeigt ein konzeptionelles Modell mit vier Entitäts Typen.](./media/entity-data-model-inheritance/entity-type-inheritance.gif)  
   
@@ -26,7 +27,7 @@ Das folgende Diagramm zeigt ein konzeptionelles Modell mit vier Entitäts Typen:
   
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schlüsselkonzepte im Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

@@ -3,14 +3,15 @@ title: <variable>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: 5878720f51f4b5cfe3163abf316a867ccda31342
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d9b40551233f3b22db7953f1980aaf99b0ee8ae9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397770"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185352"
 ---
 # \<variable>
+
 Stellt eine Auflistung von Variablen dar, die dieser Aktivitätsabfrage zugeordnet sind.  
   
  Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -43,15 +44,17 @@ Stellt eine Auflistung von Variablen dar, die dieser Aktivitätsabfrage zugeordn
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine Zeichenfolge, die den Namen der Variablen angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -61,6 +64,7 @@ Stellt eine Auflistung von Variablen dar, die dieser Aktivitätsabfrage zugeordn
 |[\<variable>](variable.md)|Eine einer Aktivitätszustandsabfrage zugeordnete Variable.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine einzigartige Funktion des Elements „ActivityStateQuery“ ist seine Fähigkeit, Daten zu extrahieren, während es die Ausführung eines Workflows nachverfolgt. Dadurch steht zusätzlicher Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. Sie können die [\<arguments>](arguments.md) Elemente, [\<states>](states.md) und verwenden [\<states>](states.md) , um beliebige Variablen oder Argumente aus beliebigen Aktivitäten in einem Workflow zu extrahieren. Das folgende Beispiel zeigt eine Abfrage des Aktivitätszustands, mit der Variablen und Argumente extrahiert werden, wenn der `Closed`-Überwachungsdatensatz der Aktivität ausgegeben wird. Variablen und Argumente können nur mit einem activitystatus erecord extrahiert werden und können daher innerhalb eines Überwachungs Profils mit abonniert werden [\<activityStateQuery>](activitystatequery.md) .  
   
 ```xml  

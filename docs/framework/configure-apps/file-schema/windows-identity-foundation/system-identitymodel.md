@@ -3,14 +3,15 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 216b4c73e06469d6577c61338ad1af0fdd2dc05e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251789"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185573"
 ---
 # \<system.identityModel>
+
 Stellt die Konfiguration zum Aktivieren von WIF-Optionen (Windows Identity Foundation) in-Anwendungen bereit.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -24,27 +25,31 @@ Stellt die Konfiguration zum Aktivieren von WIF-Optionen (Windows Identity Found
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitäts Einstellungen auf Dienst Ebene an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`<configuration>`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Fügen Sie `<system.identityModel>` der Konfigurationsdatei einen Abschnitt hinzu, um einen Dienst oder eine Anwendung für die Verwendung von Windows Identity Foundation (WIF) zu konfigurieren. Das- `<system.identityModel>` Element wird durch die- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Klasse dargestellt.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie einer Konfigurationsdatei ein-Abschnitt hinzugefügt wird `<system.identityModel>` . Sie müssen zunächst den Konfigurations Abschnitt und die Namespace Deklaration unter dem-Element hinzufügen `<configSections>` . Anschließend können Sie das- `<system.IdentityModel>` Element der Konfigurationsdatei hinzufügen, um eine oder mehrere Identitäts Konfigurationen anzugeben.  
   
 ```xml  

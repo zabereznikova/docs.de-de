@@ -5,14 +5,15 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: ca474cdcaeaac7b1c32efa5c58f4b5bb5b7f7895
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557241"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185638"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool>-Element (Webeinstellungen)
+
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um Prozess weites Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus unter IIS 7,0 oder einer höheren Version ausgeführt wird.  
   
 > [!IMPORTANT]
@@ -37,22 +38,23 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitige Anforderungen ASP.net pro CPU zulässt.|  
 |`maxConcurrentThreadsPerCPU`|Gibt an, wie viele gleichzeitige Threads für einen Anwendungs Pool für jede CPU ausgeführt werden können. Dies bietet eine alternative Möglichkeit zum Steuern der ASP.net-Parallelität, da Sie die Anzahl verwalteter Threads, die pro CPU verwendet werden können, für die Verarbeitung von Anforderungen einschränken können. Diese Einstellung ist standardmäßig auf 0 festgelegt. Dies bedeutet, dass ASP.net die Anzahl der Threads, die pro CPU erstellt werden können, nicht einschränkt, obwohl der CLR-Thread Pool auch die Anzahl der Threads einschränkt, die erstellt werden können.|  
 |`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen an, die in einem einzelnen Prozess in eine Warteschlange eingereiht werden können. Wenn mindestens zwei ASP.NET-Anwendungen in einem einzelnen Anwendungs Pool ausgeführt werden, unterliegt der kumulative Satz von Anforderungen, die an eine beliebige Anwendung im Anwendungs Pool vorgenommen werden, dieser Einstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|Enthält Informationen dazu, wie ASP.net mit einer Host Anwendung interagiert.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Wenn Sie IIS 7,0 oder eine höhere Version im integrierten Modus ausführen, können Sie mit dieser Element Kombination konfigurieren, wie ASP.NET Threads und Warteschlangen Anforderungen verwaltet, wenn die Anwendung in einem IIS-Anwendungs Pool gehostet wird. Wenn Sie IIS 6 ausführen oder IIS 7,0 im klassischen Modus oder im ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
   
@@ -97,6 +99,6 @@ Bei den Werten im Beispiel handelt es sich um die Standardwerte.
 |Validierungsdatei||  
 |Kann leer sein||  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [\<system.web> -Element (Webeinstellungen)](system-web-element-web-settings.md)

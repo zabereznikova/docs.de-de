@@ -3,14 +3,15 @@ title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: 5863c01e97e7f5fb6fe07c43174c0d6cb7a0a25d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a49b41c04c8f184188b62e04c3b232bd33752fca
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251747"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185521"
 ---
 # \<userNameSecurityTokenHandlerRequirement>
+
 Stellt die Konfiguration für die- <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Klasse oder abgeleitete Klassen bereit.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,15 +37,17 @@ Stellt die Konfiguration für die- <xref:System.IdentityModel.Services.Tokens.Me
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |mitgliedshipprovidername|Gibt die <xref:System.Web.Security.MembershipProvider> an, die vom Sicherheitstokenhandler verwendet werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -54,6 +57,7 @@ Stellt die Konfiguration für die- <xref:System.IdentityModel.Services.Tokens.Me
 |[\<add>](add.md)|Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `<userNameSecurityTokenHandlerRequirement>` Element legt die-Eigenschaft fest, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> Wenn ein- <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Objekt aus der Konfiguration initialisiert wird.  
   
 ## <a name="example"></a>Beispiel  

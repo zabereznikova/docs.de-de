@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: 3e32539900893297d2bac232138f9940a8ab100b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 114543e43306e4195f92ca625e894a532084be6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557644"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177773"
 ---
 # \<wsDualHttpBinding>
+
 Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge oder für die Kommunikation über SOAP-Vermittler geeignet ist.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -55,14 +56,15 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|bypassProxyOnLocal|Ein boolescher Wert, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll. Der Standardwert ist `false`.|  
-|clientBaseAddress|Ein URI, der die Basisadresse festlegt, die vom Client auf Antwortnachrichten vom Dienst überwacht wird. Wenn dies angegeben wurde, wird diese Adresse (einschließlich der kanalspezifischen GUIDs) zur Überwachung verwendet. Wenn kein Wert angegeben wurde, wird die Basisadresse des Clients je nach Transport generiert. Der Standardwert ist `null`.|  
+|bypassProxyOnLocal|Ein boolescher Wert, der angibt, ob der Proxyserver bei lokalen Adressen umgangen werden soll. Der Standardwert lautet `false`.|  
+|clientBaseAddress|Ein URI, der die Basisadresse festlegt, die vom Client auf Antwortnachrichten vom Dienst überwacht wird. Wenn dies angegeben wurde, wird diese Adresse (einschließlich der kanalspezifischen GUIDs) zur Überwachung verwendet. Wenn kein Wert angegeben wurde, wird die Basisadresse des Clients je nach Transport generiert. Der Standardwert lautet `null`.|  
 |closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |hostnameComparisonMode|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HostNameComparisonMode> und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird. Der Standardwert lautet <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, wodurch der Hostname beim Abgleich ignoriert wird.|  
 |maxBufferPoolSize|Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt. Der Standardwert ist 524.288 Byte (512 * 1024). Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
@@ -70,16 +72,16 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 |messageEncoding|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Gültige Werte sind:<br /><br /> -Text: Verwenden Sie einen Textnachrichten Encoder.<br />-MTOM: Verwenden Sie einen MTOM-Encoder (Message Transmission Organization Mechanism 1,0).<br />-Der Standardwert ist Text.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
 |name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab .NET Framework 4 müssen Bindungen und Verhaltensweisen keinen Namen haben. Weitere Informationen zur Standardkonfiguration und zu den namenlosen Bindungen und Verhalten finden Sie unter [vereinfachte Konfiguration](../../../wcf/simplified-configuration.md) und [vereinfachte Konfiguration für WCF-Dienste](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useDefaultWebProxy``true` ist, muss diese Einstellung `null` lauten. Der Standardwert ist `null`.|  
+|proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useDefaultWebProxy``true` ist, muss diese Einstellung `null` lauten. Der Standardwert lautet `null`.|  
 |receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |textEncoding|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Gültige Werte sind:<br /><br /> -BigEndianUnicode: Unicode bigEndian-Codierung.<br />-Unicode: 16-Bit-Codierung.<br />-UTF8:8-Bit-Codierung<br /><br /> Der Standardwert ist UTF8. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
-|transactionFlow|Ein boolescher Wert, der angibt, ob die Bindung geleitete WS-Transaktionen unterstützt. Der Standardwert ist `false`.|  
-|useDefaultWebProxy|Ein boolescher Wert, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems verwendet wird. Die Proxyadresse muss `null` sein (das heißt, sie ist nicht festgelegt), wenn dieses Attribut den Wert `true` hat. Der Standardwert ist `true`.|  
+|transactionFlow|Ein boolescher Wert, der angibt, ob die Bindung geleitete WS-Transaktionen unterstützt. Der Standardwert lautet `false`.|  
+|useDefaultWebProxy|Ein boolescher Wert, der angibt, ob der automatisch konfigurierte HTTP-Proxy des Systems verwendet wird. Die Proxyadresse muss `null` sein (das heißt, sie ist nicht festgelegt), wenn dieses Attribut den Wert `true` hat. Der Standardwert lautet `true`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<security>](security-of-wsdualhttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement>.|  
 |[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
@@ -87,11 +89,12 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  Die `WSDualHttpBinding` bietet die gleiche Unterstützung für Webdienstprotokolle wie die `WSHttpBinding`, jedoch für die Verwendung mit Duplexverträgen. `WSDualHttpBinding` unterstützt ausschließlich SOAP-Sicherheit und erfordert zuverlässiges Messaging. Diese Bindung macht es erforderlich, dass der Client einen öffentlichen URI aufweist, der einen Rückrufendpunkt für den Dienst bereitstellt. Dies wird vom `clientBaseAddress`-Attribut zur Verfügung gestellt. Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
   
  Diese Bindung kann zur zuverlässigen Kommunikation über einen oder mehrere SOAP-Vermittler verwendet werden.  
@@ -132,7 +135,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>

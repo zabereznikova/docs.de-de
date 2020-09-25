@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8b01ec217fc1b6b91ccf36c8667922b57f26852
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152840"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185586"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web>-Element (Webeinstellungen)
+
 Enthält Informationen dazu, wie die ASP.net-hostingschicht Prozess weites Verhalten verwaltet.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -38,13 +39,13 @@ Keine
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Gibt Konfigurationseinstellungen für IIS-Anwendungs Pools in einer ASPNET. config-Datei an.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Gibt Konfigurationseinstellungen für IIS-Anwendungs Pools in einer aspnet.config Datei an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<configuration>](../configuration-element.md)|Gibt das Stamm Element in jeder Konfigurationsdatei an, die von den Common Language Runtime-und .NET Framework Anwendungen verwendet wird.|  
   
@@ -54,7 +55,7 @@ Das `system.web` -Element und das zugehörige `applicationPool` untergeordnete E
   
 ## <a name="example"></a>Beispiel  
 
-Das folgende Beispiel zeigt, wie Sie das Prozess weite Verhalten von ASP.net in der Datei Aspnet. config konfigurieren, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Im Beispiel wird davon ausgegangen, dass IIS im integrierten Modus ausgeführt wird und die Anwendung den .NET Framework 3,5 SP1 oder eine höhere Version verwendet. Dieses Verhalten tritt nicht in früheren Versionen .NET Framework von als der .NET Framework 3,5 SP1 auf. Bei den Werten im Beispiel handelt es sich um die Standardwerte.  
+Im folgenden Beispiel wird gezeigt, wie das ASP.NET-Prozess weite Verhalten in der aspnet.config-Datei konfiguriert wird, wenn ASP.net in einem IIS-Anwendungs Pool gehostet wird. Im Beispiel wird davon ausgegangen, dass IIS im integrierten Modus ausgeführt wird und die Anwendung den .NET Framework 3,5 SP1 oder eine höhere Version verwendet. Dieses Verhalten tritt nicht in früheren Versionen .NET Framework von als der .NET Framework 3,5 SP1 auf. Bei den Werten im Beispiel handelt es sich um die Standardwerte.  
   
 ```xml  
 <configuration>  
@@ -78,4 +79,4 @@ Das folgende Beispiel zeigt, wie Sie das Prozess weite Verhalten von ASP.net in 
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [\<applicationPool>-Element (Webeinstellungen)](applicationpool-element-web-settings.md)
+- [\<applicationPool> -Element (Webeinstellungen)](applicationpool-element-web-settings.md)

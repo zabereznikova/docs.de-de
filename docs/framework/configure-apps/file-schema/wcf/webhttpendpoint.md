@@ -2,14 +2,15 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 8d4f55fd5b51ea77839b7fdbb930e937f5700417
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3282871bf8dbd25726ada7003d3066b9a42e2366
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854800"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177981"
 ---
 # \<webHttpEndpoint>
+
 Dieses Konfigurationselement definiert einen Standard Endpunkt mit einer Fixed- [\<webHttpBinding>](webhttpbinding.md) Bindung, die das-Verhalten automatisch hinzufügt [\<webHttp>](webhttp.md) . Verwenden Sie diesen Endpunkt, wenn Sie einen REST-Dienst schreiben.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ Dieses Konfigurationselement definiert einen Standard Endpunkt mit einer Fixed- 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|Ein boolescher Wert, der angibt, ob die automatische Formatauswahl aktiviert ist.<br /><br /> Wenn die automatische Formatauswahl aktiviert ist, analysiert die Infrastruktur den `Accept`-Header der Anforderungsnachricht und bestimmt das geeignetste Antwortformat. Wenn der `Accept`-Header kein geeignetes Antwortformat angibt, verwendet die Infrastruktur das `Content-Type`-Element der Anforderungsnachricht oder das Standardantwortformat des Vorgangs.|  
 |defaultOutgoingResponseFormat|Ein Attribut mit dem Standardformat für ausgehende Antworten. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Web.WebMessageFormat>.|  
@@ -45,6 +47,7 @@ Dieses Konfigurationselement definiert einen Standard Endpunkt mit einer Fixed- 
 |webEndpointType|Eine Zeichenfolge, die den Typ des Endpunkts angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

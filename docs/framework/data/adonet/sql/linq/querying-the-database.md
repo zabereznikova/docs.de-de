@@ -2,17 +2,19 @@
 title: Abfragen der Datenbank
 ms.date: 03/30/2017
 ms.assetid: eefb8b0c-ff07-4e86-a3d3-567479523fe9
-ms.openlocfilehash: 6ca402600d43eb84c31c499d3f93aca95d4ea1d9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: b4ce48ee3d49769a353bf7371140b1f5a645f34e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634312"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184873"
 ---
 # <a name="querying-the-database"></a>Abfragen der Datenbank
+
 In dieser Gruppe von Themen wird beschrieben, wie Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Projekten entwickelt und ausgeführt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Abfragen von Informationen](how-to-query-for-information.md)  
  Zeigt kurz, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen im Allgemeinen mit LINQ-Abfragen identisch sind.  
   
@@ -43,5 +45,5 @@ In dieser Gruppe von Themen wird beschrieben, wie Abfragen in [!INCLUDE[vbtecdli
  [Vorgehensweise: Filtern auf DataContext-Ebene](how-to-filter-at-the-datacontext-level.md)  
  Beschreibt eine andere Verwendung von <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
   
- [Abfragebeispiele](query-examples.md)  
+ [Abfrage Beispiele](query-examples.md)  
  Bietet zahlreiche Abfragebeispiele.
