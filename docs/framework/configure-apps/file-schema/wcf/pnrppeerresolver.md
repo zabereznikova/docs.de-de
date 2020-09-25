@@ -2,14 +2,15 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: d3e88d7f2dd991091d3d7abdc715e125ddc9ac56
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0a8cc60226b13552d47faec3a156ed1f59acacb9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181400"
 ---
 # \<pnrpPeerResolver>
+
 Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver verwendet werden soll. Dieses Element ist optional, da das PNRP der Standardresolver ist.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,15 +27,17 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |resolverType|Eine Zeichenfolge, die den zu verwendenden Resolver angibt. Dieses Attribut ist optional. Wenn es nicht festgelegt wurde oder eine leere Zeichenfolge angegeben wurde, wird das PNRP verwendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

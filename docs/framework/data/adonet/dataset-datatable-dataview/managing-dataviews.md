@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c07f521b94f23b479281b0314d6b89a095ee9624
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784504"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181244"
 ---
 # <a name="managing-dataviews"></a>Verwalten von "DataViews"
+
 Mit einem <xref:System.Data.DataViewManager> können Sie die Ansichtseinstellungen für alle Tabellen in einer <xref:System.Data.DataView> verwalten. Wenn Sie über ein Steuerelement verfügen, das Sie an mehrere Tabellen binden möchten, z. b. ein Raster, das Beziehungen navigiert, ist ein **DataViewManager** ideal.  
   
- Der **DataViewManager** enthält eine Auflistung von <xref:System.Data.DataViewSetting> -Objekten, die zum Festlegen der Ansichts Einstellung der Tabellen in <xref:System.Data.DataSet>verwendet werden. Die <xref:System.Data.DataViewSettingCollection> enthält ein <xref:System.Data.DataViewSetting> -Objekt für jede Tabelle in einem **DataSet**. Sie können die Standardeigenschaften **ApplyDefaultSort**, **Sort**, **RowFilter**und **RowStateFilter** der Tabelle, auf die verwiesen wird, mithilfe der **DataViewSetting**-Eigenschaft festlegen. Sie können auf die **DataViewSetting** für eine bestimmte Tabelle anhand des Namens oder ordinalverweises verweisen oder indem Sie einen Verweis auf dieses bestimmte Tabellenobjekt übergeben. Mithilfe der **DataViewSettings** -Eigenschaft können Sie auf die Auflistung von **DataViewSetting** -Objekten in einem **DataViewManager** zugreifen.  
+ Der **DataViewManager** enthält eine Auflistung von- <xref:System.Data.DataViewSetting> Objekten, die zum Festlegen der Ansichts Einstellung der Tabellen in verwendet werden <xref:System.Data.DataSet> . Die <xref:System.Data.DataViewSettingCollection> enthält ein- <xref:System.Data.DataViewSetting> Objekt für jede Tabelle in einem **DataSet**. Sie können die Standardeigenschaften **ApplyDefaultSort**, **Sort**, **RowFilter**und **RowStateFilter** der Tabelle, auf die verwiesen wird, mithilfe der **DataViewSetting**-Eigenschaft festlegen. Sie können auf die **DataViewSetting** für eine bestimmte Tabelle anhand des Namens oder ordinalverweises verweisen oder indem Sie einen Verweis auf dieses bestimmte Tabellenobjekt übergeben. Mithilfe der **DataViewSettings** -Eigenschaft können Sie auf die Auflistung von **DataViewSetting** -Objekten in einem **DataViewManager** zugreifen.  
   
- Im folgenden Codebeispiel wird ein **DataSet** mit den SQL Server **Northwind** -Datenbanktabellen **Customers**, **Orders**und **Order Details**gefüllt, die Beziehungen zwischen den Tabellen werden erstellt, und es wird ein **DataViewManager** verwendet. Legen Sie die **standarddataview** -Einstellungen fest, und binden Sie ein **DataGrid** an den **DataViewManager**. Im Beispiel werden die standardmäßigen **DataView** -Einstellungen für alle Tabellen **im DataSet** festgelegt, um nach dem Primärschlüssel der Tabelle (**ApplyDefaultSort** = **true**) zu sortieren. Anschließend wird die Sortierreihenfolge der **Customers** -Tabelle in geändert. nach **CompanyName**sortieren.  
+ Im folgenden Codebeispiel wird ein **DataSet** mit den SQL Server **Northwind** -Datenbanktabellen **Customers**, **Orders**und **Order Details**gefüllt, die Beziehungen zwischen den Tabellen erstellt, **ein DataViewManager** zum Festlegen der standardmäßigen **DataView** -Einstellungen verwendet und ein **DataGrid** an den **DataViewManager**gebunden. Im Beispiel werden die standardmäßigen **DataView** -Einstellungen für alle Tabellen im **DataSet** festgelegt, um nach dem Primärschlüssel der Tabelle (**ApplyDefaultSort**  =  **true**) zu sortieren. Anschließend wird die Sortierreihenfolge der **Customers** -Tabelle geändert, um nach **CompanyName**zu sortieren.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -119,11 +120,11 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataViewManager>
 - <xref:System.Data.DataViewSetting>
 - <xref:System.Data.DataViewSettingCollection>
-- [DataViews](dataviews.md)
+- ["DataViews"](dataviews.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

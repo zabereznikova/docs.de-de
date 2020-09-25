@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 25419f8a810b52103e6b862cfe2fe6ab5a1fd981
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1c65389c8c5664f86f3f0c04829a2422908d72d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040087"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202291"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generieren von stark typisierten "DataSets"
-Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit dem Tool XSD. exe, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird, eine stark typisierte <xref:System.Data.DataSet> generieren.  
+
+Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit <xref:System.Data.DataSet> dem XSD.exe Tool, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird, ein stark typisiertes generieren.  
   
  (Informationen zum Erstellen einer XSD aus Datenbanktabellen finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [Arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
@@ -23,7 +24,7 @@ Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) ents
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- In dieser Syntax weist die `/d`-Direktive das Tool an, ein **DataSet**zu generieren, und die `/l:` teilt dem Tool mit, welche Sprache verwendet C# werden soll (z. b. oder Visual Basic .net). Die optionale `/eld`-Direktive gibt an, dass Sie LINQ to DataSet verwenden können, um das generierte **DataSet** abzufragen. Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen von typisierten Datasets](../querying-typed-datasets.md). Die optionale `/n:`-Direktive weist das Tool an, auch einen Namespace für das **DataSet** mit dem Namen **xsdschema. Namespace**zu generieren. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
+ In dieser Syntax weist die- `/d` Direktive das Tool an, ein **DataSet**zu generieren, und teilt dem Tool mit, `/l:` welche Sprache verwendet werden soll (z. b. c# oder Visual Basic .net). Die optionale- `/eld` Direktive gibt an, dass Sie LINQ to DataSet verwenden können, um das generierte **DataSet** abzufragen. Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen von typisierten Datasets](../querying-typed-datasets.md). Die optionale- `/n:` Direktive weist das Tool an, auch einen Namespace für das **DataSet** mit dem Namen **xsdschema. Namespace**zu generieren. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
   
  Im folgenden Codebeispiel wird die Syntax dargestellt, die zum Kompilieren des generierten Codes als Bibliothek mithilfe des C#-Compilers (csc.exe) verwendet wird.  
   
@@ -94,10 +95,10 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Typed DataSets (Typisierte DataSets)](typed-datasets.md)
-- [DataSets, DataTables und DataViews](index.md)
+- [Typisierte "DataSets"](typed-datasets.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

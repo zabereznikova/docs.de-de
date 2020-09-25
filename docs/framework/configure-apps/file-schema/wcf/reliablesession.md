@@ -2,14 +2,15 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 95f6646041dc2dd7bae7691a0a9f748c844f50b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ec69d9194d98302a4744e290f23fbb150b2e87cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738749"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181312"
 ---
 # \<reliableSession>
+
 Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |acknowledgementInterval|Eine <xref:System.TimeSpan>, die angibt, wie lange der Kanal maximal wartet, bis eine Bestätigung für die bis zu diesem Zeitpunkt erhaltenen Nachrichten gesendet wird. Der Standardwert ist 00:00:0.2.|  
 |flowControlEnabled|Eine boolescher Wert, der angibt, ob die erweiterte Flusssteuerung, eine Microsoft-spezifische Implementierung der Flusssteuerung für WS-Reliable Messaging, aktiviert ist. Der Standardwert lautet `true`.|  
@@ -49,6 +51,7 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
 |reliableMessagingVersion|Ein gültiger Wert von <xref:System.ServiceModel.ReliableMessagingVersion>, der die zu verwendende WS-ReliableMessaging-Version angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -58,6 +61,7 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
 |[\<binding>](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Zuverlässige Sitzungen bieten Funktionen für zuverlässiges Messaging. Beim zuverlässigen Messaging wird die Kommunikation bei Fehlern erneut gestartet, und es werden Zustellungszusicherungen, wie Prüfung der Nachrichtenreihenfolge beim Eingang, vorgenommen. Die Sitzungen erhalten den Status von Clients im Verlauf der verschiedenen Aufrufe aufrecht. Dieses Element stellt auch optional sortierte Nachrichtenübermittlung bereit. Diese implementierte Sitzung kann SOAP und Transportvermittler überqueren.  
   
  Jedes Bindungselement stellt einen Verarbeitungsschritt beim Senden und Empfangen von Nachrichten dar. Zur Laufzeit erstellen Bindungselemente die Kanalfactorys und die Listener, die notwendig sind, um ausgehende und eingehende Kanalstapel zum Senden und Empfangen von Nachrichten zu erstellen. Das `reliableSession` bietet eine optionale Ebene im Stapel, die eine zuverlässige Sitzung zwischen Endpunkten herstellen und das Sitzungsverhalten konfigurieren kann.  
@@ -65,6 +69,7 @@ Definiert die Einstellung für WS-Reliable Messaging. Wenn dieses Element einer 
  Weitere Informationen finden Sie unter [zuverlässige Sitzungen](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Bindung mit verschiedenen Transport- und Codierungselementen konfiguriert wird, insbesondere durch zuverlässige Sitzungen, die den Clientstatus aufrechterhalten und Zustellungszusicherungen anhand der Nachrichtenreihenfolge vorgeben. Diese Funktion wird in den Anwendungskonfigurationsdateien für den Client und den Dienst konfiguriert. Im Beispiel wird die Dienstkonfiguration gezeigt.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: <schemeSettings>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: c745c90bb61b9ee393687d7f6db4fd11565c7dc7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5a146b854239fd516125e66e05312e27b90c73ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91187016"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<schemeSettings>-Element (URI-Einstellungen)
+
 Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -24,9 +25,11 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -44,6 +47,7 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 |[uri](uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Standardmäßig werden von der- <xref:System.Uri?displayProperty=nameWithType> Klasse in Prozent codierte Pfad Trennzeichen vor dem Ausführen der Pfad Komprimierung aufgehoben. Dies wurde als Sicherheitsmechanismus gegen Angriffe wie die folgende implementiert:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
@@ -59,9 +63,11 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
  Dieses Standardverhalten kann so geändert werden, dass keine Escapezeichen für Prozent codierte Pfad Trennzeichen verwendet werden, indem die SchemeSettings-Konfigurationsoption für ein bestimmtes Schema verwendet wird.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt eine Konfiguration, die von der-Klasse verwendet wird <xref:System.Uri> , um das Escapezeichen für Prozent codierte Pfade für das http-Schema zu unterstützen.  
   
 ```xml  
@@ -91,4 +97,4 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

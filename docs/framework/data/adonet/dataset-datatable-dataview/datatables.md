@@ -3,14 +3,15 @@ title: "\"DataTables\""
 description: Erfahren Sie mehr über eine ADO.net-Datentabelle, die eine Tabelle mit relationalen Daten im Arbeitsspeicher darstellt. NET-basierte Anwendung, in der es sich befindet.
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: da6c9201951a6c7916067011c0a4f01ef9fdeffd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d501096b4abe94653acdc5249c120abff94534d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286907"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202304"
 ---
 # <a name="datatables"></a>"DataTables"
+
 Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Beziehungen und Einschränkungen. In ADO.net <xref:System.Data.DataTable> werden-Objekte verwendet, um die Tabellen in einem **DataSet**darzustellen. Eine **Daten** Tabelle stellt eine Tabelle mit relationalen Daten im Arbeitsspeicher dar. die Daten sind in der lokal. Eine netzwerkbasierte Anwendung, in der Sie sich befindet, aber aus einer Datenquelle wie Microsoft SQL Server mit einem **DataAdapter** aufgefüllt werden kann, um weitere Informationen zu erhalten, finden Sie unter Auffüllen [eines Datasets von einem DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
  Die **datdatababel** -Klasse ist ein Member des **System. Data** -Namespace innerhalb der .NET Framework-Klassenbibliothek. Sie können eine **Daten** Tabelle unabhängig oder als Member eines **DataSets**erstellen und verwenden, und **Daten** Tabelle kann auch zusammen mit anderen .NET Framework Objekten verwendet werden, einschließlich der <xref:System.Data.DataView> . Sie greifen auf die Auflistung von Tabellen in einem **DataSet** über die **Tables** -Eigenschaft des **DataSet** -Objekts zu.  
@@ -22,6 +23,7 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  Sie können mithilfe einer oder mehrerer zugehöriger Spalten in Tabellen diese Tabellen als über- und untergeordnete Tabellen in Beziehung zueinander setzen. Sie erstellen mithilfe eines eine Beziehung zwischen **datentierbaren** Objekten <xref:System.Data.DataRelation> . **DataRelations** -Objekte können dann verwendet werden, um die zugehörigen untergeordneten oder übergeordneten Zeilen einer bestimmten Zeile zurückzugeben. Weitere Informationen finden Sie unter [Hinzufügen von DataRelations](adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Erstellen einer "DataTable"](creating-a-datatable.md)  
  Erläutert, wie eine **Daten** Tabelle erstellt und einem **DataSet**hinzugefügt wird.  
   
@@ -35,6 +37,7 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  Stellt Informationen zu den Ereignissen bereit, die für die Verwendung mit einer **Daten**Tabelle verfügbar sind, einschließlich Ereignissen, wenn Spaltenwerte geändert werden und Zeilen hinzugefügt oder gelöscht werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [ADO.NET](../index.md)  
  Beschreibt die ADO.NET-Architektur und -Komponenten und wie diese dazu verwendet werden, auf vorhandene Datenquellen zuzugreifen und Anwendungsdaten zu verwalten.  
   
@@ -56,6 +59,6 @@ Ein <xref:System.Data.DataSet> besteht aus einer Auflistung von Tabellen, Bezieh
  [Übersicht über die Klassenbibliothek](../../../../standard/class-library-overview.md)  
  Bietet eine Übersicht über die .NET Framework-Klassenbibliothek, einschließlich des **System** Namespace und des Namespace der zweiten Ebene, **System. Data**.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über ADO.NET](../ado-net-overview.md)

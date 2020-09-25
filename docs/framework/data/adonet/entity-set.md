@@ -2,14 +2,15 @@
 title: Entitätenmenge
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 5a2465801c270813dd7bca2144d05fa202571153
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6286d3707a8506e7a389359a5aa361c152e75212
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738421"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194791"
 ---
 # <a name="entity-set"></a>Entitätenmenge
+
 Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitäts Typs](entity-type.md) und Instanzen eines beliebigen Typs, der von diesem Entitätstyp abgeleitet wird. (Informationen zu abgeleiteten Typen finden Sie unter [Entity Data Model: Vererbung](entity-data-model-inheritance.md).) Die Beziehung zwischen einem Entitätstyp und einer Entitätenmenge entspricht der Beziehung zwischen einer Zeile und einer Tabelle in einer relationalen Datenbank: wie eine Zeile beschreibt ein Entitätstyp die Datenstruktur, und wie eine Tabelle enthält eine Entitätenmenge Instanzen einer bestimmten Struktur. Eine Entitätenmenge ist keine Datenmodellkonstruktion, sie beschreibt keine Datenstruktur. Vielmehr stellt eine Entitätenmenge eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Entitätstypinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
   
  Eine Entitätenmenge wird innerhalb eines [Entitätencontainers](entity-container.md)definiert, einer logischen Gruppierung von Entitätenmengen und Zuordnungs [Sätzen](association-set.md).  
@@ -28,11 +29,12 @@ Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitä
  Sie müssen nicht für jeden Entitätstyp in einem konzeptionellen Modell eine Entitätenmenge definieren.  
   
 ## <a name="example"></a>Beispiel  
+
  Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit drei Entitätstypen: `Book`, `Publisher` und `Author`.  
   
  ![Beispielmodell mit drei Entitäts Typen](./media/entity-set/example-model-three-entity-types.gif)  
   
- Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt eine Instanz des `Book` Entitäts Typs zur Laufzeit dar. Ebenso stellt PJ eine `Publisher` Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der `PublishedBy` Zuordnung im `PublishedBy` Zuordnungs Satz dar.  
+ Die folgende Abbildung zeigt zwei Entitätenmengen (`Books` und `Publishers`) und einen Zuordnungssatz (`PublishedBy`) auf Grundlage des oben gezeigten konzeptionellen Modells. BI in der `Books` Entitätenmenge stellt zur Laufzeit eine Instanz des `Book` Entitäts Typs dar. Ebenso stellt PJ eine- `Publisher` Instanz in der `Publishers` Entitätenmenge dar. Bipj stellt eine Instanz der Zuordnung `PublishedBy` im Zuordnungs `PublishedBy` Satz dar.  
   
  ![Screenshot, der ein Beispiel für eine Reihe anzeigt.](./media/entity-set/sets-example-association.gif)  
   
@@ -44,7 +46,7 @@ Eine *Entitätenmenge* ist ein logischer Container für Instanzen eines [Entitä
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schlüsselkonzepte im Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

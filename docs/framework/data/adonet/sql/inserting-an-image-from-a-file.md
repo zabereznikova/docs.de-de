@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e70576637d44e874532aa06da4fe94115ac8ed9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148607"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194582"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Einfügen eines Bilds aus einer Datei
+
 Je nach Feldtyp in Ihrer Datenquelle können Sie ein Blob (Binary Large Object) entweder als Binär- oder Zeichendaten in eine Datenbank schreiben. „Blob“ ist ein allgemeiner Begriff, der sich auf die Datentypen `text`, `ntext` und `image` bezieht, die in der Regel Dokumente und Bilder enthalten.  
   
- Um einen BLOB-Wert in Ihre Datenbank zu schreiben, geben Sie die entsprechende INSERT- oder UPDATE-Anweisung aus, und übergeben Sie den BLOB-Wert als Eingabeparameter (siehe [Konfigurieren von Parametern und Parameterdatentypen](../configuring-parameters-and-parameter-data-types.md)). Wenn Ihr Blob in Form von Text gespeichert wird, z. B. als `text`-Feld in SQL Server, können Sie das Blob als Zeichenfolgenparameter übergeben. Wenn das Blob im Binärformat gespeichert wird, z. B. als `image`-Feld in SQL Server, können Sie ein Array vom Typ `byte` als binären Parameter übergeben.  
+ Um einen BLOB-Wert in die Datenbank zu schreiben, geben Sie die entsprechende INSERT-oder Update-Anweisung aus, und übergeben Sie den BLOB-Wert als Eingabeparameter (siehe [Konfigurieren von Parametern und Parameter Datentypen](../configuring-parameters-and-parameter-data-types.md)). Wenn Ihr Blob in Form von Text gespeichert wird, z. B. als `text`-Feld in SQL Server, können Sie das Blob als Zeichenfolgenparameter übergeben. Wenn das Blob im Binärformat gespeichert wird, z. B. als `image`-Feld in SQL Server, können Sie ein Array vom Typ `byte` als binären Parameter übergeben.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel werden Mitarbeiterinformationen zur Tabelle „Employees“ in der Datenbank „Northwind“ hinzugefügt. Ein Foto des Mitarbeiters wird aus einer Datei gelesen und zum Feld „Photo“ in der Tabelle hinzugefügt. Dieses Feld ist ein Bildfeld.  
   
 ```vb  
@@ -134,6 +136,6 @@ public static byte[] GetPhoto(string filePath)
 
 - [Verwenden von Befehlen zum Ändern von Daten](../using-commands-to-modify-data.md)
 - [Abrufen von Binärdaten](../retrieving-binary-data.md)
-- [SQL Server-Binär- und Großwertdaten](sql-server-binary-and-large-value-data.md)
+- [SQL Server von Binärdaten und Daten mit umfangreichen Werten](sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../sql-server-data-type-mappings.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)
