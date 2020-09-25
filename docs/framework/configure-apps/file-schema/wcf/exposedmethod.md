@@ -2,14 +2,15 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 46f2872fb289c2793c356ea179deb3ce52e6d65e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2947f0de6a88f39463e58a3b39bda52588fe4baa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855305"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203903"
 ---
 # \<exposedMethod>
+
 Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,15 +33,17 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine Zeichenfolge, die die COM+-Methode enthält, die verfügbar gemacht wird, wenn die Schnittstelle für eine COM+-Komponente als Webdienst bereitgestellt wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -50,13 +53,14 @@ Stellt eine COM+-Methode dar, die verfügbar gemacht wird, wenn die Schnittstell
 |[\<exposedMethods>](exposedmethods.md)|Eine Auflistung von- [\<exposedMethod>](exposedmethod.md) Elementen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Mit dem Konfigurationstool für die COM+-Integration (ComSvcConfig.exe) können dem erzeugten Dienstvertrag spezifische Methoden aus einer COM-Schnittstelle hinzugefügt werden.  
   
  Beispielsweise können Sie dem erzeugten Dienstvertrag mit dem folgenden Befehl die drei benannten Methoden aus der `IFinances`-COM-Schnittstelle in der `ItemOrders`.Financial-Komponente hinzufügen.  
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Wenn Sie auch die Datei "ComSvcConfig. exe" ausführen, generiert Sie den folgenden Dienstvertrag, der die zuvor erwähnten Methoden als Elemente auflistet [\<exposedMethod>](exposedmethod.md) .  
+ Wenn Sie die ComSvcConfig.exe auch ausführen, generiert Sie den folgenden Dienstvertrag, der die zuvor erwähnten Methoden als [\<exposedMethod>](exposedmethod.md) Elemente auflistet.  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"

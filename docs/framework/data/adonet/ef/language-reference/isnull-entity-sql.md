@@ -2,14 +2,15 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150199"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203617"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
+
 Ermittelt, ob ein Abfrageausdruck den Wert NULL hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,6 +20,7 @@ expression IS [ NOT ] NULL
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `expression`  
  Ein gültiger Abfrageausdruck. Dieser darf keine Auflistung sein oder über Auflistungsmember oder einen Datensatztyp mit Auflistungstypeigenschaften verfügen.  
   
@@ -26,9 +28,11 @@ expression IS [ NOT ] NULL
  Negiert das EDM.Boolean-Ergebnis von IS NULL.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  `true` wenn `expression` NULL zurückgibt, andernfalls `false`.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Verwenden Sie `IS NULL`, um zu ermitteln, ob das Element einer äußeren Verknüpfung den Wert NULL hat:  
   
 ```sql  
@@ -48,16 +52,17 @@ select c from LOB.Customer as c where c.DOB is not null
   
 |Muster|Verhalten|  
 |-------------|--------------|  
-|null IS NULL|Gibt `true` zurück.|  
-|TREAT (null AS EntityType) IS NULL|Gibt `true` zurück.|  
+|null IS NULL|Gibt `true`zurück.|  
+|TREAT (null AS EntityType) IS NULL|Gibt `true`zurück.|  
 |TREAT (null AS ComplexType) IS NULL|Löst einen Fehler aus.|  
 |TREAT (null AS RowType) IS NULL|Löst einen Fehler aus.|  
-|EntityType IS NULL|Gibt `true` oder `false` zurück.|  
+|EntityType IS NULL|Gibt einen `true` oder `false` zurück.|  
 |ComplexType IS NULL|Löst einen Fehler aus.|  
 |RowType IS NULL|Löst einen Fehler aus.|  
   
 ## <a name="example"></a>Beispiel  
- Die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] folgende Abfrage verwendet den Operator IS NOT NULL, um zu bestimmen, ob ein Abfrageausdruck nicht null ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
+
+ In der folgenden- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage wird der is not NULL-Operator verwendet, um zu bestimmen, ob ein Abfrage Ausdruck nicht NULL ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
 1. Verwenden Sie das Verfahren unter [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   

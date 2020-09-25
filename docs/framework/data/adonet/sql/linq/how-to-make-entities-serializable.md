@@ -2,21 +2,23 @@
 title: 'Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
-ms.openlocfilehash: 5e9d078ed2daacfa48b09693f533e9aade613281
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f4528cab21ac678f5d06717d0ce6e7ff7e77d3e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002712"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203500"
 ---
 # <a name="how-to-make-entities-serializable"></a>Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten
+
 Sie können die Serialisierbarkeit von Entitäten aktivieren, wenn Sie den Code generieren. Entitätsklassen werden mit dem <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und Spalten mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut ergänzt.  
   
  Entwickler, die Visual Studio verwenden, können die objektrelationaler Designer zu diesem Zweck verwenden.  
   
- Wenn Sie das SQLMetal-Befehlszeilen Tool verwenden, verwenden Sie die **/Serialization** -Option mit dem Argument `unidirectional`. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
+ Wenn Sie das SQLMetal-Befehlszeilen Tool verwenden, verwenden Sie die **/Serialization** -Option mit dem- `unidirectional` Argument. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Die folgenden SQLMetal-Befehlszeilen erzeugen Dateien, die serialisierbare Entitäten aufweisen.  
   
 ```console  

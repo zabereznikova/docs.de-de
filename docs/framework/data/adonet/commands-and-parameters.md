@@ -3,19 +3,21 @@ title: Befehle und Parameter
 description: Erfahren Sie, wie Sie Befehls Objekte für jeden .NET Framework Datenanbieter verwenden, um Befehle auszuführen und Ergebnisse aus einer Datenquelle zurückzugeben.
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: c0baec4d6c3984cb50178c3aa7f9ed3878055bb6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fb7b86dc3c826805e0e1dcec4764be2e484ec40b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287141"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203825"
 ---
 # <a name="commands-and-parameters"></a>Befehle und Parameter
+
 Nach dem Herstellen einer Verbindung mit einer Datenquelle können Sie mit einem <xref:System.Data.Common.DbCommand>-Objekt Befehle ausführen und sich Ergebnisse aus der Datenquelle zurückgeben lassen. Befehle können mit einem der Befehlskonstruktoren für den von Ihnen verwendeten .NET Framework-Datenanbieter erstellt werden. Konstruktoren können optionale Argumente verwenden, z. B. eine an der Datenquelle auszuführende SQL-Anweisung, ein <xref:System.Data.Common.DbConnection>-Objekt oder ein <xref:System.Data.Common.DbTransaction>-Objekt. Sie können diese Objekte auch als Eigenschaften des Befehls konfigurieren. Sie können außerdem mit der <xref:System.Data.Common.DbConnection.CreateCommand%2A>-Methode eines `DbConnection`-Objekts einen Befehl für eine bestimmte Verbindung erstellen. Die SQL-Anweisung, die vom Befehl ausgeführt wird, kann mit der <xref:System.Data.Common.DbCommand.CommandText%2A>-Eigenschaft konfiguriert werden.  
   
  Jeder in .NET Framework enthaltene .NET Framework-Datenanbieter verfügt über ein `Command`-Objekt. Der .NET Framework-Datenanbieter für OLE DB enthält ein <xref:System.Data.OleDb.OleDbCommand>-Objekt, der .NET Framework-Datenanbieter für SQL Server enthält ein <xref:System.Data.SqlClient.SqlCommand>-Objekt, der .NET Framework-Datenanbieter für ODBC enthält ein <xref:System.Data.Odbc.OdbcCommand>-Objekt, und der .NET Framework-Datenanbieter für Oracle enthält ein <xref:System.Data.OracleClient.OracleCommand>-Objekt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Ausführen eines Befehls](executing-a-command.md)  
  Beschreibt das ADO.NET-`Command`-Objekt und dessen Verwendung zum Ausführen von Abfragen und Befehlen für eine Datenquelle.  
   
@@ -31,7 +33,7 @@ Nach dem Herstellen einer Verbindung mit einer Datenquelle können Sie mit einem
  [Verwenden von Befehlen zum Ändern von Daten](using-commands-to-modify-data.md)  
  Beschreibt die Verwendung eines Datenanbieters zum Ausführen gespeicherter Prozeduren oder von DDL-Anweisungen (Data Definition Language).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - ["DataAdapters" und "DataReaders"](dataadapters-and-datareaders.md)
 - ["DataSets", "DataTables" und "DataViews"](./dataset-datatable-dataview/index.md)

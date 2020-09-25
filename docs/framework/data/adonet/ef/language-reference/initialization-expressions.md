@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
-ms.openlocfilehash: 5d6656ab77f7ad0f7366a230d98b95cff5b2677b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 93f590e1c177adf541baca85a48fee5f9eb8d1d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854430"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203630"
 ---
 # <a name="initialization-expressions"></a>Initialisierungsausdrücke
+
 Ein Initialisierungsausdruck initialisiert ein neues Objekt. Die meisten Initialisierungsausdrücke werden unterstützt, einschließlich der meisten neuen C# 3.0- und Visual Basic 9.0-Initialisierungsausdrücke. Die folgenden Typen können von einer LINQ to Entities-Abfrage initialisiert und zurückgegeben werden:  
   
 - Eine Auflistung von 0 (null) oder mehreren typisierten Entitätsobjekten oder einer Projektion komplexer Typen, die im konzeptionellen Modell definiert sind.  
@@ -46,6 +47,6 @@ Ein Initialisierungsausdruck initialisiert ein neues Objekt. Die meisten Initial
  [!code-csharp[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#typeinitialization_mq)]
  [!code-vb[DP L2E Conceptual Examples#TypeInitialization_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#typeinitialization_mq)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ausdrücke in LINQ to Entities-Abfragen](expressions-in-linq-to-entities-queries.md)

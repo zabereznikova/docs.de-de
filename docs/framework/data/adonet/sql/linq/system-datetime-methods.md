@@ -2,17 +2,19 @@
 title: System.DateTime-Methoden
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3bffb1f47c19ccf7ea59151cd3545a15d59f1f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792417"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203487"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime-Methoden
+
 Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften sind für LINQ to SQL-Abfragen verfügbar. Wenn eine Methode, ein Operator oder eine Eigenschaft nicht unterstützt wird, kann der Member von LINQ to SQL nicht für die Ausführung auf dem SQL Server übersetzt werden. Diese Member können trotzdem im Code verwendet werden. Sie müssen jedoch ausgewertet werden, bevor die Abfrage in Transact-SQL übersetzt wird oder nachdem die Ergebnisse aus der Datenbank abgerufen wurden.  
   
 ## <a name="supported-systemdatetime-members"></a>Unterstützte 'System.DateTime'-Member  
+
  Nach der Zuordnung im Objektmodell oder in der externen Mappingdatei können Sie mit LINQ to SQL die folgenden <xref:System.DateTime?displayProperty=nameWithType>-Member in LINQ to SQL-Abfragen aufrufen.  
   
 |Unterstützte <xref:System.DateTime>-Methoden|Unterstützte <xref:System.DateTime>-Operatoren|Unterstützte <xref:System.DateTime>-Eigenschaften|  
@@ -32,6 +34,7 @@ Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften 
 |||<xref:System.DateTime.Year%2A>|  
   
 ## <a name="members-not-supported-by-linq-to-sql"></a>Von LINQ to SQL nicht unterstützte Member  
+
  Die folgenden Member werden in LINQ to SQL-Abfragen nicht unterstützt.  
   
 |||  
@@ -47,6 +50,7 @@ Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften 
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
 ## <a name="method-translation-example"></a>Beispiel für die Methodenübersetzung  
+
  Alle von LINQ to SQL unterstützten Methoden werden in Transact-SQL übersetzt, bevor sie an SQL Server gesendet werden. Beachten Sie beispielsweise das folgende Muster.  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
@@ -56,6 +60,7 @@ Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften 
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>Datums- und Uhrzeitmethoden von SQLMethods  
+
  Zusätzlich zu den Methoden der <xref:System.DateTime>-Struktur werden von LINQ to SQL zum Arbeiten mit Datums- und Uhrzeitangaben die in der folgenden Tabelle aufgeführten Methoden der <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType>-Klasse bereitgestellt.  
   
 ||||  
@@ -64,7 +69,7 @@ Die folgenden LINQ to SQL-unterstützten Methoden, Operatoren und Eigenschaften 
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Abfragekonzepte](query-concepts.md)
 - [Erstellen des Objektmodells](creating-the-object-model.md)

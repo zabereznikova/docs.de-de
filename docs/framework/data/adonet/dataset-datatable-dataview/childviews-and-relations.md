@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: cf67304f564729172d1b7f3565d52abffeb90049
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74b2de7a9ee62ae42a932c94261cf425d6a94808
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151480"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203734"
 ---
 # <a name="childviews-and-relations"></a>"ChildViews" und Beziehungen
-Wenn zwischen Tabellen in einem <xref:System.Data.DataSet> Beziehungen vorhanden sind, können Sie eine <xref:System.Data.DataView> mit Zeilen aus der verwandten untergeordneten Tabelle erstellen, indem Sie die <xref:System.Data.DataRowView.CreateChildView%2A>-Methode der <xref:System.Data.DataRowView> für die Zeilen in der übergeordneten Tabelle verwenden. Der folgende Code zeigt beispielsweise **Kategorien** und zugehörige **Produkte** in alphabetischer Reihenfolge nach **Kategoriename** und **Produktname**sortiert an.  
+
+Wenn zwischen Tabellen in einem <xref:System.Data.DataSet> Beziehungen vorhanden sind, können Sie eine <xref:System.Data.DataView> mit Zeilen aus der verwandten untergeordneten Tabelle erstellen, indem Sie die <xref:System.Data.DataRowView.CreateChildView%2A>-Methode der <xref:System.Data.DataRowView> für die Zeilen in der übergeordneten Tabelle verwenden. Der folgende Code zeigt z. b. **Kategorien** und ihre zugehörigen **Produkte** in alphabetischer Reihenfolge nach " **CategoryName** " und " **ProductName**" sortiert an.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
