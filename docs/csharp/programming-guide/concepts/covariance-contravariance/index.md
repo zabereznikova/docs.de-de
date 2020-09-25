@@ -3,14 +3,15 @@ title: Kovarianz und Kontravarianz (C#)
 description: Informationen zur Kovarianz und Kontravarianz und deren Auswirkung auf die Zuweisungskompatibilität. Hier sehen Sie ein Codebeispiel, dass die Unterschiede zwischen Kovarianz und Kontravarianz aufzeigt.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d0309ec1bb3161412433e1b44e8e35410911b38d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465662"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176330"
 ---
 # <a name="covariance-and-contravariance-c"></a>Kovarianz und Kontravarianz (C#)
+
 Kovarianz und Kontravarianz in C# ermöglichen die implizite Referenzkonvertierung für Arraytypen, Delegattypen und generische Typargumente. Die Kovarianz behält die Zuweisungskompatibilität bei und die Kontravarianz kehrt sie um.  
   
  Der folgende Code veranschaulicht den Unterschied zwischen Zuweisungskompatibilität, Kovarianz und Kontravarianz.  

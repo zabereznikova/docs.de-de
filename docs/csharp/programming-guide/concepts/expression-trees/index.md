@@ -3,14 +3,15 @@ title: Ausdrucksbaumstrukturen (C#)
 description: Erfahren Sie mehr zu Ausdrucksbaumstrukturen. Erfahren Sie, wie Code, der von diesen Datenstrukturen dargestellt wird, kompiliert und ausgeführt wird, wobei jeder Knoten einen Ausdruck darstellt.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 04b5486b6d3c54f0dfd3914eacbda5cffe15890a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063314"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167638"
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
+
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
   
  Sie können Code kompilieren und ausführen, der von Ausdrucksbaumstrukturen dargestellt wird. Dies ermöglicht dynamische Änderungen des ausführbaren Codes, die Ausführung von LINQ-Abfragen in verschiedenen Datenbanken und die Erstellung von dynamischen Abfragen. Weitere Informationen zu Ausdrucksbaumstrukturen in LINQ finden Sie unter [Verwenden von Ausdrucksbaumstrukturen zum Erstellen von dynamischen Abfragen (C#)](./how-to-use-expression-trees-to-build-dynamic-queries.md).
@@ -20,6 +21,7 @@ Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, 
  Sie können den C#- oder Visual Basic-Compiler zur Erstellung einer Ausdrucksbaumstruktur veranlassen, basierend auf einem anonymen Lambda-Ausdruck oder Sie können Ausdrucksbaumstrukturen durch Verwendung des Namespace <xref:System.Linq.Expressions> manuell erstellen.  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Erstellen von Ausdrucksbaumstrukturen aus Lambda-Ausdrücken  
+
  Wenn ein Lambda-Ausdruck einer Variablen vom Typ <xref:System.Linq.Expressions.Expression%601> zugewiesen ist, gibt der Compiler Code aus, um eine Ausdrucksbaumstruktur zu erstellen, die den Lambda-Ausdruck verkörpert.  
   
  Der C#-Compiler kann Ausdrucksbaumstrukturen nur aus Ausdrucklambdas (oder einzeiligen Lambdas) erstellen. Es kann keine Anweisungslambdas (oder mehrzeiligen Lambdas) analysieren. Weitere Informationen zu Lambdaausdrücken in C# finden Sie unter [Lambdaausdrücke](../../../language-reference/operators/lambda-expressions.md).  
@@ -31,6 +33,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>Erstellen von Ausdrucksbaumstrukturen mit der API  
+
  Verwenden Sie die Klasse <xref:System.Linq.Expressions.Expression>, um Ausdrucksbaumstrukturen mit der API zu erstellen. Diese Klasse enthält statische Factorymethoden, die bestimmte Ausdrucksstruktur-Knotentypen erstellen können, z. B. <xref:System.Linq.Expressions.ParameterExpression>, der eine Variable oder einen Parameter darstellt oder <xref:System.Linq.Expressions.MethodCallExpression>, der einen Methodenaufruf darstellt. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, und die anderen ausdrucksspezifischen Ausdrucksbaumstruktur-Typen werden auch im Namespace <xref:System.Linq.Expressions> definiert. Diese Typen werden vom abstrakten Typ <xref:System.Linq.Expressions.Expression> abgeleitet.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Ausdrucksbaumstruktur erstellt wird, die den Lambdaausdruck `num => num < 5` mithilfe der API verkörpert.  
@@ -95,6 +98,7 @@ Console.WriteLine(factorial);
 Weitere Informationen finden Sie unter [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (Generieren dynamischer Methoden mit Ausdrucksbaumstrukturen in Visual Studio 2010)](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/). Dieser Artikel gilt auch für höhere Versionen von Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analysieren von Ausdrucksbaumstrukturen  
+
  Im folgenden Codebeispiel wird veranschaulicht, wie die Ausdrucksbaumstruktur, die den Lambdaausdruck `num => num < 5` darstellt, in seine Bestandteile zerlegt werden kann.  
   
 ```csharp  
@@ -119,9 +123,11 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Unveränderlichkeit von Ausdrucksbaumstrukturen  
+
  Ausdrucksbaumstrukturen sollten unveränderlich sein. Das heißt, wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie einen neuen Knoten konstruieren, indem Sie einen vorhandenen Knoten kopieren und die enthaltenen Knoten ersetzen. Sie können einen Ausdrucksbaumstruktur-Besucher verwenden, um die vorhandene Ausdrucksbaumstruktur zu durchlaufen. Weitere Informationen finden Sie unter [Ändern von Ausdrucksbaumstrukturen (C#)](./how-to-modify-expression-trees.md).
   
 ## <a name="compiling-expression-trees"></a>Kompilieren von Ausdrucksbaumstrukturen  
+
  Der Typ <xref:System.Linq.Expressions.Expression%601> bietet die Methode <xref:System.Linq.Expressions.Expression%601.Compile%2A>, welche den durch eine Ausdrucksbaumstruktur dargestellten Code in einen ausführbaren Delegaten kompiliert.  
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Ausdrucksbaumstruktur kompiliert und der daraus resultierende Code ausgeführt wird.  

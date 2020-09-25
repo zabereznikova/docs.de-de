@@ -4,12 +4,12 @@ description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/22/2020
-ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 867765d29a7c50694a5de7b1de56346d86600a83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135689"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171818"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
 
@@ -74,7 +74,7 @@ Durch die [serverlose Architektur](https://azure.microsoft.com/solutions/serverl
 
 Dieser Leitfaden konzentriert sich auf die cloudnative Entwicklung von Anwendungen mit serverloser Architektur. In diesem E-Book wird besonders auf die Vorteile der serverlosen Architektur eingegangen. Gleichzeitig werden aber auch potentielle Nachteile bei der Entwicklung serverloser Apps aufgezeigt und ein Überblick über die serverlose Architektur gegeben. Sie erhalten einen Einblick in Beispiele für die Verwendung der serverlosen Architektur sowie in Entwurfsmuster serverloser Architekturen.
 
-In diesem Leitfaden werden die Komponenten der serverlosen Azure-Plattform erläutert. Dabei liegt der Fokus besonders auf der Implementierung der serverlosen Architektur mithilfe von [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview). Sie lernen alles zu Triggern und Bindungen und wie serverlose zustandsbehaftete Apps implementiert werden. Zuletzt erhalten Sie durch Beispiele aus dem Geschäftsbereich und durch Fallstudien Bezugspunkte und Kontext, damit Sie bestimmen können, ob die serverlose Architektur der richtige Ansatz für Ihre Projekte ist.
+In diesem Leitfaden werden die Komponenten der serverlosen Azure-Plattform erläutert. Dabei liegt der Fokus besonders auf der Implementierung der serverlosen Architektur mithilfe von [Azure Functions](/azure/azure-functions/functions-overview). Sie lernen alles zu Triggern und Bindungen und wie serverlose zustandsbehaftete Apps implementiert werden. Zuletzt erhalten Sie durch Beispiele aus dem Geschäftsbereich und durch Fallstudien Bezugspunkte und Kontext, damit Sie bestimmen können, ob die serverlose Architektur der richtige Ansatz für Ihre Projekte ist.
 
 ## <a name="evolution-of-cloud-platforms"></a>Entwicklung der Cloudplattformen
 
@@ -116,12 +116,12 @@ Microbilling ist ein weiteres Feature der serverlosen Architektur. Es ist üblic
 
 ## <a name="what-this-guide-doesnt-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
-In diesem Leitfaden wird auf die Architekturansätze und Entwurfsmuster eingegangen. Er bietet keinen tiefgehenden Einblick in die Implementierungsdetails von Azure Functions, [Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps) oder von anderen serverlosen Plattformen. Es werden beispielsweise keine erweiterten Workflows mit Logic Apps oder Features von Azure Functions behandelt, wie etwa die Konfiguration von Cross-Origin Resource Sharing (CORS), die Anwendung benutzerdefinierter Domänen oder das Hochladen von SSL-Zertifikaten. Informationen dazu sind online in der [Dokumentation zu Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-reference) verfügbar.
+In diesem Leitfaden wird auf die Architekturansätze und Entwurfsmuster eingegangen. Er bietet keinen tiefgehenden Einblick in die Implementierungsdetails von Azure Functions, [Logic Apps](/azure/logic-apps/logic-apps-what-are-logic-apps) oder von anderen serverlosen Plattformen. Es werden beispielsweise keine erweiterten Workflows mit Logic Apps oder Features von Azure Functions behandelt, wie etwa die Konfiguration von Cross-Origin Resource Sharing (CORS), die Anwendung benutzerdefinierter Domänen oder das Hochladen von SSL-Zertifikaten. Informationen dazu sind online in der [Dokumentation zu Azure Functions](/azure/azure-functions/functions-reference) verfügbar.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- [Azure Architecture Center](https://docs.microsoft.com/azure/architecture/)
-- [Bewährte Methode für Cloudanwendungen](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Azure Architecture Center](/azure/architecture/)
+- [Bewährte Methode für Cloudanwendungen](/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Zielgruppe dieses Leitfadens
 
