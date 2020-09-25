@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 89b96edcf1da20698cd203e78fa27e644fa69cc3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155245"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201823"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses>-Element
+
 Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeigen Amen im- [\<nameEntry>](nameentry-element.md) Element aufweisen.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -32,20 +33,22 @@ Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeige
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<cryptoClass>](cryptoclass-element.md)|Enthält eine Kryptografieklasse, die eine Zuordnung zu einem anzeigen Amen im- **\<nameEntry>** Element aufweist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
@@ -53,6 +56,7 @@ Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeige
 |`mscorlib`|Enthält das- `cryptographySettings` Element.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie das **\<cryptoClass>** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und die- <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein-Objekt zurückzugeben `MyCryptoRSAClass` .  
   
 ```xml  
@@ -81,6 +85,6 @@ Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeige
 - <xref:System.Security.Cryptography>
 - [Konfigurationsdateischema](../index.md)
 - [Schema für Kryptografieeinstellungen](index.md)
-- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [System. Security. Cryptography. CryptoConfig. kreatefromname](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

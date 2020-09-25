@@ -2,14 +2,15 @@
 title: <peer> of- <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: a8144ca7bad5654bf8f77259ea1717442665fc81
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555457"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186990"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer> of- \<clientCredentials> Element
+
 Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer-to-Peer-Clients verwendet werden.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,14 +32,16 @@ Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer-to-Peer-Cli
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<certificate>](certificate-element.md)|Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachrichten für Peer-to-Peer-Clients verwendet wird. .|  
 |[\<peerAuthentication>](peerauthentication-element.md)|Gibt die Authentifizierungsoptionen für Peer-Clients an.|  
@@ -46,11 +49,12 @@ Gibt Anmeldeinformationen an, die bei der Authentifizierung von Peer-to-Peer-Cli
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Konfigurationselement gibt die Anmeldeinformationen an, mit denen sich ein Peerknoten gegenüber anderen Knoten im Netz authentifiziert, sowie die Authentifizierungseinstellungen, mit denen ein Peerknoten andere Peerknoten authentifiziert. Weitere Informationen finden Sie unter [Peer Channel Message Authentication](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) und [Sichern von Peer Kanal Anwendungen](../../../wcf/feature-details/securing-peer-channel-applications.md).  
   
 ## <a name="see-also"></a>Weitere Informationen

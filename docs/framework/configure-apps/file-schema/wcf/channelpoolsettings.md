@@ -2,14 +2,15 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 26537980a6be5c0fe12661d93a6ba5fe862ceb4e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8638d56ccb4aaa1c5ac735aa268823af2b1fbc6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398159"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176070"
 ---
 # \<channelPoolSettings>
+
 Gibt die Kanalpool-Einstellungen für eine benutzerdefinierte Bindung an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,17 +30,19 @@ Gibt die Kanalpool-Einstellungen für eine benutzerdefinierte Bindung an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`idleTimeout`|Eine positive <xref:System.TimeSpan>, die die maximale Zeit angibt, für die die Kanäle im Pool im Leerlauf sein können, bevor sie unterbrochen werden. Der Standardwert ist 00:02:00.|  
 |`leaseTimeout`|Eine <xref:System.TimeSpan>, die das Zeitintervall angibt, nach dem ein Kanal nach der Rückkehr zum Pool geschlossen wird. Der Standardwert ist 00:10:00.|  
 |`maxOutboundChannelsPerEndpoint`|Eine positive ganze Zahl, die die maximale Anzahl an Kanälen angibt, die im Pool für jeden Remoteendpunkt gespeichert werden können. Der Standardwert ist 10.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -49,6 +52,7 @@ Gibt die Kanalpool-Einstellungen für eine benutzerdefinierte Bindung an.
 |[\<oneWay>](oneway.md)|Aktiviert Paketrouting für eine benutzerdefinierte Bindung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Kontingente werden als Richtlinienmechanismus verwendet, um den Verbrauch übermäßiger Ressourcen zu verhindern. Sie verhindern Denial-of-Service-Angriffe (DoS), die entweder böswillig oder unbeabsichtigt sind. Verwenden Sie dieses Element, wenn Sie Kanalkontingente auf einem benutzerdefinierten Kanal festlegen.  
   
  `ChannelPoolSettings` gibt drei Kontingente an:  

@@ -11,19 +11,20 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ae089e941d75df7ba1cd87b5b92a514a33bfbf85
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69927116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195193"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schema für Ablaufverfolgungs- und Debugeinstellungen
+
 Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, die Nachrichten sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.  
   
  Die folgende Tabelle beschreibt die Funktion jedes Elements der Ablaufverfolgungs- und Debugeinstellungen.  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Fügt einen Listener zu der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  

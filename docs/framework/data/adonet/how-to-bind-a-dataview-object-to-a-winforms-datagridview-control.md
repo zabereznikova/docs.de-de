@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: cbae5453be485896e27a5039ece20bb3bcec9913
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf2a47c5d29c0af680ee4ccae503e92d3a9124d8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194712"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Vorgehensweise: Binden eines DataView-Objekts an ein Windows Forms-DataGridView-Steuerelement
+
 Das <xref:System.Windows.Forms.DataGridView>-Steuerelement ermöglicht die flexible Anzeige von Daten in tabellarischer Form. Das <xref:System.Windows.Forms.DataGridView> unterstützt das Standard-Datenbindungsmodell von Windows Forms und ermöglicht so die Bindung an eine <xref:System.Data.DataView> und eine Vielzahl anderer Datenquellen. In den meisten Fällen dürfte jedoch eine Bindung an eine <xref:System.Windows.Forms.BindingSource>-Komponente erfolgen, die sich um die Details der Interaktion mit der Datenquelle kümmert.  
   
  Weitere Informationen zum- <xref:System.Windows.Forms.DataGridView> Steuerelement finden Sie unter Übersicht über das [DataGridView-Steuer](/dotnet/desktop/winforms/controls/datagridview-control-overview-windows-forms)Element.  

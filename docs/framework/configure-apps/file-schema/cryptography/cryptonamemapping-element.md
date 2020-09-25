@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9ffae33a3c8a06d6cfcabf5a58b7d72baeda79c5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155218"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201797"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping>-Element
+
 Enthält die Zuordnung von Klassen zu den Anzeigenamen.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,21 +32,23 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`cryptoClasses`|Enthält eine Liste von Kryptografieklassen, die eine Zuordnung zu einem anzeigen Amen im- **\<nameEntry>** Element aufweisen.|  
 |`nameEntry`|Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann eine Klasse über viele Anzeigenamen verfügen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
@@ -53,6 +56,7 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 |`mscorlib`|Enthält das- \<cryptographySettings> Element.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie das **\<cryptoNameMapping>** -Element verwendet wird, um auf eine Kryptografieklasse zu verweisen und die Laufzeit zu konfigurieren. Anschließend können Sie die Zeichenfolge "RSA" an die <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> -Methode übergeben und die- <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> Methode verwenden, um ein-Objekt zurückzugeben `MyCryptoRSAClass` .  
   
 ```xml  
@@ -78,5 +82,5 @@ Enthält die Zuordnung von Klassen zu den Anzeigenamen.
 
 - [Konfigurationsdateischema](../index.md)
 - [Schema für Kryptografieeinstellungen](index.md)
-- [Kryptografiedienste](../../../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)

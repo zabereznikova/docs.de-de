@@ -1,15 +1,16 @@
 ---
-title: <trackingProfile>von WCF
+title: <trackingProfile> von WCF
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: c5df03d63653e658a23a36e8943c06f156d2ae00
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 97a494e492fcdd298dd14fd989f00d972e815f85
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854940"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201407"
 ---
-# <a name="trackingprofile-of-wcf"></a>\<trackingProfile>von WCF
+# <a name="trackingprofile-of-wcf"></a>\<trackingProfile> von WCF
+
 Stellt einen Konfigurationsabschnitt zum Erstellen eines Abonnements von Workflownachverfolgungsdatensätzen für einen Nachverfolgungsteilnehmer dar. Ein Überwachungsprofil enthält Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert. Die innerhalb des Nachverfolgungsprofilabschnitts definierten Abfragen geben die Art von Ereignissen an, die das Abonnement zurückgibt.  
   
 Weitere Informationen zur Workflow Überwachung und deren Konfiguration finden Sie unter [Workflow Verfolgung und Ablauf](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) Verfolgung und [Überwachungs profile](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -83,7 +84,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine Zeichenfolge, die den Namen des Nachverfolgungsprofils angibt.|  
   
@@ -100,6 +101,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |[\<tracking>](../windows-workflow-foundation/tracking.md)|Stellt einen Konfigurationsabschnitt zum Definieren von Nachverfolgungseinstellungen für einen Workflowdienst dar.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Überwachungsprofile enthalten Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert. Je nach Überwachungsanforderungen können Sie ein Profil schreiben, das sehr grob gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert. Umgekehrt ist es möglich, ein sehr spezifisches Profil zu erstellen, dessen resultierende Ereignisse umfangreich genug sind, um später einen genauen Ausführungsfluss zu rekonstruieren.  
   
  Überwachungsprofile werden als deklarative Abonnements für Überwachungsdatensätze angeordnet, die es Ihnen ermöglichen, bestimmte Überwachungsdatensätze aus der Workflowlaufzeit abzufragen. Es gibt eine Handvoll Abfrage Typen, mit denen Sie verschiedene Objektklassen abonnieren können <xref:System.Activities.Tracking.TrackingRecord> . Eine umfassende Liste der Abfragen finden Sie unter [\<participants>](../windows-workflow-foundation/participants.md) und [Überwachungs profile](../../../windows-workflow-foundation/tracking-profiles.md).

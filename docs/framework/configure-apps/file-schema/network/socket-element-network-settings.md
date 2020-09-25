@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089092"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201732"
 ---
 # <a name="socket-element-network-settings"></a>\<socket>-Element (Netzwerkeinstellungen)
+
 Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,17 +35,19 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`alwaysUseCompletionPortsForAccept`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Accept-Methodenaufrufe verwenden soll. Der Standardwert ist `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Verbindungsmethoden Aufrufe verwenden soll. Der Standardwert ist `false`.|  
+|`alwaysUseCompletionPortsForAccept`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Accept-Methodenaufrufe verwenden soll. Standardwert: `false`.|  
+|`alwaysUseCompletionPortsForConnect`|Gibt an, ob der Socket immer Beendigungs Anschlüsse für Verbindungsmethoden Aufrufe verwenden soll. Standardwert: `false`.|  
 |`ipProtectionLevel`|Gibt den Standardwert <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> an, der für einen Socket verwendet werden soll. Der Standardwert hängt von der Windows-Version ab.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -54,6 +57,7 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
 |[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das `alwaysUseCompletionPortsForAccept` -Attribut und das- `alwaysUseCompletionPortsForConnect` Attribut werden verwendet, um das Standardverhalten in Bezug auf die Verwendung von Abschlussports durch die Klassen im <xref:System.Net.Sockets?displayProperty=nameWithType> .-Namespace anzugeben. Abschlussports werden für hochleistungsfähige Server Anwendungen empfohlen.  
   
  Der Standardwert für das `alwaysUseCompletionPortsForAccept` -Attribut und das- `alwaysUseCompletionPortsForConnect` Attribut ist **false**.  
@@ -84,9 +88,11 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
  Die- <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> Eigenschaft kann verwendet werden, um den aktuellen Wert des `ipProtectionLevel` Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass die Abschlussports verwendet werden sollen und der Standardwert <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> uneingeschränkt sein sollte.  
   
 ```xml  
@@ -110,4 +116,4 @@ Gibt an, ob Socketvorgänge Beendigungs Ports verwenden.
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

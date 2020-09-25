@@ -2,14 +2,15 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 478211755b9131c03b72777ee95ff7223b9092c9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8f4dcf8f7d71cfa2ed9944822d7cce974e7f1979
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850273"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201563"
 ---
 # \<backupList>
+
 Ein Konfigurationsabschnitt zur Definition einer Sicherungsliste mit einer Reihe von Endpunkten, die der Routingdienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann. Wenn der erste Endpunkt in der Liste ausgefallen ist, führt der Routingdienst automatisch ein Failover zum nächsten Endpunkt in der Liste aus.  So können Sie die Zuverlässigkeit einer Anwendung schnell verbessern, wobei die Clientanwendung weder komplexe Muster behandeln noch den Bereitstellungsort aller Dienste kennen muss.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,11 +32,12 @@ Ein Konfigurationsabschnitt zur Definition einer Sicherungsliste mit einer Reihe
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine Zeichenfolge, die den Namen der Endpunktliste angibt.|  
   
@@ -52,6 +54,7 @@ Ein Konfigurationsabschnitt zur Definition einer Sicherungsliste mit einer Reihe
 |[\<routing>](routing.md)|Eine Liste mit Sicherungsendpunkten.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieser Abschnitt enthält eine sortierte Auflistung von Endpunkten, an die eine Nachricht gesendet wird, wenn beim Senden an den primären Endpunkt eine Kommunikationsausnahme auftritt.  
   
  Wenn das Senden an den primären Endpunkt, der im- `endpointName` Attribut von aufgeführt ist [\<add>](add-of-entries.md) , mit einer Kommunikations Ausnahme fehlschlägt, versucht der Routing Dienst, die Nachricht an den ersten Endpunkt in diesem Konfigurations Abschnitt zu senden. Wenn auch dies mit einer Kommunikationsausnahme scheitert, versucht der Routingdienst so lange, die Nachricht an den nächsten Endpunkt in diesem Abschnitt zu senden, bis entweder der Sendeversuch erfolgreich ist, ein anderer Fehler als eine Kommunikationsausnahme zurückgegeben wird oder alle Endpunkte in der Auflistung einen Fehler zurückgegeben haben.  

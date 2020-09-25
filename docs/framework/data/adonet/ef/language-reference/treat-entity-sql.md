@@ -2,14 +2,15 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558848"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201043"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
+
 Behandelt ein Objekt eines bestimmten Basistyps als Objekt des angegebenen abgeleiteten Typs.  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `expression`  
  Jeder gültige Abfrageausdruck, der eine Entität zurückgibt.  
   
@@ -32,9 +34,11 @@ TREAT ( expression as type)
 > Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Ein Wert des angegebenen Datentyps.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  TREAT wird zum Umwandeln zwischen verknüpften Klassen verwendet. Wenn z. B. `Employee` von `Person` abgeleitet ist und "p" vom Typ `Person`ist, wandelt `TREAT(p AS NamespaceName.Employee)` eine generische `Person` -Instanz in `Employee`um. Das bedeutet, dass "p" als `Employee`behandelt werden kann.  
   
  TREAT wird in Vererbungsszenarios verwendet, in denen eine Abfrage wie die folgende möglich ist:  
@@ -62,11 +66,12 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|Löst eine Ausnahme aus.|  
   
 ## <a name="example"></a>Beispiel  
+
  In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage wird der TREAT-Operator verwendet, um ein Objekt des Typs "Kurs" in eine Auflistung von Objekten des Typs "OnsiteCourse" umzuwandeln. Die Abfrage basiert auf dem [Modell "School"](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entity SQL-Referenz](entity-sql-reference.md)
 - [Strukturierte Typen, die NULL-Werte zulassen](nullable-structured-types-entity-sql.md)

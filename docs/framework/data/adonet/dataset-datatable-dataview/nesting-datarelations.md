@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201277"
 ---
 # <a name="nesting-datarelations"></a>Verschachteln von "DataRelations"
-Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen. Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert. Wenn Sie ein **DataRelations**-Element erstellen, werden die Beziehungen zwischen übergeordneten und untergeordneten Elementen nur über die-Beziehung verwaltet. Die Tabellen und Spalten sind separate Entitäten. Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
+
+Bei einer relationalen Darstellung von Daten enthalten einzelne Tabellen Zeilen, die über eine Spalte oder eine Gruppe von Spalten miteinander in Beziehung stehen. Im ADO.NET-<xref:System.Data.DataSet> wird die Beziehung zwischen Tabellen mit einer <xref:System.Data.DataRelation> implementiert. Wenn Sie ein **DataRelations**-Element erstellen, werden die Beziehungen zwischen übergeordneten und untergeordneten Elementen nur über die-Beziehung verwaltet. 	Die Tabellen und Spalten sind separate Entitäten. Bei der hierarchischen Darstellung von durch XML bereitgestellten Daten werden die hierarchischen Beziehungen durch übergeordnete Elemente dargestellt, die geschachtelte untergeordnete Elemente enthalten.  
   
- Um die Schachtelung von untergeordneten Objekten zu vereinfachen, wenn ein **DataSet** <xref:System.Xml.XmlDataDocument> mit einem synchronisiert oder mithilfe von " **Write texml**" als XML-Daten geschrieben wird, macht die **datarelierung** eine geschachtelte Eigenschaft verfügbar. Wenn die **geschachtelte** -Eigenschaft einer **DataRelations** auf **true** festgelegt wird, werden die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte geschachtelt, wenn Sie als XML-Daten geschrieben oder mit einem **XmlDataDocument**synchronisiert werden. Die **Eigenschaft "** **DataRelations** " ist standardmäßig auf " **false**" fest.  
+ Um die Schachtelung von untergeordneten Objekten zu vereinfachen, wenn ein **DataSet** mit einem synchronisiert <xref:System.Xml.XmlDataDocument> oder mithilfe von " **Write texml**" als XML-Daten geschrieben **Nested** wird, macht die **datarelierung** eine geschachtelte Eigenschaft verfügbar. Wenn die **geschachtelte** -Eigenschaft einer **DataRelations** auf **true** festgelegt wird, werden die untergeordneten Zeilen der Beziehung innerhalb der übergeordneten Spalte geschachtelt, wenn Sie als XML-Daten geschrieben oder mit einem **XmlDataDocument**synchronisiert werden. Die **Eigenschaft "** **DataRelations** " ist standardmäßig auf " **false**" fest.  
   
  Sehen Sie sich beispielsweise das folgende **DataSet**an.  
   
@@ -134,6 +135,6 @@ customerOrders.Nested = true;
 ## <a name="see-also"></a>Siehe auch
 
 - [Using XML in a DataSet (Verwenden von XML in einem DataSet)](using-xml-in-a-dataset.md)
-- [Adding DataRelations (Hinzufügen von DataRelations)](adding-datarelations.md)
-- [DataSets, DataTables und DataViews](index.md)
+- [Hinzufügen von "DataRelations"](adding-datarelations.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

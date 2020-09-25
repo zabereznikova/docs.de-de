@@ -2,14 +2,15 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 9b3ed6b39f1743249925d5b6d9a47845c87983bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3b6cebd178ac5cd30fa034bd961d2d08075771d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850211"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201537"
 ---
 # \<baseAddresses>
+
 Stellt eine Auflistung von `baseAddress`-Elementen dar, bei denen es sich um Basisadressen für einen Diensthost in einer selbst gehosteten Umgebung handelt. Wenn eine Basisadresse vorhanden ist, können Endpunkte mit Adressen relativ zur Basisadresse konfiguriert werden.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,24 +28,27 @@ Stellt eine Auflistung von `baseAddress`-Elementen dar, bei denen es sich um Bas
 </baseAddresses>
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<add>](add-of-baseaddresses.md)|Ein Konfigurationselement, das die vom Diensthost verwendeten Basisadressen angibt.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<host>](host.md)|Ein Konfigurationselement, das Einstellungen für einen Diensthost angibt.|  
   
