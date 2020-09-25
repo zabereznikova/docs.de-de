@@ -3,14 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 50fc7194823fb0c5c426fb54ffd50b17c3714ed9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cddd19f40f039f86e100cc7ee6a78633502eb2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251762"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185560"
 ---
 # \<trustedIssuers>
+
 Konfiguriert die Liste der vertrauenswürdigen Aussteller Zertifikate, die von der Konfigurations basierten Aussteller Namen Registrierung verwendet werden ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> ).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,14 +43,16 @@ Konfiguriert die Liste der vertrauenswürdigen Aussteller Zertifikate, die von d
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`<add thumbprint=xs:string name=xs:string>`|Fügt der Auflistung vertrauenswürdiger Aussteller ein Zertifikat hinzu. Das Zertifikat wird mit dem- `thumbprint` Attribut angegeben. Dieses Attribut ist erforderlich und sollte die ASN. 1-codierte Form des Zertifikat Fingerabdrucks enthalten. Das `name` -Attribut ist optional und kann verwendet werden, um einen anzeigen Amen für das Zertifikat anzugeben.|  
 |`<clear>`|Löscht alle Zertifikate aus der Sammlung vertrauenswürdiger Aussteller.|  
@@ -57,16 +60,18 @@ Konfiguriert die Liste der vertrauenswürdigen Aussteller Zertifikate, die von d
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<issuerNameRegistry>](issuernameregistry.md)|Konfiguriert die Aussteller Namen Registrierung. **Wichtig:**  Das- `type` Attribut des- `<issuerNameRegistry>` Elements muss auf die- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse verweisen, damit das- `<trustedIssuers>` Element gültig ist.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Windows Identity Foundation (WIF) bietet eine einzige Implementierung der- <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse, die standardmäßig die- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse implementiert. Die Registrierung des Konfigurations Aussteller namens verwaltet eine Liste der vertrauenswürdigen Aussteller, die aus der Konfiguration geladen werden. In der Liste werden die einzelnen Aussteller Namen mit dem X. 509-Zertifikat verknüpft, das zum Überprüfen der Signatur der vom Aussteller erzeugten Token erforderlich ist. Die Liste der vertrauenswürdigen Aussteller Zertifikate wird unter dem- `<trustedIssuers>` Element angegeben. Jedes Element in der Liste ordnet einen mmamonischen Aussteller Namen dem X. 509-Zertifikat zu, das zum Überprüfen der Signatur von Token benötigt wird, die von diesem Aussteller erstellt werden. Vertrauenswürdige Zertifikate werden mithilfe der ASN. 1-codierten Form des Zertifikat Fingerabdrucks angegeben und mithilfe des- `<add>` Elements hinzugefügt. Sie können Aussteller (Zertifikate) aus der Liste löschen oder entfernen, indem Sie `<clear>` die `<remove>` Elemente und verwenden.  
   
  Das- `type` Attribut des- `<issuerNameRegistry>` Elements muss auf die- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse verweisen, damit das- `<trustedIssuers>` Element gültig ist.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende XML-Code zeigt, wie die konfigurationsbasierte Aussteller Namen Registrierung angegeben wird.  
   
 ```xml  

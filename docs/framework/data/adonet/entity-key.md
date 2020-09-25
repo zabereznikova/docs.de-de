@@ -2,14 +2,15 @@
 title: Entitätsschlüssel
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 39a7500f088aa85baf0244005d6a804b3bf0b521
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b2692faf2f8bea27c8a5d6cdc52689ca186d3194
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737796"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200783"
 ---
 # <a name="entity-key"></a>Entitätsschlüssel
+
 Ein *Entitäts Schlüssel* ist eine [Eigenschaft](property.md) oder ein Satz von Eigenschaften eines [Entitäts Typs](entity-type.md) , die zur Bestimmung der Identität verwendet werden. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von Entitäts Schlüsseleigenschaften müssen eine Entitätstyp Instanz innerhalb einer [Entitätenmenge](entity-set.md) zur Laufzeit eindeutig identifizieren. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
   
  Nachfolgend werden die Anforderungen für eine Reihe von Eigenschaften für einen Entitätsschlüssel gezeigt:  
@@ -23,6 +24,7 @@ Ein *Entitäts Schlüssel* ist eine [Eigenschaft](property.md) oder ein Satz von
 - Wenn eine Entität an einer Vererbungshierarchie beteiligt ist, muss die Stammentität alle Eigenschaften enthalten, die den Entitätsschlüssel bilden, und der Entitätsschlüssel muss für den Stammentitätstyp definiert sein. Weitere Informationen finden Sie unter [Entity Data Model: Vererbung](entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit drei Entitätstypen: `Book`, `Publisher` und `Author`. Die Eigenschaften jedes Entitätstyps, die den entsprechenden Entitätsschlüssel bilden, werden mit "(Schlüssel)" angegeben. Beachten Sie, dass der Entitätstyp `Author` über einen Entitätsschlüssel verfügt, der aus zwei Eigenschaften besteht: `Name` und `Address`.  
   
  ![Beispielmodell mit drei Entitäts Typen](./media/entity-key/example-model-three-entity-types.gif)  
@@ -39,7 +41,7 @@ Ein *Entitäts Schlüssel* ist eine [Eigenschaft](property.md) oder ein Satz von
   
  Die Verwendung von `Name` und `Address` für den Entitätsschlüssel ist empfehlenswert, da zwei Autoren mit demselben Namen sehr wahrscheinlich nicht die gleiche Adresse besitzen. Dieser Entitätsschlüssel garantiert jedoch nicht absolut eindeutige Entitätsschlüssel in einem Entitätssatz. In diesem Fall wäre das Hinzufügen einer Eigenschaft, z. B. `AuthorId`, zur eindeutigen Identifikation eines Autors empfehlenswert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Schlüsselkonzepte im Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

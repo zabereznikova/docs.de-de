@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f113a475bb350640aef7a6b4d7a70b32509d1e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781395"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200406"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Zurückgeben des Durchschnittswerts aus einer numerischen Sequenz
+
 Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt aus einer Sequenz numerischer Werte.  
   
 > [!NOTE]
 > Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Übersetzung von `Average` für ganzzahlige Werte wird als ganze Zahl, nicht als Double berechnet.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der Mittelwert von `Freight`-Werten in der `Orders`-Tabelle zurückgegeben.  
   
  Die Ergebnisse aus der Beispieldatenbank Northwind lauten `78.2442`.  
@@ -27,6 +29,7 @@ Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der durchschnittliche Einzelpreis aller `Products` in der `Products`-Tabelle zurückgegeben.  
   
  Die Ergebnisse aus der Beispieldatenbank Northwind lauten `28.8663`.  
@@ -35,6 +38,7 @@ Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der `Average`-Operator verwendet, um jene `Products` zu ermitteln, deren Einzelpreis höher als der Durchschnittspreis der entsprechenden Kategorie ist. Anschließend werden die Ergebnisse in Gruppen angezeigt.  
   
  Beachten Sie, dass dieses Beispiel in C# die Verwendung des `var`-Schlüsselworts erfordert, da der Rückgabetyp anonym ist.  
@@ -114,6 +118,6 @@ Der <xref:System.Linq.Enumerable.Average%2A>-Operator ermittelt den Durchschnitt
   
  `Gravad lax`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Aggregatabfragen](aggregate-queries.md)

@@ -2,22 +2,25 @@
 title: NULL-Literale und Typrückschluss (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5797c9f55b1a1c89cc27787af6f9ad7bfffc5767
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249827"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185066"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>NULL-Literale und Typrückschluss (Entity SQL)
+
 NULL-Literale sind mit allen Typen im [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Typsystem kompatibel. Damit der Typ eines NULL-Literals ordnungsgemäß abgeleitet wird, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] erzwingt jedoch bestimmte Einschränkungen für die Verwendung eines NULL-Literals.  
   
 ## <a name="typed-nulls"></a>Typisierte Nullen  
- Typisierte Nullen können stets verwendet werden. Typrückschluss ist für typisierte Nullen nicht erforderlich, da der Typ bekannt ist. Beispielsweise kann mit dem folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Konstrukt eine NULL vom Typ Int16 erstellt werden:  
+
+ Typisierte Nullen können stets verwendet werden. Typrückschluss ist für typisierte Nullen nicht erforderlich, da der Typ bekannt ist. Beispielsweise kann mit dem folgenden -Konstrukt eine NULL vom Typ Int16 erstellt werden:  
   
  `(cast(null as Int16))`  
   
 ## <a name="free-floating-null-literals"></a>Nicht typisierte NULL-Literale  
+
  Nicht typisierte NULL-Literale können in den folgenden Kontexten verwendet werden:  
   
 - Als Argument eines CAST-Ausdrucks oder eines TREAT-Ausdrucks. Dies ist die empfohlene Methode zur Erstellung eines typisierten NULL-Ausdrucks.  
@@ -40,6 +43,6 @@ NULL-Literale sind mit allen Typen im [!INCLUDE[esql](../../../../../../includes
   
  Nicht typisierte NULL-Literale können nicht in anderen Szenarios verwendet werden. Zum Beispiel können sie nicht als Argumente eines Zeilenkonstruktors verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Entity SQL](entity-sql-overview.md)

@@ -2,28 +2,31 @@
 title: REF CURSOR-Beispiele
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b45ef971ccb6b785988cc351d02be9e0844f6e11
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149134"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200536"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR-Beispiele
+
 Die REF CURSOR-Beispiele umfassen die folgenden drei Microsoft Visual Basic-Beispiele, mit denen die Verwendung von REF CURSOR veranschaulicht wird.  
   
-|Beispiel|Beschreibung|  
+|Beispiel|BESCHREIBUNG|  
 |------------|-----------------|  
 |[REF CURSOR-Parameter in "OracleDataReader"](ref-cursor-parameters-in-an-oracledatareader.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die einen REF CURSOR-Parameter zurückgibt. Der Wert wird als <xref:System.Data.OracleClient.OracleDataReader> gelesen.|  
-|[Abrufen von Daten aus mehreren REF CURSORs mithilfe von "OracleDataReader"](retrieving-data-from-multiple-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt, und die Werte mit einem **OracleDataReader**gelesen.|  
+|[Abrufen von Daten aus mehreren REF CURSORs mithilfe von "OracleDataReader"](retrieving-data-from-multiple-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt und die Werte mithilfe eines **OracleDataReader**liest.|  
 |[Auffüllen eines "DataSets" mit einem oder mehreren REF CURSORs](filling-a-dataset-using-one-or-more-ref-cursors.md)|In diesem Beispiel wird eine gespeicherte PL/SQL-Prozedur ausgeführt, die zwei REF CURSOR-Parameter zurückgibt. <xref:System.Data.DataSet> wird mit den zurückgegebenen Zeilen gefüllt.|  
   
  Zur Verwendung dieser Beispiele müssen Sie möglicherweise die Oracle-Tabellen erstellen. Sie müssen außerdem ein PL/SQL-Paket sowie einen PL/SQL-Paketkörper erstellen.  
   
 ## <a name="creating-the-oracle-tables"></a>Erstellen der Oracle-Tabellen  
+
  In diesen Beispielen werden Tabellen verwendet, die im Oracle Scott/Tiger-Schema definiert sind. Das Oracle Scott/Tiger-Schema ist in den meisten Oracle-Installationen enthalten. Wenn dieses Schema nicht vorhanden ist, können Sie mithilfe der SQL-Befehlsdatei unter {OracleHome}\rdbms\admin\scott.sql die in diesen Beispielen verwendeten Tabellen und Indizes erstellen.  
   
 ## <a name="creating-the-oracle-package-and-package-body"></a>Erstellen des Oracle-Pakets und des Paketkörpers  
+
  Für diese Beispiele sind das folgende PL/SQL-Paket und der PL/SQL-Paketkörper auf Ihrem Server erforderlich. Erstellen Sie das folgende Oracle-Paket auf dem Oracle-Server.  
   
 ```sql
