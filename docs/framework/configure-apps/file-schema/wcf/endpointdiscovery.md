@@ -2,14 +2,15 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 98b1655f42b7b43604ed4ab9d66870ec204a9590
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 621c742e3bb06ce91fa5a6b8951351295f73df9e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398023"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185807"
 ---
 # \<endpointDiscovery>
+
 Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -50,7 +52,7 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<scopes>](scopes.md)|Eine Auflistung von Bereichs-URIs für den Endpunkt. Einem Endpunkt können mehrere Bereichs-URIs zugeordnet werden.|  
-|[\<extensions>](extensions.md)[von \<endpointDiscovery> ]|Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.|  
+|[\<extensions>](extensions.md) [von \<endpointDiscovery> ]|Eine Auflistung von XML-Elementen, die Ihnen ermöglicht, benutzerdefinierte Metadaten anzugeben, die für einen Endpunkt veröffentlicht werden sollen.|  
 |\<types>|Eine Auflistung von Schnittstellen, nach denen gesucht werden soll.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -61,11 +63,13 @@ Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. s
 |||  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Bei Hinzufügung zur Verhaltenskonfiguration des Endpunkts und bei Festlegen des `enabled`-Attributs auf `true` aktiviert dieses Konfigurationselement seine Ermittelbarkeit. Außerdem können Sie mit dem untergeordneten- [\<scopes>](scopes.md) Element benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienst Endpunkte während der Abfrage zu filtern. Außerdem können Sie das untergeordnete-Element verwenden, um [\<extensions>](extensions.md) benutzerdefinierte Metadaten anzugeben, die zusammen mit den standardmäßigen sichtbaren Metadaten (EPR, Kontextname, bindingName, Scope und ListenUri) veröffentlicht werden sollen.  
   
  Dieses Konfigurationselement ist von dem [\<serviceDiscovery>](servicediscovery.md) Element abhängig, das die Dienst Ebene der Auffindbarkeit bereitstellt. Dies bedeutet, dass die Einstellungen dieses Elements ignoriert werden, wenn [\<serviceDiscovery>](servicediscovery.md) in der Konfiguration nicht vorhanden ist.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Konfigurationsbeispiel werden Filterbereiche und Erweiterungsmetadaten angegeben, die für einen Endpunkt veröffentlicht werden sollen.  
   
 ```xml  

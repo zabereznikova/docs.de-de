@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: c25477c2c99be66b34b07e1f7e50115bfa8d14e9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96cef2dff3156e49a93be818230c83370dab5264
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154932"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185860"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>\<clear>-Element für bypasslist (Netzwerkeinstellungen)
+
 Löscht die Proxy Umgehungs Liste.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,13 +34,16 @@ Löscht die Proxy Umgehungs Liste.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -48,12 +52,15 @@ Löscht die Proxy Umgehungs Liste.
 |[bypasslist](bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `clear` Element löscht alle Einträge aus der Umgehungs Liste.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Umgehungs Liste gelöscht und dann der Umgehungs Liste zwei Adressen hinzugefügt. Der erste umgeht den Proxy für alle Server in der contoso.com-Domäne. mit dem zweiten wird der Proxy für alle Server umgangen, deren IP-Adresse mit 192,168 beginnt.  
   
 ```xml  
@@ -73,4 +80,4 @@ Löscht die Proxy Umgehungs Liste.
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
