@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 6a44d61f29fad7fa7d5304deb8b1e329478bc5b4
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 02e45f4e67a80d3afb600f44ea9fa6a5e175310c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201998"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186677"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
+
 WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als Feed mit Ressourcen verfügbar zu machen, die durch URIs adressierbar sind. Diese Ressourcen werden entsprechend den Entitäts Beziehungs Konventionen des [Entity Data Model](../adonet/entity-data-model.md)dargestellt. In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
   
 ## <a name="addressing-resources"></a>Adressieren von Ressourcen  
+
  In odata adressieren Sie alle Daten, die vom Datenmodell mithilfe eines URI verfügbar gemacht werden. So gibt der folgende URI z. B. einen Feed zurück, bei dem es sich um die Customers-Entitätenmenge handelt, die Einträge für alle Instanzen des Customer-Entitätstyps enthält:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
@@ -50,6 +52,7 @@ WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als
  Weitere Informationen finden Sie unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="system-query-options"></a>Systemabfrageoptionen  
+
  Odata definiert einen Satz von System Abfrage Optionen, mit denen Sie herkömmliche Abfrage Vorgänge für Ressourcen ausführen können, z. b. Filtern, Sortieren und Paging. Der folgende URI gibt z. b. den Satz aller `Order` Entitäten zusammen mit verknüpften `Order_Detail` Entitäten zurück, deren Postleitzahlen nicht auf enden `100` :  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')&$expand=Order_Details&$orderby=ShipCity`
@@ -69,6 +72,7 @@ WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als
 |`$inlinecount`|Fordert an, dass die Anzahl der im Feed zurückgegebenen Entitäten im Feed enthalten sein muss.|  
   
 ## <a name="addressing-relationships"></a>Behandeln von Beziehungen  
+
  Zusätzlich zum Adressieren von Entitätenmengen und Entitäts Instanzen ermöglicht odata auch das adressieren der Zuordnungen, die Beziehungen zwischen Entitäten darstellen. Diese Funktionalität ist erforderlich, um eine Beziehung zwischen zwei Entitätsinstanzen erstellen oder ändern zu können, z. B. das Versandunternehmen, das sich auf eine angegebene Bestellung in der Northwind-Beispieldatenbank bezieht. Odata unterstützt einen- `$link` Operator, um die Zuordnungen zwischen Entitäten zu adressieren. Der folgende URI wird z. B. in einer HTTP PUT-Anforderungsnachricht angegeben, um das Versandunternehmen für die angegebene Bestellung in ein neues Versandunternehmen zu ändern.  
   
 `https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper`
@@ -76,8 +80,9 @@ WCF Data Services unterstützt die Open Data Protocol (odata), um Ihre Daten als
  Weitere Informationen finden Sie im Abschnitt `3.2. Addressing Links between Entries` unter [odata: URI-Konventionen](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="consuming-the-returned-feed"></a>Verwenden des zurückgegebenen Feeds  
+
  Der URI einer odata-Ressource ermöglicht es Ihnen, vom Dienst verfügbar gemachte Entitäts Daten zu adressieren. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben, wird eine odata-Feed-Darstellung der angeforderten Ressource zurückgegeben. Weitere Informationen finden Sie in der [WCF Data Services Schnellstart](quickstart-wcf-data-services.md)Anleitung. Obwohl ein Webbrowser nützlich sein kann, um zu testen, ob eine Datendienstressource die erwarteten Daten zurückgibt, wird auf Produktionsdatendiensten, die Daten auch erstellen, aktualisieren und löschen können, im Allgemeinen mit Anwendungscode oder Skriptsprachen auf einer Webseite zugegriffen. Weitere Informationen finden Sie unter [Verwenden eines Daten Dienstanbieter in einer Client Anwendung](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Open Data Protocol-Website](https://www.odata.org/)

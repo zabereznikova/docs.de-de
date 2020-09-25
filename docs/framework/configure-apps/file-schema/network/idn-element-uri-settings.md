@@ -2,12 +2,12 @@
 title: <idn>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698162"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195401"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn>-Element (URI-Einstellungen)
 
@@ -26,6 +26,7 @@ Gibt an, ob die IDN (Internationalized Domain Name)-Verarbeitung auf einen Domä
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -50,7 +51,7 @@ Die vorhandene <xref:System.Uri> Klasse wurde in .NET Framework 3,5 erweitert. 3
 
 Die folgenden beiden Änderungen sind erforderlich, um die Unterstützung für IRI zu aktivieren:
 
-1. Fügen Sie der Datei Machine. config im Verzeichnis .NET Framework 2,0 die folgende Zeile hinzu:
+1. Fügen Sie die folgende Zeile in die Datei machine.config im Verzeichnis .NET Framework 2,0 ein:
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
@@ -95,4 +96,4 @@ Das folgende Beispiel zeigt eine Konfiguration, die von der- <xref:System.Uri> K
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
