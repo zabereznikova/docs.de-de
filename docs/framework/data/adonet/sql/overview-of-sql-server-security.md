@@ -3,14 +3,15 @@ title: Übersicht über die SQL Server-Sicherheit
 description: Erfahren Sie mehr über die SQL Server Sicherheitsarchitektur, um zu verstehen, welche Features und Funktionen bekannte Bedrohungen erkennen, und um zukünftige Bedrohungen zu antizipieren.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba396774e760a550246d0f0507984d3f7212204b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286274"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172657"
 ---
 # <a name="overview-of-sql-server-security"></a>Übersicht über die SQL Server-Sicherheit
+
 Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidigungsstrategie mit sich überschneidenden Sicherheitsebenen begegnen. SQL Server bietet eine Sicherheitsarchitektur, die es Datenbankadministratoren und Entwicklern erlaubt, sichere Datenbankanwendungen zu erstellen und ihre Anwendungen vor Sicherheitsrisiken zu schützen. Jede neue SQL Server-Version ist durch die Einführung neuer Funktionen und Funktionalität besser als die vorherige Version. Aber Sicherheit gibt es nicht einfach ab Fabrik. Jede Anwendung hat ihre eigenen Sicherheitsanforderungen. Entwickler müssen ein klares Bild davon haben, welche Kombination aus Funktionen und Funktionalität sich zur Abwehr der bekannten Risiken am besten eignet, und sie müssen zukünftig auftretende Risiken vorhersehen können.  
   
  Eine SQL Server-Instanz enthält, angefangen mit dem Server, eine hierarchisch strukturierte Sammlung von Entitäten. Auf jedem Server befinden sich mehrere Datenbanken, und jede Datenbank enthält eine Sammlung sicherungsfähiger Objekte. Jedes SQL Server Sicherungs fähigen Element verfügt über zugeordnete *Berechtigungen* , die einem *Prinzipal*erteilt werden können. dabei handelt es sich um eine Einzelperson, Gruppe oder Prozess, die Zugriff auf SQL Server gewährt. Das SQL Server-Sicherheits Framework verwaltet den Zugriff auf Sicherungs fähige Entitäten durch *Authentifizierung* und *Autorisierung*.  
@@ -22,6 +23,7 @@ Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidi
  Die Themen in diesem Abschnitt enthalten grundlegende Informationen zur SQL Server-Sicherheit sowie Links zur jeweiligen vollständigen SQL Server-Onlinedokumentation.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Authentifizierung in SQL Server](authentication-in-sql-server.md)  
  Beschreibt die Anmeldung und Authentifizierung bei SQL Server und bietet Links zu weiteren Ressourcen.  
   
@@ -40,7 +42,7 @@ Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidi
  [CLR-Integrationssicherheit in SQL Server](clr-integration-security-in-sql-server.md)  
  Enthält Links zu Ressourcen zum Thema CLR-Integrationssicherheit.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [SQL Server Sicherheit](sql-server-security.md)

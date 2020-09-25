@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172839"
 ---
 # \<userDefinedType>
+
 Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingeschlossen werden soll.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,11 +37,12 @@ Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingesc
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`name`|Ein optionales Attribut, das eine Zeichenfolge enthält, die den lesbaren Namen des Typs angibt. Dieses wird nicht von der Laufzeit verwendet, sondern hilft einem Reader bei der Typunterscheidung.|  
 |`TypeDefID`|Eine GUID-Zeichenfolge, mit der der spezifische UDT-Typ in der registrierten Typbibliothek identifiziert wird.|  
@@ -48,6 +50,7 @@ Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingesc
 |`TypeLibVersion`|Eine Zeichenfolge, die die Version der Typbibliothek angibt, mit der der Typ definiert wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -57,6 +60,7 @@ Stellt einen benutzerdefinierten Typ (UDT) dar, der in den Dienstvertrag eingesc
 |`userDefinedTypes`|Eine Auflistung von `userDefinedType`-Elementen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Durch Überprüfen der Typbibliothek werden von der Laufzeit der COM+-Integration Dienste erstellt. Wenn COM+-Komponenten Methoden enthalten, die einen VARIANT übergeben, können die tatsächlichen Typen, die vor der Laufzeit übergeben werden sollen, vom System nicht bestimmt werden. Aus diesem Grund tritt beim Versuch, einen benutzerdefinierten Typ in einem VARIANT zu übergeben, ein Fehler auf, da der Typ für die Serialisierung nicht bekannt ist.  
   
  Sie können jedoch der Konfigurationsdatei die UDTs hinzufügen, sodass diese als bekannte Typen im entsprechenden Dienstvertrag eingefügt werden können, um das Problem zu umgehen. Voraussetzung hierfür ist eine eindeutige Identifizierung des UDT und der Verträge, d.&#160;h. der ursprünglich verwendeten COM-Schnittstelle.  

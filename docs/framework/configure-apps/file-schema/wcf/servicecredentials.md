@@ -2,14 +2,15 @@
 title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: 90a34a4a52b4c7a2e67d733fecba132818cac4fc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 63368355027856118546bc70183b41864eddb0e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399647"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172878"
 ---
 # \<serviceCredentials>
+
 Gibt die Anmeldeinformationen an, die beim Authentifizieren des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,11 +42,12 @@ Gibt die Anmeldeinformationen an, die beim Authentifizieren des Diensts verwende
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`type`|Eine Zeichenfolge, die den Typ dieses Konfigurationselements angibt.|  
   

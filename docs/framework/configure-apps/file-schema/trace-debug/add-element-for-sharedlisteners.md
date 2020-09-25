@@ -8,15 +8,16 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: 5588892ec75a791eda1eb043936c0af95e79354e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0ede5f9dc19e9589afc888e7fcd01785bc1840c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153606"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174029"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<add>-Element für \<sharedListeners>
-Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners`eine Auflistung von Listenern, auf die Any [\<source>](source-element.md) oder [\<trace>](trace-element.md) verweisen kann.  Standardmäßig werden Listener in der Auflistung `sharedListeners` nicht in eine Auflistung eingefügt `Listeners` . Sie müssen mit dem Namen zu oder hinzugefügt werden [\<source>](source-element.md) [\<trace>](trace-element.md) . Es ist nicht möglich, die Listener in der Auflistung `sharedListeners` zur Laufzeit im Code zu erhalten.  
+
+Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` eine Auflistung von Listenern, auf die Any [\<source>](source-element.md) oder [\<trace>](trace-element.md) verweisen kann.  Standardmäßig werden Listener in der Auflistung `sharedListeners` nicht in eine Auflistung eingefügt `Listeners` . Sie müssen mit dem Namen zu oder hinzugefügt werden [\<source>](source-element.md) [\<trace>](trace-element.md) . Es ist nicht möglich, die Listener in der Auflistung `sharedListeners` zur Laufzeit im Code zu erhalten.  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
@@ -34,11 +35,12 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners`e
 ```
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen des Listener an, der verwendet wird, um den freigegebenen Listener einer Auflistung hinzuzufügen `Listeners` .|  
 |`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listener an. Sie müssen eine Zeichenfolge verwenden, die den unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)angegebenen Anforderungen entspricht.|  
@@ -60,6 +62,7 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners`e
 |`sharedListeners`|Eine Auflistung von Listenern, auf die beliebige Quell-oder Ablauf Verfolgungs Elemente verweisen können.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die Listenerklassen, die mit dem .NET Framework ausgeliefert werden, werden von der- <xref:System.Diagnostics.TraceListener> Klasse abgeleitet Der Wert für das- `name` Attribut wird verwendet, um den freigegebenen Listener einer Auflistung `Listeners` entweder für eine Ablauf Verfolgung oder eine Ablauf Verfolgungs Quelle hinzuzufügen. Der Wert für das-Attribut ist abhängig vom `initializeData` Typ des von Ihnen erstellten Listener. Nicht alle Ablaufverfolgungslistener erfordern, dass `initializeData` Sie angeben  
   
 > [!NOTE]
@@ -77,10 +80,12 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners`e
 |<xref:System.Diagnostics.XmlWriterTraceListener>|Der Name der Datei, in die <xref:System.Diagnostics.XmlWriterTraceListener> geschrieben wird.|  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
+
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine.config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie-Elemente verwendet werden, `<add>` um der-Auflistung hinzuzufügen <xref:System.Diagnostics.TextWriterTraceListener> `textListener` `sharedListeners` .   `textListener`wird der-Auflistung `Listeners` für die Ablauf Verfolgungs Quelle nach Name hinzugefügt `TraceSourceApp` . Der `textListener` Listener schreibt die Ablauf Verfolgungs Ausgabe in die Datei "MyListener. log".  
+
+ Im folgenden Beispiel wird gezeigt, wie-Elemente verwendet werden, `<add>` um der-Auflistung hinzuzufügen <xref:System.Diagnostics.TextWriterTraceListener> `textListener` `sharedListeners` .   `textListener` wird der-Auflistung `Listeners` für die Ablauf Verfolgungs Quelle nach Name hinzugefügt `TraceSourceApp` . Der `textListener` Listener schreibt die Ablauf Verfolgungs Ausgabe in die Datei "MyListener. log".  
   
 ```xml  
 <configuration>  

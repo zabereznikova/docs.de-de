@@ -2,14 +2,15 @@
 title: Sequenzoperatoren
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 4feca030d3c398f4286fe9d126cae884afe7945b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a2394ed57335431fe0246f66219392af5cc0e6b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792684"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173431"
 ---
 # <a name="sequence-operators"></a>Sequenzoperatoren
+
 Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Sequenzoperatoren, die über eine oder mehrere der folgenden Qualitäten verfügen:  
   
 - Annehmen eines Lambda mit einem Indexparameter.  
@@ -43,8 +44,9 @@ Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbt
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Unterschiede zu .NET  
+
  Alle unterstützten Sequenzoperatoren funktionieren in der Common Language Runtime (CLR) wie erwartet, außer `Average`. `Average` gibt einen Wert des Typs zurück, der dem Typ entspricht, dessen Durchschnitt ermittelt wird, wohingegen `Average` in der CLR entweder immer ein <xref:System.Double> oder ein <xref:System.Decimal> zurückgibt. Wird das Quellargument explizit in double/decimal oder wird der Selector in double/decimal umgewandelt, weist auch die resultierende SQL diese Umwandlung auf, und das Ergebnis entspricht den Erwartungen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datentypen und Funktionen](data-types-and-functions.md)

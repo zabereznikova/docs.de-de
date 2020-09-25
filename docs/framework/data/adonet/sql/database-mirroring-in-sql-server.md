@@ -5,42 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: b18c67f5573d375fe0872d76d69a1f0aafa7e7f6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7e2c1c8ea1cbc1bb22452b9ef9d1f250c96118ea
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173535"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelungen in SQL Server
-Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch ein Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Durch das Spiegeln wird sichergestellt, dass jederzeit zwei separate Kopien der Daten vorhanden sind. Dies gewährleistet Hochverfügbarkeit und vollständige Datenredundanz. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Außerdem unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, über den der Name eines Failover-Partnerservers im <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> angegeben werden kann.  
+
+Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Die Spiegelung stellt sicher, dass jederzeit zwei getrennte Kopien der Daten vorhanden sind, was Hochverfügbarkeit und vollständige Datenredundanz gewährleistet. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Zusätzlich unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, der es erlaubt, den Namen eines Failoverpartnerservers in <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> anzugeben.  
   
- Die folgende vereinfachte Ereignissequenz tritt bei einem <xref:System.Data.SqlClient.SqlConnection>-Objekt ein, das eine Datenbank zum Ziel hat, welche für die Spiegelung konfiguriert wurde:  
+ Die folgende vereinfachte Ereignissequenz erfolgt für ein <xref:System.Data.SqlClient.SqlConnection>-Objekt, das eine für Spiegelung konfigurierte Datenbank als Ziel hat:  
   
-1. Die Clientanwendung stellt mit Erfolg eine Verbindung mit der Prinzipaldatenbank her, und der Server sendet den Namen des Partnerservers zurück, der dann auf dem Client zwischengespeichert wird.  
+1. Die Clientanwendung verbindet sich erfolgreich mit der Prinzipaldatenbank, und der Server sendet den Namen des Partnerservers zurück, der dann auf dem Client zwischengespeichert wird.  
   
-2. Wenn der Server mit der Prinzipaldatenbank ausfällt oder die Konnektivität unterbrochen wird, gehen die Verbindung und der Transaktionsstatus verloren. Die Clientanwendung versucht, erneut eine Verbindung mit der Prinzipaldatenbank herzustellen, und hat damit keinen Erfolg.  
+2. Wenn der Server mit der Prinzipaldatenbank ausfällt oder die Verbindung unterbrochen wird, gehen Verbindung und Transaktionsstatus verloren. Die Clientanwendung versucht, wieder eine Verbindung mit der Prinzipaldatenbank herzustellen, und schlägt fehl.  
   
-3. Die Clientanwendung versucht daraufhin transparent, eine Verbindung mit der Spiegeldatenbank auf dem Partnerserver herzustellen. Wenn dieser Vorgang erfolgreich ausgeführt werden kann, wird die Verbindung zur Spiegeldatenbank umgeleitet, die daraufhin zur neuen Prinzipaldatenbank wird.  
+3. Die Clientanwendung versucht dann auf transparente Weise, eine Verbindung mit der Spiegeldatenbank auf dem Partnerserver herzustellen. Bei Erfolg wird die Verbindung zur Spiegeldatenbank umgeleitet, die dann zur neuen Prinzipaldatenbank wird.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Angeben des Failoverpartners in der Verbindungszeichenfolge  
- Wenn Sie den Namen eines Failover-Partnerservers in der Verbindungszeichenfolge angeben, versucht der Client transparent, eine Verbindung mit dem Failover-Partnerserver herzustellen, wenn die Prinzipaldatenbank beim ersten Verbindungsversuch der Clientanwendung nicht verfügbar ist.  
+
+ Wenn Sie den Namen eines Failoverpartnerservers in der Verbindungszeichenfolge angeben, versucht der Client transparent eine Verbindung mit dem Failoverpartner herzustellen, sofern die Prinzipaldatenbank beim ersten Verbindungsversuch der Clientanwendung nicht verfügbar ist.  
   
 ```csharp
 ";Failover Partner=PartnerServerName"  
 ```  
   
- Wenn Sie den Namen des Failover-Partnerservers nicht angeben und die Prinzipaldatenbank nicht verfügbar ist, wenn die Clientanwendung eine Verbindung herstellt, wird ein <xref:System.Data.SqlClient.SqlException>-Objekt ausgelöst.  
+ Wenn Sie den Namen des Failoverpartnerservers weglassen und die Hauptdatenbank beim ersten Verbindungsversuch der Clientanwendung nicht verfügbar ist, wird eine <xref:System.Data.SqlClient.SqlException> ausgelöst.  
   
- Wenn ein <xref:System.Data.SqlClient.SqlConnection> erfolgreich geöffnet wird, wird der Failover-Partnername vom Server zurückgegeben. Er hat Vorrang vor allen in der Verbindungszeichenfolge angegebenen Werten.  
+ Wenn <xref:System.Data.SqlClient.SqlConnection> erfolgreich geöffnet wird, wird der Failoverpartnername vom Server zurückgegeben und ersetzt alle in der Verbindungszeichenfolge angegebenen Werte.  
   
 > [!NOTE]
-> Sie müssen den Namen des Anfangskatalogs oder der Angangsdatenbank explizit in der Verbindungszeichenfolge für Szenarien mit Datenbankspiegelung angeben. Wenn der Client Failoverinformationen zu einer Verbindung empfängt, für die nicht explizit ein Anfangskatalog oder eine Anfangsdatenbank angegeben wurde, werden die Failoverinformationen nicht zwischengespeichert, und die Anwendung versucht auch nicht, bei einem Ausfall des Prinzipalservers einen Failover durchzuführen. Wenn eine Verbindungszeichenfolge über einen Wert für den Failoverpartner, nicht jedoch über einen Wert für den Anfangskatalog oder die Anfangsdatenbank verfügt, wird eine `InvalidArgumentException` ausgelöst.  
+> In Szenarien mit Datenbankspiegelung müssen Sie den Ausgangskatalog oder Datenbanknamen explizit in der Verbindungszeichenfolge angeben. Wenn der Client Failover-Informationen zu einer Verbindung empfängt, für die nicht explizit ein Anfangskatalog oder eine Anfangsdatenbank angegeben wurde, werden die Failover-Informationen nicht zwischengespeichert und die Anwendung versucht auch nicht, bei einem Ausfall des Prinzipalservers einen Failover durchzuführen. Wenn eine Verbindungszeichenfolge einen Wert für den Failoverpartner, aber keinen Wert für den Ausgangskatalog oder die Datenbank hat, wird eine `InvalidArgumentException` ausgelöst.  
   
 ## <a name="retrieving-the-current-server-name"></a>Abrufen des Namens für den aktuellen Server  
- Im Fall eines Failovers können Sie den Namen des Servers, mit dem tatsächlich die aktuelle Verbindung besteht, mit der <xref:System.Data.SqlClient.SqlConnection.DataSource%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Das folgende Codefragment ruft den Namen des aktiven Servers ab. Dabei wird davon ausgegangen, dass die Verbindungsvariable auf eine geöffnete <xref:System.Data.SqlClient.SqlConnection> verweist.  
+
+ Bei einem Failover können Sie den Namen des Servers abrufen, mit dem die aktuelle Verbindung tatsächlich besteht, indem Sie die <xref:System.Data.SqlClient.SqlConnection.DataSource%2A>-Eigenschaft eines <xref:System.Data.SqlClient.SqlConnection>-Objekts verwenden. Das folgende Codefragment ruft den Namen des aktiven Servers ab, wobei angenommen wird, dass die Verbindungsvariable auf eine geöffnete <xref:System.Data.SqlClient.SqlConnection> verweist.  
   
- Wenn ein failoverereignis auftritt und die Verbindung zum Spiegel Server gewechselt wird, wird die **DataSource** -Eigenschaft aktualisiert, um den Spiegelungs Namen widerzuspiegeln.  
+ Wenn ein Failover-Ereignis eintritt und die Verbindung zum Spiegelserver wechselt, wird die **DataSource**-Eigenschaft aktualisiert, um den Namen des Spiegelservers wiederzugeben.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,18 +54,20 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Spiegelungsverhalten bei "SqlClient"  
- Der Client versucht stets, eine Verbindung mit dem aktuellen Prinzipalserver herzustellen. Wenn keine Verbindung hergestellt werden kann, wechselt er zum Failover-Partner. Wenn die Spiegeldatenbank auf dem Partnerserver bereits auf die Prinzipalrolle heraufgestuft wurde, kann die Verbindung hergestellt werden. Die neue Prinzipal-Spiegel-Zuordnung wird an den Client gesendet und für die Lebensdauer der aufrufenden <xref:System.AppDomain> zwischengespeichert. Er wird nicht in einem permanenten Speicher gespeichert und ist nicht für nachfolgende Verbindungen in einer anderen Anwendungs **Domäne** oder einem anderen Prozess verfügbar. Es ist jedoch für nachfolgende Verbindungen innerhalb derselben **AppDomain**verfügbar. Beachten Sie, dass eine andere **AppDomain** oder ein anderer Prozess, der auf demselben oder einem anderen Computer ausgeführt wird, immer über einen Pool von Verbindungen verfügt und diese Verbindungen nicht zurückgesetzt werden. Wenn die primäre Datenbank ausfällt, tritt für jeden Prozess oder jede **AppDomain** ein Fehler auf, und der Pool wird automatisch gelöscht.  
+
+ Der Client versucht stets, eine Verbindung mit dem aktuellen Prinzipalserver herzustellen. Bei Misserfolg wird der Failoverpartner versucht. Wenn die Spiegeldatenbank bereits auf die Prinzipalrolle auf dem Partnerserver umgestellt wurde, ist die Verbindung erfolgreich. Die neue Zuordnung zwischen Prinzipal und Spiegel wird an den Client gesendet und für die Lebensdauer des Aufrufs von <xref:System.AppDomain> zwischengespeichert. Sie wird nicht im dauerhaften Speicher gespeichert und ist für nachfolgende Verbindungen in einer anderen **AppDomain** oder einem anderen Prozess nicht verfügbar. Sie ist allerdings für nachfolgende Verbindungen innerhalb derselben **AppDomain** verfügbar. Beachten Sie, dass eine andere **AppDomain** oder ein anderer Prozess, die oder der auf demselben oder einem anderen Computer ausgeführt wird, immer über einen eigenen Pool von Verbindungen verfügt, die nicht zurückgesetzt werden. Wenn in diesem Fall die primäre Datenbank ausfällt, wird jeder Prozess bzw. jede **AppDomain** einmal mit einem Fehler ausgeführt, und der Pool wird automatisch gelöscht.  
   
 > [!NOTE]
-> Die Unterstützung für Spiegelung auf dem Server wird pro Datenbank konfiguriert. Wenn für andere Datenbanken, die nicht zur Prinzipal-Spiegel-Konfiguration gehören, Datenbearbeitungsvorgänge ausgeführt werden (entweder durch Verwendung mehrteiliger Namen oder durch Ändern der aktuellen Datenbank), werden die Änderungen an diesen anderen Datenbanken bei einem Ausfall nicht übernommen. Beim Ändern von Daten in einer Datenbank, die nicht gespiegelt ist, wird kein Fehler erzeugt. Entwickler müssen die möglichen Auswirkungen solcher Vorgänge überprüfen.  
+> Die Unterstützung der Spiegelung auf dem Server wird datenbankbezogen konfiguriert. Wenn Datenbearbeitungsvorgänge auf andere, nicht im Prinzipal-/Spiegelsatz enthaltene Datenbanken angewendet werden, entweder durch Verwendung mehrteiliger Namen oder durch Änderung der aktuellen Datenbank, werden die Änderungen an diesen anderen Datenbanken bei einem Fehler nicht weitergegeben. Wenn Daten in einer nicht gespiegelten Datenbank geändert werden, wird kein Fehler ausgegeben. Der Entwickler muss die möglichen Auswirkungen solcher Vorgänge einschätzen.  
   
 ## <a name="database-mirroring-resources"></a>Ressourcen zur Datenbankspiegelung  
- Eine konzeptionelle Dokumentation und Informationen zum Konfigurieren, bereitstellen und Verwalten der Spiegelung finden Sie in den folgenden Ressourcen in SQL Server Dokumentation.  
+
+ Die Begriffsdokumentation und Informationen zum Konfigurieren, Bereitstellen und Verwalten der Spiegelung finden Sie in den folgenden Ressourcen in der SQL Server-Dokumentation.  
   
-|Ressource|Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[Daten Bank Spiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
+|[Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über ADO.NET](../ado-net-overview.md)

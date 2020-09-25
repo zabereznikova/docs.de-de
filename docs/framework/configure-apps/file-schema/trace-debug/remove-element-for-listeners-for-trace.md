@@ -1,5 +1,5 @@
 ---
-title: <remove>-Element für <listeners> für<trace>
+title: <remove> -Element für <listeners> für <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088838"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173834"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remove>-Element für \<listeners> für\<trace>
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove> -Element für \<listeners> für \<trace>
+
 Entfernt einen Listener aus der **listenerauflistung** .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,15 +31,17 @@ Entfernt einen Listener aus der **listenerauflistung** .
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |**name**|Erforderliches Attribut.<br /><br /> Der Name des Listener, der aus der **listenerauflistung** entfernt werden soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -56,6 +59,7 @@ Entfernt einen Listener aus der **listenerauflistung** .
 > Wenn Sie <xref:System.Diagnostics.DefaultTraceListener> aus der Auflistung entfernen `Listeners` , ändert sich das Verhalten der <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> Methoden,, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . Wenn Sie eine- `Assert` oder- `Fail` Methode aufrufen, wird normalerweise die Anzeige eines Meldungs Felds angezeigt, das Meldungs Feld wird jedoch nicht angezeigt, wenn <xref:System.Diagnostics.DefaultTraceListener> sich nicht in der Auflistung befindet `Listeners` .  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie der Standardablaufverfolgungslistener aus der Auflistung der ablaufverfol **Listeners**  
   
 ```xml  

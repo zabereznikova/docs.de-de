@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5dfa1d9f02f660b55ecf6598ef5012174a1ba853
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975243"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172592"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
-Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als Open Data Protocol (odata)-Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch keine Bindung an einen Netzwerk Socket für eingehende HTTP-Anforderungen herstellen und diesen überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
+
+Mithilfe WCF Data Services können Sie einen Dienst erstellen, der Daten als Open Data Protocol (odata)-Feed verfügbar macht. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität bereit, die erforderlich ist, um Anforderungs Nachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwort Nachrichten zu generieren, die von odata benötigt werden. Ein Datendienst kann jedoch Netzwerksockets für eingehende HTTP-Anforderungen weder binden noch diese überwachen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
 
  Der Datendiensthost führt die folgenden Aufgaben im Namen des Datendiensts aus:
 
@@ -58,11 +59,13 @@ Wenn Sie das Dialogfeld **Neues Element hinzufügen** in Visual Studio 2015 verw
  Da sich ein Datendienst wie ein WCF-Dienst verhält, wird der Datendienst in ASP.NET integriert und folgt dem WCF-webprogrammier Modell. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.net](../../wcf/feature-details/wcf-services-and-aspnet.md) und [WCF-Web-HTTP-Programmiermodell](../../wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Selbst gehostete WCF-Dienste
+
  Da Sie eine WCF-Implementierung beinhaltet, wird WCF Data Services das Self-Hosting eines Daten Diensts als WCF-Dienst unterstützen. Ein Dienst kann in jeder .NET Framework Anwendung, z. b. einer Konsolenanwendung, selbstgeh ostet werden. Die <xref:System.Data.Services.DataServiceHost>-Klasse, die von <xref:System.ServiceModel.Web.WebServiceHost> erbt, wird verwendet, um den Datendienst bei einer bestimmten Adresse zu instanziieren.
 
  Selbsthosting kann für die Entwicklung und für Tests verwendet werden, da die Bereitstellung und Problembehandlung vereinfacht wird. Diese Art von Hosting stellt jedoch nicht die erweiterten Hosting-und Verwaltungsfunktionen bereit, die von ASP.net oder Internetinformationsdienste (IIS) bereitgestellt werden. Weitere Informationen finden Sie unter [Hosting in einer verwalteten Anwendung](../../wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Definieren eines benutzerdefinierten Datendiensthosts
+
  Wenn die WCF-Hostimplementierung zu restriktiv ist, können Sie für einen Datendienst auch einen benutzerdefinierten Host definieren. Alle Klassen, die eine <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren, können für einen Datendienst als Netzwerkhost verwendet werden. Ein benutzerdefinierter Host muss die <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren und in der Lage sein, die folgenden grundlegenden Aufgaben des Datendiensthosts zu übernehmen:
 
 - Bereitstellen des Dienststammpfads für den Datendienst
@@ -73,8 +76,8 @@ Wenn Sie das Dialogfeld **Neues Element hinzufügen** in Visual Studio 2015 verw
 
 - Überprüfen der Parameter in der Abfragezeichenfolge
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Defining WCF Data Services](defining-wcf-data-services.md)
-- [Verfügbarmachen der Daten als Dienst](exposing-your-data-as-a-service-wcf-data-services.md)
+- [Definieren von WCF Data Services](defining-wcf-data-services.md)
+- [Verfügbarmachen Ihrer Daten als Dienst](exposing-your-data-as-a-service-wcf-data-services.md)
 - [Konfigurieren des Datendiensts](configuring-the-data-service-wcf-data-services.md)

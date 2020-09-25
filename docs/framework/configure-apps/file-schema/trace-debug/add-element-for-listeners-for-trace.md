@@ -1,5 +1,5 @@
 ---
-title: <add>-Element für <listeners> für<trace>
+title: <add> -Element für <listeners> für <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: c64673908dc9afe67d97c08f93e5b9d9533bd34d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153671"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174042"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>\<add>-Element für \<listeners> für\<trace>
+# <a name="add-element-for-listeners-for-trace"></a>\<add> -Element für \<listeners> für \<trace>
+
 Fügt der **listenerauflistung** einen Listener hinzu.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Fügt der **listenerauflistung** einen Listener hinzu.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -59,6 +61,7 @@ Fügt der **listenerauflistung** einen Listener hinzu.
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die <xref:System.Diagnostics.Debug> - <xref:System.Diagnostics.Trace> Klasse und die- **Listeners** Klasse verwenden dieselbe Listener-Auflistung. Wenn Sie der Auflistung in einer dieser Klassen ein Listenerobjekt hinzufügen, verwendet die andere Klasse denselben Listener. Die Listenerklassen werden von abgeleitet <xref:System.Diagnostics.TraceListener> .  
   
  Wenn Sie das-Attribut des Ablaufverfolgungslistener nicht angeben, wird für den Ablaufverfolgungslistener `name` <xref:System.Diagnostics.TraceListener.Name%2A> standardmäßig eine leere Zeichenfolge ("") Wenn die Anwendung nur über einen Listener verfügt, können Sie Sie ohne Angabe eines Namens hinzufügen und entfernen, indem Sie eine leere Zeichenfolge für den Namen angeben. Wenn Ihre Anwendung jedoch über mehr als einen Listener verfügt, sollten Sie eindeutige Namen für jeden Ablaufverfolgungslistener angeben, sodass Sie einzelne Ablaufverfolgungslistener innerhalb der-und-Auflistung identifizieren und verwalten können <xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A> .  
@@ -83,7 +86,8 @@ Fügt der **listenerauflistung** einen Listener hinzu.
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Der Name der Datei, in die <xref:System.Diagnostics.XmlWriterTraceListener> geschrieben wird.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie Elemente verwendet werden, **\<add>** um die Listener und der Listener-Auflistung hinzuzufügen `MyListener` `MyEventListener` . **Listeners** `MyListener`erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. `MyEventListener`erstellt einen Eintrag im Ereignisprotokoll.  
+
+ Im folgenden Beispiel wird gezeigt, wie Elemente verwendet werden, **\<add>** um die Listener und der Listener-Auflistung hinzuzufügen `MyListener` `MyEventListener` . **Listeners** `MyListener` erstellt eine Datei `MyListener.log` mit dem Namen und schreibt die Ausgabe in die Datei. `MyEventListener` erstellt einen Eintrag im Ereignisprotokoll.  
   
 ```xml  
 <configuration>  

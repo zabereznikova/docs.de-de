@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f649f0247c150ebc2f0e7e54c3fc8c0b607c5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174289"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172709"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
+
 Vor der Einführung von MARS (Multiple Active Result Sets, mehrere aktive Resultsets) mussten Entwickler entweder mehrere Verbindungen oder serverseitige Cursor verwenden, um bestimmte Szenarien aufzulösen. Bei der Verwendung mehrerer Verbindungen in einem Transaktionskontext waren darüber hinaus gebundene Verbindungen (mit **sp_getbindtoken** und **sp_bindsession**) erforderlich. In den folgenden Szenarien wird gezeigt, wie eine MARS-fähige Verbindung anstelle mehrerer Verbindungen verwendet wird.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Verwenden mehrerer Befehle mit MARS  
+
  Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit zwei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS.  
   
 ### <a name="example"></a>Beispiel  
+
  Im Beispiel wird eine einzelne Verbindung mit der **AdventureWorks**-Datenbank geöffnet. Wenn Sie ein <xref:System.Data.SqlClient.SqlCommand>-Objekt verwenden, wird ein <xref:System.Data.SqlClient.SqlDataReader> erstellt. Bei Verwenden des Readers wird ein zweiter <xref:System.Data.SqlClient.SqlDataReader> geöffnet, wobei die Daten aus dem ersten <xref:System.Data.SqlClient.SqlDataReader> als Eingabe in die WHERE-Klausel für den zweiten Reader verwendet werden.  
   
 > [!NOTE]
@@ -164,9 +167,11 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lesen und Aktualisieren von Daten mit MARS  
- MARS ermöglicht die Verwendung einer Verbindung sowohl für Lese- als auch für DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) mit mehr als einem ausstehenden Vorgang. Dieses Feature macht eine Anwendung zur Behandlung von Fehlern im Zusammenhang mit der Verbindungsauslastung überflüssig. Darüber hinaus kann MARS die Verwendung von serverseitigen Cursorn ersetzen, die in der Regel mehr Ressourcen verbrauchen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
+
+ MARS ermöglicht die Verwendung einer Verbindung sowohl für Lese- als auch für DML-Vorgänge (Data Manipulation Language, Datenbearbeitungssprache) mit mehr als einem ausstehenden Vorgang. Dieses Feature macht eine Anwendung zur Behandlung von Fehlern im Zusammenhang mit der Verbindungsauslastung überflüssig. Außerdem kann Mars die Verwendung von serverseitigen Cursorn ersetzen, die in der Regel mehr Ressourcen verbrauchen. Da außerdem mehrere Vorgänge über eine einzelne Verbindung ausgeführt werden können, kann ein gemeinsamer Transaktionskontext verwendet werden. Dadurch ist die Verwendung der gespeicherten Systemprozeduren **sp_getbindtoken** und **sp_bindsession** nicht mehr erforderlich.  
   
 ### <a name="example"></a>Beispiel  
+
  Die folgende Konsolenanwendung veranschaulicht die Verwendung zweier <xref:System.Data.SqlClient.SqlDataReader>-Objekte mit drei <xref:System.Data.SqlClient.SqlCommand>-Objekten und einem einzelnen <xref:System.Data.SqlClient.SqlConnection>-Objekt bei aktiviertem MARS. Das erste Befehlsobjekt ruft eine Liste von Anbietern ab, deren Bonitätsbewertung 5 ist. Das zweite Befehlsobjekt verwendet die von einem <xref:System.Data.SqlClient.SqlDataReader> bereitgestellte Anbieter-ID, um den zweiten <xref:System.Data.SqlClient.SqlDataReader> mit allen Produkten für den bestimmten Anbieter zu laden. Jeder Produktdatensatz wird vom zweiten <xref:System.Data.SqlClient.SqlDataReader> besucht. Es wird eine Berechnung ausgeführt, um den neuen Wert für **OnOrderQty** zu bestimmen. Anschließend wird mithilfe des dritten Befehlsobjekts die **ProductVendor**-Tabelle mit dem neuen Wert aktualisiert. Der gesamte Prozess findet innerhalb einer einzelnen Transaktion statt, für die am Ende ein Rollback erfolgt.  
   
 > [!NOTE]
@@ -404,5 +409,5 @@ private static string GetConnectionString()
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Mehrere aktive Result Sets (MARS)](multiple-active-result-sets-mars.md)
+- [Mehrere aktive Resultsets (MARS)](multiple-active-result-sets-mars.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

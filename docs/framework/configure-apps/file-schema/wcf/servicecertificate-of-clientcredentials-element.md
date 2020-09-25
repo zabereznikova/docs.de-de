@@ -1,15 +1,16 @@
 ---
-title: <serviceCertificate>of- <clientCredentials> Element
+title: <serviceCertificate> of- <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 4c7489a171bdd5cb4b747ca99f1b7ff6dd65517b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 502452c664f2dcb0856f72e25ff8b1517f432919
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172891"
 ---
-# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate>of- \<clientCredentials> Element
+# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate> of- \<clientCredentials> Element
+
 Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Client verwenden können.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,14 +28,16 @@ Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Clie
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<defaultCertificate>](defaultcertificate-element.md)|Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.|  
 |[\<scopedCertificates>](scopedcertificates-element.md)|Stellt eine Auflistung von X.509-Zertifikaten dar, die von bestimmten Diensten (mit Gültigkeitsbereich) zur Authentifizierung bereitgestellt werden. Diese Auflistung wird normalerweise verwendet, um die Dienstzertifikate für Sicherheitstokendienste in einem Verbundsszenario anzugeben.|  
@@ -42,11 +45,12 @@ Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Clie
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Konfigurationselement gibt die Einstellungen an, anhand derer der Client das während der SSL-Authentifizierung vom Dienst bereitgestellte Zertifikat überprüft. Enthält außerdem Zertifikate für den Dienst, die explizit auf dem Client für die Verschlüsselung von Nachrichten unter Verwendung der Nachrichtensicherheit konfiguriert sind.  
   
  Die Attribute des- `serviceCertificate` Elements sind identisch mit den Attributen des-Elements [\<clientCertificate>](clientcertificate-of-clientcredentials-element.md) .  

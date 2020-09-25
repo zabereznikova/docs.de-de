@@ -2,14 +2,15 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850028"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173782"
 ---
 # \<comContract>
+
 Gibt einen Dienstvertrag für die COM+-Integration an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,11 +46,12 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |contract|Eine Zeichenfolge, die den Vertragstyp enthält.|  
 |name|Eine Zeichenfolge, die den Vertragsnamen enthält.|  
@@ -71,6 +73,7 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
 |comContracts|Enthält eine Auflistung von `comContract`-Elementen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Com+-Integrations Dienstverträge sind zurzeit auf den `http://tempuri.org` Namespace beschränkt, und der Vertrags Name wird von der unterstützenden com-Schnittstelle abgeleitet. Sie können Alternativen aber angeben, indem Sie den `comContracts`-Abschnitt und das `comContract`-Element in der Konfigurationsdatei verwenden. Sie können beispielsweise folgende Konfiguration zum Angeben des Namespaces, des Vertragsnamens, der benutzerdefinierten Typen und anderer Einstellungen für einen Dienstvertrag verwenden.  
   
 ```xml  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697490"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174068"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime>-Element
 
@@ -38,14 +38,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-|attribute|BESCHREIBUNG|
+|attribute|Beschreibung|
 |---------------|-----------------|
 |`version`|Optionales Attribut.<br /><br /> Ein Zeichen folgen Wert, der die Version der .NET Framework angibt, die von dieser Anwendung unterstützt wird. Der Zeichen folgen Wert muss mit dem Verzeichnisnamen unter dem Stammverzeichnis der .NET Framework Installation identisch sein. Der Inhalt des Zeichen folgen Werts wird nicht analysiert.|
 |`safemode`|Optionales Attribut.<br /><br /> Gibt an, ob der Startcode der Laufzeit die Registrierung durchsucht, um die Laufzeitversion zu bestimmen.|
 
 ## <a name="safemode-attribute"></a>safemode-Attribut
 
-|Wert|BESCHREIBUNG|
+|Wert|Beschreibung|
 |-----------|-----------------|
 |`false`|Der Startcode der Laufzeit sucht in der Registrierung. Dies ist der Standardwert.|
 |`true`|Der Startcode der Laufzeit sucht nicht in der Registrierung.|
@@ -62,6 +62,7 @@ Keine
 |`startup`|Enthält das- `<requiredRuntime>` Element.|
 
 ## <a name="remarks"></a>Bemerkungen
+
  Anwendungen, die zur Unterstützung von nur Version 1,0 der Laufzeit erstellt wurden, müssen das- `<requiredRuntime>` Element verwenden. Anwendungen, die mit Version 1,1 oder höher der Laufzeit erstellt wurden, müssen das- `<supportedRuntime>` Element verwenden.
 
 > [!NOTE]
@@ -86,6 +87,6 @@ Im folgenden Beispiel wird gezeigt, wie die Laufzeitversion in einer Konfigurati
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Schema für Starteinstellungen](index.md)
+- [Schema für Start Einstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [How to: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

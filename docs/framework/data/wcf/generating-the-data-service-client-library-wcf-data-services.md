@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 050a791736e90b5daf46fd272197ca21a220afb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545806"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172618"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generieren der Datendienst-Clientbibliothek (WCF Data Services)
+
 Ein Datendienst, der die Open Data Protocol (odata) implementiert, kann ein dienstmetadatendokument zurückgeben, das das Datenmodell beschreibt, das vom odata-Feed verfügbar gemacht wird. Weitere Informationen finden Sie im Abschnitt Dienst Metadaten-Dokument im Artikel [odata: Übersicht](https://www.odata.org/documentation/odata-version-2-0/overview/) . Sie können das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio verwenden, um einen Verweis auf einen odata-basierten Dienst hinzuzufügen. Wenn Sie dieses Tool verwenden, um einen Verweis auf die von einem odata-Feed in einem Client Projekt zurückgegebenen Metadaten hinzuzufügen, führt es die folgenden Aktionen aus:  
   
 - Fordert das Dienstmetadatendokument vom Datendienst an und interpretiert die zurückgegebenen Metadaten.  
@@ -32,6 +33,7 @@ Ein Datendienst, der die Open Data Protocol (odata) implementiert, kann ein dien
  Die Client Datendienst Klassen können auch mit dem [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) Tool an der Eingabeaufforderung generiert werden. Weitere Informationen finden Sie unter Gewusst [wie: Manuelles Generieren von Client Datendienst Klassen](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>Zuordnung von Clientdatentypen  
+
  Wenn Sie das Dialogfeld " **Dienstverweis hinzufügen** " in Visual Studio oder das Tool verwenden, `DataSvcUtil.exe` um Client Daten Klassen zu generieren, die auf einem odata-Feed basieren, werden die .NET Framework-Datentypen wie folgt den primitiven Typen aus dem Datenmodell zugeordnet:  
   
 |Datenmodelltyp|Datentyp ".NET Framework"|  
@@ -52,7 +54,7 @@ Ein Datendienst, der die Open Data Protocol (odata) implementiert, kann ein dien
   
  Weitere Informationen finden Sie im Abschnitt primitive Datentypen im Artikel [odata: Overview](https://www.odata.org/documentation/odata-version-2-0/overview/) .
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF Data Services-Clientbibliothek](wcf-data-services-client-library.md)
 - [Schnellstart](quickstart-wcf-data-services.md)

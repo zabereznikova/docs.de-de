@@ -3,17 +3,19 @@ title: Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server
 description: Erfahren Sie, wie Sie den Zugriff auf Ihre Daten und Datenbankobjekte einschränken, indem Sie den Zugriff mithilfe von gespeicherten Prozeduren oder benutzerdefinierten Funktionen implementieren.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 44f6a0c3ca6b913c8998c4e5ddb60eab2b64e71b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286287"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172722"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server
+
 Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenbank aufzubauen, besteht darin, den Zugriff auf Daten so zu implementieren, dass er nur über gespeicherte Prozeduren oder benutzerdefinierten Funktionen läuft. Sie können alle Berechtigungen für die zugrunde liegenden Objekte, z. B. Tabellen, widerrufen oder verweigern, und Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren. Auf diese Weise wird um Ihre Daten und Datenbankobjekte herum ein wirksamer Sicherheitszaun aufgebaut.  
   
 ## <a name="stored-procedure-benefits"></a>Vorteile gespeicherter Prozeduren  
+
  Gespeicherte Prozeduren bieten die folgenden Vorteile:  
   
 - Datenlogik und Geschäftsregeln können gekapselt werden, sodass die Benutzer so auf die Daten und Objekte zugreifen, wie das von den Entwicklern und Datenbankadministratoren beabsichtigt ist.  
@@ -31,9 +33,11 @@ Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenba
 - Gespeicherte Prozeduren können Netzwerkverkehr reduzieren, da sie in einem Prozeduraufruf mehrere Vorgänge kombinieren.  
   
 ## <a name="stored-procedure-execution"></a>Ausführung gespeicherter Prozeduren  
+
  Gespeicherte Prozeduren profitieren beim Datenzugriff von der Besitzverkettung, sodass die Benutzer keine explizite Zugriffsberechtigung für die Datenbankobjekte benötigen. Eine Besitzkette ist vorhanden, wenn Objekte, die sequenziell aufeinander zugreifen, demselben Benutzer gehören. So kann eine gespeicherte Prozedur z. B. andere gespeicherte Prozeduren aufrufen oder auf mehrere Tabellen zugreifen. Wenn alle Objekte in einer Ausführungskette demselben Besitzer gehören, prüft SQL Server nur die EXECUTE-Berechtigungen für den Aufrufer, nicht aber die Berechtigungen des Aufrufers für die anderen Objekte. Sie müssen daher bei gespeicherten Prozeduren nur die EXECUTE-Berechtigungen gewähren. Sämtliche Berechtigungen für die zugrunde liegenden Tabellen können Sie widerrufen oder verweigern.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
+
  Für eine hinreichende Absicherung Ihrer Anwendung reicht es nicht aus, einfach nur gespeicherte Prozeduren zu schreiben. Sie sollten darüber hinaus auch auf die folgenden potenziellen Sicherheitslücken eingehen.  
   
 - Erteilen Sie EXECUTE-Berechtigungen für die gespeicherten Prozeduren für die Datenbankrollen, die auf die Daten zugreifen können sollen.  
@@ -51,13 +55,14 @@ Eine Möglichkeit, eine Bastion aus mehreren Verteidigungslinien um Ihre Datenba
 - Verwenden Sie dynamisches SQL nur, wenn das unbedingt notwendig ist. Verwenden Sie die Transact-SQL-QUOTENAME()-Funktion, um Zeichenfolgenwerte zu begrenzen, und maskieren Sie sämtliche Vorkommen des Trennzeichens in der Eingabezeichenfolge.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
+
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Resource|BESCHREIBUNG|  
+|Resource|Beschreibung|  
 |--------------|-----------------|  
 |[Gespeicherte Prozeduren](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) und [SQL Injection](/sql/relational-databases/security/sql-injection)|In den Artikeln wird beschrieben, wie gespeicherte Prozeduren erstellt werden und wie SQL Injection funktioniert.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)

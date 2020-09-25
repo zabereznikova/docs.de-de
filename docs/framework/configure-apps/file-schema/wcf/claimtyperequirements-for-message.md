@@ -2,14 +2,15 @@
 title: <claimTypeRequirements> für <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e70b036fddbc706c8c16de9a0834140f600aa5ef
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "61704406"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173795"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements> für \<message>
+
 Gibt eine Auflistung von erforderlichen Anspruchstypen an.  
   
  Die Auflistung wird vom Dienst verwendet, um erforderliche und optionale Ansprüche anzugeben, die sich in dem vom Client für den Dienstzugriff verwendeten ausgestellten Token befinden müssen. Der Dienst macht die erforderlichen Anspruchstypen in Metadaten verfügbar, wenn die WSDL-Veröffentlichung aktiviert wurde, aber WCF erfordert nicht, dass das ausgestellte Token die angegebenen Anspruchstypen enthält. Dienste, die versuchen, erforderliche Anspruchstypen durchzusetzen, sollten mit Autorisierungsrichtlinien verwendet werden.  
