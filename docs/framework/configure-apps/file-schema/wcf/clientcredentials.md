@@ -2,14 +2,15 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: f295fe48e194611c80b78c0c23ab3e66ea1c0b64
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6094006df24ee824c419a783ab29d7604757577c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400498"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201459"
 ---
 # \<clientCredentials>
+
 Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,13 +41,14 @@ Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinf
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`supportInteractive`|Ein boolescher Wert, der angibt, ob ein interaktiver Benutzer in die Auswahl von Clientanmeldeinformationen zur Laufzeit einbezogen werden kann. Der Standardwert ist `true`.|  
+|`supportInteractive`|Ein boolescher Wert, der angibt, ob ein interaktiver Benutzer in die Auswahl von Clientanmeldeinformationen zur Laufzeit einbezogen werden kann. Standardwert: `true`.|  
 |`type`|Eine Zeichenfolge, die den Typ dieses Konfigurationselements angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -67,6 +69,7 @@ Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinf
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Durch die Clientanmeldeinformationen wird der Client bei den Diensten authentifiziert, wenn eine gegenseitige Authentifizierung erforderlich ist. Dieser Konfigurationsabschnitt kann auch zur Angabe von Dienstzertifikaten in Szenarien verwendet werden, bei denen der Client seine Nachrichten an einen Dienst mithilfe des Dienstzertifikats schützen muss.  
   
 ## <a name="see-also"></a>Weitere Informationen

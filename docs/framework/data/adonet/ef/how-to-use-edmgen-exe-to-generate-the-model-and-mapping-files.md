@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 6b41ce971f14938c7bb04a174dbf6029c564c788
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8837afd05eec0eaf8ef3e909d46b280e8ae05da7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546575"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198183"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Vorgehensweise: Generieren von Modell- und Zuordnungsdateien mit „EdmGen.exe“
+
 In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) verwendet wird, um die folgenden Dateien auf der Grundlage der Datenbank "School" zu generieren:  
   
 - Ein konzeptionelles Modell (eine CSDL-Datei).  
@@ -53,7 +54,7 @@ In diesem Thema wird veranschaulicht, wie das Tool EDM-Generator (EdmGen.exe) ve
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Modellieren und Zuordnen](modeling-and-mapping.md)
 - [Gewusst wie: Manuelles Konfigurieren eines Entity Framework-Projekts](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))

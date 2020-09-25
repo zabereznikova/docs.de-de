@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154204"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199002"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly>-Element
+
 Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie ein- `dependentAssembly` Element für jede Assembly.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,14 +33,16 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`assemblyIdentity`|Enthält identifizierende Informationen über die Assembly. Dieses Element muss in jedem Element enthalten sein `dependentAssembly` .|  
 |`codeBase`|Gibt an, wo die Runtime eine freigegebene Assembly finden kann, wenn Sie nicht auf dem Computer installiert ist.|  
@@ -48,13 +51,14 @@ Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. V
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`assemblyBinding`|Enthält Informationen über die Assemblyversionsumleitung und die Speicherorte von Assemblys.|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie Sie Assemblyinformationen für zwei Assemblys Kapseln.  
   
 ```xml  

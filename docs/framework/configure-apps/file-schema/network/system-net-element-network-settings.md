@@ -9,14 +9,15 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201719"
 ---
 # <a name="systemnet-element-network-settings"></a>\<system.Net>-Element (Netzwerkeinstellungen)
+
 Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,9 +31,11 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -54,9 +57,11 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 |[configuration](../configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das [\<system.net>](system-net-element-network-settings.md) -Element enthält Einstellungen für Klassen in den zugehörigen untergeordneten <xref:System.Net> Namespaces. Die Einstellungen konfigurieren Authentifizierungs Module, Verbindungs Verwaltung, e-Mail-Einstellungen, den Proxy Server und Internet Anforderungs Module zum Empfangen von Informationen von Internet Hosts.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt eine typische Konfiguration, die von-Klassen verwendet wird <xref:System.Net> .  
   
 ```xml  
@@ -93,6 +98,6 @@ Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

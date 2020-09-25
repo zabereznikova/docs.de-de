@@ -3,14 +3,15 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: d562bd4e3d46a1bdf41fc4065fee926850a49aa1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e1048cf3a9f56e4177f3ffe2dcd561a1babadacd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152170"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198768"
 ---
 # \<etwTracking>
+
 Ein Dienstverhalten, das einem Dienst ermöglicht, die ETW-Nachverfolgung mit einem <xref:System.Activities.Tracking.EtwTrackingParticipant> zu verwenden.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,29 +34,33 @@ Ein Dienstverhalten, das einem Dienst ermöglicht, die ETW-Nachverfolgung mit ei
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |profileName|Eine Zeichenfolge, die den Namen des diesem Verhalten zugeordneten Nachverfolgungsprofils angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>Natürlich\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Gibt ein Verhaltenselement an.|  
+|[\<behavior> von \<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn dieses Konfigurationselement der Verhaltenskonfiguration des Dienstes hinzugefügt wird, konfiguriert es einen Nachverfolgungsteilnehmer für einen Workflowdienst.  
   
  Nachverfolgungsteilnehmer werden verwendet, um die vom Workflow ausgegebenen Nachverfolgungsdaten zu erfassen und in verschiedenen Medien zu speichern. Außerdem kann jede Nachverarbeitung der Nachverfolgungsdatensätze auch innerhalb des Nachverfolgungsteilnehmers erfolgen.  
   
 ## <a name="example"></a>Beispiel  
+
  In der folgenden Beispielkonfiguration wird der standardmäßige ETW-Nachverfolgungsteilnehmer gezeigt, der in der Datei Web.config konfiguriert ist.  
   
  Die Anbieter-ID, die der etw-Überwachungs Teilnehmer zum Schreiben der nach Verfolgungs Datensätze in etw verwendet, ist im **\<diagnostics>** Abschnitt definiert. Dem Nachverfolgungsteilnehmer ist ein Profil zugeordnet, das die Nachverfolgungsdatensätze angibt, die er abonniert hat. Dies wird durch das **ProfileName** -Attribut des- **\<add>** Elements definiert. Nachdem diese definiert wurden, wird dem Dienst Verhalten der nach Verfolgungs Teilnehmer hinzugefügt **\<etwTracking>** . Dadurch wird der ausgewählte Nachverfolgungsteilnehmer den Erweiterungen der Workflowinstanz hinzugefügt, die daraufhin die Nachverfolgungsdatensätze empfangen.  

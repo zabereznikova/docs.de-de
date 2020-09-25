@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: 01958637cedcd6d502d51e9f0821ff3a9faae840
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5358e3a1295b180356ed6c127111313b44de277
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198482"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>Vorgehensweise: Ausführen einer Abfrage, die komplexe Typen zurückgibt
+
 Dieses Thema zeigt, wie eine [!INCLUDE[esql](../../../../../includes/esql-md.md)]-Abfrage ausgeführt wird, die Entitätstypobjekte zurückgibt, die eine Eigenschaft eines komplexen Typs enthalten.  
   
 ### <a name="to-run-the-code-in-this-example"></a>So führen Sie den Code in diesem Beispiel aus  
@@ -31,6 +32,7 @@ Dieses Thema zeigt, wie eine [!INCLUDE[esql](../../../../../includes/esql-md.md)
      Weitere Informationen zum Erstellen und ändern komplexer Typen mithilfe des Entity Data Model-Assistenten finden Sie unter Gewusst [wie: umgestalten vorhandener Eigenschaften in eine Eigenschaft eines komplexen Typs](/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) und Gewusst [wie: Erstellen und ändern komplexer Typen](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine Abfrage ausgeführt, die eine Auflistung von `Contact` -Objekten zurückgibt und zwei Eigenschaften der `Contact` -Objekte anzeigt: `ContactID` und die Werte des `EmailPhoneComplexType` komplexen Typs.  
   
  [!code-csharp[DP EntityServices Concepts#ComplexTypeWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#complextypewithentitycommand)]
