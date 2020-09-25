@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552283"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176148"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides>-Element
 
@@ -29,6 +29,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 ```
 
 ## <a name="attributes-and-elements"></a>Attribute und Elemente
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.
 
 ### <a name="attributes"></a>Attribute
@@ -39,28 +40,30 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 
 ### <a name="value-attribute"></a>value-Attribut
 
-|Wert|BESCHREIBUNG|
+|Wert|Beschreibung|
 |-----------|-----------------|
 |"Name = Wert"|Ein vordefinierter SwitchName zusammen mit dem Wert ( `true` oder `false` ). Mehrere Switch-Name-Wert-Paare werden durch Semikolons (";") getrennt. Eine Liste der vordefinierten Switchnamen, die von der .NET Framework unterstützt werden, finden Sie im Abschnitt "Hinweise".|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
+
  Keine
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
-|Element|BESCHREIBUNG|
+|Element|Beschreibung|
 |-------------|-----------------|
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`runtime`|Enthält Informationen über Laufzeitinitialisierungsoptionen.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
+
  Ab .NET Framework 4,6 ermöglicht das- `<AppContextSwitchOverrides>` Element in einer Konfigurationsdatei Aufrufern einer API, zu bestimmen, ob Ihre APP neue Funktionen nutzen oder die Kompatibilität mit früheren Versionen einer Bibliothek beibehalten kann. Wenn sich z. b. das Verhalten einer API zwischen zwei Versionen einer Bibliothek geändert hat, ermöglicht das- `<AppContextSwitchOverrides>` Element Aufrufern von dieser API, das neue Verhalten bei Versionen der Bibliothek zu abonnieren, die die neue Funktionalität unterstützen. Für apps, die APIs im .NET Framework aufzurufen, `<AppContextSwitchOverrides>` kann das-Element auch Aufrufern ermöglichen, deren apps auf eine frühere Version des .NET Framework abzielen, um neue Funktionen zu abonnieren, wenn Ihre APP in einer Version des .NET Framework ausgeführt wird, das diese Funktion enthält.
 
  Das- `value` Attribut des- `<AppContextSwitchOverrides>` Elements besteht aus einer einzelnen Zeichenfolge, die aus einem oder mehreren durch Semikolons getrennten Name/Wert-Paaren besteht.  Jeder Name identifiziert einen Kompatibilitäts Schalter, und der entsprechende Wert ist ein boolescher Wert ( `true` oder `false` ), der angibt, ob der Switch festgelegt ist. Standardmäßig ist der Schalter `false` , und Bibliotheken stellen die neue Funktionalität bereit. Sie stellen nur die vorherige Funktionalität bereit, wenn der Switch festgelegt ist (d. h. sein Wert ist `true` ). Dadurch können Bibliotheken neues Verhalten für eine vorhandene API bereitstellen, während Aufrufer, die vom vorherigen Verhalten abhängen, die neue Funktionalität ablehnen können.
 
 .NET Framework unterstützt die folgenden Schalter:
 
-|SwitchName|BESCHREIBUNG|Eingeführt|
+|SwitchName|Beschreibung|Eingeführt|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Steuert, ob Windows Presentation Foundation einen Legacy Algorithmus für das Steuerelement Layout verwendet. Weitere Informationen finden Sie unter [Entschärfung: WPF-Layout](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Steuert, ob der Standard Algorithmus, der zum Signieren von Paket Teilen von PackageDigitalSignatureManager verwendet wird, SHA1 oder SHA256 ist.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.7.1|
@@ -176,7 +179,7 @@ Im folgenden Beispiel wird das- `<add>` Element verwendet, um dem- `<appSettings
 </configuration>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Migrieren von neuen Verhaltensweisen in .NET Framework 4.6 und höher](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>

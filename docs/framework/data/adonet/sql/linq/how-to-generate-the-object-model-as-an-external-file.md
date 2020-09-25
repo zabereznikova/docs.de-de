@@ -2,20 +2,22 @@
 title: 'Vorgehensweise: Generieren des Objektmodells als externe Datei'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 915c02de55211efa24a4aa9f21ddc2c7e60fa41a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 2442caec5400759ae2bfeca35f99ebd2ff52d011
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002740"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180763"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Vorgehensweise: Generieren des Objektmodells als externe Datei
+
 Alternativ zur attributbasierten Zuordnung können Sie Ihr Objektmodell als externe XML-Datei generieren, indem Sie das Befehlszeilentool SQLMetal verwenden. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Mit einer externen XML-Zuordnungsdatei verbessern Sie die Übersichtlichkeit des Codes. Sie können auch das Verhalten anpassen, indem Sie die externe Datei ändern, ohne die Binärdateien der Anwendung neu zu kompilieren. Weitere Informationen finden Sie unter [externe Zuordnung](external-mapping.md).  
   
 > [!NOTE]
 > Das objektrelationaler Designer unterstützt nicht die Generierung einer externen Datei.  
   
 ## <a name="example"></a>Beispiel  
+
  Mit dem folgenden Befehl wird eine externe Zuordnungsdatei für die Beispieldatenbank Northwind erstellt.  
   
 ```console  
@@ -23,6 +25,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Auszug aus einer externen Zuordnungsdatei ist die Zuordnung für die Tabelle Customers in der Beispieldatenbank Northwind zu sehen. Dieser Auszug wurde durch Ausführen von SQLMetal mit der **/map** -Option generiert.  
   
 ```xml  
@@ -48,8 +51,8 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Erstellen des Objektmodells](creating-the-object-model.md)
 - [External Mapping (Externe Zuordnung)](external-mapping.md)
-- [Vorgehensweise: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [How to: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

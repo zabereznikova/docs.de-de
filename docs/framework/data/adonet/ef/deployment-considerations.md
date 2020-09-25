@@ -2,14 +2,15 @@
 title: Überlegungen zur Bereitstellung (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: bdc7a6211681c78d81ba750844611b35e779abd2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542691"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181127"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Überlegungen zur Bereitstellung (Entity Framework)
+
 Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die das ADO.NET Entity Framework für den Datenzugriff verwenden. Weitere Informationen zum Entity Framework finden Sie unter [Getting Started](getting-started.md).  
   
  Das Entity Framework stellt einen Satz von Tools zur Verfügung, die zur Verwendung in Visual Studio geeignet sind und die Entwicklung in Visual Studio vereinfachen. Weitere Informationen finden Sie unter [ADO.NET Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). In diesem Thema wird nicht beschrieben, wie spezielle Technologien verwendet werden, um eine Entity Framework-basierte Anwendung bereitzustellen.  
@@ -28,7 +29,7 @@ Dieses Thema enthält Informationen über das Bereitstellen von Anwendungen, die
   
 - Da das Entity Framework eine Komponente von .NET Framework ist, kann es gemäß der .NET Framework-Lizenzvereinbarung mit Ihrer Anwendung weitergegeben werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ADO.NET Entity Framework](index.md)
 - [Überlegungen zur Entwicklung und Bereitstellung](development-and-deployment-considerations.md)
