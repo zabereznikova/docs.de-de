@@ -10,14 +10,15 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195258"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy>-Element
+
 Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,17 +34,18 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`apply`|Gibt an, ob Herausgeber Richtlinien angewendet werden sollen.|  
   
 ## <a name="apply-attribute"></a>Attribut anwenden  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`yes`|Wendet Herausgeber Richtlinien an. Dies ist die Standardeinstellung.|  
 |`no`|Die Herausgeber Richtlinie wird nicht angewendet.|  
@@ -62,6 +64,7 @@ Keine
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn ein Komponentenhersteller eine neue Version einer Assembly freigibt, kann der Hersteller eine Herausgeber Richtlinie einschließen, damit Anwendungen, die die alte Version verwenden, nun die neue Version verwenden. Um anzugeben, ob die Herausgeber Richtlinie für eine bestimmte Assembly angewendet werden soll, platzieren Sie das- **\<publisherPolicy>** Element im- **\<dependentAssembly>** Element.  
   
  Die Standardeinstellung für das **Apply** -Attribut ist " **Yes**". Wenn Sie das **Apply** -Attribut auf **No** festlegen, werden alle vorherigen **Yes** -Einstellungen für eine Assembly überschrieben.  
@@ -69,6 +72,7 @@ Keine
  Die Berechtigung ist erforderlich, damit eine Anwendung die Herausgeber Richtlinie mit dem- [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) Element in der Anwendungs Konfigurationsdatei explizit ignoriert. Die Berechtigung wird erteilt, indem das-Flag auf festgelegt wird <xref:System.Security.Permissions.SecurityPermissionFlag> <xref:System.Security.Permissions.SecurityPermission> . Weitere Informationen finden Sie unter [Sicherheits Berechtigung für die assemblybindungsumleitung](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Herausgeber Richtlinie für die Assembly deaktiviert `myAssembly` .  
   
 ```xml  

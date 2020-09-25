@@ -4,18 +4,19 @@ description: Erfahren Sie mehr über ADO.net, Klassen, die Datenzugriffs Dienste
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 4f9b2ca42a2c25c1463b7d1ca38b4b8920b2dafd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 503977ab2bef6f03ab13fab168319d350aad9471
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286727"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194569"
 ---
 # <a name="adonet"></a>ADO.NET
 
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Neues in ADO.NET](whats-new.md)  
  Enthält eine Einführung in neue Funktionen von ADO.NET.  
   
@@ -47,6 +48,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Beschreibt Funktionen und Verhaltensweisen, die spezifisch für den .NET Framework-Datenanbieter für Oracle sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Language Integrated Query (LINQ) – C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  Enthält Links zu LINQ-Themen und-Beispielen mit c#.  
   
@@ -56,13 +58,13 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [WCF Data Services 4.5](../wcf/index.md)  
  Beschreibt, wie WCF Data Services verwendet wird, um Datendienste im Internet oder in einem Intranet bereitzustellen, die die Open Data Protocol (odata) implementieren.  
   
- [Entwicklungshandbuch für .NET Framework](../../development-guide.md)  
+ [Entwicklungs Leit Faden für .NET Framework](../../development-guide.md)  
  Stellt Links zu Informationen über Standardentwicklungsaufgaben in .NET Framework bereit.  
   
  [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)  
  Enthält eine Liste der .net-Beispiele und-Tutorials.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [Übersicht über ADO.NET](ado-net-overview.md)
