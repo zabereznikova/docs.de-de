@@ -2,14 +2,15 @@
 title: <security> von <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 77009dc950a608da9e0db3a7d09be67e1ed46137
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60b863a0a2a846a60dde2e4b323a305b5096b1cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738636"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169894"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> von \<webHttpBinding>
+
 Gibt die Sicherheitsanforderungen für einen Endpunkt an, der mit einem konfiguriert ist [\<webHttpBinding>](webhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,17 +39,18 @@ Gibt die Sicherheitsanforderungen für einen Endpunkt an, der mit einem konfigur
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |Modus|Gibt an, ob Sicherheit auf Transportebene oder keine Sicherheitsfunktion von einem Endpunkt verwendet wird. Der Standardwert lautet `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Der Dienst muss mit SSL-Zertifikaten konfiguriert werden. Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert. Die Client Authentifizierung wird über das- `ClientCredentialType` Attribut von gesteuert [\<transport>](transport-of-webhttpbinding.md) .|  

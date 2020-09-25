@@ -2,14 +2,15 @@
 title: <security> von <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: aa01e906ddd2f15007c72bfc2a45122cfb15ba2c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d39e3e5e655817aa91c5301274a860a00a6ab7ef
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736372"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169985"
 ---
 # <a name="security-of-nettcpbinding"></a>\<security> von \<netTcpBinding>
+
 Definiert die Sicherheitseinstellungen für eine Bindung.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,17 +32,18 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|Modus|(Optional) Gibt den angewendeten Sicherheitstyp an. Gültige Werte werden unten gezeigt. Der Standardwert ist `Transport`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|Modus|Dies ist optional. Gibt den angewendeten Sicherheitstyp an. Gültige Werte werden unten gezeigt. Standardwert: `Transport`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>mode-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Transportsicherheit wird durch TLS über TCP oder SPNego gewährleistet. Der Dienst muss unter Umständen mit SSL-Zertifikaten konfiguriert werden. In diesem Modus kann die Schutzstufe gesteuert werden.|  
@@ -62,6 +64,7 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
 |binding|Das Bindungs Element von [\<netTcpBinding>](nettcpbinding.md) .|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Alle Standardbindungen stellen Parameter zur Steuerung der Sicherheitsanforderungen für Übertragungen bereit. Diese Parameter beinhalten normalerweise den Sicherheitsmodus, mit dem angegeben wurde, ob Sicherheit auf Nachrichtenebene oder auf Übertragungsebene verwendet wird und welcher Clientanmeldeinformationstyp ausgewählt wurde. Basierend auf der mit diesen Parametern bereitgestellten Optionsauswahl wird ein Kanalstapel mit der entsprechenden Sicherheit erstellt.  
   
  Die von Windows Communication Foundation (WCF) gelieferten und vom System bereitgestellten Bindungen wurden für einige der gängigsten Szenarioanforderungen entwickelt. Diese Bindungen ermöglichen alle die Angabe von Sicherheitsanforderungen für einige bestimmte Zielszenarien.  

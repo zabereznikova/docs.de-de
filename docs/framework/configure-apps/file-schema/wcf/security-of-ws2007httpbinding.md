@@ -2,14 +2,15 @@
 title: <security> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: e88f55f3651d1ccd55631dce13a0349ac2772624
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 48b49bf69f791f90ed5b2eea8e6d412438cd9519
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736388"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169842"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<security> von \<ws2007HttpBinding>
+
 Stellt die Sicherheitseinstellungen dar, die mit dem-Element verwendet werden [\<ws2007HttpBinding>](ws2007httpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,17 +40,18 @@ Stellt die Sicherheitseinstellungen dar, die mit dem-Element verwendet werden [\
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`mode`|Optionale. Gibt den angewendeten Sicherheitstyp an. Der Standardwert lautet `Message`.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`None`|Die Sicherheitsfunktionen sind deaktiviert.|  
 |`Transport`|Die Sicherheit wird über HTTPS bereitgestellt. Der Dienst muss mit Secure Sockets Layer (SSL)-Zertifikaten konfiguriert werden. Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert. Die Client Authentifizierung wird über das- `ClientCredentials` Attribut des- [\<transport>](transport-of-ws2007httpbinding.md) Elements gesteuert.|  
@@ -70,6 +72,7 @@ Stellt die Sicherheitseinstellungen dar, die mit dem-Element verwendet werden [\
 |[\<ws2007HttpBinding>](ws2007httpbinding.md)|Eine sichere Bindung für HTTP-Transportanwendungen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Diese Element ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS.  
   
 ## <a name="see-also"></a>Weitere Informationen

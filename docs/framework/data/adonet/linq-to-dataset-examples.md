@@ -2,17 +2,19 @@
 title: Beispiele für LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 68d4ed74713858a643c6db40b6982ba2775dbfa5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783767"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169517"
 ---
 # <a name="linq-to-dataset-examples"></a>Beispiele für LINQ to DataSet
-Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele, in denen die Standard Abfrage Operatoren verwendet werden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete wird mithilfe der `FillDataSet` -Methode aufgefüllt, die beim Laden von [Daten in ein DataSet](loading-data-into-a-dataset.md)angegeben wird. Weitere Informationen finden Sie unter [Übersicht über Standard Abfrage Operatoren (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder unter [Übersicht über Standard Abfrage Operatoren (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+
+Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele, in denen die Standard Abfrage Operatoren verwendet werden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete wird mithilfe der- `FillDataSet` Methode aufgefüllt, die beim Laden von [Daten in ein DataSet](loading-data-into-a-dataset.md)angegeben wird. Weitere Informationen finden Sie unter Übersicht [über Standard Abfrage Operatoren (c#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Übersicht über Standard Abfrage Operatoren (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Beispiele für Abfrageausdrücke](query-expression-examples-linq-to-dataset.md)  
  Enthält die folgenden Beispiele:  
   
@@ -22,13 +24,13 @@ Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele, in denen die Sta
   
 - [Partitionierung](query-expression-syntax-examples-partitioning.md)  
   
-- [Sortierung](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+- [Sortieren](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [Elementoperatoren](query-expression-syntax-examples-element-operators.md)  
+- [Element Operatoren](query-expression-syntax-examples-element-operators.md)  
   
 - [Aggregierungsoperatoren](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Joinoperatoren](query-expression-syntax-examples-join-operators.md)  
+- [Verknüpfungsoperatoren](query-expression-syntax-examples-join-operators.md)  
   
  [Beispiele für die methodenbasierte Abfrage](method-based-query-examples-linq-to-dataset.md)  
  Enthält die folgenden Beispiele:  
@@ -37,13 +39,13 @@ Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele, in denen die Sta
   
 - [Partitionierung](method-based-query-syntax-examples-partitioning-linq.md)  
   
-- [Sortierung](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+- [Sortieren](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [Set-Operatoren](method-based-query-syntax-examples-set-operators.md)  
+- [Mengenoperatoren](method-based-query-syntax-examples-set-operators.md)  
   
-- [Konvertierungsoperatoren](method-based-query-syntax-examples-conversion-operators.md)  
+- [Konvertierungs Operatoren](method-based-query-syntax-examples-conversion-operators.md)  
   
-- [Elementoperatoren](method-based-query-syntax-examples-element-operators.md)  
+- [Element Operatoren](method-based-query-syntax-examples-element-operators.md)  
   
 - [Aggregierungsoperatoren](method-based-query-syntax-examples-aggregate-operators.md)  
   
@@ -52,7 +54,7 @@ Dieser Abschnitt enthält LINQ to DataSet Programmierbeispiele, in denen die Sta
  [Beispiele für DataSet-spezifische Operatoren](dataset-specific-operator-examples-linq-to-dataset.md)  
  Enthält Beispiele, die zeigen, wie Sie die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode und die <xref:System.Data.DataRowComparer>-Klasse verwenden können.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Programmierhandbuch](programming-guide-linq-to-dataset.md)
 - [Laden von Daten in ein DataSet](loading-data-into-a-dataset.md)
