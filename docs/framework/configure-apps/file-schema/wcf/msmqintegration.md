@@ -2,14 +2,15 @@
 title: <msmqIntegration>
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 143557833457f379d410c3b71d87199a5b9e783b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 66f7e3ba145441926ed11227a0ba82ff21925cf7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738894"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204683"
 ---
 # \<msmqIntegration>
+
 Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,20 +43,22 @@ Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.
 </msmqIntegration>
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |customDeadLetterQueue|Ein URI, der den Speicherort der Warteschlange für unzustellbare Nachrichten für jede Anwendung enthält, in der abgelaufene oder nicht an die Anwendung übertragene Nachrichten platziert werden.<br /><br /> Bei Nachrichten, die ExactlyOnce-Zusicherungen erfordern (das heißt, das `exactlyOnce`-Attribut ist auf `true` festgelegt), ist dieses Attribut standardmäßig die systemweite Transaktionswarteschlange für unzustellbare Nachrichten in MSMQ.<br /><br /> Für Nachrichten, die keine Zusicherungen erfordern (das heißt, `exactlyOnce` ist auf `false` festgelegt), ist dieses Attribut standardmäßig `null`.<br /><br /> Der Wert muss das net.msmq-Schema verwenden. Der Standardwert lautet `null`.<br /><br /> Wenn `deadLetterQueue` auf `None` oder `System` festgelegt ist, muss dieses Attribut auf `null` festgelegt sein. Wenn dieses Attribut nicht auf `null` festgelegt ist, muss `deadLetterQueue` auf `Custom` festgelegt sein.|  
 |deadLetterQueue|Gibt den zu verwendenden Typ der Warteschlange für unzustellbare Nachrichten an.<br /><br /> Gültige Werte sind<br /><br /> -Custom: benutzerdefinierte Warteschlange für Warteschlangen.<br />-None: Es darf keine Warteschlange für unzustellbare Nachrichten verwendet werden.<br />-System: verwendet die System DeadLetter-Warteschlange.<br /><br /> Dieses Attribut ist vom Typ DeadLetterQueue.|  
-|durable|Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten permanent oder flüchtig sind. Der Standardwert lautet `true`.<br /><br /> Eine permanente Meldung überlebt einen Warteschlangen-Managerabsturz, was für eine flüchtige Meldung nicht gilt. Flüchtige Nachrichten sind nützlich, wenn Anwendungen eine geringere Latenz erfordern und eine geringe Anzahl verlorener Nachrichten tolerieren können.<br /><br /> Wenn `exactlyOnce` auf `true` festgelegt ist, müssen die Nachrichten permanent sein.|  
-|exactlyOnce|Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten genau einmal empfangen werden. Der Standardwert lautet `true`.<br /><br /> Eine Meldung kann mit oder ohne Zusicherungen gesendet werden. Eine Zusicherung ermöglicht einer Anwendung, sicherzustellen, dass eine gesendete Nachricht die empfangende Nachrichtenwarteschlange erreicht hat. Andernfalls kann die Anwendung dies durch Lesen der Warteschlange für unzustellbare Nachrichten bestimmen.<br /><br /> `exactlyOnce`, wenn auf `true` festgelegt, gibt an, dass MSMQ sicherstellt, dass eine gesendete Nachricht genau einmal an die empfangende Nachrichtenwarteschlange gesendet wird. Wenn die Zustellung fehlschlägt, wird die Nachricht an die Warteschlange für unzustellbare Nachrichten gesendet.<br /><br /> Mit `exactlyOnce` gesendete Nachrichten, die auf `true` festgelegt sind, dürfen nur an eine Transaktionswarteschlange gesendet werden.|  
+|durable|Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten permanent oder flüchtig sind. Der Standardwert ist `true`.<br /><br /> Eine permanente Meldung überlebt einen Warteschlangen-Managerabsturz, was für eine flüchtige Meldung nicht gilt. Flüchtige Nachrichten sind nützlich, wenn Anwendungen eine geringere Latenz erfordern und eine geringe Anzahl verlorener Nachrichten tolerieren können.<br /><br /> Wenn `exactlyOnce` auf `true` festgelegt ist, müssen die Nachrichten permanent sein.|  
+|exactlyOnce|Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten genau einmal empfangen werden. Der Standardwert ist `true`.<br /><br /> Eine Meldung kann mit oder ohne Zusicherungen gesendet werden. Eine Zusicherung ermöglicht einer Anwendung, sicherzustellen, dass eine gesendete Nachricht die empfangende Nachrichtenwarteschlange erreicht hat. Andernfalls kann die Anwendung dies durch Lesen der Warteschlange für unzustellbare Nachrichten bestimmen.<br /><br /> `exactlyOnce`, wenn auf `true` festgelegt, gibt an, dass MSMQ sicherstellt, dass eine gesendete Nachricht genau einmal an die empfangende Nachrichtenwarteschlange gesendet wird. Wenn die Zustellung fehlschlägt, wird die Nachricht an die Warteschlange für unzustellbare Nachrichten gesendet.<br /><br /> Mit `exactlyOnce` gesendete Nachrichten, die auf `true` festgelegt sind, dürfen nur an eine Transaktionswarteschlange gesendet werden.|  
 |manualAddressing|Ein boolescher Wert , der es dem Benutzer ermöglicht, die Kontrolle über die Nachrichtenadressierung zu übernehmen. Diese Eigenschaft wird i.&#160;d.&#160;R. in Routerumgebungen verwendet, wenn das Ziel der Nachricht von der Anwendung bestimmt wird.<br /><br /> Wenn diese Eigenschaft auf `true` festgelegt ist, wird vom Kanal angenommen, dass die Nachricht bereits adressiert wurde, und es werden ihr keine weiteren Informationen hinzugefügt. Der Benutzer kann dann jede Nachricht einzeln adressieren.<br /><br /> Wenn als Wert `false` festgelegt wurde, erstellt der Standard-Windows Communication Foundation (WCF)-Adressiermechanismus automatisch Adressen für alle Nachrichten.<br /><br /> Der Standardwert lautet `false`.|  
 |maxBufferPoolSize|Eine positive ganze Zahl, die die maximale Pufferpoolgröße angibt. Der Standard ist 524288.<br /><br /> Viele Bereiche von WCF verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
 |maxImmediateRetries|Eine ganze Zahl, die die maximale Anzahl von sofortigen Wiederholungs versuchen für eine Meldung angibt, die aus der Anwendungs Warteschlange gelesen wird. Der Standardwert ist 5.<br /><br /> Wenn die maximale Anzahl der sofortigen Zustellungsversuche erreicht ist und die Nachricht nicht von der Anwendung empfangen wurde, wird die Nachricht an eine Wiederholungswarteschlange gesendet, um sie später erneut zuzustellen. Wenn keine Wiederholungszyklen angegeben sind, wird die Nachricht entweder an die Warteschlange für potenziell schädliche Nachrichten gesendet, oder es wird eine negative Bestätigung zurück zum Absender geschickt.|  
@@ -70,13 +73,13 @@ Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |msmqTransportSecurity|Gibt Transportsicherheitseinstellungen für diese Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: 4e7375fddaa98b45766b29d911d555f773edcafa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117443"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205034"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager>-Element
+
 Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -36,12 +38,13 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Deaktivieren Sie nicht die Möglichkeit, die Fusion-Einstellungen zu überschreiben. Dies ist das Standardverhalten, beginnend mit dem .NET Framework 4.|  
 |1|Deaktivieren Sie die Möglichkeit zum Überschreiben von Fusion-Einstellungen. Dadurch wird das Verhalten früherer Versionen des .NET Framework wieder hergestellt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -52,6 +55,7 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Beginnend mit dem .NET Framework 4 besteht das Standardverhalten darin, dass das- <xref:System.AppDomainManager> Objekt Konfigurationseinstellungen mithilfe der- <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft oder der- <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode des- <xref:System.AppDomainSetup> Objekts, das an die Implementierung der- <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Methode in der-Unterklasse von übermittelt wird, <xref:System.AppDomainManager> überschreiben kann. Bei der Standard Anwendungsdomäne setzen die Einstellungen, die Sie ändern, die Einstellungen außer Kraft, die von der Anwendungs Konfigurationsdatei angegeben wurden. Für andere Anwendungs Domänen überschreiben Sie die Konfigurationseinstellungen, die an die-Methode oder die-Methode übergebenen wurden <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> .  
   
  Sie können entweder neue Konfigurationsinformationen übergeben oder NULL ( `Nothing` in Visual Basic) übergeben, um die übergebenen Konfigurationsinformationen auszuschließen.  
@@ -63,6 +67,7 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
  Als Alternative zur Verwendung des- `<disableFusionUpdatesFromADManager>` Elements können Sie das Standardverhalten deaktivieren, indem Sie eine Registrierungs Einstellung erstellen oder eine Umgebungsvariable festlegen. Erstellen Sie in der Registrierung einen DWORD-Wert namens `COMPLUS_disableFusionUpdatesFromADManager` unter `HKCU\Software\Microsoft\.NETFramework` oder `HKLM\Software\Microsoft\.NETFramework` , und legen Sie den Wert auf 1 fest. Legen Sie in der Befehlszeile die Umgebungsvariable `COMPLUS_disableFusionUpdatesFromADManager` auf 1 fest.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie Sie die Möglichkeit zum Überschreiben von Fusions Einstellungen mithilfe des- `<disableFusionUpdatesFromADManager>` Elements deaktivieren.  
   
 ```xml  

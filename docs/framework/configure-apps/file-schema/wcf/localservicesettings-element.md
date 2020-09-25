@@ -2,14 +2,15 @@
 title: <localServiceSettings>-Element
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400303"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204930"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings>-Element
+
 Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung fest.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,11 +43,12 @@ Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung f
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`detectReplays`|Ein boolescher Wert, der angibt, ob Replay-Angriffe auf den Kanal automatisch erkannt und behandelt werden. Der Standardwert lautet `false`.|  
 |`inactivityTimeout`|Ein positiver Wert <xref:System.TimeSpan> , der die Dauer der Inaktivität angibt, die der Kanal wartet, bevor ein Timeout auftritt. Der Standardwert ist "01:00:00".|  
@@ -54,7 +56,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung f
 |`maxCachedCookies`|Eine positive ganze Zahl, die die maximale Anzahl an Cookies angibt, die zwischengespeichert werden können. Der Standardwert lautet 1000.|  
 |`maxClockSkew`|Eine <xref:System.TimeSpan>, die den maximal zulässigen Zeitunterschied zwischen den Systemuhren der beiden Kommunikationspartner angibt. Der Standardwert ist "00:05:00".<br /><br /> Wenn dieser Wert auf den Standardwert festgelegt wird, akzeptiert der Empfänger Nachrichten mit Sendezeitstempeln, die bis zu 5 Minuten vor oder nach dem Zeitpunkt liegen, zu dem die Nachricht empfangen wurde. Nachrichten, die den Sendezeittest nicht bestehen, werden verworfen. Diese Einstellung wird in Verbindung mit dem `replayWindow`-Attribut verwendet.|  
 |`maxPendingSessions`|Eine positive ganze Zahl, die die maximale Anzahl an ausstehenden Sicherheitssitzungen angibt, die der Dienst unterstützt. Wenn diese Grenze erreicht wird, erhalten alle neuen Clients SOAP-Fehler. Der Standardwert lautet „1000“.|  
-|`maxStatefulNegotiations`|Eine positive ganze Zahl, die die Anzahl von Sicherheitsaushandlungen angibt, die gleichzeitig aktiv sein können. Aushandlungssitzungen, die über dem Grenzwert liegen, werden in die Warteschlange gestellt und können erst dann fertig gestellt werden, wenn wieder Speicherplatz verfügbar wird. Der Standardwert ist „1024“.|  
+|`maxStatefulNegotiations`|Eine positive ganze Zahl, die die Anzahl von Sicherheitsaushandlungen angibt, die gleichzeitig aktiv sein können. Aushandlungssitzungen, die über dem Grenzwert liegen, werden in die Warteschlange gestellt und können erst dann fertig gestellt werden, wenn wieder Speicherplatz verfügbar wird. Der Standardwert ist 1024.|  
 |`negotiationTimeout`|Eine <xref:System.TimeSpan>, die die Lebensdauer der vom Kanal verwendeten Sicherheitsrichtlinie angibt. Wenn die Zeitspanne abgelaufen ist, handelt der Kanal mit dem Client eine neue Sicherheitsrichtlinie aus. Der Standardwert ist "00:02:00".|  
 |`reconnectTransportOnFailure`|Ein boolescher Wert, der angibt, ob Verbindungen, die WS-Reliable-Messaging verwenden, nach Transportfehlern erneut versuchen, eine Verbindung herzustellen. Der Standard ist `true`, was bedeutet, dass unendlich viele Versuche der Verbindungsherstellung durchgeführt werden. Dieser Kreislauf wird vom Inaktivitätstimeout unterbrochen, das dazu führt, dass der Kanal eine Ausnahme ausgibt, wenn die Verbindung nicht wiederhergestellt werden kann.|  
 |`replayCacheSize`|Eine positive ganze Zahl, die die Anzahl der zwischengespeicherten Nonces für die Replay-Erkennung angibt. Wenn dieses Limit überschritten wird, wird die älteste Nonce entfernt, und eine neue Nonce für die neue Nachricht wird erstellt. Der Standardwert ist 500000.|  
@@ -64,6 +66,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung f
 |`timestampValidityDuration`|Eine positive <xref:System.TimeSpan>, die die Dauer angibt, in der ein Zeitstempel gültig ist. Der Standardwert ist "00:15:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -74,6 +77,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Dienst für diese Bindung f
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Gibt die Standardwerte an, die zum Initiieren eines sicheren Konversationsdiensts verwendet werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die Einstellungen sind lokal, da sie nicht als Teil der Sicherheitsrichtlinie des Diensts veröffentlicht werden und nicht die Client-Bindung beeinträchtigen.  
   
  Die folgenden Attribute des `localServiceSecuritySettings`-Elements können helfen, einen Denial-of-Service-Sicherheitsangriff (DoS) zu verhindern:  

@@ -8,17 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: c9799037ae0ea8b29b5e989859aff29c310593d4
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 64c5c82f33daf677e58d49655897c392f1f7b7f9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568971"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204397"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptors (WCF Data Services)
-WCF Data Services ermöglicht einer Anwendung das Abfangen von Anforderungs Nachrichten, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Sie können diese benutzerdefinierte Logik verwenden, um Daten in eingehenden Nachrichten zu validieren. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
+
+WCF Data Services ermöglicht einer Anwendung das Abfangen von Anforderungs Nachrichten, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Sie können Daten in eingehenden Nachrichten mithilfe dieser benutzerdefinierten Logik überprüfen. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
   
- Das Abfangen wird von speziell attributierten Methoden im Datendienst ausgeführt. Diese Methoden werden von WCF Data Services an der entsprechenden Stelle der Nachrichtenverarbeitung aufgerufen. Interceptors werden pro Entitätenmenge definiert, und Interceptor Methoden können keine Parameter aus der Anforderung annehmen, wie dies bei Dienst Vorgängen möglich ist. Abfrage-Interceptor-Methoden, die beim Verarbeiten einer HTTP GET-Anforderung aufgerufen werden, müssen einen Lambda Ausdruck zurückgeben, der bestimmt, ob eine Instanz der Entitätenmenge des Interceptors von den Abfrage Ergebnissen zurückgegeben werden soll. Dieser Ausdruck wird vom Datendienst verwendet, um den angeforderten Vorgang weiter zu optimieren. Nachfolgend wird eine Beispieldefinition eines Abfrage-Interceptors dargestellt.  
+ Das Abfangen wird von speziell attributierten Methoden im Datendienst ausgeführt. Diese Methoden werden von WCF Data Services an der entsprechenden Stelle der Nachrichtenverarbeitung aufgerufen. Interceptoren werden für jede Entitätenmenge definiert, und Interceptormethoden können im Gegensatz zu Dienstvorgängen keine Parameter aus der Anforderung akzeptieren. Abfrage-Interceptor-Methoden, die beim Verarbeiten einer HTTP GET-Anforderung aufgerufen werden, müssen einen Lambda-Ausdruck zurückgeben, der bestimmt, ob eine Instanz der Entitätenmenge des Interceptors von den Abfrageergebnissen zurückgegeben werden soll. Dieser Ausdruck wird vom Datendienst verwendet, um den angeforderten Vorgang weiter zu optimieren. Nachfolgend wird eine Beispieldefinition eines Abfrage-Interceptors dargestellt.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
@@ -48,6 +49,6 @@ WCF Data Services ermöglicht einer Anwendung das Abfangen von Anforderungs Nach
   
  Weitere Informationen finden Sie unter Gewusst [wie: Abfangen von Datendienst Nachrichten](how-to-intercept-data-service-messages-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Dienstvorgänge](service-operations-wcf-data-services.md)
+- [Dienstoperationen](service-operations-wcf-data-services.md)

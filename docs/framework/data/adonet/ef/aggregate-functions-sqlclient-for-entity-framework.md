@@ -2,25 +2,26 @@
 title: Aggregatfunktionen (SqlClient für Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 1fad25f2229b4fa810cf82a96dcb8c50a9de3070
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c32ccfe18c67c9baeb7df0f981c9129b3bbc8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204514"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Aggregatfunktionen (SqlClient für Entity Framework)
+
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Aggregatfunktionen zur Verfügung. Aggregatfunktionen führen Berechnungen für eine Reihe von Eingabewerten aus und geben einen einzelnen Wert zurück. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird.  
   
- Im Folgenden sind die SqlClient-Aggregatfunktionen zu finden.  
+ Im folgenden finden Sie die SqlClient-Aggregatfunktionen.  
 
-## <a name="avgexpression"></a>AVG(Ausdruck)
+## <a name="avgexpression"></a>AVG (Ausdruck)
 
 Gibt den Durchschnitt aller Werte in einer Auflistung zurück. NULL-Werte werden ignoriert.
 
 **Argumente**
 
-An `Int32` `Int64`, `Double`, `Decimal`und .
+`Int32`, `Int64` , `Double` Und `Decimal` .
 
 **Rückgabewert**
 
@@ -30,17 +31,17 @@ Der `expression`-Typ.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
 
-## <a name="checksum_aggcollection"></a>CHECKSUM_AGG(Sammlung)
+## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (Sammlung)
 
  Gibt die Prüfsumme der Werte in einer Auflistung zurück. NULL-Werte werden ignoriert.
 
  **Argumente**
 
- Eine Auflistung(`Int32`).
+ Eine-Auflistung ( `Int32` ).
 
  **Rückgabewert**
 
- Ein `Int32`-Element.
+ Eine `Int32`.
 
  **Beispiel**
 
@@ -52,37 +53,37 @@ Gibt die Anzahl der Elemente in einer Auflistung als `Int32` zurück.
 
 **Argumente**
 
-Eine\<Auflistung T>, wobei T einer der folgenden Typen ist:
+Eine-Auflistung \<T> , wobei T einer der folgenden Typen ist:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid`(nicht in SQL Server 2000 zurückgegeben)|
+|`Time`|`String`|`Binary`|`Guid` (nicht zurückgegeben in SQL Server 2000)|
 
 **Rückgabewert**
 
-Ein `Int32`-Element.
+Eine `Int32`.
 
 **Beispiel**
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]
 
-## <a name="count_bigexpression"></a>COUNT_BIG(Ausdruck)
+## <a name="count_bigexpression"></a>COUNT_BIG (Ausdruck)
 
 Gibt die Anzahl der Elemente in einer Auflistung als `bigint` zurück.
 
  **Argumente**
 
- Eine Auflistung(T), wobei T einer der folgenden Typen ist:
+ Eine Auflistung (t), wobei t einer der folgenden Typen ist:
 
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid`(nicht in SQL Server 2000 zurückgegeben)|
+|`Time`|`String`|`Binary`|`Guid` (nicht zurückgegeben in SQL Server 2000)|
 
 **Rückgabewert**
 
-Ein `Int64`-Element.
+Eine `Int64`.
 
 **Beispiel**
 
@@ -94,7 +95,7 @@ Gibt den Maximalwert der Auflistung zurück.
 
 **Argumente**
 
-Eine Auflistung(T), wobei T einer der folgenden Typen ist:
+Eine Auflistung (t), wobei t einer der folgenden Typen ist:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -115,7 +116,7 @@ Gibt den Minimalwert in einer Auflistung zurück.
 
 **Argumente**
 
-Eine Auflistung(T), wobei T einer der folgenden Typen ist:
+Eine Auflistung (t), wobei t einer der folgenden Typen ist:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -130,13 +131,13 @@ Der `expression`-Typ.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
 
-## <a name="stdevexpression"></a>STDEV(Ausdruck)
+## <a name="stdevexpression"></a>StDev (Ausdruck)
 
 Gibt die statistische Standardabweichung aller Werte im angegebenen Ausdruck zurück.
 
 **Argumente**
 
-Eine Auflistung(`Double`).
+Eine-Auflistung ( `Double` ).
 
 **Rückgabewert**
 
@@ -146,13 +147,13 @@ Ein `Double`.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
 
-## <a name="stdevpexpression"></a>STDEVP(Ausdruck)
+## <a name="stdevpexpression"></a>STDE VP (Ausdruck)
 
 Gibt die statistische Standardabweichung für die Grundgesamtheit (Population) aller Werte des angegebenen Ausdrucks zurück.
 
 **Argumente**
 
-Eine Auflistung(`Double`).
+Eine-Auflistung ( `Double` ).
 
 **Rückgabewert**
 
@@ -162,13 +163,13 @@ Ein `Double`.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
 
-## <a name="sumexpression"></a>SUMME(Ausdruck)
+## <a name="sumexpression"></a>SUM(Ausdruck)
 
 Gibt die Summe aller Werte in der Auflistung zurück.
 
 **Argumente**
 
-Eine Auflistung(T), bei der T einer `Int32` `Int64`der `Double` `Decimal`folgenden Typen ist: , , , .
+Eine Auflistung (t), wobei t einer der folgenden Typen ist: `Int32` , `Int64` , `Double` , `Decimal` .
 
 **Rückgabewert**
 
@@ -178,13 +179,13 @@ Der `expression`-Typ.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
 
-## <a name="varexpression"></a>VAR(Ausdruck)
+## <a name="varexpression"></a>VAR (Ausdruck)
 
 Gibt die statistische Varianz aller Werte im angegebenen Ausdruck zurück.
 
 **Argumente**
 
-Eine Auflistung(`Double`).
+Eine-Auflistung ( `Double` ).
 
 **Rückgabewert**
 
@@ -194,13 +195,13 @@ Ein `Double`.
 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
 
-## <a name="varpexpression"></a>VARP(Ausdruck)
+## <a name="varpexpression"></a>VarP (Ausdruck)
 
 Gibt die statistische Varianz für die Grundgesamtheit aller Werte im angegebenen Ausdruck zurück.
 
 **Argumente**
 
-Eine Auflistung(`Double`).
+Eine-Auflistung ( `Double` ).
 
 **Rückgabewert**
 

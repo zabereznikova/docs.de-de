@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784333"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204527"
 ---
 # <a name="row-states-and-row-versions"></a>Zeilenstatus und Zeilenversionen
+
 ADO.NET verwaltet Zeilen in Tabellen mithilfe des Zeilenstatus und der Zeilenversion. Ein Zeilenstatus gibt den Status einer Zeile an. In Zeilenversionen werden die Werte, die in einer Zeile gespeichert werden, während der Bearbeitung verwaltet. Zu diesen Werten zählen z. B. die Werte current, original und default. Wenn Sie beispielsweise eine Spalte in einer Zeile geändert haben, weist die Zeile den Zeilenstatus `Modified` und die folgenden beiden Zeilenversionen auf: `Current` mit den aktuellen Zeilenwerten und `Original` mit den Zeilenwerten vor den Änderungen der Spalte.  
   
  Jedes <xref:System.Data.DataRow>-Objekt hat eine <xref:System.Data.DataRow.RowState%2A>-Eigenschaft, über die Sie den aktuellen Status der Zeile überprüfen können. Die folgende Tabelle enthält eine kurze Beschreibung aller `RowState`-Enumerationswerte.  
@@ -94,9 +95,9 @@ foreach (DataRow delRow in delRows)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Bearbeiten von Daten in einer DataTable](manipulating-data-in-a-datatable.md)
-- [DataSets, DataTables und DataViews](index.md)
-- [DataAdapters und DataReaders](../dataadapters-and-datareaders.md)
+- [Bearbeiten von Daten in einer "DataTable"](manipulating-data-in-a-datatable.md)
+- ["DataSets", "DataTables" und "DataViews"](index.md)
+- ["DataAdapters" und "DataReaders"](../dataadapters-and-datareaders.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

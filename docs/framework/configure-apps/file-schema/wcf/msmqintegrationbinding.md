@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bc2b1648ad404ba13920d9f276c299756554b5d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140769"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204670"
 ---
 # \<msmqIntegrationBinding>
+
 Definiert eine Bindung, die eine Warteschlangenunterstützung bereitstellt, indem Nachrichten über MSMQ weitergeleitet werden.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -49,11 +50,12 @@ Definiert eine Bindung, die eine Warteschlangenunterstützung bereitstellt, inde
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |customDeadLetterQueue|Ein URI, der den Speicherort der Warteschlange für unzustellbare Nachrichten für jede Anwendung enthält, in der abgelaufene oder nicht übertragene oder nicht zugestellte Nachrichten platziert werden.<br /><br /> Die Warteschlange für unzustellbare Nachrichten ist eine Warteschlange für abgelaufene Nachrichten, die nicht zugestellt werden konnten. Diese Warteschlange befindet sich im Warteschlangen-Manager der sendenden Anwendung.<br /><br /> Der URI, der von <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> angegeben wird, muss das net.msmq-Schema verwenden.|  
@@ -83,21 +85,22 @@ Definiert eine Bindung, die eine Warteschlangenunterstützung bereitstellt, inde
 |Binary|Binärformat|  
 |ActiveX|ActiveX-Format|  
 |ByteArray|Serialisiert das Objekt in Byte-Array.|  
-|Stream|Der Text, als Stream formatiert.|  
+|Datenstrom|Der Text, als Stream formatiert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<security>](security-of-msmqintegrationbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Bindungs Element kann verwendet werden, um Windows Communication Foundation (WCF)-Anwendungen zu ermöglichen, Nachrichten an vorhandene MSMQ-Anwendungen zu senden und von diesen zu empfangen, die com verwenden. Native MSMQ-APIs oder die im- <xref:System.Messaging?displayProperty=nameWithType> Namespace definierten Typen können Sie mithilfe dieses Konfigurations Elements angeben, wie die Warteschlange adressiert werden soll, ob übertragen werden soll, ob Nachrichten dauerhaft gespeichert werden müssen und wie Nachrichten geschützt und authentifiziert werden sollen. Weitere Informationen finden Sie unter Vorgehens [Weise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing Anwendungen](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Beispiel  
