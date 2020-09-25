@@ -8,14 +8,15 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 58a2bf5118a3a2cd9c33301eca5dcc751c2351bf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4859f3a9e6de4f1bf8a56212bfe01f94d66f5650
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74283089"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190240"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter>-Element (Netzwerkeinstellungen)
+
 Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,15 +33,17 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Gibt an, ob die Netzwerk Leistungsindikatoren aktiviert sind. Der Standardwert ist `false`.|  
+|`enabled`|Gibt an, ob die Netzwerk Leistungsindikatoren aktiviert sind. Standardwert: `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -50,6 +53,7 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
 |[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
  Netzwerkleistungsindikatoren müssen in der zu verwendenden Konfigurationsdatei aktiviert sein. Alle Netzwerkleistungsindikatoren werden mit einer einzelnen Einstellung in der Konfigurationsdatei aktiviert bzw. deaktiviert. Einzelne Netzwerkleistungsindikatoren können nicht aktiviert oder deaktiviert werden. Weitere Informationen zu den spezifischen Netzwerk Leistungsindikatoren finden Sie unter [Netzwerk Leistungsindikatoren](../../../debug-trace-profile/performance-counters.md#networking-performance-counters).  
@@ -59,6 +63,7 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
  Die- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> Eigenschaft kann verwendet werden, um den aktuellen Wert des **aktivierten** Attributs aus den anwendbaren Konfigurationsdateien zu erhalten.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie die verknüpften <xref:System.Net> Namespaces und zum Aktivieren von Netzwerk Leistungsindikatoren konfiguriert werden.  
   
 ```xml  
@@ -77,5 +82,5 @@ Aktiviert oder deaktiviert Netzwerk Leistungsindikatoren.
 
 - <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
 - [Netzwerk Leistungsindikatoren](../../../debug-trace-profile/performance-counters.md#networking-performance-counters)

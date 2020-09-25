@@ -2,14 +2,15 @@
 title: <uri>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: a492baf9951466383ca0277a2927b8554e5bb332
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2f22d70407d10dbb38f0cb8d3a8ac74ff3fe8763
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190201"
 ---
 # <a name="uri-element-uri-settings"></a>\<uri>-Element (URI-Einstellungen)
+
 Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbeitet, die mithilfe von URIs (Uniform Resource Identifier) ausgedrückt werden.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -23,9 +24,11 @@ Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbei
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -43,11 +46,13 @@ Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbei
 |[configuration](../configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `uri` Element enthält Einstellungen für Member der-Klasse, die <xref:System.Uri> von Klassen im- <xref:System.Net> Namespace verwendet werden. Die Einstellungen konfigurieren die Unterstützung für IRI und IDN.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
+
  Das folgende Beispiel zeigt eine Konfiguration, die von der- <xref:System.Uri> Klasse zur Unterstützung der IRI-Verarbeitung und IDN-Namen verwendet wird. Das Beispiel löscht außerdem alle Schema Einstellungen und fügt dann Unterstützung für die nicht-Escapezeichen für Prozent codierte Pfade für das http-Schema hinzu.  
   
 ### <a name="code"></a>Code  
@@ -65,6 +70,6 @@ Enthält Einstellungen, die angeben, wie die .NET Framework Webadressen verarbei
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

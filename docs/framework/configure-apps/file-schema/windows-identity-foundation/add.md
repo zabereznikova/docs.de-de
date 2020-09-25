@@ -3,14 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 7c2b6bdc62da63905d7ff33a9984808e7b7d114f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f37019fa0787f5c5553dbd3debc173ec0a047ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544539"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189954"
 ---
 # \<add>
+
 Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -45,7 +47,7 @@ Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Klasse, die- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse einer dieser Klassen bereit.|  
 |[\<sessionTokenRequirement>](sessiontokenrequirement.md)|Stellt die Konfiguration für die- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen bereit.|  
@@ -54,11 +56,12 @@ Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  Das- `<add>` Element kann ein einzelnes untergeordnetes Element annehmen, das die Konfiguration für den Tokenhandler angibt. Dies hängt davon ab, ob die Handlerklasse, auf die über das-Attribut des-Elements verwiesen wird, `type` `<add>` Unterstützung für diese Funktion bietet Tokenhandlerklassen, die diese Funktion bereitstellen, müssen einen Konstruktor verfügbar machen, der ein <xref:System.Xml.XmlElement> Objekt annimmt.  
 
 ```csharp  
@@ -78,6 +81,7 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
  Die Einstellungen, die für einen Handler angegeben werden, überschreiben die entsprechenden Einstellungen, die für die tokenhandlerauflistung unter dem [\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md) -Element angegeben sind [\<identityConfiguration>](identityconfiguration.md)  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende XML-Code zeigt die Verwendung des `<add>` -Elements und des- `<remove>` Elements, um den standardsitzungstokenhandler durch einen benutzerdefinierten Sitzungs Token-Handler Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.  
   
 ```xml  

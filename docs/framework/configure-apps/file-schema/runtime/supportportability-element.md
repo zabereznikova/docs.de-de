@@ -5,14 +5,15 @@ helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-ms.openlocfilehash: 99fa51238040f21d998a8c6c2aef7c13d288104a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ce6943b9456d4fd380ea8d6cf354d197b92f96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551584"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183948"
 ---
 # <a name="supportportability-element"></a>\<supportPortability>-Element
+
 Gibt an, dass eine Anwendung in zwei verschiedenen Implementierungen von .NET Framework durch das Deaktivieren des Standardverhaltens, das die Assemblys zu Anwendungsportabilitätszwecken als gleich behandelt, auf die gleiche Assembly verweisen kann.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,7 +33,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |PKT|Erforderliches Attribut.<br /><br /> Gibt das öffentliche Schlüsseltoken der betreffenden Assembly als Zeichenfolge an.|  
 |enabled|Optionales Attribut.<br /><br /> Gibt an, ob Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly aktiviert werden soll.|  
@@ -41,7 +42,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|true|Aktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dies ist die Standardoption.|  
+|true|Aktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dies ist die Standardeinstellung.|  
 |false|Deaktivieren Sie die Unterstützung für Portabilität zwischen Implementierungen der angegebenen .NET Framework-Assembly. Dadurch kann die Anwendung Verweise auf mehrere Implementierungen besitzen.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -50,7 +51,7 @@ Keine
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
-|Element|BESCHREIBUNG|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5961330eab5f25508319f276df1e9b4572f49ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286791"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189304"
 ---
 # <a name="query-execution"></a>Abfrageausführung
+
 Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Befehlsstruktur konvertiert. Eine Befehlsstruktur ist eine Darstellung einer Abfrage, die mit dem Entity Framework kompatibel ist. Die Befehlsstruktur wird dann für die Datenquelle ausgeführt. Während der Ausführung der Abfrage werden alle Abfrageausdrücke (d. h. alle Komponenten der Abfrage) ausgewertet, einschließlich der Ausdrücke, die für die Materialisierung der Ergebnisse verwendet werden.  
   
  An welchem Punkt Abfrageausdrücke ausgeführt werden ist unterschiedlich. LINQ-Abfragen werden nicht bei der Erstellung der Abfragevariablen, sondern beim Durchlaufen der Abfragevariablen ausgeführt. Dies wird als *verzögerte Ausführung*bezeichnet. Eine sofortige Ausführung der Abfrage kann auch erzwungen werden. Dies ist für die Zwischenspeicherung von Abfrageergebnissen sinnvoll. Dies wird weiter unten in diesem Thema beschrieben.  
@@ -24,6 +25,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
 > Eine bequeme Zusammenfassung der Abfrage Operatoren im Tabellenformat, mit der Sie das Ausführungs Verhalten eines Operators schnell ermitteln können, finden Sie [unter Klassifizierung von Standard Abfrage Operatoren nach Ausführungs Arten (c#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Verzögerte Abfrageausführung  
+
  In einer Abfrage, die eine Sequenz von Werten zurückgibt, enthält die Abfragevariable selbst niemals die Abfrageergebnisse, sondern immer nur die Abfragebefehle. Die Ausführung der Abfrage wird verzögert, bis die Abfragevariable in einer `foreach`- oder `For Each`-Schleife durchlaufen wird. Dies wird als *verzögerte Ausführung*bezeichnet. Das heißt, dass die Abfrage Ausführung einige Zeit nach dem Konstruieren der Abfrage erfolgt. Auf diese Weise können Sie die Abfrage so häufig ausführen, wie Sie dies wünschen. Dies bietet sich z. B. dann an, wenn Sie eine Datenbank haben, die von anderen Anwendungen aktualisiert wird. Sie können in Ihrer Anwendung eine Abfrage erstellen, mit der die neuesten Informationen abgerufen werden, und diese Abfrage wiederholt ausführen, wobei jedes Mal die aktualisierten Informationen zurückgegeben werden.  
   
  Die verzögerte Ausführung ermöglicht die Kombination mehrerer Abfragen oder die Erweiterung einer bestehenden Abfrage. durch das Hinzufügen neuer Operationen. Die Änderungen werden dann bei der Ausführung der Abfrage berücksichtigt. Im folgenden Beispiel gibt die erste Abfrage alle Produkte zurück. Die zweite Abfrage erweitert die erste, indem sie `Where` verwendet, um alle Produkte der Größe "L" zurückzugeben:  
@@ -34,6 +36,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  Nachdem eine Abfrage ausgeführt wurde, verwenden alle folgenden Abfragen die LINQ-Operatoren im Arbeitsspeicher. Durch das Durchlaufen der Abfragevariable durch die Verwendung einer `foreach`- oder `For Each`-Anweisung oder das Aufrufen eines der LINQ-Konvertierungsoperatoren wird die sofortige Ausführung verursacht. Dabei kann es sich um folgende Konvertierungsoperatoren handeln: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> und <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
 ## <a name="immediate-query-execution"></a>Unmittelbare Abfrageausführung  
+
  Im Gegensatz zur verzögerten Ausführung von Abfragen, die eine Sequenz von Werten zurückgeben, werden Abfragen, die einen Singleton-Wert zurückgeben, sofort ausgeführt. Einige Beispiele für SINGLETON-Abfragen sind <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A> und <xref:System.Linq.Enumerable.Max%2A>. Diese werden sofort ausgeführt, da die Abfrage eine Sequenz für die Berechnung des Singleton-Ergebnisses erzeugen muss. Eine unmittelbare Ausführung kann auch erzwungen werden. Dies ist nützlich, wenn die Ergebnisse einer Abfrage zwischengespeichert werden sollen. Zur Erzwingung der sofortigen Ausführung einer Abfrage, die keinen Singleton-Wert zurückgibt, kann die <xref:System.Linq.Enumerable.ToList%2A>-Methode, die <xref:System.Linq.Enumerable.ToDictionary%2A>-Methode oder die <xref:System.Linq.Enumerable.ToArray%2A>-Methode für eine Abfrage oder eine Abfragevariable aufgerufen werden. Im folgenden Beispiel wird die <xref:System.Linq.Enumerable.ToArray%2A>-Methode verwendet, um eine Sequenz unmittelbar in ein Array auszuwerten.  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
@@ -42,6 +45,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  Die Ausführung kann auch erzwungen werden, indem die `foreach`-Schleife oder die `For Each`-Schleife unmittelbar hinter den Abfrageausdruck gestellt wird. Mit einem Aufruf von <xref:System.Linq.Enumerable.ToList%2A> oder <xref:System.Linq.Enumerable.ToArray%2A> werden jedoch alle Daten in einem einzelnen Auflistungsobjekt zwischengespeichert.  
   
 ## <a name="store-execution"></a>Speicherausführung  
+
  Im Allgemeinen werden Ausdrücke in LINQ to Entities auf dem Server ausgewertet, und das Verhalten der Ausdrücke richtet sich nicht nach der CLR-Semantik, sondern nach der Semantik der Datenquelle. Dies gilt jedoch nicht, wenn der Ausdruck z. B. auf dem Client ausgeführt wird. Dies kann zu unerwarteten Ergebnissen führen, wenn sich beispielsweise Server und Client in unterschiedlichen Zeitzonen befinden.  
   
  Einige Ausdrücke in der Abfrage werden möglicherweise auf dem Client ausgeführt. Im Allgemeinen findet der größte Teil der Abfrageausführung auf dem Server statt. Neben Methoden, die für der Datenquelle zugeordnete Abfrageelemente ausgeführt werden, gibt es häufig Ausdrücke in der Abfrage, die lokal ausgeführt werden können. Bei der lokalen Ausführung eines Abfrageausdrucks wird ein Wert zurückgegeben, der für die Ausführung der Abfrage oder die Konstruktion des Ergebnisses verwendet werden kann.  
@@ -51,6 +55,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  In diesem Abschnitt werden die Szenarios, in denen Code lokal auf dem Client ausgeführt wird, beschrieben. Weitere Informationen darüber, welche Typen von Ausdrücken lokal ausgeführt werden, finden Sie unter [Ausdrücke in LINQ to Entities Abfragen](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literale und Parameter  
+
  Lokale Variablen, wie die `orderID`-Variable im folgenden Beispiel, werden auf dem Client ausgewertet.  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
@@ -62,6 +67,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
 ### <a name="casting-literals-on-the-client"></a>Umwandeln von Literalen auf dem Client  
+
  Umwandlungen von `null` in einen CLR-Typ werden auf dem Client ausgeführt:  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
@@ -73,6 +79,7 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
 ### <a name="constructors-for-literals"></a>Konstruktoren für Literale  
+
  Neue CLR-Typen, die konzeptionellen Modelltypen zugeordnet werden können, werden auf dem Client ausgeführt:  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
@@ -81,9 +88,11 @@ Nachdem eine LINQ-Abfrage von einem Benutzer erstellt wurde, wird sie in eine Be
  Neue Arrays werden ebenfalls auf dem Client ausgeführt.  
   
 ## <a name="store-exceptions"></a>Speicherausnahmen  
+
  Während der Abfrageausführung auftretende Speicherfehler werden an den Client übergeben und nicht zugeordnet oder behandelt.  
   
 ## <a name="store-configuration"></a>Speicherkonfiguration  
+
  Bei der Abfrageausführung im Speicher überschreibt die Speicherkonfiguration das Clientverhalten, und für alle Operationen und Ausdrücke wird Speichersemantik verwendet. Das kann zu unterschiedlichem Verhalten von CLR- und Speicherausführung in Bereichen wie NULL-Vergleichen, GUID-Sortierung, Genauigkeit von Operationen mit nicht-präzisen Datentypen (wie Gleitkommatypen oder <xref:System.DateTime>) sowie Zeichenfolgenoperationen führen. Bei der Beurteilung von Abfrageergebnissen sollten diese Punkte beachtet werden.  
   
  Folgende Beispiele zeigen einige Unterschiede im Verhalten zwischen der CLR und SQL Server:  

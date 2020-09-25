@@ -2,14 +2,15 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: e49a564c9793b371425b2b787586bb9d3cbed58b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: adfd94365ceb0ddc3164a6baef838c16027b4bc3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77452226"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190137"
 ---
 # \<dns>
+
 Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.509-Zertifikat-Authentifizierungsmodus gültig, wenn das Serverzertifikat eine DNS mit dem gleichen Wert enthält. Sie ist auch für den Windows-Authentifizierungsmodus gültig, wenn der SPN den gleichen Wert hat.  
   
 Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst Identität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md).  
@@ -28,6 +29,7 @@ Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst I
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -37,6 +39,7 @@ Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst I
 |value|Der DNS des Zertifikats. DNS ist ein standardmäßiges Protokoll, das verwendet wird, um Computer in einem IP-basierten Netzwerk zu suchen. Benutzer können anzeigen Amen wie `https://go.microsoft.com/fwlink/?prd=10929` oder `https://go.microsoft.com/fwlink/?LinkID=96165` einfacher als Zahlen basierte Adressen, wie z. b. 207.46.131.137, merken.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -46,6 +49,7 @@ Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst I
 |[\<identity>](identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Konfigurationscode gibt den DNS eines X.509-Zertifikats an, das für die Authentifizierung eines Servers verwendet wird.  
   
 ```xml  

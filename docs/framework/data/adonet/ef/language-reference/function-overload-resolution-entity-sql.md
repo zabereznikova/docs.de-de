@@ -2,14 +2,15 @@
 title: Auflösung von Funktionsüberladungen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 1aeebc501487a6fc443df00c24beb2bc6aa5fc49
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d37cd9342d1fb3b60d5a2c05d373fb7e71f54b1f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250922"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189395"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Auflösung von Funktionsüberladungen (Entity SQL)
+
 In diesem Thema wird beschrieben, wie [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Funktionen aufgelöst werden.  
   
  Solange die Funktionen über eindeutige Signaturen verfügen, können mehrere Funktionen mit demselben Namen definiert werden.  
@@ -30,7 +31,7 @@ In diesem Thema wird beschrieben, wie [!INCLUDE[esql](../../../../../../includes
   
  Bei benutzerdefinierten Funktionen hat die Definition für eine Inlineabfragefunktion Vorrang, selbst wenn eine vom Modell definierte Funktion eine Signatur aufweist, die besser für die benutzerdefinierte Funktion geeignet wäre.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entity SQL-Referenz](entity-sql-reference.md)
 - [Übersicht über Entity SQL](entity-sql-overview.md)

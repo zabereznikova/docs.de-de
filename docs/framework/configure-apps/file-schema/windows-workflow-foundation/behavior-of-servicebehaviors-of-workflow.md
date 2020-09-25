@@ -1,16 +1,17 @@
 ---
-title: <behavior>des <serviceBehaviors> Workflows
+title: <behavior> des <serviceBehaviors> Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 071cff8e9f6ec3fa0546a07d19160869d8b43f60
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14c528746963a3078e0ab377d095414d2fca0dbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152319"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189616"
 ---
-# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior>des \<serviceBehaviors> Workflows
+# <a name="behavior-of-servicebehaviors-of-workflow"></a>\<behavior> des \<serviceBehaviors> Workflows
+
 Das **Behavior** -Element enthält eine Sammlung von Einstellungen für das Verhalten eines Dienstanbieter. Jedes Verhalten wird anhand seines **namens**indiziert. Dienste können mit dem Behavior- **Configuration** -Attribut des-Elements über diesen Namen mit den einzelnen Verhalten verknüpft werden [\<endpoint>](../wcf/endpoint-element.md) . Dies ermöglicht es Endpunkten, allgemeine Verhaltenskonfigurationen gemeinsam zu verwenden, ohne dass die Einstellungen neu definiert werden müssen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -52,11 +53,12 @@ Das **Behavior** -Element enthält eine Sammlung von Einstellungen für das Verh
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine eindeutige Zeichenfolge, die den Konfigurationsnamen des Verhaltens enthält. Dieser Wert muss eine benutzerdefinierte und eindeutige Zeichenfolge sein, da sie als identifizierende Zeichenfolge für das Element fungiert.|  
   

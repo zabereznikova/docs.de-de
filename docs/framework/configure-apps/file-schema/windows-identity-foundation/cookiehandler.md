@@ -3,14 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 853dc9817d080e59ac7a792576eda862bd0b1f1d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5f5b432830a61adab324b2b6cd2ebe6eeccca7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252029"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189837"
 ---
 # \<cookieHandler>
+
 Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) zum Lesen und Schreiben von Cookies verwendet.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,11 +39,12 @@ Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <x
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Gibt den Basis Namen für alle geschriebenen Cookies an. Der Standardwert ist "fedauth".|  
 |path|Gibt den Pfadwert für alle geschriebenen Cookies an. Der Standardwert ist "HttpRuntime. AppDomainAppVirtualPath".|  
@@ -66,6 +68,7 @@ Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <x
 |[\<federationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, mit denen <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) und <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) konfiguriert werden.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der <xref:System.IdentityModel.Services.CookieHandler> ist für das Lesen und Schreiben von unformatierten Cookies auf der http-Protokollebene verantwortlich. Sie können einen oder einen benutzerdefinierten cookiehandler konfigurieren, <xref:System.IdentityModel.Services.ChunkedCookieHandler> der von der-Klasse abgeleitet wird <xref:System.IdentityModel.Services.CookieHandler> .  
   
  Legen Sie zum Konfigurieren eines segmentierten cookiehandlers das Mode-Attribut auf "aufgeteilte" oder "Default" fest. Die Standard Segmentgröße beträgt 2000 Bytes, aber Sie können optional eine andere Segmentgröße angeben, indem Sie ein untergeordnetes `<chunkedCookieHandler>` Element einschließen.  
@@ -75,6 +78,7 @@ Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <x
  Das- `<cookieHandler>` Element wird durch die- <xref:System.IdentityModel.Services.CookieHandlerElement> Klasse dargestellt. Der in der Konfiguration angegebene cookiehandler ist über die-Eigenschaft des-Objekts verfügbar, das in <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> der-Eigenschaft festgelegt ist <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> .  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende XML-Code zeigt ein- `<cookieHandler>` Element. Da das-Attribut in diesem Beispiel `mode` nicht angegeben wird, wird der standardmäßige Cookie-Handler von Sam verwendet. Dies ist eine Instanz der- <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse. Da das untergeordnete- `<chunkedCookieHandler>` Element nicht angegeben ist, wird die Standard Segmentgröße verwendet. HTTPS ist nicht erforderlich, da das- `requireSsl` Attribut festgelegt ist `false` .  
   
 > [!WARNING]

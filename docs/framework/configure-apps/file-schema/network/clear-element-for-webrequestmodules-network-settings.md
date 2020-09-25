@@ -10,14 +10,15 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5832d120824df75d374fc94cb0aa4e08189cb965
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 892058dd8af8a38bd7bde868b34a2c6899d9a989
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088502"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184039"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>\<clear>-Element für webRequestModules (Netzwerkeinstellungen)
+
 Entfernt alle registrierten Webanforderungs Module aus der Anwendung.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,13 +33,16 @@ Entfernt alle registrierten Webanforderungs Module aus der Anwendung.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
+
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine.  
+
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -47,12 +51,15 @@ Entfernt alle registrierten Webanforderungs Module aus der Anwendung.
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Das- `clear` Element entfernt alle registrierten Webanforderungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
+
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden alle Webanforderungs Module gelöscht und anschließend ein Webanforderungs Modul für http registriert.  
   
 ```xml  
@@ -72,4 +79,4 @@ Entfernt alle registrierten Webanforderungs Module aus der Anwendung.
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Net.WebRequest>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

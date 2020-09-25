@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088429"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190370"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy>-Element (Netzwerkeinstellungen)
+
 Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Richtlinie.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,17 +33,18 @@ Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Rich
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|`policyLevel`|Gibt die FTP-Caching-Richtlinie an. Der Standardwert ist `Default`.|  
+|`policyLevel`|Gibt die FTP-Caching-Richtlinie an. Standardwert: `Default`.|  
   
 ## <a name="policylevel-attribute"></a>PolicyLevel-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource neu ist, die Länge des Inhalts genau ist und die Attribute für die Ablauf-, Änderungs-und Inhalts Länge vorhanden sind.|  
 |`BypassCache`|Gibt die Ressource vom Server zurück.|  
@@ -54,6 +56,7 @@ Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Rich
 |`Revalidate`|Erfüllt eine Anforderung, indem die zwischengespeicherte Kopie der Ressource zurückgegeben wird, wenn der Timestamp der zwischengespeicherten Ressource dem Timestamp der Ressource auf dem Server entspricht. Andernfalls wird die Ressource vom Server heruntergeladen, dem Aufrufer dargestellt und im Cache gespeichert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -65,6 +68,7 @@ Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Rich
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie eine FTP-Cachingrichtlinie von angegeben wird `NoCacheNoStore` .  
   
 ```xml  
@@ -84,4 +88,4 @@ Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Rich
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Netzwerkeinstellungsschema](index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
