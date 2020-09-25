@@ -2,19 +2,21 @@
 title: Verweis
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 55754ef7bb06a1ceac7d4c12098847f4db16e928
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553557"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184858"
 ---
 # <a name="reference"></a>Verweis
+
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
   
  Außerdem wird empfohlen, Microsoft-Dokumentation auf bestimmte Probleme zu durchsuchen und besonders an dem [LINQ-Forum](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql)teilzunehmen, in dem Sie komplexere Themen ausführlich mit Experten erörtern können. Darüber hinaus steht Ihnen ein White Paper zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie zur Verfügung. Dieses enthält auch Codebeispiele zu Visual Basic und C#. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query für relationale Daten](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Datentypen und Funktionen](data-types-and-functions.md)  
  Beschreibt, wie Common Language Runtime (CLR)-Konstrukte entsprechende Ausdrücke nur in SQL enthalten, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] explizit eine Konvertierung in der Übersetzungs-Engine bereitgestellt hat.  
   
@@ -37,6 +39,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  Beschreibt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , wie Standard Abfrage Operatoren in SQL-Befehle übersetzt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [LINQ to SQL](index.md)  
  Bietet ein Portal für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Themen.  
   

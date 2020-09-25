@@ -2,14 +2,15 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 58b21d3be8e13a0a2204a4fd6d355f734207c509
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65efedd36401db402a32748afaebff0f2af9f2a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150466"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185222"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
+
 Wertet eine Reihe von `Boolean` -Ausdrücken aus, um das Ergebnis zu bestimmen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,6 +26,7 @@ END
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `n`  
  Ist ein Platzhalter, der angibt, dass mehrere WHEN `Boolean_expression` THEN `result_expression` -Klauseln verwendet werden können.  
   
@@ -38,19 +40,22 @@ END
  Der `Boolean` -Ausdruck, der ausgewertet wird, wenn das gesuchte CASE-Format verwendet wird. `Boolean_expression` ist ein beliebiger gültiger `Boolean` -Ausdruck.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt den Typ mit der höchsten Priorität in `result_expression` und im optionalen `else_result_expression`zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case-Ausdruck ähnelt dem Transact-SQL-Fallausdruck. Mit dem CASE-Ausdruck wird eine Reihe von Bedingungen geprüft, um zu ermitteln, welcher Ausdruck das passende Ergebnis ergibt. Diese Form des CASE-Ausdrucks ist für einen oder eine Reihe von `Boolean` -Ausdrücken geeignet, um den korrekten Ergebnisausdruck zu ermitteln.  
+
+ Der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case-Ausdruck ähnelt dem Case-Ausdruck von Transact-SQL. Mit dem CASE-Ausdruck wird eine Reihe von Bedingungen geprüft, um zu ermitteln, welcher Ausdruck das passende Ergebnis ergibt. Diese Form des CASE-Ausdrucks ist für einen oder eine Reihe von `Boolean` -Ausdrücken geeignet, um den korrekten Ergebnisausdruck zu ermitteln.  
   
  Die CASE-Funktion wertet `Boolean_expression` für jede WHEN-Klausel in der angegebenen Reihenfolge aus und gibt `result_expression` des ersten `Boolean_expression` zurück, der `true`ergibt. Die übrigen Ausdrücke werden nicht ausgewertet. Ergibt kein `Boolean_expression` den Wert `true`, gibt die Datenbank-Engine den `else_result_expression` -Ausdruck zurück, sofern eine ELSE-Klausel angegeben wurde, oder einen NULL-Wert, wenn keine ELSE-Klausel angegeben wurde.  
   
  Eine CASE-Anweisung kann keinen multiset-Wert zurückgeben.  
   
 ## <a name="example"></a>Beispiel  
+
  In der folgenden Entity SQL-Abfrage wird der CASE-Ausdruck zur Auswertung eines Satzes von `Boolean` -Ausdrücken verwendet, um das Ergebnis zu bestimmen. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1. Gehen Sie wie folgt unter [Gewusst wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt.](../how-to-execute-a-query-that-returns-primitivetype-results.md)  
+1. Befolgen Sie das Verfahren unter Gewusst [wie: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   
@@ -59,5 +64,5 @@ END
 ## <a name="see-also"></a>Weitere Informationen
 
 - [THEN](then-entity-sql.md)
-- [Auswählen](select-entity-sql.md)
+- [SELECT](select-entity-sql.md)
 - [Entity SQL-Referenz](entity-sql-reference.md)

@@ -2,14 +2,15 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: dc5c00a2204646863ae2570bb97b8d70e22a72d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 30fd78d6c56e8b22e0e744a38f18ac076dc70162
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399189"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178033"
 ---
 # \<userNameAuthentication>
+
 Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennwort an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,11 +34,12 @@ Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennw
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |`cacheLogonTokenLifetime`|Eine <xref:System.TimeSpan>, die angibt, wie lange ein Token maximal zwischengespeichert wird. Der Standardwert ist 00:15:00.|  
 |`cacheLogonTokens`|Ein boolescher Wert, der angibt, ob Anmeldetoken zwischengespeichert werden. Der Standardwert lautet `false`.|  
@@ -48,6 +50,7 @@ Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennw
 |`userNamePasswordValidationMode`|Gibt die Art und Weise an, in der der Benutzername und das Kennwort überprüft werden. Gültige Werte sind:<br /><br /> -Windows<br />-Mitgliedshipprovider<br />-Benutzer definiert<br /><br /> Der Standardwert ist Windows. Dieses Attribut ist vom Typ <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -57,6 +60,7 @@ Gibt die Anmeldeinformationen eines Diensts basierend auf Benutzername und Kennw
 |[\<serviceCredentials>](servicecredentials.md)|Gibt die Anmeldeinformationen an, die beim Authentifizieren des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn keine der von einem Dienst verwendeten Bindungen für die Benutzername/Kennwort-basierte Authentifizierung konfiguriert ist, werden die Attribute für dieses Element ignoriert. Dazu gehören `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName` und `userNamePasswordValidationMode`.  
   
  Wenn keine der von einem Dienst verwendeten Bindungen für die Windows-Authentifizierung von Benutzername/Kennwort konfiguriert ist, werden die mit der Zwischenspeicherung von Anmeldetoken zusammenhängenden Eigenschaften ignoriert. Dazu gehören `cacheLogonTokenLifetime`, `cacheLogonTokens` und `maxCacheLogonTokens`.  

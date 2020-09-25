@@ -2,14 +2,15 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cfddfb9ebfc7c3447af977e14738baabebc8fe9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732557"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177850"
 ---
 # \<webSocketSettings>
+
 Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,11 +38,12 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |createNotificationOnConnection|Gibt an, ob eine Benachrichtigung bei Zustandekommen einer Verbindung gesendet wird.|  
 |disablePayloadMasking|Gibt an, ob die WebSocket-Maske deaktiviert ist.|  
@@ -54,13 +56,14 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
   
 ## <a name="transportusage-attribute"></a>transportUsage-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |WhenDuplex|Verwendet das WebSocket-Protokoll bei einem Duplexvertrag.|  
-|Immer|Verwendet immer das WebSocket-Protokoll unabhängig vom Vertrag.|  
+|Always|Verwendet immer das WebSocket-Protokoll unabhängig vom Vertrag.|  
 |Nie|Verwendet niemals das WebSocket-Protokoll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -70,6 +73,7 @@ Ein Konfigurationselement zum Angeben von WebSocket-Einstellungen.
 |\<netHttpBinding>|Gibt das NetHttpBinding-Element an.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Verwendung des \<webSocketSettings>-Elements veranschaulicht.  
   
 ```xml  
