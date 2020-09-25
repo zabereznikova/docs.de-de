@@ -4,14 +4,15 @@ description: Erfahren Sie mehr über Features und Verhalten der .NET Framework D
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: eeb0ab69a68dfc2fc0faa1b4e833f80b307fffe5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a517bccd9b60d00f6c6c636c9164d63fb5966de3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286442"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197390"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server und ADO.NET
+
 In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  
   
  <xref:System.Data.SqlClient> bietet Zugriff auf SQL Server-Versionen, der datenbankspezifische Protokolle kapselt. Die Funktionen des Datenanbieters sind denen des .NET Framework-Datenanbieters für OLE DB, ODBC und Oracle angepasst. <xref:System.Data.SqlClient> beinhaltet einen TDS-Parser (Tabular Data Stream) für die direkte Kommunikation mit SQL Server.  
@@ -20,6 +21,7 @@ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für
 > Damit eine Anwendung den .NET Framework-Datenanbieter für SQL Server verwenden kann, muss sie wie folgt auf den <xref:System.Data.SqlClient>-Namespace verweisen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [SQL Server Sicherheit](sql-server-security.md)  
  Bietet eine Übersicht über die SQL Server-Sicherheitsfunktionen und Anwendungsszenarios zum Erstellen sicherer ADO.NET-Anwendungen, die auf SQL Server zugreifen.  
   
@@ -42,7 +44,7 @@ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für
   
  [SQL Server-Onlinedokumentation](/sql/sql-server/sql-server-technical-documentation)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Datentypzuordnungen in ADO.NET](../data-type-mappings-in-ado-net.md)

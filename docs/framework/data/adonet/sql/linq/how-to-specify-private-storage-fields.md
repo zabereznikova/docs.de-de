@@ -2,15 +2,16 @@
 title: 'Vorgehensweise: Angeben von privaten Speicherfeldern'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: e6e6a4e28fbfb327f25874844f28bcbafa6d2805
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7b47504e7dbad8a2d8414304ec19f2e9e2c06ef5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793215"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197169"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>Vorgehensweise: Angeben von privaten Speicherfeldern
-Verwenden Sie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> -Eigenschaft <xref:System.Data.Linq.Mapping.DataAttribute> des-Attributs, um den Namen eines zugrunde liegenden Speicher Felds festzulegen.  
+
+Verwenden Sie die-Eigenschaft des- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> <xref:System.Data.Linq.Mapping.DataAttribute> Attributs, um den Namen eines zugrunde liegenden Speicher Felds festzulegen.  
   
  Codebeispiele finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>.  
   
@@ -20,7 +21,7 @@ Verwenden Sie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
   
 2. Weisen Sie den Feldnamen als Wert der <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>-Eigenschaft zu.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Das LINQ to SQL-Objektmodell](the-linq-to-sql-object-model.md)
-- [Vorgehensweise: Anpassen von Entitäts Klassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](how-to-customize-entity-classes-by-using-the-code-editor.md)
