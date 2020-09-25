@@ -2,29 +2,30 @@
 title: Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 902b79b73f494ced0f54b29babff1b2e767bd47a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe53232b6818b5bb28b433c4a473b6381b8e9083
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150882"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198560"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Zuordnen von keyref-XML Schema (XSD)-Einschränkungen zu DataSet-Einschränkungen
-Mit dem **keyref-Element** können Sie Verknüpfungen zwischen Elementen innerhalb eines Dokuments herstellen. Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar. Wenn ein Schema das **keyref-Element** angibt, wird das Element während des Schemazuordnungsprozesses in <xref:System.Data.DataSet>eine entsprechende Fremdschlüsseleinschränkung für die Spalten in den Tabellen der konvertiert. Standardmäßig generiert das **keyref-Element** auch eine Beziehung mit den Eigenschaften **ParentTable**, **ChildTable**, **ParentColumn**und **ChildColumn,** die für die Beziehung angegeben sind.  
+
+Das **keyref** -Element ermöglicht es Ihnen, Links zwischen Elementen innerhalb eines Dokuments zu erstellen. Dies ist mit einer Fremdschlüsselbeziehung in einer relationalen Datenbank vergleichbar. Wenn ein Schema das **keyref** -Element angibt, wird das-Element während des Schema Zuordnungsprozesses in eine entsprechende Foreign Key-Einschränkung für die Spalten in den-Tabellen konvertiert <xref:System.Data.DataSet> . Standardmäßig generiert das **keyref** -Element auch eine Beziehung, bei der **die Eigenschaften**"parametable", " **ChildTable**", " **para Column**" und " **childColumn** " in der Beziehung angegeben werden.  
   
- In der folgenden Tabelle werden die **msdata-Attribute** beschrieben, die Sie im **keyref-Element** angeben können.  
+ In der folgenden Tabelle werden die **msdata** -Attribute aufgelistet, die Sie im **keyref** -Element angeben können.  
   
-|Attributname|Beschreibung|  
+|Attributname|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Wenn **ConstraintOnly="true"** für das **keyref-Element** im Schema angegeben ist, wird eine Einschränkung erstellt, aber keine Beziehung wird erstellt. Wenn dieses Attribut nicht angegeben ist (oder auf **False**festgelegt ist), werden sowohl die Einschränkung als auch die Beziehung im **DataSet**erstellt.|  
-|**msdata:ConstraintName**|Wenn das **ConstraintName-Attribut** angegeben wird, wird sein Wert als Name der Einschränkung verwendet. Andernfalls stellt das **name-Attribut** des **keyref-Elements** im Schema den Einschränkungsnamen im **DataSet bereit.**|  
-|**msdata:UpdateRule**|Wenn das **UpdateRule-Attribut** im **keyref-Element** im Schema angegeben ist, wird sein Wert der **UpdateRule-Einschränkungseigenschaft** im **DataSet**zugewiesen. Andernfalls wird die **UpdateRule-Eigenschaft** auf **Cascade**festgelegt.|  
-|**msdata:DeleteRule**|Wenn das **DeleteRule-Attribut** im **keyref-Element** im Schema angegeben ist, wird sein Wert der **DeleteRule-Einschränkungseigenschaft** im **DataSet**zugewiesen. Andernfalls wird die **DeleteRule-Eigenschaft** auf **Cascade**festgelegt.|  
-|**msdata:AcceptRejectRule**|Wenn das **AcceptRejectRule-Attribut** im **keyref-Element** im Schema angegeben ist, wird sein Wert der **AcceptRejectRule-Einschränkungseigenschaft** im **DataSet**zugewiesen. Andernfalls wird die **AcceptRejectRule-Eigenschaft** auf **Keine**festgelegt.|  
+|**msdata:ConstraintOnly**|Wenn für das **keyref** -Element im Schema **"beschränintonly =" true "** angegeben wird, wird eine Einschränkung erstellt, aber es wird keine Beziehung erstellt. Wenn dieses Attribut nicht angegeben wird (oder auf **false**festgelegt ist), werden sowohl die-Einschränkung als auch die-Beziehung im **DataSet**erstellt.|  
+|**msdata:ConstraintName**|Wenn das Attribut " **Einschränkungs Name** " angegeben wird, wird dessen Wert als Name der Einschränkung verwendet. Andernfalls stellt das Attribut " **Name** " des **keyref** -Elements im Schema den Einschränkungs Namen im **DataSet**bereit.|  
+|**msdata:UpdateRule**|Wenn das **UpdateRule** -Attribut im **keyref** -Element im Schema angegeben wird, wird dessen Wert der **UpdateRule** -Einschränkungs Eigenschaft im **DataSet**zugewiesen. Andernfalls ist die **UpdateRule** -Eigenschaft auf **Cascade**festgelegt.|  
+|**msdata:DeleteRule**|Wenn das **DeleteRule** -Attribut im **keyref** -Element im Schema angegeben wird, wird dessen Wert der **DeleteRule** -Einschränkungs Eigenschaft im **DataSet**zugewiesen. Andernfalls ist die **DeleteRule** -Eigenschaft auf **Cascade**festgelegt.|  
+|**msdata:AcceptRejectRule**|Wenn das Attribut " **Accept trejectrule** " im **keyref** -Element im Schema angegeben wird, wird dessen Wert der Eigenschaft " **Accept trejectrule** " im **DataSet**zugewiesen. Andernfalls ist die Eigenschaft " **akzeptrejectrule** " auf " **None**" festgelegt.|  
   
- Das folgende Beispiel enthält ein Schema, das die **Schlüssel-** und **Keyref-Beziehungen** zwischen dem untergeordneten **OrderNumber-Element** des **Order-Elements** und dem **untergeordneten OrderNo-Element** des **OrderDetail-Elements** angibt.  
+ Das folgende Beispiel enthält ein Schema, das die **Key** -Beziehung und die **keyref** -Beziehung zwischen dem untergeordneten **OrderNumber** -Element des **Order** -Elements und dem untergeordneten **OrderNo** -Element des **Order Detail** -Elements angibt.  
   
- Im Beispiel verweist das untergeordnete **OrderNumber-Element** des **OrderDetail-Elements** auf das untergeordnete **Schlüsselelement OrderNo** des **Order-Elements.**  
+ Im Beispiel verweist das untergeordnete **OrderNumber** -Element des **Order Detail** -Elements auf das untergeordnete **OrderNo** -Schlüsselelement des **Order** -Elements.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -66,16 +67,16 @@ Mit dem **keyref-Element** können Sie Verknüpfungen zwischen Elementen innerha
 </xs:schema>  
 ```  
   
- Der Xml-Schema-Definitions-Schemazuordnungsprozess (XML Schema Definition Language, XSD) erzeugt das folgende **DataSet** mit zwei Tabellen:  
+ Der XSD (XML Schema Definition Language)-Schema Mapping-Prozess erzeugt das folgende **DataSet** mit zwei Tabellen:  
   
 ```text  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Darüber hinaus definiert das **DataSet** die folgenden Einschränkungen:  
+ Außerdem definiert das **DataSet** die folgenden Einschränkungen:  
   
-- Eine eindeutige Einschränkung für die **Tabelle "Auftrag".**  
+- Eine Unique-Einschränkung für die **Order** -Tabelle.  
   
     ```text
               Table: Order  
@@ -85,7 +86,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- Eine Beziehung zwischen den Tabellen **Order** und **OrderDetail.** Die **Nested-Eigenschaft** ist auf **False** festgelegt, da die beiden Elemente nicht im Schema verschachtelt sind.  
+- Eine Beziehung zwischen der **Order** -Tabelle und der **Order Detail** -Tabelle. Die Eigenschaft " **schsted** " ist auf " **false** " festgelegt, da die beiden Elemente nicht im Schema enthalten sind.  
   
     ```text
               ParentTable: Order  
@@ -98,7 +99,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- Eine Fremdschlüsseleinschränkung für die **Tabelle OrderDetail.**  
+- Eine FOREIGN KEY-Einschränkung für die **Order Detail** -Tabelle.  
   
     ```text  
               ConstraintName: OrderNoRef  

@@ -2,44 +2,52 @@
 title: Anwendungssicherheitsszenarios in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-ms.openlocfilehash: bf844f35a3504af52cdb6bf745862ad5098dfc5f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2d0e65f61939312bf29111e87c49366cd9e389be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782694"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197650"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Anwendungssicherheitsszenarios in SQL Server
-Für das Erstellen einer sicheren SQL Server-Clientanwendung gibt es kein Patentrezept. Jede Anwendung hat spezifische Anforderungen, eine spezielle Bereitstellungsumgebung und einen eigenen Benutzerkreis. Eine Anwendung, die zum Zeitpunkt ihrer Bereitstellung angemessen sicher ist, kann im Laufe der Zeit weniger sicher werden. Es ist unmöglich, genau vorherzusagen, welche Bedrohungen zukünftig entstehen können.  
+
+Es gibt kein universelles Standardverfahren, um eine sichere SQL Server-Clientanwendung zu erstellen. Die Anforderungen, Bereitstellungsumgebung und Benutzereigenschaften sind bei jeder Anwendung unterschiedlich. Bei einer Anwendung, die bei der anfänglichen Bereitstellung sicher ist, kann die Sicherheit im Laufe der Zeit nachlassen. Potenzielle Bedrohungen der Zukunft lassen sich nicht präzise vorhersagen.  
   
- SQL Server, als Produkt, wurde im Laufe der Zeit ständig um die jeweils neuesten Sicherheitsfunktionen erweitert, um Entwicklern das Erstellen sicherer Datenbankanwendungen zu ermöglichen. Dennoch ist Sicherheit nicht einfach "ab Werk" zu haben; sie erfordert eine ständige Überwachung und Aktualisierung.  
+ SQL Server wurde kontinuierlich weiterentwickelt und um die neuesten Sicherheitsfunktionen erweitert, mit denen Entwickler sichere Datenbankanwendungen erstellen können. Für maximale Sicherheit ist dennoch eine dauerhafte Überwachung und Aktualisierung erforderlich.  
   
 ## <a name="common-threats"></a>Allgemeine Bedrohungen  
- Entwickler müssen die Sicherheitsbedrohungen und die Tools zu deren Abwehr kennen, und sie müssen wissen, wie selbst zu verantwortende Sicherheitslücken vermieden werden können. Sicherheit ist wie eine Kette – Mängel in einem Glied bringen die Festigkeit der gesamten Kette in Gefahr. In der folgenden Liste finden Sie eine Übersicht über die häufigsten Sicherheitsbedrohungen. Eine ausführliche Erläuterung dieser Bedrohungen folgt dann in den einzelnen Themen in diesem Abschnitt.  
+
+ Entwickler müssen sich kontinuierlich über Sicherheitsbedrohungen und die verfügbaren Tools informieren, um diesen Bedrohungen entgegenzuwirken. Darüber hinaus müssen sie wissen, wie sie selbstverschuldete Sicherheitslücken vermeiden. Die Sicherheit eines Systems ist mit einer Kette vergleichbar, bei der die Beschädigung eines Kettenglieds den Zusammenhalt der gesamten Kette gefährdet. In der folgenden Liste sind einige gängige Sicherheitsbedrohungen aufgeführt, die in den Themen dieses Abschnitts näher erläutert werden.  
   
-### <a name="sql-injection"></a>SQL-Injection  
- Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit, Anwendungen anzugreifen. Dabei werden anstelle einer gültigen Eingabe Transact-SQL-Anweisungen in den Code eingeschleust. Wenn die Eingabe direkt und ohne Validierung an den Server weitergeleitet wird und die Anwendung den eingeschleusten Code ausführt, können auf diese Weise Daten beschädigt oder sogar zerstört werden. Sie können die Einschleusung von SQL Server-Befehlen vereiteln, indem Sie gespeicherte Prozeduren und parametrisierte Befehle verwenden, dynamisches SQL vermeiden und den Benutzern nur eingeschränkte Berechtigungen gewähren.  
+### <a name="sql-injection"></a>Einschleusung von SQL-Befehlen  
+
+ Bei der Einschleusung von SQL-Befehlen gibt ein böswilliger Benutzer anstelle gültiger Eingaben Transact-SQL-Anweisungen ein. Wenn die Eingabe ohne Überprüfung direkt an den Server weitergegeben wird und die Anwendung den eingeschleusten Code versehentlich ausführt, kann der Angriff Daten beschädigen oder zerstören. Sie können Angriffe, die das Ziel haben, SQL Server-Befehle einzuschleusen, abwehren, indem Sie gespeicherte Prozeduren und parametrisierte Befehle verwenden, dynamisches SQL vermeiden und die Berechtigungen aller Benutzer einschränken.  
   
-### <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung  
- Von einem Angriff durch Rechteerweiterung wird gesprochen, wenn sich ein Benutzer Zugang zu den Privilegien eines vertrauenswürdigen Kontos, z. B. als Besitzer oder Administrator, verschafft hat und diese für schädliche Aktionen nutzt. Arbeiten Sie immer nur mit Konten der untersten Berechtigungsebene, und weisen Sie nur die Berechtigungen zu, die wirklich benötigt werden. Vermeiden Sie es, zum Ausführen von Code administrative oder Besitzerkonten zu verwenden. Auf diese Weise dämmen Sie den potenziellen Schaden ein, den ein erfolgreicher Angriff verursachen kann. Verwenden Sie beim Ausführen von Aufgaben, die zusätzliche Berechtigungen erfordern, Prozedursignatur oder Identitätswechsel nur so lange, wie Sie sie für die Aufgabe benötigen. Sie können gespeicherte Prozeduren mit Zertifikaten signieren oder zur vorübergehenden Zuweisung von Berechtigungen Identitätswechsel verwenden.  
+### <a name="elevation-of-privilege"></a>Erhöhung von Rechten  
+
+ Angriffe durch Rechteerweiterungen treten auf, wenn ein Benutzer die Berechtigungen eines vertrauenswürdigen Kontos (z.B. eines Besitzers oder Administrators) annehmen kann. Arbeiten Sie stets mit Benutzerkonten mit geringstmöglichen Berechtigungen, und weisen Sie nur die wirklich benötigten Berechtigungen zu. Vermeiden Sie bei der Ausführung von Code die Verwendung von Administrator- oder Besitzerkonten. Dadurch lässt sich der Schaden begrenzen, falls ein Angriff erfolgreich ist. Wenn Sie Aufgaben ausführen, für die zusätzliche Berechtigungen erforderlich sind, verwenden Sie für die Dauer der Aufgabe Prozedursignaturen oder einen Identitätswechsel. Sie können gespeicherte Prozeduren mit Zertifikaten signieren oder zur vorübergehenden Zuweisung von Berechtigungen mit Identitätswechsel arbeiten.  
   
 ### <a name="probing-and-intelligent-observation"></a>Angriffe durch Auswertung von Fehlermeldungen und intelligente Beobachtung  
- Angreifer können durch die Auswertung der von einer Anwendung generierten Fehlermeldungen Rückschlüsse auf eventuelle Sicherheitslücken ziehen. Implementieren Sie daher in prozeduralem Code immer auch eine Fehlerbehandlungsroutine, damit der Endbenutzer keine SQL Server-Fehlerinformationen angezeigt bekommt.  
+
+ Bei einem Probing-Angriff können die von einer Anwendung generierten Fehlermeldungen verwendet werden, um nach Sicherheitslücken zu suchen. Implementieren Sie im gesamten prozeduralen Code eine Fehlerbehandlung, um zu verhindern, dass SQL Server-Fehlerinformationen an den Endbenutzer zurückgegeben werden.  
   
 ### <a name="authentication"></a>Authentifizierung  
- Angreifer können die Verwendung von SQL Server-Anmeldungen ausnutzen, bei denen zur Laufzeit eine auf einer Benutzereingabe basierende Verbindungszeichenfolge konstruiert wird. Wenn die Verbindungszeichenfolge nicht auf gültige Schlüsselwortpaare überprüft wird, hat der Angreifer u. U. die Möglichkeit, zusätzliche Zeichen einzuschleusen, die es ihm erlauben, auf sicherheitsrelevante Daten oder andere Ressourcen auf dem Server zuzugreifen. Verwenden Sie daher nach Möglichkeit die Windows-Authentifizierung. Wenn Sie mit SQL Server-Anmeldungen arbeiten müssen, verwenden Sie zum Erstellen und Validieren der Verbindungszeichenfolgen zur Laufzeit den Verbindungszeichenfolgen-Generator (<xref:System.Data.SqlClient.SqlConnectionStringBuilder>).  
+
+ Ein Angriff durch Einschleusung einer Verbindungszeichenfolge kann bei Verwendung von SQL Server-Anmeldungen auftreten, bei denen Verbindungszeichenfolgen zur Laufzeit basierend auf Benutzereingaben generiert werden. Wenn die Verbindungszeichenfolge nicht auf gültige Schlüsselwortkombinationen geprüft wird, kann ein Angreifer zusätzliche Zeichen einfügen und möglicherweise auf vertrauliche Daten oder andere Ressourcen auf dem Server zugreifen. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn Sie SQL Server-Anmeldungen nutzen müssen, verwenden Sie <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, um Verbindungszeichenfolgen zur Laufzeit zu erstellen und zu überprüfen.  
   
-### <a name="passwords"></a>Kennwortangriffe  
- Viele Angriffe sind erfolgreich, weil es dem Angreifer gelungen ist, das Kennwort eines Benutzers auszuspionieren oder zu erraten. Kennwörter bilden die erste Verteidigungslinie gegen Angriffe, daher ist die Festlegung starker Kennwörter für die Sicherheit Ihres Systems von entscheidender Bedeutung. Sie können Kennwortrichtlinien für die Authentifizierung im gemischten Modus erstellen und durchsetzen.  
+### <a name="passwords"></a>Kennwörter  
+
+ Viele Angriffe sind erfolgreich, weil ein Eindringling ein Kennwort für einen Benutzer mit Administratorenrechten abrufen oder erraten konnte. Kennwörter dienen als erste Schutzmaßnahme gegen Eindringlinge, daher ist die Festlegung sicherer Kennwörter von entscheidender Bedeutung für die Systemsicherheit. Erstellen Sie Kennwortrichtlinien für die Authentifizierung im gemischten Modus, und setzen Sie diese Richtlinien durch.  
   
- Weisen Sie dem `sa`-Konto immer, auch bei Verwendung der Windows-Authentifizierung, ein starkes Kennwort zu.  
+ Weisen Sie dem `sa`-Konto immer ein sicheres Kennwort zu, auch wenn Sie die Windows-Authentifizierung verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Verwalten von Berechtigungen mit gespeicherten Prozeduren in SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)  
  Beschreibt, wie gespeicherte Prozeduren zur Verwaltung von Berechtigungen und zum Steuern des Datenzugriffs verwendet werden können. Die Verwendung gespeicherter Prozeduren bietet einen effektiven Schutz vor einer ganzen Reihe von Sicherheitsbedrohungen.  
   
- [Schreiben von sicherem dynamischen SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)  
- Beschreibt Verfahren zum Schreiben von sicherem dynamischen SQL-Code unter Verwendung gespeicherter Prozeduren.  
+ [Schreiben von sicherem dynamischem SQL in SQL Server](writing-secure-dynamic-sql-in-sql-server.md)  
+ Beschreibt Verfahren, um mithilfe von gespeicherten Prozeduren sicheren dynamischen SQL-Code zu schreiben.  
   
  [Signieren von gespeicherten Prozeduren in SQL Server](signing-stored-procedures-in-sql-server.md)  
  Beschreibt die Vorgehensweise zum Signieren gespeicherter Prozeduren mit einem Zertifikat, sodass die Benutzer mit Daten arbeiten können, auf die sie keinen direkten Zugriff haben. Auf diese Weise können gespeicherte Prozeduren Vorgänge ausführen, die der Aufrufer seinen Berechtigungen zufolge nicht direkt ausführen darf.  
@@ -56,9 +64,9 @@ Für das Erstellen einer sicheren SQL Server-Clientanwendung gibt es kein Patent
  [Aktivieren des datenbankübergreifenden Zugriffs in SQL Server](enabling-cross-database-access-in-sql-server.md)  
  Beschreibt, wie der Zugriff auf mehrere Datenbanken bereitgestellt werden kann, ohne dabei die Sicherheit zu gefährden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [SQL Server Security (SQL Server-Sicherheit)](sql-server-security.md)
+- [SQL Server Sicherheit](sql-server-security.md)
 - [Übersicht über die SQL Server-Sicherheit](overview-of-sql-server-security.md)
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

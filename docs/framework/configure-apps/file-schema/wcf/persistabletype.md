@@ -2,14 +2,15 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 328caaefe0cc24da45b460cab0a672dc8a6ccce1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6425b21fe50865beb7bb2876ea478b415fbe3944
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855072"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181517"
 ---
 # \<persistableType>
+
 Gibt alle dauerhaften Typen an.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,10 +34,12 @@ Gibt alle dauerhaften Typen an.
 </comContracts>
 ```  
   
-## <a name="type"></a>type  
+## <a name="type"></a>Typ  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -47,6 +50,7 @@ Gibt alle dauerhaften Typen an.
 |name|Ein optionales Attribut, das eine Zeichenfolge enthält, die den Namen des dauerhaften Typs angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

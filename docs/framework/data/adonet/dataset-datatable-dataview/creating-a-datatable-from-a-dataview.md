@@ -5,22 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42843ec40f4f7271526e341dc53bdbc2ef11db38
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151350"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198729"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Erstellen einer "DataTable" aus einer "DataView"
-Nachdem Sie Daten aus einer Datenquelle abgerufen und eine <xref:System.Data.DataTable> mit Daten gefüllt haben, möchten Sie die zurückgegebenen Daten möglicherweise sortieren, filtern oder anderweitig einschränken, ohne sie erneut abrufen zu müssen. Dies wird durch die <xref:System.Data.DataView>-Klasse ermöglicht. Wenn <xref:System.Data.DataTable> Sie außerdem eine neue Ausgabe <xref:System.Data.DataView>aus der erstellen <xref:System.Data.DataView.ToTable%2A> müssen, können Sie die Methode verwenden, um alle <xref:System.Data.DataTable>Zeilen und Spalten oder eine Teilmenge der Daten in eine neue zu kopieren. Die <xref:System.Data.DataView.ToTable%2A>-Methode stellt Überladungen für folgende Vorgänge bereit:  
+
+Nachdem Sie Daten aus einer Datenquelle abgerufen und eine <xref:System.Data.DataTable> mit Daten gefüllt haben, möchten Sie die zurückgegebenen Daten möglicherweise sortieren, filtern oder anderweitig einschränken, ohne sie erneut abrufen zu müssen. Dies wird durch die <xref:System.Data.DataView>-Klasse ermöglicht. Wenn Sie ein neues <xref:System.Data.DataTable> aus der erstellen müssen <xref:System.Data.DataView> , können Sie außerdem die-Methode verwenden, <xref:System.Data.DataView.ToTable%2A> um alle Zeilen und Spalten oder eine Teilmenge der Daten in eine neue zu kopieren <xref:System.Data.DataTable> . Die <xref:System.Data.DataView.ToTable%2A>-Methode stellt Überladungen für folgende Vorgänge bereit:  
   
 - Erstellen einer <xref:System.Data.DataTable>, die Spalten enthält, bei denen es sich um eine Teilmenge der Spalten in der <xref:System.Data.DataView> handelt.  
   
-- Erstellen <xref:System.Data.DataTable> Sie eine, die <xref:System.Data.DataView>nur unterschiedliche Zeilen aus dem enthält, analog zum SCHLÜSSELwort DISTINCT in Transact-SQL.  
+- Erstellen <xref:System.Data.DataTable> Sie einen, der nur eindeutige Zeilen aus dem enthält <xref:System.Data.DataView> , analog zum eindeutigen Schlüsselwort in Transact-SQL.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Konsolenanwendungsbeispiel <xref:System.Data.DataTable> wird ein erstellt, das Daten aus der **Tabelle Person.Contact** in der **AdventureWorks-Beispieldatenbank** enthält. Als Nächstes erstellt das Beispiel <xref:System.Data.DataView> eine sortierte und gefilterte basierend auf der <xref:System.Data.DataTable>. Nach dem Anzeigen <xref:System.Data.DataTable> des <xref:System.Data.DataView>Inhalts von und <xref:System.Data.DataTable> der <xref:System.Data.DataView> erstellt das <xref:System.Data.DataView.ToTable%2A> Beispiel ein neues aus dem, indem die Methode aufgerufen wird, und wählt nur eine Teilmenge der verfügbaren Spalten aus. Zum Schluss werden im Beispiel die Inhalte der neuen <xref:System.Data.DataTable> angezeigt.  
+
+ Im folgenden Beispiel für eine Konsolenanwendung wird eine erstellt <xref:System.Data.DataTable> , die Daten aus der **Person. Contact** -Tabelle in der **AdventureWorks** -Beispieldatenbank enthält. Im folgenden Beispiel wird ein sortiertes und gefiltertes erstellt, <xref:System.Data.DataView> das auf dem basiert <xref:System.Data.DataTable> . Nachdem der Inhalt von und angezeigt <xref:System.Data.DataTable> <xref:System.Data.DataView> wurde, erstellt das Beispiel eine neue <xref:System.Data.DataTable> aus der <xref:System.Data.DataView> durch Aufrufen der- <xref:System.Data.DataView.ToTable%2A> Methode, die nur eine Teilmenge der verfügbaren Spalten auswählt. Zum Schluss werden im Beispiel die Inhalte der neuen <xref:System.Data.DataTable> angezeigt.  
   
 ```vb  
 Private Sub DemonstrateDataView()  

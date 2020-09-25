@@ -3,14 +3,15 @@ title: Authentifizierung in SQL Server
 description: Erfahren Sie mehr über die Authentifizierung mit SQL Server für ADO.net, einschließlich Windows-Authentifizierungsmodus und gemischter Modus.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286545"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197529"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
+
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
   
 - Die Windows-Authentifizierung ist der Standard. Sie wird häufig auch als "integrierte Sicherheit" bezeichnet, weil dieses SQL Server-Sicherheitsmodell eng in Windows integriert ist. Bestimmte Benutzer- und Gruppenkonten in Windows werden für die Anmeldung bei SQL Server als vertrauenswürdig eingestuft. Windows-Benutzer, die bereits authentifiziert wurden, müssen keine zusätzlichen Anmeldeinformationen eingeben.  
@@ -30,6 +31,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizieru
 > Anmeldungen sind nicht mit Datenbankbenutzern identisch. Sie müssen Anmeldungen oder Windows-Gruppen separat zu Datenbankbenutzern oder -rollen zuordnen. Anschließend erteilen Sie Benutzern oder Rollen Berechtigungen für den Zugriff auf Datenbankobjekte.  
   
 ## <a name="authentication-scenarios"></a>Authentifizierungsszenarien  
+
  Die Windows-Authentifizierung ist üblicherweise in den folgenden Situationen die beste Wahl:  
   
 - Es gibt einen Domänencontroller.  
@@ -50,6 +52,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizieru
 > Das Angeben der Windows-Authentifizierung führt nicht zu einer Deaktivierung von SQL Server-Anmeldungen. Wenn Sie die SQL Server-Anmeldungen mit den weit reichenden Berechtigungen deaktivieren möchten, verwenden Sie die Transact-SQL-ALTER LOGIN DISABLE-Anweisung.  
   
 ## <a name="login-types"></a>Anmeldungstypen  
+
  SQL Server unterstützt die folgenden drei Anmeldungstypen:  
   
 - Ein lokales Windows-Benutzerkonto oder ein vertrauenswürdiges Domänenkonto. SQL Server nutzt zur Authentifizierung der Windows-Benutzerkonten die Windows-Authentifizierung.  
@@ -62,6 +65,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizieru
 > SQL Server stellt auf Grundlage von Zertifikaten oder asymmetrischen Schlüsseln erstellte Anmeldungen bereit, die ausschließlich für die Codesignierung verwendet werden. Sie können nicht verwendet werden, um eine Verbindung mit SQL Server herzustellen.  
   
 ## <a name="mixed-mode-authentication"></a>Authentifizierung im gemischten Modus  
+
  Wenn die Authentifizierung im gemischten Modus erforderlich ist, müssen Sie SQL Server-Anmeldungen erstellen, die in SQL Server gespeichert werden. Zur Laufzeit müssen dann der SQL Server-Benutzername und das Kennwort angegeben werden.  
   
 > [!IMPORTANT]
@@ -73,13 +77,14 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizieru
 > Durch das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann ein System anfällig für Angriffe durch Einschleusung von Verbindungszeichenfolgen werden. Verwenden Sie <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, um zur Laufzeit Verbindungszeichenfolgen mit gültiger Syntax zu erstellen. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
+
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
-|Resource|BESCHREIBUNG|  
+|Resource|Beschreibung|  
 |--------------|-----------------|  
 |[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Anmeldungen und andere Sicherheitsprinzipale in SQL Server.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)

@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Generieren von Objektebenencode mit „EdmGen.exe“'
 ms.date: 03/30/2017
 ms.assetid: c44d2ebe-f66f-42cb-9741-4a3f0c2dcffb
-ms.openlocfilehash: 9a73a803d310ebd847e49f4bd71609f8ef9f2944
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a243a588dcb6f7e7001de331cb9011a23ee2fdbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546639"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198222"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-object-layer-code"></a>Vorgehensweise: Generieren von Objektebenencode mit „EdmGen.exe“
+
 In diesem Thema wird gezeigt, wie Sie mithilfe des [EDM-Generators (EdmGen.exe)](edm-generator-edmgen-exe.md) auf der Grundlage der CSDL-Datei Code auf Objektebene generieren.  
   
 ### <a name="to-generate-object-layer-code-for-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>So generieren Sie mithilfe von EdmGen.exe den Objektebenencode für das Modell "School" für ein Visual Basic-Projekt  
@@ -38,7 +39,7 @@ In diesem Thema wird gezeigt, wie Sie mithilfe des [EDM-Generators (EdmGen.exe)]
     /incsdl:.\School.csdl /outobjectlayer:.\School.Objects.cs /language:CSharp  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Modellieren und Zuordnen](modeling-and-mapping.md)
 - [Gewusst wie: Manuelles Konfigurieren eines Entity Framework-Projekts](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
