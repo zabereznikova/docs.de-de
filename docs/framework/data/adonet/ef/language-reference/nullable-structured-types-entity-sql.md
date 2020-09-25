@@ -2,19 +2,21 @@
 title: Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: b155c672d8c0bef8b01fb26fb49908f094add25a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fc2230401ef98c005ab52a845de37482c0dcf698
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319484"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202263"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Strukturierte Typen, die NULL-Werte zulassen (Entity SQL)
+
 Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhanden ist. Dies unterscheidet sich von einer vorhandenen Instanz, in der alle Eigenschaften den Wert `null` haben.  
   
  In diesem Thema werden strukturierte Typen beschrieben, die NULL-Werte zulassen. Zu dieser Beschreibung gehören eine Aufzählung der Typen, die NULL-Werte zulassen, und die Angabe von Codemustern, die `null`-Instanzen von strukturierten Typen erstellen, die NULL-Werte zulassen.  
   
 ## <a name="kinds-of-nullable-structured-types"></a>Arten strukturierter Typen, die NULL-Werte zulassen  
+
  Es gibt drei Arten von Strukturtypen, die NULL-Werte zulassen:  
   
 - Zeilentypen  
@@ -24,6 +26,7 @@ Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhan
 - Entitätstypen  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Codemuster, die NULL-Instanzen strukturierter Typen erstellen  
+
  In den folgenden Szenarios werden `null`-Instanzen erstellt:  
   
 - `null` als strukturierten Typ formen:  
@@ -88,6 +91,6 @@ Eine `null`-Instanz eines strukturierten Typs ist eine Instanz, die nicht vorhan
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über Entity SQL](entity-sql-overview.md)
