@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174510"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183116"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
+
 Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen Statistiken aktivieren, indem Sie die Eigenschaft <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen, nachdem Sie ein gültiges Verbindungsobjekt erstellt haben. Nachdem Statistiken aktiviert wurden, können Sie sie als Momentaufnahme überprüfen, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Sie zählen die Liste als eine Reihe von Wörterbucheinträgen in Form von Name-Wert-Paaren durch. Diese Name-Wert-Paare sind nicht geordnet. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts zum Zurücksetzen der Zähler aufrufen. Wenn die Statistikerfassung nicht aktiviert ist, wird keine Ausnahme generiert. Wenn außerdem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne dass zuvor <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufgerufen wurde, sind die abgerufenen Werte die Anfangswerte jedes Eintrags. Wenn Sie Statistiken aktivieren, Ihre Anwendung eine Weile ausführen und Statistiken dann deaktivieren, spiegeln die abgerufenen Werte die Werte wider, die bis zu dem Punkt erfasst wurden, an dem Statistiken deaktiviert wurden. Alle erfassten statistischen Werte gelten verbindungsbezogen.  
   
 ## <a name="statistical-values-available"></a>Verfügbare statistische Werte  
+
  Gegenwärtig bietet der Microsoft SQL Server-Anbieter 18 Elemente. Die Anzahl der verfügbaren Elemente kann über die **Count**-Eigenschaft des <xref:System.Collections.IDictionary>-Schnittstellenverweises abgerufen werden, die von <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> zurückgegeben wird. Alle Zähler für Anbieterstatistiken verwenden den <xref:System.Int64>-CLR-Typ (Common Language Runtime) (**long** in C# und Visual Basic), der 64 Bit lang ist. Der maximale Wert des im Feld **int64.MaxValue** definierten **int64**-Datentyps beträgt ((2^63)-1)). Wenn die Werte für die Zähler diesen Maximalwert erreichen, dürfen sie nicht mehr als genau betrachtet werden. Das bedeutet, dass **int64.MaxValue**-1((2^63)-2) tatsächlich der größte gültige Wert für alle Statistiken ist.  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter fü
 |`UnpreparedExecs`|Gibt die Anzahl der über die Verbindung ausgeführten unvorbereiteten Anweisungen zurück, nachdem die Anwendung mit der Nutzung des Anbieters begonnen und Statistiken aktiviert hat.|  
   
 ### <a name="retrieving-a-value"></a>Abrufen eines Werts  
+
  Die folgende Konsolenanwendung zeigt, wie Statistiken über eine Verbindung aktiviert, vier einzelne Statistikwerte abgerufen und in das Konsolenfenster geschrieben werden können.  
   
 > [!NOTE]
@@ -201,6 +204,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>Abrufen aller Werte  
+
  Die folgende Konsolenanwendung zeigt, wie Statistiken über eine Verbindung aktiviert, alle verfügbaren Statistikwerte mit dem Enumerator abgerufen und in das Konsolenfenster geschrieben werden können.  
   
 > [!NOTE]

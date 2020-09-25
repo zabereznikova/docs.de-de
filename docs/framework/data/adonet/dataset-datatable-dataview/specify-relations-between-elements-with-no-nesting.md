@@ -2,17 +2,18 @@
 title: Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6684e992242d5c695f3c237f70de61b4dae1c48f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150817"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183402"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Angeben von Beziehungen zwischen Elementen ohne Verschachtelung
-Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt. Sie können jedoch explizit Beziehungen zwischen Elementen angeben, die nicht geschachtelt sind, indem Sie die Anmerkung **msdata:Relationship** verwenden.  
+
+Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erstellt. Mithilfe der msdata: Relationship-Anmerkung können Sie jedoch explizit Beziehungen zwischen Elementen angeben, die nicht mit der **msdata: Relationship** -Anmerkung versehen sind.  
   
- Das folgende Beispiel zeigt ein XML-Schema, in dem die **msdata:Relationship-Anmerkung** zwischen den Elementen **Order** und **OrderDetail** angegeben wird, die nicht geschachtelt sind. Die **msdata:Relationship-Anmerkung** wird als untergeordnetes Element des **Schemaelements** angegeben.  
+ Im folgenden Beispiel wird ein XML-Schema gezeigt, in dem die **msdata: Relationship** -Anmerkung zwischen den Elementen **Order** und **Order Detail** angegeben ist, die nicht schziert sind. Die **msdata: Relationship** -Anmerkung wird als untergeordnetes Element des **Schema** -Elements angegeben.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -53,7 +54,7 @@ Wenn Elemente nicht geschachtelt sind, werden keine impliziten Beziehungen erste
 </xs:schema>  
 ```  
   
- Der Schemazuordnungsprozess der XML-Schemadefinitionssprache <xref:System.Data.DataSet> (XSD) erstellt eine **Mit-Order-** und **OrderDetail-Tabellen** und eine Beziehung, die zwischen diesen beiden Tabellen angegeben ist, wie unten gezeigt.  
+ Der XSD (XML Schema Definition Language)-Schema Mapping-Prozess erstellt eine <xref:System.Data.DataSet> mit den Tabellen **Order** und **OrderDetail** und eine Beziehung, die zwischen diesen beiden Tabellen angegeben ist, wie unten gezeigt.  
   
 ```text  
 RelationName: OrdOrderDetailRelation  

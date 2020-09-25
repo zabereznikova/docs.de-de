@@ -8,14 +8,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 5a1d7acdd34182dd82f4dce66d136c4ef4de6e95
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b67db612496e56a341dab2e5fc4b52c954ff02b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105352"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183389"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Zuordnen von Algorithmennamen zu kryptografischen Klassen
+
 Es gibt vier Möglichkeiten, wie ein Entwickler ein Kryptografieobjekt mithilfe des Windows SDK erstellen kann:  
   
 - Erstellen Sie ein-Objekt, indem Sie den **New** -Operator verwenden.  
@@ -33,6 +34,7 @@ Es gibt vier Möglichkeiten, wie ein Entwickler ein Kryptografieobjekt mithilfe 
  Wenn es keine Rolle spielt, welcher Hash Algorithmus verwendet wird, kann der Entwickler die-Methode aufzurufen <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> , die ein Objekt zurückgibt, das eine Hash Transformation implementiert.  
   
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Mapping von Algorithmusnamen in Konfigurationsdateien  
+
  Standardmäßig gibt die Laufzeit ein- <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> Objekt für alle vier Szenarien zurück. Ein Computer Administrator kann jedoch den Objekttyp ändern, den die Methoden in den letzten beiden Szenarien zurückgegeben haben. Zu diesem Zweck müssen Sie der Klasse, die Sie in der Computer Konfigurationsdatei (Machine.config) verwenden möchten, einen anzeigen Amen für den Algorithmus zuordnen.  
   
  Im folgenden Beispiel wird gezeigt, wie die Laufzeit so konfiguriert wird, dass **System. Security. Cryptography. SHA1. Create**, **System. Security. CryptoConfig. kreatefromname ("SHA1")** und **System. Security. Cryptography. HashAlgorithm. Create** ein-Objekt zurückgeben `MySHA1HashClass` .  
@@ -68,7 +70,7 @@ Es gibt vier Möglichkeiten, wie ein Entwickler ein Kryptografieobjekt mithilfe 
   
  Eine Liste der Standardnamen und der Klassen, denen Sie zugeordnet sind, finden Sie unter <xref:System.Security.Cryptography.CryptoConfig> .  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Kryptografiedienste](../../standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](configure-cryptography-classes.md)

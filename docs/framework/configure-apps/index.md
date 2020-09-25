@@ -25,14 +25,15 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e40744c9c73e02fe96864d6b1320eb3dde4d1144
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559290"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183454"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
+
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ ms.locfileid: "90559290"
  Dieses Thema beschreibt die Syntax von Konfigurationsdateien und enthält Informationen zu den drei Arten von Konfigurationsdateien: Computer, Anwendung und Sicherheit.  
   
 ## <a name="configuration-file-format"></a>Format von Konfigurationsdateien  
+
  Konfigurationsdateien enthalten Elemente, so genannte logische Datenstrukturen zur Einstellung von Konfigurationsinformationen. Innerhalb der Konfigurationsdatei können Sie Anfang und Ende eines Elements durch Tags markieren. Beispielsweise besteht das-Element aus untergeordneten- `<runtime>` `<runtime>` *Elementen* `</runtime>` . Ein leeres Element würde in Form von `<runtime/>` oder `<runtime></runtime>` geschrieben.  
   
  Wie bei allen XML-Dateien wird bei der Syntax von Konfigurationsdateien die Groß-/Kleinschreibung berücksichtigt.  
@@ -53,6 +55,7 @@ ms.locfileid: "90559290"
 ```  
   
 ## <a name="machine-configuration-files"></a>Computerkonfigurationsdateien  
+
  Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
   
  Das Konfigurationssystem sucht zunächst in der Computer Konfigurationsdatei nach dem [ **\<appSettings>** Element](./file-schema/appsettings/index.md) und anderen Konfigurations Abschnitten, die ein Entwickler definieren kann. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
@@ -63,6 +66,7 @@ ms.locfileid: "90559290"
  Weitere Informationen dazu, wie die Common Language Runtime die Computerkonfigurationsdatei für die Assemblybindung verwendet, finden Sie unter [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Anwendungskonfigurationsdateien  
+
  Eine Anwendungskonfigurationsdatei enthält App-spezifische Einstellungen. Eine solche Datei enthält Konfigurationseinstellungen, die von der Common Language Runtime gelesen werden (z. B. Assemblybindungsrichtlinien, Remotingobjekte usw.), und Einstellungen, die von der App gelesen werden können.  
   
  Name und Speicherort der Anwendungskonfigurationsdatei sind vom Host der App abhängig; folgende Hosts sind möglich:  
@@ -88,6 +92,7 @@ ms.locfileid: "90559290"
      In diesem Tag bezeichnet `location` die URL, an der sich die Konfigurationsdatei befindet. Dadurch wird die App-Basis festgelegt. Die Konfigurationsdatei und die App müssen sich in derselben Website befinden.  
   
 ## <a name="security-configuration-files"></a>Sicherheitskonfigurationsdateien  
+
  Sicherheitskonfigurationsdateien enthalten Informationen zur Codegruppenhierarchie und zu Berechtigungen, die einer Richtlinienebene zugeordnet sind. Es wird dringend empfohlen, mithilfe des [Sicherheitsrichtlinientools für den Codezugriff (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) die Sicherheitsrichtlinie dahingehend zu ändern, dass Richtlinienänderungen keinesfalls zur Beschädigung der Sicherheitskonfigurationsdateien führen können.  
   
 > [!NOTE]
@@ -102,6 +107,7 @@ ms.locfileid: "90559290"
 - Konfigurationsdatei für Benutzerrichtlinien: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Suchen von Assemblys mit DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Beschreibt, wie die Common Language Runtime angewiesen wird, beim Suchen nach Assemblys die DEVPATH-Umgebungsvariable zu verwenden.  
   

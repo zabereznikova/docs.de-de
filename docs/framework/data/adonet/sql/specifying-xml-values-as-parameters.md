@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20a573da0221704451f10138cb854523d5a17f17
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183051"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Angeben von XML-Werten als Parameter
+
 Wenn eine Abfrage einen Parameter erfordert, dessen Wert eine XML-Zeichenfolge ist, können Entwickler den Wert mithilfe einer Instanz des **SqlXml**-Datentyps bereitstellen. XML-Spalten in SQL Server akzeptieren Parameterwerte ohne zusätzlichen Aufwand genau so wie andere Datentypen.  
   
 ## <a name="example"></a>Beispiel  
+
  In der folgenden Konsolenanwendung wird eine neue Tabelle in der **AdventureWorks**-Datenbank erstellt. Die neue Tabelle enthält die Spalte **SalesID** und die XML-Spalte **SalesInfo**.  
   
 > [!NOTE]

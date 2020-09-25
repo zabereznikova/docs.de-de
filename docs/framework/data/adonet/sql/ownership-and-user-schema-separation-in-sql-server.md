@@ -3,17 +3,19 @@ title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 description: Erfahren Sie, wie Sie durch die Trennung von Benutzer Schemas Flexibilität beim Verwalten von SQL Server Berechtigungen für Datenbankobjekte Schemas gruppieren Objekte in separaten Namespaces.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e92799237a90c502aa4000d8d4027df522aa0d87
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558835"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183142"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
+
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
   
 ## <a name="user-schema-separation"></a>Trennung von Benutzer und Schema  
+
  Durch die Trennung von Benutzer und Schema können die Berechtigungen für Datenbankobjekte flexibler verwaltet werden. Ein *Schema* ist ein benannter Container für Datenbankobjekte, der es Ihnen ermöglicht, Objekte in separaten Namespaces zu gruppieren. So enthält die AdventureWorks-Beispieldatenbank z. B. Schemas wie Production, Sales und HumanResources.  
   
  Die vierteilige Benennungssyntax zum Verweisen auf Objekte gibt den Schemanamen an.  
@@ -23,11 +25,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ```  
   
 ### <a name="schema-owners-and-permissions"></a>Schemabesitzer und Berechtigungen  
+
  Schemas können jedem beliebigen Datenbankprinzipal gehören, und ein einzelner Prinzipal kann Besitzer mehrerer Schemas sein. Sie können Sicherheitsregeln auf ein Schema anwenden, die dann von allen Objekten im Schema geerbt werden. Wenn Sie die Zugriffsberechtigungen für ein Schema eingerichtet haben, werden diese Berechtigungen automatisch auf alle neuen Objekte angewendet, die dem Schema hinzugefügt werden. Benutzer können einem Standardschema zugewiesen werden, und mehrere Datenbankbenutzer können gemeinsam dasselbe Schema verwenden.  
   
  Wenn Entwickler Objekte in einem Schema erstellen, gehen diese Objekte standardmäßig nicht in den Besitz des Entwicklers über, sondern in den Besitz des Sicherheitsprinzipals, dem das Schema gehört. Der Objektbesitz kann mit der Transact-SQL-ALTER AUTHORIZATION-Anweisung übertragen werden. Ein Schema kann auch Objekte enthalten, die unterschiedlichen Besitzern gehören und im Vergleich zu den dem Schema zugewiesenen Berechtigungen detailliertere Berechtigungen besitzen. Eine solche Strukturierung wird jedoch nicht empfohlen, da sie die Verwaltung der Berechtigungen erschwert. Objekte können zwischen Schemas verschoben werden, und der Schemabesitz kann zwischen den Prinzipalen übertragen werden. Datenbankbenutzer lassen sich löschen, ohne dass sich dies auf die Schemas auswirkt.  
   
 ### <a name="built-in-schemas"></a>Integrierte Schemas  
+
  SQL Server enthält zehn vordefinierte Schemas, deren Namen mit den integrierten Datenbankbenutzern und Rollen übereinstimmen. Diese Schemas wurden hauptsächlich aus Gründen der Abwärtskompatibilität bereitgestellt. Sie können die Schemas, die denselben Namen wie die festen Datenbankrollen haben, löschen, wenn Sie sie nicht benötigen. Die folgenden Schemas können nicht gelöscht werden:  
   
 - `dbo`  
@@ -44,6 +48,7 @@ Server.Database.DatabaseSchema.DatabaseObject
 > Die Schemas `sys` und `INFORMATION_SCHEMA` sind für Systemobjekte reserviert. Sie können in diesen Schemas keine Objekte erstellen, und Sie können die Schemas nicht löschen.  
   
 #### <a name="the-dbo-schema"></a>Das "dbo"-Schema  
+
  Das `dbo`-Schema ist das Standardschema für neu erstellte Datenbanken. Das `dbo`-Schema gehört dem `dbo`-Benutzerkonto. Für Benutzer, die mit dem Transact-SQL-CREATE USER-Befehl erstellt werden, ist `dbo` standardmäßig das Standardschema.  
   
  Benutzer, denen das `dbo`-Schema zugewiesen ist, erben nicht die Berechtigungen des `dbo`-Benutzerkontos. Es werden keine Berechtigungen aus einem Schema an die Benutzer vererbt; die Schemaberechtigungen werden von den im Schema enthaltenen Datenbankobjekten geerbt.  
@@ -52,13 +57,14 @@ Server.Database.DatabaseSchema.DatabaseObject
 > Wenn mit einem einteiligen Namen auf Datenbankobjekte verwiesen wird, durchsucht SQL Server zunächst das Standardschema des Benutzers. Wenn das Objekt dort nicht gefunden wird, sucht SQL Server als Nächstes im `dbo`-Schema. Wenn sich das Objekt nicht im `dbo`-Schema befindet, wird eine Fehlermeldung zurückgegeben.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
+
  Weitere Informationen zu Objektbesitz und Schemas finden Sie in den folgenden Ressourcen:  
   
-|Ressource|BESCHREIBUNG|  
+|Resource|Beschreibung|  
 |--------------|-----------------|  
 |[Trennung von Benutzer und Schema](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Beschreibt die Änderungen, die die Trennung von Benutzer und Schema zur Folge hat. Enthält Informationen zum neuen Verhalten, seinen Auswirkungen auf den Objektbesitz, zu Katalogsichten und zu Berechtigungen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von ADO.NET-Anwendungen](../securing-ado-net-applications.md)
 - [Anwendungssicherheitsszenarios in SQL Server](application-security-scenarios-in-sql-server.md)

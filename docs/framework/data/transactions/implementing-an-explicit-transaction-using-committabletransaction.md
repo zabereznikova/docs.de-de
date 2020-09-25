@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 7e1d78b581fcb3c4b2265f1d04cf2aba83faa28a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141990"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182882"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementieren einer expliziten Transaktion mit CommittableTransaction
+
 Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwendungen, Transaktionen explizit zu verwenden, anstatt die <xref:System.Transactions.TransactionScope>-Klasse implizit zu verwenden. Sie ist für Anwendungen nützlich, die dieselben Transaktionen über mehrere Funktionsaufrufe oder mehrere Threadaufrufe hinweg verwenden wollen. Im Unterschied zur <xref:System.Transactions.TransactionScope>-Klasse muss der Autor der Anwendung die <xref:System.Transactions.CommittableTransaction.Commit%2A>-Methode bzw. die <xref:System.Transactions.Transaction.Rollback%2A>-Methode aufrufen, um einen Commit der Transaktion auszuführen oder um sie abzubrechen.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>Übersicht über die CommittableTransaction-Klasse  
+
  Die <xref:System.Transactions.CommittableTransaction>-Klasse ist von der <xref:System.Transactions.Transaction>-Klasse abgeleitet und stellt deshalb die gesamte Funktionalität der letztgenannten bereit. Besonders nützlich ist die <xref:System.Transactions.Transaction.Rollback%2A>-Methode für die <xref:System.Transactions.Transaction>-Klasse, die auch dazu verwendet werden kann, ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt auszuführen.  
   
  Die <xref:System.Transactions.Transaction>-Klasse ist der <xref:System.Transactions.CommittableTransaction>-Klasse ähnlich, bietet aber keine `Commit`-Methode. Dadurch haben Sie die Möglichkeit, das Transaktionsobjekt (oder Klone davon) an andere Methoden zu übergeben (eventuell solche anderer Threads), während Sie weiter steuern können, wann ein Commit für die Transaktion ausgeführt wird. Der abgerufene Code kann sich für eine Transaktion eintragen und über sie abstimmen, jedoch kann nur der Ersteller des <xref:System.Transactions.CommittableTransaction>-Objekts ein Commit für die Transaktion ausführen.  
@@ -28,6 +30,7 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
 - Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann nicht wiederverwendet werden. Nachdem ein Commit oder ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt ausgeführt wurde, kann es nicht in einer Transaktion wiederverwendet werden. Das heißt, es kann nicht als aktueller Ambient-Transaktionskontext festgelegt werden.  
   
 ## <a name="creating-a-committabletransaction"></a>Erstellen einer CommittableTransaction  
+
  Im folgenden Beispiel wird eine neue Instanz von <xref:System.Transactions.CommittableTransaction> erstellt und ein Commit dafür ausgeführt.  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
@@ -40,6 +43,7 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
  Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann über Funktionsaufrufe und Threads hinweg verwendet werden. Jedoch muss der Anwendungsentwickler Ausnahmen bearbeiten und die <xref:System.Transactions.Transaction.Rollback%28System.Exception%29>-Methode beim Auftreten von Fehlern explizit aufrufen.  
   
 ## <a name="asynchronous-commit"></a>Asynchroner Commit  
+
  Die <xref:System.Transactions.CommittableTransaction>-Klasse stellt zudem einen Mechanismus bereit, um ein Commit für eine Transaktion asynchron auszuführen. Ein Transaktionscommit kann viel Zeit in Anspruch nehmen, da eventuell mehrfach auf Datenbanken zugegriffen werden muss. Außerdem bestehen im Netzwerk möglicherweise Wartezeiten aufgrund der Netzwerklatenz. Wenn Sie Deadlocks in Anwendungen mit hohem Durchsatz vermeiden möchten, können Sie einen asynchronen Commit durchführen, um die Transaktionsaufgaben so schnell wie möglich abzuschließen, und den Commitvorgang als Hintergrundaufgabe ausführen. Die <xref:System.Transactions.CommittableTransaction.BeginCommit%2A>-Methode und die <xref:System.Transactions.CommittableTransaction.EndCommit%2A>-Methode der <xref:System.Transactions.CommittableTransaction>-Klasse ermöglichen dies.  
   
  Sie können <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> aufrufen, um den zurückgehaltenen Commit an einen Thread aus dem Threadpool weiterzuleiten. Sie können zudem <xref:System.Transactions.CommittableTransaction.EndCommit%2A> aufrufen, um zu ermitteln, ob ein Commit für die Transaktion ausgeführt wurde. Wenn der Commit aus irgendeinem Grund nicht für die Transaktion ausgeführt wurde, löst <xref:System.Transactions.CommittableTransaction.EndCommit%2A> eine Transaktionsausnahme aus. Wurde der Transaktionscommit zum Zeitpunkt des Aufrufs von <xref:System.Transactions.CommittableTransaction.EndCommit%2A> noch nicht ausgeführt, wird der Aufrufer gesperrt, bis der Commit durchgeführt oder die Transaktion abgebrochen wurde.  
@@ -86,7 +90,7 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Implementieren einer impliziten Transaktion mit Transaktionsbereich](implementing-an-implicit-transaction-using-transaction-scope.md)
 - [Verarbeiten von Transaktionen](index.md)

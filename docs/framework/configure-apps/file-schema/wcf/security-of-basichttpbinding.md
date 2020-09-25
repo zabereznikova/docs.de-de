@@ -2,14 +2,15 @@
 title: <security> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: c8e4f2d000a155eecd2a6c7faaaf4af525b24ca3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6144e5448526d7f2a7c89693f70f71a7f26c4a22
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738718"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183662"
 ---
 # <a name="security-of-basichttpbinding"></a>\<security> von \<basicHttpBinding>
+
 Definiert die Sicherheitsfunktionen von [\<basicHttpBinding>](basichttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,17 +33,18 @@ Definiert die Sicherheitsfunktionen von [\<basicHttpBinding>](basichttpbinding.m
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
   
-### <a name="attributes"></a>Attribute  
+### <a name="attributes"></a>Attributes  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
-|Modus|(Optional) Gibt den verwendeten Sicherheitstyp an. Der Standardwert lautet `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
+|Modus|Dies ist optional. Gibt den verwendeten Sicherheitstyp an. Der Standardwert lautet `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.BasicHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>mode-Attribut  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Die SOAP-Nachrichten werden bei der Verwendung von HTTPS gesichert. Der Dienst wird über das X.509-Zertifikat beim Client authentifiziert. Der Client wird über ClientCredentialType authentifiziert. Siehe [\<transport>](transport-of-basichttpbinding.md) .|  
@@ -64,6 +66,7 @@ Definiert die Sicherheitsfunktionen von [\<basicHttpBinding>](basichttpbinding.m
 |binding|Das Bindungs Element von [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Standardmäßig wird die SOAP-Nachricht nicht geschützt, und der Client wird nicht authentifiziert. Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `basicHttpBinding`-Element zu konfigurieren.  
   
 ## <a name="see-also"></a>Weitere Informationen

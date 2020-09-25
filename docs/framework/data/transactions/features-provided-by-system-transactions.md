@@ -3,17 +3,19 @@ title: Von System.Transactions bereitgestellte Funktionen
 description: Überprüfen Sie die Funktionen, die vom System. Transactions-Namespace in .NET bereitgestellt werden, um Ihre eigene Transaktions Anwendung und den Ressourcen-Manager zu schreiben.
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 0278e9248305572c6156c6500f1fe51a8b3f3338
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 27c6224530b4faa1ada93db8147f9334f38b93ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141861"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182921"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Von System.Transactions bereitgestellte Funktionen
+
 In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xref:System.Transactions>-Namespace bereitstellt, Ihre eigene Transaktionsanwendung und Ihren eigenen Ressourcen-Manager schreiben können. In diesem Abschnitt wird insbesondere darauf eingegangen, wie eine (lokale oder verteilte) Transaktion erstellt wird und ein oder mehrere Teilnehmer daran teilnehmen können.  
   
 ## <a name="overview-of-systemtransactions"></a>Übersicht über System.Transactions  
+
  Die Infrastruktur, die von den Klassen im <xref:System.Transactions>-Namespace bereitgestellt werden, erleichtern die Transaktionsprogrammierung und machen sie effizienter, da von SQL Server, ADO.NET, Message Queuing (MSMQ) und Microsoft Distributed Transaction Coordinator (MSDTC) gestartete Transaktionen unterstützt werden. Der <xref:System.Transactions>-Namespace bietet sowohl ein explizites Programmiermodell, das auf der <xref:System.Transactions.Transaction>-Klasse basiert, als auch ein implizites Programmiermodell, das die <xref:System.Transactions.TransactionScope>-Klasse verwendet, in der Transaktionen automatisch von der Infrastruktur verwaltet werden. Weitere Informationen zum Erstellen einer Transaktions Anwendung mit diesen beiden Modellen finden Sie unter [Schreiben einer transaktionalen Anwendung](writing-a-transactional-application.md).  
   
  Der <xref:System.Transactions>-Namespace stellt auch Typen zur Implementierung eines Ressourcen-Managers bereit. Mit einem Ressourcen-Manager werden dauerhafte oder flüchtige in einer Transaktion verwendete Daten verwaltet. Zusammen mit dem Transaktions-Manager gewährleistet der Ressourcen-Manager Unteilbarkeit und Isolation für die Anwendung. Der von der <xref:System.Transactions>-Infrastruktur bereitgestellte Transaktions-Manager unterstützt Transaktionen, die mehrere flüchtige Ressourcen oder eine einzelne dauerhafte Ressource umfassen. Weitere Informationen zum Implementieren eines Ressourcen-Managers finden Sie unter [Implementieren einer Ressourcen-Manager](implementing-a-resource-manager.md).  
@@ -29,6 +31,7 @@ In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xr
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 ### <a name="writing-a-transactional-application"></a>Erstellen einer Transaktionsanwendung  
+
  Der <xref:System.Transactions>-Namespace stellt zwei Modelle zum Erstellen von Transaktionsanwendungen bereit. [Durch das Implementieren einer impliziten Transaktion mit Transaktions Bereich](implementing-an-implicit-transaction-using-transaction-scope.md) wird beschrieben, wie der <xref:System.Transactions> Namespace das Erstellen impliziter Transaktionen mithilfe der-Klasse unterstützt <xref:System.Transactions.TransactionScope>  
   
  [Durch das Implementieren einer expliziten Transaktion mit CommittableTransaction](implementing-an-explicit-transaction-using-committabletransaction.md) wird beschrieben, wie das <xref:System.Transactions> Erstellen expliziter Transaktionen mithilfe der-Klasse vom-Namespace <xref:System.Transactions.CommittableTransaction>  
@@ -36,4 +39,5 @@ In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xr
  Weitere Themen zum Schreiben einer Transaktions Anwendung finden Sie unter [Schreiben einer transaktionalen](writing-a-transactional-application.md)Anwendung.  
   
 ### <a name="implementing-a-resource-manager"></a>Implementieren eines Ressourcen-Managers  
+
  Informationen zum Implementieren eines Ressourcen-Managers, der an einer Transaktion teilnehmen kann, finden Sie unter [Implementieren einer Ressourcen-Manager](implementing-a-resource-manager.md). In diesem Abschnitt werden das Eintragen einer Ressource, das Durchführen eines Transaktionscommit, die Wiederherstellung nach einem Fehler und Best Practices für die Optimierung behandelt.

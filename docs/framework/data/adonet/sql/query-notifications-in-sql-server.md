@@ -3,14 +3,15 @@ title: Abfragebenachrichtigungen in SQL Server
 description: Erfahren Sie, wie Sie mithilfe von Abfrage Benachrichtigungen Anwendungen Benachrichtigen, wenn sich Daten in einer SQL Server Datenbank geändert haben, z. b. zum Aktualisieren von Anwendungs anzeigen.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543984"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183090"
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
+
 Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.  
   
  Es gibt drei Möglichkeiten, Abfragebenachrichtigungen mithilfe von ADO.NET zu implementieren:  
@@ -40,6 +41,7 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
 - [Entwicklerhandbuch (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Aktivieren von Abfrage Benachrichtigungen](enabling-query-notifications.md)  
  Erläutert die Verwendung von Abfragebenachrichtigungen, einschließlich der Anforderungen zu deren Aktivierung und Nutzung.  
   
@@ -53,6 +55,7 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
  Veranschaulicht das Konfigurieren eines <xref:System.Data.SqlClient.SqlCommand>-Objekts für dar Arbeiten mit einer Abfragebenachrichtigung.  
   
 ## <a name="reference"></a>Verweis  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  Beschreibt die <xref:System.Data.Sql.SqlNotificationRequest>-Klasse und alle ihre Member.  
   
@@ -62,7 +65,7 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
  <xref:System.Web.Caching.SqlCacheDependency>  
  Beschreibt die <xref:System.Web.Caching.SqlCacheDependency>-Klasse und alle ihre Member.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [SQL Server und ADO.NET](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

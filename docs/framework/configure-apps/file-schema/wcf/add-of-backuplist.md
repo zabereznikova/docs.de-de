@@ -2,14 +2,15 @@
 title: <add> von <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6d8fd26170059226583a300b1b48b849666db929
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850552"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181621"
 ---
 # <a name="add-of-backuplist"></a>\<add> von \<backupList>
+
 Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definiert.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,15 +33,17 @@ Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definier
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |name|Eine Zeichenfolge, die den Namen des Sicherungsendpunkts angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

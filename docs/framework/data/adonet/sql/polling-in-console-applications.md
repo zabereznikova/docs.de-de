@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174523"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183129"
 ---
 # <a name="polling-in-console-applications"></a>Abrufen in Konsolenanwendungen
+
 Mithilfe von asynchronen Vorgängen in ADO.NET können Sie zeitaufwendige Datenbankvorgänge auf einem Thread initiieren, während andere Tasks auf einem weiteren Thread ausgeführt werden. In den meisten Szenarios erreichen Sie jedoch irgendwann einen Punkt, an dem die Anwendung angehalten werden sollte, bis der Datenbankvorgang beendet ist. Dann ist es hilfreich, den asynchronen Vorgang abzurufen, um zu ermitteln, ob der Vorgang abgeschlossen wurde.  
   
  Dafür können Sie die Eigenschaft <xref:System.IAsyncResult.IsCompleted%2A> verwenden.  
   
 ## <a name="example"></a>Beispiel  
+
  Mit der folgenden Konsolenanwendung werden Daten innerhalb der **AdventureWorks**-Beispieldatenbank unter Verwendung eines asynchronen Vorgangs aktualisiert. In diesem Beispiel wird eine WAITFOR-Anweisung in den Befehlstext eingefügt, um einen Prozess mit langer Laufzeit zu emulieren. Normalerweise ist es nicht wünschenswert, dass Befehle langsamer ausgeführt werden, aber in diesem Fall kann dadurch das asynchrone Verhalten besser veranschaulicht werden.  
   
 ```vb  

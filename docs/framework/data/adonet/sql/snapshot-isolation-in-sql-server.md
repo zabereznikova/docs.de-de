@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 7fa769448dd922925a5eccf4c85bd1840155df68
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4934c031eb9dfb26d60c5233937cbc65ca60d4f7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286246"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183077"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
+
 Die Momentaufnahmenisolation verbessert die Parallelität für OLTP-Anwendungen.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informationen zur Snapshot-Isolation und Zeilenversionserstellung  
+
  Sobald die Momentaufnahme Isolation aktiviert ist, müssen die aktualisierten Zeilen Versionen für jede Transaktion beibehalten werden.  Vor SQL Server 2019 wurden diese Versionen in **tempdb**gespeichert. In SQL Server 2019 wird eine neue Funktion eingeführt, Accelerated Database Recovery (ADR), die einen eigenen Satz von Zeilen Versionen erfordert.  Ab SQL Server 2019 werden Zeilen Versionen in **tempdb** wie immer beibehalten, wenn die ADR nicht aktiviert ist.  Wenn die automatische Bereitstellungs Funktion aktiviert ist, werden alle Zeilen Versionen, die mit der Momentaufnahme Isolation und der AdR verknüpft sind, im permanenten Versionsspeicher der AdR (PVS) gespeichert, der sich in der Benutzerdatenbank in einer Datei Gruppe befindet, die der Benutzer angibt. Eine eindeutige Transaktionssequenznummer identifiziert jede Transaktion, wobei diese eindeutigen Nummern für jede Zeilenversion aufgezeichnet werden. Die Transaktion arbeitet mit den neuesten Zeilenversionen, die eine Sequenznummer vor der Sequenznummer der Transaktion haben. Neuere Zeilenversionen, die nach Beginn der Transaktion erstellt wurden, werden von der Transaktion ignoriert.  
   
  Der Begriff „Momentaufnahme“ spiegelt die Tatsache wider, dass alle Abfragen in der Transaktion die gleiche Version bzw. Momentaufnahme der Datenbank sehen, und zwar basierend auf dem Zustand der Datenbank zum Zeitpunkt des Transaktionsbeginns. In einer Snapshot-Transaktion werden für die zugrunde liegenden Datenzeilen oder Datenseiten keine Sperren bezogen, wodurch andere Transaktionen ausgeführt werden können, ohne durch eine vorherige, nicht vollständig ausgeführte Transaktion blockiert zu werden. Transaktionen, die Daten ändern, blockieren keine Transaktionen, die Daten lesen. Transaktionen, die Daten lesen, blockieren keine Transaktionen, die Daten schreiben. Dies ist bei der Standardisolationsstufe READ COMMITTED in SQL Server normalerweise der Fall. Dieses nicht blockierende Verhalten verringert auch beträchtlich die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen.  
@@ -36,6 +38,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Das Festlegen der Option READ_COMMITTED_SNAPSHOT auf ON ermöglicht den Zugriff auf Zeilen mit Versionsangabe unter der Standardisolationsstufe READ_COMMITTED. Wenn die Option READ_COMMITTED_SNAPSHOT auf OFF festgelegt ist, müssen Sie die Isolationsstufe für Momentaufnahmen für jede Sitzung explizit festlegen, um auf Zeilen mit Versionsangabe zugreifen zu können.  
   
 ## <a name="managing-concurrency-with-isolation-levels"></a>Verwalten von Parallelität mit Isolationsstufen  
+
  Die Isolationsstufe, auf der eine Transact-SQL-Anweisung ausgeführt wird, bestimmt ihr Sperr- und Zeilenversionsverwaltungs-Verhalten. Eine Isolationsstufe gilt verbindungsweit. Sobald sie für eine Verbindung mit der Anweisung SET TRANSACTION ISOLATION LEVEL festgelegt wurde, bleibt sie in Kraft, bis die Verbindung geschlossen oder eine andere Isolationsstufe festgelegt wird. Wenn eine Verbindung geschlossen und an den Pool zurückgegeben wird, wird die Isolationsstufe der letzten SET TRANSACTION ISOLATION LEVEL-Anweisung beibehalten. Nachfolgende Verbindungen, die eine Verbindung im Pool wiederverwenden, arbeiten mit der Isolationsstufe, die zum Zeitpunkt des Hinzufügens zum Pool in Kraft war.  
   
  Einzelne innerhalb einer Verbindung gestellte Abfragen können Sperrhinweise enthalten, die die Isolation für eine einzelne Anweisung oder Transaktion ändern, aber die Isolationsstufe der Verbindung nicht beeinflussen. In gespeicherten Prozeduren oder Funktionen festgelegte Isolationsstufen oder Sperrhinweise ändern die Isolationsstufe der Verbindung, die sie aufruft, nicht und sind nur für die Dauer des Aufrufs der gespeicherten Prozedur oder Funktion wirksam.  
@@ -53,6 +56,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Weitere Informationen finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Snapshot-Isolationsstufenerweiterungen  
+
  SQL Server hat Erweiterungen für die SQL-92-Isolationsgrade eingeführt, zu denen der SNAPSHOT-Isolationsgrad und eine zusätzliche Implementierung von READ COMMITTED gehört. Der READ_COMMITTED_SNAPSHOT-Isolationsgrad kann auf transparente Weise READ COMMITTED für alle Transaktionen ersetzen.  
   
 - Die SNAPSHOT-Isolation legt fest, dass Daten, die innerhalb einer Transaktion gelesen werden, niemals Änderungen widerspiegeln, die durch andere gleichzeitige Transaktionen vorgenommen wurden. Die Transaktion verwendet die Datenzeilenversionen, die zu Beginn der Transaktion vorhanden sind. Beim Lesen werden keine Sperren für die Daten aktiviert, sodass SNAPSHOT-Transaktionen andere Transaktionen nicht am Schreiben von Daten hindern. Transaktionen, die Daten schreiben, halten SNAPSHOT-Transaktionen nicht vom Lesen von Daten ab. Sie müssen die Momentaufnahmenisolation durch Festlegen der Datenbankoption ALLOW_SNAPSHOT_ISOLATION aktivieren, um sie verwenden zu können.  
@@ -60,6 +64,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 - Die Datenbankoption READ_COMMITTED_SNAPSHOT bestimmt das Verhalten der Standardisolationsstufe READ COMMITTED, wenn die Momentaufnahmenisolation in einer Datenbank aktiviert ist. Wenn Sie ON für READ_COMMITTED_SNAPSHOT nicht explizit angeben, gilt READ COMMITTED für alle impliziten Transaktionen. Dies führt zum selben Verhalten wie das Festlegen von READ_COMMITTED_SNAPSHOT auf OFF (Standard). Wenn OFF für READ_COMMITTED_SNAPSHOT aktiviert ist, verwendet die Datenbank-Engine gemeinsame Sperren, um die Standardisolationsstufe zu erzwingen. Wenn Sie die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festlegen, verwendet die Datenbank-Engine standardmäßig die Zeilenversionsverwaltung und Momentaufnahmenisolation, anstatt Sperren zum Schutz der Daten einzusetzen.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Funktionsweise der Snapshot-Isolation und der Zeilenversionserstellung  
+
  Wenn die SNAPSHOT-Isolationsstufe aktiviert ist, speichert die SQL Server-Datenbank-Engine bei jedem Aktualisieren einer Zeile eine Kopie der Ursprungszeile in **tempdb** und fügt der Zeile eine Transaktionsfolgenummer hinzu. Es folgt die Abfolge der eintretenden Ereignisse:  
   
 - Eine neue Transaktion wird eingeleitet, der eine Transaktionssequenznummer zugewiesen wird.  
@@ -77,6 +82,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Eine Momentaufnahmentransaktion verwendet immer eine optimistische Parallelitätssteuerung, wobei alle Sperren zurückgehalten werden, die andere Transaktionen an der Aktualisierung von Zeilen hindern würden. Wenn eine Momentaufnahmentransaktion versucht, eine Aktualisierung einer Zeile zu committen, die nach Beginn der Transaktion geändert wurde, wird die Transaktion rückgängig gemacht und ein Fehler ausgelöst.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Verwenden der Snapshot-Isolation in ADO.NET  
+
  Die Momentaufnahmenisolation wird in ADO.NET von der <xref:System.Data.SqlClient.SqlTransaction>-Klasse unterstützt. Wenn eine Datenbank für die Snapshot-Isolation aktiviert, aber nicht für READ_COMMITTED_SNAPSHOT ON konfiguriert wurde, müssen Sie eine <xref:System.Data.SqlClient.SqlTransaction> mit dem **IsolationLevel.Snapshot**-Enumerationswert initiieren, wenn Sie die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode aufrufen. Dieses Codefragment geht davon aus, dass die Verbindung ein geöffnetes <xref:System.Data.SqlClient.SqlConnection>-Objekt ist.  
   
 ```vb  
@@ -90,6 +96,7 @@ SqlTransaction sqlTran =
 ```  
   
 ### <a name="example"></a>Beispiel  
+
  Das folgende Beispiel veranschaulicht das Verhalten der verschiedenen Isolationsstufen beim Versuch, auf gesperrte Daten zuzugreifen. Es ist nicht für die Verwendung im Produktionscode vorgesehen.  
   
  Der Code stellt eine Verbindung mit der **AdventureWorks**-Beispieldatenbank in SQL Server her, erstellt die Tabelle **TestSnapshot** und fügt eine Datenzeile ein. Der Code verwendet die Transact-SQL-Anweisung ALTER DATABASE, um die Momentaufnahmenisolation für die Datenbank zu aktivieren. Die Option READ_COMMITTED_SNAPSHOT wird jedoch nicht festgelegt, sodass das Standardverhalten der Isolationsstufe READ_COMMITTED weiterhin gilt. Der Code führt dann die folgenden Aktionen aus:  
@@ -111,6 +118,7 @@ SqlTransaction sqlTran =
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
   
 ### <a name="example"></a>Beispiel  
+
  Das folgende Beispiel veranschaulicht das Verhalten der Momentaufnahmenisolation, wenn Daten geändert werden. Der Code führt die folgenden Aktionen aus:  
   
 - Herstellen einer Verbindung mit der **AdventureWorks**-Beispieldatenbank und Aktivieren der SNAPSHOT-Isolation.  
@@ -131,6 +139,7 @@ SqlTransaction sqlTran =
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
   
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Verwenden von Sperrhinweisen mit der Snapshot-Isolation  
+
  Im vorherigen Beispiel wählt die erste Transaktion Daten aus. Eine zweite Transaktion aktualisiert die Daten, bevor die erste Transaktion abgeschlossen werden kann. Dadurch entsteht ein Aktualisierungskonflikt, wenn die erste Transaktion versucht, dieselbe Zeile zu aktualisieren. Sie können die Wahrscheinlichkeit von Aktualisierungskonflikten bei lang laufenden Momentaufnahmentransaktionen verringern, indem Sie zu Beginn der Transaktion Sperrhinweise angeben. Die folgende SELECT-Anweisung verwendet den UPDLOCK-Hinweis, um die ausgewählten Zeilen zu sperren:  
   
 ```sql  
@@ -142,7 +151,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  Wenn Ihre Anwendung viele Konflikte aufweist, ist die Momentaufnahmenisolation möglicherweise nicht die beste Wahl. Hinweise sollten nur verwendet werden, wenn unbedingt nötig. Ihre Anwendung sollte nicht so konzipiert sein, dass ihr Betrieb ständig auf Sperrhinweise angewiesen ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [SQL Server und ADO.NET](index.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)
