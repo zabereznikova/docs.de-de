@@ -2,14 +2,15 @@
 title: <transport> von <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: d40178e59b89c2912123e1927e9e960f6d880871
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 81c52405478d4c1ab5c65aab73f7feff61b879d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735951"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178020"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<transport> von \<netNamedPipeBinding>
+
 Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,15 +34,17 @@ Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|BESCHREIBUNG|  
+|attribute|Beschreibung|  
 |---------------|-----------------|  
 |protectionLevel|Definiert die Schutzebene der benannten Pipe. Das Signieren von Nachrichten verringert das Risiko, dass Nachrichten während der Übertragung durch Dritte manipuliert werden. Mit der Verschlüsselung können Daten während des Transports geschützt werden. Gültige Werte sind:<br /><br /> -None: kein Schutz.<br />-Sign: Nachrichten werden signiert.<br />-Verschlüsseltandsign: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
