@@ -1,15 +1,15 @@
 ---
 title: Untersuchen der Bereiche von Daten mithilfe von Indizes und Bereichen
-description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um Segmente eines sequenziellen Datasets zu untersuchen.
-ms.date: 03/11/2020
+description: In diesem fortgeschrittenen Tutorial erfahren Sie, wie Sie Daten mithilfe von Indizes und Bereichen untersuchen, um einen fortlaufenden Bereich eines sequenziellen Datasets zu untersuchen.
+ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156493"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738865"
 ---
 # <a name="indices-and-ranges"></a>Indizes und Bereiche
 
@@ -60,7 +60,7 @@ Der folgende Code erzeugt einen Teilbereich mit den Worten „quick“, „brown
 
 [!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-Der folgende Code erzeugt einen Teilbereich mit „lazy“ und „dog“. Dazu gehören `words[^2]` und `words[^1]`. Der Endindex `words[^0]` ist nicht enthalten. Fügen Sie den folgenden Code auch hinzu:
+Der folgende Code gibt den Bereich mit „lazy“ und „dog“ zurück. Dazu gehören `words[^2]` und `words[^1]`. Der Endindex `words[^0]` ist nicht enthalten. Fügen Sie den folgenden Code auch hinzu:
 
 [!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -78,9 +78,16 @@ Das folgende Beispiel zeigt viele der Gründe für diese Auswahl. Ändern Sie `x
 
 ## <a name="type-support-for-indices-and-ranges"></a>Typunterstützung für Indizes und Bereiche
 
-Indizes und Bereiche stellen eine klare, präzise Syntax für den Zugriff auf ein einzelnes Element oder einen Teilbereich von Elementen in einer Sequenz bereit. Ein Indexausdruck gibt in der Regel den Typ der Elemente einer Sequenz zurück. Ein Bereichsausdruck gibt in der Regel den gleichen Sequenztyp wie die Quellsequenz zurück.
+Indizes und Bereiche stellen eine klare, präzise Syntax für den Zugriff auf ein einzelnes Element oder einen Bereich von Elementen in einer Sequenz bereit. Ein Indexausdruck gibt in der Regel den Typ der Elemente einer Sequenz zurück. Ein Bereichsausdruck gibt in der Regel den gleichen Sequenztyp wie die Quellsequenz zurück.
 
 Jeder Typ, der einen [Indexer](../programming-guide/indexers/index.md) mit einem <xref:System.Index>- oder <xref:System.Range>-Parameter bereitstellt, unterstützt explizit Indizes bzw. Bereiche. Ein Indexer, der einen einzelnen <xref:System.Range>-Parameter annimmt, kann einen anderen Sequenztyp zurückgeben, z. B. <xref:System.Span%601?displayProperty=nameWithType>.
+
+> [!IMPORTANT]
+> Die Codeleistung bei Verwendung eines Bereichsoperators hängt vom Typ des Operanden der Sequenz ab.
+>
+> Die Zeitkomplexität des Bereichsoperators hängt vom Sequenztyp ab. Wenn die Sequenz beispielsweise `string` oder ein Array ist, ist das Ergebnis eine Kopie des angegebenen Abschnitts der Eingabe, die Zeitkomplexität ist also *O(N)* . N steht dabei für die Länge des Bereichs. Wenn es sich andernfalls um <xref:System.Span%601?displayProperty=nameWithType> oder <xref:System.Memory%601?displayProperty=nameWithType> handelt, verweist das Ergebnis auf denselben Sicherungsspeicher, d. h. es gibt keine Kopie, und für den Vorgang gilt *O(1)* .
+>
+> Zusätzlich zur Zeitkomplexität führt dies zu weiteren Belegungen und Kopien, was sich auf die Leistung auswirkt. Bei leistungsabhängigem Code sollten Sie als Sequenztyp `Span<T>` oder `Memory<T>` verwenden, da der Bereichsoperator keine Belegungen dafür vornimmt.
 
 Ein Typ ist **zählbar**, wenn er über eine Eigenschaft mit dem Namen `Length` oder `Count` mit einem zugreifbaren Getter und einem Rückgabetyp von `int` verfügt. Ein zählbarer Typ, der Indizes oder Bereiche nicht explizit unterstützt, kann implizite Unterstützung dafür bieten. Weitere Informationen finden Sie in den Abschnitten [Implizite Indexunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) und [Implizite Bereichsunterstützung](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) der [Featurevorschläge](~/_csharplang/proposals/csharp-8.0/ranges.md). Bereiche, die die implizite Bereichsunterstützung verwenden, geben denselben Sequenztyp wie die Quellsequenz zurück.
 
@@ -90,8 +97,10 @@ Beispielsweise unterstützen die folgenden .NET-Typen Indizes und Bereiche: <xre
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
+In allen Fällen ordnet der Bereichsoperator für <xref:System.Array> ein Array zu, um die zurückgegebenen Elemente zu speichern.
+
 ## <a name="scenarios-for-indices-and-ranges"></a>Szenarien für Indizes und Bereiche
 
-Sie werden oft Bereiche und Indizes verwenden, wenn Sie einen Teilbereich einer größeren Sequenz analysieren möchten. Aus der neuen Syntax lässt sich klarer herauslesen, welcher Teilbereich beteiligt ist. Die lokale Funktion `MovingAverage` nimmt einen <xref:System.Range> als Argument entgegen. Die Methode listet dann genau diesen Bereich bei der Berechnung von Minimum, Maximum und Durchschnitt auf. Probieren Sie den folgenden Code in Ihrem Projekt aus:
+Sie werden oft Bereiche und Indizes verwenden, wenn Sie einen Teil einer größeren Sequenz analysieren möchten. Aus der neuen Syntax lässt sich klarer herauslesen, welcher Teil der Sequenz beteiligt ist. Die lokale Funktion `MovingAverage` nimmt einen <xref:System.Range> als Argument entgegen. Die Methode listet dann genau diesen Bereich bei der Berechnung von Minimum, Maximum und Durchschnitt auf. Probieren Sie den folgenden Code in Ihrem Projekt aus:
 
 [!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

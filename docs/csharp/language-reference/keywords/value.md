@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: f72e9f097880d9de725a85a0973001baaefd9a9c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ad2eb6f12d8c295dc5203994d6c570cd2377e3ee
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141737"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828915"
 ---
 # <a name="value-c-reference"></a>value (C#-Referenz)
 

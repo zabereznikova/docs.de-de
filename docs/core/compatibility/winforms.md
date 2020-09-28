@@ -2,12 +2,12 @@
 title: Breaking Changes bei Windows Forms
 description: Hier werden die Breaking Changes in Windows Forms für .NET Core und .NET 5 aufgelistet.
 ms.date: 09/08/2020
-ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656336"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678998"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
@@ -17,6 +17,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Das OutputType-Atttribut für WPF- und WinForms-Apps wurde auf WinExe festgelegt](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [Mit DataGridView verbundene APIs lösen jetzt InvalidOperationException aus](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms- und WPF-Apps verwenden Microsoft.NET.Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [Statusleisten-Steuerelement wurde entfernt](#removed-status-bar-controls) | 5.0 |
@@ -38,6 +39,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Kompatibilitätsoption UseLegacyImages wird nicht unterstützt](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
+
+***
 
 [!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
 

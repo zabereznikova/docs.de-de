@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065031"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738722"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -224,7 +224,7 @@ Ein weiterer nützlicher Anwendungsfall für dieses Feature ist die Kombination 
 
 Mithilfe eines `return new();`-Ausdrucks können Sie eine Instanz zurückgeben, die vom Standardkonstruktor erstellt wurde.
 
-Ein ähnliches Feature verbessert die Zieltypauflösung von bedingten Ausdrücken. Aufgrund dieser Änderung müssen die beiden Ausdrücke keine implizite Konvertierung von einem in den anderen aufweisen, sondern können beide implizit in einen gemeinsamen Typ konvertieren. Diese Änderung wird Ihnen wahrscheinlich nicht auffallen. Was Sie bemerken werden, ist, dass einige bedingte Ausdrücke, die zuvor eine Umwandlung erforderten oder nicht kompiliert werden konnten, jetzt funktionieren.
+Ein ähnliches Feature verbessert die Zieltypauflösung von bedingten Ausdrücken. Aufgrund dieser Änderung müssen die beiden Ausdrücke keine implizite Konvertierung von einem in den anderen aufweisen, sondern können beide über implizite Konvertierungen in einen Zieltyp verfügen. Diese Änderung wird Ihnen wahrscheinlich nicht auffallen. Was Sie bemerken werden, ist, dass einige bedingte Ausdrücke, die zuvor eine Umwandlung erforderten oder nicht kompiliert werden konnten, jetzt funktionieren.
 
 Ab C# 9.0 können Sie Lambdaausdrücken oder anonymen Methoden den Modifizierer `static` hinzufügen. Statische Lambdaausdrücke entsprechen den lokalen `static`-Funktionen: statische Lambdafunktionen oder anonyme Funktionen weder lokale Variablen noch den Instanzzustand erfassen. Der Modifizierer `static` verhindert, dass versehentlich andere Variablen erfasst werden.
 

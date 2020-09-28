@@ -1,7 +1,7 @@
 ---
 description: 'Operator „?:“: C#-Referenz'
 title: 'Operator „?:“: C#-Referenz'
-ms.date: 03/06/2020
+ms.date: 09/17/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 0efa6de2b537fd3af76807938ac2b50a2716561f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122354"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738878"
 ---
 # <a name="-operator-c-reference"></a>Operator „?“ (C#-Referenz)
 
@@ -29,7 +29,13 @@ condition ? consequent : alternative
 
 Der `condition`-Ausdruck muss als `true` oder `false` ausgewertet werden. Wenn `condition``true` ergibt, wird der `consequent`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Wenn `condition``false` ergibt, wird der `alternative`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Nur `consequent` oder `alternative` wird ausgewertet.
 
-Der Typ von `consequent` und `alternative` muss identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.
+Ab C# 9.0 weisen bedingte Ausdrücke das Typ des Ziels auf. Wenn der Zieltyp eines bedingten Ausdrucks also bekannt ist, müssen die Typen von `consequent` und `alternative` implizit in den Zieltyp konvertierbar sein, wie im folgenden Beispiel gezeigt wird:
+
+[!code-csharp[target-typed conditional](snippets/shared/ConditionalOperator.cs#TargetTyped)]
+
+Wenn der Zieltyp eines bedingten Ausdrucks nicht bekannt ist, z. B. wenn Sie das [`var`](../keywords/var.md)-Schlüsselwort nutzen oder in C# 8.0 oder älteren Versionen, muss der Typ von `consequent` und `alternative` identisch sein, oder es muss eine implizite Konvertierung von einem Typ in den anderen geben:
+
+[!code-csharp[not target-typed conditional](snippets/shared/ConditionalOperator.cs#NotTargetTyped)]
 
 Der bedingte Operator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 
@@ -56,9 +62,9 @@ Im folgenden Beispiel wird die Verwendung des bedingten Operators veranschaulich
 
 ## <a name="conditional-ref-expression"></a>Bedingter ref-Ausdruck
 
-Ab C# 7.2 kann eine lokale [ref](../keywords/ref.md#ref-locals)-Variable oder eine schreibgeschützte lokale [ref](../keywords/ref.md#ref-readonly-locals)-Variable mit dem bedingten ref-Ausdruck bedingt zugewiesen werden. Sie können den bedingten ref-Ausdruck auch als [Verweisrückgabewert](../keywords/ref.md#reference-return-values) oder als [`ref`-Methodenargument](../keywords/ref.md#passing-an-argument-by-reference) verwenden.
+Ab C# 7.2 kann eine lokale [ref](../keywords/ref.md#ref-locals)-Variable oder eine schreibgeschützte lokale [ref](../keywords/ref.md#ref-readonly-locals)-Variable mit dem bedingten ref-Ausdruck bedingt zugewiesen werden. Sie können einen bedingten ref-Ausdruck auch als [Verweisrückgabewert](../keywords/ref.md#reference-return-values) oder als [`ref`-Methodenargument](../keywords/ref.md#passing-an-argument-by-reference) verwenden.
 
-Die Syntax für den bedingten ref-Ausdruck lautet:
+Die Syntax für den bedingten ref-Ausdruck lautet folgendermaßen:
 
 ```csharp
 condition ? ref consequent : ref alternative
@@ -66,7 +72,7 @@ condition ? ref consequent : ref alternative
 
 Wie der ursprüngliche bedingte Operator wertet der bedingte ref-Ausdruck nur einen von zwei Ausdrücken aus: entweder `consequent` oder `alternative`.
 
-Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequent` und `alternative` identisch sein.
+Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequent` und `alternative` identisch sein. Bedingte ref-Ausdrücke weisen nicht den Typ des Ziels auf.
 
 Im folgenden Beispiel wird die Verwendung des bedingten ref-Ausdrucks veranschaulicht:
 
@@ -86,9 +92,12 @@ Ein benutzerdefinierter Typ kann den bedingten Operator nicht überladen.
 
 Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-Weitere Informationen zum bedingten REF-Ausdruck finden Sie unter [Hinweis zum Featurevorschlag](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
+Weitere Informationen zu in C# 7.2 und höher eingeführten Features finden Sie in den folgenden Featurevorschlägen:
 
-## <a name="see-also"></a>Siehe auch
+- [Bedingter ref-Ausdruck (C# 7.2)](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)
+- [Bedingter Ausdruck mit Zieltyp (C# 9.0)](~/_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md)
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren und -Ausdrücke](index.md)

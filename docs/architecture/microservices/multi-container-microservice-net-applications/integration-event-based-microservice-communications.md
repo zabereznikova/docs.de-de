@@ -2,18 +2,18 @@
 title: Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Integrationsereignisse zum Implementieren ereignisbasierter Kommunikation zwischen Microservices
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988322"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539345"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
 Wie bereits erwähnt, veröffentlicht ein Microservice bei Verwendung ereignisbasierter Kommunikation ein Ereignis, wenn etwas Nennenswertes geschieht, beispielsweise wenn eine Geschäftseinheit aktualisiert wird. Andere Microservices abonnieren diese Ereignisse. Wenn ein Microservice ein Ereignis empfängt, kann er die eigenen Geschäftseinheiten aktualisieren, was dazu führen kann, dass weitere Ereignisse veröffentlicht werden. Das ist die Grundidee des Konzepts der letztlichen Konsistenz. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Schnittstelle ausgelegt sein, die die API enthält, die zum Abonnieren von Ereignissen, zum Kündigen des Abonnements von Ereignissen sowie zum Veröffentlichen von Ereignissen erforderlich ist. Er kann auch über eine oder mehrere Implementierungen verfügen, die auf prozessübergreifender Kommunikation oder Messaging-Kommunikation beruhen. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein auf Veröffentlichen/Abonnieren basierendes Modell unterstützen.
 
-Sie können Ereignisse verwenden, um Geschäftstransaktionen zu implementieren, die sich über mehrere Dienste erstrecken. Dadurch werden diese Dienste im Laufe der Zeit konsistent. Eine letztendlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der Microservice eine Geschäftseinheit und veröffentlicht ein Ereignis, das die nächste Aktion auslöst. In Abbildung 6-18 unten wird ein PriceUpdated-Ereignis gezeigt, das über einen Ereignisbus veröffentlicht wurde, sodass die Preisaktualisierung in den Warenkorb und andere Microservices weitergegeben wird.
+Sie können Ereignisse verwenden, um Geschäftstransaktionen zu implementieren, die sich über mehrere Dienste erstrecken. Dadurch werden diese Dienste im Laufe der Zeit konsistent. Eine letztendlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der Microservice eine Geschäftseinheit und veröffentlicht ein Ereignis, das die nächste Aktion auslöst. In Abbildung 6-18 unten wird ein PriceUpdated-Ereignis gezeigt, das über einen Ereignisbus veröffentlicht wurde, sodass die Preisaktualisierung in den Warenkorb und an andere Microservices weitergegeben wird.
 
 ![Diagramm der asynchronen, ereignisgesteuerten Kommunikation mit einem Ereignisbus.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 

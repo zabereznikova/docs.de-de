@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9baca45de1c8994f610815e84fdee8ba3930eb04
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 7c0227980aa5d90f3788783088bcd7cd9509ed66
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497401"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770782"
 ---
 ### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>Der WCF-Standardwert MsmqSecureHashAlgorithm ist jetzt SHA256
 
@@ -14,13 +14,21 @@ Ab .NET Framework 4.7.1 ist SHA256 der Standardalgorithmus zum Signieren von Msm
 
 #### <a name="suggestion"></a>Vorschlag
 
-Wenn Kompatibilitätsprobleme durch diese Änderung an .NET Framework 4.7.1 oder höher auftreten, können Sie diese deaktivieren, indem Sie folgende Zeile zum Abschnitt <code>&lt;runtime&gt;</code> Ihrer App.config-Datei hinzufügen:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InMsmqEncryptionAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+Wenn Kompatibilitätsprobleme durch diese Änderung an .NET Framework 4.7.1 oder höher auftreten, können Sie diese beseitigen, indem Sie folgende Zeile zum Abschnitt `<runtime>` Ihrer app.config-Datei hinzufügen:
 
-| name    | Wert       |
-|:--------|:------------|
-| Bereich   |Gering|
-|Version|4.7.1|
-|Typ|Laufzeit|
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InMsmqEncryptionAlgorithm=true&quot; />
+  </runtime>
+</configuration>
+```
+
+| name    | Wert   |
+|:--------|:--------|
+| Bereich   | Gering   |
+| Version | 4.7.1   |
+| Typ    | Laufzeit |
 
 #### <a name="affected-apis"></a>Betroffene APIs
 

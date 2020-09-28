@@ -1,13 +1,13 @@
 ---
 title: Transaktionen
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: Hier erfahren Sie, wie Sie Transaktionen einsetzen.
-ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 50c4cd1023eac892cafc3ae4395e9168bd8e9f36
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450381"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678861"
 ---
 # <a name="transactions"></a>Transaktionen
 
@@ -36,3 +36,12 @@ Microsoft.Data.Sqlite behandelt den für „IsolationLevel“ an <xref:Microsoft
 Mit dem folgenden Code wird ein „Dirty Read“ simuliert. Beachten Sie, dass die Verbindungszeichenfolge `Cache=Shared` enthalten muss.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]
+
+## <a name="deferred-transactions"></a>Verzögerte Transaktionen
+
+Ab der Version 5.0 von Microsoft.Data.Sqlite können Transaktionen verzögert werden. Dadurch wird die Erstellung der tatsächlichen Transaktion in der Datenbank so lange verzögert, bis der erste Befehl ausgeführt wird. Außerdem wird für die Transaktion dadurch allmählich ein Upgrade von einer Lesetransaktion zu einer Schreibtransaktion durchgeführt, wie es von den jeweiligen Befehlen erfordert wird. Dies kann hilfreich sein, wenn während der Transaktion gleichzeitiger Zugriff auf die Datenbank ermöglicht werden soll.
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DeferredTransactionSample/Program.cs?name=snippet_DeferredTransaction)]
+
+> [!WARNING]
+> Bei Befehlen innerhalb einer verzögerten Transaktion können Fehler auftreten, wenn sie dazu führen, dass für die Transaktion ein Upgrade von einer Lesetransaktion zu einer Schreibtransaktion durchgeführt wird, noch während die Datenbank gesperrt ist. Wenn dies geschieht, muss die Anwendung die gesamte Transaktion neu ausführen.

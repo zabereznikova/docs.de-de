@@ -2,12 +2,12 @@
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306907"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738748"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
@@ -154,7 +154,7 @@ Zudem wird der neue OrderItem(params)-Vorgang ebenfalls über die AddOrderItem-M
 
 Wenn Sie Entity Framework Core 1.1 oder höher verwenden, kann besser eine Entität des domänengesteuerten Designs festgelegt werden, da diese neben Eigenschaften auch die [Zuordnung zu Feldern](https://docs.microsoft.com/ef/core/modeling/backing-field) zulässt. Dies ist nützlich, wenn Auflistungen von untergeordneten Entitäten oder Wertobjekten geschützt werden sollen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften nutzen, und Sie können jedes Update für die Feldauflistung in öffentlichen Methoden ausführen und schreibgeschützten Zugriff über die AsReadOnly-Methode bereitstellen.
 
-Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Es gibt jedoch eine Ausnahme: EF Core muss auch diese Felder festlegen, damit das Objekt mit den richtigen Werten zurückgegeben werden kann.
+Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Eine Ausnahme besteht jedoch: EF Core muss auch diese Felder festlegen, damit das Objekt mit den richtigen Werten zurückgegeben werden kann.
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Zuordnen von Eigenschaften zu Feldern in der Datenbanktabelle mit get-Accessors
 

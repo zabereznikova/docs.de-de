@@ -3,19 +3,19 @@ title: Implementieren einer DisposeAsync-Methode
 description: Hier erfahren Sie, wie Sie die Methoden „DisposeAsync“ und „DisposeAsyncCore“ implementieren, um eine asynchrone Ressourcenbereinigung durchzuführen.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022908"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720282"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementieren einer DisposeAsync-Methode
 
@@ -77,7 +77,7 @@ Möglicherweise müssen Sie sowohl die <xref:System.IDisposable>- als auch die <
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-Bei der <xref:System.IDisposable.Dispose?displayProperty=nameWithType>- und der <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>-Implementierung handelt es sich um einfache Codebausteine. Zunächst überprüfen die Methoden `Dispose(bool)` und `DisposeAsyncCore()`, ob der Wert für `_disposed` `true` ist. Sie werden nur ausgeführt, wenn der Wert `false` ist.
+Bei der <xref:System.IDisposable.Dispose?displayProperty=nameWithType>- und der <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>-Implementierung handelt es sich um einfache Codebausteine.
 
 In der Überladungsmethode `Dispose(bool)` wird die <xref:System.IDisposable>-Instanz bedingt verworfen, wenn sie nicht den Wert `null` aufweist. Die <xref:System.IAsyncDisposable>-Instanz wird in <xref:System.IDisposable> umgewandelt. Wenn der Wert dieser Instanz auch nicht `null` ist, wird sie ebenfalls verworfen. Beiden Instanzen wird dann der Wert `null` zugewiesen.
 
@@ -85,7 +85,7 @@ Bei der `DisposeAsyncCore()`-Methode wird der gleiche logische Ansatz verfolgt. 
 
 ## <a name="using-async-disposable"></a>Verwenden von asynchron verwerfbar
 
-Wenn Sie ein Objekt ordnungsgemäß nutzen zu können, das die <xref:System.IAsyncDisposable>-Schnittstelle implementiert, verwenden Sie die Schlüsselwörter [await](../../csharp/language-reference/operators/await.md) und [using](../../csharp/language-reference/keywords/using-statement.md) zusammen. Sehen Sie sich das folgende Beispiel an, in dem die `ExampleAsyncDisposable`-Klasse instanziiert und dann von einer `await using`-Anweisung umschlossen wird.
+Wenn Sie ein Objekt ordnungsgemäß nutzen können möchten, das die <xref:System.IAsyncDisposable>-Schnittstelle implementiert, verwenden Sie die Schlüsselwörter [await](../../csharp/language-reference/operators/await.md) und [using](../../csharp/language-reference/keywords/using-statement.md) zusammen. Sehen Sie sich das folgende Beispiel an, in dem die `ExampleAsyncDisposable`-Klasse instanziiert und dann von einer `await using`-Anweisung umschlossen wird.
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

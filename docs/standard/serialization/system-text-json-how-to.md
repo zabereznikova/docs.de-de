@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289511"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557839"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Marshallen und Marshallen rückgängig machen) von JSON-Daten in .NET
 
@@ -118,7 +118,7 @@ Das Serialisieren in UTF-8 ist ungefähr 5–10 % schneller als die Verwendung 
 * JSON wird standardmäßig verkleinert. Sie können den [JSON-Code übersichtlich formatieren](#serialize-to-formatted-json).
 * Standardmäßig entspricht die Groß-/Kleinschreibung von JSON-Namen der von .NET-Namen. Sie können die [Groß-/Kleinschreibung von JSON-Namen anpassen](#customize-json-names-and-values).
 * Zirkelbezüge werden erkannt und daraufhin Ausnahmen ausgelöst.
-* Felder sind aktuell ausgeschlossen.
+* Aktuell werden [Felder](../../csharp/programming-guide/classes-and-structs/fields.md) ausgeschlossen.
 
 Unter anderem unterstützte Typen:
 

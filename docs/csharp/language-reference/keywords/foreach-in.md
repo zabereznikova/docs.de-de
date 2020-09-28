@@ -1,7 +1,7 @@
 ---
 description: foreach, in (C#-Referenz)
 title: foreach-Anweisung in C#
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142075"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828889"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C#-Referenz)
 
@@ -25,7 +25,7 @@ Die Anweisung `foreach` führt eine Anweisung oder einen Block von Anweisungen f
 
 Die Anweisung `foreach` ist nicht auf diese Typen beschränkt. Sie können sie mit einer Instanz eines beliebigen Typs verwenden, der die folgenden Bedingungen erfüllt:
 
-- Ein Typ weist die öffentliche parameterlose Methode `GetEnumerator` auf, deren Rückgabetyp entweder eine Klasse, eine Struktur oder ein Schnittstellentyp ist.
+- Ein Typ weist die öffentliche parameterlose Methode `GetEnumerator` auf, deren Rückgabetyp entweder eine Klasse, eine Struktur oder ein Schnittstellentyp ist. Ab C# 9.0 kann die `GetEnumerator`-Methode die [Erweiterungsmethode](../../programming-guide/classes-and-structs/extension-methods.md) eines Typs sein.
 - Der Rückgabetyp der Methode `GetEnumerator` weist die öffentliche Eigenschaft `Current` und die öffentliche parameterlose Methode `MoveNext` auf, deren Rückgabetyp <xref:System.Boolean> ist.
 
 Im folgenden Beispiel wird die Anweisung `foreach` mit einer Instanz des Typs <xref:System.Span%601?displayProperty=nameWithType> verwendet, der keine Schnittstellen implementiert:
@@ -67,7 +67,12 @@ Im obigen Formular muss der Typ `T` eines Sammlungselements implizit oder expliz
 
 Weitere Informationen finden Sie im Abschnitt [Die foreach-Anweisung](~/_csharplang/spec/statements.md#the-foreach-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+Weitere Informationen zu in C# 8.0 und höher eingeführten Features finden Sie in den folgenden Featurevorschlägen:
+
+- [Asynchrone Datenströme (C# 8.0)](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [Unterstützung für die Erweiterung `GetEnumerator` in `foreach`-Schleifen (C# 9.0)](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)

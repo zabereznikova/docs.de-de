@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174795"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539267"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -76,7 +76,7 @@ Blazor ist in ASP.NET Core 3.0 und höher enthalten. Das Tool bietet einen neue
 
 Serverseitiges Blazor wurde 2019 mit ASP.NET Core 3.0 veröffentlicht. Wie der Name schon sagt, erfolgt die Ausführung auf dem Server, wobei Änderungen am Clientdokument über das Netzwerk an den Browser zurückgegeben werden. Serverseitiges Blazor bietet eine komplexe Clienterfahrung, ohne dass clientseitiges JavaScript erforderlich ist und ohne dass für jede Clientseiteninteraktion separate Seitenladevorgänge erforderlich sind. Änderungen an der geladenen Seite werden vom Server angefordert und von ihm verarbeitet und dann mittels SignalR an den Client zurückgesendet.
 
-Clientseitiges Blazor wird 2020 veröffentlicht und macht das Rendern von Änderungen auf dem Server überflüssig. Stattdessen wird WebAssembly genutzt, um .NET-Code innerhalb des Clients auszuführen. Der Client kann weiterhin API-Aufrufe an den Server richten, um Daten anzufordern. Das gesamte clientseitige Verhalten erfolgt jedoch im Client über WebAssembly, das bereits von allen gängigen Browsern unterstützt wird und lediglich eine JavaScript-Bibliothek ist.
+Clientseitiges Blazor wurde im Mai 2020 veröffentlicht und macht das Rendern von Änderungen auf dem Server überflüssig. Stattdessen wird WebAssembly genutzt, um .NET-Code innerhalb des Clients auszuführen. Der Client kann weiterhin API-Aufrufe an den Server richten, um Daten anzufordern. Das gesamte clientseitige Verhalten erfolgt jedoch im Client über WebAssembly, das bereits von allen gängigen Browsern unterstützt wird und lediglich eine JavaScript-Bibliothek ist.
 
 > ### <a name="references--modern-web-applications"></a>Ressourcen: Moderne Webanwendungen
 >

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eigenständige Apps zuschneiden, um ihre Grö
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465480"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770454"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
 
@@ -24,7 +24,7 @@ Die Engine für die Buildzeitanalyse sendet Warnungen an die Entwickler von prob
 Der Kürzungsmodus für diese Anwendungen wird mit der `TrimMode`-Einstellung konfiguriert. Der Standardwert ist `copyused`, und Assemblys, auf die verwiesen wird, werden mit der Anwendung gebündelt. Der `link`-Wert wird mit Blazor WebAssembly-Anwendungen verwendet und entfernt nicht verwendeten Code in Assemblys. Kürzungsanalysewarnungen bieten Informationen zu Codemustern, bei denen keine vollständige Abhängigkeitsanalyse möglich war. Diese Warnungen werden standardmäßig unterdrückt und können aktiviert werden, indem das Flag `SuppressTrimAnalysisWarnings` auf `false` festgelegt wird. Weitere Informationen zu den verfügbaren Kürzungsoptionen finden Sie unter [Kürzungsoptionen](trimming-options.md).
 
 > [!NOTE]
-> Das Kürzen ist ein experimentelles Feature in .NET Core 3.1 und 5.0 und _nur_ für Anwendungen verfügbar, die eigenständig veröffentlicht werden.
+> Beim Kürzen handelt es sich um experimentelles Feature in .NET 3.1 und .NET 5.0. Kürzen ist _nur_ für Anwendungen verfügbar, die eigenständig veröffentlicht werden.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Verhindern, dass Assemblys zugeschnitten werden
 

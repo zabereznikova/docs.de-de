@@ -4,12 +4,12 @@ description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und 
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132941"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538452"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter Ubuntu
 
@@ -172,6 +172,10 @@ sudo apt-get upgrade
 ## <a name="apt-troubleshooting"></a>Problembehandlung für APT
 
 Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Installation von .NET Core mit APT auftreten können.
+
+### <a name="unable-to-find-package"></a>Paket konnte nicht gefunden werden
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>"Das Paket kann nicht gefunden werden"/"Die Pakete konnten nicht installiert werden"
 
