@@ -7,19 +7,21 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 148c1f9fba67659a07c667bb15619d6f3f7c3b2f
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 283c36ab9b976a92e339000a982340148c2480a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302021"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178644"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Vorgehensweise: Ausführen von Bereinigungscode mit finally (C#-Programmierleitfaden)
+
 `finally`-Anweisungen sollen sicherstellen, dass die notwendige Bereinigung von Objekten, die externe Ressourcen enthalten, sofort erfolgen, auch wenn eine Ausnahme ausgelöst wird. Ein Beispiel für eine solche Bereinigung ist der Aufruf von <xref:System.IO.Stream.Close%2A> auf einem <xref:System.IO.FileStream> sofort nach der Verwendung, anstatt abzuwarten, bis das Objekt durch die Common Language Runtime wie folgt speicherbereinigt wird:  
   
  [!code-csharp[csProgGuideExceptions#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#16)]  
   
 ## <a name="example"></a>Beispiel  
+
  Um den vorherigen Code in eine `try-catch-finally`-Anweisung umzuwandeln, wird der Bereinigungscode wie folgt vom Arbeitscode getrennt.  
   
  [!code-csharp[csProgGuideExceptions#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#17)]  

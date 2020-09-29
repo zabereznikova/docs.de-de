@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 5310b911cc0abf0e82c4dc8efd45eb45ffb94c9d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381709"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176226"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Vorgehensweise: Verwenden des My-Namespaces (C#-Programmierleitfaden)
 
@@ -33,6 +33,7 @@ Der Namespace <xref:Microsoft.VisualBasic.MyServices> (`My` in Visual Basic) bie
      [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel werden mehrere statische Methoden aufgerufen, die im `MyServices`-Namespace enthalten sind. Damit dieser Code kompiliert wird, muss dem Projekt ein Verweis auf „Microsoft.VisualBasic.dll“ hinzugefügt werden.  
   
  [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  

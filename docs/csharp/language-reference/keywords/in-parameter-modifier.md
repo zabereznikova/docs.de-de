@@ -5,12 +5,12 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 613be9248e6ce9b974bcab1b59abd30469e9e180
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b9cd308a1eaf2ae8f4e3e89b1a4770933b3978cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118403"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188407"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -121,6 +121,7 @@ Sie können keines der Schlüsselwörter `in`, `ref` und `out` für die folgende
 - Das erste Argument einer Erweiterungsmethode, wenn es sich bei diesem Argument um einen generischen Typ handelt (selbst dann, wenn dieser Typ auf eine Struktur beschränkt ist).
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch

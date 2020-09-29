@@ -2,12 +2,12 @@
 title: Domänenereignisse. Entwurf und Implementierung
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Domänenereignisse, ein Schlüsselkonzept zum Herstellen der Kommunikation zwischen Aggregaten
 ms.date: 10/08/2018
-ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 651d9cb98444c0729b97f523cc3d688f0f8d51d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738774"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173367"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -342,7 +342,7 @@ Schließlich ist es wichtig zu erwähnen, dass Ereignisse manchmal über mehrere
 
 Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in Ihrer Domäne zu implementieren. Um die DDD-Terminologie zu verwenden, setzen Sie Domänenereignisse ein, um explizit Nebenwirkungen über ein oder mehrere Aggregate zu implementieren. Verwenden Sie zusätzlich für eine bessere Skalierbarkeit und weniger Auswirkungen in Datenbanksperren Eventual Consistency zwischen Aggregaten in der gleichen Domäne.
 
-Die Referenz-App verwendet [MediatR](https://github.com/jbogard/MediatR), um Domänenereignisse innerhalb einer Transaktion synchron zwischen Aggregaten zu verteilen. Sie können auch eine AMQP-Implementierung wie [RabbitMQ](https://www.rabbitmq.com/) oder [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) verwenden, um Domänenereignisse asynchron zu verteilen. Dies geschieht mithilfe der letztlichen Konsistenz, aber Sie müssen, wie oben erwähnt, die Notwendigkeit von Kompensationsaktionen bei Fehlern berücksichtigen.
+Die Referenz-App verwendet [MediatR](https://github.com/jbogard/MediatR), um Domänenereignisse innerhalb einer Transaktion synchron zwischen Aggregaten zu verteilen. Sie können auch eine AMQP-Implementierung wie [RabbitMQ](https://www.rabbitmq.com/) oder [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) verwenden, um Domänenereignisse asynchron zu verteilen. Dies geschieht mithilfe der letztlichen Konsistenz, aber Sie müssen, wie oben erwähnt, die Notwendigkeit von Kompensationsaktionen bei Fehlern berücksichtigen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

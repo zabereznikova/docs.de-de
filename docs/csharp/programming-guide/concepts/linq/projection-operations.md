@@ -3,14 +3,15 @@ title: Projektionsvorgänge (C#)
 description: Erfahren Sie mehr über Projektionsvorgänge. Diese Vorgänge transformieren ein Objekt in eine neue Form, die häufig nur aus Eigenschaften besteht, die später verwendet werden.
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 289100ac9afcfc0d5b93b5f963adc0a123e0a5af
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 6128b1bb2e7ba3dbb1b428d475acc307ba931013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299161"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186002"
 ---
 # <a name="projection-operations-c"></a>Projektionsvorgänge (C#)
+
 Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
   
  Die Methoden des Standardabfrageoperators, die Projektion ausführen, sind im folgenden Abschnitt aufgeführt.  
@@ -25,6 +26,7 @@ Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form 
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="select"></a>Auswählen  
+
  Im folgenden Beispiel wird die `select`-Klausel verwendet, um den ersten Buchstaben jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
   
 ```csharp  
@@ -46,6 +48,7 @@ foreach (string s in query)
 ```  
   
 ### <a name="selectmany"></a>SelectMany  
+
  Im folgenden Beispiel wird die `from`-Klausel verwendet, um jedes Wort aus jeder Zeichenfolge in einer Liste von Zeichenfolgen zu projizieren.  
   
 ```csharp  
@@ -72,6 +75,7 @@ foreach (string s in query)
 ```  
   
 ## <a name="select-versus-selectmany"></a>Select im Vergleich zu SelectMany  
+
  Die Arbeit von jeweils `Select()` und `SelectMany()` besteht darin, einen Ergebniswert (oder Werte) aus den Quellwerten zu erstellen. `Select()` generiert einen Ergebniswert für jeden Quellwert. Das Ergebnis ist daher eine Auflistung, die über die gleiche Anzahl von Elementen wie die Quellauflistung verfügt. Im Gegensatz dazu erzeugt `SelectMany()` ein einziges Gesamtergebnis, das verkettete untergeordnete Auflistungen aus jedem Quellwert enthält. Die Transform-Funktion, die als Argument an `SelectMany()` übergeben wird, muss eine aufzählbare Sequenz von Werten für jeden Quellwert zurückgeben. Diese aufzählbaren Sequenzen werden anschließend von `SelectMany()` zu einer großen Sequenz verkettet.  
   
  Die folgenden zwei Abbildungen zeigen den konzeptionellen Unterschied zwischen den Aktionen der beiden Methoden. In jedem Fall wird davon ausgegangen, dass die Auswahlfunktion (Transform) das Array von Blumen aus jedem Quellwert auswählt.  
@@ -85,6 +89,7 @@ foreach (string s in query)
  ![Grafische Darstellung der Aktion SelectMany&#40;&#41;](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Codebeispiel  
+
  Im folgenden Beispiel wird das Verhalten von `Select()` und `SelectMany()` verglichen. Der Code erstellt eine „Bouquet“ von Blumen, indem er die ersten beiden Elemente aus jeder Liste der Blumennamen in der Quellauflistung aufführt. In diesem Beispiel ist der „einzelne Wert“, den die Transformationsfunktion <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> verwendet, selbst eine Auflistung von Werten. Dies erfordert die zusätzliche `foreach`-Schleife, um jede Zeichenfolge in den einzelnen Untersequenzen aufzulisten.  
   
 ```csharp  

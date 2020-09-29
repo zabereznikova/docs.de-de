@@ -3,14 +3,15 @@ title: Filtern von Daten (C#)
 description: Durch Filtern, auch als Auswahl bezeichnet, werden die Ergebnisse auf der Grundlage einer Bedingung eingeschränkt. Hier erfahren Sie mehr über die Methoden des Standardabfrageoperators in LINQ in C#, die Filter ausführen.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 51bf9f930ba67ba07c7c0f357910d5e36014138d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103930"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186041"
 ---
 # <a name="filtering-data-c"></a>Filtern von Daten (C#)
+
 Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die eine bestimmte Bedingung erfüllen. Es ist auch bekannt als Auswahl.  
   
  Die folgende Abbildung zeigt die Ergebnisse des Filterns einer Zeichenfolge. Das Prädikat für den Filtervorgang gibt an, dass das Zeichen A sein muss.  
@@ -27,6 +28,7 @@ Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die 
 |Where|Wählt Werte aus, die auf einer Prädikatfunktion basieren.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
+
  Im folgenden Beispiel wird die `where`-Klausel verwendet, um die Zeichenfolgen aus einem Array zu filtern, die eine bestimmte Länge aufweisen.  
   
 ```csharp  

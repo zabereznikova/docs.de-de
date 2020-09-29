@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: f60c1ea4f3f029ec3b81a4197a711523ec372df9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474500"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186158"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonyme Typen (C#-Programmierhandbuch)
 
@@ -48,6 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Hinweise  
+
  Anonyme Typen sind [Klassentypen](../../language-reference/keywords/class.md), die direkt vom [Objekt](../../language-reference/builtin-types/reference-types.md) abgleitet werden und in keinen anderen Typ als ein [Objekt](../../language-reference/builtin-types/reference-types.md) umgewandelt werden können. Der Compiler gibt für jeden anonymen Typ einen Namen an, Ihre Anwendung kann jedoch nicht darauf zugreifen. Aus der Perspektive der Common Language Runtime unterscheidet sich ein anonymer Typ nicht von anderen Verweistypen.  
   
  Wenn zwei oder mehr anonyme Objektinitialisierer in einer Assembly eine Sequenz von Eigenschaften angeben, die die gleiche Reihenfolge und die gleichen Namen und Typen aufweisen, behandelt der Compiler die Objekte als Instanzen desselben Typs. Sie erhalten die gleichen vom Compiler generierten Typinformationen.  

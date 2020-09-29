@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474890"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174302"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
+
 Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -65,9 +66,11 @@ protected override void Finalize()
  Es ist möglich, die Garbage Collection durch Aufrufen von <xref:System.GC.Collect%2A> zu erzwingen. Dieser Aufruf sollte jedoch meistens vermieden werden, da er Leistungsprobleme hervorrufen kann.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Verwenden von Finalizern zum Freigeben von Ressourcen  
+
  Im Allgemeinen erfordert C# nicht so viel Speicherverwaltung seitens des Entwicklers wie Sprachen, die mit der Garbage Collection nicht auf eine Laufzeit abzielen. Der Garbage Collector von .NET verwaltet implizit die Belegung und Freigabe von Arbeitsspeicher für Ihre Objekte. Wenn Ihre Anwendung nicht verwaltete Ressourcen wie z. B. Fenster, Dateien und Netzwerkverbindungen kapselt, sollten Sie Finalizer verwenden, um die Ressourcen freizugeben. Wenn das Objekt abgeschlossen werden kann, führt der Garbage Collector die `Finalize`-Methode des Objekts aus.
   
 ## <a name="explicit-release-of-resources"></a>Explizite Freigabe von Ressourcen  
+
  Wenn Ihre Anwendung eine umfangreiche externe Ressource verwendet, wird außerdem empfohlen, dass Sie eine Möglichkeit bieten, die Ressource explizit freizugeben, bevor der Garbage Collector das Objekt freigibt. Implementieren Sie zum Freigeben der Ressource eine `Dispose`-Methode aus der Schnittstelle <xref:System.IDisposable>, die die erforderliche Bereinigung für das Objekt durchführt. Dies kann die Leistung der Anwendung erheblich verbessern. Trotz dieser expliziten Kontrolle über Ressourcen wird der Finalizer Ressourcen sicher bereinigen, wenn der Aufruf der `Dispose`-Methode fehlschlägt.  
   
  Weitere Informationen zum Bereinigen von Ressourcen finden Sie in den folgenden Artikeln:  
@@ -79,6 +82,7 @@ protected override void Finalize()
 - [Using-Anweisung](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel erstellt drei Klassen, die eine Vererbungskette bilden. Die Klasse `First` ist die Basisklasse, `Second` wird von `First` abgeleitet, und `Third` wird von `Second` abgeleitet. Alle drei verfügen über Finalizer. In `Main` wird eine Instanz der am meisten abgeleiteten Klasse erstellt. Wenn das Programm ausgeführt wird, beachten Sie, dass die Finalizer der drei Klassen automatisch und in Reihenfolge von der am meisten bis zu der am wenigsten abgeleiteten aufgerufen werden.  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 13321cdc83637105a2b981902ce984e6a90a25d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863863"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181816"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
+
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
   
  In C# können abgeleitete Klassen Methoden mit dem gleichen Namen wie Basisklassen-Methoden enthalten.  
@@ -65,6 +66,7 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../langua
  Mit dem Schlüsselwort `new` teilt der Compiler mit, dass Ihre Definition die Definition ausblendet, die in der Basisklasse enthalten ist. Dies ist das Standardverhalten.  
   
 ## <a name="override-and-method-selection"></a>Überschreiben und Methodenauswahl  
+
  Wenn eine Methode in einer Klasse benannt wird, wählt der C#-Compiler die beste Methode zum Aufrufen aus, wenn mehr als eine Methode mit dem Aufruf kompatibel ist, z.B. wenn es zwei Methoden mit dem gleichen Namen und Parameter gibt, die mit dem übergebenen Parameter kompatibel sind. Die folgenden Methoden wären kompatibel:  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  

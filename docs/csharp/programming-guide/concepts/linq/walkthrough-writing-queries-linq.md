@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559147"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176239"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in C# (LINQ)
+
 Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die zum Schreiben von LINQ-Abfrageausdrücke verwendet werden.  
   
 ## <a name="create-a-c-project"></a>Erstellen eines C#-Projekts  
@@ -40,6 +41,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
 5. Beachten Sie, dass Ihr Projekt einen Verweis auf „System.Core.dll“ und eine `using`-Direktive für den Namespace <xref:System.Linq?displayProperty=nameWithType> enthält.  
   
 ## <a name="create-an-in-memory-data-source"></a>Erstellen einer In-Memory-Datenquelle  
+
  Die Datenquelle für die Abfragen ist eine einfache Liste mit `Student`-Objekten. Jeder `Student`-Datensatz umfasst einen Vornamen, einen Nachnamen und ein Array von Ganzzahlen, das die Testergebnisse der einzelnen Studenten in der Klasse darstellt. Kopieren Sie diesen Code in Ihr Projekt. Beachten Sie die folgenden Eigenschaften:  
   
 - Die `Student`-Klasse besteht aus automatisch implementierten Eigenschaften.  
@@ -173,6 +175,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die C#-Sprachfunktionen, die 
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Nächste Schritte  
+
  Nachdem Sie nun mit den grundlegenden Aspekten der Arbeit mit Abfragen in C# vertraut sind, sind Sie nun bereit, die Dokumentation und Beispiele für bestimmte LINQ-Anbieter zu lesen, an denen Sie interessiert sind:  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9ade723bdca17597dcd56240f506e60f2debf6be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186418"
 ---
 # <a name="warning-c-reference"></a>#warning (C#-Referenz)
+
 Mit `#warning` können Sie von einem bestimmten Ort in Ihrem Code aus eine Compilerwarnung [CS1030](../../misc/cs1030.md) der Stufe 1 generieren. Beispiel:  
   
 ```csharp
@@ -22,6 +23,7 @@ Mit `#warning` können Sie von einem bestimmten Ort in Ihrem Code aus eine Compi
 ```  
   
 ## <a name="remarks"></a>Bemerkungen
+
  Eine übliche Verwendung von `#warning` ist die Verwendung in einer bedingten Anweisung. Es ist auch möglich, einen benutzerdefinierten Fehler mit [#error](./preprocessor-error.md) zu generieren.  
   
 ## <a name="example"></a>Beispiel  

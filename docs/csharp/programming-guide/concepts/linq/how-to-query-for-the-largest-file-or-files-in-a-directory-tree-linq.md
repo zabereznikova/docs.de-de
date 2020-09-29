@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Abfragen der größten Datei oder der größten Dateien 
 description: Dieses C#-Beispiel zeigt fünf LINQ-Abfragen mit Bezug auf die Dateigröße in Byte. Sie können diese Abfragen so bearbeiten, dass andere Eigenschaften des FileInfo-Objekts abgefragt werden.
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: c06c6017d6fd1efd6412729c5df63a2b819908a6
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 049db9bf104af1593ba9807c307008e8e760da32
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104373"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176252"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Vorgehensweise: Abfragen der größten Datei oder der größten Dateien in einer Verzeichnisstruktur (LINQ) (C#)
+
 Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:  
   
 - So rufen Sie die Größe in Bytes der größten Datei ab  
@@ -24,6 +25,7 @@ Dieses Beispiel zeigt fünf Abfragen mit Bezug auf die Dateigröße in Bytes:
 - So ordnen Sie Dateien in Gruppen auf Grundlage ihrer Dateigröße in Bytes und ignorieren dabei die Dateien, die kleiner als eine angegebene Größe sind  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel enthält fünf separate Abfragen, die zeigen, wie Sie Dateien je nach ihrer Dateigröße in Bytes abfragen und gruppieren. Sie können diese Beispiele ganz einfach verändern, um die Abfrage auf eine andere Eigenschaft des <xref:System.IO.FileInfo>-Objekts anzuwenden.  
   
 ```csharp  
@@ -144,6 +146,7 @@ class QueryBySize
  Die Abfrage ruft eine separate Methode zum Abrufen der Dateigröße in Bytes auf, um die mögliche Ausnahme zu verwenden, die in dem Fall ausgelöst wird, wenn eine Datei auf einem anderen Thread im Zeitraum, in dem das <xref:System.IO.FileInfo>-Objekt im Aufruf an `GetFiles` erstellt wurde, gelöscht wurde. Obwohl das <xref:System.IO.FileInfo>-Objekt bereits erstellt wurde, kann die Ausnahme auftreten, weil ein <xref:System.IO.FileInfo>-Objekt versucht, seine <xref:System.IO.FileInfo.Length%2A>-Eigenschaft mithilfe der aktuellsten Größe in Bytes beim ersten Zugriff auf die Eigenschaft zu aktualisieren. Indem dieser Vorgang in einen Try-Catch-Block außerhalb der Abfrage erfolgt, folgt der Code der Regel zum Vermeiden von Vorgängen in Abfragen, die Nebeneffekte verursachen können. Im Allgemeinen ist beim Abfangen von Ausnahmen große Sorgfalt geboten, damit einen Anwendung nicht in einem unbekannten Zustand gelassen wird.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
 Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
 
 ## <a name="see-also"></a>Siehe auch

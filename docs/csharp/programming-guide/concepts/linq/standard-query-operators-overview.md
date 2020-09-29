@@ -3,14 +3,15 @@ title: Übersicht über Standardabfrageoperatoren (C#)
 description: Die LINQ-Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation und Sortierung in C# bereit.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1ff98e47641dbe7a884b7d6c7758c1fe61b95091
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178774"
 ---
 # <a name="standard-query-operators-overview-c"></a>Übersicht über Standardabfrageoperatoren (C#)
+
 Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  
   
  Es gibt zwei Gruppen von LINQ-Standardabfrageoperatoren: Eine Gruppe funktioniert auf Grundlage von Objekten vom Typ <xref:System.Collections.Generic.IEnumerable%601>, die andere auf Grundlage von Objekten vom Typ <xref:System.Linq.IQueryable%601>. Die Methoden, die eine Gruppe bilden, sind statische Member der Klassen <xref:System.Linq.Enumerable> und <xref:System.Linq.Queryable>. Sie werden als *Erweiterungsmethoden* des Typs, auf dessen Grundlage sie funktionieren, definiert. Erweiterungsmethoden können entweder mit der Syntax für statische Methoden oder mit der für Instanzmethoden aufgerufen werden.  
@@ -68,12 +69,15 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
+
  Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C# und Visual Basic-Sprache, wodurch sie als Teil eines *query*-*Ausdrucks* aufgerufen werden können. Weitere Informationen über Standardabfrageoperatoren, die über dedizierte Schlüsselwörter und deren entsprechende Syntax verfügen, finden Sie unter [Query Expression Syntax for Standard Query Operators (C#) (Abfrageausdruckssyntax für Standardabfrageoperatoren (C#))](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Erweitern der Standardabfrageoperatoren  
+
  Sie können die Gruppe von Standardabfrageoperatoren durch Erstellen von domänenspezifischen Methoden erweitern, die für Ihre Zieldomäne oder -technologie geeignet sind. Sie können die Standardabfrageoperatoren auch mit ihren eigenen Implementierungen ersetzen, die zusätzliche Dienste bieten, z.B. Remote-Auswertung, Abfrageübersetzung und Optimierung. Ein Beispiel finden Sie unter <xref:System.Linq.Enumerable.AsEnumerable%2A>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  Über die folgenden Links gelangen Sie zu Artikeln, die Ihnen weitere Informationen über die verschiedenen Standardabfrageoperatoren basierend auf deren Funktionen bieten.  
   
  [Sorting Data (C#) (Sortieren von Daten (C#))](./sorting-data.md)  

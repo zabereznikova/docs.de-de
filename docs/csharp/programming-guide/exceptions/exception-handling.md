@@ -6,14 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302034"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178683"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Ausnahmebehandlung (C#-Programmierhandbuch)
+
 Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Programmierern verwendet, um Code zu partitionieren, der von einer Ausnahme betroffen sein könnte. Zugeordnete [catch](../../language-reference/keywords/try-catch.md)-Blöcke werden verwendet, um die sich ergebenden Ausnahmen zu behandeln. Ein [finally](../../language-reference/keywords/try-finally.md)-Block enthält Code, der ausgeführt wird, unabhängig davon, ob eine Ausnahme im `try`-Block ausgelöst wird, z.B. das Freigeben von Ressourcen, die im `try`-Block zugeordnet werden. Ein `try`-Block erfordert einen oder mehrere zugeordnete `catch`-Blöcke oder ein `finally`-Block oder beides.  
   
  Die folgenden Beispiele zeigen eine `try-catch`-Anweisung eine `try-finally`-Anweisung und eine `try-catch-finally`-Anweisung.  
@@ -27,6 +28,7 @@ Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Prog
  Ein `try`-Block ohne einen `catch`- oder `finally`-Block verursachen einen Compilerfehler.  
   
 ## <a name="catch-blocks"></a>catch-Blöcke  
+
  Ein `catch`-Block kann den Typ der Ausnahme angeben, die abgefangen werden soll. Die Typspezifikation wird einen *Ausnahmefilter* aufrufen. Der Typ der Ausnahme sollte von <xref:System.Exception> abgeleitet werden. Im Allgemeinen sollten Sie <xref:System.Exception> nicht als Ausnahmefilter angeben, sofern Sie nicht entweder alle Ausnahmen behandeln können, die möglicherweise im `try`-Block ausgelöst werden, oder Sie nicht eine [throw](../../language-reference/keywords/throw.md)-Anweisung am Ende des `catch`-Blocks eingeschlossen haben.  
   
  Mehrere `catch`-Blöcke mit verschiedenen Ausnahmefiltern können miteinander verkettet werden. Die `catch`-Blöcke werden von oben nach unten in Ihrem Code überprüft, aber nur ein `catch`-Block wird für jede Ausnahme, die ausgelöst wird, ausgeführt. Der erste `catch`-Block, der den exakten Typ oder eine Basisklasse der ausgelösten Ausnahme angibt, wird ausgeführt. Wenn kein `catch`-Block einen passenden Ausnahmefilter angibt, wird ein `catch`-Block, der über keinen Filter verfügt, ausgewählt, wenn einer in der Anweisung vorhanden ist. Es ist wichtig, `catch`-Blöcke mit den spezifischsten (d.h. am stärksten abgeleiteten) Ausnahmetypen als erstes zu positionieren.  
@@ -44,6 +46,7 @@ Ein [try](../../language-reference/keywords/try-catch.md)-Block wird von C#-Prog
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Finally-Blöcke  
+
  Mit einem `finally`-Block können Sie Aktionen bereinigen, die in einem `try`-Block ausgeführt werden. Falls vorhanden, wird der `finally`-Block zuletzt ausgeführt, nach dem `try`-Block und jedem übereinstimmenden `catch` Block. Ein `finally`-Block wird immer ausgeführt, unabhängig davon, ob eine Ausnahme ausgelöst wird oder ein `catch`-Block gefunden wird, der mit dem Ausnahmetyp übereinstimmt.  
   
  Der `finally`-Block kann zum Freigeben von Ressourcen verwendet werden, wie z.B. Dateistreams, Datenbankverbindungen und Grafikhandles, ohne Warten auf den Garbage Collector in der Laufzeit, um die Objekte zu beenden. Weitere Informationen finden Sie unter [using-Anweisung](../../language-reference/keywords/using-statement.md).  

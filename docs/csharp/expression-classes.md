@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen un
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 548f5ba6a2de00d9556621791515555b6f6a325c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146085"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180438"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 Sie können in diesem einfachen Beispiel erkennen, dass viele Typen bei der Erstellung und beim Arbeiten mit Ausdrucksbaumstrukturen beteiligt sind. Diese Komplexität ist erforderlich, um die Funktionalität des rich-Vokabulars der C#-Sprache bereitzustellen.
 
 ## <a name="navigating-the-apis"></a>Navigieren in den APIs
+
 Es gibt Ausdrucksknotentypen, die fast alle Elemente der Syntax der C#-Sprache zuordnen. Jeder Typ verfügt über spezielle Methoden für diese Art von Sprachelement. Es ist viel, was Sie sich gleichzeitig merken müssen. Anstatt sich alles zu merken, finden Sie hier die Techniken, die ich zum Arbeiten mit Ausdrucksbaumstrukturen verwende:
 
 1. Betrachten Sie die Member des `ExpressionType`-enum, um mögliche Knoten zu bestimmen, die Sie untersuchen sollten. Dies ist wirklich hilfreich, wenn Sie eine Ausdrucksbaumstruktur durchlaufen und verstehen möchten.

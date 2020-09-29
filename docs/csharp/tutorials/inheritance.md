@@ -4,12 +4,12 @@ description: Lernen Sie die Verwendung der Vererbung in C#-Bibliotheken und -Anw
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063509"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190461"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -277,6 +277,7 @@ Sie können jetzt ein `Book`-Objekt instanziieren, sowohl dessen eindeutige als 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Entwerfen abstrakter Basisklassen und der von ihnen abgeleiteten Klassen
+
 <a name="abstract"></a>
 
 Im vorherigen Beispiel haben Sie eine Basisklasse definiert, die eine Implementierung für eine Reihe von Methoden bereitstellte, um abgeleiteten Klassen die gemeinsame Codenutzung zu erlauben. In vielen Fällen wird jedoch nicht erwartet, dass die Basisklasse eine Implementierung bereitstellt. Stattdessen ist die Basisklasse eine *abstrakte Klasse*, die *abstrakte Methoden* deklariert. Sie dient als Vorlage, die die Member definiert, die jede abgeleitete Klasse implementieren muss. In einer abstrakten Basisklasse ist die Implementierung jedes abgeleiteten Typs in der Regel für diesen Typ eindeutig. Sie haben die Klasse mit dem Schlüsselwort „abstract“ markiert, weil ein `Publication`-Objekt nicht instanziiert werden sollte, obwohl die Klasse für Veröffentlichungen übliche Funktionsimplementierungen bereitgestellt hat.

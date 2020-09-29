@@ -5,12 +5,12 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e2c0126d0920df18271f8889d8e117cd374d979
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937472"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174185"
 ---
 # <a name="use-attributes-in-c"></a>Verwenden von Attributen in C\#
 
@@ -21,6 +21,7 @@ Betrachten wir z.B. das `[Obsolete]`-Attribut. Es kann auf Klassen, Strukturen, 
 In diesem Tutorial erfahren Sie, wie Sie Attribute zu Ihrem Code hinzufügen sowie eigene Attribute erstellen und verwenden, und Sie lernen einige der Attribute kennen, die in .NET Core integriert sind.
 
 ## <a name="prerequisites"></a>Voraussetzungen
+
 Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Installationsanweisungen finden Sie auf der Seite [.NET Core-Downloads](https://dotnet.microsoft.com/download).
 Sie können diese Anwendung unter Windows, Ubuntu Linux, macOS oder in einem Docker-Container ausführen.
 Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschreibungen wird [Visual Studio Code](https://code.visualstudio.com/) verwendet. Hierbei handelt es sich um einen plattformübergreifenden Open Source-Editor. Sie können jedoch auch ein beliebiges anderes Tool verwenden, mit dem Sie vertraut sind.
@@ -85,12 +86,12 @@ Attribute können für verschiedene Ziele verwendet werden. In den obigen Beispi
 * Assembly
 * Klasse
 * Konstruktor
-* delegate
-* Enum
-* event
+* Delegat
+* Enumeration
+* Ereignis
 * Feld
 * GenericParameter
-* Interface
+* Schnittstelle
 * Methode
 * Modul
 * Parameter
@@ -136,12 +137,12 @@ Attribute werden in vielen Tools und Frameworks verwendet. NUnit verwendet Attri
 
 Nachfolgend werden einige wichtige Attribute aufgeführt, die in die .NET Core-Basisklassenbibliotheken integriert sind:
 
-* `[Obsolete]` Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
+* `[Obsolete]`. Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
 
-* `[Conditional]` Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
+* `[Conditional]`. Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
 Wenn diese Zeichenfolge nicht einer `#define`-Anweisung entspricht, werden alle Aufrufe dieser Methode (aber nicht die Methode selbst) durch den C#-Compiler entfernt. Dieses Attribut wird typischerweise zum Debuggen (zu Diagnosezwecken) eingesetzt.
 
-* `[CallerMemberName]` Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Ein Beispiel:
+* `[CallerMemberName]`. Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Beispiel:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

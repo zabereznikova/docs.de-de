@@ -2,12 +2,12 @@
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: Übersicht über die Abhängigkeitsinjektion und Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht.
 ms.date: 08/17/2020
-ms.openlocfilehash: 72395acafb403a4e34858eb2b982ec83b9f3cee1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173418"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -23,7 +23,7 @@ Der Projektmappen-Explorer des Microservice „Ordering.API“, der die Unterord
 
 **Abbildung 7-23**. Die Anwendungsschicht im Projekt Ordering.API-Projekt (ASP.NET Core-Web-API-Projekt)
 
-ASP.NET Core enthält einen einfachen [integrierten Container](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (dargestellt durch die IServiceProvider-Schnittstelle), der die Constructor Injection standardmäßig unterstützt. Zudem stellt ASP.NET bestimmte Dienste über Dependency Injection zur Verfügung. ASP.NET Core verwendet den Begriff *Dienst* für alle Typen, die Sie registrieren und die über DI eingefügt werden. Sie konfigurieren die integrierten Containerdienste in der ConfigureServices-Methode in der Startup-Klasse Ihrer Anwendung. Ihre Abhängigkeiten werden in den Diensten implementiert, die ein Typ benötigt und die Sie im IoC-Container registrieren.
+ASP.NET Core enthält einen einfachen [integrierten Container](/aspnet/core/fundamentals/dependency-injection) (dargestellt durch die IServiceProvider-Schnittstelle), der die Constructor Injection standardmäßig unterstützt. Zudem stellt ASP.NET bestimmte Dienste über Dependency Injection zur Verfügung. ASP.NET Core verwendet den Begriff *Dienst* für alle Typen, die Sie registrieren und die über DI eingefügt werden. Sie konfigurieren die integrierten Containerdienste in der ConfigureServices-Methode in der Startup-Klasse Ihrer Anwendung. Ihre Abhängigkeiten werden in den Diensten implementiert, die ein Typ benötigt und die Sie im IoC-Container registrieren.
 
 In der Regel fügen Sie Abhängigkeiten ein, die Infrastrukturobjekte implementieren. Eine typische einzufügende Abhängigkeit ist ein Repository. Sie können jedoch auch jede andere Infrastrukturabhängigkeit einfügen, die verfügbar ist. Für einfachere Implementierungen können Sie Ihr Arbeitseinheitsmuster-Objekt (EF DbContext-Objekt) direkt einfügen, da der DBContext auch die Implementierung Ihrer Infrastrukturpersistenzobjekte ist.
 

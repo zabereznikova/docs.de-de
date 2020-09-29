@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: db723cb1e29181e9462c5b423c66cdf8de659259
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302008"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178670"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Abfangen einer Nicht-CLS-Ausnahme
+
 Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen auszulösen, die nicht aus <xref:System.Exception> stammen. Diese Ausnahmen werden als *Nicht-CLS-Ausnahmen* oder *Nicht-Ausnahmen* bezeichnet. In C# können Sie keine Nicht-CLS-Ausnahmen auslösen. Sie können sie jedoch auf zwei Arten abfangen:  
   
 - Innerhalb eines `catch (RuntimeWrappedException e)`-Blocks
@@ -28,6 +29,7 @@ Einige .NET-Sprachen, einschließlich C++/CLI, erlauben Objekten, Ausnahmen ausz
 Greifen Sie in einem `catch(RuntimeWrappedException e)`-Block über die Eigenschaft <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> auf die ursprüngliche Ausnahme zu.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie Sie eine Nicht-CLS-Ausnahme abfangen, die von einer in C++/CLI geschriebenen Klassenbibliothek ausgelöst wurde. Beachten Sie, dass in diesem Beispiel der C#-Clientcode im Voraus weiß, dass der Ausnahmetyp, der ausgelöst wird, <xref:System.String?displayProperty=nameWithType> lautet. Wandeln Sie die Eigenschaft <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> in den ursprünglichen Typ um, solange dieser Typ über Ihren Code erreicht werden kann.  
   
 ```csharp

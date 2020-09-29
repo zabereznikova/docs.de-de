@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: 8e072e7aa53177929dda0be931beb85863b6a12e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1d2afd34d1a80841ba711897492cd4cd6412fa53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299226"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91184117"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Generics zur Laufzeit (C#-Programmierhandbuch)
+
 Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen. Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.  
   
  Wenn das erste Mal ein generischer Typ mit einem Werttyp als Parameter erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem übergebene Parameter an den entsprechenden Stellen in MSIL ersetzt werden. Spezialisierte generische Typen werden für jeden eindeutigen Werttyp, der als Parameter verwendet wird, einmal erstellt.  

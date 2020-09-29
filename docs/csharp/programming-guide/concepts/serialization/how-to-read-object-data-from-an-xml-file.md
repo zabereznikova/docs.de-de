@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)'
 description: Dieses C#-Beispiel liest Objektdaten, die zuvor mithilfe der XmlSerializer-Klasse in eine XML-Datei geschrieben wurden.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8d607424201cfad08df1c5ffbfb66a114b31886d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302788"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178761"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)
+
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
   
 ## <a name="example"></a>Beispiel  
@@ -44,6 +45,7 @@ public void ReadXML()
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
 Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Namen der Datei, die die serialisierten Daten enthält. Weitere Informationen zum Serialisieren von Daten finden Sie unter [Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)](./how-to-write-object-data-to-an-xml-file.md).
   
  Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
@@ -51,6 +53,7 @@ Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Na
  Nur die öffentlichen Eigenschaften und Felder werden deserialisiert.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
+
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
 - Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
@@ -60,6 +63,7 @@ Ersetzen Sie den Dateinamen „c:\temp\SerializationOverview.xml“ durch den Na
 - Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).  
   
 ## <a name="net-security"></a>.NET-Sicherheit  
+
  Überprüfen Sie immer die Eingaben, und deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle. Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes ausgeführt, der es deserialisiert hat. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
   
 ## <a name="see-also"></a>Siehe auch

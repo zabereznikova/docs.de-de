@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktu
 description: In diesem Artikel erfahren Sie, wie Sie LINQ in C# verwenden, um doppelte Dateinamen in unterschiedlichen Verzeichnissen abzufragen, und wie Sie Dateien abfragen, deren Größen und LastWriteTime-Eigenschaften ebenfalls übereinstimmen.
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 87874fdb5bcfd66ffecf3379e315dfa019e89898
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104565"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176291"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (C#)
+
 Manchmal können sich Dateien mit demselben Namen in mehr als einem Ordner befinden. Beispielsweise enthalten mehrere Ordner unter dem Installationsordner von Visual Studio eine Datei „readme.htm“. Dieses Beispiel zeigt, wie solche mehrfach vorkommenden Dateinamen in einem angegebenen Stammordner abgefragt werden können. Das zweite Beispiel zeigt, wie Dateien abgefragt werden können, deren Größe und LastWrite-Zeiten ebenfalls übereinstimmen.  
   
 ## <a name="example"></a>Beispiel  
@@ -171,6 +172,7 @@ class QueryDuplicateFileNames
  Die erste Abfrage verwendet einen einfachen Schlüssel, um eine Übereinstimmung zu ermitteln. Somit werden Dateien gefunden, die den gleichen Namen haben, deren Inhalt aber unterschiedlich sein kann. Die zweite Abfrage verwendet einen zusammengesetzten Schlüssel für den Abgleich von drei Eigenschaften des <xref:System.IO.FileInfo>-Objekts. Diese Abfrage hat eine größere Wahrscheinlichkeit, Dateien zu finden, die denselben Namen und ähnliche oder identische Inhalte aufweisen.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
 ## <a name="see-also"></a>Siehe auch
