@@ -2,12 +2,12 @@
 title: Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 899084ac00d9be0df47ef88c026f4e8c19722bb6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144251"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172156"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 
@@ -33,7 +33,7 @@ Eine robuste Anwendung, wie die in Abbildung 4-9 gezeigte, sollte Verfahren wie 
 
 Sie können diese Verfahren sowohl in HTTP-Ressourcen als auch in Datenbankressourcen verwenden. In Abbildung 4-9 basiert die Anwendung auf einer 3-schichtigen Architektur, sodass Sie diese Verfahren auf der Dienstebene (HTPP) und auf der Datenschichtebene (TCP) benötigen. In einer monolithischen Anwendung, die zusätzlich zur Datenbank nur eine einzelne App-Ebene verwendet (keine zusätzlichen Dienste oder Microservices), kann das behandeln vorübergehender Fehler auf Datenbankverbindungsebene ausreichen. In diesem Szenario ist nur eine bestimmte Konfiguration der Datenbankverbindung erforderlich.
 
-Bei der Implementierung robuster Kommunikationen, die auf die Datenbank zugreifen, kann dies je nach verwendeter .NET-Version unkompliziert sein (z. B. [mit Entity Framework 6 oder höher](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Es ist nur eine Frage der Konfiguration der Datenbankverbindung.). Oder Sie müssen möglicherweise zusätzliche Bibliotheken verwenden, wie z. B. den [Anwendungsblock zur Handhabung von vorübergehenden Fehlern](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (Transient Fault Handling Application Block; für frühere Versionen von .NET), oder sogar Ihre eigene Bibliothek implementieren.
+Bei der Implementierung robuster Kommunikationen, die auf die Datenbank zugreifen, kann dies je nach verwendeter .NET-Version unkompliziert sein (z. B. [mit Entity Framework 6 oder höher](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Es ist nur eine Frage der Konfiguration der Datenbankverbindung.). Oder Sie müssen möglicherweise zusätzliche Bibliotheken verwenden, wie z. B. den [Anwendungsblock zur Handhabung von vorübergehenden Fehlern](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (Transient Fault Handling Application Block; für frühere Versionen von .NET), oder sogar Ihre eigene Bibliothek implementieren.
 
 Bei der Implementierung von HTTP-Wiederholungsversuchen und Trennschaltern empfiehlt es sich bei .NET, die [Polly](https://github.com/App-vNext/Polly)-Bibliothek zu verwenden, die auf .NET Framework 4.0, .NET Framework 4.5 und .NET Standard 1.1 abzielt, was die Unterstützung von .NET Core umfasst.
 

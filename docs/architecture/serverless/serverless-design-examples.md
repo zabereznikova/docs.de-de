@@ -4,12 +4,12 @@ description: Informationen zur Vielfalt der Szenarien, die von serverlosen Archi
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b4e8fda0c1423c881c0807602e11f7c49ff7cfe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aa9b7951fd8f11a65a64c22443de7041aba7d94
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093557"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171753"
 ---
 # <a name="serverless-design-examples"></a>Beispiele für serverloses Design
 
@@ -29,13 +29,13 @@ Bei der Verwendung von CQRS kann es sich bei einem Lesevorgang um eine spezielle
 
 ![CQRS-Beispiel](./media/cqrs-example.png)
 
-Der serverlose Ansatz kann das CQRS-Muster berücksichtigen, indem getrennte Endpunkte bereitstellt werden. Eine serverlose Funktion dient zum Verarbeiten von Abfragen oder Lesevorgängen, eine andere serverlose Funktion oder ein Satz von Funktionen verarbeitet Updatevorgänge. Eine serverlose Funktion kann auch dafür verantwortlich sein, das Lesemodell auf dem neuesten Stand zu halten, und sie kann durch den [Änderungsfeed](https://docs.microsoft.com/azure/cosmos-db/change-feed) der Datenbank ausgelöst werden. Die Front-End-Entwicklung wird durch eine Verbindung mit den erforderlichen Endpunkten vereinfacht. Die Verarbeitung von Ereignissen erfolgt auf dem Back-End. Dieses Modell lässt sich auch gut für große Projekte skalieren, weil verschiedene Teams an unterschiedlichen Vorgängen arbeiten können.
+Der serverlose Ansatz kann das CQRS-Muster berücksichtigen, indem getrennte Endpunkte bereitstellt werden. Eine serverlose Funktion dient zum Verarbeiten von Abfragen oder Lesevorgängen, eine andere serverlose Funktion oder ein Satz von Funktionen verarbeitet Updatevorgänge. Eine serverlose Funktion kann auch dafür verantwortlich sein, das Lesemodell auf dem neuesten Stand zu halten, und sie kann durch den [Änderungsfeed](/azure/cosmos-db/change-feed) der Datenbank ausgelöst werden. Die Front-End-Entwicklung wird durch eine Verbindung mit den erforderlichen Endpunkten vereinfacht. Die Verarbeitung von Ereignissen erfolgt auf dem Back-End. Dieses Modell lässt sich auch gut für große Projekte skalieren, weil verschiedene Teams an unterschiedlichen Vorgängen arbeiten können.
 
 ## <a name="event-based-processing"></a>Ereignisbasierte Verarbeitung
 
-In nachrichtenbasierten Systemen werden Ereignisse häufig in Warteschlangen oder Herausgeber-/Abonnementthemen gesammelt, um darauf zu reagieren. Diese Ereignisse können dazu führen, dass serverlose Funktionen bestimmte Geschäftslogik ausführen. Ein Beispiel für ereignisbasierte Verarbeitung sind ereignisgesteuerte Systeme. Ein „Ereignis“ wird ausgelöst, um eine Aufgabe als abgeschlossen zu markieren. Eine serverlose Funktion, die durch das-Ereignis ausgelöst wird, aktualisiert das entsprechende Datenbankdokument. Eine zweite serverlose Funktion kann das-Ereignis verwenden, um das Lesemodell für das System zu aktualisieren. [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) bietet eine Möglichkeit, Ereignisse mit Funktionen als Abonnenten zu integrieren.
+In nachrichtenbasierten Systemen werden Ereignisse häufig in Warteschlangen oder Herausgeber-/Abonnementthemen gesammelt, um darauf zu reagieren. Diese Ereignisse können dazu führen, dass serverlose Funktionen bestimmte Geschäftslogik ausführen. Ein Beispiel für ereignisbasierte Verarbeitung sind ereignisgesteuerte Systeme. Ein „Ereignis“ wird ausgelöst, um eine Aufgabe als abgeschlossen zu markieren. Eine serverlose Funktion, die durch das-Ereignis ausgelöst wird, aktualisiert das entsprechende Datenbankdokument. Eine zweite serverlose Funktion kann das-Ereignis verwenden, um das Lesemodell für das System zu aktualisieren. [Azure Event Grid](/azure/event-grid/overview) bietet eine Möglichkeit, Ereignisse mit Funktionen als Abonnenten zu integrieren.
 
-> Ereignisse sind Informationsmeldungen. Weitere Informationen finden Sie unter [Ereignisgesteuertes Muster](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+> Ereignisse sind Informationsmeldungen. Weitere Informationen finden Sie unter [Ereignisgesteuertes Muster](/azure/architecture/patterns/event-sourcing).
 
 ## <a name="file-triggers-and-transformations"></a>Dateitrigger und Transformationen
 
@@ -43,7 +43,7 @@ ETL (Extrahieren, Transformieren und Laden) ist eine gängige Geschäftsfunktion
 
 ![Serverlose Dateitrigger und Transformationen](./media/serverless-file-triggers.png)
 
-In der Abbildung liefert „cool storage“ (kalter Speicher) Daten, die in [Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics) analysiert werden. Alle Probleme, die im Datenstrom auftreten, lösen eine Azure-Funktion aus, um die Anomalie zu verarbeiten.
+In der Abbildung liefert „cool storage“ (kalter Speicher) Daten, die in [Azure Stream Analytics](/azure/stream-analytics) analysiert werden. Alle Probleme, die im Datenstrom auftreten, lösen eine Azure-Funktion aus, um die Anomalie zu verarbeiten.
 
 ## <a name="asynchronous-background-processing-and-messaging"></a>Asynchrone Hintergrundverarbeitung und Messaging
 
@@ -65,7 +65,7 @@ Serverlose Funktionen können verwendet werden, um eine Datenpipeline bereitzust
 
 ## <a name="stream-processing"></a>Datenstromverarbeitung
 
-Geräte und Sensoren generieren häufig Datenströme, die in Echtzeit verarbeitet werden müssen. Es gibt eine Reihe von Technologien, mit denen Nachrichten und Datenströme von [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) und [IoT Hub](https://docs.microsoft.com/azure/iot-hub) bis hin zu [Service Bus](https://docs.microsoft.com/azure/service-bus) erfasst werden können. Unabhängig vom Transport ist der serverlose Ansatz eine ideale Methode zum Verarbeiten der eingehenden Nachrichten und Datenströme. Das serverlose Modell kann schnell skaliert werden, um den Bedarf großer Datenmengen zu erfüllen. Der serverlose Code kann Geschäftslogik anwenden, um die Daten und die Ausgabe in einem strukturierten Format für Aktionen und Analysen zu analysieren.
+Geräte und Sensoren generieren häufig Datenströme, die in Echtzeit verarbeitet werden müssen. Es gibt eine Reihe von Technologien, mit denen Nachrichten und Datenströme von [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs) und [IoT Hub](/azure/iot-hub) bis hin zu [Service Bus](/azure/service-bus) erfasst werden können. Unabhängig vom Transport ist der serverlose Ansatz eine ideale Methode zum Verarbeiten der eingehenden Nachrichten und Datenströme. Das serverlose Modell kann schnell skaliert werden, um den Bedarf großer Datenmengen zu erfüllen. Der serverlose Code kann Geschäftslogik anwenden, um die Daten und die Ausgabe in einem strukturierten Format für Aktionen und Analysen zu analysieren.
 
 ![Serverlose Datenstromverarbeitung](./media/serverless-stream-processing.png)
 
@@ -77,16 +77,16 @@ Ein API-Gateway bietet einen einzigen Einstiegspunkt für Clients und leitet dan
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure IoT Hub](/azure/iot-hub)
 - [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für verteilte Datenverwaltung)](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-- [Entwerfen von Microservices: Identifizieren von Microservicegrenzen](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-- [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Entwerfen von Microservices: Identifizieren von Microservicegrenzen](/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Muster „Ereignissourcing“](/azure/architecture/patterns/event-sourcing)
 - [Implementing the Circuit Breaker pattern (Implementieren des Schaltkreisunterbrechermusters)](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-- [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Verwenden der Unterstützung von Änderungsfeeds in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [IoT Hub](/azure/iot-hub)
+- [Service Bus](/azure/service-bus)
+- [Verwenden der Unterstützung von Änderungsfeeds in Azure Cosmos DB](/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Zurück](serverless-architecture-considerations.md)

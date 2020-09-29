@@ -14,14 +14,15 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.custom: updateeachrelease
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 55e80d0bd05e2119154210503bb277d743050e18
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d59274423e6f9844d3ab22f3ac513ba1a05d7f07
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139072"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171350"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C#-Compileroptionen)
+
 Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,6 +32,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `option`  
  Die Warnstufe, die für die Kompilierung angezeigt werden soll: Niedrigere Zahlen zeigen nur schwerwiegendere Warnungen an, höhere Zahlen zeigen mehr Warnungen an. Der Wert muss 0 (null) oder eine positive ganze Zahl sein:
 
@@ -45,6 +47,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
 |Höher als Stufe 5|Jeder Wert über Stufe 5 wird wie bei Stufe 5 behandelt. Sie geben im Allgemeinen einen beliebig hohen Wert an (z. B. `9999`), um sicherzustellen, dass immer alle Warnungen vorhanden sind, wenn der Compiler mit neuen Warnstufen aktualisiert wird.|
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Um Informationen zu einem Fehler oder einer Warnung zu erhalten, schlagen Sie den Fehlercode im Hilfeindex nach. Andere Möglichkeiten zum Abrufen von Informationen zu einem Fehler oder einer Warnung finden Sie unter [C#-Compilerfehler](../compiler-messages/index.md).  
   
  Verwenden Sie [-warnaserror](./warnaserror-compiler-option.md), um alle Warnungen als Fehler zu behandeln. Verwenden Sie [-nowarn](./nowarn-compiler-option.md), um bestimmte Warnungen zu deaktivieren.  
@@ -62,6 +65,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass nur Warnungen der Stufe 1 angezeigt werden:  
   
 ```console  

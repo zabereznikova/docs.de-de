@@ -2,12 +2,12 @@
 title: Was ist Docker?
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Was ist Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: a53845d3bbcf24f3eaeb98b9e08b6f35a023c30e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7d4b419f46f32fa4acdeb1ac7d5e0c2b2c199fc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337703"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172403"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 
@@ -29,7 +29,7 @@ Es gibt zwei Typen von Runtimes zum Ausführen von [Windows-Containern](/virtual
 
 - Hyper-V-Container erweitern die durch Windows Server-Container bereitgestellte Isolierung, indem jeder Container in einem hochgradig optimierten virtuellen Computer ausgeführt wird. In dieser Konfiguration wird der Kernel des Containerhosts nicht für den Hyper-V-Container freigegeben, was die Isolierung verbessert.
 
-Die Images für diese Container werden auf die gleiche Weise erstellt und funktionieren auch gleich. Der Unterschied besteht darin, wie der Container aus dem Image erstellt wird: Für das Ausführen eines Hyper-V-Containers ist ein Zusatzparameter erforderlich. Weitere Informationen finden Sie unter [Windows-Container](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
+Die Images für diese Container werden auf die gleiche Weise erstellt und funktionieren auch gleich. Der Unterschied besteht darin, wie der Container aus dem Image erstellt wird: Für das Ausführen eines Hyper-V-Containers ist ein Zusatzparameter erforderlich. Weitere Informationen finden Sie unter [Windows-Container](/virtualization/windowscontainers/manage-containers/hyperv-container).
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Vergleichen von Docker-Containern mit virtuellen Computern
 

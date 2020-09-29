@@ -2,12 +2,12 @@
 title: Verwalten von Docker-Produktionsumgebungen
 description: Lernen Sie die wichtigsten Aspekte beim Verwalten einer containerbasierten Produktionsumgebung kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: 11880a523d6ff79c9646fd1e174f380779d00dcc
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: dbc5f541478410060420f95f32e4ff5291354075
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914926"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160644"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten von Docker-Produktionsumgebungen
 
@@ -25,10 +25,10 @@ Tabelle 6–1 listet gängige Verwaltungstools und ihre Beziehung zu Orchestrato
 
 | Verwaltungstools | Beschreibung | Verwandte Orchestratoren |
 |------------------|-------------|-----------------------|
-| [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Dediziertes Kubernetes-Verwaltungstool von Azure | Azure Kubernetes Services (AKS) |
+| [Azure Monitor für Container](/azure/monitoring/monitoring-container-insights-overview) | Dediziertes Kubernetes-Verwaltungstool von Azure | Azure Kubernetes Services (AKS) |
 | [Kubernetes Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes-Verwaltungstool, kann lokale Kubernetes-Cluster überwachen und verwalten | Azure Kubernetes Service (AKS)<br/>Lokales Kubernetes |
-| [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Online- und Desktopversion zum Verwalten von Service Fabric-Clustern auf Azure, lokal, in der lokalen Entwicklung und in anderen Clouds | Azure Service Fabric |
-| [Containerüberwachung (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Allgemeine Lösung zur Verwaltung und Überwachung von Containern. Kann Kubernetes-Cluster mithilfe von [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) verwalten. | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS und andere. |
+| [Azure-Portal für Service Fabric](/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](/azure/service-fabric/service-fabric-visualizing-your-cluster) | Online- und Desktopversion zum Verwalten von Service Fabric-Clustern auf Azure, lokal, in der lokalen Entwicklung und in anderen Clouds | Azure Service Fabric |
+| [Containerüberwachung (Azure Monitor)](/azure/azure-monitor/insights/containers) | Allgemeine Lösung zur Verwaltung und Überwachung von Containern. Kann Kubernetes-Cluster mithilfe von [Azure Monitor für Container](/azure/monitoring/monitoring-container-insights-overview) verwalten. | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS und andere. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -36,9 +36,9 @@ Eine weitere Möglichkeit für Clusterbereitstellung und -verwaltung ist Azure S
 
 Im Folgenden finden Sie Verwaltungstools für Service Fabric:
 
-- [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) Vorgänge im Clusterkontext (Erstellen/Aktualisieren/Löschen von Clustern) oder Konfigurieren der Infrastruktur von Clustern (VMs, Load Balancer, Netzwerk usw.)
+- [Azure-Portal für Service Fabric](/azure/service-fabric/service-fabric-cluster-creation-via-portal) Vorgänge im Clusterkontext (Erstellen/Aktualisieren/Löschen von Clustern) oder Konfigurieren der Infrastruktur von Clustern (VMs, Load Balancer, Netzwerk usw.)
 
-- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) ist ein spezialisiertes, plattformübergreifendes Tool für Desktop und Webbenutzeroberfläche, das Erkenntnisse und bestimmte Vorgänge auf dem Service Fabric-Cluster ermöglicht, aus der Knoten-/VM-Perspektive und aus der Anwendungs-/Dienstperspektive.
+- [Azure Service Fabric Explorer](/azure/service-fabric/service-fabric-visualizing-your-cluster) ist ein spezialisiertes, plattformübergreifendes Tool für Desktop und Webbenutzeroberfläche, das Erkenntnisse und bestimmte Vorgänge auf dem Service Fabric-Cluster ermöglicht, aus der Knoten-/VM-Perspektive und aus der Anwendungs-/Dienstperspektive.
 
 >[!div class="step-by-step"]
 >[Zurück](run-microservices-based-applications-in-production.md)

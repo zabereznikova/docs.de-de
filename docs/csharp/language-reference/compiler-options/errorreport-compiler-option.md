@@ -9,14 +9,15 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6238ac392ff99d18d9cc7ea07e23b08ff235c14f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125721"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173229"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C#-Compileroptionen)
+
 Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler an Microsoft zu melden.
 
 > [!NOTE]
@@ -29,6 +30,7 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
 ```
 
 ## <a name="arguments"></a>Argumente
+
  **keine**  
  Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.
 
@@ -39,6 +41,7 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
  **send**: Sendet Berichte zu internen Compilerfehlern automatisch an Microsoft. Wenn Sie diese Option aktivieren, müssen Sie zuerst der Richtlinie zur Datensammlung von Microsoft zustimmen. Beim ersten Mal, wenn Sie **-errorreport:send** auf einem Computer angeben, wird eine Compilermeldung Sie auf eine Website verweisen, die die Microsoft-Richtlinie zur Datensammlung enthält.
 
 ## <a name="remarks"></a>Bemerkungen
+
  Ein interner Compilerfehler (ICE) entsteht, wenn der Compiler eine Quellcodedatei nicht verarbeiten kann. Tritt ein ICE auf, erzeugt der Compiler keine Ausgabedatei oder eine hilfreiche Diagnose, die Sie verwenden können, um Ihren Code zu beheben.
 
  In früheren Versionen wurden Sie beim Auftreten eines ICE aufgefordert, sich an den Microsoft-Produktsupport zu wenden, um das Problem zu melden. Mithilfe von **-errorreport** können Sie dem Visual C#-Team ICE-Informationen bereitstellen. Die Fehlerberichte können dabei helfen, zukünftige Compilerversionen zu verbessern.

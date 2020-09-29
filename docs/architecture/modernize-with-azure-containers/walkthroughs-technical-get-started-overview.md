@@ -2,12 +2,12 @@
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 ms.date: 04/28/2018
-ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516124"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172143"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -190,7 +190,7 @@ Die vollständige technische exemplarische Vorgehensweise finden Sie im GitHub-R
 
 ### <a name="overview"></a>Übersicht
 
-[Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) ist die schnellste Methode zum Einrichten einer Entwicklungs-/Test-/Stagingumgebung für Container, in der Sie einzelne Instanzen von Containern bereitstellen können.
+[Azure Container Instances (ACI)](/azure/container-instances/) ist die schnellste Methode zum Einrichten einer Entwicklungs-/Test-/Stagingumgebung für Container, in der Sie einzelne Instanzen von Containern bereitstellen können.
 
 ### <a name="goals"></a>Ziele
 

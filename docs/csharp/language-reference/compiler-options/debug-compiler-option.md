@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 164530a5ec99e7d5b9f34dbcdfb18d80f3102308
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 77aa9bf0fc0911f441d00403d773ee5ae03ae99b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125916"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173294"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C#-Compileroptionen)
+
 Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generiert und sie in der Ausgabedatei bzw. in Ausgabedateien platziert.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,6 +28,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `+` &#124; `-`  
  Wenn `+` oder nur **-debug** angegeben wird, generiert der Compiler Debuginformationen und platziert sie in einer Programmdatenbank (PDB-Datei). Wenn Sie `-` angeben (entspricht dem Weglassen von **-debug**), werden keine Debuginformationen erstellt.  
   
@@ -34,6 +36,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
  Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Das vollständige Argument, das aktiv ist, wenn Sie **-debug:pdbonly** nicht angeben, ermöglicht das Anfügen eines Debuggers an das ausgeführte Programm. Durch die Angabe von pdbonly wird das Debuggen von Quellcode möglich, wenn das Programm im Debugger gestartet wird. Der Assembler wird jedoch nur angezeigt, wenn das aktive Programm an den Debugger angefügt ist.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn **-debug**, **-debug+** oder **-debug:full** nicht angegeben ist, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
   
  Wenn Sie **-debug:full** verwenden, beachten Sie, dass dies Einfluss auf die Geschwindigkeit und Größe von optimiertem JIT-Code hat und die Codequalität mit **-debug:full** beeinträchtigt sein kann. Zum Generieren von Releasecode wird empfohlen, **-debug:pdbonly** oder keine PDB-Datei zu verwenden.  
@@ -58,6 +61,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Platzieren Sie die Debuginformationen in der Ausgabedatei `app.pdb`:  
   
 ```console  

@@ -3,12 +3,12 @@ title: Migrieren einer ASP.NET-Web-App zu einer Azure-VM
 description: Hier erfahren Sie, wie Sie eine ASP.NET-Webanwendung aus einer lokalen Umgebung zu einem virtuellen Azure-Computer migrieren.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174243"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171558"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Migrieren einer ASP.NET-Webanwendung zu einem virtuellen Azure-Computer
 
@@ -60,6 +60,7 @@ Virtuelle Azure-Netzwerke ermöglichen Folgendes:
 Informationen zu den ersten Schritten finden Sie in der [Dokumentation zu Virtual Network](/azure/virtual-network/).
 
 ### <a name="active-directory"></a>Active Directory
+
 Viele Anwendungen verwenden Active Directory für die Authentifizierung und Identitätsverwaltung.
 
 - Mit Azure AD Connect können Sie Ihre lokalen Verzeichnisse in Azure Active Directory integrieren. Informationen zu den ersten Schritten finden Sie unter [Integrieren Ihrer lokalen Verzeichnisse in Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
@@ -75,11 +76,13 @@ Wenn Ihre Anwendung eine lokale Datenbank verwendet, kann sie standardmäßig ni
 ### <a name="high-availability-and-scalability"></a>Hochverfügbarkeit und Skalierbarkeit
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
+
 Wenn Ihre Anwendung hochverfügbar und skalierbar sein soll, empfiehlt es sich, das VM-Image zu einer Azure-VM-Skalierungsgruppe zu migrieren, um die Verfügbarkeit und Skalierbarkeit der Anwendung zu verbessern. Mit VM-Skalierungsgruppen können Sie einen bereits konfigurierten virtuellen Computer verwenden oder eine Buildpipeline für die Erstellung eines Images mit Ihrer Anwendung einrichten.
 
 Informationen zu den ersten Schritten finden Sie unter [Bereitstellen der App in VM-Skalierungsgruppen](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Zentralisierte Protokollierung
+
 Wenn Ihre Anwendung über mehrere Instanzen hinweg ausgeführt wird, empfiehlt es sich unter Umständen, die Protokolle an einem zentralen Ort zu speichern – beispielsweise in [Azure Storage](/azure/storage/).
 
 ## <a name="next-steps"></a>Nächste Schritte

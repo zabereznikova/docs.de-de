@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607892"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169036"
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -46,9 +46,9 @@ Für den Einstieg in die Entwicklung einer ASP.NET Core-Anwendung mit CI bzw. CD
 
 Zum Erstellen einer Releasepipeline muss der Code Ihrer Anwendung sich in der Quellcodeverwaltung befinden. Richten Sie ein lokales Repository ein, und verbinden Sie es mit einem Remoterepository in einem Teamprojekt. Befolgen Sie diese Anweisungen:
 
-- [Teilen Sie Ihren Code mit Git und Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) oder
+- [Teilen Sie Ihren Code mit Git und Visual Studio](/azure/devops/git/share-your-code-in-git-vs) oder
 
-- [Teilen Sie Ihren Code mit TFVC und Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
+- [Teilen Sie Ihren Code mit TFVC und Visual Studio](/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 Erstellen Sie einen Azure App Service, in dem Sie Ihre Anwendung bereitstellen. Erstellen Sie eine Webanwendung, indem Sie zum Blatt „App Services“ im Azure-Portal navigieren. Klicken Sie auf „+Hinzufügen“, wählen Sie die Vorlage „Web App“ aus, klicken Sie auf „Erstellen“, und geben Sie einen Namen sowie die anderen erforderlichen Informationen an. Auf die Webanwendung kann über „{name}.azurewebsites.net“ zugegriffen werden.
 
@@ -58,13 +58,13 @@ Erstellen Sie einen Azure App Service, in dem Sie Ihre Anwendung bereitstellen. 
 
 Der CI-Buildprozess führt einen automatisierten Buildvorgang aus, wenn neuer Code an das Quellcodeverwaltungs-Repository des Projekts committet wird. Dadurch erhalten Sie sofortiges Feedback, dass der Code erstellt wird (und im Idealfall die automatisierten Tests besteht) und bereitgestellt werden kann. Dieser CI-Build erstellt ein Web Deploy-Paketartefakt und veröffentlicht dieses für die Nutzung durch Ihren CD-Prozess.
 
-[Definieren des CI-Buildprozesses](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
+[Definieren des CI-Buildprozesses](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Achten Sie darauf, dass die Continuous Integration aktiviert ist, damit das System den Buildvorgang der Warteschlange hinzufügt, wenn jemand in Ihrem Team neuen Code committet. Testen Sie den Build und stellen Sie sicher, dass er ein Web Deploy-Paket als eines seiner Artefakte erstellt.
 
 Wenn ein Build erfolgreich ist, werden die Ergebnisse Ihres CI-Builds durch Ihren CD-Prozess für Ihre Azure-Webanwendung bereitgestellt. Erstellen und konfigurieren Sie ein *Release*, das Sie dann für Ihren Azure App Service bereitstellen, um dies zu konfigurieren.
 
-[Bereitstellen einer Azure-Web-App](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
+[Bereitstellen einer Azure-Web-App](/azure/devops/pipelines/targets/webapp)
 
 Sobald Ihre CI- und CD-Pipeline konfiguriert ist, können Sie Ihre Webanwendung aktualisieren und dann an die Quellcodeverwaltung committen, um diese bereitzustellen.
 
@@ -82,7 +82,7 @@ Die Entwicklung Ihrer ASP.NET Core-Anwendung für die Bereitstellung in Azure un
 
 #### <a name="step-2-application-code-repository"></a>Schritt 2 Repository für Anwendungscode
 
-Wenn Sie bereit dazu sind, Ihren Code mit Ihrem Team zu teilen, sollten Sie Ihre Änderungen vom lokalen Quellrepository an das freigegebene Quellrepository des Teams übergeben. Wenn Sie an einem benutzerdefinierten Branch gearbeitet haben, erfordert dieser Schritt in der Regel das Zusammenführen Ihres Codes in einen freigegebenen Branch (möglicherweise über einen [Pull Request](https://docs.microsoft.com/azure/devops/git/pull-requests)).
+Wenn Sie bereit dazu sind, Ihren Code mit Ihrem Team zu teilen, sollten Sie Ihre Änderungen vom lokalen Quellrepository an das freigegebene Quellrepository des Teams übergeben. Wenn Sie an einem benutzerdefinierten Branch gearbeitet haben, erfordert dieser Schritt in der Regel das Zusammenführen Ihres Codes in einen freigegebenen Branch (möglicherweise über einen [Pull Request](/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Schritt 3 Buildserver: Continuous Integration – Erstellen, Testen, Packen
 

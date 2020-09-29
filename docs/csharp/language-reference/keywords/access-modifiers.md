@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 2ea7a65c23b6a1edee572f6f6ff6c52d14358408
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e941fc673c508f10863ee49b6544d6886bd594a3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127151"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168815"
 ---
 # <a name="access-modifiers-c-reference"></a>Zugriffsmodifizierer (C#-Referenz)
+
 Zugriffsmodifizierer sind Schlüsselwörter, die verwendet werden, um die deklarierte Zugriffsart eines Members oder Typs anzugeben. In diesem Abschnitt werden die vier Zugriffsmodifizierer beschrieben:  
   
 - `public`

@@ -4,12 +4,12 @@ description: Verstehen der Herausforderungen der Architektur von serverlosen Anw
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: fbbb0c38cea58902124743fb99f9ab31b3d09be9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135671"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171649"
 ---
 # <a name="serverless-architecture-considerations"></a>Überlegungen zur serverlosen Architektur
 
@@ -23,7 +23,7 @@ Es gibt mehrere Lösungen, die einen Zustand bereitstellen, ohne die Vorteile ei
 
 - Verwenden eines temporären Datenspeichers oder verteilten Caches wie Redis
 - Speichern des Zustands in einer Datenbank, z.B. SQL oder CosmosDB
-- Verarbeiten des Zustands durch eine Workflow-Engine wie [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)
+- Verarbeiten des Zustands durch eine Workflow-Engine wie [Durable Functions](/azure/azure-functions/durable/durable-functions-overview)
 
 Fazit: Sie sollten die Notwendigkeit einer Zustandsverwaltung in Prozessen beachten, für die Sie eine serverlose Implementierung in Erwägung ziehen.
 
@@ -63,7 +63,7 @@ Regeln geben häufig an, wie das zentrale Hochskalieren (Erhöhen der Hostressou
 
 ## <a name="monitoring-tracing-and-logging"></a>Überwachung, Ablaufverfolgung und Protokollierung
 
-Ein häufig übersehener Aspekt von DevOps ist die Überwachung von Anwendungen nach der Bereitstellung. Es ist wichtig, dass Sie über eine Strategie zum Überwachen von serverlosen Funktionen verfügen. Die größte Herausforderung besteht häufig in der Korrelation oder dem Erkennen, wenn ein Benutzer mehrere Funktionen als Teil derselben Interaktion aufruft. Die meisten serverlosen Plattformen ermöglichen Konsolenprotokollierung, die in Tools von Drittanbietern importiert werden kann. Es gibt auch Optionen zum Automatisieren der Erfassung von Telemetriedaten, Generieren und Nachverfolgen von Korrelations-IDs und Überwachen spezifischer Aktionen, um detaillierte Einblicke zu erhalten. Azure bietet die erweiterte [Application Insights-Plattform](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) für Überwachung und Analysen.
+Ein häufig übersehener Aspekt von DevOps ist die Überwachung von Anwendungen nach der Bereitstellung. Es ist wichtig, dass Sie über eine Strategie zum Überwachen von serverlosen Funktionen verfügen. Die größte Herausforderung besteht häufig in der Korrelation oder dem Erkennen, wenn ein Benutzer mehrere Funktionen als Teil derselben Interaktion aufruft. Die meisten serverlosen Plattformen ermöglichen Konsolenprotokollierung, die in Tools von Drittanbietern importiert werden kann. Es gibt auch Optionen zum Automatisieren der Erfassung von Telemetriedaten, Generieren und Nachverfolgen von Korrelations-IDs und Überwachen spezifischer Aktionen, um detaillierte Einblicke zu erhalten. Azure bietet die erweiterte [Application Insights-Plattform](/azure/azure-functions/functions-monitoring) für Überwachung und Analysen.
 
 ## <a name="inter-service-dependencies"></a>Abhängigkeiten zwischen Diensten
 

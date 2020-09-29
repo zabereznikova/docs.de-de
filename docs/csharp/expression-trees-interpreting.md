@@ -4,12 +4,12 @@ description: Weitere Informationen zum Schreiben von Code, um die Struktur einer
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173307"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -22,6 +22,7 @@ Dieser Entwurf macht den Zugriff auf alle Knoten in einer Ausdrucksbaumstruktur 
 Wenn der Knotentyp untergeordnete Elemente besitzt, greifen Sie rekursiv auf die untergeordneten Elemente zu. Wiederholen Sie den beim Stammknoten verwendeten Prozess bei jedem untergeordneten Knoten: Bestimmen Sie den Typ, und wenn er untergeordnete Elemente aufweist, greifen Sie auf jedes der untergeordneten Elemente zu.
 
 ## <a name="examining-an-expression-with-no-children"></a>Untersuchen eines Ausdrucks ohne untergeordnete Elemente
+
 Beginnen wir damit, auf jeden Knoten in einer einfachen Ausdrucksbaumstruktur zuzugreifen.
 Hier ist der Code, der einen konstanten Ausdruck erstellt und anschließend seine Eigenschaften überprüft:
 

@@ -4,12 +4,12 @@ description: Eine Einführung in Architekturansätze für das Erstellen von clou
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ab84d1f3425c1fda787756b73fd8315fe6d4231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522898"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171974"
 ---
 # <a name="architecture-approaches"></a>Architekturansätze
 
@@ -21,7 +21,7 @@ Dieses Kapitel enthält eine Übersicht über logische und physische Architektur
 
 Moderne Geschäftsanwendungen folgen einer Vielzahl von Architekturmustern. Dieser Abschnitt bietet eine Übersicht über allgemeine Muster. Die hier aufgeführten Muster sind nicht unbedingt alle bewährten Methoden, veranschaulichen aber verschiedene Ansätze.
 
-Weitere Informationen finden Sie unter [Leitfaden für die Azure-Anwendungsarchitektur](https://docs.microsoft.com/azure/architecture/guide/).
+Weitere Informationen finden Sie unter [Leitfaden für die Azure-Anwendungsarchitektur](/azure/architecture/guide/).
 
 ## <a name="monoliths"></a>Monolithische Anwendungen
 
@@ -65,7 +65,7 @@ Das serverlose Modell kann verwendet werden, um mindestens eine Schicht zu imple
 
 ## <a name="microservices"></a>Microservices
 
-**[Microservices](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** architekturen weisen allgemeine Merkmale auf, z.B. die folgenden:
+**[Microservices](/azure/architecture/guide/architecture-styles/microservices)** architekturen weisen allgemeine Merkmale auf, z.B. die folgenden:
 
 - Anwendungen bestehen aus mehreren kleinen Diensten.
 - Jeder Dienst wird in einem eigenen Prozess ausgeführt.

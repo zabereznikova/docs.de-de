@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca86388b9f5dfe5e63ead1b5f84486ba2181af57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539242"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169075"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -149,7 +149,7 @@ Für die meisten Fälle wird empfohlen, globale Ausnahmehandler in Ihren Control
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Integrationstests für ASP.NET Core-Apps
 
-Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und andere Implementierungstypen sein, die in Ihrem Infrastrukturprojekt definiert wurden. Sie könnten beispielsweise über Ihre Datenzugriffsklassen im Infrastrukturprojekt [prüfen, ob EF Core die erwarteten Daten erfolgreich aktualisiert und abruft](https://docs.microsoft.com/ef/core/miscellaneous/testing/). Das korrekte Verhalten Ihres MVC-Projekts in ASP.NET Core können Sie am besten mit Funktionstests testen, die Sie für Ihre App ausführen, welche in einem Testhost ausgeführt wird.
+Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und andere Implementierungstypen sein, die in Ihrem Infrastrukturprojekt definiert wurden. Sie könnten beispielsweise über Ihre Datenzugriffsklassen im Infrastrukturprojekt [prüfen, ob EF Core die erwarteten Daten erfolgreich aktualisiert und abruft](/ef/core/miscellaneous/testing/). Das korrekte Verhalten Ihres MVC-Projekts in ASP.NET Core können Sie am besten mit Funktionstests testen, die Sie für Ihre App ausführen, welche in einem Testhost ausgeführt wird.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests für ASP.NET Core-Apps
 

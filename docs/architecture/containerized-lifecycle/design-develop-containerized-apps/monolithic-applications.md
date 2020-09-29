@@ -2,12 +2,12 @@
 title: Monolithische Anwendungen
 description: Verstehen der grundlegenden Konzepte für das Containerisieren monolithischer Anwendungen.
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915446"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163543"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
@@ -37,7 +37,7 @@ Aus Sicht der Infrastruktur kann jeder Server, wie in Abbildung 4-2 dargestellt,
 
 Schließlich müssen aus dem Blickwinkel der Verfügbarkeit monolithische Anwendungen als Ganzes bereitgestellt werden; das bedeutet, dass im Fall eines erforderlichen *Beendens und Startens* während des Bereitstellungsfensters die gesamte Funktionalität und alle Benutzer betroffen sind. In bestimmten Situationen kann die Verwendung von Azure und Containern diese Situationen minimieren und die Wahrscheinlichkeit von Ausfallzeiten Ihrer Anwendung verringern, wie in Abbildung 4–3 zu ersehen.
 
-Sie können monolithische Anwendungen in Azure mithilfe dedizierter VMs für die einzelnen Instanzen bereitstellen. Mithilfe von [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) lassen sich die VMs komfortabel skalieren.
+Sie können monolithische Anwendungen in Azure mithilfe dedizierter VMs für die einzelnen Instanzen bereitstellen. Mithilfe von [Azure VM Scale Sets](/azure/virtual-machine-scale-sets/) lassen sich die VMs komfortabel skalieren.
 
 Sie können auch [Azure App Services](https://azure.microsoft.com/services/app-service/) verwenden, um monolithische Anwendungen auszuführen und Instanzen problemlos zu skalieren, ohne dass die VMs verwaltet werden müssen. Azure App Services kann ebenfalls einzelne Instanzen von Docker-Containern ausführen, was die Bereitstellung vereinfacht.
 

@@ -2,12 +2,12 @@
 title: Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
 ms.date: 04/28/2018
-ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089634"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172169"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 
@@ -69,7 +69,7 @@ In Abbildung 2-2 wird die integrierte Abhängigkeitszuordnung für alle Server- 
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Verwenden von Azure Site Recovery, um Ihre vorhandenen VMs zu Azure-VMs zu migrieren
 
-Als Teil von End-to-End-[Azure Migrate](https://aka.ms/azuremigrate) ist [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) ein Tool, mit dem Sie Ihre Web-Apps problemlos zu virtuellen Computern in Azure migrieren können. Sie können Site Recovery verwenden, um lokale VMs und physische Server in Azure zu synchronisieren oder um sie an einen sekundären lokalen Ort zu replizieren. Sie können sogar eine Workload replizieren, die auf einem unterstützten virtuellen Azure-Computer, auf einem lokalen virtuellen *Hyper-V*-Computer, auf einem virtuellen *VMware*-Computer oder auf einem physischen Windows- oder Linux-Server ausgeführt wird. Mit der Replikation in Azure entfallen die Kosten und die Komplexität, die mit der Verwaltung eines sekundären Datencenters verbunden sind.
+Als Teil von End-to-End-[Azure Migrate](https://aka.ms/azuremigrate) ist [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) ein Tool, mit dem Sie Ihre Web-Apps problemlos zu virtuellen Computern in Azure migrieren können. Sie können Site Recovery verwenden, um lokale VMs und physische Server in Azure zu synchronisieren oder um sie an einen sekundären lokalen Ort zu replizieren. Sie können sogar eine Workload replizieren, die auf einem unterstützten virtuellen Azure-Computer, auf einem lokalen virtuellen *Hyper-V*-Computer, auf einem virtuellen *VMware*-Computer oder auf einem physischen Windows- oder Linux-Server ausgeführt wird. Mit der Replikation in Azure entfallen die Kosten und die Komplexität, die mit der Verwaltung eines sekundären Datencenters verbunden sind.
 
 Site Recovery ist auch speziell auf Hybridumgebungen ausgelegt, die sich teilweise lokal und teilweise in Azure befinden. Site Recovery sorgt für Geschäftskontinuität, indem es Ihre Apps, die auf VMs und lokalen physischen Servern ausgeführt werden, verfügbar hält, wenn ein Standort ausfällt. Es repliziert Workloads, die auf VMs und physischen Servern ausgeführt werden, damit sie an einem sekundären Ort verfügbar bleiben, wenn die Verfügbarkeit des primären Standorts nicht mehr gegeben ist. Workloads werden am primären Standort wiederhergestellt, wenn er wieder betriebsbereit ist.
 

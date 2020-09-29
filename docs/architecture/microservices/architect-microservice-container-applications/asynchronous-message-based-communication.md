@@ -2,12 +2,12 @@
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679174"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169244"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -59,7 +59,7 @@ Zu beachten ist, dass Sie möglicherweise mit mehreren Microservices kommunizier
 
 Bei der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice Ereignisse auf einem Ereignisbus. Viele Microservices können diesen dann abonnieren, um Benachrichtigungen zu erhalten und damit zu interagieren. Die Implementierung bestimmt darüber, welches Protokoll für die ereignisgesteuerte Nachrichtenkommunikation verwendet wird. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) kann dazu beitragen, eine zuverlässige Kommunikation unter Verwendung von Warteschlangen zu gewährleisten.
 
-Bei der Nutzung eines Ereignisbusses empfiehlt sich eine Abstraktionsebene (beispielsweise eine Ereignisbusschnittstelle), die auf einer zugehörigen Implementierung in Klassen mit Code basiert, der die API eines Nachrichtenbrokers wie [RabbitMQ](https://www.rabbitmq.com/) oder eines Service Busses wie [Azure Service Bus mit Themen](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) verwendet. Alternativ können Sie auch Service Busse auf höherer Ebene wie NServiceBus, MassTransit oder Brighter verwenden, um den Ereignisbus und das Veröffentlichen/Abonnieren-System umzusetzen.
+Bei der Nutzung eines Ereignisbusses empfiehlt sich eine Abstraktionsebene (beispielsweise eine Ereignisbusschnittstelle), die auf einer zugehörigen Implementierung in Klassen mit Code basiert, der die API eines Nachrichtenbrokers wie [RabbitMQ](https://www.rabbitmq.com/) oder eines Service Busses wie [Azure Service Bus mit Themen](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) verwendet. Alternativ können Sie auch Service Busse auf höherer Ebene wie NServiceBus, MassTransit oder Brighter verwenden, um den Ereignisbus und das Veröffentlichen/Abonnieren-System umzusetzen.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Hinweis zu Messagingtechnologien für Produktionssysteme
 
@@ -75,7 +75,7 @@ Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur f
 
 - Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Verwenden des [Musters „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+- Verwenden des [Musters „Ereignissourcing“](/azure/architecture/patterns/event-sourcing).
 
 - Verwenden des [Musters „Postausgang“](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
 

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9c3b307668968865b401aedc04c79f95d4f32513
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127242"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171337"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C#-Compileroptionen)
+
 Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet, und der Buildprozesses wird angehalten (keine Ausgabedateien werden erstellt).  
   
  **-warnaserror-** ist standardmäßig gültig, wodurch Warnungen nicht die Generierung einer Ausgabedatei verhindern. **-warnaserror**, ist identisch mit **-warnaserror+** und bewirkt, dass Warnungen als Fehler behandelt werden.  
@@ -45,6 +47,7 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
  Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und konfigurieren Sie den Compiler so, dass keine Warnungen angezeigt werden:  
   
 ```console  

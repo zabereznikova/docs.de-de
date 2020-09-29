@@ -2,12 +2,12 @@
 title: Microsoft-Technologien in cloudoptimierten Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Microsoft-Technologien in cloudoptimierten Anwendungen
 ms.date: 04/28/2018
-ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: b257497835638dd65c894998e95bd7e9d784b7bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546509"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172013"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Microsoft-Technologien in cloudoptimierten Anwendungen
 
@@ -15,7 +15,7 @@ In der folgenden Liste werden die Tools, Technologien und Lösungen beschrieben,
 
 - **Cloudinfrastruktur**: Die Infrastruktur, die die Compute-Plattform, das Betriebssystem, das Netzwerk und den Speicher bereitstellt. Microsoft Azure ist auf dieser Ebene positioniert.
 
-- **Laufzeit**: Diese Ebene stellt die Umgebung bereit, in der die Anwendung ausgeführt werden soll. Wenn Sie Container verwenden, basiert diese Ebene in der Regel auf der [Docker-Engine](https://docs.docker.com/engine/), die entweder auf Linux- oder auf Windows-Hosts ausgeführt wird. ([Windows-Container](https://docs.microsoft.com/virtualization/windowscontainers/about/) werden seit Windows Server 2016 unterstützt. Windows-Container sind die beste Wahl für vorhandene .NET Framework-Anwendungen, die unter Windows ausgeführt werden.)
+- **Laufzeit**: Diese Ebene stellt die Umgebung bereit, in der die Anwendung ausgeführt werden soll. Wenn Sie Container verwenden, basiert diese Ebene in der Regel auf der [Docker-Engine](https://docs.docker.com/engine/), die entweder auf Linux- oder auf Windows-Hosts ausgeführt wird. ([Windows-Container](/virtualization/windowscontainers/about/) werden seit Windows Server 2016 unterstützt. Windows-Container sind die beste Wahl für vorhandene .NET Framework-Anwendungen, die unter Windows ausgeführt werden.)
 
 - **Verwaltete Cloud**: Wenn Sie eine Option mit verwalteter Cloud auswählen, können Sie die Kosten und die Komplexität der Verwaltung und Unterstützung der zugrunde liegenden Infrastruktur, VMs, Betriebssystempatches und Netzwerkkonfiguration vermeiden. Wenn Sie sich für die Migration mithilfe von IaaS entscheiden, sind Sie für alle diese Aufgaben und die zugehörigen Kosten verantwortlich. Bei einer Option mit verwalteter Cloud verwalten Sie lediglich die Anwendungen und Dienste, die Sie entwickeln. Der Clouddienstanbieter verwaltet in der Regel alles andere. Beispiele für verwaltete Clouddienste in Azure sind unter anderem [Azure SQL-Datenbank-](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) und verwaltete Compute-Dienste wie [VM-Skalierungsgruppen](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/) und [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 

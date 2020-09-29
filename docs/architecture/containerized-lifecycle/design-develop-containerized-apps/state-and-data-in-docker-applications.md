@@ -2,12 +2,12 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Lernen Sie die verfügbare Option zum Speichern des Status in containerbasierten Anwendungen kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915326"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163465"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -27,7 +27,7 @@ Die folgenden Lösungen werden verwendet, um persistente Daten in Docker-Anwendu
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/), stellt geografisch verteilbaren Speicher und eine geeignete Lösung für langfristige Persistenz für Containern bereit.
 
-- Relationale Remotedatenbanken wie die [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/), NoSQL-Datenbanken wie [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) oder Zwischenspeicherdienste wie [Redis](https://redis.io/).
+- Relationale Remotedatenbanken wie die [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/), NoSQL-Datenbanken wie [Azure Cosmos DB](/azure/cosmos-db/introduction) oder Zwischenspeicherdienste wie [Redis](https://redis.io/).
 
 Über den Docker-Container:
 

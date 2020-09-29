@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306954"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152701"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -25,7 +25,7 @@ In diesem Ansatz verfügt jeder Microservice über einen öffentlichen Endpunkt.
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-In einer Produktionsumgebung, die auf einem Cluster basiert, wird diese URL dem im Cluster verwendeten Load Balancer zugeordnet, der dann wiederum die Anforderungen an die Microservices weiterleitet. In Produktionsumgebungen kann es sein, dass zwischen Ihren Microservices und dem Internet ein Application Delivery Controller (ADC) wie [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) steht. Dieser Controller fungiert als transparente Ebene, die nicht nur einen Lastenausgleich ausführt, sondern auch Ihre Dienste sichert, indem sie das Beenden von SSL ermöglicht. Dadurch wird das Laden Ihrer Hosts verbessert, denn das Beenden von SSL, das zu einer hohen CPU-Auslastung führt, und andere Pflichten zur Weiterleitung an das Azure Application Gateway werden abgeladen. In jedem Fall sind Lastenausgleich und ADC im Hinblick auf die logische Anwendungsarchitektur transparent.
+In einer Produktionsumgebung, die auf einem Cluster basiert, wird diese URL dem im Cluster verwendeten Load Balancer zugeordnet, der dann wiederum die Anforderungen an die Microservices weiterleitet. In Produktionsumgebungen kann es sein, dass zwischen Ihren Microservices und dem Internet ein Application Delivery Controller (ADC) wie [Azure Application Gateway](/azure/application-gateway/application-gateway-introduction) steht. Dieser Controller fungiert als transparente Ebene, die nicht nur einen Lastenausgleich ausführt, sondern auch Ihre Dienste sichert, indem sie das Beenden von SSL ermöglicht. Dadurch wird das Laden Ihrer Hosts verbessert, denn das Beenden von SSL, das zu einer hohen CPU-Auslastung führt, und andere Pflichten zur Weiterleitung an das Azure Application Gateway werden abgeladen. In jedem Fall sind Lastenausgleich und ADC im Hinblick auf die logische Anwendungsarchitektur transparent.
 
 Eine Architektur zur direkten Kommunikation zwischen Client und Microservice kann sich gut für eine kleine auf einem Microservice basierende Anwendung eignen, insbesondere wenn es sich bei der Client-App um eine Webanwendung auf Serverseite handelt (z.B. eine ASP.NET-MVC-App). Wenn Sie allerdings eine große und komplexe auf einem Microservice basierende Anwendung erstellen (z.B. wenn Sie mit dutzenden Microservicetypen arbeiten), und vor allem wenn es sich bei den Client-Apps um mobile Remote-Apps oder SPA-Webanwendungen handelt, kann dieser Ansatz zu einigen Problemen führen.
 
@@ -95,13 +95,13 @@ Ein API-Gateway kann mehrere Funktionen bieten. Je nach Produkt stehen umfangrei
 
 **Reverseproxy- oder Gatewayrouting.** Das API-Gateway bietet einen Reverseproxy, um Anforderungen an die Endpunkte der internen Microservices umzuleiten (Layer-7-Routing, in der Regel HTTP-Anforderungen). Das Gateway stellt einen einzigen Endpunkt bzw. eine einzige URL für die Client-Apps bereit und ordnet die Anforderungen intern einer Gruppe von internen Microservices zu. Dieses Routingfeature hilft dabei, die Client-Apps von den Microservices zu entkoppeln, ist aber auch dann praktisch, wenn eine monolithische API modernisiert werden soll: Indem Sie das API-Gateway zwischen die monolithische API und die Client-Apps platzieren, können Sie neue APIs als neue Microservices hinzufügen und dennoch weiterhin die ältere monolithische API verwenden, bis diese zu einem späteren Zeitpunkt in mehrere Microservices aufgeteilt wird. Durch das API-Gateway wissen die Client-Apps nicht, ob die verwendeten APIs als interne Microservices oder monolithische API implementiert sind. Viel wichtiger noch: Wenn eine monolithische API weiterentwickelt und in Microservices umgestaltet wird, wirken sich URI-Änderungen dank des API-Gatewayroutings nicht auf Client-Apps aus.
 
-Weitere Informationen finden Sie unter [Muster „Gatewayrouting“](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
+Weitere Informationen finden Sie unter [Muster „Gatewayrouting“](/azure/architecture/patterns/gateway-routing).
 
 **Aggregierung von Anforderungen.** Im Rahmen des Gatewaymusters können Sie mehrere Clientanforderungen (in der Regel HTTP-Anforderungen) für mehrere interne Microservices in eine einzige Clientanforderung aggregieren. Dieses Muster ist besonders praktisch, wenn eine Clientseite Informationen aus mehreren Microservices benötigt. Bei diesem Ansatz sendet die Client-App eine einzelne Anforderung an das API-Gateway, das mehrere Anforderungen an die internen Microservices sendet, die Ergebnisse dann aggregiert und alles an die Client-App zurücksendet. Hauptziel und auch der wichtigste Vorteil dieses Entwurfsmusters ist, dass die Kommunikation zwischen den Client-Apps und der Back-End-API reduziert wird. Dies ist insbesondere bei Remote-Apps von Bedeutung, die sich nicht in dem Rechenzentrum befinden, in dem die Microservices bereitgestellt sind – z.B. bei mobilen Apps oder Anforderungen von SPA-Apps, die von JavaScript in Clientremotebrowsern gesendet werden. Bei regulären Web-Apps, die die Anforderungen in der Serverumgebung ausführen (z.B. eine ASP.NET Core MVC-Web-App), ist dieses Muster nicht so wichtig, weil die Latenz wesentlich geringer ist als bei Remoteclient-Apps.
 
 Je nachdem, welches API-Gatewayprodukt Sie einsetzen, ist dieses möglicherweise in der Lage, diese Aggregierung durchzuführen. In vielen Fällen ist es aber ein flexiblerer Ansatz, Microservices zur Aggregierung im Bereich des API-Gateways zu erstellen, sodass Sie die Aggregierung im Code (genauer gesagt C#-Code) definieren können.
 
-Weitere Informationen finden Sie unter [Muster „Gatewayaggregation“](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
+Weitere Informationen finden Sie unter [Muster „Gatewayaggregation“](/azure/architecture/patterns/gateway-aggregation).
 
 **Übergreifende Aspekte oder Gatewayabladung.** Je nachdem, welche Features von den verschiedenen API-Gatewayprodukten angeboten werden, können Sie einen Teil der Funktionalität von den einzelnen Microservice auf das Gateway abladen. Dadurch vereinfachen Sie die Implementierung jedes Microservice, da übergreifende Aspekte auf eine einzige Ebene konsolidiert werden. Dies ist besonders nützlich für spezielle Funktionen, deren richtige Implementierung in jeden internen Microservice eine sehr komplexe Angelegenheit sein kann. Hier einige Beispiele:
 
@@ -115,7 +115,7 @@ Weitere Informationen finden Sie unter [Muster „Gatewayaggregation“](https:/
 - Header, Abfragezeichenfolgen und Anspruchstransformation
 - IP-Whitelists
 
-Weitere Informationen finden Sie unter [Muster „Gatewayabladung“](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
+Weitere Informationen finden Sie unter [Muster „Gatewayabladung“](/azure/architecture/patterns/gateway-offloading).
 
 ## <a name="using-products-with-api-gateway-features"></a>Verwenden von Produkten mit API-Gatewayfeatures
 

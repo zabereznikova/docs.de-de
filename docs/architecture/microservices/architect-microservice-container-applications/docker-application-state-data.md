@@ -2,12 +2,12 @@
 title: Zustand und Daten in Docker-Anwendungen
 description: Zustands- und Datenverwaltung in Docker-Anwendungen. Microservice-Instanzen sind erweiterbar, DATEN jedoch NICHT. Wie lässt sich dieser Tatsache mithilfe von Microservices Rechnung tragen?
 ms.date: 09/20/2018
-ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10271d41dcd0574cd212663c2ee22ae06c2c1269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771438"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152623"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -27,7 +27,7 @@ Die folgenden Lösungen werden verwendet, um Daten in Docker-Anwendungen zu verw
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/), das geografisch verteilbaren Speicher und eine geeignete Lösung für langfristige Persistenz für Container bereitstellt.
 
-- Relationale Remotedatenbanken wie die [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) oder NoSQL-Datenbanken wie [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) oder Zwischenspeicherdienste wie [Redis](https://redis.io/).
+- Relationale Remotedatenbanken wie die [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/) oder NoSQL-Datenbanken wie [Azure Cosmos DB](/azure/cosmos-db/introduction) oder Zwischenspeicherdienste wie [Redis](https://redis.io/).
 
 Über den Docker-Container:
 

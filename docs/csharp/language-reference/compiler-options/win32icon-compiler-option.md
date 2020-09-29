@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: 76a54f9011371492bdc15f15c3e40d51082deed3
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5b62bbfe28bb5aa82605a88a83cf82eff9278807
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138409"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168867"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C#-Compileroptionen)
+
 Die Option **-win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der Ausgabedatei im Datei-Explorer das gewünschte Aussehen verleiht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,10 +27,12 @@ Die Option **-win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der A
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Die ICO-Datei, die Sie Ihrer Ausgabedatei hinzufügen möchten  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine ICO-Datei kann mit dem [Ressourcencompiler](/windows/desktop/menurc/resource-compiler) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine ICO-Datei erstellt.  
   
  Weitere Informationen zum Verweisen auf eine .NET Framework-Ressourcendatei finden Sie unter [-linkresource](./linkresource-compiler-option.md), weitere Informationen zum Anfügen einer .NET Framework-Ressourcendatei unter [-resource](./resource-compiler-option.md). Weitere Informationen zum Importieren einer RES-Datei finden Sie unter [-win32res](./win32res-compiler-option.md).  
@@ -45,6 +48,7 @@ Die Option **-win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der A
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und fügen Sie eine ICO-Datei `rf.ico` hinzu, um `in.exe` zu erzeugen.  
   
 ```console  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118519"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160540"
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 
@@ -40,6 +40,7 @@ Wenn die Methode, die mit dem `async`-Schlüsselwort geändert wird, keinen `awa
  Das `async`-Schlüsselwort ist insofern kontextabhängig, dass es nur dann ein Schlüsselwort ist, wenn mit ihm eine Methode, ein Lambda-Ausdruck oder eine anonyme Methode geändert wird. In allen anderen Kontexten wird es als Bezeichner interpretiert.
 
 ## <a name="example"></a>Beispiel
+
 Im folgenden Beispiel werden die Struktur und Ablaufsteuerung zwischen einem asynchronen Ereignishandler, `StartButton_Click`, und einer asynchronen Methode, `ExampleMethodAsync`, veranschaulicht. Das Ergebnis der asynchronen Methode ist die Anzahl von Zeichen einer Webseite. Der Code ist für eine Windows Presentation Foundation (WPF)- oder Windows Store-Anwendung geeignet, die Sie in Visual Studio erstellen. Informationen zum Einrichten der Anwendung finden Sie in den Codekommentaren.
 
 Sie können diesen Code in Visual Studio als Windows Presentation Foundation (WPF)-App oder Windows Store-App ausführen. Sie benötigen ein Schaltflächen-Steuerelement mit dem Namen `StartButton` und ein Textfeldsteuerelement mit dem Namen `ResultsTextBox`. Denken Sie daran, die Namen und den Handler so festzulegen, dass es in etwa wie folgt aussieht:
@@ -68,6 +69,7 @@ So führen Sie den Code als Windows Store-App aus:
 > Weitere Informationen zu Aufgaben und zum Code, der während des Wartens auf eine Aufgabe ausgeführt wird, finden Sie unter [Asynchrone Programmierung mit async und await](../../programming-guide/concepts/async/index.md). Ein vollständiges Konsolenbeispiel, das ähnliche Elemente verwendet, finden Sie unter [Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).
 
 ## <a name="return-types"></a>Rückgabetypen
+
 Eine asynchrone Methode kann folgende Rückgabetypen haben:
 
 - <xref:System.Threading.Tasks.Task>

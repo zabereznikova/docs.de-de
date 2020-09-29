@@ -2,12 +2,12 @@
 title: Kommunikation in einer Microservicearchitektur
 description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Microservices, und lernen Sie die Auswirkungen synchroner und asynchroner Optionen kennen.
 ms.date: 01/30/2020
-ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401520"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169257"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -35,7 +35,7 @@ Auf der zweiten Achse wird definiert, ob die Kommunikation über einen einzelnen
 
 - Einzelner Empfänger. Jede Anforderung muss von genau einem Empfänger oder Dienst verarbeitet werden. Ein Beispiel für diese Kommunikation ist das [Befehlsmuster](https://en.wikipedia.org/wiki/Command_pattern).
 
-- Mehrere Empfänger. Jede Anforderung kann von 0 (null) bis hin zu mehreren Empfängern verarbeitet werden. Dieser Kommunikationstyp muss asynchron sein. Ein Beispiel hierfür ist der Mechanismus [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern), der in Mustern wie der [ereignisgesteuerten Architektur](https://microservices.io/patterns/data/event-driven-architecture.html) verwendet wird. Diese basiert bei der Verteilung von Datenupdates über Ereignisse zwischen mehreren Microservices auf einer Ereignisbusschnittstelle oder einem Nachrichtenbroker. Sie wird in der Regel über einen Servicebus oder ein mit [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) vergleichbares Artefakt unter Verwendung von [Themen und Abonnements](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) implementiert.
+- Mehrere Empfänger. Jede Anforderung kann von 0 (null) bis hin zu mehreren Empfängern verarbeitet werden. Dieser Kommunikationstyp muss asynchron sein. Ein Beispiel hierfür ist der Mechanismus [publish/subscribe](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern), der in Mustern wie der [ereignisgesteuerten Architektur](https://microservices.io/patterns/data/event-driven-architecture.html) verwendet wird. Diese basiert bei der Verteilung von Datenupdates über Ereignisse zwischen mehreren Microservices auf einer Ereignisbusschnittstelle oder einem Nachrichtenbroker. Sie wird in der Regel über einen Servicebus oder ein mit [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) vergleichbares Artefakt unter Verwendung von [Themen und Abonnements](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) implementiert.
 
 Eine auf Microservices basierende Anwendung verwendet häufig eine Kombination aus diesen Kommunikationstypen. Am häufigsten wird als Kommunikationstyp die Kommunikation über einzelne Empfänger mit einem synchronen Protokoll wie HTTP/HTTPS verwendet, wenn ein regulärer HTTP-Dienst der Web-API aufgerufen wird. Zudem verwenden Microservices für die asynchrone Kommunikation zwischen Microservices in der Regel Messagingprotokolle.
 
@@ -81,7 +81,7 @@ Wenn ein Client die Kommunikation über Anforderungen/Antworten verwendet, sende
 
 **Abbildung 4-16**. Verwenden der Kommunikation über HTTP-Anforderungen/-Antworten (synchron oder asynchron)
 
-Wenn ein Client die Kommunikation über Anforderungen/Antworten verwendet, setzt er voraus, dass die Antwort innerhalb kurzer Zeit (in der Regel nach weniger als einer Sekunde oder höchstens ein paar Sekunden) eintreffen wird. Bei verzögerten Antworten müssen Sie eine asynchrone Kommunikation implementieren, die auf [Messagingmustern](https://docs.microsoft.com/azure/architecture/patterns/category/messaging) und [Messagingtechnologien](https://en.wikipedia.org/wiki/Message-oriented_middleware) basiert. Dieser Ansatz unterscheidet sich von dem Ansatz, der im nächsten Abschnitt erläutert wird.
+Wenn ein Client die Kommunikation über Anforderungen/Antworten verwendet, setzt er voraus, dass die Antwort innerhalb kurzer Zeit (in der Regel nach weniger als einer Sekunde oder höchstens ein paar Sekunden) eintreffen wird. Bei verzögerten Antworten müssen Sie eine asynchrone Kommunikation implementieren, die auf [Messagingmustern](/azure/architecture/patterns/category/messaging) und [Messagingtechnologien](https://en.wikipedia.org/wiki/Message-oriented_middleware) basiert. Dieser Ansatz unterscheidet sich von dem Ansatz, der im nächsten Abschnitt erläutert wird.
 
 Ein beliebter Architekturstil für die Kommunikation über Anforderungen/Antworten ist [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Dieser Ansatz basiert auf dem [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)-Protokoll, das HTTP-Verben wie GET, POST und PUT umfasst, und ist eng daran gekoppelt. REST ist bei der Erstellung von Diensten der am häufigsten verwendete Architekturstil für die Kommunikation. Sie können REST-Dienste implementieren, wenn Sie ASP.NET Core Web-API-Dienste entwickeln.
 

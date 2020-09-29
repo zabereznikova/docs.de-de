@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)'
 description: Dieses Beispiel zeigt drei Verfahren zum Vergleichen von Dateilisten mithilfe von LINQ-Abfragen in C#. Sie können diese Verfahren anpassen, um Sequenzen von Objekten eines beliebigen Typs zu vergleichen.
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 3cdac57d3d746aa2290c51d1263a7d42dc3463e0
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 840fda1548f36d9b9ad39c2e0d1346dfc727b106
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105338"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165259"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)
+
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
   
 - Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
@@ -127,6 +128,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.  
   
 ## <a name="see-also"></a>Siehe auch

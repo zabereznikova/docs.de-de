@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder
 description: In diesem Artikel erfahren Sie, wie Sie LINQ in C# verwenden, um Dateien in einer Verzeichnisstruktur zu finden, und entweder die neuste oder die älteste Datei zurückgeben.
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 01a3482d8ea4c95b60dd9434320f175f0498c3e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165311"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Vorgehensweise: Abfragen von Dateien mit einem angegebenen Attribut oder Namen (C#)
+
 In diesem Beispiel wird veranschaulicht, wie nach allen Dateien mit einem angegebenen Suffix (z.B. „.txt“) in einer angegebenen Verzeichnisstruktur gesucht wird. Es wird auch gezeigt, wie basierend auf dem Zeitpunkt der Erstellung entweder die neueste oder älteste Datei in der Struktur zurückgegeben wird.  
   
 ## <a name="example"></a>Beispiel  
@@ -65,6 +66,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
   Erstellen Sie ein C#-Konsolenanwendungsprojekt mit `using`-Anweisungen für die Namespaces „System.Linq“ und „System.IO“.
   
 ## <a name="see-also"></a>Siehe auch

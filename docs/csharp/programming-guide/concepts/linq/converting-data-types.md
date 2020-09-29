@@ -3,14 +3,15 @@ title: Konvertieren von Datentypen (C#)
 description: Konvertierungsmethoden ändern den Typ von Eingabeobjekten. Hier erfahren Sie mehr über Konvertierungsvorgänge in LINQ-Abfragen in C# wie beispielsweise „Enumerable.AsEnumerable“ und „Enumerable.OfType“.
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 3291690f9aaee945ca7feb04ebbc676db2612894
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: f9e3b354fd6eeba6564067550ea3821e4946d92f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105488"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91159136"
 ---
 # <a name="converting-data-types-c"></a>Konvertieren von Datentypen (C#)
+
 Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 
  Konvertierungsvorgänge in LINQ-Abfragen sind in vielen Anwendungen nützlich. Nachstehend sind einige Beispiele aufgeführt:
@@ -22,6 +23,7 @@ Konvertierungsmethoden ändern den Typ von Eingabeobjekten.
 - Die Methoden <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> und <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> können verwendet werden, um die sofortige Ausführung einer Abfrage zu erzwingen, statt sie zu verzögern, bis die Abfrage enumeriert wurde.
 
 ## <a name="methods"></a>Methoden
+
  Die folgende Tabelle enthält die Standardabfrageoperator-Methoden, die Datentypumwandlungen ausführen.
 
  Die Konvertierungsmethoden in dieser Tabelle, deren Namen mit „As“ beginnen, ändern den statischen Typ der Quellauflistung, listen ihn jedoch nicht auf. Die Methoden, deren Namen mit „To“ anfangen, listen die Quellauflistung auf und verschieben die Elemente in den entsprechenden Auflistungstyp.

@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515974"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169127"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -241,7 +241,7 @@ Alternativ können Sie auch festlegen, dass die Anwendung Microservices aufruft,
 
 ### <a name="feature-organization"></a>Organisieren von Features
 
-Standardmäßig stellen ASP.NET Core-Anwendungen ihre eigene Ordnerstruktur her, die Controller, Ansichten und häufig auch ViewModels umfasst. Clientseitiger Code, der diese Strukturen auf Serverseite unterstützen soll, wird in der Regel separat im wwwroot-Ordner gespeichert. Es kann jedoch sein, dass bei größeren Anwendungen im Zusammenhang mit dieser Ordnerstruktur Probleme auftreten, da Sie häufig zwischen diesen Ordnern hin- und herwechseln müssen, wenn Sie an einem bestimmten Feature arbeiten. Je mehr Dateien und Unterordner in einem Ordner gespeichert werden, desto schwieriger wird dies, und desto mehr müssen Sie im Projektmappen-Explorer scrollen. Wenn Sie dieses Problem vermeiden möchten, können Sie Anwendungscode anstatt nach Dateityp nach _Feature_ ordnen. Diese Strukturierung wird häufig als Featureordner oder [Feature Slices](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) bezeichnet (siehe auch: [Vertical Slices (Vertikale Slices)](https://deviq.com/vertical-slices/)).
+Standardmäßig stellen ASP.NET Core-Anwendungen ihre eigene Ordnerstruktur her, die Controller, Ansichten und häufig auch ViewModels umfasst. Clientseitiger Code, der diese Strukturen auf Serverseite unterstützen soll, wird in der Regel separat im wwwroot-Ordner gespeichert. Es kann jedoch sein, dass bei größeren Anwendungen im Zusammenhang mit dieser Ordnerstruktur Probleme auftreten, da Sie häufig zwischen diesen Ordnern hin- und herwechseln müssen, wenn Sie an einem bestimmten Feature arbeiten. Je mehr Dateien und Unterordner in einem Ordner gespeichert werden, desto schwieriger wird dies, und desto mehr müssen Sie im Projektmappen-Explorer scrollen. Wenn Sie dieses Problem vermeiden möchten, können Sie Anwendungscode anstatt nach Dateityp nach _Feature_ ordnen. Diese Strukturierung wird häufig als Featureordner oder [Feature Slices](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) bezeichnet (siehe auch: [Vertical Slices (Vertikale Slices)](https://deviq.com/vertical-slices/)).
 
 In diesem Zusammenhang unterstützt ASP.NET Core MVC die Verwendung verschiedener Bereiche. Wenn Sie verschiedene Bereiche verwenden, können Sie verschiedene separate Ordner für Controller und Ansichten (sowie für jegliche zugeordneten Modelle) in jedem Bereichsordner erstellen. In Abbildung 7-1 wird eine Ordnerstruktur dargestellt, in der Bereiche verwendet werden.
 
@@ -301,7 +301,7 @@ Geben Sie dann diese Konvention als eine Option an, wenn Sie in ConfigureService
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC verwendet außerdem eine Konvention, um Ansichten zu finden. Sie können diese Konvention mit einer benutzerdefinierten Konvention überschreiben, indem Sie den obenstehend unter FeatureConvention angegebenen Featurenamen verwenden, damit in Ihren Featureordnern Ansichten gefunden werden. Weitere Informationen zu diesem Ansatz finden Sie im MSDN Magazine-Artikel [ASP.NET Core: Feature Slices für ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc). Auf dieser Seite können Sie auch ein Beispiel herunterladen.
+ASP.NET Core MVC verwendet außerdem eine Konvention, um Ansichten zu finden. Sie können diese Konvention mit einer benutzerdefinierten Konvention überschreiben, indem Sie den obenstehend unter FeatureConvention angegebenen Featurenamen verwenden, damit in Ihren Featureordnern Ansichten gefunden werden. Weitere Informationen zu diesem Ansatz finden Sie im MSDN Magazine-Artikel [ASP.NET Core: Feature Slices für ASP.NET Core MVC](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc). Auf dieser Seite können Sie auch ein Beispiel herunterladen.
 
 ### <a name="apis-and-no-locblazor-applications"></a>APIs und Blazor-Anwendungen
 
@@ -313,7 +313,7 @@ Wenn Sie eine Blazor WebAssembly-Administratorbenutzeroberfläche zu eShopOnWeb 
 
 Nun kommt möglicherweise die Frage auf, warum ein separates `BlazorShared`-Projekt hinzugefügt wird, wenn bereits ein gemeinsames `ApplicationCore`-Projekt vorhanden ist, das verwendet werden kann, um alle für `PublicApi` und `BlazorAdmin` erforderlichen Typen freizugeben. Dies liegt daran, dass dieses Projekt die gesamte Geschäftslogik der Anwendung enthält und somit wesentlich größer als notwendig ist, weshalb auch der Schutz auf dem Server notwendig ist. Beachten Sie, dass jede Bibliothek, auf die `BlazorAdmin` verweist, beim Laden der Blazor-Anwendung über die Browser der Benutzer heruntergeladen wird.
 
-Abhängig davon, ob das [„Back-Ends für Front-Ends“-Muster (BFF)](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) verwendet wird, dürfen die von der Blazor WebAssembly-App genutzten APIs ihre Typen nicht für Blazor freigeben. Insbesondere kann eine öffentliche API, die von vielen verschiedenen Clients verwendet werden soll, eigene Anforderungs- und Ergebnistypen definieren, anstatt diese in einem clientspezifischen freigegebenen Projekt freizugeben. Im eShopOnWeb-Beispiel wird davon ausgegangen, dass das `PublicApi`-Projekt tatsächlich eine öffentliche API hostet, sodass nicht alle Anforderungs- und Antworttypen aus dem `BlazorShared`-Projekt stammen.
+Abhängig davon, ob das [„Back-Ends für Front-Ends“-Muster (BFF)](/azure/architecture/patterns/backends-for-frontends) verwendet wird, dürfen die von der Blazor WebAssembly-App genutzten APIs ihre Typen nicht für Blazor freigeben. Insbesondere kann eine öffentliche API, die von vielen verschiedenen Clients verwendet werden soll, eigene Anforderungs- und Ergebnistypen definieren, anstatt diese in einem clientspezifischen freigegebenen Projekt freizugeben. Im eShopOnWeb-Beispiel wird davon ausgegangen, dass das `PublicApi`-Projekt tatsächlich eine öffentliche API hostet, sodass nicht alle Anforderungs- und Antworttypen aus dem `BlazorShared`-Projekt stammen.
 
 ### <a name="cross-cutting-concerns"></a>Übergreifende Belange
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum Herunterladen finden Sie im MSDN Magazine-Artikel [ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
+Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum Herunterladen finden Sie im MSDN Magazine-Artikel [ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Ressourcen: Strukturieren von Anwendungen
 >

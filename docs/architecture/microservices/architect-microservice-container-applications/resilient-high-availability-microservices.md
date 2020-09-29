@@ -2,12 +2,12 @@
 title: Resilienz und Hochverfügbarkeit bei Microservices
 description: Microservices müssen so entworfen werden, dass sie vorübergehende Netzwerk- und Abhängigkeitsfehler aushalten. Zudem müssen sie resilient sein, um Hochverfügbarkeit zu gewährleisten.
 ms.date: 09/20/2018
-ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988920"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172449"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -40,7 +40,7 @@ Protokolle geben mithilfe von Ausnahmen, Warnungen und einfachen Informationsmel
 
 Bei monolithischen serverbasierten Anwendungen können Protokolle einfach in eine Datei auf der Festplatte (also in eine Protokolldatei) geschrieben und anschließend mit einem beliebigen Tool analysiert werden. Da die Anwendungsausführung auf einen bestimmten Server oder einen bestimmten virtuellen Computer beschränkt ist, ist die Analyse des Ereignisflusses meist nicht allzu komplex. Bei einer verteilten Anwendung, bei der mehrere Dienste auf verschiedenen Knoten in einem Orchestratorcluster ausgeführt werden, stellt die Korrelation von verteilten Ereignissen dagegen eine Herausforderung dar.
 
-Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabedatenstrom von Ereignissen oder Protokolldateien selbst zu speichern oder gar das Routing der Ereignisse an einer zentrale Stelle zu verwalten. Sie sollte transparent sein, d.h., alle Prozesse sollen jeweils nur ihren eigenen Ereignisdatenstrom in eine Standardausgabe schreiben, die darunter von der Infrastruktur der Ausführungsumgebung erfasst wird, in der die Prozesse ausgeführt werden. Ein Beispiel für diese Ereignisdatenstromrouter ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow). Dieser Router erfasst Ereignisdatenströme aus verschiedenen Quellen und veröffentlicht diese in Ausgabesystemen. Hierzu zählen einfache Standardausgaben für eine Entwicklungsumgebung oder für Cloudsysteme wie [Azure Monitor](https://azure.microsoft.com/services/monitor//) und [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Es gibt auch von Drittanbietern gute Plattformen und Tools zur Analyse von Protokollen, mit denen Protokolle durchsucht und überwacht, Anwender gewarnt und Berichte gesendet werden können, auch in Echtzeit. Ein Beispiel hierfür ist [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Eine auf Microservices basierende Anwendung sollte nicht versuchen, den Ausgabedatenstrom von Ereignissen oder Protokolldateien selbst zu speichern oder gar das Routing der Ereignisse an einer zentrale Stelle zu verwalten. Sie sollte transparent sein, d.h., alle Prozesse sollen jeweils nur ihren eigenen Ereignisdatenstrom in eine Standardausgabe schreiben, die darunter von der Infrastruktur der Ausführungsumgebung erfasst wird, in der die Prozesse ausgeführt werden. Ein Beispiel für diese Ereignisdatenstromrouter ist [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow). Dieser Router erfasst Ereignisdatenströme aus verschiedenen Quellen und veröffentlicht diese in Ausgabesystemen. Hierzu zählen einfache Standardausgaben für eine Entwicklungsumgebung oder für Cloudsysteme wie [Azure Monitor](https://azure.microsoft.com/services/monitor//) und [Azure Diagnostics](/azure/azure-monitor/platform/diagnostics-extension-overview). Es gibt auch von Drittanbietern gute Plattformen und Tools zur Analyse von Protokollen, mit denen Protokolle durchsucht und überwacht, Anwender gewarnt und Berichte gesendet werden können, auch in Echtzeit. Ein Beispiel hierfür ist [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Orchestratoren zum Verwalten von Integritäts- und Diagnoseinformationen
 

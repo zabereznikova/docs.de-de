@@ -4,12 +4,12 @@ description: Azure Event Grid ist eine serverlose Lösung für die zuverlässige
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 408e1b9cd1b1e5316c7c6a17bb1b0c76a38f9e11
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 30937bafd8069eb4508dce18351964103421373a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135710"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171883"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -31,7 +31,7 @@ Event Grid deckt mehrere verschiedene Szenarien ab. In diesem Abschnitt werden d
 
 ![Betriebsautomatisierung](./media/ops-automation.png)
 
-Event Grid kann zur Beschleunigung der Automatisierung und Vereinfachung der Richtliniendurchsetzung beitragen, indem [Azure Automation](https://docs.microsoft.com/azure/automation) benachrichtigt wird, wenn Infrastruktur bereitgestellt wird.
+Event Grid kann zur Beschleunigung der Automatisierung und Vereinfachung der Richtliniendurchsetzung beitragen, indem [Azure Automation](/azure/automation) benachrichtigt wird, wenn Infrastruktur bereitgestellt wird.
 
 ### <a name="application-integration"></a>Anwendungsintegration
 
@@ -47,11 +47,11 @@ Event Grid kann Azure Functions-, Logic Apps- oder ihren eigenen benutzerdefinie
 
 ## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid im Vergleich zu anderen Azure-Messagingdiensten
 
-Azure bietet mehrere Messagingdienste, einschließlich [Event Hubs](https://docs.microsoft.com/azure/event-hubs) und [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging). Jeder dieser Dienste ist so konzipiert, dass ein bestimmter Satz von Anwendungsfällen berücksichtigt wird. Die folgende Abbildung gibt einen Überblick über die Unterschiede zwischen den Diensten.
+Azure bietet mehrere Messagingdienste, einschließlich [Event Hubs](/azure/event-hubs) und [Service Bus](/azure/service-bus-messaging). Jeder dieser Dienste ist so konzipiert, dass ein bestimmter Satz von Anwendungsfällen berücksichtigt wird. Die folgende Abbildung gibt einen Überblick über die Unterschiede zwischen den Diensten.
 
 ![Azure-Messaging im Vergleich](./media/azure-messaging-services.png)
 
-Einen ausführlicheren Vergleich finden Sie unter [Messagingdienste im Vergleich](https://docs.microsoft.com/azure/event-grid/compare-messaging-services).
+Einen ausführlicheren Vergleich finden Sie unter [Messagingdienste im Vergleich](/azure/event-grid/compare-messaging-services).
 
 ## <a name="performance-targets"></a>Leistungsziele
 
@@ -110,34 +110,34 @@ Ein großer Vorteil der Verwendung von Event Grid sind die von Azure generierten
 | | Microsoft.Resources.ResourceDeleteFailure | Wird ausgelöst, wenn ein Vorgang zum Löschen einer Ressource fehlschlägt. |
 | | Microsoft.Resources.ResourceDeleteCancel | Wird ausgelöst, wenn ein Vorgang zum Löschen einer Ressource abgebrochen wird. Dieses Ereignis tritt ein, wenn eine Vorlagenbereitstellung abgebrochen wird. |
 
-Weitere Informationen finden Sie unter [Azure Event Grid-Ereignisschema](https://docs.microsoft.com/azure/event-grid/event-schema).
+Weitere Informationen finden Sie unter [Azure Event Grid-Ereignisschema](/azure/event-grid/event-schema).
 
 Sie können von jedem Anwendungstyp aus auf Event Grid zugreifen, selbst über einen lokal ausgeführten.
 
 ## <a name="conclusion"></a>Schlussbemerkung
 
-In diesem Kapitel haben Sie die serverlose Azure-Plattform kennengelernt, die aus Azure Functions, Logic Apps und Event Grid besteht. Sie können diese Ressourcen verwenden, um eine vollständig serverlose App-Architektur oder eine Hybridlösung zu erstellen, die mit anderen Cloudressourcen und lokalen Servern interagiert. In Kombination mit einer serverlosen Datenplattform wie [Azure SQL](https://docs.microsoft.com/azure/sql-database) oder [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction) können Sie vollständig verwaltete, cloudnative Anwendungen erstellen.
+In diesem Kapitel haben Sie die serverlose Azure-Plattform kennengelernt, die aus Azure Functions, Logic Apps und Event Grid besteht. Sie können diese Ressourcen verwenden, um eine vollständig serverlose App-Architektur oder eine Hybridlösung zu erstellen, die mit anderen Cloudressourcen und lokalen Servern interagiert. In Kombination mit einer serverlosen Datenplattform wie [Azure SQL](/azure/sql-database) oder [CosmosDB](/azure/cosmos-db/introduction) können Sie vollständig verwaltete, cloudnative Anwendungen erstellen.
 
 ## <a name="recommended-resources"></a>Empfohlene Ressourcen
 
-- [App Service-Pläne](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
-- [Application Insights](https://docs.microsoft.com/azure/application-insights)
-- [Application Insights Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [App Service-Pläne](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Application Insights](/azure/application-insights)
+- [Application Insights Analytics](/azure/application-insights/app-insights-analytics)
 - [Azure: Migrieren einer App zur Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Grid-Ereignisschema](https://docs.microsoft.com/azure/event-grid/event-schema)
-- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
-- [Dokumentation zu Azure Functions](https://docs.microsoft.com/azure/azure-functions)
-- [Konzepte für Azure Functions-Trigger und -Bindungen](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Herstellen einer Verbindung mit lokalen Datenquellen mit dem lokalen Azure-Datengateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
-- [Erstellen Ihrer ersten Funktion im Azure-Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-- [Create your first function using the Azure CLI (Erstellen Ihrer ersten Funktion mit der Azure-Befehlszeilenschnittstelle)](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
-- [Erstellen Ihrer ersten Funktion mit Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [Von Functions unterstützte Sprachen](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Überwachen von Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Azure Event Grid](/azure/event-grid/overview)
+- [Azure Event Grid-Ereignisschema](/azure/event-grid/event-schema)
+- [Azure Event Hubs](/azure/event-hubs)
+- [Dokumentation zu Azure Functions](/azure/azure-functions)
+- [Konzepte für Azure Functions-Trigger und -Bindungen](/azure/azure-functions/functions-triggers-bindings)
+- [Azure Logic Apps](/azure/logic-apps)
+- [Azure Service Bus](/azure/service-bus-messaging)
+- [Azure Table Storage](/azure/cosmos-db/table-storage-overview)
+- [Herstellen einer Verbindung mit lokalen Datenquellen mit dem lokalen Azure-Datengateway](/azure/analysis-services/analysis-services-gateway)
+- [Erstellen Ihrer ersten Funktion im Azure-Portal](/azure/azure-functions/functions-create-first-azure-function)
+- [Create your first function using the Azure CLI (Erstellen Ihrer ersten Funktion mit der Azure-Befehlszeilenschnittstelle)](/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Erstellen Ihrer ersten Funktion mit Visual Studio](/azure/azure-functions/functions-create-your-first-function-visual-studio)
+- [Von Functions unterstützte Sprachen](/azure/azure-functions/supported-languages)
+- [Überwachen von Azure Functions](/azure/azure-functions/functions-monitoring)
 
 >[!div class="step-by-step"]
 >[Zurück](logic-apps.md)

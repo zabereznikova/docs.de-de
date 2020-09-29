@@ -4,12 +4,12 @@ description: Entwerfen moderner Web-Apps mit ASP.NET Core und Azure | Empfehlung
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164436"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169218"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps
 
@@ -54,7 +54,7 @@ Azure App Service-Web-Apps sind eine hervorragende Lösung nicht nur für Apps, 
 
 ![Grundlegende Azure-Architektur](./media/image1-5.png)
 
-Zur Verwaltung einer solchen App ist in der Regel eine geringe Anzahl von Ressourcen in einer einzigen Ressourcengruppe ausreichend. Apps, die nicht aus vielen separaten Prozessen bestehen, sondern als eine einzige Einheit bereitgestellt werden, sind üblicherweise gute Kandidaten für diesen [grundlegenden Architekturansatz](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). Obwohl die Architektur recht einfach ist, ermöglicht es dieser Ansatz dennoch, die gehostete App sowohl zentral (mehr Ressourcen pro Knoten) als auch horizontal (mehr gehostete Knoten) hochzuskalieren, um einen höheren Bedarf zu erfüllen. Mit der Autoskalierung kann die App so konfiguriert werden, dass die Anzahl der Knoten, auf denen die Apps gehostet wird, automatisch basierend auf dem Bedarf und der durchschnittlichen Last auf den Knoten angepasst wird.
+Zur Verwaltung einer solchen App ist in der Regel eine geringe Anzahl von Ressourcen in einer einzigen Ressourcengruppe ausreichend. Apps, die nicht aus vielen separaten Prozessen bestehen, sondern als eine einzige Einheit bereitgestellt werden, sind üblicherweise gute Kandidaten für diesen [grundlegenden Architekturansatz](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). Obwohl die Architektur recht einfach ist, ermöglicht es dieser Ansatz dennoch, die gehostete App sowohl zentral (mehr Ressourcen pro Knoten) als auch horizontal (mehr gehostete Knoten) hochzuskalieren, um einen höheren Bedarf zu erfüllen. Mit der Autoskalierung kann die App so konfiguriert werden, dass die Anzahl der Knoten, auf denen die Apps gehostet wird, automatisch basierend auf dem Bedarf und der durchschnittlichen Last auf den Knoten angepasst wird.
 
 ### <a name="app-service-web-apps-for-containers"></a>App Service-Web-Apps für Container
 
@@ -74,7 +74,7 @@ Da Teile größerer Anwendungen in kleinere, unabhängige *Microservices* aufget
 
 ![Beispielarchitektur für Microservices mit verschiedenen allgemeinen Entwurfsmustern.](./media/image1-10.png)
 
-[Erfahren Sie mehr über Entwurfsmuster für den Aufbau microservicebasierter Systeme](https://docs.microsoft.com/azure/architecture/microservices/design/patterns).
+[Erfahren Sie mehr über Entwurfsmuster für den Aufbau microservicebasierter Systeme](/azure/architecture/microservices/design/patterns).
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces bietet folgende Vorteile:
 - Teams benötigen eine geringere Anzahl von Integrationsumgebungen.
 - Die Notwendigkeit, bestimmte Dienste in verteilten Systemen zu simulieren, entfällt.
 
-[Weitere Informationen zu Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+[Weitere Informationen zu Azure Dev Spaces](/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 

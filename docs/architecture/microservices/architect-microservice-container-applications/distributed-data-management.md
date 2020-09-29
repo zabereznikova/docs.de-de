@@ -2,12 +2,12 @@
 title: Herausforderungen und Lösungen für die verteilte Datenverwaltung
 description: Erfahren Sie, welche Herausforderungen und Lösungen für die verteilte Datenverwaltung in Microservices bestehen.
 ms.date: 09/20/2018
-ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1439dd5a04c3991a2b3b2ef12763843f9f339a29
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144317"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152650"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Herausforderungen und Lösungen für die verteilte Datenverwaltung
 
@@ -25,7 +25,7 @@ Eine zweite Herausforderung besteht darin, Abfragen zu implementieren, die Daten
 
 **API-Gateway**: Für eine einfache Datenaggregation aus mehreren Microservices, die verschiedene Datenbanken besitzen, besteht die empfohlene Vorgehensweise in einem Aggregations-Microservice, der als API-Gateway bezeichnet wird. Allerdings müssen Sie bei der Implementierung dieses Musters vorsichtig sein, da es zu einem Engpass in Ihrem System führen und gegen den Grundsatz der Autonomie der Microservices verstoßen kann. Um dieses Risiko zu mindern, können Sie mehrere abgestimmte API-Gateways verwenden, die sich jeweils auf ein vertikales „Segment“ bzw. einen Geschäftsbereich des Systems konzentrieren. Das API-Gateway-Muster wird weiter unten ausführlicher erläutert, wenn es explizit um [API-Gateways](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication) geht.
 
-**CQRS mit Abfrage-/schreibgeschützten Tabellen**: Eine weitere Lösung für das Aggregieren von Daten aus mehreren Microservices ist das [Muster für materialisierte Sichten](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Bei diesem Ansatz generieren Sie vorab eine schreibgeschützte Tabelle mit den Daten, die mehreren Microservices gehören (d.h. Sie bereiten vor den eigentlichen Abfragen denormalisierte Daten vor). Die Tabelle weist ein für die Anforderungen der Client-App geeignetes Format auf.
+**CQRS mit Abfrage-/schreibgeschützten Tabellen**: Eine weitere Lösung für das Aggregieren von Daten aus mehreren Microservices ist das [Muster für materialisierte Sichten](/azure/architecture/patterns/materialized-view). Bei diesem Ansatz generieren Sie vorab eine schreibgeschützte Tabelle mit den Daten, die mehreren Microservices gehören (d.h. Sie bereiten vor den eigentlichen Abfragen denormalisierte Daten vor). Die Tabelle weist ein für die Anforderungen der Client-App geeignetes Format auf.
 
 Stellen Sie sich beispielsweise den Bildschirm einer mobilen App vor. Wenn Sie nur über eine Datenbank verfügen, können Sie die Daten für diesen Bildschirm vermutlich mit einer SQL-Abfrage zusammentragen, die eine komplexe Verknüpfung mit mehreren Tabellen ausführt. Wenn Sie jedoch mehrere Datenbanken haben und jede Datenbank im Besitz eines anderen Microservice ist, können Sie diese Datenbanken nicht abfragen und eine SQL-Verknüpfung erstellen. Ihre komplexe Abfrage wird zur einer Herausforderung. Diese Anforderung lässt sich mit einem CQRS-Ansatz meistern. Hierzu erstellen Sie eine denormalisierte Tabelle in einer anderen Datenbank, die nur für Abfragen verwendet wird. Die Tabelle kann speziell für die Daten konzipiert werden, die Sie für die komplexe Abfrage benötigen – mit einer 1:1-Beziehung zwischen den Feldern, die der Bildschirm Ihrer Anwendung benötigt, und den Spalten in der Abfragetabelle. Sie könnte darüber hinaus für Berichtszwecke verwendet werden.
 

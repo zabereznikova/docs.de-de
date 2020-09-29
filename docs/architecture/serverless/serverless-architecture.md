@@ -4,18 +4,18 @@ description: Untersuchung verschiedener Architekturen und Apps, die von serverlo
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7d80ce3957c2ad90a67ae6ba1fc2786af30fcc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522407"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171714"
 ---
 # <a name="serverless-architecture"></a>Serverlose Architektur
 
 Es gibt viele Ansätze für die Verwendung von [serverlosen](https://azure.com/serverless) Architekturen. In diesem Kapitel werden Beispiele für gängige Architekturen erläutert, die serverlose Funktionen integrieren. Außerdem werden Probleme behandelt, die möglicherweise zusätzliche Herausforderungen darstellen oder bei der Implementierung von serverlosen Funktionen spezielle Überlegungen erforderlich machen. Schließlich werden mehrere Entwurfsbeispiele bereitgestellt, die verschiedene serverlose Anwendungsfälle veranschaulichen.
 
-Serverlose Hosts verwenden häufig eine vorhandene containerbasierte- oder PaaS-Schicht, um die serverlosen Instanzen zu verwalten. Azure Functions basiert z.B. auf [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service wird zum horizontalen Hochskalieren von Instanzen und zum Verwalten der Laufzeit verwendet, die Azure Functions-Code ausführt. Für Windows-basierte Funktionen wird der Host als PaaS ausgeführt und skaliert die .NET-Laufzeit horizontal hoch. Bei Linux-basierten Funktionen nutzt der Host Container.
+Serverlose Hosts verwenden häufig eine vorhandene containerbasierte- oder PaaS-Schicht, um die serverlosen Instanzen zu verwalten. Azure Functions basiert z.B. auf [Azure App Service](/azure/app-service/). App Service wird zum horizontalen Hochskalieren von Instanzen und zum Verwalten der Laufzeit verwendet, die Azure Functions-Code ausführt. Für Windows-basierte Funktionen wird der Host als PaaS ausgeführt und skaliert die .NET-Laufzeit horizontal hoch. Bei Linux-basierten Funktionen nutzt der Host Container.
 
 ![Azure Functions-Architektur](./media/azure-functions-architecture.png)
 
@@ -71,7 +71,7 @@ Die schiere Menge an Geräten und Informationen erfordert oft eine ereignisgeste
 - Es ermöglicht die unabhängige Versionsverwaltung, damit Entwickler die Geschäftslogik für ein bestimmtes Gerät aktualisieren können, ohne dass das gesamte System bereitgestellt werden muss.
 - Resilienz und weniger Ausfallzeiten.
 
-Die Allgegenwärtigkeit von IoT hat zu mehreren serverlosen Produkten geführt, die sich speziell auf IoT-Belange konzentrieren, beispielsweise [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Die serverlose Architektur automatisiert Aufgaben wie Geräteregistrierung, Richtlinienerzwingung, Nachverfolgung und sogar Bereitstellung von Code auf Geräten in der *Edge-Umgebung*. „Edge“ bezieht sich auf Geräte wie Sensoren und Aktoren, die zwar mit dem Internet verbunden, aber kein aktiver Teil davon sind.
+Die Allgegenwärtigkeit von IoT hat zu mehreren serverlosen Produkten geführt, die sich speziell auf IoT-Belange konzentrieren, beispielsweise [Azure IoT Hub](/azure/iot-hub). Die serverlose Architektur automatisiert Aufgaben wie Geräteregistrierung, Richtlinienerzwingung, Nachverfolgung und sogar Bereitstellung von Code auf Geräten in der *Edge-Umgebung*. „Edge“ bezieht sich auf Geräte wie Sensoren und Aktoren, die zwar mit dem Internet verbunden, aber kein aktiver Teil davon sind.
 
 >[!div class="step-by-step"]
 >[Zurück](architecture-approaches.md)

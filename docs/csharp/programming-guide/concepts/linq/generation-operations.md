@@ -3,14 +3,15 @@ title: Generierungsvorgänge (C#)
 description: Bei der Generierung wird eine neue Sequenz von Werten erstellt. Hier erfahren Sie mehr über die Methoden des Standardabfrageoperators in LINQ in C#, die bei der Generierung verwendet werden.
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 90b7913d60ced82c854f514d3644425f6ddd2571
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 07cb7dfc1cb5f06cc6e7800ec1e5e2dac015045b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103642"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165272"
 ---
 # <a name="generation-operations-c"></a>Generierungsvorgänge (C#)
+
 Die Generierung bezieht sich auf das Erstellen einer neuen Sequenz von Werten.  
   
  Die Methoden des Standardabfrageoperators, die Generierung ausführen, sind im folgenden Abschnitt aufgeführt.  
