@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065164"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721238"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: Plattformkompatibilität
 
-Die .NET-Codeanalyseregel CA1416 ist ab .NET 5.0 standardmäßig aktiviert. Sie erzeugt eine Buildwarnung für Aufrufe an plattformspezifische APIs von Aufrufsites, bei denen das Betriebssystem nicht überprüft wird.
+Die .NET-Codeanalyseregel [CA1416](/visualstudio/code-quality/ca1416) ist ab .NET 5.0 standardmäßig aktiviert. Sie erzeugt eine Buildwarnung für Aufrufe an plattformspezifische APIs von Aufrufsites, bei denen das Betriebssystem nicht überprüft wird.
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Ab .NET 5.0 umfasst das .NET SDK [.NET-Quellcodeanalysen](../../../../docs/fundamentals/productivity/code-analysis.md). Einige dieser Regeln, darunter CA1416, sind standardmäßig aktiviert. Wenn Ihr Projekt Code enthält, der gegen diese Regel verstößt und dafür konfiguriert ist, Warnungen als Fehler zu interpretieren, könnte es sich hierbei um einen Breaking Change für Ihr Build handeln. Die Regel CA1416 informiert Sie darüber, wenn Sie plattformspezifische APIs über Orte verwenden, an denen der Plattformkontext nicht überprüft wird.
+Ab .NET 5.0 umfasst das .NET SDK [.NET-Quellcodeanalysen](../../../../docs/fundamentals/productivity/code-analysis.md). Einige dieser Regeln, darunter [CA1416](/visualstudio/code-quality/ca1416), sind standardmäßig aktiviert. Wenn Ihr Projekt Code enthält, der gegen diese Regel verstößt und dafür konfiguriert ist, Warnungen als Fehler zu interpretieren, könnte es sich hierbei um einen Breaking Change für Ihr Build handeln. Die Regel CA1416 informiert Sie darüber, wenn Sie plattformspezifische APIs über Orte verwenden, an denen der Plattformkontext nicht überprüft wird.
 
-Die Regel CA1416, die Plattformkompatibilitätsanalyse, arbeitet mit einigen anderen Features zusammen, die neu in .NET 5.0 sind. .NET 5.0 führt die Attribute `SupportedOSPlatformAttribute` und `UnsupportedOSPlatformAttribute` (in einem früheren Vorschaurelease <xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> und <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute> genannt) ein, mit denen Sie die Plattformen angeben können, auf denen eine API *unterstützt* oder *nicht unterstützt* wird. Wenn diese Attribute nicht vorhanden sind, wird davon ausgegangen, dass eine API auf allen Plattformen unterstützt wird. Diese Attribute wurden auf plattformspezifische APIs in den wichtigsten .NET-Bibliotheken angewendet.
+Regel [CA1416](/visualstudio/code-quality/ca1416), das Analysetool für die Plattformkompatibilität, arbeitet mit einigen anderen Features zusammen, die neu in .NET 5.0 sind. In NET 5.0 werden <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> und <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> eingeführt, mit denen Sie die Plattformen angeben können, auf denen eine API *unterstützt wird* oder *nicht*. Wenn diese Attribute nicht vorhanden sind, wird davon ausgegangen, dass eine API auf allen Plattformen unterstützt wird. Diese Attribute wurden auf plattformspezifische APIs in den wichtigsten .NET-Bibliotheken angewendet.
 
-In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar sind, kennzeichnet die Regel CA1416 alle plattformspezifischen API-Aufrufe, bei denen der Plattformkontext nicht überprüft wird. Die meisten APIs, die nun mit den Attributen `SupportedOSPlatformAttribute` und `UnsupportedOSPlatformAttribute` versehen sind, lösen <xref:System.PlatformNotSupportedException>-Ausnahmen aus, wenn sie unter einem nicht unterstützten Betriebssystem aufgerufen werden. Da diese APIs nun als plattformspezifisch gekennzeichnet sind, hilft Ihnen die Regel CA1416 dabei, <xref:System.PlatformNotSupportedException>-Ausnahmen zur Laufzeit zu verhindern, indem Überprüfungen des Betriebssystems zu Ihren Aufrufsites hinzugefügt werden.
+In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar sind, kennzeichnet die Regel [CA1416](/visualstudio/code-quality/ca1416) alle plattformspezifischen API-Aufrufe, bei denen der Plattformkontext nicht überprüft wird. Die meisten APIs, die nun mit den Attributen <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> und <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> versehen sind, lösen <xref:System.PlatformNotSupportedException>-Ausnahmen aus, wenn sie unter einem nicht unterstützten Betriebssystem aufgerufen werden. Da diese APIs nun als plattformspezifisch gekennzeichnet sind, hilft Ihnen die Regel [CA1416](/visualstudio/code-quality/ca1416) dabei, <xref:System.PlatformNotSupportedException>-Ausnahmen zur Laufzeit zu verhindern, indem Überprüfungen des Betriebssystems zu Ihren Aufrufsites hinzugefügt werden.
 
 #### <a name="examples"></a>Beispiele
 
@@ -44,7 +44,7 @@ In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar si
 
 #### <a name="recommended-action"></a>Empfohlene Maßnahme
 
-Stellen Sie sicher, dass plattformspezifische APIs nur aufgerufen werden, wenn der Code auf der entsprechenden Plattform ausgeführt wird. Sie können vor dem Aufrufen einer plattformspezifischen API mithilfe einer der `Is<Platform>`-Methoden in der Klasse <xref:System.OperatingSystem?displayProperty=nameWithType>, z. B. `System.OperatingSystem.IsWindows()`, das aktuelle Betriebssystem überprüfen.
+Stellen Sie sicher, dass plattformspezifische APIs nur aufgerufen werden, wenn der Code auf der entsprechenden Plattform ausgeführt wird. Sie können vor dem Aufrufen einer plattformspezifischen API mithilfe einer der `Is<Platform>`-Methoden in der Klasse <xref:System.OperatingSystem?displayProperty=nameWithType>, z. B. <xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType>, das aktuelle Betriebssystem überprüfen.
 
 Sie können eine der `Is<Platform>`-Methoden in der Bedingung einer `if`-Anweisung verwenden:
 
@@ -122,4 +122,5 @@ Für die Blazor WebAssembly-Plattform:
 
 #### <a name="see-also"></a>Weitere Informationen
 
+- [CA1416: Plattformkompatibilität überprüfen](/visualstudio/code-quality/ca1416)
 - [.NET API-Analysetool](../../../../docs/standard/analyzers/api-analyzer.md)
