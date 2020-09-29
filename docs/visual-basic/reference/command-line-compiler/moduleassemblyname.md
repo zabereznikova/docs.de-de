@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9fb9287f9472d4b33eff4cb601aff5eed370b2c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403147"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065566"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
+
 Gibt den Namen der Assembly an, zu der dieses Modul gehört.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,6 +30,7 @@ Gibt den Namen der Assembly an, zu der dieses Modul gehört.
 |`assembly_name`|Der Name der Assembly, zu der dieses Modul gehört|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Compiler verarbeitet die `-moduleassemblyname`-Option nur, wenn die `-target:module`-Option angegeben wurde. Dies führt dazu, dass der Compiler ein Modul erstellt. Das vom Compiler erstellte Modul ist nur für die mit der `-moduleassemblyname`-Option angegebene Assembly gültig. Wenn Sie das Modul in eine andere Assembly verschieben, treten Laufzeitfehler auf.  
   
  Die `-moduleassemblyname`-Option ist nur erforderlich, wenn Folgendes gilt:  

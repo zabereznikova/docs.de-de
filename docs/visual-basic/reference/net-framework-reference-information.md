@@ -6,17 +6,19 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: ebf9040fc16666d7e40e95981d5ceee97e716acb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3ce3780818a6a07de1c594b9da3f4a5f9e03f37
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352849"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058403"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework-Referenzinformationen (Visual Basic)
+
 Dieses Thema enthält Links zu Informationen über die Arbeit mit der .NET Framework-Klassenbibliothek.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Erste Schritte](../../framework/get-started/index.md)  
  Stellt eine umfassende Übersicht über .NET Framework und Links zu zusätzlichen Ressourcen bereit.  
   

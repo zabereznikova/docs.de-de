@@ -3,12 +3,12 @@ title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810884"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078215"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -364,9 +364,11 @@ Eine durch Semikolons getrennte Liste von Tags, die das Paket festlegt.
 Bestimmt den Ausgabepfad, in dem das gepackte Paket abgelegt wird. Der Standardwert ist `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 Dieser Boolesche Wert gibt an, ob das Paket ein zusätzliches Symbolpaket erstellen soll, wenn das Projekt verpackt wird. Das Format des Symbolpakets wird durch die Eigenschaft `SymbolPackageFormat` gesteuert.
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 Gibt das Format des Symbolpakets an. Im Fall von „symbols.nupkg“ wird ein älteres Symbolpaket mit der Erweiterung *.symbols.nupkg* erstellt, das PDB-, DLL- und andere Ausgabedateien enthält. Im Fall von „snupkg“ wird ein Symbolpaket dieses Typs erstellt, das die portablen PDB-Dateien enthält. Der Standardwert ist „symbols.nupkg“.
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ Gibt die URL für das Repository an, in der sich der Quellcode für das Paket be
 Gibt den Verzeichnistyp an. Der Standardwert ist „Git“.
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 Gibt den Namen des Quellbranch im Repository an. Wenn das Projekt in einem NuGet-Paket gepackt ist, wird es den Paketmetadaten hinzugefügt.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 Optionaler Repositorycommit oder ein Changeset, um anzugeben, für welches Quellpaket die Erstellung erfolgt ist. `RepositoryUrl` muss ebenfalls angegeben werden, damit diese Eigenschaft einbezogen wird. Wenn das Projekt in einem NuGet-Paket gepackt ist, wird dieser Commit oder das Changeset den Paketmetadaten hinzugefügt.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis

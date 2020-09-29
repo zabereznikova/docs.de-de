@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a91bd74d0be4f1cb223091ee2527f9567b4ca5db
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408548"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058468"
 ---
 # <a name="-libpath"></a>-libpath
+
 Gibt den Speicherort der Verweisassemblys an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,6 +30,7 @@ Gibt den Speicherort der Verweisassemblys an.
 |`dirList`|Erforderlich. Eine durch Semikolons getrennte Liste von Verzeichnissen, in denen der Compiler suchen kann, wenn die Assembly, auf die verwiesen wird, im aktuellen Arbeitsverzeichnis (das Verzeichnis, in dem Sie den Compiler aufrufen) oder im CLR-Systemverzeichnis (Common Language Runtime) nicht gefunden werden kann. Wenn der Verzeichnisname ein Leerzeichen enthält, müssen Sie den Name in Anführungszeichen (" ") einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `-libpath`-Option gibt den Speicherort der Assemblys an, auf die durch die [-reference](reference.md)-Option verwiesen wird.  
   
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
@@ -50,6 +52,7 @@ Gibt den Speicherort der Verweisassemblys an.
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Verweise**.<br />3.  Klicken Sie auf die Schaltfläche **Verweispfade…** .<br />4.  Geben Sie im Dialogfeld **Verweispfade** den Verzeichnisname im Feld **Ordner:** ein.<br />5.  Klicken Sie auf **Ordner hinzufügen**.|  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Code kompiliert `T2.vb`, um eine EXE-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis, im Stammverzeichnis des Laufwerks C: und im Verzeichnis „Neue Verzeichnisse“ des Laufwerks C: nach Assemblyverweisen.  
   
 ```console  

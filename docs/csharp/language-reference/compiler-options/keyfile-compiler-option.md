@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5af40da18895d47933cb809d710e31a40f14513b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152428"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C#-Compileroptionen)
+
 Gibt den Dateinamen mit dem kryptografischen Schlüssel an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
 |`file`|Der Name der Datei mit dem Schlüssel mit starkem Namen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Wenn diese Option verwendet wird, fügt der Compiler den öffentlichen Schlüssel von der angegebenen Datei in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel. Geben Sie sn -k `file` in die Befehlszeile ein, um eine Schlüsseldatei zu generieren.  
   
  Wenn Sie mit der Option **-target:module** kompilieren, wird der Name der Schlüsseldatei im Modul aufbewahrt und in die Assembly integriert, die erstellt wird, wenn Sie eine Assembly mit [-addmodule](./addmodule-compiler-option.md) kompilieren.  

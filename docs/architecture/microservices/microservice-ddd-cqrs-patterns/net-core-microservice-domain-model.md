@@ -2,12 +2,12 @@
 title: Implementieren eines Microservicedomänenmodells mit .NET Core
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738748"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152545"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
@@ -152,7 +152,7 @@ In diesem Ausschnitt wird ein Großteil der Validierungen oder Logik, die im Zus
 
 Zudem wird der neue OrderItem(params)-Vorgang ebenfalls über die AddOrderItem-Methode aus dem Aggregatstamm „Order“ durchgeführt. Aus diesem Grund befindet sich ein Großteil der Logik oder Validierungen, die im Zusammenhang mit diesem Vorgang stehen, an einem gemeinsamen Ort im Aggregatstamm, insbesondere alle Elemente, die Auswirkungen auf die Konsistenz zwischen anderen untergeordneten Elementen haben. Dies ist der wichtigste Zweck des Aggregatstammmusters.
 
-Wenn Sie Entity Framework Core 1.1 oder höher verwenden, kann besser eine Entität des domänengesteuerten Designs festgelegt werden, da diese neben Eigenschaften auch die [Zuordnung zu Feldern](https://docs.microsoft.com/ef/core/modeling/backing-field) zulässt. Dies ist nützlich, wenn Auflistungen von untergeordneten Entitäten oder Wertobjekten geschützt werden sollen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften nutzen, und Sie können jedes Update für die Feldauflistung in öffentlichen Methoden ausführen und schreibgeschützten Zugriff über die AsReadOnly-Methode bereitstellen.
+Wenn Sie Entity Framework Core 1.1 oder höher verwenden, kann besser eine Entität des domänengesteuerten Designs festgelegt werden, da diese neben Eigenschaften auch die [Zuordnung zu Feldern](/ef/core/modeling/backing-field) zulässt. Dies ist nützlich, wenn Auflistungen von untergeordneten Entitäten oder Wertobjekten geschützt werden sollen. Mit dieser Erweiterung können Sie einfache private Felder anstelle von Eigenschaften nutzen, und Sie können jedes Update für die Feldauflistung in öffentlichen Methoden ausführen und schreibgeschützten Zugriff über die AsReadOnly-Methode bereitstellen.
 
 Wenn Sie das domänengesteuerte Design verwenden, sollten Sie nur über die Methoden in der Entität (oder den Konstruktor) ein Update für diese ausführen, sodass Eigenschaften nur mit einem get-Accessor definiert werden. Die Eigenschaften werden über private Felder gesichert. Auf private Members kann nur innerhalb einer Klasse zugegriffen werden. Eine Ausnahme besteht jedoch: EF Core muss auch diese Felder festlegen, damit das Objekt mit den richtigen Werten zurückgegeben werden kann.
 

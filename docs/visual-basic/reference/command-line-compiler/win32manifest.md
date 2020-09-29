@@ -6,14 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414258"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098877"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
+
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,6 +30,7 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
 |`fileName`|Pfad der benutzerdefinierten Manifestdatei.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Standardmäßig bettet der Visual Basic-Compiler ein Anwendungsmanifest ein, das eine angeforderte Ausführungsebene als „asInvoker“ angibt. Er erstellt das Manifest in demselben Ordner, in dem die ausführbare Datei erstellt wird. Wenn Sie Visual Studio verwenden, ist dies in der Regel der Ordner „bin\Debug“ oder „bin\Release“. Wenn Sie ein benutzerdefiniertes Manifest bereitstellen möchten, z. B. um die angeforderte Ausführungsebene „highestAvailable“ oder „requireAdministrator“ anzugeben, verwenden Sie diese Option zur Angabe des Dateinamens.  
   
 > [!NOTE]
@@ -47,6 +49,7 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
  Sie können das Anwendungsmanifest als benutzerdefinierten Postbuildschritt oder als Teil einer Win32-Ressourcendatei bereitstellen, indem Sie die Option `-nowin32manifest` verwenden. Verwenden Sie dieselbe Option, wenn Ihre Anwendung der Datei- oder Registrierungsvirtualisierung unter Windows Vista unterliegen soll. Dadurch wird verhindert, dass der Compiler ein Standardmanifest in der PE-Datei erstellt und einbettet.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt das Standardmanifest, das der Visual Basic-Compiler in eine PE-Datei einfügt.  
   
 > [!NOTE]

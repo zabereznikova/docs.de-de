@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125448"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152441"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C#-Compileroptionen)
+
 Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird. Dies geschieht mithilfe der Option [-reference (C#-Compileroptionen)](./reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `dir1`  
  Ein Verzeichnis, in dem der Compiler suchen kann, wenn die Assembly, auf die verwiesen wird, im aktuellen Arbeitsverzeichnis nicht gefunden werden kann (dort wo der Compiler aufgerufen wird) oder im Verzeichnis des CLR-Systems.  
   
@@ -33,6 +35,7 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
  Mindestens ein zusätzliches Verzeichnis, in dem nach Assemblyverweisen gesucht werden kann. Trennen Sie zusätzliche Verzeichnisnamen mit einem Komma, aber ohne Leerzeichen zu verwenden.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
   
 1. Aktuelles Arbeitsverzeichnis Dies ist das Arbeitsverzeichnis, aus dem der Compiler abgerufen wird.  
@@ -62,6 +65,7 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie „t2.cs“, um eine EXE-Datei zu erstellen. Der Compiler sucht im Arbeitsverzeichnis und im Stammverzeichnis des Laufwerks C nach Assemblyverweisen.  
   
 ```console  

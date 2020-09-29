@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 94a8b43a891df9837925869e17fac4536a995264
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c243b05b7e819691165ef20996691c0bd38ae4a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414271"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098864"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
+
 Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandelt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -30,6 +31,7 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
 |`numberList`|Dies ist optional. Mit Kommas als Trennzeichen getrennte Liste der Warnungs-ID-Nummern, für die die `-warnaserror`-Option gilt. Ist keine Warnungs-ID angegeben, gilt die `-warnaserror`-Option für alle Warnungen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `-warnaserror`-Option bewirkt, dass alle Warnungen als Fehler behandelt werden. Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet. Der Compiler meldet weitere Vorkommen derselben Warnung als Warnungen.  
   
  Standardmäßig ist `-warnaserror-` aktiv, sodass Warnungen nur als Informationen gemeldet werden. Die `-warnaserror`-Option, die mit `-warnaserror+` identisch ist, bewirkt, dass Warnungen als Fehler behandelt werden.  
@@ -48,6 +50,7 @@ Bewirkt, dass der Compiler das erste Vorkommen einer Warnung als Fehler behandel
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Deaktivieren Sie das Kontrollkästchen **Alle Warnungen deaktivieren**.<br />4.  Deaktivieren Sie das Kontrollkästchen **Alle Warnungen als Fehler behandeln**.<br />5.  Wählen Sie **Fehler** in der **Benachrichtigung**-Spalte neben der Warnung aus, die als Fehler behandelt werden soll.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgende Code wird `In.vb` kompiliert und wird der Compiler angewiesen, für das erste Vorkommen jeder von ihm gefundenen Warnung einen Fehler anzuzeigen.  
   
 ```console
@@ -55,6 +58,7 @@ vbc -warnaserror in.vb
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Code wird `T2.vb` kompiliert und nur die Warnung für nicht verwendete lokale Variablen (42024) als Fehler behandelt.  
   
 ```console

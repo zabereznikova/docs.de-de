@@ -7,14 +7,15 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: 337cb794ef9a405a178f1998cbe27b5da7709382
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4b50d56373676bf78a7591102095209401c907d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397440"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097591"
 ---
 # <a name="-optimize"></a>-optimize
+
 Aktiviert oder deaktiviert Compileroptimierungen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -30,6 +31,7 @@ Aktiviert oder deaktiviert Compileroptimierungen.
 |`+` &#124; `-`|Dies ist optional. Die `-optimize-`-Option deaktiviert Compileroptimierungen. Die `-optimize+`-Option aktiviert Optimierungen. Optimierungen sind standardmäßig deaktiviert.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Durch Compileroptimierungen wird Ihre Ausgabedatei kleiner, schneller und effizienter. Da Optimierungen jedoch zu Neuanordnungen von Code in der Ausgabedatei führen, kann `-optimize+` das Debuggen erschweren.  
   
  Alle mit `-target:module` generierten Module für eine Assembly müssen dieselben `-optimize`-Einstellungen wie die Assembly verwenden. Weitere Informationen finden Sie unter [-target (Visual Basic)](target.md).  
@@ -41,6 +43,7 @@ Aktiviert oder deaktiviert Compileroptimierungen.
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.<br />     <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern Sie das Kontrollkästchen **Optimierungen aktivieren** entsprechend.|  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Code kompiliert `T2.vb` und aktiviert Compileroptimierungen.  
   
 ```console

@@ -1,13 +1,13 @@
 ---
 title: Dotnet-Installationsskripts
 description: Erfahren Sie mehr über die dotnet-Installationsskripts zur Installation des .NET Core SDK und der Shared Runtime.
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538041"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078202"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -185,7 +185,6 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
   Stellt eine bestimmte Buildversion dar. Mögliche Werte sind:
 
   - `latest` – der neueste Build auf dem Kanal (mit der `-Channel`-Option verwendet).
-  - `coherent` – neuester kohärenter Build auf dem Kanal; verwendet die neueste stabile Paketkombination (mit Branchname-`-Channel`-Optionen verwendet).
   - Dreiteilige Version im X.Y.Z-Format, die eine bestimmte Buildversion darstellt; sie hat Vorrang vor der `-Channel`-Option. Beispiel: `2.0.0-preview2-006120`.
 
   Wenn nichts angegeben ist, wird für `-Version` standardmäßig `latest` verwendet.

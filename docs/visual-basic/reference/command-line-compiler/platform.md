@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: a6226b73d5d5d4d48a71afe39e8a546019d4c0bc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 488a1da6b25bcb4b42f0d355c6faee542046d0f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352345"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098890"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+
 Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabedatei ausführen kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabeda
 |`anycpu32bitpreferred`|Kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Die Anwendung wird als 32-Bit-Anwendung auf 32-Bit- und 64-Bit-Versionen von Windows ausgeführt. Dieses Flag ist nur gültig für ausführbare Dateien (.EXE) und erfordert .NET Framework 4.5.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie die `-platform`-Option, um den Typ des Zielprozessors für die Ausgabedatei anzugeben.  
   
  Im Allgemeinen werden in Visual Basic geschriebene .NET Framework-Assemblys identisch ausgeführt, unabhängig von der Plattform. Es gibt jedoch einige Fälle, die sich auf unterschiedlichen Plattformen unterschiedlich verhalten. Diese allgemeinen Fälle sind:  
@@ -75,6 +77,7 @@ Gibt an, welche Plattformversion der common Language Runtime (CLR) die Ausgabeda
      Weitere Informationen finden Sie unter [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel veranschaulicht, wie die `-platform`-Compileroption genutzt wird.  
   
 ```console

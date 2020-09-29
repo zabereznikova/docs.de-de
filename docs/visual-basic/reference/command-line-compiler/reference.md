@@ -9,14 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 633b457106203e213f5d30003e576b7e8132f4d2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b489a164e56a5e3bdbf7e3cdf24ec330fadedf38
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400486"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097552"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
+
 Hiermit wird bewirkt, dass der Compiler Typinformationen in den angegebenen Assemblys des Projekts zur Verfügung stellt, das Sie aktuell kompilieren.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ oder
 |`fileList`|Erforderlich. Durch Trennzeichen getrennte Liste von Assemblydateinamen. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen einschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Dateien, die Sie importieren, müssen Assemblymetadaten enthalten. Nur öffentliche Typen sind außerhalb der Assembly sichtbar. Mit der Option [-addmodule](addmodule.md) werden Metadaten aus einem Modul importiert.  
   
  Wenn Sie auf eine Assembly (Assembly A) verweisen, die selbst auf eine andere Assembly (Assembly B) verweist, müssen Sie auf Assembly B verweisen, wenn:  
@@ -55,6 +57,7 @@ oder
  Die Kurzform von `-reference` ist `-r`.  
   
 ## <a name="example"></a>Beispiel  
+
  Mit dem folgenden Befehl werden die Quelldatei `Input.vb` und Verweisassemblys aus `Metad1.dll` und `Metad2.dll` kompiliert, um `Out.exe` zu erstellen.  
   
 ```console

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: 3877757185030b0dba914a79d8c760fb8033ae5f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 809b7ad005b6bb5f127f84425b5d2beb980df471
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408646"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058130"
 ---
 # <a name="-filealign"></a>-filealign
+
 Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,10 +27,12 @@ Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `number`  
  Erforderlich. Ein Wert, der die Ausrichtung der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Sie können die `-filealign`-Option verwenden, um die Ausrichtung der Abschnitte in Ihrer Ausgabedatei anzugeben. Abschnitte sind Blöcke zusammenhängenden Speichers in einer Portable Executable-Datei (PE), die entweder Code oder Daten enthält. Die `-filealign`-Option ermöglicht es Ihnen, Ihre Anwendung mit einer nicht dem Standardwert entsprechenden Ausrichtung zu kompilieren. Die meisten Entwickler müssen diese Option nicht verwenden.  
   
  Jeder Abschnitt wird an einer Grenze ausgerichtet, die einem Vielfachen des `-filealign`-Werts entspricht. Es gibt keinen festen Standardwert. Wenn `-filealign` nicht angegeben wird, wählt der Compiler zur Kompilierzeit einen Standardwert.  

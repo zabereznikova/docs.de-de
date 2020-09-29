@@ -2,16 +2,17 @@
 title: Migrieren von DNX zur .Net Core-CLI
 description: Migrieren der Verwendung von DNX-Tools zu .NET Core-CLI-Tools.
 ms.date: 06/20/2016
-ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e5ebbab2551cf750a5b1136e7b1d4b67816c3b03
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503822"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071117"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrieren von DNX zur .NET Core-CLI (project.json)
 
 ## <a name="overview"></a>Übersicht
+
 Im RC1-Release von .NET Core und ASP.NET Core 1.0 wurde DNX eingeführt. Im RC2-Release von .NET Core und ASP.NET Core 1.0 wurde der Wechsel von DNX auf die NET Core-CLI vollzogen.
 
 Lassen Sie uns als kurze Auffrischung noch einmal zusammenfassen, worum es bei DNX ging. DNX war eine Laufzeit und ein Toolset, das zum Erstellen von .NET Core und, genauer gesagt, ASP.NET Core 1.0-Anwendungen verwendet wurde. DNX bestand aus 3 Hauptteilen:
@@ -25,9 +26,11 @@ Mit der Einführung der CLI (command line interface, Befehlszeilenschnittstelle)
 Dieses Migrationshandbuch behandelt die Grundlagen, wie Sie Projekte weg von DNX und zur .NET Core-CLI migrieren können. Wenn Sie ein Projekt auf .NET Core von Grund auf neu erstellen, können Sie dieses Dokument getrost überspringen.
 
 ## <a name="main-changes-in-the-tooling"></a>Wichtigste Änderungen in den Tools
+
 Es gibt einige allgemeine Änderungen in den Tools, die zuerst ausgeführt werden sollten.
 
 ### <a name="no-more-dnvm"></a>DNVM ist nicht mehr vorhanden
+
 DNVM, kurz für *DotNet Version Manager* war ein Bash/PowerShell-Skript mit dem ein DNX auf Ihrem Computer installiert wurde. Benutzer konnten dadurch das benötigte DNX von einem von ihnen angegebenen Feed (oder Standard-Feeds) erhalten sowie ein bestimmtes DNX als „aktiv“ markieren, das $PATH für die jeweilige Sitzung als Umgebungsvariable setzte. Dies ermöglichte die Nutzung der verschiedenen Tools.
 
 DNVM wurde eingestellt, da die zugehörigen Features durch die Änderungen in der .NET Core-CLI überflüssig wurden.
@@ -42,6 +45,7 @@ Angesichts dessen werden die Installationsfeatures von DNVM nicht benötigt. Was
 Sie verweisen auf eine Laufzeit in Ihrer `project.json`-Datei, indem Sie ein Paket einer bestimmten Version zu Ihren Abhängigkeiten hinzufügen. Durch diese Änderung kann die Anwendung die neuen Laufzeit-Bits verwenden. Diese Bits auf Ihren Computer zu verschieben ist der gleiche Prozess wie bei der CLI: Sie installieren die Laufzeit über eines der unterstützten nativen Installationsprogramme oder das Installationsskript.
 
 ### <a name="different-commands"></a>Unterschiedliche Befehle
+
 Wenn Sie DNX verwendet haben, haben Sie bisher einige Befehle aus einem der drei Teile genutzt (DNX, DNU oder DNVM). Mit der CLI ändern sich manche dieser Befehle, manche sind nicht mehr verfügbar und manche bleiben gleich, verfügen jedoch über eine etwas andere Semantik.
 
 Die folgende Tabelle stellt die Zuordnung zwischen DNX-/DNU-Befehlen und ihren CLI-Gegenstücken dar.
@@ -61,22 +65,27 @@ Die folgende Tabelle stellt die Zuordnung zwischen DNX-/DNU-Befehlen und ihren C
 (\*) – diese Features werden in der CLI nicht unterstützt (dies ist beabsichtigt).
 
 ## <a name="dnx-features-that-are-not-supported"></a>DNX-Features, die nicht unterstützt werden
+
 Wie in der obigen Tabelle gezeigt, gibt es Features in DNX, die absichtlich nicht in der CLI unterstützt werden, zumindest für den Moment. In diesem Abschnitt werden die wichtigsten Features aufgezählt und die Gründe, warum diese nicht unterstützt werden, beschrieben. Außerdem wird beschrieben, wie Sie dies umgehen können, falls Sie die Features benötigen.
 
 ### <a name="global-commands"></a>Globale Befehle
+
 In DNU war ein Konzept namens „globale Befehle“ enthalten. Im Wesentlichen waren dies Konsolenanwendungen, die als NuGet Pakete mit einem Shell-Skript verpackt waren, und das angegebene DNX aufriefen, die Sie zum Ausführen der Anwendung angegeben hatten.
 
 Dieses Konzept wird in CLI nicht unterstützt. CLI unterstützt jedoch das Konzept, Befehle pro Projekt hinzuzufügen, die mithilfe der bekannten Syntax `dotnet <command>` aufgerufen werden können.
 
 ### <a name="installing-dependencies"></a>Installieren von Abhängigkeiten
+
 In V1 enthält die .NET Core-CLI keinen `install`-Befehl zum Installieren von Abhängigkeiten. Wenn Sie ein Paket von NuGet installieren möchten, müssen Sie es als Abhängigkeit zu Ihrer Datei `project.json` hinzufügen und dann `dotnet restore` ausführen ([siehe Hinweis](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Ausführen des Codes
+
 Im Wesentlichen gibt es zwei Möglichkeiten, den Code auszuführen. Eine Möglichkeit ist das Ausführen von der Quelle mit dem Befehl `dotnet run`. Im Gegensatz zu `dnx run` führt dieser keine Kompilierung im Speicher durch. Stattdessen wird `dotnet build` aufgerufen, um den Code zu erstellen und dann die erstellte Binärdatei auszuführen.
 
 Eine andere Möglichkeit ist das Verwenden von `dotnet` selbst zum Ausführen des Codes. Dies erfolgt durch das Bereitstellen eines Pfads zu Ihrer Assembly: `dotnet path/to/an/assembly.dll`.
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>Migrieren Ihres DNX-Projekts zur .NET Core-CLI
+
 Zusätzlich zur Nutzung von neuen Befehlen, wenn Sie mit Code arbeiten, gibt es noch drei weitere wichtige Punkte beim Migrieren von DNX:
 
 1. Migrieren Sie die Datei `global.json` (wenn diese vorhanden ist) um CLI (Command Line Interface, Befehlszeilenschnittstelle) verwenden zu können.
@@ -84,6 +93,7 @@ Zusätzlich zur Nutzung von neuen Befehlen, wenn Sie mit Code arbeiten, gibt es 
 3. Migrieren weg von beliebigen DNX-APIs zu ihren BLC-Entsprechungen.
 
 ### <a name="changing-the-globaljson-file"></a>Ändern der Datei „global.json“
+
 Die Datei `global.json` verhält sich wie eine Projektmappendatei für RC1- und RC2- Projekte (oder höhere). Damit die .NET Core-CLI (wie auch Visual Studio) zwischen RC1 und höheren Versionen unterscheiden kann, verwendet sie die Eigenschaft `"sdk": { "version" }`, um zu ermitteln, welches Projekt RC1 oder höher ist. Wenn `global.json` nicht über diesen Knoten verfügt, wird davon ausgegangen, dass die höchste Version verwendet wird.
 
 Entfernen Sie entweder die Eigenschaft, um die Datei `global.json` zu aktualisieren, oder stellen Sie sie auf die genaue Version der Tools ein, die Sie verwenden möchten, in diesem Fall **1.0.0-preview2-003121**:

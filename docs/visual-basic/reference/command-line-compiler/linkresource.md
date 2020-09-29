@@ -9,14 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 43ebb61efa26ed11af573e2c4e73a6fd71ac0902
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c4f753f94aedaf0a4f997a3f9b99fb3f417abf8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403199"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065683"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
+
 Erstellt einen Link zu einer verwalteten Ressource.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ oder
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Erforderlich. Die Ressourcendatei, die mit der Assembly verknüpft werden soll. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie diesen in Anführungszeichen (" ") einschließen.  
   
@@ -39,6 +41,7 @@ oder
  Dies ist optional. Der logische Name der Ressource. Der Name, der zum Laden der Ressource verwendet wird. Der Standardwert ist der Name der Datei. Optional können Sie folgendermaßen angeben, ob die Datei im Assemblymanifest öffentlich oder privat ist: `-linkres:filename.res,myname.res,public`. Standardmäßig ist `filename` in der Assembly öffentlich.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Mit der Option `-linkresource` wird die Ressourcendatei nicht in die Ausgabedatei eingebettet. Verwenden Sie hierfür die Option `-resource`.  
   
  Die Option `-linkresource` erfordert eine der `-target`-Optionen (außer `-target:module`).  
@@ -53,6 +56,7 @@ oder
 > Die Option `-linkresource` steht nicht in der Visual Studio-Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
+
  Mit dem folgenden Code werden `in.vb` kompiliert und eine Verknüpfung mit der Ressourcendatei `rf.resource` generiert.  
   
 ```console  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0d1b03d9ab98f28a0112198f1ecc1e928d6d4a7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cb56e727479fd249cb0d7e5e7c3c50d5b68b3a72
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408711"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072014"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
+
 Definiert Konstanten für die bedingte Kompilierung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ oder
 |`value`|Dies ist optional. Der Wert, der `symbol` zugewiesen werden soll. Wenn `value` eine Zeichenfolge ist, muss sie von einer Kombination aus umgekehrtem Schrägstrich/Anführungszeichen (\\") statt Anführungszeichen umgeben sein. Wurde kein Wert festgelegt, dann wird er als True angenommen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Option `-define` hat einen ähnlichen Effekt wie das Verwenden einer `#Const`-Präprozessoranweisung in der Quelldatei, außer dass mit `-define` definierte Konstanten öffentlich sind und für alle Dateien im Projekt gelten.  
   
  Sie können Symbole, die mit dieser Option erstellt wurden, mit der `#If`...`Then`...`#Else`-Anweisung verwenden, um Quelldateien bedingt zu kompilieren.  
@@ -52,6 +54,7 @@ oder
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf **Erweitert**.<br />4.  Ändern Sie den Wert im Feld **Benutzerdefinierte Konstanten**.|  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Code definiert zwei konditionelle Compilerkonstanten und verwendet sie anschließend.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  

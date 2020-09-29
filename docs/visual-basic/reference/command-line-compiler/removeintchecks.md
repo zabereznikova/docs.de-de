@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: ec4722cb7088819dae95ca1b7cbc1469d957a7aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ce1f24f25ea58cb6ddc2f5c582b6103d8f18d922
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400473"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085164"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
+
 Aktiviert oder deaktiviert die Überprüfung auf Überlauffehler für Integervorgänge  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ Aktiviert oder deaktiviert die Überprüfung auf Überlauffehler für Integervor
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Klicken Sie auf die Schaltfläche **Erweitert** .<br />4.  Ändern Sie den Wert des Felds **Überprüfungen auf Ganzzahlüberlauf entfernen**.|  
   
 ## <a name="example"></a>Beispiel  
+
  Mit dem folgenden Code wird `Test.vb` kompiliert, und die Überprüfung auf Überlauffehler für Integerwerte wird deaktiviert.  
   
 ```console

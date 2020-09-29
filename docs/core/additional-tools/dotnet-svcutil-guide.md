@@ -3,12 +3,12 @@ title: Übersicht zum WCF-Tool „svcutil“
 description: Übersicht zum Microsoft-WCF-Tool „dotnet-svcutil“, über das Funktionen für .NET Core- und ASP.NET Core-Projekte hinzugefügt werden, z.B. das WCF-Tool „svcutil“ für .NET Framework-Projekte.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396222"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078254"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF-Tool „dotnet-svcutil“ für .NET Core
 
@@ -75,6 +75,7 @@ Führen Sie in einem Windows-, macOS- oder Linux-Befehlsfenster die folgenden Sc
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
     Öffnen Sie die `HelloSvcutil.csproj`-Projektdatei im Editor, bearbeiten Sie das `Project`-Element, und fügen Sie mithilfe des folgenden Codes das [`dotnet-svcutil`NuGet-Paket](https://nuget.org/packages/dotnet-svcutil) als CLI-Toolverweis hinzu:
 
     ```xml
@@ -156,6 +157,7 @@ Die generierte Datei wird als _HelloSvcutil/ServiceReference/Reference.cs_ gespe
 Die folgende Ausgabe wird angezeigt: „Hello dotnet-svcutil!“
 
 Um eine ausführliche Beschreibung der Parameter des `dotnet-svcutil`-Tools zu erhalten, rufen Sie das Tool wie folgt mit Übergabe des Hilfeparameters auf:
+
 # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

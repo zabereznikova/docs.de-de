@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408672"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097708"
 ---
 # <a name="-doc"></a>-doc
+
 Verarbeitet Dokumentationskommentare zu einer XML-Datei.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ oder
 |`file`|Erforderlich, wenn `-doc:` verwendet wird. Gibt die XML-Ausgabedatei an, die mit den Kommentaren aus den Quellcodedateien der Kompilierung aufgefüllt wird. Wenn der Dateiname ein Leerzeichen enthält, müssen Sie den Namen in Anführungszeichen (" ") setzen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `-doc`-Option steuert, ob der Compiler eine XML-Datei generiert, die die Dokumentationskommentare enthält. Wenn Sie die `-doc:file`-Syntax verwenden, gibt der `file`-Parameter den Namen der XML-Datei an. Wenn Sie `-doc` oder `-doc+` verwenden, übernimmt der Compiler den Namen der XML-Datei von der ausführbaren Datei oder Bibliothek, die vom Compiler erstellt wird. Wenn Sie `-doc-` verwenden oder die `-doc`-Option nicht angeben, erstellt der Compiler keine XML-Datei.  
   
  In Quellcodedateien können Dokumentationskommentare den folgenden Definitionen vorangestellt sein:  
@@ -55,6 +57,7 @@ oder
 |1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Legen Sie den Wert im Feld **XML-Dokumentationsdatei generieren** fest.|  
   
 ## <a name="example"></a>Beispiel  
+
  Ein Beispiel finden Sie unter [Dokumentieren von Code mit XML](../../programming-guide/program-structure/documenting-your-code-with-xml.md).  
   
 ## <a name="see-also"></a>Siehe auch

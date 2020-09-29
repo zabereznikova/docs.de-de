@@ -8,14 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400577"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098916"
 ---
 # <a name="-optioninfer"></a>-optioninfer
+
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 > Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `-optioninfer-`.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn die Quellcodedatei eine [Option Infer-Anweisung](../../language-reference/statements/option-infer-statement.md) enthält, überschreibt die Anweisung die Einstellung des `-optioninfer`-Befehlszeilencompilers.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Festlegen von -optioninfer in der Visual Studio-IDE  
@@ -43,6 +45,7 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 2. Ändern Sie auf der Registerkarte **Kompilieren** den Wert im Feld **Option infer**.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  
   
 ```console

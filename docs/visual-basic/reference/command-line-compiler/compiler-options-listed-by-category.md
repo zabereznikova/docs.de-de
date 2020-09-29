@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 533d3da2f76854d311262ce97b43f240acab5f7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408750"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072040"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic-Compileroptionen nach Kategorien sortiert
+
 Die Visual Basic-Befehlszeilencompiler bietet eine Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio. Es folgt eine Liste der Befehlszeilen-Compileroptionen von Visual Basic (nach Funktionskategorie sortiert).  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
