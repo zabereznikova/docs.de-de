@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e8b98e465228afd07432e737bb16aefb1b979973
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: 3506653bfc749ae3d8002715ca72ca89de7a681b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770836"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91025395"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>Der WCF-Konstruktor AddressHeaderCollection löst jetzt eine ArgumentException aus, wenn ein addressHeader-Element den Wert NULL aufweist
 
@@ -22,14 +22,15 @@ Wenn Kompatibilitätsprobleme durch diese Änderung an .NET Framework 4.7.1 ode
     <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true" />
   </runtime>
 </configuration>
+```
 
-| Name    | Value   |
+| name    | Wert   |
 |:--------|:--------|
-| Scope   | Minor   |
+| Bereich   | Gering   |
 | Version | 4.7.1   |
-| Type    | Runtime |
+| Typ    | Laufzeit |
 
-#### Affected APIs
+#### <a name="affected-apis"></a>Betroffene APIs
 
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>
 
