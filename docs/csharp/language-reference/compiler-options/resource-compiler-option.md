@@ -12,14 +12,15 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465688"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193776"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C#-Compileroptionen)
+
 Bettet die angegebene Ressource in die Ausgabedatei ein.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,6 +30,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Die .NET-Ressourcendatei, die in die Ausgabedatei eingebettet werden soll  
   
@@ -39,6 +41,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist public.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Verwenden Sie [-linkresource](./linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.  
   
  Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.  
@@ -62,6 +65,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und fügen Sie die Ressourcendatei `rf.resource` an:  
   
 ```console  

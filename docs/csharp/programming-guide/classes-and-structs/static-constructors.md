@@ -6,19 +6,21 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 1bb494ded34065bb76b72db40375555ca1eb6953
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 07b3e54c9ffeb1abacaf5ddd04d2058697e653e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203968"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statische Konstruktoren (C#-Programmierhandbuch)
+
 Ein statischer Konstruktor wird verwendet, um [static](../../language-reference/keywords/static.md)-Daten zu initialisieren oder um eine bestimmte Aktion auszuführen, die nur einmal ausgeführt werden muss. Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf irgendwelche statischen Member verwiesen wird.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
 
 ## <a name="remarks"></a>Hinweise
+
 Statische Konstruktoren verfügen über folgende Eigenschaften:  
   
 - Ein statischer Konstruktor kann nicht über Zugriffsmodifizierer oder Parameter verfügen.  
@@ -52,11 +54,13 @@ Statische Konstruktoren verfügen über folgende Eigenschaften:
 - Statische Konstruktoren sind auch eine praktische Möglichkeit, Laufzeitüberprüfungen des Typparameters über Einschränkungen (Typparametereinschränkungen) zu erzwingen, der zur Kompilierzeit nicht überprüft werden kann.
 
 ## <a name="example"></a>Beispiel
+
  In diesem Beispiel verfügt die Klasse `Bus` über einen statischen Konstruktor. Wenn die erste Instanz von `Bus` erstellt wird (`bus1`), wird der statische Konstruktor zur Initialisierung der Klasse aufgerufen. Die Beispielausgabe überprüft, ob der statische Konstruktor nur einmal ausgeführt wird, obwohl zwei Instanzen von `Bus` erstellt werden, und dass er vor dem Ausführen des Instanzkonstruktors ausgeführt wird.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
 Weitere Informationen finden Sie im Abschnitt [Statische Konstruktoren](~/_csharplang/spec/classes.md#static-constructors) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Siehe auch

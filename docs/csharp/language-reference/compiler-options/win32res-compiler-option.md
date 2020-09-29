@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: c220c78a6d2c3109402a20f0de40fe9665d6c730
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 442c788595a01db9c0a1196d9e13b2a98963a38c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140814"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204345"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C#-Compileroptionen)
+
 Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.  
   
 ## <a name="syntax"></a>Syntax  
@@ -27,10 +28,12 @@ Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Die Ressourcendatei, die Sie Ihrer Ausgabedatei hinzufügen möchten  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Eine Win32-Ressourcendatei kann mit dem [Ressourcencompiler](resource-compiler-option.md) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine RES-Datei erstellt.  
   
  Eine Win32-Ressource kann Versions- oder Bitmapinformationen (Symbolinformationen) enthalten, anhand derer die Anwendung im Datei-Explorer identifiziert werden kann. Wenn sie **-win32res** nicht angeben, generiert der Compiler Versionsinformationen auf Grundlage der Assemblyversion.  
@@ -46,6 +49,7 @@ Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.
 3. Klicken Sie auf die Schaltfläche **Ressourcendatei**, und wählen Sie die Datei über das Kombinationsfeld aus.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und fügen Sie die Win32-Ressourcendatei `rf.res` an, um `in.exe` zu erzeugen:  
   
 ```console  

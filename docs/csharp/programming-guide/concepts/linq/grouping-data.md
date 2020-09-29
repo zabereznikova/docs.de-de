@@ -3,14 +3,15 @@ title: Gruppieren von Daten (C#)
 description: Beim Gruppieren werden Daten in Gruppen von Elementen zusammengefasst, die alle über ein bestimmtes Attribut verfügen. Hier erfahren Sie mehr über die Standardabfrageoperatoren in LINQ in C#, die Datenelemente gruppieren.
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 5e1bca1d360b0f44a081cf2770118a0551629b5b
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 584d50fc15dd8b4ce1cfdf4766f3bc8b8383eb12
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103686"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202564"
 ---
 # <a name="grouping-data-c"></a>Gruppieren von Daten (C#)
+
 Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.  
   
  Die folgende Abbildung zeigt die Ergebnisse der Gruppierung einer Zeichenfolge. Der Schlüssel für jede Gruppe ist das Zeichen.  
@@ -27,6 +28,7 @@ Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass d
 |ToLookup|Fügt Elemente basierend auf einer Schlüsselauswahlfunktion in eine <xref:System.Linq.Lookup%602>-Klasse (one-to-many-Wörterbuch) ein.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
+
  Im folgenden Codebeispiel wird die `group by`-Klausel angewandt, um die Gruppe ganzer Zahlen in Listen mit geraden und ungeraden Zahlen zu aufzuteilen.  
   
 ```csharp  

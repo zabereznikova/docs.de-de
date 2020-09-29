@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466104"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194101"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C#-Compileroptionen)
+
 Erstellt einen Link zur .NET-Ressource in der Ausgabedatei Die Ressourcendateien wird nicht in die Ausgabedatei eingefügt. Dies ist ein Unterschied zur Option [-resource](./resource-compiler-option.md), die eine Ressourcendatei in die Ausgabedatei einbettet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,6 +30,7 @@ Erstellt einen Link zur .NET-Ressource in der Ausgabedatei Die Ressourcendateien
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Die .NET-Ressourcendatei, die Sie mit der Assembly verknüpfen möchten  
   
@@ -39,6 +41,7 @@ Erstellt einen Link zur .NET-Ressource in der Ausgabedatei Die Ressourcendateien
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist public.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Verknüpfte Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mit den C#-Compiler erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Modifizierer zulässig.  
   
  **-linkresource** erfordert eine andere [-target](./target-compiler-option.md)-Option als **-target:module**.  
@@ -52,6 +55,7 @@ Erstellt einen Link zur .NET-Ressource in der Ausgabedatei Die Ressourcendateien
  Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs` und verknüpfen Sie die Ressourcendatei `rf.resource`:  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `A.cs` in eine DLL, verknüpfen Sie eine native DLL „n.dll“, und fügen Sie die Ausgabe in den globalen Assemblycache (GAC) ein. In diesem Beispiel befinden sich sowohl „a.dll“ als auch „n.dll“ im GAC.  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  In diesem Beispiel wird das Gleiche wie im vorherigen Beispiel erreicht, allerdings mithilfe von Assemblylinkeroptionen.  
   
 ```console  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 2074e170ab177c39fdf3954fa93ae4b666bf853d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d8691e5e4477dbbe989344469b44382d5e0e7c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466052"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193607"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C#-Compileroptionen)
+
 Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Standardmäßig weist die Ausgabedatei, die durch Kompilieren mit dieser Option erstellt wird, eine Dateierweiterung .NETMODULE auf.  
   
  Eine Datei ohne Assemblymanifest kann nicht von der .NET-Runtime geladen werden. Allerdings kann eine solche Datei mithilfe von [-addmodule](./addmodule-compiler-option.md) in das Assemblymanifest integriert werden.  
@@ -37,6 +39,7 @@ Diese Option bewirkt, dass der Compiler kein Assemblymanifest generiert.
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und `in.netmodule` wird erstellt:  
   
 ```console  

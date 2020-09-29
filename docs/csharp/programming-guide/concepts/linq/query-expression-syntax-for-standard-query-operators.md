@@ -3,17 +3,19 @@ title: Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)
 description: Erfahren Sie mehr über die Abfrageausdruckssyntax für Standardabfrageoperatoren. Hier finden Sie eine Liste von Standardabfrageoperatoren mit äquivalenten Abfrageausdrucksklauseln.
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f85563de496eaf423ea7a43c6d7100bb93eae5b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299122"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195520"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)
+
 Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von C#, wodurch sie als Teil eines *Abfrageausdrucks* aufgerufen werden können. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.  
   
 ## <a name="query-expression-syntax-table"></a>Tabelle: Abfrageausdruckssyntax  
+
  In der folgenden Tabelle finden Sie eine Liste von Standardabfrageoperatoren, die über äquivalente Abfrageausdrucksklauseln verfügen.  
   
 |Methode|C#-Abfrageausdruckssyntax|  

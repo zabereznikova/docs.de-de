@@ -8,14 +8,15 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8f7e222e194fc4ba96159ecd792765f64b4d1c57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193751"
 ---
 # <a name="-c-compiler-options"></a>@ (C#-Compileroptionen)
+
 Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kompilierende Quellcodedateien enthält.  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,10 +26,12 @@ Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kom
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `response_file`  
  Eine Datei, die Compileroptionen oder zu kompilierende Quellcodedateien auflistet.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die Compileroptionen und Quellcodedateien werden vom Compiler so verarbeitet, als ob sie in der Befehlszeile angegeben wären.  
   
  Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Antwortdateioptionen an. Beispiel:  
@@ -48,6 +51,7 @@ Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kom
  Diese Compileroption kann weder in der Visual Studio-Entwicklungsumgebung festgelegt werden, noch kann sie programmgesteuert geändert werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Nachfolgend sind einige Zeilen aus einer Beispielantwortdatei aufgeführt:  
   
 ```console  

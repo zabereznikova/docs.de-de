@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 3cea52fe872fcb407206ee2063b93dc81447a3b2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ae1706f1ecdd396e24711070d19420faa6d34761
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128503"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193761"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C#-Compileroptionen)
+
 Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolenanwendung (EXE) erstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolen
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die Option **-target:exe** ist standardmäßig aktiviert. Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt.  
   
  Verwenden Sie [-target:winexe](./target-winexe-compiler-option.md), um ein ausführbares Windows-Programm zu erstellen.  
@@ -47,6 +49,7 @@ Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolen
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Jede der folgenden Befehlszeilen wird `in.cs` kompilieren, wodurch `in.exe` erstellt wird:  
   
 ```console  

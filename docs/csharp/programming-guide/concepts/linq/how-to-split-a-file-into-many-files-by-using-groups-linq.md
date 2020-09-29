@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch Verwenden
 description: Erfahren Sie, wie Sie eine Datei mithilfe von Gruppen in mehrere Dateien aufteilen. Hier finden Sie ein Codebeispiel und zusätzliche verfügbare Ressourcen.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301059"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203929"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Vorgehensweise: Aufteilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)
+
 Dieses Beispiel zeigt eine Möglichkeit, den Inhalt von zwei Dateien zusammenführen und dann einen Satz von neuen Dateien zu erstellen, die die Daten auf neue Weise organisieren.  
   
 ### <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien  

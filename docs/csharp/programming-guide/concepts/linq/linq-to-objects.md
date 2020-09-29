@@ -3,12 +3,12 @@ title: LINQ to Objects (C#)
 description: Hier erhalten Sie Informationen zu LINQ to Objects in C#. Dafür werden LINQ-Abfragen mit einer beliebigen IEnumerable- oder IEnumerable<T>-Sammlung ohne LINQ-Zwischenanbieter oder API verwendet.
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: f8e65f129dc002d9615b01e3a3a123514754b886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 575708f14487670a4371d470dcdcf650b03c3175
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557005"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202525"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 
@@ -29,6 +29,7 @@ Die Bezeichnung „LINQ to Objects“ bezieht sich auf die direkte Verwendung vo
  Der Zweck dieses Abschnitts ist es, den LINQ-Ansatz anhand einiger Beispiele zu veranschaulichen. Er ist nicht als vollständig zu betrachten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](./linq-and-strings.md)  
  Erläutert, wie LINQ zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden kann. Dieser Abschnitt umfasst auch Links zu Artikeln, die diese Prinzipien veranschaulichen.  
   

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 0f5b1e1bec8fd601bf111e1c2c64adf22d0a064e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128477"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193724"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (C#-Compileroptionen)
+
 Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link Library (DLL) statt einer ausführbaren Datei (EXE) zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link L
 ```  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Die DLL wird mit der DLL-Dateiendung erstellt.  
   
  Sofern es nicht anders mit der Option [-out](./out-compiler-option.md) angegeben wurde, erhält die Ausgabedatei den Namen der ersten Eingabedatei.  
@@ -45,6 +47,7 @@ Die Option **-target:library** veranlasst den Compiler dazu, eine Dynamic Link L
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `in.cs`, und `in.dll` wird erstellt:  
   
 ```console  

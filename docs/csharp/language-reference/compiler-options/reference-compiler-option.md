@@ -14,14 +14,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124798"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193789"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C#-Compileroptionen)
+
 Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../keywor
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Der Name einer Datei, die ein Assemblymanifest enthält. Fügen Sie die separate Option **-reference** für jede Datei ein, um mehr als eine Datei zu importieren.  
   
@@ -39,6 +41,7 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../keywor
  Ein gültiger C#-Bezeichner, der einen Stammnamespace darstellt, der alle Namespaces in der Assembly enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  Fügen Sie die Option **-reference** für jede Datei ein, um mehr als eine Datei zu importieren.  
   
  Die zu importierenden Dateien müssen ein Manifest enthalten. Die Ausgabedatei muss mit einer anderen [-target](./target-compiler-option.md)-Option als [-target:module](./target-module-compiler-option.md) kompiliert werden.  
@@ -65,6 +68,7 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../keywor
 > Verwenden Sie in Visual Studio das Dialogfeld **Verweis hinzufügen**. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Verweisen mit dem Verweis-Manager](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Um ein gleichwertiges Verhalten zwischen Hinzufügen von Verweisen mit `-reference` und Hinzufügen von Verweisen mithilfe des Dialogfelds **Verweis hinzufügen** sicherzustellen, legen Sie die Eigenschaft **Einbetten von Interop-Typen** für die Assembly, die Sie hinzufügen möchten, auf **FALSE** fest. Der Standardwert für diese Eigenschaft ist **TRUE**.  
   
 ## <a name="example"></a>Beispiel  
+
  Dieses Beispiel zeigt die Verwendung der Funktion [extern-Alias](../keywords/extern-alias.md).  
   
  Kompilieren Sie die Quelldatei, und importieren Sie Metadaten aus `grid.dll` und `grid20.dll`, die bereits zuvor kompiliert wurden. Die beiden DLLs enthalten separate Versionen derselben Komponente, und Sie verwenden zwei **-reference**-Parameter mit Aliasoptionen, um die Quelldatei zu kompilieren. Die Optionen sehen folgendermaßen aus:  

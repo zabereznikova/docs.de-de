@@ -9,14 +9,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 3edd7e23358bc0569dae6204d519209df1ade290
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124824"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193802"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (C#-Compileroptionen)
+
 Mit der Option „-recurse“ können Sie Quellcodedateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnisses (dir) oder des Projektverzeichnisses kompilieren.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,6 +27,7 @@ Mit der Option „-recurse“ können Sie Quellcodedateien in allen untergeordne
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `dir` (optional)  
  Das Verzeichnis, in dem die Suche beginnen soll. Wenn dieses nicht angegeben wird, beginnt die Suche im Projektverzeichnis.  
   
@@ -33,6 +35,7 @@ Mit der Option „-recurse“ können Sie Quellcodedateien in allen untergeordne
  Die Datei(en), nach der oder denen gesucht werden soll. Platzhalterzeichen sind zulässig.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Mit der Option **-recurse** können Sie Quellcodedateien in allen untergeordneten Verzeichnissen des angegebenen Verzeichnisses (`dir`) oder des Projektverzeichnisses kompilieren.  
   
  Sie können Platzhalter in einem Dateinamen verwenden, um alle übereinstimmenden Dateien im Projektverzeichnis zu kompilieren, ohne **-recurse** zu verwenden.  
@@ -40,6 +43,7 @@ Mit der Option „-recurse“ können Sie Quellcodedateien in allen untergeordne
  Diese Compileroption steht in Visual Studio nicht zur Verfügung und kann auch nicht programmgesteuert angepasst werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompiliert alle C#-Dateien im aktuellen Verzeichnis:  
   
 ```console  

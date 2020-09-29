@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125019"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193880"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
+
 Die Option **-out** gibt den Namen der Ausgabedatei an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,10 +27,12 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `filename`  
  Der Name der Ausgabedatei, die vom Compiler erstellt wurde  
   
 ## <a name="remarks"></a>Bemerkungen  
+
  In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **-out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **-out** angegebenen Ausgabedatei kompiliert.  
   
  Geben Sie den vollständigen Namen und die Erweiterung der Datei an, die Sie erstellen möchten.  
@@ -59,6 +62,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
      So legen Sie diese Compileroption programmgesteuert fest: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> ist eine schreibgeschützte Eigenschaft, die durch eine Kombination aus dem Projekttyp (ausführbare Datei, Bibliothek usw.) und dem Namen der Assembly bestimmt wird. Das Ändern von einer oder diesen beiden Eigenschaften ist erforderlich, um den Namen der Ausgabedatei festzulegen.  
   
 ## <a name="example"></a>Beispiel  
+
  Kompilieren Sie `t.cs`, und erstellen Sie die Ausgabedatei `t.exe` und die Datei `t2.cs` sowie die Modulausgabedatei `mymodule.netmodule`:  
   
 ```console  
