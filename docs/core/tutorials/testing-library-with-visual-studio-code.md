@@ -2,12 +2,12 @@
 title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180451"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
 
@@ -120,7 +120,7 @@ So erstellen Sie die Testmethoden:
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>Behandeln von Testfehlern
@@ -150,14 +150,14 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. Entfernen Sie die Zeichenfolge „Error“, die Sie in Schritt 1 hinzugefügt haben. Führen Sie den Test erneut aus. Nun ist er erfolgreich.
@@ -173,6 +173,12 @@ Nachdem die Tests beim Ausführen des Debugbuilds der Bibliothek nun alle erfolg
    ```
 
    Die Tests sind erfolgreich.
+
+## <a name="debug-tests"></a>Debuggen von Tests
+
+Wenn Sie Visual Studio Code als IDE verwenden, können Sie den gleichen Prozess wie unter [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio-code.md) beschrieben verwenden, um Code mit Ihrem Komponententestprojekt zu debuggen. Anstatt das App-Projekt *ShowCase* zu starten, öffnen Sie *StringLibraryTest/UnitTest1.cs*, und wählen Sie **Alle Tests ausführen** zwischen den Zeilen 7 und 8 aus. Wenn Sie den Test nicht finden können, drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>P</kbd>, um die Befehlspalette zu öffnen, und geben Sie **Fenster erneut Laden** ein.
+
+Visual Studio Code startet das Testprojekt mit angefügtem Debugger. Die Ausführung wird an jedem Haltepunkt angehalten, den Sie dem Testprojekt oder zugrunde liegenden Bibliothekscode hinzugefügt haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

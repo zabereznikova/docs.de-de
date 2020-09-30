@@ -1,22 +1,22 @@
 ---
 title: MSBuild-Eigenschaften für Microsoft.NET.Sdk
-description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET Core SDK verstanden werden.
+description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK verstanden werden.
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
+ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656261"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91354452"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>MSBuild-Referenz für .NET Core SDK-Projekte
+# <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
-Diese Seite ist eine Referenz für die MSBuild-Eigenschaften und -Elemente, mit denen Sie .NET Core-Projekte konfigurieren können.
+Diese Seite ist eine Referenz für die MSBuild-Eigenschaften und -Elemente, mit denen Sie .NET-Projekte konfigurieren können.
 
 > [!NOTE]
-> Diese Seite befindet sich noch in Bearbeitung und führt nicht sämtlich nützlichen MSBuild-Eigenschaften für das .NET Core SDK auf. Eine Liste der gängigen MSBuild-Eigenschaften finden Sie unter [Gemeinsame MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
+> Diese Seite befindet sich noch in Bearbeitung und führt nicht sämtlich nützlichen MSBuild-Eigenschaften für das .NET SDK auf. Eine Liste der gängigen MSBuild-Eigenschaften finden Sie unter [Gemeinsame MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="framework-properties"></a>Frameworkeigenschaften
 
@@ -123,7 +123,7 @@ Der folgende XML-Code schließt die `System.Security`-Assembly aus der Kürzung 
 
 ### <a name="useapphost"></a>UseAppHost
 
-Die Eigenschaft `UseAppHost` wurde in Version 2.1.400 des .NET Core SDK eingeführt. Sie steuert, ob eine native ausführbare Datei für eine Bereitstellung erstellt wird. Eine native ausführbare Datei ist für eigenständige Bereitstellungen erforderlich.
+Die Eigenschaft `UseAppHost` wurde in Version 2.1.400 des .NET SDK eingeführt. Sie steuert, ob eine native ausführbare Datei für eine Bereitstellung erstellt wird. Eine native ausführbare Datei ist für eigenständige Bereitstellungen erforderlich.
 
 In .NET Core 3.0 und höheren Versionen wird standardmäßig eine frameworkabhängige ausführbare Datei erstellt. Legen Sie die Eigenschaft `UseAppHost` auf `false` fest, um die Erzeugung der ausführbaren Datei zu deaktivieren.
 
@@ -133,7 +133,7 @@ In .NET Core 3.0 und höheren Versionen wird standardmäßig eine frameworkabh�
 </PropertyGroup>
 ```
 
-Weitere Informationen zur Bereitstellung finden Sie unter [.NET Core-Anwendungsbereitstellung](../deploying/index.md).
+Weitere Informationen zur Bereitstellung finden Sie unter [.NET-Anwendungsbereitstellung](../deploying/index.md).
 
 ## <a name="compile-properties"></a>Kompilierungseigenschaften
 
@@ -147,7 +147,7 @@ Die `EmbeddedResourceUseDependentUponConvention`-Eigenschaft definiert, ob Resso
 > [!NOTE]
 > Wenn `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für ein `EmbeddedResource`-Element angegeben werden, basiert der generierte Manifestdateiname für diese Ressourcendatei stattdessen auf diesen Metadaten.
 
-Standardmäßig ist diese Eigenschaft in einem neuen .NET Core-Projekt auf `true` festgelegt. Wenn bei Festlegung auf `false` keine `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für das `EmbeddedResource`-Element in der Projektdatei angegeben werden, basiert der Ressourcenmanifest-Dateiname auf dem Stammnamespace für das Projekt und dem relativen Dateipfad zur *.resx*-Datei. Weitere Informationen finden Sie unter [Benennung von Ressourcenmanifestdateien](../resources/manifest-file-names.md).
+Standardmäßig ist diese Eigenschaft in einem neuen .NET-Projekt auf `true` festgelegt. Wenn bei Festlegung auf `false` keine `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für das `EmbeddedResource`-Element in der Projektdatei angegeben werden, basiert der Ressourcenmanifest-Dateiname auf dem Stammnamespace für das Projekt und dem relativen Dateipfad zur *.resx*-Datei. Weitere Informationen finden Sie unter [Benennung von Ressourcenmanifestdateien](../resources/manifest-file-names.md).
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ Die verfügbaren Optionen sind in der nachfolgenden Tabelle aufgeführt.
 
 ### <a name="analysismode"></a>AnalysisMode
 
-Ab .NET 5.0 RC2 umfasst das .NET SDK alle [Codequalitätsregeln für Zertifizierungsstellen](/visualstudio/code-quality/code-analysis-for-managed-code-warnings). Standardmäßig werden nur [einige Regeln als Buildwarnungen aktiviert](../../fundamentals/productivity/code-analysis.md#enabled-rules). Mit der `AnalysisMode`-Eigenschaft können Sie die Regeln anpassen, die standardmäßig aktiviert sind. Sie können entweder zu einem aggressiveren Analysemodus (Deaktivierung) oder zu einem konservativeren Analysemodus (Aktivierung) wechseln. Wenn Sie beispielsweise alle Regeln standardmäßig als Buildwarnungen aktivieren möchten, legen Sie den Wert auf `AllEnabledByDefault` fest.
+Ab .NET 5.0 RC2 umfasst das .NET SDK alle [Codequalitätsregeln für Zertifizierungsstellen](../../fundamentals/code-analysis/quality-rules/index.md). Standardmäßig werden nur [einige Regeln als Buildwarnungen aktiviert](../../fundamentals/code-analysis/overview.md#enabled-rules). Mit der `AnalysisMode`-Eigenschaft können Sie die Regeln anpassen, die standardmäßig aktiviert sind. Sie können entweder zu einem aggressiveren Analysemodus (Deaktivierung) oder zu einem konservativeren Analysemodus (Aktivierung) wechseln. Wenn Sie beispielsweise alle Regeln standardmäßig als Buildwarnungen aktivieren möchten, legen Sie den Wert auf `AllEnabledByDefault` fest.
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ Die verfügbaren Optionen sind in der nachfolgenden Tabelle aufgeführt.
 | Wert | Bedeutung |
 |-|-|
 | `Default` | Dies ist der Standardmodus, in dem bestimmte Regeln als Buildwarnungen bzw. Visual Studio-IDE-Vorschläge aktiviert sind und der Rest deaktiviert ist. |
-| `AllEnabledByDefault` | Dies ist der aggressive Modus (Deaktivierung), in dem alle Regeln als Buildwarnungen aktiviert sind. Sie können einzelne Regeln [deaktivieren](../../fundamentals/productivity/configure-code-analysis-rules.md). |
-| `AllDisabledByDefault` | Dies ist der konservative Modus (Aktivierung), in dem alle Regeln standardmäßig deaktiviert sind. Sie können einzelne Regeln [aktivieren](../../fundamentals/productivity/configure-code-analysis-rules.md). |
+| `AllEnabledByDefault` | Dies ist der aggressive Modus (Deaktivierung), in dem alle Regeln als Buildwarnungen aktiviert sind. Sie können einzelne Regeln [deaktivieren](../../fundamentals/code-analysis/configuration-options.md). |
+| `AllDisabledByDefault` | Dies ist der konservative Modus (Aktivierung), in dem alle Regeln standardmäßig deaktiviert sind. Sie können einzelne Regeln [aktivieren](../../fundamentals/code-analysis/configuration-options.md). |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors-Eigenschaft
 
-Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfigurieren, ob Warnungen im Rahmen der Codequalitätsanalyse (CAxxxx) als Warnungen behandelt werden und den Build unterbrechen sollen. Wenn Sie beim Erstellen von Projekten das `-warnaserror`-Flag verwenden, werden [Warnungen im Rahmen der .NET-Codequalitätsanalyse](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) ebenfalls als Fehler behandelt. Wenn Warnungen bei der Codequalitätsanalyse nicht als Fehler behandelt werden sollen, können Sie die MSBuild-Eigenschaft `CodeAnalysisTreatWarningsAsErrors` in Ihrer Projektdatei auf `false` festlegen.
+Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfigurieren, ob Warnungen im Rahmen der Codequalitätsanalyse (CAxxxx) als Warnungen behandelt werden und den Build unterbrechen sollen. Wenn Sie beim Erstellen von Projekten das `-warnaserror`-Flag verwenden, werden [Warnungen im Rahmen der .NET-Codequalitätsanalyse](../../fundamentals/code-analysis/overview.md#code-quality-analysis) ebenfalls als Fehler behandelt. Wenn Warnungen bei der Codequalitätsanalyse nicht als Fehler behandelt werden sollen, können Sie die MSBuild-Eigenschaft `CodeAnalysisTreatWarningsAsErrors` in Ihrer Projektdatei auf `false` festlegen.
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ Mit der `CodeAnalysisTreatWarningsAsErrors`-Eigenschaft können Sie konfiguriere
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers-Eigenschaft
 
-Die [.NET-Codequalitätsanalyse](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) ist für Projekte, die auf .NET 5.0 oder höher ausgerichtet sind, standardmäßig aktiviert. Sie können die .NET-Codeanalyse für Projekte aktivieren, die auf frühere Versionen von .NET abzielen, indem Sie die Eigenschaft `EnableNETAnalyzers` auf `true` festlegen. Legen Sie diese Eigenschaft auf `false` fest, um die Codeanalyse in einem beliebigen Projekt zu deaktivieren.
+Die [.NET-Codequalitätsanalyse](../../fundamentals/code-analysis/overview.md#code-quality-analysis) ist für Projekte, die auf .NET 5.0 oder höher ausgerichtet sind, standardmäßig aktiviert. Sie können die .NET-Codeanalyse für Projekte aktivieren, die auf frühere Versionen von .NET abzielen, indem Sie die Eigenschaft `EnableNETAnalyzers` auf `true` festlegen. Legen Sie diese Eigenschaft auf `false` fest, um die Codeanalyse in einem beliebigen Projekt zu deaktivieren.
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ Die [.NET-Codequalitätsanalyse](../../fundamentals/productivity/code-analysis.m
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
-Die [.NET-Codeformatsanalyse](../../fundamentals/productivity/code-analysis.md#code-style-analysis) ist beim Build für alle .NET-Projekte standardmäßig deaktiviert. Sie können die Codeformatsanalyse für .NET-Projekte aktivieren, indem Sie die `EnforceCodeStyleInBuild`-Eigenschaft auf `true` festlegen.
+Die [.NET-Codeformatsanalyse](../../fundamentals/code-analysis/overview.md#code-style-analysis) ist beim Build für alle .NET-Projekte standardmäßig deaktiviert. Sie können die Codeformatsanalyse für .NET-Projekte aktivieren, indem Sie die `EnforceCodeStyleInBuild`-Eigenschaft auf `true` festlegen.
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ Die [.NET-Codeformatsanalyse](../../fundamentals/productivity/code-analysis.md#c
 </PropertyGroup>
 ```
 
-Alle Codeformatregeln, die als Warnungen oder Fehler [konfiguriert](../../fundamentals/productivity/code-analysis.md#code-style-analysis) sind, werden beim Build ausgeführt und melden Verstöße.
+Alle Codeformatregeln, die als Warnungen oder Fehler [konfiguriert](../../fundamentals/code-analysis/overview.md#code-style-analysis) sind, werden beim Build ausgeführt und melden Verstöße.
 
 ## <a name="run-time-configuration-properties"></a>Runtimekonfigurationseigenschaften
 
-Sie können manche Verhaltensweisen der Runtime konfigurieren, indem Sie die MSBuild-Eigenschaften in der Projektdatei der App angeben. Informationen zu anderen Konfigurationsmöglichkeiten für das Runtimeverhalten finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md).
+Sie können manche Verhaltensweisen der Runtime konfigurieren, indem Sie die MSBuild-Eigenschaften in der Projektdatei der App angeben. Informationen zu anderen Konfigurationsmöglichkeiten für das Runtimeverhalten finden Sie unter [Konfigurationseinstellungen für die Runtime](../run-time-config/index.md).
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [InvariantGlobalization](#invariantglobalization)

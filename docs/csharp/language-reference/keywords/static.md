@@ -1,25 +1,27 @@
 ---
 description: static-Modifizierer – C#-Referenz
 title: static-Modifizierer – C#-Referenz
-ms.date: 04/22/2020
+ms.date: 09/25/2020
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: f42636d1bbdf4342297f46f50ec6dfc2a70eacad
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142062"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247721"
 ---
 # <a name="static-c-reference"></a>static (C#-Referenz)
 
 Auf dieser Seite wird das Modifiziererschlüsselwort `static` behandelt. Das Schlüsselwort `static` ist auch Teil der [`using static`](using-static.md)-Anweisung.
 
 Verwenden Sie den Modifizierer `static`, um einen statischen Member zu deklarieren, der zum Typ selbst gehört, anstatt zu einem bestimmten Objekt. Der `static`-Modifizierer kann zum Deklarieren von `static`-Klassen verwendet werden. In Klassen, Schnittstellen und Strukturen können Sie den Modifizierer `static` zu Feldern, Methoden, Eigenschaften, Operatoren, Ereignissen und Konstruktoren hinzufügen. Der `static`-Modifizierer kann nicht mit Indexern oder Finalizern verwendet werden. Weitere Informationen finden Sie unter [Statische Klassen und statische Klassenmember](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+
+Ab C# 9.0 können Sie [Lambdaausdrücken](../operators/lambda-expressions.md) oder [anonymen Methoden](../operators/delegate-operator.md) den `static`-Modifizierer hinzufügen. Eine statische Lambda- oder anonyme Methode kann keine lokalen Variablen bzw. keinen Instanzzustand erfassen.
 
 ## <a name="example---static-class"></a>Beispiel: statische Klasse
 

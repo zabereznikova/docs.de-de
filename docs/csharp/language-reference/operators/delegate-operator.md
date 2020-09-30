@@ -1,16 +1,16 @@
 ---
 description: Operator „delegate“ – C#-Referenz
 title: Operator „delegate“ – C#-Referenz
-ms.date: 07/18/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122250"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247656"
 ---
 # <a name="delegate-operator-c-reference"></a>Operator „delegate“ (C#-Referenz)
 
@@ -30,6 +30,18 @@ Bei Verwendung des Operators `delegate` können Sie die Parameterliste weglassen
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 Dies ist die einzige Funktion anonymer Methoden, die von Lambdaausdrücken nicht unterstützt wird. In allen anderen Fällen ist ein Lambdaausdruck eine bevorzugte Methode zum Schreiben von Inlinecode.
+
+Ab C# 9.0 können Sie [discards](../../discards.md) verwenden, um mindestens zwei Eingabeparameter einer anonymen Methode anzugeben, die nicht von der Methode verwendet werden:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+Aus Gründen der Abwärtskompatibilität wird `_` als Name dieses Parameters innerhalb einer anonymen Methode behandelt, wenn nur ein einzelner Parameter den Namen `_` aufweist.
+
+Ab C# 9.0 können Sie außerdem den `static`-Modifizierer bei der Deklaration einer anonymen Methode verwenden:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+Eine statische anonyme Methode kann keine lokalen Variablen oder den Instanzstatus aus einschließenden Bereichen erfassen.
 
 Zum Deklarieren eines [Delegattyps](../builtin-types/reference-types.md#the-delegate-type) wird auch das Schlüsselwort `delegate` verwendet.
 

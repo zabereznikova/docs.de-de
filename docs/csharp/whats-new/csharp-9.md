@@ -2,21 +2,21 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738722"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247617"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
 Mit Version 9.0 wird die Sprache C# um die folgenden Features und Verbesserungen erweitert:
 
-- Datensätze
-- init-only-Setter
-- Top-Level-Anweisungen
-- Verbesserungen am Musterabgleich:
+- [Datensätze](#record-types)
+- [init-only-Setter](#init-only-setters)
+- [Top-Level-Anweisungen](#top-level-statements)
+- [Verbesserungen am Musterabgleich:](#pattern-matching-enhancements)
 - Integerwerte mit nativer Größe
 - Funktionszeiger
 - Unterdrücken der Ausgabe des Flags „localsinit“
@@ -48,7 +48,6 @@ Diese Datensatzdefinition erstellt den Typ `Person`, der zwei schreibgeschützte
 - Überschreibungen für <xref:System.Object.GetHashCode>
 - Methoden zum Kopieren und Klonen von Membern
 - `PrintMembers` und <xref:System.Object.ToString>
-- `Deconstruct`-Methode
 
 Datensätze unterstützen die Vererbung. Ein neuer, von `Person` abgeleiteter Datensatz wird wie folgt deklariert:
 
@@ -64,7 +63,6 @@ Der Compiler synthetisiert verschiedene Versionen der oben genannten Methoden. D
 - Für Datensätze wird eine konsistente Zeichenfolgendarstellung für Sie generiert.
 - Datensätze unterstützen die Erstellung von Kopien. Bei einer ordnungsgemäßen Erstellung von Kopien müssen Vererbungshierarchien und von Entwicklern hinzugefügte Eigenschaften berücksichtigt werden.
 - Datensätze können mit Änderungen kopiert werden. Diese Kopier- und Änderungsvorgänge unterstützen nicht-destruktive Bearbeitungen.
-- Alle Datensätze unterstützen die Dekonstruktion.
 
 Zusätzlich zu den bekannten `Equals`-Überladungen, dem `operator ==` sowie dem `operator !=` synthetisiert der Compiler eine neue `EqualityContract`-Eigenschaft. Die Eigenschaft gibt ein `Type`-Objekt zurück, das mit dem Typ des Datensatzes übereinstimmt. Wenn der Basistyp `object` entspricht, lautet die Eigenschaft `virtual`. Wenn der Basistyp einem anderen Datensatztyp entspricht, lautet die Eigenschaft `override`. Wenn der Datensatztyp `sealed` entspricht, lautet die Eigenschaft `sealed`. Die synthetisierte `GetHashCode`-Methode verwendet die `GetHashCode`-Methode aus allen Eigenschaften und Feldern, die im Basis- und im Datensatztyp deklariert wurden. Diese synthetisierten Methoden erzwingen wertbasierte Gleichheitsbeziehungen für eine gesamte Vererbungshierarchie. Dies bedeutet, dass `Student` niemals als identisch mit `Person` gilt, wenn beide den gleichen Namen enthalten. Die Typen sowie auch alle Eigenschaften müssen ebenfalls übereinstimmen, wenn Datensatztypen als gleich gelten sollen.
 
@@ -224,15 +222,15 @@ Ein weiterer nützlicher Anwendungsfall für dieses Feature ist die Kombination 
 
 Mithilfe eines `return new();`-Ausdrucks können Sie eine Instanz zurückgeben, die vom Standardkonstruktor erstellt wurde.
 
-Ein ähnliches Feature verbessert die Zieltypauflösung von bedingten Ausdrücken. Aufgrund dieser Änderung müssen die beiden Ausdrücke keine implizite Konvertierung von einem in den anderen aufweisen, sondern können beide über implizite Konvertierungen in einen Zieltyp verfügen. Diese Änderung wird Ihnen wahrscheinlich nicht auffallen. Was Sie bemerken werden, ist, dass einige bedingte Ausdrücke, die zuvor eine Umwandlung erforderten oder nicht kompiliert werden konnten, jetzt funktionieren.
+Ein ähnliches Feature verbessert die Zieltypauflösung von [bedingten Ausdrücken](../language-reference/operators/conditional-operator.md). Aufgrund dieser Änderung müssen die beiden Ausdrücke keine implizite Konvertierung von einem in den anderen aufweisen, sondern können beide über implizite Konvertierungen in einen Zieltyp verfügen. Diese Änderung wird Ihnen wahrscheinlich nicht auffallen. Was Sie bemerken werden, ist, dass einige bedingte Ausdrücke, die zuvor eine Umwandlung erforderten oder nicht kompiliert werden konnten, jetzt funktionieren.
 
-Ab C# 9.0 können Sie Lambdaausdrücken oder anonymen Methoden den Modifizierer `static` hinzufügen. Statische Lambdaausdrücke entsprechen den lokalen `static`-Funktionen: statische Lambdafunktionen oder anonyme Funktionen weder lokale Variablen noch den Instanzzustand erfassen. Der Modifizierer `static` verhindert, dass versehentlich andere Variablen erfasst werden.
+Ab C# 9.0 können Sie [Lambdaausdrücken](../language-reference/operators/lambda-expressions.md) oder [anonymen Methoden](../language-reference/operators/delegate-operator.md) den Modifizierer `static` hinzufügen. Statische Lambdaausdrücke entsprechen den lokalen `static`-Funktionen: Eine statische Lambdafunktion oder anonyme Methode kann weder lokale Variablen noch den Instanzzustand erfassen. Der Modifizierer `static` verhindert, dass versehentlich andere Variablen erfasst werden.
 
 Kovariante Rückgabetypen flexibilisieren die Rückgabetypen von überschriebenen Funktionen. Eine überschriebene virtuelle Funktion kann einen Typ zurückgeben, der von dem in der Basisklassenmethode deklarierten Rückgabetyp abgeleitet wird. Dies kann nicht nur für Datensätze nützlich sein, sondern auch für andere Typen, die virtuelle Klon- oder Factorymethoden unterstützen.
 
-Außerdem erkennen und verwenden `foreach`-Schleifen eine `GetEnumerator`-Erweiterungsmethode, die ansonsten das `foreach`-Muster erfüllt. Diese Änderung bedeutet, dass `foreach` mit anderen musterbasierten Konstruktionen, z. B. mit dem async-Muster, sowie der musterbasierten Dekonstruktion konsistent ist. In der Praxis bedeutet diese Änderung, dass Sie jedem Typ `foreach`-Unterstützung hinzufügen können. Sie sollten die Verwendung von „foreach“ jedoch auf die Fälle beschränken, in denen die Enumeration eines Objekts in Ihrem Softwareentwurf sinnvoll ist.
+Außerdem erkennen und verwenden [`foreach`-Schleifen](../language-reference/keywords/foreach-in.md) eine `GetEnumerator`-Erweiterungsmethode, die ansonsten das `foreach`-Muster erfüllt. Diese Änderung bedeutet, dass `foreach` mit anderen musterbasierten Konstruktionen, z. B. mit dem async-Muster, sowie der musterbasierten Dekonstruktion konsistent ist. In der Praxis bedeutet diese Änderung, dass Sie jedem Typ `foreach`-Unterstützung hinzufügen können. Sie sollten die Verwendung von „foreach“ jedoch auf die Fälle beschränken, in denen die Enumeration eines Objekts in Ihrem Softwareentwurf sinnvoll ist.
 
-Sie können auch Ausschussvariablen als Parameter für Lambdaausdrücke verwenden. So müssen Sie das Argument nicht mehr benennen, und der Compiler muss es unter Umständen gar nicht verwenden. Sie nutzen einfach `_` für alle Argumente.
+Sie können auch Ausschussvariablen als Parameter für Lambdaausdrücke verwenden. So müssen Sie das Argument nicht mehr benennen, und der Compiler muss es unter Umständen gar nicht verwenden. Sie nutzen einfach `_` für alle Argumente. Weitere Informationen finden Sie im Abschnitt [Eingabeparameter eines Lambdaausdrucks](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) des Artikels [Lambdaausdrücke](../language-reference/operators/lambda-expressions.md).
 
 Schließlich haben Sie nun die Möglichkeit, Attribute auf lokale Funktionen anzuwenden. Sie können beispielsweise Nullwerte zulassende Attributanmerkungen auf lokale Funktionen anwenden.
 
