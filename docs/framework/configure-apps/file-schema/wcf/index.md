@@ -2,12 +2,12 @@
 title: WCF-Konfigurationsschema
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: ab64b41e6e79c934ac0145dd7eec0a943f5dc473
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 44d5e0acc6f5a9ca43949bce0c7964354ad18270
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165129"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573656"
 ---
 # <a name="wcf-configuration-schema"></a>WCF-Konfigurationsschema
 
@@ -19,12 +19,12 @@ Windows Communication Foundation (WCF)-Konfigurationselemente ermöglichen es Ih
   
  [Locking Configuration Settings (Sperren von Konfigurationseinstellungen)](/previous-versions/aspnet/55th21y4(v=vs.100))  
   
- In diesem Abschnitt werden alle möglichen Werte eines Konfigurationselements sowie seine Interaktion mit anderen WCF-Konfigurationselementen beschrieben. Das WCF-Konfigurations Schema wird in der folgenden Abbildung veranschaulicht:  
-  
- ![Diagramm, in dem das WCF-Konfigurations Schema angezeigt wird.](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ In diesem Abschnitt werden alle möglichen Werte eines Konfigurationselements sowie seine Interaktion mit anderen WCF-Konfigurationselementen beschrieben. Das WCF-Konfigurations Schema wird in der folgenden Abbildung veranschaulicht:
+
+:::image type="content" source="./media/index/windows-communication-foundation-configuration-schema.gif" alt-text="Diagramm, in dem das WCF-Konfigurations Schema angezeigt wird." lightbox="./media/index/windows-communication-foundation-configuration-schema.gif":::
   
 > [!CAUTION]
-> Sie sollten WCF-Konfigurations Abschnitte in ihren Anwendungs Konfigurationsdateien (app.config) mit entsprechenden Access Control Listen (ACL) schützen, um potenzielle Sicherheitsbedrohungen zu verhindern.  So sollten Sie z.&#160;B. sicherstellen, dass nur die entsprechenden Personen auf die Sicherheitseinstellungen von Anwendungsbindungen oder auf den Dienstmodellabschnitt der Konfigurationsdatei eines Diensts zugreifen oder diese ändern können.  
+> Schützen Sie die WCF-Konfigurations Abschnitte in ihren Anwendungs Konfigurationsdateien (app.config) mit entsprechenden Access Control Listen (ACL), um potenzielle Sicherheitsbedrohungen zu verhindern. Stellen Sie z. b. sicher, dass nur die entsprechenden Personen auf die Sicherheitseinstellungen für Anwendungs Bindungen oder den Dienstmodell Abschnitt der Konfigurationsdatei für einen Dienst zugreifen bzw. diese ändern können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
