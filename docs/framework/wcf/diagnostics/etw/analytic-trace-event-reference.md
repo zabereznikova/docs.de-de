@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 1b44e6b0abf0fc48b43ae17cbd24780e46ae518d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4aa8e7a7d22edde02272dc4c3850b5695347b2bb
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798124"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609511"
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
 In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten definiert, die der WCF-Analyse Ablauf Verfolgung zugeordnet sind.  
@@ -71,8 +71,8 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[514 - WebHostRequestStop](514-webhostrequeststop.md)|Information|WebHostRequest anhalten.|WebHost|  
 |[601 - CBAEntryRead](601-cbaentryread.md)|Ausführlich|Das ServiceActivation-Element mit der relativen Adresse '%1' und der normalisierten relativen Adresse '%2' wurde verarbeitet.||  
 |[602 - CBAMatchFound](602-cbamatchfound.md)|Ausführlich|Die eingehende Anforderung stimmt mit einem ServiceActivation-Element mit der Adresse '%1' überein.||  
-|[603 - AspNetRoutingService](603-aspnetroutingservice.md)|Ausführlich|Die eingehende Anforderung stimmt mit einem WCF-Dienst überein, der in der Asp.Net-Route mit der Adresse %1 definiert wird.|RoutingServices|  
-|[604 - AspNetRoute](604-aspnetroute.md)|Ausführlich|Eine neue Asp.Net-Route '%1' mit serviceType '%2' und serviceHostFactoryType '%3' wird hinzugefügt.|RoutingServices|  
+|[603 - AspNetRoutingService](603-aspnetroutingservice.md)|Ausführlich|Die eingehende Anforderung stimmt mit einem WCF-Dienst überein, der in ASP.net Route mit Adresse %1 definiert ist|RoutingServices|  
+|[604 - AspNetRoute](604-aspnetroute.md)|Ausführlich|Eine neue ASP.net Route ' %1 ' mit Service Type ' %2 ' und servicehostfactor ytype ' %3 ' wird hinzugefügt.|RoutingServices|  
 |[605 - IncrementBusyCount](605-incrementbusycount.md)|Ausführlich|IncrementBusyCount aufgerufen. Quelle: %1|WebHost|  
 |[606 - DecrementBusyCount](606-decrementbusycount.md)|Ausführlich|DecrementBusyCount aufgerufen. Quelle: %1|WebHost|  
 |[701 - ServiceChannelOpenStart](701-servicechannelopenstart.md)|Ausführlich|ServiceChannelOpen wurde gestartet.|WebHost|  
@@ -118,10 +118,10 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[1445 - ReadPoolMiss](1445-readpoolmiss.md)|Ausführlich|"%1" neu erstellt|Kontingent|  
 |[1446 - WritePoolMiss](1446-writepoolmiss.md)|Ausführlich|"%1" neu erstellt|Kontingent|  
 |[1451 - MaxRetryCyclesExceeded](1451-maxretrycyclesexceeded.md)|Fehler|1%|Kontingent|  
-|[3300 - ReceiveContextCompleteFailed](3300-receivecontextcompletefailed.md)|Warnung|%1 konnte nicht abgeschlossen werden.|Channel|  
-|[3301 - ReceiveContextAbandonFailed](3301-receivecontextabandonfailed.md)|Warnung|%1 konnte nicht aufgegeben werden.|Channel|  
+|[3300 - ReceiveContextCompleteFailed](3300-receivecontextcompletefailed.md)|Warnung|%1 konnte nicht abgeschlossen werden.|Kanal|  
+|[3301 - ReceiveContextAbandonFailed](3301-receivecontextabandonfailed.md)|Warnung|%1 konnte nicht aufgegeben werden.|Kanal|  
 |[3303 - ReceiveContextAbandonWithException](3303-receivecontextabandonwithexception.md)|Warnung|Der Empfangskontext ist fehlerhaft.|ServiceModel|  
-|[3303 - ReceiveContextAbandonWithException](3303-receivecontextabandonwithexception.md)|Information|%1 wurde mit der Ausnahme %2 aufgegeben.|Channel|  
+|[3303 - ReceiveContextAbandonWithException](3303-receivecontextabandonwithexception.md)|Information|%1 wurde mit der Ausnahme %2 aufgegeben.|Kanal|  
 |[3305 - ClientBaseCachedChannelFactoryCount](3305-clientbasecachedchannelfactorycount.md)|Information|Anzahl der zwischengespeicherten Kanalfactorys: "%1".  Maximal können "%2" Kanalfactorys zwischengespeichert werden.|ServiceModel|  
 |[3306 - ClientBaseChannelFactoryAgedOutofCache](3306-clientbasechannelfactoryagedoutofcache.md)|Information|Eine Kanalfactory wurde aufgrund des Alters aus dem Cache entfernt, da der Cache die Einschränkung von "%1" erreicht hat.|ServiceModel|  
 |[3307 - ClientBaseChannelFactoryCacheHit](3307-clientbasechannelfactorycachehit.md)|Information|Es wurde eine übereinstimmende Kanalfactory aus dem Cache verwendet.|ServiceModel|  
@@ -129,12 +129,12 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[3309 - QueryCompositionExecuted](3309-querycompositionexecuted.md)|Information|Abfragekomposition mit "%1" wurde für den Anforderungs-URI "%2" ausgeführt.|ServiceModel|  
 |[3310 - DispatchFailed](3310-dispatchfailed.md)|Fehler|Der Vorgang "%1" wurde mit Fehlern verteilt.|ServiceModel|  
 |[3311 - DispatchSuccessful](3311-dispatchsuccessful.md)|Information|Der Vorgang "%1" wurde erfolgreich verteilt.|ServiceModel|  
-|[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes gelesen.|Channel|  
-|[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes geschrieben.|Channel|  
+|[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes gelesen.|Kanal|  
+|[3312 - MessageReadByEncoder](3312-messagereadbyencoder.md)|Information|Vom Encoder wurde eine Nachricht mit einer Größe von '%1' Bytes geschrieben.|Kanal|  
 |[3314 - SessionIdleTimeout](3314-sessionidletimeout.md)|Fehler|Sitzungsabbruch für im Leerlauf befindlichen Kanal zum URI: "%1".|ServiceModel|  
 |[3319 - SocketAcceptEnqueued](3319-socketacceptenqueued.md)|Ausführlich|Die Verbindungsannahme wurde gestartet.|TCP|  
 |[3320 - SocketAccepted](3320-socketaccepted.md)|Ausführlich|ListenerId: hat folgende SocketId akzeptiert: %2|TCP|  
-|[3321 - ConnectionPoolMiss](3321-connectionpoolmiss.md)|Ausführlich|Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.|Channel|  
+|[3321 - ConnectionPoolMiss](3321-connectionpoolmiss.md)|Ausführlich|Der Pool für "%1" besitzt keine verfügbaren Verbindungen und %2 ausgelastete Verbindungen.|Kanal|  
 |[3322 - DispatchFormatterDeserializeRequestStart](3322-dispatchformatterdeserializerequeststart.md)|Ausführlich|Die Deserialisierung der Anforderungsnachricht wurde vom Verteiler gestartet.|ServiceModel|  
 |[3323 - DispatchFormatterDeserializeRequestStop](3323-dispatchformatterdeserializerequeststop.md)|Ausführlich|Die Deserialisierung der Anforderungsnachricht wurde vom Verteiler abgeschlossen.|ServiceModel|  
 |[3324 - DispatchFormatterSerializeReplyStart](3324-dispatchformatterserializereplystart.md)|Ausführlich|Die Serialisierung der Antwortnachricht wurde vom Verteiler gestartet.|ServiceModel|  
@@ -150,19 +150,19 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[3334 - IncomingMessageVerified](3334-incomingmessageverified.md)|Ausführlich|Die eingehende Nachricht wurde überprüft.|Sicherheits-ServiceModel|  
 |[3335 - GetServiceInstanceStart](3335-getserviceinstancestart.md)|Ausführlich|Das Abrufen der Dienstinstanz wurde gestartet.|ServiceModel|  
 |[3336 - GetServiceInstanceStop](3336-getserviceinstancestop.md)|Ausführlich|Die Dienstinstanz wurde abgerufen.|ServiceModel|  
-|[3337 - ChannelReceiveStart](3337-channelreceivestart.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde gestartet.|Channel|  
-|[3338 - ChannelReceiveStop](3338-channelreceivestop.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde angehalten.|Channel|  
+|[3337 - ChannelReceiveStart](3337-channelreceivestart.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde gestartet.|Kanal|  
+|[3338 - ChannelReceiveStop](3338-channelreceivestop.md)|Ausführlich|ChannelHandlerId:%1 - Nachrichtenempfangsschleife wurde angehalten.|Kanal|  
 |[3339 - ChannelFactoryCreated](3339-channelfactorycreated.md)|Ausführlich|Die ChannelFactory wurde erstellt.|ServiceModel|  
-|[3340 - PipeConnectionAcceptStart](3340-pipeconnectionacceptstart.md)|Ausführlich|Die Pipeverbindungsannahme für "%1" wurde gestartet.|Channel|  
-|[3341 - PipeConnectionAcceptStop](3341-pipeconnectionacceptstop.md)|Ausführlich|Die Pipeverbindung wurde akzeptiert.|Channel|  
-|[3342 - EstablishConnectionStart](3342-establishconnectionstart.md)|Ausführlich|Die Verbindungseinrichtung für "%1" wurde gestartet.|Channel|  
-|[3343 - EstablishConnectionStop](3343-establishconnectionstop.md)|Ausführlich|Die Verbindung wurde eingerichtet.|Channel|  
-|[3345 - SessionPreambleUnderstood](3345-sessionpreambleunderstood.md)|Ausführlich|Die Sitzungspräambel für "%1" wurde verstanden.|Channel|  
-|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|Fehler|Der Verbindungsleser sendet Fehler "%1".|Channel|  
+|[3340 - PipeConnectionAcceptStart](3340-pipeconnectionacceptstart.md)|Ausführlich|Die Pipeverbindungsannahme für "%1" wurde gestartet.|Kanal|  
+|[3341 - PipeConnectionAcceptStop](3341-pipeconnectionacceptstop.md)|Ausführlich|Die Pipeverbindung wurde akzeptiert.|Kanal|  
+|[3342 - EstablishConnectionStart](3342-establishconnectionstart.md)|Ausführlich|Die Verbindungseinrichtung für "%1" wurde gestartet.|Kanal|  
+|[3343 - EstablishConnectionStop](3343-establishconnectionstop.md)|Ausführlich|Die Verbindung wurde eingerichtet.|Kanal|  
+|[3345 - SessionPreambleUnderstood](3345-sessionpreambleunderstood.md)|Ausführlich|Die Sitzungspräambel für "%1" wurde verstanden.|Kanal|  
+|[3346 - ConnectionReaderSendFault](3346-connectionreadersendfault.md)|Fehler|Der Verbindungsleser sendet Fehler "%1".|Kanal|  
 |[3347 - SocketAcceptClosed](3347-socketacceptclosed.md)|Ausführlich|Die Socketannahme wurde geschlossen.|TCP|  
 |[3348 - ServiceHostFaulted](3348-servicehostfaulted.md)|Kritisch|Fehler beim Diensthost.|TCP|  
-|[3349 - ListenerOpenStart](3349-listeneropenstart.md)|Ausführlich|Der Listener für "%1" wird geöffnet.|Channel|  
-|[3350 - ListenerOpenStop](3350-listeneropenstop.md)|Ausführlich|Öffnen des Listeners wurde abgeschlossen.|Channel|  
+|[3349 - ListenerOpenStart](3349-listeneropenstart.md)|Ausführlich|Der Listener für "%1" wird geöffnet.|Kanal|  
+|[3350 - ListenerOpenStop](3350-listeneropenstop.md)|Ausführlich|Öffnen des Listeners wurde abgeschlossen.|Kanal|  
 |[3351 - ServerMaxPooledConnectionsQuotaReached](3351-servermaxpooledconnectionsquotareached.md)|Ausführlich|Das Kontingent für die maximale Anzahl von Verbindungen im Serverpool wurde erreicht.|Kontingent|  
 |[3352 - TcpConnectionTimedOut](3352-tcpconnectiontimedout.md)|Fehler|Zeitüberschreitung für SocketId:%1 für Remoteadresse %2.|TCP|  
 |[3353 - TcpConnectionResetError](3353-tcpconnectionreseterror.md)|Warnung|Fehler beim Zurücksetzen der Verbindung für SocketId:%1 für Remoteadresse %2.|TCP|  
@@ -179,38 +179,38 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[3364 - SharedListenerProxyRegisterStart](3364-sharedlistenerproxyregisterstart.md)|Ausführlich|Die SharedListenerProxy-Registrierung für URI "%1" wurde gestartet.|ActivationServices|  
 |[3365 - SharedListenerProxyRegisterStop](3365-sharedlistenerproxyregisterstop.md)|Ausführlich|SharedListenerProxy-Registrierung anhalten.|ActivationServices|  
 |[3366 - SharedListenerProxyRegisterFailed](3366-sharedlistenerproxyregisterfailed.md)|Fehler|Fehler beim Registrieren von SharedListenerProxy mit Status "%1".|ActivationServices|  
-|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|Fehler|ConnectionPoolPreambleFailed.|Channel|  
+|[3367 - ConnectionPoolPreambleFailed](3367-connectionpoolpreamblefailed.md)|Fehler|ConnectionPoolPreambleFailed.|Kanal|  
 |[3368 - SslOnInitiateUpgrade](3368-ssloninitiateupgrade.md)|Ausführlich|SslOnAcceptUpgradeStart|Sicherheit|  
 |[3369 - SslOnAcceptUpgrade](3369-sslonacceptupgrade.md)|Ausführlich|SslOnAcceptUpgradeStop|Sicherheit|  
-|[3370 - BinaryMessageEncodingStart](3370-binarymessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Channel|  
-|[3371 - MtomMessageEncodingStart](3371-mtommessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von MtomMessageEncoder gestartet.|Channel|  
-|[3372 - TextMessageEncodingStart](3372-textmessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von TextMessageEncoder gestartet.|Channel|  
-|[3373 - BinaryMessageDecodingStart](3373-binarymessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Channel|  
-|[3374 - MtomMessageDecodingStart](3374-mtommessagedecodingstart.md)|Ausführlich|Der MtomMessageEncoder hat das Decodieren der Nachricht gestartet.|Channel|  
-|[3375 - TextMessageDecodingStart](3375-textmessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von TextMessageEncoder gestartet.|Channel|  
+|[3370 - BinaryMessageEncodingStart](3370-binarymessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Kanal|  
+|[3371 - MtomMessageEncodingStart](3371-mtommessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von MtomMessageEncoder gestartet.|Kanal|  
+|[3372 - TextMessageEncodingStart](3372-textmessageencodingstart.md)|Ausführlich|Das Codieren der Nachricht wurde von TextMessageEncoder gestartet.|Kanal|  
+|[3373 - BinaryMessageDecodingStart](3373-binarymessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von BinaryMessageEncoder gestartet.|Kanal|  
+|[3374 - MtomMessageDecodingStart](3374-mtommessagedecodingstart.md)|Ausführlich|Der MtomMessageEncoder hat das Decodieren der Nachricht gestartet.|Kanal|  
+|[3375 - TextMessageDecodingStart](3375-textmessagedecodingstart.md)|Ausführlich|Das Decodieren der Nachricht wurde von TextMessageEncoder gestartet.|Kanal|  
 |[3376 - HttpResponseReceiveStart](3376-httpresponsereceivestart.md)|Information|HTTP-Transport hat mit dem Empfang einer Nachricht begonnen.|HTTP|  
 |[3377 - SocketReadStop](3377-socketreadstop.md)|Ausführlich|SocketId:%1 hat '%2' Bytes aus '%3' gelesen.|TCP|  
 |[3378 - SocketAsyncReadStop](3378-socketasyncreadstop.md)|Ausführlich|SocketId:%1 hat '%2' Bytes aus '%3' gelesen.|TCP|  
 |[3379 - SocketWriteStart](3379-socketwritestart.md)|Ausführlich|SocketId:%1 schreibt %2 Bytes in "%3".|TCP|  
 |[3380 - SocketAsyncWriteStart](3380-socketasyncwritestart.md)|Ausführlich|SocketId:%1 schreibt %2 Bytes in "%3".|TCP|  
-|[3381 - SequenceAcknowledgementSent](3381-sequenceacknowledgementsent.md)|Ausführlich|Bestätigung für SessionId: %1 wurde gesendet.|Channel|  
-|[3382 - ClientReliableSessionReconnect](3382-clientreliablesessionreconnect.md)|Information|Verbindung für SessionId:%1 wird wiederhergestellt.|Channel|  
-|[3383 - ReliableSessionChannelFaulted](3383-reliablesessionchannelfaulted.md)|Information|Fehler bei SessionId:%1.|Channel|  
+|[3381 - SequenceAcknowledgementSent](3381-sequenceacknowledgementsent.md)|Ausführlich|Bestätigung für SessionId: %1 wurde gesendet.|Kanal|  
+|[3382 - ClientReliableSessionReconnect](3382-clientreliablesessionreconnect.md)|Information|Verbindung für SessionId:%1 wird wiederhergestellt.|Kanal|  
+|[3383 - ReliableSessionChannelFaulted](3383-reliablesessionchannelfaulted.md)|Information|Fehler bei SessionId:%1.|Kanal|  
 |[3384 - WindowsStreamSecurityOnInitiateUpgrade](3384-windowsstreamsecurityoninitiateupgrade.md)|Ausführlich|WindowsStreamSecurity initiiert Sicherheitsupgrade.|Sicherheit|  
 |[3385 - WindowsStreamSecurityOnAcceptUpgrade](3385-windowsstreamsecurityonacceptupgrade.md)|Ausführlich|Windows-Streamingsicherheit akzeptiert Upgrade.|Sicherheit|  
 |[3386 - SocketConnectionAbort](3386-socketconnectionabort.md)|Warnung|SocketId:%1 wird abgebrochen.|TCP|  
 |[3388 - HttpGetContextStart](3388-httpgetcontextstart.md)|Ausführlich|HttpGetContext starten.|HTTP|  
-|[3389 - ClientSendPreambleStart](3389-clientsendpreamblestart.md)|Ausführlich|Senden der Präambel durch den Client beginnt.|Channel|  
-|[3390 - ClientSendPreambleStop](3390-clientsendpreamblestop.md)|Ausführlich|Senden der Präambel durch den Client wird beendet.|Channel|  
+|[3389 - ClientSendPreambleStart](3389-clientsendpreamblestart.md)|Ausführlich|Senden der Präambel durch den Client beginnt.|Kanal|  
+|[3390 - ClientSendPreambleStop](3390-clientsendpreamblestop.md)|Ausführlich|Senden der Präambel durch den Client wird beendet.|Kanal|  
 |[3391 - HttpMessageReceiveFailed](3391-httpmessagereceivefailed.md)|Warnung|Fehler beim Empfang der HTTP-Nachricht.|HTTP|  
 |[3392 - TransactionScopeCreate](3392-transactionscopecreate.md)|Information|TransactionScope wird mit LocalIdentifier:'%1' und DistributedIdentifier:'%2' erstellt.|ServiceModel|  
-|[3393 - StreamedMessageReadByEncoder](3393-streamedmessagereadbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht gelesen.|Channel|  
-|[3394 - StreamedMessageWrittenByEncoder](3394-streamedmessagewrittenbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht geschrieben.|Channel|  
-|[3395 - MessageWrittenAsynchronouslyByEncoder](3395-messagewrittenasynchronouslybyencoder.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Channel|  
-|[3396 - BufferedAsyncWriteStart](3396-bufferedasyncwritestart.md)|Information|BufferId:%1 hat das Schreiben von '%2' Bytes in den zugrunde liegenden Datenstrom abgeschlossen.|Channel|  
-|[3397 - BufferedAsyncWriteStop](3397-bufferedasyncwritestop.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Channel|  
-|[3398 - PipeSharedMemoryCreated](3398-pipesharedmemorycreated.md)|Ausführlich|Gemeinsam genutzter Speicher für Pipe wurde erstellt bei "%1".|Channel|  
-|[3399 - NamedPipeCreated](3399-namedpipecreated.md)|Ausführlich|NamedPipe "%1" wurde erstellt.|Channel|  
+|[3393 - StreamedMessageReadByEncoder](3393-streamedmessagereadbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht gelesen.|Kanal|  
+|[3394 - StreamedMessageWrittenByEncoder](3394-streamedmessagewrittenbyencoder.md)|Information|Vom Encoder wurde eine gestreamte Nachricht geschrieben.|Kanal|  
+|[3395 - MessageWrittenAsynchronouslyByEncoder](3395-messagewrittenasynchronouslybyencoder.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Kanal|  
+|[3396 - BufferedAsyncWriteStart](3396-bufferedasyncwritestart.md)|Information|BufferId:%1 hat das Schreiben von '%2' Bytes in den zugrunde liegenden Datenstrom abgeschlossen.|Kanal|  
+|[3397 - BufferedAsyncWriteStop](3397-bufferedasyncwritestop.md)|Information|Vom Encoder wurde eine Nachricht asynchron geschrieben.|Kanal|  
+|[3398 - PipeSharedMemoryCreated](3398-pipesharedmemorycreated.md)|Ausführlich|Gemeinsam genutzter Speicher für Pipe wurde erstellt bei "%1".|Kanal|  
+|[3399 - NamedPipeCreated](3399-namedpipecreated.md)|Ausführlich|NamedPipe "%1" wurde erstellt.|Kanal|  
 |[3401 - SignatureVerificationStart](3401-signatureverificationstart.md)|Ausführlich|Signaturüberprüfung gestartet.|Sicherheit|  
 |[3402 - SignatureVerificationSuccess](3402-signatureverificationsuccess.md)|Ausführlich|Signaturüberprüfung erfolgreich.|Sicherheit|  
 |[3403 - WrappedKeyDecryptionStart](3403-wrappedkeydecryptionstart.md)|Ausführlich|Entschlüsselung des Wrapperschlüssels gestartet.|Sicherheit|  
@@ -305,27 +305,27 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[4034 - RoutingTableLookupStop](4034-routingtablelookupstop.md)|Ausführlich|Die Routingtabellensuche wurde abgeschlossen.|ActivationServices|  
 |[4035 - PendingSessionQueueRatio](4035-pendingsessionqueueratio.md)|Ausführlich|Verhältnis Sitzungswarteschlange: %1%2|Kontingent|  
 |[4600 - MessageLogEventSizeExceeded](4600-messagelogeventsizeexceeded.md)|Warnung|Nachricht konnte nicht protokolliert werden, da sie die zulässige ETW-Ereignisgröße überschreitet.|WCFMessageLogging|  
-|[4801 - DiscoveryClientInClientChannelFailedToClose](4801-discoveryclientinclientchannelfailedtoclose.md)|Warnung|Der in DiscoveryClientChannel erstellte DiscoveryClient konnte nicht geschlossen werden und wurde daher abgebrochen.|Suche|  
-|[4802 - DiscoveryClientProtocolExceptionSuppressed](4802-discoveryclientprotocolexceptionsuppressed.md)|Information|Eine ProtocolException wurde beim Schließen von DiscoveryClient unterdrückt. Dies kann darauf zurückzuführen sein, dass von einem DiscoveryService nach wie vor versucht wird, eine Antwort an den DiscoveryClient zu senden.|Suche|  
-|[4803 - DiscoveryClientReceivedMulticastSuppression](4803-discoveryclientreceivedmulticastsuppression.md)|Information|Vom DiscoveryClient wurde eine Multicastunterdrückungsmeldung von einem DiscoveryProxy empfangen.|Suche|  
-|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](4804-discoverymessagereceivedafteroperationcompleted.md)|Information|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da der entsprechende %3-Vorgang abgeschlossen wurde.|Suche|  
-|[4805 - DiscoveryMessageWithInvalidContent](4805-discoverymessagewithinvalidcontent.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde gelöscht, da sie ungültigen Inhalt aufwies.|Suche|  
-|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|Warnung|Eine %1-Meldung mit messageId='%2' und relatesTo='%3' wurde vom DiscoveryClient gelöscht, da entweder der entsprechende %4-Vorgang abgeschlossen wurde oder der relatesTo-Wert ungültig ist.|Suche|  
-|[4807 - DiscoveryMessageWithInvalidReplyTo](4807-discoverymessagewithinvalidreplyto.md)|Warnung|Eine Erkennungsanforderungsmeldung mit messageId='%1' wurde gelöscht, da sie eine ungültige ReplyTo-Adresse enthielt.|Suche|  
-|[4808 - DiscoveryMessageWithNoContent](4808-discoverymessagewithnocontent.md)|Warnung|Eine %1-Meldung wurde gelöscht, da kein Inhalt vorhanden war.|Suche|  
-|[4809 - DiscoveryMessageWithNullMessageId](4809-discoverymessagewithnullmessageid.md)|Warnung|Eine %1-Meldung wurde gelöscht, da der Meldungsheader nicht die erforderliche MessageId-Eigenschaft enthielt.|Suche|  
-|[4810 - DiscoveryMessageWithNullMessageSequence](4810-discoverymessagewithnullmessagesequence.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da sie nicht über die DiscoveryMessageSequence-Eigenschaft verfügte.|Suche|  
-|[4811 - DiscoveryMessageWithNullRelatesTo](4811-discoverymessagewithnullrelatesto.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da der Meldungsheader nicht die erforderliche RelatesTo-Eigenschaft enthielt.|Suche|  
-|[4812 - DiscoveryMessageWithNullReplyTo](4812-discoverymessagewithnullreplyto.md)|Warnung|Eine Erkennungsanforderungsmeldung mit messageId='%1' wurde gelöscht, da sie keine ReplyTo-Adresse enthielt.|Suche|  
-|[4813 - DuplicateDiscoveryMessage](4813-duplicatediscoverymessage.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde gelöscht, da es sich um ein Duplikat handelte.|Suche|  
-|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|Information|Die Erkennbarkeit des Endpunkts mit EndpointAddress='%1' und ListenUri='%2' wurde deaktiviert.|Suche|  
-|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|Information|Die Erkennbarkeit des Endpunkts mit EndpointAddress='%1' und ListenUri='%2' wurde aktiviert.|Suche|  
-|[4816 - FindInitiatedInDiscoveryClientChannel](4816-findinitiatedindiscoveryclientchannel.md)|Ausführlich|Ein Suchvorgang wurde im DiscoveryClientChannel initiiert, um Endpunkte zu suchen.|Suche|  
-|[4817 - InnerChannelCreationFailed](4817-innerchannelcreationfailed.md)|Warnung|Fehler beim Erstellen des Channels mit einem gefundenen Endpunkt mit EndpointAddress='%1' und Via='%2'. Vom DiscoveryClientChannel wird nun versucht, den nächsten verfügbaren gefundenen Endpunkt zu verwenden.|Suche|  
-|[4818 - InnerChannelOpenFailed](4818-innerchannelopenfailed.md)|Warnung|Fehler beim Öffnen des Channels mit einem gefundenen Endpunkt mit EndpointAddress= '%1' und Via= '%2'. Vom DiscoveryClientChannel wird nun versucht, den nächsten verfügbaren gefundenen Endpunkt zu verwenden.|Suche|  
-|[4819 - InnerChannelOpenSucceeded](4819-innerchannelopensucceeded.md)|Information|Der DiscoveryClientChannel hat erfolgreich einen Endpunkt erkannt und über diesen den Kanal geöffnet. Der Client ist über EndpointAddress='%1' und Via='%2' mit einem Dienst verbunden.|Suche|  
-|[4820 - SynchronizationContextReset](4820-synchronizationcontextreset.md)|Information|Der SynchronizationContext wurde von DiscoveryClientChannel auf den ursprünglichen Wert "%1" zurückgesetzt.|Suche|  
-|[4821 - SynchronizationContextSetToNull](4821-synchronizationcontextsettonull.md)|Information|Der SynchronizationContext wurde von DiscoveryClientChannel auf NULL festgelegt, bevor der Suchvorgang initiiert wurde.|Suche|  
+|[4801 - DiscoveryClientInClientChannelFailedToClose](4801-discoveryclientinclientchannelfailedtoclose.md)|Warnung|Der in DiscoveryClientChannel erstellte DiscoveryClient konnte nicht geschlossen werden und wurde daher abgebrochen.|Ermittlung|  
+|[4802 - DiscoveryClientProtocolExceptionSuppressed](4802-discoveryclientprotocolexceptionsuppressed.md)|Information|Eine ProtocolException wurde beim Schließen von DiscoveryClient unterdrückt. Dies kann darauf zurückzuführen sein, dass von einem DiscoveryService nach wie vor versucht wird, eine Antwort an den DiscoveryClient zu senden.|Ermittlung|  
+|[4803 - DiscoveryClientReceivedMulticastSuppression](4803-discoveryclientreceivedmulticastsuppression.md)|Information|Vom DiscoveryClient wurde eine Multicastunterdrückungsmeldung von einem DiscoveryProxy empfangen.|Ermittlung|  
+|[4804 - DiscoveryMessageReceivedAfterOperationCompleted](4804-discoverymessagereceivedafteroperationcompleted.md)|Information|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da der entsprechende %3-Vorgang abgeschlossen wurde.|Ermittlung|  
+|[4805 - DiscoveryMessageWithInvalidContent](4805-discoverymessagewithinvalidcontent.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde gelöscht, da sie ungültigen Inhalt aufwies.|Ermittlung|  
+|[4806 - DiscoveryMessageWithInvalidRelatesToOrOperationCompleted](4806-discoverymessagewithinvalidrelatestooroperationcompleted.md)|Warnung|Eine %1-Meldung mit messageId='%2' und relatesTo='%3' wurde vom DiscoveryClient gelöscht, da entweder der entsprechende %4-Vorgang abgeschlossen wurde oder der relatesTo-Wert ungültig ist.|Ermittlung|  
+|[4807 - DiscoveryMessageWithInvalidReplyTo](4807-discoverymessagewithinvalidreplyto.md)|Warnung|Eine Erkennungsanforderungsmeldung mit messageId='%1' wurde gelöscht, da sie eine ungültige ReplyTo-Adresse enthielt.|Ermittlung|  
+|[4808 - DiscoveryMessageWithNoContent](4808-discoverymessagewithnocontent.md)|Warnung|Eine %1-Meldung wurde gelöscht, da kein Inhalt vorhanden war.|Ermittlung|  
+|[4809 - DiscoveryMessageWithNullMessageId](4809-discoverymessagewithnullmessageid.md)|Warnung|Eine %1-Meldung wurde gelöscht, da der Meldungsheader nicht die erforderliche MessageId-Eigenschaft enthielt.|Ermittlung|  
+|[4810 - DiscoveryMessageWithNullMessageSequence](4810-discoverymessagewithnullmessagesequence.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da sie nicht über die DiscoveryMessageSequence-Eigenschaft verfügte.|Ermittlung|  
+|[4811 - DiscoveryMessageWithNullRelatesTo](4811-discoverymessagewithnullrelatesto.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde vom DiscoveryClient gelöscht, da der Meldungsheader nicht die erforderliche RelatesTo-Eigenschaft enthielt.|Ermittlung|  
+|[4812 - DiscoveryMessageWithNullReplyTo](4812-discoverymessagewithnullreplyto.md)|Warnung|Eine Erkennungsanforderungsmeldung mit messageId='%1' wurde gelöscht, da sie keine ReplyTo-Adresse enthielt.|Ermittlung|  
+|[4813 - DuplicateDiscoveryMessage](4813-duplicatediscoverymessage.md)|Warnung|Eine %1-Meldung mit messageId='%2' wurde gelöscht, da es sich um ein Duplikat handelte.|Ermittlung|  
+|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|Information|Die Erkennbarkeit des Endpunkts mit EndpointAddress='%1' und ListenUri='%2' wurde deaktiviert.|Ermittlung|  
+|[4814 - EndpointDiscoverabilityDisabled](4814-endpointdiscoverabilitydisabled.md)|Information|Die Erkennbarkeit des Endpunkts mit EndpointAddress='%1' und ListenUri='%2' wurde aktiviert.|Ermittlung|  
+|[4816 - FindInitiatedInDiscoveryClientChannel](4816-findinitiatedindiscoveryclientchannel.md)|Ausführlich|Ein Suchvorgang wurde im DiscoveryClientChannel initiiert, um Endpunkte zu suchen.|Ermittlung|  
+|[4817 - InnerChannelCreationFailed](4817-innerchannelcreationfailed.md)|Warnung|Fehler beim Erstellen des Channels mit einem gefundenen Endpunkt mit EndpointAddress='%1' und Via='%2'. Vom DiscoveryClientChannel wird nun versucht, den nächsten verfügbaren gefundenen Endpunkt zu verwenden.|Ermittlung|  
+|[4818 - InnerChannelOpenFailed](4818-innerchannelopenfailed.md)|Warnung|Fehler beim Öffnen des Channels mit einem gefundenen Endpunkt mit EndpointAddress= '%1' und Via= '%2'. Vom DiscoveryClientChannel wird nun versucht, den nächsten verfügbaren gefundenen Endpunkt zu verwenden.|Ermittlung|  
+|[4819 - InnerChannelOpenSucceeded](4819-innerchannelopensucceeded.md)|Information|Der DiscoveryClientChannel hat erfolgreich einen Endpunkt erkannt und über diesen den Kanal geöffnet. Der Client ist über EndpointAddress='%1' und Via='%2' mit einem Dienst verbunden.|Ermittlung|  
+|[4820 - SynchronizationContextReset](4820-synchronizationcontextreset.md)|Information|Der SynchronizationContext wurde von DiscoveryClientChannel auf den ursprünglichen Wert "%1" zurückgesetzt.|Ermittlung|  
+|[4821 - SynchronizationContextSetToNull](4821-synchronizationcontextsettonull.md)|Information|Der SynchronizationContext wurde von DiscoveryClientChannel auf NULL festgelegt, bevor der Suchvorgang initiiert wurde.|Ermittlung|  
 |[5001 - DCSerializeWithSurrogateStart](5001-dcserializewithsurrogatestart.md)|Ausführlich|DataContract-Serialisierung von "%1" mit Surrogates starten.|Serialisierung|  
 |[5002 - DCSerializeWithSurrogateStop](5002-dcserializewithsurrogatestop.md)|Ausführlich|DataContract-Serialisierung mit Surrogates anhalten.|Serialisierung|  
 |[5003 - DCDeserializeWithSurrogateStart](5003-dcdeserializewithsurrogatestart.md)|Ausführlich|DataContract-Deserialisierung von "%1" mit Surrogates starten.|Serialisierung|  
@@ -343,8 +343,8 @@ In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten 
 |[5015 - DCJsonGenWriterStop](5015-dcjsongenwriterstop.md)|Ausführlich|Json-Generierung von Writer anhalten.|Serialisierung|  
 |[5016 - GenXmlSerializableStart](5016-genxmlserializablestart.md)|Ausführlich|Generierung von serialisierbarem XML-Element für "%1" starten.|Serialisierung|  
 |[5017 - GenXmlSerializableStop](5017-genxmlserializablestop.md)|Ausführlich|Generierung von serialisierbarem XML-Element anhalten.|Serialisierung|  
-|[5203 - JsonMessageDecodingStart](5203-jsonmessagedecodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Dekodieren der Nachricht begonnen.|Channel|  
-|[5204 - JsonMessageEncodingStart](5204-jsonmessageencodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Codieren der Nachricht begonnen.|Channel|  
+|[5203 - JsonMessageDecodingStart](5203-jsonmessagedecodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Dekodieren der Nachricht begonnen.|Kanal|  
+|[5204 - JsonMessageEncodingStart](5204-jsonmessageencodingstart.md)|Ausführlich|JsonMessageEncoder hat mit dem Codieren der Nachricht begonnen.|Kanal|  
 |[5402 - TokenValidationStarted](5402-tokenvalidationstarted.md)|Ausführlich|Überprüfung des SecurityToken (Typ "%1" und ID "%2") gestartet.|Sicherheit|  
 |[5403 - TokenValidationSuccess](5403-tokenvalidationsuccess.md)|Ausführlich|SecurityToken (Typ "%1" und ID "%2") erfolgreich überprüft.|Sicherheit|  
 |[5404 - TokenValidationFailure](5404-tokenvalidationfailure.md)|Fehler|Fehler bei der Überprüfung des SecurityToken (Typ "%1" und ID "%2"). %3|Sicherheit|  

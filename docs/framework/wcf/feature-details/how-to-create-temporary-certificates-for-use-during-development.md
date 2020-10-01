@@ -6,12 +6,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a249f0de00c45b1588762ffa0f826e890f961334
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557410"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607771"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
 
@@ -113,7 +113,7 @@ Weitere Informationen zum Verwenden von Zertifikaten in WCF finden Sie unter [Wo
 
 Achten Sie darauf, alle temporären Stammzertifizierungsstellen-Zertifikate aus den Ordnern **Vertrauenswürdige Stammzertifizierungsstellen** und **Persönlich** zu löschen, indem Sie mit der rechten Maustaste auf das Zertifikat klicken und anschließend auf **Löschen**klicken.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwenden von Zertifikaten](working-with-certificates.md)
 - [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](how-to-view-certificates-with-the-mmc-snap-in.md)

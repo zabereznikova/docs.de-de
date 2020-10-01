@@ -2,12 +2,12 @@
 title: AspNetCompatibilityRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 00908a39-a21b-4029-bbb9-33e5a6ed25a7
-ms.openlocfilehash: 8e4b2e0e32ccd3b671e81531833ccb3aa3788389
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b11aedc3069b80df40e36949e009dc902680889
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964267"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609446"
 ---
 # <a name="aspnetcompatibilityrequirementsattribute"></a>AspNetCompatibilityRequirementsAttribute
 AspNetCompatibilityRequirementsAttribute  
@@ -28,11 +28,11 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
  Die AspNetCompatibilityRequirementsAttribute-Klasse verfügt über die folgende Eigenschaft.  
   
 ### <a name="requirementsmode"></a>RequirementsMode  
- Datentyp: string (Zeichenfolge)  
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, ob der Asp.Net-Kompatibilitätsmodus aktiv ist.  
+ Gibt an, ob ASP.NET-Kompatibilitätsmodus aktiv ist.  
   
 ## <a name="requirements"></a>Anforderungen  
   
@@ -40,6 +40,6 @@ class AspNetCompatibilityRequirementsAttribute : Behavior
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ServiceHostingEnvironment.AspNetCompatibilityEnabled%2A>

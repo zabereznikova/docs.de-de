@@ -2,12 +2,12 @@
 title: Hosten von Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555808"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609459"
 ---
 # <a name="hosting-workflow-services"></a>Hosten von Workflowdiensten
 
@@ -46,7 +46,7 @@ Ein Workflowdienst muss gehostet werden, damit er auf eingehende Meldungen reagi
  Eine xamlx-Datei, die einen Workflow Dienst definiert, muss ein <`Service`> root-Element oder ein root-Element enthalten, das alle von abgeleiteten Typen enthält <xref:System.Workflow.ComponentModel.Activity> . Wenn Sie die Visual Studio-Aktivitäts Vorlage verwenden, wird eine xamlx-Datei erstellt. Wenn Sie die WCF-Workflow Dienst Vorlage verwenden, wird eine xamlx-Datei erstellt.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hosten eines Workflowdiensts unter Windows Server AppFabric
- Das Hosten eines Workflowdiensts unter Windows Server App Fabric erfolgt auf dieselbe Weise wie das Hosten unter IIS/WAS. Der einzige Unterschied besteht darin, dass Windows Server App Fabric installiert wird. Windows Server App Fabric stellt Tools bereit, die dem Internetinformationsdienste-Manager sowie PowerShell-Commandlets hinzugefügt werden. Diese Tools vereinfachen das Bereitstellen, Verwalten und Nachverfolgen von Workflowdiensten und WCF-Diensten.
+ Das Hosten eines Workflowdiensts unter Windows Server App Fabric erfolgt auf dieselbe Weise wie das Hosten unter IIS/WAS. Der einzige Unterschied besteht darin, dass Windows Server App Fabric installiert wird. Windows Server App Fabric bietet Tools, die Internetinformationsdienste Manager und PowerShell-Commandlets hinzugefügt werden. Diese Tools vereinfachen das Bereitstellen, Verwalten und Nachverfolgen von Workflowdiensten und WCF-Diensten.
 
 ## <a name="referencing-custom-activities"></a>Verweisen auf benutzerdefinierte Aktivitäten
  Verweise auf benutzerdefinierte Aktivitäten müssen dem `Assemblies` Abschnitt <> unter <> hinzugefügt werden `System.Web.Compilation` , damit Sie in die Anwendungsdomäne geladen werden und der XAML-Deserialisierer die Typen finden kann. Diese Einstellungen können auf Anwendungsebene oder in der Web.config-Stammdatei vorgenommen werden, falls die Einstellungen für alle Anwendungen auf dem Computer übernommen werden sollen.
