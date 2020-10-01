@@ -3,12 +3,12 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538526"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437991"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -27,6 +27,10 @@ Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Te
 ## <a name="unit-testing"></a>Komponententest
 
 [Komponententests](../testing/index.md) sind eine wichtige Komponente von Continuous Integration und der Bereitstellung hochwertiger Software. Komponententests sollen Sie früh warnen, wenn Sie etwas unterbrechen.
+
+## <a name="collect-diagnostics-in-containers"></a>Sammeln von Diagnosen in Containern
+
+Dieselben Diagnosetools, die in nicht-containerisierten Linux-Umgebungen verwendet werden, können auch verwendet werden, um [Diagnosen in Containern](diagnostics-in-containers.md) zu sammeln. Es sind nur ein paar Nutzungsänderungen erforderlich, um sicherzustellen, dass die Tools in einem Docker-Container funktionieren.
 
 ## <a name="debug-linux-dumps"></a>Debuggen von Linux-Abbildern
 
