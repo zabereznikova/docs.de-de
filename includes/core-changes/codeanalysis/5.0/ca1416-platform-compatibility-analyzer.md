@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721238"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406171"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: Plattformkompatibilität
 
@@ -20,7 +20,7 @@ In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar si
 
 #### <a name="examples"></a>Beispiele
 
-- Die Methode <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> wird nur unter Windows unterstützt. (Sie ist mit `[SupportedOSPlatform("windows")]` versehen.) Der folgende Code erzeugt eine CA1416-Warnung zur Buildzeit, wenn im Projekt `net5.0` [als Ziel angegeben ist](../../../../docs/standard/frameworks.md) (aber nicht `net5.0-windows`). Mögliche Maßnahmen, um diese Warnung zu vermeiden, finden Sie unter [Empfohlene Maßnahme](#recommended-action).
+- Die Methode <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> wird nur unter Windows unterstützt, und sie ist mit `[SupportedOSPlatform("windows")]` versehen. Der folgende Code erzeugt eine CA1416-Warnung zur Buildzeit, wenn im Projekt `net5.0` [als Ziel angegeben ist](../../../../docs/standard/frameworks.md) (aber nicht `net5.0-windows`). Mögliche Maßnahmen, um diese Warnung zu vermeiden, finden Sie unter [Empfohlene Maßnahme](#recommended-action).
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar si
   }
   ```
 
-- Die Methode <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> wird im Browser nicht unterstützt. (Sie ist mit `[UnsupportedOSPlatform("browser")]` versehen.) Der folgende Code erzeugt eine CA1416-Warnung zur Buildzeit, wenn das Projekt das Blazor WebAssembly-SDK (`<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">`) verwendet oder `browser` in der Projektdatei als unterstützte Plattform (`<SupportedPlatform Include="browser" />`) aufgeführt ist.
+- Die Methode <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> wird im Browser nicht unterstützt, und sie ist mit `[UnsupportedOSPlatform("browser")]` versehen. Der folgende Code erzeugt eine CA1416-Warnung zur Buildzeit, wenn das Projekt die Browserplattform unterstützt.
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ In Projekten für Plattformen, für die die verwendeten APIs nicht verfügbar si
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - In Blazor WebAssembly-Projekten und Projekten der Razor-Klassenbibliothek ist die Browserunterstützung automatisch enthalten.
+  > - Wenn Sie den Browser manuell als unterstützte Plattform Ihrem Projekt hinzufügen möchten, fügen Sie den folgenden Eintrag zu Ihrer Projektdatei hinzu:
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>Eingeführt in Version
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-Außerdem können Sie Ihre API als plattformspezifisch kennzeichnen. In diesem Fall müssen dann die Aufrufer die Anforderungen überprüfen. Sie können bestimmte Methoden oder Typen oder eine gesamte Assembly markieren.
+Wenn Sie eine Bibliothek erstellen, können Sie Ihre API als plattformspezifisch markieren. In diesem Fall fällt der Aufwand für die Überprüfung von Anforderungen für Ihre Aufrufer weg. Sie können bestimmte Methoden oder Typen oder eine gesamte Assembly markieren.
 
 ```csharp
 [SupportedOSPlatform("windows")]
