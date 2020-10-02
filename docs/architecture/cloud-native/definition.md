@@ -3,12 +3,12 @@ title: Definition von cloudbasiert
 description: Erfahren Sie mehr über die grundlegenden Säulen, die das Fundament für Native cloudsysteme bereitstellen.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160904"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654691"
 ---
 # <a name="defining-cloud-native"></a>Definieren von Cloud Native
 
@@ -26,7 +26,7 @@ Die Cloud Native Computing Foundation bietet eine [offizielle Definition](https:
 
 Anwendungen sind immer komplexer geworden, und Benutzer fordern mehr und mehr an. Benutzer erwarten schnelle Reaktionsfähigkeit, innovative Features und keine Ausfallzeiten. Leistungsprobleme, wiederkehrende Fehler und die Unfähigkeit, schnell zu verschieben, sind nicht mehr akzeptabel. Sie können problemlos zu ihrem Mitbewerber wechseln.
 
-Cloud Native ist viel über *Geschwindigkeit* und *Agilität*. Geschäftssysteme werden von der Unterstützung von Geschäftsfunktionen bis hin zu einer strategischen Transformation entwickelt und beschleunigen die Geschäfts Geschwindigkeit und das Wachstum. Es ist zwingend erforderlich, dass Sie sofort Ideen in den Markt bringen.
+Cloud Native ist die *Geschwindigkeit* und *Agilität*. Geschäftssysteme verbessern sich von der Unterstützung von Unternehmensfunktionen bis hin zu einer strategischen Transformation, die die Geschäfts Geschwindigkeit und das Wachstum beschleunigt. Es ist zwingend erforderlich, dass Sie sofort Ideen in den Markt bringen.
 
 Im folgenden finden Sie einige Unternehmen, die diese Techniken implementiert haben. Berücksichtigen Sie die Geschwindigkeit, Agilität und Skalierbarkeit, die Sie erreicht haben.
 
