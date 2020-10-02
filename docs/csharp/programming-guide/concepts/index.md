@@ -3,12 +3,12 @@ title: Programmierkonzepte (C#)
 description: Verwenden Sie die Ressourcen in diesem Abschnitt, um mehr über Programmierkonzepte in der Sprache C# zu erfahren, einschließlich der objektorientierten Programmierung.
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 0e11fb3a184cb828be58cd43dde281366ed533d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5594bd93d70a4f9cf0ab6136b011a5cceea7bf3f
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91159331"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609394"
 ---
 # <a name="programming-concepts-c"></a>Programmierkonzepte (C#)
 
@@ -26,7 +26,6 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache C#.
 |[Ausdrucksbaumstrukturen (C#)](./expression-trees/index.md)|Erläutert, wie Sie Ausdrucksbaumstrukturen für die dynamische Änderung von ausführbarem Codes verwenden können.|  
 |[Iteratoren (C#)](./iterators.md)|Beschreibt Iteratoren, die verwendet werden, um Auflistungen zu durchlaufen und um Elemente einzeln zurückzugeben.|  
 |[Language Integrated Query (LINQ) (C#)](./linq/index.md)|Behandelt die leistungsstarken Abfragefunktionen in der Sprachsyntax von C# sowie das Abfragemodell für relationale Datenbanken, XML-Dokumente, Datasets und speicherinterne Auflistungen.|  
-|[Objektorientierte Programmierung (C#)](./object-oriented-programming.md)|Beschreibt allgemeine objektorientierte Konzepte, einschließlich Kapselung, Vererbung und Polymorphie.|  
 |[Reflektion (C#)](./reflection.md)|Erläutert, wie Sie mithilfe von Reflektion Instanzen von Typen dynamisch erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen können. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann.|  
 |[Serialisierung (C#)](./serialization/index.md)|Beschreibt wichtige Konzepte der binären, XML- und SOAP-Serialisierung.|  
   

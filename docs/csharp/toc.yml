@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: Generieren und Nutzen asynchroner Streams
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: Erweitern von Datenfunktionen mithilfe des Musterabgleichs
+    - name: Erstellen von datengesteuerten Algorithmen mit Musterabgleich
       href: tutorials/pattern-matching.md
     - name: Konsolenanwendung
       href: tutorials/console-teleprompter.md
