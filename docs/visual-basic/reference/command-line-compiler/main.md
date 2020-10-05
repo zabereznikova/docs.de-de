@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403160"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065618"
 ---
 # <a name="-main"></a>-main
+
 Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -23,10 +24,12 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
 ```  
   
 ## <a name="arguments"></a>Argumente  
+
  `location`  
  Erforderlich. Der Name der Klasse oder des Moduls mit der `Sub Main`-Prozedur, die beim Programmstart aufgerufen werden soll. Dieser kann als **-main:module** oder **-main:namespace.module** vorliegen.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Option ist geeignet, wenn Sie eine ausführbare Datei oder ein ausführbares Windows-Programm erstellen. Wird die Option **-main** nicht angegeben, sucht der Compiler in allen öffentlichen Klassen und Modulen nach einer gültigen freigegebenen `Sub Main`-Prozedur.  
   
  Informationen zu den verschiedenen Formularen der `Main`-Prozedur finden Sie unter [Main-Prozedur in Visual Basic](../../programming-guide/program-structure/main-procedure.md).  
@@ -46,6 +49,7 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
 4. Ändern Sie die den Wert im Feld **Startobjekt**.  
   
 ## <a name="example"></a>Beispiel  
+
  Mit dem folgenden Code werden `T2.vb` und `T3.vb` kompiliert. Dabei wird angegeben, dass sich die `Sub Main`-Prozedur in der `Test2`-Klasse befindet.  
   
 ```console

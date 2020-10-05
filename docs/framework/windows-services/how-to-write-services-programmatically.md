@@ -9,13 +9,12 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-author: ghogen
-ms.openlocfilehash: 9693e3d387f38319519ab04211d8219fe1e5dda1
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925708"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608399"
 ---
 # <a name="how-to-write-services-programmatically"></a>Vorgehensweise: Programmgesteuertes Schreiben von Diensten
 Wenn Sie nicht die Projektvorlage Windows-Dienst verwenden möchten, können Sie durch Einrichten der Vererbung und anderer Infrastrukturelemente eigene Dienste schreiben. Sobald Sie einen Dienst programmgesteuert erstellen, müssen sie mehrere Schritte ausführen, die andernfalls von der Vorlage behandelt würden:  

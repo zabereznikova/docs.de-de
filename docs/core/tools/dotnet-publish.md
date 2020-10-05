@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
 ms.date: 02/24/2020
-ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537768"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654893"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -145,7 +145,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 - **`-p:PublishReadyToRun=true`**
 
-  Kompiliert Anwendungsassemblys im R2R-Format (ReadyToRun). R2R ist eine Form der AOT-Kompilierung (Ahead-Of-Time). Weitere Informationen finden Sie unter [ReadyToRun-Images](../whats-new/dotnet-core-3-0.md#readytorun-images). Verfügbar seit .NET Core 3.0 SDK.
+  Kompiliert Anwendungsassemblys im R2R-Format (ReadyToRun). R2R ist eine Form der AOT-Kompilierung (Ahead-Of-Time). Weitere Informationen finden Sie unter [ReadyToRun-Images](../deploying/ready-to-run.md). Verfügbar seit .NET Core 3.0 SDK.
 
   Es wird empfohlen, diese Option nicht auf der Befehlszeile, sondern in einem Veröffentlichungsprofil anzugeben. Weitere Informationen finden Sie unter [MSBuild](#msbuild).
 

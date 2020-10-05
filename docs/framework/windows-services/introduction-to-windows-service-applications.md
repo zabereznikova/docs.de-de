@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-author: ghogen
-ms.openlocfilehash: 13bd1f42776ac76a43a83667465ac0ca277e3452
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: b177673d8904a3c40e41cd0f92b1ea7408641186
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925669"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609316"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Einführung in Windows-Dienstanwendungen
 Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstellen von ausführbaren Anwendungen mit langer Laufzeit ermöglicht, die in eigenen Windows-Sitzungen ausgeführt werden. Die Dienste können automatisch gestartet werden, sobald der Computer gestartet wird. Sie können angehalten und neu gestartet werden. Es wird jedoch keine Benutzeroberfläche angezeigt. Dienste eignen sich mit diesen Funktionen ideal zur Verwendung auf einem Server. Sie sind darüber hinaus für alle Fälle geeignet, in denen Funktionen mit langer Laufzeit benötigt werden und Benutzer, die am gleichen Computer arbeiten, nicht gestört werden sollen. Dienste können auch im Sicherheitskontext eines bestimmten Benutzerkontos ausgeführt werden, bei dem es sich nicht um einen angemeldeten Benutzer oder das Standardcomputerkonto handelt. Weitere Informationen zu Diensten und Windows-Sitzungen finden Sie in der Windows SDK-Dokumentation.  
