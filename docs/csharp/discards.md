@@ -2,13 +2,13 @@
 title: 'Ausschüsse: Leitfaden für C#'
 description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es sich um nicht zugewiesene, verwerfbare Variablen handelt, und die Möglichkeiten, wie Ausschüsse verwendet werden können.
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100636"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869318"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
@@ -20,12 +20,14 @@ Sie geben an, dass es sich bei einer Variable um Ausschuss handelt, indem Sie ih
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-In C# 7.0 werden Ausschussvariablen in Zuweisungen in den folgenden Kontexten unterstützt:
+In C# 7.0 und höher werden Ausschussvariablen in Zuweisungen in den folgenden Kontexten unterstützt:
 
 - [Dekonstruieren](deconstruct.md) von Tupeln und Objekten.
 - Musterabgleich mit [is](language-reference/keywords/is.md) und [switch](language-reference/keywords/switch.md).
 - Aufrufe von Methoden mit `out`-Parametern.
 - Ein eigenständiger `_`, wenn sich kein `_` im Bereich befindet.
+
+Ab C# 9.0 können Sie mithilfe von Ausschussvariablen nicht verwendete Eingabeparameter eines Lambdaausdrucks angeben. Weitere Informationen finden Sie im Abschnitt [Eingabeparameter eines Lambdaausdrucks](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) des Artikels [Lambdaausdrücke](language-reference/operators/lambda-expressions.md).
 
 Wenn es sich bei `_` um einen gültigen Ausschuss handelt, wird beim Versuch, seinen Wert abzurufen oder ihn in einer Zuweisungsoperation zu verwenden, ein Compilerfehler (CS0301, „Der Name ‚\_‘ existiert im aktuellen Kontext nicht“) generiert. Das liegt daran, dass `_` kein Wert und möglicherweise nicht einmal ein Speicherort zugewiesen ist. Wenn es sich dabei um eine tatsächliche Variable handeln würde, könnten Sie nicht wie im vorherigen Beispiel mehr als einen Wert verwerfen.
 

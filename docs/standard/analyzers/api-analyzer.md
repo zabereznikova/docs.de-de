@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs u
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598094"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406244"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -85,6 +85,9 @@ Eine globale Unterdrückung ist die empfohlene Methode, um projektübergreifende
 
 ## <a name="discover-cross-platform-issues"></a>Ermitteln plattformübergeifender Probleme
 
+> [!NOTE]
+> In .NET 5.0 wird das [Analysetool für die Plattformkompatibilität](platform-compat-analyzer.md) als Ersatz für dieses Feature eingeführt. Das Analysetool für die Plattformkompatibilität ist im .NET SDK enthalten (es ist nicht erforderlich, es separat zu installieren) und standardmäßig aktiviert.
+
 Ähnlich wie bei den veralteten APIs identifiziert das Analysetool alle APIs, die nicht plattformübergeifend sind. Beispielsweise funktioniert <xref:System.Console.WindowWidth?displayProperty=nameWithType> unter Windows, jedoch nicht unter Linux oder macOS. Die Diagnose-ID wird im Fenster **Fehlerliste** angezeigt. Sie können die Warnung unterdrücken, indem Sie mit der rechten Maustaste darauf klicken und **Schnellaktionen und Refactorings** wählen. Dabei verhält es sich anders als in Fällen veralteter APIs, bei denen Sie zwei Möglichkeiten haben (entweder das veraltete Element weiterhin zu verwenden und Warnungen zu unterdrücken oder es gar nicht zu verwenden). Hier können Sie, wenn Sie Ihren Code nur für bestimmte Plattformen entwickeln, alle Warnungen für alle anderen Plattformen unterdrücken, auf denen Ihr Code später nicht ausgeführt werden soll. Dazu müssen Sie nur Ihre Projektdatei bearbeiten und die Eigenschaft `PlatformCompatIgnore` hinzufügen, die alle zu ignorierenden Plattformen auflistet. Folgende Werte werden akzeptiert: `Linux`, `macOS` und `Windows`.
 
 ```xml
@@ -129,3 +132,4 @@ Der Benutzer entscheidet, wie die Diagnose behandelt werden soll: als Warnungen,
 
 - Blogbeitrag [Introducing API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) (Einführung in das API-Analysetool).
 - Demovideo [API Analyzer](https://youtu.be/eeBEahYXGd0) (API-Analysetool) auf YouTube
+- [Analysetool für die Plattformkompatibilität](platform-compat-analyzer.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 049f0636b1c2c2df33461714aea5a11810ef00ad
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359193"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177292"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
 
@@ -186,6 +186,12 @@ So testen Sie die endgültige Produktversion:
    > ![StringLibrary-Kontextmenü mit Befehl „Erstellen“](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Führen Sie den Komponententest aus, indem Sie auf der Menüleiste **Testen** > **Alle Tests** auswählen. Die Tests sind erfolgreich.
+
+## <a name="debug-tests"></a>Debuggen von Tests
+
+Wenn Sie Visual Studio als IDE verwenden, können Sie den gleichen Prozess wie im [Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio.md) beschrieben zum Debuggen von Code mithilfe Ihres Komponententestprojekts verwenden. Anstatt das App-Projekt *ShowCase* zu starten, klicken Sie erst mit der rechten Maustaste auf das Projekt **StringLibraryTests** und anschließend mit der linken im Kontextmenü auf **Tests debuggen**.
+
+Visual Studio startet das Testprojekt mit angefügtem Debugger. Die Ausführung wird an jedem Haltepunkt angehalten, den Sie dem Testprojekt oder zugrunde liegenden Bibliothekscode hinzugefügt haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 

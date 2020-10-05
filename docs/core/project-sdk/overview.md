@@ -1,39 +1,41 @@
 ---
-title: '.NET Core-Projekt-SDKs: Übersicht'
+title: 'Übersicht: .NET SDKs für Projekte'
 titleSuffix: ''
-description: Erfahren Sie mehr über .NET Core-Projekt-SDKs.
-ms.date: 02/02/2020
+description: Hier erfahren Sie mehr .NET SDKs für Projekte.
+ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 873c06007307c5892c4828f987486b4dd98dc9ae
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187914"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247571"
 ---
-# <a name="net-core-project-sdks"></a>.NET Core-Projekt-SDKs
+# <a name="net-project-sdks"></a>.NET SDKs für Projekte
 
-.NET Core-Projekten ist ein SDK (Software Development Kit) zugeordnet. Jedes *Projekt-SDK* besteht aus einer Reihe von MSBuild-[Zielen](/visualstudio/msbuild/msbuild-targets) und zugehörigen [Tasks](/visualstudio/msbuild/msbuild-tasks), mit denen Code kompiliert, paketiert und veröffentlicht wird. Ein Projekt, das auf ein Projekt-SDK verweist, wird zuweilen auch als *Projekt im SDK-Stil* bezeichnet.
+Projekten für .NET Core und .NET 5.0 und höher ist ein SDK (Software Development Kit) zugeordnet. Jedes *Projekt-SDK* besteht aus einer Reihe von MSBuild-[Zielen](/visualstudio/msbuild/msbuild-targets) und zugehörigen [Tasks](/visualstudio/msbuild/msbuild-tasks), mit denen Code kompiliert, paketiert und veröffentlicht wird. Ein Projekt, das auf ein Projekt-SDK verweist, wird zuweilen auch als *Projekt im SDK-Stil* bezeichnet.
 
 ## <a name="available-sdks"></a>Verfügbare SDKs
 
-Für .NET Core sind die folgenden SDKs verfügbar:
+Folgende SDKs sind verfügbar:
 
-| Id | Beschreibung | Repository|
+| id | Beschreibung | Repository|
 | - | - | - |
-| `Microsoft.NET.Sdk` | Das .NET Core SDK | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Web` | Das .NET Core [Web SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
-| `Microsoft.NET.Sdk.Razor` | Das .NET Core [Razor SDK](/aspnet/core/razor-pages/sdk) |
-| `Microsoft.NET.Sdk.Worker` | Das .NET Core Worker Service SDK |
-| `Microsoft.NET.Sdk.WindowsDesktop` | Das .NET Core WinForms and WPF SDK |
+| `Microsoft.NET.Sdk` | .NET SDK | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Web` | Das .NET [Web SDK](/aspnet/core/razor-pages/web-sdk) | <https://github.com/dotnet/sdk> |
+| `Microsoft.NET.Sdk.Razor` | Das .NET [Razor SDK](/aspnet/core/razor-pages/sdk) |
+| `Microsoft.NET.Sdk.Worker` | Das .NET Worker Service SDK |
+| `Microsoft.NET.Sdk.WindowsDesktop` | Das WinForms und das WPF SDK\* | <https://github.com/dotnet/winforms> und <https://github.com/dotnet/wpf> |
 
-Das .NET Core SDK ist das Basis-SDK für .NET Core. Die anderen SDKs verweisen auf das .NET Core SDK, und Projekten, die den anderen SDKs zugeordnet sind, stehen alle .NET Core SDK-Eigenschaften zur Verfügung. Das Web SDK hängt z. B. sowohl vom .NET Core SDK als auch vom Razor SDK ab.
+Das .NET SDK ist das Basis-SDK für .NET. Die anderen SDKs verweisen auf das .NET SDK, und Projekten, die den anderen SDKs zugeordnet sind, stehen alle .NET SDK-Eigenschaften zur Verfügung. Das Web SDK ist z. B. sowohl vom .NET SDK als auch vom Razor SDK abhängig.
 
 Sie können auch selbst ein SDK erstellen, das über NuGet verteilt werden kann.
 
+\* Ab .NET 5.0 sollten Windows Forms und Windows Presentation Foundation-Projekte (WPF) das .NET SDK (`Microsoft.NET.Sdk`) anstelle von `Microsoft.NET.Sdk.WindowsDesktop` angeben. Wenn Sie für diese Projekte `TargetFramework` auf `net5.0-windows` und `UseWPF` oder `UseWindowsForms` auf `true` festlegen, wird das Windows Desktop SDK automatisch importiert. Wenn Ihr Projekt auf .NET 5.0 oder höher ausgerichtet ist und das `Microsoft.NET.Sdk.WindowsDesktop` SDK angibt, wird die Buildwarnung NETSDK1137 ausgelöst.
+
 ## <a name="project-files"></a>Projektdateien
 
-.NET Core-Projekte basieren auf dem [MSBuild](/visualstudio/msbuild/msbuild)-Format. Projektdateien mit der Erweiterung *.csproj* für C#-Projekte und *.fsproj* für F#-Projekte, weisen das XML-Format auf. Das Stammelement einer MSBuild-Projektdatei ist das Element [Project](/visualstudio/msbuild/project-element-msbuild). Das `Project`-Element besitzt ein optionales `Sdk`-Attribut, das angibt, welches SDK (und welche Version) verwendet werden soll. Um die .NET Core-Tools zu verwenden und Ihren Code zu erstellen, legen Sie das `Sdk`-Attribut auf eine der IDs in der Tabelle [Verfügbare SDKs](#available-sdks) fest.
+.NET-Projekte basieren auf dem [MSBuild](/visualstudio/msbuild/msbuild)-Format. Projektdateien mit der Erweiterung *.csproj* für C#-Projekte und *.fsproj* für F#-Projekte, weisen das XML-Format auf. Das Stammelement einer MSBuild-Projektdatei ist das Element [Project](/visualstudio/msbuild/project-element-msbuild). Das `Project`-Element besitzt ein optionales `Sdk`-Attribut, das angibt, welches SDK (und welche Version) verwendet werden soll. Damit Sie die .NET-Tools verwenden und Ihren Code erstellen können, müssen Sie das Attribut `Sdk` auf eine der IDs in der Tabelle [Available SDKs](#available-sdks) (Verfügbare SDKs) festlegen.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -58,7 +60,7 @@ Das [Sdk](/visualstudio/msbuild/sdk-element-msbuild)-Element auf der obersten Eb
 </Project>
 ```
 
-Indem mit einer dieser Möglichkeiten auf ein SDK verwiesen wird, werden Projektdateien für .NET Core erheblich vereinfacht. Während der Auswertung des Projekts fügt MSBuild implizite Importe in der Projektdatei hinzu: im oberen Bereich für `Sdk.props`, im unteren Bereich für `Sdk.targets`.
+Wenn Sie mit einer dieser Möglichkeiten auf ein SDK verweisen, werden Projektdateien für .NET erheblich vereinfacht. Während der Auswertung des Projekts fügt MSBuild implizite Importe in der Projektdatei hinzu: im oberen Bereich für `Sdk.props`, im unteren Bereich für `Sdk.targets`.
 
 ```xml
 <Project>
@@ -85,7 +87,7 @@ Wenn das Projekt mehrere Zielframeworks umfasst, geben Sie die Ergebnisse des Be
 
 Die standardmäßigen Include- und Excludedateien für Compile-Elemente, eingebettete Ressourcen und `None`-Elemente sind im SDK definiert. Im Gegensatz zu SDK-Projekten, die nicht das .NET Framework als Ziel verwenden, müssen Sie diese Elemente nicht in Ihrer Projektdatei angeben, da die Standardwerte die meisten gängigen Anwendungsfälle abdecken. Dadurch wird die Projektdatei kleiner, verständlicher und kann bei Bedarf manuell bearbeitet werden.
 
-Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipedia.org/wiki/Glob_(programming)) im .NET Core SDK enthalten und ausgeschlossen sind:
+Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipedia.org/wiki/Glob_(programming)) im .NET SDK enthalten bzw. nicht enthalten sind:
 
 | Element           | Glob einschließen                              | Glob ausschließen                                                  | Glob entfernen              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -132,11 +134,11 @@ Zum Beheben der Fehler führen Sie eine der folgenden Aktionen aus:
 
 ## <a name="customize-the-build"></a>Anpassen des Builds
 
-Es gibt verschiedene Möglichkeiten, [einen Build anzupassen](/visualstudio/msbuild/customize-your-build). Sie können eine Eigenschaft überschreiben, indem Sie sie als Argument an einen [msbuild](/visualstudio/msbuild/msbuild-command-line-reference)- oder [dotnet](../tools/index.md)-Befehl übergeben. Sie können die Eigenschaft auch zur Projektdatei oder zu einer *Directory.Build.props*-Datei hinzufügen. Eine Liste mit nützlichen Eigenschaften für .NET Core-Projekte finden Sie unter [MSBuild-Eigenschaften für .NET Core SDK-Projekte](msbuild-props.md).
+Es gibt verschiedene Möglichkeiten, [einen Build anzupassen](/visualstudio/msbuild/customize-your-build). Sie können eine Eigenschaft überschreiben, indem Sie sie als Argument an einen [msbuild](/visualstudio/msbuild/msbuild-command-line-reference)- oder [dotnet](../tools/index.md)-Befehl übergeben. Sie können die Eigenschaft auch zur Projektdatei oder zu einer *Directory.Build.props*-Datei hinzufügen. Eine Liste mit nützlichen Eigenschaften für .NET-Projekte finden Sie in der [MSBuild-Referenz für .NET Core SDK-Projekte](msbuild-props.md).
 
 ### <a name="custom-targets"></a>Benutzerdefinierte Ziele
 
-.NET Core-Projekte können benutzerdefinierte MSBuild-Ziele und -Eigenschaften für Projekte paketieren, die das Paket nutzen. Verwenden Sie diese Art der Erweiterbarkeit, wenn Sie Folgendes vorhaben:
+.NET-Projekte können benutzerdefinierte MSBuild-Ziele und -Eigenschaften für Projekte in Pakete packen, die das Paket nutzen. Verwenden Sie diese Art der Erweiterbarkeit, wenn Sie Folgendes vorhaben:
 
 - Erweitern des Buildprozesses
 - Zugreifen auf Artefakte des Buildprozesses, z. B. generierte Dateien

@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie mit der global.json-Datei d
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062794"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872398"
 ---
 # <a name="globaljson-overview"></a>global.json: Übersicht
 
@@ -81,9 +81,9 @@ In der folgenden Tabelle werden die verschiedenen möglichen Werte für den Schl
 | `minor`       | Verwendet die aktuelle Patchebene für die angegebene Haupt- und Nebenversion sowie die angegebene Featuregruppe. <br> Wenn dieser Wert nicht gefunden wird, wird ein Rollforward auf die nächsthöhere Featuregruppe innerhalb derselben Haupt- bzw. Nebenversion ausgeführt, und es wird die neuste Patchebene für diese Featuregruppe verwendet. <br> Wenn dieser Wert nicht gefunden wird, wird eine Rollforward auf die nächsthöhere Nebenversion und die nächsthöhere Featuregruppe innerhalb derselben Hauptversion ausgeführt, und es wird die neuste Patchebene für diese Featuregruppe verwendet. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
 | `major`       | Verwendet die aktuelle Patchebene für die angegebene Haupt- und Nebenversion sowie die angegebene Featuregruppe. <br> Wenn dieser Wert nicht gefunden wird, wird ein Rollforward auf die nächsthöhere Featuregruppe innerhalb derselben Haupt- bzw. Nebenversion ausgeführt, und es wird die neuste Patchebene für diese Featuregruppe verwendet. <br> Wenn dieser Wert nicht gefunden wird, wird eine Rollforward auf die nächsthöhere Nebenversion und die nächsthöhere Featuregruppe innerhalb derselben Hauptversion ausgeführt, und es wird die neuste Patchebene für diese Featuregruppe verwendet. <br> Wenn dieser Wert nicht gefunden wird, wird eine Rollforward auf die nächsthöhere Haupt-, Nebenversion und Featuregruppe ausgeführt, und es wird die neuste Patchebene für diese Featuregruppe verwendet. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
 | `latestPatch` | Verwendet die neuste installierte Patchebene, die mit der angeforderten Haupt-, Nebenversion und Featuregruppe mit einer Patchebene übereinstimmt und größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
-| `latestFeature` | Verwendet die höchste installierte Featuregruppe und Patchebene, die mit der angeforderten Haupt- und Nebenversion mit einer Featuregruppe übereinstimmt, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
-| `latestMinor` | Verwendet die höchste installierte Nebenversion, Featuregruppe und Patchebene, die mit der angeforderten Hauptversion mit einer Nebenversion übereinstimmt, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
-| `latestMajor` | Verwendet das höchste installierte .NET Core SDK mit einer Hauptversion, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
+| `latestFeature` | Verwendet die höchste installierte Featuregruppe und Patchebene, die mit der angeforderten Haupt- und Nebenversion mit einer Featuregruppe und einer Patchebene übereinstimmt, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
+| `latestMinor` | Verwendet die höchste installierte Nebenversion, Featuregruppe und Patchebene, die mit der angeforderten Hauptversion mit einer Nebenversion, einer Featuregruppe und einer Patchebene übereinstimmt, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
+| `latestMajor` | Verwendet das höchste installierte .NET Core SDK mit einer Version, die größer als der angegebene Wert ist oder diesem entspricht. <br> Wenn dieser Wert nicht gefunden wird, wird ein Fehler ausgelöst. |
 | `disable`     | Es wird kein Rollforward ausgeführt. Es ist eine exakte Übereinstimmung erforderlich. |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdks
@@ -175,7 +175,7 @@ Ab .NET Core 3.0 gelten die folgenden Regeln, wenn ermittelt wird, welche SDK-Ve
 - Wenn eine *global.json*-Datei gefunden wird, in der keine SDK-Version, aber dafür ein `allowPrerelease`-Wert angegeben ist, wird die höchste installierte SDK-Version verwendet (entspricht dem Festlegen von `rollForward` auf `latestMajor`). Ob es sich bei der neusten SDK-Version um ein Release handeln muss oder ob Vorabversionen akzeptiert werden, hängt vom Wert `allowPrerelease` ab. `true` gibt an, dass Vorabversionen berücksichtigt werden, während bei `false` nur Releases berücksichtigt werden.
 - Wenn eine *global.json*-Datei gefunden wird und in dieser eine SDK-Version angegeben ist, geschieht Folgendes:
 
-  - Wenn kein `rollFoward`-Wert festgelegt ist, wird `latestPatch` als `rollForward`-Standardrichtlinie verwendet. Überprüfen Sie andernfalls die einzelnen Werte und deren Verhalten im Abschnitt [rollForward](#rollforward).
+  - Wenn kein `rollForward`-Wert festgelegt ist, wird `latestPatch` als `rollForward`-Standardrichtlinie verwendet. Überprüfen Sie andernfalls die einzelnen Werte und deren Verhalten im Abschnitt [rollForward](#rollforward).
   - Im Abschnitt [allowPrerelease](#allowprerelease) wird beschrieben, ob Vorabversionen berücksichtigt werden, und es wird das Standardverhalten festgelegt, wenn `allowPrerelease` nicht festgelegt ist.
 
 ## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)

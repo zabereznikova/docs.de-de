@@ -2,12 +2,12 @@
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
 ms.date: 08/07/2020
-ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024601"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872454"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -140,7 +140,7 @@ Die Tests der Referenzanwendung (eShopOnContainers) wurden kürzlich neu struktu
 
 3. **Funktions-/Integrationstests von Anwendungen** konzentrieren sich auf die Integration von Microservices und umfassen Testsituationen, die sich auf mehrere Microservices beziehen. Diese Tests befinden sich im **Anwendung.FunctionalTests**-Projekt.
 
-Komponenten- und Integrationstest pro Microservice sind in jedem Microservice in einem Testordner enthalten. Anwendungs- und Auslastungstests befinden sich im Testordner des Projektmappenordners (s. Abbildung 6-25).
+Während Komponenten- und Integrationstests in einem Testordner innerhalb des Microserviceprojekts gespeichert werden, werden Anwendungs-und Auslastungstests wie in Abbildung 6-25 dargestellt separat unter dem Stammordner verwaltet.
 
 ![Screenshot von VS, das auf einige der Testprojekte in der Projektmappe verweist.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 

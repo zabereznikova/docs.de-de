@@ -3,12 +3,12 @@ title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538094"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874713"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -63,6 +63,8 @@ Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichn
 | `identity`        | string        | Ein eindeutiger Namen für diese Vorlage |
 | `name`            | string        | Der Name der Vorlage, der Benutzern angezeigt wird |
 | `shortName`       | string        | Ein Standardkurzname zum Auswählen der Vorlage, die für Umgebungen gilt, in denen der Vorlagenname vom Benutzer angegeben wird und nicht über eine grafische Benutzeroberfläche. Die Kurzform kann z.B. nützlich sein, wenn Sie Vorlagen aus einer Eingabeaufforderung mit CLI-Befehlen verwenden. |
+| `sourceName`       | Zeichenfolge        | Der Name in der Quellstruktur, der durch den vom Benutzer festgelegten Namen ersetzt werden soll. Die Vorlagen-Engine sucht nach den Instanzen von `sourceName` in der Konfigurationsdatei und ersetzt diese in Dateinamen und Dateiinhalten. Der Wert, der ersetzt werden soll, kann mithilfe der Optionen `-n` oder `--name` beim Ausführen einer Vorlage angegeben werden. Wird kein Name angegeben, wird das aktuelle Verzeichnis verwendet.|
+| `preferNameDirectory`       | boolean        | Gibt an, ob ein Verzeichnis für die Vorlage erstellt werden soll, wenn der Name angegeben, aber kein Ausgabeverzeichnis festgelegt ist (anstatt den Inhalt direkt im aktuellen Verzeichnis zu erstellen). Der Standardwert ist „FALSE“.|
 
 Das vollständige Schema für die Datei *template.json* finden Sie im [JSON-Schemaspeicher](http://json.schemastore.org/template). Weitere Informationen zur Datei *template.json* finden Sie im [Wiki zur Erstellung von .NET-Vorlagen](https://github.com/dotnet/templating/wiki).
 

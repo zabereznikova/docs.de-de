@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240843"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247591"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
@@ -109,7 +109,7 @@ Führen Sie `dotnet new classlib -o PluginBase` im Stammverzeichnis des Projekts
 
 Diese `ICommand`-Schnittstelle ist die, die von allen Plug-Ins implementiert wird.
 
-Nachdem die `ICommand`-Schnittstelle definiert wurde, kann das Anwendungsprojekt ein wenig mehr aufgefüllt werden. Fügen Sie einen Verweis vom `AppWithPlugin`-Projekt auf das `PluginBase`-Projekt mit dem Befehl `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` aus dem Stammverzeichnis hinzu.
+Nachdem die `ICommand`-Schnittstelle definiert wurde, kann das Anwendungsprojekt ein wenig mehr aufgefüllt werden. Fügen Sie einen Verweis vom `AppWithPlugin`-Projekt auf das `PluginBase`-Projekt mit dem Befehl `dotnet add AppWithPlugin/AppWithPlugin.csproj reference PluginBase/PluginBase.csproj` aus dem Stammverzeichnis hinzu.
 
 Ersetzen Sie den Kommentar `// Load commands from plugins` durch den folgenden Codeausschnitt, um das Laden von Plug-Ins aus den angegebenen Dateipfaden zu ermöglichen:
 
@@ -261,7 +261,7 @@ Das Element `<Private>false</Private>` ist wichtig. Es weist MSBuild dazu an, di
 
 Ebenso ist das Element `<ExcludeAssets>runtime</ExcludeAssets>` wichtig, wenn `PluginBase` auf andere Paket verweist. Diese Einstellung hat denselben Effekt wie `<Private>false</Private>`, funktioniert aber in Paketverweisen, die im `PluginBase`-Projekt oder einer der zugehörigen Abhängigkeiten enthalten sein können.
 
-Nach Fertigstellung des `HelloPlugin`-Projekts sollten Sie das `AppWithPlugin`-Projekt aktualisieren, um in Erfahrung zu bringen, wo sich das `HelloPlugin` befindet. Fügen Sie `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` als ein Element des `pluginPaths`-Arrays nach dem Kommentar `// Paths to plugins to load` hinzu.
+Nach Fertigstellung des `HelloPlugin`-Projekts sollten Sie das `AppWithPlugin`-Projekt aktualisieren, um in Erfahrung zu bringen, wo sich das `HelloPlugin` befindet. Fügen Sie nach dem Kommentar `// Paths to plugins to load` `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` (dieser Pfad kann je nach .NET Core-Version anders sein) als Element das Array `pluginPaths` hinzu.
 
 ## <a name="plugin-with-library-dependencies"></a>Plug-In mit Bibliotheksabhängigkeiten
 

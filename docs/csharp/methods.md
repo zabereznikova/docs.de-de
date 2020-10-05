@@ -4,12 +4,12 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495537"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874707"
 ---
 # <a name="methods-in-c"></a>Methoden in C#
 
@@ -121,13 +121,14 @@ Durch das Übergeben eines Verweistyp-Parameters können Sie den eigentlichen We
 
 Manchmal ist die Voraussetzung, dass Sie die genaue Anzahl von Argumenten für Ihre Methode angeben, restriktiv. Mithilfe des Schlüsselworts `params` wird angegeben, dass ein Parameter ein Parameterarray ist, und Sie können Ihre Methode mit einer variablen Anzahl von Argumenten aufrufen. Der mit dem Schlüsselwort `params` gekennzeichnete Parameter muss ein Arraytyp sein, und er muss der letzte Parameter in der Parameterliste der Methode sein.
 
-Ein Aufrufer kann anschließend die Methode auf drei verschiedene Arten aufrufen:
+Ein Aufrufer kann anschließend die Methode auf vier verschiedene Arten aufrufen:
 
 - Durch das Übergeben eines Arrays des entsprechenden Typs, der die gewünschte Anzahl von Elementen enthält
 - Durch das Übergeben einer mit Komma getrennten Liste eines einzelnen Arguments des entsprechenden Typs der Methode
+- Durch Übergeben von `null`.
 - Durch keine Bereitstellung eines Arguments für das Parameterarray
 
-Das folgende Beispiel definiert eine Methode namens `GetVowels`, die alle Vokale aus einem Parameterarray zurückgibt. Die `Main`-Methode zeigt alle drei Möglichkeiten, um die Methode aufzurufen. Aufrufer müssen keine Argumente für Parameter angeben, die den Modifizierer `params` enthalten. In diesem Fall ist der Parameter `null`.
+Das folgende Beispiel definiert eine Methode namens `GetVowels`, die alle Vokale aus einem Parameterarray zurückgibt. Die Methode `Main` zeigt alle vier Möglichkeiten zum Aufrufen der Methode. Aufrufer müssen keine Argumente für Parameter angeben, die den Modifizierer `params` enthalten. In diesem Fall ist der Parameter ein leeres Array.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 

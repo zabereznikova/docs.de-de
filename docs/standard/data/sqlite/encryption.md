@@ -1,13 +1,13 @@
 ---
 title: Verschlüsselung
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: Informationen zur Verschlüsselung einer Datenbankdatei
-ms.openlocfilehash: ccdd4b6b8642b3cde1c2667c9ca432a9b0ef21f2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1b33e1510a269aba87caba2cd39faab33791aa55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450483"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203409"
 ---
 # <a name="encryption"></a>Verschlüsselung
 
@@ -37,13 +37,16 @@ Weitere Informationen zum Verwenden einer anderen nativen Bibliothek für die Ve
 
 ## <a name="specify-the-key"></a>Angeben des Schlüssels
 
-Geben Sie den Schlüssel mithilfe Schlüsselworts `Password` für Verbindungszeichenfolgen an, um die Verschlüsselung zu aktivieren. Verwenden Sie <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>, um den Wert per Benutzereingabe hinzuzufügen oder zu aktualisieren und Angriffe durch das Einschleusen von Verbindungszeichenfolgen zu vermeiden.
+Geben Sie den Schlüssel mithilfe Schlüsselworts `Password` für Verbindungszeichenfolgen an, um die Verschlüsselung für eine neue Datenbank zu aktivieren. Verwenden Sie <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>, um den Wert per Benutzereingabe hinzuzufügen oder zu aktualisieren und Angriffe durch das Einschleusen von Verbindungszeichenfolgen zu vermeiden.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
+> [!TIP]
+> Die Methode zum Ver- und Entschlüsseln vorhandener Datenbanken variiert je nach verwendeter Lösung. Beispielsweise müssen Sie für SQLCipher die Funktion `sqlcipher_export()` verwenden. Weitere Informationen finden Sie in der Dokumentation zu Ihrer Lösung.
+
 ## <a name="rekeying-the-database"></a>Neuvergabe von Schlüsseln für Datenbanken
 
-Wenn Sie den Verschlüsselungsschlüssel einer Datenbank ändern möchten, verwenden Sie eine `PRAGMA rekey`-Anweisung. Geben Sie `NULL` an, um die Datenbank zu entschlüsseln.
+Wenn Sie den Schlüssel einer Datenbank ändern möchten, verwenden Sie eine `PRAGMA rekey`-Anweisung.
 
 Allerdings unterstützt SQLite keine Parameter in `PRAGMA`-Anweisungen. Verwenden Sie stattdessen die `quote()`-Funktion, um die Einschleusung von SQL-Befehlen zu verhindern.
 

@@ -2,15 +2,15 @@
 title: Breaking Changes in ASP.NET Core
 titleSuffix: ''
 description: Listet die Breaking Changes in ASP.NET Core auf.
-ms.date: 09/11/2020
+ms.date: 09/18/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a4534367184127604ed53bf1fdafabbf8ff575d1
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539586"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406192"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Breaking Changes in ASP.NET Core
 
@@ -37,6 +37,8 @@ Die folgenden Breaking Changes in ASP.NET Core 3.0, 3.1 und 5.0 sind auf dieser
 - [Azure: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: Unbedeutende Leerzeichen zur Kompilierzeit aus Komponenten entfernt](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: Die Typen JSObjectReference und JSInProcessObjectReference wurden in „internal“ geändert](#blazor-jsobjectreference-and-jsinprocessobjectreference-types-changed-to-internal)
+- [Blazor: Das Feature ProtectedBrowserStorage wurde in das freigegebene Framework verschoben](#blazor-protectedbrowserstorage-feature-moved-to-shared-framework)
 - [Blazor: Schreibgeschützte öffentliche RenderTreeFrame-Felder sind jetzt Eigenschaften.](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor: Das Zielframework von NuGet-Paketen wurde geändert](#blazor-target-framework-of-nuget-packages-changed)
 - [Zwischenspeicherung: CompactOnMemoryPressure-Eigenschaft wurde entfernt](#caching-compactonmemorypressure-property-removed)
@@ -102,6 +104,7 @@ Die folgenden Breaking Changes in ASP.NET Core 3.0, 3.1 und 5.0 sind auf dieser
 - [SPAs: Standard für Konsolenprotokollierungsfallback für SpaServices und NodeServices wurde geändert](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [SPAs: SpaServices und NodeServices wurden als veraltet markiert](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Statische Dateien: CSV-Inhaltstyp in standardkonform geändert](#static-files-csv-content-type-changed-to-standards-compliant)
+- [System.Security.Cryptography-APIs werden in Blazor WebAssembly nicht unterstützt](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly)
 - [Zielframework: .NET Framework nicht unterstützt](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
@@ -123,6 +126,14 @@ Die folgenden Breaking Changes in ASP.NET Core 3.0, 3.1 und 5.0 sind auf dieser
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: JSObjectReference and JSInProcessObjectReference types changed to internal](~/includes/core-changes/aspnetcore/5.0/blazor-jsobjectreference-to-internal.md)]
+
+***
+
+[!INCLUDE[Blazor: ProtectedBrowserStorage feature moved to shared framework](~/includes/core-changes/aspnetcore/5.0/blazor-protectedbrowserstorage-moved.md)]
 
 ***
 
@@ -206,6 +217,10 @@ Die folgenden Breaking Changes in ASP.NET Core 3.0, 3.1 und 5.0 sind auf dieser
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 
 ***
 
