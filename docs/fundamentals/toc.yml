@@ -366,6 +366,8 @@ items:
             items:
               - name: Allgemeine Optionen
                 href: code-analysis/configuration-options.md
+              - name: Konfigurationsdateien
+                href: code-analysis/configuration-files.md
               - name: Regeln für Codequalität
                 items:
                   - name: Regeloptionen
@@ -1026,6 +1028,8 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: Einzeldateibereitstellung und ausführbare Datei
         href: ../core/deploying/single-file.md
+      - name: ReadyToRun
+        href: ../core/deploying/ready-to-run.md
       - name: Kürzen von eigenständigen Bereitstellungen
         items:
           - name: Übersicht und exemplarische Vorgehensweise
@@ -1318,9 +1322,17 @@ items:
       - name: Generischer Host
         href: ../core/extensions/generic-host.md
       - name: Protokollierung
-        href: /aspnet/core/fundamentals/logging
+        items:
+          - name: Übersicht
+            href: ../core/extensions/logging.md
+          - name: Protokollierungsanbieter
+            href: ../core/extensions/logging-providers.md
+          - name: Implementieren eines benutzerdefinierten Protokollierungsanbieters
+            href: ../core/extensions/custom-logging-provider.md
+          - name: High-Performance-SKU
+            href: ../core/extensions/high-performance-logging.md
       - name: Optionenmuster
-        href: /aspnet/core/fundamentals/configuration/options
+        href: ../core/extensions/options.md
   - name: Datenzugriff
     items:
       - name: LINQ

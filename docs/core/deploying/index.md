@@ -2,12 +2,12 @@
 title: Anwendungsveröffentlichung
 description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder frameworkabhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720110"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654671"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
@@ -149,6 +149,34 @@ Veröffentlichung einer eigenständigen App. Es wird eine ausführbare 64-Bit-Da
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>Veröffentlichen mit ReadyToRun-Images
+
+Die Veröffentlichung mit ReadyToRun-Images verbessert die Startzeit der Anwendung zulasten der Erhöhung der Anwendungsgröße. Weitere Informationen zum Veröffentlichen mit ReadyToRun finden Sie unter [ReadyToRun](ready-to-run.md).
+
+### <a name="advantages"></a>Vorteile
+
+- **Verbesserte Startzeit**\
+Die Anwendung benötigt weniger Zeit für die JIT-Ausführung.
+
+### <a name="disadvantages"></a>Nachteile
+
+- **Größere Größe**\
+Die Anwendung ist auf dem Datenträger größer.
+
+### <a name="examples"></a>Beispiele
+
+Veröffentlichung einer eigenständigen ReadyToRun-App. Es wird eine ausführbare 64-Bit-Datei für macOS erstellt.
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+Veröffentlichung einer eigenständigen ReadyToRun-App. Es wird eine ausführbare 64-Bit-Datei für Windows erstellt.
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>Siehe auch

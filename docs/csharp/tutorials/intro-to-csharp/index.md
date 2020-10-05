@@ -3,12 +3,12 @@ title: Einführung in C# – interaktive Tutorials
 description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554566"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609179"
 ---
 # <a name="introduction-to-c"></a>Einführung in C\#
 
@@ -52,7 +52,13 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie die oben aufgeführten Lektion
 
 ## <a name="introduction-to-classes"></a>[Einführung in Klassen](introduction-to-classes.md)
 
-Dieses letzte Tutorial ist nur für die Ausführung auf Ihrem Computer unter Verwendung Ihrer eigenen lokalen Entwicklungsumgebung und von .NET Core verfügbar.
+Dieses Tutorial ist nur für die Ausführung auf Ihrem Computer unter Verwendung Ihrer eigenen lokalen Entwicklungsumgebung und von .NET Core verfügbar.
 Sie erstellen eine Konsolenanwendung und die grundlegenden objektorientierten Funktionen, die Teil der C#-Sprache sind.
 
 Für dieses Tutorial wird vorausgesetzt, dass Sie die Onlineeinführungstutorials abgeschlossen und das [.NET Core SDK](https://dotnet.microsoft.com/download) und [Visual Studio Code](https://code.visualstudio.com/) installiert haben.
+
+## <a name="object-oriented-programming"></a>[Objektorientiertes Programmieren](object-oriented-programming.md)
+
+In diesem Tutorial werden die Konzepte erläutert, die in der objektorientierten Programmierung verwendet werden. Sie lernen die Konzepte der *Abstraktion*, der *Kapselung*, der *Vererbung* und der *Polymorphie* mithilfe von C#-Beispielen kennen.
+
+Für dieses Tutorial wird vorausgesetzt, dass Sie die Onlineeinführungstutorials abgeschlossen und das [.NET Core SDK](https://dotnet.microsoft.com/download) und [Visual Studio Code](https://code.visualstudio.com/) oder [Visual Studio](https://visualstudio.com) auf Ihrem Entwicklungscomputer installiert haben.
