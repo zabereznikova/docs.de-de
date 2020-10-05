@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554448"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712620"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in der .NET Framework
 
@@ -130,8 +130,8 @@ Die Kategorie ".NET CLR-Netzwerk" der Verwaltungskonsole für die Leistung enth�
 |**Hergestellte Verbindungen**|Die kumulierte Gesamtzahl der <xref:System.Net.Sockets.Socket>-Objekte für Streamsockets, die jemals innerhalb der <xref:System.AppDomain> seit Prozessstart verbunden waren.|  
 |**Empfangene Datagramme**|Die kumulierte Gesamtzahl der Datagrammpakete, die von allen <xref:System.Net.Sockets.Socket>-Objekten innerhalb der <xref:System.AppDomain> seit Prozessstart empfangen wurden.|  
 |**Gesendete Datagramme**|Die kumulierte Gesamtzahl der Datagrammpakete, die von allen <xref:System.Net.Sockets.Socket>-Objekten innerhalb der <xref:System.AppDomain> seit Prozessstart gesendet wurden.|  
-|**Durchschnittliche HttpWebRequest-Lebensdauer**|Die durchschnittliche Zeit bis zum Abschluss für alle <xref:System.Net.HttpWebRequest>-Objekte, die im letzten Intervall innerhalb der <xref:System.AppDomain> seit Prozessstart beendet wurden.|  
-|**Durchschnittliche HttpWebRequest-Warteschlangenzeit**|Die durchschnittliche in Warteschlangen verbrachte Zeit für alle <xref:System.Net.HttpWebRequest>-Objekte, die im letzten Intervall innerhalb der <xref:System.AppDomain> seit Prozessstart die Warteschlange verlassen haben.|  
+|**Durchschnittliche httpwebrequests-Lebensdauer**|Die durchschnittliche Zeit bis zum Abschluss für alle <xref:System.Net.HttpWebRequest>-Objekte, die im letzten Intervall innerhalb der <xref:System.AppDomain> seit Prozessstart beendet wurden.|  
+|**Durchschnittliche httpwebrequests-Warteschlangen Zeit**|Die durchschnittliche in Warteschlangen verbrachte Zeit für alle <xref:System.Net.HttpWebRequest>-Objekte, die im letzten Intervall innerhalb der <xref:System.AppDomain> seit Prozessstart die Warteschlange verlassen haben.|  
 |**Erstellte HttpWebRequests/sec**|Die Anzahl der pro Sekunde erstellten <xref:System.Net.HttpWebRequest>-Objekte innerhalb der <xref:System.AppDomain>.|  
 |**In Warteschlange gestellte HttpWebRequests/s**|Die Anzahl der <xref:System.Net.HttpWebRequest>-Objekte, die innerhalb der <xref:System.AppDomain> pro Sekunde der Warteschlange hinzugefügt wurden.|  
 |**Abgebrochene HttpWebRequests/s**|Die Anzahl der <xref:System.Net.HttpWebRequest>-Objekte pro Sekunde, bei denen die Anwendung die <xref:System.Net.HttpWebRequest.Abort%2A>-Methode innerhalb der <xref:System.AppDomain> aufgerufen hat.|  
@@ -169,11 +169,11 @@ Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:
   
  Es gibt zwei Dauerindikatoren, die messen, wie lange <xref:System.Net.HttpWebRequest>-Objekte gebraucht haben, um entweder ihre gesamte Lebensdauer oder nur einen Teil davon zu durchlaufen:  
   
-- **Durchschnittliche HttpWebRequest-Lebensdauer**  
+- **Durchschnittliche httpwebrequests-Lebensdauer**  
   
-- **Durchschnittliche HttpWebRequest-Warteschlangenzeit**  
+- **Durchschnittliche httpwebrequests-Warteschlangen Zeit**  
   
- Für den Indikator **Durchschnittliche HttpWebRequest-Lebensdauer** beginnt die Lebensdauer der meisten <xref:System.Net.HttpWebRequest>-Objekte immer mit der Erstellungszeit des Objekts und dauert bis zu dem Zeitpunkt, an dem der Antwortstream von der Anwendung geschlossen wird. Es gibt zwei ungewöhnliche Fälle:  
+ Für den **Indikator Durchschnittliche httpwebrequests-Lebensdauer** beginnt die Lebensdauer der meisten- <xref:System.Net.HttpWebRequest> Objekte immer mit dem Zeitpunkt, an dem das Objekt erstellt wird, bis zu dem Zeitpunkt, zu dem der Antwortstream von der Anwendung geschlossen wird. Es gibt zwei ungewöhnliche Fälle:  
   
 - Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
   
