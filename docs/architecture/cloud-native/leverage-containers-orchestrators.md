@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155548"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755908"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -31,7 +31,7 @@ Monolithische Anwendungen erfordern eine vollständige Bereitstellung der gesamt
 
 Eine monolithische Anwendung wird vollständig auf einer einzelnen Computer Instanz gehostet, die häufig Hochleistungs Hardware erfordert. Wenn für einen Teil der monolithische Skalierung erforderlich ist, muss eine andere Kopie der gesamten Anwendung auf einem anderen Computer bereitgestellt werden. Bei einer monolithischen Anwendung können Anwendungskomponenten nicht einzeln skaliert werden, sondern alles oder nichts. Das Skalieren von Komponenten, die keine Skalierung erfordern, führt zu ineffizient und kostspieliger Ressourcennutzung
 
-### <a name="environment"></a>Umgebung
+### <a name="environment"></a>Environment
 
 Monolithische Anwendungen werden in der Regel in einer Hostingumgebung mit vorinstallierter Betriebssystem-, Lauf Zeit-und Bibliotheksabhängigkeiten bereitgestellt. Diese Umgebung stimmt möglicherweise nicht mit der Umgebung identisch, auf der die Anwendung entwickelt oder getestet wurde. Inkonsistenzen zwischen Anwendungsumgebungen sind eine häufige Ursache für Probleme bei monolithischen bereit Stellungen.
 
@@ -216,7 +216,7 @@ Das Standardverhalten, wenn die app ausgeführt wird, ist so konfiguriert, dass 
 
 Neben der lokalen Entwicklung bietet [Azure dev Spaces](/azure/dev-spaces/) eine bequeme Möglichkeit für mehrere Entwickler, mit ihren eigenen Kubernetes-Konfigurationen in Azure zu arbeiten. Wie Sie in Abbildung 3-7 sehen können, können Sie die Anwendung auch in Azure dev Spaces ausführen.
 
-Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und **fügen**Sie  >  **docker-Unterstützung**hinzu, wie in Abbildung 3-8 dargestellt.
+Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das **Add**Projekt, und wählen Sie  >  **docker-Unterstützung**hinzufügen aus, wie in Abbildung 3-8 dargestellt.
 
 ![Visual Studio-docker-Unterstützung hinzufügen](./media/visual-studio-add-docker-support.png)
 
