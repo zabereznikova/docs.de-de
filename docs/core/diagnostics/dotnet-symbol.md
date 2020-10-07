@@ -35,7 +35,7 @@ Das globale Tool `dotnet-symbol` lädt Dateien (Symbole, DAC, Module usw.) herun
 
 - **`--microsoft-symbol-server`**
 
-  Hinzufügen des Symbolserverpfads http://msdl.microsoft.com/download/symbols (Standard)
+  Hinzufügen des Symbolserverpfads 'http://msdl.microsoft.com/download/symbols' (Standard)
 
 - **`--server-path <symbol server path>`**
 
