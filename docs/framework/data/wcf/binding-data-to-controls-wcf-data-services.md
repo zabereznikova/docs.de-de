@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152922"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805212"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Binden von Daten an Steuerelemente (WCF Data Services)
 
@@ -36,7 +36,7 @@ Mit WCF Data Services können Sie Steuerelemente wie die Steuer `ComboBox` Eleme
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Binden von Daten an Windows Presentation Foundation-Elemente  
 
- Da die <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, können Sie Objekte in einer WPF (Windows Presentation Foundation)-Anwendung an ein Element oder Steuerelement binden, ähnlich wie beim Verwenden der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse für die Bindung. Weitere Informationen finden Sie unter [Datenbindung (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md). Eine Möglichkeit zum Binden von Datendienstdaten an WPF-Steuerelemente ist das Festlegen der `DataContext`-Eigenschaft des Elements auf die Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse, die das Abfrageergebnis enthält. In diesem Fall verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft, um die Objektquelle für das Steuerelement festzulegen. Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>-Eigenschaft, um anzugeben, welche Eigenschaft des gebundenen Objekts angezeigt werden soll. Wenn Sie ein Element an ein verknüpftes Objekt binden, das von einer Navigationseigenschaft zurückgegeben wird, schließen Sie den Pfad in die für die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft definierte Bindung ein. Der Pfad ist relativ zum Stammobjekt, das von der <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft des übergeordneten Steuerelements festgelegt ist. Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft eines <xref:System.Windows.Controls.StackPanel>-Elements festgelegt, um das übergeordnete Steuerelement an eine <xref:System.Data.Services.Client.DataServiceCollection%601> von Customer-Objekten zu binden:  
+ Da die <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, können Sie Objekte in einer WPF (Windows Presentation Foundation)-Anwendung an ein Element oder Steuerelement binden, ähnlich wie beim Verwenden der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse für die Bindung. Weitere Informationen finden Sie unter [Datenbindung (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview). Eine Möglichkeit zum Binden von Datendienstdaten an WPF-Steuerelemente ist das Festlegen der `DataContext`-Eigenschaft des Elements auf die Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse, die das Abfrageergebnis enthält. In diesem Fall verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft, um die Objektquelle für das Steuerelement festzulegen. Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>-Eigenschaft, um anzugeben, welche Eigenschaft des gebundenen Objekts angezeigt werden soll. Wenn Sie ein Element an ein verknüpftes Objekt binden, das von einer Navigationseigenschaft zurückgegeben wird, schließen Sie den Pfad in die für die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft definierte Bindung ein. Der Pfad ist relativ zum Stammobjekt, das von der <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft des übergeordneten Steuerelements festgelegt ist. Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft eines <xref:System.Windows.Controls.StackPanel>-Elements festgelegt, um das übergeordnete Steuerelement an eine <xref:System.Data.Services.Client.DataServiceCollection%601> von Customer-Objekten zu binden:  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
@@ -120,7 +120,7 @@ Mit WCF Data Services können Sie Steuerelemente wie die Steuer `ComboBox` Eleme
   
  Weitere Informationen finden Sie unter [Aktualisieren des Daten Dienstanbieter](updating-the-data-service-wcf-data-services.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [Vorgehensweise: Hinzufügen eines Datendienstverweises](how-to-add-a-data-service-reference-wcf-data-services.md)
