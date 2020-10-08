@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247617"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654906"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -194,7 +194,7 @@ Jedes dieser Muster kann in jedem Kontext verwendet werden, in dem Muster zuläs
 
 Diese drei neuen Features verbessern die Unterstützung für die native Interop und spezifische Bibliotheken, die eine hohe Leistung erfordern: ganze Zahlen mit nativer Größe, Funktionszeiger und das Auslassen des `localsinit`-Flags.
 
-Ganze Zahlen mit nativer Größe, `nint` und `nuint`, sind ganzzahlige Typen. Sie werden durch die zugrunde liegenden Typen <xref:System.IntPtr?displayProperty=nameWithType> und <xref:System.UIntPtr?displayProperty=nameWithType> ausgedrückt. Der Compiler gibt zusätzliche Konvertierungen und Vorgänge für diese Typen als native ganze Zahlen aus. Ganze Zahlen mit nativer Größe haben keine Konstanten für `MaxValue` oder `MinValue`, mit Ausnahme von `nuint.MinValue`. Hier entspricht `MinValue` dem Wert `0`. Andere Werte können nicht als Konstanten ausgedrückt werden, da sie von der nativen Größe einer ganzen Zahl auf dem Zielcomputer abhängen. Konstantenwerte können für `nint` in folgendem Bereich verwendet werden: [`int.MinValue` ... `int.MaxValue`]. Konstantenwerte können für `nuint` in folgendem Bereich verwendet werden: [`uint.MinValue` ... `uint.MaxValue`]. Der Compiler führt eine konstante Faltung aller unären und binären Operatoren mithilfe der Typen <xref:System.Int32?displayProperty=nameWithType> und <xref:System.UInt32?displayProperty=nameWithType> durch. Wenn das Ergebnis nicht in 32 Bit passt, wird der Vorgang zur Laufzeit ausgeführt und nicht als Konstante angesehen. Ganze Zahlen mit nativer Größe können die Leistung in Szenarios steigern, in denen ganzzahlige Mathematik intensiv angewendet und die schnellstmögliche Leistung benötigt wird.
+Ganze Zahlen mit nativer Größe, `nint` und `nuint`, sind ganzzahlige Typen. Sie werden durch die zugrunde liegenden Typen <xref:System.IntPtr?displayProperty=nameWithType> und <xref:System.UIntPtr?displayProperty=nameWithType> ausgedrückt. Der Compiler gibt zusätzliche Konvertierungen und Vorgänge für diese Typen als native ganze Zahlen aus. Integer mit nativer Größe definieren die Eigenschaften für `MaxValue` oder `MinValue`. Diese Werte können nicht als Kompilierzeitkonstanten ausgedrückt werden, da sie von der nativen Größe einer ganzen Zahl auf dem Zielcomputer abhängen. Diese Werte sind zur Laufzeit schreibgeschützt. Konstantenwerte können für `nint` in folgendem Bereich verwendet werden: [`int.MinValue` ... `int.MaxValue`]. Konstantenwerte können für `nuint` in folgendem Bereich verwendet werden: [`uint.MinValue` ... `uint.MaxValue`]. Der Compiler führt eine konstante Faltung aller unären und binären Operatoren mithilfe der Typen <xref:System.Int32?displayProperty=nameWithType> und <xref:System.UInt32?displayProperty=nameWithType> durch. Wenn das Ergebnis nicht in 32 Bit passt, wird der Vorgang zur Laufzeit ausgeführt und nicht als Konstante angesehen. Ganze Zahlen mit nativer Größe können die Leistung in Szenarios steigern, in denen ganzzahlige Mathematik intensiv angewendet und die schnellstmögliche Leistung benötigt wird.
 
 Funktionszeiger bieten eine einfache Syntax für den Zugriff auf die IL-Opcodes `ldftn` und `calli`. Sie können Funktionszeiger mithilfe der neuen `delegate*`-Syntax deklarieren. Ein `delegate*`-Typ ist ein Typ von Zeiger. Bei einem Aufruf des `delegate*`-Typs wird `calli` verwendet. Dies ist ein Unterschied zu einem Delegaten, der `callvirt` für die `Invoke()`-Methode verwendet. Syntaktisch sind die Aufrufe identisch. Bei Aufrufen von Funktionszeigern wird die `managed`-Aufrufkonvention verwendet. Wenn Sie deklarieren möchten, dass Sie die `unmanaged`-Aufrufkonvention benötigen, müssen Sie nach der `delegate*`-Syntax das Schlüsselwort `unmanaged` einfügen. Andere Aufrufkonventionen können mithilfe von Attributen in der `delegate*`-Deklaration angegeben werden.
 
@@ -204,11 +204,11 @@ Diese Features können die Leistung in einigen Szenarios verbessern. Sie sollten
 
 ## <a name="fit-and-finish-features"></a>Anpassen und Fertigstellen von Features
 
-Viele der anderen Features helfen Ihnen, Code effizienter zu schreiben. In C# 9.0 können Sie den Typ in einem neuen Ausdruck weglassen, wenn der Typ des erstellten Objekts bereits bekannt ist. Die häufigste Anwendungsfall hierfür sind Felddeklarationen:
+Viele der anderen Features helfen Ihnen, Code effizienter zu schreiben. In C# 9.0 können Sie den Typ in einem neuen [`new`-Ausdruck](../language-reference/operators/new-operator.md) weglassen, wenn der Typ des erstellten Objekts bereits bekannt ist. Die häufigste Anwendungsfall hierfür sind Felddeklarationen:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-Der Zieltyp „new“ kann auch verwendet werden, wenn Sie ein neues Objekt erstellen müssen, das als Parameter an eine Methode übergeben werden soll. In diesem Fall können Sie eine `ForecastFor()`-Methode mit der folgenden Signatur implementieren:
+Der Zieltyp `new` kann auch verwendet werden, wenn Sie ein neues Objekt erstellen müssen, das als Argument an eine Methode übergeben werden soll. In diesem Fall können Sie eine `ForecastFor()`-Methode mit der folgenden Signatur implementieren:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ Ein weiterer nützlicher Anwendungsfall für dieses Feature ist die Kombination 
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-Mithilfe eines `return new();`-Ausdrucks können Sie eine Instanz zurückgeben, die vom Standardkonstruktor erstellt wurde.
+Mithilfe einer `return new();`-Anweisung können Sie eine Instanz zurückgeben, die vom Standardkonstruktor erstellt wurde.
 
 Ein ähnliches Feature verbessert die Zieltypauflösung von [bedingten Ausdrücken](../language-reference/operators/conditional-operator.md). Aufgrund dieser Änderung müssen die beiden Ausdrücke keine implizite Konvertierung von einem in den anderen aufweisen, sondern können beide über implizite Konvertierungen in einen Zieltyp verfügen. Diese Änderung wird Ihnen wahrscheinlich nicht auffallen. Was Sie bemerken werden, ist, dass einige bedingte Ausdrücke, die zuvor eine Umwandlung erforderten oder nicht kompiliert werden konnten, jetzt funktionieren.
 

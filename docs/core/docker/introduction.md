@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157790"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654821"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -36,9 +36,9 @@ Containerregistrierungen sind eine Sammlung von Imagerepositorys. Sie können Ih
 
 Docker verfügt über eine öffentliche Registrierung, die auf dem [Docker-Hub](https://hub.docker.com/) gehostet wird, die Sie verwenden können. Images, die sich auf [.NET Core beziehen](https://hub.docker.com/_/microsoft-dotnet-core/), werden auf dem Docker-Hub aufgeführt.
 
-Die Microsoft Container Registry (MCR) ist die offizielle Quelle für von Microsoft bereitgestellte Containerimages. MCR basiert auf Azure CDN, um global replizierte Images bereitzustellen. MCR verfügt jedoch nicht über eine öffentlich zugängliche Website, und der primäre Weg, um mehr über von Microsoft bereitgestellte Containerimages zu erfahren, führt über die [Microsoft Docker-Hubseiten](https://hub.docker.com/_/microsoft-dotnet-core/).
+Der [Microsoft Container Registry-Dienst (MCR)](/azure/container-registry) ist die offizielle Quelle für von Microsoft bereitgestellte Containerimages. MCR basiert auf Azure CDN, um global replizierte Images bereitzustellen. MCR verfügt jedoch nicht über eine öffentlich zugängliche Website, und der primäre Weg, um mehr über von Microsoft bereitgestellte Containerimages zu erfahren, führt über die [Microsoft Docker-Hubseiten](https://hub.docker.com/_/microsoft-dotnet-core/).
 
-### <a name="dockerfile"></a>Docker-Datei
+### <a name="dockerfile"></a>Dockerfile
 
 Eine **Dockerfile-Datei** ist eine Datei, die einen Satz von Anweisungen definiert, mit dem ein Image erstellt wird. Jede Anweisung in der **Dockerfile-Datei** erstellt eine Ebene im Image. Wenn Sie das Image neu erstellen, werden in den meisten Fällen nur die Ebenen neu erstellt, die sich geändert haben. Die **Dockerfile-Datei** kann an andere Benutzer verteilt werden und ermöglicht es ihnen, ein neues Image auf die gleiche Weise zu erstellen, wie Sie es erstellt haben. Dies ermöglicht es Ihnen zwar, die *Anweisungen* zur Erstellung des Images zu verteilen, aber die Hauptmethode zur Verteilung Ihres Images ist die Veröffentlichung in einer Registrierung.
 
@@ -68,7 +68,7 @@ Führen Sie sich wiederholende Computeaufträge mit Containern aus.
 Optimieren, verschieben und modernisieren Sie .NET-Anwendungen in Microservices mithilfe von Windows Server-Containern.
 
 - [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
-Speichern und verwalten Sie Containerimages für alle Typen von Azure-Bereitstellungen.
+Speichern und Verwalten von Containerimages für alle Arten von Azure-Bereitstellungen
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -3,12 +3,12 @@ title: Kompilierungskonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die die Funktionsweise des JIT-Compilers für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762005"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654841"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Laufzeitkonfigurationsoptionen für die Kompilierung
 
@@ -135,7 +135,7 @@ Projektdatei:
 ## <a name="readytorun"></a>ReadyToRun
 
 - Das ReadyToRun-Image konfiguriert, ob die .NET Core-Runtime vorkompilierten Code für Images mit verfügbaren ReadyToRun-Daten verwendet. Wenn Sie diese Option deaktivieren, erzwingt die Runtime eine JIT-Kompilierung für Frameworkcode.
-- Weitere Informationen finden Sie unter [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
+- Weitere Informationen finden Sie auf der Seite zu [Bereit zur Ausführung](../deploying/ready-to-run.md).
 - Wenn Sie diese Einstellung weglassen, verwendet .NET ReadyToRun-Daten, sofern verfügbar. Dies entspricht der Einstellung des Werts auf `1`.
 
 | | Einstellungsname | Werte |

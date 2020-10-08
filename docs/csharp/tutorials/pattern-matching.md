@@ -1,21 +1,21 @@
 ---
-title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
+title: 'Tutorial: Erstellen von Algorithmen mit Musterabgleich'
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
-ms-technology: csharp-whats-new
-ms.custom: mvc
-ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.technology: csharp-whats-new
+ms.custom: contperfq1
+ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156531"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437979"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Verwenden des Musterabgleichs für buildtypgesteuerte und datengesteuerte Algorithmen
 
 Mit C# 7 wurden einfache Funktionen für den Musterabgleich eingeführt. Diese Funktionen werden in C# 8 mit neuen Ausdrücken und Mustern erweitert. Sie können Funktionen schreiben, die sich verhalten, als würden Sie Typen erweitern, die sich möglicherweise in anderen Bibliotheken befinden. Ein weiterer Verwendungszweck für Muster ist die Erstellung von Funktionalität, die Ihre Anwendung erfordert, und die keine grundlegende Funktion des erweiterten Typs ist.
 
-In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 >
@@ -298,7 +298,7 @@ Sie verwenden den Musterabgleich für dieses Feature, aber Sie integrieren es mi
 
 Die folgende Tabelle zeigt die Kombinationen von Eingabewerten und des Multiplikators für die Preisgestaltung für Spitzenzeiten:
 
-| Day        | zeit         | Richtung | Aufschlag/Rabatt |
+| Tag        | Time         | Direction | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Wochentag    | morgendliche Hauptverkehrszeit | stadteinwärts   | x 2,00  |
 | Wochentag    | morgendliche Hauptverkehrszeit | stadtauswärts  | x 1,00  |

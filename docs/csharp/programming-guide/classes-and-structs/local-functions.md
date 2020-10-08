@@ -1,15 +1,15 @@
 ---
 title: Lokale Funktionen – C#-Programmierhandbuch
 description: Lokale Funktionen in C# sind private Methoden, die in einem anderen Member geschachtelt sind und aus dem enthaltenden Member aufgerufen werden können.
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656184"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654919"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
@@ -36,17 +36,19 @@ Lokale Funktionen machen den Zweck Ihres Codes deutlich. Beim Lesen des Codes wi
 Eine lokale Funktion wird definiert als eine geschachtelte Methode in einem enthaltenden Member. Ihre Definition besitzt die folgende Syntax:
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-Lokale Funktionen können die Modifizierer [async](../../language-reference/keywords/async.md) und [unsafe](../../language-reference/keywords/unsafe.md) verwenden.
+Sie können die folgenden Modifizierer mit einer lokalen Funktion verwenden:
 
-Beachten Sie, dass alle im enthaltenden Member definierten lokalen Variablen, einschließlich der Methodenparameter, in der lokalen Funktion zugänglich sind.
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) (in C# 8.0 und höher). Eine statische lokale Funktion kann keine lokalen Variablen oder den Instanzzustand erfassen.
+- [`extern`](../../language-reference/keywords/extern.md) (in C# 9.0 und höher). Eine externe lokale Funktion muss `static` sein.
+
+Alle im enthaltenden Member definierten lokalen Variablen, einschließlich der Methodenparameter, sind in einer nicht statischen lokalen Funktion zugänglich.
 
 Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funktion keinen Memberzugriffsmodifizierer enthalten. Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.
-
-> [!NOTE]
-> Vor C# 8.0 dürfen lokale Funktionen nicht den `static`-Modifizierer enthalten. Die Verwendung des Schlüsselworts `static` generiert den Compilerfehler CS0106 („Der Modifizierer ‘static‘ ist für dieses Element nicht gültig“) oder einen Compilerfehler, der besagt, dass Sie C# 8.0 oder höher verwenden sollten.
 
 Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden.
 

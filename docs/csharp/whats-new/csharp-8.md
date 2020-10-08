@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414889"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654867"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -322,7 +322,7 @@ In beiden Fällen generiert der Compiler den Aufruf von `Dispose()`. Der Compile
 
 ## <a name="static-local-functions"></a>Statische lokale Funktionen
 
-Sie können nun den `static`-Modifikator zu lokalen Funktionen hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt, „Eine statische lokale Funktion kann keine Referenz auf \<variable> enthalten.“
+Sie können nun den `static`-Modifikator zu [lokalen Funktionen](../programming-guide/classes-and-structs/local-functions.md) hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt, „Eine statische lokale Funktion kann keine Referenz auf \<variable> enthalten.“
 
 Betrachten Sie folgenden Code. Die lokale Funktion `LocalFunction` greift auf die Variable `y` zu, die im umschließenden Bereich (die Methode `M`) deklariert ist. Daher kann `LocalFunction` nicht mit dem `static`-Modifikator deklariert werden:
 

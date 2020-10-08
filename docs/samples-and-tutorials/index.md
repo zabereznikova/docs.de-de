@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557189"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805010"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -99,7 +99,7 @@ In diesem Tutorial erfahren Sie, wie Sie eine einfache .NET Core-Anwendung erste
 
 **[Ausführen von ASP.NET-MVC-Anwendungen in Windows-Docker-Containern](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
-Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-App in einem Windows-Docker-Container. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) finden Sie im dotnet/samples-Repository auf GitHub.
+Dieses Tutorial veranschaulicht die Bereitstellung einer vorhandenen ASP.NET-MVC-App in einem Windows-Docker-Container.
 
 ## <a name="view-and-download-samples"></a>Anzeigen und Herunterladen von Beispielen
 

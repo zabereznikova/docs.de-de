@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter W
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: d4755ff94ffc1f678bc078e382e353c203caba87
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d355380e92235e799d366dca02eaf8450f563f33
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812249"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609277"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung unter Windows erstellen.
 

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537495"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654770"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -27,7 +27,13 @@ Weitere Informationen zu diesem Release finden Sie unter [Ankündigung von .NET 
 
 ## <a name="language-improvements-c-80"></a>Sprachverbesserungen in C# 8.0
 
-C# 8.0 ist ebenfalls Teil dieses Releases, welches das Feature mit [Referenztypen, die NULL-Werte zulassen](../../csharp/tutorials/nullable-reference-types.md), [asynchrone Datenströme](../../csharp/tutorials/generate-consume-asynchronous-stream.md) und [weitere Muster](../../csharp/tutorials/pattern-matching.md) enthält. Weitere Informationen zu Features von C# 8.0 finden Sie unter [Neues in C# 8.0](../../csharp/whats-new/csharp-8.md).
+C# 8.0 ist ebenfalls Teil dieses Releases, welches das Feature mit [Referenztypen, die NULL-Werte zulassen](../../csharp/language-reference/builtin-types/nullable-reference-types.md), asynchrone Datenströme und weitere Muster enthält. Weitere Informationen zu Features von C# 8.0 finden Sie unter [Neues in C# 8.0](../../csharp/whats-new/csharp-8.md).
+
+Tutorials im Zusammenhang mit den C# 8.0-Sprachfeatures:
+
+- [Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen](../../csharp/tutorials/nullable-reference-types.md)
+- [Tutorial: Generieren und Nutzen asynchroner Datenströme mit C# 8.0 und .NET Core 3.0](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Tutorial: Verwenden des Musterabgleichs für buildtypgesteuerte und datengesteuerte Algorithmen](../../csharp/tutorials/pattern-matching.md)
 
 Es wurden Spracherweiterungen hinzugefügt, um die folgenden API-Features zu unterstützen:
 
@@ -205,6 +211,8 @@ Ausnahmen für die versionsübergreifende Angabe von Zielen:
 - Windows x64 kann verwendet werden, um Windows ARM32-, ARM64- und x86-Images zu kompilieren.
 - Windows x86 kann verwendet werden, um Windows ARM32-Images zu kompilieren.
 - Linux X64 kann verwendet werden, um Linux ARM32- und -ARM64-Images zu kompilieren.
+
+Weitere Informationen finden Sie auf der Seite zu [Bereit zur Ausführung](../deploying/ready-to-run.md).
 
 ## <a name="runtimesdk"></a>Runtime/SDK
 
