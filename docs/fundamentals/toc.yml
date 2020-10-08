@@ -50,15 +50,11 @@ items:
   - name: "Übersicht (Woche\_1)"
     items:
       - name: Einführung in .NET
-        href: ../standard/tour.md
+        href: ../core/introduction.md
       - name: .NET-Architekturkomponenten
         href: ../standard/components.md
       - name: .NET-Klassenbibliotheken
         href: ../standard/class-libraries.md
-      - name: Einführung in .NET Core
-        href: ../core/introduction.md
-      - name: Übersicht über .NET Core
-        href: ../core/about.md
       - name: .NET Standard-Übersicht
         href: ../standard/net-standard.md
       - name: .NET-Glossar
@@ -157,7 +153,7 @@ items:
         items:
           - name: Übersicht
             href: ../core/tools/index.md
-          - name: Referenz
+          - name: Verweis
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
