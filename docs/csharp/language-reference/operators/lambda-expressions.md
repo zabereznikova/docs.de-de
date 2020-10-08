@@ -1,7 +1,7 @@
 ---
 title: 'C#-Referenz: Lambdaausdrücke'
 description: Erfahren Sie mehr über Lambdaausdrücke. Es gibt Ausdruckslambdas, deren Text ein Ausdruck ist, und Anweisungslambdas, deren Text eine Anweisung ist.
-ms.date: 07/29/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536443"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247708"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambdaausdrücke (C#-Referenz)
 
@@ -50,29 +50,13 @@ Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Select%2A?displayProperty
   
 ## <a name="expression-lambdas"></a>Ausdruckslambdas
 
-Ein Lambdaausdruck mit einem Ausdruck auf der rechten Seite des `=>`-Operators wird als *Ausdruckslambda* bezeichnet. Ausdruckslambdas werden häufig bei der Erstellung von [Ausdrucksbaumstrukturen](../../programming-guide/concepts/expression-trees/index.md) verwendet. Ein Ausdruckslambda gibt das Ergebnis des Ausdrucks zurück und hat folgende grundlegende Form:
+Ein Lambdaausdruck mit einem Ausdruck auf der rechten Seite des `=>`-Operators wird als *Ausdruckslambda* bezeichnet. Ein Ausdruckslambda gibt das Ergebnis des Ausdrucks zurück und hat folgende grundlegende Form:
 
 ```csharp
 (input-parameters) => expression
 ```
 
-Die Klammern sind nur optional, wenn das Lambda über einen Eingabeparameter verfügt; andernfalls sind sie erforderlich.
-
-Geben Sie Eingabeparameter von 0 (null) mit leeren Klammern an:  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-Zwei oder mehr Eingabeparameter sind durch Kommas getrennt und in Klammern eingeschlossen:
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-Für den Compiler ist es manchmal unmöglich, die Eingabetypen abzuleiten. Sie können die Typen wie im folgenden Beispiel dargestellt explizit angeben:
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-Eingabeparametertypen müssen alle entweder explizit oder implizit sein. Andernfalls tritt der Compilerfehler [CS0748](../../misc/cs0748.md) auf.
-
-Der Text eines Ausdruckslambdas kann aus einem Methodenaufruf bestehen. Wenn Sie jedoch Ausdrucksbaumstrukturen erstellen, die außerhalb des Kontexts der .NET Common Language Runtime ausgewertet werden, z.B. in SQL Server, sollten Sie in Lambdaausdrücken keine Methodenaufrufe verwenden. Die Methoden haben außerhalb des Kontexts der .NET Common Language Runtime keine Bedeutung.
+Der Text eines Ausdruckslambdas kann aus einem Methodenaufruf bestehen. Wenn Sie jedoch [Ausdrucksbaumstrukturen](../../programming-guide/concepts/expression-trees/index.md) erstellen, die außerhalb des Kontexts der .NET Common Language Runtime ausgewertet werden, z. B. in SQL Server, sollten Sie in Lambdaausdrücken keine Methodenaufrufe verwenden. Die Methoden haben außerhalb des Kontexts der .NET Common Language Runtime keine Bedeutung.
 
 ## <a name="statement-lambdas"></a>Anweisungslambdas
 
@@ -84,10 +68,39 @@ Ein Anweisungslambda ähnelt einem Ausdruckslambda, allerdings sind die Anweisun
 
 Der Text eines Anweisungslambdas kann aus einer beliebigen Anzahl von Anweisungen bestehen, wobei es sich meistens um höchstens zwei oder drei Anweisungen handelt.
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code language="csharp" interactive="try-dotnet-method" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatementLambda":::
 
 Anweisungslambdas können nicht zum Erstellen von Ausdrucksbaumstrukturen verwendet werden.
-  
+
+## <a name="input-parameters-of-a-lambda-expression"></a>Eingabeparameter eines Lambdaausdrucks
+
+Sie schließen die Eingabeparameter eines Lambdaausdrucks in Klammern ein. Geben Sie Eingabeparameter von 0 (null) mit leeren Klammern an:  
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetZeroParameters":::
+
+Wenn ein Lambdaausdruck nur über einen Eingabeparameter verfügt, sind Klammern optional:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetOneParameter":::
+
+Zwei oder mehr Eingabeparameter werden durch Kommas getrennt:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetTwoParameters":::
+
+Manchmal kann der Compiler die Typen von Eingabeparametern nicht ableiten. Sie können die Typen wie im folgenden Beispiel dargestellt explizit angeben:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetExplicitlyTypedParameters":::
+
+Eingabeparametertypen müssen alle entweder explizit oder implizit sein. Andernfalls tritt der Compilerfehler [CS0748](../../misc/cs0748.md) auf.
+
+Ab C# 9.0 können Sie [discards](../../discards.md) verwenden, um mindestens zwei Eingabeparameter eines Lambdaausdrucks anzugeben, der nicht im Ausdruck verwendet wird:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetDiscards":::
+
+Verwerfungsparameter von Lambdas können nützlich sein, wenn Sie einen Lambdaausdruck zur [Bereitstellung eines Ereignishandlers](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) verwenden.
+
+> [!NOTE]
+> Aus Gründen der Abwärtskompatibilität wird innerhalb eines Lambdaausdrucks `_` als Name des Parameters behandelt, wenn nur ein einzelner Eingabeparameter den Namen `_` aufweist.
+
 ## <a name="async-lambdas"></a>Asynchrone Lambdas
 
 Sie können mit den Schlüsselwörtern [async](../keywords/async.md) und [await](await.md) Lambda-Ausdrücke und Anweisungen, die asynchrone Verarbeitung enthalten, leicht erstellen. Das folgende Windows Forms enthält z. B. einen Ereignishandler, der eine Async-Methode, `ExampleMethodAsync`, aufruft und erwartet.
@@ -218,15 +231,22 @@ Die folgenden Regeln gelten für den Variablenbereich in Lambda-Ausdrücken:
 
 - Ein Lambdaausdruck darf keine [goto](../keywords/goto.md)-, [break](../keywords/break.md)- oder [continue](../keywords/continue.md)-Anweisung enthalten, wenn das Ziel dieser Sprunganweisung außerhalb des Lambdaausdrucksblocks liegt. Eine Sprunganweisung darf auch nicht außerhalb des Lambdaausdrucksblocks sein, wenn das Ziel im Block ist.
 
+Ab C# 9.0 können Sie den `static`-Modifizierer auf einen Lambdaausdruck anwenden, um zu verhindern, dass lokale Variablen oder der Instanzzustand versehentlich durch die Lambdafunktion erfasst werden:
+
+:::code language="csharp" source="snippets/lambda-expressions/GeneralExamples.cs" id="SnippetStatic":::
+
+Ein statischer Lambdaausdruck kann keine lokalen Variablen oder den Instanzzustand aus einschließenden Bereichen erfassen, kann jedoch auf statische Member und Konstantendefinitionen verweisen.
+
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 Weitere Informationen finden Sie im Abschnitt [Anonyme Funktionsausdrücke](~/_csharplang/spec/expressions.md#anonymous-function-expressions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel
+Weitere Informationen zu in C# 9.0 eingeführten Features finden Sie in den folgenden Featurevorschlägen:
 
-[Delegates, Events, and Lambda Expressions](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) (Delegaten, Ereignisse und Lambda-Ausdrücke) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10)) (C# 3.0-Cookbook, 3. Auflage: Mehr als 250 Lösungen für C# 3.0-Programmierer)  
-  
-## <a name="see-also"></a>Siehe auch
+- [Parameter zum Verwerfen von Lambdafunktion](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
+- [Statische anonyme Funktionen](~/_csharplang/proposals/csharp-9.0/static-anonymous-functions.md)
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren und -Ausdrücke](index.md)
