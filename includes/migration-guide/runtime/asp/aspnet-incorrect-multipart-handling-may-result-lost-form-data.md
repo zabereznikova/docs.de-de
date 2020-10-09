@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: ed669364efe9dd8f57d831a3764dd3fc68cd5e05
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: d61a3b3dd855d783d7bff7cb74e5b84969e60860
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497176"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608046"
 ---
 ### <a name="aspnet-incorrect-multipart-handling-may-result-in-lost-form-data"></a>Falsche Behandlung von mehrteiligen Elementen in ASP.NET kann zu Datenverlusten bei Formularen führen.
 
 #### <a name="details"></a>Details
 
-In Anwendungen, die .NET Framework 4.7.2 und frühere Versionen gezielt nutzen, werden mehrteilige Grenzwerte von ASP.Net möglicherweise falsch analysiert, was dazu führt, dass Formulardaten bei der Ausführung einer Anforderung nicht verfügbar sind. Anwendungen, die .NET Framework 4.8 oder höhere Versionen gezielt nutzen, analysieren mehrteilige Daten ordnungsgemäß, sodass Formularwerte bei der Ausführung von Anforderungen verfügbar sind.
+In Anwendungen für .NET Framework 4.7.2 und früher werden mehrteilige Grenzwerte von ASP.NET möglicherweise falsch analysiert, was dazu führt, dass Formulardaten bei der Ausführung einer Anforderung nicht verfügbar sind. Anwendungen, die .NET Framework 4.8 oder höhere Versionen gezielt nutzen, analysieren mehrteilige Daten ordnungsgemäß, sodass Formularwerte bei der Ausführung von Anforderungen verfügbar sind.
 
 #### <a name="suggestion"></a>Vorschlag
 

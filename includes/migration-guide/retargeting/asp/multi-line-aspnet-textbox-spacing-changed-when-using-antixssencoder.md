@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 150b98255b3075a8fe8cad60ce234206b788a5f5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 53860bb867522503c5cb9bd35e25fadd00a116a2
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617188"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609159"
 ---
-### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>Der Abstand für mehrzeilige ASP.NET-Textfelder (TextBox) wurde bei der Verwendung von AntiXSSEncoder geändert
+### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>Geänderter Abstand für mehrzeilige ASP.NET-Textfelder (TextBox) bei Verwendung von AntiXSSEncoder
 
 #### <a name="details"></a>Details
 
