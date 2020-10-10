@@ -8,12 +8,12 @@ metadata:
   ms.topic: hub-page
   ms.prod: azure-dotnet
   ms.date: 08/12/2020
-  ms.openlocfilehash: 041b2124dde5ea5a1d6c04947fe14b1f72f6dacc
-  ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+  ms.openlocfilehash: 0708f2429f9943e14a5d0b843d6c6f0e6b2232bc
+  ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 08/13/2020
-  ms.locfileid: "88187939"
+  ms.lasthandoff: 10/08/2020
+  ms.locfileid: "91844552"
 highlightedContent:
   items:
   - itemType: overview
@@ -115,21 +115,21 @@ conceptualContent:
     - itemType: quickstart
       text: Verwenden von .NET zum Abfragen von Azure PostgreSQL
       url: /azure/postgresql/connect-csharp
+    - itemType: concept
+      text: Verwenden des Repositorymusters mit Azure Cosmos DB
+      url: https://devblogs.microsoft.com/cosmosdb/azure-cosmos-db-repository-net-sdk-v-1-0-4/
+    - itemType: tutorial
+      text: Herstellen einer Verbindung mit und Abfragen einer Azure Database for PostgreSQL-Datenbank
+      url: /azure/postgresql/connect-csharp
     - itemType: learn
-      text: Entwickeln und Konfigurieren einer ASP.NET-Anwendung zum Abfragen einer Azure SQL-Datenbank-Instanz
-      url: /learn/modules/develop-app-that-queries-azure-sql/
+      text: Beibehalten und Abrufen von relationalen Daten mit Entity Framework Core
+      url: /learn/modules/persist-data-ef-core/
     - itemType: learn
-      text: Erstellen einer .NET Core-App für Azure Cosmos DB in Visual Studio Code
+      text: Erstellen einer .NET Core-App mit Azure Cosmos DB in Visual Studio Code
       url: /learn/modules/build-cosmos-db-app-with-vscode/
     - itemType: learn
       text: Speichern von Anwendungsdaten mit Azure Blob Storage
       url: /learn/modules/store-app-data-with-azure-blob-storage/
-    - itemType: learn
-      text: Beibehalten und Abrufen von relationalen Daten mit Entity Framework Core
-      url: /learn/modules/persist-data-ef-core/
-    - itemType: tutorial
-      text: Herstellen einer Verbindung mit und Abfragen einer Azure Database for PostgreSQL-Datenbank
-      url: /azure/postgresql/connect-csharp
   - title: Authentifizierung und Sicherheit
     links:
     - itemType: overview

@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755908"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877573"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -25,13 +25,13 @@ Obwohl Sie den Vorteil der Einfachheit haben, stellen monolithische Architekture
 
 ### <a name="deployment"></a>Bereitstellung
 
-Monolithische Anwendungen erfordern eine vollständige Bereitstellung der gesamten Anwendung, auch wenn nur eine kleine Änderung vorgenommen wurde. Vollständige bereit Stellungen können aufwendig und fehleranfällig sein. Außerdem ist ein Neustart der Anwendung erforderlich, was vorübergehend die Nichtverfügbarkeit beeinträchtigt.
+Außerdem ist ein Neustart der Anwendung erforderlich, was sich vorübergehend auf die Verfügbarkeit auswirken kann, wenn bei der Bereitstellung keine Techniken ohne Ausfallzeit angewendet werden.
 
 ### <a name="scaling"></a>Skalierung
 
 Eine monolithische Anwendung wird vollständig auf einer einzelnen Computer Instanz gehostet, die häufig Hochleistungs Hardware erfordert. Wenn für einen Teil der monolithische Skalierung erforderlich ist, muss eine andere Kopie der gesamten Anwendung auf einem anderen Computer bereitgestellt werden. Bei einer monolithischen Anwendung können Anwendungskomponenten nicht einzeln skaliert werden, sondern alles oder nichts. Das Skalieren von Komponenten, die keine Skalierung erfordern, führt zu ineffizient und kostspieliger Ressourcennutzung
 
-### <a name="environment"></a>Environment
+### <a name="environment"></a>Umgebung
 
 Monolithische Anwendungen werden in der Regel in einer Hostingumgebung mit vorinstallierter Betriebssystem-, Lauf Zeit-und Bibliotheksabhängigkeiten bereitgestellt. Diese Umgebung stimmt möglicherweise nicht mit der Umgebung identisch, auf der die Anwendung entwickelt oder getestet wurde. Inkonsistenzen zwischen Anwendungsumgebungen sind eine häufige Ursache für Probleme bei monolithischen bereit Stellungen.
 
@@ -139,7 +139,7 @@ Organisationen, die eine große Anzahl von Anwendungen bereitstellen und verwalt
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Wann sollten Sie die Verwendung von Containern und orchestratoren vermeiden?
 
-Wenn Sie Ihre Anwendung nach den zwölfstufigen App-Prinzipien nicht erstellen können, sollten Sie die Vermeidung von Containern und orchestratoren in Erwägung gezogen. In diesen Fällen sollten Sie eine VM-basierte Hostingplattform oder möglicherweise ein Hybridsystem in Erwägung gezogen. Damit können Sie jederzeit bestimmte Teile der Funktionalität in separate Container oder sogar Server lose Funktionen aufteilen.
+Wenn Sie Ihre Anwendung nach den Twelve-Factor-App-Prinzipien nicht erstellen können, sollten Sie die Vermeidung von Containern und orchestratoren in Erwägung gezogen. In diesen Fällen sollten Sie eine VM-basierte Hostingplattform oder möglicherweise ein Hybridsystem in Erwägung gezogen. Damit können Sie jederzeit bestimmte Teile der Funktionalität in separate Container oder sogar Server lose Funktionen aufteilen.
 
 ## <a name="development-resources"></a>Entwicklungsressourcen
 
