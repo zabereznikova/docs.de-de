@@ -2,12 +2,12 @@
 title: ML.NET-Metriken
 description: Verstehen Sie die Metriken, die verwendet werden, um die Leistung eines ML.NET-Modells auszuwerten.
 ms.date: 12/17/2019
-ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679507"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804821"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Auswerten des ML.NET-Modells mit Metriken
 
@@ -23,7 +23,7 @@ Beispielsweise wird für die Klassifizierungsaufgabe das Modell ausgewertet, ind
 |-----------|-----------------------|-----------|
 | **Genauigkeit** |  [Accuracy](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) Dies ist der Anteil der korrekten Vorhersagen mit einem Testdataset. Es ist das Verhältnis zwischen der Anzahl der korrekten Vorhersagen und der Gesamtzahl der Eingangsstichproben. Dies funktioniert gut, wenn es zu jeder Klasse eine ähnliche Anzahl von Stichproben gibt.| **Je näher der Wert an 1,00 liegt, desto besser**. Aber ein Wert von genau 1,00 zeigt ein Problem an (häufig: Bezeichnung-Ziel-Verlust, Überanpassung oder Test mit Trainingsdaten). Wenn die Testdaten unausgewogen sind (wobei die meisten Instanzen zu einer der Klassen gehören), das Dataset klein ist oder die Werte auf 0,00 oder 1,00 ansteigen, dann wird die Effektivität eines Klassifikators nicht wirklich erfasst, und Sie müssen zusätzliche Metriken überprüfen. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) oder *Area under the curve* (Fläche unter der Kurve) ist die Messung der Fläche unter der Kurve, die durch Abgleichen der True Positive-Rate mit der False Positive-Rate generiert wird.  |   **Je näher der Wert an 1,00 liegt, desto besser**. Der Wert muss größer als 0,50 sein, damit ein Modell akzeptabel ist. Ein Modell mit einem AUC-Wert von 0,50 oder weniger ist wertlos. |
-| **aucPR** | [aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) oder *Area under a Precision-Recall curve* (Fläche unter der Precision-Recall-Kurve): Ein nützliches Maß für den Erfolg der Vorhersage, wenn die Klassen unausgewogen sind (stark verzerrte Datasets). |  **Je näher der Wert an 1,00 liegt, desto besser**. Hohe Werte nahe 1,00 zeigen, dass der Klassifikator sowohl genaue Ergebnisse liefert (hohe Präzision) als auch einen Großteil aller positiven Ergebnisse liefert (hohe Wiedererkennung). |
+| **aucPR** | aucPR oder *Area under a Precision-Recall curve* (Fläche unter der Precision-Recall-Kurve): Ein nützliches Maß für den Erfolg der Vorhersage, wenn die Klassen unausgewogen sind (stark verzerrte Datasets). |  **Je näher der Wert an 1,00 liegt, desto besser**. Hohe Werte nahe 1,00 zeigen, dass der Klassifikator sowohl genaue Ergebnisse liefert (hohe Präzision) als auch einen Großteil aller positiven Ergebnisse liefert (hohe Wiedererkennung). |
 | **F1-score** | [F1-score](https://en.wikipedia.org/wiki/F1_score) auch bezeichnet als *„balanced F-score“ oder F-Maß*. Dies ist das harmonische Mittel zwischen Präzision und Wiedererkennung. F1 Score ist hilfreich, wenn das Verhältnis zwischen Präzision und Wiedererkennung ausgeglichen sein soll.| **Je näher der Wert an 1,00 liegt, desto besser**.  Ein F1-Score erreicht seinen besten Wert bei 1,00 und den schlechtesten bei 0,00. Daran erkennen Sie, wie präzise Ihr Klassifizierer ist. |
 
 Weitere Informationen zu binären Klassifizierungsmetriken finden Sie in den folgenden Artikeln:

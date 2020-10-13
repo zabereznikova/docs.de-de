@@ -1,23 +1,21 @@
 ---
 title: Verwenden von Broadcastvariablen in .NET für Apache Spark
 description: Erfahren Sie, wie Sie Broadcastvariablen in .NET für Apache Spark-Anwendung verwenden.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3cf2215f59ce28878f44138386c01597ec852905
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617855"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955022"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Verwenden von Broadcastvariablen in .NET für Apache Spark
 
 In diesem Artikel erfahren Sie, wie Sie Broadcastvariablen in .NET für Apache Spark verwenden. [Broadcastvariablen in Apache Spark](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) sind Mechanismen für die Freigabe von Variablen über Executors hinweg, die schreibgeschützt sein sollen. Mithilfe von Broadcastvariablen können Sie eine schreibgeschützte Variable auf jedem Computer zwischenspeichern, anstatt eine Kopie davon mit Tasks zu versenden. Sie können Broadcastvariablen verwenden, um jeden Knoten effizient mit einer Kopie eines großen Eingabedatasets zu versehen.
 
 Da Daten nur einmal gesendet werden, haben Broadcastvariablen Vorteile gegenüber lokalen Variablen, die mit jedem Task an die Executors ausgeliefert werden. Weitere Informationen zu Broadcastvariablen und deren Verwendung finden Sie in der [offiziellen Dokumentation zu Broadcastvariablen](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables).
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>Erstellen von Broadcastvariablen
 

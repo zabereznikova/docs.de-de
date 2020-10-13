@@ -3,12 +3,12 @@ title: Verarbeiten asynchroner Aufgaben nach Abschluss
 description: In diesem Beispiel wird gezeigt, wie Sie mit Task.WhenAny in C# mehrere Tasks starten und deren Ergebnisse jeweils nach Abschluss der Durchführung verarbeiten, anstatt sie in der Reihenfolge zu verarbeiten, in der sie gestartet wurden.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557306"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805238"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Verarbeiten asynchroner Aufgaben nach Abschluss (C#)
 
@@ -77,7 +77,7 @@ Der Haupteinstiegspunkt in die Konsolenanwendung ist die `Main`-Methode. Ersetze
 static Task Main() => SumPageSizesAsync();
 ```
 
-Die aktualisierte `Main`-Methode wird jetzt als [Async main](../../../whats-new/csharp-7-1.md#async-main)-Methode betrachtet, die einen asynchronen Einstiegspunkt in die ausführbare Datei ermöglicht. Sie wird mit einem Aufruf von `SumPageSizesAsync` angegeben.
+Die aktualisierte `Main`-Methode wird jetzt als [Async main](../../../whats-new/csharp-7.md#async-main)-Methode betrachtet, die einen asynchronen Einstiegspunkt in die ausführbare Datei ermöglicht. Sie wird mit einem Aufruf von `SumPageSizesAsync` angegeben.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Erstellen der SumPageSizesAsync-Methode
 

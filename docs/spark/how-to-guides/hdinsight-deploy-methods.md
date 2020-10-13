@@ -1,21 +1,19 @@
 ---
 title: Senden eines .NET für Apache Spark-Auftrags an Azure HDInsight
 description: Hier erfahren Sie, wie Sie einen .NET für Apache Spark-Auftrag mit spark-submit und Apache Livy an Azure HDInsight senden.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cb99cd8028d504924d2dd69910efed0065d0a2e2
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557163"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954918"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Senden eines .NET für Apache Spark-Auftrags an Azure HDInsight
 
 Es gibt zwei Möglichkeiten, einen .NET für Apache Spark-Auftrag für HDInsight bereitzustellen: `spark-submit` und Apache Livy.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="deploy-using-spark-submit"></a>Bereitstellen mit spark-submit
 

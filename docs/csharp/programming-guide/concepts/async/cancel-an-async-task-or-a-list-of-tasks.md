@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie, wie Sie Abbruchtoken verwenden, um 
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 84cd1bb413d20b6c13be8415c13c72b57873b1cf
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 79c9db53674182489c89d657786bf39e8bb44b21
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654704"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805251"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Abbrechen einer Aufgabenliste (C#)
 
@@ -115,7 +115,7 @@ static async Task Main()
 }
 ```
 
-Die aktualisierte `Main`-Methode wird jetzt als [Async main](../../../whats-new/csharp-7-1.md#async-main)-Methode betrachtet, die einen asynchronen Einstiegspunkt in die ausführbare Datei ermöglicht. Sie schreibt einige Anweisungsnachrichten an die Konsole und deklariert dann eine <xref:System.Threading.Tasks.Task>-Instanz namens `cancelTask`, die Tastatureingaben in die Konsole liest. Wenn die <kbd>EINGABETASTE</kbd> gedrückt wird, wird ein Aufruf an <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> ausgeführt. Dies signalisiert den Abbruch. Dann wird eine `sumPageSizesTask`-Variable der `SumPageSizesAsync`-Methode zugewiesen. Beide Aufgaben werden dann an <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> übergeben, was fortgesetzt wird, wenn eine der beiden Aufgaben abgeschlossen wird.
+Die aktualisierte `Main`-Methode wird jetzt als [Async main](../../../whats-new/csharp-7.md#async-main)-Methode betrachtet, die einen asynchronen Einstiegspunkt in die ausführbare Datei ermöglicht. Sie schreibt einige Anweisungsnachrichten an die Konsole und deklariert dann eine <xref:System.Threading.Tasks.Task>-Instanz namens `cancelTask`, die Tastatureingaben in die Konsole liest. Wenn die <kbd>EINGABETASTE</kbd> gedrückt wird, wird ein Aufruf an <xref:System.Threading.CancellationTokenSource.Cancel?displayProperty=nameWithType> ausgeführt. Dies signalisiert den Abbruch. Dann wird eine `sumPageSizesTask`-Variable der `SumPageSizesAsync`-Methode zugewiesen. Beide Aufgaben werden dann an <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])?displayProperty=nameWithType> übergeben, was fortgesetzt wird, wenn eine der beiden Aufgaben abgeschlossen wird.
 
 ## <a name="create-the-asynchronous-sum-page-sizes-method"></a>Erstellen der SumPageSizesAsync-Methode
 

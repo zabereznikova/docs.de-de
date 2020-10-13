@@ -4,12 +4,12 @@ description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core un
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656982"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804893"
 ---
 # <a name="console-app"></a>Konsolen-App
 
@@ -187,7 +187,7 @@ ShowTeleprompter().Wait();
 Hier führt der Code in `Main` einen asynchronen Wartevorgang aus. Sie sollten nach Möglichkeit anstelle eines synchronen Wartevorgangs immer den `await`-Operator verwenden. In der `Main`-Methode einer Konsolenanwendung kann der `await`-Operator jedoch nicht verwendet werden. Dies würde dazu führen, dass die Anwendung beendet wird, bevor alle Tasks abgeschlossen sind.
 
 > [!NOTE]
-> Wenn Sie C# 7.1 oder höher verwenden, können Sie Konsolenanwendungen mit der [`async` `Main`-Methode](../whats-new/csharp-7-1.md#async-main) erstellen.
+> Wenn Sie C# 7.1 oder höher verwenden, können Sie Konsolenanwendungen mit der [`async` `Main`-Methode](../whats-new/csharp-7.md#async-main) erstellen.
 
 Als Nächstes müssen Sie die zweite asynchrone Methode schreiben, um Inhalte aus der Konsole zu lesen und auf die Tasteneingaben „<“ (kleiner als) und „>“ (größer als) sowie „X“ und „x“ zu überwachen. Dies ist die Methode, die Sie für diesen Task hinzufügen:
 
