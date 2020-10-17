@@ -133,7 +133,7 @@ items:
             href: ../core/tutorials/index.md
   - name: Neues
     items:
-      - name: "Entwicklung von .NET Core zu .NET\_5"
+      - name: "Neuigkeiten in .NET\_5"
         href: ../core/dotnet-five.md
       - name: Neuerungen in .NET Core 3.1
         href: ../core/whats-new/dotnet-core-3-1.md
@@ -155,13 +155,19 @@ items:
             href: ../core/sdk.md
           - name: Fehlermeldungen
             items:
+              - name: NETSDK1005 und NETSDK1047
+                href: ../core/tools/sdk-errors/netsdk1005.md
+              - name: NETSDK1059
+                href: ../core/tools/sdk-errors/netsdk1059.md
+              - name: NETSDK1073
+                href: ../core/tools/sdk-errors/netsdk1073.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: .NET Core-CLI
         items:
           - name: Übersicht
             href: ../core/tools/index.md
-          - name: Verweis
+          - name: Referenz
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -199,6 +205,8 @@ items:
                     href: ../core/tools/dotnet-nuget-remove-source.md
                   - name: dotnet nuget update source
                     href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet nuget verify
+                    href: ../core/tools/dotnet-nuget-verify.md
               - name: dotnet pack
                 href: ../core/tools/dotnet-pack.md
               - name: dotnet publish
@@ -954,7 +962,9 @@ items:
                         href: code-analysis/style-rules/language-rules.md
                       - name: this- und Me-Einstellungen
                         items:
-                          - name: IDE0003 und IDE0009
+                          - name: IDE0003
+                            href: code-analysis/style-rules/ide0003-ide0009.md
+                          - name: IDE0009
                             href: code-analysis/style-rules/ide0003-ide0009.md
                       - name: Verwenden von Sprachschlüsselwörtern für Typen
                         items:
@@ -972,6 +982,8 @@ items:
                             href: code-analysis/style-rules/ide0044.md
                           - name: IDE0062
                             href: code-analysis/style-rules/ide0062.md
+                          - name: IDE0064
+                            href: code-analysis/style-rules/ide0064.md
                       - name: Einstellungen für Klammern
                         items:
                           - name: IDE0047 und IDE0048
@@ -980,6 +992,8 @@ items:
                         items:
                           - name: Übersicht
                             href: code-analysis/style-rules/expression-level-preferences.md
+                          - name: IDE0010
+                            href: code-analysis/style-rules/ide0010.md
                           - name: IDE0017
                             href: code-analysis/style-rules/ide0017.md
                           - name: IDE0018
@@ -1000,16 +1014,28 @@ items:
                             href: code-analysis/style-rules/ide0045.md
                           - name: IDE0046
                             href: code-analysis/style-rules/ide0046.md
+                          - name: IDE0050
+                            href: code-analysis/style-rules/ide0050.md
                           - name: IDE0054
-                            href: code-analysis/style-rules/ide0054.md
+                            href: code-analysis/style-rules/ide0054-ide0074.md
                           - name: IDE0056
                             href: code-analysis/style-rules/ide0056.md
                           - name: IDE0057
                             href: code-analysis/style-rules/ide0057.md
-                          - name: IDE0058
-                            href: code-analysis/style-rules/ide0058.md
-                          - name: IDE0059
-                            href: code-analysis/style-rules/ide0059.md
+                          - name: IDE0070
+                            href: code-analysis/style-rules/ide0070.md
+                          - name: IDE0071
+                            href: code-analysis/style-rules/ide0071.md
+                          - name: IDE0072
+                            href: code-analysis/style-rules/ide0072.md
+                          - name: IDE0074
+                            href: code-analysis/style-rules/ide0054-ide0074.md
+                          - name: IDE0075
+                            href: code-analysis/style-rules/ide0075.md
+                          - name: IDE0082
+                            href: code-analysis/style-rules/ide0082.md
+                          - name: IDE0090
+                            href: code-analysis/style-rules/ide0090.md
                       - name: Einstellungen für die NULL-Überprüfung
                         items:
                           - name: Übersicht
@@ -1017,20 +1043,20 @@ items:
                           - name: IDE0016
                             href: code-analysis/style-rules/ide0016.md
                           - name: IDE0029
-                            href: code-analysis/style-rules/ide0029.md
+                            href: code-analysis/style-rules/ide0029-ide0030.md
+                          - name: IDE0030
+                            href: code-analysis/style-rules/ide0029-ide0030.md
                           - name: IDE0031
                             href: code-analysis/style-rules/ide0031.md
                           - name: IDE0041
                             href: code-analysis/style-rules/ide0041.md
                           - name: IDE1005
                             href: code-analysis/style-rules/ide1005.md
-                      - name: Parametereinstellungen
-                        items:
-                          - name: IDE0060
-                            href: code-analysis/style-rules/ide0060.md
                       - name: var-Einstellungen
                         items:
-                          - name: IDE0007 und IDE0008
+                          - name: IDE0007
+                            href: code-analysis/style-rules/ide0007-ide0008.md
+                          - name: IDE0008
                             href: code-analysis/style-rules/ide0007-ide0008.md
                       - name: Ausdruckskörpermember
                         items:
@@ -1040,7 +1066,9 @@ items:
                             href: code-analysis/style-rules/ide0021.md
                           - name: IDE0022
                             href: code-analysis/style-rules/ide0022.md
-                          - name: IDE0023 und IDE0024
+                          - name: IDE0023
+                            href: code-analysis/style-rules/ide0023-ide0024.md
+                          - name: IDE0024
                             href: code-analysis/style-rules/ide0023-ide0024.md
                           - name: IDE0025
                             href: code-analysis/style-rules/ide0025.md
@@ -1059,9 +1087,17 @@ items:
                           - name: IDE0019
                             href: code-analysis/style-rules/ide0019.md
                           - name: IDE0020
-                            href: code-analysis/style-rules/ide0020.md
+                            href: code-analysis/style-rules/ide0020-ide0038.md
+                          - name: IDE0038
+                            href: code-analysis/style-rules/ide0020-ide0038.md
                           - name: IDE0066
                             href: code-analysis/style-rules/ide0066.md
+                          - name: IDE0078
+                            href: code-analysis/style-rules/ide0078.md
+                          - name: IDE0083
+                            href: code-analysis/style-rules/ide0083.md
+                          - name: IDE0084
+                            href: code-analysis/style-rules/ide0084.md
                       - name: Codeblockeinstellungen
                         items:
                           - name: Übersicht
@@ -1074,6 +1110,48 @@ items:
                         items:
                           - name: IDE0065
                             href: code-analysis/style-rules/ide0065.md
+                      - name: Dateiheadereinstellungen
+                        items:
+                          - name: IDE0073
+                            href: code-analysis/style-rules/ide0073.md
+                  - name: Nicht benötigte Coderegeln
+                    items:
+                      - name: Übersicht
+                        href: code-analysis/style-rules/unnecessary-code-rules.md
+                      - name: IDE0001
+                        href: code-analysis/style-rules/ide0001.md
+                      - name: IDE0002
+                        href: code-analysis/style-rules/ide0002.md
+                      - name: IDE0004
+                        href: code-analysis/style-rules/ide0004.md
+                      - name: IDE0005
+                        href: code-analysis/style-rules/ide0005.md
+                      - name: IDE0035
+                        href: code-analysis/style-rules/ide0035.md
+                      - name: IDE0051
+                        href: code-analysis/style-rules/ide0051.md
+                      - name: IDE0052
+                        href: code-analysis/style-rules/ide0052.md
+                      - name: IDE0058
+                        href: code-analysis/style-rules/ide0058.md
+                      - name: IDE0059
+                        href: code-analysis/style-rules/ide0059.md
+                      - name: IDE0060
+                        href: code-analysis/style-rules/ide0060.md
+                      - name: IDE0079
+                        href: code-analysis/style-rules/ide0079.md
+                      - name: IDE0080
+                        href: code-analysis/style-rules/ide0080.md
+                      - name: IDE0081
+                        href: code-analysis/style-rules/ide0081.md
+                      - name: IDE0100
+                        href: code-analysis/style-rules/ide0100.md
+                  - name: Verschiedene Regeln
+                    items:
+                      - name: IDE0076
+                        href: code-analysis/style-rules/ide0076.md
+                      - name: IDE0077
+                        href: code-analysis/style-rules/ide0077.md
                   - name: Formatierungsregeln
                     items:
                       - name: Übersicht
@@ -1425,44 +1503,42 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Auswahl zwischen anonymen Typen und Tupeltypen
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-  - name: Microsoft-Erweiterungen
+  - name: Dependency Injection
     items:
-      - name: Konfiguration
-        items:
-          - name: Übersicht
-            href: ../core/extensions/configuration.md
-            displayName: 'configuration,config,configuration sources,config sources'
-          - name: Konfigurationsanbieter
-            href: ../core/extensions/configuration-providers.md
-            displayName: 'configuration providers,config providers'
-          - name: Implementieren eines benutzerdefinierten Konfigurationsanbieters
-            href: ../core/extensions/custom-configuration-provider.md
-            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: Dependency Injection
-        items:
-          - name: Übersicht
-            href: ../core/extensions/dependency-injection.md
-            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-          - name: Verwenden der Dependency Injection
-            href: ../core/extensions/dependency-injection-usage.md
-            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-          - name: Richtlinien für die Dependency Injection
-            href: ../core/extensions/dependency-injection-guidelines.md
-            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Generischer Host
-        href: ../core/extensions/generic-host.md
-      - name: Protokollierung
-        items:
-          - name: Übersicht
-            href: ../core/extensions/logging.md
-          - name: Protokollierungsanbieter
-            href: ../core/extensions/logging-providers.md
-          - name: Implementieren eines benutzerdefinierten Protokollierungsanbieters
-            href: ../core/extensions/custom-logging-provider.md
-          - name: High-Performance-SKU
-            href: ../core/extensions/high-performance-logging.md
+      - name: Übersicht
+        href: ../core/extensions/dependency-injection.md
+        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Verwenden der Dependency Injection
+        href: ../core/extensions/dependency-injection-usage.md
+        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+      - name: Richtlinien für die Dependency Injection
+        href: ../core/extensions/dependency-injection-guidelines.md
+        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+  - name: Konfiguration
+    items:
+      - name: Übersicht
+        href: ../core/extensions/configuration.md
+        displayName: 'configuration,config,configuration sources,config sources'
+      - name: Konfigurationsanbieter
+        href: ../core/extensions/configuration-providers.md
+        displayName: 'configuration providers,config providers'
+      - name: Implementieren eines benutzerdefinierten Konfigurationsanbieters
+        href: ../core/extensions/custom-configuration-provider.md
+        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: Optionenmuster
         href: ../core/extensions/options.md
+  - name: Protokollierung
+    items:
+      - name: Übersicht
+        href: ../core/extensions/logging.md
+      - name: Protokollierungsanbieter
+        href: ../core/extensions/logging-providers.md
+      - name: Implementieren eines benutzerdefinierten Protokollierungsanbieters
+        href: ../core/extensions/custom-logging-provider.md
+      - name: High-Performance-SKU
+        href: ../core/extensions/high-performance-logging.md
+  - name: HostBuilder (generischer Host)
+    href: ../core/extensions/generic-host.md
   - name: Datenzugriff
     items:
       - name: LINQ
@@ -1471,6 +1547,77 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
+  - name: Datei- und Datenstrom-E/A
+    items:
+      - name: Übersicht
+        href: ../standard/io/index.md
+      - name: Formate von Dateipfaden unter Windows-Systemen
+        href: ../standard/io/file-path-formats.md
+      - name: Allgemeine E/A-Aufgaben
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: 'Vorgehensweise: Kopieren von Verzeichnissen'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: 'Vorgehensweise: Auflisten von Verzeichnissen und Dateien'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: 'Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: 'Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: 'Vorgehensweise: Schreiben von Text in eine Datei'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: 'Vorgehensweise: Lesen von Text aus einer Datei'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: 'Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: 'Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: 'Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: 'Vorgehensweise: Komprimieren und Extrahieren von Dateien'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: Erstellen von Streams
+            href: ../standard/io/composing-streams.md
+          - name: 'Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: Asynchrone Datei-E/A
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: Verarbeiten von E/A-Fehlern
+        href: ../standard/io/handling-io-errors.md
+      - name: Isolierter Speicher
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: Isolationstypen
+            href: ../standard/io/types-of-isolation.md
+          - name: 'Vorgehensweise: Erhalten von Speichern für isolierten Speicher'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: 'Vorgehensweise: Auflisten von Speichern für isolierten Speicher'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: 'Vorgehensweise: Löschen von Speichern im isolierten Speicher'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: 'Vorgehensweise: Vorhersehen von Speicherengpässen bei isoliertem Speicher'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: 'Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: 'Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: 'Vorgehensweise: Lesen von bzw. Schreiben in Dateien im isolierten Speicher'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: 'Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: Pipes
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: 'Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: 'Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: Pipelines
+        href: ../standard/io/pipelines.md
+      - name: Arbeiten mit Puffern
+        href: ../standard/io/buffers.md
+      - name: Im Speicher abgebildete Dateien
+        href: ../standard/io/memory-mapped-files.md
   - name: 'Parallelverarbeitung, Parallelität und Async'
     items:
       - name: Übersicht
@@ -1720,77 +1867,6 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: XML Schema Definition-Tool (Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: Datei- und Datenstrom-E/A
-    items:
-      - name: Übersicht
-        href: ../standard/io/index.md
-      - name: Formate von Dateipfaden unter Windows-Systemen
-        href: ../standard/io/file-path-formats.md
-      - name: Allgemeine E/A-Aufgaben
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: 'Vorgehensweise: Kopieren von Verzeichnissen'
-            href: ../standard/io/how-to-copy-directories.md
-          - name: 'Vorgehensweise: Auflisten von Verzeichnissen und Dateien'
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: 'Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei'
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: 'Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei'
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: 'Vorgehensweise: Schreiben von Text in eine Datei'
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: 'Vorgehensweise: Lesen von Text aus einer Datei'
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: 'Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge'
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: 'Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge'
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: 'Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen'
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: 'Vorgehensweise: Komprimieren und Extrahieren von Dateien'
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: Erstellen von Streams
-            href: ../standard/io/composing-streams.md
-          - name: 'Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams'
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: Asynchrone Datei-E/A
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: Verarbeiten von E/A-Fehlern
-        href: ../standard/io/handling-io-errors.md
-      - name: Isolierter Speicher
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: Isolationstypen
-            href: ../standard/io/types-of-isolation.md
-          - name: 'Vorgehensweise: Erhalten von Speichern für isolierten Speicher'
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: 'Vorgehensweise: Auflisten von Speichern für isolierten Speicher'
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: 'Vorgehensweise: Löschen von Speichern im isolierten Speicher'
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: 'Vorgehensweise: Vorhersehen von Speicherengpässen bei isoliertem Speicher'
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: 'Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher'
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: 'Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: 'Vorgehensweise: Lesen von bzw. Schreiben in Dateien im isolierten Speicher'
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: 'Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher'
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: Pipes
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: 'Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: 'Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk'
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: Pipelines
-        href: ../standard/io/pipelines.md
-      - name: Arbeiten mit Puffern
-        href: ../standard/io/buffers.md
-      - name: Im Speicher abgebildete Dateien
-        href: ../standard/io/memory-mapped-files.md
   - name: Komponententest
     displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
     items:
@@ -2086,5 +2162,5 @@ items:
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: Portieren von C++/CLI-Projekten
             href: ../core/porting/cpp-cli.md
-      - name: Wahl zwischen .NET Core und .NET Framework für Server-Apps
+      - name: ".NET\_5 im Vergleich zum .NET Framework für Server-Apps"
         href: ../standard/choosing-core-framework-server.md
