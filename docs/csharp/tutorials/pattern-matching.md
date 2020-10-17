@@ -1,19 +1,19 @@
 ---
 title: 'Tutorial: Erstellen von Algorithmen mit Musterabgleich'
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437979"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955628"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Verwenden des Musterabgleichs für buildtypgesteuerte und datengesteuerte Algorithmen
 
-Mit C# 7 wurden einfache Funktionen für den Musterabgleich eingeführt. Diese Funktionen werden in C# 8 mit neuen Ausdrücken und Mustern erweitert. Sie können Funktionen schreiben, die sich verhalten, als würden Sie Typen erweitern, die sich möglicherweise in anderen Bibliotheken befinden. Ein weiterer Verwendungszweck für Muster ist die Erstellung von Funktionalität, die Ihre Anwendung erfordert, und die keine grundlegende Funktion des erweiterten Typs ist.
+Mit C# 7 wurden einfache Funktionen für den Musterabgleich eingeführt. Diese Features werden in C# 8 und C# 9 mit neuen Ausdrücken und Mustern erweitert. Sie können Funktionen schreiben, die sich verhalten, als würden Sie Typen erweitern, die sich möglicherweise in anderen Bibliotheken befinden. Ein weiterer Verwendungszweck für Muster ist die Erstellung von Funktionalität, die Ihre Anwendung erfordert, und die keine grundlegende Funktion des erweiterten Typs ist.
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -25,7 +25,7 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Compilers. Der C# 8-Compiler steht ab [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder mit dem [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) zur Verfügung.
+Sie müssen Ihren Computer zur Ausführung von .NET 5 einrichten, einschließlich des C# 9-Compilers. Der C# 9-Compiler steht ab [Visual Studio 2019 Version 16.9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) oder [.NET 5.0 SDK](https://dot.net/get-dotnet5) zur Verfügung.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ Diese Regeln können mit dem **Eigenschaftenmuster** im gleichen Switch-Ausdruck
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-Im vorherigen Code sehen Sie die `when`-Klausel eines switch-Arms. Mit der `when`-Klausel testen Sie andere Bedingungen einer Eigenschaft als Gleichheit. Wenn Sie damit fertig sind, haben Sie eine Methode, die der folgenden ähnelt:
+Im vorherigen Code sehen Sie die `when`-Klausel eines switch-Arms. Mit der `when`-Klausel testen Sie andere Bedingungen einer Eigenschaft als Gleichheit. Wenn Sie damit fertig sind, haben Sie eine Methode, die dem folgenden Code ähnelt:
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ Im vorherigen Beispiel folgt aus der Verwendung eines rekursiven Ausdrucks, dass
 
 ## <a name="add-peak-pricing"></a>Hinzufügen der Preisgestaltung für Spitzenzeiten
 
-Für das letzte Feature möchte die Mautbehörde die zeitabhängige Preisgestaltung für Spitzenzeiten hinzufügen. Während der morgendlichen und abendlichen Hauptverkehrszeiten werden die Mautgebühren verdoppelt. Diese Regel betrifft nur den Verkehr in einer Richtung: am Morgen den stadteinwärts und am Abend den stadtauswärts gehenden Verkehr. Während anderer Zeiten werden die Mautgebühren werktags um 50% heraufgesetzt. Am späten Abend und frühen Morgen werden die Mautgebühren um 25% verringert. Am Wochenende gelten unabhängig von der Zeit die normalen Gebühren.
+Für das letzte Feature möchte die Mautbehörde die zeitabhängige Preisgestaltung für Spitzenzeiten hinzufügen. Während der morgendlichen und abendlichen Hauptverkehrszeiten werden die Mautgebühren verdoppelt. Diese Regel betrifft nur den Verkehr in einer Richtung: am Morgen den stadteinwärts und am Abend den stadtauswärts gehenden Verkehr. Während anderer Zeiten werden die Mautgebühren werktags um 50% heraufgesetzt. Am späten Abend und frühen Morgen werden die Mautgebühren um 25% verringert. Am Wochenende gelten unabhängig von der Zeit die normalen Gebühren. Sie könnten eine Reihe an `if`- und `else`-Anweisungen verwenden, um dies mithilfe des folgenden Codes auszudrücken:
 
-Sie verwenden den Musterabgleich für dieses Feature, aber Sie integrieren es mit anderen Verfahren. Sie könnten einen einzelnen Musterabgleichausdruck erstellen, der alle Kombinationen von Richtung, Wochentag und Zeit berücksichtigen würde. Das Ergebnis wäre ein komplizierter Ausdruck. Er wäre schwierig zu lesen und schwer zu verstehen. Dies erschwert, die Richtigkeit zu gewährleisten. Kombinieren Sie stattdessen diese Methoden, um ein Tupel von Werten zu erstellen, das alle diese Zustände präzise beschreibt. Berechnen Sie mithilfe des Musterabgleichs einen Multiplikator für die Maut. Das Tupel enthält drei diskrete Bedingungen:
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+Der vorangehende Code funktioniert ordnungsgemäß, ist jedoch nicht lesbar. Sie müssen sich alle Eingabefälle sowie die geschachtelten `if`-Anweisungen genau ansehen, um zum Code argumentieren zu können. Stattdessen verwenden Sie den Musterabgleich für dieses Feature, aber Sie integrieren es mit anderen Verfahren. Sie könnten einen einzelnen Musterabgleichausdruck erstellen, der alle Kombinationen von Richtung, Wochentag und Zeit berücksichtigen würde. Das Ergebnis wäre ein komplizierter Ausdruck. Er wäre schwierig zu lesen und schwer zu verstehen. Dies erschwert, die Richtigkeit zu gewährleisten. Kombinieren Sie stattdessen diese Methoden, um ein Tupel von Werten zu erstellen, das alle diese Zustände präzise beschreibt. Berechnen Sie mithilfe des Musterabgleichs einen Multiplikator für die Maut. Das Tupel enthält drei diskrete Bedingungen:
 
 - Der Tag ist entweder ein Wochentag oder fällt auf ein Wochenende.
 - Der Zeitbereich, in dem die Maut erhoben wird.
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-Diese Methode funktioniert, aber sie enthält Wiederholungen. Sie können sie vereinfachen, wie im folgenden Code gezeigt:
+Diese Methode ist korrekt, sie ist jedoch repetitiv. Sie können sie vereinfachen, wie im folgenden Code gezeigt:
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ Fügen Sie als Nächstes eine ähnliche Funktion hinzu, um die Zeit in den Blöc
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Die vorherige Methode verwendet den Musterabgleich nicht. Es ist klarer, eine vertraute Kaskade von `if`-Anweisungen zu verwenden. Sie fügen eine private `enum`-Variable hinzu, um jeden Zeitbereich in einen diskreten Wert zu konvertieren.
+Sie fügen eine private `enum`-Klasse hinzu, um jeden Zeitbereich in einen diskreten Wert zu konvertieren. Die `GetTimeBand`-Methode verwendet dann *relationale Muster* sowie *konjunktive Muster*, die jeweils in C# 9.0 hinzugefügt wurden. Das relationale Muster ermöglicht es Ihnen, einen numerischen Wert mithilfe von `<`, `>`, `<=` oder `>=` zu testen. Das `or`-Muster testet, ob ein Ausdruck mit einem oder mehreren Mustern übereinstimmt. Sie können auch ein `and`-Muster verwenden, um dafür zu sorgen, dass ein Ausdruck mit zwei verschiedenen Mustern übereinstimmt, sowie ein `not`-Muster, um zu testen, ob ein Ausdruck nicht mit einem Muster übereinstimmt.
 
 Nachdem Sie diese Methoden erstellt haben, können Sie einen anderen `switch`-Ausdruck mit dem **Tupelmuster** zum Berechnen des Aufschlags bzw. Rabatts auf den Preis verwenden. Sie könnten einen `switch`-Ausdruck mit allen 16 Armen erstellen:
 

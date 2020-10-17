@@ -2,12 +2,12 @@
 title: Breaking Changes bei Windows Forms
 description: Hier werden die Breaking Changes in Windows Forms für .NET Core und .NET 5 aufgelistet.
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678998"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804859"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Breaking Changes bei Windows Forms
 
@@ -17,6 +17,7 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [DataGridView setzt Schriftarten für angepasste Zelltypen nicht mehr zurück](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [Das OutputType-Atttribut für WPF- und WinForms-Apps wurde auf WinExe festgelegt](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [Mit DataGridView verbundene APIs lösen jetzt InvalidOperationException aus](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms- und WPF-Apps verwenden Microsoft.NET.Sdk](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Kompatibilitätsoption UseLegacyImages wird nicht unterstützt](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 

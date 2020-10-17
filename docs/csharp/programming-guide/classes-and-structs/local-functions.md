@@ -1,15 +1,15 @@
 ---
 title: Lokale Funktionen – C#-Programmierhandbuch
 description: Lokale Funktionen in C# sind private Methoden, die in einem anderen Member geschachtelt sind und aus dem enthaltenden Member aufgerufen werden können.
-ms.date: 10/02/2020
+ms.date: 10/09/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654919"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955680"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
@@ -50,11 +50,15 @@ Alle im enthaltenden Member definierten lokalen Variablen, einschließlich der M
 
 Im Gegensatz zu einer Methodendefinition kann die Definition einer lokalen Funktion keinen Memberzugriffsmodifizierer enthalten. Da alle lokale Funktionen privat sind, generiert das Verwenden eines Zugriffsmodifizierers wie etwa das Schlüsselwort `private` den Compilerfehler CS0106 „Der Modifizierer ‚private‘ ist für dieses Element nicht gültig“.
 
-Darüber hinaus können keine Attribute auf lokale Funktionen oder ihre Parameter und Typparameter angewendet werden.
-
 Das folgende Beispiel definiert eine lokale Funktion mit dem Namen `AppendPathSeparator`, die für eine Methode mit dem Namen `GetText` privat ist:
 
-[!code-csharp[LocalFunctionExample](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="Basic" :::
+
+Ab C# 9.0 können Sie Attribute auf eine lokale Funktion, ihre Parameter und Typparameter anwenden. Sehen Sie sich dazu das folgende Beispiel an:
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="WithAttributes" :::
+
+Im vorherigen Beispiel wird ein [spezielles Attribut](../../language-reference/attributes/nullable-analysis.md) verwendet, um den Compiler bei der statischen Analyse in einem Nullable-Kontext zu unterstützen.
 
 ## <a name="local-functions-and-exceptions"></a>Lokale Funktionen und Ausnahmen
 
@@ -62,21 +66,21 @@ Eine nützliche Funktion von lokalen Funktionen ist die Tatsache, dass sie Ausna
 
 Das folgende Beispiel definiert eine `OddSequence`-Methode, die ungerade Zahlen in einem angegebenen Bereich aufzählt. Da eine Zahl größer als 100 an die `OddSequence`-Enumeratormethode übergeben wird, wird <xref:System.ArgumentOutOfRangeException> ausgelöst. Die Ausgabe des Beispiels zeigt, dass die Ausnahme erst beim Durchlaufen der Zahlen und nicht beim Abrufen des Enumerators eingeblendet wird.
 
-[!code-csharp[LocalFunctionIterator1](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)]
+:::code language="csharp" source="snippets/local-functions/IteratorWithoutLocal.cs" :::
 
-Stattdessen können Sie während der Validierung und vor Abrufen des Iterators wie im folgenden Beispiel dargestellt eine Ausnahme auslösen, indem der Iterator aus einer lokalen Funktion zurückgegeben wird.
+Wenn Sie Iteratorlogik in eine lokale Funktion platzieren, werden Ausnahmen bei der Argumentvalidierung ausgelöst, wenn Sie den Enumerator abrufen. Sehen Sie sich dazu das folgende Beispiel an:
 
-[!code-csharp[LocalFunctionIterator2](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+:::code language="csharp" source="snippets/local-functions/IteratorWithLocal.cs" :::
 
-Lokale Funktionen können auf ähnliche Weise verwendet werden, um Ausnahmen außerhalb des asynchronen Vorgangs zu behandeln. Normalerweise erfordern Ausnahmen in einer async-Methode die Überprüfung der inneren Ausnahmen von <xref:System.AggregateException>. Lokale Funktionen ermöglichen einen schnellen Abbruch Ihres Codes. Ihre Ausnahme kann sowohl synchron ausgelöst als auch beobachtet werden.
+Sie können lokale Funktionen auf ähnliche Weise wie asynchrone Vorgänge nutzen. Ausnahmen, die in einer asynchronen Methode ausgelöst werden, treten auf, wenn der entsprechende Task erwartet wird. Lokale Funktionen ermöglichen einen schnellen Abbruch Ihres Codes. Ihre Ausnahme kann sowohl synchron ausgelöst als auch beobachtet werden.
 
-Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `GetMultipleAsync` verwendet, um für eine bestimmte Anzahl von Sekunden anzuhalten und ein zufälliges Vielfaches dieser Sekundenanzahl zurückzugeben. Die maximale Verzögerung beträgt 5 Sekunden. <xref:System.ArgumentOutOfRangeException> wird ausgegeben, wenn der Wert größer als 5 ist. Im folgenden Beispiel wird verdeutlicht, dass die Ausnahme, die bei der Übergabe eines Werts größer als 6 an die Methode `GetMultipleAsync` ausgelöst wird, von <xref:System.AggregateException> umschlossen wird, sobald die Methode `GetMultipleAsync` ausgeführt wird.
+Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `GetMultipleAsync` verwendet, um für eine bestimmte Anzahl von Sekunden anzuhalten und ein zufälliges Vielfaches dieser Sekundenanzahl zurückzugeben. Die maximale Verzögerung beträgt 5 Sekunden. <xref:System.ArgumentOutOfRangeException> wird ausgegeben, wenn der Wert größer als 5 ist. Wie das folgende Beispiel zeigt, tritt die Ausnahme, die ausgelöst wird, wenn an die `GetMultipleAsync`-Methode ein Wert von 6 übergeben wird, nur dann auf, wenn der Task erwartet wird.
 
-[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)]
+:::code language="csharp" source="snippets/local-functions/AsyncWithoutLocal.cs" :::
 
-Wie beim Methodeniterator kann der Code aus diesem Beispiel umgestaltet werden, um die Validierung vor Aufruf der asynchronen Methode durchzuführen. Die Ausgabe des folgenden Beispiels zeigt, dass <xref:System.ArgumentOutOfRangeException> nicht von einer <xref:System.AggregateException> umschlossen wird.
+Wie beim Methodeniterator können Sie das vorherige Beispiel umgestalten und den Code eines asynchronen Vorgangs in eine lokale Funktion platzieren. Wie die Ausgabe des folgenden Beispiels zeigt, wird <xref:System.ArgumentOutOfRangeException> ausgelöst, sobald die `GetMultiple`-Methode aufgerufen wird.
 
-[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)]
+:::code language="csharp" source="snippets/local-functions/AsyncWithLocal.cs" :::
 
 ## <a name="local-functions-vs-lambda-expressions"></a>Lokale Funktionen im Vergleich zu Lambdaausdrücken
 
@@ -84,11 +88,11 @@ Auf den ersten Blick sind lokale Funktionen und [Lambdaausdrücke](../../languag
 
 Sehen wir uns die Unterschiede zwischen der Implementierungen des Fakultätsalgorithmus als lokale Funktion und als Lambdaausdruck an. Erste die Version mit einer lokalen Funktion:
 
-[!code-csharp[LocalFunctionFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLocal" :::
 
 Vergleichen Sie diese Implementierung mit einer Version, die Lambdaausdrücke verwendet:
 
-[!code-csharp[26_LambdaFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLambda" :::
 
 Lokale Funktionen haben Namen. Lamdaausdrücke sind anonyme Methoden, die Variablen zugewiesen werden, die `Func`- und `Action`-Typen sind. Wenn Sie eine lokale Funktion deklarieren, sind die Argumenttypen und der Rückgabetyp Teil der Funktionsdeklaration. Statt Teil des Texts des Lambdaausdrucks zu sein, sind die Argumentttypen und der Rückgabetyp Teil der Variablentypdeklaration des Lambdaausdrucks. Diese beiden Unterschiede können zu klarerem Code führen.
 
@@ -115,7 +119,7 @@ Die Analyse, die diese Beispielanalyse ermöglicht, ist der vierte Unterschied. 
 
 Betrachten Sie das folgende asynchrone Beispiel:
 
-[!code-csharp[TaskLambdaExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLambda" :::
 
 Der Abschluss dieses Lambdaausdrucks enthält die Variablen `address`, `index` und `name`. Im Fall von lokalen Funktionen ist das Objekt, das den Abschluss implementiert, möglicherweise vom Typ `struct`. Dieser struct-Typ würde per Verweis an die lokale Funktion übergeben. Dieser Unterschied bei der Implementierung würde bei einer Zuweisung gespart.
 
@@ -124,7 +128,7 @@ Die für Lambdaausdrücke erforderliche Instanziierung bedeutet zusätzliche Spe
 > [!NOTE]
 > Die Entsprechung dieser Methode mit der lokalen Funktion verwendet auch eine Klasse für den Abschluss. Ob der Abschluss für eine lokale Funktion als `class` oder `struct` implementiert wird, ist ein Implementierungsdetail. Eine lokale Funktion verwendet möglicherweise `struct`, während ein Lambdaausdruck immer `class` nutzt.
 
-[!code-csharp[TaskLocalFunctionExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLocal" :::
 
 Eine letzter Vorteil, der in diesem Beispiel zu kurz gekommen ist, besteht darin, dass lokale Funktionen mithilfe der `yield return`-Syntax als Iteratoren implementiert werden können, um eine Sequenz von Werten zu erzeugen. Die `yield return`-Anweisung ist in Lambdaausdrücken unzulässig.
 

@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxanalyse (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240517"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756155"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Erste Schritte mit der Syntaxanalyse
 
@@ -51,7 +51,7 @@ Eine Syntaxstruktur ist eine Datenstruktur, die von den C#- und Visual Basic-Com
 
 Syntaxstrukturen bestehen aus den folgenden vier primären Bausteinen:
 
-* Die <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>-Klasse: Eine Instanz dieser Klasse repräsentiert eine vollständige Analysestruktur. <xref:Microsoft.CodeAnalysis.SyntaxTree> ist eine abstrakte Klasse mit sprachspezifischen Ableitungen. Sie verwenden die Analysemethoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>), um Text in C# oder Visual Basic zu analysieren.
+* Die <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>-Klasse: Eine Instanz dieser Klasse repräsentiert eine vollständige Analysestruktur. <xref:Microsoft.CodeAnalysis.SyntaxTree> ist eine abstrakte Klasse mit sprachspezifischen Ableitungen. Sie verwenden die Analysemethoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (oder <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>), um Text in C# (oder Visual Basic) zu analysieren.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>-Klasse: Instanzen dieser Klasse repräsentieren syntaktische Konstrukte wie Deklarationen, Anweisungen, Klauseln und Ausdrücke.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>-Struktur: Diese Struktur repräsentiert ein einzelnes Schlüsselwort oder Interpunktionszeichen oder einen einzelnen Bezeichner oder Operator.
 * Die <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>-Struktur: Diese Struktur repräsentiert syntaktisch unwichtige Informationen wie Leerräume zwischen Token, Vorverarbeitungsdirektiven und Kommentare.

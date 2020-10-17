@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654906"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955166"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -232,7 +232,7 @@ Außerdem erkennen und verwenden [`foreach`-Schleifen](../language-reference/key
 
 Sie können auch Ausschussvariablen als Parameter für Lambdaausdrücke verwenden. So müssen Sie das Argument nicht mehr benennen, und der Compiler muss es unter Umständen gar nicht verwenden. Sie nutzen einfach `_` für alle Argumente. Weitere Informationen finden Sie im Abschnitt [Eingabeparameter eines Lambdaausdrucks](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) des Artikels [Lambdaausdrücke](../language-reference/operators/lambda-expressions.md).
 
-Schließlich haben Sie nun die Möglichkeit, Attribute auf lokale Funktionen anzuwenden. Sie können beispielsweise Nullwerte zulassende Attributanmerkungen auf lokale Funktionen anwenden.
+Schließlich haben Sie nun die Möglichkeit, Attribute auf [lokale Funktionen](../programming-guide/classes-and-structs/local-functions.md) anzuwenden. Sie können beispielsweise [Nullable-Attributanmerkungen](../language-reference/attributes/nullable-analysis.md) auf lokale Funktionen anwenden.
 
 ## <a name="support-for-code-generators"></a>Unterstützung für Code-Generatoren
 

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem .NET API-Analysetool veraltete APIs u
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406244"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756194"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -124,7 +124,7 @@ All diese Diagnosen stehen nicht nur in der IDE zur Verfügung, sondern auch üb
 
 ## <a name="configuration"></a>Konfiguration
 
-Der Benutzer entscheidet, wie die Diagnose behandelt werden soll: als Warnungen, Fehler oder Vorschläge. Alternativ kann er sie auch deaktivieren. Beispielsweise können Sie als Architekt entscheiden, dass Kompatibilitätsprobleme als Fehler behandelt werden sollen, während Aufrufe einiger veralteter APIs Warnungen und andere Probleme nur Vorschläge generieren. Diese Einstellungen können Sie getrennt nach Diagnose-ID und Projekt konfigurieren. Navigieren Sie hierzu im **Projektmappen-Explorer** unter Ihrem Projekt zum Knoten **Abhängigkeiten**. Erweitern Sie die Knoten **Abhängigkeiten** > **Analysetools** > **Microsoft.DotNet.Analyzers.Compatibility**. Klicken Sie mit der rechten Maustaste auf die Diagnose-ID, wählen Sie **Schweregrad für Regelsatz festlegen**, und wählen Sie die gewünschte Option aus.
+Der Benutzer entscheidet, wie die Diagnose behandelt werden soll: als Warnungen, Fehler oder Vorschläge. Alternativ kann er sie auch deaktivieren. Beispielsweise können Sie als Architekt entscheiden, dass Kompatibilitätsprobleme als Fehler behandelt werden sollen, während Aufrufe einiger veralteter APIs Warnungen und andere Probleme nur Vorschläge generieren. Diese Einstellungen können Sie getrennt nach Diagnose-ID und Projekt konfigurieren. Navigieren Sie hierzu im **Projektmappen-Explorer** unter Ihrem Projekt zum Knoten **Abhängigkeiten**. Erweitern Sie die Knoten **Abhängigkeiten** > **Analysetools** > **Microsoft.DotNet.Analyzers.Compatibility**. Klicken Sie mit der rechten Maustaste auf die Diagnose-ID, klicken Sie auf **Schweregrad für Regelsatz festlegen**, und wählen Sie die gewünschte Option aus.
 
 ![Screenshot Projektmappen-Explorer mit Diagnosen und Popupdialogfeld mit Regelsatz-Schweregrad](media/api-analyzer/disable-notifications.jpg)
 

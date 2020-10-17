@@ -4,12 +4,12 @@ description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistype
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249128"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805179"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -221,3 +221,6 @@ Experimentieren Sie, indem Sie bei der Typdeklaration zwischen Verweistypen wech
 Weitere Informationen erhalten Sie durch die Migration einer vorhandenen Anwendung zur Verwendung NULL-Werte zulassender Verweistypen:
 > [!div class="nextstepaction"]
 > [Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)
+
+Hier erfahren Sie, wie Sie Nullable-Verweistypen bei Verwendung von Entity Framework nutzen:
+> [Grundlagen von Entity Framework Core: Verwenden von Nullable-Verweistypen](/ef/core/miscellaneous/nullable-reference-types)

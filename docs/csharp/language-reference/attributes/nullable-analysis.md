@@ -2,18 +2,18 @@
 title: 'Reservierte C#-Attribute: Statische Analysen, die NULL-Werte zulassen'
 ms.date: 04/14/2020
 description: Diese Attribute werden vom Compiler interpretiert, um eine bessere statische Analyse für Nullable- und Non-Nullable-Verweistypen zu liefern.
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656306"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955602"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Reservierte Attribute zur Unterstützung der statischen NULL-Zustandsanalyse des Compilers
 
 In einem Nullable-Kontext führt der Compiler eine statische Analyse des Codes durch, um den NULL-Zustand aller Verweistypvariablen zu bestimmen:
 
-- *Nicht NULL*: Die statische Analyse hat ergeben, dass die Variable einem Nicht-NULL-Wert zugewiesen ist.
+- *Nicht NULL*: Die statische Analyse bestimmt, dass einer Variable ein Nicht-NULL-Wert zugewiesen wird.
 - *Möglicherweise NULL*: Die statische Analyse kann nicht bestimmen, ob einer Variable ein Nicht-NULL-Wert zugewiesen ist.
 
 Sie können verschiedene Attribute anwenden, die dem Compiler Informationen zur Semantik Ihrer APIs liefern. Diese Informationen unterstützen den Compiler dabei, eine statische Analyse durchzuführen und zu bestimmen, wann eine Variable ungleich NULL ist. Im vorliegenden Artikel werden jedes dieser Attribute und seine Verwendung kurz beschrieben. Alle Beispiele gehen von C# 8.0 oder höher aus, und der Code steht in einem Nullable-Kontext.

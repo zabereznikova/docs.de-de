@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d2855738c723ba6d2437257793f18349b18629dc
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137083"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877586"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -100,7 +100,7 @@ Hier ist ein vollständigeres Beispiel für die Verweisrückgabe, das sowohl die
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-Die aufgerufene Methode kann den Rückgabewert auch als `ref readonly` deklarieren, um den Wert als Verweis zurückzugeben, und durchsetzen, dass der aufrufende Code den zurückgegebenen Wert nicht ändern kann. Die aufrufende Methode kann das Kopieren des zurückgegebenen Werts vermeiden, indem sie den Wert in einer lokalen [schreibgeschützten ref-Variablen](#ref-readonly-locals) speichert.
+Die aufgerufene Methode kann den Rückgabewert auch als `ref readonly` deklarieren, um den Wert als Verweis zurückzugeben, und durchsetzen, dass der aufrufende Code den zurückgegebenen Wert nicht ändern kann. Die aufrufende Methode kann das Kopieren des Rückgabewerts verhindern, indem sie den Wert in einer lokalen [schreibgeschützten ref-Variablen](#ref-readonly-locals) speichert.
 
 Ein Beispiel finden Sie unter [Beispiel für ref-Rückgaben und lokale ref-Variablen](#a-ref-returns-and-ref-locals-example).
 

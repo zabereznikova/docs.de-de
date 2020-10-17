@@ -2,12 +2,12 @@
 title: Breaking Changes hinsichtlich der Basisklassenbibliothek
 description: Listet die Breaking Changes in .NET-Kernbibliotheken auf.
 ms.date: 07/27/2020
-ms.openlocfilehash: c3207ac7630d794f77c793cc6d1d52e158c0c084
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738819"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955556"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Breaking Changes und .NET-Kernbibliotheken
 
@@ -17,6 +17,8 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Assemblybezogene Behavior Changes für Veröffentlichungsformat mit einzelner Datei](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
+| [Die Reihenfolge der Tags in Activity.Tags wird umgekehrt](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [Parameternamen in RC1 wurden geändert](#parameter-names-changed-in-rc1) | 5.0 |
 | [OSPlatform-Attribute wurden umbenannt oder entfernt](#osplatform-attributes-renamed-or-removed) | 5.0 |
 | [Thread.Abort ist veraltet](#threadabort-is-obsolete) | 5.0 |
@@ -55,6 +57,14 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Process.StartInfo löst InvalidOperationException für Prozesse aus, die Sie nicht gestartet haben](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
+
+[!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
 
