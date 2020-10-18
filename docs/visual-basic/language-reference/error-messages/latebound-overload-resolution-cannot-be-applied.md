@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 4500a177c7a4729fe5131af1b007fd38e77afe07
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 090ec6f3bbf56350fda2ab15c974b0bc6b15e3d3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397336"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162517"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Die spät gebundene Überladungsauflösung kann nicht auf "\<procedurename>" angewendet werden, da die zugreifende Instanz ein Schnittstellentyp ist.
+# <a name="bc30933-latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>BC30933: die lategebundene Überladungs Auflösung kann nicht auf "" angewendet werden, \<procedurename> da die Zugriffs Instanz ein Schnittstellentyp ist.
 
 Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, da ein Argument vom Typ ist `Object` und das verweisende Objekt den Datentyp einer Schnittstelle aufweist. Das- `Object` Argument zwingt den Compiler, den Verweis als spät gebunden aufzulösen.
 
@@ -66,8 +66,8 @@ refer.s1(CType(o1, Double))
 
 Jede der vorangehenden Codezeilen wandelt die Variable explizit `Object` `o1` in einen der für die über Ladungen definierten Parametertypen um.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Prozedurüberladung](../../programming-guide/language-features/procedures/procedure-overloading.md)
-- [Überladungs Auflösung](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [Overload Resolution](../../programming-guide/language-features/procedures/overload-resolution.md)
 - [CType Function](../functions/ctype-function.md)

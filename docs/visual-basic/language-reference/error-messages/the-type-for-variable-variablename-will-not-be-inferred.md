@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3e76ffea283de2843fc5586179074c01a053ece8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870485"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161282"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable '\<variablename>' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist
+# <a name="bc42110-the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>BC42110: der Typ für die Variable " \<variablename> " wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist.
 
 Der Typ für die Variable ' \<variablename> ' wird nicht abgeleitet, da er an ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie den Namen von ' \<variablename> ', oder verwenden Sie den voll qualifizierten Namen (z. b. ' me. variablename ' oder ' MyBase. variablename ').
 
@@ -43,7 +43,7 @@ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausble
 
 **Fehler-ID:** BC42110
 
-### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung
+## <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung
 
 - Machen Sie die Schleifensteuerungsvariable lokal verfügbar, indem Sie ihren Namen in einen Bezeichner ändern, der nicht mit dem Feldnamen der Klasse übereinstimmt.
 
@@ -83,7 +83,7 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Option Infer-Anweisung](../statements/option-infer-statement.md)
 - [For Each...Next-Anweisung](../statements/for-each-next-statement.md)

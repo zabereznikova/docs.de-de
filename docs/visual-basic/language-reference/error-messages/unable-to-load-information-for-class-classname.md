@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 449bd34d5026dd4f9b9020123b99df81081f4331
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 05c3303db90a396479bc396c5c2395c3afbb59ae
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873505"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161607"
 ---
-# <a name="unable-to-load-information-for-class-classname"></a>Informationen über die Klasse "\<classname>" konnten nicht geladen werden.
+# <a name="bc30712-unable-to-load-information-for-class-classname"></a>BC30712: die Informationen für die Klasse "" konnten nicht geladen werden. \<classname>
 
-Es wurde auf eine Klasse verwiesen, die nicht verfügbar ist.  
-  
- **Fehler-ID:** BC30712  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1. Vergewissern Sie sich, dass die Klasse definiert ist und Sie den Namen richtig geschrieben haben.  
-  
-2. Versuchen Sie, auf einen der im Modul deklarierten Member zuzugreifen. In einigen Fällen können in der Debugumgebung Member nicht gefunden werden, weil die Module, in denen sie deklariert sind, noch nicht geladen wurden.  
-  
+Es wurde auf eine Klasse verwiesen, die nicht verfügbar ist.
+
+ **Fehler-ID:** BC30712
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Vergewissern Sie sich, dass die Klasse definiert ist und Sie den Namen richtig geschrieben haben.
+
+2. Versuchen Sie, auf einen der im Modul deklarierten Member zuzugreifen. In einigen Fällen können in der Debugumgebung Member nicht gefunden werden, weil die Module, in denen sie deklariert sind, noch nicht geladen wurden.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Debuggen in Visual Studio](/visualstudio/debugger/debugger-feature-tour)

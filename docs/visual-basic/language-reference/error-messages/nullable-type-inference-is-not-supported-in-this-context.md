@@ -7,37 +7,37 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: f2d3bcdaccfd993da1eebf81ae961f35eb22b294
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 610d2dc427d882c412b87eb67f021a8a86025f25
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873675"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159925"
 ---
-# <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Der Rückschluss von Typen, die NULL-Werte zulassen, wird in diesem Kontext nicht unterstützt
+# <a name="bc36629-nullable-type-inference-is-not-supported-in-this-context"></a>BC36629: der Typrückschluss, der NULL zulässt, wird in diesem Kontext nicht unterstützt
 
-Werttypen und Strukturen können als Nullable deklariert werden.  
-  
-```vb  
-Dim a? As Integer  
-Dim b As Integer?  
-```  
-  
- Es ist jedoch nicht möglich, die Deklaration, die NULL zulässt, in Kombination mit dem Typrückschluss In den folgenden Beispielen wird dieser Fehler verursacht.  
-  
-```vb  
-' Not valid.  
-' Dim c? = 10  
-' Dim d? = a  
-```  
-  
- **Fehler-ID:** BC36629  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-- Verwenden Sie eine- `As` Klausel, um die Variable als Werte zulässt-Werttyp zu deklarieren.  
-  
-## <a name="see-also"></a>Weitere Informationen
+Werttypen und Strukturen können als Nullable deklariert werden.
+
+```vb
+Dim a? As Integer
+Dim b As Integer?
+```
+
+ Es ist jedoch nicht möglich, die Deklaration, die NULL zulässt, in Kombination mit dem Typrückschluss In den folgenden Beispielen wird dieser Fehler verursacht.
+
+```vb
+' Not valid.
+' Dim c? = 10
+' Dim d? = a
+```
+
+ **Fehler-ID:** BC36629
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Verwenden Sie eine- `As` Klausel, um die Variable als Werte zulässt-Werttyp zu deklarieren.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Auf NULL festlegbare Werttypen](../../programming-guide/language-features/data-types/nullable-value-types.md)
 - [Lokaler Typrückschluss](../../programming-guide/language-features/variables/local-type-inference.md)

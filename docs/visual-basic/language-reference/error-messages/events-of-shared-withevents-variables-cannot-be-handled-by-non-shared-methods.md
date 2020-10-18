@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: d519463e036de215143efad5be3745484ac17d82
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 02039b81251e59a951a0fe37ec2c9534b458b6a5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874289"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161919"
 ---
-# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Ereignisse freigegebener WithEvents-Variablen können nicht von freigegebenen Methoden behandelt werden.
+# <a name="bc30594-events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>BC30594: Ereignisse von freigegebenen widervents-Variablen können nicht von nicht freigegebenen Methoden behandelt werden.
 
-Eine mit dem- `Shared` Modifizierer deklarierte Variable ist eine freigegebene Variable. Eine freigegebene Variable identifiziert genau einen Speicherort. Eine mit dem-Modifizierer deklarierte Variable bestätigt `WithEvents` , dass der Typ, zu dem die Variable gehört, den Satz von Ereignissen behandelt, den die Variable auslöst. Wenn der Variablen ein Wert zugewiesen wird, entbindet die von der `WithEvents` Deklaration erstellte Eigenschaft jeden vorhandenen Ereignishandler und verknüpft den neuen Ereignishandler über die- `Add` Methode.  
-  
- **Fehler-ID:** BC30594  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-- Deklarieren Sie den Ereignishandler `Shared` .  
-  
-## <a name="see-also"></a>Weitere Informationen
+Eine mit dem- `Shared` Modifizierer deklarierte Variable ist eine freigegebene Variable. Eine freigegebene Variable identifiziert genau einen Speicherort. Eine mit dem-Modifizierer deklarierte Variable bestätigt `WithEvents` , dass der Typ, zu dem die Variable gehört, den Satz von Ereignissen behandelt, den die Variable auslöst. Wenn der Variablen ein Wert zugewiesen wird, entbindet die von der `WithEvents` Deklaration erstellte Eigenschaft jeden vorhandenen Ereignishandler und verknüpft den neuen Ereignishandler über die- `Add` Methode.
+
+ **Fehler-ID:** BC30594
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Deklarieren Sie den Ereignishandler `Shared` .
+
+## <a name="see-also"></a>Siehe auch
 
 - [Freigegeben](../modifiers/shared.md)
 - [WithEvents](../modifiers/withevents.md)

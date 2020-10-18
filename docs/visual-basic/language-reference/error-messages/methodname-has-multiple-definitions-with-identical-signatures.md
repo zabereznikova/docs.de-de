@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
-ms.openlocfilehash: 2934a5666c55e1ca57b91ab86585261e6d71a2d3
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 663b22421d1a0e401cfb3c135c99bd097163a78b
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873732"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160365"
 ---
-# <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>\<methodname> hat mehrere Definitionen mit identischen Signaturen.
+# <a name="bc30269-methodname-has-multiple-definitions-with-identical-signatures"></a>BC30269: " \<methodname> " hat mehrere Definitionen mit identischen Signaturen.
 
-Eine- `Function` oder- `Sub` Prozedur Deklaration verwendet den identischen Prozedur Namen und die gleiche Argumentliste als vorherige Deklaration. Eine mögliche Ursache ist ein Versuch, die ursprüngliche Prozedur zu überladen. Überladene Prozeduren müssen verschiedene Argumentlisten aufweisen.  
-  
- **Fehler-ID:** BC30269  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-- Ändern Sie den Namen der Prozedur oder die Argumentliste, oder entfernen Sie die doppelte Deklaration.  
-  
-## <a name="see-also"></a>Weitere Informationen
+Eine- `Function` oder- `Sub` Prozedur Deklaration verwendet den identischen Prozedur Namen und die gleiche Argumentliste als vorherige Deklaration. Eine mögliche Ursache ist ein Versuch, die ursprüngliche Prozedur zu überladen. Überladene Prozeduren müssen verschiedene Argumentlisten aufweisen.
+
+ **Fehler-ID:** BC30269
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Ändern Sie den Namen der Prozedur oder die Argumentliste, oder entfernen Sie die doppelte Deklaration.
+
+## <a name="see-also"></a>Siehe auch
 
 - [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Überlegungen zur Prozedurüberladung](../../programming-guide/language-features/procedures/considerations-in-overloading-procedures.md)

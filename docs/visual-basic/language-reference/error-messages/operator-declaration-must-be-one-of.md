@@ -7,34 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: c388b1b0762dd7475ca365a8a62228d0b5d59414
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a94e62e33427987a302a6244b2b8ce8d295e4f11
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873620"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159897"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>Die Operator Deklaration muss eine der folgenden sein: +,-, *, \, /, ^, &amp; , like, mod, and, or, Xor, not, \<\<, >>...
+# <a name="bc33000-operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>BC33000: die Operator Deklaration muss eine der folgenden sein: +,-, *, \, /, ^, &amp; , like, mod, and, or, Xor, not, \<\<, >>...
 
-Sie können nur einen Operator deklarieren, der für das überladen geeignet ist. In der folgenden Tabelle sind die zu deklarierenden Operatoren aufgelistet.  
-  
-|type|Operatoren|  
-|----------|---------------|  
-|Unär|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|Konvertierung (unär)|`CType`|  
-  
- Beachten Sie, dass der- `=` Operator in der binären Liste der Vergleichs Operator und nicht der Zuweisungs Operator ist.  
-  
- **Fehler-ID:** BC33000  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1. Wählen Sie einen Operator aus der Gruppe der überladbaren Operatoren aus.  
-  
-2. Wenn Sie die Funktionalität des Überladens eines Operators benötigen, der nicht direkt überladen werden kann, erstellen Sie eine `Function` -Prozedur, die die entsprechenden Parameter übernimmt und den entsprechenden Wert zurückgibt.  
-  
-## <a name="see-also"></a>Weitere Informationen
+Sie können nur einen Operator deklarieren, der für das überladen geeignet ist. In der folgenden Tabelle sind die zu deklarierenden Operatoren aufgelistet.
+
+|type|Operatoren|
+|----------|---------------|
+|Unär|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|
+|Binary|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|
+|Konvertierung (unär)|`CType`|
+
+ Beachten Sie, dass der- `=` Operator in der binären Liste der Vergleichs Operator und nicht der Zuweisungs Operator ist.
+
+ **Fehler-ID:** BC33000
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Wählen Sie einen Operator aus der Gruppe der überladbaren Operatoren aus.
+
+- Wenn Sie die Funktionalität des Überladens eines Operators benötigen, der nicht direkt überladen werden kann, erstellen Sie eine `Function` -Prozedur, die die entsprechenden Parameter übernimmt und den entsprechenden Wert zurückgibt.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Operator Statement](../statements/operator-statement.md)
 - [Operatorprozeduren](../../programming-guide/language-features/procedures/operator-procedures.md)

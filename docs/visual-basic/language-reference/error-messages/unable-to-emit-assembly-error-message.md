@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c088f273c100b1a7eefcf74047865093f378e970
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197274"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161659"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>Die Assembly kann nicht ausgegeben werden: \<Fehlermeldung >
+# <a name="bc30145-unable-to-emit-assembly-error-message"></a>BC30145: die Assembly kann nicht ausgegeben werden: \<error message>
 
-Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren, und der Linker meldet einen Fehler in der Ausgabe Phase der Erstellung der Assembly.
+Der Visual Basic-Compiler ruft den Assemblylinker (*Al.exe*, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren, und der Linker meldet einen Fehler in der Ausgabe Phase der Erstellung der Assembly.
 
 **Fehler-ID:** BC30145
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-1. Überprüfen Sie die Fehlermeldung in Anführungszeichen, und lesen Sie das Thema " [Al. exe](../../../framework/tools/al-exe-assembly-linker.md) ".
+1. Überprüfen Sie die Fehlermeldung in Anführungszeichen, und informieren Sie sich im Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) über weitere Erläuterungen und Ratschläge.
 
-2. Versuchen Sie, die Assembly manuell zu signieren, indem Sie entweder " [Al. exe](../../../framework/tools/al-exe-assembly-linker.md) " oder " [Sn. exe" (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)verwenden.
+2. Versuchen Sie, die Assembly manuell zu signieren, indem Sie entweder die [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) oder das [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)verwenden.
 
 3. Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.
 
 ### <a name="to-sign-the-assembly-manually"></a>So signieren Sie die Assembly manuell
 
-1. Verwenden Sie " [Sn. exe" (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)), um eine Datei mit einem öffentlichen/privaten Schlüsselpaar zu erstellen.
+1. Verwenden Sie die [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)), um eine Datei mit einem öffentlichen/privaten Schlüsselpaar zu erstellen.
 
    Diese Datei hat die Erweiterung " *. snk* ".
 
@@ -42,7 +42,7 @@ Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als A
 
 4. Wechseln Sie in das Verzeichnis, in dem Sie den Assemblywrapper platzieren möchten.
 
-5. Geben Sie folgenden Befehl ein:
+5. Geben Sie den folgenden Befehl ein:
 
     ```cmd
     tlbimp <path to COM reference file> /out:<output assembly name> /keyfile:<path to .snk file>
@@ -61,7 +61,7 @@ Der Visual Basic-Compiler ruft den Assemblylinker (*Al. exe*, auch bekannt als A
 
 ## <a name="see-also"></a>Siehe auch
 
-- ["Al. exe"](../../../framework/tools/al-exe-assembly-linker.md)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (Strong Name-Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../standard/assembly/create-public-private-key-pair.md)
+- [How to: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../standard/assembly/create-public-private-key-pair.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)
