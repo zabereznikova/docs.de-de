@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 4793c7282043edb46b3d2f77a0f0a955c43ab34c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 1aec6ac0a354bfe7e0378a2e46a70a7161bf6d36
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870188"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163245"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML-Namespace-URI `http://www.w3.org/XML/1998/namespace` ; kann nur an ' xmlns ' gebunden werden.
+# <a name="bc31183-xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>BC31183: XML-Namespace-URI `http://www.w3.org/XML/1998/namespace` ; kann nur an ' xmlns ' gebunden werden.
 
-Der URI `http://www.w3.org/XML/1998/namespace` wird in einer XML-Namespace Deklaration verwendet. Dieser URI ist ein reservierter Namespace und kann nicht in einer XML-Namespace Deklaration enthalten sein.  
-  
- **Fehler-ID:** BC31183  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-Entfernen Sie die XML-Namespace Deklaration, oder ersetzen Sie den URI `http://www.w3.org/XML/1998/namespace` durch einen gültigen Namespace-URI.  
-  
-## <a name="see-also"></a>Weitere Informationen
+Der URI `http://www.w3.org/XML/1998/namespace` wird in einer XML-Namespace Deklaration verwendet. Dieser URI ist ein reservierter Namespace und kann nicht in einer XML-Namespace Deklaration enthalten sein.
+
+ **Fehler-ID:** BC31183
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+Entfernen Sie die XML-Namespace Deklaration, oder ersetzen Sie den URI `http://www.w3.org/XML/1998/namespace` durch einen gültigen Namespace-URI.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Imports-Anweisung (XML-Namespace)](../statements/imports-statement-xml-namespace.md)
 - [XML-Literale](../xml-literals/index.md)

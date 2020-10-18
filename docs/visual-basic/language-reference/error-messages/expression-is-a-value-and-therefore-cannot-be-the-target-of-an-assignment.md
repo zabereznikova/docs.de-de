@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cd23e6c2beb2f93578a350bc41a780c9ab785f26
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409506"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160892"
 ---
-# <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
+# <a name="bc30068-expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>BC30068: der Ausdruck ist ein Wert und kann daher nicht das Ziel einer Zuweisung sein.
 
 Eine Anweisung versucht, einem Ausdruck einen Wert zuzuweisen. Sie können einen Wert nur einer beschreibbaren Variablen, einer Eigenschaft oder einem Array Element zur Laufzeit zuweisen. Im folgenden Beispiel wird veranschaulicht, wie dieser Fehler auftreten kann.
 
@@ -58,7 +58,7 @@ exitButton.Location = exitLocation
 
 - Verwenden Sie die-Variable, um auf die-Eigenschaft zuzugreifen, um ihr einen Wert zuzuweisen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Operatoren und Ausdrücke](../../programming-guide/language-features/operators-and-expressions/index.md)
 - [Anweisungen](../../programming-guide/language-features/statements.md)

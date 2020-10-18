@@ -1,5 +1,5 @@
 ---
-title: Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember '<defaultpropertyname>' der Schnittstelle '<interfacename1>' oder '<defaultpropertyname>' der Schnittstelle '<interfacename2>' handeln.
+title: Der Standardeigenschaftenzugriff ist nicht eindeutig. Es kann sich um den geerbten Schnittstellenmember "<defaultpropertyname>" der Schnittstelle "<interfacename1>" oder "<defaultpropertyname>" der Schnittstelle "<interfacename2>" handeln.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30686
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: b7c4c9c75de1b3777f34a70470b89f323a5699f9
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250369"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162062"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Zugriff auf die Standardeigenschaft ist mehrdeutig zwischen den geerbten Schnittstellenmember\<Defaultpropertyname > 'der Schnittstelle'\<schnittstellenname1 >' und '\<Defaultpropertyname > 'der Schnittstelle'\< schnittstellenname2 >'
+# <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: der Standardeigenschaften Zugriff ist zwischen den geerbten Schnittstellenmembern ' \<defaultpropertyname> ' der-Schnittstelle ' \<interfacename1> ' und ' \<defaultpropertyname> ' der-Schnittstelle \<interfacename2> mehrdeutig.
 
 Eine Schnittstelle erbt von zwei Schnittstellen, von denen jede eine Standard Eigenschaft mit demselben Namen deklariert. Der Compiler kann keinen Zugriff auf diese Standard Eigenschaft ohne Qualifizierung auflösen. Dies wird anhand des folgenden Beispiels veranschaulicht.
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-Wenn Sie `testObj(1)` angeben, versucht der Compiler, ihn in der Default-Eigenschaft aufzulösen. Aufgrund der geerbten Schnittstellen gibt es jedoch zwei mögliche Standardeigenschaften, daher signalisiert der Compiler diesen Fehler.
+Wenn Sie angeben `testObj(1)` , versucht der Compiler, ihn in die Default-Eigenschaft aufzulösen. Aufgrund der geerbten Schnittstellen gibt es jedoch zwei mögliche Standardeigenschaften, daher signalisiert der Compiler diesen Fehler.
 
 **Fehler-ID:** BC30686
 
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
 
-- Vermeiden Sie das Erben von Membern mit dem gleichen Namen. Wenn `testObj` z. b. keines der Member von, z. b. `Iface2`, benötigt, deklarieren Sie es im vorherigen Beispiel wie folgt:
+- Vermeiden Sie das Erben von Membern mit dem gleichen Namen. Wenn im vorherigen Beispiel keines der Member von benötigt, z. b., `testObj` `Iface2` , deklarieren Sie es wie folgt:
 
   ```vb
   Dim testObj As Iface1

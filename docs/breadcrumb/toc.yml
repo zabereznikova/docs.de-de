@@ -317,13 +317,17 @@ items:
               - name: Erste Schritte
                 tocHref: /dotnet/csharp/getting-started/
                 topicHref: /dotnet/csharp/getting-started/index
+                items:
+                  - name: Einführung in C#
+                    tocHref: /dotnet/csharp/tour-of-csharp/
+                    topicHref: /dotnet/csharp/tour-of-csharp/index
               - name: Tutorials
                 tocHref: /dotnet/csharp/tutorials/
                 topicHref: /dotnet/csharp/tutorials/index
               - name: Überblick
                 tocHref: /dotnet/csharp/tour-of-csharp/
                 topicHref: /dotnet/csharp/tour-of-csharp/index
-              - name: Neues
+              - name: Neuigkeiten
                 tocHref: /dotnet/csharp/whats-new/
                 topicHref: /dotnet/csharp/whats-new/index
               - name: .NET Compiler Platform SDK

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: c23a1013326fc3af0b0dd29bb8007d4f17553185
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6cba7b6f896a86edcb0daddae9003cf59d30bd48
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875724"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161685"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>Ressourcendatei "\<filename>" konnte nicht eingebettet werden: \<error message>
+# <a name="bc30143-unable-to-embed-resource-file-filename-error-message"></a>BC30143: die Ressourcen Datei "" konnte nicht eingebettet werden \<filename> : \<error message>
 
-Der Visual Basic-Compiler ruft den Assemblylinker (Al.exe, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM+-Ressourcedatei in die Assembly.  
-  
- **Fehler-ID:** BC30143  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-1. Überprüfen Sie die Fehlermeldung in Anführungszeichen, und lesen Sie das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) Weitere Erläuterungen und Ratschläge.  
-  
-2. Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
-  
-## <a name="see-also"></a>Weitere Informationen
+Der Visual Basic-Compiler ruft den Assemblylinker (Al.exe, auch bekannt als ALink) auf, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler beim direkten Einbetten einer nativen COM+-Ressourcedatei in die Assembly.
+
+ **Fehler-ID:** BC30143
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+1. Überprüfen Sie die Fehlermeldung in Anführungszeichen, und lesen Sie das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md) Weitere Erläuterungen und Ratschläge.
+
+2. Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/feedback-options)

@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 0264a4235a056c93edb703ec2ef70e7124e0df4e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5eff7622ce2a35cf2846c5141cede98ea033d708
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873621"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159884"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
 
-Es wird auf eine ungültige Objekt Variable verwiesen.   Dieser Fehler kann mehrere Ursachen haben:
+Es wird auf eine ungültige Objekt Variable verwiesen. Dieser Fehler kann mehrere Ursachen haben:
 
 - Eine Variable wurde ohne Angabe eines Typs deklariert. Wenn eine Variable ohne Angabe eines Typs deklariert wird, wird standardmäßig der Typ verwendet `Object` .
 
@@ -51,7 +51,7 @@ Es wird auf eine ungültige Objekt Variable verwiesen.   Dieser Fehler kann mehr
 
 5. Stellen Sie sicher, dass `With` der Block initialisiert wird, indem Sie den `With` Anweisungs Einstiegspunkt ausführen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Deklaration von Objektvariablen](../../programming-guide/language-features/variables/object-variable-declaration.md)
 - [ReDim-Anweisung](../statements/redim-statement.md)

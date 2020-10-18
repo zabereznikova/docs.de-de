@@ -10,14 +10,14 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: b278dcc10a8a4e9e67aacdb16dca2588d2ebd0f1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 85798e6453bc6cea6174ecc536b35835865e0459
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409782"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163453"
 ---
-# <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden
+# <a name="bc36647-and-bc36644-data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>BC36647 und BC36644: die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden.
 
 Die Datentypen der Typparameter können nicht von diesen Argumenten abgeleitet werden. Sie können diesen Fehler möglicherweise beheben, indem Sie die Datentypen explizit angeben.
 
@@ -58,7 +58,7 @@ End Interface
 
 Anstelle des Typrückschlusses können Sie einen Datentyp für den oder die Typparameter angeben.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Gelockerte Delegatenkonvertierung](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Generic Procedures in Visual Basic](../../programming-guide/language-features/data-types/generic-procedures.md)
