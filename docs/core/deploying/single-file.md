@@ -4,18 +4,18 @@ description: Hier erfahren Sie, was eine Einzeldatei-App ist und warum Sie diese
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712636"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050415"
 ---
 # <a name="single-file-deployment-and-executable"></a>Einzeldateibereitstellung und ausführbare Datei
 
 Wenn Sie alle Abhängigkeiten der Anwendung in eine einzelne Binärdatei packen, kann ein Anwendungsentwickler die Anwendung in einer Datei bereitstellen und verteilen. Dieses Bereitstellungsmodell wurde mit .NET 3.0 eingeführt und in .NET 5.0 erweitert. Wenn ein Benutzer zuvor in .NET Core 3.0 eine Einzeldatei-App ausgeführt hat, hat der .NET Core-Host zuerst alle Dateien in ein temporäres Verzeichnis extrahiert, bevor die Anwendung ausgeführt wurde. In .NET 5.0 wurde der Ablauf verbessert, indem der Code direkt ausgeführt wird, ohne die Dateien aus der App zu extrahieren.
 
-Die Einzeldateibereitstellung ist für das [frameworkabhängige Bereitstellungsmodell](index.md#publish-framework-dependent) und [eigenständige Anwendungen](index.md#publish-self-contained) verfügbar. Bei einer eigenständigen Anwendung handelt es sich dabei um eine große Datei, da die Runtime und die Frameworkbibliotheken enthalten sind. Die Einzeldatei-Bereitstellungsoption kann mit den Veröffentlichungsoptionen [ReadyToRun](../tools/dotnet-publish.md) und [Trim](trim-self-contained.md) (ein experimentelles Feature in .NET 5.0) kombiniert werden.
+Die Einzeldateibereitstellung ist für das [frameworkabhängige Bereitstellungsmodell](index.md#publish-framework-dependent) und [eigenständige Anwendungen](index.md#publish-self-contained) verfügbar. Bei einer eigenständigen Anwendung handelt es sich dabei um eine große Datei, da die Runtime und die Frameworkbibliotheken enthalten sind. Die Einzeldatei-Bereitstellungsoption kann mit den Veröffentlichungsoptionen [ReadyToRun](ready-to-run.md) und [Trim](trim-self-contained.md) (ein experimentelles Feature in .NET 5.0) kombiniert werden.
 
 ## <a name="api-incompatibility"></a>API-Inkompatibilität
 
