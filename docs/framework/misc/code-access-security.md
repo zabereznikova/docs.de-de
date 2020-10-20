@@ -16,17 +16,20 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554865"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224336"
 ---
 # <a name="code-access-security"></a>Codezugriffssicherheit
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
-  
+
+> [!NOTE]
+> Da die Code Zugriffssicherheit veraltet ist, ist der modernste Code innerhalb des .net-Ökosystems nicht für die Verwendung in einer teilweise vertrauenswürdigen Umgebung konzipiert. Anwendungen, die sich auf CAS stützen, sollten nicht erwarten, dass moderne Bibliotheken innerhalb dieser Umgebungen korrekt verhalten, es sei denn, der Bibliotheks Entwickler hat explizite Schritte ausgeführt, um die Kompatibilität innerhalb der CAS-Sandbox sicherzustellen.  
+
  Die heutigen hochgradig vernetzten Computersysteme sind häufig Code ausgesetzt, der aus unterschiedlichen, teilweise auch unbekannten Quellen stammt. Code kann an e-Mails angefügt oder über das Internet heruntergeladen werden. Viele Computerbenutzer haben leider die Auswirkungen von bösartigem mobilem Code hautnah zu spüren bekommen, beispielsweise von Viren und Würmern, die Daten beschädigen oder zerstören können und deren Beseitigung zeit- und kostenintensiv ist.  
   
  Die meisten gängigen Sicherheitsmechanismen gewähren Benutzern Rechte auf der Grundlage Ihrer Anmelde Informationen (in der Regel ein Kennwort) und schränken Ressourcen (häufig Verzeichnisse und Dateien) ein, auf die der Benutzer zugreifen darf. Bei diesem Ansatz bleiben jedoch einige Aspekte unberücksichtigt: Benutzer erhalten Code aus zahlreichen Quellen, von denen einige möglicherweise unzuverlässig oder nicht vertrauenswürdig sind. Code kann Fehler oder Sicherheitsrisiken enthalten, die von bösartigem Code ausgenutzt werden können. Und in manchen Fällen kann Code zu unerwartetem Verhalten führen. Daher können Computersysteme beschädigt werden und private Daten in die falschen Hände gelangen, wenn umsichtige und vertrauenswürdige Benutzer schädliche oder fehlerhafte Software ausführen. Die meisten Betriebssystem-Sicherheitsmechanismen erfordern, dass jedem Teil des Codes vertraut werden muss, damit er ausgeführt werden kann, außer vielleicht für Skripts auf einer Webseite. Daher ist nach wie vor ein umfassend anwendbarer Sicherheitsmechanismus erforderlich, der die geschützte Ausführung von Code eines Computersystems auf einem anderen System ermöglicht, selbst wenn keine gegenseitige Vertrauensstellung der Systeme besteht.  

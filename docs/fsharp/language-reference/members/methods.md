@@ -1,17 +1,17 @@
 ---
 title: Methoden
-description: Erfahren Sie, wie eine F-Methode eine Funktion ist, die einem Typ zugeordnet ist, der zum Verfügbarmachen und Implementieren der Funktionalität und des Verhaltens von Objekten und Typen verwendet wird.
+description: 'Erfahren Sie, wie eine F #-Methode eine Funktion ist, die einem Typ zugeordnet ist, der verwendet wird, um die Funktionalität und das Verhalten von Objekten und Typen bereitzustellen und zu implementieren.'
 ms.date: 11/04/2019
 ms.openlocfilehash: 6f5ae76ea450b07763eb58d0c95b18b30f634551
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401064"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224109"
 ---
 # <a name="methods"></a>Methoden
 
-Eine *Methode* ist eine Funktion, die einem Typ zugeordnet ist. In der objektorientierten Programmierung werden Methoden verwendet, um die Funktionalität und das Verhalten von Objekten und Typen verfügbar zu machen und zu implementieren.
+Eine *Methode* ist eine-Funktion, die einem-Typ zugeordnet ist. Bei der objektorientierten Programmierung werden Methoden verwendet, um die Funktionalität und das Verhalten von Objekten und Typen verfügbar zu machen und zu implementieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,59 +49,59 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="remarks"></a>Bemerkungen
 
-In der vorherigen Syntax können Sie die verschiedenen Formen von Methodendeklarationen und -definitionen anzeigen. In längeren Methodenkörpern folgt ein Zeilenumbruch dem Gleichheitszeichen (=), und der gesamte Methodenkörper wird eingerückt.
+In der vorherigen Syntax können Sie die verschiedenen Formen von Methoden Deklarationen und-Definitionen sehen. In längeren Methoden Texten folgt ein Zeilenumbruch dem Gleichheitszeichen (=), und der gesamte Methoden Text wird eingezogen.
 
-Attribute können auf jede Methodendeklaration angewendet werden. Sie gehen der Syntax für eine Methodendefinition voran und werden in der Regel in einer separaten Zeile aufgeführt. Weitere Informationen finden Sie unter [Attribute](../attributes.md).
+Attribute können auf jede Methoden Deklaration angewendet werden. Sie sind der Syntax für eine Methoden Definition vorangestellt und werden in der Regel in einer separaten Zeile aufgeführt. Weitere Informationen finden Sie unter [Attribute](../attributes.md).
 
-Methoden können `inline`markiert werden. Informationen zu `inline` finden Sie unter [Inlinefunktionen](../functions/inline-functions.md).
+Methoden können als gekennzeichnet werden `inline` . Informationen zu `inline` finden Sie unter [Inlinefunktionen](../functions/inline-functions.md).
 
-Nicht-Inline-Methoden können rekursiv innerhalb des Typs verwendet werden. Es besteht keine Notwendigkeit, `rec` das Schlüsselwort explizit zu verwenden.
+Nicht Inline-Methoden können rekursiv innerhalb des Typs verwendet werden. Es ist nicht erforderlich, explizit das `rec` Schlüsselwort zu verwenden.
 
 ## <a name="instance-methods"></a>Instanzmethoden
 
-Instanzmethoden werden mit `member` dem Schlüsselwort und einem *Selbstbezeichner*deklariert, gefolgt von einem Punkt (.) und dem Methodennamen und den Parametern. Wie bei `let` Bindungen kann die *Parameterliste* ein Muster sein. In der Regel schließen Sie Methodenparameter in Klammern in ein Tupelformular ein, d. h. die Art und Weise, wie Methoden in F- angezeigt werden, wenn sie in anderen .NET Framework-Sprachen erstellt werden. Die Curryform (Parameter, die durch Leerzeichen getrennt sind) ist jedoch ebenfalls üblich, und andere Muster werden ebenfalls unterstützt.
+Instanzmethoden werden mit dem `member` -Schlüsselwort und einem *selbst Bezeichner*, gefolgt von einem-Wert (.) und dem Methodennamen und-Parametern, deklariert. Wie bei `let` Bindungen, kann die *Parameter-List* ein Muster sein. In der Regel schließen Sie Methoden Parameter in Klammern in einem tupelformular ein. Dies ist die Methode, mit der Methoden in F # angezeigt werden, wenn Sie in anderen .NET Framework Sprachen erstellt werden. Das Curry-Formular (durch Leerzeichen getrennte Parameter) ist jedoch ebenfalls üblich, und andere Muster werden ebenfalls unterstützt.
 
-Das folgende Beispiel veranschaulicht die Definition und Verwendung einer nicht abstrakten Instanzmethode.
+Im folgenden Beispiel werden die Definition und die Verwendung einer nicht abstrakten Instanzmethode veranschaulicht.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
 
-Verwenden Sie innerhalb von Instanzmethoden nicht den Selbstbezeichner, um auf Felder zuzugreifen, die mithilfe von let-Bindungen definiert wurden. Verwenden Sie den Selbstbezeichner, wenn Sie auf andere Member und Eigenschaften zugreifen.
+Verwenden Sie in Instanzmethoden den Self-Identifier nicht für den Zugriff auf Felder, die mithilfe von let-Bindungen definiert wurden. Verwenden Sie den selbst Bezeichner, wenn Sie auf andere Member und Eigenschaften zugreifen.
 
 ## <a name="static-methods"></a>Statische Methoden
 
-Das `static` Schlüsselwort wird verwendet, um anzugeben, dass eine Methode ohne Instanz aufgerufen werden kann und keiner Objektinstanz zugeordnet ist. Andernfalls sind Methoden Instanzmethoden.
+Das-Schlüsselwort `static` wird verwendet, um anzugeben, dass eine Methode ohne eine-Instanz aufgerufen werden kann und keiner Objektinstanz zugeordnet ist. Andernfalls sind Methoden Instanzmethoden.
 
-Das Beispiel im nächsten Abschnitt zeigt `let` Felder, die mit `member` dem Schlüsselwort deklariert wurden, Eigenschaftenmember, die mit dem Schlüsselwort deklariert wurden, und eine statische Methode, die mit dem `static` Schlüsselwort deklariert wurde.
+Das Beispiel im nächsten Abschnitt zeigt Felder, die mit dem- `let` Schlüsselwort deklariert werden, mit dem-Schlüsselwort deklarierte Eigenschaften `member` und eine statische Methode, die mit dem- `static` Schlüsselwort deklariert wurde.
 
-Das folgende Beispiel veranschaulicht die Definition und Verwendung statischer Methoden. Angenommen, diese Methodendefinitionen `SomeType` befinden sich in der Klasse im vorherigen Abschnitt.
+Das folgende Beispiel veranschaulicht die Definition und Verwendung statischer Methoden. Nehmen Sie an, dass sich diese Methoden Definitionen in der- `SomeType` Klasse des vorherigen Abschnitts befinden.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
 ## <a name="abstract-and-virtual-methods"></a>Abstrakte und virtuelle Methoden
 
-Das `abstract` Schlüsselwort gibt an, dass eine Methode über einen virtuellen Dispatch-Slot und möglicherweise keine Definition in der Klasse verfügt. Ein *virtueller Dispatch-Slot* ist ein Eintrag in einer intern verwalteten Funktionstabelle, der zur Laufzeit zum Nachschlagen virtueller Funktionsaufrufe in einem objektorientierten Typ verwendet wird. Der virtuelle Dispatch-Mechanismus ist der Mechanismus, der *Polymorphismus*implementiert, ein wichtiges Merkmal der objektorientierten Programmierung. Eine Klasse, die über mindestens eine abstrakte Methode ohne Definition verfügt, ist eine *abstrakte Klasse,* was bedeutet, dass keine Instanzen dieser Klasse erstellt werden können. Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte Klassen](../abstract-classes.md).
+Das Schlüsselwort `abstract` gibt an, dass eine Methode einen virtuellen dispatchslot hat und möglicherweise keine Definition in der Klasse aufweist. Ein *virtueller dispatchslot* ist ein Eintrag in einer intern verwalteten Tabelle von Funktionen, die zur Laufzeit verwendet wird, um virtuelle Funktionsaufrufe in einem objektorientierten Typ zu suchen. Der virtuelle Dispatchmechanismus ist der Mechanismus, der *Polymorphie*implementiert, ein wichtiges Feature der objektorientierten Programmierung. Eine Klasse, die über mindestens eine abstrakte Methode ohne Definition verfügt, ist eine *abstrakte Klasse*, was bedeutet, dass keine Instanzen dieser Klasse erstellt werden können. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte Klassen](../abstract-classes.md).
 
-Abstrakte Methodendeklarationen enthalten keinen Methodentext. Stattdessen folgt auf den Namen der Methode ein Doppelpunkt (:) und eine Typsignatur für die Methode. Die Typsignatur einer Methode entspricht der von IntelliSense angezeigten, wenn Sie den Mauszeiger über einen Methodennamen im Visual Studio-Code-Editor anhalten, außer ohne Parameternamen. Typsignaturen werden auch vom Interpreter fsi.exe angezeigt, wenn Sie interaktiv arbeiten. Die Typsignatur einer Methode wird gebildet, indem die Typen der Parameter aufgelistet werden, gefolgt vom Rückgabetyp mit entsprechenden Trennzeichen. Curry-Parameter werden `->` durch und Tupelparameter `*`durch getrennt. Der Rückgabewert wird immer durch `->` ein Symbol von den Argumenten getrennt. Klammern können verwendet werden, um komplexe Parameter zu gruppieren, z. B. wenn ein Funktionstyp ein Parameter ist, oder um anzugeben, wann ein Tupel als einzelner Parameter und nicht als zwei Parameter behandelt wird.
+Abstrakte Methoden Deklarationen enthalten keinen Methoden Text. Stattdessen folgt der Name der Methode einem Doppelpunkt (:) und eine Typsignatur für die Methode. Die Typsignatur einer Methode ist identisch mit der, die von IntelliSense angezeigt wird, wenn Sie den Mauszeiger über einen Methodennamen im Visual Studio Code-Editor bewegen, außer ohne Parameternamen. Typsignaturen werden auch vom Interpreter angezeigt, fsi.exe, wenn Sie interaktiv arbeiten. Die Typsignatur einer Methode wird gebildet, indem die Typen der Parameter, gefolgt vom Rückgabetyp, mit entsprechenden Trennzeichen aufgelistet werden. Curry-Parameter werden durch getrennt, `->` und tupelparameter werden durch getrennt `*` . Der Rückgabewert wird immer von den Argumenten durch ein `->` Symbol getrennt. Klammern können verwendet werden, um komplexe Parameter zu gruppieren, z. b. Wenn ein Funktionstyp ein Parameter ist, oder um anzugeben, dass ein Tupel als einzelner Parameter und nicht als zwei Parameter behandelt wird.
 
-Sie können auch abstrakte Methoden Standarddefinitionen geben, indem `default` Sie die Definition zur Klasse hinzufügen und das Schlüsselwort verwenden, wie im Syntaxblock in diesem Thema gezeigt. Eine abstrakte Methode mit einer Definition in derselben Klasse entspricht einer virtuellen Methode in anderen .NET Framework-Sprachen. Unabhängig davon, ob eine `abstract` Definition vorhanden ist oder nicht, erstellt das Schlüsselwort einen neuen Dispatch-Slot in der virtuellen Funktionstabelle für die Klasse.
+Sie können auch abstrakten Methoden Standarddefinitionen übergeben, indem Sie die Definition der-Klasse hinzufügen und das- `default` Schlüsselwort verwenden, wie im Syntax Block in diesem Thema gezeigt. Eine abstrakte Methode, die eine Definition in derselben Klasse aufweist, entspricht einer virtuellen Methode in anderen .NET Framework Sprachen. Unabhängig davon, ob eine Definition vorhanden ist, `abstract` erstellt das Schlüsselwort einen neuen dispatchslot in der virtuellen Funktions Tabelle für die Klasse.
 
-Unabhängig davon, ob eine Basisklasse ihre abstrakten Methoden implementiert, können abgeleitete Klassen Implementierungen abstrakter Methoden bereitstellen. Um eine abstrakte Methode in einer abgeleiteten Klasse zu implementieren, definieren Sie eine `override` Methode, die denselben Namen und dieselbe Signatur in der abgeleiteten Klasse hat, außer verwenden Sie das schlüsselwortgebende Wort, `default` und stellen Sie den Methodentext bereit. Die `override` Schlüsselwörter `default` und bedeuten genau das gleiche. Verwenden `override` Sie diese Methode, wenn die neue Methode eine Basisklassenimplementierung überschreibt. verwenden `default` Sie, wenn Sie eine Implementierung in derselben Klasse wie die ursprüngliche abstrakte Deklaration erstellen. Verwenden Sie `abstract` das Schlüsselwort nicht für die Methode, die die Methode implementiert, die in der Basisklasse als abstrakt deklariert wurde.
+Unabhängig davon, ob eine Basisklasse die abstrakten Methoden implementiert, können abgeleitete Klassen Implementierungen abstrakter Methoden bereitstellen. Um eine abstrakte Methode in einer abgeleiteten Klasse zu implementieren, definieren Sie eine Methode, die den gleichen Namen und die gleiche Signatur in der abgeleiteten Klasse aufweist, mit Ausnahme des `override` `default` -oder-Schlüssel Worts, und stellen den Methoden Text bereit. Die Schlüsselwörter `override` und `default` bedeuten genau dasselbe. Verwenden `override` Sie, wenn die neue Methode eine Basisklassen Implementierung überschreibt `default` . verwenden Sie diese Methode, wenn Sie in derselben Klasse wie die ursprüngliche abstrakte Deklaration eine Implementierung erstellen. Verwenden Sie das- `abstract` Schlüsselwort nicht für die Methode, die die Methode implementiert, die in der Basisklasse als abstrakt deklariert wurde.
 
-Im folgenden Beispiel wird `Rotate` eine abstrakte Methode mit einer Standardimplementierung veranschaulicht, die einer virtuellen .NET Framework-Methode entspricht.
+Das folgende Beispiel veranschaulicht eine abstrakte Methode `Rotate` mit einer Standard Implementierung, die einer .NET Framework virtuellen Methode entspricht.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
-Das folgende Beispiel veranschaulicht eine abgeleitete Klasse, die eine Basisklassenmethode überschreibt. In diesem Fall ändert die Außerkraftsetzung das Verhalten, sodass die Methode nichts bewirkt.
+Im folgenden Beispiel wird eine abgeleitete Klasse veranschaulicht, die eine Basisklassen Methode überschreibt. In diesem Fall wird das Verhalten durch die-Überschreibung geändert, sodass die-Methode nichts bewirkt.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
 
 ## <a name="overloaded-methods"></a>Überladene Methoden
 
-Überladene Methoden sind Methoden, die identische Namen in einem bestimmten Typ haben, aber unterschiedliche Argumente aufweisen. Optionale Argumente werden in der Regel anstelle von überladenen Methoden verwendet. Überladene Methoden sind jedoch in der Sprache zulässig, vorausgesetzt, die Argumente sind in Tupelform und nicht in Curryform.
+Überladene Methoden sind Methoden, die über identische Namen in einem bestimmten Typ verfügen, aber über unterschiedliche Argumente verfügen. In F # werden optionale Argumente normalerweise anstelle von überladenen Methoden verwendet. Allerdings sind überladene Methoden in der Sprache zulässig, vorausgesetzt, dass sich die Argumente in der tupelform und nicht in der Cursor Form befinden.
 
 ## <a name="optional-arguments"></a>Optionale Argumente
 
-Ab F-4.1 können Sie auch optionale Argumente mit einem Standardparameterwert in Methoden haben.  Dies soll die Zusammenarbeit mit dem Code von C-Code erleichtern.  Im folgenden Beispiel wird die Syntax veranschaulicht:
+Ab F # 4,1 können Sie auch optionale Argumente mit einem Standardparameter Wert in-Methoden haben.  Dies dient der Vereinfachung der Interoperation mit c#-Code.  Im folgenden Beispiel wird die Syntax veranschaulicht:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -109,11 +109,11 @@ type C() =
     _.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
-Beachten Sie, dass `DefaultParameterValue` der übergebene Wert mit dem Eingabetyp übereinstimmen muss.  In der obigen Stichprobe `int`ist es eine .  Der Versuch, einen Nicht-Ganzzahlwert `DefaultParameterValue` zu übergeben, würde zu einem Kompilierungsfehler führen.
+Beachten Sie, dass der in übergebene Wert `DefaultParameterValue` dem Eingabetyp entsprechen muss.  Im obigen Beispiel ist es ein `int` .  Der Versuch, einen nicht ganzzahligen Wert in zu übergeben, `DefaultParameterValue` führt zu einem Kompilierungsfehler.
 
 ## <a name="example-properties-and-methods"></a>Beispiel: Eigenschaften und Methoden
 
-Das folgende Beispiel enthält einen Typ mit Beispielen für Felder, private Funktionen, Eigenschaften und eine statische Methode.
+Das folgende Beispiel enthält einen Typ, der Beispiele für Felder, private Funktionen, Eigenschaften und eine statische Methode enthält.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
 
