@@ -153,9 +153,9 @@
         - name: Generische Typen
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: 'Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann'
+            - name: 'Definieren einer Klasse, die für unterschiedliche Typen die gleiche Funktionalität bereitstellen kann'
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: 'Vorgehensweise: Verwenden einer generischen Klasse'
+            - name: Verwenden einer generischen Klasse
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: Generische Prozeduren
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -875,14 +875,18 @@
         - name: XML-Verarbeitungsanweisungsliteral
           href: language-reference/xml-literals/xml-processing-instruction-literal.md
     - name: Fehlermeldungen
-      href: language-reference/error-messages/index.md
       items:
+        - name: Übersicht
+          displayName: 'error messages, compiler errors'
+          href: language-reference/error-messages/index.md
+        - name: BC30663
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: BC32500
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '"#ElseIf" muss ein entsprechendes "#If" oder "#ElseIf" voranstehen.'
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
         - name: 'Region- und #End Region-Anweisungen sind im Methodentext/in mehrzeiligen Lambda-Ausdrücken ungültig.'
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
-        - name: '<attribute> kann nicht angewendet werden, da das Format von GUID "<number>" falsch ist.'
-          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '<classname> ist nicht CLS-kompatibel, da die <interfacename>-Schnittstelle, von der geerbt wird, nicht CLS-kompatibel ist'
           href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
         - name: <elementname> ist veraltet (Visual Basic-Warnung)
@@ -949,8 +953,6 @@
           href: language-reference/error-messages/bc31043.md
         - name: As Any wird in Declare-Anweisungen nicht unterstützt.
           href: language-reference/error-messages/bc30828.md
-        - name: Das Attribut "<attributename>" kann nicht mehrmals angewendet werden.
-          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
         - name: Automatisierungsfehler
           href: language-reference/error-messages/automation-error.md
         - name: 'Ungültiger Prüfsummenwert, keine hexadezimalen Ziffern oder ungerade Anzahl von hexadezimalen Ziffern.'
@@ -1409,7 +1411,7 @@
               href: reference/command-line-compiler/win32manifest.md
             - name: '-win32resource'
               href: reference/command-line-compiler/win32resource.md
-        - name: Compileroptionen nach Kategorien sortiert
+        - name: Compileroptionen nach Kategorie
           href: reference/command-line-compiler/compiler-options-listed-by-category.md
     - name: .NET Framework-Referenzinformationen
       href: reference/net-framework-reference-information.md

@@ -3,12 +3,12 @@ title: Sichern von .NET-Microservices und Webanwendungen
 description: Sicherheit in .NET-Microservices und -Webanwendungen – Lernen Sie die Authentifizierungsoptionen in ASP.NET Core-Webanwendungen kennen.
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 01797189ce946c39bc7b8cafdff1e69ff9760e4e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608095"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160671"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Erstellen sicherer .NET-Microservices und -Webanwendungen
 
