@@ -3,12 +3,12 @@ title: Vergleich der relationalen und NoSQL-Daten
 description: Weitere Informationen zu relationalen und nosql-Daten in Cloud-native Anwendungen
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163634"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434870"
 ---
 # <a name="relational-vs-nosql-data"></a>Vergleich der relationalen und NoSQL-Daten
 
@@ -26,11 +26,11 @@ Nosql-Datenbanken enthalten mehrere verschiedene Modelle für den Zugriff und di
 
 **Abbildung 5-9**: Datenmodelle für nosql-Datenbanken
 
-| Modellieren | Merkmale |
+| Modell | Merkmale |
 | :-------- | :-------- |
 | Dokumentspeicher | Daten und Metadaten werden hierarchisch in JSON-basierten Dokumenten in der Datenbank gespeichert. |
 | Schlüsselwert Speicher | Die einfachste der nosql-Datenbanken, Daten werden als eine Auflistung von Schlüssel-Wert-Paaren dargestellt. |
-| Breit spaltige Speicherung | Verknüpfte Daten werden als eine Reihe von geschachtelten Schlüssel-Wert-Paaren in einer einzelnen Spalte gespeichert. |
+| Wide-Column Speicher | Verknüpfte Daten werden als eine Reihe von geschachtelten Schlüssel-Wert-Paaren in einer einzelnen Spalte gespeichert. |
 | Graphspeicher | Daten werden in einer Diagramm Struktur als Knoten-, Edge-und Daten Eigenschaften gespeichert. |
 
 ## <a name="the-cap-theorem"></a>Das Cap-Theorem
@@ -65,7 +65,7 @@ Diese Art von Ergebnis wird als letztliche Konsistenz bezeichnet und ist ein Mer
 
 Hohe Verfügbarkeit und umfangreiche Skalierbarkeit sind häufig wichtiger für das Unternehmen als eine hohe Konsistenz. Entwickler können Techniken und Muster wie z. b. Sagas, cqrs und asynchrones Messaging implementieren, um die letztliche Konsistenz zu berücksichtigen.
 
-> Heutzutage ist Vorsicht geboten, wenn die Cap-Theorem-Einschränkungen durchgeführt werden. Es wurde ein neuer Datenbanktyp mit dem Namen newsql entwickelt, der die relationale Datenbank-Engine erweitert, um sowohl die horizontale Skalierbarkeit als auch die skalierbare Leistung von nosql-Systemen zu unterstützen.
+> Heutzutage muss bei der Betrachtung der Cap-Theorem-Einschränkungen Vorsicht geboten werden. Es wurde ein neuer Datenbanktyp mit dem Namen newsql entwickelt, der die relationale Datenbank-Engine erweitert, um sowohl die horizontale Skalierbarkeit als auch die skalierbare Leistung von nosql-Systemen zu unterstützen.
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>Überlegungen zu relationalen oder nosql-Systemen
 
@@ -131,7 +131,7 @@ Microsoft setzt jedoch die Verpflichtung fort, Azure zu einer "offenen Plattform
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)   ist eine relationale Open-Source-Datenbank und eine Säule für Anwendungen, die auf dem [Lamp-Software Stapel](https://en.wikipedia.org/wiki/LAMP_(software_bundle))erstellt werden. Es wird häufig für *Lese* intensive Workloads gewählt und wird von vielen großen Organisationen verwendet, darunter Facebook, Twitter und YouTube. Die Community Edition ist kostenlos verfügbar, während für die Enterprise Edition ein Lizenzkauf erforderlich ist. Das ursprünglich in 1995 erstellte Produkt wurde von Sun Microsystems in 2008 erworben. Oracle hat Sun und MySQL in 2010 erworben.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) ist eine relationale Open-Source-Datenbank und eine Säule für Anwendungen, die auf dem [Lamp-Software Stapel](https://en.wikipedia.org/wiki/LAMP_(software_bundle))erstellt werden. Es wird häufig für *Lese* intensive Workloads gewählt und wird von vielen großen Organisationen verwendet, darunter Facebook, Twitter und YouTube. Die Community Edition ist kostenlos verfügbar, während für die Enterprise Edition ein Lizenzkauf erforderlich ist. Das ursprünglich in 1995 erstellte Produkt wurde von Sun Microsystems in 2008 erworben. Oracle hat Sun und MySQL in 2010 erworben.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) ist ein verwalteter relationaler Datenbankdienst, der auf der Open Source-MySQL-Server-Engine basiert. Dabei wird die MySQL Community Edition verwendet. Der Azure MySQL-Server ist der Verwaltungspunkt für den-Dienst. Dabei handelt es sich um dieselbe MySQL Server-Engine, die für lokale bereit Stellungen verwendet wird. Die Engine kann pro Server eine einzelne Datenbank oder mehrere Datenbanken pro Server erstellen, die Ressourcen gemeinsam nutzen. Sie können weiterhin Daten mit denselben Open Source-Tools verwalten, ohne neue Kenntnisse erlernen oder virtuelle Computer verwalten zu müssen.
 
@@ -206,7 +206,7 @@ Beachten Sie in der vorherigen Tabelle die [Tabellen-API](/azure/cosmos-db/table
 
 |  | Azure-Tabellenspeicher  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
-| Latency | Fast | Latenz bei einstelligen Millisekunden für Lese-und Schreibvorgänge weltweit |
+| Latency | Schnell | Latenz bei einstelligen Millisekunden für Lese-und Schreibvorgänge weltweit |
 | Throughput | Limit von 20.000 Vorgängen pro Tabelle | 10 Millionen Vorgänge pro Tabelle |
 | Globale Verteilung | Einzelne Region mit optionaler sekundärer Lese Region | Sofort einsatzbereite Verteilungen für alle Regionen mit automatischem Failover |
 | Indizierung | Nur für Partitions-und Zeilen Schlüsseleigenschaften verfügbar | Automatische Indizierung aller Eigenschaften |
@@ -228,12 +228,12 @@ Azure Cosmos DB bietet fünf wohl definierte [Konsistenz Modelle](/azure/cosmos-
 
  Diese Optionen ermöglichen es Ihnen, genaue Auswahlmöglichkeiten und präzisere Kompromisse hinsichtlich Konsistenz, Verfügbarkeit und Leistung für Ihre Daten zu treffen. Die Ebenen werden in der folgenden Tabelle dargestellt.
 
-| Konsistenzebene | Beschreibung  |
+| Konsistenzebene | BESCHREIBUNG  |
 | :-------- | :-------- |
 | Letztlich | Keine Reihenfolge Garantie für Lesevorgänge. Replikate werden schließlich konvergiert. |
 | Konstantes Präfix | Lesevorgänge sind noch immer möglich, aber die Daten werden in der Reihenfolge zurückgegeben, in der Sie geschrieben wurden. |
 | Sitzung | Gewährleistet, dass Sie alle während der aktuellen Sitzung geschriebenen Daten lesen können. Dies ist die Standard Konsistenz Ebene. |
-| Begrenzte Veraltung | Liest die Schreibweise von Schreibvorgängen nach dem angegebenen Intervall. |  
+| Begrenzte Veraltung (Bounded staleness) | Liest die Schreibweise von Schreibvorgängen nach dem angegebenen Intervall. |  
 | STARK (Strong)  | Bei Lesevorgängen wird sichergestellt, dass die zuletzt mit einem Commit ausgeführten Version eines Elements Einem Client wird nie ein Commit oder ein Teil Lesevorgang angezeigt. |  
 
 In dem Artikel, [der die 9-Ball-Cosmos DB Konsistenz Ebenen erläutert](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), bietet Microsoft Program Manager Jeremy Likness eine ausgezeichnete Erläuterung der fünf Modelle.
@@ -258,11 +258,11 @@ Intern verwaltet Cosmos DB automatisch die Platzierung [logischer Partitionen](/
 
 ## <a name="newsql-databases"></a>NewSQL-Datenbanken
 
-*Newsql*   ist eine neue Datenbanktechnologie, die die verteilte Skalierbarkeit von nosql mit den Acid-Garantien einer relationalen Datenbank kombiniert. Newsql-Datenbanken sind für Geschäftssysteme wichtig, die große Datenmengen in verteilten Umgebungen mit vollständiger Transaktionsunterstützung und Acid-Konformität verarbeiten müssen. Obwohl eine nosql-Datenbank eine enorme Skalierbarkeit bereitstellen kann, gewährleistet Sie keine Datenkonsistenz. Zeitweilig auftretende Probleme aufgrund inkonsistenter Daten können das Entwicklungsteam belasten. Entwickler müssen Sicherheitsvorkehrungen in Ihrem Code für den Mikro Dienst erstellen, um Probleme zu verwalten, die durch inkonsistente Daten verursacht
+*Newsql* ist eine neue Datenbanktechnologie, die die verteilte Skalierbarkeit von nosql mit den Acid-Garantien einer relationalen Datenbank kombiniert. Newsql-Datenbanken sind für Geschäftssysteme wichtig, die große Datenmengen in verteilten Umgebungen mit vollständiger Transaktionsunterstützung und Acid-Konformität verarbeiten müssen. Obwohl eine nosql-Datenbank eine enorme Skalierbarkeit bereitstellen kann, gewährleistet Sie keine Datenkonsistenz. Zeitweilig auftretende Probleme aufgrund inkonsistenter Daten können das Entwicklungsteam belasten. Entwickler müssen Sicherheitsvorkehrungen in Ihrem Code für den Mikro Dienst erstellen, um Probleme zu verwalten, die durch inkonsistente Daten verursacht
 
 Die Cloud Native Computing Foundation (cncf) umfasst mehrere newsql-Datenbankprojekte.
 
-| Projekt | Merkmale |
+| Project | Merkmale |
 | :-------- | :-------- |
 | Cockroach-DB |Eine Acid-kompatible relationale Datenbank, die Global skaliert wird. Fügen Sie einem Cluster einen neuen Knoten hinzu, und mit "cockroachdb" können Sie die Daten über Instanzen und geografische Regionen hinweg ausgleichen. Replikate werden erstellt, verwaltet und verteilt, um die Zuverlässigkeit zu gewährleisten. Es ist Open Source und kostenlos verfügbar.  |
 | Tidb | Eine Open-Source-Datenbank, die hybride transaktionale und analytische Workloads (HTAP) unterstützt. Es ist MySQL-kompatibel und bietet horizontale Skalierbarkeit, starke Konsistenz und hohe Verfügbarkeit.  Tidb verhält sich wie ein MySQL-Server. Sie können weiterhin vorhandene MySQL-Client Bibliotheken verwenden, ohne dass umfassende Codeänderungen an Ihrer Anwendung erforderlich sind. |
@@ -279,7 +279,7 @@ Kubernetes verwendet ein *dienstekonstrukt* , um einem Client zu ermöglichen, e
 
 In diesem Szenario sind alle Datenbankinstanzen gleich. Es sind keine primären oder sekundären Beziehungen vorhanden. Bei Techniken wie der *Konsens Replikation* in cockroachdb kann jeder Datenbankknoten beliebige Anforderungen verarbeiten. Wenn der Knoten, der eine Anforderung für den Lastenausgleich empfängt, die Daten lokal benötigt, antwortet er sofort. Andernfalls wird der Knoten zu einem Gateway und leitet die Anforderung an die entsprechenden Knoten weiter, um die richtige Antwort zu erhalten. Aus Sicht des Clients ist jeder Datenbankknoten identisch: Sie werden als einzelne *logische* Datenbank mit den Konsistenz Garantien eines einzelnen Computer Systems angezeigt, obwohl Dutzende oder sogar Hunderte von Knoten vorhanden sind, die im Hintergrund arbeiten.
 
-Eine ausführliche Betrachtung der Mechanismen hinter newsql-Datenbanken finden Sie im Artikel [Dash: vier Eigenschaften von Kubernetes-Native Datenbanken](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
+Eine ausführliche Betrachtung der Mechanismen für newsql-Datenbanken finden Sie im Artikel [Dash: vier Eigenschaften von Kubernetes-Native Datenbanken](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/) .
 
 ## <a name="data-migration-to-the-cloud"></a>Datenmigration in die Cloud
 
