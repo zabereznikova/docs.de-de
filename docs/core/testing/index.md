@@ -1,80 +1,87 @@
 ---
-title: Komponententests in .NET Core und .NET Standard
-description: Dieser Artikel bietet eine kurze Übersicht über Komponententests für .NET Core- und .NET Standard-Projekte.
-author: ardalis
-ms.author: wiwagn
-ms.date: 05/18/2020
-zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: e15f80b173389cdff86c6e62013e9c0f21171dd6
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+title: Testen in .NET
+description: Dieser Artikel bietet eine kurze Übersicht über die Konzepte, die Terminologie und die Tools für Tests in .NET.
+author: IEvangelist
+ms.author: dapine
+ms.date: 10/19/2020
+ms.openlocfilehash: 36e88cc059447a98931593e0535c70cbc92a2cf4
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703108"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223479"
 ---
-# <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
+# <a name="testing-in-net"></a>Testen in .NET
 
-Mit .NET Core können Sie im Handumdrehen Komponententests erstellen. Dieser Artikel gibt eine kurze Einführung zu Komponententests (und wie sich diese von anderen Arten von Tests unterscheiden). Über die am Ende der Seite verlinkten Ressourcen erfahren Sie, wie Sie einer Projektmappe ein neues Testprojekt hinzufügen. Nachdem Sie Ihre Testprojekte erstellt haben, können Sie Ihre Komponententests über die Befehlszeile oder Visual Studio durchführen.
+In diesem Artikel wird das Konzept des Testens vorgestellt, und es wird gezeigt, wie verschiedene Arten von Tests zum Überprüfen von Code verwendet werden können. Zum Testen von .NET-Anwendungen stehen verschiedene Tools zur Verfügung, z. B. die [.NET-CLI](#net-cli) und [IDEs (integrierte Entwicklungsumgebungen)](#ide).
 
-Wenn Sie ein **ASP.NET Core**-Projekt testen, finden Sie weitere Informationen unter [Integrationstests in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
+## <a name="test-types"></a>Testtypen
 
-.NET Core 2.0 und höher unterstützt [.NET Standard 2.0](../../standard/net-standard.md). Wir verwenden die dazugehörigen Bibliotheken, um Komponententests zu veranschaulichen.
+Automatisierte Tests sind ideal, um sicherzustellen, dass Anwendungscode so funktioniert, wie es von den Programmierern beabsichtigt war. In diesem Artikel werden Komponententests, Integrationstests und Auslastungstests behandelt.
 
-Sie können in .NET Core 2.0 oder höher integrierte Vorlagen für Komponententestprojekte für C#, F# und Visual Basic als Ausgangspunkt für Ihr eigenes Projekt verwenden.
+### <a name="unit-tests"></a>Komponententests
 
-## <a name="what-are-unit-tests"></a>Was sind Komponententests?
+Bei einem *Komponententest* handelt es sich um einen Test, der einzelne Softwarekomponenten oder Methoden, auch als „Arbeitseinheit“ bezeichnet, ausgeführt werden. Komponententests sollten nur Code testen, für den der Entwickler zuständig ist. Es werden keine Aspekte der Infrastruktur getestet. Ein Beispiel für einen Aspekt der Infrastruktur ist etwa die Interaktion mit Datenbanken, Dateisystemen und Netzwerkressourcen.
 
-Mit automatisierten Tests können Sie sicherstellen, dass eine Softwareanwendung das tut, was die Autoren möchten. Es gibt mehrere Arten von Tests für Softwareanwendungen. Dazu zählen u.a. Integrationstests, Webtests und Auslastungstests. **Komponententests** testen einzelne Softwarekomponenten und Methoden. Komponententests sollten nur den Code testen, für den der Entwickler zuständig ist. Sie sollten keine Aspekte der Infrastruktur testen. Aspekte der Infrastruktur sind z.B. Datenbanken, Dateisysteme und Netzwerkressourcen.
+Weitere Informationen zum Erstellen von Komponententests finden Sie unter [Testtools](#testing-tools).
 
-Beachten Sie, dass es bewährte Methode für das Schreiben von Tests gibt. Bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development/) wird ein Komponententest vor dem Code geschrieben, den er prüfen soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor dieses geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können.
+### <a name="integration-tests"></a>Integrationstests
 
-> [!NOTE]
-> Das ASP.NET-Team hält sich an [diese Konventionen](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests), um Entwicklern das Festlegen von aussagekräftigen Namen für Testklassen und -methoden zu erleichtern.
+Ein *Integrationstest* unterscheidet sich von einem Komponententest insofern, dass er die Funktionsfähigkeit von zwei oder mehr Softwarekomponenten gemeinsam überprüft, d. h. deren „Integration“. Diese Tests decken ein breiteres Spektrum des zu testenden Systems ab, während Komponententests auf einzelne Komponenten beschränkt sind. Häufig werden bei Integrationstests auch Aspekte der Infrastruktur berücksichtigt.
 
-Achten Sie beim Schreiben von Komponententests darauf, dass diese nicht von der Infrastruktur abhängig sind. Dadurch werden die Tests langsam und fehleranfällig. Diese Abhängigkeiten sollten nur bei Integrationstests bestehen. Sie können diese Abhängigkeiten in Ihrem Code vermeiden, indem Sie das [Prinzip der expliziten Abhängigkeit](https://deviq.com/explicit-dependencies-principle/) und [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) einsetzen. Sie können die Komponententests und die Integrationstests in unterschiedlichen Projekten erstellen. Dadurch wird sichergestellt, dass Ihr Komponententestprojekt keine Verweise auf oder Abhängigkeiten von Infrastrukturpaketen aufweist.
+### <a name="load-tests"></a>Auslastungstests
 
-## <a name="next-steps"></a>Nächste Schritte
+Bei einem *Auslastungstest* wird ermittelt, ob ein System eine bestimmte Auslastung verarbeiten kann, z. B. eine bestimmte Anzahl gleichzeitiger Benutzer, die eine Anwendung verwenden, und eine verzögerungsfreie Verarbeitung von Interaktionen. Weitere Informationen zu Auslastungstests für Webanwendungen finden Sie unter [Auslastungs-/Belastungstests in ASP.NET Core](/aspnet/core/test/load-tests).
 
-Mehr Informationen zu Unittests in .NET Core-Projekten:
+## <a name="test-considerations"></a>Überlegungen zu Tests
 
-.NET Core-Komponententestprojekte werden für folgende Programmiersprachen unterstützt:
+Beachten Sie die [bewährten Methoden](unit-testing-best-practices.md) für das Schreiben von Tests. Beispielsweise wird bei der [testgesteuerten Entwicklung (Test Driven Development, TDD)](https://deviq.com/test-driven-development) ein Komponententest vor dem Code geschrieben, der damit getestet werden soll. Stellen Sie sich die TDD wie eine Gliederung für ein Buch vor, bevor es geschrieben wird. Dadurch sollen Entwickler einfacheren, lesbareren und effizienteren Code schreiben können.
 
-- [C#](../../csharp/index.yml)
-- [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml)
+## <a name="testing-tools"></a>Testtools
 
-Sie können auch zwischen mehreren Komponententestframeworks auswählen:
+.NET ist eine mehrsprachige Entwicklungsplattform, und Sie können verschiedene Testtypen für [C#](../../csharp/index.yml), [F#](../../fsharp/index.yml) und [Visual Basic](../../visual-basic/index.yml) schreiben. Für jede dieser Sprachen können Sie aus mehreren Testframeworks wählen.
 
-- [xUnit](https://xunit.net/)
-- [NUnit](https://nunit.org)
-- [MSTest](https://github.com/Microsoft/testfx-docs)
+### <a name="xunit"></a>xUnit
 
-In den folgenden exemplarischen Vorgehensweisen erfahren Sie mehr:
+[xUnit](https://xunit.net) ist ein kostenloses Open-Source-Tool für Komponententests für .NET mit Unterstützung durch die Community. xUnit.net wurde vom ursprünglichen Erfinder von NUnit v2 geschrieben und stellt die neueste Technologie für Komponententests für .NET-Apps dar. xUnit.net kann mit ReSharper, CodeRush, TestDriven.NET und [Xamarin](/apps/xamarin) verwendet werden. Es handelt sich dabei um ein Projekt der [.NET Foundation](https://dotnetfoundation.org), das deren Verhaltensregeln folgt.
 
-:::zone pivot="mstest"
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- Erstellen von Komponententests mit [*MSTest* und *C#* mit der .NET Core-CLI](unit-testing-with-mstest.md).
-- Erstellen von Komponententests mit [*MSTest* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-mstest.md).
-- Erstellen von Komponententests mit [*MSTest* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-mstest.md).
+- [Komponententests mit C#](unit-testing-with-dotnet-test.md)
+- [Komponententests mit F#](unit-testing-fsharp-with-dotnet-test.md)
+- [Komponententests mit Visual Basic](unit-testing-visual-basic-with-dotnet-test.md)
 
-:::zone-end
-:::zone pivot="xunit"
+### <a name="nunit"></a>NUnit
 
-- Erstellen von Komponententests mit [*xUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-dotnet-test.md).
-- Erstellen von Komponententests mit [*xUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-dotnet-test.md).
-- Erstellen von Komponententests mit [*xUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-dotnet-test.md).
+[NUnit](https://nunit.org) ist ein Komponententest-Framework für alle .NET-Sprachen. Ausgangspunkt war eine Portierung von JUnit. Die aktuelle Produktionsversion wurde neu programmiert und um viele neue Features und Unterstützung für eine Vielzahl von .NET-Plattformen erweitert. NUnit ist ein Projekt der [.NET Foundation](https://dotnetfoundation.org).
 
-:::zone-end
-:::zone pivot="nunit"
+Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- Erstellen von Komponententests mit [*NUnit* und *C#* mit der .NET Core-CLI](unit-testing-with-nunit.md).
-- Erstellen von Komponententests mit [*NUnit* und *F#* mit der .NET Core-CLI](unit-testing-fsharp-with-nunit.md).
-- Erstellen von Komponententests mit [*NUnit* und *Visual Basic* mit der .NET Core-CLI](unit-testing-visual-basic-with-nunit.md).
+- [Komponententests mit C#](unit-testing-with-nunit.md)
+- [Komponententests mit F#](unit-testing-fsharp-with-nunit.md)
+- [Komponententests mit Visual Basic](unit-testing-visual-basic-with-nunit.md)
 
-:::zone-end
+### <a name="mstest"></a>MSTest
 
-In den folgenden Artikeln erfahren Sie mehr:
+[MSTest](https://github.com/Microsoft/testfx-docs) ist das Microsoft-Testframework für alle .NET-Sprachen. Es ist erweiterbar und funktioniert sowohl mit der .NET-CLI als auch mit Visual Studio. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- Visual Studio Enterprise bietet nützliche Testtools für .NET Core. Weitere Informationen finden Sie in den Artikel zu [Live Unit Testing](/visualstudio/test/live-unit-testing) und [Codeabdeckung](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-- Weitere Informationen zum Durchführen selektiver Komponententests finden Sie unter [Ausführen von selektiven Komponententests](selective-unit-tests.md) und [Including and excluding test projects and test methods](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods) (Einbeziehen und Ausschließen von Testprojekten und Testmethoden).
-- [Verwenden von XUnit mit .NET Core und Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [Komponententests mit C#](unit-testing-with-mstest.md)
+- [Komponententests mit F#](unit-testing-fsharp-with-mstest.md)
+- [Komponententests mit Visual Basic](unit-testing-visual-basic-with-mstest.md)
+
+### <a name="net-cli"></a>.NET CLI
+
+Mit dem Befehl [dotnet test](../tools/dotnet-test.md) in der [.NET-CLI](../tools/index.md) können Sie Komponententests für Lösungen ausführen. Die .NET-CLI macht die meisten Funktionen verfügbar, die in [integrierten Entwicklungsumgebungen (IDEs)](#ide) über die Benutzeroberfläche verfügbar sind. Die .NET-CLI ist plattformübergreifend und kann im Rahmen von Continuous Integration- und Continuous Delivery-Pipelines verwendet werden. Die .NET-CLI unterstützt skriptgesteuerte Prozesse, um häufige Aufgaben zu automatisieren.
+
+### <a name="ide"></a>IDE
+
+Visual Studio, Visual Studio für Mac und Visual Studio Code bieten grafische Benutzeroberflächen für Testfunktionen. In den IDEs stehen mehr Funktionen als bei der CLI zur Verfügung, z. B. [Live Unit Testing](/visualstudio/test/live-unit-testing). Weitere Informationen finden Sie unter [Einschließen und Ausschließen von Testprojekten und Testmethoden](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+
+## <a name="see-also"></a>Weitere Informationen:
+
+Weitere Informationen finden Sie in den folgenden Artikeln:
+
+- [Bewährte Methoden für Komponententests mit .NET](unit-testing-best-practices.md)
+- [Integrationstests in ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites)
+- [Ausführen von selektiven Komponententests](selective-unit-tests.md)
+- [Verwenden von Code Coverage für Komponententests](unit-testing-code-coverage.md)

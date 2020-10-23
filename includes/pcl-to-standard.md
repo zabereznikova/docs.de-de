@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd5bcc6bd96834d4803e00bd84eff4441abfe9f8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eb0a5c8ac733f0db4e8356dca80f898bc7a72cfb
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641424"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471960"
 ---
 > [!IMPORTANT]
-> Da Projekte für Portable Klassenbibliotheken nur eine ganz bestimmte Teilmenge von .NET-Implementierungen Ziel, wir Raten dringend ab, deren Verwendung in der Entwicklung neuer Anwendungen. Der empfohlene Ersatz ist eine .NET Standard-Bibliothek, die Implementierungen für alle .NET ausgerichtet ist, die eine bestimmte Version von .NET Standard unterstützen. Weitere Informationen finden Sie unter [.NET Standard](~/docs/standard/net-standard.md).
+> Wir raten dringend von der Verwendung portabler Klassenbibliotheken bei der Entwicklung neuer Anwendungen ab, da Sie nur auf eine bestimmte Teilmenge von .net-Implementierungen abzielen. Wenn Sie eine wiederverwendbare Bibliothek für die gemeinsame Nutzung von Code zwischen .NET Framework und anderen .net-Implementierungen aufbauen, ist die empfohlene Ersetzung eine .NET Standard 2,0-Bibliothek. Verwenden Sie andernfalls .net 5 oder höher. Weitere Informationen finden Sie unter [.NET Standard](~/docs/standard/net-standard.md).
