@@ -2,12 +2,12 @@
 title: Breaking Changes bei der Kryptografie
 description: Listet die Breaking Changes bei der Kryptografie in .NET Core auf.
 ms.date: 04/22/2020
-ms.openlocfilehash: 667d983fc6f2592c2169f97d328cd7947c8bcc81
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 6f37e5caacadc276562e63a728162c6b26f2e435
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406145"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159551"
 ---
 # <a name="cryptography-breaking-changes"></a>Breaking Changes bei der Kryptografie
 
@@ -15,6 +15,8 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 
 | Unterbrechende Änderung | Eingeführt in Version |
 | - | :-: |
+| [Das Instanziieren von Standardimplementierungen kryptografischer Abstraktionen wird nicht unterstützt](#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported) | 5.0 |
+| [TLS-Standardverschlüsselungssuites für .NET unter Linux](#default-tls-cipher-suites-for-net-on-linux) | 5.0 |
 | [System.Security.Cryptography-APIs werden in Blazor WebAssembly nicht unterstützt](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly) | 5.0 |
 | [Funktionalität von System.Security.Cryptography.Oid mit init-only-Eigenschaft](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
 | [BEGIN TRUSTED CERTIFICATE-Syntax nicht mehr für Stammzertifikate unter Linux unterstützt](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
@@ -25,6 +27,14 @@ Auf dieser Seite sind die folgenden Breaking Changes dokumentiert:
 | [Der boolesche Parameter von SignedCms.ComputeSignature wird beachtet](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [instantiating-default-implementations-of-cryptographic-abstractions-not-supported](../../../includes/core-changes/cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)]
+
+***
+
+[!INCLUDE [default-cipher-suites-for-tls-on-linux](../../../includes/core-changes/cryptography/5.0/default-cipher-suites-for-tls-on-linux.md)]
+
+***
 
 [!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 

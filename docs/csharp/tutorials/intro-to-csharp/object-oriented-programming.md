@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 description: C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Abstraktion, Kapselung, Vererbung und Polymorphie.
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614660"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997653"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -162,7 +162,7 @@ Ersetzen Sie den Code durch folgenden Code:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-Die hinzugefügte Methode ist , was bedeutet, dass sie nur von abgeleiteten Klassen aufgerufen werden kann. Diese Deklaration verhindert, dass die Methode von anderen Clients aufgerufen wird. Zudem ist sie `virtual`, damit abgeleitete Klassen das Verhalten ändern können. Der Rückgabetyp ist eine `Transaction?`. Die `?`-Anmerkung gibt an, dass die Methode `null` zurückgeben darf. Fügen Sie im `LineOfCreditAccount` die folgende Implementierung hinzu, damit bei Überschreiten des Abbuchungslimits eine Gebühr erhoben wird:
+Die hinzugefügte Methode ist `protected`, was bedeutet, dass sie nur von abgeleiteten Klassen aufgerufen werden kann. Diese Deklaration verhindert, dass die Methode von anderen Clients aufgerufen wird. Zudem ist sie `virtual`, damit abgeleitete Klassen das Verhalten ändern können. Der Rückgabetyp ist eine `Transaction?`. Die `?`-Anmerkung gibt an, dass die Methode `null` zurückgeben darf. Fügen Sie im `LineOfCreditAccount` die folgende Implementierung hinzu, damit bei Überschreiten des Abbuchungslimits eine Gebühr erhoben wird:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 

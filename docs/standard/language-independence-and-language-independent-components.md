@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 1097d156aad06b7a17141e4d6786e5411cbaa571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679611"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160840"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 
-Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf das .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.
+.NET ist sprachunabhängig. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET ausgerichtet sind. Dazu zählen beispielsweise C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für .NET entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann sprachenunabhängig von allen .NET-Apps auf die Komponente zugegriffen werden.
 
 > [!NOTE]
 > In diesem Artikel wird das Erstellen sprachunabhängiger Komponenten erläutert. Diese Komponenten können von Apps verwendet werden, die in einer beliebigen Sprache geschrieben wurden. Sie können auch eine einzelne Komponente oder App aus Quellcode erstellen, der in mehreren Sprachen geschrieben wurde. Weitere Informationen finden Sie im zweiten Teil dieses Artikels unter [Sprachübergreifende Interoperabilität](#CrossLang).
@@ -157,7 +157,7 @@ Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt.
 
 ### <a name="types-and-type-member-signatures"></a>Typen und Typmembersignaturen
 
-Der <xref:System.Object?displayProperty=nameWithType>-Typ ist CLS-kompatibel, und er ist der Basistyp aller Objekttypen im .NET Framework-Typsystem. Vererbung erfolgt im .NET Framework entweder implizit (zum Beispiel erbt die <xref:System.String>-Klasse implizit von der <xref:System.Object>-Klasse) oder explizit (zum Beispiel erbt die <xref:System.Globalization.CultureNotFoundException>-Klasse explizit von der <xref:System.ArgumentException>-Klasse, die explizit von der <xref:System.SystemException>-Klasse erbt, die explizit von der <xref:System.Exception>-Klasse erbt). Damit ein abgeleiteter Typ CLS-kompatibel ist, muss auch der Basistyp CLS-kompatibel sein.
+Der <xref:System.Object?displayProperty=nameWithType>-Typ ist CLS-kompatibel und der Basistyp aller Objekttypen im .NET-Typsystem. Die Vererbung in .NET erfolgt entweder implizit (z. B. erbt die <xref:System.String>-Klasse implizit von der <xref:System.Object>-Klasse) oder explizit (z. B. erbt die <xref:System.Globalization.CultureNotFoundException>-Klasse explizit von der <xref:System.ArgumentException>-Klasse, die explizit von der <xref:System.SystemException>-Klasse erbt, die wiederum explizit von der <xref:System.Exception>-Klasse erbt). Damit ein abgeleiteter Typ CLS-kompatibel ist, muss auch der Basistyp CLS-kompatibel sein.
 
 Im folgenden Beispiel wird ein abgeleiteter Typ veranschaulicht, dessen Basistyp nicht CLS-kompatibel ist. Es wird eine `Counter`-Basisklasse definiert, die eine ganze Zahl ohne Vorzeichen mit einer Länge von 32 Bit als Indikator verwendet. Da die Klasse Gegenfunktionalität bereitstellt, indem eine ganze Zahl ohne Vorzeichen umgebrochen wird, wird die Klasse als nicht CLS-kompatibel gekennzeichnet. Daher ist eine abgeleitete Klasse, `NonZeroCounter`, auch nicht CLS-kompatibel.
 
@@ -170,7 +170,7 @@ Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyp
 
 - Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein.
 
-Das [allgemeine Typsystem](base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
+Das [allgemeine Typsystem](base-types/common-type-system.md) von .NET enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
 
 |CLS-kompatibler Typ|Beschreibung|
 |-------------------------|-----------------|
@@ -197,13 +197,13 @@ Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-k
 |<xref:System.UInt64>|64-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Int64> (kann überlaufen), <xref:System.Numerics.BigInteger> oder <xref:System.Double>|
 |<xref:System.UIntPtr>|Zeiger ohne Vorzeichen oder Handle|<xref:System.IntPtr>|
 
-Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel:
+Die .NET-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein. Beispiele:
 
 - Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int*` namens `Value` verfügt. Da `int*` ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
   [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]
 
-- Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind. Typisierte Verweise werden in .NET Framework von der <xref:System.TypedReference>-Klasse dargestellt.
+- Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind. Typisierte Verweise werden in .NET durch die <xref:System.TypedReference>-Klasse dargestellt.
 
 Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das <xref:System.CLSCompliantAttribute>-Attribut mit einem Wert von `isCompliant``false` darauf anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#CLSAttribute).
 
@@ -487,7 +487,7 @@ Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von <xref:System.Excep
 
 ### <a name="attributes"></a>Attribute
 
-In .NET-Frameworkassemblys stellen benutzerdefinierte Attribute einen erweiterbaren Mechanismus zum Speichern benutzerdefinierter Attribute und das Abrufen von Metadaten über Programmierobjekte, wie Assemblys, Typen, Member und Methodenparameter, bereit. Benutzerdefinierte Attribute müssen von <xref:System.Attribute?displayProperty=nameWithType> oder einem Typ abgeleitet werden, der von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet wird.
+In .NET-Assemblys stellen benutzerdefinierte Attribute einen erweiterbaren Mechanismus zum Speichern benutzerdefinierter Attribute und zum Abrufen von Metadaten über Programmierobjekte wie Assemblys, Typen, Member und Methodenparameter bereit. Benutzerdefinierte Attribute müssen von <xref:System.Attribute?displayProperty=nameWithType> oder einem Typ abgeleitet werden, der von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet wird.
 
 Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von <xref:System.Attribute?displayProperty=nameWithType> abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
 
@@ -533,7 +533,7 @@ Zur Kompilierzeit erkennt der Compiler nicht kompatible Elemente, von denen ange
 
 Komponentenentwickler können das <xref:System.CLSCompliantAttribute>-Attribut auf zwei Arten verwenden:
 
-- Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.
+- Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools zugegriffen werden kann, die auf .NET ausgerichtet sind.
 
 - Um sicherzustellen, dass die öffentliche Schnittstelle der Komponentenbibliothek nur Programmelemente verfügbar macht, die CLS-kompatibel sind. Wenn Elemente nicht CLS-kompatibel sind, geben Compiler im Allgemeinen eine Warnung aus.
 
@@ -571,7 +571,7 @@ Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie ke
 
 ## <a name="cross-language-interoperability"></a>Sprachübergreifende Interoperabilität
 
-Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung, die im Artikel [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md) erläutert wird, bezeichnet die nahtlose Nutzung von Typen, die in einer Sprache geschrieben wurden, durch eine App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly.
+Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung, die im Artikel [Sprachenunabhängigkeit und sprachunabhängige Komponenten](language-independence-and-language-independent-components.md) erläutert wird, bezeichnet die nahtlose Nutzung von Typen, die in einer Sprache geschrieben wurden, durch eine App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikel hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET-Assembly.
 
 Das folgende Beispiel veranschaulicht die sprachübergreifende Interoperabilität. Es wird die Klassenbibliothek Utilities.dll erstellt, die zwei Klassen einschließt: `NumericLib` und `StringLib`. Die `NumericLib`-Klasse wurde in C# und die `StringLib`-Klasse in Visual Basic geschrieben. Im Folgenden sehen Sie den Quellcode für "StringUtil.vb", der in der `ToTitleCase`-Klasse einen einzelnen Member enthält, `StringLib`.
 

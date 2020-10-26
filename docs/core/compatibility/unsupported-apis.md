@@ -1,25 +1,25 @@
 ---
-title: Nicht unterstützte APIs in .NET Core
+title: Nicht unterstützte APIs in .NET Core und .NET 5 (und höher)
 titleSuffix: ''
-description: Erfahren Sie, welche APIs aus .NET Framework immer eine Ausnahme in .NET Core auslösen.
-ms.date: 12/23/2019
-ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+description: Hier erfahren Sie, welche .NET-APIs in .NET Core und .NET 5.0 und höheren Versionen immer eine Ausnahme auslösen.
+ms.date: 10/13/2020
+ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414434"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159338"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>APIs, die in .NET Core immer Ausnahmen auslösen
+# <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>APIs, die in .NET Core und .NET 5 und höher immer Ausnahmen auslösen
 
-Die folgenden APIs lösen für .NET Core auf allen oder einer Teilmenge aller Plattformen immer die Ausnahme <xref:System.PlatformNotSupportedException> aus.
+Die folgenden APIs lösen in .NET 5.0 und höheren Versionen (einschließlich aller .NET Core-Versionen) auf allen oder einer Teilmenge aller Plattformen immer eine <xref:System.PlatformNotSupportedException> aus.
 
-In diesem Artikel werden die betroffenen API-Member nach Namespace organisiert.
+In diesem Artikel werden die betroffenen APIs nach Namespace organisiert.
 
 > [!NOTE]
 >
-> - Dies ist nicht die endgültige Fassung dieses Artikels. Er enthält keine vollständige Liste der APIs, die Ausnahmen in .NET Core auslösen.
-> - In diesem Artikel sind die expliziten Schnittstellenimplementierungen für die binäre Serialisierung, die in .NET Core eine Ausnahme auslösen, nicht enthalten. Weitere Informationen finden Sie unter [Binäre Serialisierung](../../standard/serialization/binary-serialization.md#net-core).
+> - Dies ist nicht die endgültige Fassung dieses Artikels. Er enthält keine vollständige Liste der APIs, die Ausnahmen in .NET 5 und höher auslösen.
+> - In diesem Artikel sind die expliziten Schnittstellenimplementierungen für die binäre Serialisierung, die in .NET 5 und höher eine Ausnahme auslösen, nicht enthalten. Weitere Informationen finden Sie unter [Binäre Serialisierung](../../standard/serialization/binary-serialization.md#net-core).
 
 ## <a name="system"></a>System
 

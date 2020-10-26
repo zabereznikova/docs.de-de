@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: cf4449618c2b57f21855354f2250d41a403b4d57
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 9523ba99f877fde7207042ecb8d28548168a68cb
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381644"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162725"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierleitfaden)
 
@@ -32,9 +32,9 @@ In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementieru
   
 5. Ein nicht-NULL-Wert ist ungleich NULL. Die CLR prüft jedoch bei allen Methodenaufrufen auf NULL und löst eine `NullReferenceException` aus, wenn der `this`-Verweis NULL ist. Daher löst `x.Equals(y)` eine Ausnahme aus, wenn `x` NULL ist. Dadurch wird Regel 1 oder 2 gebrochen, abhängig vom Argument für `Equals`.
 
- Jede Struktur, die Sie definieren, besitzt bereits eine Standardimplementierung der Wertgleichheit, die von der <xref:System.ValueType?displayProperty=nameWithType>-Außerkraftsetzung der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methode geerbt wurde. Diese Implementierung verwendet Reflektion, um alle Felder und Eigenschaften im Typ zu untersuchen. Obwohl diese Implementierung richtige Ergebnisse produziert, ist sie relativ langsam im Vergleich zu einer benutzerdefinierten Implementierung, die Sie speziell für den Typ schreiben.  
+Jede Struktur, die Sie definieren, besitzt bereits eine Standardimplementierung der Wertgleichheit, die von der <xref:System.ValueType?displayProperty=nameWithType>-Außerkraftsetzung der <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methode geerbt wurde. Diese Implementierung verwendet Reflektion, um alle Felder und Eigenschaften im Typ zu untersuchen. Obwohl diese Implementierung richtige Ergebnisse produziert, ist sie relativ langsam im Vergleich zu einer benutzerdefinierten Implementierung, die Sie speziell für den Typ schreiben.  
   
- Die Implementierungsdetails für Wertgleichheit unterscheiden sich für Klassen und Strukturen. Sowohl Klassen als auch Strukturen erfordern dieselben grundlegenden Schritte zur Implementierung der Gleichheit:  
+Die Implementierungsdetails für Wertgleichheit unterscheiden sich für Klassen und Strukturen. Sowohl Klassen als auch Strukturen erfordern dieselben grundlegenden Schritte zur Implementierung der Gleichheit:  
   
 1. Überschreiben Sie die [virtuelle](../../language-reference/keywords/virtual.md) Methode <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. In den meisten Fällen sollte Ihre Implementierung von `bool Equals( object obj )` nur die typspezifische `Equals`-Methode aufrufen, die die Implementierung der Schnittstelle <xref:System.IEquatable%601?displayProperty=nameWithType> darstellt. (Siehe Schritt 2)  
   
@@ -45,29 +45,30 @@ In beiden Fällen und in beiden Klassen und Strukturen sollte Ihre Implementieru
 4. Überschreiben Sie <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>, damit zwei Objekte, die Wertgleichheit besitzen, den gleichen Hashcode erzeugen.  
   
 5. Optional: Implementieren Sie zur Unterstützung von Definitionen für „größer als“ oder „kleiner als“ die Schnittstelle <xref:System.IComparable%601> für Ihren Typ, und überladen Sie auch die Operatoren [<=](../../language-reference/operators/comparison-operators.md#less-than-or-equal-operator-) und [>=](../../language-reference/operators/comparison-operators.md#greater-than-or-equal-operator-).  
-  
- Das erste nachfolgende Beispiel zeigt die Implementierung einer Klasse. Das zweite nachfolgende Beispiel zeigt die Implementierung einer Struktur.  
 
-## <a name="example"></a>Beispiel
+> [!NOTE]
+> Ab C# 9.0 können Sie Datensätze verwenden, um ohne unnötige Codebausteine eine Semantik mit Wertgleichheit zu erzielen.
 
- Im folgenden Beispiel wird veranschaulicht, wie Sie Wertgleichheit in einer Klasse (Referenztyp) implementieren.  
-  
- [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
-  
- Die standardmäßige Implementierung beider <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methoden führt bei Klassen (Referenztypen) einen Verweisgleichheitsvergleich, keine Wertgleichheitsprüfung aus. Wenn eine Implementierer die virtuelle Methode überschreibt, dient dies dazu, ihr Wertgleichheitssemantik zu verleihen.  
-  
- Die Operatoren `==` und `!=` können mit Klassen verwendet werden, selbst wenn die Klasse sie nicht überlädt. Allerdings ist das Standardverhalten eine Ausführung einer Verweisgleichheitsprüfung. Wenn Sie die `Equals`-Methode in einer Klasse überladen, sollten Sie die Operatoren `==` und `!=` überladen, obwohl dies nicht erforderlich ist.  
+## <a name="class-example"></a>Klassenbeispiel
 
-## <a name="example"></a>Beispiel
+Im folgenden Beispiel wird veranschaulicht, wie Sie Wertgleichheit in einer Klasse (Referenztyp) implementieren.
 
- Im folgenden Beispiel wird veranschaulicht, wie Sie Wertgleichheit in einer Struktur (Werttyp) implementieren:  
+[!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]
+
+Die standardmäßige Implementierung beider <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>-Methoden führt bei Klassen (Referenztypen) einen Verweisgleichheitsvergleich, keine Wertgleichheitsprüfung aus. Wenn eine Implementierer die virtuelle Methode überschreibt, dient dies dazu, ihr Wertgleichheitssemantik zu verleihen.
+
+Die Operatoren `==` und `!=` können mit Klassen verwendet werden, selbst wenn die Klasse sie nicht überlädt. Allerdings ist das Standardverhalten eine Ausführung einer Verweisgleichheitsprüfung. Wenn Sie die `Equals`-Methode in einer Klasse überladen, sollten Sie die Operatoren `==` und `!=` überladen, obwohl dies nicht erforderlich ist.
+
+## <a name="struct-example"></a>Strukturbeispiel
+
+Im folgenden Beispiel wird veranschaulicht, wie Sie Wertgleichheit in einer Struktur (Werttyp) implementieren:
+
+[!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]
   
- [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
+Für Strukturen führt die Standardimplementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (was die außer Kraft gesetzte Version in <xref:System.ValueType?displayProperty=nameWithType> ist) eine Überprüfung der Wertgleichheit durch, indem sie Reflektion zum Vergleichen der Werte jedes Felds im Typ verwendet. Wenn ein Implementierer die virtuelle `Equals`-Methode in einer Struktur überschreibt, dient dies der Bereitstellung effizienterer Mittel für die Ausführung der Wertgleichheitsprüfung und optional dazu, den Vergleich auf einer Teilmenge des Felds oder der Eigenschaften der Struktur zu basieren.
   
- Für Strukturen führt die Standardimplementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (was die außer Kraft gesetzte Version in <xref:System.ValueType?displayProperty=nameWithType> ist) eine Überprüfung der Wertgleichheit durch, indem sie Reflektion zum Vergleichen der Werte jedes Felds im Typ verwendet. Wenn ein Implementierer die virtuelle `Equals`-Methode in einer Struktur überschreibt, dient dies der Bereitstellung effizienterer Mittel für die Ausführung der Wertgleichheitsprüfung und optional dazu, den Vergleich auf einer Teilmenge des Felds oder der Eigenschaften der Struktur zu basieren.  
-  
- Die Operatoren [==](../../language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.  
-  
+Die Operatoren [==](../../language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Übereinstimmungsvergleiche](equality-comparisons.md)

@@ -3,12 +3,12 @@ title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446671"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160879"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -124,6 +124,84 @@ Der Compiler generiert Warnungen, wenn Sie in einem Nullable-Warnungskontext ein
 ## <a name="attributes-describe-apis"></a>Beschreiben von APIs mit Attributen
 
 Sie fügen APIs Attribute hinzu, die für den Compiler weitere Informationen darüber bereitstellen, wann Argumente oder Rückgabewerte NULL sein können oder nicht. Weitere Informationen zu diesen Attributen finden Sie in unserem Artikel in der Programmiersprachenreferenz zu den [Nullable-Attributen](language-reference/attributes/nullable-analysis.md). Diese Attribute werden über aktuelle und kommende Releases zu .NET-Bibliotheken hinzugefügt. Die am häufigsten verwendeten APIs werden zuerst aktualisiert.
+
+## <a name="known-pitfalls"></a>Bekannte Fehlerquellen
+
+Arrays und Strukturen, die Verweistypen enthalten, sind bekannte Fehlerquellen in Features, die NULL-Werte für Verweistypen zulassen.
+
+### <a name="structs"></a>Strukturen
+
+Strukturen, die Verweistypen enthalten, die keine NULL-Werte zulassen, können Sie `default` zuweisen, ohne dass Warnungen ausgelöst werden. Betrachten Sie das folgenden Beispiel:
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+Im obigen Beispiel gibt es in `PrintStudent(default)` keine Warnung, obwohl die Verweistypen `FirstName` und `LastName`, die keine NULL-Werte zulassen, NULL zurückgeben.
+
+Bei der Verwendung von generischen Strukturen tritt ein weiteres häufigeres Problem auf. Betrachten Sie das folgenden Beispiel:
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+Im obigen Beispiel entspricht die Eigenschaft `Bar` zur Laufzeit `null`, und sie wird einer Zeichenfolge zugewiesen, die keine NULL-Werte zulässt, ohne dass eine Warnung ausgelöst wird.
+
+### <a name="arrays"></a>Arrays
+
+Arrays stellen ebenfalls eine bekannte Fehlerquelle in Verweistypen dar, die NULL-Werte zulassen. Sehen Sie sich das folgende Beispiel an, das keine Warnungen auslöst:
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+Im obigen Beispiel zeigt die Deklaration des Arrays, dass dieses Zeichenfolgen enthält, die keine NULL-Werte zulassen, während alle seine Elemente mit NULL-Werten initialisiert werden. Anschließend wird der Variablen `s` ein NULL-Wert (das erste Element des Arrays) zugewiesen. Schließlich wird die Variable `s` dereferenziert, was zu einer Laufzeitausnahme führt.
 
 ## <a name="see-also"></a>Siehe auch
 

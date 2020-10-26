@@ -1,7 +1,7 @@
 ---
 title: Serialisieren und Deserialisieren von JSON mit C# – .NET
-description: Dieser Artikel veranschaulicht, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.
-ms.date: 05/13/2020
+description: Hier erfahren Sie, wie Sie mithilfe des System.Text.Json-Namespace Daten vom JSON- in das .NET-Format serialisieren und daraus deserialisieren. Er enthält Beispielcode.
+ms.date: 10/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 72ba79784d3eb1beb43eab8db0a448a7e3b18eb6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0fda248b7d2e5a7cfa748447d0265565cb160b7e
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557839"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997780"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Marshallen und Marshallen rückgängig machen) von JSON-Daten in .NET
 
-Dieser Artikel veranschaulicht, wie Sie mithilfe des <xref:System.Text.Json>-Namespace Daten in das JSON-Format (JavaScript Object Notation) serialisiert und daraus deserialisiert werden. Wenn Sie vorhandenen Code aus `Newtonsoft.Json` portieren, finden Sie weitere Informationen unter [Migrieren zu `System.Text.Json`](system-text-json-migrate-from-newtonsoft-how-to.md).
+Dieser Artikel veranschaulicht, wie Sie mithilfe des <xref:System.Text.Json?displayProperty=fullName>-Namespace Daten in das JSON-Format (JavaScript Object Notation) serialisieren und daraus deserialisieren. Wenn Sie vorhandenen Code aus `Newtonsoft.Json` portieren, finden Sie weitere Informationen unter [Migrieren zu `System.Text.Json`](system-text-json-migrate-from-newtonsoft-how-to.md).
 
 Die Anleitungen und der Beispielcode verwenden die Bibliothek direkt und nicht über ein Framework wie [ASP.NET Core](/aspnet/core/).
 
@@ -62,9 +62,12 @@ In den vorangehenden Beispielen wird Typrückschluss für den zu serialisierende
 
 ### <a name="serialization-example"></a>Serialisierungsbeispiel
 
-Im Folgenden finden Sie eine Beispielklasse, die Sammlungen und eine geschachtelte Klasse enthält:
+Im Folgenden finden Sie eine Beispielklasse, die die Sammlungstypeigenschaften und einen benutzerdefinierten Typen enthält:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
+
+> [!TIP]
+> „POCO“ steht für [Plain Old CLR Object](https://en.wikipedia.org/wiki/Plain_old_CLR_object). Ein POCO ist ein .NET-Typ, der von keinen frameworkspezifischen Typen abhängig ist (z. B. durch Vererbung oder Attribute).
 
 Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht wie im folgenden Beispiel aus. Die JSON-Ausgabe wird standardmäßig verkleinert:
 
@@ -72,7 +75,7 @@ Die JSON-Ausgabe der Serialisierung einer Instanz des vorangehenden Typs sieht w
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
 ```
 
-Im folgenden Beispiel wird derselbe JSON-Code dargestellt, allerdings formatiert (d. h. übersichtlich mit Zwischenräumen und Einzügen):
+Im folgenden Beispiel wird derselbe JSON-Code dargestellt, allerdings in formatierter Form (d. h. übersichtlich mit Zwischenräumen und Einzügen):
 
 ```json
 {
@@ -123,7 +126,7 @@ Das Serialisieren in UTF-8 ist ungefähr 5–10 % schneller als die Verwendung 
 Unter anderem unterstützte Typen:
 
 * .NET-Primitive, die JavaScript-Primitiven entsprechen, z. B. numerische Typen, Zeichenfolgen und boolesche Werte.
-* Benutzerdefinierte [Plain Old CLR Objects (POCOs)](https://stackoverflow.com/questions/250001/poco-definition).
+* benutzerdefinierte [Plain Old CLR Objects (POCOs)](https://en.wikipedia.org/wiki/Plain_old_CLR_object)
 * Eindimensionale und Jagged Arrays (`ArrayName[][]`).
 * Ein `Dictionary<string,TValue>`, wobei `TValue` ein `object` ist, ein `JsonElement` oder ein POCO.
 * Sammlungen aus den folgenden Namespaces.
@@ -137,7 +140,7 @@ Sie können [benutzerdefinierte Konverter](system-text-json-converters-how-to.md
 
 Um aus einer Zeichenfolge oder einer Datei zu deserialisieren, rufen Sie die <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>-Methode auf.
 
-Im folgenden Beispiel wird JSON aus einer Zeichenfolge gelesen und eine Instanz der `WeatherForecast`-Klasse erstellt, die schon zuvor im [Serialisierungsbeispiel](#serialization-example) gezeigt wurde:
+Im folgenden Beispiel wird JSON aus einer Zeichenfolge gelesen und eine Instanz der `WeatherForecastWithPOCOs`-Klasse erstellt, die schon zuvor im [Serialisierungsbeispiel](#serialization-example) gezeigt wurde:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripToString.cs?name=SnippetDeserialize)]
 
@@ -159,9 +162,13 @@ Um aus UTF-8 zu deserialisieren, rufen Sie eine <xref:System.Text.Json.JsonSeria
 
 ## <a name="deserialization-behavior"></a>Deserialisierungsverhalten
 
+Beim Deserialisieren von JSON-Code gelten die folgenden Verhaltensweisen:
+
 * Beim Abgleichen der Eigenschaftsnamen wird standardmäßig die Groß-/Kleinschreibung beachtet. Sie können [angeben, dass Groß-/Kleinschreibung nicht berücksichtigt wird](#case-insensitive-property-matching).
 * Wenn der JSON-Code einen Wert für eine schreibgeschützte Eigenschaft enthält, wird der Wert ignoriert, und es wird keine Ausnahme ausgelöst.
-* Die Deserialisierung in Verweistypen ohne einen parameterlosen Konstruktor wird nicht unterstützt.
+* Konstruktoren für die Deserialisierung:
+  - Im Zusammenhang mit .NET Core 3.0 und 3.1 wird ein parameterloser Konstruktor für die Deserialisierung verwendet, der öffentlich, intern oder privat sein kann.
+  - In .NET 5.0 und höher werden nicht öffentliche Konstruktoren vom Serialisierungsprogramm ignoriert. Parametrisierte Konstruktoren können jedoch verwendet werden, wenn kein parameterloser Konstruktor verfügbar ist.
 * Die Deserialisierung in unveränderliche Objekte oder schreibgeschützte Eigenschaften wird nicht unterstützt.
 * Standardmäßig werden Enumerationen (Aufzählungen) als Zahlen unterstützt. Sie können [Enumerationsnamen als Zeichenfolgen serialisieren](#enums-as-strings).
 * Felder werden nicht unterstützt.

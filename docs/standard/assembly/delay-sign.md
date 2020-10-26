@@ -5,7 +5,7 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 7b5c8c8463fdc573782fa457bf5671c72a7e25f7
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 704ddbec3ddd179622fdc7289036247763449256
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378501"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162894"
 ---
 # <a name="delay-sign-an-assembly"></a>Verzögertes Signieren einer Assembly
 
@@ -63,7 +63,7 @@ So verzögern Sie das Signieren einer Assembly:
    sn –Vr myAssembly.dll
    ```
 
-   Um die Überprüfung auf Plattformen wie Advanced RISC Machine-Mikroprozessoren (ARM) zu deaktivieren, auf denen das Strong Name-Tool nicht ausgeführt werden kann, erstellen Sie mit der Option **–Vk** eine Registrierungsdatei. Importieren Sie die Registrierungsdatei in die Registrierung des Computers, auf dem die Überprüfung deaktiviert werden soll. Im folgenden Beispiel wird eine Registrierungsdatei für `myAssembly.dll` erstellt.
+   Wenn Sie die Überprüfung auf Plattformen wie Advanced RISC Machine-Mikroprozessoren (ARM) deaktivieren möchten, auf denen das Strong Name-Tool nicht ausgeführt werden kann, erstellen Sie mit der Option **–Vk** eine Registrierungsdatei. Importieren Sie die Registrierungsdatei in die Registrierung des Computers, auf dem die Überprüfung deaktiviert werden soll. Im folgenden Beispiel wird eine Registrierungsdatei für `myAssembly.dll` erstellt.
 
    ```console
    sn –Vk myRegFile.reg myAssembly.dll

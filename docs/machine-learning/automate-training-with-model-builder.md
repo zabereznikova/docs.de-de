@@ -3,12 +3,12 @@ title: Was ist der Modell-Generator und wie funktioniert er?
 description: Erfahren Sie mehr über die Verwendung des ML.NET-Modell-Generators zum automatischen Trainieren eines Machine Learning-Modells.
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679676"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161139"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Was ist der Modell-Generator und wie funktioniert er?
 
@@ -54,9 +54,15 @@ Die Regression wird verwendet, um Zahlen vorherzusagen.
 
 #### <a name="image-classification"></a>Bildklassifizierung
 
-Bildklassifizierung kann verwendet werden, um Bilder unterschiedlicher Kategorien zu identifizieren. Beispiele hierfür sind unterschiedliche Arten von Gelände, Tieren oder Fertigungsfehlern.
+Die Bildklassifizierung wird verwendet, um Bilder unterschiedlicher Kategorien zu identifizieren. Beispiele hierfür sind unterschiedliche Arten von Gelände, Tieren oder Fertigungsfehlern.
 
 Sie können das Szenario für die Bildklassifizierung verwenden, wenn Sie über einen Satz von Bildern verfügen und die Bilder in verschiedene Kategorien klassifizieren möchten.
+
+#### <a name="object-detection"></a>Objekterkennung
+
+Die Objekterkennung dient dem Suchen und Kategorisieren von Entitäten auf Bildern.  Beispiele hierfür sind das Suchen und Identifizieren von Autos und Personen auf einem Bild.
+
+Sie können die Objekterkennung verwenden, wenn Bilder mehrere Objekte verschiedener Typen enthalten.
 
 #### <a name="recommendation"></a>Empfehlung
 
@@ -66,13 +72,15 @@ Sie können das Empfehlungsszenario verwenden, wenn Sie über einen Satz mit Ben
 
 ## <a name="environment"></a>Umgebung
 
-Sie können Ihr Machine Learning-Modell lokal auf Ihrem Computer oder in der Cloud in Azure trainieren.
+Sie können Ihr Machine Learning-Modell je nach Szenario lokal auf Ihrem Computer oder in der Cloud in Azure trainieren.
 
 Wenn Sie ein lokales Training durchführen, arbeiten Sie innerhalb der Grenzen Ihrer Computerressourcen (CPU, Arbeitsspeicher und Datenträger). Wenn Sie das Training in der Cloud durchführen, können Sie Ihre Ressourcen in Abstimmung auf die Anforderungen Ihres Szenarios hochskalieren, insbesondere für große Datasets.
 
-Das lokale Training wird für alle Szenarien unterstützt.
+Das lokale CPU-Training wird für alle Szenarios mit Ausnahme der Objekterkennung unterstützt.
 
-Das Azure-Training wird für die Bildklassifizierung unterstützt.
+Das lokale GPU-Training wird für die Bildklassifizierung unterstützt.
+
+Das Azure-Training wird für die Bild- und Objektklassifizierung unterstützt.
 
 ## <a name="data"></a>Daten
 

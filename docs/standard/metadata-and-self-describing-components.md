@@ -13,18 +13,18 @@ helpviewer_keywords:
 - metadata, about metadata
 - common language runtime, metadata
 - PE files, metadata
-- components [.NET Framework], metadata
+- components [.NET], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-ms.openlocfilehash: 5327bd70b05bac8970fa9802fb15e94ba5f686c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ed09882ba722ace0b7f7be2a35fffc362af2742
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290057"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159351"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadaten und selbstbeschreibende Komponenten
 
-Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente (.exe oder .dll) nicht einfach eine andere Softwarekomponente verwenden, die in einer anderen Sprache geschrieben war. COM ist die Lösung dieses Problems angegangen. Mit .NET Framework wird die Interoperation von Komponenten erleichtert, indem zusätzliche deklarative Informationen von Compilern an alle Module und Assemblys weitergegeben werden. Diese Informationen, so genannte Metadaten, ermöglichen eine nahtlose Interaktion der Komponenten.
+Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente (.exe oder .dll) nicht einfach eine andere Softwarekomponente verwenden, die in einer anderen Sprache geschrieben war. COM ist die Lösung dieses Problems angegangen. .NET erleichtert die Interoperation von Komponenten, indem zusätzliche deklarative Informationen von Compilern an alle Module und Assemblys weitergegeben werden. Diese Informationen, so genannte Metadaten, ermöglichen eine nahtlose Interaktion der Komponenten.
 
  Metadaten sind binäre Informationen, die ein Programm beschreiben, das entweder im Speicher oder in einer PE (Portable Executable)-Datei von Common Language Runtime gespeichert ist. Wenn Sie Code in eine PE-Datei kompilieren, werden in einen Bereich der Datei Metadaten eingefügt, während der Code in MSIL (Microsoft Intermediate Language) konvertiert und in einen anderen Bereich der Datei eingefügt wird. Jeder Typ und jeder Member, auf den in einem Modul oder in einer Assembly verwiesen wird, wird mit Metadaten beschrieben. Beim Ausführen von Code lädt Common Language Runtime Metadaten in den Speicher und verweist darauf, um Informationen zu Codeklassen, Membern, Vererbung usw. zu finden.
 
@@ -52,7 +52,7 @@ Früher konnte eine in einer bestimmten Sprache geschriebene Softwarekomponente 
 
 ## <a name="benefits-of-metadata"></a>Vorteile von Metadaten
 
-Metadaten ermöglichen ein einfacheres Programmierungsmodell und machen IDL (Interface Definition Language)-Dateien, Headerdateien oder andere externe Methoden zum Verweisen auf Komponenten überflüssig. Mit Metadaten können .NET Framework-Sprachen automatisch auf sprachneutrale Weise beschrieben werden, unabhängig vom Entwickler und Benutzer. Metadaten sind zudem mithilfe von Attributen erweiterbar. Sie bieten die folgenden wesentlichen Vorteile:
+Metadaten ermöglichen ein einfacheres Programmierungsmodell und machen IDL (Interface Definition Language)-Dateien, Headerdateien oder andere externe Methoden zum Verweisen auf Komponenten überflüssig. Mit Metadaten können .NET-Sprachen unabhängig vom Entwickler und Benutzer automatisch auf sprachneutrale Weise beschrieben werden. Metadaten sind zudem mithilfe von Attributen erweiterbar. Sie bieten die folgenden wesentlichen Vorteile:
 
 - Selbstbeschreibende Dateien
 
@@ -64,11 +64,11 @@ Metadaten ermöglichen ein einfacheres Programmierungsmodell und machen IDL (Int
 
 - Attribute
 
-  Mit .NET Framework können Sie bestimmte Arten von Metadaten, so genannte Attribute, in der kompilierten Datei deklarieren. Attribute befinden sich überall in .NET Framework und dienen zur detaillierteren Steuerung des Programms zur Laufzeit. Außerdem können Sie mithilfe von benutzerdefinierten Attributen Ihre eigenen benutzerdefinierten Metadaten in .NET Framework-Dateien ausgeben. Weitere Informationen finden Sie unter [Attribute](attributes/index.md).
+  Mit .NET können Sie bestimmte Arten von Metadaten (sogenannte Attribute) in der kompilierten Datei deklarieren. Attribute befinden sich überall in .NET und werden zur detaillierteren Steuerung des Programms zur Laufzeit verwendet. Außerdem können Sie mithilfe von benutzerdefinierten Attributen Ihre eigenen benutzerdefinierten Metadaten in .NET-Dateien ausgeben. Weitere Informationen finden Sie unter [Attribute](attributes/index.md).
 
 ## <a name="metadata-and-the-pe-file-structure"></a>Metadaten und die PE-Dateistruktur
 
-Metadaten werden in einem Bereich einer .NET Framework-PE (Portable Executable)-Datei gespeichert, während MSIL (Microsoft Intermediate Language) in einem anderen Bereich der PE-Datei gespeichert wird. Der Metadatenbereich der Datei enthält eine Reihe von Tabellen und Heapdatenstrukturen. Der MSIL-Bereich enthält MSIL und Metadatentokens, die auf den Metadatenbereich der PE-Datei verweisen. Möglicherweise werden Metadatentoken verwendet, wenn Sie Tools wie [MSIL Disassembler-Tool (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) verwenden, um z.B. die MSIL des Codes anzuzeigen.
+Metadaten werden in einem Bereich einer .NET-PE-Datei (portierbare ausführbare Datei) gespeichert, während MSIL (Microsoft Intermediate Language) in einem anderen Bereich der PE-Datei gespeichert wird. Der Metadatenbereich der Datei enthält eine Reihe von Tabellen und Heapdatenstrukturen. Der MSIL-Bereich enthält MSIL und Metadatentokens, die auf den Metadatenbereich der PE-Datei verweisen. Möglicherweise werden Metadatentoken verwendet, wenn Sie Tools wie [MSIL Disassembler-Tool (Ildasm.exe)](../framework/tools/ildasm-exe-il-disassembler.md) verwenden, um z.B. die MSIL des Codes anzuzeigen.
 
 ### <a name="metadata-tables-and-heaps"></a>Metadatentabellen und -heaps
 

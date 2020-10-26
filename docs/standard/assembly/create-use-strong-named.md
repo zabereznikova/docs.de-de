@@ -7,18 +7,18 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - strong-named assemblies, scenarios
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1d87edde97e77011b678662f61500c7acd8293b0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378530"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162712"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -46,7 +46,7 @@ Im folgenden Szenario wird kurz umrissen, wie eine Assembly mit einem starken Na
 
 3. Assembly B ist ein Consumer von Assembly A. Der Referenzabschnitt des Manifests von Assembly B enthält ein Token, das den öffentlichen Schlüssel von Assembly A darstellt. Ein Token ist ein Teilabschnitt des vollständigen öffentlichen Schlüssels und wird aus Platzgründen oft an Stelle des eigentlichen Schlüssels verwendet.
 
-4. Die Common Language Runtime überprüft die starke Namenssignatur, wenn die Assembly im globalen Assemblycache platziert wird. Beim Binden mit starken Namen zur Runtime vergleicht die Common Language Runtime den im Manifest von Assembly B gespeicherten Schlüssel mit dem Schlüssel, der verwendet wurde, um den starken Namen von Assembly A zu generieren. Wenn die Sicherheitstests von .NET Framework durchlaufen und die Bindung abgeschlossen wurde, garantiert Assembly B, dass Bits von Assembly A nicht verändert wurden, und dass sie tatsächlich von den Entwicklern von Assembly A stammen.
+4. Die Common Language Runtime überprüft die starke Namenssignatur, wenn die Assembly im globalen Assemblycache platziert wird. Beim Binden mit starken Namen zur Laufzeit vergleicht die Common Language Runtime den im Manifest von Assembly B gespeicherten Schlüssel mit dem Schlüssel, der verwendet wurde, um den starken Namen von Assembly A zu generieren. Wenn die Sicherheitstests von .NET durchlaufen und die Bindung abgeschlossen wurde, kann für Assembly B garantiert werden, dass Bits von Assembly A nicht verändert wurden und dass sie tatsächlich von den Entwicklern von Assembly A stammen.
 
 > [!NOTE]
 > Dieses Szenario löst keine Vertrauenswürdigkeitsprobleme. Assemblys können neben starken Namen auch vollständige Microsoft Authenticode-Signaturen tragen. Authenticode-Signaturen enthalten ein Zertifikat, das Vertrauenswürdigkeit bescheinigt. Beachten Sie unbedingt, dass bei starken Namen nicht erforderlich ist, Code auf diese Weise zu signieren. Starke Namen bieten lediglich eine eindeutige Identität.

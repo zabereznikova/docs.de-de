@@ -1,13 +1,13 @@
 ---
 title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
-ms.date: 08/05/2019
-ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 10/12/2020
+ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714422"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997701"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core
 
@@ -78,10 +78,10 @@ Die Low-Level-APIs sind möglicherweise nicht die richtige Wahl für Ihre Protok
 
 Über die <xref:Microsoft.Extensions.Logging.ILogger>-Schnittstelle wurde eine gemeinsame Protokollierungsschnittstelle erstellt, bei der die Protokollierungen mithilfe einer Abhängigkeitsinjektion eingefügt werden können.
 
-Damit Sie beispielsweise die beste Wahl für Ihre Anwendung treffen können, bietet `ASP.NET` Unterstützung für integrierte und Drittanbieter-Frameworks:
+Damit Sie beispielsweise die beste Wahl für Ihre Anwendung treffen können, bietet .NET Unterstützung für integrierte Frameworks sowie für Frameworks von Drittanbietern:
 
-- [Integrierte ASP.NET-Protokollierungsanbieter](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [ASP.NET-Protokollierungsanbieter von Dritten](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [Integrierte .NET-Protokollierungsanbieter](../extensions/logging-providers.md#built-in-logging-providers)
+- [Dritte .NET-Protokollierungsanbieter](../extensions/logging-providers.md#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>Verweise zur Protokollierung
 
@@ -89,7 +89,7 @@ Damit Sie beispielsweise die beste Wahl für Ihre Anwendung treffen können, bie
 
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [ASP.NET-Protokollierung](/aspnet/core/fundamentals/logging) bietet eine Übersicht über die unterstützten Protokollierungstechniken.
+- [Die .NET-Protokollierung](../extensions/logging.md) bietet eine Übersicht über die unterstützten Protokollierungstechniken.
 
 - Die [C#-Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) kann das Schreiben von Protokollierungscode vereinfachen.
 

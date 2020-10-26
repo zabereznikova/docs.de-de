@@ -2,49 +2,60 @@
 title: .NET-Architekturkomponenten
 description: In diesem Artikel werden .NET-Architekturkomponenten wie .NET Standard, .NET-Implementierungen sowie .NET-Runtimes und -Tools beschrieben.
 author: cartermp
-ms.date: 08/23/2017
+ms.date: 10/05/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0cdd2485e81626ffc9d17380427c29fee0f82083
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547674"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050252"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
-Eine .NET-App wird für *.NET-Implementierungen* entwickelt und wird in mindestens einer ausgeführt.  Implementierungen von .NET sind z. B. .NET Framework, .NET Core und Mono. .NET Standard ist die API-Spezifikation, die allen .NET-Implementierungen zugrunde liegt. Dieser Artikel bietet eine kurze Einführung in jedes dieser Konzepte.
+Eine .NET-App wird für *.NET-Implementierungen* entwickelt und wird in mindestens einer ausgeführt. Implementierungen von .NET sind z. B. das .NET Framework, .NET 5 (und .NET Core) und Mono. .NET Standard ist die API-Spezifikation, die mehreren .NET-Implementierungen zugrunde liegt. Dieser Artikel bietet eine kurze Einführung in jedes dieser Konzepte.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard besteht aus einem Satz von APIs, die durch die Basisklassenbibliothek einer .NET-Implementierung implementiert werden. Formeller ausgedrückt ist es eine Spezifikation von .NET-APIs, die eine einheitliche Gruppe von Verträgen bilden, mit denen Sie Code kompilieren. Diese Verträge werden in jeder .NET-Implementierung implementiert. Dadurch wird Portabilität zwischen verschiedenen .NET-Implementierungen ermöglicht, sodass Ihr Code überall ausgeführt werden kann.
+.NET Standard besteht aus einem Satz von APIs, die durch die Basisklassenbibliothek einer .NET-Implementierung implementiert werden. Formeller ausgedrückt ist es eine Spezifikation von .NET-APIs, die eine einheitliche Gruppe von Verträgen bilden, mit denen Sie Code kompilieren. Diese Verträge sind Teil mehrerer .NET-Implementierungen.
 
-.NET Standard ist auch ein [Zielframework](glossary.md#target-framework). Wenn Ihr Code auf eine bestimmte .NET Standard-Version ausgerichtet ist, kann er auf jeder .NET-Implementierung ausgeführt werden, die diese .NET Standard-Version unterstützt.
+.NET Standard ist ein [Zielframework](glossary.md#target-framework). Wenn Ihr Code auf eine bestimmte .NET Standard-Version ausgerichtet ist, kann er auf jeder .NET-Implementierung ausgeführt werden, die diese .NET Standard-Version unterstützt.
 
-Weitere Informationen zu .NET Standard und zur Programmierung für .NET Standard finden Sie im Thema [.NET Standard](net-standard.md).
+.NET Standard wurde erstellt, um die Portabilität über verschiedene .NET-Implementierungen hinweg zu ermöglichen. Jetzt bietet allerdings .NET 5 eine bessere Möglichkeit, Code über mehrere Plattformen und Workloads hinweg gemeinsam zu nutzen. Weitere Informationen finden Sie unter [.NET 5 und .NET Standard](net-standard.md#net-5-and-net-standard).
 
 ## <a name="net-implementations"></a>.NET-Implementierungen
 
 Jede Implementierung von .NET umfasst die folgenden Komponenten:
 
-- Mindestens eine Runtime. Beispiele: CLR für .NET Framework, CoreCLR und CoreRT für .NET Core.
-- Eine Klassenbibliothek, die .NET Standard und ggf. zusätzliche APIs implementiert. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek
-- Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) sind im .NET Framework und .NET Core enthalten.
+- Mindestens eine Runtime. z. B.: .NET Framework-CLR und .NET 5-CLR
+- eine Klassenbibliothek, z. B. .NET Framework-Basisklassenbibliothek, .NET 5-Basisklassenbibliothek
+- Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) sind im .NET Framework und in .NET 5 enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
-Es gibt vier primäre .NET-Implementierungen, die Microsoft aktiv entwickelt und wartet: .NET Core, .NET Framework, Mono und die universelle Windows-Plattform (UWP)
+Es gibt vier .NET-Implementierungen, die von Microsoft unterstützt werden:
 
-### <a name="net-core"></a>.NET Core
+- .NET 5 (und .NET Core) und höhere Versionen:
+- .NET Framework
+- Mono
+- UWP
 
-.NET Core ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um Server- und Cloud-Arbeitsauslastungen nach Maß zu bewältigen. Diese Implementierung kann unter Windows, macOS und Linux ausgeführt werden. Damit wird .NET Standard implementiert. Code, der auf .NET Standard abzielt, kann also in .NET Core ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) werden in .NET Core ausgeführt.
+.NET 5 ist nun die primäre Implementierung, auf die aktuell bei der Entwicklung der Fokus gelegt wird. .NET 5 basiert auf einer einzelnen Codebasis, die mehrere Plattformen und viele Workloads unterstützt, z. B. Windows-Desktop-Apps und plattformübergreifende Konsolen-Apps, Cloud-Dienste und Websites.
 
-Weitere Informationen zu .NET Core finden Sie unter [Einführung in .NET Core](../core/introduction.md) und [Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md).
+### <a name="net-5"></a>.NET 5
+
+.NET 5 ist eine plattformübergreifende Implementierung von .NET und wurde entwickelt, um größere Server- und Cloudworkloads zu verarbeiten. Außerdem werden andere Workloads unterstützt, einschließlich Desktop-Apps. Diese Implementierung kann unter Windows, macOS und Linux ausgeführt werden. Damit wird .NET Standard implementiert. Code, der auf .NET Standard ausgerichtet ist, kann also in .NET 5 ausgeführt werden. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) und [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) werden in .NET 5 ausgeführt.
+
+Weitere Informationen finden Sie in den folgenden Ressourcen:
+
+- [Einführung in .NET](../core/introduction.md)
+- [.NET 5 für Server-Apps im Vergleich zum .NET Framework](choosing-core-framework-server.md)
+- [.NET 5 und .NET Standard](net-standard.md#net-5-and-net-standard)
 
 ### <a name="net-framework"></a>.NET Framework
 
 .NET Framework ist die ursprüngliche .NET-Implementierung, die 2002 auf den Markt gebracht wurde. .NET Framework 4.5 und höhere Versionen implementieren .NET Standard. Code, der auf .NET Standard abzielt, kann also in diesen .NET Framework-Versionen ausgeführt werden. .NET Framework enthält zusätzliche Windows-spezifische APIs, wie z.B. APIs für die Windows-Desktopentwicklung mit Windows Forms und WPF. .NET Framework wurde für das Erstellen von Windows-Desktopanwendungen optimiert.
 
-Weitere Informationen zu .NET Framework finden Sie im [Leitfaden für .NET Framework](../framework/index.yml).
+Weitere Informationen finden Sie im [Leitfaden zum .NET Framework](../framework/index.yml).
 
 ### <a name="mono"></a>Mono
 
@@ -56,20 +67,20 @@ In der Vergangenheit hat Mono die größere API des .NET Framework implementiert
 
 Mono wird in der Regel mit einem Just-In-Time-Compiler verwendet. Es enthält aber auch einen vollständig statischen Compiler (Ahead-of-time-Kompilierung), der auf Plattformen wie iOS verwendet wird.
 
-Weitere Informationen zu Mono finden Sie in der [Mono-Dokumentation](https://www.mono-project.com/docs/).
+Weitere Informationen finden Sie in der [Mono-Dokumentation](https://www.mono-project.com/docs/):
 
 ### <a name="universal-windows-platform-uwp"></a>Universelle Windows-Plattform (UWP)
 
-Die UWP ist eine Implementierung von .NET, mit der moderne Windows-Anwendungen für Touchscreengeräte und Software für das Internet der Dinge (Internet of Things, IoT) erstellt werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Die .NET-APIs für C# und Visual Basic werden von .NET Core bereitgestellt.
+Die UWP ist eine Implementierung von .NET, mit der moderne Windows-Anwendungen für Touchscreengeräte und Software für das Internet der Dinge (Internet of Things, IoT) erstellt werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden.
 
-Weitere Informationen zur UWP finden Sie unter [Einführung in die universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide).
+Weitere Informationen finden Sie in der [Einführung in die Universelle Windows-Plattform](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>.NET-Runtimes
 
 Eine Laufzeit ist die Ausführungsumgebung eines verwalteten Programms. Das Betriebssystem ist Teil der Laufzeitumgebung, gehört jedoch nicht zur .NET-Runtime. Dies sind einige Beispiele für .NET-Runtimes:
 
 - Die Common Language Runtime (CLR) für das .NET Framework
-- Die Core Common Language Runtime (CoreCLR) für .NET Core
+- Die Common Language Runtime (CLR) für .NET 5
 - .NET Native für die universelle Windows-Plattform
 - Die Mono-Runtime für Xamarin.iOS, Xamarin.Android, Xamarin.Mac und das Mono-Desktopframework
 
@@ -82,6 +93,8 @@ Es stehen verschiedene Tools und Infrastrukturkomponenten zur Verfügung, die in
 - [MSBuild](/visualstudio/msbuild/msbuild), die Build-Engine, mit dem Projekte erstellt werden
 - [NuGet](/nuget/), der Paket-Manager von Microsoft für .NET
 - Open-Source-Buildorchestrierungtools, z.B. [CAKE](https://cakebuild.net/) und [FAKE](https://fake.build/)
+
+Weitere Informationen finden Sie unter [Tools und Produktivität](../core/introduction.md#tools-and-productivity).
 
 ## <a name="applicable-standards"></a>Anwendbare Standards
 
@@ -105,9 +118,9 @@ Die offiziellen ISO/IEC-Dokumente sind auf der ISO/IEC-Seite [Publicly Available
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Wahl zwischen .NET Core und .NET Framework für Server-Apps](choosing-core-framework-server.md)
-- [Einführung in .NET Standard](net-standard.md)
 - [Einführung in .NET](../core/introduction.md)
+- [Einführung in .NET Standard](net-standard.md)
+- [.NET 5 für Server-Apps im Vergleich zum .NET Framework](choosing-core-framework-server.md)
 - [Leitfaden für .NET Framework](../framework/index.yml)
 - [Leitfaden für C#](../csharp/index.yml)
 - [Leitfaden für F#](../fsharp/index.yml)
