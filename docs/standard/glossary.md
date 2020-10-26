@@ -1,14 +1,14 @@
 ---
 title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
-ms.date: 01/22/2019
+ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415008"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050343"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -21,6 +21,18 @@ Ahead-of-Time-Compiler
 Ähnlich wie bei [JIT](#jit) übersetzt dieser Compiler ebenfalls [IL](#il) in Computercode. Im Gegensatz zur JIT-Kompilierung erfolgt die AOT-Kompilierung, bevor die Anwendung ausgeführt wird und wird von einem anderen Computer aus ausgeführt. Da AOT-Toolketten nicht während der Laufzeit kompiliert werden, muss die Zeit, die für das Kompilieren aufgewendet wird, nicht minimiert werden. Das bedeutet, dass mehr Zeit in die Optimierung investiert werden kann. Da die gesamte Anwendung den Kontext der AOT darstellt, führt der AOT-Compiler auch modulübergreifende Verknüpfungen und die Analyse des gesamten Programms aus. Das bedeutet, dass allen Verweisen gefolgt und eine einzige ausführbare Datei generiert wird.
 
 Siehe [CoreRT](#corert) und [.NET Native](#net-native).
+
+## <a name="app-model"></a>App-Modell
+
+Hierbei handelt es sich um eine [Workload](#workload)-spezifische API. Im Folgenden finden Sie einige Beispiele:
+
+* ASP.NET
+* ASP.NET-Web-API
+* Entity Framework (EF)
+* Windows Presentation Foundation (WPF)
+* Windows Communication Foundation (WCF)
+* Windows Workflow Foundation (WF)
+* Windows Forms (WinForms)
 
 ## <a name="aspnet"></a>ASP.NET
 
@@ -291,6 +303,12 @@ Siehe [Zielframeworks](frameworks.md).
 Universelle Windows-Plattform
 
 Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen und Software für das Internet der Dinge (Internet of Things, IoT) erstellen werden. Sie wurde als einheitliche Plattform entwickelt, um das Programmieren für verschiedene Gerätetypen, von PCs, Tablets und Smartphones bis hin zur Xbox, zu ermöglichen. Die UWP bietet viele Dienste, z.B. einen zentralen App Store, eine Ausführungsumgebung (AppContainer) und mehrere Windows-APIs, die anstelle von Win32 (WinRT) verwendet werden. Apps können in C++, C#, Visual Basic und JavaScript geschrieben werden. Bei Verwendung von C# und Visual Basic werden die .NET-APIs von .NET 5 (und .NET Core) und höheren Versionen bereitgestellt.
+
+## <a name="workload"></a>workload
+
+Hierbei handelt es sich um einen App-Typen, der erstellt wird. Eine Workload ist allgemeiner als ein [App-Modell](#app-model). Oben auf jeder Seite der .NET-Dokumentation, einschließlich dieser, finden Sie beispielsweise eine Dropdownliste für **Workloads**, in der Sie die Dokumentation entsprechend der Optionen **Web**, **Mobil**, **Cloud**, **Desktop** und **Machine Learning und Daten** wechseln können.
+
+In manchen Kontexten bezieht sich *Workload* auf eine Featuresammlung in Visual Studio, die Sie installieren können, um einen bestimmten App-Typen zu unterstützen. Ein Beispiel hierfür finden Sie unter [Auswählen einer Workload](../core/install/windows.md#select-a-workload).
 
 ## <a name="see-also"></a>Siehe auch
 
