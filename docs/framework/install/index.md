@@ -1,17 +1,19 @@
 ---
 title: Leitfaden für die Installation von .NET Framework
 description: Informationen zum Installieren von .NET Framework unter Windows
-ms.date: 08/03/2017
-ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 10/21/2020
+ms.openlocfilehash: 9a12c3a39d1089b28ff7b657967d4a72128596f3
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716363"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471929"
 ---
 # <a name="installation-guide"></a>Installationshandbuch
 
 Sie können .NET Framework unter verschiedenen Windows-Versionen installieren.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 ## <a name="supported-windows-versions"></a>Unterstützte Windows-Versionen
 
@@ -27,7 +29,7 @@ Sie können .NET Framework unter verschiedenen Windows-Versionen installieren.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Herunterladen von .NET Framework](https://dotnet.microsoft.com/download)
+- [.NET Framework herunterladen](https://dotnet.microsoft.com/download)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Installieren von.NET Framework für Entwickler](guide-for-developers.md)
-- [Handbuch für die Bereitstellung von .NET Framework für Entwickler](../deployment/deployment-guide-for-developers.md)
+- [Installieren von .NET Framework für Entwickler](guide-for-developers.md)
+- [Bereitstellen von .NET Framework für Entwickler](../deployment/deployment-guide-for-developers.md)
