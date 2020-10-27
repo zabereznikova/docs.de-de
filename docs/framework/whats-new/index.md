@@ -1,21 +1,23 @@
 ---
 title: Neuerungen in .NET Framework
 description: Finden Sie heraus, welche Neuerungen es in den verschiedenen Versionen von .NET Framework gibt. Lesen Sie eine Zusammenfassung der wichtigsten neuen Features und Verbesserungen in den einzelnen Versionen.
-ms.date: 04/18/2019
+ms.date: 10/21/2020
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756077"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471942"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 Dieser Artikel beschreibt wichtige Funktionen und Änderungen in den folgenden Versionen von .NET Framework:
 
@@ -69,7 +71,7 @@ Ein Hauptschwerpunkt von .NET Framework 4.8 ist nach wie vor die Verbesserung de
 
 #### <a name="base-classes"></a>Basisklassen
 
-**Reduzierung der Auswirkungen von FIPS auf Kryptografie**. In früheren Versionen von .NET Framework lösen verwaltete Kryptografieanbieterklassen wie <xref:System.Security.Cryptography.SHA256Managed> eine Ausnahme des Typs <xref:System.Security.Cryptography.CryptographicException> aus, wenn die kryptografischen Systembibliotheken im „FIPS-Modus“ konfiguriert sind. Diese Ausnahmen werden ausgelöst, da die verwalteten Versionen der Kryptografieanbieterklassen im Gegensatz zu den kryptografischen Systembibliotheken nicht gemäß FIPS 140-2 (Federal Information Processing Standards) zertifiziert sind. Da nur wenige Entwickler ihre Entwicklungscomputer im FIPS-Modus betreiben, werden die Ausnahmen häufig in Produktionssystemen ausgelöst.
+**Reduzierung der Auswirkungen von FIPS auf Kryptografie** . In früheren Versionen von .NET Framework lösen verwaltete Kryptografieanbieterklassen wie <xref:System.Security.Cryptography.SHA256Managed> eine Ausnahme des Typs <xref:System.Security.Cryptography.CryptographicException> aus, wenn die kryptografischen Systembibliotheken im „FIPS-Modus“ konfiguriert sind. Diese Ausnahmen werden ausgelöst, da die verwalteten Versionen der Kryptografieanbieterklassen im Gegensatz zu den kryptografischen Systembibliotheken nicht gemäß FIPS 140-2 (Federal Information Processing Standards) zertifiziert sind. Da nur wenige Entwickler ihre Entwicklungscomputer im FIPS-Modus betreiben, werden die Ausnahmen häufig in Produktionssystemen ausgelöst.
 
 Standardmäßig lösen in diesem Fall die folgenden verwalteten Kryptografieklassen in Anwendungen für .NET Framework 4.8 <xref:System.Security.Cryptography.CryptographicException> nicht mehr aus:
 
@@ -141,6 +143,7 @@ Der Integritätsstatus eines Diensts kann mithilfe von Abfrageparametern wie `On
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
   Der HTTP-Antwortstatuscode 450 wird zurückgegeben, wenn [ServiceHost.State](xref:System.ServiceModel.Channels.CommunicationObject.State) größer als <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> ist.
+
 Abfrageparameter und Beispiele:
 
 - OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
@@ -187,11 +190,11 @@ Um die Unterstützung für die Skalierung mit hohen DPI-Werten im gemischten Mod
 
 Die Runtime in .NET Framework 4.8 weist die folgenden Änderungen und Verbesserungen auf:
 
-**Verbesserungen am JIT-Compiler**. Der Just-in-Time-Compiler (JIT) in .NET Framework 4.8 basiert auf dem JIT-Compiler in .NET Core 2.1. Viele der Optimierungen und alle Fehlerkorrekturen für den JIT-Compiler von .NET Core 2.1 sind im JIT-Compiler von .NET Framework 4.8 enthalten.
+**Verbesserungen am JIT-Compiler** . Der Just-in-Time-Compiler (JIT) in .NET Framework 4.8 basiert auf dem JIT-Compiler in .NET Core 2.1. Viele der Optimierungen und alle Fehlerkorrekturen für den JIT-Compiler von .NET Core 2.1 sind im JIT-Compiler von .NET Framework 4.8 enthalten.
 
-**Verbesserungen für NGEN**. Die Runtime für die Speicherverwaltung für [Native Image Generator](../tools/ngen-exe-native-image-generator.md)-Bilder (NGEN) wurde so verbessert, dass aus NGEN-Bildern zugeordnete Daten nicht speicherresident sind. Dadurch wird die Angriffsfläche für Versuche, willkürlichen Code auszuführen, verkleinert, indem der auszuführende Speicher modifiziert wird.
+**Verbesserungen für NGEN** . Die Runtime für die Speicherverwaltung für [Native Image Generator](../tools/ngen-exe-native-image-generator.md)-Bilder (NGEN) wurde so verbessert, dass aus NGEN-Bildern zugeordnete Daten nicht speicherresident sind. Dadurch wird die Angriffsfläche für Versuche, willkürlichen Code auszuführen, verkleinert, indem der auszuführende Speicher modifiziert wird.
 
-**Überprüfung durch Antischadsoftware für alle Assemblys**. In früheren .NET Framework-Versionen scannt die Runtime alle vom Datenträger geladenen Assemblys mit Windows Defender oder Antischadsoftware von Drittanbietern. Assemblys, die aus anderen Quellen geladen werden, z.B. mit der <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>-Methode, werden jedoch nicht gescannt und können möglicherweise unentdeckte Schadsoftware enthalten. Ab .NET Framework 4.8 unter Windows 10 löst die Runtime einen Scan durch Antischadsoftware-Lösungen aus, die die [Antimalware Scan Interface (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) implementieren.
+**Überprüfung durch Antischadsoftware für alle Assemblys** . In früheren .NET Framework-Versionen scannt die Runtime alle vom Datenträger geladenen Assemblys mit Windows Defender oder Antischadsoftware von Drittanbietern. Assemblys, die aus anderen Quellen geladen werden, z.B. mit der <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>-Methode, werden jedoch nicht gescannt und können möglicherweise unentdeckte Schadsoftware enthalten. Ab .NET Framework 4.8 unter Windows 10 löst die Runtime einen Scan durch Antischadsoftware-Lösungen aus, die die [Antimalware Scan Interface (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) implementieren.
 
 <a name="v472"></a>
 
@@ -308,7 +311,7 @@ End Function
 
 **Unterstützung für kurzlebige Schlüssel**
 
-Der PFX-Import kann optional private Schlüssel direkt aus dem Arbeitsspeicher unter Umgehung der Festplatte laden. Wenn das neue <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType>-Flag in einem <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Konstruktor oder einer der Überladungen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>-Methode angegeben wird, werden die privaten Schlüssel als kurzlebige Schlüssel geladen. Auf diese Weise wird verhindert, dass die Schlüssel auf dem Datenträger sichtbar sind. Dabei gilt jedoch Folgendes:
+Der PFX-Import kann optional private Schlüssel direkt aus dem Arbeitsspeicher unter Umgehung der Festplatte laden.  Wenn das neue <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType>-Flag in einem <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Konstruktor oder einer der Überladungen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>-Methode angegeben wird, werden die privaten Schlüssel als kurzlebige Schlüssel geladen. Auf diese Weise wird verhindert, dass die Schlüssel auf dem Datenträger sichtbar sind. Dabei gilt jedoch Folgendes:
 
 - Da die Schlüssel nicht dauerhaft auf dem Datenträger gespeichert werden, sind Zertifikate, die mit diesem Flag geladen werden, keine guten Kandidaten zum Hinzufügen zu einem X509Store.
 
@@ -328,7 +331,7 @@ Ab .NET Framework 4.7.2 stellt die <xref:System.Security.Cryptography.Pkcs.Signe
 
 **Beibehalten der Öffnung eines in einem Wrapper enthaltenen Datenstroms nach dem Verwerfen von CryptoStream**
 
-Ab .NET Framework 4.7.2 verfügt die <xref:System.Security.Cryptography.CryptoStream>-Klasse über einen zusätzlichen Konstruktor, der es <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> ermöglicht, den in einem Wrapper enthaltenen Datenstrom nicht zu schließen. Um den in einem Wrapper enthaltenen Datenstrom nach dem Verwerfen der <xref:System.Security.Cryptography.CryptoStream>-Instanz geöffnet zu lassen, rufen Sie den neuen <xref:System.Security.Cryptography.CryptoStream>-Konstruktor wie folgt auf:
+Ab .NET Framework 4.7.2 verfügt die <xref:System.Security.Cryptography.CryptoStream>-Klasse über einen zusätzlichen Konstruktor, der es <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> ermöglicht, den in einem Wrapper enthaltenen Datenstrom nicht zu schließen.  Um den in einem Wrapper enthaltenen Datenstrom nach dem Verwerfen der <xref:System.Security.Cryptography.CryptoStream>-Instanz geöffnet zu lassen, rufen Sie den neuen <xref:System.Security.Cryptography.CryptoStream>-Konstruktor wie folgt auf:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -471,15 +474,15 @@ Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der ab
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/>
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -497,13 +500,13 @@ Dies ist der grundlegende Ablauf von Enclave-basiertem Always Encrypted:
 
 **Suchen nach ResourceDictionaries nach Quelle**
 
-Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> suchen, die für einen bestimmten Quell-URI erstellt wurden. (Dieses Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent (z. B. die Visual Studio-Funktion „Bearbeiten und fortfahren“) erlaubt es dem Benutzer, ein ResourceDictionary mit der Absicht zu bearbeiten, dass die Änderungen auf die aktuell ausgeführte Anwendung angewendet werden. Ein Schritt zum Erreichen dieses Ziels besteht im Ermitteln aller ResourceDictionaries, die die ausgeführte Anwendung aus dem Wörterbuch erstellt hat, das aktuell bearbeitet wird. Beispielsweise kann eine Anwendung ein ResourceDictionary deklarieren, dessen Inhalt aus einem bestimmten Quell-URI kopiert wird:
+Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> suchen, die für einen bestimmten Quell-URI erstellt wurden.  (Dieses Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent (z. B. die Visual Studio-Funktion „Bearbeiten und fortfahren“) erlaubt es dem Benutzer, ein ResourceDictionary mit der Absicht zu bearbeiten, dass die Änderungen auf die aktuell ausgeführte Anwendung angewendet werden. Ein Schritt zum Erreichen dieses Ziels besteht im Ermitteln aller ResourceDictionaries, die die ausgeführte Anwendung aus dem Wörterbuch erstellt hat, das aktuell bearbeitet wird. Beispielsweise kann eine Anwendung ein ResourceDictionary deklarieren, dessen Inhalt aus einem bestimmten Quell-URI kopiert wird:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml" />
 ```
 
-Ein Diagnose-Assistent, der das ursprüngliche Markup in *MyRD.xaml*  bearbeitet, kann das neue Feature verwenden, um nach dem Wörterbuch zu suchen. Das Feature wird durch eine neue statische Methode (<xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>) implementiert. Der Diagnose-Assistent ruft die neue Methode über einen absoluten URI auf, der das ursprüngliche Markup identifiziert, wie der folgende Code veranschaulicht:
+Ein Diagnose-Assistent, der das ursprüngliche Markup in *MyRD.xaml* bearbeitet, kann das neue Feature verwenden, um nach dem Wörterbuch zu suchen.  Das Feature wird durch eine neue statische Methode (<xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>) implementiert. Der Diagnose-Assistent ruft die neue Methode über einen absoluten URI auf, der das ursprüngliche Markup identifiziert, wie der folgende Code veranschaulicht:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -513,11 +516,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-Die Methode gibt ein leeres aufzählbares Element zurück, es sei denn,  <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert, und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) -Umgebungsvariable wurde festgelegt.
+Die Methode gibt ein leeres aufzählbares Element zurück, es sei denn, <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert, und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)-Umgebungsvariable wurde festgelegt.
 
 **Suchen nach ResourceDictionary-Besitzern**
 
-Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die Besitzer eines bestimmten <xref:Windows.UI.Xaml.ResourceDictionary> ermitteln. (Das Feature steht für die Verwendung durch Diagnose Assistenten und nicht durch Produktionsanwendungen zur Verfügung.) Wenn eine Änderung an einem <xref:Windows.UI.Xaml.ResourceDictionary> vorgenommen wird, ermittelt WPF automatisch alle [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise, die von der Änderung betroffen sein könnten.
+Ab .NET Framework 4.7.2 kann ein Diagnose-Assistent die Besitzer eines bestimmten <xref:Windows.UI.Xaml.ResourceDictionary> ermitteln.  (Das Feature steht für die Verwendung durch Diagnose Assistenten und nicht durch Produktionsanwendungen zur Verfügung.) Wenn eine Änderung an einem <xref:Windows.UI.Xaml.ResourceDictionary> vorgenommen wird, ermittelt WPF automatisch alle [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise, die von der Änderung betroffen sein könnten.
 
 Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio kann diese Funktion ggf. erweitern, um [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweise zu verarbeiten. Der erste Schritt in diesem Prozess ist das Ermitteln der Besitzer des Wörterbuchs, also aller Objekte, deren `Resources`-Eigenschaft auf das Wörterbuch verweist (entweder direkt oder indirekt über die <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>-Eigenschaft). Drei neue statische Methoden, die für die <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>-Klasse implementiert wurden (jeweils eine Methode für jeden der Basistypen, der über eine `Resources`-Eigenschaft verfügt), unterstützen diesen Schritt:
 
@@ -527,11 +530,11 @@ Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Diese Methoden geben ein leeres aufzählbares Element zurück, es sei denn,  <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert, und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) -Umgebungsvariable wurde festgelegt.
+Diese Methoden geben ein leeres aufzählbares Element zurück, es sei denn, <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert, und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)-Umgebungsvariable wurde festgelegt.
 
 **Suchen nach StaticResource-Verweisen**
 
-Ein Diagnose-Assistent kann jetzt immer dann eine Benachrichtigung erhalten, wenn ein [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis aufgelöst wird. (Das Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio möchte ggf. alle Verwendungen einer Ressource aktualisieren, wenn sich ihr Wert in einem <xref:Windows.UI.Xaml.ResourceDictionary> ändert. WPF führt dies automatisch für [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise aus, aber absichtlich nicht für [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweise. Ab .NET Framework 4.7.2 kann der Diagnose-Assistent diese Benachrichtigungen verwenden, um diese Verwendungen der statischen Ressource zu ermitteln.
+Ein Diagnose-Assistent kann jetzt immer dann eine Benachrichtigung erhalten, wenn ein [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis aufgelöst wird.  (Das Feature steht für die Verwendung durch Diagnose Assistenten zur Verfügung, nicht für Produktionsanwendungen.) Ein Diagnose-Assistent wie etwa die Funktion „Bearbeiten und fortfahren“ von Visual Studio möchte ggf. alle Verwendungen einer Ressource aktualisieren, wenn sich ihr Wert in einem <xref:Windows.UI.Xaml.ResourceDictionary> ändert. WPF führt dies automatisch für [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)-Verweise aus, aber absichtlich nicht für [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweise. Ab .NET Framework 4.7.2 kann der Diagnose-Assistent diese Benachrichtigungen verwenden, um diese Verwendungen der statischen Ressource zu ermitteln.
 
 Die Benachrichtigung wird durch das neue <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>-Ereignis implementiert:
 
@@ -543,7 +546,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Dieses Ereignis wird immer ausgelöst, wenn die Runtime einen [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis auflöst. Die <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs>-Argumente beschreiben die Auflösung und geben das Objekt und die Eigenschaft an, die den [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis hosten, sowie das  <xref:Windows.UI.Xaml.ResourceDictionary> und den Schlüssel, die für die Auflösung verwendet wurden:
+Dieses Ereignis wird immer ausgelöst, wenn die Runtime einen [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis auflöst. Die <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs>-Argumente beschreiben die Auflösung und geben das Objekt und die Eigenschaft an, die den [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)-Verweis hosten, sowie das <xref:Windows.UI.Xaml.ResourceDictionary> und den Schlüssel, die für die Auflösung verwendet wurden:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -567,7 +570,7 @@ Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
 End Class
 ```
 
-Das Ereignis wird nicht ausgelöst (und sein `add`-Accessor wird ignoriert), es sei denn,  <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) -Umgebungsvariable wurde festgelegt.
+Das Ereignis wird nicht ausgelöst (und sein `add`-Accessor wird ignoriert), es sei denn, <xref:System.Windows.Diagnostics.VisualDiagnostics> ist aktiviert und die [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)-Umgebungsvariable wurde festgelegt.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -575,7 +578,7 @@ HDPI-fähige Anwendungen für Windows Forms, Windows Presentation Foundation (WP
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -685,7 +688,7 @@ Eine Liste der neuen APIs, die .NET Framework 4.7 hinzugefügt wurden, finden Si
 
 .NET Framework 4.7 verbessert die Serialisierung durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** *
+**Verbesserte Funktionalität mit Elliptic Curve Cryptography (ECC)** _
 
 In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klassen <xref:System.Security.Cryptography.ECDsa> und <xref:System.Security.Cryptography.ECDiffieHellman> hinzugefügt, damit ein Objekt einen bereits eingerichteten Schlüssel darstellen kann. Eine `ExportParameters(Boolean)`-Methode wurde auch zum Exportieren des Schlüssels unter Verwendung expliziter Kurvenparameter hinzugefügt.
 
@@ -693,7 +696,7 @@ In .NET Framework 4.7 wurden `ImportParameters(ECParameters)`-Methoden den Klass
 
 Auf GitHub finden Sie ein [Beispiel der kryptografischen Verbesserungen in .NET Framework 4.7](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e).
 
-**Bessere Unterstützung für Steuerzeichen durch DataContractJsonSerializer**
+_ *Bessere Unterstützung für Steuerzeichen durch DataContractJsonSerializer**
 
 In .NET Framework 4.7 serialisiert die Klasse <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Steuerzeichen entsprechend dem ECMAScript 6-Standard. Dieses Verhalten wird standardmäßig für Anwendungen aktiviert, die auf .NET Framework 4.7 ausgerichtet sind, und es ist ein optionales Feature für Anwendungen, die unter .NET Framework 4.7 ausgeführt werden, aber auf eine frühere Version des .NET Framework ausgerichtet sind. Weitere Informationen finden Sie im Abschnitt [Anwendungskompatibilität](../migration-guide/application-compatibility.md).
 
@@ -703,7 +706,7 @@ In .NET Framework 4.7 serialisiert die Klasse <xref:System.Runtime.Serialization
 
 .NET Framework 4.7 bietet nun die folgenden netzwerkbezogenen Features:
 
-**Standardmäßig Betriebssystemunterstützung für TLS-Protokolle***
+**Standardmäßig Betriebssystemunterstützung für TLS-Protokolle** _
 
 Der TLS-Stapel, der von <xref:System.Net.Security.SslStream?displayProperty=nameWithType> und vorgelagerten Komponenten im Stapel wie z.B. HTTP, FTP und SMTP verwendet wird, ermöglicht Entwicklern, die vom Betriebssystem unterstützten TLS-Standardprotokolle zu verwenden. Entwickler müssen eine TLS-Version nicht länger vordefinieren.
 
@@ -713,15 +716,15 @@ Der TLS-Stapel, der von <xref:System.Net.Security.SslStream?displayProperty=name
 
 In .NET Framework 4.7 bietet ASP.NET die folgenden neuen Features:
 
-**Erweiterbarkeit des Objektcaches**
+_ *Erweiterbarkeit des Objektcaches**
 
 Ab .NET Framework 4.7 bietet ASP.NET eine neue Gruppe von APIs, die es Entwicklern ermöglichen, die ASP.NET- Standardimplementierungen für das Zwischenspeichern von Objekten im Arbeitsspeicher und dessen Überwachung zu ersetzen. Entwickler können jetzt die drei folgenden Komponenten ersetzen, wenn die ASP.NET-Implementierung nicht geeignet ist:
 
-- **Objektcachespeicher**. Mithilfe des neuen Abschnitts für die Konfiguration von Cacheanbietern können Entwickler neue Implementierungen eines Objektcaches für eine ASP.NET-Anwendung einbinden, indem die neue **ICacheStoreProvider**-Schnittstelle verwendet wird.
+- **Objektcachespeicher** . Mithilfe des neuen Abschnitts für die Konfiguration von Cacheanbietern können Entwickler neue Implementierungen eines Objektcaches für eine ASP.NET-Anwendung einbinden, indem die neue **ICacheStoreProvider** -Schnittstelle verwendet wird.
 
-- **Speicherüberwachung**. Der Standardspeichermonitor in ASP.NET benachrichtigt Anwendungen, sobald sie sich dem für den Prozess konfigurierten Grenzwert für private Bytes nähern oder der insgesamt verfügbare physische Arbeitsspeicher knapp wird. Bei Annäherung an diese Grenzwerte werden Benachrichtigungen ausgelöst. Bei einigen Anwendungen werden Benachrichtigungen erst ausgelöst, sobald die konfigurierten Grenzwerte schon fast erreicht sind, sodass keine sinnvolle Reaktion möglich ist. Entwickler können nun mithilfe der <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>-Eigenschaft ihre eigene Arbeitsspeicherüberwachung schreiben, um die Standardeinstellung zu ersetzen.
+- **Speicherüberwachung** . Der Standardspeichermonitor in ASP.NET benachrichtigt Anwendungen, sobald sie sich dem für den Prozess konfigurierten Grenzwert für private Bytes nähern oder der insgesamt verfügbare physische Arbeitsspeicher knapp wird. Bei Annäherung an diese Grenzwerte werden Benachrichtigungen ausgelöst. Bei einigen Anwendungen werden Benachrichtigungen erst ausgelöst, sobald die konfigurierten Grenzwerte schon fast erreicht sind, sodass keine sinnvolle Reaktion möglich ist. Entwickler können nun mithilfe der <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>-Eigenschaft ihre eigene Arbeitsspeicherüberwachung schreiben, um die Standardeinstellung zu ersetzen.
 
-- **Reaktionen bei Erreichen des Speichergrenzwerts**. Standardmäßig versucht ASP.NET, den Objektcache zu trimmen und regelmäßig <xref:System.GC.Collect%2A?displayProperty=nameWithType> aufzurufen, wenn der Prozessgrenzwert für private Bereiche fast erreicht ist. Für einige Anwendungen ist die Häufigkeit der Aufrufe von <xref:System.GC.Collect%2A?displayProperty=nameWithType> oder die Menge des Caches, der getrimmt wird, ineffizient. Entwickler können jetzt das Standardverhalten ersetzen oder ergänzen, indem für den Speichermonitor der Anwendung **IObserver**-Implementierungen abonniert werden.
+- **Reaktionen bei Erreichen des Speichergrenzwerts** . Standardmäßig versucht ASP.NET, den Objektcache zu trimmen und regelmäßig <xref:System.GC.Collect%2A?displayProperty=nameWithType> aufzurufen, wenn der Prozessgrenzwert für private Bereiche fast erreicht ist. Für einige Anwendungen ist die Häufigkeit der Aufrufe von <xref:System.GC.Collect%2A?displayProperty=nameWithType> oder die Menge des Caches, der getrimmt wird, ineffizient. Entwickler können jetzt das Standardverhalten ersetzen oder ergänzen, indem für den Speichermonitor der Anwendung **IObserver** -Implementierungen abonniert werden.
 
 <a name="wcf47"></a>
 
@@ -743,10 +746,10 @@ Ab .NET Framework 4.7 ermöglicht WCF das Konfigurieren von TLS 1.1 oder TLS 1.2
 
 WCF umfasst eine Reihe von Codeänderungen zum Vermeiden von Racebedingungen, wodurch Leistung und Zuverlässigkeit von Serialisierungsoptionen verbessert werden. Dazu gehören:
 
-- Bessere Unterstützung für das Kombinieren von asynchronem und synchronem Code in Aufrufen von **SocketConnection.BeginRead** und **SocketConnection.Read**.
-- Verbesserte Zuverlässigkeit beim Abbrechen einer Verbindung mit **SharedConnectionListener** und **DuplexChannelBinder**.
+- Bessere Unterstützung für das Kombinieren von asynchronem und synchronem Code in Aufrufen von **SocketConnection.BeginRead** und **SocketConnection.Read** .
+- Verbesserte Zuverlässigkeit beim Abbrechen einer Verbindung mit **SharedConnectionListener** und **DuplexChannelBinder** .
 - Verbesserte Zuverlässigkeit von Serialisierungsvorgängen beim Aufrufen der <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType>-Methode.
-- Verbesserte Zuverlässigkeit beim Entfernen eines Waiters durch Aufrufen der **ChannelSynchronizer.RemoveWaiter**-Methode.
+- Verbesserte Zuverlässigkeit beim Entfernen eines Waiters durch Aufrufen der **ChannelSynchronizer.RemoveWaiter** -Methode.
 
 <a name="wf47"></a>
 
@@ -1387,7 +1390,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
 
 ### <a name="native-image-generator-ngen-pdbs"></a>NGEN (Native Image Generator)-PDBs
 
-Die computerübergreifende Ereignisablaufverfolgung ermöglicht Kunden die Profilerstellung für ein Programm auf Computer A und die Anzeige der Profilerstellungsdaten per Quellzeilenzuordnung auf Computer B. Unter früheren .NET Framework-Versionen musste der Benutzer alle Module und systemeigenen Images vom Profilcomputer auf den Analysecomputer kopieren, der die IL PDB-Datei für die Zuordnung zwischen Quellzeilen und systemeigenen Images enthielt. Während dies bei kleineren Dateien wie Handy-Apps durchaus gut funktionieren kann, können Desktopsystemdateien ziemlich anwachsen und beträchtliche Zeit für das Kopieren erfordern.
+Die computerübergreifende Ereignisablaufverfolgung ermöglicht Kunden die Profilerstellung für ein Programm auf Computer A und die Anzeige der Profilerstellungsdaten per Quellzeilenzuordnung auf Computer B. Unter früheren .NET Framework-Versionen musste der Benutzer alle Module und nativen Images vom Profilcomputer auf den Analysecomputer kopieren, der die IL PDB-Datei für die Zuordnung zwischen Quellzeilen und nativen Images enthielt. Während dies bei kleineren Dateien wie Handy-Apps durchaus gut funktionieren kann, können Desktopsystemdateien ziemlich anwachsen und beträchtliche Zeit für das Kopieren erfordern.
 
 Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwischen IL und systemeigenen Images enthält, ohne dass eine Abhängigkeit von der IL PDB-Datei besteht. In diesem Szenario für die computerübergreifende Ereignisablaufverfolgung muss lediglich die von Computer A generierte PDB-Datei für systemeigene Images auf Computer B kopiert werden, und die [Debug Interface Access-APIs](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) müssen verwendet werden, um die „Quellzeilen-zu-IL“-Zuordnung der IL PDB-Datei und die „IL-zu-systemeigene Images“-Zuordnung der PDB-Datei für systemeigene Images zu lesen. Durch die Kombination beider Zuordnungen entsteht eine Zuordnung zwischen Quellzeilen und systemeigenem Image. Da die PDB-Datei für systemeigene Images viel kleiner als alle Module und systemeigenen Images ist, wird das Kopieren von Computer A auf Computer B deutlich beschleunigt.
 
@@ -1582,9 +1585,9 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
     Es empfiehlt sich, ein konsistentes Format für Optionen zu verwenden, da es sich hierbei um eine formellen Vertrag handelt, der von einer Bibliothek verfügbar gemacht wird. Das folgende Beispiel zeigt zwei offensichtliche Formate.
 
-    - *Switch*.*namespace*.*switchname*
+    - *Switch* . *namespace* . *switchname*
 
-    - *Switch*.*library*.*switchname*
+    - *Switch* . *library* . *switchname*
 
   - **Änderungen am aufgabenbasierten asynchronen Entwurfsmuster (TAP)**
 
@@ -1840,7 +1843,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
 ## <a name="whats-new-in-net-framework-451"></a>Neuerungen in .NET Framework 4.5.1
 
-**Updates für April 2014**:
+**Updates für April 2014** :
 
 - [Visual Studio 2013 Update 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) enthält Updates für die Vorlagen der portablen Klassenbibliothek, um die folgenden Szenarien zu unterstützen:
 
@@ -2064,7 +2067,7 @@ Weitere Informationen finden Sie unter [Neues in Windows Communication Foundatio
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-.NET Framework 4.5 bietet viele neue Features für Windows Workflow Foundation (WF), so z. B.:
+.NET Framework 4.5 bietet viele neue Features für Windows Workflow Foundation (WF), so z. B.:
 
 - Zustandsautomatworkflows, die zunächst als Teil von .NET Framework 4.0.1 ([.NET Framework 4 Platform-Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)) eingeführt wurden. Dieses Update umfasste mehrere neue Klassen und Aktivitäten, sodass Entwickler Zustandsautomatworkflows erstellen konnten. Diese Klassen und Aktivitäten wurden für .NET Framework 4.5 aktualisiert und umfassen nun Folgendes:
 
@@ -2078,13 +2081,13 @@ Weitere Informationen finden Sie unter [Neues in Windows Communication Foundatio
 
 - Verbesserte Workflow Designer-Funktionen, z. B.:
 
-  - Verbesserte Workflowsuchfunktionen in Visual Studio, einschließlich **Schnellsuche** und **In Dateien suchen**.
+  - Verbesserte Workflowsuchfunktionen in Visual Studio, einschließlich **Schnellsuche** und **In Dateien suchen** .
 
   - Automatisches Erstellen einer Sequenzaktivität, wenn eine zweite untergeordnete Aktivität zu einer Containeraktivität hinzugefügt wird, und Einschließen beider Aktivitäten in die Sequenzaktivität.
 
   - Schwenk-Unterstützung zur Änderung des sichtbaren Teils eines Workflows ohne die Verwendung von Bildlaufleisten.
 
-  - Die neue Ansicht **Dokumentgliederung**, die die Gliederungsansicht der Workflowkomponenten in einer Baumstruktur anzeigt und die Auswahl einer Komponente in der Ansicht **Dokumentgliederung** ermöglicht.
+  - Die neue Ansicht **Dokumentgliederung** , die die Gliederungsansicht der Workflowkomponenten in einer Baumstruktur anzeigt und die Auswahl einer Komponente in der Ansicht **Dokumentgliederung** ermöglicht.
 
   - Hinzufügen von Anmerkungen zu Aktivitäten.
 
@@ -2127,7 +2130,7 @@ Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folg
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Framework und Out-of-Band-Releases](../get-started/the-net-framework-and-out-of-band-releases.md)
-- [Neuerungen der Barrierefreiheit in .NET Framework](whats-new-in-accessibility.md)
+- [Neuerungen der Barrierefreiheit in .NET Framework ](whats-new-in-accessibility.md)
 - [Neues in Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Neues in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
