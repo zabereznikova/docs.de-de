@@ -2,12 +2,12 @@
 title: 'Nullable-Verweistypen: C#-Referenz'
 description: Informationen zu Nullable-Verweistypen in C# und deren Verwendung
 ms.date: 04/06/2020
-ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102696"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471862"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Nullable-Verweistypen (C#-Referenz)
 
@@ -24,7 +24,7 @@ Nullable-Verweistypen sind ab C# 8.0 verfügbar, sofern der Code für *NULL-kom
 
 Die Unterschiede zwischen dem Non-Nullable-Verweistyp `T` und dem Nullable-Verweistyp `T?` werden so erzwungen, wie der Compiler die vorhergehenden Regeln interpretiert. Eine Variable vom Typ `T` und eine Variable vom Typ `T?` werden durch denselben .NET-Typ dargestellt. Im folgenden Beispiel werden eine Non-Nullable-Zeichenfolge und eine Nullable-Zeichenfolge deklariert. Anschließend wird der NULL-tolerante Operator verwendet, um einer Non-Nullable-Zeichenfolge einen Wert zuzuweisen:
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetCoreSyntax":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetCoreSyntax":::
 
 Die Variablen `notNull` und `nullable` werden beide durch den <xref:System.String>-Typ dargestellt. Da Non-Nullable- und Nullable-Typen als derselbe Typ gespeichert werden, gibt es mehrere Speicherorte, an denen Nullable-Verweistypen nicht verwendet werden dürfen. Ein Nullable-Verweistyp kann generell nicht als Basisklasse oder implementierte Schnittstelle verwendet werden. Ein Nullable-Verweistyp kann nicht in Ausdrücken für Objekterstellung oder Typtests verwendet werden. Ein Nullable-Verweistyp kann nicht der Typ eines Memberzugriffsausdrucks sein. In den folgenden Beispielen werden diese Konstrukte veranschaulicht:
 
@@ -55,11 +55,11 @@ Non-Nullable-Verweistypen können immer sicher dereferenziert werden, da ihr NUL
 
 Nullable-Verweistypen können initialisiert oder `null` zugewiesen werden. Daher muss bei der statischen Analyse bestätigt werden, dass eine Variable *not null* (nicht NULL) ist, bevor sie dereferenziert wird. Wenn feststeht wird, dass ein Nullable-Verweis *maybe null* (vielleicht NULL) ist, kann dieser keiner Non-Nullable-Verweisvariable zugewiesen werden. In der folgenden Klasse werden Beispiele für diese Warnungen veranschaulicht:
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
 
 Im folgenden Codeausschnitt sehen Sie, an welcher Stelle der Compiler bei Verwendung dieser Klasse Warnungen ausgibt:
 
-:::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
+:::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
 In den vorangehenden Beispielen wird die statische Analyse des Compilers veranschaulicht, mit der der NULL-Status von Verweisvariablen bestimmt wird. Der Compiler wendet Sprachregeln auf NULL-Prüfungen und -Zuweisungen an, um die Analyse mit Informationen zu versorgen.  Der Compiler kann keine Annahmen zur Semantik von Methoden oder Eigenschaften treffen. Wenn Sie Methoden aufzurufen, die NULL-Prüfungen durchführen, kann der Compiler nicht wissen, welche Methoden den NULL-Status einer Variablen beeinflussen. Es gibt einige Attribute, die Sie Ihren APIs hinzufügen können, um den Compiler über die Semantik von Argumenten und Rückgabewerten in Kenntnis zu setzen. Diese Attribute wurden auf viele gängige APIs in den .NET Core-Bibliotheken angewendet. Beispielsweise wurde <xref:System.String.IsNullOrEmpty%2A> aktualisiert, und der Compiler interpretiert diese Methode ordnungsgemäß als NULL-Prüfung. Weitere Informationen zu den Attributen, die für die statische Analyse des NULL-Status gelten, finden Sie im Artikel zu [Nullable-Attributen](../attributes/nullable-analysis.md).
 

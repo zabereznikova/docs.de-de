@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 1d6d33a36092ba685247f894375888da278b7e6e
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654867"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434797"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -38,7 +38,7 @@ Der Rest dieses Artikels beschreibt diese Funktionen kurz. Wenn ausführliche Ar
 
 1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
 1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
-1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp8* für das *try-samples*-Repository fest.
+1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp8* für das *try-samples* -Repository fest.
 1. Führen Sie aus `dotnet try`.
 
 ## <a name="readonly-members"></a>Readonly-Member
@@ -244,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-Die folgende Methode verwendet das **Positionsmuster**, um die Werte von `x` und `y` zu extrahieren. Dann wird mit einer `when`-Klausel der `Quadrant` des Punktes bestimmt:
+Die folgende Methode verwendet das **Positionsmuster** , um die Werte von `x` und `y` zu extrahieren. Dann wird mit einer `when`-Klausel der `Quadrant` des Punktes bestimmt:
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -271,7 +271,6 @@ Eine **using-Deklaration** ist eine Variablendeklaration, der das Schlüsselwort
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
-    // Notice how we declare skippedLines after the using statement.
     int skippedLines = 0;
     foreach (string line in lines)
     {
@@ -295,11 +294,9 @@ Im vorhergehenden Beispiel wird die Datei angeordnet, wenn die schließende Klam
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
 {
-    // We must declare the variable outside of the using block
-    // so that it is in scope to be returned.
-    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
+        int skippedLines = 0;
         foreach (string line in lines)
         {
             if (!line.Contains("Second"))

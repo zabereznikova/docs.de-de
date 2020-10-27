@@ -3,13 +3,13 @@ title: Komponententests für den C#-Code in .NET Core mit „dotnet test“ und 
 description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und xUnit erstellen.
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656383"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471536"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Komponententests für C# in .NET Core mit „dotnet test“ und xUnit
 
@@ -40,7 +40,7 @@ In den folgenden Anweisungen werden die Schritte zur Erstellung der Testprojektm
   ```
 
   Der Befehl [`dotnet new sln`](../tools/dotnet-new.md) erstellt im Verzeichnis *unit-testing-using-dotnet-test* eine neue Projektmappe.
-* Ändern Sie das Verzeichnis in *unit-testing-using-dotnet-test*.
+* Ändern Sie das Verzeichnis in *unit-testing-using-dotnet-test* .
 * Führen Sie den folgenden Befehl aus:
 
   ```dotnetcli
@@ -78,14 +78,14 @@ In den folgenden Anweisungen werden die Schritte zur Erstellung der Testprojektm
   dotnet sln add ./PrimeService/PrimeService.csproj
   ```
 
-* Erstellen Sie das Projekt *PrimeService.Tests*, indem Sie den folgenden Befehl ausführen:
+* Erstellen Sie das Projekt *PrimeService.Tests* , indem Sie den folgenden Befehl ausführen:
 
   ```dotnetcli
   dotnet new xunit -o PrimeService.Tests
   ```
 
 * Für den obigen Befehl gilt Folgendes:
-  * Erstellt das Projekt *PrimeService.Tests* im Verzeichnis *PrimeService.Tests*. Das Testprojekt verwendet [xUnit](https://xunit.net/) als Testbibliothek.
+  * Erstellt das Projekt *PrimeService.Tests* im Verzeichnis *PrimeService.Tests* . Das Testprojekt verwendet [xUnit](https://xunit.net/) als Testbibliothek.
   * Konfiguriert den Test Runner, indem die folgenden `<PackageReference />`-Elemente zur Projektdatei hinzugefügt werden:
     * Microsoft.NET.Test.Sdk
     * xunit
@@ -128,10 +128,10 @@ Befolgen Sie die Anweisungen unter „Ersetzen Sie den Code in *PrimeService.cs*
 
 Ein beliebter Ansatz bei der testgesteuerten Entwicklung ist das Schreiben eines Tests vor Implementierung des Zielcodes. In diesem Tutorial wird der Ansatz der testgesteuerten Entwicklung befolgt. Die `IsPrime`-Methode ist aufrufbar, aber nicht implementiert. Ein Testaufruf von `IsPrime` schlägt fehl. Bei der testgesteuerten Entwicklung wird ein Test geschrieben, der bekanntermaßen fehlschlägt. Der Zielcode wird aktualisiert, damit der Test bestanden wird. Sie wiederholen diesen Ansatz kontinuierlich, schreiben einen nicht erfolgreichen Test und aktualisieren dann den Zielcode so, dass er bestanden wird.
 
-Aktualisieren Sie das Projekt *PrimeService.Tests*:
+Aktualisieren Sie das Projekt *PrimeService.Tests* :
 
-* Löschen Sie *PrimeService.Tests/UnitTest1.cs*.
-* Erstellen Sie die Datei *PrimeService.Tests/PrimeService_IsPrimeShould.cs*.
+* Löschen Sie *PrimeService.Tests/UnitTest1.cs* .
+* Erstellen Sie die Datei *PrimeService.Tests/PrimeService_IsPrimeShould.cs* .
 * Ersetzen Sie den Code in *PrimeService_IsPrimeShould.cs* durch folgenden Code:
 
 ```csharp
@@ -142,17 +142,11 @@ namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [Fact]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.False(result, "1 should not be prime");
         }
@@ -182,7 +176,8 @@ Führen Sie `dotnet test` aus. Der Test wurde erfolgreich ausgeführt.
 Fügen Sie Primzahlentests für 0 und-1 hinzu. Sie können den vorangehenden Test kopieren und den folgenden Code so ändern, dass 0 und-1 verwendet werden:
 
 ```csharp
-var result = _primeService.IsPrime(1);
+var primeService = new PrimeService();
+bool result = primeService.IsPrime(1);
 
 Assert.False(result, "1 should not be prime");
 ```
@@ -198,7 +193,8 @@ Anstatt neue Tests zu erstellen, wenden Sie die vorhergehenden xUnit-Attribute a
 [Fact]
 public void IsPrime_InputIs1_ReturnFalse()
 {
-    var result = _primeService.IsPrime(1);
+    var primeService = new PrimeService();
+    bool result = primeService.IsPrime(1);
 
     Assert.False(result, "1 should not be prime");
 }

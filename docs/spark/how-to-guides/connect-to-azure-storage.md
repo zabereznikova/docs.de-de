@@ -1,15 +1,17 @@
 ---
 title: Herstellen einer Verbindung mit Remotespeicher über Ihren lokalen Computer
 description: Stellen Sie mithilfe von .NET für Apache Spark eine Verbindung mit Azure Storage-Konten über Ihren lokalen Computer her.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 09e92b0cae848f9c98b691a11842f131f613396b
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: dc0c3b44279756596f3d456616821e690710ae04
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877995"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224010"
 ---
 # <a name="connect-to-azure-data-lake-storage-gen-2-or-wasb-account"></a>Herstellen einer Verbindung mit einem Azure Data Lake Storage Gen2- oder WASB-Konto
 
@@ -29,7 +31,7 @@ In diesem Artikel erfahren Sie, wie Sie eine Verbindung mit einem ADLS Gen2- (Az
 
 ## <a name="configure-your-storage-account-in-hadoop"></a>Konfigurieren Ihres Speicherkontos in Hadoop
 
-1. Öffnen Sie das ADLS Gen2- oder WASB-Speicherkonto, mit dem Sie eine Verbindung über das [Azure-Portal](https://portal.azure.com) herstellen möchten, öffnen Sie das Panel **Zugriffsschlüssel** auf dem Blatt **Einstellungen**, und kopieren Sie den Wert von **Key** (Schlüssel) unter key1.
+1. Öffnen Sie das ADLS Gen2- oder WASB-Speicherkonto, mit dem Sie eine Verbindung über das [Azure-Portal](https://portal.azure.com) herstellen möchten, öffnen Sie das Panel **Zugriffsschlüssel** auf dem Blatt **Einstellungen** , und kopieren Sie den Wert von **Key** (Schlüssel) unter key1.
 2. Zum Konfigurieren des Zugriffs auf Ihr ADLS Gen2-Konto für Hadoop müssten Sie Ihre `core-site.xml`-Datei bearbeiten (befindet sich unter `%HADOOP_HOME%\etc\hadoop\`), die eine clusterweite Konfiguration enthält. Fügen Sie die folgenden Eigenschaften innerhalb der `<configuration>`-Tags in dieser Datei ein:
 
     ```xml

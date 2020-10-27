@@ -21,19 +21,19 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398310"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223520"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Integrierte Verweistypen (C#-Referenz)
 
 C# enthält eine Reihe von integrierten Verweistypen. Diese enthalten Schlüsselwörter oder Operatoren, die Synonyme für einen Typ in der .NET-Bibliothek sind.
 
-## <a name="the-object-type"></a>Der Objekttyp
+## <a name="the-object-type"></a>den Objekttyp
 
-Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt*. Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt*. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md).
+Der `object`-Typ ist ein Alias für <xref:System.Object?displayProperty=nameWithType> in .NET. Im vereinheitlichen Typsystem von C# erben alle Typen, vordefiniert und benutzerdefiniert sowie Verweis- und Werttypen, direkt oder indirekt von <xref:System.Object?displayProperty=nameWithType>. Sie können Werte eines beliebigen Typs Variablen des Typs `object` zuweisen. Diesem Standardwert kann mithilfe des Literals `null` eine beliebige `object`-Variable zugewiesen werden. Wenn eine Variable eines Werttyps in ein Objekt konvertiert wird, gilt es als *geschachtelt* . Wenn eine Variable des Typs `object` in ein Wertobjekt konvertiert wird, gilt es als *nicht geschachtelt* . Weitere Informationen finden Sie unter [Boxing und Unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>Der Zeichenfolgentyp
 
@@ -60,14 +60,14 @@ string a = "good " + "morning";
 
 Dadurch wird ein Zeichenfolgenobjekt erstellt, das „Guten Morgen“ enthält.
 
-Zeichenfolgen sind *unveränderlich*. Die Inhalte eines Zeichenfolgenobjekts können nicht geändert werden, nachdem ein Objekt erstellt wurde, obwohl die Syntax den Eindruck erweckt, dass es machbar wäre. Wenn Sie z. B. diesen Code schreiben, erstellt der Compiler tatsächlich ein neues Zeichenfolgenobjekt, um die neue Zeichensequenz zu speichern. Das neue Objekt wird `b` zugewiesen. Der Speicherplatz, der `b` zugeordnet wurde (sofern die Zeichenfolge „h“ enthalten war), hat dann Anspruch auf die Garbage Collection.
+Zeichenfolgen sind *unveränderlich* . Die Inhalte eines Zeichenfolgenobjekts können nicht geändert werden, nachdem ein Objekt erstellt wurde, obwohl die Syntax den Eindruck erweckt, dass es machbar wäre. Wenn Sie z. B. diesen Code schreiben, erstellt der Compiler tatsächlich ein neues Zeichenfolgenobjekt, um die neue Zeichensequenz zu speichern. Das neue Objekt wird `b` zugewiesen. Der Speicherplatz, der `b` zugeordnet wurde (sofern die Zeichenfolge „h“ enthalten war), hat dann Anspruch auf die Garbage Collection.
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-Der `[]`-[Operator](../operators/member-access-operators.md#indexer-operator-) kann für schreibgeschützten Zugriff auf einzelne Zeichen einer Zeichenfolge verwendet werden: Gültige Indexwerte beginnen bei `0` und müssen kleiner als die Länge der Zeichenfolge sein:
+Der -`[]` [Operator](../operators/member-access-operators.md#indexer-operator-) kann für schreibgeschützten Zugriff auf einzelne Zeichen einer Zeichenfolge verwendet werden: Gültige Indexwerte beginnen bei `0` und müssen kleiner als die Länge der Zeichenfolge sein:
 
 ```csharp
 string str = "test";
@@ -168,7 +168,7 @@ Das folgende Beispiel verwendet `dynamic` in einigen Deklarationen. Die `Main`-M
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Weitere Informationen
+### <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](../keywords/index.md)

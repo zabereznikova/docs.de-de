@@ -1,15 +1,17 @@
 ---
 title: Herstellen einer Verbindung zwischen .NET für Apache Spark und SQL Server
 description: Hier erfahren Sie, wie Sie über Ihre .NET für Apache Spark-Anwendung eine Verbindung mit einer SQL Server-Instanz herstellen.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 773e743a67c066438cb86d983ebfa34f73692c2d
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877993"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224022"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>Herstellen einer Verbindung zwischen .NET für Apache Spark und SQL Server
 
@@ -27,7 +29,7 @@ In diesem Artikel erfahren Sie, wie Sie über Ihre [.NET für Apache Spark](http
 
     ![Aktivieren von TCP/IP in SQL Server](./media/connect-external-sources/SqlServerTCPIP.png)
 
-    Notieren Sie sich auch den Wert für **Alle überwachen** in obiger Registerkarte unter **Protokoll**.
+    Notieren Sie sich auch den Wert für **Alle überwachen** in obiger Registerkarte unter **Protokoll** .
 
 5. Konfigurieren Sie Port 1433 als TCP/IP-Port für alle erforderlichen IP-Adressen, wenn `Listen All` auf `No` festgelegt ist. Legen Sie andernfalls den TCP-Port in IPAll fest.
 

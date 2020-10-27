@@ -4,11 +4,11 @@ description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereic
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397764"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223744"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -30,7 +30,7 @@ Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) n
 
 Die Kalibrierung ist der Prozess der Zuordnung einer unformatierten Bewertung zu einer Klassenzugehörigkeit für die binäre und Multiklassenklassifizierung. Einige ML.NE-Trainer haben ein `NonCalibrated`-Suffix. Diese Algorithmen erzeugen eine unformatierte Bewertung, die dann einer Klassenwahrscheinlichkeit zugeordnet werden muss.
 
-## <a name="catalog"></a>Catalog
+## <a name="catalog"></a>Katalog
 
 In ML.NET ist ein Katalog eine Sammlung von Erweiterungsfunktionen, die nach einem gemeinsamen Zweck gruppiert sind.
 
@@ -44,7 +44,7 @@ Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überw
 
 Bei der [Regression](#regression) gibt diese Auswertungsmetrik an, wie gut Daten in ein Modell passen. Die Werte liegen zwischen 0 und 1. Ein Wert von 0 bedeutet, dass die Daten zufällig sind oder nicht an das Modell angepasst werden können. Ein Wert von 1 bedeutet, dass das Modell exakt mit den Daten übereinstimmt. Dies wird oft als r<sup>2</sup>, R<sup>2</sup> oder R-Quadrat bezeichnet.
 
-## <a name="data"></a>Data
+## <a name="data"></a>Daten
 
 Daten sind für alle Machine Learning-Anwendungen von zentraler Bedeutung. In ML.NET werden Daten durch <xref:Microsoft.ML.IDataView>-Objekte dargestellt. Datenansichtsobjekte:
 
@@ -64,11 +64,11 @@ Eine.NET-Methode, die zu einer Klasse gehört, aber außerhalb der Klasse defini
 
 Erweiterungsmethoden werden in ML.NET häufig verwendet, um Instanzen von [Estimators](#estimator) zu konstruieren.
 
-## <a name="feature"></a>Feature
+## <a name="feature"></a>Funktion
 
 Eine messbare Eigenschaft des zu messenden Phänomens, typischerweise ein numerischer Wert (double). Mehrere Funktionen werden als **Funktionsvektor** bezeichnet und typischerweise als `double[]` gespeichert. Funktionen definieren die wichtigen Eigenschaften des zu messenden Phänomens. Weitere Informationen finden Sie auf Wikipedia im Artikel zum Thema [Funktion](https://en.wikipedia.org/wiki/Feature_(machine_learning)).
 
-## <a name="feature-engineering"></a>Funktionsentwicklung
+## <a name="feature-engineering"></a>Featureentwicklung
 
 Als Funktionsentwicklung wird der Prozess bezeichnet, bei dem eine Reihe von [Funktionen](#feature) definiert und eine Software entwickelt wird, die aus den verfügbaren Phänomendaten Funktionsvektoren erzeugt, auch Funktionsextraktion genannt. Weitere Informationen finden Sie auf Wikipedia im Artikel zur [Funktionsentwicklung](https://en.wikipedia.org/wiki/Feature_engineering).
 
@@ -122,11 +122,11 @@ Ein Vektor aus [Funktionen](#feature) besteht ausschließlich aus numerischen We
 
 Alle Vorgänge, die zur Anpassung eines Modells an einen Datensatz erforderlich sind. Eine Pipeline besteht aus Datenimport, Transformation, Funktionsbereitstellung und Lernschritten. Ist eine Pipeline einmal trainiert, wird sie zum Modell.
 
-## <a name="precision"></a>Genauigkeit
+## <a name="precision"></a>Precision
 
 Bei der [Klassifizierung](#classification) steht die Genauigkeit für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die als zu dieser Klasse gehörend vorhergesagt werden.
 
-## <a name="recall"></a>Wiedererkennung
+## <a name="recall"></a>Recall
 
 Bei der [Klassifizierung](#classification) steht die Wiedererkennung für eine Klasse für die Anzahl der Elemente, die korrekt als zu dieser Klasse gehörend vorhergesagt werden, geteilt durch die Gesamtzahl der Elemente, die tatsächlich zu dieser Klasse gehören.
 
@@ -161,7 +161,7 @@ Bewertung ist der Prozess, bei dem neue Daten auf ein trainiertes Machine Learni
 
 Eine Unterklasse des maschinellen Lernens, in der ein gewünschtes Modell die Bezeichnung für noch unbekannte Daten vorhersagt. Beispiele hierfür sind Klassifizierung, Regression und strukturierte Vorhersage. Weitere Informationen finden Sie auf Wikipedia im Artikel [Überwachtes Lernen](https://en.wikipedia.org/wiki/Supervised_learning).
 
-## <a name="training"></a>Aus- und Weiterbildung
+## <a name="training"></a>Training
 
 Der Prozess der Identifizierung eines [Modells](#model) für einen bestimmten Trainingsdatensatz. Für ein lineares Modell bedeutet dies, die Gewichtung zu finden. Bei einem Baum geht es darum, die Entscheidungspunkte zu identifizieren.
 

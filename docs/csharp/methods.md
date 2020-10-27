@@ -4,12 +4,12 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874707"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223658"
 ---
 # <a name="methods-in-c"></a>Methoden in C#
 
@@ -49,7 +49,7 @@ Methoden können entweder *instance* oder *static* sein. Das Aufrufen einer Inst
 
 Das Aufrufen einer Methode ähnelt dem Zugreifen auf ein Feld. Fügen Sie nach dem Objektnamen (wenn Sie eine Instanzmethode aufrufen) oder dem Typnamen (beim Aufrufen einer `static`-Methode) einen Punkt, den Methodennamen und Klammern hinzu. Argumente werden innerhalb der Klammern aufgelistet und durch Kommas getrennt.
 
-Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn ein Aufrufer die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der Name des Arguments (sofern im aufzurufenden Code einer verwendet wird) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Im folgenden Beispiel enthält die `Square`-Methode einen einzelnen Parameter vom Typ `int` mit dem Namen *i*. Der erste Methodenaufruf übergibt der `Square`-Methode eine Variable vom Typ `int` mit dem Namen *num*. Der zweite übergibt eine numerische Konstante und der dritte einen Ausdruck.
+Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn ein Aufrufer die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der Name des Arguments (sofern im aufzurufenden Code einer verwendet wird) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Im folgenden Beispiel enthält die `Square`-Methode einen einzelnen Parameter vom Typ `int` mit dem Namen *i* . Der erste Methodenaufruf übergibt der `Square`-Methode eine Variable vom Typ `int` mit dem Namen *num* . Der zweite übergibt eine numerische Konstante und der dritte einen Ausdruck.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -81,7 +81,7 @@ Typen können geerbte Member überschreiben, indem das Schlüsselwort `override`
 
 ## <a name="passing-parameters"></a>Übergeben von Parametern
 
-Typen in C# sind entweder *Werttypen* oder *Verweistypen*. Eine Liste der integrierten Werttypen finden Sie unter [Typen](./tour-of-csharp/types.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
+Typen in C# sind entweder *Werttypen* oder *Verweistypen* . Eine Liste der integrierten Werttypen finden Sie unter [Typen](./tour-of-csharp/types.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
 
 <a name="byval"></a>
 
@@ -198,7 +198,7 @@ Der Aufrufer kann anschließend das zurückgegebene Tupel mit Code wie dem folge
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine($"{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Namen können auch den Tupelelementen in der Typdefinition des Tupels zugewiesen werden. Das folgende Beispiel zeigt eine alternative Version der `GetPersonalInfo`-Methode, die benannte Elemente verwendet:
@@ -215,7 +215,7 @@ Der vorherige Aufruf der `GetPersonInfo`-Methode kann anschließend wie folgt ge
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine($"{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Wenn eine Methode einem Array als Argument übergeben wird und den Wert der einzelnen Elemente ändert, ist es nicht erforderlich, dass die Methode das Array zurückgibt, obwohl Sie sich entscheiden könnten, dies für den funktionalen Fluss von Werten oder zu stilistischen Zwecken zu tun.  Das liegt daran, dass C# alle Verweistypen als Wert übergibt und der Wert eines Arrayverweises der Zeiger auf das Array ist. Im folgenden Beispiel sind Änderungen an den Inhalten des `values`-Arrays, die in der `DoubleValues`-Methode ausgeführt werden, von jedem Code beobachtbar, der einen Verweis auf das Array hat.

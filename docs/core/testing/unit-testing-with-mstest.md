@@ -3,13 +3,13 @@ title: Komponententests für C# mit MSTest und .NET Core
 description: Erfahren Sie mehr über die Konzepte von Komponententests in C# und .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Beispielprojektmappe mithilfe von „dotnet test“ und MSTest erstellen.
 author: ncarandini
 ms.author: wiwagn
-ms.date: 09/08/2017
-ms.openlocfilehash: 765b57dce323c10dc5fcbf395cb7d52be76046c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: c6132251ecc4f453189937f93cf8024dcb8b91f5
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656357"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471608"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Komponententests für C# mit MSTest und .NET Core
 
@@ -19,7 +19,7 @@ Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen e
 
 ## <a name="create-the-source-project"></a>Erstellen des Quellprojekts
 
-Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-mstest*, um darin die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen. Erstellen Sie als Nächstes ein *PrimeService*-Verzeichnis. Die folgende Gliederung zeigt die Verzeichnis- und Dateistruktur:
+Öffnen eines Shell-Fensters. Erstellen Sie ein Verzeichnis namens *unit-testing-using-mstest* , um darin die Projektmappe zu speichern. Führen Sie in diesem neuen Verzeichnis [`dotnet new sln`](../tools/dotnet-new.md) aus, um eine neue Projektmappendatei für die Klassenbibliothek und das Testprojekt zu erstellen. Erstellen Sie als Nächstes ein *PrimeService* -Verzeichnis. Die folgende Gliederung zeigt die Verzeichnis- und Dateistruktur:
 
 ```console
 /unit-testing-using-mstest
@@ -44,11 +44,11 @@ namespace Prime.Services
 }
 ```
 
-Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-using-mstest*. Führen Sie [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
+Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-using-mstest* . Führen Sie [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
 
 ## <a name="create-the-test-project"></a>Erstellen des Testprojekts
 
-Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende Gliederung zeigt die Verzeichnisstruktur:
+Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests* . Die folgende Gliederung zeigt die Verzeichnisstruktur:
 
 ```console
 /unit-testing-using-mstest
@@ -59,7 +59,7 @@ Erstellen Sie als Nächstes das Verzeichnis *PrimeService.Tests*. Die folgende G
     /PrimeService.Tests
 ```
 
-Stellen Sie das *PrimeService.Tests*-Verzeichnis als aktuelles Verzeichnis ein, und erstellen Sie ein neues Projekt mit [`dotnet new mstest`](../tools/dotnet-new.md). Der neue dotnet-Befehl erstellt ein Testprojekt, das MSTest als Testbibliothek verwendet. Die generierte Vorlage konfiguriert das Testprogramm in der Datei *PrimeServiceTests.csproj*:
+Stellen Sie das *PrimeService.Tests* -Verzeichnis als aktuelles Verzeichnis ein, und erstellen Sie ein neues Projekt mit [`dotnet new mstest`](../tools/dotnet-new.md). Der neue dotnet-Befehl erstellt ein Testprojekt, das MSTest als Testbibliothek verwendet. Die generierte Vorlage konfiguriert das Testprogramm in der Datei *PrimeServiceTests.csproj* :
 
 ```xml
 <ItemGroup>
@@ -94,7 +94,7 @@ Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](..
 
 ## <a name="create-the-first-test"></a>Erstellen des ersten Tests
 
-Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Entfernen Sie *UnitTest1.cs* aus dem *PrimeService.Tests*-Verzeichnis, und erstellen Sie eine neue C#-Datei namens *PrimeService_IsPrimeShould.cs* mit folgendem Inhalt:
+Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Entfernen Sie *UnitTest1.cs* aus dem *PrimeService.Tests* -Verzeichnis, und erstellen Sie eine neue C#-Datei namens *PrimeService_IsPrimeShould.cs* mit folgendem Inhalt:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -105,17 +105,11 @@ namespace Prime.UnitTests.Services
     [TestClass]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [TestMethod]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
         }

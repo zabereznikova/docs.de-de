@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 description: C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Abstraktion, Kapselung, Vererbung und Polymorphie.
 ms.date: 09/30/2020
-ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997653"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471594"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-Jede dieser Klassen *erbt* das gemeinsame Verhalten von der gemeinsamen *Basisklasse*, der `BankAccount`-Klasse. Schreiben Sie die Implementierungen für neue und andere Funktionen in jede der *abgeleiteten Klassen*.  Diese abgeleiteten Klassen verfügen bereits über das gesamte Verhalten, das in der `BankAccount`-Klasse definiert ist.
+Jede dieser Klassen *erbt* das gemeinsame Verhalten von der gemeinsamen *Basisklasse* , der `BankAccount`-Klasse. Schreiben Sie die Implementierungen für neue und andere Funktionen in jede der *abgeleiteten Klassen* .  Diese abgeleiteten Klassen verfügen bereits über das gesamte Verhalten, das in der `BankAccount`-Klasse definiert ist.
 
-Es empfiehlt sich, jede neue Klasse in einer anderen Quelldatei zu erstellen. In [Visual Studio](https://visualstudio.com) können Sie mit der rechten Maustaste auf das Projekt klicken und *Klasse hinzufügen* auswählen, um eine neue Klasse in einer neuen Datei hinzuzufügen. Wählen Sie in [Visual Studio Code](https://code.visualstudio.com) die Option *Datei* und dann *Neu* aus, um eine neue Quelldatei zu erstellen. Benennen Sie in beiden Tools die Datei entsprechend dem Klassennamen um: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs* und *GiftCardAccount.cs*.
+Es empfiehlt sich, jede neue Klasse in einer anderen Quelldatei zu erstellen. In [Visual Studio](https://visualstudio.com) können Sie mit der rechten Maustaste auf das Projekt klicken und *Klasse hinzufügen* auswählen, um eine neue Klasse in einer neuen Datei hinzuzufügen. Wählen Sie in [Visual Studio Code](https://code.visualstudio.com) die Option *Datei* und dann *Neu* aus, um eine neue Quelldatei zu erstellen. Benennen Sie in beiden Tools die Datei entsprechend dem Klassennamen um: *InterestEarningAccount.cs* , *LineOfCreditAccount.cs* und *GiftCardAccount.cs* .
 
 Wenn Sie die Klassen wie im obigen Beispiel gezeigt erstellen, werden Sie feststellen, dass keine der abgeleiteten Klassen kompiliert wird. Ein Konstruktor ist für die Initialisierung eines Objekts verantwortlich. Der Konstruktor einer abgeleiteten Klasse muss die abgeleitete Klasse initialisieren und Anweisungen dazu bereitstellen, wie das in der abgeleiteten Klasse enthaltene Basisklassenobjekt zu initialisieren ist. Die ordnungsgemäße Initialisierung erfolgt normalerweise ohne zusätzlichen Code. Die `BankAccount`-Klasse deklariert einen öffentlichen Konstruktor mit der folgenden Signatur:
 
@@ -73,7 +73,7 @@ Die Parameter für diesen neuen Konstruktor entsprechen dem Parametertyp und den
 - Ein Geschenkkartenkonto:
   - Kann einmal monatlich am letzten Tag des Monats mit einem angegebenen Betrag aufgefüllt werden.
 
-Sie sehen, dass alle drei Kontotypen über eine Aktion verfügen, die am Ende jedes Monats stattfindet. Jeder Kontotyp führt jedoch unterschiedliche Aufgaben aus. Sie verwenden *Polymorphie*, um diesen Code zu implementieren. Erstellen Sie eine einzelne `virtual`-Methode in der `BankAccount`-Klasse:
+Sie sehen, dass alle drei Kontotypen über eine Aktion verfügen, die am Ende jedes Monats stattfindet. Jeder Kontotyp führt jedoch unterschiedliche Aufgaben aus. Sie verwenden *Polymorphie* , um diesen Code zu implementieren. Erstellen Sie eine einzelne `virtual`-Methode in der `BankAccount`-Klasse:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="DeclareMonthEndTransactions":::
 
@@ -140,7 +140,7 @@ Beachten Sie, dass der `LineOfCreditAccount`-Konstruktor das Vorzeichen des Para
 
 Das letzte hinzuzufügende Feature ermöglicht es dem `LineOfCreditAccount`, für das Überziehen des Kreditlimits eine Gebühr zu erheben, statt die Transaktion abzulehnen.
 
-Ein Verfahren besteht darin, eine virtuelle Funktion zu definieren, in der das erforderliche Verhalten implementiert wird. Die `Bank Account`-Klasse gestaltet die `MakeWithdrawal`-Methode in zwei Methoden um. Die neue Methode führt die angegebene Aktion aus, wenn der Saldo durch die Abbuchung unter den Mindestbetrag fällt. Die vorhandene `MakeWithdrawal`-Methode enthält den folgenden Code:
+Ein Verfahren besteht darin, eine virtuelle Funktion zu definieren, in der das erforderliche Verhalten implementiert wird. Die `BankAccount`-Klasse gestaltet die `MakeWithdrawal`-Methode in zwei Methoden um. Die neue Methode führt die angegebene Aktion aus, wenn der Saldo durch die Abbuchung unter den Mindestbetrag fällt. Die vorhandene `MakeWithdrawal`-Methode enthält den folgenden Code:
 
 ```csharp
 public void MakeWithdrawal(decimal amount, DateTime date, string note)

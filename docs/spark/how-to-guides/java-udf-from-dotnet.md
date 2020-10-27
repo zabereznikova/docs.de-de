@@ -1,15 +1,17 @@
 ---
 title: Aufrufen benutzerdefinierter Java-Funktionen in .NET für Apache Spark-Anwendungen
 description: In diesem Artikel erhalten Sie Informationen zum Aufrufen benutzerdefinierter Java-Funktionen in einer .NET für Apache Spark-Anwendung.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e309a1e8cda2a559f300a07155c005677db85945
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: edf525102bf5503dcb51247b5fa590aa0d42b369
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878022"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224115"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>Aufrufen benutzerdefinierter Java-Funktionen in .NET für Apache Spark-Anwendungen
 

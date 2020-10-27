@@ -3,11 +3,11 @@ title: Datentransformationen
 description: Untersuchen Sie die in ML.NET unterstützten herausragenden technischen Komponenten.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397752"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224213"
 ---
 # <a name="data-transformations"></a>Datentransformationen
 
@@ -25,7 +25,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="column-mapping-and-grouping"></a>Zuordnung und Gruppierung von Spalten
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Verketten einer oder mehrerer Eingabespalten in einer neuen Ausgabespalte |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Kopieren und Umbenennen einer oder mehrerer Eingabespalten |
@@ -34,7 +34,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="normalization-and-scaling"></a>Normalisierung und Skalierung
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Subtrahieren des Mittelwerts (der Trainingsdaten) und Dividieren durch die Varianz (der Trainingsdaten) |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Normalisieren auf Basis des Logarithmus der Trainingsdaten |
@@ -46,7 +46,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="conversions-between-data-types"></a>Konvertierungen zwischen Datentypen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Konvertieren des Typs einer Eingabespalte in einen neuen Typ |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue%2A> | Zuordnen von Werten zu Schlüsseln (Kategorien) auf Grundlage des angegebenen Zuordnungenwörterbuchs |
@@ -58,7 +58,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="text-transformations"></a>Texttransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText%2A> | Umwandeln einer Textspalte in ein Gleitkommaarray der normalisierten Anzahl von N-Grammen und Char-Grammen |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A> | Aufteilen einer oder mehrerer Textspalten in einzelne Wörter |
@@ -75,7 +75,7 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="image-transformations"></a>Bildtransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> | Konvertieren eines Bilds in Graustufen |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage%2A> | Konvertieren eines Vektors von Pixeln in <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
@@ -86,14 +86,14 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="categorical-data-transformations"></a>Kategorische Datentransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A> | Konvertieren einer oder mehrerer Textspalten in mit [1-aus-n-Code](https://en.wikipedia.org/wiki/One-hot) codierte Vektoren |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding%2A> | Konvertieren mindestens einer Textspalte in hashbasierte one-hot-codierte Vektoren |
 
 ## <a name="time-series-data-transformations"></a>Zeitreihendaten-Transformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn%2A> | Erkennen von Anomalien in den Eingabe-Zeitreihendaten mit dem SR-Algorithmus (Spectral Residual Algorithm) |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa%2A> | Erkennen von Änderungspunkten in Zeitreihendaten mithilfe von SSA (Singular Spectrum Analysis) |
@@ -104,34 +104,34 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="missing-values"></a>Fehlende Werte
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | Erstellen einer neuen booleschen Ausgabespalte, deren Wert „true“ ist, wenn der Wert in der Eingabespalte fehlt |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | Erstellen einer neuen Ausgabespalte, deren Wert auf einen Standardwert festgelegt ist, wenn der Wert aus der Eingabespalte nicht vorhanden ist, und andernfalls auf den Eingabewert |
 
-## <a name="feature-selection"></a>Featureauswahl
+## <a name="feature-selection"></a>Funktionsauswahl
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount%2A> | Auswählen von Features, deren nicht standardmäßige Werte größer als der Schwellenwert sind |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation%2A> | Wählen Sie die Features aus, von denen die Daten in der Bezeichnungsspalte am meisten abhängen |
 
 ## <a name="feature-transformations"></a>Merkmalstransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap%2A> | Zuordnen jedes Eingabevektors zu einem Merkmalsraum einer niedrigeren Dimension, wobei die inneren Produkte einer Kernelfunktion nahe kommen, damit die Merkmale als Eingaben für die linearen Algorithmen verwendet werden können |
 | <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents%2A> | Verringern der Dimensionen des Eingabemerkmalsvektors durch Anwenden des Algorithmus für die Hauptkomponentenanalyse |
 
 ## <a name="explainability-transformations"></a>Erklärbarkeitstransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution%2A> | Berechnen der Beitragsbewertungen für jedes Element eines Merkmalsvektors |
 
 ## <a name="calibration-transformations"></a>Kalibrierungstransformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 |<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit unter Verwendung der logistischen Regression mit anhand der Trainingsdaten geschätzten Parametern |
 | <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit unter Verwendung der logistischen Regression mit festen Parametern |
@@ -140,13 +140,13 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 
 ## <a name="deep-learning-transformations"></a>Deep Learning-Transformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A> | Transformieren der Eingabedaten mit einem importierten ONNX-Modell |
 | <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel%2A> | Transformieren der Eingabedaten mit einem importierten TensorFlow-Modell |
 
 ## <a name="custom-transformations"></a>Benutzerdefinierte Transformationen
 
-| Transformation | Definition |
+| Transformieren | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping%2A> | Transformieren vorhandener Spalten in neue mit einer benutzerdefinierten Zuordnung |

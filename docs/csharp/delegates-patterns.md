@@ -4,11 +4,11 @@ description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von 
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
 ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398736"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223696"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
