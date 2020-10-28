@@ -2,12 +2,12 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449477"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687702"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 
@@ -26,7 +26,7 @@ Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, e
   
 5. Die nicht portablen Attribute <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute> werden aus generiertem Clientproxycode entfernt.  
   
-6. Die nicht portablen Eigenschaften <xref:System.ServiceModel.ServiceContractAttribute>ProtectionLevel<xref:System.ServiceModel.OperationContractAttribute>, <xref:System.ServiceModel.FaultContractAttribute>SessionMode{4}, {5}IsInitiating{6} und {7}IsTerminating{8} werden aus {9}, {10} und {11} entfernt.  
+6. Die nicht portablen Eigenschaften ProtectionLevel, SessionMode, IsInitiating und IsTerminating werden aus ,  und  entfernt.  
   
 7. Alle Dienstvorgänge werden auf dem Clientproxy als asynchrone Vorgänge generiert.  
   
@@ -44,7 +44,7 @@ Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, e
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> wird in Projekten für portable Teilmengen nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](accessing-services-using-a-wcf-client.md)
-- [Portable Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Portable Klassenbibliothek](../cross-platform/portable-class-library.md)
