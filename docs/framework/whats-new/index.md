@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471942"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687559"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -1855,7 +1855,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
   - Sie können eine Windows Store- oder Windows Phone Store-Klassenbibliothek wie eine portable Klassenbibliothek neu zuweisen.
 
-  Weitere Informationen zu diesen Änderungen finden Sie unter [Portable Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+  Weitere Informationen zu diesen Änderungen finden Sie unter [Portable Klassenbibliothek](../cross-platform/portable-class-library.md).
 
 - Der .NET Framework-Inhaltssatz enthält nun Dokumentation für .NET Native, eine Vorkompilierungstechnologie für die Erstellung und Bereitstellung von Windows-Apps. .NET Native kompiliert Ihre Apps direkt zu nativem Code anstatt zu einer Intermediate Language (IL) und erzielt dadurch eine bessere Leistung. Details hierzu finden Sie unter [Kompilieren von Anwendungen mit .NET Native](../net-native/index.md).
 
@@ -2125,13 +2125,12 @@ Windows 8.x Store-Apps werden für bestimmte Formfaktoren entworfen und nutzen d
 
 ### <a name="portable-class-libraries"></a>Portable Klassenbibliotheken <a name="portable"></a>
 
-Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folgeversionen) können Sie verwaltete Assemblys, die auf mehreren .NET Framework-Plattformen ausgeführt werden können, schreiben und erstellen. Bei Verwenden eines Projekts des Typs „Portable Klassenbibliothek“ wählen Sie die Zielplattformen (wie Windows Phone- und .NET für Windows 8.x Store-Apps) aus. Die verfügbaren Typen und Member im Projekt werden automatisch auf die allgemeinen Typen und Member dieser Plattformen beschränkt. Weitere Informationen finden Sie in der Dokumentation zur [Portablen Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Mit dem Projekt „Portable Klassenbibliothek“ in Visual Studio 2012 (und Folgeversionen) können Sie verwaltete Assemblys, die auf mehreren .NET Framework-Plattformen ausgeführt werden können, schreiben und erstellen. Bei Verwenden eines Projekts des Typs „Portable Klassenbibliothek“ wählen Sie die Zielplattformen (wie Windows Phone- und .NET für Windows 8.x Store-Apps) aus. Die verfügbaren Typen und Member im Projekt werden automatisch auf die allgemeinen Typen und Member dieser Plattformen beschränkt. Weitere Informationen finden Sie in der Dokumentation zur [Portablen Klassenbibliothek](../cross-platform/portable-class-library.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [.NET Framework und Out-of-Band-Releases](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Neuerungen der Barrierefreiheit in .NET Framework ](whats-new-in-accessibility.md)
-- [Neues in Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Neues in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Neuerungen bei C++ in Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

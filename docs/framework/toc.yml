@@ -725,24 +725,20 @@ items:
         href: misc/using-libraries-from-partially-trusted-code.md
       - name: Verwenden der Assert-Methode
         href: misc/using-the-assert-method.md
-  - name: Erstellen von Konsolen-Apps
-    href: ../standard/building-console-apps.md
-  - name: Verarbeiten von Ereignissen in einer Web Forms-App
-    href: ../standard/events/how-to-consume-events-in-a-web-forms-application.md
-  - name: .NET Framework-Codeanalyzer
-    href: ../standard/analyzers/framework-analyzer.md
+  - name: Codeanalyse
+    href: code-analyzers.md
   - name: Entwickeln für mehrere Plattformen
     items:
       - name: Übersicht
-        href: ../standard/cross-platform/index.md
+        href: cross-platform/index.md
         displayName: cross platform
       - name: Portable Klassenbibliothek
-        href: ../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md
+        href: cross-platform/portable-class-library.md
       - name: Verwenden der portablen Klassenbibliothek mit MVVM
-        href: ../standard/cross-platform/using-portable-class-library-with-model-view-view-model.md
+        href: cross-platform/using-portable-class-library-with-model-view-view-model.md
       - name: 'App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind'
-        href: ../standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+        href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
       - name: .NET Framework-Unterstützung für Microsoft Store-Apps und die Windows-Runtime
-        href: ../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+        href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
       - name: Übergeben eines URI an die Windows-Runtime
-        href: ../standard/cross-platform/passing-a-uri-to-the-windows-runtime.md
+        href: cross-platform/passing-a-uri-to-the-windows-runtime.md
