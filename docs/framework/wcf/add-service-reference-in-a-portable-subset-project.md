@@ -44,7 +44,7 @@ Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, e
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> wird in Projekten für portable Teilmengen nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](accessing-services-using-a-wcf-client.md)
 - [Portable Klassenbibliothek](../cross-platform/portable-class-library.md)
