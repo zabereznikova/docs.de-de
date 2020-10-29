@@ -1,0 +1,31 @@
+---
+title: Entwickeln für mehrere Plattformen mit dem .NET Framework
+ms.date: 10/21/2020
+ms.assetid: b153baaa-130c-4169-860b-e580591de91e
+ms.openlocfilehash: ef8fae4238f404d650528d25ab873fa48e2c0703
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687741"
+---
+# <a name="develop-for-multiple-platforms-with-net-framework"></a>Entwickeln für mehrere Plattformen mit .NET
+
+Mit .NET Framework und Visual Studio können Sie Apps sowohl für Microsoft-Plattformen als auch für Plattformen anderer Anbieter entwickeln.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
+
+## <a name="options-for-cross-platform-development"></a>Optionen für das plattformübergreifende Entwickeln
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
+
+Um für mehrere Plattformen zu entwickeln, können Sie Quellcode oder Binärdateien freigeben und Aufrufe zwischen .NET Framework-Code und Windows Runtime-APIs ausführen.
+
+|Zweck|Lösung|
+|-----------------------|------------|
+|Quellcode zwischen Windows Phone 8.1- und Windows 8.1-Apps freigeben|**Freigegebene Projekte** (Universal Apps-Vorlage in Visual Studio 2013 Update 2).<br /><br /> – Derzeit keine Unterstützung von Visual Basic.<br />– Plattformspezifischen Code können Sie mit #`if`-Anweisungen separieren.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [Loslegen](/windows/uwp/get-started/create-uwp-apps)<br />-   [Verwenden von Visual Studio zum Erstellen von universellen XAML-Apps](https://devblogs.microsoft.com/visualstudio/using-visual-studio-to-build-universal-xaml-apps/) (Blogbeitrag)<br />-   [Verwenden von Visual Studio zum Erstellen von konvergierten XAML-Apps](https://channel9.msdn.com/Events/Build/2014/3-591) (Video)|
+|Binärdateien zwischen Apps freigeben, die verschiedene Plattformen als Ziel haben|**Projekte für portable Klassenbibliotheken** für plattformagnostischen Code.<br /><br /> – Dieser Ansatz wird normalerweise für Code verwendet, der eine Geschäftslogik implementiert.<br />– Sie können Visual Basic oder C# verwenden.<br />– API-Unterstützung ist von der Plattform abhängig.<br />– Projekte für portable Klassenbibliotheken, die Windows 8.1 und Windows Phone 8.1 als Ziel haben, unterstützen Windows Runtime-APIs und XAML. Diese Funktionen sind in älteren Versionen der portablen Klassenbibliothek nicht verfügbar.<br />– Falls nötig, können Sie plattformspezifischen Code mit Schnittstellen oder abstrakten Klassen abstrahieren.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [Portable Klassenbibliothek](portable-class-library.md)<br />-   [Arbeiten mit portablen Klassenbibliotheken](/archive/blogs/dsplaisted/how-to-make-portable-class-libraries-work-for-you) (Blogbeitrag)<br />-   [Verwenden der portablen Klassenbibliothek mit MVVM](using-portable-class-library-with-model-view-view-model.md) <br />-   [App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind](app-resources-for-libraries-that-target-multiple-platforms.md) <br />-   [.NET Portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) (Visual Studio-Erweiterung)|
+|Quellcode zwischen Apps für andere Plattformen als Windows 8.1 und Windows Phone 8.1 freigeben|Funktion **Als Link hinzufügen** .<br /><br /> – Dieser Ansatz ist geeignet für App-Logik, die beide Apps gemeinsam haben, die aber aus bestimmten Gründen nicht portabel ist. Sie können diese Funktion für C#- oder Visual Basic-Code verwenden.<br />     Beispielsweise nutzen Windows Phone 8 und Windows 8 die Windows Runtime-APIs gemeinsam, aber die portablen Klassenbibliotheken unterstützen Windows Runtime für diese Plattformen nicht. Sie können `Add as link` verwenden, um gemeinsamen Windows Runtime-Code zwischen einer Windows Phone 8-App und einer Windows Store-App, die Windows 8 als Ziel hat, freizugeben.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [Freigeben von Code mit „Als Link hinzufügen“](/previous-versions/windows/apps/jj714082(v=vs.105))<br />-   [Vorgehensweise: Hinzufügen vorhandener Elemente zu einem Projekt](/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))|
+|Windows Store-Apps mit .NET Framework schreiben oder Windows Runtime-APIs aus .NET Framework-Code aufrufen|**Windows Runtime-APIs** aus Ihrem .NET Framework-Code in C# oder Visual Basic. Verwenden Sie .NET Framework, um Windows Store-Apps zu erstellen. Beachten Sie die API-Unterschiede zwischen den zwei Plattformen. Es gibt jedoch Klassen, die Ihnen bei der Arbeit mit diesen Unterschieden helfen.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](support-for-windows-store-apps-and-windows-runtime.md) <br />-   [Übergeben eines URI an Windows-Runtime](passing-a-uri-to-the-windows-runtime.md) <br />-   <xref:System.IO.WindowsRuntimeStreamExtensions><br />-    <xref:System.WindowsRuntimeSystemExtensions>|
+|.NET Framework-Apps für Plattformen anderer Anbieter erstellen|**Verweisassemblys für portable Klassenbibliotheken** in .NET Framework und eine Visual Studio-Erweiterung oder ein Drittanbietertool wie Xamarin.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [Die portable Klassenbibliothek ist jetzt auf allen Plattformen verfügbar.](https://devblogs.microsoft.com/dotnet/portable-class-library-pcl-now-available-on-all-platforms/) (Blogbeitrag)<br />-   [Xamarin-Dokumentation](/xamarin)|
+|JavaScript und HTML für plattformübergreifende Entwicklung verwenden|**Universal App-Vorlagen** in Visual Studio 2013 Update 2 zum Entwickeln für Windows Runtime-APIs für Windows 8.1 und Windows Phone 8.1. Derzeit können JavaScript und HTML nicht mit .NET Framework-APIs zum Entwickeln plattformübergreifender Apps verwendet werden.<br /><br /> Details hierzu finden Sie in den folgenden Abschnitten:<br /><br /> -   [JavaScript-Projektvorlagen](/previous-versions/windows/apps/hh758331(v=win.10))<br />-   [Portieren einer Windows-Runtime-App mithilfe von JavaScript auf Windows Phone](/previous-versions/windows/apps/dn636144(v=win.10))|

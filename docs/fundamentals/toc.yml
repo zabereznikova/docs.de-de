@@ -172,7 +172,7 @@ items:
           - name: Übersicht
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: Verweis
+          - name: Referenz
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Auswahl zwischen anonymen Typen und Tupeltypen
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: Konsolen-App-Konzepte
+        href: ../standard/building-console-apps.md
   - name: Dependency Injection
     items:
       - name: Übersicht
