@@ -116,3 +116,5 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
         - name: Unterdrücken der Ausgabe des localsinit-Flags
           href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
+        - name: Nicht eingeschränkte Typparameteranmerkungen
+          href: ../../../../_csharplang/proposals/csharp-9.0/unconstrained-type-parameter-annotations.md
