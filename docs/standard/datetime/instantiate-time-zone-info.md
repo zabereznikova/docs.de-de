@@ -7,14 +7,14 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - instantiating time zone objects
-- time zone objects [.NET Framework], instantiation
+- time zone objects [.NET], instantiation
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
-ms.openlocfilehash: e8d50419dc21a1748a88c96c200806d0558f0e5a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 34606c0e227d7826cd6188f42fc2fb23f17105ca
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276881"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063650"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>Vorgehensweise: Instanziieren eines TimeZoneInfo-Objekts
 
@@ -45,4 +45,4 @@ Wenn Ihre Anwendung eine Zeitzone benötigt, die vorhanden sein muss, sollten Si
 
 - [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)
 - [Suchen der in einem lokalen System definierten Zeitzonen](finding-the-time-zones-on-local-system.md)
-- [Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte](access-utc-and-local.md)
+- [Gewusst wie: Zugreifen auf die vordefinierte UTC und lokale Zeit Zonen Objekte](access-utc-and-local.md)

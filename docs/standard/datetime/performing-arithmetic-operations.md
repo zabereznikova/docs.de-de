@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- times [.NET Framework], arithmetic operations
-- dates [.NET Framework], arithmetic operations
-- time zones [.NET Framework], arithmetic operations
-- arithmetic operations [.NET Framework], dates and times
-- dates [.NET Framework], comparing
+- times [.NET], arithmetic operations
+- dates [.NET], arithmetic operations
+- time zones [.NET], arithmetic operations
+- arithmetic operations [.NET], dates and times
+- dates [.NET], comparing
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: c212397f99bd09195f298d7d704c879705b14f02
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8350454c0570bcf0ba82fa5d83639da0433c785c
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281543"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063559"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Durchführen arithmetischer Datums- und Uhrzeitoperationen
 

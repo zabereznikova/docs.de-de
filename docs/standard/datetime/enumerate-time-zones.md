@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], enumerating
-- enumerating time zones [.NET Framework]
+- time zones [.NET], enumerating
+- enumerating time zones [.NET]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 8f1cc9d58bc0f169d458854eac6568caaa4481c7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a51e9d0c51968d57e0d79dd80d8619ab11cdbf93
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286131"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063767"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Vorgehensweise: Aufzählen der auf einem Computer vorhandenen Zeitzonen
 
@@ -25,7 +25,7 @@ Für die erfolgreiche Verarbeitung einer Zeitzone ist es erforderlich, dass dem 
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Aufzählen der im lokalen System vorhandenen Zeitzonen
 
-1. Rufen Sie die <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> -Methode auf. Die-Methode gibt eine generische Auflistung <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von- <xref:System.TimeZoneInfo> Objekten zurück. Die Einträge in der Auflistung werden nach der- <xref:System.TimeZoneInfo.DisplayName%2A> Eigenschaft sortiert. Beispiel:
+1. Rufen Sie die <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>-Methode auf. Die-Methode gibt eine generische Auflistung <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von- <xref:System.TimeZoneInfo> Objekten zurück. Die Einträge in der Auflistung werden nach der- <xref:System.TimeZoneInfo.DisplayName%2A> Eigenschaft sortiert. Beispiel:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -37,7 +37,7 @@ Für die erfolgreiche Verarbeitung einer Zeitzone ist es erforderlich, dass dem 
 
 ### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>So präsentieren Sie dem Benutzer eine Liste der Zeitzonen, die auf dem lokalen System vorhanden sind
 
-1. Rufen Sie die <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> -Methode auf. Die-Methode gibt eine generische Auflistung <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von- <xref:System.TimeZoneInfo> Objekten zurück.
+1. Rufen Sie die <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>-Methode auf. Die-Methode gibt eine generische Auflistung <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> von- <xref:System.TimeZoneInfo> Objekten zurück.
 
 2. Weisen Sie die in Schritt 1 zurückgegebene Auflistung der- `DataSource` Eigenschaft eines Windows Forms-oder ASP.net List-Steuer Elements zu.
 
@@ -63,12 +63,12 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 - Die folgenden Namespaces werden importiert:
 
-  <xref:System>(in c#-Code)
+  <xref:System> (in c#-Code)
 
   <xref:System.Collections.ObjectModel>
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Datumsangaben, Uhrzeiten und Zeitzonen](index.md)
-- [Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource](save-time-zones-to-an-embedded-resource.md)
+- [Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource](save-time-zones-to-an-embedded-resource.md)
 - [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](restore-time-zones-from-an-embedded-resource.md)

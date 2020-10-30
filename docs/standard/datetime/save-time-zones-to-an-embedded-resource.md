@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], saving
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zones [.NET], saving
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: c8084cb8edff64b9d598f4fd0a62a362491c7aa7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281244"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063403"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource
 
@@ -25,7 +25,7 @@ In der Regel erfolgt die Serialisierung eines- <xref:System.TimeZoneInfo> Objekt
 
 Zusätzlich zu einer Ressourcen Datei, die mit der Anwendung kompiliert wird, können auch mehrere andere Datenspeicher für Zeitzoneninformationen verwendet werden. Hierzu gehört Folgendes:
 
-- Die Registrierung. Beachten Sie, dass eine Anwendung die untergeordneten Schlüssel des eigenen Anwendungs Schlüssels verwenden sollte, um benutzerdefinierte Zeit Zonendaten zu speichern, anstatt die Unterschlüssel HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones zu verwenden.
+- Die Registrierung. Beachten Sie, dass eine Anwendung die untergeordneten Schlüssel Ihres eigenen Anwendungs Schlüssels verwenden sollte, um benutzerdefinierte Zeit Zonendaten zu speichern, anstatt die Unterschlüssel HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones zu verwenden.
 
 - Konfigurationsdateien.
 
@@ -47,15 +47,15 @@ Zusätzlich zu einer Ressourcen Datei, die mit der Anwendung kompiliert wird, k�
 
 5. Übergeben Sie die serialisierte Zeichenfolge der Zeitzone an die- <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> Methode.
 
-6. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> -Methode auf.
+6. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType>-Methode auf.
 
-7. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> -Methode auf.
+7. Rufen Sie die <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType>-Methode auf.
 
 8. Schließen Sie das <xref:System.IO.StreamWriter> Objekt, indem Sie seine-Methode aufrufen <xref:System.IO.StreamWriter.Close%2A> .
 
 9. Fügen Sie die generierte RESX-Datei zum Visual Studio-Projekt der Anwendung hinzu.
 
-10. Stellen Sie mithilfe des Fensters **Eigenschaften** in Visual Studio sicher, dass die Eigenschaft Buildvorgang der Datei ". resx" auf **eingebettete Ressource**fest **gelegt ist.**
+10. Stellen Sie mithilfe des Fensters **Eigenschaften** in Visual Studio sicher, dass die Eigenschaft Buildvorgang der Datei ". resx" auf **eingebettete Ressource** fest **gelegt ist.**
 
 ## <a name="example"></a>Beispiel
 
@@ -68,13 +68,13 @@ In diesem Beispiel <xref:System.TimeZoneInfo> werden-Objekte so serialisiert, da
 
 Da die- <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> Methode einer .NET-XML-Ressourcen Datei umfassende Header Informationen hinzufügt, kann Sie nicht zum Hinzufügen von Ressourcen zu einer vorhandenen Datei verwendet werden. Im Beispiel wird dies behandelt, indem die Datei "SerializedTimeZones. resx" überprüft und, falls vorhanden, alle anderen Ressourcen als die beiden serialisierten Zeitzonen in einem generischen Objekt gespeichert werden <xref:System.Collections.Generic.Dictionary%602> . Die vorhandene Datei wird dann gelöscht, und die vorhandenen Ressourcen werden der neuen Datei "SerializedTimeZones. resx" hinzugefügt. Die serialisierten Zeit Zonendaten werden dieser Datei ebenfalls hinzugefügt.
 
-Die Schlüsselfelder (oder **Namen**) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die- <xref:System.String.Replace%28System.String%2CSystem.String%29> Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
+Die Schlüsselfelder (oder **Namen** ) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die- <xref:System.String.Replace%28System.String%2CSystem.String%29> Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
 
-- Dem Projekt wird ein Verweis auf "System. Windows. Forms. dll" und "System. Core. dll" hinzugefügt.
+- Ein Verweis auf System.Windows.Forms.dll und System.Core.dll dem Projekt hinzugefügt werden.
 
 - Die folgenden Namespaces werden importiert:
 
