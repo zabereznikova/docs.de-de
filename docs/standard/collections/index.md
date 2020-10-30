@@ -5,26 +5,26 @@ ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
-- objects [.NET Framework], grouping in collections
+- objects [.NET], grouping in collections
 - Array class, grouping data in collections
-- threading [.NET Framework], safety
+- threading [.NET], safety
 - Collections classes
-- collections [.NET Framework]
+- collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3d5b16dccdd9867293a52c74a2d379c807fd93e7
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662744"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889347"
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
 
 Ähnliche Daten können häufig effizienter verarbeitet werden, wenn sie als eine Auflistung gespeichert und bearbeitet werden. Verwenden Sie die Klasse <xref:System.Array?displayProperty=nameWithType> oder die Klassen in den Namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, <xref:System.Collections.Immutable>, um einzelne Elemente oder einen Bereich von Elementen zu einer Sammlung hinzuzufügen, aus dieser zu entfernen und zu ändern.
 
-Es gibt zwei Grundarten von Auflistungen: generische Auflistungen und nicht generische Auflistungen. Generische Auflistungen wurden in .NET Framework 2.0 hinzugefügt und bieten Auflistungen, die zum Zeitpunkt der Kompilierung typsicher sind. Aus diesem Grund bieten generische Auflistungen in der Regel eine bessere Leistung. Generische Auflistungen akzeptieren beim Erstellen einen Typparameter und erfordern nicht, dass Sie eine Umwandlung in den und aus dem <xref:System.Object>-Typ durchführen, wenn Sie Elemente aus der Auflistung hinzufügen oder entfernen.  Darüber hinaus werden die meisten generischen Auflistungen in Windows Store-Apps unterstützt. Nicht generische Auflistungen speichern Elemente als <xref:System.Object>, erfordern eine Umwandlung, und die meisten werden für die Windows Store-App-Entwicklung nicht unterstützt. Allerdings finden Sie möglicherweise in älterem Code auch nicht generische Auflistungen.
+Es gibt zwei Grundarten von Auflistungen: generische Auflistungen und nicht generische Auflistungen. Generische Auflistungen sind beim Kompilieren typsicher. Aus diesem Grund bieten generische Auflistungen in der Regel eine bessere Leistung. Generische Auflistungen akzeptieren beim Erstellen einen Typparameter und erfordern nicht, dass Sie eine Umwandlung in den und aus dem <xref:System.Object>-Typ durchführen, wenn Sie Elemente aus der Auflistung hinzufügen oder entfernen.  Darüber hinaus werden die meisten generischen Auflistungen in Windows Store-Apps unterstützt. Nicht generische Auflistungen speichern Elemente als <xref:System.Object>, erfordern eine Umwandlung, und die meisten werden für die Windows Store-App-Entwicklung nicht unterstützt. Allerdings finden Sie möglicherweise in älterem Code auch nicht generische Auflistungen.
 
-Ab .NET Framework 4 stellen die Auflistungen im <xref:System.Collections.Concurrent>-Namespace effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit. Die unveränderlichen Sammlungsklassen im Namespace <xref:System.Collections.Immutable> ([NuGet-Paket](https://www.nuget.org/packages/System.Collections.Immutable)) sind grundsätzlich threadsicher, da Vorgänge mit einer Kopie der ursprünglichen Sammlung ausgeführt werden und die ursprüngliche Sammlung nicht geändert werden kann.
+Ab .NET Framework 4 stellen die Auflistungen im <xref:System.Collections.Concurrent>-Namespace effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit. Die unveränderlichen Sammlungsklassen im Namespace <xref:System.Collections.Immutable> ([NuGet-Paket](https://www.nuget.org/packages/System.Collections.Immutable)) sind grundsätzlich threadsicher, da Vorgänge mit einer Kopie der ursprünglichen Sammlung ausgeführt werden und die ursprüngliche Sammlung nicht geändert werden kann.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Allgemeine Auflistungsfunktionen
@@ -33,11 +33,11 @@ Alle Sammlungen bieten Methoden zum Hinzufügen, Entfernen oder Suchen von Eleme
 
 - **Die Fähigkeit zum Enumerieren der Auflistung**
 
-    .NET Framework-Auflistungen implementieren entweder <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, damit die Auflistung durchlaufen werden kann. Ein Enumerator kann als beweglicher Zeiger auf ein Element in der Auflistung betrachtet werden. Die Anweisung [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) und die [For Each...Next-Anweisung](../../visual-basic/language-reference/statements/for-each-next-statement.md) verwenden den Enumerator, der mit der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode verfügbar gemacht wird, und verbergen die Komplexität bei der Bearbeitung des Enumerators. Darüber hinaus gilt jede Auflistung, die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementiert, als *abfragbarer Typ* und kann mit LINQ abgefragt werden. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff. Sie sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und bieten Filter-, Sortier- und Gruppierungsfunktionen. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), [Einführung in LINQ-Abfragen (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) und [Basic Query Operations (Visual Basic) (Grundlegende Abfragevorgänge (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+    .NET-Auflistungen implementieren entweder <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, damit die Auflistung durchlaufen werden kann. Ein Enumerator kann als beweglicher Zeiger auf ein Element in der Auflistung betrachtet werden. Die Anweisung [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) und die [For Each...Next-Anweisung](../../visual-basic/language-reference/statements/for-each-next-statement.md) verwenden den Enumerator, der mit der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode verfügbar gemacht wird, und verbergen die Komplexität bei der Bearbeitung des Enumerators. Darüber hinaus gilt jede Auflistung, die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementiert, als *abfragbarer Typ* und kann mit LINQ abgefragt werden. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff. Sie sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und bieten Filter-, Sortier- und Gruppierungsfunktionen. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), [Einführung in LINQ-Abfragen (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) und [Basic Query Operations (Visual Basic) (Grundlegende Abfragevorgänge (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 - **Die Möglichkeit, den Inhalt der Auflistung in ein Array zu kopieren**
 
-    Alle Auflistungen können mit der **CopyTo**-Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von 0 (Null).
+    Alle Auflistungen können mit der **CopyTo** -Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von 0 (Null).
 
 Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
 
@@ -51,7 +51,7 @@ Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
 
 - **Eine konsistente Untergrenze**
 
-    Die untere Grenze einer Auflistung ist der Index des ersten darin enthaltenen Elements. Alle indizierten Auflistungen in den <xref:System.Collections>-Namespaces haben eine untere Grenze von 0 (Null), d. h. sie sind 0-indiziert. <xref:System.Array> hat standardmäßig eine untere Grenze von 0; es kann jedoch eine andere Untergrenze definiert werden, wenn Sie eine Instanz der **Array**-Klasse mit <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> erstellen.
+    Die untere Grenze einer Auflistung ist der Index des ersten darin enthaltenen Elements. Alle indizierten Auflistungen in den <xref:System.Collections>-Namespaces haben eine untere Grenze von 0 (Null), d. h. sie sind 0-indiziert. <xref:System.Array> hat standardmäßig eine untere Grenze von 0; es kann jedoch eine andere Untergrenze definiert werden, wenn Sie eine Instanz der **Array** -Klasse mit <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> erstellen.
 
 - **Synchronisierung für den Zugriff von mehreren Threads** (nur <xref:System.Collections>-Klassen).
 

@@ -172,7 +172,7 @@ items:
           - name: Übersicht
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: Referenz
+          - name: Verweis
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -1560,6 +1560,8 @@ items:
         href: ../core/extensions/custom-logging-provider.md
       - name: High-Performance-SKU
         href: ../core/extensions/high-performance-logging.md
+      - name: Formatieren von Konsolenprotokollen
+        href: ../core/extensions/console-log-formatter.md
   - name: HostBuilder (generischer Host)
     href: ../core/extensions/generic-host.md
   - name: Datenzugriff

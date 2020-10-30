@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: 5678e904afae4d348fbb56b189c95cd59b8e7a4d
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 9a83c0e8ee3476f43ccc2e88c21ccbbc0661bd19
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162842"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889217"
 ---
 # <a name="extend-metadata-using-attributes"></a>Erweitern von Metadaten mithilfe von Attributen
 
@@ -33,7 +33,7 @@ Die Common Language Runtime (CLR) ermöglicht Ihnen, schlüsselwortähnliche bes
 |[Anwenden von Attributen](applying-attributes.md)|In diesem Abschnitt wird die Anwendung eines Attributs auf ein Codeelement beschrieben.|
 |[Verfassen von benutzerdefinierten Attributen](writing-custom-attributes.md)|Beschreibt, wie benutzerdefinierte Attributklassen entworfen werden.|
 |[Abrufen von Informationen aus Attributen](retrieving-information-stored-in-attributes.md)|Beschreibt, wie benutzerdefinierte Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird.|
-|[Metadaten und selbstbeschreibende Komponenten](../metadata-and-self-describing-components.md)|Dieser Abschnitt enthält  eine Übersicht über Metadaten und beschreibt ihre Implementierung in einer .NET Framework-PE-Datei (Portable Executable).|
+|[Metadaten und selbstbeschreibende Komponenten](../metadata-and-self-describing-components.md)|Dieser Abschnitt enthält eine Übersicht über Metadaten und beschreibt ihre Implementierung in einer portierbaren ausführbaren .NET-Datei (PE-Datei).|
 |[How to: Load Assemblies into the Reflection-Only Context](../../framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)|Erläutert das Abrufen benutzerdefinierter Attributinformationen in den ausschließlich reflektionsbezogenen Kontext.|
 
 ## <a name="reference"></a>Referenz
