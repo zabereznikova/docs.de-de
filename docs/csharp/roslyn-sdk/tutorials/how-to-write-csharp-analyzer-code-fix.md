@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381592"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224041"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -18,29 +18,9 @@ In diesem Tutorial lernen Sie die Erstellung eines **Analysetools** und eines be
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-> [!NOTE]
-> Die aktuelle Visual Studio-Vorlage **Analyzer mit Codekorrektur (.NET Standard)** enthält einen bekannten Fehler, der in Visual Studio 2019, Version 16.7 behoben sein sollte. Die Projekte in der Vorlage werden nur kompiliert, wenn die folgenden Änderungen vorgenommen werden:
->
-> 1. Klicken Sie auf **Extras** > **Optionen** > **NuGet-Paket-Manager** > **Paketquellen**.
->    - Klicken Sie auf das Pluszeichen, um eine neue Quelle hinzuzufügen:
->    - Legen Sie die **Quelle** auf `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` fest, und wählen Sie **Aktualisieren** aus.
-> 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **MakeConst.Vsix**, und wählen Sie **Projektdatei bearbeiten** aus.
->    - Aktualisieren Sie den Knoten `<AssemblyName>`, um das Suffix `.Visx` hinzuzufügen:
->      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
->    - Aktualisieren Sie den Knoten `<ProjectReference>` in Zeile 41, um den `TargetFramework`-Wert zu ändern:
->      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
-> 1. Aktualisieren Sie die Datei *MakeConstUnitTests.cs* im Projekt *MakeConst.Test*:
->    - Ändern Sie Zeile 9 in Folgendes, und beachten Sie die Namespaceänderung:
->      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
->    - Ändern Sie Zeile 24 in die folgende Methode:
->      - `await Verify.VerifyAnalyzerAsync(test);`
->    - Ändern Sie Zeile 62 in die folgende Methode:
->      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
+- [Visual Studio 2019](https://www.visualstudio.com/downloads), Version 16.7 oder höher
 
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
-
-Installieren Sie zunächst über den Visual Studio-Installer das **SDK für die .NET Compiler Platform**:
+Installieren Sie zunächst über den Visual Studio-Installer das **SDK für die .NET Compiler Platform** :
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -68,11 +48,11 @@ const int x = 0;
 Console.WriteLine(x);
 ```
 
-Dies bringt die Analyse mit sich, mit der bestimmt wird, ob eine Variable zu einer Konstanten gemacht werden kann, wozu Syntaxanalyse, Konstantenanalyse des Initialisiererausdrucks und eine Datenflussanalyse erforderlich sind, um sicherzustellen, dass zu keinem Zeitpunkt in die Variable geschrieben wird. Die .NET Compiler Platform stellt APIs zur Verfügung, die das Durchführen dieser Analyse erleichtern. Der erste Schritt ist die Erstellung eines neuen C#-Projekts **Analysetool mit Codefix**.
+Dies bringt die Analyse mit sich, mit der bestimmt wird, ob eine Variable zu einer Konstanten gemacht werden kann, wozu Syntaxanalyse, Konstantenanalyse des Initialisiererausdrucks und eine Datenflussanalyse erforderlich sind, um sicherzustellen, dass zu keinem Zeitpunkt in die Variable geschrieben wird. Die .NET Compiler Platform stellt APIs zur Verfügung, die das Durchführen dieser Analyse erleichtern. Der erste Schritt ist die Erstellung eines neuen C#-Projekts **Analysetool mit Codefix** .
 
 - Wählen Sie in Visual Studio **Datei > Neu > Projekt...** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen.
 - Wählen Sie unter **Visual C# > Erweiterbarkeit** **Analyzer with code fix (.NET Standard)** (Analysetool mit Codefix (.NET Standard)) aus.
-- Benennen Sie Ihr Projekt "**MakeConst**", und klicken Sie auf „OK“.
+- Benennen Sie Ihr Projekt " **MakeConst** ", und klicken Sie auf „OK“.
 
 Die Vorlage für das Analysetool mit Codefix erstellt drei Projekte: Das erste enthält das Analysetool und den Codefix, das zweite ist ein Komponententestprojekt, und das dritte ist das VSIX-Projekt. Das Standardstartprojekt ist das VSIX-Projekt. Drücken Sie <kbd>F5</kbd>, um das VSIX-Projekt zu starten. Dadurch wird eine zweite Instanz von Visual Studio mit geladenem neuem Analysemodul gestartet.
 
@@ -94,7 +74,7 @@ Sie brauchen keine zweite Instanz von Visual Studio zu starten und neuen Code zu
 
 ## <a name="create-analyzer-registrations"></a>Erstellen von Analysetoolregistrierungen
 
-Die Vorlage erstellt die anfängliche `DiagnosticAnalyzer`-Klasse in der Datei **MakeConstAnalyzer.cs**. Dieses anfängliche Analysetool zeigt zwei wichtige Eigenschaften jedes Analysetools.
+Die Vorlage erstellt die anfängliche `DiagnosticAnalyzer`-Klasse in der Datei **MakeConstAnalyzer.cs** . Dieses anfängliche Analysetool zeigt zwei wichtige Eigenschaften jedes Analysetools.
 
 - Jedes Diagnoseanalysetool muss ein `[DiagnosticAnalyzer]`-Attribut bereitstellen, das die Sprache beschreibt, in der es arbeitet.
 - Jedes Diagnoseanalysetool muss aus der <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>-Klasse abgeleitet sein.
@@ -106,13 +86,13 @@ Die Vorlage zeigt außerdem die grundlegenden Features, die jedes Analysetool au
 
 Sie registrieren Aktionen in Ihrer Überschreibung der <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType>-Methode. In diesem Tutorial suchen Sie auf der Suche nach lokalen Deklarationen **Syntaxknoten** auf und sehen, welche von ihnen konstante Werte aufweisen. Wenn eine Deklaration eine Konstante vorsehen könnte, erstellt und meldet Ihr Analysetool eine Diagnose.
 
-Der erste Schritt besteht darin, die Registrierungskonstanten und die `Initialize`-Methode zu aktualisieren, damit diese Konstanten Ihr „Make Const“-Analysetool anzeigen. Die meisten der Zeichenfolgenkonstanten sind in der Zeichenfolgen-Ressourcendatei definiert. Sie sollten sich zwecks einfacherer Lokalisierung auch an diese Praxis halten. Öffnen Sie die **Resources.resx**-Datei für das **MakeConst**-Analysetoolprojekt. Dadurch wird der Ressourcen-Editor angezeigt. Aktualisieren Sie die Zeichenfolgenressourcen wie folgt:
+Der erste Schritt besteht darin, die Registrierungskonstanten und die `Initialize`-Methode zu aktualisieren, damit diese Konstanten Ihr „Make Const“-Analysetool anzeigen. Die meisten der Zeichenfolgenkonstanten sind in der Zeichenfolgen-Ressourcendatei definiert. Sie sollten sich zwecks einfacherer Lokalisierung auch an diese Praxis halten. Öffnen Sie die **Resources.resx** -Datei für das **MakeConst** -Analysetoolprojekt. Dadurch wird der Ressourcen-Editor angezeigt. Aktualisieren Sie die Zeichenfolgenressourcen wie folgt:
 
 - Ändern Sie `AnalyzerTitle` in „Variable kann als Konstante umdeklariert werden“.
 - Ändern Sie `AnalyzerMessageFormat` in „Kann als Konstante deklariert werden“.
 - Ändern Sie `AnalyzerDescription` in „Als Konstante deklarieren“.
 
-Ändern Sie außerdem die **Zugriffsmodifizierer**-Dropdownliste in `public`. Das vereinfacht die Verwendung dieser Konstanten in Komponententests. Wenn Sie fertig sind, sollte der Ressourcen-Editor wie in der folgenden Abbildung aussehen:
+Ändern Sie außerdem die **Zugriffsmodifizierer** -Dropdownliste in `public`. Das vereinfacht die Verwendung dieser Konstanten in Komponententests. Wenn Sie fertig sind, sollte der Ressourcen-Editor wie in der folgenden Abbildung aussehen:
 
 ![Zeichenfolgenressourcen aktualisieren](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -209,7 +189,7 @@ Console.WriteLine(x);
 
 Der Benutzer wählt es im Editor in der Benutzeroberfläche der Glühbirne aus, und Visual Studio ändert den Code.
 
-Öffnen Sie die von der Vorlage hinzugefügte Datei **MakeConstCodeFixProvider.cs**.  Dieser Codefix ist bereits mit der Diagnose-ID verschaltet, die von Ihrem Diagnoseanalysetool erzeugt wird, er implementiert jedoch noch nicht die gewünschte Codetransformation. Zunächst sollten Sie einen Teil des Vorlagencodes entfernen. Ändern Sie die Titelzeichenfolge in „Als Konstante deklarieren“:
+Öffnen Sie die von der Vorlage hinzugefügte Datei **MakeConstCodeFixProvider.cs** .  Dieser Codefix ist bereits mit der Diagnose-ID verschaltet, die von Ihrem Diagnoseanalysetool erzeugt wird, er implementiert jedoch noch nicht die gewünschte Codetransformation. Zunächst sollten Sie einen Teil des Vorlagencodes entfernen. Ändern Sie die Titelzeichenfolge in „Als Konstante deklarieren“:
 
 [!code-csharp[Update the CodeFix title](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
 
@@ -280,7 +260,7 @@ Sie haben große Fortschritte erzielt. Unter den Deklarationen, die in `const` u
 
 Ihr Analysetool und der Codefix funktionieren beim einfachen Fall einer einzelnen Deklaration, die als „const“ deklariert werden kann. Es gibt eine Vielzahl von möglichen Deklarationsanweisungen, bei denen diese Implementierung zu Fehlern führt. Sie tragen diesen Fällen Rechnung, indem Sie mit der Komponententestbibliothek arbeiten, die von der Vorlage erstellt wurde. Das funktioniert viel schneller, als wiederholt eine zweite Instanz von Visual Studio zu öffnen.
 
-Öffnen Sie die **MakeConstUnitTests.cs**-Datei im Komponententestprojekt. Die Vorlage hat zwei Tests erstellt, die den zwei allgemeinen Mustern für einen Komponententest für Analysetools und Codefixe folgen. `TestMethod1` zeigt das Muster für einen Test, der sicherstellt, dass das Analysetool keine Diagnose meldet, wenn es das nicht sollte. `TestMethod2` zeigt das Muster für das Melden einer Diagnose und das Ausführen des Codefixes.
+Öffnen Sie die **MakeConstUnitTests.cs** -Datei im Komponententestprojekt. Die Vorlage hat zwei Tests erstellt, die den zwei allgemeinen Mustern für einen Komponententest für Analysetools und Codefixe folgen. `TestMethod1` zeigt das Muster für einen Test, der sicherstellt, dass das Analysetool keine Diagnose meldet, wenn es das nicht sollte. `TestMethod2` zeigt das Muster für das Melden einer Diagnose und das Ausführen des Codefixes.
 
 Der Code nahezu jedes Tests für Ihr Analysetool folgt einem dieser beiden Muster. Im ersten Schritt können Sie diese Tests als datengesteuerte Tests umarbeiten. Anschließend wird es einfach, neue Tests zu erstellen, indem Sie neue Zeichenfolgenkonstanten hinzufügen, um verschiedene Testeingaben darzustellen.
 
@@ -329,7 +309,7 @@ Im vorstehenden Code wurden außerdem ein paar Änderungen an dem Code vorgenomm
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Führen Sie diese zwei Tests aus, um sicherzustellen, dass sie bestanden werden. Öffnen Sie in Visual Studio den **Test-Explorer**, indem Sie **Test** > **Windows** > **Test-Explorer** auswählen. Wählen Sie dann den Link **Alle ausführen** aus.
+Führen Sie diese zwei Tests aus, um sicherzustellen, dass sie bestanden werden. Öffnen Sie in Visual Studio den **Test-Explorer** , indem Sie **Test** > **Windows** > **Test-Explorer** auswählen. Wählen Sie dann den Link **Alle ausführen** aus.
 
 ## <a name="create-tests-for-valid-declarations"></a>Erstellen von Tests für gültige Deklarationen
 

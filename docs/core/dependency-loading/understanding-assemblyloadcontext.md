@@ -4,12 +4,12 @@ description: Wichtige Konzepte für ein besseres Verständnis von Zweck und Verh
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 4d3f0e50e7c336469bd9af4d1589427388684434
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523614"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332821"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Grundlegendes zu System.Runtime.Loader.AssemblyLoadContext
 
@@ -52,11 +52,11 @@ In den Artikeln [Ladealgorithmus für verwaltete Assemblys](loading-managed.md),
 
 In diesem Abschnitt werden die allgemeinen Prinzipien der relevanten Ereignisse und Funktionen behandelt.
 
-- **Wiederholbarkeit**. Eine Abfrage für eine bestimmte Abhängigkeit muss immer zu derselben Antwort führen. Es muss dieselbe geladene Abhängigkeitsinstanz zurückgegeben werden. Diese Anforderung ist grundlegend für die Cachekonsistenz. Wir haben speziell für verwaltete Assemblys einen <xref:System.Reflection.Assembly>-Cache erstellt. Der Cacheschlüssel ist ein einfacher Assemblyname: <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
-- **Normalerweise keine Fehlerauslösung**.  Es wird erwartet, dass diese Funktionen `null` zurückgeben, anstatt einen Fehler auszulösen, dass die angeforderte Abhängigkeit nicht gefunden werden kann. Durch das Auslösen wird die Suche vorzeitig beendet und eine Ausnahme an den Aufrufer zurückgegeben. Die Auslösung sollte auf unerwartete Fehler wie eine beschädigte Assembly oder Fälle mit nicht genügend Arbeitsspeicher beschränkt sein.
+- **Wiederholbarkeit** . Eine Abfrage für eine bestimmte Abhängigkeit muss immer zu derselben Antwort führen. Es muss dieselbe geladene Abhängigkeitsinstanz zurückgegeben werden. Diese Anforderung ist grundlegend für die Cachekonsistenz. Für verwaltete Assemblys wurde eigens ein <xref:System.Reflection.Assembly>-Cache erstellt. Der Cacheschlüssel ist ein einfacher Assemblyname: <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
+- **Normalerweise keine Fehlerauslösung** .  Es wird erwartet, dass diese Funktionen `null` zurückgeben, anstatt einen Fehler auszulösen, dass die angeforderte Abhängigkeit nicht gefunden werden kann. Durch das Auslösen wird die Suche vorzeitig beendet und eine Ausnahme an den Aufrufer zurückgegeben. Die Auslösung sollte auf unerwartete Fehler wie eine beschädigte Assembly oder Fälle mit nicht genügend Arbeitsspeicher beschränkt sein.
 - **Vermeidung von Rekursion.** Beachten Sie, dass diese Funktionen und Handler die Laderegeln für die Suche nach Abhängigkeiten implementieren. Ihre Implementierung sollte keine APIs aufrufen, die Rekursion auslösen. Ihr Code sollte in der Regel Ladefunktionen von **AssemblyLoadContext** aufrufen, die ein bestimmtes Pfad- oder Speicherverweisargument erfordern.
-- **Laden in den richtigen AssemblyLoadContext.** Die Wahl des richtigen Orts für das Laden von Abhängigkeiten ist anwendungsspezifisch.  Die Auswahl wird durch diese Ereignisse und Funktionen implementiert. Wenn Ihr Code **AssemblyLoadContext**-Funktionen vom Typ „Laden nach Pfad“ aufruft, sollten Sie dafür die Instanz verwenden, in die der Code geladen werden soll. In einigen Fällen besteht die einfachste Lösung darin, `null` zurückzugeben und das Laden <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> zu überlassen.
-- **Berücksichtigung von Thread-Races**. Das Laden kann von mehreren Threads ausgelöst werden. Der AssemblyLoadContext verarbeitet Thread-Races, indem er die Assemblys einzeln im Cache hinzufügt. Die Instanz des letztes Threads wird dann verworfen. Fügen Sie in Ihrer Implementierungslogik keine zusätzliche Logik hinzu, die nicht ordnungsgemäß mehrere Threads verarbeiten kann.
+- **Laden in den richtigen AssemblyLoadContext.** Die Wahl des richtigen Orts für das Laden von Abhängigkeiten ist anwendungsspezifisch.  Die Auswahl wird durch diese Ereignisse und Funktionen implementiert. Wenn Ihr Code **AssemblyLoadContext** -Funktionen vom Typ „Laden nach Pfad“ aufruft, sollten Sie dafür die Instanz verwenden, in die der Code geladen werden soll. In einigen Fällen besteht die einfachste Lösung darin, `null` zurückzugeben und das Laden <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> zu überlassen.
+- **Berücksichtigung von Thread-Races** . Das Laden kann von mehreren Threads ausgelöst werden. Der AssemblyLoadContext verarbeitet Thread-Races, indem er die Assemblys einzeln im Cache hinzufügt. Die Instanz des letztes Threads wird dann verworfen. Fügen Sie in Ihrer Implementierungslogik keine zusätzliche Logik hinzu, die nicht ordnungsgemäß mehrere Threads verarbeiten kann.
 
 ## <a name="how-are-dynamic-dependencies-isolated"></a>Wie werden dynamische Abhängigkeiten isoliert?
 

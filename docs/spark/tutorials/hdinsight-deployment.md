@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET für Apache Spark-Anwendung in HDIn
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955369"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223352"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: Bereitstellen einer .NET für Apache Spark-Anwendung in Azure HDInsight
 
@@ -51,7 +51,7 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
 1. Besuchen Sie das [Azure-Portal](https://portal.azure.com).
 
-2. Wählen Sie **+ Ressource erstellen**. Wählen Sie dann **HDInsight** aus der Kategorie **Analyse** aus.
+2. Wählen Sie **+ Ressource erstellen** . Wählen Sie dann **HDInsight** aus der Kategorie **Analyse** aus.
 
     ![Erstellen einer HDInsight-Ressource über das Azure-Portal](./media/hdinsight-deployment/create-hdinsight-resource.png)
 
@@ -65,16 +65,16 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
     |Speicherort   | Wählen Sie einen Speicherort für die Ressourcengruppe aus. Die Vorlage verwendet diesen Standort sowohl für die Erstellung des Clusters als auch für den Standardclusterspeicher. |
     |Clustertyp| Wählen Sie als Clustertyp **Spark** aus.|
     |Clusterversion|Nach der Auswahl des Clustertyps wird dieses Feld automatisch mit der Standardversion aufgefüllt. Wählen Sie eine Version 2.3 oder 2.4 von Spark aus.|
-    |Benutzername für Clusteranmeldung| Geben Sie den Anmeldebenutzernamen für den Cluster ein.  Der Standardname lautet *admin*. |
+    |Benutzername für Clusteranmeldung| Geben Sie den Anmeldebenutzernamen für den Cluster ein.  Der Standardname lautet *admin* . |
     |Kennwort für Clusteranmeldung| Geben Sie das Kennwort für die Anmeldung ein. |
-    |SSH-Benutzername (Secure Shell)| Geben Sie den SSH-Benutzernamen ein. Standardmäßig gilt für dieses Konto dasselbe Kennwort wie für das Konto mit dem *Benutzernamen für die Clusteranmeldung*. |
+    |SSH-Benutzername (Secure Shell)| Geben Sie den SSH-Benutzernamen ein. Standardmäßig gilt für dieses Konto dasselbe Kennwort wie für das Konto mit dem *Benutzernamen für die Clusteranmeldung* . |
 
 4. Klicken Sie auf **Weiter: Speicher >>** , um zur Seite **Speicher** zu wechseln. Geben Sie unter **Speicher** die folgenden Werte an:
 
     |Eigenschaft  |Beschreibung  |
     |---------|---------|
-    |Primärer Speichertyp|Übernehmen Sie den Standardwert **Azure Storage**.|
-    |Auswahlmethode|Übernehmen Sie den Standardwert **Aus Liste auswählen**.|
+    |Primärer Speichertyp|Übernehmen Sie den Standardwert **Azure Storage** .|
+    |Auswahlmethode|Übernehmen Sie den Standardwert **Aus Liste auswählen** .|
     |Primäres Speicherkonto|Wählen Sie Ihr Abonnement und eines Ihrer aktiven Speicherkonten in diesem Abonnement aus.|
     |Container|Dieser Container ist der spezifische Blobcontainer in Ihrem Speicherkonto, in dem Ihr Cluster nach Dateien sucht, um Ihre App in der Cloud auszuführen. Sie können ihm einen beliebigen verfügbaren Namen zuweisen.|
 
@@ -82,7 +82,7 @@ Führen Sie die folgenden Schritte aus, bevor Sie beginnen:
 
 ## <a name="publish-your-app"></a>Veröffentlichen der App
 
-Anschließend veröffentlichen Sie die *mySparkApp*, die im Tutorial [.NET für Apache Spark: Erste Schritte in 10 Minuten](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) erstellt wurde, die Ihrem Spark-Cluster Zugriff auf alle Dateien ermöglicht, die er zum Ausführen Ihrer App benötigt.
+Anschließend veröffentlichen Sie die *mySparkApp* , die im Tutorial [.NET für Apache Spark: Erste Schritte in 10 Minuten](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) erstellt wurde, die Ihrem Spark-Cluster Zugriff auf alle Dateien ermöglicht, die er zum Ausführen Ihrer App benötigt.
 
 1. Führen Sie zum Veröffentlichen der *mySparkApp* die folgenden Befehle aus:
 
@@ -100,11 +100,11 @@ Anschließend veröffentlichen Sie die *mySparkApp*, die im Tutorial [.NET für 
    foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. Führen Sie die folgenden Aufgaben aus, um die veröffentlichten App-Dateien zu komprimieren, damit Sie sie problemlos in ihren HDInsight-Cluster hochladen können.
+2. Führen Sie die folgenden Aufgaben aus, um die veröffentlichten App-Dateien zu komprimieren, damit Sie sie problemlos in ihren HDInsight-Cluster hochladen können. Zippen Sie den Inhalt des Veröffentlichungsordners, z. B. *publish.zip* (in Schritt 1 erstellt). Alle Assemblys sollten sich auf der ersten Ebene der ZIP-Datei befinden und es sollte keine Zwischenordnerebene geben. Dies bedeutet, dass alle Assemblys in das aktuelle Arbeitsverzeichnis extrahiert werden, wenn Sie *publish.zip* entzippen.
 
    **Unter Windows:**
 
-   Navigieren Sie zu *MySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64*. Klicken Sie dann mit der rechten Maustaste auf den Ordner **Veröffentlichen**, und wählen Sie **Senden an > Komprimierter Ordner (ZIP-Ordner)** aus. Nennen Sie den neuen Ordner **publish.zip**.
+   Verwenden Sie ein Extraktionsprogramm wie 7-Zip oder WinZip, um die Datei mit allen veröffentlichten Binärdateien in das bin-Verzeichnis zu extrahieren.
 
    **Führen Sie unter Linux den folgenden Befehl aus:**
 
@@ -132,26 +132,26 @@ Im nächsten Schritt verwenden Sie Azure Storage-Explorer, um die folgenden fün
 
    Erstellen Sie eine neue Datei mit dem Namen **install-worker.sh** auf Ihrem lokalen Computer, und fügen Sie den [Inhalt von install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) auf GitHub ein. Laden Sie dann *install-worker.sh* in Ihren Blobcontainer hoch.
 
-4. Ihr Cluster benötigt die Datei „publish.zip“, die die veröffentlichten Dateien Ihrer App enthält. Navigieren Sie zu Ihrem veröffentlichten Ordner **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, und suchen Sie nach **publish.zip**. Laden Sie dann *publish.zip* in Ihren Blobcontainer hoch.
+4. Ihr Cluster benötigt die Datei „publish.zip“, die die veröffentlichten Dateien Ihrer App enthält. Navigieren Sie zu Ihrem veröffentlichten Ordner **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** , und suchen Sie nach **publish.zip** . Laden Sie dann *publish.zip* in Ihren Blobcontainer hoch.
 
-5. Ihr Cluster benötigt den Anwendungscode, der in einer JAR-Datei gepackt wurde. Navigieren Sie zu Ihrem veröffentlichten Ordner **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64**, und suchen Sie nach **microsoft-spark-2.3.x-0.3.0.jar**. Laden Sie die JAR-Datei dann in Ihren Blobcontainer hoch.
+5. Ihr Cluster benötigt den Anwendungscode, der in einer JAR-Datei gepackt wurde. Navigieren Sie zu Ihrem veröffentlichten Ordner **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** , und suchen Sie nach **microsoft-spark-2.3.x-0.3.0.jar** . Laden Sie die JAR-Datei dann in Ihren Blobcontainer hoch.
 
    Möglicherweise gibt es mehrere JAR-Dateien (für die Versionen 2.3.x und 2.4.x von Spark). Sie müssen die JAR-Datei auswählen, die mit der Version von Spark übereinstimmt, die Sie während der Clustererstellung ausgewählt haben. Wählen Sie beispielsweise *microsoft-spark-2.3.x-0.3.0.jar* aus, wenn Sie Spark 2.3.2 während der Clustererstellung ausgewählt haben.
 
-6. Ihr Cluster benötigt die Eingabe in Ihre App. Navigieren Sie zu Ihrem Verzeichnis **mySparkApp**, und suchen Sie nach **input.txt**. Laden Sie die Eingabedatei in das Verzeichnis **user/sshuser** in Ihren Blobcontainer hoch. Sie stellen über SSH eine Verbindung mit Ihrem Cluster her, und in diesem Ordner sucht der Cluster nach der Eingabe. Die Datei *input.txt* ist die einzige Datei, die in ein bestimmtes Verzeichnis hochgeladen wurde.
+6. Ihr Cluster benötigt die Eingabe in Ihre App. Navigieren Sie zu Ihrem Verzeichnis **mySparkApp** , und suchen Sie nach **input.txt** . Laden Sie die Eingabedatei in das Verzeichnis **user/sshuser** in Ihren Blobcontainer hoch. Sie stellen über SSH eine Verbindung mit Ihrem Cluster her, und in diesem Ordner sucht der Cluster nach der Eingabe. Die Datei *input.txt* ist die einzige Datei, die in ein bestimmtes Verzeichnis hochgeladen wurde.
 
 ## <a name="run-the-hdinsight-script-action"></a>Ausführen der HDInsight-Skriptaktion
 
 Sobald der Cluster ausgeführt wird und Sie Ihre Dateien in Azure hochgeladen haben, führen Sie das Skript **install-worker.sh** auf dem Cluster aus.
 
-1. Navigieren Sie im Azure-Portal zu Ihrem HDInsight Spark-Cluster, und wählen Sie dann **Skriptaktionen**aus.
+1. Navigieren Sie im Azure-Portal zu Ihrem HDInsight Spark-Cluster, und wählen Sie dann **Skriptaktionen** aus.
 
 2. Wählen Sie **+ Neue übermitteln** aus, und geben Sie die folgenden Werte an:
 
    |Eigenschaft  |Beschreibung  |
    |---------|---------|
    | Skripttyp |Benutzerdefiniert|
-   | name | Installieren des Workers|
+   | Name | Installieren des Workers|
    | Bash-Skript-URI |`https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh` </br> Klicken Sie zum Bestätigen dieses URIs in Azure Storage-Explorer mit der rechten Maustaste auf „install-Worker.sh“, und wählen Sie „Eigenschaften“ aus. |
    | Knotentyp(en)| Worker|
    | Parameter | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
@@ -160,11 +160,11 @@ Sobald der Cluster ausgeführt wird und Sie Ihre Dateien in Azure hochgeladen ha
 
 ## <a name="run-your-app"></a>Ausführen der App
 
-1. Navigieren Sie im Azure-Portal zu Ihrem HDInsight Spark-Cluster, und wählen Sie dann **SSH und Clusteranmeldung**aus.
+1. Navigieren Sie im Azure-Portal zu Ihrem HDInsight Spark-Cluster, und wählen Sie dann **SSH und Clusteranmeldung** aus.
 
 2. Kopieren Sie die SSH-Anmeldeinformationen, und fügen Sie diese in ein Terminal ein. Melden Sie sich mit dem Kennwort, das Sie während der Clustererstellung festgelegt haben, bei Ihrem Cluster an. Es sollten Meldungen angezeigt werden, die Sie bei Ubuntu und Spark Willkommen heißen.
 
-3. Verwenden Sie den Befehl **spark-submit**, um Ihre App auf dem HDInsight-Cluster auszuführen. Denken Sie daran, **mycontainer** und **mystorageaccount** im Beispielskript durch die tatsächlichen Namen Ihres Blobcontainers und Speicherkontos zu ersetzen.
+3. Verwenden Sie den Befehl **spark-submit** , um Ihre App auf dem HDInsight-Cluster auszuführen. Denken Sie daran, **mycontainer** und **mystorageaccount** im Beispielskript durch die tatsächlichen Namen Ihres Blobcontainers und Speicherkontos zu ersetzen.
 
    ```bash
    $SPARK_HOME/bin/spark-submit \

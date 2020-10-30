@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209642"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224256"
 ---
 # <a name="net-class-libraries"></a>.NET-Klassenbibliotheken
 
@@ -20,7 +20,7 @@ Es gibt drei Arten von Klassenbibliotheken, die Sie verwenden können:
 
 * **Plattformspezifische** Klassenbibliotheken haben Zugriff auf alle APIs einer bestimmten Plattform (z.B. .NET Framework, Xamarin iOS), können jedoch nur von Apps und Bibliotheken verwendet werden, deren Ziel diese Plattform ist.
 * **Portable** Klassenbibliotheken haben Zugriff auf eine Teilmenge der APIs und können von Apps und Bibliotheken verwendet werden, deren Ziel mehrere Plattformen sind.
-* **.NET Standard**-Klassenbibliotheken führen das Konzept plattformspezifischer und portabler Bibliotheken in einem einzelnen Modell zusammen, das das Beste aus beiden Welten bietet.
+* **.NET Standard** -Klassenbibliotheken führen das Konzept plattformspezifischer und portabler Bibliotheken in einem einzelnen Modell zusammen, das das Beste aus beiden Welten bietet.
 
 ## <a name="platform-specific-class-libraries"></a>Plattformspezifische Klassenbibliotheken
 
@@ -44,7 +44,7 @@ Viele Bibliotheksentwickler sind von der Produktion mehrerer plattformspezifisch
 
 .NET Standard macht einige _Bibliotheksverträge_ verfügbar. .NET-Implementierungen müssen jeden Vertrag entweder vollständig oder überhaupt nicht unterstützen. Jede Implementierung unterstützt deshalb eine bestimmte Menge an .NET Standard-Verträgen. Die logische Konsequenz ist, dass jede .NET Standard-Klassenbibliothek auf den Plattformen unterstützt wird, die ihre Vertragsverpflichtungen unterstützt.
 
-Der .NET Standard macht nicht die gesamte Funktionalität von .NET Framework verfügbar (dies ist auch nicht das Ziel), aber er macht viele weitere APIs als portable Klassenbibliotheken verfügbar. Mit der Zeit werden weitere APIs hinzugefügt.
+.NET Standard macht nicht die gesamte Funktionalität von .NET Framework verfügbar (dies ist auch nicht das Ziel), aber es werden viele weitere APIs als portable Klassenbibliotheken verfügbar gemacht. Mit der Zeit werden weitere APIs hinzugefügt.
 
 Die folgenden Plattformen unterstützen .NET Standard-Bibliotheken:
 

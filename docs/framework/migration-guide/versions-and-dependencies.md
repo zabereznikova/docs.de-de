@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f807a9d9a7ccebf2ae71d47e01fbfba7338b1799
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557670"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471996"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework-Versionen und -Abhängigkeiten
 
@@ -18,12 +18,14 @@ Jede Version von .NET Framework enthält die CLR (Common Language Runtime) sowie
 
 Jede neue Version von .NET Framework fügt neue Features hinzu, wobei jedoch die Features der Vorgängerversionen beibehalten werden.
 
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
+
 Die CLR wird durch ihre eigene Versionsnummer identifiziert. Die .NET Framework-Versionsnummer wird mit jeder neuen Version erhöht, ohne dass jeweils die CLR-Version erhöht wird. Beispiel: .NET Framework 4, 4.5. und spätere Versionen enthalten CLR 4. .NET Framework 2.0, 3.0 und 3.5 enthalten hingegen CLR 2.0. (Es gab keine Version 3 der CLR.)
 
 > [!TIP]
 >
 > - Eine vollständige Liste unterstützter Betriebssysteme finden Sie unter [Systemanforderungen](../get-started/system-requirements.md).
-> - Informationen zum Herunterladen finden Sie unter [Installieren von.NET Framework für Entwickler](../install/guide-for-developers.md).
+> - Die Installationsprogramme finden Sie unter [Installieren des .NET Framework für Entwickler](../install/guide-for-developers.md).
 > - Informationen zum Ermitteln der auf einem Computer installierten .NET Framework-Versionen finden Sie unter [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](how-to-determine-which-versions-are-installed.md).
 
 ## <a name="version-information"></a>Versionsinformationen
@@ -32,7 +34,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 - Das Häkchensymbol ✔️ kennzeichnet Betriebssystemversionen, unter denen das .NET Framework von vornherein installiert ist.
 - Das Pluszeichensymbol ➕ kennzeichnet Betriebssystemversionen, unter denen .NET Framework nicht installiert ist, aber installiert werden kann.
-- Der Asterisk **\*** kennzeichnet Betriebssystemversionen, unter denen das .NET Framework (vorinstalliert und nicht vorinstalliert) [in der Systemsteuerung](../install/dotnet-35-windows-10.md) oder über den Server-Manager (für Windows Server) aktiviert werden muss.
+- Der Asterisk * *\** _ kennzeichnet Betriebssystemversionen, unter denen das .NET Framework (vorinstalliert und nicht vorinstalliert) [in der Systemsteuerung](../install/dotnet-35-windows-10.md) oder über den Server-Manager (für Windows Server) aktiviert werden muss.
 
 | | |
 | - | - |
@@ -49,7 +51,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 
 |||
 |-|-|
-|**CLR-Version**|4|
+|_ *CLR-Version**|4|
 |**Windows-Versionen**|✔️ 10-Update vom Mai 2019<br/>➕ 10-Update vom Oktober 2018 (Version 1809)<br/>➕ 10-Update vom April 2018 (Version 1803)<br/>➕ 10 Fall Creators Update (Version 1709)<br/>➕ 10 Creators Update (Version 1703)<br/>➕ 10 Anniversary Update (Version 1607)<br/>➕ 8.1<br/>➕7|
 |**Windows Server-Versionen**|➕ Windows Server 2019<br/>➕ Windows Server, Version 1809<br/>➕ Windows Server, Version 1803<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**Ermitteln der installierten .NET-Version**|Verwenden Sie das `Release`-DWORD:<br/>- 528040 (Windows 10-Update vom Mai 2019)<br/>- 528049 (alle weiteren Betriebssystemversionen)<br/>(Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md))|
@@ -68,7 +70,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 |**Windows Server-Versionen**|✔️ Windows Server 2019<br/>✔️ Windows Server, Version 1809<br/>✔️ Windows Server, Version 1803<br/>➕ Windows Server, Version 1709<br/>➕ 2016<br/>➕ 2012 R2<br/>➕ 2012<br/>➕ 2008 R2 SP1|
 |**Ermitteln der installierten .NET-Version**|Verwenden Sie das `Release`-DWORD:<br/>- 461814 (Windows 10-Update vom Oktober 2018)<br/>– 461808 (Windows 10-Update vom April 2018 und Windows Server Version 1803)<br/>– 461814 (alle weiteren Betriebssystemversionen)<br/>(Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md))|
 
-<sup>1</sup> Erfordert die Installation der Workloads **.NET-Desktopentwicklung**, **ASP.NET- und Webentwicklung**, **Azure-Entwicklung**, **Office-/SharePoint-Entwicklung**, **Mobile Entwicklung mit .NET** oder **Plattformübergreifende .NET Core-Entwicklung**.
+<sup>1</sup> Erfordert die Installation der Workloads **.NET-Desktopentwicklung** , **ASP.NET- und Webentwicklung** , **Azure-Entwicklung** , **Office-/SharePoint-Entwicklung** , **Mobile Entwicklung mit .NET** oder **Plattformübergreifende .NET Core-Entwicklung** .
 
 ### <a name="net-framework-471"></a>.NET Framework 4.7.1
 
@@ -120,7 +122,7 @@ Die folgenden Tabellen enthalten eine Zusammenfassung des .NET Framework-Version
 |**Windows Server-Versionen**|➕ 2012 R2<br />➕ 2012<br />➕ 2008 R2 SP1|
 |**Ermitteln der installierten .NET-Version**|Verwenden Sie das `Release`-DWORD:<br /><br/>– 394254 (Windows 10-Update von November)<br />– 394271 (alle weiteren Betriebssystemversionen)<br /><br/>(Siehe [Anweisungen](how-to-determine-which-versions-are-installed.md))|
 
-<sup>1</sup> Erfordert die Installation der Workloads **.NET-Desktopentwicklung**, **ASP.NET- und Webentwicklung**, **Azure-Entwicklung**, **Office-/SharePoint-Entwicklung**, **Mobile Entwicklung mit .NET** oder **Plattformübergreifende .NET Core-Entwicklung**.
+<sup>1</sup> Erfordert die Installation der Workloads **.NET-Desktopentwicklung** , **ASP.NET- und Webentwicklung** , **Azure-Entwicklung** , **Office-/SharePoint-Entwicklung** , **Mobile Entwicklung mit .NET** oder **Plattformübergreifende .NET Core-Entwicklung** .
 
 ### <a name="net-framework-46"></a>.NET Framework 4.6
 

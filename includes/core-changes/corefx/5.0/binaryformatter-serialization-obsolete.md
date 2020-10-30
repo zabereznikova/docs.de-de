@@ -1,25 +1,23 @@
 ---
-ms.openlocfilehash: 7cb146d19486618a4cee9976abe2220ea4b72790
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 43bd1481ca6c3d3444afda2e2a2c67e7236b4402
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88204017"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434945"
 ---
 ### <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten
 
-`Serialize`- und `Deserialize`-Methoden in <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, <xref:System.Runtime.Serialization.Formatter> und <xref:System.Runtime.Serialization.IFormatter> sind jetzt veraltet. Darüber hinaus ist die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Serialisierung in ASP.NET-Apps standardmäßig verboten.
+Die Methoden `Serialize` und `Deserialize` für <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>, <xref:System.Runtime.Serialization.Formatter> und <xref:System.Runtime.Serialization.IFormatter> sind nun veraltet und generieren eine Warnung. Darüber hinaus ist die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Serialisierung in ASP.NET-Apps standardmäßig verboten.
 
 #### <a name="change-description"></a>Änderungsbeschreibung
 
-Aufgrund von [Sicherheitsrisiken](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) in <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sind die folgenden Methoden jetzt veraltet. Darüber hinaus wird <xref:System.NotSupportedException> in ASP.NET Core 5.0-Apps (und höher)ausgelöst, es sei denn, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wurde durch die Web-App wieder aktiviert.
+Aufgrund von [Sicherheitsrisiken](../../../../docs/standard/serialization/binaryformatter-security-guide.md#binaryformatter-security-vulnerabilities) in <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sind die folgenden Methoden jetzt veraltet und lösen zur Kompilierzeit eine Warnung mit der ID `SYSLIB0011` aus. Darüber hinaus wird <xref:System.NotSupportedException> in ASP.NET Core 5.0-Apps (und höher)ausgelöst, es sei denn, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wurde durch die Web-App wieder aktiviert.
 
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>
 
-Diese Methoden wurden im Rahmen unsere Bemühungen als veraltet markiert, die Nutzung von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> im .NET-Ökosystem einzudämmen.
-
-Die folgenden Serialisierungsmethoden sind jetzt ebenfalls veraltet, führen jedoch nicht zu Änderungen im Verhalten:
+Die folgenden Serialisierungsmethoden sind jetzt ebenfalls veraltet und lösen die Warnung `SYSLIB0011` aus, führen jedoch nicht zu Änderungen im Verhalten:
 
 - <xref:System.Runtime.Serialization.Formatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType>
 - <xref:System.Runtime.Serialization.Formatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType>
@@ -29,6 +27,10 @@ Die folgenden Serialisierungsmethoden sind jetzt ebenfalls veraltet, führen jed
 #### <a name="version-introduced"></a>Eingeführt in Version
 
 5.0 Preview 8
+
+#### <a name="reason-for-change"></a>Grund für die Änderung
+
+Diese Methoden wurden im Rahmen unsere Bemühungen als veraltet markiert, die Nutzung von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> im .NET-Ökosystem einzudämmen.
 
 #### <a name="recommended-action"></a>Empfohlene Aktion
 
@@ -58,7 +60,7 @@ Die folgenden Serialisierungsmethoden sind jetzt ebenfalls veraltet, führen jed
   </PropertyGroup>
   ```
 
-  Wenn Sie die Warnung in der Projektdatei unterdrücken, wird sie für alle Codedateien im Projekt unterdrückt. Durch Unterdrücken von SYSLIB0011 werden keine Warnungen unterdrückt, die von anderen veralteten APIs verursacht werden.
+  Wenn Sie die Warnung in der Projektdatei unterdrücken, wird sie für alle Codedateien im Projekt unterdrückt. Durch Unterdrücken von `SYSLIB0011` werden keine Warnungen unterdrückt, die von anderen veralteten APIs verursacht werden.
 
 - Um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> weiterhin in ASP.NET-Apps zu verwenden, können Sie die Option in der Projektdatei wieder aktivieren. Es wird jedoch dringend empfohlen, dies nicht zu tun. Weitere Informationen finden Sie im [BinaryFormatter-Sicherheitsleitfaden](../../../../docs/standard/serialization/binaryformatter-security-guide.md).
 

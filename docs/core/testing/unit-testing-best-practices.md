@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281107"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223494"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -47,11 +47,11 @@ Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Merkmale eines guten Komponententests
 
-- **Schnelligkeit**. Es ist nicht ungewöhnlich, dass ausgereifte Projekte Tausende von Komponententests enthalten. Die Ausführung von Komponententests sollte sehr wenig Zeit in Anspruch nehmen. Sie sollten innerhalb von Millisekunden abgeschlossen sein.
-- **Unabhängigkeit**. Komponententest sind eigenständig, sie können isoliert ausgeführt werden und verfügen über keine Abhängigkeiten auf externen Faktoren, wie etwa einem Dateisystem oder einer Datenbank.
-- **Wiederholbarkeit**. Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
-- **Selbstprüfung**. Der Test sollte in der Lage sein, automatisch und ohne menschliches Eingreifen zu erkennen, ob er erfolgreich war oder fehlgeschlagen ist.
-- **Verhältnismäßigkeit**. Ein Komponententest darf verglichen mit dem zu testenden Code nicht unverhältnismäßig lang für das Schreiben benötigen. Wenn Sie bemerken, dass der Codetest im Vergleich zum Schreiben des Codes viel Zeit in Anspruch nimmt, erwägen Sie einen Entwurf, der besser getestet werden kann.
+- **Schnelligkeit** . Es ist nicht ungewöhnlich, dass ausgereifte Projekte Tausende von Komponententests enthalten. Die Ausführung von Komponententests sollte sehr wenig Zeit in Anspruch nehmen. Sie sollten innerhalb von Millisekunden abgeschlossen sein.
+- **Unabhängigkeit** . Komponententest sind eigenständig, sie können isoliert ausgeführt werden und verfügen über keine Abhängigkeiten auf externen Faktoren, wie etwa einem Dateisystem oder einer Datenbank.
+- **Wiederholbarkeit** . Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
+- **Selbstprüfung** . Der Test sollte in der Lage sein, automatisch und ohne menschliches Eingreifen zu erkennen, ob er erfolgreich war oder fehlgeschlagen ist.
+- **Verhältnismäßigkeit** . Ein Komponententest darf verglichen mit dem zu testenden Code nicht unverhältnismäßig lang für das Schreiben benötigen. Wenn Sie bemerken, dass der Codetest im Vergleich zum Schreiben des Codes viel Zeit in Anspruch nimmt, erwägen Sie einen Entwurf, der besser getestet werden kann.
 
 ## <a name="code-coverage"></a>Codeabdeckung
 
@@ -61,13 +61,13 @@ Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinw
 
 ## <a name="lets-speak-the-same-language"></a>Begriffsklärung
 
-Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
+Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes* , beim Schreiben von Komponententests definiert:
 
-*Fake*: Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
+*Fake* : Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
 
-*Mock*: Ein Pseudoobjekt ist ein unechtes Objekt im System, das entscheidet, ob ein Komponententest erfolgreich war oder nicht. Ein Mock ist zunächst ein Fake, bis eine Assert-Anweisung ausgeführt wird.
+*Mock* : Ein Pseudoobjekt ist ein unechtes Objekt im System, das entscheidet, ob ein Komponententest erfolgreich war oder nicht. Ein Mock ist zunächst ein Fake, bis eine Assert-Anweisung ausgeführt wird.
 
-*Stub*: Ein Stub ist ein anpassbarer Platzhalter für eine vorhandene Abhängigkeit (oder einen Projektmitarbeiter) im System. Wenn Sie einen Stub verwenden, können Sie Ihren Code testen, ohne sich direkt um die Abhängigkeit kümmern zu müssen. Standardmäßig ist ein Fake immer zunächst ein Stub.
+*Stub* : Ein Stub ist ein anpassbarer Platzhalter für eine vorhandene Abhängigkeit (oder einen Projektmitarbeiter) im System. Wenn Sie einen Stub verwenden, können Sie Ihren Code testen, ohne sich direkt um die Abhängigkeit kümmern zu müssen. Standardmäßig ist ein Fake immer zunächst ein Stub.
 
 Betrachten Sie den folgenden Codeausschnitt:
 
@@ -115,6 +115,8 @@ Der Hauptunterschied zwischen Mocks und Stubs ist also der folgende: Mocks unter
 
 ## <a name="best-practices"></a>Bewährte Methoden
 
+Achten Sie beim Schreiben von Komponententests darauf, dass diese nicht von der Infrastruktur abhängig sind. Dadurch werden die Tests langsam und fehleranfällig. Diese Abhängigkeiten sollten nur für Integrationstests verwendet werden. Sie können diese Abhängigkeiten in Ihrem Code vermeiden, indem Sie das [Prinzip der expliziten Abhängigkeit](https://deviq.com/explicit-dependencies-principle) und [Dependency Injection](../extensions/dependency-injection.md) einsetzen. Sie können die Komponententests und die Integrationstests in unterschiedlichen Projekten erstellen. Dadurch wird sichergestellt, dass Ihr Komponententestprojekt keine Verweise auf oder Abhängigkeiten von Infrastrukturpaketen aufweist.
+
 ### <a name="naming-your-tests"></a>Benennen Ihrer Tests
 
 Der Name Ihres Tests sollte aus drei Teilen bestehen:
@@ -141,9 +143,9 @@ Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bi
 
 **Arrange, Act, Assert** ist ein häufiges Muster beim Ausführen von Komponententests. Dieses Muster besteht aus drei Hauptteilen:
 
-- *Arrange*: Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
-- *Act*: Führen Sie eine Aktion für ein Objekt durch.
-- *Assert*: Überprüfen Sie die ordnungsgemäße Funktionsweise.
+- *Arrange* : Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
+- *Act* : Führen Sie eine Aktion für ein Objekt durch.
+- *Assert* : Überprüfen Sie die ordnungsgemäße Funktionsweise.
 
 #### <a name="why"></a>Warum?
 
@@ -186,7 +188,7 @@ Das Benennen von Variablen in Komponententests ist genauso wichtig, wenn nicht n
 #### <a name="why"></a>Warum?
 
 - Durch magische Zeichenfolgen sieht es der Leser des Tests womöglich nicht als notwendig an, den Produktionscode zu überprüfen, um herauszufinden, was den Wert besonders macht.
-- Sie stellen explizit dar, was Sie *beweisen* möchten und nicht, was Sie versuchen zu *erreichen*.
+- Sie stellen explizit dar, was Sie *beweisen* möchten und nicht, was Sie versuchen zu *erreichen* .
 
 Magische Zeichenfolgen können den Leser Ihrer Tests verwirren. Wenn eine Zeichenfolge nicht wie gewohnt aussieht, fragt sich der Leser womöglich, warum ein bestimmter Wert für einen Parameter oder Rückgabewert ausgewählt wurde. Dadurch sieht sich der Leser möglicherweise die Implementierungsdetails genauer an und konzentriert sich so nicht mehr auf den Test.
 

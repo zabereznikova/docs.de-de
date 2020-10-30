@@ -3,12 +3,12 @@ title: Analysieren von Abhängigkeiten zum Portieren von Code zu .NET Core
 description: Erfahren Sie, wie Sie externe Abhängigkeiten analysieren können, um Ihr Projekt von .NET Framework auf .NET Core portieren zu können.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 430da45052e3953ab49f182b1773fc6d74bd2221
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397920"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223600"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analysieren Ihrer Abhängigkeiten zum Portieren von Code zu .NET Core
 
@@ -45,12 +45,12 @@ Am einfachsten überprüfen Sie die NuGet-Paketordner mit dem Tool [NuGet Packag
 1. Öffnen Sie den NuGet-Paket-Explorer.
 2. Klicken Sie auf **Open package from online feed** (Paket über Onlinefeed öffnen).
 3. Suchen Sie nach dem Namen des Pakets.
-4. Wählen Sie den Paketnamen aus den Suchergebnissen aus, und klicken Sie auf **Öffnen**.
+4. Wählen Sie den Paketnamen aus den Suchergebnissen aus, und klicken Sie auf **Öffnen** .
 5. Erweitern Sie den Ordner *Lib* (Bibliotheken) auf der rechten Seite, und suchen Sie in den Ordnernamen.
 
 Suchen Sie nach einem Ordner mit Namen mit einem der folgenden Muster: `netstandardX.Y` oder `netcoreappX.Y`.
 
-Bei diesen Werten handelt es sich um [Target Framework Moniker (TFMs)](../../standard/frameworks.md), die den Versionen des [.NET-Standard](../../standard/net-standard.md) und .NET Core-Profils und der herkömmlichen PCL-Profilen (Portable Class Library) zugeordnet sind, die mit .NET Core kompatibel sind.
+Bei diesen Werten handelt es sich um [Zielframeworkmoniker](../../standard/frameworks.md), die den Versionen von [.NET Standard](../../standard/net-standard.md), .NET Core sowie den herkömmlichen Portable Class Library-Profilen (PCL) zugeordnet sind, die mit .NET Core kompatibel sind.
 
 > [!IMPORTANT]
 > Beachten Sie bei TFMs, die von einem Paket unterstützt werden, dass `netcoreapp*` trotz Kompatibilität, nur für .NET Core-Projekte konzipiert ist und nicht für .NET Standard-Projekte.

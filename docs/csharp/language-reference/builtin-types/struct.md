@@ -1,7 +1,7 @@
 ---
-description: Informationen zum struct-Typ in C#
 title: Strukturtypen – C#-Referenz
-ms.date: 04/21/2020
+description: Informationen zum struct-Typ in C#
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132728"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526601"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
-Ein *Strukturtyp* (oder *struct type*) ist ein [Werttyp](value-types.md), der Daten und zugehörige Funktionen kapseln kann. Verwenden Sie das `struct`-Schlüsselwort, um einen Strukturtyp zu definieren:
+Ein *Strukturtyp* (oder *struct type* ) ist ein [Werttyp](value-types.md), der Daten und zugehörige Funktionen kapseln kann. Verwenden Sie das `struct`-Schlüsselwort, um einen Strukturtyp zu definieren:
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-Strukturtypen verfügen über eine *Wertsemantik*. Das heißt, eine Variable eines Strukturtyps enthält eine Instanz des Typs. Standardmäßig werden die Variablenwerte bei der Zuweisung kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Bei Strukturtypvariablen wird eine Instanz des Typs kopiert. Weitere Informationen finden Sie unter [Werttypen](value-types.md).
+Strukturtypen verfügen über eine *Wertsemantik* . Das heißt, eine Variable eines Strukturtyps enthält eine Instanz des Typs. Standardmäßig werden die Variablenwerte bei der Zuweisung kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Bei Strukturtypvariablen wird eine Instanz des Typs kopiert. Weitere Informationen finden Sie unter [Werttypen](value-types.md).
 
-In der Regel werden Strukturtypen zum Entwerfen kleiner datenorientierter Typen verwendet, die wenig oder gar kein Verhalten bereitstellen. Beispielsweise verwendet .NET Strukturtypen, um Zahlen (sowohl [Integer](integral-numeric-types.md) als auch [reelle](floating-point-numeric-types.md) Zahlen), [boolesche Werte](bool.md), [Unicode-Zeichen](char.md) und [Zeitinstanzen](xref:System.DateTime) darzustellen. Wenn Sie das Verhalten eines Typs verwenden möchten, sollten Sie eine [Klasse](../keywords/class.md) definieren. Klassentypen verfügen über *Verweissemantik*. Das heißt, eine Variable eines Klassentyps enthält einen Verweis auf eine Instanz des Typs, nicht die Instanz selbst.
+In der Regel werden Strukturtypen zum Entwerfen kleiner datenorientierter Typen verwendet, die wenig oder gar kein Verhalten bereitstellen. Beispielsweise verwendet .NET Strukturtypen, um Zahlen (sowohl [Integer](integral-numeric-types.md) als auch [reelle](floating-point-numeric-types.md) Zahlen), [boolesche Werte](bool.md), [Unicode-Zeichen](char.md) und [Zeitinstanzen](xref:System.DateTime) darzustellen. Wenn Sie das Verhalten eines Typs verwenden möchten, sollten Sie eine [Klasse](../keywords/class.md) definieren. Klassentypen verfügen über *Verweissemantik* . Das heißt, eine Variable eines Klassentyps enthält einen Verweis auf eine Instanz des Typs, nicht die Instanz selbst.
 
 Da Strukturtypen eine Wertsemantik nutzen, wird die Definition von *unveränderlichen* Strukturtypen empfohlen.
 
@@ -32,12 +32,12 @@ Da Strukturtypen eine Wertsemantik nutzen, wird die Definition von *unveränderl
 
 Ab C# 7.2 können Sie mit dem `readonly`-Modifizierer einen Strukturtyp als unveränderlich deklarieren:
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 Alle Datenmember einer `readonly`-Struktur müssen als schreibgeschützt gekennzeichnet sein:
 
 - Alle Felddeklarationen müssen den [`readonly`-Modifizierer](../keywords/readonly.md) aufweisen.
-- Alle Eigenschaften – auch automatisch implementierte – müssen schreibgeschützt sein.
+- Alle Eigenschaften, auch automatisch implementierte, müssen schreibgeschützt sein. In C# 9.0 und höher kann eine Eigenschaft einen [`init`-Accessor](../../whats-new/csharp-9.md#init-only-setters) aufweisen.
 
 Auf diese Weise ist garantiert, dass kein Member einer `readonly`-Struktur den Status der Struktur ändert. In C# 8.0 und höher bedeutet dies, dass andere Instanzmember mit Ausnahme von Konstruktoren implizit [`readonly`](#readonly-instance-members) werden.
 
@@ -54,20 +54,24 @@ In der Regel wenden Sie den `readonly`-Modifizierer auf die folgenden Arten von 
 
 - Methoden:
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   Sie können den `readonly`-Modifizierer auch auf Methoden anwenden, die in <xref:System.Object?displayProperty=nameWithType> deklarierte Methoden überschreiben:
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - Eigenschaften und Indexer:
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   Wenn Sie den `readonly`-Modifizierer auf die Accessoren sowohl einer Eigenschaft als auch eines Indexers anwenden müssen, wenden Sie ihn in der Deklaration der Eigenschaft bzw. des Indexers an.
 
   > [!NOTE]
   > Der Compiler deklariert einen `get`-Accessor einer [automatisch implementierten Eigenschaft](../../programming-guide/classes-and-structs/auto-implemented-properties.md) als `readonly`, unabhängig davon, ob der `readonly`-Modifizierer in einer Eigenschaftsdeklaration vorhanden ist.
+
+  In C# 9.0 und höher können Sie den `readonly`-Modifizierer auf eine Eigenschaft oder einen Indexer mit einem `init`-Accessor anwenden:
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 Sie können den `readonly`-Modifizierer nicht auf statische Member eines Strukturtyps anwenden.
 
@@ -95,7 +99,7 @@ Normalerweise instanziieren Sie einen Strukturtyp, indem Sie einen entsprechende
 
 Wenn alle Instanzfelder eines Strukturtyps zugänglich sind, können Sie ihn auch ohne den `new`-Operator instanziieren. In diesem Fall müssen Sie alle Instanzfelder vor der ersten Verwendung der Instanz initialisieren. Das folgende Beispiel zeigt, wie Sie dabei vorgehen müssen:
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 Verwenden Sie für [integrierte Werttypen](value-types.md#built-in-value-types) die entsprechenden Literale, um den Wert des Typs festzulegen.
 
@@ -118,11 +122,11 @@ Ab C# 7.2 können Sie bei der Deklaration eines Strukturtyps den Modifizierer `r
 
 In der Regel definieren Sie einen `ref`-Strukturtyp, wenn Sie einen Typ benötigen, der auch Datenmember von `ref`-Strukturtypen enthält:
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 Kombinieren Sie die `readonly`- und `ref`-Modifizierer in der Typdeklaration (der `readonly`-Modifizierer muss vor dem `ref`-Modifizierer stehen), um eine `ref`-Struktur als [`readonly`](#readonly-struct) zu deklarieren:
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 In .NET sind <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> Beispiele für eine `ref`-Struktur.
 

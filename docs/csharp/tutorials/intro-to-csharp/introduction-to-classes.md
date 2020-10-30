@@ -3,12 +3,12 @@ title: Klassen und Objekte – Tutorial zur Einführung in C#
 description: Erstellen Ihres ersten C#-Programms und Erforschen objektorientierter Konzepte
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 90abe3836292029ce7ebf26ae9be3253c4eface1
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0955b0ac33b346b9880c8af70bd73cb458120f35
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756051"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434886"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Erkunden der objektorientierten Programmierung mit Klassen und Objekten
 
@@ -16,7 +16,7 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie über einen Computer verfügen
 
 ## <a name="create-your-application"></a>Erstellen Ihrer Anwendung
 
-Erstellen Sie in einem Terminalfenster ein Verzeichnis namens *classes*. Dort werden Sie Ihre Anwendung erstellen. Wechseln Sie in dieses Verzeichnis, und geben Sie `dotnet new console` im Konsolenfenster ein. Dieser Befehl erstellt die Anwendung. Öffnen Sie *Program.cs*. Es sollte wie folgt aussehen:
+Erstellen Sie in einem Terminalfenster ein Verzeichnis namens *classes* . Dort werden Sie Ihre Anwendung erstellen. Wechseln Sie in dieses Verzeichnis, und geben Sie `dotnet new console` im Konsolenfenster ein. Dieser Befehl erstellt die Anwendung. Öffnen Sie *Program.cs* . Es sollte wie folgt aussehen:
 
 ```csharp
 using System;
@@ -33,9 +33,9 @@ namespace classes
 }
 ```
 
-In diesem Tutorial erstellen Sie neue Typen, die ein Bankkonto darstellen. Entwickler definieren jede Klasse in der Regel in einer anderen Textdatei. Dies erleichtert die Verwaltung bei zunehmender Programmgröße. Erstellen Sie eine neue Datei mit dem Namen *BankAccount.cs* im Verzeichnis *classes*.
+In diesem Tutorial erstellen Sie neue Typen, die ein Bankkonto darstellen. Entwickler definieren jede Klasse in der Regel in einer anderen Textdatei. Dies erleichtert die Verwaltung bei zunehmender Programmgröße. Erstellen Sie eine neue Datei mit dem Namen *BankAccount.cs* im Verzeichnis *classes* .
 
-Diese Datei enthält die Definition eines ***Bankkontos***. In der objektorientierten Programmierung wird der Code organisiert, indem Typen in Form von ***Klassen*** erstellt werden. Diese Klassen enthalten den Code, der eine bestimmte Entität darstellt. Die `BankAccount`-Klasse stellt ein Bankkonto dar. Der Code implementiert bestimmte Vorgänge mittels Methoden und Eigenschaften. In diesem Tutorial unterstützt das Bankkonto dieses Verhalten:
+Diese Datei enthält die Definition eines * **Bankkontos** _. In der objektorientierten Programmierung wird der Code organisiert, indem Typen in Form von _*_Klassen_*_ erstellt werden. Diese Klassen enthalten den Code, der eine bestimmte Entität darstellt. Die `BankAccount`-Klasse stellt ein Bankkonto dar. Der Code implementiert bestimmte Vorgänge mittels Methoden und Eigenschaften. In diesem Tutorial unterstützt das Bankkonto dieses Verhalten:
 
 1. Es enthält eine 10-stellige Zahl, die das Bankkonto eindeutig identifiziert.
 1. Es enthält eine Zeichenfolge, die den bzw. die Namen des Besitzers speichert.
@@ -47,7 +47,7 @@ Diese Datei enthält die Definition eines ***Bankkontos***. In der objektorienti
 
 ## <a name="define-the-bank-account-type"></a>Definieren des Bankkontotyps
 
-Sie können beginnen, indem Sie die Grundlagen einer Klasse erstellen, die dieses Verhalten definiert. Erstellen Sie eine neue Datei mit dem Befehl **File:New**. Nennen Sie sie *BankAccount.cs*. Fügen Sie der Datei *BankAccount.cs* folgenden Code hinzu:
+Sie können beginnen, indem Sie die Grundlagen einer Klasse erstellen, die dieses Verhalten definiert. Erstellen Sie eine neue Datei mit dem Befehl _ *File:New* *. Nennen Sie sie *BankAccount.cs* . Fügen Sie der Datei *BankAccount.cs* folgenden Code hinzu:
 
 ```csharp
 using System;
@@ -73,13 +73,13 @@ namespace classes
 
 Bevor wir fortfahren, lassen Sie uns anschauen, was Sie erstellt haben.  Die `namespace`-Deklaration ist eine Möglichkeit, Ihren Code logisch zu organisieren. Da dieses Tutorial relativ klein ist, platzieren Sie den gesamten Code in einen einzigen Namespace.
 
-`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren den Zustand und das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf ***Member***. Die ersten drei sind ***Eigenschaften***. Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind ***Methoden***. Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
+`public class BankAccount` definiert die Klasse oder den Typ, die/den Sie erstellen. Sämtliche Inhalte zwischen `{` und `}`, die der Klassendeklaration folgen, definieren den Zustand und das Verhalten der Klasse. Die `BankAccount`-Klasse verfügt über fünf * **Member** _. Die ersten drei sind _*_Eigenschaften_*_ . Eigenschaften sind Datenelemente und können Code aufweisen, der eine Überprüfung oder andere Regeln erzwingt. Die letzten beiden sind _*_Methoden_*_ . Methoden sind Codeblöcke, die eine einzelne Funktion ausführen. Das Lesen der Namen der einzelnen Member sollte Ihnen oder anderen Entwicklern genug Informationen liefern, um zu verstehen, welche Aufgabe die Klasse hat.
 
 ## <a name="open-a-new-account"></a>Eröffnen eines neuen Kontos
 
 Die erste zu implementierende Funktion ist das Eröffnen eines Bankkontos. Wenn ein Kunde ein Konto eröffnet, muss er einen anfänglichen Kontostand bereitstellen und Informationen über den/die Besitzer dieses Kontos angeben.
 
-Das Erstellen eines neuen Objekts des `BankAccount`-Typs bedeutet Definieren eines ***Konstruktors***, der diese Werte zuweist. Ein ***Konstruktor*** ist ein Member, der den gleichen Namen wie die Klasse hat. Er wird verwendet, um Objekte dieses Klassentyps zu initialisieren. Fügen Sie dem `BankAccount`-Typ den folgenden Konstruktor hinzu,. Platzieren Sie folgenden Code oberhalb der Deklaration von `MakeDeposit`:
+Das Erstellen eines neuen Objekts des Typs `BankAccount` bedeutet, einen _*_Konstruktor_*_ zu definieren, der diese Werte zuweist. Ein _*_Konstruktor_*_ ist ein Member, der den gleichen Namen wie die Klasse hat. Er wird verwendet, um Objekte dieses Klassentyps zu initialisieren. Fügen Sie dem `BankAccount`-Typ den folgenden Konstruktor hinzu,. Platzieren Sie folgenden Code oberhalb der Deklaration von `MakeDeposit`:
 
 ```csharp
 public BankAccount(string name, decimal initialBalance)
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in *Program.cs* durch den folgende Code (ersetzen Sie `<name>` durch Ihren Namen):
+Konstruktoren werden bei der Erstellung eines Objekts mit [`new`](../../language-reference/operators/new-operator.md) aufgerufen. Ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` in _Program.cs* durch den folgende Code (ersetzen Sie `<name>` durch Ihren Namen):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -119,11 +119,11 @@ Geben Sie `dotnet run` ein, um die Ergebnisse anzuzeigen.
 
 Um ordnungsgemäß zu funktionieren, muss Ihre Bankkontoklasse Einzahlungen und Abbuchungen akzeptieren. Einzahlungen und Abbuchungen implementieren Sie, indem Sie eine Erfassung jeder Transaktion für das Konto erstellen. Dies ist vorteilhafter, als den Kontostand bei jeder Transaktion einfachen zu aktualisieren. Der Verlauf kann zum Überwachen aller Transaktionen und Verwalten täglicher Kontostände verwendet werden. Indem der Kontostand ggf. aus dem Verlauf aller Transaktionen berechnet wird, werden etwaige Korrekturen von Fehlern in einer einzelnen Transaktion bei der nächsten Berechnung im Kontostand ordnungsgemäß widergespiegelt.
 
-Zunächst erstellen wir einen neuen Typ, um eine Transaktion darzustellen. Dies ist ein einfacher Typ, der keine Verantwortlichkeiten hat. Er benötigt einige Eigenschaften. Erstellen Sie eine neue Datei mit dem Namen *Transaction.cs*. Fügen Sie ihr folgenden Code hinzu:
+Zunächst erstellen wir einen neuen Typ, um eine Transaktion darzustellen. Dies ist ein einfacher Typ, der keine Verantwortlichkeiten hat. Er benötigt einige Eigenschaften. Erstellen Sie eine neue Datei mit dem Namen *Transaction.cs* . Fügen Sie ihr folgenden Code hinzu:
 
 :::code language="csharp" source="./snippets/introduction-to-classes/Transaction.cs":::
 
-Nun fügen wir eine <xref:System.Collections.Generic.List%601> von `Transaction`-Objekten der `BankAccount`-Klasse hinzu. Fügen Sie die folgende Deklaration nach dem Konstruktor in ihrer *BankAccount.cs*-Datei hinzu:
+Nun fügen wir eine <xref:System.Collections.Generic.List%601> von `Transaction`-Objekten der `BankAccount`-Klasse hinzu. Fügen Sie die folgende Deklaration nach dem Konstruktor in ihrer *BankAccount.cs* -Datei hinzu:
 
 :::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="TransactionDeclaration":::
 
@@ -133,19 +133,19 @@ Die <xref:System.Collections.Generic.List%601>-Klasse erfordert, dass Sie einen 
 using System.Collections.Generic;
 ```
 
-Jetzt ändern wir die Art, in der `Balance` gemeldet wird.  Er kann durch Summierung der Werte aller Transaktionen gefunden werden. Ändern Sie die Deklaration von `Balance` in der `BankAccount`-Klasse folgendermaßen:
+Nun werden Sie `Balance` korrekt berechnen. Der aktuelle Saldo kann durch Summieren der Werte aller Transaktionen ermittelt werden. Mit dem aktuellen Code können Sie nur den anfänglichen Saldo des Kontos abrufen. Sie müssen daher die Eigenschaft `Balance` aktualisieren. Ersetzen Sie die Zeile `public decimal Balance { get; }` in *BankAccount.cs* durch den folgenden Code:
 
 :::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="BalanceComputation":::
 
-Dieses Beispiel zeigt einen wichtigen Aspekt der ***Eigenschaften***. Jetzt berechnen Sie den Kontostand, wenn ein anderer Programmierer den Wert anfordert. Die Berechnung zählt alle Transaktionen auf und gibt die Summe als aktuellen Kontostand zurück.
+Dieses Beispiel zeigt einen wichtigen Aspekt von * **Eigenschaften** _. Jetzt berechnen Sie den Kontostand, wenn ein anderer Programmierer den Wert anfordert. Die Berechnung zählt alle Transaktionen auf und gibt die Summe als aktuellen Kontostand zurück.
 
 Implementieren Sie nun die `MakeDeposit`- und `MakeWithdrawal`-Methode. Diese Methoden erzwingen die letzten beiden Regeln: Der anfängliche Kontostand muss positiv sein, und eine Abbuchung darf nicht in einem negativen Kontostand resultieren.
 
-Dies führt das Konzept der ***Ausnahmen*** ein. Standardmäßig wird eine Ausnahme ausgelöst, um anzuzeigen, dass eine Methode ihre Aufgabe nicht erfolgreich ausführen kann. Der Typ der Ausnahme und die zugeordnete Nachricht beschreiben den Fehler. Hier löst die `MakeDeposit`-Methode eine Ausnahme aus, wenn der Einzahlungsbetrag negativ ist. Die `MakeWithdrawal`-Methode löst eine Ausnahme aus, wenn der Abbuchungsbetrag negativ ist, oder wenn aus der Abbuchung ein negativer Kontostand resultiert. Fügen Sie nach der Deklaration der `allTransactions`-Liste den folgenden Code hinzu:
+Dies führt das Konzept der _*_Ausnahmen_*_ ein. Standardmäßig wird eine Ausnahme ausgelöst, um anzuzeigen, dass eine Methode ihre Aufgabe nicht erfolgreich ausführen kann. Der Typ der Ausnahme und die zugeordnete Nachricht beschreiben den Fehler. Hier löst die `MakeDeposit`-Methode eine Ausnahme aus, wenn der Einzahlungsbetrag negativ ist. Die `MakeWithdrawal`-Methode löst eine Ausnahme aus, wenn der Abbuchungsbetrag negativ ist, oder wenn aus der Abbuchung ein negativer Kontostand resultiert. Fügen Sie nach der Deklaration der `allTransactions`-Liste den folgenden Code hinzu:
 
 :::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="DepositAndWithdrawal":::
 
-Die [`throw`](../../language-reference/keywords/throw.md)-Anweisung **löst** eine Ausnahme aus. Die Ausführung des aktuellen Block wird beendet, und die Steuerung wird an den ersten übereinstimmenden `catch`-Block übertragen, der in der Aufrufliste gefunden wurde. Sie fügen einen `catch`-Block hinzu, um diesen Code etwas später zu testen.
+Die [`throw`](../../language-reference/keywords/throw.md)-Anweisung _ *löst* * eine Ausnahme aus. Die Ausführung des aktuellen Block wird beendet, und die Steuerung wird an den ersten übereinstimmenden `catch`-Block übertragen, der in der Aufrufliste gefunden wurde. Sie fügen einen `catch`-Block hinzu, um diesen Code etwas später zu testen.
 
 Der Konstruktor sollte so geändert werden, dass er eine anfängliche Transaktion hinzufügt, anstatt den Kontostand direkt zu aktualisieren. Da Sie die `MakeDeposit`-Methode bereits geschrieben haben, rufen Sie sie aus dem Konstruktor auf. Der fertige Konstruktor sollte wie folgt aussehen:
 

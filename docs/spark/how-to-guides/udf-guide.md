@@ -1,15 +1,17 @@
 ---
 title: Erstellen benutzerdefinierter Funktionen in .NET für Apache Spark
 description: Hier erfahren Sie, wie Sie benutzerdefinierte Funktionen (User-Defined Functions, UDFs) in .NET-Anwendungen für Apache Spark implementieren.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955035"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224180"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Erstellen benutzerdefinierter Funktionen in .NET für Apache Spark
 
@@ -184,6 +186,12 @@ Sie sehen, dass `func` und `func2` sich keinen Abschluss mehr teilen, sondern se
 
 * NULL-Werte in UDFs können Ausnahmen auslösen. Diese müssen vom Entwickler behandelt werden.
 * UDFs nutzen nicht die Optimierungen der integrierten Spark-Funktionen. Sie sollten also nach Möglichkeit die integrierten Funktionen verwenden.
+
+## <a name="faqs"></a>Häufig gestellte Fragen
+
+**Warum erhalte ich den Fehler `System.NotImplementedException: The method or operation is not implemented.` oder `System.InvalidCastException: Unable to cast object of type 'System.Collections.Hashtable' to type 'System.Collections.Generic.IDictionary`, wenn ich versuche, eine benutzerdefinierte Funktion mit `ArrayType`, `MapType`, `ArrayList` oder `HashTable` als Argument oder Rückgabetyp aufzurufen?**  
+Die Unterstützung für `ArrayType` und `MapType` wird erst ab [v1.0](https://github.com/dotnet/spark/releases/tag/v1.0.0) bereitgestellt, sodass Sie diesen Fehler erhalten, wenn Sie eine frühere .NET-Version für Apache Spark verwenden und versuchen, diese Typen entweder als Argumente an die benutzerdefinierte Funktion oder als Rückgabetyp zu übergeben.
+Die Typen `ArrayList` und `HashTable` können nicht als Rückgabetypen einer benutzerdefinierten Funktion unterstützt werden, da sie nicht generische Sammlungen sind und ihre Elementtypdefinitionen daher nicht für Spark bereitgestellt werden können.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

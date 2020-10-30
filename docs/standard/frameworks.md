@@ -4,12 +4,12 @@ description: In diesem Artikel erfahren Sie mehr über Zielframeworks für .NET-
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065252"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223456"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Zielframeworks in Projekten im SDK-Format
 
@@ -25,7 +25,7 @@ Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die 
 
 ## <a name="latest-versions"></a>Neueste Versionen
 
-Die folgende Tabelle listet die häufigsten Zielframeworks auf, wie auf diese verwiesen wird und welche Version von [.NET Standard](net-standard.md) von ihnen implementiert wird. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek.
+In der folgenden Tabelle wird aufgelistet, wie die häufigsten Zielframeworks lauten, wie auf diese verwiesen wird und welche Version von [.NET Standard](net-standard.md) sie implementieren. Diese Zielframeworkversionen sind die neuesten stabilen Versionen. Vorabversionen werden nicht angezeigt. Ein TFM ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek.
 
 | Zielframework      | Latest <br/> Stabile Version | TFM | Implementiert <br/> .NET Standard-Version |
 | :-: | :-: | :-: | :-: |
@@ -69,7 +69,7 @@ Weitere Informationen zu den TFMs in .NET 5 finden Sie unter [Namen der Zielfra
 
 ## <a name="how-to-specify-a-target-framework"></a>Angeben eines Zielframeworks
 
-Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Framework angegeben wird, verwenden Sie das Element **TargetFramework**. Die folgende Projektdatei einer Konsolen-App veranschaulicht, wie Sie .NET 5.0 als Zielframework festlegen:
+Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Framework angegeben wird, verwenden Sie das Element **TargetFramework** . Die folgende Projektdatei einer Konsolen-App veranschaulicht, wie Sie .NET 5.0 als Zielframework festlegen:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,7 +82,7 @@ Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Framew
 </Project>
 ```
 
-Wenn Sie mehrere Zielframeworks angeben, können Sie bedingt auf Assemblys für jedes Zielframework verweisen. Sie können in Ihrem Code bedingt mit diesen Assemblys kompilieren, indem Sie die Präprozessorsymbole mit *wenn-dann-sonst*-Logik verwenden.
+Wenn Sie mehrere Zielframeworks angeben, können Sie bedingt auf Assemblys für jedes Zielframework verweisen. Sie können in Ihrem Code bedingt mit diesen Assemblys kompilieren, indem Sie die Präprozessorsymbole mit *wenn-dann-sonst* -Logik verwenden.
 
 Die folgende Bibliotheksprojektdatei ist auf APIs von .NET Standard (`netstandard1.4`) und des .NET Framework (`net40` und `net45`) ausgerichtet. Verwenden Sie das Element **TargetFrameworks** im Plural für mehrer Zielframeworks. Die `Condition`-Attribute enthalten implementierungsspezifische Pakete, wenn die Bibliothek für die zwei .NET Framework-TFMs kompiliert wird:
 
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");

@@ -1,19 +1,19 @@
 ---
 title: Lokale Funktionen – C#-Programmierhandbuch
 description: Lokale Funktionen in C# sind private Methoden, die in einem anderen Member geschachtelt sind und aus dem enthaltenden Member aufgerufen werden können.
-ms.date: 10/09/2020
+ms.date: 10/16/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: a2d389c8b1c687dc4885004fcdc33e0ed7ada977
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 75accda2e40443073274ece4d8964c13a0945dad
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955680"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332899"
 ---
 # <a name="local-functions-c-programming-guide"></a>Lokale Funktionen (C#-Programmierhandbuch)
 
-Ab C#-7.0 unterstützt C# *lokale Funktionen*. Lokale Funktionen sind private Methoden eines Typs, die in einem anderen Member geschachtelt sind. Sie können nur aus ihrem enthaltenden Member aufgerufen werden. Lokale Funktionen können deklariert und aufgerufen werden aus:
+Ab C#-7.0 unterstützt C# *lokale Funktionen* . Lokale Funktionen sind private Methoden eines Typs, die in einem anderen Member geschachtelt sind. Sie können nur aus ihrem enthaltenden Member aufgerufen werden. Lokale Funktionen können deklariert und aufgerufen werden aus:
 
 - Methoden, insbesondere Iteratormethoden und Async-Methoden
 - Konstruktoren
@@ -86,21 +86,39 @@ Wie beim Methodeniterator können Sie das vorherige Beispiel umgestalten und den
 
 Auf den ersten Blick sind lokale Funktionen und [Lambdaausdrücke](../../language-reference/operators/lambda-expressions.md) sehr ähnlich. In vielen Fällen ist die Entscheidung zwischen Lamdaausdrücken und lokalen Funktionen eine Frage des Formats und persönlicher Präferenz. Es gibt allerdings tatsächliche Unterschiede, wann das eine oder das andere verwendet werden kann. Diese sollten Ihnen bekannt sein.
 
-Sehen wir uns die Unterschiede zwischen der Implementierungen des Fakultätsalgorithmus als lokale Funktion und als Lambdaausdruck an. Erste die Version mit einer lokalen Funktion:
+Sehen wir uns die Unterschiede zwischen der Implementierungen des Fakultätsalgorithmus als lokale Funktion und als Lambdaausdruck an. Dies ist die Version mit einer lokalen Funktion:
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLocal" :::
 
-Vergleichen Sie diese Implementierung mit einer Version, die Lambdaausdrücke verwendet:
+Diese Version verwendet Lambdaausdrücke:
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="FactorialWithLambda" :::
 
-Lokale Funktionen haben Namen. Lamdaausdrücke sind anonyme Methoden, die Variablen zugewiesen werden, die `Func`- und `Action`-Typen sind. Wenn Sie eine lokale Funktion deklarieren, sind die Argumenttypen und der Rückgabetyp Teil der Funktionsdeklaration. Statt Teil des Texts des Lambdaausdrucks zu sein, sind die Argumentttypen und der Rückgabetyp Teil der Variablentypdeklaration des Lambdaausdrucks. Diese beiden Unterschiede können zu klarerem Code führen.
+### <a name="naming"></a>Benennung
 
-Lokale Funktionen haben andere Regeln für definitive Zuweisungen als Lambdaausdrücke. Auf eine Deklaration einer lokalen Funktion kann von jeder Stelle im Code aus, die sich innerhalb des Bereichs befindet, verwiesen werden. Ein Lambdaausdruck muss einer Delegatvariablen zugewiesen werden, bevor darauf zugegriffen werden kann (oder bevor er aufgerufen werden kann, indem der Delegat auf den Lambdaausdruck verweist). Beachten Sie, dass die Version mit Lambdaausdrücken den Lambdaausdruck `nthFactorial` deklarieren und initialisieren muss, bevor er definiert wird. Wird das nicht gemacht, führt dies zu einem Kompilierzeitfehler, weil auf `nthFactorial` verwiesen wurde, bevor es zugewiesen wurde. Diese Unterschiede bedeuten, dass rekursive Algorithmen mit lokalen Funktionen leichter erstellt werden können. Sie können eine lokale Funktion deklarieren und definieren, die sich selbst aufruft. Lambdaausdrücke müssen deklariert werden, und dann muss ihnen ein Standardwert zugewiesen werden, bevor sie erneut einem Text zugewiesen werden können, der auf den gleichen Lambdaausdruck verweist.
+Lokale Funktionen werden explizit wie Methoden benannt. Lambdaausdrücke sind anonyme Methoden und müssen Variablen eines `delegate`-Typs zugewiesen werden. In der Regel handelt es sich entweder um `Action`- oder `Func`-Typen. Die Deklaration einer lokalen Funktion erfolgt so ähnlich wie das Schreiben einer normalen Methode. Sie müssen dazu einen Rückgabetyp und eine Funktionssignatur deklarieren.
 
-Regeln für definitive Zuweisungen gelten auch für Variablen, die von der lokalen Funktion oder dem Lambdaausdruck erfasst werden. Sowohl Regeln für lokale Funktionen als auch für Lambdaausdrücke erfordern, dass alle erfassten Variablen dann definitiv zugewiesen werden, wenn die lokale Funktion oder der Lambdaausdruck in einen Delegaten konvertiert wird. Der Unterschied besteht darin, dass Lambdaausdrücke in Delegate konvertiert werden, wenn sie deklariert werden. Lokale Funktionen werden nur dann in Delegate konvertiert, wenn sie als Delegate verwendet werden. Wenn Sie eine lokale Funktion deklarieren und nur darauf verweisen, indem Sie sie wie eine Methode aufrufen, wird sie nicht in einen Delegaten konvertiert. Durch diese Regel können Sie eine lokale Funktion an jeder passenden Stelle in ihrem einschließenden Bereich deklarieren. Es ist üblich, lokale Funktionen am Ende der übergeordneten Methode hinter allen Rückgabeanweisungen zu deklarieren.
+### <a name="function-signatures-and-lambda-expression-types"></a>Funktionssignaturen und Typen für Lambdaausdrücke
 
-Zudem kann der Compiler statische Analysen durchführen, mit denen lokale Funktionen erfasste Variablen im einschließenden Bereich definitiv zuweisen können. Betrachten Sie das folgende Beispiel:
+Beim Bestimmen der Argument- und Rückgabetypen sind Lambdaausdrücke auf den Typ der `Action`/`Func`-Variablen angewiesen, der sie zugewiesen werden. Da die Syntax in lokalen Funktionen stark einer normalen Methode ähnelt, sind die Argumenttypen und der Rückgabetyp bereits Teil der Funktionsdeklaration.
+
+### <a name="definite-assignment"></a>Definite assignment (Festgelegte Zuweisung)
+
+Lambdaausdrücke sind Objekte, die zur Laufzeit deklariert und zugewiesen werden. Damit ein Lambdaausdruck verwendet werden kann, muss er definitiv zugewiesen werden: die `Action`/`Func`-Variable, der er zugewiesen wird, muss deklariert werden. Anschließend muss der Lambdaausdruck der Variablen zugewiesen werden. Beachten Sie, dass `LambdaFactorial` den Lambdaausdruck `nthFactorial` deklarieren und initialisieren muss, bevor dieser definiert wird. Wird das nicht gemacht, führt dies zu einem Kompilierzeitfehler, weil auf `nthFactorial` verwiesen wurde, bevor es zugewiesen wurde.
+
+Lokale Funktionen werden zur Kompilierzeit definiert. Da sie keinen Variablen zugewiesen werden, kann an jeder Stelle im Code **innerhalb des Gültigkeitsbereichs der Funktion** darauf verwiesen werden. Im ersten Beispiel `LocalFunctionFactorial` konnten Sie die lokale Funktion entweder oberhalb oder unterhalb der `return`-Anweisung deklarieren, ohne Compilerfehler auszulösen.
+
+Diese Unterschiede bedeuten, dass rekursive Algorithmen mit lokalen Funktionen leichter erstellt werden können. Sie können eine lokale Funktion deklarieren und definieren, die sich selbst aufruft. Lambdaausdrücke müssen deklariert werden, und dann muss ihnen ein Standardwert zugewiesen werden, bevor sie erneut einem Text zugewiesen werden können, der auf den gleichen Lambdaausdruck verweist.
+
+### <a name="implementation-as-a-delegate"></a>Implementierung als Delegat
+
+Lambdaausdrücke werden bei der Deklaration in Delegate konvertiert. Lokale Funktionen sind flexibler, da sie wie eine herkömmliche Methode *oder* als Delegat geschrieben werden können. Lokale Funktionen werden nur dann in Delegate konvertiert, wenn sie als Delegate ***verwendet*** werden.
+
+Wenn Sie eine lokale Funktion deklarieren und nur darauf verweisen, indem Sie sie wie eine Methode aufrufen, wird sie nicht in einen Delegaten konvertiert.
+
+### <a name="variable-capture"></a>Erfassung von Variablen
+
+Die Regeln für [definitive Zuweisungen](../../../../_csharplang/spec/variables.md#definite-assignment) gelten auch für alle Variablen, die von der lokalen Funktion oder dem Lambdaausdruck erfasst werden. Zudem kann der Compiler statische Analysen durchführen, mit denen lokale Funktionen erfasste Variablen im einschließenden Gültigkeitsbereich definitiv zuweisen können. Betrachten Sie das folgende Beispiel:
 
 ```csharp
 int M()
@@ -115,7 +133,11 @@ int M()
 
 Der Compiler kann festlegen, dass `LocalFunction``y` bei Aufruf definitiv zuweist. Da `LocalFunction` vor der `return`-Anweisung aufgerufen wird, wird `y` definitiv bei der `return`-Anweisung zugewiesen.
 
-Die Analyse, die diese Beispielanalyse ermöglicht, ist der vierte Unterschied. Je nach Verwendung können lokale Funktionen Heapzuweisungen vermeiden, die immer für Lambdaausdrücke erforderlich sind. Wenn eine lokale Funktion nie in einen Delegaten konvertiert wird und keine der von der lokalen Funktion erfassten Variablen von anderen Lambdaausdrücken oder lokalen Funktionen erfasst wird, die in Delegate konvertiert werden, kann der Compiler Heapzuweisungen vermeiden.
+Beachten Sie, dass die lokale Funktion als Delegattyp implementiert wird, wenn diese lokale Funktion Variablen im einschließenden Gültigkeitsbereich erfasst.
+
+### <a name="heap-allocations"></a>Heapzuweisungen
+
+Je nach Verwendung können lokale Funktionen Heapzuweisungen vermeiden, die immer für Lambdaausdrücke erforderlich sind. Wenn eine lokale Funktion nie in einen Delegaten konvertiert wird und keine der von der lokalen Funktion erfassten Variablen von anderen Lambdaausdrücken oder lokalen Funktionen, die in Delegate konvertiert werden, erfasst wird, kann der Compiler Heapzuweisungen vermeiden.
 
 Betrachten Sie das folgende asynchrone Beispiel:
 
@@ -125,12 +147,20 @@ Der Abschluss dieses Lambdaausdrucks enthält die Variablen `address`, `index` u
 
 Die für Lambdaausdrücke erforderliche Instanziierung bedeutet zusätzliche Speicherbelegung, was ein Leistungsfaktor in zeitkritischen Codepfaden sein kann. Lokale Funktionen erfordern diesen Mehraufwand nicht. Im obigen Beispiel hat die Version mit der lokalen Funktion zwei Zuordnungen weniger als die Version mit dem Lambdaausdruck.
 
+Wenn Sie wissen, dass Ihre lokale Funktion nicht in einen Delegaten konvertiert wird und dass keine der von ihr erfassten Variablen auch von anderen Lambdaausdrücken oder lokalen Funktionen, die in Delegate konvertiert werden, erfasst wird, können Sie durch Deklarieren der lokalen Funktion als statisch (`static`) verhindern, dass Ihre lokale Funktion im Heap zugewiesen wird. Beachten Sie, dass dieses Feature in C# 8.0 und höher verfügbar ist.
+
 > [!NOTE]
 > Die Entsprechung dieser Methode mit der lokalen Funktion verwendet auch eine Klasse für den Abschluss. Ob der Abschluss für eine lokale Funktion als `class` oder `struct` implementiert wird, ist ein Implementierungsdetail. Eine lokale Funktion verwendet möglicherweise `struct`, während ein Lambdaausdruck immer `class` nutzt.
 
 :::code language="csharp" source="snippets/local-functions/Program.cs" id="AsyncWithLocal" :::
 
-Eine letzter Vorteil, der in diesem Beispiel zu kurz gekommen ist, besteht darin, dass lokale Funktionen mithilfe der `yield return`-Syntax als Iteratoren implementiert werden können, um eine Sequenz von Werten zu erzeugen. Die `yield return`-Anweisung ist in Lambdaausdrücken unzulässig.
+### <a name="usage-of-the-yield-keyword"></a>Verwendung des Schlüsselworts `yield`
+
+Eine letzter Vorteil, der in diesem Beispiel zu kurz gekommen ist, besteht darin, dass lokale Funktionen mithilfe der `yield return`-Syntax als Iteratoren implementiert werden können, um eine Sequenz von Werten zu erzeugen.
+
+:::code language="csharp" source="snippets/local-functions/Program.cs" id="YieldReturn" :::
+
+Die `yield return`-Anweisung ist in Lambdaausdrücken unzulässig. Weitere Informationen finden Sie unter [Compilerfehler CS1621](../../misc/cs1621.md).
 
 Während lokale Funktionen für Lambdaausdrücke als überflüssig erscheinen, dienen sie tatsächlich anderen Zwecken und haben unterschiedliche Verwendungen. Lokale Funktionen sind effizienter, im Fall dass Sie eine Funktion schreiben möchten, die nur aus dem Kontext einer anderen Methode abgerufen wird.
 

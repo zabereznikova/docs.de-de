@@ -3,12 +3,12 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050343"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224400"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -50,13 +50,13 @@ Siehe [ASP.NET Core-Dokumentation](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>Assembly
 
-Eine *DLL*/*EXE*-Datei, die eine Sammlung von APIs enthalten kann, die von Anwendungen oder anderen Assemblys aufgerufen werden können.
+Eine *DLL*/*EXE* -Datei, die eine Sammlung von APIs enthalten kann, die von Anwendungen oder anderen Assemblys aufgerufen werden können.
 
 Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten enthalten. Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
 
 ## <a name="bcl"></a>BCL
 
-Basisklassenbibliothek Auch bekannt als *Frameworkbibliotheken*.
+Basisklassenbibliothek Auch bekannt als *Frameworkbibliotheken* .
 
 Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschränktem Umfang Microsoft.\*) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren.
 
@@ -98,7 +98,7 @@ Jede Laufzeitsoftware und alle Entwicklungstools und Communityressourcen, die zu
 
 Der Begriff „.NET-Umgebung“ unterscheidet sich von ähnlichen Begriffen wie „.NET-Stapel“ durch seine Einbindung von Apps und Bibliotheken, die von Drittanbietern stammen. Hier ein Beispiel in einem Satz:
 
-- „Die Motivation hinter [.NET Standard](#net-standard) ist das Herstellen einer umfassenderen Einheitlichkeit in der .NET-Umgebung.“
+- „Das Ziel von [.NET Standard](#net-standard) ist mehr Einheitlichkeit im .NET-Ökosystem.“
 
 ## <a name="framework"></a>Framework
 
@@ -138,7 +138,7 @@ Just-In-Time-Compiler
 Eine Implementierung von .NET umfasst:
 
 - Mindestens eine Runtime. Beispiele: [CLR](#clr) und [CoreRT](#corert).
-- Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: Die [Basisklassenbibliotheken](#bcl) für [.NET Framework](#net-framework) und [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
+- Eine Klassenbibliothek, die eine Version von .NET Standard implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: Die [Basisklassenbibliotheken](#bcl) für [.NET Framework](#net-framework) und [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
 - Optional mindestens ein Anwendungsframework. Beispiele: [ASP.NET](#aspnet), Windows Forms und WPF sind in .NET Framework und .NET 5 enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
@@ -213,7 +213,7 @@ Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](
 
 Hierbei handelt es sich um eine Reihe von Bibliotheken und Tools, mit denen Entwickler .NET-Anwendungen und Bibliotheken für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions) erstellen können. Dies wird auch als .NET Core SDK bezeichnet.
 
-Darin enthalten sind die [.NET-CLI](#net-cli) zum Erstellen von Apps, die .NET-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei (*dotnet.exe*), durch die CLI-Befehle und Anwendungen ausgeführt werden.
+Darin enthalten sind die [.NET-CLI](#net-cli) zum Erstellen von Apps, die .NET-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei ( *dotnet.exe* ), durch die CLI-Befehle und Anwendungen ausgeführt werden.
 
 Weitere Informationen finden Sie in der [Übersicht über .NET SDK](../core/sdk.md).
 
@@ -233,9 +233,9 @@ Sie können sich diese Technologie als einen persistenten [JIT](#jit)-Compiler v
 
 ## <a name="package"></a>package
 
-Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP*-Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
+Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP* -Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
 
-Die *ZIP*-Datei besitzt eine *NUPKG*-Erweiterung und eventuell Ressourcen, z.B. *DLL*- und *XML*-Dateien, für die Verwendung mit mehreren Zielframeworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref*, und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib*.
+Die *ZIP* -Datei besitzt eine *NUPKG* -Erweiterung und eventuell Ressourcen, z.B. *DLL* - und *XML* -Dateien, für die Verwendung mit mehreren Zielframeworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref* , und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib* .
 
 ## <a name="platform"></a>platform
 
@@ -244,7 +244,7 @@ Ein Betriebssystem (z.B. Windows, macOS, Linux, iOS und Android) und die Hardwar
 Hier sind Beispiele für die Verwendung in Sätzen:
 
 - „.NET Core ist eine plattformübergreifende Implementierung von .NET.“
-- „PCL-Profile stehen für Microsoft-Plattformen, während .NET Standard plattformunabhängig ist.“
+- „PCL-Profile stehen für Microsoft-Plattformen, während .NET Standard plattformagnostisch ist.“
 
 In der Legacydokumentation zu .NET wird manchmal der Begriff „.NET-Plattform“ für eine [Implementierung von .NET](#implementation-of-net) oder den [.NET-Stapel](#stack), einschließlich aller Implementierungen, verwendet. Beide dieser Verwendungsmöglichkeiten werden häufig mit der primären Bedeutung (Betriebssystem/Hardware) verwechselt. Daher werden diese Verwendungen nach Möglichkeit vermieden.
 
@@ -278,7 +278,7 @@ In der Legacydokumentation zu .NET bezieht sich „Runtime“ manchmal auf eine 
 
 Eine Reihe von Programmiertechnologien, die zusammen verwendet werden, um Anwendungen zu erstellen und auszuführen.
 
-„Der .NET-Stapel“ bezieht sich auf .NET Standard und alle .NET-Implementierungen. Der Ausdruck „ein .NET-Stapel“ bezieht sich auf eine Implementierung von .NET.
+Mit dem „.NET-Stapel“ sind .NET Standard und alle .NET-Implementierungen gemeint. Der Ausdruck „ein .NET-Stapel“ bezieht sich auf eine Implementierung von .NET.
 
 ## <a name="target-framework"></a>Zielframework
 
@@ -306,7 +306,7 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 
 ## <a name="workload"></a>workload
 
-Hierbei handelt es sich um einen App-Typen, der erstellt wird. Eine Workload ist allgemeiner als ein [App-Modell](#app-model). Oben auf jeder Seite der .NET-Dokumentation, einschließlich dieser, finden Sie beispielsweise eine Dropdownliste für **Workloads**, in der Sie die Dokumentation entsprechend der Optionen **Web**, **Mobil**, **Cloud**, **Desktop** und **Machine Learning und Daten** wechseln können.
+Hierbei handelt es sich um einen App-Typen, der erstellt wird. Eine Workload ist allgemeiner als ein [App-Modell](#app-model). Oben auf jeder Seite der .NET-Dokumentation, einschließlich dieser, finden Sie beispielsweise eine Dropdownliste für **Workloads** , in der Sie die Dokumentation entsprechend der Optionen **Web** , **Mobil** , **Cloud** , **Desktop** und **Machine Learning und Daten** wechseln können.
 
 In manchen Kontexten bezieht sich *Workload* auf eine Featuresammlung in Visual Studio, die Sie installieren können, um einen bestimmten App-Typen zu unterstützen. Ein Beispiel hierfür finden Sie unter [Auswählen einer Workload](../core/install/windows.md#select-a-workload).
 

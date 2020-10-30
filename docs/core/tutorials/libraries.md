@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Biblioth
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396202"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223704"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
 
@@ -30,10 +30,10 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 | 4.5.2                  | .NET Framework 4.5.2 Entwicklerpaket                    |
 | 4.5.1                  | .NET Framework 4.5.1 Entwicklerpaket                    |
 | 4.5                    | Windows Software Development Kit für Windows 8         |
-| 4.0                    | Windows SDK für Windows 7 und .NET Framework 4         |
+| 4,0                    | Windows SDK für Windows 7 und .NET Framework 4         |
 | 2.0, 3.0 und 3.5      | .NET Framework 3.5 SP1-Runtime (oder Windows 8+-Version) |
 
-## <a name="how-to-target-the-net-standard"></a>So legen Sie .NET Standard als Ziel fest
+## <a name="how-to-target-net-standard"></a>Verwenden von .NET Standard als Ziel
 
 Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [.NET-Standard](../../standard/net-standard.md) weitere Informationen.
 
@@ -77,7 +77,7 @@ Wenn Sie so viele Entwickler und Projekte erreichen möchten wie möglich, verwe
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
 | .NET Framework 3.5     | `net35`  |
-| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.0     | `net40`  |
 | .NET Framework 4.5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
@@ -97,7 +97,7 @@ Sie fügen anschließend TFM in den `TargetFramework`-Abschnitt Ihrer Projektdat
 </Project>
 ```
 
-Das ist schon alles! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, können Sie die Bibliothek für neueren Versionen von .NET Framework verwenden.
+Das war’s! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, können Sie die Bibliothek für neueren Versionen von .NET Framework verwenden.
 
 ## <a name="how-to-multitarget"></a>Vorgehensweise: Festlegen mehrerer Ziele
 
@@ -258,7 +258,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
-Das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools plattformübergreifend testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
+Das war’s! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools plattformübergreifend testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
 1. Führen Sie mit dem Befehl `dotnet test` in Ihrem Testverzeichnis Tests über die Befehlszeile aus.

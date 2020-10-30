@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495472"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526609"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -143,7 +143,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 - **`--type <TYPE>`**
 
-  Filtert Vorlagen auf Grundlage verfügbarer Typen. Die Werte `project`, `item` und `other` sind vordefiniert.
+  Filtert Vorlagen auf Grundlage verfügbarer Typen. Bei `project` und `item` handelt es sich um vordefinierte Werte.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -152,7 +152,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
   Wenn Sie für diese Option keinen Parameter angeben, listet der Befehl die installierten Vorlagen und Details dazu auf.
 
   > [!NOTE]
-  > Um eine Vorlage durch einen `PATH` zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, jedoch nicht *./GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
+  > Um eine Vorlage durch einen `PATH` zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* , jedoch nicht *./GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
   > Schließen Sie keinen letzten abschließenden Schrägstrich in den Vorlagenpfad Ihres Verzeichnisses ein.
 
 - **`--update-apply`**
@@ -190,11 +190,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Falls angegeben, erfolgt während der Projekterstellung keine implizite Wiederherstellung. Verfügbar ab .NET Core 2.2 SDK.
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Gibt das [Zielframework](../../standard/frameworks.md) an. Werte: `netcoreapp<version>`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard<version>`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert ist `netstandard2.0`.
 
@@ -208,11 +208,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK.
 
@@ -226,11 +226,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _ *`--langVersion <VERSION_NUMBER>`**
 
   Legt in der erstellten Projektdatei die `LangVersion`-Eigenschaft fest. Verwenden Sie beispielsweise `--langVersion 7.3` für C# 7.3.
 
@@ -240,11 +240,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK.
 
@@ -256,11 +256,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Gibt das [Zielframework](../../standard/frameworks.md) an. Die Option ist ab .NET Core 3.0 SDK verfügbar.
 
@@ -279,11 +279,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="nunit"></a>nunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Gibt das [Zielframework](../../standard/frameworks.md) an.
 
@@ -304,11 +304,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="page"></a>Seite (page)
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   Namespace für den generierten Code. Der Standardwert ist `MyApp.Namespace`.
 
@@ -316,19 +316,19 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Erstellt die Seite ohne PageModel.
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   Namespace für den generierten Code. Der Standardwert ist `MyApp.Namespace`.
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
@@ -395,11 +395,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
-### <a name="web"></a>Web
+### <a name="web"></a>Web-
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   Schließt *launchSettings.json* aus der generierten Vorlage aus.
 
@@ -423,11 +423,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Deaktiviert HTTPS.
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
@@ -513,11 +513,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Bestimmt, ob das Projekt zur Verwendung der [Razor-Runtimekompilierung](/aspnet/core/mvc/views/view-compilation#runtime-compilation) in Debugbuilds konfiguriert ist. Die Option ist ab .NET Core SDK 3.1.201 verfügbar.
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> angular, react
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Der zu verwendende Authentifizierungstyp. Verfügbar seit .NET Core 3.0 SDK.
   
@@ -554,11 +554,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   Schließt *launchSettings.json* aus der generierten Vorlage aus.
 
@@ -582,11 +582,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Deaktiviert HTTPS.
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _ *`--no-restore`**
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
@@ -594,11 +594,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Unterstützt das Hinzufügen von herkömmlichen Razor-Seiten und -Ansichten sowie von Komponenten zu dieser Bibliothek. Verfügbar seit .NET Core 3.0 SDK.
 
-***
+**_
   
 ### <a name="webapi"></a>Web-API
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
 
@@ -663,11 +663,11 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _ *`--sdk-version <VERSION_NUMBER>`**
 
   Gibt die .NET Core SDK-Version an, die in der Datei *global.json* verwendet werden soll.
 
@@ -735,7 +735,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
   dotnet new -u
   ```
 
-- Erstellen Sie im aktuellen Verzeichnis die Datei *global.json*, und legen Sie die SDK-Version auf 3.1.101 fest:
+- Erstellen Sie im aktuellen Verzeichnis die Datei *global.json* , und legen Sie die SDK-Version auf 3.1.101 fest:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

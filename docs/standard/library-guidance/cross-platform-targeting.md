@@ -2,12 +2,12 @@
 title: Plattformübergreifende Ziele für .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Erstellen von plattformübergreifenden .NET Bibliotheken.
 ms.date: 08/12/2019
-ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731457"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223345"
 ---
 # <a name="cross-platform-targeting"></a>Plattformübergreifende Ziele
 
@@ -15,7 +15,7 @@ Modernes .NET unterstützt mehrere Betriebssysteme und Geräte. Es ist wichtig, 
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard ist die beste Möglichkeit, plattformübergreifenden Support zu einer .NET-Bibliothek hinzuzufügen. [.NET Standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sind. Mit dem Targeting von .NET Standard können Sie Bibliotheken erstellen, die nur APIs verwenden dürfen, die sich in einer bestimmten Version von .NET Standard befinden. Das bedeutet, dass es von allen Plattformen verwendet werden kann, die diese Version von .NET Standard implementieren.
+.NET Standard ist die beste Möglichkeit, plattformübergreifenden Support zu einer .NET-Bibliothek hinzuzufügen. [.NET Standard](../net-standard.md) ist eine Spezifikation von .NET-APIs, die für alle .NET-Implementierungen verfügbar sind. Wenn Sie Software für .NET Standard entwickeln, können Sie Bibliotheken erstellen, die nur APIs aus einer bestimmten Version von .NET Standard verwenden. Dies bedeutet, dass die Bibliotheken von allen Plattformen verwendet werden können, die diese Version von .NET Standard implementieren.
 
 ![.NET-Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 

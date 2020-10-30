@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955166"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526584"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -34,7 +34,7 @@ C# 9.0 wird in **.NET 5** unterstützt. Weitere Informationen finden Sie unter
 
 ## <a name="record-types"></a>Eintragstypen
 
-In C# 9.0 werden ***Datensatztypen*** eingeführt. Hierbei handelt es sich um einen Verweistyp, der synthetisierte Methoden bereitstellt, die mithilfe von Wertsemantik Gleichheitsbeziehungen herstellen. Datensätze sind immer unveränderbar.
+In C# 9.0 werden * *_Datensatztypen_* _ eingeführt. Hierbei handelt es sich um einen Verweistyp, der synthetisierte Methoden bereitstellt, die mithilfe von Wertsemantik Gleichheitsbeziehungen herstellen. Datensätze sind immer unveränderbar.
 
 Sie vereinfachen die Erstellung von unveränderbaren Verweistypen in .NET. In der Vergangenheit wurden .NET-Typen größtenteils als Verweistypen (einschließlich Klassen und anonyme Typen) und Werttypen (einschließlich Strukturen und Tupeln) klassifiziert. Obwohl unveränderbare Werttypen empfohlen werden, führen veränderbare Werttypen nur selten zu Fehlern. Werttypvariablen speichern Werte, sodass Änderungen an einer Kopie der ursprünglichen Daten vorgenommen werden, wenn Werttypen an Methoden übergeben werden.
 
@@ -86,7 +86,7 @@ Der Compiler synthetisiert zwei Methoden, die eine Druck- oder Bildschirmausgabe
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-In den bisher gezeigten Beispielen wird eine herkömmliche Syntax für die Deklaration von Eigenschaften verwendet. Es gibt eine prägnantere Lösung namens ***positionelle Datensätze***.  Nachstehend finden Sie die drei Datensatztypen, die zuvor als positionelle Datensätze definiert wurden:
+In den bisher gezeigten Beispielen wird eine herkömmliche Syntax für die Deklaration von Eigenschaften verwendet. Es gibt eine prägnantere Lösung namens _*_positionelle Datensätze_*_ .  Nachstehend finden Sie die drei Datensatztypen, die zuvor als positionelle Datensätze definiert wurden:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ Der Compiler erstellt eine `Deconstruct`-Methode für positionelle Datensätze. 
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Datensätze unterstützen auch ***with-Ausdrücke***. Ein ***with-Ausdruck*** weist den Compiler an, eine Kopie eines Datensatzes *mit* (engl.: „with“) bestimmten geänderten Eigenschaften zu erstellen:
+Datensätze unterstützen auch _*_with-Ausdrücke_*_ . Ein _*_with-Ausdruck_*_ weist den Compiler an, eine Kopie eines Datensatzes _mit* (engl.: „with“) bestimmten geänderten Eigenschaften zu erstellen:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -106,9 +106,9 @@ In der obigen Zeile wird ein neuer `Person`-Datensatz erstellt, bei dem die `Las
 
 ## <a name="init-only-setters"></a>init-only-Setter
 
-***Nur-init-Setter*** bieten eine konsistente Syntax zum Initialisieren von Objektmembern. Eigenschafteninitialisierer verdeutlichen, welcher Wert welche Eigenschaft festlegt. Der Nachteil ist, dass diese Eigenschaften festlegbar sein müssen. Ab C# 9.0 können Sie `init`-Zugriffsmethoden anstelle von `set`-Zugriffsmethoden für Eigenschaften und Indexer erstellen. Aufrufer können diese Werte mithilfe der Syntax von Eigenschafteninitialisierern in Erstellungsausdrücken festlegen. Diese Eigenschaften sind jedoch nach Abschluss der Erstellung schreibgeschützt. Nur-init-Setter bieten Ihnen die Möglichkeit, den Zustand innerhalb eines bestimmten Zeitfensters zu ändern. Dieses Zeitfenster schließt sich nach Abschluss der Konstruktionsphase. Die Konstruktionsphase endet effektiv, nachdem die gesamte Initialisierung, einschließlich aller Eigenschafteninitialisierer und with-Ausdrücke, abgeschlossen wurde.
+***Nur-init-Setter** _ bieten eine konsistente Syntax zum Initialisieren von Objektmembern. Eigenschafteninitialisierer verdeutlichen, welcher Wert welche Eigenschaft festlegt. Der Nachteil ist, dass diese Eigenschaften festlegbar sein müssen. Ab C# 9.0 können Sie `init`-Zugriffsmethoden anstelle von `set`-Zugriffsmethoden für Eigenschaften und Indexer erstellen. Aufrufer können diese Werte mithilfe der Syntax von Eigenschafteninitialisierern in Erstellungsausdrücken festlegen. Diese Eigenschaften sind jedoch nach Abschluss der Erstellung schreibgeschützt. Nur-init-Setter bieten Ihnen die Möglichkeit, den Zustand innerhalb eines bestimmten Zeitfensters zu ändern. Dieses Zeitfenster schließt sich nach Abschluss der Konstruktionsphase. Die Konstruktionsphase endet effektiv, nachdem die gesamte Initialisierung, einschließlich aller Eigenschafteninitialisierer und with-Ausdrücke, abgeschlossen wurde.
 
-Im vorherigen Beispiel für positionelle Datensätze wurde veranschaulicht, wie eine Eigenschaft mithilfe eines Nur-init-Setters in einem with-Ausdruck festgelegt wird. Sie können Nur-init-Setter in einem jedem Typ deklarieren, den Sie schreiben. Die folgende Struktur definiert z. B. eine Struktur zur Wetterbeobachtung:
+Sie können Nur-`init`-Setter in einem jedem Typ deklarieren, den Sie schreiben. Die folgende Struktur definiert z. B. eine Struktur zur Wetterbeobachtung:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="DeclareWeatherObservation":::
 
@@ -127,7 +127,7 @@ Nur-init-Setter können nützlich sein, um Basisklasseneigenschaften von abgelei
 
 ## <a name="top-level-statements"></a>Top-Level-Anweisungen
 
-Mithilfe von ***allgemeinen Anweisungen*** lässt sich der Code in vielen Anwendungen stark verkürzen. Dies ist das kanonische Hallo-Welt-Programm („Hello World“):
+Mithilfe von _*_allgemeinen Anweisungen_*_ lässt sich der Code in vielen Anwendungen stark verkürzen. Dies ist das kanonische Hallo-Welt-Programm („Hello World“):
 
 ```csharp
 using System;
@@ -164,12 +164,12 @@ Vor allem schränken allgemeine Anweisungen weder den Umfang noch die Komplexit�
 
 C# 9 enthält neue Verbesserungen am Musterabgleich:
 
-- ***Typmuster*** gleichen eine Variable mit einem Typ ab.
-- ***In Klammern gesetzte Muster*** erzwingen den Vorrang von Musterkombinationen oder heben diesen hervor.
-- In ***konjunktiven `and`-Mustern*** müssen beide Muster übereinstimmen.
-- In ***disjunktiven `or`-Mustern*** muss eines von beiden Mustern übereinstimmen.
-- In ***negierten `not`-Mustern*** darf ein Muster nicht übereinstimmen.
-- In ***relationalen Mustern*** muss die Eingabe kleiner als, größer als, kleiner gleich oder größer gleich einer angegebenen Konstante sein.
+- _*_Typmuster_*_ gleichen eine Variable mit einem Typ ab.
+- _*_In Klammern gesetzte Muster_*_ erzwingen den Vorrang von Musterkombinationen oder heben diesen hervor.
+- In _*_konjunktiven `and`-Mustern_*_ müssen beide Muster übereinstimmen.
+- In _*_disjunktiven `or`-Mustern_*_ muss eines von beiden Mustern übereinstimmen.
+- In _*_negierten `not`-Mustern_*_ darf ein Muster nicht übereinstimmen.
+- In _*_relationalen Mustern_*_ muss die Eingabe kleiner als, größer als, kleiner gleich oder größer gleich einer angegebenen Konstante sein.
 
 Diese Muster erweitern die Mustersyntax. Sehen Sie sich die folgenden Beispiele an:
 
@@ -196,7 +196,7 @@ Diese drei neuen Features verbessern die Unterstützung für die native Interop 
 
 Ganze Zahlen mit nativer Größe, `nint` und `nuint`, sind ganzzahlige Typen. Sie werden durch die zugrunde liegenden Typen <xref:System.IntPtr?displayProperty=nameWithType> und <xref:System.UIntPtr?displayProperty=nameWithType> ausgedrückt. Der Compiler gibt zusätzliche Konvertierungen und Vorgänge für diese Typen als native ganze Zahlen aus. Integer mit nativer Größe definieren die Eigenschaften für `MaxValue` oder `MinValue`. Diese Werte können nicht als Kompilierzeitkonstanten ausgedrückt werden, da sie von der nativen Größe einer ganzen Zahl auf dem Zielcomputer abhängen. Diese Werte sind zur Laufzeit schreibgeschützt. Konstantenwerte können für `nint` in folgendem Bereich verwendet werden: [`int.MinValue` ... `int.MaxValue`]. Konstantenwerte können für `nuint` in folgendem Bereich verwendet werden: [`uint.MinValue` ... `uint.MaxValue`]. Der Compiler führt eine konstante Faltung aller unären und binären Operatoren mithilfe der Typen <xref:System.Int32?displayProperty=nameWithType> und <xref:System.UInt32?displayProperty=nameWithType> durch. Wenn das Ergebnis nicht in 32 Bit passt, wird der Vorgang zur Laufzeit ausgeführt und nicht als Konstante angesehen. Ganze Zahlen mit nativer Größe können die Leistung in Szenarios steigern, in denen ganzzahlige Mathematik intensiv angewendet und die schnellstmögliche Leistung benötigt wird.
 
-Funktionszeiger bieten eine einfache Syntax für den Zugriff auf die IL-Opcodes `ldftn` und `calli`. Sie können Funktionszeiger mithilfe der neuen `delegate*`-Syntax deklarieren. Ein `delegate*`-Typ ist ein Typ von Zeiger. Bei einem Aufruf des `delegate*`-Typs wird `calli` verwendet. Dies ist ein Unterschied zu einem Delegaten, der `callvirt` für die `Invoke()`-Methode verwendet. Syntaktisch sind die Aufrufe identisch. Bei Aufrufen von Funktionszeigern wird die `managed`-Aufrufkonvention verwendet. Wenn Sie deklarieren möchten, dass Sie die `unmanaged`-Aufrufkonvention benötigen, müssen Sie nach der `delegate*`-Syntax das Schlüsselwort `unmanaged` einfügen. Andere Aufrufkonventionen können mithilfe von Attributen in der `delegate*`-Deklaration angegeben werden.
+Funktionszeiger bieten eine einfache Syntax für den Zugriff auf die IL-Opcodes `ldftn` und `calli`. Sie können Funktionszeiger mithilfe der neuen `delegate_`-Syntax deklarieren. Ein `delegate*`-Typ ist ein Typ von Zeiger. Bei einem Aufruf des `delegate*`-Typs wird `calli` verwendet. Dies ist ein Unterschied zu einem Delegaten, der `callvirt` für die `Invoke()`-Methode verwendet. Syntaktisch sind die Aufrufe identisch. Bei Aufrufen von Funktionszeigern wird die `managed`-Aufrufkonvention verwendet. Wenn Sie deklarieren möchten, dass Sie die `unmanaged`-Aufrufkonvention benötigen, müssen Sie nach der `delegate*`-Syntax das Schlüsselwort `unmanaged` einfügen. Andere Aufrufkonventionen können mithilfe von Attributen in der `delegate*`-Deklaration angegeben werden.
 
 Schließlich können Sie <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> hinzufügen, um den Compiler anzuweisen, das `localsinit`-Flag nicht auszugeben. Dieses Flag weist die Common Language Runtime an, alle lokalen Variablen mit 0 (Null) zu initialisieren. Das `localsinit`-Flag ist das Standardverhalten von C# seit Version 1.0. Die zusätzliche Nullinitialisierung kann jedoch in einigen Szenarios zu nachweisbaren Leistungseinbußen führen, insbesondere wenn Sie `stackalloc` verwenden. In diesen Fällen können Sie <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute> hinzufügen. Sie können die Klasse einer einzelnen Methode oder Eigenschaft, zu `class`/`struct`/`interface` oder sogar zu einem Modul hinzufügen. Dieses Attribut hat keine Auswirkung auf `abstract`-Methoden. Es beeinflusst den für die Implementierung generierten Code.
 
@@ -226,7 +226,7 @@ Ein ähnliches Feature verbessert die Zieltypauflösung von [bedingten Ausdrück
 
 Ab C# 9.0 können Sie [Lambdaausdrücken](../language-reference/operators/lambda-expressions.md) oder [anonymen Methoden](../language-reference/operators/delegate-operator.md) den Modifizierer `static` hinzufügen. Statische Lambdaausdrücke entsprechen den lokalen `static`-Funktionen: Eine statische Lambdafunktion oder anonyme Methode kann weder lokale Variablen noch den Instanzzustand erfassen. Der Modifizierer `static` verhindert, dass versehentlich andere Variablen erfasst werden.
 
-Kovariante Rückgabetypen flexibilisieren die Rückgabetypen von überschriebenen Funktionen. Eine überschriebene virtuelle Funktion kann einen Typ zurückgeben, der von dem in der Basisklassenmethode deklarierten Rückgabetyp abgeleitet wird. Dies kann nicht nur für Datensätze nützlich sein, sondern auch für andere Typen, die virtuelle Klon- oder Factorymethoden unterstützen.
+Kovariante Rückgabetypen flexibilisieren die Rückgabetypen von [override](../language-reference/keywords/override.md)-Methoden. Eine override-Methode kann einen Typ zurückgeben, der vom Rückgabetyp der überschriebenen Basismethode abgeleitet wurde. Dies kann sowohl für Datensätze als auch für andere Typen nützlich sein, die virtuelle Klon- oder Factorymethoden unterstützen.
 
 Außerdem erkennen und verwenden [`foreach`-Schleifen](../language-reference/keywords/foreach-in.md) eine `GetEnumerator`-Erweiterungsmethode, die ansonsten das `foreach`-Muster erfüllt. Diese Änderung bedeutet, dass `foreach` mit anderen musterbasierten Konstruktionen, z. B. mit dem async-Muster, sowie der musterbasierten Dekonstruktion konsistent ist. In der Praxis bedeutet diese Änderung, dass Sie jedem Typ `foreach`-Unterstützung hinzufügen können. Sie sollten die Verwendung von „foreach“ jedoch auf die Fälle beschränken, in denen die Enumeration eines Objekts in Ihrem Softwareentwurf sinnvoll ist.
 
@@ -240,9 +240,9 @@ Die beiden letzten Features dienen der Unterstützung von C#-Code-Generatoren. C
 
 Ein Code-Generator liest Attribute oder andere Codeelemente mithilfe der Roslyn-Analyse-APIs. Auf Grundlage dieser Informationen fügt er der Kompilierung neuen Code hinzu. Quell-Generatoren können nur Code hinzufügen. Sie sind nicht berechtigt, vorhandenen Code während der Kompilierung zu ändern.
 
-Bei den beiden Features für Code-Generatoren sind handelt es sich um Erweiterungen für die ***partielle Methodensyntax*** und für ***Modulinitialisierer***. Zuerst zu den Änderungen an partiellen Methoden: Vor C# 9.0 waren partielle Methoden privat (`private`) und konnten weder einen Zugriffsmodifizierer angeben noch über eine leere Rückgabe (`void`) oder `out`-Parameter verfügen. Diese Einschränkungen führten dazu, dass der Compiler alle Aufrufe von partiellen Methoden entfernte, wenn keine Methodenimplementierung bereitgestellt wurde. In C# 9.0 werden diese Einschränkungen behoben. Deklarationen von partiellen Methoden müssen jetzt jedoch implementiert werden. Code-Generatoren können diese Implementierung bereitstellen. Damit kein Breaking Change eingeführt wird, befolgt der Compiler bei jeder partiellen Methode, die keinen Zugriffsmodifizierer aufweist, die alten Regeln. Wenn die partielle Methode den Zugriffsmodifizierer `private` enthält, unterliegt die partielle Methode den neuen Regeln.
+Bei den beiden Features für Code-Generatoren sind handelt es sich um Erweiterungen für die * **partielle Methodensyntax** _ und für _*_Modulinitialisierer_*_ . Zuerst zu den Änderungen an partiellen Methoden: Vor C# 9.0 waren partielle Methoden privat (`private`) und konnten weder einen Zugriffsmodifizierer angeben noch über eine leere Rückgabe (`void`) oder `out`-Parameter verfügen. Diese Einschränkungen führten dazu, dass der Compiler alle Aufrufe von partiellen Methoden entfernte, wenn keine Methodenimplementierung bereitgestellt wurde. In C# 9.0 werden diese Einschränkungen behoben. Deklarationen von partiellen Methoden müssen jetzt jedoch implementiert werden. Code-Generatoren können diese Implementierung bereitstellen. Damit kein Breaking Change eingeführt wird, befolgt der Compiler bei jeder partiellen Methode, die keinen Zugriffsmodifizierer aufweist, die alten Regeln. Wenn die partielle Methode den Zugriffsmodifizierer `private` enthält, unterliegt die partielle Methode den neuen Regeln.
 
-Das zweite neue Feature für Code-Generatoren sind ***Modulinitialisierer***. Modulinitialisierer sind Methoden, an die das Attribut <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> angefügt wurde. Diese Methoden werden von der Runtime aufgerufen, wenn die Assembly geladen wird. Ein Modulinitialisierer:
+Das zweite neue Feature für Code-Generatoren sind _* _Modulinitialisierer_ **. Modulinitialisierer sind Methoden, an die das Attribut <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> angefügt wurde. Diese Methoden werden von der Runtime aufgerufen, wenn die Assembly geladen wird. Ein Modulinitialisierer:
 
 - muss statisch sein
 - muss parameterlos sein

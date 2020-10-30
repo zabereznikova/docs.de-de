@@ -4,12 +4,12 @@ description: Weitere Informationen zum Schreiben von Code, um die Struktur einer
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173307"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223674"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -355,7 +355,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Dieser Code stellt eine mögliche Implementierung für die mathematische *Fakultät*-Funktion dar. So wie ich diesen Code geschrieben habe, werden zwei Einschränkungen beim Erstellen von Ausdrucksbaumstrukturen durch die Zuweisung von Lambdaausdrücken an Ausdrücke hervorgehoben. Erstens sind Anweisungslambdas nicht zulässig. Das bedeutet, ich kann keine Schleifen, Blöcke, if/else-Anweisungen und anderen allgemeinen Steuerungsstrukturen in C# verwenden. Ich kann nur Ausdrücke verwenden. Zweitens kann ich nicht denselben Ausdruck rekursiv aufrufen.
+Dieser Code stellt eine mögliche Implementierung für die mathematische *Fakultät* -Funktion dar. So wie ich diesen Code geschrieben habe, werden zwei Einschränkungen beim Erstellen von Ausdrucksbaumstrukturen durch die Zuweisung von Lambdaausdrücken an Ausdrücke hervorgehoben. Erstens sind Anweisungslambdas nicht zulässig. Das bedeutet, ich kann keine Schleifen, Blöcke, if/else-Anweisungen und anderen allgemeinen Steuerungsstrukturen in C# verwenden. Ich kann nur Ausdrücke verwenden. Zweitens kann ich nicht denselben Ausdruck rekursiv aufrufen.
 Ich könnte dies, wenn er bereits ein Delegat wäre, aber ich kann ihn nicht in seiner Form der Ausdrucksbaumstruktur aufrufen. Im Abschnitt zum [Erstellen von Ausdrucksbaumstrukturen](expression-trees-building.md) werden Sie Techniken erlernen, um diese Einschränkung zu umgehen.
 
 In diesem Ausdruck können Knoten all dieser Typen auftreten:

@@ -1,38 +1,39 @@
 ---
 title: Übersicht über .NET Framework
-description: .NET Framework ist eine Technologie, die die Erstellung und Ausführung von Windows-Apps und -Webdiensten unterstützt.
-ms.date: 03/30/2017
+description: Dies ist eine Übersicht über .NET Framework, eine Technologie, die das Erstellen und Ausführen von Windows-Apps und -Webdiensten unterstützt.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75b2e94b93eabdbf8a6a40f38c1b12a8caddd98a
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557761"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471743"
 ---
 # <a name="overview-of-net-framework"></a>Übersicht über .NET Framework
 
 .NET Framework ist eine Technologie, die die Erstellung und Ausführung von Windows-Apps und Webdiensten unterstützt. .NET Framework wurde im Hinblick auf folgende Zielsetzungen entwickelt:
 
-- Bereitstellung einer konsistenten, objektorientierten Programmierumgebung, in der Objektcode gespeichert wird. Die Ausführung erfolgt dann entweder lokal oder über Remotezugriff bzw. lokal mit Verteilung über das Web.
+- Bereitstellen einer konsistenten, objektorientierten Programmierumgebung, in der Objektcode gespeichert wird und die Ausführung dann entweder lokal oder über Remotezugriff bzw. lokal mit Verteilung über das Web erfolgt
 
-- Bereitstellung einer Codeausführungsumgebung, mit der Konflikte bei der Softwarebereitstellung und Versionskonflikte auf ein Minimum beschränkt werden.
+- Bereitstellen einer Umgebung für die Codeausführung, die Folgendes bietet:
 
-- Bereitstellung einer Codeausführungsumgebung, die eine sichere Ausführung ermöglicht, und zwar auch von Code, der von unbekannten oder nur halb-vertrauenswürdigen Dritten erstellt wurde.
+  - Minimieren von Konflikten im Zusammenhang mit der Softwarebereitstellung und -versionsverwaltung
 
-- Bereitstellung einer Codeausführungsumgebung, die nicht mehr die bei interpretations- oder skriptbasierten Umgebungen auftretenden Leistungsprobleme aufweist.
+  - Bereitstellen einer sicheren Codeausführungsumgebung einschließlich für Code, der von unbekannten oder nur bedingt vertrauenswürdigen Dritten erstellt wurde
 
-- Schaffung einer konsistenten Entwicklungsumgebung für die verschiedensten Typen von Apps, wie beispielsweise Windows- und webbasierte Apps.
+  - Beseitigen der Leistungsprobleme im Zusammenhang mit skriptbasierten oder interpretierten Umgebungen
 
-- Aufbau der gesamten Kommunikation auf Industriestandards, um die Integration von Code, der auf .NET Framework basiert, in jeden anderen Code zu gewährleisten.
+- Bereitstellen einer konsistenten Entwicklungsumgebung für die verschiedensten Typen von Apps (z. B. Windows- und webbasierte Apps)
 
-> [!NOTE]
-> Eine allgemeine Einführung in .NET Framework für Benutzer und Entwickler erhalten Sie unter [Erste Schritte](index.md).
+- Aufbauen der gesamten Kommunikation auf Industriestandards, um die Integration von auf .NET Framework basierendem Code mit jedem anderen Code zu gewährleisten
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 .NET Framework besteht aus der Common Language Runtime (CLR) und der .NET Framework-Klassenbibliothek. .NET Framework setzt auf der Common Language Runtime auf. Stellen Sie sich die Common Language Runtime als Agent vor, der zum Ausführungszeitpunkt Code verwaltet sowie Basisdienste wie Speicherverwaltung, Threadverwaltung und Remoting bereitstellt. Er erzwingt gleichzeitig strikte Typsicherheit und andere Formen der Codegenauigkeit, mit denen Sicherheit und Zuverlässigkeit unterstützt werden. Das Konzept der Codeverwaltung ist ein fundamentales Prinzip der Laufzeitumgebung. Code, der die Laufzeit zum Ziel hat, wird als verwalteter Code bezeichnet, während Code, der nicht auf die Laufzeit abzielt, als nicht verwalteter Code gilt. Die Klassenbibliothek, ist eine umfassende, objektorientierte Auflistung wiederverwendbarer Typen für die Entwicklung vielfältiger Apps, z. B. solcher mit herkömmlicher Befehlszeile oder grafischer Benutzeroberfläche (GUI), bis hin zu Apps, die auf den neuesten Innovationen von ASP.NET, z. B. Web Forms und XML-Webdiensten, basieren.
 
