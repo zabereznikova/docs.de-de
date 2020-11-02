@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - backreferences
 - constructs, backreference
-- .NET Framework regular expressions, backreference constructs
+- .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290603"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889152"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Rückverweiskonstrukte in regulären Ausdrücken
 
@@ -36,7 +36,7 @@ Ein nummerierter Rückverweis verwendet die folgende Syntax:
 
 wobei *Nummer* die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck ist. `\4` gleicht z.B. den Inhalt der vierten Erfassungsgruppe ab. Wenn *number* nicht im Muster eines regulären Ausdrucks definiert ist, tritt ein Analysefehler auf, und die Engine für reguläre Ausdrücke löst eine <xref:System.ArgumentException> aus. Beispielsweise ist der reguläre Ausdruck `\b(\w+)\s\1` gültig, da `(\w+)` die erste und einzige Erfassungsgruppe im Ausdruck ist. Auf der anderen Seite ist `\b(\w+)\s\2` ungültig und löst eine Argumentausnahme aus, da es keine nummerierte Erfassungsgruppe `\2` gibt. Wenn darüber hinaus *number* eine Erfassungsgruppe an einer bestimmten Ordnungsposition identifiziert, dieser Erfassungsgruppe jedoch ein anderer Name als die zugehörige Ordnungsposition zugewiesen wurde, löst der Parser für reguläre Ausdrücke ebenfalls eine <xref:System.ArgumentException> aus.
 
-Beachten Sie die Mehrdeutigkeit zwischen oktalen Escapesequenzen (z.B. `\16`) und `\`*number*-Rückverweisen mit der gleichen Notation. Diese Mehrdeutigkeit wird wie folgt aufgelöst:
+Beachten Sie die Mehrdeutigkeit zwischen oktalen Escapesequenzen (z.B. `\16`) und `\`*number* -Rückverweisen mit der gleichen Notation. Diese Mehrdeutigkeit wird wie folgt aufgelöst:
 
 - Die Ausdrücke `\1` bis `\9` werden immer als Rückverweise und nicht als oktale Codes interpretiert.
 
@@ -87,7 +87,7 @@ In einem benannten Rückverweis mit `\k` kann *name* auch die Zeichenfolgendarst
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-Wenn *name* die Zeichenfolgendarstellung einer Zahl ist und keine Erfassungsgruppe diesen Namen trägt, ist `\k<`*name*`>` das Gleiche wie der Rückverweis `\`*number*, wobei *number* die Ordnungsposition der Erfassung ist. Im folgenden Beispiel gibt es eine einzige Erfassungsgruppe namens `char`. Das Rückverweiskonstrukt referenziert die Gruppe als `\k<1>`. Wie die Ausgabe des Beispiels zeigt, ist der Aufruf von <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> erfolgreich, weil `char` die erste Erfassungsgruppe ist.
+Wenn *name* die Zeichenfolgendarstellung einer Zahl ist und keine Erfassungsgruppe diesen Namen trägt, ist `\k<`*name*`>` das Gleiche wie der Rückverweis `\`*number* , wobei *number* die Ordnungsposition der Erfassung ist. Im folgenden Beispiel gibt es eine einzige Erfassungsgruppe namens `char`. Das Rückverweiskonstrukt referenziert die Gruppe als `\k<1>`. Wie die Ausgabe des Beispiels zeigt, ist der Aufruf von <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> erfolgreich, weil `char` die erste Erfassungsgruppe ist.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]

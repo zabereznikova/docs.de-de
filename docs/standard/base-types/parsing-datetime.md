@@ -10,16 +10,16 @@ helpviewer_keywords:
 - parsing strings, date and time strings
 - date and time strings
 - ParseExact method
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9fba80e4dbe1e4950ed24e7489ac48ea1b6ff20b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662900"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889035"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -53,7 +53,7 @@ Der Formatanbieter wird auch zum Interpretieren mehrdeutiger numerischer Datumsa
 Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Methode zum Konvertieren eines `string`-Werts in ein <xref:System.DateTime>-Objekt. In diesem Beispiel wird die dem aktuellen Thread zugeordnete Kultur verwendet. Wenn die der aktuellen Kultur zugeordnete <xref:System.Globalization.CultureInfo>-Klasse nicht die Eingabezeichenfolge analysieren kann, wird eine <xref:System.FormatException> ausgelöst.
 
 > [!TIP]
-> Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
+> Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen** , um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
 > Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) verfügbar.

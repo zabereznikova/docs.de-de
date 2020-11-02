@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-ms.openlocfilehash: eab94ac91be0c755a1da74e2f2220e3b76cc4249
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 339544ce9f0ee44097d1a60e0d2c2035d81f674d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290784"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925362"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Gewusst wie: Umschließen von EAP-Mustern in einer Aufgabe
 Das folgende Beispiel zeigt, wie eine beliebige Abfolge von Vorgängen des ereignisbasierten asynchronen Musters (Event-Based Asynchronous Pattern, EAP) mithilfe einer <xref:System.Threading.Tasks.TaskCompletionSource%601> als einzelne Aufgabe verfügbar gemacht wird. Das Beispiel zeigt auch, wie eine <xref:System.Threading.CancellationToken> zum Aufrufen der integrierten Abbruchmethoden für die <xref:System.Net.WebClient>-Objekte aufgerufen wird.  
@@ -24,4 +24,4 @@ Das folgende Beispiel zeigt, wie eine beliebige Abfolge von Vorgängen des ereig
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [TPL und herkömmliche asynchrone .NET Framework-Programmierung](tpl-and-traditional-async-programming.md)
+- [TPL und herkömmliche asynchrone .NET-Programmierung](tpl-and-traditional-async-programming.md)

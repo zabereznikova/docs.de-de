@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- observer design pattern [.NET Framework], implementing providers
-- providers [.NET Framework], in observer design pattern
-- observables [.NET Framework], in observer design pattern
+- observer design pattern [.NET], implementing providers
+- providers [.NET], in observer design pattern
+- observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: 4f8a213c0df3ef3c633106b7249a4947fe77c0d2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b57b595a40494ba0cf6c38b6a13688dece602584
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280022"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064222"
 ---
 # <a name="how-to-implement-a-provider"></a>Gewusst wie: Implementieren eines Anbieters
 Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbieter, der Daten überwacht und Benachrichtigungen sendet, und mindestens einem Beobachter, der Benachrichtigungen (Rückrufe) vom Anbieter empfängt. In diesem Thema wird das Erstellen eines Anbieters behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md) wird erläutert, wie ein Observer erstellt wird.  

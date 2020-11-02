@@ -8,17 +8,17 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - streams, base streams
-- I/O [.NET Framework], composing streams
+- I/O [.NET], composing streams
 - Stream class, composing streams
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 93295c1d70f510ef563abc3a191d6690b1174fa8
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160104"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188574"
 ---
 # <a name="compose-streams"></a>Erstellen von Streams
 Ein *Sicherungsspeicher* ist ein Speichermedium, wie etwa ein Datenträger oder Arbeitsspeicher. Jeder einzelne Sicherungsspeicher implementiert seinen eigenen Datenstrom als Implementierung der <xref:System.IO.Stream>-Klasse.

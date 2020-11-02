@@ -10,16 +10,16 @@ helpviewer_keywords:
 - lookbehinds
 - regular expressions, grouping constructs
 - lookaheads
-- .NET Framework regular expressions, grouping constructs
+- .NET regular expressions, grouping constructs
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: d737e5758ee7a940aeea3ded9a7937d687393116
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662627"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888507"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -62,7 +62,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Für den Zugriff auf erfasste Gruppen gibt es vier Möglichkeiten:  
   
-- Indem das Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\`*number*verwiesen, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist.  
+- Indem das Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\`*number* verwiesen, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist.  
   
 - Indem das benannte Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\k<`*name*`>`verwiesen, wobei *name* der Name einer Erfassungsgruppe ist, oder mit `\k<`*number*`>`verwiesen, wobei *number* die Ordinalzahl einer Erfassungsgruppe ist. Eine Erfassungsgruppe weist einen Standardnamen auf, der mit der zugehörigen Ordinalzahl identisch ist. Weitere Informationen finden Sie unter [Benannte übereinstimmende Teilausdrücke](#named_matched_subexpression) weiter unten in diesem Thema.  
   
@@ -107,7 +107,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 - Indem das benannte Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\k<`*name*`>`verwiesen, wobei *name* der Name des erfassten Teilausdrucks ist.  
   
-- Indem das Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\`*number*verwiesen, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist. Benannte übereinstimmende Teilausdrücke werden hintereinander von links nach rechts nach übereinstimmenden Teilausdrücken nummeriert.  
+- Indem das Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\`*number* verwiesen, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist. Benannte übereinstimmende Teilausdrücke werden hintereinander von links nach rechts nach übereinstimmenden Teilausdrücken nummeriert.  
   
 - Mit der Ersatzsequenz `${`*name*`}` in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> - oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methodenaufruf, wobei *name* der Name des erfassten Teilausdrucks ist.  
   
@@ -172,7 +172,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 `(?'name1-name2' subexpression)`
   
- wobei *name1* die aktuelle Gruppe (optional), *name2* eine zuvor definierte Gruppe und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Die Ausgleichsgruppendefinition löscht die Definition von *name2* und speichert das Intervall zwischen *name2* und *name1* in *name1*. Wenn keine *name2* -Gruppe definiert ist, wird die Übereinstimmung rückwärts verarbeitet. Da durch Löschen der letzten Definition von *name2* die vorherige Definition von *name2*angezeigt wird, kann mithilfe dieses Konstrukts der Erfassungsstapel für die *name2* -Gruppe als Zähler für die Erfassung von geschachtelten Konstrukten, z. B. Anführungszeichen oder öffnende bzw. schließende Klammern, verwendet werden.  
+ wobei *name1* die aktuelle Gruppe (optional), *name2* eine zuvor definierte Gruppe und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Die Ausgleichsgruppendefinition löscht die Definition von *name2* und speichert das Intervall zwischen *name2* und *name1* in *name1* . Wenn keine *name2* -Gruppe definiert ist, wird die Übereinstimmung rückwärts verarbeitet. Da durch Löschen der letzten Definition von *name2* die vorherige Definition von *name2* angezeigt wird, kann mithilfe dieses Konstrukts der Erfassungsstapel für die *name2* -Gruppe als Zähler für die Erfassung von geschachtelten Konstrukten, z. B. Anführungszeichen oder öffnende bzw. schließende Klammern, verwendet werden.  
   
  Die Ausgleichsgruppendefinition verwendet *name2* als Stapel. Das Anfangszeichen jedes geschachtelten Konstrukts wird in die Gruppe sowie in die zugehörige <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> -Auflistung eingefügt. Wenn das schließende Zeichen abgeglichen wird, wird das entsprechende öffnende Zeichen aus der Gruppe entfernt, und die <xref:System.Text.RegularExpressions.Group.Captures%2A> -Auflistung wird um eins verringert. Nachdem die öffnenden und schließenden Zeichen aller geschachtelten Konstrukte abgeglichen wurden, ist *name2* leer.  
   
@@ -291,7 +291,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  `(?=` *Teilausdruck* `)`  
   
- wobei *Teilausdruck* ein beliebiges Muster eines regulären Ausdrucks ist. Damit eine Übereinstimmung erfolgreich ist, muss die Eingabezeichenfolge mit dem regulären Ausdrucksmuster in *subexpression*übereinstimmen, obwohl der übereinstimmende Teilausdruck nicht im Übereinstimmungsergebnis enthalten ist. Eine positive Lookaheadassertion mit einer Breite von Null wird nicht zurückverfolgt.  
+ wobei *Teilausdruck* ein beliebiges Muster eines regulären Ausdrucks ist. Damit eine Übereinstimmung erfolgreich ist, muss die Eingabezeichenfolge mit dem regulären Ausdrucksmuster in *subexpression* übereinstimmen, obwohl der übereinstimmende Teilausdruck nicht im Übereinstimmungsergebnis enthalten ist. Eine positive Lookaheadassertion mit einer Breite von Null wird nicht zurückverfolgt.  
   
  In der Regel befindet sich eine positive Lookaheadassertion mit einer Breite von Null am Ende eines Musters eines regulären Ausdrucks. Damit wird eine Teilzeichenfolge definiert, die am Ende einer Zeichenfolge gefunden werden muss, damit eine Übereinstimmung vorliegt, jedoch nicht in der Übereinstimmung enthalten sein soll. Dies ist auch zum Verhindern einer übermäßigen Rückverfolgung nützlich. Sie können eine Lookaheadassertion mit einer Breite von Null verwenden, um sicherzustellen, dass eine bestimmte Erfassungsgruppe mit Text beginnt, der einer Teilmenge des Musters entspricht, das für diese Erfassungsgruppe definiert ist. Wenn z. B. eine Erfassungsgruppe aufeinander folgenden Wortzeichen entspricht, können Sie mit einer positiven Lookaheadassertion mit einer Breite von Null anfordern, dass das erste Zeichen ein alphabetischer Großbuchstabe ist.  
   
@@ -314,7 +314,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  `(?!` *Teilausdruck* `)`  
   
- wobei *Teilausdruck* ein beliebiges Muster eines regulären Ausdrucks ist. Damit die Übereinstimmung erfolgreich ist, darf die Eingabezeichenfolge mit dem regulären Ausdrucksmuster in *subexpression*nicht übereinstimmen, obwohl die übereinstimmende Zeichenfolge nicht im Übereinstimmungsergebnis enthalten ist.  
+ wobei *Teilausdruck* ein beliebiges Muster eines regulären Ausdrucks ist. Damit die Übereinstimmung erfolgreich ist, darf die Eingabezeichenfolge mit dem regulären Ausdrucksmuster in *subexpression* nicht übereinstimmen, obwohl die übereinstimmende Zeichenfolge nicht im Übereinstimmungsergebnis enthalten ist.  
   
  Eine negative Lookaheadassertion mit einer Breite von Null wird in der Regel entweder am Anfang oder dem Ende eines regulären Ausdrucks verwendet. Am Anfang eines regulären Ausdrucks kann ein bestimmtes Muster definiert werden, das nicht zugewiesen werden soll, wenn der Anfang des regulären Ausdrucks ein ähnliches aber allgemeineres Muster zur Übereinstimmung definiert. In diesem Fall wird dies häufig verwendet, um das Zurückverfolgen einzuschränken. Am Ende eines regulären Ausdrucks kann ein Teilausdruck definiert werden, der am Ende einer Übereinstimmung nicht auftreten darf.  
   

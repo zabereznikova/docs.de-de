@@ -10,25 +10,26 @@ helpviewer_keywords:
 - regular expressions, substitutions
 - replacement patterns
 - metacharacters, substitutions
-- .NET Framework regular expressions, substitutions
+- .NET regular expressions, substitutions
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768104"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888931"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
+
 Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
   
- .NET Framework definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
+ .NET definiert die in der folgenden Tabelle aufgeführten Ersetzungselemente.  
   
 |Substitution|Beschreibung|  
 |------------------|-----------------|  
-|$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#substituting-a-numbered-group).|  
+|$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl* identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#substituting-a-numbered-group).|  
 |${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#substituting-a-named-group).|  
 |$$|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#substituting-a--character).|  
 |$&|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#substituting-the-entire-match).|  
@@ -141,11 +142,11 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
 |Match|Position|Zeichenfolge vor Übereinstimmung|Ergebniszeichenfolge|  
 |-----------|--------------|-------------------------|-------------------|  
-|1|2|aa|aa**aa**bb2cc3dd4ee5|  
-|2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
-|3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
-|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
+|1|2|aa|aa **aa** bb2cc3dd4ee5|  
+|2|5|aa1bb|aaaabb **aa1bb** cc3dd4ee5|  
+|3|8|aa1bb2cc|aaaabbaa1bbcc **aa1bb2cc** dd4ee5|  
+|4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd **aa1bb2cc3dd** ee5|  
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee **aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Ersetzen des Texts nach der Übereinstimmung  
  Die Ersetzung `$'` ersetzt die übereinstimmende Zeichenfolge nach der Übereinstimmung durch die gesamte Eingabezeichenfolge. Das heißt, die Eingabezeichenfolge wird nach der Übereinstimmung dupliziert, während der übereinstimmende Text entfernt wird. Jeder Text, der dem übereinstimmenden Text vorausgeht, bleibt in der Ergebniszeichenfolge unverändert. Wenn keine Übereinstimmung vorhanden ist, wirkt sich die Ersetzung  `$'` nicht aus.  
@@ -159,10 +160,10 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
 |Match|Position|Zeichenfolge nach Übereinstimmung|Ergebniszeichenfolge|  
 |-----------|--------------|------------------------|-------------------|  
-|1|2|bb2cc3dd4ee5|aa**bb2cc3dd4ee5**bb2cc3dd4ee5|  
-|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb**cc3dd4ee5**cc3dd4ee5|  
-|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc**dd4ee5**dd4ee5|  
-|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd**ee5**ee5|  
+|1|2|bb2cc3dd4ee5|aa **bb2cc3dd4ee5** bb2cc3dd4ee5|  
+|2|5|cc3dd4ee5|aabb2cc3dd4ee5bb **cc3dd4ee5** cc3dd4ee5|  
+|3|8|dd4ee5|aabb2cc3dd4ee5bbcc3dd4ee5cc **dd4ee5** dd4ee5|  
+|4|11|ee5|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5dd **ee5** ee5|  
 |5|14|<xref:System.String.Empty?displayProperty=nameWithType>|aabb2cc3dd4ee5bbcc3dd4ee5ccdd4ee5ddee5ee|  
 
 ## <a name="substituting-the-last-captured-group"></a>Ersetzen der zuletzt erfassten Gruppe  
@@ -195,8 +196,8 @@ Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Si
   
 |Match|Position|Match|Ergebniszeichenfolge|  
 |-----------|--------------|-----------|-------------------|  
-|1|3|123|ABC**ABC123DEF456**DEF456|  
-|2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
+|1|3|123|ABC **ABC123DEF456** DEF456|  
+|2|5|456|ABCABC123DEF456DEF **ABC123DEF456**|  
   
 ## <a name="see-also"></a>Siehe auch
 

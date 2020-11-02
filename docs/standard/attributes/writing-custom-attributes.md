@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550924"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889191"
 ---
 # <a name="writing-custom-attributes"></a>Verfassen von benutzerdefinierten Attributen
 Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType>ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
@@ -104,7 +104,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
   
 - Attributklassen müssen als öffentliche Klassen deklariert werden.  
   
-- Gemäß Konvention endet der Name der Attributklasse mit dem Wort **Attribute**. Dies ist zwar nicht erforderlich, die Einhaltung dieser Konvention empfiehlt sich aber aus Gründen der besseren Übersicht. Wenn das Attribut angewendet wird, ist die Aufnahme des Wortes „Attribute“ optional.  
+- Gemäß Konvention endet der Name der Attributklasse mit dem Wort **Attribute** . Dies ist zwar nicht erforderlich, die Einhaltung dieser Konvention empfiehlt sich aber aus Gründen der besseren Übersicht. Wenn das Attribut angewendet wird, ist die Aufnahme des Wortes „Attribute“ optional.  
   
 - Alle Attributklassen müssen direkt oder indirekt von <xref:System.Attribute?displayProperty=nameWithType> erben.  
   

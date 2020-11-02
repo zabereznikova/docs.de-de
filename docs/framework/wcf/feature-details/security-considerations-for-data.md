@@ -5,22 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656969"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188314"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 
-Beim Umgang mit Daten in Windows Communication Foundation (WCF) müssen Sie eine Reihe von Bedrohungs Kategorien in Erwägung gezogen. In der folgenden Tabelle werden die wichtigsten Bedrohungskategorien der Datenverarbeitung aufgeführt. WCF bietet Tools, mit denen diese Bedrohungen minimiert werden können.
+Beim Umgang mit Daten in Windows Communication Foundation (WCF) müssen Sie eine Reihe von Bedrohungs Kategorien in Erwägung gezogen. In der folgenden Liste werden die wichtigsten Bedrohungs Klassen angezeigt, die sich auf die Datenverarbeitung beziehen. WCF bietet Tools, mit denen diese Bedrohungen minimiert werden können.
 
-Ein Denial-of-Service-Vorgang beim Empfang nicht vertrauenswürdiger Daten kann dazu führen, dass die Empfängerseite auf eine unverhältnismäßig große Menge verschiedener Ressourcen wie Arbeitsspeicher, Threads, verfügbare Verbindungen oder Prozessor Zyklen zugreifen kann, indem lange Berechnungen durchgeführt werden. Ein Denial-of-Service-Angriff führt möglicherweise zum Absturz des Servers, wodurch er keine Nachrichten von anderen, legitimen Clients verarbeiten kann.
+* Denial of Service
 
-Eingehende nicht vertrauenswürdige Daten mit böswilliger Codeausführung bewirken, dass die empfangende Seite Code ausführen kann, der nicht beabsichtigt war.
+  Der Erhalt nicht vertrauenswürdige Daten kann aufgrund langwieriger Berechnungen auf Empfängerseite einen überdurchschnittlich hohen Zugriff auf verschiedene Ressourcen, wie Arbeitsspeicher, Threads, verfügbare Verbindungen oder Prozessorzyklen verursachen. Ein Denial-of-Service-Angriff führt möglicherweise zum Absturz des Servers, wodurch er keine Nachrichten von anderen, legitimen Clients verarbeiten kann.
 
-Die Offenlegung von Informationen durch den Remote Angreifer zwingt die empfangende Partei, auf Ihre Anforderungen so zu reagieren, dass mehr Informationen als beabsichtigt offengelegt werden.
+* Ausführung von schädlichem Code
+
+  Eingehende nicht vertrauenswürdige Daten bewirken, dass die Empfängerseite unbeabsichtigten Code ausführt.
+
+* Offenlegung von Informationen
+
+  Der Remoteangreifer zwingt die Empfängerseite, auf Anforderungen so zu antworten, dass dabei mehr Informationen als beabsichtigt offengelegt werden.
 
 ## <a name="user-provided-code-and-code-access-security"></a>Vom Benutzer bereitgestellter Code und Codezugriffssicherheit
 
@@ -155,7 +161,7 @@ Diese Kontingent schränkt die maximale Schachtelungstiefe von XML-Elementen ein
 
 #### <a name="maxnametablecharcount"></a>MaxNameTableCharCount
 
-Dieses Kontingent schränkt die Größe der *Nametable*des Readers ein. Die Nametable enthält bestimmte Zeichenfolgen (z. B. Namespaces and Präfixe), die beim Verarbeiten von XML-Dokumenten auftreten. Diese Zeichenfolgen werden im Arbeitsspeicher gepuffert. Legen Sie deshalb dieses Kontingent fest, um eine übermäßige Pufferung bei einem erwarteten Streaming zu verhindern.
+Dieses Kontingent schränkt die Größe der *Nametable* des Readers ein. Die Nametable enthält bestimmte Zeichenfolgen (z. B. Namespaces and Präfixe), die beim Verarbeiten von XML-Dokumenten auftreten. Diese Zeichenfolgen werden im Arbeitsspeicher gepuffert. Legen Sie deshalb dieses Kontingent fest, um eine übermäßige Pufferung bei einem erwarteten Streaming zu verhindern.
 
 #### <a name="maxstringcontentlength"></a>MaxStringContentLength
 
@@ -169,7 +175,7 @@ Dieses Kontingent schränkt die maximale Größe eines Arrays von Primitiven ein
 
 Die binäre XML-Codierung, die von WCF unterstützt wird, Bein *haltet eine Funktion* für Eine große Zeichenfolge kann mit wenigen Bytes codiert werden. Das ermöglicht eine erhebliche Leistungsverbesserung, bringt jedoch neue Angriffsflächen für Denial-of-Service-Bedrohungen mit sich, die abgewehrt werden müssen.
 
-Es gibt zwei Arten von Wörterbüchern: *statisch* und *dynamisch*. Das statische Wörterbuch besteht aus eine integrierten Liste langer Zeichenfolgen, die mithilfe eines kurzen Codes in der binären Codierung dargestellt werden können. Diese Zeichenfolgenliste steht beim Erstellen des Readers fest und kann nicht geändert werden. Keine der Zeichen folgen im statischen Wörterbuch, die von WCF standardmäßig verwendet werden, ist ausreichend groß, um eine ernste Denial-of-Service-Bedrohung darzustellen, obwohl Sie möglicherweise weiterhin in einem Angriff auf die Wörterbuch Erweiterung verwendet werden. Seien Sie in komplexen Szenarien, in denen Sie ein eigenes statisches Wörterbuch bereitstellen, mit dem Einbringen langer Wörterbuchzeichenfolgen vorsichtig.
+Es gibt zwei Arten von Wörterbüchern: *statisch* und *dynamisch* . Das statische Wörterbuch besteht aus eine integrierten Liste langer Zeichenfolgen, die mithilfe eines kurzen Codes in der binären Codierung dargestellt werden können. Diese Zeichenfolgenliste steht beim Erstellen des Readers fest und kann nicht geändert werden. Keine der Zeichen folgen im statischen Wörterbuch, die von WCF standardmäßig verwendet werden, ist ausreichend groß, um eine ernste Denial-of-Service-Bedrohung darzustellen, obwohl Sie möglicherweise weiterhin in einem Angriff auf die Wörterbuch Erweiterung verwendet werden. Seien Sie in komplexen Szenarien, in denen Sie ein eigenes statisches Wörterbuch bereitstellen, mit dem Einbringen langer Wörterbuchzeichenfolgen vorsichtig.
 
 Die Funktion dynamischer Wörterbücher ermöglicht es Nachrichten, eigene Zeichenfolgen zu definieren und kurzen Codes zuzuordnen. Diese Zeichenfolgen-Code-Zuordnungen bleiben während der gesamten Kommunikationssitzung im Arbeitsspeicher. Auf diese Weise müssen anschließende Nachrichten die Zeichenfolgen nicht erneut senden und können bereits definierte Codes nutzen. Die Länge dieser Zeichenfolgen ist beliebig, weshalb sie eine ernstere Bedrohung darstellen als die Zeichenfolgen im statischen Wörterbuch.
 

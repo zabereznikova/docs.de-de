@@ -3,19 +3,20 @@ title: EventWaitHandle
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], EventWaitHandle class
+- threading [.NET], EventWaitHandle class
 - EventWaitHandle class
-- event wait handles [.NET Framework]
-- threading [.NET Framework], cross-process synchronization
+- event wait handles [.NET]
+- threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c4745af9c5336d013dc0ca7ef1030b208c8b68
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138078"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188340"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
+
 Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Signalisieren und Warten auf Signale miteinander zu kommunizieren. Ereignis-Wait-Handles (die auch einfach als „Ereignisse“ bezeichnet werden) sind Wait-Handles, die als Signale verwendet werden können, damit ein oder mehrere wartende Threads freigegeben werden. Nachdem ein Ereignis-Wait-Handle als Signal verwendet wurde, wird es entweder manuell oder automatisch zurückgesetzt. Die <xref:System.Threading.EventWaitHandle>-Klasse kann entweder ein lokales Ereignis-Wait-Handle (lokales Ereignis) darstellen oder ein Ereignis-Wait-Handle eines benannten Systems (benanntes Ereignis oder Systemereignis, für alle Prozesse sichtbar).  
   
 > [!NOTE]

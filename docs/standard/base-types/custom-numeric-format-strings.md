@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - format strings
 - custom numeric format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6e99191ecfb59e73656b98b8fb5185114194ab09
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541578"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888697"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
@@ -45,7 +45,7 @@ Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladung
 |"‰"|Promilleplatzhalter|Multipliziert eine Zahl mit 1000 und fügt ein lokalisiertes Promillesymbol in die Ergebniszeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter: [Der benutzerdefinierte Spezifizierer „‰“](#SpecifierPerMille)|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Exponentialschreibweise|Formatiert das Ergebnis mit der Exponentialschreibweise, wenn mindestens einmal 0 (null) darauf folgt. Die Groß- oder Kleinschreibung ("E" oder "e") gibt die Schreibweise des Symbols für den Exponenten in der Ergebniszeichenfolge an. Die Anzahl der Nullen, die auf das Zeichen "E" oder auf das Zeichen "e" folgen, bestimmt die Mindestanzahl der Ziffern im Exponenten. Ein Pluszeichen (+) gibt an, dass dem Exponenten immer ein Vorzeichen vorausgeht. Ein Minuszeichen (-) gibt an, dass nur negativen Exponenten ein Vorzeichen vorausgeht.<br /><br /> Weitere Informationen finden Sie unter: [Die benutzerdefinierten Spezifizierer „E“ und „e“](#SpecifierExponent)|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|Escapezeichen|Das Zeichen, das auf das Escapezeichen folgt, wird als Literal und nicht als benutzerdefinierter Formatbezeichner interpretiert.<br /><br /> Weitere Informationen finden Sie unter: [Das Escapezeichen „\\“](#SpecifierEscape)|987654 ("\\###00\\#") -> #987654#|
-|'*Zeichenfolge*'<br /><br /> "*Zeichenfolge*"|Zeichenfolgenliteraltrennzeichen|Gibt an, dass die eingeschlossenen Zeichen unverändert in die Ergebniszeichenfolge kopiert werden sollen.<br/><br/>Weitere Informationen finden Sie unter: [Zeichenliterale](#character-literals)|68 ("#' Grad'") > 68 Grad<br /><br /> 68 ("#' Grad'") -> 68 Grad|
+|' *Zeichenfolge* '<br /><br /> " *Zeichenfolge* "|Zeichenfolgenliteraltrennzeichen|Gibt an, dass die eingeschlossenen Zeichen unverändert in die Ergebniszeichenfolge kopiert werden sollen.<br/><br/>Weitere Informationen finden Sie unter: [Zeichenliterale](#character-literals)|68 ("#' Grad'") > 68 Grad<br /><br /> 68 ("#' Grad'") -> 68 Grad|
 |;|Abschnittstrennzeichen|Definiert Abschnitte mit separaten Formatzeichenfolgen für positive und negative Zahlen sowie Nullen.<br /><br /> Weitere Informationen finden Sie unter: [Das Abschnittstrennzeichen „;“](#SectionSeparator)|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
 |Andere|Alle anderen Zeichen|Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.<br/><br/>Weitere Informationen finden Sie unter: [Zeichenliterale](#character-literals)|68 ("# °") -> 68 °|
 

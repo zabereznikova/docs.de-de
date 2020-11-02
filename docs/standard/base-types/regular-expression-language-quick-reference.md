@@ -11,16 +11,16 @@ helpviewer_keywords:
 - searching with regular expressions, language elements
 - pattern-matching with regular expressions, language elements
 - regular expressions, language elements
-- regular expressions [.NET Framework]
+- regular expressions [.NET]
 - cheat sheet
-- .NET Framework regular expressions, language elements
+- .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556799"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889308"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 
@@ -47,10 +47,10 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck gibt an, dass es 
 |`\f`|Entspricht einem Seitenvorschubzeichen \u000C.|`[\f]{2,}`|`"\f\f\f"` in `"\f\f\f"`|
 |`\n`|Entspricht einer neuen Zeile \u000A.|`\r\n(\w+)`|`"\r\nThese"` in `"\r\nThese are\ntwo lines."`|
 |`\e`|Entspricht einem Escapezeichen \u001B.|`\e`|`"\x001B"` in `"\x001B"`|
-|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben (*nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|`"a b"`, `"c d"` in `"a bc d"`|
-|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|`"a b"`, `"c d"` in `"a bc d"`|
+|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben ( *nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|`"a b"`, `"c d"` in `"a bc d"`|
+|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben ( *nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|`"a b"`, `"c d"` in `"a bc d"`|
 |`\c` *X*<br /><br /> `\c` *x*|Entspricht dem durch *X* oder *x* angegebenen ASCII-Steuerzeichen, wobei *X* oder *x* der Buchstabe des Steuerzeichens ist.|`\cC`|`"\x0003"` in `"\x0003"` (STRG-C)|
-|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|`"a b"`, `"c d"` in `"a bc d"`|
+|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn* ).|`\w\u0020\w`|`"a b"`, `"c d"` in `"a bc d"`|
 |`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Hierdurch kann die Engine für reguläre Ausdrücke Sprachelemente (z.B. \* oder ?) und Zeichenliterale (dargestellt durch `\*` oder `\?`) unterscheiden.|`\d+[\+-x\*]\d+`|`"2+2"` und `"3*9"` in `"(2+2) * 3*9"`|
 
 ## <a name="character-classes"></a>Zeichenklassen
@@ -59,9 +59,9 @@ Eine Zeichenklasse entspricht einer beliebigen Reihe von Zeichen. Zeichenklassen
 
 |Zeichenklasse|Beschreibung|Muster|Übereinstimmungen|
 |---------------------|-----------------|-------------|-------------|
-|`[` *Zeichengruppe* `]`|Entspricht einem beliebigen einzelnen Zeichen in *Zeichengruppe*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|`"a"` in `"gray"`<br /><br /> `"a"`, `"e"` in `"lane"`|
+|`[` *Zeichengruppe* `]`|Entspricht einem beliebigen einzelnen Zeichen in *Zeichengruppe* . Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|`"a"` in `"gray"`<br /><br /> `"a"`, `"e"` in `"lane"`|
 |`[^` *Zeichengruppe* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *Zeichengruppe* enthalten ist. Standardmäßig wird bei Zeichen in *Zeichengruppe* die Groß-/Kleinschreibung beachtet.|`[^aei]`|`"r"`, `"g"`, `"n"` in `"reign"`|
-|`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *erstes* bis *letztes*.|`[A-Z]`|`"A"`, `"B"` in `"AB123"`|
+|`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *erstes* bis *letztes* .|`[A-Z]`|`"A"`, `"B"` in `"AB123"`|
 |`.`|Platzhalterzeichen: Entspricht jedem beliebigen einzelnen Zeichen außer \n.<br /><br /> Damit es einem Punkt als Literalzeichen entspricht ("." oder oder `\u002E`), muss ihm ein Escapezeichen (`\.`) vorangestellt werden.|`a.e`|`"ave"` in `"nave"`<br /><br /> `"ate"` in `"water"`|
 |`\p{` *name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` in `"City Lights"`<br /><br /> `"Д"`, `"Ж"` in `"ДЖem"`|
 |`\P{` *name* `}`|Entspricht jedem beliebigen Zeichen, das sich nicht in der allgemeinen Unicode-Kategorie oder einem von *Name* angegebenen benannten Block befindet.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` in `"City"`<br /><br /> `"e"`, `"m"` in `"ДЖem"`|
@@ -97,7 +97,7 @@ Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und 
 |`(?<` *Name* `>` *Teilausdruck* `)`<br /> oder <br />`(?'` *Name* `'` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|`"ee"` in `"deep"`|
 |`(?<` *Name1* `-` *Name2* `>` *Teilausdruck* `)` <br /> oder <br /> `(?'` *Name1* `-` *Name2* `'` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` in `"3+2^((1-3)*(3-1))"`|
 |`(?:` *Teilausdruck* `)`|Definiert eine Nicht-Erfassungsgruppe.|`Write(?:Line)?`|`"WriteLine"` in `"Console.WriteLine()"`<br /><br /> `"Write"` in `"Console.Write(value)"`|
-|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *Teilausdruck*. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` in `"A12xl A12XL a12xl"`|
+|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *Teilausdruck* . Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` in `"A12xl A12XL a12xl"`|
 |`(?=` *Teilausdruck* `)`|Positive Lookaheadassertion mit einer Breite von Null.|`\w+(?=\.)`|`"is"`, `"ran"` und `"out"` in `"He is. The dog ran. The sun is out."`|
 |`(?!` *Teilausdruck* `)`|Negative Lookaheadassertion mit einer Breite von Null.|`\b(?!un)\w+\b`|`"sure"`, `"used"` in `"unsure sure unity used"`|
 |`(?<=` *Teilausdruck* `)`|Positive Lookbehindassertion mit einer Breite von Null.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` in `"1851 1999 1950 1905 2003"`|
@@ -113,15 +113,15 @@ Quantifizierer geben an, wie viele Instanzen des vorherigen Elements (bei dem es
 |`*`|Entspricht dem vorangehenden Element nicht oder mehrmals.|`\d*\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+`|Entspricht dem vorangehenden Element einmal oder mehrmals.|`"be+"`|`"bee"` in `"been"`, `"be"` in `"bent"`|
 |`?`|Entspricht dem vorangehenden Element nicht oder einmal.|`"rai?n"`|`"ran"`, `"rain"`|
-|`{` *n* `}`|Entspricht dem vorangehenden Element genau *n*-mal.|`",\d{3}"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|
-|`{` *n* `,}`|Entspricht dem vorangehenden Element mindestens *n*-mal.|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|
-|`{` *n* `,` *m* `}`|Entspricht dem vorangehenden Element mindestens *n*-, höchstens jedoch *m*-mal.|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"19302"` in `"193024"`|
+|`{` *n* `}`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|
+|`{` *n* `,}`|Entspricht dem vorangehenden Element mindestens *n* -mal.|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|
+|`{` *n* `,` *m* `}`|Entspricht dem vorangehenden Element mindestens *n* -, höchstens jedoch *m* -mal.|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"19302"` in `"193024"`|
 |`*?`|Entspricht dem vorangehenden Element nicht oder mehrmals, jedoch so wenige Male wie möglich.|`\d*?\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+?`|Entspricht dem vorangehenden Element ein- oder mehrmals, jedoch so wenige Male wie möglich.|`"be+?"`|`"be"` in `"been"`, `"be"` in `"bent"`|
 |`??`|Entspricht dem vorangehenden Element nicht oder einmal, jedoch so wenige Male wie möglich.|`"rai??n"`|`"ran"`, `"rain"`|
-|`{` *n* `}?`|Entspricht dem vorangehenden Element genau *n*-mal.|`",\d{3}?"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|
-|`{` *n* `,}?`|Entspricht dem vorangehenden Element mindestens *n*-mal, jedoch so wenige Male wie möglich.|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|
-|`{` *n* `,` *m* `}?`|Entspricht dem vorangehenden Element zwischen *n*- und *m*-mal, jedoch so wenige Male wie möglich.|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193"`, `"024"` in `"193024"`|
+|`{` *n* `}?`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}?"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|
+|`{` *n* `,}?`|Entspricht dem vorangehenden Element mindestens *n* -mal, jedoch so wenige Male wie möglich.|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|
+|`{` *n* `,` *m* `}?`|Entspricht dem vorangehenden Element zwischen *n* - und *m* -mal, jedoch so wenige Male wie möglich.|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193"`, `"024"` in `"193024"`|
 
 ## <a name="backreference-constructs"></a>Rückverweiskonstrukte
 
@@ -139,8 +139,8 @@ Alternierungskonstrukte ändern einen regulären Ausdruck, um entweder/oder-Verg
 |Alternierungskonstrukt|Beschreibung|Muster|Übereinstimmungen|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (<code>&#124;</code>) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|`"the"`, `"this"` in `"this is the day."`|
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja* , wenn das von *Ausdruck* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *nein*. *Ausdruck* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` in `"A10 C103 910"`|
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja*, wenn *Name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *nein*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` in `"Dogs.jpg \"Yiska playing.jpg\""`|
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja* , wenn das von *Ausdruck* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *nein* . *Ausdruck* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` in `"A10 C103 910"`|
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *ja* , wenn *Name* , eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *nein* .|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` in `"Dogs.jpg \"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>Ersetzungen
 

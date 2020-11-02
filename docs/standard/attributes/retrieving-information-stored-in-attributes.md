@@ -10,14 +10,14 @@ dev_langs:
 helpviewer_keywords:
 - retrieving attributes
 - multiple attribute instances
-- attributes [.NET Framework], retrieving
+- attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661860"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889204"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
@@ -35,7 +35,7 @@ Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuers
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Abrufen einer einzelnen Instanz eines Attributs  
- Im folgenden Beispiel wird die (im vorherigen Abschnitt beschriebene) `DeveloperAttribute`-Klasse auf die `MainApp`-Klasse auf Klassenebene angewendet. Die `GetAttribute`-Methode verwendet **GetCustomAttribute**, um die in `DeveloperAttribute` gespeicherten Werte auf Klassenebene abzurufen, bevor sie in der Konsole angezeigt werden.  
+ Im folgenden Beispiel wird die (im vorherigen Abschnitt beschriebene) `DeveloperAttribute`-Klasse auf die `MainApp`-Klasse auf Klassenebene angewendet. Die `GetAttribute`-Methode verwendet **GetCustomAttribute** , um die in `DeveloperAttribute` gespeicherten Werte auf Klassenebene abzurufen, bevor sie in der Konsole angezeigt werden.  
   
  [!code-cpp[Conceptual.Attributes.Usage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#18)]
  [!code-csharp[Conceptual.Attributes.Usage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#18)]
@@ -49,7 +49,7 @@ The Level Attribute is: 42.
 The Reviewed Attribute is: True.  
 ```  
   
- Wenn das Attribut nicht gefunden wird, initialisiert die **GetCustomAttribute**-Methode `MyAttribute` auf einen Nullwert. In diesem Beispiel wird `MyAttribute` auf eine solche Instanz geprüft und der Benutzer benachrichtigt, wenn kein Attribut gefunden wird. Wenn das `DeveloperAttribute` nicht im Klassenbereich gefunden werden, wird die folgende Meldung in der Konsole angezeigt.  
+ Wenn das Attribut nicht gefunden wird, initialisiert die **GetCustomAttribute** -Methode `MyAttribute` auf einen Nullwert. In diesem Beispiel wird `MyAttribute` auf eine solche Instanz geprüft und der Benutzer benachrichtigt, wenn kein Attribut gefunden wird. Wenn das `DeveloperAttribute` nicht im Klassenbereich gefunden werden, wird die folgende Meldung in der Konsole angezeigt.  
   
 ```console  
 The attribute was not found.
@@ -59,9 +59,9 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Abrufen mehrerer Instanzen eines Attributs in demselben Gültigkeitsbereich angewendet  
- Im vorherigen Beispiel werden die zu prüfende Klasse und das zu suchenden spezifische Attribut an <xref:System.Attribute.GetCustomAttribute%2A> übergeben. Dieser Code funktioniert gut, wenn nur eine Instanz eines Attributs auf Klassenebene angewendet wird. Wenn jedoch mehrere Instanzen eines Attributs auf derselben Klassenebene angewendet werden, ruft die **GetCustomAttribute**-Methode nicht alle Informationen ab. In Fällen, in dem mehrere Instanzen des gleichen Attributs in demselben Gültigkeitsbereich angewendet werden, können Sie mithilfe von <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> alle Instanzen eines Attributs in einem Array platzieren. Wenn beispielsweise zwei Instanzen von `DeveloperAttribute` auf Klassenebene derselben Klasse angewendet werden, kann die `GetAttribute`-Methode zum Anzeigen der in beiden Attributen gefundenen Informationen geändert werden. Beim Anwenden mehrerer Attribute auf derselben Ebene müssen Sie beachten, dass das Attribut mit der **AllowMultiple**-Eigenschaft definiert wird, die in der <xref:System.AttributeUsageAttribute> auf **true** gesetzt ist.  
+ Im vorherigen Beispiel werden die zu prüfende Klasse und das zu suchenden spezifische Attribut an <xref:System.Attribute.GetCustomAttribute%2A> übergeben. Dieser Code funktioniert gut, wenn nur eine Instanz eines Attributs auf Klassenebene angewendet wird. Wenn jedoch mehrere Instanzen eines Attributs auf derselben Klassenebene angewendet werden, ruft die **GetCustomAttribute** -Methode nicht alle Informationen ab. In Fällen, in dem mehrere Instanzen des gleichen Attributs in demselben Gültigkeitsbereich angewendet werden, können Sie mithilfe von <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> alle Instanzen eines Attributs in einem Array platzieren. Wenn beispielsweise zwei Instanzen von `DeveloperAttribute` auf Klassenebene derselben Klasse angewendet werden, kann die `GetAttribute`-Methode zum Anzeigen der in beiden Attributen gefundenen Informationen geändert werden. Beim Anwenden mehrerer Attribute auf derselben Ebene müssen Sie beachten, dass das Attribut mit der **AllowMultiple** -Eigenschaft definiert wird, die in der <xref:System.AttributeUsageAttribute> auf **true** gesetzt ist.  
   
- Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der **GetCustomAttributes**-Methode ein Array erstellen, das auf alle Instanzen von `DeveloperAttribute` in einer bestimmten Klasse verweist. Die Werte aller Attribute werden anschließend in der Konsole angezeigt.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der **GetCustomAttributes** -Methode ein Array erstellen, das auf alle Instanzen von `DeveloperAttribute` in einer bestimmten Klasse verweist. Die Werte aller Attribute werden anschließend in der Konsole angezeigt.  
   
  [!code-cpp[Conceptual.Attributes.Usage#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source3.cpp#19)]
  [!code-csharp[Conceptual.Attributes.Usage#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source3.cs#19)]
@@ -81,7 +81,7 @@ The attribute was not found.
   
  Wenn auf Methoden- oder Klassenebene keine Instanzen von `DeveloperAttribute` gefunden werden, benachrichtigt die `GetAttribute`-Methode den Benutzer, dass keine Attribute gefunden wurden, und zeigt den Namen der Methode oder Klasse an, die das Attribut nicht enthält. Wenn ein Attribut gefunden wird, werden die Felder `Name`, `Level` und `Reviewed` in der Konsole angezeigt.  
   
- Sie können die Elemente der <xref:System.Type>-Klasse verwenden, um die einzelnen Methoden und Elemente der übergebenen Klasse abzurufen. In diesem Beispiel wird zuerst das **Type**-Objekt abgefragt, um Attributinformationen für die Klassenebene abzurufen. Als Nächstes wird <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> verwendet, um Instanzen aller Methoden in einem Array von <xref:System.Reflection.MemberInfo?displayProperty=nameWithType>-Objekten zu platzieren, um Attributinformationen für die Methodenebene abzurufen. Sie können mithilfe der <xref:System.Type.GetProperties%2A?displayProperty=nameWithType>-Methode nach Attributen auf Eigenschaftenebene oder mithilfe von <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> nach Attributen auf Konstruktorebene suchen.  
+ Sie können die Elemente der <xref:System.Type>-Klasse verwenden, um die einzelnen Methoden und Elemente der übergebenen Klasse abzurufen. In diesem Beispiel wird zuerst das **Type** -Objekt abgefragt, um Attributinformationen für die Klassenebene abzurufen. Als Nächstes wird <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> verwendet, um Instanzen aller Methoden in einem Array von <xref:System.Reflection.MemberInfo?displayProperty=nameWithType>-Objekten zu platzieren, um Attributinformationen für die Methodenebene abzurufen. Sie können mithilfe der <xref:System.Type.GetProperties%2A?displayProperty=nameWithType>-Methode nach Attributen auf Eigenschaftenebene oder mithilfe von <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> nach Attributen auf Konstruktorebene suchen.  
   
 ## <a name="see-also"></a>Siehe auch
 

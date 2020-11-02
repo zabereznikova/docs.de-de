@@ -12,15 +12,15 @@ helpviewer_keywords:
 - characters, escapes
 - regular expressions, character escapes
 - escape characters
-- .NET Framework regular expressions, character escapes
+- .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 4491b83db195a8d0f5bbf4f4326d92ed9ebd24e7
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 927fb32163a7b44561c19fdb35e38b488fc50fb7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050441"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889516"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
@@ -49,7 +49,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 |`\` *nnn*|Entspricht einem ASCII-Zeichen, wobei *nnn* aus zwei oder drei Ziffern besteht, die den oktalen Zeichencode darstellen. Beispielsweise stellt `\040` ein Leerzeichen dar. Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer (z. B. `\2`) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht. (Siehe [Rückverweiskonstrukte](backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Entspricht einem ASCII-Zeichen, wobei *nn* ein zweistelliger Hexadezimalzeichencode ist.|  
 |`\c` *X*|Entspricht einem ASCII-Steuerzeichen, wobei X der Buchstabe des Steuerzeichens ist. Beispielsweise ist `\cC` STRG+C.|  
-|`\u` *nnnn*|Entspricht einer UTF-16-Codeeinheit, deren Wert *nnnn* hexadezimal ist. **Hinweis**:  Das Perl 5-Escapezeichen, das zum Festlegen von Unicode verwendet wird, wird nicht von .NET unterstützt. Das Perl 5-Escape-Zeichen hat das Format `\x{` *####* `…}`, wobei *####* `…` einer Reihe von Hexadezimalziffern entspricht. Verwenden Sie stattdessen `\u`*nnnn*.|  
+|`\u` *nnnn*|Entspricht einer UTF-16-Codeeinheit, deren Wert *nnnn* hexadezimal ist. **Hinweis** :  Das Perl 5-Escapezeichen, das zum Festlegen von Unicode verwendet wird, wird nicht von .NET unterstützt. Das Perl 5-Escape-Zeichen hat das Format `\x{` *####* `…}`, wobei *####* `…` einer Reihe von Hexadezimalziffern entspricht. Verwenden Sie stattdessen `\u`*nnnn* .|  
 |`\`|Folgt diesem Zeichen ein Zeichen, das nicht als Escapezeichen erkannt wird, entspricht es diesem Zeichen. `\*` entspricht beispielsweise einem Sternchen (*) und ist gleich `\x2A`.|  
   
 ## <a name="an-example"></a>Beispiel  
