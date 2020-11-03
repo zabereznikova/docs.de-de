@@ -8,18 +8,19 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - writing text to files
-- I/O [.NET Framework], writing text to files
+- I/O [.NET], writing text to files
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: df057856385c8e9c63140e45512a97e492130396
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447211"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189237"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Vorgehensweise: Schreiben von Text in eine Datei
+
 In diesem Artikel werden verschiedene Vorgehensweisen zum Schreiben von Text in eine Datei für eine .NET-Anwendung veranschaulicht.
 
 Die folgenden Klassen und Methoden werden in der Regel zum Schreiben von Text in eine Datei verwendet:  

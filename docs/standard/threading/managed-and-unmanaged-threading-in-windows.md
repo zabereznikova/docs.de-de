@@ -3,18 +3,18 @@ title: Verwaltetes und nicht verwaltetes Threading in Windows
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924382"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189159"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Verwaltetes und nicht verwaltetes Threading in Windows
 
@@ -52,7 +52,7 @@ Ein verwalteter Thread kann gekennzeichnet werden, um anzugeben, dass er ein [Si
  Wenn der Apartmentzustand nicht festgelegt ist, bevor der Thread gestartet wird, wird der Thread als Multithread-Apartment (MTA) initialisiert. Der Finalizerthread und alle von <xref:System.Threading.ThreadPool> gesteuerten Threads sind MTAs.  
   
 > [!IMPORTANT]
-> Bei Anwendungsstartcode besteht die einzige Möglichkeit zum Steuern des Apartmentstatus darin, <xref:System.MTAThreadAttribute> oder <xref:System.STAThreadAttribute> für das Einstiegspunktverfahren anzuwenden. In .NET Framework 1.0 und 1.1 kann die Eigenschaft <xref:System.Threading.Thread.ApartmentState%2A> als erste Codezeile festgelegt werden. Das ist in .NET Framework 2.0 nicht zulässig.  
+> Bei Anwendungsstartcode besteht die einzige Möglichkeit zum Steuern des Apartmentstatus darin, <xref:System.MTAThreadAttribute> oder <xref:System.STAThreadAttribute> für das Einstiegspunktverfahren anzuwenden.
   
  Verwaltete Objekte, die für COM verfügbar gemacht werden, verhalten sich, als hätten sie den Freethread-Marshaler aggregiert. Anders gesagt können Sie von jedem COM-Apartment auf eine Freethreadweise aufgerufen werden. Die einzigen verwalteten Objekte, die dieses Freethread-Verhalten nicht zeigen, die Objekte, die von <xref:System.EnterpriseServices.ServicedComponent> oder <xref:System.Runtime.InteropServices.StandardOleMarshalObject> abgeleitet werden.  
   

@@ -8,20 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- anonymous pipes [.NET Framework]
-- parent-child communication [.NET Framework]
-- pipes [.NET Framework]
-- one-way communication [.NET Framework]
-- local computer communication [.NET Framework], pipes
+- anonymous pipes [.NET]
+- parent-child communication [.NET]
+- pipes [.NET]
+- one-way communication [.NET]
+- local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: 090a25aea4f280fc2ad00cf7777a501c475dfc66
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c9d223d975dc7ab251717a66de0bc845845dc9d7
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594802"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189354"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
+
 Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Computer bereit. Sie bieten zwar weniger Funktionen als benannte Pipes, erfordern aber auch weniger Mehraufwand. Sie können anonyme Pipes verwenden, um die prozessübergreifende Kommunikation auf einem lokalen Computer zu vereinfachen. Anonyme Pipes können nicht zur Kommunikation über ein Netzwerk verwendet werden.  
   
  Um anonyme Pipes zu implementieren, verwenden Sie die <xref:System.IO.Pipes.AnonymousPipeServerStream>- und <xref:System.IO.Pipes.AnonymousPipeClientStream>-Klassen.  

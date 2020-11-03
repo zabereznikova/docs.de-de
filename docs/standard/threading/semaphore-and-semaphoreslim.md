@@ -6,19 +6,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 - Semaphore class, about Semaphore class
 - SemaphoreSlim class, about SemaphoreSlim class
-- threading [.NET Framework], Semaphore class
+- threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600450"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188938"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
+
 Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt ein benanntes (systemweites) oder lokales Semaphor dar. Dabei handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Win32-Semaphoren sind zählende Semaphoren, die zum Steuern des Zugriffs auf einen Ressourcenpool verwendet werden können.  
   
  Die <xref:System.Threading.SemaphoreSlim>-Klasse stellt ein einfaches, schnelles Semaphor dar, das zum Warten innerhalb eines einzelnen Prozesses verwendet werden kann, wenn die Wartezeiten voraussichtlich sehr kurz sind. <xref:System.Threading.SemaphoreSlim> basiert im möglichst hohen Maße auf Synchronisierungsprimitiven, die von Common Language Runtime (CLR) bereitgestellt werden. Es stellt jedoch auch verzögert initialisierte, Kernel-basierte Wait-Handles zur Unterstützung des Wartens auf mehrere Semaphoren bereit. <xref:System.Threading.SemaphoreSlim> unterstützt auch die Verwendung von Abbruchtoken, unterstützt aber keine benannten Semaphoren oder die Verwendung eines Wait-Handles für die Synchronisierung.  
