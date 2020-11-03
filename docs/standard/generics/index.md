@@ -9,30 +9,30 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - generic methods, type inference
-- generics [.NET Framework], collections
-- generic interfaces [.NET Framework]
+- generics [.NET], collections
+- generic interfaces [.NET]
 - constructed generic types
 - nested generic types
 - generic type definitions
-- generic classes [.NET Framework]
-- generics [.NET Framework], interfaces
-- generics [.NET Framework], about
-- generics [.NET Framework]
-- generic collections [.NET Framework]
-- generic delegates [.NET Framework]
+- generic classes [.NET]
+- generics [.NET], interfaces
+- generics [.NET], about
+- generics [.NET]
+- generic collections [.NET]
+- generic delegates [.NET]
 - generic type arguments
-- generics [.NET Framework], delegates
-- generics [.NET Framework], features
-- constraints [.NET Framework]
+- generics [.NET], delegates
+- generics [.NET], features
+- constraints [.NET]
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599814"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063155"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -56,15 +56,15 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
 - Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
   
-- *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
+- *Generische Typparameter* , oder *Typparameter* , sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
   
-- Ein *konstruierter generischer Typ*, oder *konstruierter Typ*, ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
+- Ein *konstruierter generischer Typ* , oder *konstruierter Typ* , ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
   
 - Ein *generisches Typargument* ist jeder Typ, der durch einen generischen Typparameter ersetzt wird.  
   
 - Der allgemeine Begriff *generischer Typ* schließt sowohl konstruierte Typen als auch generische Typdefinitionen ein.  
   
-- *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz*bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](covariance-and-contravariance.md).  
+- *Kovarianz* und *Kontravarianz* der generischen Typparameter ermöglichen es Ihnen, konstruierte generische Typen zu verwenden, deren Typargumente stärker abgeleitet (Kovarianz) oder weniger stark abgeleitet (Kontravarianz) sind als ein konstruierter Zieltyp. Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Weitere Informationen finden Sie unter [Kovarianz und Kontravarianz](covariance-and-contravariance.md).  
   
 - *Einschränkungen* sind Begrenzungen für generische Typparameter. Sie können beispielsweise einen Typparameter auf Typen beschränken, die die generische Schnittstelle <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> implementieren, um sicherzustellen, dass Instanzen des Typs sortiert werden können. Sie können Typparameter auch auf Typen mit einer bestimmten Basisklasse beschränken, die über einen parameterlosen Konstruktor verfügen oder die Verweis- oder Werttypen sind. Benutzer des generischen Typs können keine Typargumente ersetzen, die die Einschränkungen nicht erfüllen.  
   
@@ -99,7 +99,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
  Es folgen einige Einschränkungen von Generics:  
   
-- Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). .NET Framework unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
+- Generische Typen können von den meisten Basisklassen abgeleitet werden, z. B. <xref:System.MarshalByRefObject> (und Einschränkungen können verwendet werden, um festzulegen, dass generische Typparameter von Basisklassen wie <xref:System.MarshalByRefObject>abgeleitet werden). .NET unterstützt allerdings keine kontextgebundenen generischen Typen. Ein generischer Typ kann von <xref:System.ContextBoundObject>abgeleitet werden, aber wenn Sie versuchen, eine Instanz dieses Typs zu erstellen, wird eine <xref:System.TypeLoadException>ausgelöst.  
   
 - Enumerationen können keine generischen Typparameter haben. Eine Enumeration kann nur durch Zufall generisch sein (z. B. weil sie in einem generischen Typ verschachtelt ist, der mit Visual Basic, C# oder C++ definiert wurde). Weitere Informationen finden Sie im Abschnitt "Enumerationen" unter [Allgemeines Typsystem](../base-types/common-type-system.md).  
   
