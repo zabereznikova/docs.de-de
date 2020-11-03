@@ -17,12 +17,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557059"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282054"
 ---
 # <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden des Datenschutzes
 
@@ -35,7 +35,7 @@ ms.locfileid: "87557059"
   
 Verwenden Sie die <xref:System.Security.Cryptography.ProtectedData>-Klasse, um eine Kopie eines Bytearrays zu verschlüsseln. Diese Funktionalität ist in .NET Framework, .net Core und .net 5 verfügbar.  Sie können angeben, dass Daten, die über das aktuelle Benutzerkonto verschlüsselt wurden, nur über dasselbe Benutzerkonto oder über jedes Konto auf dem Computer entschlüsselt werden können.  In der <xref:System.Security.Cryptography.DataProtectionScope>-Enumeration finden Sie eine ausführliche Beschreibung der <xref:System.Security.Cryptography.ProtectedData>-Optionen.  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>So verschlüsseln Sie Daten in eine Datei oder einen Stream mithilfe von Datenschutz  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>Verschlüsseln von Daten in einer Datei oder einem Stream mithilfe von Datenschutz  
   
 1. Erstellen Sie eine zufällige Entropie.  
   

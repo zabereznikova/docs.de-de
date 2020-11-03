@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549979"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281722"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -56,7 +56,7 @@ Die Kryptografie wird für folgende Zielsetzungen verwendet:
 
 Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen und Vorgehensweisen, die als kryptografische Grundelemente bezeichnet werden, ein kryptografisches Schema erstellen. In der nachstehenden Tabelle sind die kryptografischen Grundelemente und deren Verwendungszweck aufgeführt.
 
-|Kryptografisches Grundelement|Verwendung|
+|Kryptografisches Grundelement|Zweck|
 |-----------------------------|---------|
 |Verschlüsselung mit geheimem Schlüssel (symmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem einzigen, gemeinsam genutzten, geheimen Schlüssel ver- und entschlüsselt.|
 |Verschlüsselung mit öffentlichem Schlüssel (asymmetrische Kryptografie)|Transformiert die Daten und verhindert, dass sie von Dritten gelesen werden. Bei diesem Verschlüsselungstyp werden die Daten mit einem Paar aus öffentlichem und privatem Schlüssel ver- und entschlüsselt.|
@@ -71,7 +71,7 @@ Die Verschlüsselung mit geheimem Schlüssel wird auch als symmetrische Verschl�
 
 Ein Algorithmus mit geheimem Schlüssel, eine so genannte Blockchiffre, wird zum Verschlüsseln von jeweils einem Datenblock verwendet. Blockverschlüsselungsverfahren wie DES (Data Encryption Standard), TripleDES und AES (Advanced Encryption Standard transformieren einen Eingabeblock mit *n* Bytes in einen Ausgabeblock mit verschlüsselten Bytes kryptografisch. Wenn eine Bytefolge ver- oder entschlüsselt werden soll, muss das blockweise geschehen. Da *n* klein ist (8 Bytes bei DES und TripleDES, 16 Bytes [Standard], 24 Bytes oder 32 Bytes bei AES), müssen Werte, die größer als *n* sind, jeweils blockweise verschlüsselt werden. Datenwerte, die kleiner als *n* sind, müssen auf *n* erweitert werden, um verarbeitet werden zu können.
 
-Eine einfache Form einer Blockchiffre wird als ECB-Modus (Electronic Codebook) bezeichnet. Der ECB-Modus gilt als nicht sicher, da zum Initialisieren des ersten Klartextblocks kein Initialisierungsvektor verwendet wird. Bei einem geheimen Schlüssel *k*wird ein Eingabeblock mit Klartext mithilfe einer einfachen Blockchiffre ohne Initialisierungsvektor in denselben Ausgabeblock mit verschlüsseltem Text transformiert. Wenn der Klartexteingabestream doppelte Blöcke enthält, befinden sich diese somit auch im verschlüsselten Textausgabestream. Diese doppelten Ausgabeblöcke weisen darauf hin, dass für die schwache Codierung nicht autorisierte Benutzer die möglicherweise eingesetzten Algorithmen verwendet haben, und geben die möglichen Angriffsformen an. Der ECB-Verschlüsselungsverfahrensmodus kann daher recht leicht analysiert und somit der Schlüssel leicht erkannt werden.
+Eine einfache Form einer Blockchiffre wird als ECB-Modus (Electronic Codebook) bezeichnet. Der ECB-Modus gilt als nicht sicher, da zum Initialisieren des ersten Klartextblocks kein Initialisierungsvektor verwendet wird. Bei einem geheimen Schlüssel *k* wird ein Eingabeblock mit Klartext mithilfe einer einfachen Blockchiffre ohne Initialisierungsvektor in denselben Ausgabeblock mit verschlüsseltem Text transformiert. Wenn der Klartexteingabestream doppelte Blöcke enthält, befinden sich diese somit auch im verschlüsselten Textausgabestream. Diese doppelten Ausgabeblöcke weisen darauf hin, dass für die schwache Codierung nicht autorisierte Benutzer die möglicherweise eingesetzten Algorithmen verwendet haben, und geben die möglichen Angriffsformen an. Der ECB-Verschlüsselungsverfahrensmodus kann daher recht leicht analysiert und somit der Schlüssel leicht erkannt werden.
 
 Für die Blockchiffreklassen in der Basisklassenbibliothek wird ein Standardverkettungsmodus mit der Bezeichnung Cipher Block Chaining (CBC) verwendet. Sie können diese Standardeinstellung jedoch ändern, wenn Sie möchten.
 
@@ -123,7 +123,7 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 - <xref:System.Security.Cryptography.DSA>
 
-RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur, aber DSA kann nur für die Signierung verwendet werden. DSA ist nicht so sicher wie RSA, und wir empfehlen RSA. Diffie-Hellman kann nur für die Schlüsselgenerierung verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
+RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur, aber DSA kann nur für die Signierung verwendet werden. DSA ist nicht so sicher wie RSA, und wir empfehlen RSA. Diffie-Hellman können nur für die Schlüsselgenerierung verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.
 
 ## <a name="digital-signatures"></a>Digitale Signaturen
 
@@ -178,13 +178,13 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung
 
-Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in der .NET Framework verwenden Zufallszahlengeneratoren, um kryptografische Schlüssel zu generieren.
+Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in .NET verwenden Zufallszahlengeneratoren, um kryptografische Schlüssel zu generieren.
 
 Die <xref:System.Security.Cryptography.RandomNumberGenerator> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
 
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste
 
-In den .NET Framework 3,5 können Sie mithilfe der folgenden Kryptografieklassen Informationen zu manifestresssignaturen für Anwendungen abrufen und überprüfen, die mit der [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment)bereitgestellt werden:
+Mithilfe der folgenden Kryptografieklassen können Sie Informationen zu manifestresssignaturen für Anwendungen abrufen und überprüfen, die mit der [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment)bereitgestellt werden:
 
 - Die <xref:System.Security.Cryptography.ManifestSignatureInformation> -Klasse ruft Informationen zu einer Manifestsignatur ab, wenn Sie deren <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> -Methodenüberladungen verwenden.
 
@@ -192,7 +192,7 @@ In den .NET Framework 3,5 können Sie mithilfe der folgenden Kryptografieklassen
 
 - Die <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> -Klasse stellt eine schreibgeschützte Auflistung der <xref:System.Security.Cryptography.ManifestSignatureInformation> -Objekte der überprüften Signatur bereit.
 
- Außerdem stellen die folgenden Klassen bestimmte Signaturinformationen bereit:
+Außerdem stellen die folgenden Klassen bestimmte Signaturinformationen bereit:
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> Enthält die Informationen zur starken Namenssignatur für ein Manifest.
 
@@ -204,11 +204,11 @@ In den .NET Framework 3,5 können Sie mithilfe der folgenden Kryptografieklassen
 
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG-Klassen (Cryptography Next Generation)
 
-In den .NET Framework 3,5 und höheren Versionen stellen die CNG-Klassen (Cryptography Next Generation) einen verwalteten Wrapper für die nativen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) Diese Klassen verfügen über "CNG" als Teil ihrer Namen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
+Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper um die systemeigenen CNG-Funktionen bereit. (CNG ist der Ersatz für CryptoAPI.) Diese Klassen verfügen über "CNG" als Teil ihrer Namen. Zentrales Element dieser CNG-Wrapperklassen ist die <xref:System.Security.Cryptography.CngKey> -Schlüsselcontainerklasse, die die Speicherung und Verwendung von CNG-Schlüsseln abstrahiert. Diese Klasse ermöglicht es, ein Schlüsselpaar oder einen öffentlichen Schlüssel sicher zu speichern und mittels eines einfachen Zeichenfolgennamens auf diesen zu verweisen. Die ECDSA-basierte <xref:System.Security.Cryptography.ECDsaCng> -Signaturklasse und die <xref:System.Security.Cryptography.ECDiffieHellmanCng> -Verschlüsselungsklasse können <xref:System.Security.Cryptography.CngKey> -Objekte verwenden.
 
 Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl zusätzlicher Operationen verwendet, einschließlich dem Öffnen, Erstellen, Löschen und Exportieren von Schlüsseln. Sie stellt auch den Zugriff auf das zugrunde liegende Schlüsselhandle bereit, das für den direkten Aufruf systemeigener Funktionen verwendet wird.
 
-Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen, wie z. b. die folgenden:
+.NET umfasst auch eine Reihe von unterstützenden CNG-Klassen, wie z. b. die folgenden:
 
 - <xref:System.Security.Cryptography.CngProvider> verwaltet einen Schlüsselspeicheranbieter.
 
@@ -216,7 +216,7 @@ Der .NET Framework 3,5 umfasst auch eine Reihe von unterstützenden CNG-Klassen,
 
 - <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
 - [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)

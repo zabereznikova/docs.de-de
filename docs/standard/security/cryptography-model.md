@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cryptography [.NET], model
 - encryption [.NET], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 0b3e07238bf0932572c222f7b947cfa7ae0221a9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: a157a9a76f87a2a56c616b76c933e6d8d6415b03
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556994"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281583"
 ---
 # <a name="net-cryptography-model"></a>.Net-Kryptografiemodell
 
@@ -25,7 +25,7 @@ ms.locfileid: "87556994"
 
 Das Kryptografiesystem von .NET implementiert ein erweiterbares Muster der abgeleiteten Klassen Vererbung. Die Hierarchie lautet wie folgt:
 
-- Algorithmustypen Klasse, <xref:System.Security.Cryptography.SymmetricAlgorithm> z <xref:System.Security.Cryptography.AsymmetricAlgorithm> . b <xref:System.Security.Cryptography.HashAlgorithm> ., oder. Diese Ebene ist abstrakt.
+- Algorithmustypen Klasse, <xref:System.Security.Cryptography.SymmetricAlgorithm> z  <xref:System.Security.Cryptography.AsymmetricAlgorithm> . b <xref:System.Security.Cryptography.HashAlgorithm> ., oder. Diese Ebene ist abstrakt.
 
 - Algorithmusklasse, die von einer Algorithmustypklasse erbt; z. B. <xref:System.Security.Cryptography.Aes>, <xref:System.Security.Cryptography.RSA> oder <xref:System.Security.Cryptography.ECDiffieHellman>. Diese Ebene ist abstrakt.
 
@@ -37,13 +37,13 @@ Mit diesem Muster abgeleiteter Klassen können Sie einen neuen Algorithmus oder 
 
 Als ein Beispiel für die verschiedenen Implementierungen eines Algorithmus können Sie sich symmetrische Algorithmen ansehen. Die Basis für alle symmetrischen Algorithmen ist <xref:System.Security.Cryptography.SymmetricAlgorithm> , die von, und anderen geerbt wird, die <xref:System.Security.Cryptography.Aes> <xref:System.Security.Cryptography.TripleDES> nicht mehr empfohlen werden.
 
-<xref:System.Security.Cryptography.Aes>wird von <xref:System.Security.Cryptography.AesCryptoServiceProvider> , <xref:System.Security.Cryptography.AesCng> und geerbt <xref:System.Security.Cryptography.AesManaged> .
+<xref:System.Security.Cryptography.Aes> wird von <xref:System.Security.Cryptography.AesCryptoServiceProvider> , <xref:System.Security.Cryptography.AesCng> und geerbt <xref:System.Security.Cryptography.AesManaged> .
 
 In .NET Framework unter Windows:
 
-* `*CryptoServiceProvider`Algorithmusklassen, wie z <xref:System.Security.Cryptography.AesCryptoServiceProvider> . b., sind Wrapper für die Windows Cryptography API (CAPI)-Implementierung eines Algorithmus.
-* `*Cng`Algorithmusklassen, z <xref:System.Security.Cryptography.ECDiffieHellmanCng> . b., sind Wrapper um die CNG-Implementierung (Cryptography Next Generation) von Windows.
-* `*Managed`Klassen, wie z <xref:System.Security.Cryptography.AesManaged> . b., werden vollständig in verwaltetem Code geschrieben. `*Managed`Implementierungen sind nicht durch die Federal Information Processing Standards (fps) zertifiziert und möglicherweise langsamer als die `*CryptoServiceProvider` `*Cng` Wrapper Klassen und.
+* `*CryptoServiceProvider` Algorithmusklassen, wie z <xref:System.Security.Cryptography.AesCryptoServiceProvider> . b., sind Wrapper für die Windows Cryptography API (CAPI)-Implementierung eines Algorithmus.
+* `*Cng` Algorithmusklassen, wie z <xref:System.Security.Cryptography.ECDiffieHellmanCng> . b., sind Wrapper um die CNG-Implementierung (Cryptography Next Generation) von Windows.
+* `*Managed` Klassen, wie z <xref:System.Security.Cryptography.AesManaged> . b., werden vollständig in verwaltetem Code geschrieben. `*Managed` Implementierungen sind nicht durch die Federal Information Processing Standards (fps) zertifiziert und möglicherweise langsamer als die `*CryptoServiceProvider` `*Cng` Wrapper Klassen und.
 
 In .net Core und .net 5 und höheren Versionen sind alle Implementierungsklassen ( `*CryptoServiceProvider` , `*Managed` und `*Cng` ) Wrapper für die Betriebssystem Algorithmen (OS). Wenn die Betriebssystem Algorithmen mit der Verwendung von "fps" zertifiziert sind, werden von .net mit der Verwendung von "PPS" Weitere Informationen finden Sie unter [plattformübergreifende Kryptographie](cross-platform-cryptography.md).
 
