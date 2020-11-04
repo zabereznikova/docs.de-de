@@ -7,20 +7,20 @@ helpviewer_keywords:
 - IO namespace
 - files, I/O
 - System.IO namespace
-- I/O [.NET Framework]
+- I/O [.NET]
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558939"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189198"
 ---
 # <a name="file-and-stream-io"></a>Datei- und Stream-E/A
 
-Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. Im .NET Framework enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.
+Datei- und Stream-E/A (Eingabe/Ausgabe) bezieht sich auf die Übertragung von Daten auf ein oder von einem Speichermedium. In .NET enthalten die `System.IO`-Namespaces Typen, die das synchrone und asynchrone Lesen und Schreiben in Datenströmen und Dateien ermöglichen. Diese Namespaces enthalten zudem Typen für die Komprimierung und Dekomprimierung von Dateien sowie Typen für die Kommunikation über Pipes und serielle Anschlüsse.
 
 Eine Datei ist eine geordnete, mit einem Namen versehene Auflistung von dauerhaft gespeicherten Bytes. Beim Umgang mit Dateien arbeiten Sie mit Verzeichnispfaden, Datenträgern sowie mit Datei- und Verzeichnisnamen. Im Unterschied dazu, handelt es sich bei einem Stream um eine Sequenz von Bytes, die zum Lesen von und zum Schreiben in einen Sicherungsspeicher verwendet wird, für den unterschiedliche Speichermedien (z. B. Festplatten oder Arbeitsspeicher) verwendet werden können. Ebenso wie es neben Festplatten mehrere andere Sicherungsspeicher gibt, gibt es neben Dateistreams zusätzlich Netzwerk-, Speicher- und Pipestreams.
 
@@ -28,7 +28,7 @@ Eine Datei ist eine geordnete, mit einem Namen versehene Auflistung von dauerhaf
 
 Sie können die Typen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, um mit Dateien und Verzeichnissen zu interagieren. Beispielsweise können Sie Eigenschaften für Dateien und Verzeichnisse abrufen und festlegen oder Auflistungen von Dateien und Verzeichnissen anhand von Suchkriterien abrufen.
 
-Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Windows-Systeme formulieren können (z.B. die DOS-Gerätesyntax, die in .NET Core 1.1 und höher und in .NET Framework 4.6.2 und höher unterstützt wird) finden Sie unter [File path formats on Windows systems (Dateipfadformate unter Windows-Systemen)](file-path-formats.md).
+Informationen zu Dateibenennungskonventionen und wie Sie einen Dateipfad für Windows-Systeme formulieren können (z. B. die DOS-Gerätesyntax, die in .NET Core 1.1 und höher und in .NET Framework 4.6.2 und höher unterstützt wird) finden Sie unter [File path formats on Windows systems (Dateipfadformate unter Windows-Systemen)](file-path-formats.md).
 
 Im Folgenden sind einige häufig verwendete Datei- und Verzeichnisklassen aufgeführt:
 
@@ -142,7 +142,7 @@ Weitere Informationen finden Sie unter [Isolierter Speicher](isolated-storage.md
 
 ## <a name="io-operations-in-windows-store-apps"></a>E/A-Vorgänge in Windows Store-Apps
 
-Die .NET für Windows 8.x Store-Apps enthalten viele der Typen zum Lesen und Schreiben in Streams. Jedoch sind nicht alle E/A-Typen von .NET Framework verfügbar.
+Die .NET für Windows 8.x Store-Apps enthalten viele der Typen zum Lesen und Schreiben in Streams. Jedoch sind nicht alle E/A-Typen von .NET verfügbar.
 
 Beachten Sie jedoch die folgenden wichtigen Unterschiede, wenn Sie E/A-Vorgänge in Windows Store-Apps Version 8.x verwenden:
 
@@ -162,7 +162,7 @@ Weitere Informationen zu E/A-Vorgängen in einer Windows Store-App Version 8.x f
 
 Wenn Sie die Klassen im <xref:System.IO?displayProperty=nameWithType>-Namespace verwenden, müssen die Sicherheitsanforderungen des Betriebssystems erfüllt sein, z. B. Zugriffssteuerungslisten (ACLs), um den Zugriff auf Dateien und Verzeichnisse zu steuern. Dies gilt zusätzlich zu anderen <xref:System.Security.Permissions.FileIOPermission>-Anforderungen. ACLs können programmgesteuert verwaltet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von Zugriffssteuerungslisten-Einträgen](how-to-add-or-remove-access-control-list-entries.md).
 
-Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen [isolierte Speicherung](isolated-storage.md) für herkömmliche .NET Framework-Anwendungen oder [Anwendungsdaten](/previous-versions/windows/apps/hh464917(v=win.10)) für Windows Store-Apps Version 8.x.
+Standardsicherheitsrichtlinien verhindern den Zugriff von Internet- oder Intranetanwendungen auf Dateien, die sich auf dem Computer des Benutzers befinden. Verwenden Sie daher beim Schreiben von Code, der über das Internet oder Intranet heruntergeladen wird, keine E/A-Klassen, für die ein Pfad zu einer physischen Datei erforderlich ist. Verwenden Sie stattdessen den [isolierten Speicher](isolated-storage.md) für .NET-Anwendungen.
 
 Eine Sicherheitsüberprüfung wird nur beim Erstellen des Streams ausgeführt. Übergeben Sie daher keinen geöffneten Stream an weniger vertrauenswürdigen Code oder an Anwendungsdomänen.
 
@@ -178,7 +178,7 @@ Beschreibt die Leistungsvorteile und den grundlegenden Ablauf der asynchronen E/
 Beschreibt einen Mechanismus zur Datenspeicherung, der durch Definition einer standardisierten Zuordnung von Code zu gespeicherten Daten Isolierung und Sicherheit gewährleistet.
 
 - [Pipes](pipe-operations.md)\
-Beschreibt anonyme und benannte Pipevorgänge im .NET Framework.
+Beschreibt anonyme und benannte Pipevorgänge in .NET.
 
 - [Speicherabbilddateien](memory-mapped-files.md)\
 Beschreibt Speicherabbilddateien, die den Inhalt von Dateien auf dem Datenträger im virtuellen Arbeitsspeicher enthalten. Sie können Speicherabbilddateien verwenden, um sehr große Dateien zu bearbeiten und gemeinsam genutzten Speicherbereich für die prozessübergreifende Kommunikation zu erstellen.
