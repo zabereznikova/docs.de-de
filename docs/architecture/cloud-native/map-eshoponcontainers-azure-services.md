@@ -2,12 +2,12 @@
 title: Zuordnen von eShopOnContainers zu Azure-Diensten
 description: Zuordnung von eshoponcontainers zu Azure-Diensten wie Azure Kubernetes Service, API-Gateway und Azure Service Bus.
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155262"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400447"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Zuordnen von eShopOnContainers zu Azure-Diensten
 
@@ -24,7 +24,7 @@ Die serverseitigen Komponenten dieser Architektur werden problemlos den Azure-Di
 
 Die Container gehosteten Dienste der Anwendung, von ASP.net Core MVC-apps bis hin zu einzelnen Katalog-und Bestell-und anordnen, können in Azure Kubernetes Service (AKS) gehostet und verwaltet werden. Die Anwendung kann lokal auf docker und Kubernetes ausgeführt werden, und dieselben Container können dann in in AKS gehosteten Staging-und Produktionsumgebungen bereitgestellt werden. Dieser Prozess kann automatisiert werden, wie im nächsten Abschnitt erläutert wird.
 
-AKS stellt Verwaltungsdienste für einzelne Cluster von Containern bereit. Die Anwendung stellt separate AKS-Cluster für jeden microservice bereit, der im obigen Architektur Diagramm angezeigt wird. Dieser Ansatz ermöglicht es jedem einzelnen Dienst, unabhängig von seinen Ressourcenanforderungen zu skalieren. Jeder-Dienst kann auch unabhängig bereitgestellt werden, und im Idealfall sollten bei solchen bereit Stellungen keine Systemausfall Zeiten entstehen.
+AKS stellt Verwaltungsdienste für einzelne Cluster von Containern bereit. Die Anwendung stellt separate Container für jeden microservice im AKS-Cluster bereit, wie im obigen Architektur Diagramm gezeigt. Dieser Ansatz ermöglicht es jedem einzelnen Dienst, unabhängig von seinen Ressourcenanforderungen zu skalieren. Jeder-Dienst kann auch unabhängig bereitgestellt werden, und im Idealfall sollten bei solchen bereit Stellungen keine Systemausfall Zeiten entstehen.
 
 ## <a name="api-gateway"></a>API Gateway
 
