@@ -12,16 +12,15 @@
     - name: Kulturunabhängige Zeichenfolgenoperationen
       href: culture-insensitive-string-operations.md
       items:
-        - name: Durchführen kulturunabhängiger Zeichenfolgenoperationen
+        - name: Übersicht
           href: performing-culture-insensitive-string-operations.md
-          items:
-            - name: Zeichenfolgenvergleiche
-              href: performing-culture-insensitive-string-comparisons.md
-            - name: Schreibungsänderungen
-              href: performing-culture-insensitive-case-changes.md
-            - name: Zeichenfolgenvorgänge in Sammlungen
-              href: performing-culture-insensitive-string-operations-in-collections.md
-            - name: Zeichenfolgenvorgänge in Arrays
-              href: performing-culture-insensitive-string-operations-in-arrays.md
+        - name: Zeichenfolgenvergleiche
+          href: performing-culture-insensitive-string-comparisons.md
+        - name: Schreibungsänderungen
+          href: performing-culture-insensitive-case-changes.md
+        - name: Zeichenfolgenvorgänge in Sammlungen
+          href: performing-culture-insensitive-string-operations-in-collections.md
+        - name: Zeichenfolgenvorgänge in Arrays
+          href: performing-culture-insensitive-string-operations-in-arrays.md
     - name: Bewährte Methoden für die Entwicklung weltweit einsatzfähiger Anwendungen
       href: best-practices-for-developing-world-ready-apps.md

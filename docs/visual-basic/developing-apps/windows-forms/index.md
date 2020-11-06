@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557018"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282167"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 
@@ -28,7 +28,7 @@ Sie können mit Visual Studio Windows Forms- und Windows-Dienstanwendungen erste
 
 ## <a name="building-rich-interactive-user-interfaces"></a>Erstellen von interaktiven Benutzeroberflächen mit anspruchsvollen Grafiken
 
-Windows Forms ist die Komponente von .NET Framework für intelligente Clients und stellt eine Reihe von verwalteten Bibliotheken bereit, die allgemeine Anwendungsaufgaben wie das Lesen aus und das Schreiben in das Dateisystem ermöglichen. Mit einer Entwicklungsumgebung wie Visual Studio können Sie Windows Forms-Anwendungen erstellen, die Informationen anzeigen, Benutzer zur Eingabe von Daten auffordern oder über ein Netzwerk mit Remotecomputern kommunizieren.
+Windows Forms ist die Smart Client-Komponente von .NET Framework und .NET Core (ab .NET Core 3.0). Sie stellt eine Reihe von verwalteten Bibliotheken bereit, die allgemeine Anwendungsaufgaben ermöglichen. Dazu zählen u. a. das Lesen von Daten aus dem Dateisystem und das Schreiben von Daten in das Dateisystem. Mit einer Entwicklungsumgebung wie Visual Studio können Sie Windows Forms-Anwendungen erstellen, die Informationen anzeigen, Benutzer zur Eingabe von Daten auffordern oder über ein Netzwerk mit Remotecomputern kommunizieren.
 
 In Windows Forms stellt ein Formular eine visuelle Oberfläche dar, auf der Informationen für den Benutzer angezeigt werden. In der Regel erstellen Sie Windows Forms-Anwendungen, indem Sie Steuerelemente in Formularen platzieren und Antworten auf Benutzeraktionen (z. B. Maus- und Tastatureingaben) entwickeln. Ein *Steuerelement* ist ein diskretes Benutzeroberflächenelement (UI-Element), das Daten anzeigt oder Dateneingaben akzeptiert.
 
@@ -97,7 +97,7 @@ Eine umfassende Einführung in ClickOnce finden Sie unter [ClickOnce-Sicherheit 
 
 ## <a name="other-controls-and-features"></a>Andere Steuerelemente und Funktionen
 
-In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Außerdem basiert Windows Forms auf dem robusten Sicherheitssystem von .NET Framework, sodass Sie für Ihre Kunden sicherere Anwendungen freigeben können.
+In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können. Dazu zählen z. B. das Erstellen von Dialogfeldern, das Drucken, das Hinzufügen von Dokumentation sowie das Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus basiert Windows Forms auf dem robusten Sicherheitssystem von .NET, sodass Sie sicherere Anwendungen für Ihre Kunden freigeben können.
 
 Ausführliche Informationen zur Verwendung dieser Funktionen finden Sie in den folgenden Hilfethemen:
 
