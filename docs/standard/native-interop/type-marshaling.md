@@ -2,12 +2,12 @@
 title: Marshalling von Typen – .NET
 description: Erfahren Sie, wie .NET Ihre Strukturen in eine native Darstellung marshallt.
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706265"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188392"
 ---
 # <a name="type-marshaling"></a>Marshalling von Typen
 
@@ -87,7 +87,7 @@ Wenn Sie Methoden in COM-Objekten in .NET aufrufen, ändert die .NET-Runtime die
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Delegattypen | `_Delegate*` in .NET Framework. In .NET Core nicht zulässig. |
+| Delegattypen | `_Delegate*` in .NET Framework. In .NET Core sowie .NET 5 und höher nicht zulässig. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | .NET-Array | `SAFEARRAY`                   |
 | `string[]` | `SAFEARRAY` aus `BSTR`s        |

@@ -4,15 +4,15 @@ description: Erfahren Sie mehr über die Verwendung von Threads und Threading in
 ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], about threading
+- threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: c092994818c9105a555acaf63ceba4b8e99bcada
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663030"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188704"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -21,7 +21,7 @@ Sie können mit .NET Anwendungen schreiben, die mehrere Vorgänge zur gleichen Z
 Clientanwendungen, die Multithreading verwenden, reagieren besser auf Benutzereingaben, weil die Benutzeroberfläche aktiv bleibt, da prozessorintensive Aufgaben in separaten Threads ausgeführt werden. Multithreading ist auch nützlich, wenn Sie skalierbare Aufgaben erstellen, da Sie Threads bei steigender Arbeitsauslastung hinzufügen können.
 
 > [!NOTE]
-> Wenn Sie mehr Kontrolle über das Verhalten von Threads der Anwendung benötigen, können Sie die Threads selbst verwalten. Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), neue parallele Sammlungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein neues Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie in den Artikeln zur [parallelen Programmierung](../parallel-programming/index.md) und zu [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+> Wenn Sie mehr Kontrolle über das Verhalten von Threads der Anwendung benötigen, können Sie die Threads selbst verwalten. Die Multithreadprogrammierung wird erheblich vereinfacht durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert. Weitere Informationen finden Sie in den Artikeln zur [parallelen Programmierung](../parallel-programming/index.md) und zu [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>Vorgehensweise: Erstellen und Starten eines neuen Threads
 
@@ -33,7 +33,7 @@ Verwenden Sie <xref:System.Threading.CancellationToken?displayProperty=nameWithT
 
 Manchmal ist es nicht möglich, einen Thread kooperativ anzuhalten, weil darin Drittanbietercode ausgeführt wird, der für einen kooperativen Abbruch nicht geeignet ist. In diesem Fall müssen Sie die Beendigung der Ausführung möglicherweise erzwingen. Um die Beendigung der Ausführung eines Threads zu erzwingen, können Sie in .NET Framework die Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> verwenden. Diese Methode löst eine <xref:System.Threading.ThreadAbortException> im Thread aus, in dem sie aufgerufen wird. Weitere Informationen finden Sie unter [Zerstören von Threads](destroying-threads.md). Die Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> wird in .NET Core nicht unterstützt. Wenn Sie die Beendigung der Ausführung von Drittanbietercode in .NET Core erzwingen müssen, führen Sie den Code in einem separaten Prozess aus und verwenden <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
-<xref:System.Threading.CancellationToken?displayProperty=nameWithType> steht erst ab .NET Framework 4 zur Verfügung. Um einen Thread in einer älteren .NET Framework-Version anzuhalten, müssen Sie den kooperativen Abbruch mithilfe von Techniken zur Threadsynchronisierung manuell implementieren. Sie können beispielsweise das flüchtige (volatile) boolesche Feld `shouldStop` erstellen und damit anfordern, dass der vom Thread ausgeführte Code angehalten wird. Weitere Informationen finden Sie unter [volatile](../../csharp/language-reference/keywords/volatile.md) in der C#-Referenz sowie unter <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> steht erst ab .NET Framework 4 zur Verfügung. Implementieren Sie den kooperativen Abbruch mithilfe von Techniken zur Threadsynchronisierung manuell, um einen Thread in einer älteren .NET Framework-Version anzuhalten. Sie können beispielsweise das flüchtige (volatile) boolesche Feld `shouldStop` erstellen und damit anfordern, dass der vom Thread ausgeführte Code angehalten wird. Weitere Informationen finden Sie unter [volatile](../../csharp/language-reference/keywords/volatile.md) in der C#-Referenz sowie unter <xref:System.Threading.Volatile?displayProperty=nameWithType>.
 
 Verwenden Sie die <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>-Methode, damit der aufrufende Thread auf die Beendigung des Threads wartet, der angehalten wird.
 

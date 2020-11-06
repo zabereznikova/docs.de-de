@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679598"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188054"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
@@ -90,7 +90,7 @@ Der DOS-Gerätepfad besteht aus den folgenden Komponenten:
 - Der Gerätepfadbezeichner (`\\.\` oder `\\?\`), der den Pfad als DOS-Gerätepfad identifiziert.
 
    > [!NOTE]
-   > `\\?\` wird in allen Versionen von .NET Core und ab Version 4.6.2 von .NET Framework unterstützt.
+   > `\\?\` wird in allen Versionen von .NET Core und .NET 5 und höher und ab Version 4.6.2 des .NET Framework unterstützt.
 
 - Ein symbolischer Link zum „echten“ Geräteobjekt (im Fall eines Laufwerknamens „C:“, im Fall eines Volume-GUID „Volume{b75e2c83-0000-0000-0000-602f00000000}“).
 
@@ -194,10 +194,10 @@ Warum kann es sinnvoll sein, die Normalisierung zu überspringen? Es gibt drei w
 
 1. Zur Verbesserung der Leistung, wenn Sie die Normalisierung bereits durchgeführt haben.
 
-1. Zum Überspringen der `MAX_PATH`-Überprüfung der Pfadlänge, um Pfade zu ermöglichen, die länger als 259 Zeichen sind (nur in .NET Framework). Abgesehen von einigen Ausnahmen ist dies mit den meisten APIs möglich.
+1. Zum Überspringen der `MAX_PATH`-Überprüfung der Pfadlänge, um Pfade mit mehr als 259 Zeichen zu ermöglichen (nur im .NET Framework). Abgesehen von einigen Ausnahmen ist dies mit den meisten APIs möglich.
 
 > [!NOTE]
-> .NET Core verarbeitet lange Pfade implizit und führt keine `MAX_PATH`-Überprüfung durch. Die `MAX_PATH`-Überprüfung gilt nur für .NET Framework.
+> In .NET Core und .NET 5 und höher werden lange Pfade implizit verarbeitet, und es wird keine `MAX_PATH`-Überprüfung durchgeführt. Die `MAX_PATH`-Überprüfung gilt nur für das .NET Framework.
 
 Das Überspringen der Normalisierung und MAX_PATH-Überprüfungen ist der einzige Unterschied zwischen den zwei Gerätepfadsyntaxen. Andernfalls sind sie identisch. Beachten Sie, dass Sie durch Überspringen der Normalisierung Pfade erstellen können, die für „normale“ Anwendungen schwer zu verarbeiten sind.
 

@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - standard format strings, numeric
 - format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
 - standard numeric format strings
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557371"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888970"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -33,7 +33,7 @@ Standardformatzeichenfolgen für Zahlen werden für die Formatierung allgemeiner
 - `xx` ist eine optionale ganze Zahl, die als *Genauigkeitsspezifizierer* (Genauigkeitsangabe) bezeichnet wird. Die Genauigkeitsangabe reicht von 0 bis 99 und wirkt sich auf die Anzahl der Ziffern im Ergebnis aus. Beachten Sie, dass die Genauigkeitsangabe die Anzahl der Ziffern in der Zeichenfolgendarstellung einer Zahl steuert. Die Zahl selbst wird nicht gerundet. Verwenden Sie für einen Rundungsvorgang die <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>-, <xref:System.Math.Floor%2A?displayProperty=nameWithType>- oder <xref:System.Math.Round%2A?displayProperty=nameWithType>-Methode.
 
   Wenn der *Genauigkeitsspezifizierer* die Anzahl von Dezimalstellen in der Ergebniszeichenfolge steuert, gibt die Ergebniszeichenfolge eine Zahl an, die auf ein darstellbares Ergebnis gerundet wird, das am ehesten dem unendlich präzisen Ergebnis entspricht. Wenn zwei gleich nahe darstellbare Ergebnisse vorhanden sind:
-  - **In .NET Framework und in .NET Core bis .NET Core 2.0** wählt die Runtime das Ergebnis mit der größeren am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+  - **Im .NET Framework und in .NET Core bis .NET Core 2.0** wählt die Runtime das Ergebnis mit der größeren am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
   - **In .NET Core 2.1 und höher** wählt die Runtime das Ergebnis mit einer geraden am wenigsten signifikanten Ziffer aus (d.h. <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
 
   > [!NOTE]
@@ -54,7 +54,7 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
 
 |Formatbezeichner|name|Beschreibung|Beispiele|
 |----------------------|----------|-----------------|--------------|
-|"C" oder "c"|Währung|Ergebnis:  Ein Währungswert<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen finden Sie unter: [Der Währungsformatspezifizierer „C“](#CFormatString)|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> 123 ¥<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -123,456 ¥|
+|"C" oder "c"|Währung|Ergebnis:  Ein Währungswert<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen finden Sie unter: [Der Währungsformatspezifizierer „C“](#CFormatString)|123.456 ("C", en-US) -> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 &euro;<br /><br /> 123.456 ("C", ja-JP) -> 123 ¥<br /><br /> -123.456 ("C3", en-US) -> (\\$123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 &euro;<br /><br /> -123.456 ("C3", ja-JP) -> -123,456 ¥|
 |"D" oder "d"|Decimal|Ergebnis:  Ganzzahlige Ziffern mit optionalem Minuszeichen<br /><br /> Unterstützt von: ausschließlich integralen Typen<br /><br /> Genauigkeitsspezifizierer: Mindestanzahl von Ziffern<br /><br /> Standardgenauigkeitsspezifizierer: Mindestanzahl von erforderlichen Ziffern<br /><br /> Weitere Informationen finden Sie unter: [Der Dezimalformatspezifizierer „D“](#DFormatString)|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" oder "e"|Exponential (wissenschaftlich)|Ergebnis:  Exponentialschreibweise<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: 6.<br /><br /> Weitere Informationen finden Sie unter: [Der Exponentialformatspezifizierer „E“](#EFormatString)|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" oder "f"|Festkomma|Ergebnis:  Ganzzahlen und Dezimalzahlen mit optionalem Minuszeichen<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen finden Sie unter: [Der Festkommaformatspezifizierer „F“](#FFormatString)|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|

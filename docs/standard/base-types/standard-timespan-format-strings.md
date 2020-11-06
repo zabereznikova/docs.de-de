@@ -12,18 +12,18 @@ helpviewer_keywords:
 - standard time interval format strings
 - standard format strings, time intervals
 - format specifiers, time intervals
-- time intervals [.NET Framework], formatting
-- time [.NET Framework], formatting
-- formatting [.NET Framework], time
+- time intervals [.NET], formatting
+- time [.NET], formatting
+- formatting [.NET], time
 - standard TimeSpan format strings
-- formatting [.NET Framework], time intervals
+- formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768117"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888944"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardmäßige TimeSpan-Formatzeichenfolgen
 
@@ -50,7 +50,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
 ## <a name="the-constant-c-format-specifier"></a>Der Konstantenformatbezeichner "c"  
  Der Formatbezeichner "c" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in der folgenden Form an:  
   
- [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
+ [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Punkt (.) und der Doppelpunkt (:) sind Literalsymbole. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
@@ -63,7 +63,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
 |*ss*|Die Anzahl von Sekunden zwischen "0" und "59".|  
 |*fffffff*|Der optionale Bruchteil einer Sekunde.  Der Wert kann zwischen "0000001" (ein Tick oder ein Zehnmillionstel einer Sekunde) und "9999999" (9.999.999 Zehnmillionstel einer Sekunde oder eine Sekunde minus ein Tick) liegen.|  
   
- Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich ist und für alle früheren .NET Framework-Versionen vor .NET Framework 4 verwendet wird. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
+ Anders als die Formatbezeichner "G" und "g" ist der Formatbezeichner "c" nicht kulturabhängig. Er erzeugt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts, der unveränderlich und üblich für Versionen vor .NET Framework 4 ist. „c“ ist die standardmäßige <xref:System.TimeSpan>-Formatzeichenfolge. Die <xref:System.TimeSpan.ToString?displayProperty=nameWithType>-Methode formatiert einen Zeitintervallwert mit der Formatzeichenfolge „c“.  
   
 > [!NOTE]
 > <xref:System.TimeSpan> unterstützt auch die standardmäßigen "t"- und "T"-Formatzeichenfolgen, die im Verhalten identisch mit der Standardformatzeichenfolge "c" sind.  
@@ -76,7 +76,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
 ## <a name="the-general-short-g-format-specifier"></a>Der allgemeine Kurzformatbezeichner "g"  
  Der <xref:System.TimeSpan>-Formatbezeichner "g" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem kompakten Format an, indem nur die erforderlichen Elemente eingeschlossen werden. Er hat das folgende Format:  
   
- [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
+ [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   
@@ -100,7 +100,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
 ## <a name="the-general-long-g-format-specifier"></a>Der allgemeine Langformatbezeichner "G"  
  Der <xref:System.TimeSpan>-Formatbezeichner "G" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem Langformat zurück, das immer Tage und Sekundenbruchteile enthält. Die Zeichenfolge, die sich aus dem Standardformatbezeichner "G" ergibt, hat folgendes Format:  
   
- [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
   
  Elemente in eckigen Klammern ([ und ]) sind optional. Der Doppelpunkt (:) ist ein Literalsymbol. In der folgenden Tabelle werden die restlichen Elemente beschrieben.  
   

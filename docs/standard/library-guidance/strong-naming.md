@@ -2,18 +2,18 @@
 title: Starke Namen und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden für starke Namen für .NET-Bibliotheken.
 ms.date: 10/16/2018
-ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6f9533d768331964a8e640243536b12ddde158e5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654559"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189211"
 ---
 # <a name="strong-naming"></a>Starke Namen
 
 Starke Namen bezieht sich auf das Signieren einer Assembly mit einem Schlüssel, wodurch eine [Assembly mit starkem Namen](../assembly/strong-named.md) entsteht. Wenn eine Assembly einen starken Namen hat, erzeugt sie eine eindeutige Identität basierend auf dem Namen und der Versionsnummer der Assembly, und dies kann helfen, Konflikte in der Assembly zu vermeiden.
 
-Der Nachteil eines starken Namens ist, dass das .NET Framework unter Windows ein striktes Laden von Assemblys ermöglicht, sobald eine Assembly einen starken Namen hat. Eine Referenz auf eine Assembly mit starkem Namen muss genau der Version der geladenen Assembly entsprechen. Dadurch sind Entwickler gezwungen, [Bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) zu konfigurieren, wenn sie die Assembly verwenden:
+Der Nachteil eines starken Namens ist, dass das .NET Framework unter Windows ein striktes Laden von Assemblys ermöglicht, sobald eine Assembly einen starken Namen aufweist. Eine Referenz auf eine Assembly mit starkem Namen muss genau der Version der geladenen Assembly entsprechen. Dadurch sind Entwickler gezwungen, [Bindungsumleitungen](../../framework/configure-apps/redirect-assembly-versions.md) zu konfigurieren, wenn sie die Assembly verwenden:
 
 ```xml
 <configuration>
@@ -28,7 +28,7 @@ Der Nachteil eines starken Namens ist, dass das .NET Framework unter Windows ein
 </configuration>
 ```
 
-Wenn sich .NET-Entwickler über starke Namen beschweren, geht es in der Regel um das strikte Laden einer Assembly. Dieses Problem wurde im .NET Framework isoliert. .NET Core, Xamarin, UWP und die meisten anderen .NET-Implementierungen haben kein striktes Laden von Assemblys und weisen so den wesentlichen Nachteil eines starken Namens nicht auf.
+Wenn sich .NET-Entwickler über starke Namen beschweren, geht es in der Regel um das strikte Laden einer Assembly. Glücklicherweise besteht dieses Problem nur im .NET Framework. .NET 5 und höher, .NET Core, Xamarin, UWP und die meisten anderen .NET-Implementierungen sind vom strikten Laden von Assemblys und somit dem größten Nachteil starker Namen nicht betroffen.
 
 Ein wichtiger Aspekt eines starken Namens ist, dass sie viral ist: eine Assembly mit einem starken Namen kann nur auf andere Assemblys mit einem starken Namen verweisen. Wenn Ihre Bibliothek keinen starken Namen hat, dann haben Sie Entwickler, die eine Anwendung oder Bibliothek erstellen, die einen starken Namen benötigt, von der Verwendung ausgeschlossen.
 
@@ -40,7 +40,7 @@ Die Vorteile der starken Namen sind:
 
 ## <a name="create-strong-named-net-libraries"></a>Erstellen von .NET-Bibliotheken mit starkem Namen
 
-Sie sollten Ihren .NET-Open-Source-Bibliotheken einen starken Namen geben. Der starke Name einer Assembly stellt sicher, dass die meisten Benutzer sie verwenden können, und das strikte Laden der Assembly betrifft nur das .NET Framework.
+Sie sollten Ihren .NET-Open-Source-Bibliotheken einen starken Namen geben. Der starke Name einer Assembly stellt sicher, dass die meisten Benutzer sie verwenden können. Das strikte Laden der Assembly betrifft nur das .NET Framework.
 
 > [!NOTE]
 > Diese Anleitung bezieht sich auf öffentlich verteilte .NET-Bibliotheken, wie z.B. auf NuGet.org veröffentlichte .NET-Bibliotheken. Ein starker Namen ist für die meisten .NET-Anwendungen nicht erforderlich und sollte nicht standardmäßig vorgenommen werden.

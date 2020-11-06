@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 4d528c54816961caa251ce054abf2c6cf07e9d01
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769105"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188587"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -25,7 +25,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
   
 - Manuelle Synchronisierung Sie können die von der .NET-Klassenbibliothek bereitgestellten Synchronisierungsobjekte verwenden. Unter [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md) finden Sie weitere Informationen, darunter eine Beschreibung der <xref:System.Threading.Monitor>-Klasse.  
   
-- Synchronisierte Kontexte. Für .NET Framework- und Xamarin-Anwendungen können Sie <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> verwenden, um eine einfache automatische Synchronisierung für <xref:System.ContextBoundObject>-Objekte zu ermöglichen.  
+- Synchronisierte Kontexte. Sie können die <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>-Klasse nur im Zusammenhang mit .NET Framework- und Xamarin-Anwendungen verwenden, um eine einfache automatische Synchronisierung für <xref:System.ContextBoundObject>-Objekte zu ermöglichen.  
   
 - Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace. Diese Klassen stellen integrierte synchronisierte Hinzufüge- und Entfernungsvorgänge bereit. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../collections/thread-safe/index.md).  
   
@@ -62,7 +62,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
 ### <a name="compiler-support"></a>Compilerunterstützung  
  Visual Basic und C# unterstützen ein Sprachschlüsselwort, das <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> zum Sperren des Objekts verwendet. Visual Basic unterstützt die [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)-Anweisung und C# unterstützt die [lock](../../csharp/language-reference/keywords/lock-statement.md)-Anweisung.  
   
- Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally**-Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally**-Block aus. Wenn eine Ausnahme innerhalb eines **lock**- oder **SyncLock**-Blocks ausgelöst wird, wird der **finally**-Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  
+ Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally** -Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally** -Block aus. Wenn eine Ausnahme innerhalb eines **lock** - oder **SyncLock** -Blocks ausgelöst wird, wird der **finally** -Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  
   
 ## <a name="synchronized-context"></a>Synchronisierter Kontexte  
 

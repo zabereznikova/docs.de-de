@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9c3edeb468445e6f7a58ead194559bed5636579
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289446"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888853"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Gründe für das Implementieren des ereignisbasierten asynchronen Musters
 
-Mit dem ereignisbasierten asynchronen Muster kann das asynchrone Verhalten einer Klasse verfügbar gemacht werden. Mit der Einführung dieses Musters definiert .NET Framework zwei Muster, um asynchrones Verhalten verfügbar zu machen: das asynchrone Muster basierend auf der <xref:System.IAsyncResult?displayProperty=nameWithType>-Schnittstelle und das ereignisbasierte Muster. In diesem Thema wird beschrieben, in welchen Fällen die Muster implementiert werden sollten.
+Mit dem ereignisbasierten asynchronen Muster kann das asynchrone Verhalten einer Klasse verfügbar gemacht werden. Mit der Einführung dieses Musters definiert .NET zwei Muster, um asynchrones Verhalten verfügbar zu machen: das asynchrone Muster basierend auf der Schnittstelle <xref:System.IAsyncResult?displayProperty=nameWithType> und das ereignisbasierte Muster. In diesem Artikel wird beschrieben, in welchen Fällen die Muster implementiert werden sollten.
 
 Weitere Informationen zur asynchronen Programmierung mit der <xref:System.IAsyncResult>-Benutzeroberfläche finden Sie unter [Asynchrones Programmiermodell (APM)](asynchronous-programming-model-apm.md).
 

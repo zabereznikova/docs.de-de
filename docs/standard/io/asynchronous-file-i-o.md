@@ -11,19 +11,19 @@ helpviewer_keywords:
 - asynchronous I/O
 - synchronous I/O
 - streams, asynchronous streams
-- I/O [.NET Framework], asynchronous I/O
+- I/O [.NET], asynchronous I/O
 - Stream class, synchronous I/O
 - data streams, asynchronous streams
 - Stream class, asynchronous I/O
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: 9506a366b6f1e363ec13550e5ed68c7176dd4d0a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598618"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188600"
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
 
@@ -31,7 +31,7 @@ Mithilfe von asynchronen Vorgängen können Sie ressourcenintensive E/A-Vorgäng
 
 Ab .NET Framework 4.5 enthalten die E/A-Typen asynchrone Methoden, um asynchrone Vorgänge zu vereinfachen. Eine asynchrone Methode enthält `Async` in ihrem Namen, z. B. <xref:System.IO.Stream.ReadAsync%2A>, <xref:System.IO.Stream.WriteAsync%2A>, <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.TextReader.ReadLineAsync%2A>und <xref:System.IO.TextReader.ReadToEndAsync%2A>. Diese asynchronen Methoden werden für Streamklassen wie <xref:System.IO.Stream>, <xref:System.IO.FileStream>und <xref:System.IO.MemoryStream>sowie für Klassen implementiert, die für das Lesen und das Schreiben in Streams verwendet werden, z. B. <xref:System.IO.TextReader> und <xref:System.IO.TextWriter>.
 
-In .NET Framework 4 und vorherigen Versionen müssen Sie Methoden wie <xref:System.IO.Stream.BeginRead%2A> und <xref:System.IO.Stream.EndRead%2A> verwenden, um asynchrone E/A-Vorgänge zu implementieren. Diese Methoden sind in .NET Framework 4.5 weiterhin verfügbar, um Legacycode zu unterstützen; allerdings können Sie mithilfe der asynchronen Methoden leichter asynchrone E/A-Vorgänge implementieren.
+In .NET Framework 4 und vorherigen Versionen müssen Sie Methoden wie <xref:System.IO.Stream.BeginRead%2A> und <xref:System.IO.Stream.EndRead%2A> verwenden, um asynchrone E/A-Vorgänge zu implementieren. Diese Methoden sind in aktuellen .NET-Versionen zwar weiterhin verfügbar, um Legacycode zu unterstützen, aber Sie können mithilfe der asynchronen Methoden leichter asynchrone E/A-Vorgänge implementieren.
 
 C# und Visual Basic verfügen jeweils über zwei Schlüsselwörter für asynchrone Programmierung:
 

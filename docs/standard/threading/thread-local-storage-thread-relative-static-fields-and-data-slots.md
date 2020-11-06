@@ -3,20 +3,21 @@ title: 'Lokaler Threadspeicher: Threadbezogene statische Felder und Datenslots'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], local storage
-- threading [.NET Framework], thread-relative static fields
+- threading [.NET], local storage
+- threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291083"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188158"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Lokaler Threadspeicher: Threadbezogene statische Felder und Datenslots
-Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und die Anwendungsdomäne eindeutig sind. .NET Framework bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.  
+
+Sie können verwalteten threadlokalen Speicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und eine Anwendungsdomäne eindeutig sind. .NET bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.  
   
 - Verwenden Sie threadbezogene statische Felder (threadbezogene `Shared`-Felder in Visual Basic), wenn Sie Ihre Anforderungen zum Zeitpunkt der Kompilierung exakt bestimmen können. Threadbezogene statische Felder bieten die beste Leistung. Außerdem bieten sie Ihnen die Vorteile der Typüberprüfung zur Kompilierzeit.  
   
@@ -24,7 +25,7 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
   
  Ordnen Sie Slots in nicht verwaltetem C++ mit `TlsAlloc` dynamisch zu, und deklarieren Sie mit `__declspec(thread)`, dass eine Variable in threadbezogenem Speicher zugewiesen werden soll. Threadbezogene statische Felder und Datenslots stellen die verwaltete Version dieses Verhaltens bereit.  
   
- In .NET Framework 4 können Sie mit der <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse threadlokale Objekte erstellen, die verzögert initialisiert werden, wenn das Objekt zuerst genutzt wird. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../framework/performance/lazy-initialization.md).  
+Sie können mit der <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse threadlokale Objekte erstellen, die verzögert initialisiert werden, wenn das Objekt zum ersten Mal verwendet wird. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Eindeutigkeit der Daten im verwalteten TLS  
  Ob Sie threadbezogene statische Felder oder Datenslots verwenden, Daten in verwaltetem TLS sind für die Kombination von Thread und Anwendungsdomäne eindeutig.  
@@ -45,7 +46,8 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
  Denken Sie daran, dass Klassenkonstruktorcode auf dem ersten Thread im ersten Kontext ausgeführt wird, der auf das Feld zugreift. In allen anderen Threads oder Kontexten in derselben Anwendungsdomäne werden die Felder mit `null` (`Nothing` in Visual Basic) initialisiert, wenn sie Verweistypen sind, oder mit ihren Standardwerten, wenn sie Werttypen sind. Aus diesem Grund sollten Sie sich beim Initialisieren threadbezogener statischer Felder nicht auf Klassenkonstruktoren verlassen. Vermeiden Sie stattdessen das Initialisieren threadbezogener statischer Felder, und setzen Sie voraus, dass sie mit `null` (`Nothing`) oder ihren Standardwerten initialisiert werden.  
   
 ## <a name="data-slots"></a>Datenslots  
- .NET Framework bietet dynamische Datenslots, die für eine Kombination aus Thread und Anwendungsdomäne eindeutig sind. Es gibt zwei Arten von Datenslots: benannte und nicht benannte Slots. Beide werden mithilfe der <xref:System.LocalDataStoreSlot>-Struktur implementiert.  
+
+.NET stellt dynamische Datenslots bereit, die für eine Kombination aus Thread und Anwendungsdomäne eindeutig sind. Es gibt zwei Arten von Datenslots: benannte und nicht benannte Slots. Beide werden mithilfe der <xref:System.LocalDataStoreSlot>-Struktur implementiert.  
   
 - Erstellen Sie einen benannten Datenslot mit der <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType>- oder <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>-Methode. Um einen Verweis auf einen vorhandenen benannten Slot abzurufen, übergeben Sie seinen Namen der <xref:System.Threading.Thread.GetNamedDataSlot%2A>-Methode.  
   

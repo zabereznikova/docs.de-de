@@ -3,19 +3,19 @@ title: Implementieren einer DisposeAsync-Methode
 description: Hier erfahren Sie, wie Sie die Methoden „DisposeAsync“ und „DisposeAsyncCore“ implementieren, um eine asynchrone Ressourcenbereinigung durchzuführen.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/16/2020
+ms.date: 10/26/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720282"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687723"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementieren einer DisposeAsync-Methode
 
@@ -102,11 +102,36 @@ Darüber hinaus könnte sie so geschrieben werden, dass Sie den impliziten Berei
 
 ## <a name="stacked-usings"></a>Gestapelte using-Anweisungen
 
-In Situationen, in denen Sie mehrere Objekte erstellen und verwenden, die <xref:System.IAsyncDisposable> implementieren, kann das Stapeln von `using`-Anweisungen in fehlgeleiteten Bedingungen Aufrufe von <xref:System.IAsyncDisposable.DisposeAsync> verhindern. Um potenzielle Probleme zu verhindern, sollten Sie das Stapeln vermeiden und stattdessen dieses Beispielmuster verwenden:
+In Situationen, in denen Sie mehrere Objekte erstellen und verwenden, die <xref:System.IAsyncDisposable> implementieren, kann das Stapeln von `await using`-Anweisungen mit <xref:System.Threading.Tasks.ValueTask.ConfigureAwait%2A> in fehlgeleiteten Bedingungen Aufrufe von <xref:System.IAsyncDisposable.DisposeAsync> verhindern. Sie sollten das Stapeln vermeiden, um sicherzustellen, dass <xref:System.IAsyncDisposable.DisposeAsync> immer aufgerufen wird. Die folgenden drei Codebeispiele zeigen akzeptable Muster, die stattdessen verwendet werden können.
 
-:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+### <a name="acceptable-pattern-one"></a>Akzeptables Muster 1
 
-## <a name="see-also"></a>Siehe auch
+:::code language="csharp" id="one" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Im vorherigen Beispiel ist der Bereich für die einzelnen asynchronen Bereinigungsvorgänge jeweils explizit unter dem `await using`-Block festgelegt. Der äußere Bereich wird dadurch definiert, wie `objOne` Klammern setzt und dabei `objTwo` umschließt. Insofern wird also zuerst `objTwo` und danach `objOne` gelöscht. Beide `IAsyncDisposable`-Instanzen warten auf ihre <xref:System.IAsyncDisposable.DisposeAsync>-Methoden, führen also den asynchronen Bereinigungsvorgang durch. Die Aufrufe werden geschachtelt, nicht gestapelt.
+
+### <a name="acceptable-pattern-two"></a>Akzeptables Muster 2
+
+:::code language="csharp" id="two" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Im vorherigen Beispiel ist der Bereich für die einzelnen asynchronen Bereinigungsvorgänge jeweils explizit unter dem `await using`-Block festgelegt. Am Ende jedes Blocks wartet die entsprechende `IAsyncDisposable`-Instanz auf ihre <xref:System.IAsyncDisposable.DisposeAsync>-Methode, führt also den asynchronen Bereinigungsvorgang durch. Die Aufrufe erfolgen sequenziell, nicht gestapelt. In diesem Szenario wird zunächst `objOne` und dann `objTwo` gelöscht.
+
+### <a name="acceptable-pattern-three"></a>Akzeptables Muster 3
+
+:::code language="csharp" id="three" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+Im vorherigen Beispiel wird der Bereich für die einzelnen asynchronen Bereinigungsvorgänge implizit mit dem Methodenkörper festgelegt, in dem die Vorgänge jeweils enthalten sind. Am Ende des umschließenden Blocks führen die `IAsyncDisposable`-Instanzen die asynchronen Bereinigungsvorgänge durch. Die Ausführung erfolgt in umgekehrter Reihenfolge dazu, wie sie deklariert wurden, d. h. `objTwo` wird vor `objOne` gelöscht.
+
+### <a name="unacceptable-pattern"></a>Unzulässiges Muster
+
+Wenn vom `AnotherAsyncDisposable`-Konstruktor eine Ausnahme zurückgegeben wird, wird `objOne` nicht ordnungsgemäß gelöscht:
+
+:::code language="csharp" id="dontdothis" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/stacked-await-usings.cs":::
+
+> [!TIP]
+> Vermeiden Sie dieses Muster, da es zu unerwartetem Verhalten führen kann.
+
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.IAsyncDisposable>
 - <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: Plattformübergreifende Ziele für .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Erstellen von plattformübergreifenden .NET Bibliotheken.
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223345"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189250"
 ---
 # <a name="cross-platform-targeting"></a>Plattformübergreifende Ziele
 
@@ -33,7 +33,7 @@ Das Targeting von .NET Standard und die erfolgreiche Kompilierung Ihres Projekts
 
 ❌ Vermeiden Sie es, ein `netstandard1.x`-Ziel einzuschließen.
 
-> .NET Standard 1.x wird als ein granularer Satz von NuGet-Paketen verteilt, der ein großes Abhängigkeitsdiagramm erstellt und dazu führt, dass Entwickler beim Erstellen viele Pakete herunterladen. Moderne .NET-Plattformen, einschließlich .NET Framework 4.6.1, UWP und Xamarin unterstützen .NET Standard 2.0. Sie sollten.NET Standard 1.x nur dann als Ziel verwenden, wenn Sie speziell auf eine ältere Plattform abzielen müssen.
+> .NET Standard 1.x wird als ein granularer Satz von NuGet-Paketen verteilt, der ein großes Abhängigkeitsdiagramm erstellt und dazu führt, dass Entwickler beim Erstellen viele Pakete herunterladen. Moderne .NET-Implementierungen unterstützen .NET Standard 2.0. Sie sollten.NET Standard 1.x nur dann als Ziel verwenden, wenn Sie speziell auf eine ältere Plattform abzielen müssen.
 
 ✔️ Schließen Sie ein `netstandard2.0`-Ziel ein, wenn Sie ein `netstandard1.x`-Ziel benötigen.
 
@@ -115,7 +115,7 @@ public static class GpsLocation
 
 ## <a name="older-targets"></a>Ältere Ziele
 
-.NET unterstützt die Festlegung von Versionen des .NET Frameworks, die seit langem nicht mehr unterstützt werden, sowie Plattformen, die selten verwendet werden. Es ist zwar sinnvoll, Ihre Bibliothek mit so vielen Zielen wie möglich arbeiten zu lassen, aber die Notwendigkeit, fehlende APIs zu umgehen, kann zu einem erheblichen Aufwand führen. Wir glauben, dass bestimmte Frameworks angesichts ihrer Reichweite und Grenzen nicht mehr als Ziel genutzt werden sollten.
+.NET unterstützt die Festlegung von Zielversionen des .NET Framework, die seit langem nicht mehr unterstützt werden, sowie Plattformen, die nur noch selten verwendet werden. Es ist zwar sinnvoll, Ihre Bibliothek mit so vielen Zielen wie möglich arbeiten zu lassen, aber die Notwendigkeit, fehlende APIs zu umgehen, kann zu einem erheblichen Aufwand führen. Wir glauben, dass bestimmte Frameworks angesichts ihrer Reichweite und Grenzen nicht mehr als Ziel genutzt werden sollten.
 
 ❌ Schließen Sie keine portable Klassenbibliothek (PCL) als Ziel ein. Beispiel: `portable-net45+win8+wpa81+wp8`.
 

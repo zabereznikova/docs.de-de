@@ -6,7 +6,7 @@ helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
 - MSIL Disassembler
-- assemblies [.NET Framework], viewing contents
+- assemblies [.NET], viewing contents
 - viewing assembly information
 - MSIL
 - viewing MSIL information
@@ -15,28 +15,28 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380070"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687501"
 ---
 # <a name="how-to-view-assembly-contents"></a>Vorgehensweise: Anzeigen des Assemblyinhalts
 
 Sie können den [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) verwenden, um Microsoft Intermediate Language-Informationen (MSIL) in einer Datei anzuzeigen. Wenn die untersuchte Datei eine Assembly ist, kann die Information die Attribute der Assembly enthalten sowie Verweise auf andere Module und Assemblys. Diese Informationen sind nützlich, um zu ermitteln, ob eine Datei eine Assembly oder Teil einer Assembly ist und ob die Datei über Verweise auf andere Module oder Assemblys verfügt.
 
-Wenn Sie den Inhalt einer Assembly mithilfe von *Ildasm.exe* anzeigen möchten, geben Sie in einer Eingabeaufforderung **ildasm\<Assemblyname>** ein. Beispielsweise disassembliert der folgende Befehl die *Hello.exe*-Assembly.
+Wenn Sie den Inhalt einer Assembly mithilfe von *Ildasm.exe* anzeigen möchten, geben Sie in einer Eingabeaufforderung **ildasm \<assembly name>** ein. Beispielsweise disassembliert der folgende Befehl die *Hello.exe* -Assembly.
 
 ```cmd
 ildasm Hello.exe
 ```
 
-Klicken Sie doppelt auf das **Manifest**-Symbol im Fenster „MSIL-Disassembler“, um Informationen zum Assemblymanifest anzuzeigen.
+Klicken Sie doppelt auf das **Manifest** -Symbol im Fenster „MSIL-Disassembler“, um Informationen zum Assemblymanifest anzuzeigen.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel beginnt mit einem einfachen „Hallo Welt“-Programm. Nachdem Sie das Programm kompiliert haben, verwenden Sie *Ildasm.exe*, um das *Hello.exe*-Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.
+Das folgende Beispiel beginnt mit einem einfachen „Hallo Welt“-Programm. Nachdem Sie das Programm kompiliert haben, verwenden Sie *Ildasm.exe* , um das *Hello.exe* -Assembly zu disassemblieren, und zeigen Sie das Assemblymanifest an.
 
 ```cpp
 using namespace System;
@@ -76,7 +76,7 @@ Class MainApp
 End Class
 ```
 
-Führen Sie den Befehl *ildasm.exe* noch mal in der *Hello.exe*-Assembly aus, und führen Sie eine Doppelklick auf das **Manifest**-Symbol im Fenster „MSIL Disassembler“ durch, wodurch folgende Ausgabe erzeugt wird:
+Führen Sie den Befehl *ildasm.exe* noch mal in der *Hello.exe* -Assembly aus, und führen Sie eine Doppelklick auf das **Manifest** -Symbol im Fenster „MSIL Disassembler“ durch, wodurch folgende Ausgabe erzeugt wird:
 
 ```output
 // Metadata version: v4.0.30319
@@ -107,14 +107,14 @@ In der folgenden Tabelle wird jede Anweisung im Assemblymanifest der Assembly *H
 
 |Anweisung|Beschreibung|
 |---------------|-----------------|
-|**.assembly extern \<assemblyname>**|Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).|
+|**.assembly extern \<assembly name>**|Gibt eine andere Assembly an, die Elemente enthält, auf die vom aktuellen Modul verwiesen wird (in diesem Beispiel `mscorlib`).|
 |**.publickeytoken \<token>**|Gibt den Token des tatsächlichen Schlüssels der verwiesenen Assembly an.|
-|**.ver \<versionsnummer>**|Gibt die Versionsnummer der verwiesenen Assembly an.|
-|**.assembly \<assemblyname>**|Gibt den Assemblynamen an.|
-|**.hash algorithm \<int32-wert>**|Gibt den verwendeten Hashalgorithmus an.|
-|**.ver \<versionsnummer>**|Gibt die Versionsnummer der Assembly an.|
-|**.module \<dateiname>**|Gibt den Namen der Module an, aus die eine Assembly besteht. In diesem Beispiel besteht die Assembly aus nur einer Datei.|
-|**.subsystem \<wert>**|Gibt die Anwendungsumgebung an, die für das Programm erforderlich ist. In diesem Beispiel gibt der Wert 3 an, dass diese ausführbare Datei von einer Konsole aus ausgeführt wird.|
+|**.ver \<version number>**|Gibt die Versionsnummer der verwiesenen Assembly an.|
+|**.assembly \<assembly name>**|Gibt den Assemblynamen an.|
+|**.hash algorithm \<int32 value>**|Gibt den verwendeten Hashalgorithmus an.|
+|**.ver \<version number>**|Gibt die Versionsnummer der Assembly an.|
+|**.module \<file name>**|Gibt den Namen der Module an, aus die eine Assembly besteht. In diesem Beispiel besteht die Assembly aus nur einer Datei.|
+|**.subsystem \<value>**|Gibt die Anwendungsumgebung an, die für das Programm erforderlich ist. In diesem Beispiel gibt der Wert 3 an, dass diese ausführbare Datei von einer Konsole aus ausgeführt wird.|
 |**.corflags**|Derzeit ein reserviertes Feld in den Metadaten.|
 
 Ein Assemblymanifest kann eine Reihe unterschiedlicher Direktiven enthalten, je nach den Inhalten der Assembly. Eine ausführliche Liste mit den Anweisungen im Assemblymanifest finden Sie in der ECMA-Dokumentation, insbesondere unter „Partition II: Metadatendefinition und Semantik) und „Partition III: CIL Instruction Set“ (CIL-Anweisungen):

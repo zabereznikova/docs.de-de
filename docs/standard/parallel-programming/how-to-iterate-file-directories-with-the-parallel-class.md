@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555652"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925258"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Gewusst wie: Iterieren von Dateiverzeichnissen der Parallel-Klasse
 In vielen Fällen lässt sich die Dateiiteration problemlos parallelisieren. Das Thema [Gewusst wie: Iterieren von Dateiverzeichnissen mit PLINQ](how-to-iterate-file-directories-with-plinq.md) zeigt die einfachste Möglichkeit zum Ausführen dieser Aufgabe für viele Szenarien. Wenn der Code die vielen Arten von Ausnahmen behandeln muss, die auftreten können, wenn der Zugriff über das Dateisystem erfolgt, können jedoch Komplikationen auftreten. Im folgenden Beispiel wird ein Verfahren zum Lösen des Problems gezeigt. Alle Dateien und Ordner in einem angegebenen Verzeichnis werden mit stapelbasierte Iteration durchlaufen, und der Code kann verschiedene Ausnahmen abfangen und behandeln. Wie die Ausnahmen behandelt werden, müssen natürlich Sie bestimmen.  
@@ -24,7 +24,7 @@ In vielen Fällen lässt sich die Dateiiteration problemlos parallelisieren. Das
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- In diesem Beispiel wird die Datei-E/A synchron ausgeführt. Bei großen Dateien oder langsamen Netzwerkverbindungen empfiehlt sich möglicherweise ein asynchroner Zugriff auf die Dateien. Sie können Verfahren für asynchrone E/A mit paralleler Iteration kombinieren. Weitere Informationen finden Sie unter [TPL und herkömmliche asynchrone .NET Framework-Programmierung](tpl-and-traditional-async-programming.md).  
+ In diesem Beispiel wird die Datei-E/A synchron ausgeführt. Bei großen Dateien oder langsamen Netzwerkverbindungen empfiehlt sich möglicherweise ein asynchroner Zugriff auf die Dateien. Sie können Verfahren für asynchrone E/A mit paralleler Iteration kombinieren. Weitere Informationen finden Sie unter [TPL und herkömmliche asynchrone .NET-Programmierung](tpl-and-traditional-async-programming.md).  
   
  Im Beispiel wird die lokale Variable `fileCount` verwendet, um eine Zählung der Gesamtanzahl der verarbeiteten Dateien zu verwalten. Da auf die Variable möglicherweise gleichzeitig von mehreren Aufgaben zugegriffen wird, wird der Zugriff darauf synchronisiert, indem die <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>-Methode aufgerufen wird.  
   

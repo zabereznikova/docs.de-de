@@ -4,22 +4,22 @@ description: In diesem Artikel werden die COM-Interopattribute des System.Runtim
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
-- .NET Framework, exposing components to COM
-- attributes [.NET Framework], design-time functionality
+- .NET, exposing components to COM
+- attributes [.NET], design-time functionality
 - conversion-tool attributes
-- attributes [.NET Framework], interop-specific
-- attributes [.NET Framework], conversion-tool
+- attributes [.NET], interop-specific
+- attributes [.NET], conversion-tool
 - interoperation with unmanaged code, applying attributes
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291330"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188678"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
@@ -43,7 +43,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Gibt die Standardschnittstelle für eine in .NET implementierte COM-Klasse an.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Gibt die physische Position jedes Felds innerhalb einer Klasse an, wenn **StructLayoutAttribute** verwendet und **LayoutKind** auf explizit festgelegt ist.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Gibt den Globally Unique Identifier (GUID) einer Klasse, Schnittstelle oder einer ganzen Typbibliothek an. Das Format der Zeichenfolge, die an das Attribut übergeben wird, muss ein zulässiges Konstruktorargument für den Typ **System.Guid** darstellen.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
-|<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch**-Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  
+|<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch** -Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  
 |<xref:System.Runtime.InteropServices.InAttribute>|Gibt an, dass Daten zum Aufrufer gemarshallt werden sollen. Kann zum Zuordnen von Parametern verwendet werden.|  
 |<xref:System.Runtime.InteropServices.InterfaceTypeAttribute>|Steuert, wie eine verwaltete Schnittstelle für COM-Clients (Dual, IUnknown-abgeleitet oder nur IDispatch) verfügbar gemacht wird.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.LCIDConversionAttribute>|Gibt an, dass eine nicht verwaltete Methodensignatur einen LCID-Parameter erwartet.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
@@ -51,7 +51,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.OptionalAttribute>|Gibt an, dass ein Parameter optional ist.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.OutAttribute>|Gibt an, dass die Daten in einem Feld oder Parameter vom aufgerufenen Objekt zurück an den Aufrufer gemarshallt werden müssen.|  
 |<xref:System.Runtime.InteropServices.PreserveSigAttribute>|Unterdrückt das HRESULT oder die Retval-Signaturtransformation, die in der Regel bei Interop-Aufrufen stattfindet. Das Attribut wirkt sich auf Marshalling und das Exportieren der Typbibliothek aus.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
-|<xref:System.Runtime.InteropServices.ProgIdAttribute>|Gibt die ProgID der .NET Framework-Klasse an. Kann zum Zuordnen von Klassen verwendet werden.|  
+|<xref:System.Runtime.InteropServices.ProgIdAttribute>|Hiermit wird die ProgID einer .NET-Klasse angegeben. Kann zum Zuordnen von Klassen verwendet werden.|  
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|Steuert das physische Layout der Felder einer Klasse.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
   
 ## <a name="conversion-tool-attributes"></a>Attribute des Konvertierungstools  
@@ -63,9 +63,9 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Gibt den Informationsverlust zu einer Klasse oder Schnittstelle an, als diese aus einer Typbibliothek in eine Assembly importiert wurden.|  
 |<xref:System.Runtime.InteropServices.ComEventInterfaceAttribute>|Identifiziert die Quellschnittstelle und die Klasse, die die Methoden der Ereignisschnittstelle implementieren.|  
 |<xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>|Gibt an, dass die Assembly ursprünglich aus einer COM-Typbibliothek importiert wurde. Dieses Attribut enthält die Typdefinition für die Bibliothek von der ursprünglichen Typbibliothek.|  
-|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Funktion aus der COM-Typbibliothek importiert wurden.|  
-|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diesen Typ aus der COM-Typbibliothek importiert wurden.|  
-|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diese Funktion aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diesen Typ aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -12,33 +12,36 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 1606238b22bd355b997b54cf94e0c28d16ec5cac
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663043"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063175"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generics
-Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen. Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
+
+*Kovarianz* und *Kontravarianz* sind Begriffe, die auf die Fähigkeit Bezug nehmen, einen stärker abgeleiteten (spezifischeren) oder einen weniger stark abgeleiteten (allgemeineren) Typ zu verwenden als ursprünglich angegeben. Generische Typparameter unterstützen Kovarianz und Kontravarianz und bieten somit mehr Flexibilität beim Zuweisen und Verwenden von generischen Typen.
+
+Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invarianz die folgenden Definitionen. In den Beispielen wird von der Basisklasse `Base` und der abgeleiteten Klasse `Derived`ausgegangen.  
   
 - `Covariance`  
   
      Ermöglicht die Verwendung eines stärker abgeleiteten Typs als ursprünglich angegeben.  
   
-     Sie können eine Instanz von `IEnumerable<Derived>` (`IEnumerable(Of Derived)` in Visual Basic) einer Variablen des Typs `IEnumerable<Base>`zuweisen.  
+     Sie können eine Instanz von `IEnumerable<Derived>` einer Variablen des Typs `IEnumerable<Base>` zuweisen.  
   
 - `Contravariance`  
   
      Ermöglicht die Verwendung eines generischeren (weniger stark abgeleiteten) Typs als ursprünglich angegeben.  
   
-     Sie können eine Instanz von `Action<Base>` (`Action(Of Base)` in Visual Basic) einer Variablen des Typs `Action<Derived>`zuweisen.  
+     Sie können eine Instanz von `Action<Base>` einer Variablen des Typs `Action<Derived>` zuweisen.  
   
 - `Invariance`  
   
-     Bedeutet, dass nur der ursprünglich angegebene Typ verwendet werden kann. Ein invarianter generischer Typparameter ist also weder kovariant noch kontravariant.  
+     Dies bedeutet, Sie können nur den ursprünglich angegebenen Typ verwenden. Ein nicht varianter generischer Typparameter ist weder kovariant noch kontravariant.  
   
-     Sie können eine Instanz von `List<Base>` (`List(Of Base)` in Visual Basic) nicht einer Variablen des Typs `List<Derived>` zuweisen oder umgekehrt.  
+     Sie können eine Instanz von `List<Base>` nicht einer Variablen des Typs `List<Derived>` zuweisen oder umgekehrt.  
   
  Kovariante Typparameter ermöglichen es Ihnen, Zuweisungen vorzunehmen, die normaler [Polymorphie](../../csharp/programming-guide/classes-and-structs/polymorphism.md) stark ähneln, wie im folgenden Code dargestellt.  
   
@@ -52,13 +55,13 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
  [!code-csharp[CoContraSimpleAction#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontrasimpleaction/cs/example.cs#1)]
  [!code-vb[CoContraSimpleAction#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontrasimpleaction/vb/example.vb#1)]  
   
- Das erscheint rückständig, ist aber typsicherer Code, der kompiliert und ausgeführt wird. Der Lambda-Ausdruck entspricht dem ihm zugewiesenen Delegaten und definiert daher eine Methode, die einen Parameter des `Base` -Typs akzeptiert und keinen Wert zurückgibt. Der resultierende Delegat kann einer Variable des `Action<Derived>` -Typs zugewiesen werden, da der Typparameter `T` des <xref:System.Action%601> -Delegaten kontravariant ist. Der Code ist typsicher, da `T` einen Parametertyp angibt. Wenn der Delegat des `Action<Base>` -Typs wie ein Delegat des `Action<Derived>`-Typs aufgerufen wird, muss sein Argument vom `Derived`-Typ sein. Dieses Argument kann immer sicher an die zugrunde liegende Methode übergeben werden, da der Parameter der Methode vom `Base`-Typ ist.  
+ Das erscheint rückständig, ist aber typsicherer Code, der kompiliert und ausgeführt wird. Der Lambdaausdruck entspricht dem ihm zugewiesenen Delegaten und definiert daher eine Methode, die einen Parameter des `Base`-Typs akzeptiert und keinen Wert zurückgibt. Der resultierende Delegat kann einer Variable des `Action<Derived>` -Typs zugewiesen werden, da der Typparameter `T` des <xref:System.Action%601> -Delegaten kontravariant ist. Der Code ist typsicher, da `T` einen Parametertyp angibt. Wenn der Delegat des `Action<Base>` -Typs wie ein Delegat des `Action<Derived>`-Typs aufgerufen wird, muss sein Argument vom `Derived`-Typ sein. Dieses Argument kann immer sicher an die zugrunde liegende Methode übergeben werden, da der Parameter der Methode vom `Base`-Typ ist.  
   
  Im Allgemeinen können kovariante Typparameter als Rückgabetyp eines Delegaten und kontravariante Typparameter als Parametertypen verwendet werden. Für eine Schnittstelle können kovariante Typparameter als Rückgabetypen der Methoden der Schnittstelle verwendet werden und kontravariante Typparameter als Parametertypen der Methoden der Schnittstelle.  
   
- Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant*bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
+ Kovarianz und Kontravarianz werden zusammen als *Varianz* bezeichnet. Ein generischer Typparameter, der nicht als kovariant oder kontravariant markiert ist, wird als *invariant* bezeichnet. Im Folgenden sehen Sie eine kurze Zusammenfassung der Fakten zur Varianz in der Common Language Runtime:  
   
-- In .NET Framework 4 sind variante Typparameter auf generische Schnittstellen und generische Delegattypen beschränkt.  
+- Variante Typparameter sind auf generische Schnittstellen und generische Delegattypen beschränkt.  
   
 - Eine generische Schnittstelle oder ein generischer Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
   
@@ -66,17 +69,21 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
   
 - Varianz gilt nicht für eine Delegatkombination. Bei zwei Delegaten vom Typ `Action<Derived>` und `Action<Base>` (`Action(Of Derived)` und `Action(Of Base)` in Visual Basic) können Sie folglich den zweiten Delegaten nicht mit dem ersten kombinieren, obwohl das Ergebnis typsicher wäre. Bei Varianz kann der zweite Delegat einer Variable des `Action<Derived>`-Typs zugewiesen werden, Delegaten können aber nur kombiniert werden, wenn ihre Typen genau überstimmen.
 
+- Ab C# 9 werden kovariante Rückgabetypen unterstützt. Eine überschreibende Methode kann einen stärker abgeleiteten Rückgabetyp deklarieren als die Methode, die überschrieben wird, und eine überschreibende schreibgeschützte Eigenschaft kann einen stärker abgeleiteten Typ deklarieren.
+
 <a name="InterfaceCovariantTypeParameters"></a>
-## <a name="generic-interfaces-with-covariant-type-parameters"></a>Generische Schnittstellen mit kovarianten Typparametern  
- Ab .NET Framework 4 verfügen mehrere generische Schnittstellen über kovariante Typparameter wie etwa <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> und <xref:System.Linq.IGrouping%602>. Alle Typparameter dieser Schnittstellen sind kovariant, sodass sie nur für die Rückgabetypen der Member verwendet werden.  
+## <a name="generic-interfaces-with-covariant-type-parameters"></a>Generische Schnittstellen mit kovarianten Typparametern
+
+Mehrere generische Schnittstellen verfügen über kovariante Typparameter, z. B. <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> und <xref:System.Linq.IGrouping%602>. Alle Typparameter dieser Schnittstellen sind kovariant, sodass sie nur für die Rückgabetypen der Member verwendet werden.  
   
  Im folgenden Beispiel werden kovariante Typparameter veranschaulicht. Im Beispiel werden zwei Typen definiert: `Base` verfügt über eine statische Methode mit dem Namen `PrintBases` , die einen `IEnumerable<Base>` (`IEnumerable(Of Base)` in Visual Basic) erwartet und die Elemente ausgibt. `Derived` erbt von `Base`. Im Beispiel wird ein leerer `List<Derived>` (`List(Of Derived)` in Visual Basic) erstellt, um zu veranschaulichen, dass dieser Typ an `PrintBases` übergeben und ohne Umwandlung einer Variablen vom Typ `IEnumerable<Base>` zugewiesen werden kann. <xref:System.Collections.Generic.List%601> implementiert <xref:System.Collections.Generic.IEnumerable%601>, die über einen einzelnen kovarianten Typparameter verfügt. Aufgrund des kovarianten Typparameters kann eine Instanz von `IEnumerable<Derived>` anstelle von `IEnumerable<Base>`verwendet werden.  
   
  [!code-csharp[CoContravarianceInClrGenericI#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici/vb/example.vb#1)]  
   
-## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>Generische Schnittstellen mit kontravarianten generischen Typparametern  
- Ab .NET Framework 4 verfügen mehrere generische Schnittstellen über kontravariante Typparameter wie etwa <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> und <xref:System.Collections.Generic.IEqualityComparer%601>. Diese Schnittstellen verfügen nur über kontravariante Typparameter. Die Typparameter werden daher nur in den Membern der Schnittstellen als Parametertypen verwendet.  
+## <a name="generic-interfaces-with-contravariant-type-parameters"></a>Generische Schnittstellen mit kontravarianten Typparametern
+
+Mehrere generische Schnittstellen verfügen über kontravariante Typparameter, z. B. <xref:System.Collections.Generic.IComparer%601>, <xref:System.IComparable%601> und <xref:System.Collections.Generic.IEqualityComparer%601>. Diese Schnittstellen verfügen nur über kontravariante Typparameter. Die Typparameter werden daher nur in den Membern der Schnittstellen als Parametertypen verwendet.  
   
  Im folgenden Beispiel werden kontravariante Typparameter veranschaulicht. Im Beispiel wird eine abstrakte (`MustInherit` in Visual Basic) `Shape` -Klasse mit einer `Area` -Eigenschaft definiert. Außerdem wird eine `ShapeAreaComparer` -Klasse definiert, die `IComparer<Shape>` (`IComparer(Of Shape)` in Visual Basic) implementiert. Die Implementierung der <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> -Methode basiert auf dem Wert der `Area` -Eigenschaft, sodass `ShapeAreaComparer` zum Sortieren von `Shape` -Objekten nach Bereich verwendet werden kann.  
   
@@ -87,8 +94,9 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
  [!code-csharp[CoContravarianceInClrGenericI2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravarianceinclrgenerici2/cs/example.cs#1)]
  [!code-vb[CoContravarianceInClrGenericI2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravarianceinclrgenerici2/vb/example.vb#1)]  
 
-## <a name="generic-delegates-with-variant-type-parameters"></a>Generische Delegaten mit varianten Typparametern  
- In .NET Framework 4 verfügen die generischen Delegaten vom Typ `Func` (beispielsweise <xref:System.Func%602>) über kovariante Rückgabetypen und kontravariante Parametertypen. Die generischen `Action` -Delegaten, z. B. <xref:System.Action%602>, verfügen über kontravariante Parametertypen. Das bedeutet, dass die Delegaten Variablen mit weiter abgeleiteten Parametertypen und (im Fall von generischen `Func` -Delegaten) weniger abgeleiteten Rückgabetypen zugewiesen werden können.  
+## <a name="generic-delegates-with-variant-type-parameters"></a>Generische Delegaten mit varianten Typparametern
+
+Die generischen `Func`-Delegaten (z. B. <xref:System.Func%602>) verfügen über kovariante Rückgabetypen und über kontravariante Parametertypen. Die generischen `Action` -Delegaten, z. B. <xref:System.Action%602>, verfügen über kontravariante Parametertypen. Das bedeutet, dass die Delegaten Variablen mit weiter abgeleiteten Parametertypen und (im Fall von generischen `Func` -Delegaten) weniger abgeleiteten Rückgabetypen zugewiesen werden können.  
   
 > [!NOTE]
 > Der letzte generische Typparameter der generischen `Func` -Delegaten gibt den Typ des Rückgabewerts in der Signatur des Delegaten an. Er ist kovariant (Schlüsselwort`out` ), wohingegen die anderen generischen Typparameter kontravariant sind (Schlüsselwort`in` ).  
@@ -113,7 +121,8 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
  [!code-csharp[CoContravarianceDelegates#5](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#5)]
  [!code-vb[CoContravarianceDelegates#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#5)]  
   
-### <a name="variance-in-generic-and-non-generic-delegates"></a>Varianz in generischen und nicht generischen Delegaten  
+### <a name="variance-in-non-generic-delegates"></a>Varianz bei nicht generischen Delegaten
+
  Im obigen Code passt die Signatur von `MyMethod` exakt zur Signatur des erstellten generischen Delegaten `Func<Base, Derived>` (`Func(Of Base, Derived)` in Visual Basic). Das Beispiel zeigt, dass dieser generische Delegat in Variablen oder Methodenparametern mit weiter abgeleiteten Parametertypen und weniger abgeleiteten Rückgabetypen gespeichert werden kann, solange alle Delegattypen aus dem generischen Delegattyp <xref:System.Func%602>erstellt werden.  
   
  Dies ist ein wichtiger Punkt. Kovarianz und Kontravarianz haben in den Typparametern generischer Delegaten ähnliche Auswirkungen wie bei der normalen Delegatbindung (siehe [Varianz in Delegaten (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) und [Varianz in Delegaten (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). Die Varianz bei der Delegatbindung funktioniert jedoch bei allen Delegattypen und nicht nur bei generischen Delegattypen, die über variante Typparameter verfügen. Darüber hinaus kann durch die Varianz bei der Delegatbindung eine Methode an einen beliebigen Delegaten gebunden werden, der restriktivere Parametertypen und einen weniger restriktiven Rückgabetyp verwendet, wohingegen die Zuweisung generischer Delegaten nur funktioniert, wenn beide Delegattypen aus der gleichen generischen Typdefinition erstellt wurden.  
@@ -123,27 +132,26 @@ Kovarianz und Kontravarianz sind Begriffe, die auf die Fähigkeit Bezug nehmen, 
  [!code-csharp[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/cs/example.cs#1)]
  [!code-vb[CoContravarianceDelegatesGenRelaxed#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegatesgenrelaxed/vb/example.vb#1)]  
 
-## <a name="defining-variant-generic-interfaces-and-delegates"></a>Definieren von varianten generischen Schnittstellen und Delegaten
- Ab .NET Framework 4 verfügen Visual Basic und C# über Schlüsselwörter, mit denen die generischen Typparameter von Schnittstellen und Delegaten als kovariant oder kontravariant gekennzeichnet werden können.  
+## <a name="define-variant-generic-interfaces-and-delegates"></a>Definieren von varianten generischen Schnittstellen und Delegaten
+
+Visual Basic und C# verfügen über Schlüsselwörter, mit denen die generischen Typparameter von Schnittstellen und Delegaten als kovariant oder kontravariant gekennzeichnet werden können.
   
-> [!NOTE]
-> Beginnen mit .NET Framework, Version 2.0, unterstützt die Common Language Runtime Varianzkennzeichnungen für generische Typparameter. Vor .NET Framework 4 war Microsoft Intermediate Language (MSIL) die einzige Möglichkeit, eine generische Klasse zu definieren, die über diese Kennzeichnungen verfügt – entweder durch Kompilieren der Klasse mit [Ilasm.exe (IL-Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) oder durch Ausgeben in einer dynamischen Assembly.  
-  
- Ein kovarianter Typparameter wird mit dem `out` -Schlüsselwort (`Out` -Schlüsselwort in Visual Basic, `+` für den [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kovarianten Typparameter als Rückgabewert einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Rückgabetyp eines Delegaten. Sie können einen kovarianten Typparameter nicht als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
+ Ein kovarianter Typparameter wird mit dem `out`-Schlüsselwort (`Out`-Schlüsselwort in Visual Basic) gekennzeichnet. Sie können einen kovarianten Typparameter als Rückgabewert einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Rückgabetyp eines Delegaten. Sie können einen kovarianten Typparameter nicht als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
   
 > [!NOTE]
 > Wenn eine Methode einer Schnittstelle über einen Parameter verfügt, der ein generischer Delegattyp ist, kann ein kovarianter Typparameter des Schnittstellentyps verwendet werden, um einen kontravarianten Typparameter des Delegattyps anzugeben.  
   
- Ein kontravarianter Typparameter wird mit dem `in` -Schlüsselwort (`In` -Schlüsselwort in Visual Basic, `-` für den [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md)) gekennzeichnet. Sie können einen kontravarianten Typparameter als Typ eines Parameters einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Typ eines Parameters eines Delegaten. Sie können einen kontravarianten Typparameter als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
+ Ein kontravarianter Typparameter wird mit dem `in`-Schlüsselwort (`In`-Schlüsselwort in Visual Basic) gekennzeichnet. Sie können einen kontravarianten Typparameter als Typ eines Parameters einer Methode verwenden, die zu einer Schnittstelle gehört, oder als Typ eines Parameters eines Delegaten. Sie können einen kontravarianten Typparameter als generische Typeinschränkung für Schnittstellenmethoden verwenden.  
   
  Nur Schnittstellentypen und Delegattypen können über variante Typparameter verfügen. Eine Schnittstelle oder ein Delegattyp kann sowohl kovariante, als auch kontravariante Typparameter haben.  
   
- In Visual Basic und C# müssen die Regeln zum Verwenden von kovarianten und kontravarianten Typparametern eingehalten werden, und es ist nicht möglich, Kovarianz- und Kontravarianzkennzeichnungen zu den Typparametern anderer Typen als Schnittstellen- und Delegattypen hinzuzufügen. Der [MSIL-Assembler](../../framework/tools/ilasm-exe-il-assembler.md) führt keine solchen Überprüfungen aus, es wird aber eine <xref:System.TypeLoadException> ausgelöst, wenn Sie versuchen, einen Typ zu laden, der gegen die Regeln verstößt.  
+ In Visual Basic und C# müssen die Regeln zum Verwenden von kovarianten und kontravarianten Typparametern eingehalten werden, und es ist nicht möglich, Kovarianz- und Kontravarianzkennzeichnungen zu den Typparametern anderer Typen als Schnittstellen- und Delegattypen hinzuzufügen.
   
  Weitere Informationen und einen Beispielcode finden Sie unter [Varianz in generischen Schnittstellen (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) und [Varianz in generischen Schnittstellen (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
 
-## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Liste der varianten generischen Schnittstellen und Delegattypen
- In .NET Framework 4 verfügen die folgenden Schnittstellen- und Delegattypen über kovariante und/oder kontravariante Typparameter:  
+## <a name="list-of-types"></a>Liste der Typen
+
+Die folgenden Schnittstellen- und Delegattypen verfügen über kovariante und/oder kontravariante Typparameter.  
   
 |Typ|Kovariante Typparameter|Kontravariante Typparameter|  
 |----------|-------------------------------|-----------------------------------|  

@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555945"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189016"
 ---
-# <a name="memory-mapped-files"></a>Speicherabbilddateien
-Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab .NET Framework 4 können Sie verwalteten Code verwenden, um auf die gleiche Weise auf Speicherabbilddateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Managing Memory-Mapped Files](/previous-versions/ms810613(v=msdn.10)) (Verwalten von im Speicher abgebildeten Dateien) beschrieben.  
+# <a name="memory-mapped-files"></a>Im Speicher abgebildete Dateien
+
+Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Sie können verwalteten Code verwenden, um auf die gleiche Weise auf im Speicher abgebildete Dateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Verwalten von im Speicher abgebildeten Dateien](/previous-versions/ms810613(v=msdn.10)) beschrieben.  
   
- Es gibt zwei Arten von Speicherabbilddateien:  
+Es gibt zwei Arten von Speicherabbilddateien:  
   
 - Beibehaltene Speicherabbilddateien  
   
@@ -35,11 +36,11 @@ Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher.
   
  Zur Verwendung einer Speicherabbilddatei müssen Sie eine Ansicht der gesamten Speicherabbilddatei oder eines Teils davon erstellen. Sie können auch mehrere Ansichten für identische Teile der Speicherabbilddatei und dadurch parallelen Arbeitsspeicher erstellen. Parallele Ansichten müssen aus der gleichen Speicherabbilddatei erstellt werden.  
   
- Mehrere Ansichten können auch erforderlich sein, wenn die Datei größer als der für die Speicherzuordnung verfügbare logische Speicher der Anwendung ist (2 GB auf einem 32-Bit-Computer).  
+ Mehrere Ansichten können auch erforderlich sein, wenn die Datei größer als der für die Speicherzuordnung verfügbare logische Speicher der Anwendung ist (2 GB auf einem 32-Bit-Computer).  
   
  Zwei Arten von Ansichten werden verwendet: die Streamzugriffsansicht und die Ansicht für direkten Zugriff. Verwenden Sie für den sequenziellen Zugriff auf eine Datei Streamzugriffsansichten. Dies wird für nicht dauerhaft gespeicherte Dateien und IPC empfohlen. Die Ansichten für direkten Zugriff werden beim Arbeiten mit persistent gespeicherten Dateien vorgezogen.  
   
- Der Zugriff auf Speicherabbilddateien erfolgt über den Speicher-Manager des Betriebssystems. Die Datei wird daher automatisch in eine Reihe von Seiten partitioniert und nach Bedarf verwendet. Die Speicherverwaltung wird automatisch ausgeführt.  
+ Der Zugriff auf im Speicher abgebildete Dateien erfolgt über den Speicher-Manager des Betriebssystems. Die Datei wird daher automatisch in eine Reihe von Seiten partitioniert und nach Bedarf verwendet. Die Speicherverwaltung wird automatisch ausgeführt.  
   
  Die folgende Abbildung zeigt, wie für mehrere Prozesse gleichzeitig mehrere überlappende Ansichten derselben Speicherabbilddatei vorhanden sein können.
 

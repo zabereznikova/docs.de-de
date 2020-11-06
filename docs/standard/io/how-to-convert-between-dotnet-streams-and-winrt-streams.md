@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7833dd16cec8d6ef1cbdb51702ea72f50231c52d
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543685"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187956"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 
-.NET Framework für UWP-Apps ist eine Teilmenge der Vollversion von .NET Framework. Aufgrund der Sicherheitsanforderungen und anderer Anforderungen an UWP-Apps können Sie nicht alle .NET Framework-APIs zum Öffnen und Lesen von Dateien verwenden. Weitere Informationen finden Sie unter [.NET for UWP apps overview (Übersicht zu .NET Framework für UWP-Apps)](/previous-versions/windows/apps/br230302(v=vs.140)). Sie können die .NET Framework-APIs jedoch für andere Streambearbeitungsvorgänge verwenden. Zur Bearbeitung dieser Streams können Sie einen .NET Framework-Streamtyp wie <xref:System.IO.MemoryStream> oder <xref:System.IO.FileStream> in einen Windows-Runtime-Stream wie <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> oder <xref:Windows.Storage.Streams.IRandomAccessStream> konvertieren.
+.NET Framework für UWP-Apps ist ein Bestandteil der Vollversion des .NET Framework. Aufgrund der Sicherheitsanforderungen und anderer Anforderungen an UWP-Apps können Sie nicht alle .NET Framework-APIs zum Öffnen und Lesen von Dateien verwenden. Weitere Informationen finden Sie unter [.NET for UWP apps overview (Übersicht zu .NET Framework für UWP-Apps)](/previous-versions/windows/apps/br230302(v=vs.140)). Sie können die .NET Framework-APIs jedoch für andere Streambearbeitungsvorgänge verwenden. Zur Bearbeitung dieser Streams können Sie einen .NET Framework-Streamtyp wie <xref:System.IO.MemoryStream> oder <xref:System.IO.FileStream> in einen Windows-Runtime-Stream wie <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> oder <xref:Windows.Storage.Streams.IRandomAccessStream> konvertieren oder umgekehrt.
 
 Die <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Klasse enthält Methoden, die diese Konvertierungen vereinfachen. Es gibt jedoch grundlegende Unterschiede zwischen Streams in .NET Framework und der Windows-Runtime, die sich auf die Ergebnisse der Verwendung dieser Methoden auswirken. Dies wird in den folgenden Abschnitten erläutert:
 

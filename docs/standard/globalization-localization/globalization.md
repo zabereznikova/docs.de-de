@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291915"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064170"
 ---
 # <a name="globalization"></a>Globalisierung
 
@@ -102,7 +102,7 @@ In der Regel sollten geordnete Zeichenfolgen, die auf der Benutzeroberfläche an
 
 Der kulturabhängige Zeichenfolgenvergleich wird durch das <xref:System.Globalization.CompareInfo>-Objekt definiert, das von der <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>-Eigenschaft jeder Kultur zurückgegeben wird. Kulturabhängige Zeichenfolgenvergleiche mit den <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methodenüberladungen verwenden ebenfalls das <xref:System.Globalization.CompareInfo>-Objekt.
 
-.NET verwendet Tabellen zum Durchführen von kulturabhängigen Sortierungen für Zeichenfolgendaten. Der Inhalt dieser Tabellen, die Daten zu Sortierungsgewichtungen und Zeichenfolgennormalisierung enthalten, wird durch die Version des Unicode-Standards festgelegt, der von einer bestimmten .NET-Version implementiert wird. Die folgende Tabelle enthält die Unicode-Versionen, die von den angegebenen Versionen des .NET Framework und von .NET Core implementiert werden. Beachten Sie, dass diese Liste der unterstützten Unicode-Versionen lediglich für den Zeichenvergleich und die Sortierung gilt. Sie gilt nicht für die kategorische Klassifizierung von Unicode-Zeichen. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgen und Unicode-Standard“ im Artikel <xref:System.String>.
+.NET verwendet Tabellen zum Durchführen von kulturabhängigen Sortierungen für Zeichenfolgendaten. Der Inhalt dieser Tabellen, die Daten zu Sortierungsgewichtungen und Zeichenfolgennormalisierung enthalten, wird durch die Version des Unicode-Standards festgelegt, der von einer bestimmten .NET-Version implementiert wird. Die folgende Tabelle enthält die Unicode-Versionen, die von den angegebenen .NET-Versionen implementiert werden. Diese Liste der unterstützten Unicode-Versionen gilt lediglich für den Zeichenvergleich und die Zeichensortierung. Sie gilt nicht für die kategorische Klassifizierung von Unicode-Zeichen. Weitere Informationen finden Sie im Abschnitt „Zeichenfolgen und Unicode-Standard“ im Artikel <xref:System.String>.
 
 |.NET Framework-Version|Betriebssystem|Unicode-Version|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ Der kulturabhängige Zeichenfolgenvergleich wird durch das <xref:System.Globaliz
 |.NET Framework 4|Alle Betriebssysteme|Unicode 5.0|
 |.NET Framework 4.5 und höher unter Windows 7|Unicode 5.0|
 |.NET Framework 4.5 und höher unter Windows 8 und späteren Betriebssystemen|Unicode 6.3.0|
-|.NET Core (alle Versionen)|Hängt von der Version des Unicode-Standards ab, die vom zugrunde liegenden Betriebssystem unterstützt wird.|
+|.NET Core und .NET 5 und höher|Hängt von der Version des Unicode-Standards ab, die vom zugrunde liegenden Betriebssystem unterstützt wird.|
 
-Ab .NET Framework 4.5 und in allen Versionen von .NET Core hängen Vergleich und Sortierung von Zeichenfolgen vom Betriebssystem ab. .NET Framework 4.5 und höher unter Windows 7 ruft Daten aus eigenen Tabellen ab, die Unicode 5.0 implementieren. .NET Framework 4.5 und höher unter Windows 8 und höher ruft Daten aus Tabellen des Betriebssystems ab, die Unicode 6.3 implementieren. Bei .NET Core hängt die unterstützte Unicode-Version vom zugrunde liegenden Betriebssystem ab. Wenn Sie kulturabhängige sortierte Daten serialisieren, können Sie mit der Klasse <xref:System.Globalization.SortVersion> bestimmen, wann die serialisierten Daten sortiert werden müssen, damit sie mit .NET und der Sortierreihenfolge des Betriebssystems konsistent sind. Ein Beispiel finden Sie im Thema zur <xref:System.Globalization.SortVersion>-Klasse.
+Ab .NET Framework 4.5 und in allen Versionen von .NET Core sowie .NET 5 und höher hängen der Vergleich und die Sortierung von Zeichenfolgen vom Betriebssystem ab. In .NET Framework 4.5 und höher werden unter Windows 7 Daten aus eigenen Tabellen abgerufen, die Unicode 5.0 implementieren. In .NET Framework 4.5 und höher werden unter Windows 8 und höher Daten aus Betriebssystemtabellen abgerufen, die Unicode 6.3 implementieren. Bei .NET Core sowie .NET 5 und höher hängt die unterstützte Unicode-Version vom zugrunde liegenden Betriebssystem ab. Wenn Sie kulturabhängige sortierte Daten serialisieren, können Sie mit der Klasse <xref:System.Globalization.SortVersion> bestimmen, wann die serialisierten Daten sortiert werden müssen, damit sie mit .NET und der Sortierreihenfolge des Betriebssystems konsistent sind. Ein Beispiel finden Sie im Thema zur <xref:System.Globalization.SortVersion>-Klasse.
 
 Wenn Ihre App umfangreiche kulturspezifische Sortierungen von Zeichenfolgendaten ausführt, können Sie Zeichenfolgen mit der <xref:System.Globalization.SortKey>-Klasse vergleichen. Ein Sortierschlüssel spiegelt die kulturspezifischen Sortierungsgewichtungen wider, einschließlich alphabetischer, Groß-/Kleinschreibungs- sowie diakritischer Gewichtungen einer bestimmten Zeichenfolge. Da Vergleiche mit Sortierschlüsseln binär sind, werden diese schneller ausgeführt als Vergleiche unter impliziter oder expliziter Verwendung eines <xref:System.Globalization.CompareInfo>-Objekts. Sie erstellen einen kulturabhängigen Sortierschlüssel für eine bestimmte Zeichenfolge, indem Sie die Zeichenfolge an die <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>-Methode übergeben.
 

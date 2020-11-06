@@ -2,12 +2,12 @@
 title: Abhängigkeiten und .NET-Bibliotheken
 description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung von NuGet-Abhängigkeiten in .NET-Bibliotheken.
 ms.date: 10/02/2018
-ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d189a3364b501272e29de72b6018844877bf2128
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291369"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189302"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 
@@ -23,9 +23,9 @@ Zur Buildzeit analysiert NuGet alle Pakete, von denen ein Projekt abhängig ist,
 
 Die meisten Rautenabhängigkeiten lassen sich recht einfach auflösen. Unter bestimmten Umständen können sie jedoch Probleme verursachen:
 
-1. **In Konflikt stehende NuGet-Paketverweise** verhindern, dass eine Version während der Paketwiederherstellung aufgelöst werden kann.
-2. **Breaking Changes zwischen den Versionen** verursachen Fehler und Ausnahmen während der Laufzeit.
-3. **Die Paketassembly weist einen starken Namen auf**, die Assemblyversion wurde geändert, und die App wird im .NET Framework ausgeführt. Assemblybindungsumleitungen sind erforderlich.
+- **In Konflikt stehende NuGet-Paketverweise** verhindern, dass eine Version während der Paketwiederherstellung aufgelöst werden kann.
+- **Breaking Changes zwischen den Versionen** verursachen Fehler und Ausnahmen während der Laufzeit.
+- **Die Paketassembly weist einen starken Namen auf** , die Assemblyversion wurde geändert, und die App wird im .NET Framework ausgeführt. Assemblybindungsumleitungen sind erforderlich.
 
 Es ist unmöglich zu bestimmen, welche Pakete neben Ihrem eigenen noch verwendet werden. Eine gute Möglichkeit, die Wahrscheinlichkeit von Rautenabhängigkeiten für Ihre Bibliothek zu senken, besteht darin, die Anzahl von benötigten Paketen zu reduzieren.
 

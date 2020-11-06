@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720162"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925245"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
 
-Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:
+Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe* , die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:
 
 - Effiziente und skalierbare Verwendung von Systemressourcen.
 
@@ -28,7 +28,7 @@ Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die ein
 
      Aufgaben und das diese umgebende Framework stellen einen umfangreichen Satz von APIs bereit, die Warten, Abbruch, Fortsetzungen, robuste Ausnahmebehandlung, detaillierte Zustandsangaben, benutzerdefinierte Planung und Vieles mehr unterstützen.
 
-Aus diesen Gründen ist TPL in .NET Framework die bevorzugte API zum Schreiben von asynchronem, parallelem und Multithreadcode.
+Aus diesen Gründen ist die TPL die bevorzugte API zum Schreiben von asynchronem Code, parallelem Code und Multithreadcode in .NET.
 
 ## <a name="creating-and-running-tasks-implicitly"></a>Implizites Erstellen und Ausführen von Aufgaben
 
@@ -94,39 +94,27 @@ Jeder Aufgabe wird eine ganzzahlige ID zugeordnet, durch die diese in einer Anwe
 
 ## <a name="task-creation-options"></a>Aufgabenerstellungsoptionen
 
-Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe einer dieser Optionen teilen Sie dem Aufgabenplaner mit, wie die Aufgabe im Threadpool geplant werden soll. In der folgenden Tabelle sind die verschiedenen Aufgabenerstellungsoptionen aufgeführt.
+Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe mindestens einer dieser Optionen teilen Sie dem Taskplaner mit, wie die Task im Threadpool geplant werden soll. Die Optionen können mit einem bitweisen **OR** -Vorgang kombiniert werden.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions>-Parameterwert|Beschreibung|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-|<xref:System.Threading.Tasks.TaskCreationOptions.None>|Dies ist die Standardoption, wenn keine Option angegeben wurde. Der Planer verwendet zum Planen der Aufgabe seine Standardheuristik.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Gibt an, dass die Aufgabe so geplant werden soll, dass früher erstellte Aufgaben mit großer Wahrscheinlichkeit auch früher ausgeführt werden als Aufgaben, die später erstellt wurden.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Gibt an, dass die Aufgabe einen Vorgang mit langer Laufzeit darstellt.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Gibt an, dass eine Aufgabe als angefügtes untergeordnetes Element der aktuellen Aufgabe erstellt werden soll (sofern vorhanden). Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](attached-and-detached-child-tasks.md).|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Gibt an, dass beim Angeben der `AttachedToParent`-Option durch eine innere Aufgabe diese Aufgabe nicht zu einer angefügten untergeordneten Aufgabe wird.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Gibt an, dass der Taskplaner für Aufgaben, die über das Aufrufen von Methoden wie <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> aus einer bestimmten Aufgabe erstellt werden, der Standardplaner ist und nicht der Planer, mit dem diese Aufgabe ausgeführt wird.|
-
-Die Optionen können mit einer bitweisen **OR**-Operation kombiniert werden. Im folgenden Beispiel wird eine Aufgabe veranschaulicht, die über die <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>-Option und die <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>-Option verfügt.
+Im folgenden Beispiel wird eine Task veranschaulicht, die über die <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>-Option und die <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>-Option verfügt.
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
 ## <a name="tasks-threads-and-culture"></a>Aufgaben, Threads und Kultur
 
-Jeder Thread hat eine zugeordnete Kultur und Benutzeroberflächenkultur, die durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>- bzw. die <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft definiert ist. Die Kultur eines Threads wird in Vorgängen wie Formatieren, Analysieren, Sortieren und Zeichenfolgenvergleich verwendet. Die Benutzeroberflächenkultur eines Threads wird für Nachschlagen in Ressourcen verwendet. Normalerweise sind die Standardkultur und -benutzeroberflächenkultur eines Threads durch die Systemkultur definiert, es sei denn, Sie legen eine Standardkultur für alle Threads in einer Anwendungsdomäne mit der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType>- und der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft fest. Wenn Sie die Kultur eines Threads explizit festlegen und einen neuen Thread starten, erbt der neue Thread nicht die Kultur des aufrufenden Threads, sondern die Standardkultur des Systems wird als seine Kultur verwendet. Im aufgabenbasierten Programmiermodell für Anwendungen, die gezielt Versionen von .NET Framework vor .NET Framework 4.6 verwenden, wird so vorgegangen.
+Jeder Thread weist eine zugeordnete Kultur und Benutzeroberflächenkultur auf, die entsprechend durch die <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>- bzw. die <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft definiert sind. Die Kultur eines Threads wird in Vorgängen wie Formatieren, Analysieren, Sortieren und Zeichenfolgenvergleich verwendet. Die Benutzeroberflächenkultur eines Threads wird für Nachschlagen in Ressourcen verwendet.
 
-> [!IMPORTANT]
-> Beachten Sie, dass die Kultur des aufrufenden Threads (als Bestandteil des Kontexts einer Aufgabe) für Anwendungen gilt, die *gezielt* .NET Framework 4.6 verwenden, und nicht für Anwendungen, deren *Ausführung unter* .NET Framework 4.6 erfolgt. Sie können beim Erstellen Ihres Projekts in Visual Studio eine bestimmte Version von .NET Framework als Ziel angeben, indem Sie diese Version aus der Dropdownliste am oberen Rand des Dialogfelds **Neues Projekt** auswählen; außerhalb von Visual Studio können Sie das <xref:System.Runtime.Versioning.TargetFrameworkAttribute>-Attribut verwenden. Bei Anwendungen, die gezielt Versionen von .NET Framework vor .NET Framework 4.6 verwenden oder auf keine bestimmte Version von .NET Framework ausgerichtet sind, wird die Kultur einer Aufgabe weiterhin durch die Kultur des Threads bestimmt, über den sie ausgeführt werden.
+Sofern Sie nicht mithilfe der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType>- und <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaften eine Standardkultur für alle Threads in einer Anwendungsdomäne festlegen, werden die Standardkultur und -benutzeroberflächenkultur eines Threads durch die Systemkultur definiert. Wenn Sie die Kultur eines Threads explizit festlegen und einen neuen Thread starten, erbt der neue Thread nicht die Kultur des aufrufenden Threads, sondern die Standardkultur des Systems wird als seine Kultur verwendet. Bei der taskbasierten Programmierung verwenden Tasks jedoch die Kultur des aufrufenden Threads, selbst wenn der Task in einem anderen Thread asynchron ausgeführt wird.
 
-Beginnend mit Anwendungen, die gezielt .NET Framework 4.6 verwenden, erbt jede Aufgabe die Kultur des aufrufenden Threads. Das gilt selbst dann, wenn die Aufgabe asynchron über einen Threadpoolthread ausgeführt wird.
+Das folgende Beispiel bietet eine einfache Veranschaulichung. Die aktuelle App-Kultur wird in „Französisch (Frankreich)“ geändert (oder, falls die aktuelle Kultur bereits „Französisch (Frankreich)“ ist, in „Englisch (USA)“). Anschließend wird der Delegat `formatDelegate` aufgerufen, der einige Zahlen zurückgibt, die als Währungswerte in der neuen Kultur formatiert sind. Eine Task verwendet die Kultur des aufrufenden Threads unabhängig davon, ob der Delegat von der Task synchron oder asynchron aufgerufen wird.
 
-Das folgende Beispiel bietet eine einfache Veranschaulichung. In dem Beispiel wird das Attribut <xref:System.Runtime.Versioning.TargetFrameworkAttribute> verwendet, um gezielt .NET Framework 4.6 zu verwenden, und die aktuelle Kultur der Anwendung wird entweder in Französisch (Frankreich) oder, wenn Französisch (Frankreich) bereits die aktuelle Kultur ist, in Englisch (USA) geändert. Anschließend wird der Delegat `formatDelegate` aufgerufen, der einige Zahlen zurückgibt, die als Währungswerte in der neuen Kultur formatiert sind. Beachten Sie, dass der Delegat unabhängig davon, ob er als Aufgabe synchron oder asynchron ausgeführt wird, das erwartete Ergebnis zurückgibt, weil die asynchrone Aufgabe die Kultur des aufrufenden Threads erbt.
+:::code language="csharp" source="snippets/cs/asyncculture1.cs" id="1":::
 
-[!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
-[!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
+:::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
-Wenn Sie Visual Studio verwenden, können Sie das <xref:System.Runtime.Versioning.TargetFrameworkAttribute>-Attribut weglassen und stattdessen beim Erstellen des Projekts im Dialogfeld **Neues Projekt** .NET Framework 4.6 als Ziel auswählen.
-
-Wenn die Ausgabe das Verhalten von Apps widerspiegeln soll, die gezielt .NET Framework-Versionen vor .NET Framework 4.6 verwenden, entfernen Sie das Attribut <xref:System.Runtime.Versioning.TargetFrameworkAttribute> aus dem Quellcode. Die Ausgabe entspricht den Formatierungskonventionen der Standardsystemkultur, nicht der Kultur des aufrufenden Threads.
+> [!NOTE]
+> In früheren Versionen des .NET Framework als Version 4.6 wurde die Kultur einer Task durch die Kultur des Threads bestimmt, in dem diese *ausgeführt* wurde, und nicht durch die Kultur des *aufrufenden Threads*. Für asynchrone Tasks bedeutet dies, dass sich die Kultur, die von der Task verwendet wird, von der Kultur des aufrufenden Threads unterscheiden könnte.
 
 Weitere Informationen zu asynchronen Aufgaben und Kultur, finden Sie im Thema <xref:System.Globalization.CultureInfo> im Abschnitt "Kultur und asynchrone aufgabenbasierte Vorgänge".
 

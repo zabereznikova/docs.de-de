@@ -1,55 +1,53 @@
 ---
 title: Übersicht über die .NET-Klassenbibliothek
-description: Informationen zur .NET-Klassenbibliothek. .NET-Implementierungen enthalten Klassen, Schnittstellen, Delegate und Werttypen, die den Zugriff auf Systemfunktionen ermöglichen.
+description: Informationen zur .NET-Klassenbibliothek. .NET-APIs enthalten Klassen, Schnittstellen, Delegate und Werttypen, die den Zugriff auf Systemfunktionen ermöglichen.
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- classes [.NET Framework], library overview
-- classes [.NET Core], library overview
+- classes [.NET], library overview
 - .NET, library overview
 - class objects value type
-- naming conventions [.NET Framework]
-- types, .NET Framework
+- naming conventions [.NET]
+- types, .NET
 - user-defined types
 - Visual Basic, data types
-- data types [.NET Framework], C++
+- data types [.NET], C++
 - Visual C#, data types
-- libraries, .NET Framework class library
-- data types [.NET Framework], F#
+- libraries, .NET
+- data types [.NET], F#
 - System namespace
 - F#, data types
-- .NET Framework, class library
-- type system [.NET Framework]
-- data types [.NET Framework]
+- .NET, class library
+- type system [.NET]
+- data types [.NET]
 - value types
-- data types [.NET Framework], Visual Basic
+- data types [.NET], Visual Basic
 - Common Language Specification
-- namespaces [.NET Framework]
+- namespaces [.NET]
 - floating point value type
-- class library [.NET Framework]
+- class library [.NET]
 - CLS
 - logical value type
-- .NET Framework class library, about
 - built-in types
-- namespaces [.NET Framework], about namespaces
+- namespaces [.NET], about namespaces
 - Visual C++, data types
-- members [.NET Framework], type
-- data types [.NET Framework], C#
+- members [.NET], type
+- data types [.NET], C#
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554761"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687522"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
-.NET-Implementierungen enthalten Klassen, Schnittstellen und Werttypen, die den Entwicklungsprozess beschleunigen und optimieren und den Zugriff auf Systemfunktionen ermöglichen. .NET Framework gewährleistet durch überwiegend CLS-kompatible Typen Interoperabilität zwischen verschiedenen Sprachen und kann daher in jeder Programmiersprache verwendet werden, deren Compiler der CLS (Common Language Specification) entspricht.  
+.NET-APIs enthalten Klassen, Schnittstellen, Delegate und Werttypen, die den Entwicklungsprozess beschleunigen und optimieren und den Zugriff auf Systemfunktionen ermöglichen. .NET Framework gewährleistet durch überwiegend CLS-kompatible Typen Interoperabilität zwischen verschiedenen Sprachen und kann daher in jeder Programmiersprache verwendet werden, deren Compiler der CLS (Common Language Specification) entspricht.  
   
- Die .NET-Typen bilden die Grundlage für den Entwurf von Anwendungen, Komponenten und Steuerelementen in .NET. .NET-Implementierungen umfassen Typen zur Ausführung folgender Funktionen:  
+Die .NET-Typen bilden die Grundlage für den Entwurf von Anwendungen, Komponenten und Steuerelementen in .NET. .NET umfasst Typen zur Ausführung folgender Funktionen:  
   
 - Darstellung von Basisdatentypen und -ausnahmen  
   
@@ -59,29 +57,29 @@ ms.locfileid: "90554761"
   
 - Zugriff auf Informationen über geladene Typen  
   
-- Aufrufen von .NET Framework-Sicherheitsüberprüfungen  
+- Aufrufen von .NET-Sicherheitsüberprüfungen  
   
 - Datenzugriff und Bereitstellen einer eigenständigen Client-GUI sowie einer servergesteuerten Client-GUI  
   
- In .NET stehen neben zahlreichen Schnittstellen abstrakte und konkrete (nicht abstrakte) Klassen zur Verfügung. Sie können die konkreten Klassen unverändert verwenden oder eigene Klassen von ihnen ableiten. Sie können entweder eine Klasse erstellen, die die Schnittstelle implementiert, oder eine Klasse von einer der .NET-Klassen ableiten, die die Schnittstelle implementiert, um die Funktionen einer Schnittstelle zu verwenden.  
+In .NET stehen neben zahlreichen Schnittstellen abstrakte und konkrete (nicht abstrakte) Klassen zur Verfügung. Sie können die konkreten Klassen unverändert verwenden oder in vielen Fällen eigene Klassen von diesen ableiten. Sie können entweder eine Klasse erstellen, die die Schnittstelle implementiert, oder eine Klasse von einer der .NET-Klassen ableiten, die die Schnittstelle implementiert, um die Funktionen einer Schnittstelle zu verwenden.  
   
 ## <a name="naming-conventions"></a>Namenskonventionen
 
  Für .NET-Typen wird ein Benennungsschema mit Punktsyntax verwendet, das der hierarchischen Struktur entspricht. Bei diesem Verfahren werden verwandte Typen in Namespaces zusammengefasst, wodurch Suchvorgänge und Verweise vereinfacht werden. Der erste Teil des vollständigen Namens, bis zum letzten Punkt, gibt den Namen des Namespaces wieder. Der letzte Teil ist der Name des Typs. `System.Collections.Generic.List<T>` stellt beispielsweise den Typ `List<T>` dar, der zum Namespace `System.Collections.Generic` gehört. Die Typen in <xref:System.Collections.Generic> können mit generischen Sammlungen verwendet werden.  
   
- Dieses Benennungsschema erleichtert es Entwicklern von Bibliotheken, die Erweiterungen für .NET Framework entwerfen, hierarchische Typengruppen zu erstellen und diese einheitlich und aussagekräftig zu benennen. Außerdem können Typen nach ihrem vollständigen Namen (d. h. ihrem Namespace und Typnamen) eindeutig identifiziert werden, wodurch Konflikte bei Typnamen vermieden werden. Von Entwicklern von Bibliotheken wird erwartet, dass sie sich beim Erstellen der Namen für eigene Namespaces an die nachstehende Konvention halten:  
+ Dieses Benennungsschema erleichtert es Entwicklern von Bibliotheken, Erweiterungen für .NET zu entwerfen, um hierarchische Typengruppen zu erstellen und diese konsistent und aussagekräftig zu benennen. Außerdem können Typen nach ihrem vollständigen Namen (d. h. ihrem Namespace und Typnamen) eindeutig identifiziert werden, wodurch Konflikte bei Typnamen vermieden werden. Von Entwicklern von Bibliotheken wird erwartet, dass sie sich beim Erstellen der Namen für eigene Namespaces an die nachstehende Konvention halten:  
   
- *CompanyName*.*TechnologyName*  
+ *CompanyName*. *TechnologyName*  
   
  Der Namespace `Microsoft.Word` entspricht beispielsweise dieser Richtlinie.  
   
- Insbesondere für das Erstellen und Dokumentieren von Klassenbibliotheken empfiehlt sich ein Benennungsschema, bei dem verwandte Typen in Namespaces zusammengefasst werden. Dieses wirkt sich jedoch nicht auf Sichtbarkeit, Memberzugriff, Vererbung, Sicherheit oder Bindung aus. Ein Namespace kann von mehreren Assemblys verwendet werden, und eine einzelne Assembly kann Typen aus mehreren Namespaces enthalten. Die Assembly stellt die formale Struktur für Versionsinformationen, Bereitstellung, Sicherheit, Ladevorgänge und Sichtbarkeit in der Common Language Runtime bereit.  
+ Für das Erstellen und Dokumentieren von Klassenbibliotheken empfiehlt sich ein Benennungsschema, bei dem verwandte Typen in Namespaces zusammengefasst werden. Dieses wirkt sich jedoch nicht auf Sichtbarkeit, Memberzugriff, Vererbung, Sicherheit oder Bindung aus. Ein Namespace kann von mehreren Assemblys verwendet werden, und eine einzelne Assembly kann Typen aus mehreren Namespaces enthalten. Die Assembly stellt die formale Struktur für Versionsinformationen, Bereitstellung, Sicherheit, Ladevorgänge und Sichtbarkeit in der Common Language Runtime bereit.  
   
  Weitere Informationen über Namespaces und Typennamen finden Sie unter [Allgemeines Typsystem](base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>System-Namespace
 
- Beim <xref:System>-Namespace handelt es sich um den Stammnamespace für Basistypen in .NET. Dieser Namespace beinhaltet Klassen, die die von allen Anwendungen verwendeten Basisdatentypen darstellen: <xref:System.Object> (der Stamm der Vererbungshierarchie), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> usw. Viele dieser Typen entsprechen den primitiven Datentypen, die in den verschiedenen Programmiersprachen verwendet werden. Wenn Sie Code mithilfe von .NET Framework-Typen schreiben, können Sie anstelle eines erwarteten Basisdatentyps von .NET Framework auch das entsprechende Schlüsselwort der verwendeten Sprache angeben.  
+ Beim <xref:System>-Namespace handelt es sich um den Stammnamespace für Basistypen in .NET. Dieser Namespace beinhaltet Klassen, die die von allen Anwendungen verwendeten Basisdatentypen darstellen: <xref:System.Object> (der Stamm der Vererbungshierarchie), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String> usw. Viele dieser Typen entsprechen den primitiven Datentypen, die in den verschiedenen Programmiersprachen verwendet werden. Wenn Sie Code mithilfe von .NET-Typen schreiben, können Sie anstelle eines erwarteten Basisdatentyps von .NET auch das entsprechende Schlüsselwort der verwendeten Programmiersprache angeben.  
   
  In der folgenden Tabelle sind die in .NET verfügbaren Basistypen mit einer Kurzbeschreibung der einzelnen Typen und den entsprechenden Typen in Visual Basic, C#, C++ und F# aufgeführt.  
   

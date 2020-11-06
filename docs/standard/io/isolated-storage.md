@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555919"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188561"
 ---
 # <a name="isolated-storage"></a>Isolierter Speicher
 
@@ -59,7 +59,7 @@ Durch isolierte Speicherung können Daten von teilweise vertrauenswürdigen Anwe
 
 Administratoren können auf Basis einer entsprechenden Vertrauensebene festlegen, wie viel isolierter Speicherplatz einer Anwendung oder einem Benutzer zur Verfügung steht. Darüber hinaus können Administratoren die gespeicherten Daten eines Benutzers vollständig löschen. Um isolierten Speicherplatz erstellen oder darauf zugreifen zu können, muss dem Code die entsprechende <xref:System.Security.Permissions.IsolatedStorageFilePermission> -Berechtigung erteilt werden.
 
-Für den Zugriff auf isolierten Speicherplatz muss der Code über alle notwendigen systemeigenen Rechte der Betriebssystemplattform verfügen. Die Bedingungen der Zugriffssteuerungslisten (ACLs, Access Control Lists), die festlegen, welche Benutzer zur Verwendung des Dateisystems berechtigt sind, müssen erfüllt sein. .NET Framework-Anwendungen verfügen bereits über Betriebssystemrechte für den Zugriff auf isolierten Speicherplatz, sofern sie keine (plattformspezifische) Imitation ausführen. In diesem Fall ist die Anwendung dafür zuständig, dass die imitierte Benutzeridentität über die entsprechenden Rechte des Betriebssystems verfügt, um auf den isolierten Speicherplatz zuzugreifen. Mithilfe dieses Zugriffs kann aus dem Web ausgeführter bzw. heruntergeladener Code auf einfache Weise aus dem Speicherbereich, der einem bestimmten Benutzer zugeordnet ist, lesen bzw. in diesen schreiben.
+Für den Zugriff auf isolierten Speicherplatz muss der Code über alle notwendigen systemeigenen Rechte der Betriebssystemplattform verfügen. Die Bedingungen der Zugriffssteuerungslisten (ACLs, Access Control Lists), die festlegen, welche Benutzer zur Verwendung des Dateisystems berechtigt sind, müssen erfüllt sein. .NET-Anwendungen verfügen bereits über Betriebssystemrechte für den Zugriff auf isolierten Speicherplatz, sofern sie keine (plattformspezifische) Imitation ausführen. In diesem Fall ist die Anwendung dafür zuständig, dass die imitierte Benutzeridentität über die entsprechenden Rechte des Betriebssystems verfügt, um auf den isolierten Speicherplatz zuzugreifen. Mithilfe dieses Zugriffs kann aus dem Web ausgeführter bzw. heruntergeladener Code auf einfache Weise aus dem Speicherbereich, der einem bestimmten Benutzer zugeordnet ist, lesen bzw. in diesen schreiben.
 
 Zur Steuerung des Zugriffs auf isolierte Speicherplätze verwendet Common Language Runtime <xref:System.Security.Permissions.IsolatedStorageFilePermission> -Objekte. Jedes Objekt verfügt über Eigenschaften, die folgende Werte festlegen:
 
@@ -138,7 +138,7 @@ Gehen wir jetzt von einem System mit den beiden registrierten Benutzern _Mallory
 
 Wenn Mallory Bob angreifen möchte, könnte sie Daten in den computerweiten Speicherort schreiben und dann versuchen, Bob zu Lesevorgängen in diesem computerweiten Speicher zu bringen. Wenn Bob eine App ausführt, die aus diesem Speicher liest, wird die App mit den dort von Mallory platzierten Daten und im Rahmen von Bobs Benutzerkonto ausgeführt. Im restlichen Teil dieses Dokuments werden verschiedene Angriffsvektoren und die Schritte beschrieben, mit denen das Risiko für Apps durch diese Angriffe minimiert werden kann.
 
-__Hinweis__: Mallory benötigt Folgendes, damit ein solcher Angriff stattfinden kann:
+__Hinweis__ : Mallory benötigt Folgendes, damit ein solcher Angriff stattfinden kann:
 
 * Benutzerkonto auf dem Computer
 * Möglichkeit, eine Datei in einem bekannten Speicherort im Dateisystem zu platzieren
@@ -164,7 +164,7 @@ Sie hat Bob dann das Starten der App im Kontext seines eigenen Benutzerkontos ve
 
 #### <a name="information-disclosure"></a>Offenlegung vertraulicher Informationen
 
-Ein Angriff durch die __Veröffentlichung von Informationen__ liegt vor, wenn Mallory Bob dazu bringen kann, den Inhalt einer Datei offenzulegen, auf die Mallory normalerweise keinen Zugriff hat. Angenommen, Bob verfügt über die Geheimnisdatei *C:\Users\Bob\secret.txt*, die Mallory lesen möchte. Sie kennt den Pfad zu dieser Datei, kann sie aber nicht lesen, da Windows ihr den Zugriff auf Bobs Benutzerprofilverzeichnis verbietet.
+Ein Angriff durch die __Veröffentlichung von Informationen__ liegt vor, wenn Mallory Bob dazu bringen kann, den Inhalt einer Datei offenzulegen, auf die Mallory normalerweise keinen Zugriff hat. Angenommen, Bob verfügt über die Geheimnisdatei *C:\Users\Bob\secret.txt* , die Mallory lesen möchte. Sie kennt den Pfad zu dieser Datei, kann sie aber nicht lesen, da Windows ihr den Zugriff auf Bobs Benutzerprofilverzeichnis verbietet.
 
 Stattdessen platziert Mallory einen Hardlink zum computerweiten Speicher. Dabei handelt es sich um eine spezielle Datei, die selbst keinen Inhalt enthält, sondern auf eine andere Datei auf dem Datenträger verweist. Beim Versuch, die Hardlinkdatei zu lesen, wird stattdessen der Inhalt der Datei gelesen, auf die der Hardlink verweist. Nachdem Mallory den Hardlink erstellt hat, kann sie den Inhalt der Datei noch immer nicht lesen, da sie keinen Zugriff auf das Ziel (`C:\Users\Bob\secret.txt`) des Links hat. Bob hingegen _hat Zugriff auf diese Datei_.
 
@@ -195,7 +195,7 @@ Gelegentlich sollten Änderungen an isolierten Speicherplätzen mit dem Dateisys
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Erstellen, Auflisten und Löschen von isoliertem Speicher
 
-Das .NET Framework stellt drei Klassen im <xref:System.IO.IsolatedStorage> -Namespace bereit, um Ihnen bei der Ausführung von Aufgaben im Zusammenhang mit isolierter Speicherung zu helfen:
+.NET stellt drei Klassen im <xref:System.IO.IsolatedStorage>-Namespace bereit, um Ihnen bei der Ausführung von Aufgaben im Zusammenhang mit isoliertem Speicher zu helfen:
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>wird von <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> abgeleitet und ermöglicht die Verwaltung von gespeicherten Assembly- und Anwendungsdateien. Eine Instanz der <xref:System.IO.IsolatedStorage.IsolatedStorageFile> -Klasse stellt einen einzelnen Speicher im Dateisystem dar.
 

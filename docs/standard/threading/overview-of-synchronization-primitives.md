@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d5ae0fe5813952742950582a4282cd1c6ab6a870
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739375"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188977"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Übersicht über Synchronisierungsprimitive
 
@@ -32,13 +32,13 @@ Von der <xref:System.Threading.WaitHandle?displayProperty=nameWithType>-Klasse w
 - <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> wird aus <xref:System.Threading.EventWaitHandle> abgeleitet und wird nach der Freigabe eines einzelnen wartenden Threads automatisch in einen nicht signalisierten Zustand zurückgesetzt, wenn einen Signalisierung eintritt.
 - <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> wird aus <xref:System.Threading.EventWaitHandle> abgeleitet bleibt bei einer Signalisierung in einem signalisierten Zustand, bis die <xref:System.Threading.EventWaitHandle.Reset%2A>-Methode aufgerufen wird.
 
-Da <xref:System.Threading.WaitHandle> aus <xref:System.MarshalByRefObject?displayProperty=nameWithType> abgeleitet wird können diese Typen in .NET Framework verwendet werden, um die Aktivitäten von Threads über Anwendungsdomänengrenzen hinweg zu synchronisieren.
+Da <xref:System.Threading.WaitHandle> aus <xref:System.MarshalByRefObject?displayProperty=nameWithType> abgeleitet wird, können diese Typen im .NET Framework verwendet werden, um die Aktivitäten von Threads über Anwendungsdomänengrenzen hinweg zu synchronisieren.
 
-In .NET Framework und .NET Core können einige dieser Typen benannte Systemsynchronisierungshandles darstellen, die im gesamten Betriebssystem sichtbar sind und für die prozessübergreifende Synchronisierung verwendet werden können:
+Im .NET Framework, in .NET Core und in .NET 5 oder höheren Versionen können einige dieser Typen benannte Systemsynchronisierungshandles darstellen, die im gesamten Betriebssystem sichtbar sind und die für die prozessübergreifende Synchronisierung verwendet werden können:
 
-- <xref:System.Threading.Mutex> (.NET Framework und .NET Core),
-- <xref:System.Threading.Semaphore> (.NET Framework und .NET Core unter Windows),
-- <xref:System.Threading.EventWaitHandle> (.NET Framework and .NET Core unter Windows).
+- <xref:System.Threading.Mutex>
+- <xref:System.Threading.Semaphore> (unter Windows)
+- <xref:System.Threading.EventWaitHandle> (unter Windows)
 
 Weitere Informationen finden Sie in der Referenz für die <xref:System.Threading.WaitHandle>-API.
 

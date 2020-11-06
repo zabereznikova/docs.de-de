@@ -6,24 +6,25 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
 - custom numeric format strings
-- numbers [.NET Framework], custom numeric format strings
+- numbers [.NET], custom numeric format strings
 - displaying date and time data
-- format providers [.NET Framework]
+- format providers [.NET]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 38c1890684bd89b2bc4719637209569f01bd17a2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290512"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888481"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Vorgehensweise: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
-.NET Framework ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
+
+.NET ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
   
 - Standardmäßige Zahlenformatzeichenfolgen, die einen vordefinierten Satz an Formaten für die Konvertierung von Zahlen in ihre Zeichenfolgendarstellung bereitstellen. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Standardmäßige Zahlenformatzeichenfolgen](standard-numeric-format-strings.md).  
   
@@ -31,9 +32,9 @@ ms.locfileid: "84290512"
   
 - Benutzerdefinierte <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekte, die die beim Anzeigen der Zeichenfolgendarstellungen numerischer Werte verwendeten Symbole und Formatmuster definieren. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `provider`-Parameter verfügt, z.B. <xref:System.Int32.ToString%2A>. Üblicherweise wird der `provider`-Parameter verwendet, um eine kulturspezifische Formatierung anzugeben.  
   
- In einigen Fällen (z.B. wenn eine Anwendung eine formatierte Kontonummer, eine ID oder eine Postleitzahl anzeigen muss) sind diese drei Techniken nicht geeignet. .NET Framework ermöglicht Ihnen auch die Definition eines Formatierungsobjekts, bei dem es sich weder um ein <xref:System.Globalization.CultureInfo>-Objekt noch um ein <xref:System.Globalization.NumberFormatInfo>-Objekt handelt, um zu bestimmen, wie ein numerischer Wert formatiert wird. Dieses Thema stellt eine Schrittanleitung für die Implementierung eines solchen Objekts bereit und bietet ein Beispiel, das Telefonnummern formatiert.  
+ In einigen Fällen (z.B. wenn eine Anwendung eine formatierte Kontonummer, eine ID oder eine Postleitzahl anzeigen muss) sind diese drei Techniken nicht geeignet. .NET ermöglicht Ihnen auch die Definition eines Formatierungsobjekts, bei dem es sich weder um ein <xref:System.Globalization.CultureInfo>-Objekt noch um ein <xref:System.Globalization.NumberFormatInfo>-Objekt handelt, um zu bestimmen, wie ein numerischer Wert formatiert wird. Dieses Thema stellt eine Schrittanleitung für die Implementierung eines solchen Objekts bereit und bietet ein Beispiel, das Telefonnummern formatiert.  
   
-### <a name="to-define-a-custom-format-provider"></a>Definieren eines benutzerdefinierten Formatanbieters  
+## <a name="define-a-custom-format-provider"></a>Definieren eines benutzerdefinierten Formatanbieters  
   
 1. Definieren Sie eine Klasse, die die <xref:System.IFormatProvider>- und <xref:System.ICustomFormatter>-Schnittstelle implementiert.  
   
@@ -55,13 +56,14 @@ ms.locfileid: "84290512"
   
     4. Geben Sie die Zeichenfolgendarstellung des `arg`-Parameters zurück.  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>Verwenden eines benutzerdefinierten Zahlenformatierungsobjekts  
+## <a name="use-a-custom-numeric-formatting-object"></a>Verwenden eines benutzerdefinierten Zahlenformatierungsobjekts  
   
 1. Erstellen Sie eine neue Instanz der benutzerdefinierten Formatierungsklasse.  
   
 2. Rufen Sie die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Formatierungsmethode auf, und übergeben Sie das benutzerdefinierte Formatierungsobjekt, den Formatierungsbezeichner (oder <xref:System.String.Empty?displayProperty=nameWithType>, falls kein Bezeichner verwendet wird) und den numerischen Wert, der formatiert werden soll.  
   
-## <a name="example"></a>Beispiel  
+## <a name="example"></a>Beispiel
+
  Das folgende Beispiel definiert einen benutzerdefinierten Zahlenformatanbieter namens `TelephoneFormatter`, der eine Zahl, die eine US-amerikanische Telefonnummer darstellt, in das entsprechende NANP- oder E.123-Format konvertiert. Die Methode verarbeitet zwei Formatbezeichner: „N“ (zur Ausgabe des NANP-Formats) und „I“ (zur Ausgabe des internationalen E.123-Formats).  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]

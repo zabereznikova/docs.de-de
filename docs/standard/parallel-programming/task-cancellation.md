@@ -10,15 +10,16 @@ helpviewer_keywords:
 - tasks, cancellation
 - asynchronous task cancellation
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
-ms.openlocfilehash: 1d9b7b35341961c27107f007e0eafa51ef49e232
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: dba2f2ad9733f8881276bdb2705a6c8457351f9c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768663"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925297"
 ---
-# <a name="task-cancellation"></a>Aufgabenabbruch
-Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> - und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> -Klasse unterstützen einen Abbruch durch die Verwendung von Abbruchtoken, die in .NET Framework neu sind. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md). In den Task-Klassen erfordert ein Abbruch eine Zusammenarbeit zwischen dem Benutzerdelegaten, der einen abbrechbaren Vorgang darstellt, und dem Code, der den Abbruch angefordert hat.  Für einen erfolgreichen Abbruch muss der anfordernde Code die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> -Methode aufrufen und der Benutzerdelegat den Vorgang rechtzeitig beenden. Sie können den Vorgang mithilfe einer dieser Optionen beenden:  
+# <a name="task-cancellation"></a>Taskabbruch
+
+Die Klassen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> unterstützen Abbruchvorgänge mithilfe von Abbruchtoken. Weitere Informationen finden Sie unter [Abbruch in verwalteten Threads](../threading/cancellation-in-managed-threads.md). In den Taskklassen erfordert ein Abbruch die Zusammenarbeit zwischen dem Benutzerdelegaten, der einen abbrechbaren Vorgang darstellt, und dem Code, der den Abbruch angefordert hat. Für einen erfolgreichen Abbruch muss der anfordernde Code die Methode <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> aufrufen und der Benutzerdelegat den Vorgang rechtzeitig beenden. Sie können den Vorgang mithilfe einer dieser Optionen beenden:  
   
 - Durch eine einfache Rückkehr vom Delegaten. In vielen Fällen reicht dies aus. Eine auf diese Weise abgebrochene Aufgabeninstanz geht jedoch in den Zustand <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> und nicht in den Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> über.  
   

@@ -3,19 +3,19 @@ title: Generische Delegaten zum Bearbeiten von Arrays und Listen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- delegates [.NET Framework], generic delegates
+- delegates [.NET], generic delegates
 - chaining delegates
-- arrays [.NET Framework], generic delegates
-- generic delegates [.NET Framework]
-- lists [.NET Framework], generic delegates
-- generics [.NET Framework], delegates
+- arrays [.NET], generic delegates
+- generic delegates [.NET]
+- lists [.NET], generic delegates
+- generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b0ecd8661b7c58645e49ca884ed0499e8c828af9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2ee80acb51ab3c394a3c0b12fface93a9d541f30
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287531"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063201"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
 Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.  
@@ -44,6 +44,6 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Generics](index.md)
-- [Generische Auflistungen in .NET Framework](collections.md)
+- [Generische Auflistungen in .NET](collections.md)
 - [Generische Schnittstellen](interfaces.md)
 - [Kovarianz und Kontravarianz](covariance-and-contravariance.md)

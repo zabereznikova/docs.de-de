@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SortedList class, grouping data in collections
 - grouping data in collections, SortedList collection type
 - SortedList collection type
-- collections [.NET Framework], SortedList collection type
+- collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 339d247f3b7e775de740c6c1ce786b078441c699
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287938"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889321"
 ---
 # <a name="sorted-collection-types"></a>Sortierte Sammlungstypen
 
@@ -45,7 +45,7 @@ Für sortierte Listen oder Wörterbücher, die gleichzeitig für mehrere Threads
 > [!NOTE]
 > Für Werte, die ihre eigenen Schlüssel enthalten (z.B. Mitarbeiterdatensätze mit einer Mitarbeiter-ID), können Sie durch Ableiten von der generischen Klasse <xref:System.Collections.ObjectModel.KeyedCollection%602> eine schlüsselgebundene Sammlung erstellen, die einige Merkmale einer Liste und einige Merkmale eines Wörterbuchs aufweist.
 
-Ab .NET Framework 4 stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in sortierter Reihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.
+Ab .NET Framework 4 stellt die Klasse <xref:System.Collections.Generic.SortedSet%601> eine selbstausgleichende Struktur bereit, in der Daten nach Einfüge-, Lösch- und Suchvorgängen in Sortierreihenfolge verwaltet werden. Diese Klasse sowie die <xref:System.Collections.Generic.HashSet%601>-Klasse implementieren die <xref:System.Collections.Generic.ISet%601>-Schnittstelle.
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - String.CompareTo method
 - String.Compare method
-- string comparison [.NET Framework], culture-insensitive
-- strings [.NET Framework], comparing
+- string comparison [.NET], culture-insensitive
+- strings [.NET], comparing
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d8dc3f1bf686550eb94d7fb3003d4c21741739e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288614"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064144"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Durchführen kulturunabhängiger Zeichenfolgenvergleiche
 In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode kulturabhängige Vergleiche sowie Vergleiche unter Berücksichtigung der Groß-/Kleinschreibung aus. Diese Methode schließt auch mehrere Überladungen ein, die einen `culture`-Parameter zur Angabe der zu verwendenden Kultur und einen `comparisonType`-Parameter zur Angabe der zu verwendenden Vergleichsregeln bereitstellen. Durch den Aufruf dieser Methoden statt der Standardüberladung wird jede Mehrdeutigkeit hinsichtlich der in einem bestimmten Methodenaufruf verwendeten Regeln vermieden. Es wird verdeutlicht, ob ein bestimmter Vergleich kulturabhängig oder kulturunabhängig ist.  
@@ -30,7 +30,7 @@ In der Standardeinstellung führt die <xref:System.String.Compare%2A?displayProp
   
  Die kulturunabhängigen von der <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode unterstützten Zeichenfolgenvergleiche sind entweder linguistisch (auf Grundlage der Sortierkonventionen der invarianten Kultur) oder nicht linguistisch (auf Grundlage des Ordnungswerts der Zeichen in der Zeichenfolge). Die meisten kulturunabhängigen Zeichenfolgenvergleiche sind nicht linguistisch. Geben Sie den <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>-Enumerationswert oder den <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>-Enumerationswert als `comparisonType`-Parameter für diese Vergleiche an. Wenn beispielsweise eine Sicherheitsentscheidung (z. B. ein Benutzername oder ein Kennwortvergleich) auf dem Ergebnis eines Zeichenfolgenvergleichs basiert, sollte der Vorgang kulturunabhängig und nicht linguistisch sein, um sicherzustellen, dass das Ergebnis nicht von den Konventionen einer bestimmten Kultur oder Sprache beeinflusst wird.  
   
- Verwenden Sie einen kulturunabhängigen linguistischen Zeichenfolgenvergleich, wenn Sie linguistisch relevante Zeichenfolgen mehrerer Kulturen auf eine konsistente Weise behandeln möchten. Wenn die Anwendung z. B. Wörter anzeigt, die mehrere Zeichensätze in einem Listenfeld verwenden, können Sie Wörter in der gleichen Reihenfolge unabhängig von der aktuellen Kultur anzeigen. Für kulturunabhängige linguistische Vergleiche definiert .NET Framework eine invariante Kultur, die auf den linguistischen Konventionen der englischen Sprache basiert. Geben Sie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> als `comparisonType`-Parameter an, um einen kulturunabhängigen linguistischen Vergleich auszuführen.  
+ Verwenden Sie einen kulturunabhängigen linguistischen Zeichenfolgenvergleich, wenn Sie linguistisch relevante Zeichenfolgen mehrerer Kulturen auf eine konsistente Weise behandeln möchten. Wenn die Anwendung z. B. Wörter anzeigt, die mehrere Zeichensätze in einem Listenfeld verwenden, können Sie Wörter in der gleichen Reihenfolge unabhängig von der aktuellen Kultur anzeigen. Für kulturunabhängige linguistische Vergleiche definiert .NET eine invariante Kultur, die auf den linguistischen Konventionen der englischen Sprache basiert. Geben Sie <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> als `comparisonType`-Parameter an, um einen kulturunabhängigen linguistischen Vergleich auszuführen.  
   
  Im folgenden Beispiel werden zwei kulturunabhängige, nicht linguistische Zeichenfolgenvergleiche ausgeführt. Beim ersten Beispiel wird die Groß-/Kleinschreibung beachtet, beim zweiten nicht.  
   

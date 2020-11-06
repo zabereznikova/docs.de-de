@@ -7,18 +7,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - regular expressions, behavior
-- .NET Framework regular expressions, behavior
+- .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 802c84bf93b3821459ab652e69a12fcc50280b9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290551"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888671"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 
-Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.
+Die .NET-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, das eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie es beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgende Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET mit einer herkömmlichen NFA-Engine implementiert werden.
 
 ## <a name="benefits-of-the-nfa-engine"></a>Vorteile der NFA-Engine
 
@@ -33,11 +33,11 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
 > [!NOTE]
 > Weitere Informationen über die durch eine übermäßige Rückverfolgung verursachten Leistungseinbußen sowie über Methoden, einen regulären Ausdruck zur Umgehung dieses Problems zu erstellen, finden Sie unter [Rückverfolgung](backtracking-in-regular-expressions.md).
 
-## <a name="net-framework-engine-capabilities"></a>Funktionen der .NET Framework-Engine
+## <a name="net-engine-capabilities"></a>Funktionen der .NET-Engine
 
- Um die Vorteile eines herkömmlichen NFA-Engine voll ausschöpfen zu können, enthält die .NET Framework-Engine für reguläre Ausdrücke einen vollständigen Satz von Konstrukten, mit deren Hilfe Programmierer die Rückverfolgungs-Engine steuern können. Diese Konstrukte können dazu verwendet werden, Übereinstimmungen schneller zu finden oder spezielle Erweiterungen eines regulären Ausdrucks anderen vorzuziehen.
+ Um die Vorteile einer herkömmlichen NFA-Engine voll ausschöpfen zu können, enthält die .NET-Engine für reguläre Ausdrücke einen vollständigen Satz von Konstrukten, mit deren Hilfe Programmierer die Rückverfolgungs-Engine steuern können. Diese Konstrukte können dazu verwendet werden, Übereinstimmungen schneller zu finden oder spezielle Erweiterungen eines regulären Ausdrucks anderen vorzuziehen.
 
- Weitere Funktionen der .NET Framework-Engine für reguläre Ausdrücke:
+ Weitere Funktionen der .NET-Engine für reguläre Ausdrücke:
 
 - Verzögerte Quantifizierer: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. Diese Konstrukte veranlassen die Rückverfolgungs-Engine, zuerst die kleinste Anzahl von Wiederholungen zu durchsuchen. Im Gegensatz dazu wird bei „gierigen“ Quantifizierern die maximale Anzahl an Wiederholungen zuerst berücksichtigt. Das folgende Beispiel veranschaulicht die Unterschiede zwischen beiden. Mit einem regulären Ausdruck wird nach einem Satz gesucht, der auf eine Zahl endet, und zum Erfassen dieser Zahl ist eine Erfassungsgruppe vorgesehen. Der reguläre Ausdruck `.+(\d+)\.` schließt den gierigen Quantifizierer `.+` ein, der bewirkt, dass die Engine für reguläre Ausdrücke nur die letzte Ziffer der Zahl erfasst. Im Gegensatz dazu schließt der reguläre Ausdruck `.+?(\d+)\.` den trägen Quantifizierer `.+?` ein, der bewirkt, dass die Engine für reguläre Ausdrücke die gesamte Zahl erfasst.
 
@@ -149,7 +149,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
 |[Backtracking](backtracking-in-regular-expressions.md)|Informationen über die Verwendung der Rückverfolgung bei regulären Ausdrücken, um mit Verzweigungen nach alternativen Übereinstimmungen zu suchen.|
 |[Kompilierung und Wiederverwendung](compilation-and-reuse-in-regular-expressions.md)|Informationen zum Kompilieren und Wiederverwenden regulärer Ausdrücke mit dem Ziel der Leistungsverbesserung.|
 |[Threadsicherheit](thread-safety-in-regular-expressions.md)|Informationen zur Threadsicherheit bei regulären Ausdrücken und Erläuterungen zur Notwendigkeit eines synchronisierten Zugriffs auf Objekte in regulären Ausdrücken.|
-|[Reguläre Ausdrücke von .NET Framework](regular-expressions.md)|Übersicht über die programmiersprachenbezogenen Aspekte von regulären Ausdrücken.|
+|[Reguläre Ausdrücke von .NET](regular-expressions.md)|Übersicht über die programmiersprachenbezogenen Aspekte von regulären Ausdrücken.|
 |[Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)|Informationen und Codebeispiele, die die Verwendung von Klassen für reguläre Ausdrücke veranschaulichen.|
 |[Sprachelemente für reguläre Ausdrücke – Kurzübersicht](regular-expression-language-quick-reference.md)|Informationen zu Zeichensatz, Operatoren und Konstrukten, mit denen Sie reguläre Ausdrücke definieren können.|
 

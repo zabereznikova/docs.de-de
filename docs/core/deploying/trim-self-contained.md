@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eigenständige Apps zuschneiden, um ihre Grö
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770454"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925284"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kürzen eigenständiger Bereitstellungen und ausführbarer Dateien
 
@@ -36,6 +36,39 @@ Wenn der Code per Reflexion indirekt auf eine Assembly verweist, können Sie mit
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>Unterstützung für SSL-Zertifikate
+
+Wenn Ihre App SSL-Zertifikate lädt (z. B. bei einer ASP.NET Core-App), möchten Sie sicherstellen, dass Sie keine Assemblys kürzen, die beim Laden von SSL-Zertifikaten helfen.
+
+Sie können die Projektdatei aktualisieren, damit für ASP.NET Core 3.1 Folgendes enthalten ist:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+Bei Verwendung von .NET 5.0 können Sie die Projektdatei aktualisieren, damit Folgendes enthalten ist:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>Zuschneiden der App: CLI
@@ -87,11 +120,11 @@ Visual Studio erstellt wiederverwendbare Veröffentlichungsprofile, die steuern,
     - Legen Sie die **Zielrumtime** auf die Plattform fest, auf der Sie die App veröffentlichen möchten.
     - Wählen Sie **Nicht verwendete Assemblys kürzen (Vorschau)** aus.
 
-    Klicken Sie auf **Speichern**, um die Einstellungen zu speichern und zum Dialogfeld **Veröffentlichen** zurückzukehren.
+    Klicken Sie auf **Speichern** , um die Einstellungen zu speichern und zum Dialogfeld **Veröffentlichen** zurückzukehren.
 
     :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Dialogfeld für die Profileinstellungen mit Bereitstellungsmodus, Zielruntime und Optionen zum Zuschneiden von nicht verwendeten Assemblys":::
 
-01. Klicken Sie auf **Veröffentlichen**, um Ihre App zugeschnitten zu veröffentlichen.
+01. Klicken Sie auf **Veröffentlichen** , um Ihre App zugeschnitten zu veröffentlichen.
 
 Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Apps mit Visual Studio](deploy-with-vs.md).
 

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: b4d58734fba4b834d5f5819a6bf19da0b7b7e8db
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285312"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925271"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potenzielle Fehler bei PLINQ
 
@@ -62,7 +62,7 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 ## <a name="limit-calls-to-thread-safe-methods"></a>Beschränken Sie Aufrufe auf threadsichere Methoden
 
-Die meisten statischen Methoden in .NET Framework sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden. Die damit verbundene Synchronisierung kann jedoch auch in diesen Fällen zu einer erheblichen Verlangsamung der Abfrage führen.
+Die meisten statischen Methoden in .NET sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden. Die damit verbundene Synchronisierung kann jedoch auch in diesen Fällen zu einer erheblichen Verlangsamung der Abfrage führen.
 
 > [!NOTE]
 > Sie können dies testen, indem Sie in Ihre Abfragen Aufrufe von <xref:System.Console.WriteLine%2A> einfügen. Diese Methode wird jedoch nur in den Dokumentationsbeispielen zu Demonstrationszwecken verwendet. Nutzen Sie sie nicht in PLINQ-Abfragen.

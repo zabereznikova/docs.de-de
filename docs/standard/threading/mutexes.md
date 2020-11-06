@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
-- threading [.NET Framework], Mutex class
+- threading [.NET], Mutex class
 - Mutex class, about Mutex class
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291174"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188990"
 ---
 # <a name="mutexes"></a>Mutexe
+
 Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zugriff auf eine Ressource bereitzustellen. Die <xref:System.Threading.Mutex>-Klasse verwendet mehr Systemressourcen als die <xref:System.Threading.Monitor>-Klasse, sie kann jedoch über Anwendungsdomänengrenzen hinweg gemarshallt, mit mehreren Wartevorgängen verwendet sowie zur Synchronisierung von Threads in verschiedenen Prozessen verwendet werden. Ein Vergleich der verwalteten Synchronisierungsmechanismen finden Sie unter [Overview of Synchronization Primitives (Überblick über Synchronisierungsprimitiven)](overview-of-synchronization-primitives.md).  
   
  Codebeispiele finden Sie in der Referenzdokumentation für die <xref:System.Threading.Mutex.%23ctor%2A>-Konstruktoren.  
@@ -30,10 +31,7 @@ Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zu
  Wenn ein <xref:System.Threading.Mutex> im Besitz eines Threads ist, kann dieser Thread genau diesen <xref:System.Threading.Mutex> bei wiederholten Warteanforderungen angeben, ohne dessen Ausführung zu blockieren. Der <xref:System.Threading.Mutex> muss jedoch ebenso oft freigegeben werden, um den Besitz freizugeben.  
   
 ## <a name="abandoned-mutexes"></a>Abgebrochene Mutexe  
- Wenn ein Thread ohne Freigabe eines <xref:System.Threading.Mutex> beendet wird, wird der Mutex als abgebrochener Mutex bezeichnet. Dabei handelt es sich häufig um einen Hinweis auf einen schwerwiegenden Programmierfehler, da die Ressource, die durch den Mutex geschützt wird, in einem inkonsistenten Zustand verbleiben kann. In .NET Framework Version 2.0 wird <xref:System.Threading.AbandonedMutexException> im nächsten Thread ausgelöst, der den Mutex verwendet.  
-  
-> [!NOTE]
-> In .NET Framework Version 1.0 und 1.1 wird ein abgebrochener <xref:System.Threading.Mutex> auf den signalisierten Zustand festgelegt, und der Besitz geht auf den nächsten wartenden Thread über. Wenn sich kein Thread im Wartezustand befindet, verbleibt der <xref:System.Threading.Mutex> in einem signalisierten Zustand. Es werden keine Ausnahmen ausgelöst.  
+ Wenn ein Thread ohne Freigabe eines <xref:System.Threading.Mutex> beendet wird, wird der Mutex als abgebrochener Mutex bezeichnet. Dabei handelt es sich häufig um einen Hinweis auf einen schwerwiegenden Programmierfehler, da die Ressource, die durch den Mutex geschützt wird, in einem inkonsistenten Zustand verbleiben kann. Eine <xref:System.Threading.AbandonedMutexException>-Klasse wird im nächsten Thread ausgelöst, die den Mutex verwendet.
   
  Wenn es sich um einen systemweiten Mutex handelt, kann ein abgebrochener Mutex darauf hinweisen, dass eine Anwendung plötzlich beendet wurde (z.B. über den Windows Task-Manager).  
   
@@ -43,7 +41,8 @@ Sie können ein <xref:System.Threading.Mutex>-Objekt verwenden, um exklusiven Zu
  Ein lokaler Mutex ist nur innerhalb des Prozesses vorhanden. Er kann von jedem Thread in einem Prozess verwendet werden, der einen Verweis auf das lokale <xref:System.Threading.Mutex>-Objekt enthält. Jedes <xref:System.Threading.Mutex>-Objekt ist ein separater lokaler Mutex.  
   
 ### <a name="access-control-security-for-system-mutexes"></a>Sichere Zugriffssteuerung für Systemmutexe  
- .NET Framework Version 2.0 bietet die Möglichkeit, für benannte Systemobjekte Sicherheitsmerkmale für die Windows-Zugriffssteuerung abzufragen und festzulegen. Es wird empfohlen, Systemmutexe direkt ab ihrer Erstellung zu sichern, da Systemobjekte global sind und deshalb auch durch Fremdcode gesperrt werden können.  
+
+.NET bietet die Möglichkeit, für benannte Systemobjekte Sicherheitsmerkmale für die Windows-Zugriffssteuerung abzufragen und festzulegen. Es wird empfohlen, Systemmutexe direkt ab ihrer Erstellung zu sichern, da Systemobjekte global sind und deshalb auch durch Fremdcode gesperrt werden können.  
   
  Informationen zur sicheren Zugriffssteuerung für Mutexe finden Sie in den Artikeln zu <xref:System.Security.AccessControl.MutexSecurity>- und <xref:System.Security.AccessControl.MutexAccessRule>-Klasse, der <xref:System.Security.AccessControl.MutexRights>-Enumeration, der <xref:System.Threading.Mutex.GetAccessControl%2A>-, <xref:System.Threading.Mutex.SetAccessControl%2A>- und <xref:System.Threading.Mutex.OpenExisting%2A>-Methode der <xref:System.Threading.Mutex>-Klasse und dem <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>-Konstruktor.  
   

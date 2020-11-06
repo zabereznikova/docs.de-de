@@ -3,12 +3,12 @@ title: Netzwerkkonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die das Netzwerk für .NET Core-Apps konfigurieren.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: d43b68206cc82f4a41df02bd5998702b4f5d0590
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bda608e83bb1b093d7d9b860de9607f6734720aa
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538132"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188301"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Laufzeitkonfigurationsoptionen für Netzwerke
 
@@ -16,9 +16,11 @@ ms.locfileid: "90538132"
 
 - Konfiguriert, ob der Support für das HTTP/2-Protokoll aktiviert ist
 
-- Wenn Sie diese Einstellung weglassen, ist die Unterstützung für das HTTP/2-Protokoll deaktiviert. Dies entspricht der Einstellung des Werts auf `false`.
-
 - Eingeführt in .NET Core 3.0
+
+- Nur .NET Core 3.0: Wenn Sie diese Einstellung weglassen, ist die Unterstützung für das HTTP/2-Protokoll deaktiviert. Dies entspricht der Einstellung des Werts auf `false`.
+
+- .NET Core 3.1 und .NET 5 und höher: Wenn Sie diese Einstellung weglassen, ist die Unterstützung für das HTTP/2-Protokoll aktiviert. Dies entspricht der Einstellung des Werts auf `true`.
 
 | | Einstellungsname | Werte |
 | - | - | - |
@@ -43,3 +45,17 @@ ms.locfileid: "90538132"
 
 > [!NOTE]
 > Ab .NET 5 ist die Einstellung `System.Net.Http.UseSocketsHttpHandler` nicht mehr verfügbar.
+
+## <a name="latin1-headers-net-core-31-only"></a>Latin1-Header (nur .NET Core 3.1)
+
+- Durch diese Umstellung kann die Überprüfung des HTTP-Headers gelockert werden, wodurch <xref:System.Net.Http.SocketsHttpHandler> ISO-8859-1-codierte (Latin-1-codierte) Zeichen in Headern senden kann.
+
+- Wenn Sie diese Einstellung weglassen, wird beim Versuch, ein Nicht-ASCII-Zeichen zu senden, <xref:System.Net.Http.HttpRequestException> zurückgegeben. Dies entspricht der Einstellung des Werts auf `false`.
+
+| | Einstellungsname | Werte |
+| - | - | - |
+| **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.AllowLatin1Headers` | `false` – deaktiviert<br/>`true` – aktiviert |
+| **Umgebungsvariable** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_ALLOWLATIN1HEADERS` | `0` – deaktiviert<br/>`1` – aktiviert |
+
+> [!NOTE]
+> Diese Option ist nur in .NET Core 3.1 ab Version 3.1.9 und nicht in früheren oder neueren Versionen verfügbar. Bei .NET 5 empfiehlt sich die Verwendung von <xref:System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector>.

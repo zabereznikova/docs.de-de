@@ -3,39 +3,40 @@ title: Assemblynamen
 description: Erfahren Sie mehr über .NET-Assemblynamen und ihre Auswirkung auf den Assemblybereich und die Verwendung durch eine Anwendung sowie über die FullName-Eigenschaft.
 ms.date: 08/19/2019
 helpviewer_keywords:
-- names [.NET Framework], assemblies
-- assemblies [.NET Framework], names
+- names [.NET], assemblies
+- assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 5a499f4f04c84de8d6542d7107d7a707b808e47f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379885"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687570"
 ---
 # <a name="assembly-names"></a>Assemblynamen
-Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.
 
- Die Runtime verwendet diese Informationen, um nach der Assembly zu suchen und sie von anderen Assemblys mit dem gleichen Namen zu unterscheiden. Eine Assembly mit dem starken Namen `myTypes` könnte z.B. folgenden vollqualifizierten Namen haben:
+Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel, die Versionsnummer und optional die Prozessorarchitektur der Assembly enthält. Verwenden Sie die <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft, um den vollqualifizierten Namen, häufig als Anzeigename bezeichnet, für geladene Assemblys abzurufen.
+
+Die Runtime verwendet die Information zum Namen, um nach der Assembly zu suchen und sie von anderen Assemblys mit dem gleichen Namen zu unterscheiden. Eine Assembly mit dem starken Namen `myTypes` könnte z.B. folgenden vollqualifizierten Namen haben:
 
 ```
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil
 ```
 
-> [!NOTE]
-> In .NET Framework Version 2.0 wird Prozessorarchitektur zur Assemblyidentität hinzugefügt. Dies macht prozessorspezifische Assemblyversionen möglich. Sie können Versionen einer Assembly erstellen, deren Identität sich nur in der Prozessorarchitektur unterschiedet, z.B. prozessorspezifische 32-Bit- und 64-Bit-Versionen. Die Prozessorarchitektur ist für starke Namen nicht unbedingt erforderlich. Weitere Informationen finden Sie unter <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.
+In diesem Beispiel gibt der vollqualifizierte Name an, dass die Assembly `myTypes` einen starken Namen mit einem öffentlichen Schlüsseltoken hat, den Kulturwert für Englisch (USA) und die Versionsnummer 1.0.1234.0. Die Prozessorarchitektur ist `msil`. Das heißt, dass eine JIT-Kompilierung (Just-In-Time) in 32-Bit- oder 64-Bit-Code durchgeführt wird, je nach Betriebssystem und Prozessor.
 
- In diesem Beispiel gibt der vollqualifizierte Name an, dass die Assembly `myTypes` einen starken Namen mit einem öffentlichen Schlüsseltoken hat, den Kulturwert für Englisch (USA) und die Versionsnummer 1.0.1234.0. Seine Prozessorarchitektur ist „msil“. Das heißt, dass er in 32-Bit- oder 64-Bit-Code JIT-kompiliert (Just-In-Time) wird, je nach Betriebssystem und Prozessor.
+> [!TIP]
+> Die `ProcessorArchitecture`-Information ermöglicht prozessorspezifische Versionen von Assemblys. Sie können Versionen einer Assembly erstellen, deren Identität sich nur in der Prozessorarchitektur unterschiedet, z.B. prozessorspezifische 32-Bit- und 64-Bit-Versionen. Die Prozessorarchitektur ist für starke Namen nicht unbedingt erforderlich. Weitere Informationen finden Sie unter <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.
 
- Code, der Typen in einer Assembly anfordert, muss einen vollqualifizierten Assemblynamen verwenden. Dies wird als vollqualifizierte Bindung bezeichnet. Die Teilbindung, die nur einen Assemblynamen angibt, ist nicht zulässig, wenn auf Assemblys in .NET Framework verwiesen wird.
+ Code, der Typen in einer Assembly anfordert, muss einen vollqualifizierten Assemblynamen verwenden. Dies wird als vollqualifizierte Bindung bezeichnet. Die Teilbindung, die nur einen Assemblynamen angibt, ist nicht zulässig, wenn auf Assemblys im .NET Framework verwiesen wird.
 
- Alles Assemblyverweise auf Assemblys, aus denen .NET Framework besteht, müssen auch den vollqualifizierten Namen der Assembly enthalten. Der Verweis auf die System.Data-Assembly von .NET Framework für Version 1.0 würde beispielsweise Folgendes enthalten:
+ Alles Assemblyverweise auf Assemblys, aus denen das .NET Framework besteht, müssen auch den vollqualifizierten Namen der Assembly enthalten. Der Verweis auf die System.Data-Assembly von .NET Framework für Version 1.0 würde beispielsweise Folgendes enthalten:
 
 ```
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 ```
 
- Beachten Sie, dass die Version den Versionsnummern aller Assemblys von .NET Framework entspricht, die mit .NET Framework Version 1.0 geliefert wurden. Der Kulturwert von Assemblys von .NET Framework ist immer neutral, und der öffentliche Schlüssel entspricht dem im oben stehenden Beispiel gezeigten Schlüssel.
+Die Version entspricht den Versionsnummern aller Assemblys des .NET Framework, die mit .NET Framework Version 1.0 geliefert wurden. Der Kulturwert von Assemblys von .NET Framework ist immer neutral, und der öffentliche Schlüssel entspricht dem im oben stehenden Beispiel gezeigten Schlüssel.
 
  Um z.B. einen Assemblyverweis in eine Konfigurationsdatei einzufügen, um einen Ablaufverfolgungslistener einzurichten, beziehen Sie den vollqualifizierten der Systemassembly von .NET Framework mit ein:
 

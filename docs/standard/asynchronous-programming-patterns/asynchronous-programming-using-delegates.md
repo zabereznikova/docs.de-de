@@ -9,17 +9,18 @@ helpviewer_keywords:
 - calling synchronous methods in asynchronous manner
 - EndInvoke method
 - calling asynchronous methods
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: 82e0a57c3d8e180456aed48886e38ca466db16c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 05e574536abe4eac823b7b74369f5b191724e5b5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289966"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889256"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Asynchrone Programmierung mithilfe von Delegaten
+
 Delegaten bieten die Möglichkeit, synchrone Methoden in asynchroner Weise aufzurufen. Wenn ein Delegat synchron aufgerufen wird, ruft die `Invoke`-Methode die Zielmethode direkt im aktuellen Thread auf. Wird die `BeginInvoke`-Methode aufgerufen, fügt die Common Language Runtime (CLR) die Anforderung in die Warteschlange ein und kehrt sofort zum Aufrufer zurück. Die Zielmethode wird in einem Thread asynchron aus dem Threadpool aufgerufen. Der ursprüngliche Thread, der die Anforderung gesendet hat, kann weiterhin parallel zur Zielmethode ausgeführt werden. Wenn im Aufruf der `BeginInvoke`-Methode eine Rückrufmethode angegeben war, wird die Rückrufmethode aufgerufen, wenn die Zielmethode beendet wurde. In der Rückrufmethode ruft die `EndInvoke`-Methode den Rückgabewert und alle Eingabe-/Ausgabe- oder reinen Ausgabeparameter ab. Ist beim Aufrufen von `BeginInvoke` keine Rückrufmethode angegeben, kann `EndInvoke` aus dem Thread aufgerufen werden, der `BeginInvoke` aufgerufen hat.  
   
 > [!IMPORTANT]
@@ -31,7 +32,7 @@ Delegaten bieten die Möglichkeit, synchrone Methoden in asynchroner Weise aufzu
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)  
- Beschreibt asynchrone Programmierung mit .NET Framework.  
+ Beschreibt die asynchrone Programmierung in .NET  
   
 ## <a name="see-also"></a>Weitere Informationen
 

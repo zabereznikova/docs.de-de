@@ -1,7 +1,7 @@
 ---
 title: Gleichheitsoperatoren – C#-Referenz
 description: Erfahren Sie mehr über Gleichheitsvergleichsoperatoren und C#-Typengleichheit.
-ms.date: 06/26/2019
+ms.date: 10/30/2020
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 33215e2440b14fb888a6f0df5c220c891ebed0e2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 39461157c33fea0effb5c8808ded1c9981900e17
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063093"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063214"
 ---
 # <a name="equality-operators-c-reference"></a>Gleichheitsoperatoren (C#-Referenz)
 
@@ -47,11 +47,19 @@ Ab C# 7.3 werden die Operatoren `==` und `!=` für [C#-Tupel](../builtin-types/v
 
 ### <a name="reference-types-equality"></a>Gleichheit von Verweistypen
 
-Standardmäßig sind zwei Verweistypoperanden gleich, wenn sie auf dasselbe Objekt verweisen:
+Standardmäßig sind zwei Verweistypoperanden, die keine Datensätze darstellen, gleich, wenn sie auf dasselbe Objekt verweisen:
 
 [!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Das Beispiel zeigt, dass benutzerdefinierte Verweistypen den `==`-Operator standardmäßig unterstützen. Ein Verweistyp kann den Operator `==` aber überladen. Wenn ein Verweistyp den `==`-Operator überlädt, verwenden Sie die <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>-Methode, um zu überprüfen, ob zwei Verweise dieses Typs auf dasselbe Objekt verweisen.
+
+### <a name="record-types-equality"></a>Gleichheit von Datensatztypen
+
+[Datensatztypen](../../whats-new/csharp-9.md#record-types) sind in C# 9.0 und höher verfügbar und unterstützen die Operatoren `==` und `!=`, die standardmäßig Semantik für Wertgleichheit ausdrücken. Das bedeutet, dass zwei Datensatzoperanden gleich sind, wenn beide gleich `null` oder die entsprechenden Werte aller Felder sowie die automatisch implementierten Eigenschaften gleich sind.
+
+:::code language="csharp" source="snippets/shared/EqualityOperators.cs" id="RecordTypesEquality":::
+
+Wie das vorherige Beispiel zeigt, werden bei Verweistypmembern, die keine Datensätze sind, die Verweiswerte verglichen, nicht die referenzierten Instanzen.
 
 ### <a name="string-equality"></a>Zeichenfolgengleichheit
 
@@ -85,11 +93,19 @@ Im folgenden Beispiel wird die Verwendung des `!=`-Operators veranschaulicht:
 
 Ein benutzerdefinierter Typ kann die Operatoren `==` und `!=`[überladen](operator-overloading.md). Wenn ein Typ einen der zwei Operatoren überlädt, muss er auch den anderen Operator überladen.
 
+Ein Datensatztyp kann die Operatoren `==` und `!=` nicht explizit überladen. Wenn Sie das Verhalten der Operatoren `==` und `!=` für den Datensatztyp `T` ändern müssen, implementieren Sie die Methode <xref:System.IEquatable%601.Equals%2A?displayProperty=nameWithType> mit der folgenden Signatur:
+
+```csharp
+public virtual bool Equals(T? other);
+```
+
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
 Weitere Informationen finden Sie im Abschnitt [Relationale und Typtestoperatoren](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Siehe auch
+Weitere Informationen zur Gleichheit von Datensatztypen finden Sie im Abschnitt [Gleichheitsmember](~/_csharplang/proposals/csharp-9.0/records.md#equality-members) des Artikels [Datensätze](~/_csharplang/proposals/csharp-9.0/records.md).
+
+## <a name="see-also"></a>Weitere Informationen
 
 - [C#-Referenz](../index.md)
 - [C#-Operatoren und -Ausdrücke](index.md)

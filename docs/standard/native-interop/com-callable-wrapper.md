@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cc27ba47c88d424a80eb47aaa310bdfd6d18433a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420525"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187917"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper (CCW)
 
@@ -46,24 +46,24 @@ Zur Unterstützung dieses nahtlosen Ansatzes erstellt der CCW traditionelle COM-
 
 ![Diagramm, das zeigt, wie CCW COM-Schnittstellen herstellt.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
-Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt die .NET-Runtime für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown**- und **IDispatch**-Schnittstellen bereit.
+Neben der Offenlegung von Schnittstellen, die explizit mit einer Klasse in der verwalteten Umgebung implementiert wird, stellt die .NET-Runtime für das Objekt Implementierungen der COM-Schnittstellen bereit, die in der folgenden Tabelle aufgeführt sind. Eine .NET-Klasse kann das Standardverhalten überschreiben, indem sie eigene Implementierungen dieser Schnittstellen bereitstellt. Zur Laufzeit stehen jedoch immer die Implementierungen der **IUnknown** - und **IDispatch** -Schnittstellen bereit.
 
 |Interface|Beschreibung|
 |---------------|-----------------|
 |**IDispatch**|Stellt einen Mechanismus für die späte Bindung an den Typ bereit.|
-|**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|
-|**IProvideClassInfo**|Ermöglicht es COM-Clients, auf die **ITypeInfo**-Schnittstelle zuzugreifen, die von einer verwalteten Klasse implementiert wurde. Gibt `COR_E_NOTSUPPORTED` in .NET Core für die Typen zurück, die nicht von COM importiert wurden. |
-|**ISupportErrorInfo**|Ermöglicht es einem COM-Client festzustellen, ob das verwaltete Objekt die **IErrorInfo**-Schnittstelle unterstützt. Falls ja, ist der Client in der Lage einen Zeiger auf das letzte Ausnahmeobjekt abzurufen. Alle verwalteten Typen unterstützen die **IErrorInfo**-Schnittstelle.|
+|**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL** ).|
+|**IProvideClassInfo**|Ermöglicht es COM-Clients, auf die **ITypeInfo** -Schnittstelle zuzugreifen, die von einer verwalteten Klasse implementiert wurde. Gibt `COR_E_NOTSUPPORTED` in .NET Core für die Typen zurück, die nicht von COM importiert wurden. |
+|**ISupportErrorInfo**|Ermöglicht es einem COM-Client festzustellen, ob das verwaltete Objekt die **IErrorInfo** -Schnittstelle unterstützt. Falls ja, ist der Client in der Lage einen Zeiger auf das letzte Ausnahmeobjekt abzurufen. Alle verwalteten Typen unterstützen die **IErrorInfo** -Schnittstelle.|
 |**ITypeInfo** (nur .NET Framework)|Stellt Typinformationen für eine Klasse bereit, die exakt den von Tlbexp.exe erstellten Typinformationen entsprechen.|
-|**IUnknown**|Stellt die Standardimplementierung der **IUnknown**-Schnittstelle bereit, über die der COM-Client die Lebensdauer des CCWs verwalten und die Typkonvertierung erzwingt.|
+|**IUnknown**|Stellt die Standardimplementierung der **IUnknown** -Schnittstelle bereit, über die der COM-Client die Lebensdauer des CCWs verwalten und die Typkonvertierung erzwingt.|
 
  Eine verwaltete Klasse kann zudem die COM-Schnittstellen bereitstellen, die in der folgenden Tabelle beschrieben werden.
 
 |Interface|Beschreibung|
 |---------------|-----------------|
-|Die Klassenschnittstelle (\_*Klassenname*)|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|
+|Die Klassenschnittstelle (\_*Klassenname* )|Schnittstelle, die von der Laufzeit offengelegt wird und nicht explizit definiert wird; legt alle öffentlichen Schnittstellen, Methoden, Eigenschaften und Felder offen, die für ein verwaltetes Objekt explizit offengelegt werden.|
 |**IConnectionPoint** und **IConnectionPointContainer**|Schnittstelle für Objekte, die delegatbasierende Ereignisse bedienen (eine Schnittstelle für die Registrierung von Ereignisabonnenten).|
-|**IDispatchEx** (nur .NET Framework)|Schnittstelle, die von der Laufzeit bereitgestellt wird, wenn die Klasse **IExpando** implementiert. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|
+|**IDispatchEx** (nur .NET Framework)|Schnittstelle, die von der Laufzeit bereitgestellt wird, wenn die Klasse **IExpando** implementiert. Die **IDispatchEx** -Schnittstelle ist eine Erweiterung der **IDispatch** -Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|
 |**IEnumVARIANT**|Schnittstelle für Klassen von Typ „Auflistung“, die die Objekte in der Auflistung enumeriert, wenn die Klasse **IEnumerable** implementiert.|
 
 ## <a name="introducing-the-class-interface"></a>Einführung in die Klassenschnittstelle
@@ -131,7 +131,7 @@ Da die COM-Interop automatisch eine Klassenschnittstelle generiert, können nach
 
 Diese Richtlinien unterstreichen den Eindruck, dass Schnittstellen, die für COM-Clients verfügbar gemacht werden, nicht verändert werden dürfen. Um das Risiko der Unterbrechung von COM-Clients zu verringern, das mit einer versehentlichen Neuordnung des Schnittstellenlayouts einhergeht, sollten Sie alle Änderungen an der Klasse vom Schnittstellenlayout trennen, indem Sie explizit Schnittstellen definieren.
 
-Verwenden Sie das **ClassInterfaceAttribute**, um die automatische Erzeugung der Klassenschnittstelle zu deaktivieren, und implementieren Sie eine explizite Schnittstelle für die Klasse, wie im folgenden Codefragment dargestellt:
+Verwenden Sie das **ClassInterfaceAttribute** , um die automatische Erzeugung der Klassenschnittstelle zu deaktivieren, und implementieren Sie eine explizite Schnittstelle für die Klasse, wie im folgenden Codefragment dargestellt:
 
 ```vb
 <ClassInterface(ClassInterfaceType.None)>Public Class LoanApp
@@ -181,7 +181,7 @@ Um die DispId eines Schnittstellenmembers zur Laufzeit abzurufen, können COM-Cl
 
 Duale Schnittstellen ermöglichen ein frühes und spätes Binden an Schnittstellenmember durch COM-Clients. Während der Entwurfszeit und beim Testen finden Sie es möglicherweise hilfreich, die Klassenschnittstelle auf dual festzulegen. Bei einer verwalteten Klasse (und deren Basisklassen), die nie geändert wird, ist diese Option ebenfalls akzeptabel. In allen anderen Fällen sollten Sie vermeiden, die Klassenschnittstelle auf dual festzulegen.
 
-Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle (**ClassInterfaceType.AutoDual**) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Kompilierungszeit zwischenspeichern.
+Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle ( **ClassInterfaceType.AutoDual** ) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Kompilierungszeit zwischenspeichern.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Stellen Sie sicher, dass alle COM-Ereignisbenachrichtigungen spät gebunden sind.
 

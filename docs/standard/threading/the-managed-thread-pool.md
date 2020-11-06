@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223797"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188691"
 ---
 # <a name="the-managed-thread-pool"></a>Der verwaltete Threadpool
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie unter [Ausnahmen in verwalteten Threads](except
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>Maximale Anzahl von Threads im Threadpool
 
-Die Anzahl von Vorgängen, die im Threadpool angereiht werden kann, wird nur durch den verfügbaren Arbeitsspeicher beschränkt. Allerdings schränkt der Threadpool die Anzahl von Threads ein, die gleichzeitig im Prozess aktiv sein können. Wenn alle Threadpoolthreads aktiv sind, werden zusätzliche Arbeitselemente eingereiht, bis Threads verfügbar sind, um diese auszuführen. Ab .NET Framework 4 ist die Standardgröße des Threadpools für einen Prozess von mehreren Faktoren abhängig, z.B. von der Größe des virtuellen Adressraums. Ein Prozess kann die <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType>-Methode aufrufen, um die Anzahl der Threads zu bestimmen.  
+Die Anzahl von Vorgängen, die im Threadpool angereiht werden kann, wird nur durch den verfügbaren Arbeitsspeicher beschränkt. Allerdings schränkt der Threadpool die Anzahl von Threads ein, die gleichzeitig im Prozess aktiv sein können. Wenn alle Threadpoolthreads aktiv sind, werden zusätzliche Arbeitselemente eingereiht, bis Threads verfügbar sind, um diese auszuführen. Die Standardgröße des Threadpools für einen Prozess hängt von mehreren Faktoren ab, z. B. von der Größe des virtuellen Adressraums. Ein Prozess kann die <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType>-Methode aufrufen, um die Anzahl der Threads zu bestimmen.  
   
 Sie können die maximale Anzahl von Threads mithilfe der <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType>-Methode und der <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>-Methode steuern.  
 
@@ -54,14 +54,14 @@ Der Threadpool stellt bei Bedarf neue Arbeitsthreads oder E/A-Abschlussthreads b
 > [!NOTE]
 > Wenn die Anforderungen niedrig sind, kann die tatsächliche Anzahl der Threads im Threadpool unterhalb der Mindestwerte liegen.  
   
-Wenn ein Minimum erreicht wird, kann der Threadpool weitere Threads erstellen oder warten, bis einige Aufgaben abgeschlossen sind. Ab .NET Framework 4 erstellt und zerstört der Threadpool Arbeitsthreads, um den Durchsatz zu optimieren. Der Durchsatz ist als die Anzahl der Aufgaben definiert, die pro Zeiteinheit abgeschlossen werden. Bei zu wenigen Threads werden die verfügbaren Ressourcen möglicherweise nicht optimal genutzt, wohingegen bei zu vielen Threads Ressourcenkonflikte auftreten können.  
+Wenn ein Minimum erreicht wird, kann der Threadpool weitere Threads erstellen oder warten, bis einige Aufgaben abgeschlossen sind. Der Threadpool erstellt und zerstört Arbeitsthreads, um den Durchsatz zu optimieren. Dieser ist als die Anzahl der Tasks definiert, die pro Zeiteinheit abgeschlossen werden. Bei zu wenigen Threads werden die verfügbaren Ressourcen möglicherweise nicht optimal genutzt, wohingegen bei zu vielen Threads Ressourcenkonflikte auftreten können.  
   
 > [!CAUTION]
 > Sie können die <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType>-Methode verwenden, um die Mindestanzahl an Threads im Leerlauf zu erhöhen. Allerdings kann ein unnötiges Erhöhen dieses Wertes zu Leistungsproblemen führen. Wenn zu viele Aufgaben gleichzeitig gestartet werden, werden möglicherweise alle Aufgaben zu langsam ausgeführt. In den meisten Fällen erreicht der Threadpool mit dem eigenen Algorithmus für die Zuordnung von Threads eine bessere Leistung.  
 
 ## <a name="using-the-thread-pool"></a>Verwenden des Threadpools
 
-Ab .NET Framework 4 kann der Threadpool am einfachsten über die [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) verwendet werden. Standardmäßig verwenden TPL-Typen wie <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> Threadpoolthreads, um Aufgaben auszuführen.
+Der Threadpool kann am einfachsten über die [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) verwendet werden. Standardmäßig verwenden TPL-Typen wie <xref:System.Threading.Tasks.Task> und <xref:System.Threading.Tasks.Task%601> Threadpoolthreads, um Aufgaben auszuführen.
 
 Sie können den Threadpool auch verwenden, indem Sie in verwaltetem Code <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> aufrufen (oder [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) in nicht verwaltetem Code) und einen <xref:System.Threading.WaitCallback?displayProperty=nameWithType>-Delegaten übergeben, der die Methode darstellt, die die Aufgabe ausführt.
 

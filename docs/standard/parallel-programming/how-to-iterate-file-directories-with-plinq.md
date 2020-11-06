@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: abf31ea69af6a85140efb783959a9a586ef6a59e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277998"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925375"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Vorgehensweise: Durchlaufen von Dateiverzeichnissen mit PLINQ
 
@@ -35,7 +35,7 @@ Die zweite Abfrage verwendet die statische <xref:System.IO.Directory.EnumerateDi
   
  Achten Sie bei Verwendung von <xref:System.IO.Directory.GetFiles%2A> darauf, dass Sie über ausreichende Berechtigungen für alle Verzeichnisse in der Struktur verfügen. Andernfalls wird eine Ausnahme ausgelöst, und es werden keine Ergebnisse zurückgegeben. Bei Verwendung von <xref:System.IO.Directory.EnumerateDirectories%2A> in einer PLINQ-Abfrage ist es schwierig, E/A-Ausnahmen auf eine ordnungsgemäße Weise zu behandeln, die Ihnen erlaubt, die Iteration fortzusetzen. Wenn der Code E/A- oder nicht autorisierten Zugriff betreffende Ausnahmen behandeln muss, sollten Sie den unter [Vorgehensweise: Iterieren von Dateiverzeichnissen der Parallel-Klasse](how-to-iterate-file-directories-with-the-parallel-class.md) beschriebenen Ansatz in Betracht ziehen.  
   
- Wenn E/A-Wartezeit ein Problem ist, z.B. bei Datei-E/A über ein Netzwerk, erwägen Sie die Verwendung einer der in [TPL und herkömmliche asynchrone .NET Framework-Programmierung](tpl-and-traditional-async-programming.md) und in diesem [Blogbeitrag](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/) beschriebenen asynchronen E/A-Techniken.  
+ Wenn E/A-Wartezeit ein Problem ist, z.B. bei Datei-E/A über ein Netzwerk, erwägen Sie die Verwendung einer der unter [TPL und herkömmliche asynchrone .NET-Programmierung](tpl-and-traditional-async-programming.md) und in diesem [Blogbeitrag](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/) beschriebenen asynchronen E/A-Techniken.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 164d7a8277cf985735b959c73eb87391944e795b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 188fef66444cd60f59a3cb9619c0d86efd155f99
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602675"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93136113"
 ---
 
 ### <a name="install-the-sdk"></a>Installieren des SDKs
@@ -23,7 +23,7 @@ sudo apt-get update; \
 
 ### <a name="install-the-runtime"></a>Installieren der Runtime
 
-Die .NET Core-Runtime ermöglicht Ihnen die Ausführung von Apps, die mit .NET Core erstellt wurden und die Runtime nicht enthalten. Die folgenden Befehle installieren die ASP.NET Core-Runtime, die die kompatibelste Runtime für .NET Core ist. Führen Sie in Ihrem Terminal die folgenden Befehle aus.
+Die .NET Core-Runtime ermöglicht Ihnen die Ausführung von Apps, die mit .NET Core erstellt wurden und die Runtime nicht enthalten. Durch die folgenden Befehle wird die ASP.NET Core-Runtime installiert, die Runtime für .NET Core mit der höchsten Kompatibilität. Führen Sie in Ihrem Terminal die folgenden Befehle aus.
 
 ```bash
 sudo apt-get update; \
@@ -35,7 +35,7 @@ sudo apt-get update; \
 > [!IMPORTANT]
 > Wenn Sie eine ähnliche Fehlermeldung wie **Das Paket aspnetcore-runtime-2.1 wurde nicht gefunden** erhalten, lesen Sie den Abschnitt [Problembehandlung für APT](#apt-troubleshooting).
 
-Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet. Ersetzen Sie im obigen Befehl `aspnetcore-runtime-2.1` durch `dotnet-runtime-2.1`.
+Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet: Ersetzen Sie dazu im vorangegangenen Befehl `aspnetcore-runtime-2.1` durch `dotnet-runtime-2.1`.
 
 ```bash
 sudo apt-get install -y dotnet-runtime-2.1

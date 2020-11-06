@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292097"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888723"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Zeichenklassen in regulären Ausdrücken
 
@@ -48,7 +48,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
  .NET unterstützt Zeichenklassensubtraktions-Ausdrücke. Hierdurch können Sie einen Zeichensatz definieren, der das Ergebnis des Ausschlusses einer Zeichenklasse von einer anderen darstellt. Weitere Informationen finden Sie unter [Zeichenklassensubtraktion](#CharacterClassSubtraction).  
   
 > [!NOTE]
-> Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen.  Ab .NET Framework 4.6.2 basieren Zeichenkategorien auf dem [Unicode Standard, Version 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). In .NET Framework 4 bis .NET Framework 4.6.1 basieren sie auf dem [Unicode-Standard, Version 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Zeichenklassen, die Zeichen nach Kategorie abgleichen, etwa [\w](#WordCharacter) zum Abgleichen von Wortzeichen oder [\p{}](#CategoryOrBlock) zum Abgleichen mit einer Unicode-Kategorie, setzen auf der <xref:System.Globalization.CharUnicodeInfo>-Klasse auf, um Informationen zu Zeichenkategorien bereitzustellen. Ab .NET Framework 4.6.2 und höher basieren Zeichenkategorien auf [Version 8.0.0 des Unicode Standards](https://www.unicode.org/versions/Unicode8.0.0/).
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Positive Zeichengruppe: [ ]  
@@ -71,7 +71,7 @@ Eine Zeichenklasse definiert einen Satz von Zeichen, von denen jedes in einer Ei
 
 In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit positiven Zeichenklassen aufgeführt.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`[aeiou]`|Übereinstimmung mit allen Vokalen.|  
 |`[\p{P}\d]`|Übereinstimmung mit allen Interpunktions- und Dezimalzeichen.|  
@@ -84,7 +84,7 @@ In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrüc
   
  Der reguläre Ausdruck `gr[ae]y\s\S+?[\s|\p{P}]` ist wie folgt definiert:  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`gr`|Übereinstimmung mit den Literalzeichen"gr".|  
 |`[ae]`|Übereinstimmung mit entweder "a" oder "e".|  
@@ -134,7 +134,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  In der folgenden Tabelle werden einige allgemeine Muster für reguläre Ausdrücke mit negativen Zeichengruppen aufgeführt.  
   
-|Muster|Beschreibung|  
+|Muster|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`[^aeiou]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Vokalen.|  
 |`[^\p{P}\d]`|Übereinstimmung mit allen Zeichen mit Ausnahme von Interpunktions- und Dezimalzeichen.|  
@@ -226,7 +226,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="word-character-w"></a>Wortzeichen: \w  
  `\w` entspricht einem beliebigen Wortzeichen. Ein Wortzeichen gehört einer der in der folgenden Tabelle aufgeführten Unicode-Kategorien an.  
   
-|Kategorie|Beschreibung|  
+|Category|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -244,7 +244,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Im folgenden Beispiel werden mit dem `\w`-Sprachelement übereinstimmende doppelte Zeichen innerhalb eines Worts ermittelt. Im Beispiel wird ein Muster für reguläre Ausdrücke definiert (`(\w)\1`), das wie folgt interpretiert werden kann.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |(\w)|Übereinstimmung mit einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |\1|Übereinstimmung mit dem Wert der ersten Erfassung.|  
@@ -260,7 +260,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Anders ausgedrückt: Mit Ausnahme der Zeichen, die in den Unicode-Kategorien enthalten sind, die in der folgenden Tabelle aufgelistet werden, liegt eine Übereinstimmung mit jedem Zeichen vor.  
   
-|Kategorie|Beschreibung|  
+|Category|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
 |Lu|Letter, Uppercase (Buchstabe, Großschreibung)|  
@@ -278,7 +278,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Das folgende Beispiel veranschaulicht die `\W`-Zeichenklasse.  Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b(\w+)(\W){1,2}`), das mit einem von einem oder zwei Nichtwortzeichen (z. B. Leer- oder Interpunktionszeichen) gefolgten Wort übereinstimmt. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |(\w+)|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -293,7 +293,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="whitespace-character-s"></a>Leerraumzeichen: \s  
  `\s` entspricht einem beliebigen Zeichen für Leerraum. Dies ist zu den in der folgenden Tabelle aufgeführten Escapesequenzen und Unicode-Kategorien äquivalent.  
   
-|Kategorie|Beschreibung|  
+|Category|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`\f`|Seitenvorschubzeichen, "\u000C".|  
 |`\n`|Zeilenumbruchzeichen, "\u000A".|  
@@ -307,7 +307,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
   
  Das folgende Beispiel veranschaulicht die `\s`-Zeichenklasse. Hierfür wird ein Muster für einen regulären Ausdruck definiert (`\b\w+(e)?s(\s|$)`), das mit einem entweder auf "s" oder "es" endenden Wort übereinstimmt. Auf dieses Wort muss ein Leerzeichen oder das Ende der Eingabezeichenfolge folgen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |\b|Der Vergleich beginnt an einer Wortgrenze.|  
 |\w+|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -380,7 +380,7 @@ wobei *firstCharacter* das Zeichen ist, mit dem der Bereich beginnt, und *lastCh
 ## <a name="supported-unicode-general-categories"></a>Unterstützte allgemeine Unicode-Kategorien  
  In der folgenden Tabelle werden die allgemeinen, in Unicode definierten Kategorien aufgeführt. Weitere Informationen finden Sie in den Unterthemen „UCD File Format“ (UCD-Dateiformat) und „General Category Values“ (Allgemeine Kategorienwerte) der [Unicode Character Database](https://www.unicode.org/reports/tr44/).  
   
-|Kategorie|Beschreibung|  
+|Category|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase (Buchstabe, Großschreibung)|  
 |`Ll`|Letter, Lowercase (Buchstabe, Kleinschreibung)|  
@@ -439,7 +439,7 @@ In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke 
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - oder -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - oder - <br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke 
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - oder - <br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -558,7 +558,7 @@ In der folgenden Tabelle werden die von .NET bereitgestellten benannten Blöcke 
   
  Im folgenden Beispiel wird ein regulärer Ausdruck definiert (`^[0-9-[2468]]+$`), der in einer Eingabezeichenfolge Übereinstimmungen für Null und ungerade Zahlen ergibt.  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Element|Beschreibung|  
+|Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |^|Beginnt am Anfang der Eingabezeichenfolge mit der Übereinstimmung.|  
 |`[0-9-[2468]]+`|Mindestens eine Übereinstimmung mit einem Zeichen von 0 bis 9 (mit Ausnahme von 2, 4, 6 und 8) liegt vor. Anders ausgedrückt: Es liegt mindestens eine Übereinstimmung mit Null oder einer ungeraden Zahl vor.|  

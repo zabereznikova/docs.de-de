@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c66eae48df54b330843b4967f957264f2bddee1d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599762"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925310"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  
@@ -45,7 +45,7 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>Beschränken Sie Aufrufe auf threadsichere Methoden.  
- Die meisten statischen Methoden in .NET Framework sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden. Die damit verbundene Synchronisierung kann jedoch auch in diesen Fällen zu einer erheblichen Verlangsamung der Abfrage führen.  
+ Die meisten statischen Methoden in .NET sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden. Die damit verbundene Synchronisierung kann jedoch auch in diesen Fällen zu einer erheblichen Verlangsamung der Abfrage führen.  
   
 > [!NOTE]
 > Sie können dies testen, indem Sie in Ihre Abfragen Aufrufe von <xref:System.Console.WriteLine%2A> einfügen. Diese Methode wird jedoch nur in den Dokumentationsbeispielen zu Demonstrationszwecken verwendet. Nutzen Sie sie nur in parallelen Schleifen, wenn dies erforderlich ist.  

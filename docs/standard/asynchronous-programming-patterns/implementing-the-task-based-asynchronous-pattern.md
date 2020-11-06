@@ -6,18 +6,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 1f2f44b6b92f66f95816778c6dc8e893f1291abe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8bac9d265211d2f266db634d4bcebb87c2debd9a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289355"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888775"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementieren des aufgabenbasierten asynchronen Entwurfsmusters
 Sie können das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) auf drei Arten implementieren: mit C# und den Visual Basic-Compilern in Visual Studio, manuell oder mit einer Kombination von Compilermethoden und manuellen Methoden. In den folgenden Abschnitten wird jede dieser Methoden ausführlich erörtert. Mit dem TAP-Muster können sowohl rechnergebundene als auch E/A-gebundene asynchrone Vorgänge implementiert werden. Im Abschnitt [Workloads](#workloads) werden die einzelnen Vorgangstypen erläutert.
@@ -34,7 +33,7 @@ Sie können das TAP-Muster manuell implementieren, um eine bessere Kontrolle üb
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
 
 ### <a name="hybrid-approach"></a>Hybrider Ansatz
- Möglicherweise finden Sie es sinnvoll, das TAP-Muster manuell zu implementieren, die Kernlogik für die Implementierung jedoch an den Compiler zu delegieren. Sie können den hybriden Ansatz beispielsweise verwenden, wenn Sie Argumente außerhalb einer vom Compiler generierten asynchronen Methode überprüfen möchten, damit die Ausnahmen zum direkten Aufrufer der Methode überwechseln können, anstatt durch das Objekt <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> verfügbar gemacht zu werden:
+ Möglicherweise finden Sie es sinnvoll, das TAP-Muster manuell zu implementieren, die Kernlogik für die Implementierung jedoch an den Compiler zu delegieren. Sie sollen den hybriden Ansatz beispielsweise verwenden, wenn Sie Argumente außerhalb einer vom Compiler generierten asynchronen Methode überprüfen möchten, damit die Ausnahmen zum direkten Aufrufer der Methode überwechseln können, anstatt durch das Objekt <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> verfügbar gemacht zu werden:
 
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
  [!code-vb[Conceptual.TAP_Patterns#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#2)]
@@ -49,9 +48,9 @@ Die <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Klasse ist p
 
 Sie können rechnergebundene Aufgaben auf die folgenden Arten generieren:
 
-- Im .NET Framework 4 verwenden Sie die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode, die einen asynchron ausgeführten Delegaten (in der Regel einen <xref:System.Action%601> oder einen <xref:System.Func%601>) akzeptiert. Wenn Sie einen <xref:System.Action%601>-Delegaten bereitstellen, gibt die Methode ein <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Objekt zurück, das die asynchrone Ausführung dieses Delegaten darstellt. Wenn Sie einen <xref:System.Func%601>-Delegaten bereitstellen, gibt die Methode ein <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Objekt zurück. Überladungen der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>-Methode akzeptieren ein Abbruchtoken (<xref:System.Threading.CancellationToken>), Aufgabenerstellungsoptionen (<xref:System.Threading.Tasks.TaskCreationOptions>) und einen Aufgabenplaner (<xref:System.Threading.Tasks.TaskScheduler>), die alle eine präzisere Steuerung der Planung und Ausführung der Aufgabe ermöglichen. Eine Factoryinstanz für den aktuellen Aufgabenplaner ist als statische Eigenschaft (<xref:System.Threading.Tasks.Task.Factory%2A>) der <xref:System.Threading.Tasks.Task>-Klasse verfügbar, z. B. `Task.Factory.StartNew(…)`.
+- Verwenden Sie in .NET Framework 4.5 und höheren Versionen (einschließlich .NET Core und .NET 5 und höher) die statische Methode <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> als Verknüpfung zu <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Sie können <xref:System.Threading.Tasks.Task.Run%2A> verwenden, um problemlos eine rechnergebundene Aufgabe zu starten, die auf den Threadpool abzielt. Dies ist der bevorzugte Mechanismus für das Starten eines computegebundenen Tasks. Verwenden Sie `StartNew` nur dann direkt, wenn Sie eine präzisere Kontrolle über den Task haben möchten.
 
-- Verwenden Sie in .NET Framework 4.5 und höheren Versionen (einschließlich .NET Core und .NET Standard) die statische Methode <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> als Verknüpfung mit <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Sie können <xref:System.Threading.Tasks.Task.Run%2A> verwenden, um problemlos eine rechnergebundene Aufgabe zu starten, die auf den Threadpool abzielt. In .NET Framework 4.5 und höheren Versionen ist dies der bevorzugte Mechanismus zum Starten eines rechnergebundenen Tasks. Verwenden Sie `StartNew` nur dann direkt, wenn Sie eine präzisere Kontrolle über den Task haben möchten.
+- Verwenden Sie in .NET Framework 4 die <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>-Methode, die akzeptiert, dass ein Delegat (in der Regel ein <xref:System.Action%601>- oder ein <xref:System.Func%601>-Delegat) asynchron ausgeführt wird. Wenn Sie einen <xref:System.Action%601>-Delegaten bereitstellen, gibt die Methode ein <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Objekt zurück, das die asynchrone Ausführung dieses Delegaten darstellt. Wenn Sie einen <xref:System.Func%601>-Delegaten bereitstellen, gibt die Methode ein <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>-Objekt zurück. Überladungen der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>-Methode akzeptieren ein Abbruchtoken (<xref:System.Threading.CancellationToken>), Aufgabenerstellungsoptionen (<xref:System.Threading.Tasks.TaskCreationOptions>) und einen Aufgabenplaner (<xref:System.Threading.Tasks.TaskScheduler>), die alle eine präzisere Steuerung der Planung und Ausführung der Aufgabe ermöglichen. Eine Factoryinstanz für den aktuellen Aufgabenplaner ist als statische Eigenschaft (<xref:System.Threading.Tasks.Task.Factory%2A>) der <xref:System.Threading.Tasks.Task>-Klasse verfügbar, z. B. `Task.Factory.StartNew(…)`.
 
 - Verwenden Sie die Konstruktoren des Typs `Task` oder der Methode `Start`, wenn Sie die Aufgabe separat generieren und planen möchten. Öffentliche Methoden dürfen nur Aufgaben zurückgeben, die bereits gestartet wurden.
 
@@ -82,7 +81,7 @@ Nehmen wir beispielsweise an, dass Sie eine Aufgabe erstellen möchten, die nach
 [!code-csharp[Conceptual.TAP_Patterns#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#4)]
 [!code-vb[Conceptual.TAP_Patterns#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#4)]
 
-Ab .NET Framework 4.5 wird zu diesem Zweck die Methode <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> bereitgestellt, und Sie können sie in einer anderen asynchronen Methode verwenden, um beispielsweise eine asynchrone Abrufschleife zu implementieren:
+Die <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType>-Methode wird zu diesem Zweck bereitgestellt. Sie können sie in einer anderen asynchronen Methode verwenden, beispielsweise zum Implementieren einer asynchrone Abrufschleife:
 
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]

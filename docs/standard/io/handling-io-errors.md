@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599801"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188041"
 ---
 # <a name="handling-io-errors-in-net"></a>Behandeln von E/A-Fehlern in .NET
 
@@ -46,7 +46,7 @@ Die genauen Umstände, unter denen das Betriebssystem bestimmte Fehlercodes zur�
 
 Aufgrund dieses Rückgriffs auf das Betriebssystem können identische Ausnahmebedingungen (wie etwa der Fehler des nicht gefundenen Verzeichnisses in unserem Beispiel) dazu führen, dass eine E/A-Methode irgendeine aus der gesamten Klasse der E/A-Ausnahmen auslöst. Das bedeutet, dass beim Aufrufen von E/A-APIs Ihr Code in der Lage sein sollte, die meisten oder alle diese Ausnahmen zu behandeln, wie in der folgenden Tabelle dargestellt:
 
-| Ausnahmetyp | .NET Core | .NET Framework |
+| Ausnahmetyp | .NET Core/.NET 5 oder höher | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Ja | Ja |
 | <xref:System.IO.FileNotFoundException> | Ja | Ja |

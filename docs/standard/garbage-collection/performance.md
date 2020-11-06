@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662848"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062970"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 
@@ -24,7 +24,7 @@ In den folgenden Abschnitten werden Tools beschrieben, die zum Untersuchen von P
 
 ### <a name="memory-performance-counters"></a>Speicherleistungsindikatoren
 
-Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen. Anweisungen hierzu finden Sie unter [Laufzeit-Profilerstellung](../../framework/debug-trace-profile/runtime-profiling.md). Die Leistungsindikatorkategorie .NET CLR-Speicher, die in [Leistungsindikatoren in .NET Framework](../../framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.
+Sie können Leistungsindikatoren verwenden, um Leistungsdaten zu erfassen. Anweisungen hierzu finden Sie unter [Laufzeit-Profilerstellung](../../framework/debug-trace-profile/runtime-profiling.md). Die Leistungsindikatorkategorie .NET CLR-Speicher, die in [Leistungsindikatoren in .NET](../../framework/debug-trace-profile/performance-counters.md) beschrieben wird, stellt Informationen über den Garbage Collector bereit.
 
 ### <a name="debugging-with-sos"></a>Debuggen mit SOS
 
@@ -34,7 +34,7 @@ Wenn Sie WinDbg installieren möchten, installieren Sie die Debugtools für Wind
 
 ### <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 
-Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Profilerstellung und das Debugging ergänzt, die von .NET Framework bereitgestellt werden. Ab .NET Framework 4 erfassen [ETW-Ereignisse der Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:
+Die Ereignisablaufverfolgung für Windows (ETW) ist ein Ablaufverfolgungssystem, das die Funktionen für Profilerstellung und Debugging ergänzt, die von .NET bereitgestellt werden. Ab .NET Framework 4 erfassen [ETW-Ereignisse der Garbage Collection](../../framework/performance/garbage-collection-etw-events.md) nützliche Informationen für eine statistische Analyse des verwalteten Heaps. Beispielsweise liefert das `GCStart_V1`-Ereignis, das ausgelöst wird, sobald eine Garbage Collection durchgeführt wird, die folgenden Informationen:
 
 - Welche Generation von Objekten wird erfasst.
 
@@ -52,7 +52,7 @@ Profiler können umfassende Informationen bereitstellen. Allerdings können komp
 
 ### <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 
-Ab .NET Framework 4 können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (Application domain Resource Monitoring, ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](app-domain-resource-monitoring.md).
+Ab .NET Framework 4 können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (Application Domain Resource Monitoring, ARM) die CPU- und Arbeitsspeicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Problembehandlung bei Performanceproblemen
 
@@ -182,7 +182,7 @@ Generation 0 enthält auf einem 64-Bit-System häufig eine größere Anzahl von 
 
 Die CPU-Auslastung ist während einer Garbage Collection hoch. Wenn sehr viel Prozessorzeit für eine Garbage Collection aufgewendet wird, erfolgen die Collections zu häufig, oder die Collection dauert zu lang. Eine zu hohe Belegungsrate für Objekte auf dem verwalteten Heap führt zu häufigeren Garbage Collections. Das Verringern der Belegungsrate verringert die Häufigkeit der Garbage Collections.
 
-Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen. Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
+Sie können die Belegungsrate mit dem Leistungsindikator `Allocated Bytes/second` überwachen. Weitere Informationen finden Sie unter [Leistungsindikatoren in .NET](../../framework/debug-trace-profile/performance-counters.md).
 
 Die Dauer einer Collection wird wesentlich durch die Anzahl der Objekte bestimmt, die nach der Belegung noch vorhanden sind. Der Garbage Collector muss einen sehr großen Speicherbereich durchlaufen, wenn viele freizugebende Objekte verblieben sind. Der Aufwand für die Komprimierung der Überlebenden ist sehr zeitintensiv. Um zu bestimmen, wie viele Objekte während einer Collection verarbeitet wurden, legen Sie einen Haltepunkt im Debugger am Ende einer Garbage Collection für eine bestimmte Generation fest.
 
@@ -282,7 +282,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist
 
-1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:
+1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen ( **pe** ) ein:
 
     **!pe**
 
@@ -330,7 +330,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
   - oder -
 
-- Verwenden Sie den Befehl **vmstat**:
+- Verwenden Sie den Befehl **vmstat** :
 
   **!vmstat**
 

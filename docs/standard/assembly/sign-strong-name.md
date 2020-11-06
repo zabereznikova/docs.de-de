@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
-- assemblies [.NET Framework], signing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], signing
+- assemblies [.NET], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378619"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687659"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Vorgehensweise: Signieren einer Assembly mit einem starken Namen
 
@@ -28,7 +28,7 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 - Mithilfe der Registerkarte **Signierung** im Dialogfeld **Eigenschaften** eines Projekts in Visual Studio. Dies ist die einfachste und bequemste Methode, eine Assembly mit einem starken Namen zu signieren.  
   
-- Mit dem [Assemblylinker-Tool (Al.exe)](../../framework/tools/al-exe-assembly-linker.md), um ein .NET Framework-Codemodul (eine *.netmodule*-Datei) mit einer Schlüsseldatei zu verknüpfen.  
+- Mit dem [Assemblylinker-Tool (Al.exe)](../../framework/tools/al-exe-assembly-linker.md), um ein .NET Framework-Codemodul (eine *.netmodule* -Datei) mit einer Schlüsseldatei zu verknüpfen.  
   
 - Mithilfe von Assemblyattributen, um die Informationen zum starken Namen in den Code einzufügen. Abhängig von dem Ort, an dem sich die zu verwendende Schlüsseldatei befindet, können Sie entweder das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut verwenden.  
   
@@ -38,13 +38,13 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Erstellen und Signieren einer Assembly mit einem starken Namen mit Visual Studio  
   
-1. Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
+1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus.  
   
 2. Wählen Sie die Registerkarte **Signierung** aus.  
   
 3. Wählen Sie das Feld **Assembly signieren** aus.  
   
-4. Klicken Sie im Feld **Schlüsseldatei mit starkem Namen auswählen** auf **Durchsuchen**, und navigieren Sie dann zur Schlüsseldatei. Klicken Sie zum Erstellen einer neuen Schlüsseldatei auf **Neu**, und geben Sie ihren Namen in das Dialogfeld **Schlüssel für einen starken Namen erstellen** ein.  
+4. Klicken Sie im Feld **Schlüsseldatei mit starkem Namen auswählen** auf **Durchsuchen** , und navigieren Sie dann zur Schlüsseldatei. Klicken Sie zum Erstellen einer neuen Schlüsseldatei auf **Neu** , und geben Sie ihren Namen in das Dialogfeld **Schlüssel für einen starken Namen erstellen** ein.  
   
 > [!NOTE]
 > Wählen Sie eine Datei mit öffentlichem Schlüssel aus, um [die Signierung einer Assembly zu verzögern](delay-sign.md).  
@@ -53,13 +53,13 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 Geben Sie in der [Developer-Eingabeaufforderung für Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md) den folgenden Befehl ein:  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
 Ort:  
 
-- *assemblyName* ist der Name der stark signierten Assembly (eine *DLL*- oder *EXE*-Datei), die der Assemblylinker ausgibt.  
+- *assemblyName* ist der Name der stark signierten Assembly (eine *DLL* - oder *EXE* -Datei), die der Assemblylinker ausgibt.  
   
-- *moduleName* ist der Name eines .NET Framework-Codemoduls (eine *NETMODULE*-Datei), das mindestens einen Typ enthält. Sie können eine *NETMODULE*-Datei erstellen, indem Sie Ihren Code mit der `/target:module`-Option in C# oder Visual Basic kompilieren.
+- *moduleName* ist der Name eines .NET Framework-Codemoduls (eine *NETMODULE* -Datei), das mindestens einen Typ enthält. Sie können eine *NETMODULE* -Datei erstellen, indem Sie Ihren Code mit der `/target:module`-Option in C# oder Visual Basic kompilieren.
   
 - *keyfileName* ist der Name des Containers oder der Datei, der bzw. die das Schlüsselpaar enthält. Der Assemblylinker interpretiert einen relativen Pfad im Zusammenhang mit dem aktuellen Verzeichnis.  
 

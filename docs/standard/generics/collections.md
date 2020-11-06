@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 956db9ace4ae00062accdd6e80c7911aaac7523f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287570"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064248"
 ---
 # <a name="generic-collections-in-net"></a>Generische Sammlungen in .NET
 
@@ -45,7 +45,7 @@ ms.locfileid: "84287570"
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   
- Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn für das Ereignis das von .NET Framework verwendete Muster für die Ereignisbehandlung befolgt wird. Angenommen, Sie haben die von <xref:System.EventArgs> abgeleitete `MyEventArgs`-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
+ Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn das Ereignis dem von .NET verwendeten Muster für die Ereignisbehandlung folgt. Angenommen, Sie haben die von <xref:System.EventArgs> abgeleitete `MyEventArgs`-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

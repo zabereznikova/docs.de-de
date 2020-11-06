@@ -7,18 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework, and TAP
-- asynchronous design patterns, .NET Framework
-- TAP, .NET Framework support for
-- Task-based Asynchronous Pattern, .NET Framework support for
-- .NET Framework, asynchronous design patterns
+- asynchronous design patterns, .NET
+- TAP, .NET support for
+- Task-based Asynchronous Pattern, .NET support for
+- .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 21675d26fa2f11d93801e2ba4ffec96b238b97b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325072"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889243"
 ---
 # <a name="task-based-asynchronous-pattern"></a>Taskbasiertes asynchrones Muster
 
@@ -26,7 +25,7 @@ Das taskbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) basier
   
 ## <a name="naming-parameters-and-return-types"></a>Benennung, Parameter und Rückgabetypen
 
-TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen. Dies steht sowohl zum Muster des asynchronen Programmiermodells (Asynchronous Programming Model, APM oder `IAsyncResult`) als auch dem ereignisbasierten asynchronen Muster (Event-based Asynchronous Pattern, EAP) im Kontrast. APM erfordert die Methoden `Begin` und `End`. EAP erfordert eine Methode, die das `Async`-Suffix hat, und auch mindestens ein Ereignis, einen Ereignishandler-Delegattypen und aus `EventArg` abgeleitete Typen. Asynchrone Methoden im TAP umfassen das Suffix `Async` nach dem Vorgangsnamen für Methoden, die awaitable-Typen zurückgeben, z.B. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> und <xref:System.Threading.Tasks.ValueTask%601>. Ein asynchroner `Get`-Vorgang, der einen `Task<String>` zurückgibt, kann z.B. mit `GetAsync` benannt werden. Wenn Sie eine TAP-Methode einer Klasse hinzufügen, die bereits eine EAP-Methode mit dem `Async`-Suffix enthält, verwenden Sie stattdessen das Suffix `TaskAsync`. Wenn beispielsweise die Klasse bereits über eine `GetAsync`-Methode verfügt, verwenden Sie den Namen `GetTaskAsync`. Wenn eine Methode einen asynchronen Vorgang startet, aber keinen awaitable-Typ zurückgibt, sollte ihr Name mit `Begin`, `Start` oder einem ähnlichen Verb beginnen, sodass eindeutig ist, dass diese Methode nicht das Ergebnis des Vorgangs zurückgibt.  
+TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen. Dies steht sowohl zum Muster des asynchronen Programmiermodells (Asynchronous Programming Model, APM oder `IAsyncResult`) als auch dem ereignisbasierten asynchronen Muster (Event-based Asynchronous Pattern, EAP) im Kontrast. APM erfordert die Methoden `Begin` und `End`. EAP erfordert eine Methode, die das `Async`-Suffix hat, und auch mindestens ein Ereignis, einen Ereignishandler-Delegattypen und aus `EventArg` abgeleitete Typen. Asynchrone Methoden im TAP umfassen das Suffix `Async` nach dem Vorgangsnamen für Methoden, die awaitable-Typen zurückgeben, z.B. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> und <xref:System.Threading.Tasks.ValueTask%601>. Ein asynchroner `Get`-Vorgang, der einen `Task<String>` zurückgibt, kann z.B. mit `GetAsync` benannt werden. Wenn Sie eine TAP-Methode einer Klasse hinzufügen, die bereits eine EAP-Methode mit dem `Async`-Suffix enthält, verwenden Sie stattdessen das Suffix `TaskAsync`. Wenn beispielsweise die Klasse bereits über eine `GetAsync`-Methode verfügt, verwenden Sie den Namen `GetTaskAsync`. Wenn eine Methode einen asynchronen Vorgang startet, aber keinen awaitable-Typ zurückgibt, sollte ihr Name mit `Begin`, `Start` oder einem ähnlichen Verb beginnen, sodass eindeutig ist, dass diese Methode nicht das Ergebnis des Vorgangs zurückgibt.  
   
  Die TAP-Methode gibt entweder <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> zurück. Das hängt davon ab, ob die entsprechende synchrone Methode „void“ oder einen `TResult`-Typ zurückgibt.  
   
@@ -95,7 +94,7 @@ TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines 
  Wenn TAP-Implementierungen Überladungen bereitstellen, die einen `progress`-Parameter akzeptieren, müssen sie `null` als Argument zulassen. In diesem Fall wird kein Status gemeldet. TAP-Implementierungen müssen den Status synchron an das <xref:System.Progress%601>-Objekt melden, was es der asynchronen Methode ermöglicht, den Status schnell zu melden. Außerdem kann der Statusconsumer ermitteln, wie und wo die Informationen am besten verarbeitet werden sollten. Zum Beispiel kann die Statusinstanz Rückrufe marshallen und Ereignisse auf einem aufgezeichneten Synchronisierungskontext auslösen.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T>-Implementierungen  
- .NET Framework 4.5 stellt eine einzelne <xref:System.IProgress%601>-Implementierung bereit: <xref:System.Progress%601>. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
+.NET stellt die <xref:System.Progress%601>-Klasse bereit, die <xref:System.IProgress%601> implementiert. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -103,18 +102,9 @@ public class Progress<T> : IProgress<T>
     public Progress();  
     public Progress(Action<T> handler);  
     protected virtual void OnReport(T value);  
-    public event EventHandler<T> ProgressChanged;  
+    public event EventHandler<T>? ProgressChanged;  
 }  
-```  
-  
-```vb  
-Public Class Progress(Of T) : Inherits IProgress(Of T)  
-    Public Sub New()  
-    Public Sub New(handler As Action(Of T))  
-    Protected Overridable Sub OnReport(value As T)  
-    Public Event ProgressChanged As EventHandler(Of T>  
-End Class  
-```  
+```
   
  Eine Instanz von <xref:System.Progress%601> macht ein <xref:System.Progress%601.ProgressChanged>-Ereignis verfügbar, das jedes Mal ausgelöst wird, wenn der asynchrone Vorgang ein Statusupdate meldet. Das <xref:System.Progress%601.ProgressChanged>-Ereignis wird auf das <xref:System.Threading.SynchronizationContext>-Objekt ausgelöst, das aufgezeichnet wurde, als die <xref:System.Progress%601>-Instanz instanziiert wurde. Wenn kein Synchronisierungskontext verfügbar war, wird ein Standardkontext, der auf den Threadpool abzielt, verwendet. Handler können mit diesem Ereignis registriert werden. Ein einzelner Handler kann auch dem <xref:System.Progress%601>-Konstruktor nach Wunsch bereitgestellt werden und verhält sich wie ein Ereignishandler für das <xref:System.Progress%601.ProgressChanged>-Ereignis. Statusupdates werden asynchron ausgelöst, um den asynchronen Vorgang zu verzögern, während der Ereignishandler ausgeführt wird. Eine andere <xref:System.IProgress%601>-Implementierung kann festlegen, dass andere Semantik anzuwenden ist.  
   

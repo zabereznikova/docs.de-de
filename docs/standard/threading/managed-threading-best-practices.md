@@ -7,18 +7,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- threading [.NET Framework], design guidelines
-- threading [.NET Framework], best practices
+- threading [.NET], design guidelines
+- threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546366"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189003"
 ---
 # <a name="managed-threading-best-practices"></a>Best Practices für verwaltetes Threading
+
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
   
 > [!NOTE]
@@ -61,7 +62,7 @@ else {
 ### <a name="race-conditions"></a>Racebedingungen  
  Bei einer Racebedingung handelt es sich um einen Fehler, der auftritt, wenn das Ergebnis eines Programms davon abhängt, welcher von zwei oder mehr Threads einen bestimmten Codeblock zuerst erreicht. Wenn Sie das Programm mehrmals ausführen, werden verschiedene Ergebnisse erzeugt, und das Ergebnis einer bestimmten Ausführung lässt sich nicht vorhersagen.  
   
- Ein einfaches Beispiel einer Racebedingung ist die Erhöhung eines Feldes. Angenommen, eine Klasse besitzt ein privates **static**-Feld (**Shared** in Visual Basic), das jedes Mal, wenn eine Instanz der Klasse erstellt wird, mit Code wie `objCt++;` (C#) oder `objCt += 1` (Visual Basic) erhöht wird. Für diesen Vorgang muss der Wert von `objCt` in ein Register geladen, der Wert erhöht und in `objCt` gespeichert werden.  
+ Ein einfaches Beispiel einer Racebedingung ist die Erhöhung eines Feldes. Angenommen, eine Klasse besitzt ein privates **static** -Feld ( **Shared** in Visual Basic), das jedes Mal, wenn eine Instanz der Klasse erstellt wird, mit Code wie `objCt++;` (C#) oder `objCt += 1` (Visual Basic) erhöht wird. Für diesen Vorgang muss der Wert von `objCt` in ein Register geladen, der Wert erhöht und in `objCt` gespeichert werden.  
   
  In einer Multithreadanwendung kann ein Thread, der den Wert geladen und erhöht hat, von einem anderen Thread präemptiv unterbrochen werden, der dann alle drei Schritte ausführt. Wenn der erste Thread die Ausführung fortsetzt und den Wert speichert, überschreibt er `objCt`, ohne dass dabei berücksichtigt wird, dass der Wert in der Zwischenzeit geändert wurde.  
   
@@ -95,7 +96,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
   
 - Seien Sie beim Sperren von Instanzen vorsichtig, zum Beispiel `lock(this)` in C# oder `SyncLock(Me)` in Visual Basic. Wenn anderer, für den Typ externer Code in der Anwendung das Objekt sperrt, könnte dies zu Deadlocks führen.  
   
-- Stellen Sie sicher, dass ein Thread, der in einem Monitor überwacht wird, den Monitor verlässt, auch wenn eine Ausnahme auftritt, während der Thread sich im Monitor befindet. Die C#-Anweisung [lock](../../csharp/language-reference/keywords/lock-statement.md) und die Visual Basic-Anweisung [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) stellen dieses Verhalten automatisch bereit, wobei sie einen **finally**-Block verwenden, um sicherzustellen, dass <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> aufgerufen wird. Wenn Sie den Aufruf von **Exit** nicht sicherstellen können, empfiehlt sich stattdessen die Verwendung von **Mutex**. Ein Mutex wird automatisch freigegeben, wenn der Thread, in dessen Besitz er sich befindet, beendet wird.  
+- Stellen Sie sicher, dass ein Thread, der in einem Monitor überwacht wird, den Monitor verlässt, auch wenn eine Ausnahme auftritt, während der Thread sich im Monitor befindet. Die C#-Anweisung [lock](../../csharp/language-reference/keywords/lock-statement.md) und die Visual Basic-Anweisung [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) stellen dieses Verhalten automatisch bereit, wobei sie einen **finally** -Block verwenden, um sicherzustellen, dass <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> aufgerufen wird. Wenn Sie den Aufruf von **Exit** nicht sicherstellen können, empfiehlt sich stattdessen die Verwendung von **Mutex**. Ein Mutex wird automatisch freigegeben, wenn der Thread, in dessen Besitz er sich befindet, beendet wird.  
   
 - Verwenden Sie mehrere Threads nicht für Aufgaben, für die verschiedene Ressourcen benötigt werden, und vermeiden Sie es, mehrere Threads einer einzelnen Ressource zuzuweisen. Aufgaben, die Ein- und Ausgaben umfassen, sollten beispielsweise über einen eigenen Thread verfügen, da der entsprechende Thread während der E/A-Vorgänge blockiert wird. Dies ermöglicht die Ausführung von anderen Threads. Benutzereingaben sind ein weiteres Beispiel für eine Ressource, die von einem für sie reservierten Thread profitiert. Auf einem Computer mit einem einzelnen Prozessor können eine Aufgabe, die eine ressourcenintensive Berechnung erfordert, und Benutzereingaben oder Aufgaben mit E/A-Vorgängen problemlos gleichzeitig ausgeführt werden. Mehrere rechenintensive Aufgaben machen sich jedoch gegenseitig die Ressourcen streitig.  
   
@@ -125,7 +126,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
     ```  
   
     > [!NOTE]
-    > Verwenden Sie im .NET Framework 2.0 und höher die <xref:System.Threading.Interlocked.Add%2A>-Methode für unteilbare Inkremente größer als 1.  
+    > Verwenden Sie die <xref:System.Threading.Interlocked.Add%2A>-Methode für atomische Steigerungen größer 1.  
   
      Im zweiten Beispiel wird eine Referenztypvariable nur aktualisiert, wenn es sich um einen NULL-Verweis (`Nothing` in Visual Basic) handelt.  
   
@@ -160,7 +161,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
     ```  
   
     > [!NOTE]
-    > Ab .NET Framework 2.0 bietet die Überladung der <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>-Methoden eine typsichere Alternative für Verweistypen.
+    > Die Überladung der <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>-Methode stellt eine typsichere Alternative für Verweistypen dar.
   
 ## <a name="recommendations-for-class-libraries"></a>Empfehlungen für Klassenbibliotheken  
  Beachten Sie die folgenden Richtlinien, wenn Sie Klassenbibliotheken für Multithreading entwerfen:  
@@ -169,7 +170,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
   
 - Machen Sie statische Daten (`Shared` in Visual Basic) standardmäßig threadsicher.  
   
-- Legen Sie Instanzdaten nicht als standardmäßig threadsicher fest. Durch Hinzufügen von Sperren, um threadsicheren Code zu erstellen, wird die Leistung beeinträchtigt, die Sperrenkonflikte werden erhöht, und es entsteht die Gefahr von Deadlocks. Bei den gängigen Anwendungsmodellen führt immer nur ein Thread Benutzercode aus, wodurch die Notwendigkeit der Threadsicherheit reduziert wird. Aus diesem Grund sind .NET Framework-Klassenbibliotheken nicht standardmäßig threadsicher.  
+- Legen Sie Instanzdaten nicht als standardmäßig threadsicher fest. Durch Hinzufügen von Sperren, um threadsicheren Code zu erstellen, wird die Leistung beeinträchtigt, die Sperrenkonflikte werden erhöht, und es entsteht die Gefahr von Deadlocks. Bei den gängigen Anwendungsmodellen führt immer nur ein Thread Benutzercode aus, wodurch die Notwendigkeit der Threadsicherheit reduziert wird. Aus diesem Grund sind .NET-Klassenbibliotheken per Standard nicht threadsicher.  
   
 - Vermeiden Sie die Bereitstellung von statischen Methoden, die den statischen Zustand ändern. Bei den üblichen Serverszenarios wird der statische Zustand in mehreren Anforderungen gemeinsam genutzt, d. h., mehrere Threads können den Code gleichzeitig ausführen. Dadurch werden Threadingfehler möglich. Verwenden Sie u. U. ein Entwurfsmuster, bei dem Daten in Instanzen gekapselt werden, die nicht in mehreren Anforderungen gemeinsam genutzt werden. Darüber hinaus können bei der Synchronisierung statischer Daten Aufrufe zwischen statischen Methoden, die den Zustand ändern, zu Deadlocks oder redundanter Synchronisierung führen und die Leistung beeinträchtigen.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583400"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188132"
 ---
 # <a name="threads-and-threading"></a>Threads und Threading
 
@@ -38,7 +38,7 @@ Wenn Ihr Programm Vorgänge ausführt, die parallel durchgeführt werden können
 
 ## <a name="how-to-use-multithreading-in-net"></a>Verwenden des Multithreadings in .NET
 
-Ab .NET Framework 4 wird für die Nutzung von Multithreading empfohlen, [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) und [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md) zu verwenden. Weitere Informationen finden Sie unter [Parallele Programmierung in .NET](../parallel-programming/index.md).
+Ab .NET Framework 4 wird für die Nutzung von Multithreading empfohlen, [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md) und [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md) zu verwenden. Weitere Informationen finden Sie unter [Parallele Programmierung in .NET](../parallel-programming/index.md).
 
 TPL und PLINQ basieren jeweils auf den <xref:System.Threading.ThreadPool>-Threads. Die <xref:System.Threading.ThreadPool?displayProperty=nameWithType>-Klasse stellt einer .NET-Anwendung einen Pool von Arbeitsthreads bereit. Sie können auch Threadpoolthreads verwenden. Weitere Informationen finden Sie unter [Der verwaltete Threadpool](the-managed-thread-pool.md).
 

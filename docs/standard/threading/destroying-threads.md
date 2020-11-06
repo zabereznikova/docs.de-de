@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - destroying threads
-- threading [.NET Framework], destroying threads
+- threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: baf9289413de0e99533f121eb2a404ff0d873511
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: caf7e29742bd7c0481badeeace91b7851520ad12
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768507"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188366"
 ---
 # <a name="destroying-threads"></a>Zerstören von Threads
 
-Um die Ausführung eines Threads zu beenden, verwenden Sie im Normalfall die [kooperative Abbruchmethode](cancellation-in-managed-threads.md). Manchmal ist es nicht möglich, einen Thread kooperativ anzuhalten, weil darin Drittanbietercode ausgeführt wird, der für einen kooperativen Abbruch nicht geeignet ist. Die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode in .NET Framework kann verwendet werden, um die Beendigung eines verwalteten Threads zu erzwingen. Beim Aufruf von <xref:System.Threading.Thread.Abort%2A> löst die Common Language Runtime eine <xref:System.Threading.ThreadAbortException> im Zielthread aus, die der Zielthread abfangen kann. Weitere Informationen finden Sie unter <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Die Methode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> wird in .NET Core nicht unterstützt. Wenn Sie die Beendigung der Ausführung von Drittanbietercode in .NET Core erzwingen müssen, führen Sie den Code in einem separaten Prozess aus und verwenden <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+Um die Ausführung eines Threads zu beenden, verwenden Sie im Normalfall die [kooperative Abbruchmethode](cancellation-in-managed-threads.md). Manchmal ist es nicht möglich, einen Thread kooperativ anzuhalten, weil darin Drittanbietercode ausgeführt wird, der für einen kooperativen Abbruch nicht geeignet ist. Die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode in .NET Framework kann verwendet werden, um die Beendigung eines verwalteten Threads zu erzwingen. Beim Aufruf von <xref:System.Threading.Thread.Abort%2A> löst die Common Language Runtime eine <xref:System.Threading.ThreadAbortException> im Zielthread aus, die der Zielthread abfangen kann. Weitere Informationen finden Sie unter <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode wird in .NET 5 und höheren Versionen (einschließlich .NET Core) nicht unterstützt. Wenn Sie die Beendigung der Ausführung von Drittanbietercode in .NET 5 oder einer höheren Version erzwingen müssen, führen Sie den Code in einem separaten Prozess aus, und verwenden Sie <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
 > Wenn ein Thread nicht verwalteten Code ausführt, wenn seine <xref:System.Threading.Thread.Abort%2A>-Methode aufgerufen wird, markiert die Runtime ihn mit <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. Die Ausnahme wird ausgelöst, wenn der Thread zu verwaltetem Code zurückkehrt.  

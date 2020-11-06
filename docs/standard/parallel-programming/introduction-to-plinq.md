@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662458"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925349"
 ---
 # <a name="introduction-to-plinq"></a>Einführung in PLINQ
 
@@ -109,7 +109,7 @@ Die folgende Abbildung zeigt den Unterschied zwischen `foreach` und <xref:System
 
 ## <a name="cancellation"></a>Abbruch
 
-PLINQ ist in die Abbruchtypen in .NET Framework 4 integriert. (Weitere Informationen finden Sie unter [Cancellation in Managed Threads (Abbruch in verwalteten Threads)](../threading/cancellation-in-managed-threads.md).) Daher können PLINQ-Abfragen im Gegensatz zu sequenziellen LINQ to Objects-Abfragen abgebrochen werden. Um eine abbrechbare PLINQ-Abfrage zu erstellen, verwenden Sie den <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>-Operator in der Abfrage, und stellen Sie eine <xref:System.Threading.CancellationToken>-Instanz als Argument bereit. Wenn die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft im Token auf „true“ festgelegt ist, erkennt PLINQ dies. Die Verarbeitung wird in diesem Fall in allen Threads abgebrochen, und eine <xref:System.OperationCanceledException> wird ausgelöst.
+PLINQ ist mit den Abbruchtypen in .NET integriert. (Weitere Informationen finden Sie unter [Cancellation in Managed Threads (Abbruch in verwalteten Threads)](../threading/cancellation-in-managed-threads.md).) Daher können PLINQ-Abfragen im Gegensatz zu sequenziellen LINQ to Objects-Abfragen abgebrochen werden. Um eine abbrechbare PLINQ-Abfrage zu erstellen, verwenden Sie den <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>-Operator in der Abfrage, und stellen Sie eine <xref:System.Threading.CancellationToken>-Instanz als Argument bereit. Wenn die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft im Token auf „true“ festgelegt ist, erkennt PLINQ dies. Die Verarbeitung wird in diesem Fall in allen Threads abgebrochen, und eine <xref:System.OperationCanceledException> wird ausgelöst.
 
 Es ist möglich, dass eine PLINQ-Abfrage nach dem Festlegen des Abbruchtokens weiterhin einige Elemente verarbeitet.
 

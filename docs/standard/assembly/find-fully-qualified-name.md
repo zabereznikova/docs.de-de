@@ -1,22 +1,22 @@
 ---
 title: 'Vorgehensweise: Ermitteln des vollqualifizierten Namens einer Assembly'
-description: In diesem Artikel erfahren Sie, wie Sie den voll qualifizierten Namen einer .NET Framework-Assembly oder einer .NET-Core-Assembly erhalten.
+description: In diesem Artikel erfahren Sie, wie Sie den vollqualifizierten Namen einer .NET-Assembly abrufen.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- names [.NET Framework], fully qualified type names
-- names [.NET Framework], assemblies
-- assemblies [.NET Framework], names
+- names [.NET], fully qualified type names
+- names [.NET], assemblies
+- assemblies [.NET], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 346d50dc7f279ce46c9803ad60479d3111739c25
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 223def7d992f5fae64c95aa6886f20980184eddc
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378948"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687620"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Vorgehensweise: Ermitteln des vollqualifizierten Namens einer Assembly
 
