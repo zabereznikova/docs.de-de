@@ -63,7 +63,7 @@
         - name: Nullable-Verweistypen – Vorschlag
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
         - name: Nullable-Verweistypen – Spezifikation
-          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: Rekursiver Musterabgleich
           href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
         - name: Standardschnittstellenmethoden
@@ -88,6 +88,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/records.md
         - name: Top-Level-Anweisungen
           href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: Nullable-Verweistypen – Spezifikation
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: 'Verbesserungen am Musterabgleich:'
           href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
         - name: init-only-Setter
