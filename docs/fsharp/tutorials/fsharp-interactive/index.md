@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie F# Interactive (dotnet fsi) zum interaktiven
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93342682"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400865"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
@@ -152,7 +152,7 @@ Sie können beliebig viele Assemblyverweise in einem Skript angeben.
 
 ## <a name="loading-other-scripts"></a>Laden anderer Skripts
 
-Bei der Skripterstellung ist es häufig nützlich, unterschiedliche Skripts für unterschiedliche Aufgaben zu verwenden. In einigen Fällen kann es sich anbieten, Code aus einem Skript in einem anderen Skript wiederzuverwenden. Anstatt die Skriptinhalte zu kopieren und in Ihrer Datei einzufügen, können Sie sie ganz einfach mit `#load` laden und auswerten.
+Bei der Skripterstellung ist es häufig nützlich, unterschiedliche Skripts für unterschiedliche Aufgaben zu verwenden. In einigen Fällen bietet es sich an, Code aus einem Skript in einem anderen Skript wiederzuverwenden. Anstatt die Skriptinhalte zu kopieren und in Ihrer Datei einzufügen, können Sie sie ganz einfach mit `#load` laden und auswerten.
 
 Angenommen, Sie verfügen über die Datei `Script1.fsx`:
 
@@ -204,7 +204,7 @@ from
 fsi
 ```
 
-Beachten Sie, dass Sie auch mit `System.Environment.GetCommandLineArgs()` auf diese Argumente zugreifen können.
+Sie können auch mit `System.Environment.GetCommandLineArgs()` auf diese Argumente zugreifen.
 
 ## <a name="f-interactive-directive-reference"></a>Referenz zu F# Interactive-Anweisungen
 
@@ -212,7 +212,7 @@ Die zuvor erwähnten Anweisungen `#r` und `#load` sind nur in F# Interactive ve
 
 |Anweisung|Beschreibung|
 |---------|-----------|
-|`#r "nuget:..."`|Verweist auf ein Paket aus NuGet|
+|`#r "nuget:..."`|Verweist auf ein Paket aus NuGet.|
 |`#r "assembly-name.dll"`|Verweist auf eine Assembly auf einem Datenträger|
 |`#load "file-name.fsx"`|Liest eine Quelldatei, kompiliert sie und führt sie aus.|
 |`#help`|Zeigt Informationen über verfügbare Anweisungen an.|
