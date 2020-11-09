@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Erfahren Sie mehr über den dotnet-Befehl (den generischen Treiber für die .NET Core-CLI) und dessen Verwendung.
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537664"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281622"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -118,15 +118,15 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
 
 - **`--additional-deps <PATH>`**
 
-  Pfad zu einer zusätzlichen *.deps.json*-Datei. Eine *deps.json*-Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+  Pfad zu einer zusätzlichen *.deps.json* -Datei. Eine *deps.json* -Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  Pfad zur *deps.json*-Datei. Eine Datei mit Namen *deps.json* ist eine Konfigurationsdatei, die Informationen zu Abhängigkeiten enthält, die zum Ausführen der Anwendung erforderlich sind. Diese Datei wird vom .NET Core SDK generiert.
+  Pfad zur *deps.json* -Datei. Eine Datei mit Namen *deps.json* ist eine Konfigurationsdatei, die Informationen zu Abhängigkeiten enthält, die zum Ausführen der Anwendung erforderlich sind. Diese Datei wird vom .NET Core SDK generiert.
 
 - **`--runtimeconfig`**
 
-  Der Pfad zu einer *runtimeconfig.json*-Datei. Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
+  Der Pfad zu einer *runtimeconfig.json* -Datei. Eine *runtimeconfig.json* -Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
 
 - **`--roll-forward <SETTING>`** **Verfügbar ab .NET Core SDK 3.0.**
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   Gibt den Speicherort der .NET Core-Runtimes an, wenn sie nicht am Standardspeicherort installiert sind. Der Standardspeicherort unter Windows ist `C:\Program Files\dotnet`. Der Standardspeicherort unter Linux und macOS ist `/usr/share/dotnet`. Diese Umgebungsvariable wird nur beim Ausführen von Anwendungen über generierte ausführbare Dateien (Apphosts) verwendet. `DOTNET_ROOT(x86)` wird stattdessen verwendet, wenn eine ausführbare 32-Bit-Datei auf einem 64-Bit-Betriebssystem ausgeführt wird.
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   Der Ordner für globale Pakete. Wenn er nicht festgelegt wird, wird standardmäßig `~/.nuget/packages` unter Unix oder `%userprofile%\.nuget\packages` unter Windows verwendet.
 

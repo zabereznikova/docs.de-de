@@ -2,12 +2,12 @@
 title: Anweisungen der obersten Ebene – C#-Tutorial
 description: In diesem Tutorial wird gezeigt, wie Sie Anweisungen der obersten Ebene verwenden, um Konzepte zu testen und mithilfe Ihrer eigenen Ideen in der Praxis umzusetzen.
 ms.date: 10/28/2020
-ms.openlocfilehash: 210fbd83bf4677061cab303089d0b27f1a4a7d01
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 5e5dc6cec382baa69ac8cb4625684315bb2cd5e0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189364"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282257"
 ---
 # <a name="tutorial-explore-ideas-using-top-level-statements-to-build-code-as-you-learn"></a>Tutorial: Schreiben von Code durch das Umsetzen eigener Ideen mithilfe von Anweisungen der obersten Ebene
 
@@ -210,7 +210,7 @@ Anweisungen der obersten Ebene können nur in einer Datei enthalten sein, und di
 
 Zum Schluss können Sie den Animationscode bereinigen, um Duplizierungen zu entfernen:
 
-:::code language="csharp" source="snippets/top-level-statements/Utiliities.cs" ID="Animation":::
+:::code language="csharp" source="snippets/top-level-statements/Utilities.cs" ID="Animation":::
 
 Nun verfügen Sie über eine komplette Anwendung, und Sie haben die wiederverwendbaren Teile für die spätere Verwendung umgestaltet.
 

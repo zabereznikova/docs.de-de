@@ -2,12 +2,12 @@
 title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio für Mac
 description: Erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio für Mac erstellen.
 ms.date: 06/08/2020
-ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537638"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400564"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio für Mac
 
@@ -18,8 +18,8 @@ Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendu
 > [!NOTE]
 > Ihr Feedback ist uns sehr wichtig. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:
 >
-> - Klicken Sie in Visual Studio für Mac auf **Hilfe** > **Ein Problem melden** im Menü oder auf **Ein Problem melden** auf der Willkommensseite. Dadurch wird ein Fenster für das Einreichen eines Fehlerberichts geöffnet. Sie können Ihr Feedback im Portal der [Entwicklercommunity](https://developercommunity.visualstudio.com/spaces/41/index.html) verfolgen.
-> - Um einen Vorschlag zu machen, wählen Sie **Hilfe** > **Vorschlag senden** im Menü oder **Vorschlag senden** auf der Willkommensseite aus. Dadurch gelangen Sie zur Webseite [Visual Studio für Mac-Entwicklercommunity](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> - Klicken Sie in Visual Studio für Mac auf **Hilfe** > **Ein Problem melden** im Menü oder auf **Ein Problem melden** auf der Willkommensseite. Dadurch wird ein Fenster für das Einreichen eines Fehlerberichts geöffnet. Sie können Ihr Feedback im Portal der [Entwicklercommunity](https://aka.ms/feedback/report?space=41) verfolgen.
+> - Um einen Vorschlag zu machen, wählen Sie **Hilfe** > **Vorschlag senden** im Menü oder **Vorschlag senden** auf der Willkommensseite aus. Dadurch gelangen Sie zur Webseite [Visual Studio für Mac-Entwicklercommunity](https://aka.ms/feedback/suggest?space=41).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

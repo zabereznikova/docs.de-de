@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2be9c4e12d6a613e7f1062ec7492b0b99203f39d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550383"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400695"
 ---
 # <a name="version-compatibility"></a>Versionskompatibilität
 
@@ -61,7 +61,7 @@ Wenn Ihre App oder Komponente nicht wie erwartet in .NET Framework 4.5 (einschli
 
 - Wenn Sie feststellen, dass eine Änderung in .NET Framework 4.5 verhindert, dass die App ordnungsgemäß funktioniert, überprüfen Sie im [Schema für Runtimeeinstellungen](../configure-apps/file-schema/runtime/index.md) und insbesondere für das [Element \<AppContextSwitchOverrides>](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), ob Sie eine Runtimeeinstellung in der App-Konfigurationsdatei verwenden können, um das vorherige Verhalten wiederherzustellen.
 
-- Wenn Sie auf ein Problem stoßen, das noch nicht dokumentiert ist, öffnen Sie ein Ticket auf der [Website für die .NET-Entwickler-Community](https://developercommunity.visualstudio.com/spaces/61/index.html) oder im [Microsoft/dotnet GitHub-Repository](https://github.com/microsoft/dotnet/issues).
+- Wenn Sie auf ein Problem stoßen, das noch nicht dokumentiert ist, öffnen Sie ein Ticket auf der [Website für die .NET-Entwickler-Community](https://aka.ms/feedback/report?space=61) oder im [Microsoft/dotnet GitHub-Repository](https://github.com/microsoft/dotnet/issues).
 
 ## <a name="side-by-side-execution"></a>Parallele Ausführung
 

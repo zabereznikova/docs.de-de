@@ -41,7 +41,7 @@ Die Leistung Ihrer Web-App hängt nur geringfügig davon ab, ob Sie Razor Pages 
 
 ## <a name="mapping-requests-to-responses"></a>Zuordnen von Anforderungen zu Antworten
 
-Im Wesentlichen dienen ASP.NET Core-Apps dazu, eingehende Anforderungen ausgehenden Antworten zuzuordnen. Auf niedriger Ebene wird dazu Middleware verwendet. Daher kann es sein, dass ASP.NET Core-Apps und -Microservices ausschließlich aus benutzerdefinierter Middleware bestehen. Wenn Sie ASP.NET Core MVC verwenden, können Sie auf einer allgemeineren Ebene arbeiten und _Routen_, _Controller_ und _Aktionen_ hinzufügen. Jede eingehende Anforderung wird mit der Routingtabelle der Anwendung verglichen, und wenn eine übereinstimmende Route gefunden wird, wird die zugewiesene Aktionsmethode (des Controllers) aufgerufen, um die Anforderung zu verarbeiten. Wenn keine übereinstimmende Route gefunden wird, wird ein Fehlerhandler aufgerufen und das Ergebnis „NotFound“ zurückgegeben.
+Im Wesentlichen dienen ASP.NET Core-Apps dazu, eingehende Anforderungen ausgehenden Antworten zuzuordnen. Auf niedriger Ebene wird dazu Middleware verwendet. Daher kann es sein, dass ASP.NET Core-Apps und -Microservices ausschließlich aus benutzerdefinierter Middleware bestehen. Wenn Sie ASP.NET Core MVC verwenden, können Sie auf einer allgemeineren Ebene arbeiten und _Routen_ , _Controller_ und _Aktionen_ hinzufügen. Jede eingehende Anforderung wird mit der Routingtabelle der Anwendung verglichen, und wenn eine übereinstimmende Route gefunden wird, wird die zugewiesene Aktionsmethode (des Controllers) aufgerufen, um die Anforderung zu verarbeiten. Wenn keine übereinstimmende Route gefunden wird, wird ein Fehlerhandler aufgerufen und das Ergebnis „NotFound“ zurückgegeben.
 
 ASP.NET Core MVC-Apps können entweder herkömmliche Routen oder Attributrouten oder beides gleichzeitig verwenden. Herkömmliche Routen werden als Code definiert und geben unter Verwendung einer wie im Folgenden dargestellten Syntax _Routingkonventionen_ an:
 
@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-In diesem Beispiel wurde eine Route mit dem Namen „Standard“ der Routingtabelle hinzugefügt. Sie definiert eine Routenvorlage mit Platzhaltern für den _Controller_, die _Aktion_ und die _ID_. Für die Platzhalter für den Controller und die Aktion ist „Standard“ angegeben („Home“ bzw. „Index“). Der Platzhalter für die ID ist hingegen optional, da ein Fragezeichen („?“) hinzugefügt wurde. Die hier definierte Konvention drückt aus, dass der erste Teil einer Anforderung dem Namen eines Controllers und der zweite Teil der Aktion entsprechen soll. Außerdem kann wenn nötig ein dritter Teil den ID-Parameter darstellen. Herkömmliche Routen werden in der Regel an einer bestimmten Stelle wie der Methode „Configure“ in der Klasse „Startup“ für die Anwendung definiert.
+In diesem Beispiel wurde eine Route mit dem Namen „Standard“ der Routingtabelle hinzugefügt. Sie definiert eine Routenvorlage mit Platzhaltern für den _Controller_ , die _Aktion_ und die _ID_. Für die Platzhalter für den Controller und die Aktion ist „Standard“ angegeben („Home“ bzw. „Index“). Der Platzhalter für die ID ist hingegen optional, da ein Fragezeichen („?“) hinzugefügt wurde. Die hier definierte Konvention drückt aus, dass der erste Teil einer Anforderung dem Namen eines Controllers und der zweite Teil der Aktion entsprechen soll. Außerdem kann wenn nötig ein dritter Teil den ID-Parameter darstellen. Herkömmliche Routen werden in der Regel an einer bestimmten Stelle wie der Methode „Configure“ in der Klasse „Startup“ für die Anwendung definiert.
 
 Attributrouten gelten für Controller und Aktionen direkt und werden nicht global angegeben. Das hat den Vorteil, dass sie besser zu finden sind, wenn Sie eine bestimmte Methode betrachten. Andererseits bedeutet dies aber auch, dass die Routinginformationen nicht an einer bestimmten Stelle in der Anwendung gespeichert sind. Sie können mit Attributrouten problemlos mehrere Routen für eine bestimmte Aktion festlegen und gleichzeitig aber auch Routen zwischen Controllern und Aktionen kombinieren. Zum Beispiel:
 
@@ -85,7 +85,7 @@ Razor Pages nutzt kein Attributrouting. Sie können in der `@page`-Anweisung ein
 @page "{id:int}"
 ```
 
-Im vorherigen Beispiel hat die Seite Routen mit einem ganzzahligen `id`-Parameter abgeglichen. Die Seite *Products.cshtml*, die sich im Stamm von `/Pages` befindet, würde beispielsweise folgende Route aufweisen:
+Im vorherigen Beispiel hat die Seite Routen mit einem ganzzahligen `id`-Parameter abgeglichen. Die Seite *Products.cshtml* , die sich im Stamm von `/Pages` befindet, würde beispielsweise folgende Route aufweisen:
 
 ```csharp
 "/Products/123"

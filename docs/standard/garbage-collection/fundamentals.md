@@ -138,7 +138,7 @@ Die Garbage Collection wird hauptsächlich in Verbindung mit der Freigabe kurzle
 
   Objekte in Generation 2, die nach einer Collection noch vorhanden sind, bleiben in Generation 2, bis sie in einer künftigen Collection als nicht erreichbar erkannt werden.
   
-  Objekte im großen Objektheap (manchmal auch als *Generation 3*bezeichnet) werden auch in Generation 2 gesammelt.
+  Objekte im großen Objektheap (manchmal auch als *Generation 3* bezeichnet) werden auch in Generation 2 gesammelt.
 
 Garbage Collections finden für bestimmte Generationen statt, wenn die Bedingungen dies erfordern. Das Durchführen einer Sammlung für eine Generation bedeutet, dass Objekte in dieser Generation und in allen jüngeren Generationen gesammelt werden. Eine Garbage Collection für Generation 2 wird auch als vollständige Garbage Collection bezeichnet, da hierbei alle Objekte in allen Generationen (d. h. alle Objekte im verwalteten Heap) freigegeben werden.
 

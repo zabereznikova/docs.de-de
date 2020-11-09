@@ -4,12 +4,12 @@ description: Hier erfahren Sie mehr über die kostenlose Open-Source-Entwicklung
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223585"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329793"
 ---
 # <a name="introduction-to-net"></a>Einführung in .NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "92223585"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Universelle Windows-Plattform (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Spiele](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Spiele](https://dotnet.microsoft.com/apps/games)
 * [Internet der Dinge (IoT)](https://dotnet.microsoft.com/apps/iot)
 * [Maschinelles Lernen](../machine-learning/index.yml)
 * [Konsolen-Apps](tutorials/with-visual-studio-code.md)

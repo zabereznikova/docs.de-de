@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: ea645e33c67bf1d39b477d8e4ce82b7a69a177fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4b2d671e310763e6ddfa114bd63b031afba83a20
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398232"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400616"
 ---
 # <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -51,7 +51,7 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 |URL|Beschreibung|
 |----------|----------------|
 |[Microsoft-Support](https://support.microsoft.com)|Bietet Zugriff auf Knowledge Base-Artikel, Downloads und Updates, Support-Webcasts und andere Dienste.|
-|[Fragen zu Visual Studio](https://developercommunity.visualstudio.com)|Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio und .NET an Microsoft. Sie können ein Problem in Visual Studio auch über **Hilfe** > **Feedback senden** > **Ein Problem melden** einreichen.|
+|[Fragen zu Visual Studio](https://aka.ms/feedback/report?space=61)|Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio und .NET an Microsoft. Sie können ein Problem in Visual Studio auch über **Hilfe** > **Feedback senden** > **Ein Problem melden** einreichen.|
 
 ## <a name="third-party-resources"></a>Ressourcen von Drittanbietern
 
