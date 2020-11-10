@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553355"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440079"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und Windows Store-Apps
 
@@ -25,7 +25,7 @@ In diesem Thema wird erläutert, was Sie beim Schreiben von Diagnosetools berüc
 
 ## <a name="introduction"></a>Einführung
 
-Wenn Sie den Einführungs Absatz überschreiten, sind Sie mit der CLR-Profilerstellungs-API vertraut. Sie haben bereits ein Diagnosetool geschrieben, das gut für verwaltete Desktop Anwendungen geeignet ist. Nun sind Sie neugierig, was Sie tun müssen, damit Ihr Tool mit einer verwalteten Windows Store-App funktioniert. Vielleicht haben Sie bereits versucht, dies zu tun, und haben festgestellt, dass es sich nicht um eine einfache Aufgabe handelt. Tatsächlich gibt es eine Reihe von Überlegungen, die für alle Entwickler von Tools möglicherweise nicht offensichtlich sind. Zum Beispiel:
+Wenn Sie den Einführungs Absatz überschreiten, sind Sie mit der CLR-Profilerstellungs-API vertraut. Sie haben bereits ein Diagnosetool geschrieben, das gut für verwaltete Desktop Anwendungen geeignet ist. Nun sind Sie neugierig, was Sie tun müssen, damit Ihr Tool mit einer verwalteten Windows Store-App funktioniert. Vielleicht haben Sie bereits versucht, dies zu tun, und haben festgestellt, dass es sich nicht um eine einfache Aufgabe handelt. Tatsächlich gibt es eine Reihe von Überlegungen, die für alle Entwickler von Tools möglicherweise nicht offensichtlich sind. Beispiel:
 
 - Windows Store-Apps werden in einem Kontext mit stark reduzierten Berechtigungen ausgeführt.
 
@@ -302,7 +302,7 @@ In der Zwischenzeit kann die Profiler-DLL im Grunde dasselbe tun, aber Sie kann 
 
 Wenn Sie eine einfache Signal Semantik zwischen Ihrer Profiler-Benutzeroberfläche und der Profiler-DLL wünschen, können Sie Ereignisse in Windows Store-Apps und Desktop-Apps verwenden.
 
-In der Profiler-DLL können Sie [einfach die Funktion](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) "-Funktion" aufrufen, um ein benanntes Ereignis mit einem beliebigen Namen zu erstellen. Zum Beispiel:
+In der Profiler-DLL können Sie [einfach die Funktion](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) "-Funktion" aufrufen, um ein benanntes Ereignis mit einem beliebigen Namen zu erstellen. Beispiel:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -356,7 +356,7 @@ Mit der Profiler-DLL können winmd-Dateien von anderen Modulen unterschieden wer
 
 ### <a name="reading-metadata-from-winmds"></a>Lesen von Metadaten aus winmds
 
-Winmd-Dateien enthalten, wie reguläre Module, Metadaten, die über die [Metadaten-APIs](../metadata/index.md)gelesen werden können. Die CLR ordnet jedoch Windows-Runtime Typen .NET Framework Typen zu, wenn Sie winmd-Dateien liest, damit Entwickler, die in verwaltetem Code programmieren und die winmd-Datei nutzen, eine natürlichere Programmierfunktion haben können. Einige Beispiele für diese Zuordnungen finden Sie [unter .NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Winmd-Dateien enthalten, wie reguläre Module, Metadaten, die über die [Metadaten-APIs](../metadata/index.md)gelesen werden können. Die CLR ordnet jedoch Windows-Runtime Typen .NET Framework Typen zu, wenn Sie winmd-Dateien liest, damit Entwickler, die in verwaltetem Code programmieren und die winmd-Datei nutzen, eine natürlichere Programmierfunktion haben können. Einige Beispiele für diese Zuordnungen finden Sie [unter .NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
 Welche Ansicht erhält der Profiler, wenn er die Metadaten-APIs verwendet: die unformatierte Windows-Runtime Ansicht oder die zugeordnete .NET Framework Ansicht?  Die Antwort: Es liegt an Ihnen.
 
@@ -388,7 +388,7 @@ Daher empfiehlt es sich, dass jeder Thread, der von der Profiler-DLL zum Aufrufe
 
 ### <a name="conditionalweaktablereferences"></a>Conditionalweaktablereferences
 
-Beginnend mit dem .NET Framework 4,5 gibt es einen neuen GC-Rückruf, [conditionalweaktableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), der dem Profiler ausführlichere Informationen über *abhängige Handles*liefert. Diese Handles fügen effektiv einen Verweis aus einem Quell Objekt zu einem Zielobjekt für die Verwaltung der GC-Lebensdauer hinzu. Abhängige Handles sind nichts neues, und Entwickler, die in verwaltetem Code programmieren, können eigene abhängige Handles erstellen, indem Sie die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> -Klasse auch vor Windows 8 und der .NET Framework 4,5 verwenden.
+Beginnend mit dem .NET Framework 4,5 gibt es einen neuen GC-Rückruf, [conditionalweaktableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), der dem Profiler ausführlichere Informationen über *abhängige Handles* liefert. Diese Handles fügen effektiv einen Verweis aus einem Quell Objekt zu einem Zielobjekt für die Verwaltung der GC-Lebensdauer hinzu. Abhängige Handles sind nichts neues, und Entwickler, die in verwaltetem Code programmieren, können eigene abhängige Handles erstellen, indem Sie die <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> -Klasse auch vor Windows 8 und der .NET Framework 4,5 verwenden.
 
 Verwaltete XAML-Windows Store-Apps nutzen nun jedoch die abhängigen Handles stark. Insbesondere verwendet die CLR diese, um die Verwaltung von Verweis Zyklen zwischen verwalteten Objekten und nicht verwalteten Windows-Runtime Objekten zu unterstützen. Dies bedeutet, dass es jetzt wichtiger ist, dass Speicher Profiler über diese abhängigen Handles informiert werden, damit Sie zusammen mit den restlichen Rändern im Heap Diagramm visualisiert werden können. Die Profiler-DLL sollte " [RootReferences2](icorprofilercallback2-rootreferences2-method.md)", " [ObjectReferences](icorprofilercallback-objectreferences-method.md)" und " [conditionalweaktableelementreferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) " verwenden, um eine umfassende Ansicht des Heap Diagramms zu bilden.
 
@@ -406,9 +406,9 @@ Es ist möglich, mit der CLR-Profilerstellungs-API verwalteten Code zu analysier
 
 **Die CLR-Interaktion mit der Windows-Runtime**
 
-- [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Windows Store-Apps**
+**Windows Store-Anwendungen**
 
 - [Dateizugriff und-Berechtigungen (Windows-Runtime-apps](/previous-versions/windows/apps/hh967755(v=win.10))
 

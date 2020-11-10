@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 8a8b5988a13ab571284b08c7aaece3542467aa71
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556968"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440971"
 ---
 # <a name="encrypting-data"></a>Verschlüsseln von Daten
 
@@ -25,7 +25,7 @@ Symmetrische Verschlüsselung und asymmetrische Verschlüsselung werden mit unte
   
 ## <a name="symmetric-encryption"></a>Symmetrische Verschlüsselung  
 
-Die verwalteten symmetrischen Kryptografieklassen werden mit einer speziellen Streamklasse namens <xref:System.Security.Cryptography.CryptoStream> verwendet, die Daten verschlüsselt, die in den jeweiligen Stream eingelesen wurden. Die **CryptoStream** -Klasse wird mit einer verwalteten Streamklasse initialisiert, einer Klasse, die die- <xref:System.Security.Cryptography.ICryptoTransform> Schnittstelle (erstellt aus einer Klasse, die einen kryptografischen Algorithmus implementiert) implementiert, und einer- <xref:System.Security.Cryptography.CryptoStreamMode> Enumeration, die den Typ des Zugriffs beschreibt, der für den **kryptostream**zulässig ist. Die **CryptoStream** -Klasse kann mit jeder Klasse initialisiert werden, die von der-Klasse abgeleitet wird <xref:System.IO.Stream> , einschließlich <xref:System.IO.FileStream> , <xref:System.IO.MemoryStream> und <xref:System.Net.Sockets.NetworkStream> . Mit diesen Klassen können Sie die unterschiedlichsten Streamobjekte symmetrisch verschlüsseln.  
+Die verwalteten symmetrischen Kryptografieklassen werden mit einer speziellen Streamklasse namens <xref:System.Security.Cryptography.CryptoStream> verwendet, die Daten verschlüsselt, die in den jeweiligen Stream eingelesen wurden. Die **CryptoStream** -Klasse wird mit einer verwalteten Streamklasse initialisiert, einer Klasse, die die- <xref:System.Security.Cryptography.ICryptoTransform> Schnittstelle (erstellt aus einer Klasse, die einen kryptografischen Algorithmus implementiert) implementiert, und einer- <xref:System.Security.Cryptography.CryptoStreamMode> Enumeration, die den Typ des Zugriffs beschreibt, der für den **kryptostream** zulässig ist. Die **CryptoStream** -Klasse kann mit jeder Klasse initialisiert werden, die von der-Klasse abgeleitet wird <xref:System.IO.Stream> , einschließlich <xref:System.IO.FileStream> , <xref:System.IO.MemoryStream> und <xref:System.Net.Sockets.NetworkStream> . Mit diesen Klassen können Sie die unterschiedlichsten Streamobjekte symmetrisch verschlüsseln.  
   
 Im folgenden Beispiel wird veranschaulicht, wie eine neue Instanz der Standard Implementierungs Klasse für den- <xref:System.Security.Cryptography.Aes> Algorithmus erstellt wird. Die-Instanz wird verwendet, um die Verschlüsselung für eine **CryptoStream** -Klasse auszuführen. In diesem Beispiel wird die **CryptoStream** -Klasse mit einem Streamobjekt namens `myStream` initialisiert, bei dem es sich um einen beliebigen Typ eines verwalteten Streams handeln kann. An **die Methode "** -Methode" von der **AES** -Klasse werden der Schlüssel und der IV übergeben, die für die Verschlüsselung verwendet werden. In diesem Fall werden der Standardschlüssel und der IV verwendet, die von `aes` erzeugt wurden.
   
@@ -41,23 +41,23 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateEncryptor(key, i
   
 Nachdem dieser Code ausgeführt wurde, werden alle Daten, die in das **CryptoStream** -Objekt geschrieben werden, mithilfe des AES-Algorithmus verschlüsselt.  
   
-Das folgende Beispiel veranschaulicht den gesamten Prozess: das Erzeugen und Verschlüsseln des Streams, das Schreiben in den Stream und das Schließen des Streams. In diesem Beispiel wird ein Dateistream erstellt, der mit der **CryptoStream** -Klasse und der **AES** -Klasse verschlüsselt wird. Mit der <xref:System.IO.StreamWriter> -Klasse wird eine Nachricht in den verschlüsselten Stream geschrieben.
+Das folgende Beispiel veranschaulicht den gesamten Prozess: das Erzeugen und Verschlüsseln des Streams, das Schreiben in den Stream und das Schließen des Streams. In diesem Beispiel wird ein Dateistream erstellt, der mit der **CryptoStream** -Klasse und der **AES** -Klasse verschlüsselt wird. Generierter IV wird an den Anfang von geschrieben <xref:System.IO.FileStream> , sodass er gelesen und für die Entschlüsselung verwendet werden kann. Anschließend wird eine Nachricht mit der-Klasse in den verschlüsselten Stream geschrieben <xref:System.IO.StreamWriter> . Derselbe Schlüssel kann mehrmals zum Verschlüsseln und Entschlüsseln von Daten verwendet werden, es wird jedoch empfohlen, jedes Mal einen neuen zufälligen IV zu generieren. Auf diese Weise unterscheiden sich die verschlüsselten Daten immer, auch wenn nur Text gleich ist.
   
 :::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs":::
 :::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb":::
 
-Der Code verschlüsselt den Stream mit dem symmetrischen AES-Algorithmus und schreibt "Hallo Welt!" in den Stream. Wenn der Code erfolgreich ist, erstellt er eine verschlüsselte Datei mit dem Namen *TestData.txt* und zeigt den folgenden Text in der Konsole an:  
+Der Code verschlüsselt den Stream mit dem symmetrischen AES-Algorithmus und schreibt IV und verschlüsselt dann "Hallo Welt!" in den Stream. Wenn der Code erfolgreich ist, erstellt er eine verschlüsselte Datei mit dem Namen *TestData.txt* und zeigt den folgenden Text in der Konsole an:
   
 ```console  
-The text was encrypted.  
+The text was encrypted.
 ```  
 
-Sie können die Datei mithilfe des symmetrischen Entschlüsselungs Beispiels in Entschlüsseln von [Daten](decrypting-data.md)entschlüsseln. In diesem Beispiel und in diesem Beispiel wird derselbe Schlüssel und IV angegeben.
+Sie können die Datei mithilfe des symmetrischen Entschlüsselungs Beispiels in Entschlüsseln von [Daten](decrypting-data.md)entschlüsseln. In diesem Beispiel und diesem Beispiel wird derselbe Schlüssel angegeben.
 
-Wenn jedoch eine Ausnahme ausgelöst wird, zeigt der Code den folgenden Text in der Konsole an:  
+Wenn jedoch eine Ausnahme ausgelöst wird, zeigt der Code den folgenden Text in der Konsole an:
   
 ```console  
-The encryption failed.  
+The encryption failed.
 ```
 
 ## <a name="asymmetric-encryption"></a>Asymmetrische Verschlüsselung
@@ -153,7 +153,7 @@ class Class1
 }
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](generating-keys-for-encryption-and-decryption.md)
 - [Entschlüsseln von Daten](decrypting-data.md)
