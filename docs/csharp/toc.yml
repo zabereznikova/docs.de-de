@@ -48,6 +48,8 @@
               href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: Lesen von Top-Level-Anweisungen
       href: tutorials/exploration/top-level-statements.md
+    - name: Erkunden von Mustern in Objekten
+      href: tutorials/exploration/patterns-objects.md
     - name: Erkunden von C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: Erkunden von Zeichenfolgeninterpolation – interakt
@@ -224,7 +226,7 @@
     - name: Artikelindex
       displayName: how to's
       href: how-to/index.md
-    - name: Analysieren von Zeichenfolgen über `String.Split`
+    - name: Aufteilen von Zeichenfolgen in Teilzeichenfolgen
       href: how-to/parse-strings-using-split.md
     - name: Verketten von Zeichenfolgen
       href: how-to/concatenate-multiple-strings.md
@@ -234,7 +236,7 @@
       href: how-to/modify-string-contents.md
     - name: Vergleichen von Zeichenfolgen
       href: how-to/compare-strings.md
-    - name: 'Sicheres Umwandeln mit Musterabgleich, Operatoren „is“ und „as“'
+    - name: Sicheres Umwandeln mit Musterabgleich und den Operatoren „is“ und „as“
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: Das .NET Compiler Platform SDK (Roslyn APIs)
   items:
