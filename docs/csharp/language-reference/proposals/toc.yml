@@ -14,6 +14,8 @@
           href: ../../../../_csharplang/proposals/csharp-7.0/binary-literals.md
         - name: Zahlentrennzeichen
           href: ../../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+        - name: Asynchrone Tasktypen
+          href: ../../../../_csharplang/proposals/csharp-7.0/task-types.md
     - name: Vorschläge für die C# 7.1-Spezifikation
       items:
         - name: Async Main-Methode
