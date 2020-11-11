@@ -1,0 +1,26 @@
+- name: Dokumentation zu .NET IoT-Bibliotheken
+  href: index.yml
+- name: Übersicht
+  href: intro.md
+- name: Schnellstart (Sense HAT)
+  href: quickstarts/sensehat.md
+- name: Tutorials
+  expanded: true
+  items:
+    - name: Blinken einer LED
+      href: tutorials/blink-led.md
+    - name: Lesen von Umgebungsbedingungen aus einem Sensor
+      href: tutorials/temp-sensor.md
+    - name: Anzeigen von Text in einem LC-Display
+      href: tutorials/lcd-display.md
+    - name: Lesen von Werten aus einem Analog-zu-Digital-Konverter
+      href: tutorials/adc.md
+- name: Anleitungen
+  expanded: true
+  items:
+    - name: Bereitstellung
+      href: deployment.md
+    - name: Debuggen
+      href: debugging.md
+- name: API-Referenz
+  href: /dotnet/api?view=iot-dotnet-1.1

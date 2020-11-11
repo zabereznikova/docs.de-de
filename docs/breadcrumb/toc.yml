@@ -109,7 +109,7 @@ items:
                 tocHref: /dotnet/framework/configure-apps/
                 topicHref: /dotnet/framework/configure-apps/index
                 items:
-                  - name: Schema der Konfigurationsdatei
+                  - name: Konfigurationsdateischema
                     tocHref: /dotnet/framework/configure-apps/file-schema/
                     topicHref: /dotnet/framework/configure-apps/file-schema/index
                     items:
@@ -578,3 +578,6 @@ items:
               - name: Azure für .NET-Entwickler
                 tocHref: /dotnet/azure/
                 topicHref: /dotnet/azure/index
+          - name: .NET-IoT-Bibliotheken
+            tocHref: /dotnet/iot/
+            topicHref: /dotnet/iot/index

@@ -1270,6 +1270,9 @@
           displayName: 'switch, pattern matching, patterns'
         - name: true- und false-Operatoren
           href: language-reference/operators/true-false-operators.md
+        - name: with-Ausdruck
+          href: language-reference/operators/with-expression.md
+          displayName: 'records, copy'
         - name: Überladen von Operatoren
           href: language-reference/operators/operator-overloading.md
     - name: Sonderzeichen
