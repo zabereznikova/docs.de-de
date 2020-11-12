@@ -2,12 +2,12 @@
 title: 'Importdeklarationen: Das open-Schlüsselwort'
 description: 'Erfahren Sie mehr über F #-Import Deklarationen und wie Sie ein Modul oder einen Namespace angeben, auf dessen Elemente verwiesen werden kann, ohne einen voll qualifizierten Namen zu verwenden.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557606"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557180"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Import Deklarationen: das- `open` Schlüsselwort
 
@@ -17,9 +17,10 @@ Eine *Import Deklaration* gibt ein Modul oder einen Namespace an, auf dessen Ele
 
 ```fsharp
 open module-or-namespace-name
+open type type-name
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Wenn Sie den voll qualifizierten Namespace-oder Modulpfad jedes Mal auf Code verweisen, können Sie Code erstellen, der schwer zu schreiben, zu lesen und zu warten ist. Stattdessen können Sie das `open` -Schlüsselwort für häufig verwendete Module und Namespaces verwenden, sodass Sie die Kurzform des Namens anstelle des voll qualifizierten Namens verwenden können, wenn Sie auf ein Member dieses Moduls oder Namespace verweisen. Dieses Schlüsselwort ähnelt dem `using` -Schlüsselwort in c#, `using namespace` in Visual C++ und `Imports` in Visual Basic.
 
@@ -42,6 +43,31 @@ printfn "%A" empty
 ```
 
 Daher sollten Sie beim Öffnen von Modulen oder Namespaces wie oder, die Member `List` `Seq` mit identischen Namen enthalten, vorsichtig sein. verwenden Sie stattdessen die qualifizierten Namen. Vermeiden Sie jede Situation, in der der Code von der Reihenfolge der Import Deklarationen abhängig ist.
+
+## <a name="open-type-declarations"></a>Open-Typdeklarationen
+
+F # unterstützt `open` für einen Typ wie folgt:
+
+```fsharp
+open type System.Math
+PI
+```
+
+Dadurch werden alle zugänglichen statischen Felder und Member für den-Typ verfügbar gemacht.
+
+Sie können auch `open` F #-definierte [Daten Satz](records.md) -und Unterscheidungs [Union](discriminated-unions.md) -Typen zur Offenlegung statischer Member nutzen. Im Fall von Unterscheidungs-Unions können Sie auch die Union-Fälle verfügbar machen. Dies kann hilfreich sein, um auf Union-Fälle in einem Typ zuzugreifen, der innerhalb eines Moduls deklariert ist, das Sie möglicherweise nicht öffnen möchten, wie hier:
+
+```fsharp
+module M =
+    type DU = A | B | C
+
+    let someOtherFunction x = x + 1
+
+// Open only the type inside the module
+open type M.DU
+
+printfn "%A" A
+```
 
 ## <a name="namespaces-that-are-open-by-default"></a>Standardmäßig geöffnete Namespaces
 

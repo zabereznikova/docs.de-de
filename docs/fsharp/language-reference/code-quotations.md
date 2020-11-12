@@ -2,16 +2,16 @@
 title: Zitieren von Code
 description: 'Erfahren Sie mehr über f #-Code Zitate, eine Sprachfunktion, die es Ihnen ermöglicht, f #-Code Ausdrücke Programm gesteuert zu generieren und zu bearbeiten.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558334"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557193"
 ---
 # <a name="code-quotations"></a>Code Zitate
 
-Dieser Artikel beschreibt *Code Zitate*, eine Sprachfunktion, die es Ihnen ermöglicht, F #-Code Ausdrücke Programm gesteuert zu generieren und zu bearbeiten. Diese Funktion ermöglicht es Ihnen, eine abstrakte Syntax Struktur zu generieren, die F #-Code darstellt. Die abstrakte Syntax Struktur kann dann nach den Anforderungen Ihrer Anwendung durchlaufen und verarbeitet werden. Beispielsweise können Sie die-Struktur verwenden, um F #-Code zu generieren oder Code in einer anderen Sprache zu generieren.
+Dieser Artikel beschreibt *Code Zitate* , eine Sprachfunktion, die es Ihnen ermöglicht, F #-Code Ausdrücke Programm gesteuert zu generieren und zu bearbeiten. Diese Funktion ermöglicht es Ihnen, eine abstrakte Syntax Struktur zu generieren, die F #-Code darstellt. Die abstrakte Syntax Struktur kann dann nach den Anforderungen Ihrer Anwendung durchlaufen und verarbeitet werden. Beispielsweise können Sie die-Struktur verwenden, um F #-Code zu generieren oder Code in einer anderen Sprache zu generieren.
 
 ## <a name="quoted-expressions"></a>Ausdrücke in Anführungszeichen
 
@@ -38,6 +38,21 @@ Die folgenden Ausdrücke sind jedoch gültig.
 
 Zum Auswerten von f #-Anführungszeichen müssen Sie den [f #-Anführungs](https://github.com/fsprojects/FSharp.Quotations.Evaluator)Zeichen Wert verwenden. Sie bietet Unterstützung für das Auswerten und Ausführen von F #-Ausdrucks Objekten.
 
+F #-Zitate behalten auch Informationen zur Typeinschränkung bei. Betrachten Sie das folgende Beispiel:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+Die von der Funktion generierte Einschränkung `inline` wird im Code-QUUM beibehalten. Das `negate` Formular der Funktion kann nun ausgewertet werden.
+
 ## <a name="expr-type"></a>Expr-Typ
 
 Eine Instanz des `Expr` Typs stellt einen F #-Ausdruck dar. Sowohl die generischen als auch die nicht generischen `Expr` Typen sind in der Dokumentation der F #-Bibliothek dokumentiert. Weitere Informationen finden Sie unter [FSharp. notiernamespace](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations.html) und [Noti. Expr-Klasse](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html).
@@ -58,7 +73,7 @@ Wenn `expr` ein typisiertes Anführungszeichen vom Typ ist `Expr<int>` , ist der
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Das folgende Beispiel veranschaulicht die Verwendung von Code Anführungszeichen, um F #-Code in einem Expression-Objekt zu platzieren und dann den f #-Code auszugeben, der den Ausdruck darstellt. Eine Funktion `println` ist definiert, die eine rekursive Funktion enthält `print` , die ein F #-Ausdrucks Objekt (vom Typ `Expr` ) in einem benutzerfreundlichen Format anzeigt. Es gibt mehrere aktive Muster in den Modulen " [FSharp. Noti. Patterns](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-patternsmodule.html) " und " [FSharp. Noti. DerivedPatterns](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-derivedpatternsmodule.html) ", die zum Analysieren von Ausdrucks Objekten verwendet werden können. In diesem Beispiel sind nicht alle möglichen Muster enthalten, die in einem F #-Ausdruck vorkommen können. Alle nicht erkannten Muster lösen eine Entsprechung für das Platzhalter Muster ( `_` ) aus und werden mithilfe der-Methode gerendert `ToString` , die auf dem- `Expr` Typ das aktive Muster kennt, das Sie dem Match-Ausdruck hinzufügen können.
 
@@ -76,7 +91,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 Sie können auch die drei aktiven Muster im [ExprShape-Modul](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html) verwenden, um Ausdrucks Baumstrukturen mit weniger aktiven Mustern zu durchlaufen. Diese aktiven Muster können nützlich sein, wenn Sie eine Struktur durchlaufen möchten, Sie jedoch nicht alle Informationen in den meisten Knoten benötigen. Wenn Sie diese Muster verwenden, entspricht jeder F #-Ausdruck einem der folgenden drei Muster: `ShapeVar` Wenn der Ausdruck eine Variable ist, `ShapeLambda` der Ausdruck ein Lambda-Ausdruck ist oder `ShapeCombination` Wenn der Ausdruck etwas anderes ist. Wenn Sie eine Ausdrucks Baumstruktur durchlaufen, indem Sie die aktiven Muster wie im vorherigen Codebeispiel verwenden, müssen Sie viele weitere Muster verwenden, um alle möglichen F #-Ausdrucks Typen zu verarbeiten, und Ihr Code ist komplexer. Weitere Informationen finden Sie unter [ExprShape. shapevar&#124;aktives Muster shapelambda&#124;shapekombination](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-exprshapemodule.html#(%20|ShapeVar|ShapeLambda|ShapeCombination|%20)).
 
@@ -95,6 +110,6 @@ Der Code in den anderen aktiven Muster Verzweigungen generiert einfach dieselbe 
 1 + Module1.mul(2,Module1.mul(3,4))
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)

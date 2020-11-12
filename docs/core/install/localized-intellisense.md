@@ -1,53 +1,53 @@
 ---
 title: Installieren der lokalisierten IntelliSense-Dateien
-description: Erfahren Sie, wie Sie Ihren Entwicklungscomputer für die Verwendung lokalisierter IntelliSense-Dateien für .NET Core-Projekte in Visual Studio einrichten.
-ms.date: 01/23/2020
-ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Erfahren Sie, wie Sie Ihren Entwicklungscomputer für die Verwendung lokalisierter IntelliSense-Dateien für .NET 5-Projekte (einschließlich .NET-Core) und höher in Visual Studio einrichten.
+ms.date: 11/06/2020
+ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157712"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439819"
 ---
-# <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Installieren der lokalisierten IntelliSense-Dateien für .NET Core
+# <a name="how-to-install-localized-intellisense-files-for-net"></a>Installieren lokalisierter IntelliSense-Dateien für .NET
 
-[IntelliSense](/visualstudio/ide/using-intellisense) ist ein Hilfsmittel zur Codevervollständigung, die in verschiedenen integrierten Entwicklungsumgebungen (IDEs), wie z. B. Visual Studio, verfügbar ist. Wenn Sie .NET Core-Projekte entwickeln, enthält das SDK standardmäßig nur die englische Version der IntelliSense-Dateien. In diesem Artikel erfahren Sie:
+[IntelliSense](/visualstudio/ide/using-intellisense) ist ein Hilfsmittel zur Codevervollständigung, das in verschiedenen integrierten Entwicklungsumgebungen (IDEs), z. B. Visual Studio, verfügbar ist. Wenn Sie .NET-Projekte entwickeln, enthält das SDK standardmäßig nur die englische Version der IntelliSense-Dateien. In diesem Artikel erfahren Sie:
 
 - wie Sie die lokalisierte Version dieser Dateien installieren.
 - wie Sie die Visual Studio-Installation ändern, um eine andere Sprache zu verwenden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder eine höhere Version.
+- [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) oder eine höhere Version wie [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 - [Visual Studio 2019 Version 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder eine neuere Version.
 
 ## <a name="download-and-install-the-localized-intellisense-files"></a>Herunterladen und Installieren der lokalisierten IntelliSense-Dateien
 
 > [!IMPORTANT]
-> Für diese Prozedur ist es erforderlich, dass Sie über eine Administratorberechtigung zum Kopieren der IntelliSense-Dateien in den .NET Core-Installationsordner verfügen.
+> Für diese Prozedur ist es erforderlich, dass Sie über Administratorberechtigungen zum Kopieren der IntelliSense-Dateien in den .NET-Installationsordner verfügen.
 
-1. Navigieren Sie zur [Seite zum Herunterladen der IntelliSense-Dateien](https://dotnet.microsoft.com/download/dotnet-core/intellisense).
+1. Navigieren Sie zur [Seite zum Herunterladen der IntelliSense-Dateien](https://dotnet.microsoft.com/download/intellisense).
 
 1. Laden Sie die IntelliSense-Datei für die Sprache und Version herunter, die Sie verwenden möchten.
 
 1. Extrahieren Sie den Inhalt der ZIP-Datei.
 
-1. Navigieren Sie zum .NET Core IntelliSense-Ordner.
+1. Navigieren Sie zum IntelliSense-Ordner für .NET.
 
-   1. Navigieren Sie zum .NET Core IntelliSense-Installationsordner. Standardmäßig befindet sich dieser unter *%ProgramFiles%\dotnet\packs*.
+   1. Navigieren Sie zum .NET-Installationsordner. Standardmäßig befindet sich dieser unter *%ProgramFiles%\dotnet\packs*.
    1. Wählen Sie aus, für welches SDK Sie IntelliSense installieren möchten, und navigieren Sie zum zugehörigen Pfad. Sie haben die folgenden Optionen:
 
-      | SDK-Typ        | `Path`                               |
-      | --------------- | ---------------------------------- |
-      | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows-Desktop | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET Standard   | *NETStandard.Library.Ref*          |
+      | SDK-Typ              | `Path`                               |
+      |-----------------------|------------------------------------|
+      | .NET 5 oder höher und .NET Core | *Microsoft.NETCore.App.Ref*        |
+      | Windows-Desktop       | *Microsoft.WindowsDesktop.App.Ref* |
+      | .NET Standard         | *NETStandard.Library.Ref*          |
 
    1. Navigieren Sie zur Version, für die Sie die lokalisierte IntelliSense-Datei installieren möchten. Zum Beispiel *3.1.0*.
-   1. Öffnen Sie den *ref*-Ordner.
-   1. Öffnen Sie den Monikerordner. Zum Beispiel *netcoreapp3.1*.
+   1. Öffnen Sie den *ref* -Ordner.
+   1. Öffnen Sie den Monikerordner. Zum Beispiel: *net5.0*.
 
-   Der vollständige Pfad, zu dem Sie navigieren würden, würde also ähnlich aussehen wie *C:\Programme\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1*.
+   Der vollständige Pfad, zu dem Sie navigieren würden, würde also in etwa wie folgt aussehen: *C:\Programme\dotnet\packs\Microsoft.NETCore.App.Ref\5.0.0\ref\net5.0*.
 
 1. Erstellen Sie einen Unterordner innerhalb des soeben geöffneten Monikerordners. Der Name des Ordners gibt an, welche Sprache Sie verwenden möchten. In der folgenden Tabelle werden die verschiedenen Optionen aufgeführt:
 
@@ -64,7 +64,7 @@ ms.locfileid: "78157712"
    | Russisch               | *ru*        |
    | Spanisch               | *es*        |
 
-1. Kopieren Sie die *xml*-Dateien, die Sie in Schritt 3 extrahiert haben, in diesen neuen Ordner. Die *xml*-Dateien sind nach SDK-Ordnern aufgeschlüsselt. Kopieren Sie diese also in den entsprechenden SDK-Ordner, den Sie in Schritt 4 ausgewählt haben.
+1. Kopieren Sie die *XML* -Dateien, die Sie in Schritt 3 extrahiert haben, in diesen neuen Ordner. Die *XML* -Dateien sind nach SDK-Ordnern aufgeschlüsselt. Kopieren Sie diese also in den entsprechenden SDK-Ordner, den Sie in Schritt 4 ausgewählt haben.
 
 ## <a name="modify-visual-studio-language"></a>Ändern der Sprache in Visual Studio
 
@@ -79,7 +79,7 @@ Wenn Sie das gewünschte Sprachpaket während des Setups nicht installiert haben
 
 1. Suchen Sie den Visual Studio-Installer auf Ihrem Computer.
 
-   Auf einem Computer mit Windows 10 wählen Sie beispielsweise **Start** und blättern dann zum Buchstaben **V**, wo das Installationsprogramm als **Visual Studio-Installer** angezeigt wird.
+   Auf einem Computer mit Windows 10 wählen Sie beispielsweise **Start** und blättern dann zum Buchstaben **V** , wo das Installationsprogramm als **Visual Studio-Installer** angezeigt wird.
 
    ![Öffnen des Visual Studio-Installer unter Windows](./media/localized-intellisense/vs-installer-windows-start.png)
 
@@ -116,13 +116,13 @@ Nachdem Sie die gewünschten Sprachpakete installiert haben, ändern Sie Ihre Vi
 
 1. Wählen Sie unter dem Knoten **Umgebung** **Internationale Einstellungen** aus.
 
-1. Wählen Sie aus der **Sprachen**-Dropdownliste eine Sprache Ihrer Wahl aus. Klicken Sie auf **OK**.
+1. Wählen Sie aus der **Sprachen** -Dropdownliste eine Sprache Ihrer Wahl aus. Klicken Sie auf **OK**.
 
 1. Ein Dialogfeld informiert Sie, dass Sie Visual Studio neu starten müssen, damit die Änderungen wirksam werden. Klicken Sie auf **OK**.
 
 1. Starten Sie Visual Studio neu.
 
-Danach sollte IntelliSense wie erwartet funktionieren, wenn Sie ein .NET Core-Projekt öffnen, das auf die Version der soeben installierten IntelliSense-Dateien abzielt.
+Danach sollte IntelliSense wie erwartet funktionieren, wenn Sie ein .NET-Projekt öffnen, das auf die Version der soeben installierten IntelliSense-Dateien ausgelegt ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 

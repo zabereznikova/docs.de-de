@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687559"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441108"
 ---
 # <a name="whats-new-in-net-framework"></a>Neuerungen in .NET Framework
 
@@ -71,7 +71,7 @@ Ein Hauptschwerpunkt von .NET Framework 4.8 ist nach wie vor die Verbesserung de
 
 #### <a name="base-classes"></a>Basisklassen
 
-**Reduzierung der Auswirkungen von FIPS auf Kryptografie** . In früheren Versionen von .NET Framework lösen verwaltete Kryptografieanbieterklassen wie <xref:System.Security.Cryptography.SHA256Managed> eine Ausnahme des Typs <xref:System.Security.Cryptography.CryptographicException> aus, wenn die kryptografischen Systembibliotheken im „FIPS-Modus“ konfiguriert sind. Diese Ausnahmen werden ausgelöst, da die verwalteten Versionen der Kryptografieanbieterklassen im Gegensatz zu den kryptografischen Systembibliotheken nicht gemäß FIPS 140-2 (Federal Information Processing Standards) zertifiziert sind. Da nur wenige Entwickler ihre Entwicklungscomputer im FIPS-Modus betreiben, werden die Ausnahmen häufig in Produktionssystemen ausgelöst.
+**Reduzierung der Auswirkungen von FIPS auf Kryptografie**. In früheren Versionen von .NET Framework lösen verwaltete Kryptografieanbieterklassen wie <xref:System.Security.Cryptography.SHA256Managed> eine Ausnahme des Typs <xref:System.Security.Cryptography.CryptographicException> aus, wenn die kryptografischen Systembibliotheken im „FIPS-Modus“ konfiguriert sind. Diese Ausnahmen werden ausgelöst, da die verwalteten Versionen der Kryptografieanbieterklassen im Gegensatz zu den kryptografischen Systembibliotheken nicht gemäß FIPS 140-2 (Federal Information Processing Standards) zertifiziert sind. Da nur wenige Entwickler ihre Entwicklungscomputer im FIPS-Modus betreiben, werden die Ausnahmen häufig in Produktionssystemen ausgelöst.
 
 Standardmäßig lösen in diesem Fall die folgenden verwalteten Kryptografieklassen in Anwendungen für .NET Framework 4.8 <xref:System.Security.Cryptography.CryptographicException> nicht mehr aus:
 
@@ -190,11 +190,11 @@ Um die Unterstützung für die Skalierung mit hohen DPI-Werten im gemischten Mod
 
 Die Runtime in .NET Framework 4.8 weist die folgenden Änderungen und Verbesserungen auf:
 
-**Verbesserungen am JIT-Compiler** . Der Just-in-Time-Compiler (JIT) in .NET Framework 4.8 basiert auf dem JIT-Compiler in .NET Core 2.1. Viele der Optimierungen und alle Fehlerkorrekturen für den JIT-Compiler von .NET Core 2.1 sind im JIT-Compiler von .NET Framework 4.8 enthalten.
+**Verbesserungen am JIT-Compiler**. Der Just-in-Time-Compiler (JIT) in .NET Framework 4.8 basiert auf dem JIT-Compiler in .NET Core 2.1. Viele der Optimierungen und alle Fehlerkorrekturen für den JIT-Compiler von .NET Core 2.1 sind im JIT-Compiler von .NET Framework 4.8 enthalten.
 
-**Verbesserungen für NGEN** . Die Runtime für die Speicherverwaltung für [Native Image Generator](../tools/ngen-exe-native-image-generator.md)-Bilder (NGEN) wurde so verbessert, dass aus NGEN-Bildern zugeordnete Daten nicht speicherresident sind. Dadurch wird die Angriffsfläche für Versuche, willkürlichen Code auszuführen, verkleinert, indem der auszuführende Speicher modifiziert wird.
+**Verbesserungen für NGEN**. Die Runtime für die Speicherverwaltung für [Native Image Generator](../tools/ngen-exe-native-image-generator.md)-Bilder (NGEN) wurde so verbessert, dass aus NGEN-Bildern zugeordnete Daten nicht speicherresident sind. Dadurch wird die Angriffsfläche für Versuche, willkürlichen Code auszuführen, verkleinert, indem der auszuführende Speicher modifiziert wird.
 
-**Überprüfung durch Antischadsoftware für alle Assemblys** . In früheren .NET Framework-Versionen scannt die Runtime alle vom Datenträger geladenen Assemblys mit Windows Defender oder Antischadsoftware von Drittanbietern. Assemblys, die aus anderen Quellen geladen werden, z.B. mit der <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>-Methode, werden jedoch nicht gescannt und können möglicherweise unentdeckte Schadsoftware enthalten. Ab .NET Framework 4.8 unter Windows 10 löst die Runtime einen Scan durch Antischadsoftware-Lösungen aus, die die [Antimalware Scan Interface (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) implementieren.
+**Überprüfung durch Antischadsoftware für alle Assemblys**. In früheren .NET Framework-Versionen scannt die Runtime alle vom Datenträger geladenen Assemblys mit Windows Defender oder Antischadsoftware von Drittanbietern. Assemblys, die aus anderen Quellen geladen werden, z.B. mit der <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>-Methode, werden jedoch nicht gescannt und können möglicherweise unentdeckte Schadsoftware enthalten. Ab .NET Framework 4.8 unter Windows 10 löst die Runtime einen Scan durch Antischadsoftware-Lösungen aus, die die [Antimalware Scan Interface (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal) implementieren.
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *Erweiterbarkeit des Objektcaches**
 
 Ab .NET Framework 4.7 bietet ASP.NET eine neue Gruppe von APIs, die es Entwicklern ermöglichen, die ASP.NET- Standardimplementierungen für das Zwischenspeichern von Objekten im Arbeitsspeicher und dessen Überwachung zu ersetzen. Entwickler können jetzt die drei folgenden Komponenten ersetzen, wenn die ASP.NET-Implementierung nicht geeignet ist:
 
-- **Objektcachespeicher** . Mithilfe des neuen Abschnitts für die Konfiguration von Cacheanbietern können Entwickler neue Implementierungen eines Objektcaches für eine ASP.NET-Anwendung einbinden, indem die neue **ICacheStoreProvider** -Schnittstelle verwendet wird.
+- **Objektcachespeicher**. Mithilfe des neuen Abschnitts für die Konfiguration von Cacheanbietern können Entwickler neue Implementierungen eines Objektcaches für eine ASP.NET-Anwendung einbinden, indem die neue **ICacheStoreProvider** -Schnittstelle verwendet wird.
 
-- **Speicherüberwachung** . Der Standardspeichermonitor in ASP.NET benachrichtigt Anwendungen, sobald sie sich dem für den Prozess konfigurierten Grenzwert für private Bytes nähern oder der insgesamt verfügbare physische Arbeitsspeicher knapp wird. Bei Annäherung an diese Grenzwerte werden Benachrichtigungen ausgelöst. Bei einigen Anwendungen werden Benachrichtigungen erst ausgelöst, sobald die konfigurierten Grenzwerte schon fast erreicht sind, sodass keine sinnvolle Reaktion möglich ist. Entwickler können nun mithilfe der <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>-Eigenschaft ihre eigene Arbeitsspeicherüberwachung schreiben, um die Standardeinstellung zu ersetzen.
+- **Speicherüberwachung**. Der Standardspeichermonitor in ASP.NET benachrichtigt Anwendungen, sobald sie sich dem für den Prozess konfigurierten Grenzwert für private Bytes nähern oder der insgesamt verfügbare physische Arbeitsspeicher knapp wird. Bei Annäherung an diese Grenzwerte werden Benachrichtigungen ausgelöst. Bei einigen Anwendungen werden Benachrichtigungen erst ausgelöst, sobald die konfigurierten Grenzwerte schon fast erreicht sind, sodass keine sinnvolle Reaktion möglich ist. Entwickler können nun mithilfe der <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>-Eigenschaft ihre eigene Arbeitsspeicherüberwachung schreiben, um die Standardeinstellung zu ersetzen.
 
-- **Reaktionen bei Erreichen des Speichergrenzwerts** . Standardmäßig versucht ASP.NET, den Objektcache zu trimmen und regelmäßig <xref:System.GC.Collect%2A?displayProperty=nameWithType> aufzurufen, wenn der Prozessgrenzwert für private Bereiche fast erreicht ist. Für einige Anwendungen ist die Häufigkeit der Aufrufe von <xref:System.GC.Collect%2A?displayProperty=nameWithType> oder die Menge des Caches, der getrimmt wird, ineffizient. Entwickler können jetzt das Standardverhalten ersetzen oder ergänzen, indem für den Speichermonitor der Anwendung **IObserver** -Implementierungen abonniert werden.
+- **Reaktionen bei Erreichen des Speichergrenzwerts**. Standardmäßig versucht ASP.NET, den Objektcache zu trimmen und regelmäßig <xref:System.GC.Collect%2A?displayProperty=nameWithType> aufzurufen, wenn der Prozessgrenzwert für private Bereiche fast erreicht ist. Für einige Anwendungen ist die Häufigkeit der Aufrufe von <xref:System.GC.Collect%2A?displayProperty=nameWithType> oder die Menge des Caches, der getrimmt wird, ineffizient. Entwickler können jetzt das Standardverhalten ersetzen oder ergänzen, indem für den Speichermonitor der Anwendung **IObserver** -Implementierungen abonniert werden.
 
 <a name="wcf47"></a>
 
@@ -746,8 +746,8 @@ Ab .NET Framework 4.7 ermöglicht WCF das Konfigurieren von TLS 1.1 oder TLS 1.2
 
 WCF umfasst eine Reihe von Codeänderungen zum Vermeiden von Racebedingungen, wodurch Leistung und Zuverlässigkeit von Serialisierungsoptionen verbessert werden. Dazu gehören:
 
-- Bessere Unterstützung für das Kombinieren von asynchronem und synchronem Code in Aufrufen von **SocketConnection.BeginRead** und **SocketConnection.Read** .
-- Verbesserte Zuverlässigkeit beim Abbrechen einer Verbindung mit **SharedConnectionListener** und **DuplexChannelBinder** .
+- Bessere Unterstützung für das Kombinieren von asynchronem und synchronem Code in Aufrufen von **SocketConnection.BeginRead** und **SocketConnection.Read**.
+- Verbesserte Zuverlässigkeit beim Abbrechen einer Verbindung mit **SharedConnectionListener** und **DuplexChannelBinder**.
 - Verbesserte Zuverlässigkeit von Serialisierungsvorgängen beim Aufrufen der <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType>-Methode.
 - Verbesserte Zuverlässigkeit beim Entfernen eines Waiters durch Aufrufen der **ChannelSynchronizer.RemoveWaiter** -Methode.
 
@@ -1585,9 +1585,9 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
     Es empfiehlt sich, ein konsistentes Format für Optionen zu verwenden, da es sich hierbei um eine formellen Vertrag handelt, der von einer Bibliothek verfügbar gemacht wird. Das folgende Beispiel zeigt zwei offensichtliche Formate.
 
-    - *Switch* . *namespace* . *switchname*
+    - *Switch*. *namespace*. *switchname*
 
-    - *Switch* . *library* . *switchname*
+    - *Switch*. *library*. *switchname*
 
   - **Änderungen am aufgabenbasierten asynchronen Entwurfsmuster (TAP)**
 
@@ -1758,7 +1758,7 @@ Bei NGEN PDB-Dateien kann NGen eine PDB-Datei erstellen, die die Zuordnung zwisc
 
 - **Open-Source-Pakete von .NET Framework**
 
-  .NET Core-Pakete wie die unveränderlichen Sammlungen, [SIMD-APIs](https://www.nuget.org/packages/Microsoft.Bcl.Simd) und Netzwerk-APIs (z. B. diejenigen aus dem Namespace <xref:System.Net.Http>) stehen jetzt auf [GitHub](https://github.com/) als Open-Source-Pakete zur Verfügung. Informationen über den Codezugriff finden Sie unter [.NET auf GitHub](https://github.com/dotnet/runtime). Weitere Informationen und wie Sie zu diesen Paketen beitragen können, finden Sie unter [.NET Core und Open-Source](../get-started/net-core-and-open-source.md), [.NET-Homepage auf GitHub](https://github.com/dotnet/home).
+  .NET Core-Pakete wie die unveränderlichen Sammlungen, [SIMD-APIs](https://www.nuget.org/packages/Microsoft.Bcl.Simd) und Netzwerk-APIs (z. B. diejenigen aus dem Namespace <xref:System.Net.Http>) stehen jetzt auf [GitHub](https://github.com/) als Open-Source-Pakete zur Verfügung. Informationen über den Codezugriff finden Sie unter [.NET auf GitHub](https://github.com/dotnet/runtime). Weitere Informationen und wie Sie zu diesen Paketen beitragen können, finden Sie unter [Einführung in .NET](../../core/introduction.md) und auf der [.NET-Homepage auf GitHub](https://github.com/dotnet/home).
 
 <a name="v452"></a>
 
@@ -2081,7 +2081,7 @@ Weitere Informationen finden Sie unter [Neues in Windows Communication Foundatio
 
 - Verbesserte Workflow Designer-Funktionen, z. B.:
 
-  - Verbesserte Workflowsuchfunktionen in Visual Studio, einschließlich **Schnellsuche** und **In Dateien suchen** .
+  - Verbesserte Workflowsuchfunktionen in Visual Studio, einschließlich **Schnellsuche** und **In Dateien suchen**.
 
   - Automatisches Erstellen einer Sequenzaktivität, wenn eine zweite untergeordnete Aktivität zu einer Containeraktivität hinzugefügt wird, und Einschließen beider Aktivitäten in die Sequenzaktivität.
 

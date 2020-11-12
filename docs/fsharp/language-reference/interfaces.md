@@ -2,12 +2,12 @@
 title: Schnittstellen
 description: 'Erfahren Sie, wie F #-Schnittstellen Sätze verwandter Member angeben, die von anderen Klassen implementiert werden.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558126"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557050"
 ---
 # <a name="interfaces"></a>Schnittstellen
 
@@ -100,6 +100,67 @@ Objekt Ausdrücke bieten eine kurze Möglichkeit, eine Schnittstelle zu implemen
 Schnittstellen können von einer oder mehreren Basis Schnittstellen erben.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>Implementieren von Schnittstellen mit Standard Implementierungen
+
+C# unterstützt das Definieren von Schnittstellen mit Standard Implementierungen wie folgt:
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+Diese können direkt von F # genutzt werden:
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+Sie können eine Standard Implementierung mit überschreiben, z. b. überschreiben `override` eines beliebigen virtuellen Members.
+
+Alle Member in einer Schnittstelle, die keine Standard Implementierung haben, müssen weiterhin explizit implementiert werden.
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>Implementieren derselben Schnittstelle bei unterschiedlichen generischen Instanziierungen
+
+F # unterstützt die Implementierung derselben Schnittstelle in unterschiedlichen generischen Instanziierungen wie folgt:
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>Weitere Informationen
 

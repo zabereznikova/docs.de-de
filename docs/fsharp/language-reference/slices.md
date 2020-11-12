@@ -2,12 +2,12 @@
 title: Slices
 description: 'Erfahren Sie, wie Sie Slices für vorhandene F #-Datentypen verwenden und wie Sie eigene Slices für andere Datentypen definieren.'
 ms.date: 12/23/2019
-ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559010"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557076"
 ---
 # <a name="slices"></a>Slices
 
@@ -149,6 +149,62 @@ let xs = [1 .. 10]
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="built-in-f-empty-slices"></a>Integrierte F #-Slices
+
+F #-Listen, Arrays, Sequenzen, Zeichen folgen, 2D-Arrays, 3D-Arrays und 4D-Arrays erzeugen ein leeres Slice, wenn die Syntax einen Slice erzeugen könnte, der nicht vorhanden ist.
+
+Beachten Sie Folgendes:
+
+```fsharp
+let l = [ 1..10 ]
+let a = [| 1..10 |]
+let s = "hello!"
+
+let emptyList = l.[-2..(-1)]
+let emptyArray = a.[-2..(-1)]
+let emptyString = s.[-2..(-1)]
+```
+
+C#-Entwickler erwarten möglicherweise, dass diese eine Ausnahme auslösen, anstatt einen leeren Slice zu liefern. Dies ist eine Entwurfs Entscheidung, die auf die Tatsache beruht, dass leere Auflistungen in F # verfasst werden. Eine leere f #-Liste kann mit einer anderen f #-Liste zusammengesetzt werden, eine leere Zeichenfolge kann einer vorhandenen Zeichenfolge hinzugefügt werden usw. Es kann üblich sein, Slices auf der Grundlage von Werten zu nehmen, die als Parameter weitergegeben werden, und die Toleranz von außerhalb der Grenzen durch das Erstellen einer leeren Sammlung ist mit der festgelegten Natur von F #-Code zu erreichen.
+
+## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Blöcke mit fester Indexgröße für 3D-und 4D-Arrays
+
+Bei F #-3D-und 4D-Arrays können Sie einen bestimmten Index "korrigieren" und andere Dimensionen mit fester Größe in einem Slice teilen.
+
+Um dies zu veranschaulichen, sehen Sie sich das folgende 3D-Array an:
+
+*z = 0*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
+
+*z = 1*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
+
+Wenn Sie den Slice `[| 4; 5 |]` aus dem Array extrahieren möchten, verwenden Sie einen Slice mit fester Indexgröße.
+
+```fsharp
+let dim = 2
+let m = Array3D.zeroCreate<int> dim dim dim
+
+let mutable count = 0
+
+for z in 0..dim-1 do
+    for y in 0..dim-1 do
+        for x in 0..dim-1 do
+            m.[x,y,z] <- count
+            count <- count + 1
+
+// Now let's get the [4;5] slice!
+m.[*, 0, 1]
+```
+
+Die letzte Zeile korrigiert die `y` `z` -und-Indizien des 3D-Arrays und übernimmt die restlichen `x` Werte, die der Matrix entsprechen.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Indizierte Eigenschaften](./members/indexed-properties.md)

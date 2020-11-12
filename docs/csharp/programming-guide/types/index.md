@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ad14c3367809c16268abedc99596089514986e3f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: aba59f6626661145c10d23d4a2c167b8337ec559
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91205112"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440379"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -34,6 +34,8 @@ Folgende Informationen können in einem Typ gespeichert sein:
 - Die enthaltenen Member (Methoden, Felder, Ereignisse usw.)
 
 - Der Basistyp, von dem geerbt wird
+
+- Die Schnittstellen, die implementiert werden
 
 - Die Position, an der der Arbeitsspeicher für Variablen zur Laufzeit belegt wird
 
@@ -58,7 +60,7 @@ Die Methodenparameter- und Rückgabewerttypen werden in der Methodendeklaration 
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Beispielsweise können Sie keinen Typ [int](../../language-reference/builtin-types/integral-numeric-types.md) deklarieren und diesem dann den booleschen Wert `true` zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Beispielsweise können Sie keinen Typ [int](../../language-reference/builtin-types/integral-numeric-types.md) deklarieren und diesem dann den booleschen Wert `true` zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung* , die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
 
 Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](./casting-and-type-conversions.md).
 
@@ -108,7 +110,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln, der von diesem implementiert wird. Dadurch wird ein *Boxing*-Vorgang gestartet, mit dem die Struktur von einem Verweistypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> oder einen beliebigen Schnittstellentyp als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](./boxing-and-unboxing.md).
+Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln, der von diesem implementiert wird. Dadurch wird ein *Boxing* -Vorgang gestartet, mit dem die Struktur von einem Verweistypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> oder einen beliebigen Schnittstellentyp als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](./boxing-and-unboxing.md).
 
 Sie können das [struct](../../language-reference/builtin-types/struct.md)-Schlüsselwort verwenden, um eigene benutzerdefinierte Werttypen zu erstellen. In der Regel wird eine Struktur als Container für einen kleinen Satz verwandter Variablen verwendet, wie im folgenden Beispiel dargestellt:
 
@@ -157,7 +159,7 @@ Da Literale typisiert sind und alle Typen letztlich von <xref:System.Object?disp
 
 ## <a name="generic-types"></a>Generische Typen
 
-Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als Platzhalter für den eigentlichen Typ verwendet werden (den *konkreten Typ*), der vom Clientcode beim Erstellen einer Instanz des Typs bereitgestellt wird. Solche Typen werden als *generische Typen* bezeichnet. Beispielsweise besitzt der .NET-Typ <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> einen Typparameter, dem üblicherweise der Name *T* gegeben wird. Beim Erstellen einer Instanz des Typs geben Sie die Objekte an, die die Liste enthalten soll, z. B. string:
+Ein Typ kann mit einem oder mehreren *Typparametern* deklariert werden, die als Platzhalter für den eigentlichen Typ verwendet werden (den *konkreten Typ* ), der vom Clientcode beim Erstellen einer Instanz des Typs bereitgestellt wird. Solche Typen werden als *generische Typen* bezeichnet. Beispielsweise besitzt der .NET-Typ <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> einen Typparameter, dem üblicherweise der Name *T* gegeben wird. Beim Erstellen einer Instanz des Typs geben Sie die Objekte an, die die Liste enthalten soll, z. B. string:
 
 ```csharp
 List<string> stringList = new List<string>();

@@ -2,16 +2,18 @@
 title: 'Neues in f # 5,0-f #-Handbuch'
 description: 'Verschaffen Sie sich einen Überblick über die neuen Features, die in F # 5,0 verfügbar sind.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0c4c9f42c63a1dc8c90213c43edbadd4061c132d
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94445841"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557141"
 ---
-# <a name="whats-new-in-f-50"></a>Neues in F # 5,0
+# <a name="whats-new-in-f-50"></a>Neues in F# 5.0
 
 F # 5,0 fügt mehrere Verbesserungen der Sprache f # und F# Interactive hinzu. Sie wird mit **.net 5** veröffentlicht.
+
+Sie können das neueste .NET SDK von der [.net-Downloadseite](https://dotnet.microsoft.com/download)herunterladen.
 
 ## <a name="get-started"></a>Erste Schritte
 
@@ -149,7 +151,6 @@ nameof op_Addition // "op_Addition"
 Wenn Sie den Namen eines Typparameters eingeben, ist eine etwas andere Syntax erforderlich:
 
 ```fsharp
-
 type C<'TType> =
     member _.TypeName = nameof<'TType>
 ```
@@ -228,16 +229,16 @@ F # 5,0 unterstützt das Aufteilen von aufteilen mit einem Fixed-Index in den in
 Um dies zu veranschaulichen, sehen Sie sich das folgende 3D-Array an:
 
 *z = 0*
-|x\y|0|1|
-|---|-|-|
-|**0**|0|1|
-|**1**|2|3|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
 
 *z = 1*
-|x\y|0|1|
-|---|-|-|
-|**0**|4|5|
-|**1**|6|7|
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
 
 Was geschieht, wenn Sie den Slice `[| 4; 5 |]` aus dem Array extrahieren möchten? Dies ist jetzt sehr einfach!
 
@@ -258,6 +259,23 @@ for z in 0..dim-1 do
 // Now let's get the [4;5] slice!
 m.[*, 0, 1]
 ```
+
+## <a name="f-quotations-improvements"></a>Verbesserungen in F #
+
+F #- [Code Zitate](../language-reference/code-quotations.md) haben jetzt die Möglichkeit, Informationen zur Typeinschränkung beizubehalten. Betrachten Sie das folgende Beispiel:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+Die von der Funktion generierte Einschränkung `inline` wird im Code-QUUM beibehalten. Das `negate` Formular der Funktion kann nun ausgewertet werden.
 
 ## <a name="applicative-computation-expressions"></a>Anwendungsberechnungs-Ausdrücke
 
