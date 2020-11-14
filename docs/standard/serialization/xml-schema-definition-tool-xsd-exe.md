@@ -3,12 +3,12 @@ title: XML Schema Definition-Tool (Xsd.exe)
 description: Das XML Serializer Generator-Tool erstellt eine XML-Serialisierungsassembly zur Verbesserung der Startleistung von XmlSerializer für Typen in einer angegebenen Assembly.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288978"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281757"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Damit .NET Framework-Tools einwandfrei funktionieren, müssen die Umgebungsvariablen `Path`, `Include` und `Lib` korrekt festgelegt sein. Führen Sie zum Festlegen dieser Umgebungsvariablen die Datei „SDKVars.bat“ aus, die sich im Verzeichnis „\<SDK>\v2.0\Bin“ befindet. SDKVars.bat muss in jeder Befehlsshell ausgeführt werden.
+> Damit .NET Framework-Tools einwandfrei funktionieren, müssen die Umgebungsvariablen `Path`, `Include` und `Lib` korrekt festgelegt sein. Führen Sie zum Festlegen dieser Umgebungsvariablen die Datei „SDKVars.bat“ im Verzeichnis „\<SDK>\\\<version>\Bin“ aus. SDKVars.bat muss in jeder Befehlsshell ausgeführt werden.
 
 ## <a name="argument"></a>Argument
 

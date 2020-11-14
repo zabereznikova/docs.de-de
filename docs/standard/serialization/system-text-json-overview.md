@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380126"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282401"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>JSON-Serialisierung und -Deserialisierung (Marshalling und Rückgängigmachen von Marshalling) in .NET: Überblick
 
@@ -27,8 +27,9 @@ Die Bibliothek stellt außerdem Klassen für die Arbeit mit einem In-Memory-Doku
 
 ## <a name="how-to-get-the-library"></a>Abrufen der Bibliothek
 
-* Die Bibliothek ist im freigegebenen [.NET Core 3.0](https://aka.ms/netcore3download)-Framework enthalten.
-* Installieren Sie für andere Zielframeworks das NuGet-Paket [System.Text.Json](https://www.nuget.org/packages/System.Text.Json). Das Paket unterstützt:
+* Die Bibliothek ist als Teil des gemeinsamen Frameworks für .NET Core 3.0 und höhere Versionen integriert.
+* Installieren Sie für frühere Framework-Versionen das NuGet-Paket [System.Text.Json](https://www.nuget.org/packages/System.Text.Json). Das Paket unterstützt:
+
   * .NET Standard 2.0 und höhere Versionen
   * .NET Framework 4.7.2 und höhere Versionen
   * .NET Core 2.0, 2.1 und 2.2

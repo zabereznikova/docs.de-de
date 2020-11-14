@@ -6,18 +6,18 @@ helpviewer_keywords:
 - registry [Visual Basic], writing to
 - registry [Visual Basic], reading
 ms.assetid: a13da106-185b-41d7-b23c-416da65e21e4
-ms.openlocfilehash: bb400ef89edaa4eb743aee3a7f2cc5b9dfec4534
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fe0714f25cd41ca9ce4eabf135c82d1dbb1fe524
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360058"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282227"
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Lesen aus der und Schreiben in die Registrierung (Visual Basic)
 
 In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die mit der Registrierung in Verbindung stehen.  
   
- Beim Programmieren in Visual Basic können Sie auf die Registrierung zugreifen. Dies geschieht entweder über die in Visual Basic bereitgestellten Funktionen oder die Registrierungsklassen von .NET Framework. Die Registrierung enthält Informationen des Betriebssystems und Informationen von auf dem Computer gehosteten Anwendungen. Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird.  
+ Beim Programmieren in Visual Basic können Sie auf die Registrierung zugreifen. Dies geschieht entweder über die in Visual Basic bereitgestellten Funktionen oder die Registrierungsklassen von .NET. Die Registrierung enthält Informationen des Betriebssystems und Informationen von auf dem Computer gehosteten Anwendungen. Das Arbeiten mit der Registrierung schränkt möglicherweise die Sicherheit ein, da nicht ordnungsgemäßer Zugriff auf Systemressourcen oder geschützte Informationen zugelassen wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 
@@ -31,7 +31,7 @@ In diesem Thema werden die Aufgaben und konzeptionellen Themen beschrieben, die 
  Beschreibt die Verwendung der `DeleteSubKey`-Methode der `My.Computer.Registry.CurrentUser`-Eigenschaft zum Löschen eines Registrierungsschlüssels  
   
  [Lesen aus der und Schreiben in die Registrierung mithilfe des Namespaces „Microsoft.Win32“](reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Beschreibt die Verwendung der Klassen `Registry` und `RegistryKey` von .NET Framework für den Zugriff auf die Registrierung  
+ Beschreibt die Verwendung der .NET-Klassen `Registry` und `RegistryKey` für den Zugriff auf die Registrierung.  
   
  [Sicherheit und die Registrierung](security-and-the-registry.md)  
  Beschreibt Sicherheitsprobleme im Zusammenhang mit der Registrierung  

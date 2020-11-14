@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: 98ea6f23467b85dc270aa323e72a8a9b0934994a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2b75ba6875b2a4430b6776c27dead72476884fff
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378425"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282079"
 ---
 # <a name="basic-serialization"></a>Einfache Serialisierung
 
@@ -43,7 +43,7 @@ formatter.Serialize(stream, obj);
 stream.Close();  
 ```  
   
-In diesem Beispiel wird ein binäres Formatierungsprogramm zur Durchführung der Serialisierung verwendet. Sie müssen lediglich eine Instanz des Datenstroms und des zu verwendenden Formatierungsprogramms erstellen, und im Formatierungsprogramm dann die **Serialize**-Methode aufrufen. Der Stream und das zu serialisierende Objekt werden in diesem Aufruf als Parameter angegeben. Obwohl es in diesem Beispiel nicht ausdrücklich gezeigt wird, werden alle Membervariablen einer Klasse serialisiert, auch wenn Variablen als privat markiert sind. In dieser Hinsicht unterscheidet sich die binäre Serialisierung von der <xref:System.Xml.Serialization.XmlSerializer>-Klasse, die nur öffentliche Felder serialisiert. Informationen zum Ausschluss von Membervariablen von der binären Serialisierung finden Sie unter [Selektive Serialisierung](selective-serialization.md).  
+In diesem Beispiel wird ein binäres Formatierungsprogramm zur Durchführung der Serialisierung verwendet. Sie müssen lediglich eine Instanz des Datenstroms und des zu verwendenden Formatierungsprogramms erstellen, und im Formatierungsprogramm dann die **Serialize** -Methode aufrufen. Der Stream und das zu serialisierende Objekt werden in diesem Aufruf als Parameter angegeben. Obwohl es in diesem Beispiel nicht ausdrücklich gezeigt wird, werden alle Membervariablen einer Klasse serialisiert, auch wenn Variablen als privat markiert sind. In dieser Hinsicht unterscheidet sich die binäre Serialisierung von der <xref:System.Xml.Serialization.XmlSerializer>-Klasse, die nur öffentliche Felder serialisiert. Informationen zum Ausschluss von Membervariablen von der binären Serialisierung finden Sie unter [Selektive Serialisierung](selective-serialization.md).  
   
 Es ist ebenso einfach, das Objekt wieder in seinem früheren Zustand wiederherzustellen. Erstellen Sie zunächst einen Datenstrom zum Einlesen und ein <xref:System.Runtime.Serialization.Formatter>, und weisen Sie das Formatierungsprogramm dann an, das Objekt zu deserialisieren. Das nachfolgende Codebeispiel zeigt, wie Sie hierzu vorgehen.  
   
@@ -59,9 +59,9 @@ Console.WriteLine("n2: {0}", obj.n2);
 Console.WriteLine("str: {0}", obj.str);  
 ```  
   
-Die oben verwendete <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse ist sehr effizient und erzeugt einen kompakten Bytestream. Alle Objekte, die mit diesem Formatierungsprogramm serialisiert wurden, können mit diesem auch deserialisiert werden. Dadurch ist es das optimale Tool zur Serialisierung von Objekten, die im .NET&#160;Framework deserialisiert werden. Beachten Sie unbedingt, dass beim Deserialisieren von Objekten keine Konstruktoren aufgerufen werden. Diese Einschränkung wird der Deserialisierung auferlegt, um die Leistung zu verbessern. Dies verstößt jedoch gegen einige der üblichen Verträge, die die Runtime mit dem Objektentwickler schließt, und Entwickler müssen sich über die Auswirkungen im Klaren sein, die die Markierung eines Objekts als serialisierbar hat.  
+Die oben verwendete <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Klasse ist sehr effizient und erzeugt einen kompakten Bytestream. Alle Objekte, die mit diesem Formatierungsprogramm serialisiert wurden, können mit diesem auch deserialisiert werden. Dadurch ist es das optimale Tool zur Serialisierung von Objekten, die in .NET deserialisiert werden. Beachten Sie unbedingt, dass beim Deserialisieren von Objekten keine Konstruktoren aufgerufen werden. Diese Einschränkung wird der Deserialisierung auferlegt, um die Leistung zu verbessern. Dies verstößt jedoch gegen einige der üblichen Verträge, die die Runtime mit dem Objektentwickler schließt, und Entwickler müssen sich über die Auswirkungen im Klaren sein, die die Markierung eines Objekts als serialisierbar hat.  
   
-Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter**-Klasse durch die **SoapFormatter,** -Klasse, und rufen Sie wie zuvor**Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
+Wenn Portabilität gefordert ist, verwenden Sie stattdessen die <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Klasse. Ersetzen Sie einfach im oben dargestellten Code die **BinaryFormatter** -Klasse durch die **SoapFormatter,** -Klasse, und rufen Sie wie zuvor **Serialisieren** und **Deserialisieren** auf. Dieses Formatierungsprogramm erzeugt die folgende Ausgabe für das oben dargestellte Beispiel.  
   
 ```xml  
 <SOAP-ENV:Envelope  

@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526584"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282336"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -86,7 +86,7 @@ Der Compiler synthetisiert zwei Methoden, die eine Druck- oder Bildschirmausgabe
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-In den bisher gezeigten Beispielen wird eine herkömmliche Syntax für die Deklaration von Eigenschaften verwendet. Es gibt eine prägnantere Lösung namens _*_positionelle Datensätze_*_ .  Nachstehend finden Sie die drei Datensatztypen, die zuvor als positionelle Datensätze definiert wurden:
+In den bisher gezeigten Beispielen wird eine herkömmliche Syntax für die Deklaration von Eigenschaften verwendet. Es gibt eine prägnantere Lösung namens _*_positionelle Datensätze_*_.  Nachstehend finden Sie die drei Datensatztypen, die zuvor als positionelle Datensätze definiert wurden:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ Der Compiler erstellt eine `Deconstruct`-Methode für positionelle Datensätze. 
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Datensätze unterstützen auch _*_with-Ausdrücke_*_ . Ein _*_with-Ausdruck_*_ weist den Compiler an, eine Kopie eines Datensatzes _mit* (engl.: „with“) bestimmten geänderten Eigenschaften zu erstellen:
+Datensätze unterstützen auch _*_with-Ausdrücke_*_. Ein _*_with-Ausdruck_*_ weist den Compiler an, eine Kopie eines Datensatzes _mit* (engl.: „with“) bestimmten geänderten Eigenschaften zu erstellen:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -240,7 +240,7 @@ Die beiden letzten Features dienen der Unterstützung von C#-Code-Generatoren. C
 
 Ein Code-Generator liest Attribute oder andere Codeelemente mithilfe der Roslyn-Analyse-APIs. Auf Grundlage dieser Informationen fügt er der Kompilierung neuen Code hinzu. Quell-Generatoren können nur Code hinzufügen. Sie sind nicht berechtigt, vorhandenen Code während der Kompilierung zu ändern.
 
-Bei den beiden Features für Code-Generatoren sind handelt es sich um Erweiterungen für die * **partielle Methodensyntax** _ und für _*_Modulinitialisierer_*_ . Zuerst zu den Änderungen an partiellen Methoden: Vor C# 9.0 waren partielle Methoden privat (`private`) und konnten weder einen Zugriffsmodifizierer angeben noch über eine leere Rückgabe (`void`) oder `out`-Parameter verfügen. Diese Einschränkungen führten dazu, dass der Compiler alle Aufrufe von partiellen Methoden entfernte, wenn keine Methodenimplementierung bereitgestellt wurde. In C# 9.0 werden diese Einschränkungen behoben. Deklarationen von partiellen Methoden müssen jetzt jedoch implementiert werden. Code-Generatoren können diese Implementierung bereitstellen. Damit kein Breaking Change eingeführt wird, befolgt der Compiler bei jeder partiellen Methode, die keinen Zugriffsmodifizierer aufweist, die alten Regeln. Wenn die partielle Methode den Zugriffsmodifizierer `private` enthält, unterliegt die partielle Methode den neuen Regeln.
+Bei den beiden Features für Code-Generatoren sind handelt es sich um Erweiterungen für die * **partielle Methodensyntax** _ und für _*_Modulinitialisierer_*_. Zuerst zu den Änderungen an partiellen Methoden: Vor C# 9.0 waren partielle Methoden privat (`private`) und konnten weder einen Zugriffsmodifizierer angeben noch über eine leere Rückgabe (`void`) oder `out`-Parameter verfügen. Diese Einschränkungen führten dazu, dass der Compiler alle Aufrufe von partiellen Methoden entfernte, wenn keine Methodenimplementierung bereitgestellt wurde. In C# 9.0 werden diese Einschränkungen behoben. Deklarationen von partiellen Methoden müssen jetzt jedoch implementiert werden. Code-Generatoren können diese Implementierung bereitstellen. Damit kein Breaking Change eingeführt wird, befolgt der Compiler bei jeder partiellen Methode, die keinen Zugriffsmodifizierer aufweist, die alten Regeln. Wenn die partielle Methode den Zugriffsmodifizierer `private` enthält, unterliegt die partielle Methode den neuen Regeln.
 
 Das zweite neue Feature für Code-Generatoren sind _* _Modulinitialisierer_ **. Modulinitialisierer sind Methoden, an die das Attribut <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute> angefügt wurde. Diese Methoden werden von der Runtime aufgerufen, wenn die Assembly geladen wird. Ein Modulinitialisierer:
 

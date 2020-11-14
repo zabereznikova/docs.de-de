@@ -1,7 +1,7 @@
 ---
 title: Standardformatzeichenfolgen für Datum und Uhrzeit
-description: In diesem Artikel erfahren Sie, wie Sie eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet, um die Textdarstellung eines Datums- und Uhrzeitwerts in .NET zu definieren.
-ms.date: 03/30/2017
+description: Erfahren Sie, wie Sie eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwenden, um die Textdarstellung eines Datums- und Uhrzeitwerts in .NET zu definieren.
+ms.date: 11/05/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,48 +14,48 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
-ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.custom: contperfq2
+ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888632"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329754"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardformatzeichenfolgen für Datum und Uhrzeit
 
-Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:
+Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Werts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als [benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit](custom-date-and-time-format-strings.md) interpretiert. Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:
 
 - Zum Definieren der Zeichenfolge, die das Ergebnis eines Formatierungsvorgangs ist.
 
 - Zum Definieren der Textdarstellung eines Datums- und Uhrzeitwerts, der bei einem Analysevorgang in einen <xref:System.DateTime>-Wert oder in einen <xref:System.DateTimeOffset>-Wert konvertiert werden kann.
 
 > [!TIP]
-> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET Core, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
-
-Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:System.DateTime> und mit dem Wert <xref:System.DateTimeOffset> verwendet werden.
+> Sie können das **Hilfsprogramm zur Formatierung** herunterladen. Dabei handelt sich um eine Windows Forms-Anwendung für .NET, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Uhrzeitwerte anwenden und die Ergebniszeichenfolge anzeigen können. Für [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) und [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb) ist Quellcode verfügbar.
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a> In der folgenden Tabelle werden die Standardformatbezeichner für Datum und Uhrzeit beschrieben. Sofern nicht anders angegeben, erzeugt ein bestimmter Standardformatbezeichner für Datum und Uhrzeit eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird. Weitere Informationen zum Verwenden von standardmäßigen Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt [Hinweise](#Notes).
+## <a name="table-of-format-specifiers"></a>Tabelle mit Formatbezeichern
+
+<a name="table"></a> In der folgenden Tabelle werden die Standardformatbezeichner für Datum und Uhrzeit beschrieben. Sofern nicht anders angegeben, erzeugt ein bestimmter Standardformatbezeichner für Datum und Uhrzeit eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird. Unter [Systemsteuerungseinstellungen](#control-panel-settings) und [DateTimeFormatInfo-Eigenschaften](#datetimeformatinfo-properties) finden Sie weitere Informationen zur Verwendung von Standardzeichenfolgen für Datums- und Uhrzeitformate.
 
 |Formatbezeichner|Beschreibung|Beispiele|
 |----------------------|-----------------|--------------|
-|"d"|Kurzes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "d" für das kurze Datum](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
-|"D"|Langes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "D" für das lange Datum](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
-|"f"|Vollständiges Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „f“ für vollständiges Datum und kurze Zeit](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
-|"F"|Vollständiges Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „F“ für vollständiges Datum und lange Zeit](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
-|"g"|Allgemeines Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Formatspezifizierer „g“ für Datum und kurze Zeit](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|
-|"G"|Allgemeines Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Formatspezifizierer „G“ für Datum und lange Zeit](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|
-|"M", "m"|Monatstagmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „M“, „m“ für den Monat](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|
-|"O", "o"|Zurückkonvertieren von Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „O“, „o“ für Roundtrips](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|
-|"R", "r"|RFC1123-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der RFC1123-Formatspezifizierer „R“, „r“](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|
-|"s"|Sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der sortierbare Formatspezifizierer „s“](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|
-|"t"|Kurzes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „t“ für kurze Zeit](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|
-|"T"|Langes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „T“ für lange Zeit](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
-|"u"|Universelles, sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der universelle sortierbare Formatspezifizierer „u“](#UniversalSortable).|Mit einem <xref:System.DateTime>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Mit einem <xref:System.DateTimeOffset>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
-|"U"|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).<br /><br /> Weitere Informationen finden Sie unter: [Der universelle vollständige Formatspezifizierer „U“](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatspezifizierer „Y“, „y“ für Jahr-Monat](#YearMonth).|2009-06-15T13:45:30 -> Juni 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"d"|Kurzes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner für das kurze Datum („d“)](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|
+|"D"|Langes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner für das lange Datum („D“)](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|
+|"f"|Vollständiges Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für vollständiges Datum und kurze Zeit („f“)](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|
+|"F"|Vollständiges Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für vollständiges Datum und lange Zeit („F“)](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|
+|"g"|Allgemeines Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Formatbezeichner für Datum und kurze Zeit („g“)](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|
+|"G"|Allgemeines Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Formatbezeichner für Datum und lange Zeit („G“)](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|
+|"M", "m"|Monatstagmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für den Monat („M“, „m“)](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|
+|"O", "o"|Datums-/Uhrzeitmuster für Roundtrip.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für Roundtrips („O“, „o“)](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|
+|"R", "r"|RFC1123-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der RFC1123-Formatbezeichner („R“, „r“)](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|
+|"s"|Sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der sortierbare Formatbezeichner („s“)](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|
+|"t"|Kurzes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für kurze Zeit („t“)](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|
+|"T"|Langes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für lange Zeit („T“)](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
+|"u"|Universelles, sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter: [Der universelle sortierbare Formatbezeichner („u“)](#UniversalSortable).|Mit einem <xref:System.DateTime>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Mit einem <xref:System.DateTimeOffset>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
+|"U"|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).<br /><br /> Weitere Informationen finden Sie unter: [Der universelle vollständige Formatbezeichner („U“)](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
+|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen finden Sie unter: [Der Formatbezeichner für Jahr-Monat („Y“)](#YearMonth).|2009-06-15T13:45:30 -> Juni 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |Jedes andere einzelne Zeichen|Unbekannter Bezeichner.|Löst eine <xref:System.FormatException> zur Laufzeit aus.|
 
 ## <a name="how-standard-format-strings-work"></a>Funktionsweise der Standardformatzeichenfolgen
@@ -98,9 +98,16 @@ Standardformatzeichenfolgen können in Analysevorgängen auch mit der <xref:Syst
 
 In den folgenden Abschnitten werden die Standardformatbezeichner für den <xref:System.DateTime>-Wert und den <xref:System.DateTimeOffset>-Wert beschrieben.
 
+## <a name="date-formats"></a>Datumsformate
+
+Diese Gruppe enthält die folgenden Formate:
+
+- [Der Formatbezeichner für das kurze Datum („d“)](#the-short-date-d-format-specifier)
+- [Der Formatbezeichner für das lange Datum („D“)](#the-long-date-d-format-specifier)
+
 <a name="ShortDate"></a>
 
-## <a name="the-short-date-d-format-specifier"></a>Der Formatbezeichner "d" für das kurze Datum
+### <a name="the-short-date-d-format-specifier"></a>Der Formatbezeichner „d“ für kurzes Datum
 
 Der Standardformatbezeichner "d" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>-Eigenschaft einer bestimmten Kultur definiert wird. Die benutzerdefinierte Formatzeichenfolge, die durch die <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>-Eigenschaft der invarianten Kultur zurückgegeben wird, lautet beispielsweise "MM/dd/yyyy".
 
@@ -120,7 +127,7 @@ Im folgenden Beispiel wird der d-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="LongDate"></a>
 
-## <a name="the-long-date-d-format-specifier"></a>Der Formatbezeichner "D" für langes Datum
+### <a name="the-long-date-d-format-specifier"></a>Der Formatbezeichner „D“ für langes Datum
 
 Der Standardformatbezeichner "D" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "dddd, dd MMMM yyyy".
 
@@ -139,9 +146,23 @@ Im folgenden Beispiel wird der D-Formatbezeichner verwendet, um einen Datums- un
 
 [Zurück zur Tabelle](#table)
 
+## <a name="date-and-time-formats"></a>Formate für Datum und Uhrzeit
+
+Diese Gruppe enthält die folgenden Formate:
+
+- [Der Formatbezeichner für vollständiges Datum und kurze Zeit („f“)](#the-full-date-short-time-f-format-specifier)
+- [Der Formatbezeichner für vollständiges Datum und lange Zeit („F“)](#the-full-date-long-time-f-format-specifier).
+- [Der allgemeine Formatbezeichner für Datum und kurze Zeit („g“)](#the-general-date-short-time-g-format-specifier)
+- [Der allgemeine Formatbezeichner für Datum und lange Zeit („G“)](#the-general-date-long-time-g-format-specifier)
+- [Der Formatbezeichner für Roundtrips („O“, „o“)](#the-round-trip-o-o-format-specifier)
+- [Der RFC1123-Formatbezeichner („R“, „r“)](#the-rfc1123-r-r-format-specifier)
+- [Der sortierbare Formatspezifizierer („s“)](#the-sortable-s-format-specifier)
+- [Der universelle sortierbare Formatspezifizierer („u“)](#the-universal-sortable-u-format-specifier)
+- [Der universelle vollständige Formatbezeichner („U“)](#the-universal-full-u-format-specifier)
+
 <a name="FullDateShortTime"></a>
 
-## <a name="the-full-date-short-time-f-format-specifier"></a>Der Formatbezeichner "f" für vollständiges Datum und kurze Zeit
+### <a name="the-full-date-short-time-f-format-specifier"></a>Der Formatbezeichner „f“ für vollständiges Datum und kurze Zeit
 
 Der Standardformatbezeichner "f" stellt eine Kombination aus dem Muster für langes Datum ("D") und dem Muster für kurze Zeit ("t") getrennt durch ein Leerzeichen dar.
 
@@ -166,7 +187,7 @@ Im folgenden Beispiel wird der f-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="FullDateLongTime"></a>
 
-## <a name="the-full-date-long-time-f-format-specifier"></a>Der Formatbezeichner "F" für vollständiges Datum und lange Zeit
+### <a name="the-full-date-long-time-f-format-specifier"></a>Der Formatbezeichner „F“ für vollständiges Datum und lange Zeit
 
 Der Standardformatbezeichner "F" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "dddd, dd MMMM yyyy HH:mm:ss".
 
@@ -190,7 +211,7 @@ Im folgenden Beispiel wird der F-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="GeneralDateShortTime"></a>
 
-## <a name="the-general-date-short-time-g-format-specifier"></a>Der allgemeine Formatbezeichner "g" für Datum und kurze Zeit
+### <a name="the-general-date-short-time-g-format-specifier"></a>Der Formatbezeichner „g“ für allgemeines Datum und kurze Zeit
 
 Der Standardformatbezeichner "g" stellt eine Kombination aus dem Muster für kurzes Datum ("d") und dem Muster für kurze Zeit ("t") getrennt durch ein Leerzeichen dar.
 
@@ -214,7 +235,7 @@ Im folgenden Beispiel wird der g-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="GeneralDateLongTime"></a>
 
-## <a name="the-general-date-long-time-g-format-specifier"></a>Der allgemeine Formatbezeichner "G" für Datum und lange Zeit
+### <a name="the-general-date-long-time-g-format-specifier"></a>Der Formatbezeichner „G“ für allgemeines Datum und lange Zeit
 
 Der Standardformatbezeichner "G" stellt eine Kombination aus dem Muster für kurzes Datum ("d") und dem Muster für lange Zeit ("T") getrennt durch ein Leerzeichen dar.
 
@@ -236,29 +257,9 @@ Im folgenden Beispiel wird der G-Formatbezeichner verwendet, um einen Datums- un
 
 [Zurück zur Tabelle](#table)
 
-<a name="MonthDay"></a>
-
-## <a name="the-month-m-m-format-specifier"></a>Der Formatbezeichner "M", "m" für den Monat
-
-Der Standardformatbezeichner "M" oder "m" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "MMMM dd".
-
-In der folgenden Tabellen sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.
-
-|Eigenschaft|Beschreibung|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definiert die lokalisierten Monatsnamen, die in der Ergebniszeichenfolge vorkommen können.|
-
-Im folgenden Beispiel wird der m-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
-
-[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
-[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
-
-[Zurück zur Tabelle](#table)
-
 <a name="Roundtrip"></a>
 
-## <a name="the-round-trip-o-o-format-specifier"></a>Der Formatbezeichner "O", "o" für Roundtrips
+### <a name="the-round-trip-o-o-format-specifier"></a>Die Formatbezeichner „O“, „o“ für Roundtrips
 
 Der Standardformatbezeichner "O" oder "o" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit unter Verwendung eines Musters dar, bei dem die Zeitzoneninformationen beibehalten werden, und gibt eine Ergebniszeichenfolge aus, die die Anforderungen von ISO 8601 erfüllt. Für <xref:System.DateTime>-Werte wurde diese Formatzeichenfolge entwickelt, um Datums- und Uhrzeitwerte zusammen mit der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft in Text beizubehalten. Die formatierte Zeichenfolge kann mit der <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType>-Methode oder mit <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode rückkonvertiert werden, wenn der `styles`-Parameter auf <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> festgelegt wird.
 
@@ -290,7 +291,7 @@ Im folgenden Beispiel wird der o-Formatbezeichner verwendet, um eine formatierte
 
 <a name="RFC1123"></a>
 
-## <a name="the-rfc1123-r-r-format-specifier"></a>Der RFC1123-Formatbezeichner "R", "r"
+### <a name="the-rfc1123-r-r-format-specifier"></a>Die RFC1123-Formatbezeichner „R“, „r“
 
 Der Standardformatbezeichner "R" oder "r" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Bei dem Muster handelt es sich um einen definierten Standard. Die Eigenschaft ist schreibgeschützt. Es ist daher unabhängig von der verwendeten Kultur oder dem bereitgestellten Formatanbieter immer identisch. Die benutzerdefinierte Formatzeichenfolge lautet "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'". Wenn dieser Standardformatbezeichner verwendet wird, wird bei der Formatierungs- oder Analysemethode immer die invariante Kultur verwendet.
 
@@ -313,7 +314,7 @@ Sie sehen im folgenden Beispiel, dass der „r“-Formatbezeichner zum Anzeigen 
 
 <a name="Sortable"></a>
 
-## <a name="the-sortable-s-format-specifier"></a>Der sortierbare Formatbezeichner "s"
+### <a name="the-sortable-s-format-specifier"></a>Der Bezeichner „s“ für sortierbares Format
 
 Der Standardformatbezeichner "s" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Bei dem Muster handelt es sich um einen definierten Standard (ISO 8601). Die Eigenschaft ist schreibgeschützt. Es ist daher unabhängig von der verwendeten Kultur oder dem bereitgestellten Formatanbieter immer identisch. Die benutzerdefinierte Formatzeichenfolge lautet "yyyy'-'MM'-'dd'T'HH':'mm':'ss".
 
@@ -328,53 +329,9 @@ Sie sehen im folgenden Beispiel, dass der „s“-Formatbezeichner zum Anzeigen 
 
 [Zurück zur Tabelle](#table)
 
-<a name="ShortTime"></a>
-
-## <a name="the-short-time-t-format-specifier"></a>Der Formatbezeichner "t" für kurze Zeit
-
-Der Standardformatbezeichner "t" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "HH:mm".
-
-Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.
-
-|Eigenschaft|Beschreibung|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mitternacht und Mittag im 12-Stunden-Format angibt.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mittag und Mitternacht im 12-Stunden-Format angibt.|
-
-Im folgenden Beispiel wird der t-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
-
-[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
-[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
-
-[Zurück zur Tabelle](#table)
-
-<a name="LongTime"></a>
-
-## <a name="the-long-time-t-format-specifier"></a>Der Formatbezeichner "T" für lange Zeit
-
-Der Standardformatbezeichner "T" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einer bestimmten Kultur definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "HH:mm:ss".
-
-In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.
-
-|Eigenschaft|Beschreibung|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mitternacht und Mittag im 12-Stunden-Format angibt.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mittag und Mitternacht im 12-Stunden-Format angibt.|
-
-Im folgenden Beispiel wird der T-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
-
-[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
-[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
-
-[Zurück zur Tabelle](#table)
-
 <a name="UniversalSortable"></a>
 
-## <a name="the-universal-sortable-u-format-specifier"></a>Der universelle sortierbare Formatbezeichner "u"
+### <a name="the-universal-sortable-u-format-specifier"></a>Der Bezeichner „u“ für universelles sortierbares Format
 
 Der Standardformatbezeichner "u" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Bei dem Muster handelt es sich um einen definierten Standard. Die Eigenschaft ist schreibgeschützt. Es ist daher unabhängig von der verwendeten Kultur oder dem bereitgestellten Formatanbieter immer identisch. Die benutzerdefinierte Formatzeichenfolge lautet "yyyy'-'MM'-'dd HH':'mm':'ss'Z'". Wenn dieser Standardformatbezeichner verwendet wird, wird bei der Formatierungs- oder Analysemethode immer die invariante Kultur verwendet.
 
@@ -389,7 +346,7 @@ Im folgenden Beispiel wird der u-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="UniversalFull"></a>
 
-## <a name="the-universal-full-u-format-specifier"></a>Der universelle vollständige Formatbezeichner "U"
+### <a name="the-universal-full-u-format-specifier"></a>Der Bezeichner „U“ für universelles vollständiges Format
 
 Der Standardformatbezeichner "U" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einer angegebenen Kultur definiert wird. Das Muster ist gleich dem F-Muster. Der <xref:System.DateTime>-Wert wird jedoch vor der Formatierung automatisch in UTC konvertiert.
 
@@ -413,9 +370,87 @@ Im folgenden Beispiel wird der U-Formatbezeichner verwendet, um einen Datums- un
 
 [Zurück zur Tabelle](#table)
 
+## <a name="time-formats"></a>Uhrzeitformate
+
+Diese Gruppe enthält die folgenden Formate:
+
+- [Der Formatbezeichner für kurze Zeit („t“)](#the-short-time-t-format-specifier)
+- [Der Formatbezeichner für lange Zeit („T“)](#the-long-time-t-format-specifier)
+
+<a name="ShortTime"></a>
+
+### <a name="the-short-time-t-format-specifier"></a>Der Formatbezeichner „t“ für kurze Zeit
+
+Der Standardformatbezeichner "t" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "HH:mm".
+
+Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.
+
+|Eigenschaft|Beschreibung|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mitternacht und Mittag im 12-Stunden-Format angibt.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mittag und Mitternacht im 12-Stunden-Format angibt.|
+
+Im folgenden Beispiel wird der t-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
+
+[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
+
+[Zurück zur Tabelle](#table)
+
+<a name="LongTime"></a>
+
+### <a name="the-long-time-t-format-specifier"></a>Der Formatbezeichner „T“ für lange Zeit
+
+Der Standardformatbezeichner "T" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einer bestimmten Kultur definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "HH:mm:ss".
+
+In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.
+
+|Eigenschaft|Beschreibung|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mitternacht und Mittag im 12-Stunden-Format angibt.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Definiert die Zeichenfolge, die Zeiten zwischen Mittag und Mitternacht im 12-Stunden-Format angibt.|
+
+Im folgenden Beispiel wird der T-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
+
+[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
+
+[Zurück zur Tabelle](#table)
+
+## <a name="partial-date-formats"></a>Partielle Datumsformate
+
+Diese Gruppe enthält die folgenden Formate:
+
+- [Der Formatbezeichner für den Monat („M“, „m“)](#the-month-m-m-format-specifier)
+- [Der Formatbezeichner für Jahr-Monat („Y“, „y“)](#the-year-month-y-y-format-specifier)
+
+<a name="MonthDay"></a>
+
+### <a name="the-month-m-m-format-specifier"></a>Die Formatbezeichner „M“, „m“ für Monat
+
+Der Standardformatbezeichner "M" oder "m" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der aktuellen <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType>-Eigenschaft definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "MMMM dd".
+
+In der folgenden Tabellen sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.
+
+|Eigenschaft|Beschreibung|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definiert die lokalisierten Monatsnamen, die in der Ergebniszeichenfolge vorkommen können.|
+
+Im folgenden Beispiel wird der m-Formatbezeichner verwendet, um einen Datums- und Zeitwert anzuzeigen.
+
+[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
+
+[Zurück zur Tabelle](#table)
+
 <a name="YearMonth"></a>
 
-## <a name="the-year-month-y-y-format-specifier"></a>Der Formatbezeichner "Y", "y" für Jahr-Monat
+### <a name="the-year-month-y-y-format-specifier"></a>Die Formatbezeichner „Y“, „y“ für Jahr-Monat
 
 Der Standardformatbezeichner "Y" oder "y" stellt eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit dar, die von der <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType>-Eigenschaft einer angegebenen Kultur definiert wird. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "yyyy MMMM".
 
@@ -435,15 +470,13 @@ Im folgenden Beispiel wird der y-Formatbezeichner verwendet, um einen Datums- un
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>Hinweise
+## <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung
 
-### <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung
-
-Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.
+Unter Windows beeinflussen die Einstellungen im Element **Regions- und Sprachoptionen** in der Systemsteuerung die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.
 
 Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> -Constructor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo> -Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo> -Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.
 
-### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften
+## <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo-Eigenschaften
 
 Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Für den <xref:System.IFormatProvider>-Parameter sollte Ihre Anwendung ein <xref:System.Globalization.CultureInfo>-Objekt angeben, das eine Kultur darstellt, oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das die Formatierungskonventionen für Datum und Uhrzeit einer bestimmten Kultur darstellt. Bei vielen der Standardformatbezeichner für Datum und Uhrzeit handelt es sich um Aliase für Formatierungsmuster, die durch Eigenschaften des aktuellen <xref:System.Globalization.DateTimeFormatInfo>-Objekts definiert werden. Die Anwendung kann das von einigen Standardformatbezeichner für Datum und Uhrzeit erstellte Ergebnis ändern, indem sie die entsprechenden Formatmuster für Datum und Uhrzeit der entsprechenden <xref:System.Globalization.DateTimeFormatInfo>-Eigenschaft ändert.
 

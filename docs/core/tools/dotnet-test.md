@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537735"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281609"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -61,7 +61,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
   - Der Pfad zum Testprojekt.
   - Der Pfad zur Projektmappe.
   - Der Pfad zu einem Verzeichnis, das ein Projekt oder eine Projektmappe enthält.
-  - Der Pfad zur *DLL*-Datei eines Testprojekts.
+  - Der Pfad zur *DLL* -Datei eines Testprojekts.
 
   Ist dieses Argument nicht angegeben, wird nach einem Projekt oder einer Projektmappe im aktuellen Verzeichnis gesucht.
 
@@ -69,7 +69,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
-  Der Pfad zu einem Verzeichnis, das nach zusätzlichen Testadaptern durchsucht werden soll. Nur *DLL*-Dateien mit dem Suffix `.TestAdapter.dll` werden untersucht. Wenn nichts angegeben ist, wird das Verzeichnis der Test-*DLL* durchsucht.
+  Der Pfad zu einem Verzeichnis, das nach zusätzlichen Testadaptern durchsucht werden soll. Nur *DLL* -Dateien mit dem Suffix `.TestAdapter.dll` werden untersucht. Wenn nichts angegeben ist, wird das Verzeichnis der Test- *DLL* durchsucht.
 
 - **`--blame`**
 
@@ -77,7 +77,13 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`--blame-crash`** (Verfügbar seit .NET 5.0 Preview SDK)
 
-  Führt die Tests im Modus „Verantwortung zuweisen“ aus und erfasst ein Absturzabbild, wenn der Testhost unerwartet beendet wird. Diese Option wird nur unter Windows unterstützt. Ein Verzeichnis, das *procdump.exe* und *procdump64.exe* enthält, muss in der PATH- oder PROCDUMP_PATH-Umgebungsvariablen enthalten sein. [Tools herunterladen](/sysinternals/downloads/procdump). Impliziert `--blame`.
+  Führt die Tests im Modus „Verantwortung zuweisen“ aus und erfasst ein Absturzabbild, wenn der Testhost unerwartet beendet wird. Diese Option hängt von der verwendeten Version von .NET, dem Fehlertyp und Betriebssystem ab.
+  
+  Für Ausnahmen in verwaltetem Code wird ab NET 5.0 automatisch ein Absturzabbild erfasst. Es wird ein Absturzabbild für den Testhost oder jegliche untergeordneten Prozesse generiert, die ebenfalls unter .NET 5.0 liefen und abgestürzt sind. Abstürze in nativem Code generieren keine Absturzabbild. Diese Option funktioniert unter Windows, macOS und Linux.
+  
+  Absturzabbilder in nativem Code oder bei Verwendung von .NET Core 3.1 oder früheren Versionen können unter Windows nur mithilfe von Procdump erfasst werden. Ein Verzeichnis, das *procdump.exe* und *procdump64.exe* enthält, muss in der PATH- oder PROCDUMP_PATH-Umgebungsvariablen enthalten sein. [Tools herunterladen](/sysinternals/downloads/procdump). Impliziert `--blame`.
+  
+  Um ein Absturzabbild aus einer nativen Anwendung zu erfassen, die unter .NET 5.0 oder höher läuft, kann die Verwendung von Procdump erzwungen werden, indem die Umgebungsvariable `VSTEST_DUMP_FORCEPROCDUMP` auf `1` festgelegt wird.
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (Verfügbar seit .NET 5.0 Preview SDK)
 
@@ -97,14 +103,14 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`--blame-hang-timeout <TIMESPAN>`** (Verfügbar seit .NET 5.0 Preview SDK)
 
-  Testspezifisches Timeout, nach dem ein Blockadeabbild ausgelöst und der Testhostprozess beendet wird. Der Timeoutwert wird in einem der folgenden Formate angegeben:
+  Testspezifisches Timeout, nach dem ein Blockadeabbild ausgelöst und der Testhostprozess und alle dessen untergeordneten Prozesse gesichert und beendet werden. Der Timeoutwert wird in einem der folgenden Formate angegeben:
   
-  - 1,5 Std.
-  - 90 Min.
-  - 5\.400 S
-  - 5\.400.000 ms
+  - 1.5h, 1.5hour, 1.5hours
+  - 90m, 90min, 90minute, 90minutes
+  - 5400s, 5400sec, 5400second, 5400seconds
+  - 5400000ms, 5400000mil, 5400000millisecond, 5400000milliseconds
 
-  Wenn keine Einheit verwendet wird (z. B. 5.400.000), wird angenommen, dass der Wert in Millisekunden angegeben wird. Bei Verwendung in Verbindung mit datenorientierten Tests hängt das Timeoutverhalten vom verwendeten Testadapter ab. Bei xUnit und NUnit wird das Timeout nach jedem Testfall erneuert. Für MSTest wird das Timeout für alle Testfälle verwendet. Diese Option wird unter Windows mit netcoreapp2.1 und höher und unter Linux mit netcoreapp3.1 und höher unterstützt. macOS wird nicht unterstützt.
+  Wenn keine Einheit verwendet wird (z. B. 5.400.000), wird angenommen, dass der Wert in Millisekunden angegeben wird. Bei Verwendung in Verbindung mit datenorientierten Tests hängt das Timeoutverhalten vom verwendeten Testadapter ab. Bei xUnit und NUnit wird das Timeout nach jedem Testfall erneuert. Für MSTest wird das Timeout für alle Testfälle verwendet. Diese Option wird unter Windows mit netcoreapp2.1 und höher, unter Linux mit netcoreapp3.1 und höher und unter macOS mit net5.0 und höher unterstützt. Impliziert `--blame` und `--blame-hang`.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -116,7 +122,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
   
   Um Code Coverage auf einer beliebigen Plattform zu erfassen, die von .NET Core unterstützt wird, installieren Sie [Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) und verwenden die `--collect:"XPlat Code Coverage"`-Option.
 
-  Unter Windows können Sie Code Coverage mithilfe der `--collect "Code Coverage"`-Option erfassen. Mit dieser Option wird eine *COVERAGE*-Datei generiert, die in Visual Studio 2019 Enterprise geöffnet werden kann. Weitere Informationen finden Sie unter [Verwenden von Code Coverage](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) und [Anpassen der Code Coverage-Analyse](/visualstudio/test/customizing-code-coverage-analysis).
+  Unter Windows können Sie Code Coverage mithilfe der `--collect "Code Coverage"`-Option erfassen. Mit dieser Option wird eine *COVERAGE* -Datei generiert, die in Visual Studio 2019 Enterprise geöffnet werden kann. Weitere Informationen finden Sie unter [Verwenden von Code Coverage](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) und [Anpassen der Code Coverage-Analyse](/visualstudio/test/customizing-code-coverage-analysis).
 
 - **`-d|--diag <LOG_FILE>`**
 
@@ -168,7 +174,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. Das `TargetPlatform`-Element (x86|x64) hat keine Auswirkung auf `dotnet test`. Installieren Sie die x86-Version von .NET Core, um x86-Tests auszuführen. Die Bitanzahl der Datei *dotnet.exe*, die sich in diesem Pfad befindet, wird zum Ausführen von Tests verwendet. Weitere Informationen finden Sie in den folgenden Ressourcen:
+  Die `.runsettings`-Datei, die zum Ausführen der Tests verwendet wird. Das `TargetPlatform`-Element (x86|x64) hat keine Auswirkung auf `dotnet test`. Installieren Sie die x86-Version von .NET Core, um x86-Tests auszuführen. Die Bitanzahl der Datei *dotnet.exe* , die sich in diesem Pfad befindet, wird zum Ausführen von Tests verwendet. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
   - [Konfigurieren von Komponententests mithilfe einer `.runsettings`-Datei.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Konfigurieren eines Testlaufs](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -264,7 +270,7 @@ Ausdrücke können mit bedingten Operatoren verknüpft werden:
 
 | Operator            | Funktion |
 | ------------------- | -------- |
-| <code>&#124;</code> | ODER       |
+| <code>&#124;</code> | ODER       |
 | `&`                 | UND      |
 
 Sie können Ausdrücke in Klammern einschließen, wenn Sie bedingte Operatoren verwenden (z.B. `(Name~TestMethod1) | (Name~TestMethod2)`).

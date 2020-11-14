@@ -2,12 +2,12 @@
 title: 'Einführung in C#: Wichtige Sprachbereiche'
 description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 08/06/2020
-ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558174"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400747"
 ---
 # <a name="major-language-areas"></a>Wichtige Sprachbereiche
 
@@ -17,30 +17,30 @@ C# und .NET stellen viele verschiedene Sammlungstypen bereit. Die Syntax von Arr
 
 ### <a name="arrays"></a>Arrays
 
-Ein [***Array***](../programming-guide/arrays/index.md) ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird. Die in einem Array enthaltenen Variablen, die auch als ***Elemente*** des Arrays bezeichnet werden, weisen alle denselben Typ auf. Dieser Typ wird als ***Elementtyp*** des Arrays bezeichnet.
+Ein [***Array** _](../programming-guide/arrays/index.md) ist eine Datenstruktur, die eine Anzahl von Variablen enthält, auf die über berechnete Indizes zugegriffen wird. Die in einem Array enthaltenen Variablen, die auch als _*_Elemente_*_ des Arrays bezeichnet werden, weisen alle denselben Typ auf. Dieser Typ wird als _*_Elementtyp_*_ des Arrays bezeichnet.
 
-Arraytypen sind Verweistypen, und die Deklaration einer Arrayvariablen reserviert Speicher für einen Verweis auf eine Arrayinstanz. Die tatsächlichen Arrayinstanzen werden unter Verwendung des `new`-Operators zur Laufzeit dynamisch erstellt. Der `new`-Vorgang legt die ***Länge*** der neuen Arrayinstanz fest, die dann für die Lebensdauer der Instanz beibehalten wird. Die Indizes der Arrayelemente reichen von `0` bis `Length - 1`. Der `new`-Operator initialisiert die Elemente eines Arrays automatisch mit ihren Standardwerten. Dieser lautet z.B. für alle numerischen Typen 0 und für alle Verweistypen `null`.
+Arraytypen sind Verweistypen, und die Deklaration einer Arrayvariablen reserviert Speicher für einen Verweis auf eine Arrayinstanz. Die tatsächlichen Arrayinstanzen werden unter Verwendung des `new`-Operators zur Laufzeit dynamisch erstellt. Der `new`-Vorgang legt die _*_Länge_*_ der neuen Arrayinstanz fest, die dann für die Lebensdauer der Instanz beibehalten wird. Die Indizes der Arrayelemente reichen von `0` bis `Length - 1`. Der `new`-Operator initialisiert die Elemente eines Arrays automatisch mit ihren Standardwerten. Dieser lautet z.B. für alle numerischen Typen 0 und für alle Verweistypen `null`.
 
 Im folgenden Beispiel wird ein Array aus `int`-Elementen erstellt. Anschließend wird das Array initialisiert und die Inhalte des Arrays werden gedruckt.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-Mit diesem Beispiel wird ein ***eindimensionales Array*** erstellt und verwendet. C# unterstützt auch ***mehrdimensionale Arrays***. Die Anzahl von Dimensionen eines Arraytyps, auch als ***Rang*** des Arraytyps bezeichnet, ist 1 plus die Anzahl von Kommas, die innerhalb der eckigen Klammern des Arraytyps angegeben ist. Mit dem folgenden Beispiel wird respektive ein eindimensionales, ein zweidimensionales und ein dreidimensionales Array erstellt.
+Mit diesem Beispiel wird ein _*_eindimensionales Array_*_ erstellt und verwendet. C# unterstützt auch _*_mehrdimensionale Arrays_*_. Die Anzahl von Dimensionen eines Arraytyps, auch als _*_Rang_*_ des Arraytyps bezeichnet, ist 1 plus die Anzahl von Kommas, die innerhalb der eckigen Klammern des Arraytyps angegeben ist. Mit dem folgenden Beispiel wird respektive ein eindimensionales, ein zweidimensionales und ein dreidimensionales Array erstellt.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
 Das `a1`-Array enthält 10 Elemente, das `a2`-Array umfasst 50 (10 × 5) Elemente, und das `a3`-Array enthält 100 (10 × 5 × 2) Elemente.
-Ein Array kann einen beliebigen Elementtyp verwenden, einschließlich eines Arraytyps.  Ein Array mit Elementen eines Arraytyps wird auch als ***Jagged Array*** bezeichnet, weil die Länge der Elementarrays nicht identisch sein muss. Im folgenden Beispiel wird ein Array aus `int`-Arrays zugewiesen:
+Ein Array kann einen beliebigen Elementtyp verwenden, einschließlich eines Arraytyps.  Ein Array mit Elementen eines Arraytyps wird auch als _*_Jagged Array_*_ bezeichnet, weil die Länge der Elementarrays nicht identisch sein muss. Im folgenden Beispiel wird ein Array aus `int`-Arrays zugewiesen:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArrayOfArrays":::
 
 In der ersten Zeile wird ein Array mit drei Elementen erstellt, das jeweils den Typ `int[]` und einen Anfangswert von `null` aufweist. In den nachfolgenden Zeilen werden die drei Elemente mit Verweisen auf einzelne Arrayinstanzen unterschiedlicher Länge initialisiert.
 
-Der `new`-Operator erlaubt es, die Anfangswerte der Arrayelemente unter Verwendung eines ***Arrayinitialisierers*** anzugeben, bei dem es sich um eine Liste von Ausdrücken zwischen den Trennzeichen `{` und `}` handelt. Mit dem folgenden Beispiel wird ein `int[]` mit drei Elementen zugewiesen und initialisiert.
+Der `new`-Operator erlaubt es, die Anfangswerte der Arrayelemente unter Verwendung eines _*_Arrayinitialisierers_*_ anzugeben, bei dem es sich um eine Liste von Ausdrücken zwischen den Trennzeichen `{` und `}` handelt. Mit dem folgenden Beispiel wird ein `int[]` mit drei Elementen zugewiesen und initialisiert.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeArray":::
 
-Die Länge des Arrays wird von der Anzahl der Ausdrücke zwischen `{` und `}` abgeleitet. Deklarationen lokaler Variablen und Felder können weiter verkürzt werden, sodass der Arraytyp nicht erneut aufgeführt werden muss.
+Die Länge des Arrays wird von der Anzahl der Ausdrücke zwischen `{` und `}` abgeleitet. Die Arrayinitialisierung kann weiter so verkürzt werden, dass der Arraytyp nicht erneut angegeben werden muss.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeShortened":::
 
@@ -56,19 +56,19 @@ Die `foreach`-Anweisung nutzt die <xref:System.Collections.Generic.IEnumerable%6
 
 ## <a name="string-interpolation"></a>Zeichenfolgeninterpolierung
 
-Die [***Zeichenfolgeninterpolation***](../language-reference/tokens/interpolated.md) von C# ermöglicht Ihnen das Formatieren von Zeichenfolgen durch Definieren von Ausdrücken, deren Ergebnisse in eine Formatzeichenfolge platziert werden. Im folgenden Beispiel wird die Temperatur für einen jeweiligen Tag aus Wetterdaten ausgegeben:
+Die [_*_Zeichenfolgeninterpolation_*_](../language-reference/tokens/interpolated.md) von C# ermöglicht Ihnen das Formatieren von Zeichenfolgen durch Definieren von Ausdrücken, deren Ergebnisse in eine Formatzeichenfolge platziert werden. Im folgenden Beispiel wird die Temperatur für einen jeweiligen Tag aus Wetterdaten ausgegeben:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Eine interpolierte Zeichenfolge wird mithilfe des `$`-Tokens deklariert. Die Zeichenfolgeninterpolation wertet die Ausdrücke zwischen `{` und `}` aus, konvertiert das Ergebnis in `string` und ersetzt den Text zwischen den Klammern durch das Zeichenfolgenergebnis des Ausdrucks. Mit `:` im ersten Ausdruck gibt `{weatherData.Date:MM-DD-YYYY}` die *Formatzeichenfolge* an. Im obigen Beispiel wird festgelegt, dass das Datum im Format „MM-TT-JJJJ“ ausgegeben werden soll.
+Eine interpolierte Zeichenfolge wird mithilfe des `$`-Tokens deklariert. Die Zeichenfolgeninterpolation wertet die Ausdrücke zwischen `{` und `}` aus, konvertiert das Ergebnis in `string` und ersetzt den Text zwischen den Klammern durch das Zeichenfolgenergebnis des Ausdrucks. Mit `:` im ersten Ausdruck gibt `{weatherData.Date:MM-DD-YYYY}` die _Formatzeichenfolge* an. Im obigen Beispiel wird festgelegt, dass das Datum im Format „MM-TT-JJJJ“ ausgegeben werden soll.
 
 ## <a name="pattern-matching"></a>Musterabgleich
 
-Die C#-Sprache stellt [***Musterabgleichsausdrücke***](../pattern-matching.md) bereit, um den Zustand eines Objekts abzufragen und Code auf Grundlage dieses Zustands auszuführen. Sie können Typen und Werte von Eigenschaften und Feldern untersuchen, um zu bestimmen, welche Aktion ausgeführt werden soll. Der `switch`-Ausdruck ist der primäre Ausdruck für den Musterabgleich.
+Die C#-Sprache stellt [***Musterabgleichsausdrücke** _](../pattern-matching.md) bereit, um den Zustand eines Objekts abzufragen und Code auf Grundlage dieses Zustands auszuführen. Sie können Typen und Werte von Eigenschaften und Feldern untersuchen, um zu bestimmen, welche Aktion ausgeführt werden soll. Der `switch`-Ausdruck ist der primäre Ausdruck für den Musterabgleich.
 
 ## <a name="delegates-and-lambda-expressions"></a>Delegate und Lambdaausdrücke
 
-Ein [***Delegattyp***](../delegates-overview.md) stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegaten ähneln konzeptionell Funktionszeigern, die es in einigen anderen Sprachen gibt. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert und typsicher.
+Ein [_*_Delegattyp_*_](../delegates-overview.md) stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegaten ähneln konzeptionell Funktionszeigern, die es in einigen anderen Sprachen gibt. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert und typsicher.
 
 Im folgenden Beispiel wird ein Delegattyp namens `Function` deklariert und verwendet.
 
@@ -98,7 +98,7 @@ In diesem kleinen Beispiel werden die wichtigsten Features für die asynchrone P
 
 ## <a name="attributes"></a>Attributes
 
-Typen, Member und andere Entitäten in einem C#-Programm unterstützen Modifizierer, die bestimmte Aspekte ihres Verhaltens steuern. Der Zugriff auf eine Methode wird beispielsweise mithilfe der Modifizierer `public`, `protected`, `internal` und `private` kontrolliert. C# generalisiert diese Funktionalität, indem benutzerdefinierte Typen deklarativer Informationen an eine Programmentität angefügt und zur Laufzeit abgerufen werden können. Programme geben diese zusätzlichen deklarativen Informationen durch das Definieren und Verwenden von [***Attributen***](../programming-guide/concepts/attributes/index.md) an.
+Typen, Member und andere Entitäten in einem C#-Programm unterstützen Modifizierer, die bestimmte Aspekte ihres Verhaltens steuern. Der Zugriff auf eine Methode wird beispielsweise mithilfe der Modifizierer `public`, `protected`, `internal` und `private` kontrolliert. C# generalisiert diese Funktionalität, indem benutzerdefinierte Typen deklarativer Informationen an eine Programmentität angefügt und zur Laufzeit abgerufen werden können. Programme geben diese zusätzlichen deklarativen Informationen durch das Definieren und Verwenden von [_ *_Attributen_**](../programming-guide/concepts/attributes/index.md) an.
 
 Im folgenden Beispiel wird ein `HelpAttribute`-Attribut deklariert, dass in Programmentitäten platziert werden kann, um Links zur zugehörigen Dokumentation bereitzustellen.
 

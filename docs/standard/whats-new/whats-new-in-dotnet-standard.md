@@ -4,12 +4,12 @@ description: In diesem Artikel werden neue Features und Verbesserungen zusammeng
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 28d6a3546e08bbc3a7d4a26f08ba9cc5e16a901b
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 419988901923b890aaf0a540d155775214e62c52
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438207"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282099"
 ---
 # <a name="whats-new-in-net-standard"></a>Neuerungen in .NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "80438207"
 
 ### <a name="a-vastly-expanded-set-of-apis"></a>Ein umfassend erweiterter Satz von APIs
 
-Bis einschließlich Version 1.6 enthielt .NET Standard eine vergleichsweise kleine Teilmenge von APIs. Nicht enthalten war eine Vielzahl von APIs, die im Allgemeinen in .NET Framework oder Xamarin verwendet wurden. Dies verkompliziert die Entwicklung, da Entwickler geeigneten Ersatz für vertraute APIs finden müssen, wenn sie Anwendungen und Bibliotheken für verschiedene .NET-Implementierungen erstellen. In .NET Standard 2.0 besteht diese Einschränkung nicht mehr, da über 20.000 mehr APIs hinzugefügt wurden, als in .NET Standard 1.6, der vorherigen Version, verfügbar waren. Eine Liste der APIs, die zu .NET Standard 2.0 hinzugefügt wurden, finden Sie unter [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Bis einschließlich Version 1.6 enthielt .NET Standard eine vergleichsweise kleine Teilmenge von APIs. Nicht enthalten war eine Vielzahl von APIs, die häufig in .NET Framework oder Xamarin verwendet wurden. Dies verkompliziert die Entwicklung, da Entwickler geeigneten Ersatz für vertraute APIs finden müssen, wenn sie Anwendungen und Bibliotheken für verschiedene .NET-Implementierungen erstellen. In .NET Standard 2.0 besteht diese Einschränkung nicht mehr, da über 20.000 mehr APIs hinzugefügt wurden, als in .NET Standard 1.6, der vorherigen Version, verfügbar waren. Eine Liste der APIs, die zu .NET Standard 2.0 hinzugefügt wurden, finden Sie unter [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 Im Folgenden finden Sie einige der neuen Features für den <xref:System>-Namespace im .NET Standard 2.0:
 
@@ -53,7 +53,7 @@ Im Folgenden finden Sie einige der neuen Features für den <xref:System>-Namespa
 
 ### <a name="support-for-net-framework-libraries"></a>Unterstützung für .NET Framework-Bibliotheken
 
-Die überwiegende Mehrheit von Bibliotheken wird eher für .NET Framework als für .NET Standard entworfen. Die meisten Aufrufe in diesen Bibliotheken gelten jedoch für APIs, die in .NET Standard 2.0 enthalten sind. Ab .NET Standard 2.0 können Sie mithilfe eines [Kompatibilitätsshims](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) von einer .NET Standard-Bibliothek auf .NET Framework-Bibliotheken zugreifen. Diese Kompatibilitätsebene ist transparent für Entwickler – Sie müssen keine besondere Maßnahme ergreifen, um von .NET Framework-Bibliotheken zu profitieren.
+Viele Bibliotheken haben .NET Framework statt .NET Standard als Ziel. Die meisten Aufrufe in diesen Bibliotheken gelten jedoch für APIs, die in .NET Standard 2.0 enthalten sind. Ab .NET Standard 2.0 können Sie mithilfe eines [Kompatibilitätsshims](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification) von einer .NET Standard-Bibliothek auf .NET Framework-Bibliotheken zugreifen. Diese Kompatibilitätsebene ist transparent für Entwickler – Sie müssen keine besondere Maßnahme ergreifen, um von .NET Framework-Bibliotheken zu profitieren.
 
 Die einzige Anforderung besteht darin, dass die von der .NET Framework-Klassenbibliothek aufgerufenen APIs in .NET Standard 2.0 enthalten sein müssen.
 

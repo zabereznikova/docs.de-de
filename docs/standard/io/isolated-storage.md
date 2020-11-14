@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188561"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282029"
 ---
 # <a name="isolated-storage"></a>Isolierter Speicher
 
@@ -37,7 +37,7 @@ Isolierter Speicher ist ein Mechanismus zur Datenspeicherung für Desktop-Apps, 
 
 ## <a name="data-compartments-and-stores"></a>Datendepots und -speicher
 
-Wenn eine Anwendung Daten in einer Datei speichert, müssen Dateiname und Speicherplatz sorgfältig ausgewählt werden, um weitestgehend zu verhindern, dass der Speicherplatz einer anderen Anwendung zugänglich und damit anfällig für Datenbeschädigungen wird. Ohne die Verwendung eines Standardsystems zur Behebung solcher Probleme kann die Entwicklung von Ad-hoc-Techniken zur Minimierung von Speicherkonflikten sehr komplex sein und zu unzuverlässigen Ergebnissen führen.
+Wenn eine Anwendung Daten in einer Datei speichert, müssen Dateiname und Speicherort sorgfältig ausgewählt werden, um weitestgehend zu verhindern, dass der Speicherort einer anderen Anwendung zugänglich und damit anfällig für Datenbeschädigungen wird. Ohne die Verwendung eines Standardsystems zur Behebung solcher Probleme können Improvisationstechniken zur Minimierung von Speicherkonflikten sehr komplex sein und zu unzuverlässigen Ergebnissen führen.
 
 Bei der isolierten Speicherung werden die Daten immer nach Benutzer oder nach Assembly isoliert. Informationen wie der Ursprung oder der starke Name der Assembly bestimmen die Identität der Assembly. Daten können auch nach Anwendungsdomäne isoliert werden, wobei ähnliche Informationen verwendet werden.
 
@@ -138,13 +138,14 @@ Gehen wir jetzt von einem System mit den beiden registrierten Benutzern _Mallory
 
 Wenn Mallory Bob angreifen möchte, könnte sie Daten in den computerweiten Speicherort schreiben und dann versuchen, Bob zu Lesevorgängen in diesem computerweiten Speicher zu bringen. Wenn Bob eine App ausführt, die aus diesem Speicher liest, wird die App mit den dort von Mallory platzierten Daten und im Rahmen von Bobs Benutzerkonto ausgeführt. Im restlichen Teil dieses Dokuments werden verschiedene Angriffsvektoren und die Schritte beschrieben, mit denen das Risiko für Apps durch diese Angriffe minimiert werden kann.
 
-__Hinweis__ : Mallory benötigt Folgendes, damit ein solcher Angriff stattfinden kann:
-
-* Benutzerkonto auf dem Computer
-* Möglichkeit, eine Datei in einem bekannten Speicherort im Dateisystem zu platzieren
-* Gewissheit, dass Bob irgendwann eine App ausführt, die versucht, diese Daten zu lesen
-
-Dies sind nicht die Bedrohungsvektoren, die für Standarddesktopumgebungen mit einem Benutzer wie beispielsweise private PCs oder Arbeitsstationen von Einmannbetrieben gelten.
+> [!NOTE]
+> Mallory benötigt Folgendes, damit ein solcher Angriff stattfinden kann:
+>
+> * Benutzerkonto auf dem Computer
+> * Möglichkeit, eine Datei in einem bekannten Speicherort im Dateisystem zu platzieren
+> * Gewissheit, dass Bob irgendwann eine App ausführt, die versucht, diese Daten zu lesen
+>
+> Dies sind nicht die Bedrohungsvektoren, die für Standarddesktopumgebungen mit einem Benutzer wie beispielsweise private PCs oder Arbeitsstationen von Einmannbetrieben gelten.
 
 #### <a name="elevation-of-privilege"></a>Rechteerweiterungen
 
@@ -221,7 +222,7 @@ Isolierte Speicherung kann in vielen Situationen hilfreich sein, zum Beispiel in
 
 - Roaming. Anwendungen können isolierte Speicherplätze auch mit Roamingbenutzerprofilen verwenden. Dadurch können die isolierten Speicher eines Benutzers wie die Profile von überall zugänglich sein.
 
-Sie sollten isolierten Speicher in den folgenden Situationen nicht verwenden:
+Verwenden Sie in den folgenden Situationen keinen isolierten Speicher:
 
 - Zum Speichern hochsensibler Daten wie unverschlüsselte Schlüssel oder Kennwörter, da isolierte Speicherplätze nicht vor besonders vertrauenswürdigem Code, nicht verwaltetem Code bzw. vor vertrauenswürdigen Benutzern des Computers geschützt sind.
 

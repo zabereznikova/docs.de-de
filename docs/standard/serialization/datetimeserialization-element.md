@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289641"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281769"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization>-Element
 Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.  
@@ -47,9 +47,10 @@ Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.
 |system.xml.serialization|Das Element der obersten Ebene zur Steuerung der XML-Serialisierung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn in den Versionen 1.0, 1.1, 2.0 und höheren Versionen von .NET Framework diese Eigenschaft auf **Local** festgelegt ist, werden <xref:System.DateTime>-Objekte immer entsprechend der Ortszeit formatiert. Das heißt, Ortszeitzoneninformationen sind in den serialisierten Daten immer enthalten. Legen Sie diese Eigenschaft auf **Local** fest, um die Kompatibilität mit früheren Versionen von .NET Framework sicherzustellen.  
+
+Wenn diese Eigenschaft auf **Local** festgelegt ist, werden <xref:System.DateTime>-Objekte stets mit der Ortszeit formatiert. Das heißt, Ortszeitzoneninformationen sind in den serialisierten Daten immer enthalten.
   
- Wenn diese Eigenschaft in .NET Framework Version 2.0 und höher auf **Roundtrip** festgelegt ist, werden <xref:System.DateTime>-Objekte überprüft, um zu ermitteln, ob sie entsprechend einer lokalen Zeitzone, der UTC-Zone oder einer unbestimmten Zeitzone formatiert sind. Die <xref:System.DateTime>-Objekte werden dann so serialisiert, dass diese Informationen beibehalten werden. Dies ist das Standardverhalten, das für alle neuen Anwendungen empfohlen wird, die nicht mit älteren Versionen des Framework kommunizieren.  
+Wenn diese Eigenschaft auf **Roundtrip** festgelegt ist, werden <xref:System.DateTime>-Objekte überprüft, um zu bestimmen, ob sie sich in der lokalen, UTC- oder einer nicht angegebenen Zeitzone befinden. Die <xref:System.DateTime>-Objekte werden dann so serialisiert, dass diese Informationen beibehalten werden. Dies ist das Standardverhalten, das für alle neuen Anwendungen empfohlen wird, die nicht mit älteren Versionen des Framework kommunizieren.  
   
 ## <a name="see-also"></a>Siehe auch
 

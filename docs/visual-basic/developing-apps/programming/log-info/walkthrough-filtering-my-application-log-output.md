@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: aa63e7d23641ad71b135f15236e29399a535784f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e77a56b2be33555bc02157c8e643ac655b083bc3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398252"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282211"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von "My.Application.Log" (Visual Basic)
 
@@ -82,7 +82,7 @@ In dieser Tabelle wird die im vorherigen Beispiel gezeigte Protokollausgabe erkl
 
     1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.
 
-    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei** aus.
 
     3. Klicken Sie auf **Hinzufügen**.
 
@@ -138,7 +138,7 @@ In dieser Tabelle wird die im vorherigen Beispiel gezeigte Protokollausgabe erkl
 9. Ändern Sie den Wert des `value`-Attributs zurück zu „Information“.
 
     > [!NOTE]
-    > Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Hiermit wird nicht geändert, wie sich die .NET Framework-Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> verhalten.
+    > Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der .NET-Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> wird dadurch nicht verändert.
 
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für alle „My.Application.Log“-Listener
 
@@ -158,7 +158,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie eine Filterung für einen neuen
 
     1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.
 
-    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei** aus.
 
     3. Klicken Sie auf **Hinzufügen**.
 

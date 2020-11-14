@@ -2,12 +2,12 @@
 title: Installieren der lokalisierten IntelliSense-Dateien
 description: Erfahren Sie, wie Sie Ihren Entwicklungscomputer für die Verwendung lokalisierter IntelliSense-Dateien für .NET 5-Projekte (einschließlich .NET-Core) und höher in Visual Studio einrichten.
 ms.date: 11/06/2020
-ms.openlocfilehash: 121439199f0de6d29a18ea55031976680fc1f833
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 45eeae12ca79179cacb3d48fca28118de70e0a4f
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439819"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506765"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net"></a>Installieren lokalisierter IntelliSense-Dateien für .NET
 
@@ -43,7 +43,7 @@ ms.locfileid: "94439819"
       | Windows-Desktop       | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard         | *NETStandard.Library.Ref*          |
 
-   1. Navigieren Sie zur Version, für die Sie die lokalisierte IntelliSense-Datei installieren möchten. Zum Beispiel *3.1.0*.
+   1. Navigieren Sie zur Version, für die Sie die lokalisierte IntelliSense-Datei installieren möchten. Beispielsweise *5.0.0*.
    1. Öffnen Sie den *ref* -Ordner.
    1. Öffnen Sie den Monikerordner. Zum Beispiel: *net5.0*.
 

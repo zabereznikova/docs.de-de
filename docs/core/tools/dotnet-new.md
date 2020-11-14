@@ -4,13 +4,13 @@ description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend au
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/01/2020
-ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.date: 09/04/2020
+ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526609"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400590"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -78,7 +78,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor Server-App                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly-App                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| Blazor WebAssembly-App                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core leer                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
 | ASP.NET Core-Web-App (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core-Web-App                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
@@ -394,6 +394,110 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 - **`--no-restore`**
 
   Führt während der Projekterstellung keine implizite Wiederherstellung durch.
+
+**_
+
+### <a name="blazorwasm"></a>blazorwasm
+
+- _ *`-f|--framework <FRAMEWORK>`**
+
+  Gibt das [Zielframework](../../standard/frameworks.md) an.
+
+  In der folgenden Tabelle sind die Standardwerte entsprechend der von Ihnen verwendeten SDK-Versionsnummer aufgeführt:
+
+  | SDK-Version | Standardwert   |
+  |-------------|-----------------|
+  | 5.0         | `net5.0`        |
+  | 3.1         | `netcoreapp3.1` |
+
+- **`--no-restore`**
+
+  Führt während der Projekterstellung keine implizite Wiederherstellung durch.
+
+- **`-ho|--hosted`**
+
+  Enthält einen ASP.NET Core-Host für die WebAssembly-App Blazor.
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  Der zu verwendende Authentifizierungstyp. Mögliche Werte sind:
+
+  - `None`: keine Authentifizierung (Standard)
+  - `Individual`: einzelne Authentifizierung
+  - `IndividualB2C`: einzelne Authentifizierung mit Azur AD B2C
+  - `SingleOrg`: Organisationauthentifizierung für einzelne Mandanten
+
+- **`--authority <AUTHORITY>`**
+
+  Die Autorität des OIDC-Anbieters. Mit der `Individual`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`.
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  Die Azure Active Directory B2C-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `https://aadB2CInstance.b2clogin.com/`.
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  Die ID der Anmelde- und Registrierungsrichtlinie für dieses Projekt. Mit der `IndividualB2C`-Authentifizierung verwenden
+
+- **`--aad-instance <INSTANCE>`**
+
+  Die Azure Active Directory-Instanz, mit der eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `https://login.microsoftonline.com/`.
+
+- **`--client-id <ID>`**
+
+  Die Client-ID für dieses Projekt. Wird in eigenständigen Szenarien mit der Authentifizierung `IndividualB2C`, `SingleOrg` oder `Individual` verwendet. Der Standardwert ist `33333333-3333-3333-33333333333333333`.
+
+- **`--domain <DOMAIN>`**
+
+  Die Domäne für den Verzeichnismandanten. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `qualified.domain.name`.
+
+- **`--app-id-uri <URI>`**
+
+  Der APP-ID-URI für die Server-API, die aufgerufen werden soll. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `api.id.uri`.
+
+- **`--api-client-id <ID>`**
+
+  Die Client-ID für die API, die vom Server gehostet wird. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `11111111-1111-1111-11111111111111111`.
+
+- **`-s|--default-scope <SCOPE>`**
+
+  Der API-Bereich, der vom Client angefordert werden muss, um ein Zugriffstoken bereitzustellen. Mit der `SingleOrg`- oder `IndividualB2C`-Authentifizierung verwenden Der Standardwert ist `user_impersonation`.
+
+- **`--tenant-id <ID>`**
+
+  Die Mandanten-ID des Verzeichnisses, mit dem eine Verbindung hergestellt werden soll. Mit der `SingleOrg`-Authentifizierung verwenden Der Standardwert ist `22222222-2222-2222-2222-222222222222`.
+
+- **`-r|--org-read-access`**
+
+  Erteilt der Anwendung Lesezugriff auf das Verzeichnis. Gilt nur für die `SingleOrg`-Authentifizierung.
+
+- **`--exclude-launch-settings`**
+
+  Schließt *launchSettings.json* aus der generierten Vorlage aus.
+
+- **`-p|--pwa`**
+
+  Erzeugt eine progressive Webanwendung (PWA), die Installation und Offlinenutzung unterstützt.
+
+- **`--no-https`**
+
+  Deaktiviert HTTPS. Diese Option gilt nur, wenn `Individual`, `IndividualB2C` oder `SingleOrg` für `--auth` nicht verwendet werden.
+
+- **`-uld|--use-local-db`**
+
+  Gibt an, dass LocalDB statt SQLite verwendet werden soll. Gilt nur für die `Individual`- oder `IndividualB2C`-Authentifizierung.
+
+- **`--called-api-url <URL>`**
+
+  URL der API, die von der Web-App aufgerufen werden soll. Gilt nur für die Authentifizierung `SingleOrg` oder `IndividualB2C` ohne Angabe eines ASP.NET Core-Hosts. Standardwert: `https://graph.microsoft.com/v1.0/me`.
+
+- **`--calls-graph`**
+
+  Gibt an, ob die Web-App Microsoft Graph aufruft. Gilt nur für die `SingleOrg`-Authentifizierung.
+
+- **`--called-api-scopes <SCOPES>`**
+
+  Bereiche, die angefordert werden müssen, um die API aus der Web-App aufzurufen. Gilt nur für die Authentifizierung `SingleOrg` oder `IndividualB2C` ohne Angabe eines ASP.NET Core-Hosts. Der Standardwert ist `user.read`.
 
 **_
 

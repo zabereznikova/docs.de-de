@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223494"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281648"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -47,11 +47,11 @@ Wenn Sie Tests für Ihren Code schreiben, wird dieser automatisch entkoppelt, da
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Merkmale eines guten Komponententests
 
-- **Schnelligkeit** . Es ist nicht ungewöhnlich, dass ausgereifte Projekte Tausende von Komponententests enthalten. Die Ausführung von Komponententests sollte sehr wenig Zeit in Anspruch nehmen. Sie sollten innerhalb von Millisekunden abgeschlossen sein.
-- **Unabhängigkeit** . Komponententest sind eigenständig, sie können isoliert ausgeführt werden und verfügen über keine Abhängigkeiten auf externen Faktoren, wie etwa einem Dateisystem oder einer Datenbank.
-- **Wiederholbarkeit** . Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
-- **Selbstprüfung** . Der Test sollte in der Lage sein, automatisch und ohne menschliches Eingreifen zu erkennen, ob er erfolgreich war oder fehlgeschlagen ist.
-- **Verhältnismäßigkeit** . Ein Komponententest darf verglichen mit dem zu testenden Code nicht unverhältnismäßig lang für das Schreiben benötigen. Wenn Sie bemerken, dass der Codetest im Vergleich zum Schreiben des Codes viel Zeit in Anspruch nimmt, erwägen Sie einen Entwurf, der besser getestet werden kann.
+- **Schnelligkeit**. Es ist nicht ungewöhnlich, dass ausgereifte Projekte Tausende von Komponententests enthalten. Die Ausführung von Komponententests sollte sehr wenig Zeit in Anspruch nehmen. Sie sollten innerhalb von Millisekunden abgeschlossen sein.
+- **Unabhängigkeit**. Komponententest sind eigenständig, sie können isoliert ausgeführt werden und verfügen über keine Abhängigkeiten auf externen Faktoren, wie etwa einem Dateisystem oder einer Datenbank.
+- **Wiederholbarkeit**. Das Ausführen eines Komponententests sollte immer zu den gleichen Ergebnissen führen. Wenn Sie zwischen den Ausführungen nichts ändern, sollte sich das Ergebnis auch nicht ändern.
+- **Selbstprüfung**. Der Test sollte in der Lage sein, automatisch und ohne menschliches Eingreifen zu erkennen, ob er erfolgreich war oder fehlgeschlagen ist.
+- **Verhältnismäßigkeit**. Ein Komponententest darf verglichen mit dem zu testenden Code nicht unverhältnismäßig lang für das Schreiben benötigen. Wenn Sie bemerken, dass der Codetest im Vergleich zum Schreiben des Codes viel Zeit in Anspruch nimmt, erwägen Sie einen Entwurf, der besser getestet werden kann.
 
 ## <a name="code-coverage"></a>Codeabdeckung
 
@@ -188,7 +188,7 @@ Das Benennen von Variablen in Komponententests ist genauso wichtig, wenn nicht n
 #### <a name="why"></a>Warum?
 
 - Durch magische Zeichenfolgen sieht es der Leser des Tests womöglich nicht als notwendig an, den Produktionscode zu überprüfen, um herauszufinden, was den Wert besonders macht.
-- Sie stellen explizit dar, was Sie *beweisen* möchten und nicht, was Sie versuchen zu *erreichen* .
+- Sie stellen explizit dar, was Sie *beweisen* möchten und nicht, was Sie versuchen zu *erreichen*.
 
 Magische Zeichenfolgen können den Leser Ihrer Tests verwirren. Wenn eine Zeichenfolge nicht wie gewohnt aussieht, fragt sich der Leser womöglich, warum ein bestimmter Wert für einen Parameter oder Rückgabewert ausgewählt wurde. Dadurch sieht sich der Leser möglicherweise die Implementierungsdetails genauer an und konzentriert sich so nicht mehr auf den Test.
 
@@ -227,7 +227,7 @@ Wenn Sie Logik in Ihre Testsammlung einfügen, erhöht sich die Wahrscheinlichke
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Hilfsmethoden statt SetUp und TearDown
 
-Wenn Sie für Ihre Test ein ähnliches Objekt oder einen ähnlichen Zustand benötigen, nutzen Sie anstatt der „Setup“- und „Teardown“-Attribute (falls vorhanden) lieber eine Hilfsmethode.
+Wenn Sie für Ihre Test ein ähnliches Objekt oder einen ähnlichen Zustand benötigen, nutzen Sie anstelle der Attribute `Setup` und `Teardown` (falls vorhanden) lieber eine Hilfsmethode.
 
 #### <a name="why"></a>Warum?
 

@@ -1,21 +1,23 @@
 ---
 title: Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung – .NET
+description: Erfahren Sie, wie Sie benutzerdefinierte Konverter für JSON-Serialisierungsklassen erstellen, die im System.Text.Json-Namespace bereitgestellt werden.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811066"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329806"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung (Marshallen) in .NET
 
@@ -28,10 +30,20 @@ Ein *Konverter* ist eine Klasse, die ein Objekt oder einen Wert in und aus JSON 
 
 Sie können auch benutzerdefinierte Konverter schreiben, um `System.Text.Json` mit Funktionen anzupassen oder zu erweitern, die nicht im aktuellen Release enthalten sind. Folgende Szenarien werden später in diesem Artikel abgedeckt:
 
+::: zone pivot="dotnet-5-0"
+
+* [Deserialisieren abgeleiteter Typen in Objekteigenschaften](#deserialize-inferred-types-to-object-properties).
+* [Unterstützung polymorpher Deserialisierung](#support-polymorphic-deserialization).
+* [Unterstützung von Roundtrips für Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [Deserialisieren abgeleiteter Typen in Objekteigenschaften](#deserialize-inferred-types-to-object-properties).
 * [Unterstützung für Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind](#support-dictionary-with-non-string-key).
 * [Unterstützung polymorpher Deserialisierung](#support-polymorphic-deserialization).
 * [Unterstützung von Roundtrips für Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>Benutzerdefinierte Konvertermuster
 
@@ -177,10 +189,20 @@ Ein integrierter Konverter wird nur ausgewählt, wenn kein anwendbarer benutzerd
 
 In den folgenden Abschnitten werden Konverterbeispiele bereitgestellt, in denen einige gängige Szenarien behandelt werden, die von integrierten Funktionen nicht verarbeitet werden.
 
-* [Deserialisieren abgeleiteter Typen in Objekteigenschaften](#deserialize-inferred-types-to-object-properties)
-* [Unterstützung für Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind](#support-dictionary-with-non-string-key)
-* [Unterstützung polymorpher Deserialisierung](#support-polymorphic-deserialization)
+::: zone pivot="dotnet-5-0"
+
+* [Deserialisieren abgeleiteter Typen in Objekteigenschaften](#deserialize-inferred-types-to-object-properties).
+* [Unterstützung polymorpher Deserialisierung](#support-polymorphic-deserialization).
 * [Unterstützung von Roundtrips für Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [Deserialisieren abgeleiteter Typen in Objekteigenschaften](#deserialize-inferred-types-to-object-properties).
+* [Unterstützung für Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind](#support-dictionary-with-non-string-key).
+* [Unterstützung polymorpher Deserialisierung](#support-polymorphic-deserialization).
+* [Unterstützung von Roundtrips für Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Deserialisieren abgeleiteter Typen in Objekteigenschaften
 
@@ -221,6 +243,8 @@ Ohne den benutzerdefinierten Konverter fügt die Deserialisierung eine `JsonElem
 
 Der Ordner [unit tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) (Komponententests) im `System.Text.Json.Serialization`-Namespace enthält weitere Beispiele für benutzerdefinierte Konverter, die die Deserialisierung in `object`-Eigenschaften verarbeiten.
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>Unterstützung für Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind
 
 Die integrierte Unterstützung für Wörterbuchsammlungen ist für `Dictionary<string, TValue>`. Das heißt, der Schlüssel muss eine Zeichenfolge sein. Um ein Wörterbuch mit einem Schlüssel vom Typ „integer“ (Ganzzahl) oder einem anderen Typ zu unterstützen, ist ein benutzerdefinierter Konverter erforderlich.
@@ -252,6 +276,7 @@ Die JSON-Ausgabe der Serialisierung sieht wie im folgenden Beispiel aus:
 ```
 
 Der Ordner [unit tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) (Komponententests) im `System.Text.Json.Serialization`-Namespace enthält weitere Beispiele für benutzerdefinierte Konverter, die Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind, verarbeiten.
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>Unterstützung polymorpher Deserialisierung
 
@@ -288,7 +313,7 @@ Das JSON kann mit demselben Konverter deserialisiert werde, mit dem es auch seri
 
 Mit dem Konvertercode im vorherigen Beispiel wird jede Eigenschaft manuell gelesen und geschrieben. Eine Alternative besteht darin, `Deserialize` oder `Serialize` aufzurufen, um einen Teil der Arbeit zu erledigen. Ein Beispiel hierzu finden Sie in [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/59744873/12509023).
 
-### <a name="support-round-trip-for-stackt"></a>Unterstützung von Roundtrips für Stack\<T>.
+### <a name="support-round-trip-for-stackt"></a>Unterstützung von Roundtrips für Stack\<T>
 
 Wenn Sie eine JSON-Zeichenfolge in ein <xref:System.Collections.Generic.Stack%601>-Objekt deserialisieren und dieses Objekt anschließend serialisieren, ist die Reihenfolge des Stapelinhalts umgekehrt. Dieses Verhalten gilt für die folgenden Typen und Schnittstellen sowie für benutzerdefinierte Typen, die von ihnen abgeleitet werden:
 
@@ -307,6 +332,29 @@ Der folgende Code zeigt einen benutzerdefinierten Konverter, der Roundtrips zu u
 Der folgende Code registriert den Konverter:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>Behandeln von NULL-Werten
+
+Standardmäßig verarbeitet das Serialisierungsmodul NULL-Werte wie folgt:
+
+* Für Verweis- und `Nullable<T>`-Typen:
+
+  * `null` wird bei der Serialisierung nicht an benutzerdefinierte Konverter übergeben.
+  * `JsonTokenType.Null` wird bei der Deserialisierung nicht an benutzerdefinierte Konverter übergeben.
+  * Bei der Deserialisierung wird eine `null`-Instanz zurückgegeben.
+  * `null` wird bei der Serialisierung direkt mit dem Writer geschrieben.
+
+* Für nicht auf NULL festlegbare Werttypen:
+
+  * `JsonTokenType.Null` wird bei der Deserialisierung an benutzerdefinierte Konverter übergeben. (Wenn kein benutzerdefinierter Konverter verfügbar ist, wird vom internen Konverter für den Typ die Ausnahme `JsonException` ausgelöst.)
+
+Dieses Verhalten für die Behandlung von NULL-Werten dient hauptsächlich zum Optimieren der Leistung, indem ein zusätzlicher Rückruf an den Konverter übersprungen wird. Darüber hinaus wird vermieden, dass Konverter für auf NULL festlegbare Typen gezwungen werden, am Anfang jeder Überschreibung der Methoden `Read` und `Write` nach `null` zu suchen.
+
+::: zone pivot="dotnet-5-0"
+Um einem benutzerdefinierten Konverter zu ermöglichen, `null` für einen Verweis- oder Werttyp zu verarbeiten, überschreiben Sie <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> so, dass `true` zurückgegeben wird, wie im folgenden Beispiel gezeigt:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Weitere Beispiele für benutzerdefinierte Konverter
 

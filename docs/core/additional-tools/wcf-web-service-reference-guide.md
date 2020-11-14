@@ -4,16 +4,16 @@ description: Übersicht zum Microsoft WCF Web Service Reference Provider-Tool, �
 author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
-ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f7b1831a956553dbef26f58f4f257c2f3914ede
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715682"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400603"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Verwenden des Provider-Tools für den WCF-Webdienstverweis
 
-Im Laufe der Jahre konnten viele Visual Studio-Entwickler von dem [**Dienstverweis hinzufügen**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)-Tool profitieren und ihre Produktivität steigern, wenn sie für ihre .NET Framework-Projekte Zugriff auf Webdienste benötigten.  Bei dem **WCF Web Service Reference**-Tool handelt es sich um eine mit Visual Studio verknüpfte Diensterweiterung, die Funktionen wie „Dienstverweis hinzufügen“ für .NET Core und ASP.NET Core-Projekte bereitstellt. Dieses Tool ruft Metadaten von einem Webdienst in der aktuellen Projektmappe, von einer Netzwerkadresse oder aus einer WSDL-Datei ab und generiert eine mit .NET Core kompatible Quelldatei. Diese enthält den Proxycode des WCF-Clients (Windows Communication Foundation), den Sie verwenden können, um auf einen Webdienst zuzugreifen.
+Im Laufe der Jahre konnten viele Visual Studio-Entwickler von dem [**Dienstverweis hinzufügen**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)-Tool profitieren und ihre Produktivität steigern, wenn sie für ihre .NET Framework-Projekte Zugriff auf Webdienste benötigten.  Bei dem **WCF Web Service Reference** -Tool handelt es sich um eine mit Visual Studio verknüpfte Diensterweiterung, die Funktionen wie „Dienstverweis hinzufügen“ für .NET Core und ASP.NET Core-Projekte bereitstellt. Dieses Tool ruft Metadaten von einem Webdienst in der aktuellen Projektmappe, von einer Netzwerkadresse oder aus einer WSDL-Datei ab und generiert eine mit .NET Core kompatible Quelldatei. Diese enthält den Proxycode des WCF-Clients (Windows Communication Foundation), den Sie verwenden können, um auf einen Webdienst zuzugreifen.
 
 > [!IMPORTANT]
 > Sie sollten nur auf Dienste aus einer vertrauenswürdigen Quelle verweisen. Wenn Sie Verweise aus nicht vertrauenswürdigen Quellen hinzufügen, hat das möglicherweise Auswirkungen auf die Sicherheit.
@@ -47,13 +47,13 @@ In diesem Artikel wird die Projektvorlage **ASP.NET Core-Webanwendung** als Beis
 
     3a. Es sind einige Suchoptionen für den Dienst im Assistenten zum **Konfigurieren von WCF-Webdienstverweisen** verfügbar:
 
-     * Klicken Sie auf die Schaltfläche **Ermitteln**, um nach Diensten zu suchen, die in der aktuellen Projektmappe definiert sind.
-     * Geben Sie eine Dienst-URL im Feld **Adresse** ein, und klicken Sie auf die Schaltfläche **Gehe zu**, um nach Diensten zu suchen, die an einer bestimmten Adresse gehostet werden.
-     * Klicken Sie auf die Schaltfläche **Durchsuchen**, um eine WSDL-Datei auszuwählen, die die Metadateninformationen des Webdiensts enthält.
+     * Klicken Sie auf die Schaltfläche **Ermitteln** , um nach Diensten zu suchen, die in der aktuellen Projektmappe definiert sind.
+     * Geben Sie eine Dienst-URL im Feld **Adresse** ein, und klicken Sie auf die Schaltfläche **Gehe zu** , um nach Diensten zu suchen, die an einer bestimmten Adresse gehostet werden.
+     * Klicken Sie auf die Schaltfläche **Durchsuchen** , um eine WSDL-Datei auszuwählen, die die Metadateninformationen des Webdiensts enthält.
 
     3b. Wählen Sie den Dienst aus der Liste der Suchergebnisse im Feld **Dienste** aus. Geben Sie ggf. den Namespace für den generierten Code im entsprechenden Textfeld **Namespace** ein.
 
-    3c. Klicken Sie auf die Schaltfläche **Weiter**, um die **Datentypoptionen** und die Seiten **Clientoptionen** zu öffnen. Sie können stattdessen auch auf die Schaltfläche **Fertig stellen** klicken, um die Standardoptionen zu verwenden.
+    3c. Klicken Sie auf die Schaltfläche **Weiter** , um die **Datentypoptionen** und die Seiten **Clientoptionen** zu öffnen. Sie können stattdessen auch auf die Schaltfläche **Fertig stellen** klicken, um die Standardoptionen zu verwenden.
 
 4. Mithilfe des Formulars **Datentypoptionen** können Sie die generierten Einstellungen für die Dienstverweise einschränken:
 
@@ -64,7 +64,7 @@ In diesem Artikel wird die Projektvorlage **ASP.NET Core-Webanwendung** als Beis
 
     Es kann zu Verzögerungen kommen, während die Typinformationen geladen werden. Dies ist von der Anzahl von Projektabhängigkeiten und anderen die Systemleistung betreffenden Faktoren abhängig. Die Schaltfläche **Fertig stellen** wird beim Laden deaktiviert. Dies ist nicht der Fall, wenn das Kontrollkästchen **Typen in Assemblys, auf die verwiesen wird, wiederverwenden** deaktiviert ist.
 
-5. Klicken Sie auf **Fertig stellen**, wenn Sie so weit sind.
+5. Klicken Sie auf **Fertig stellen** , wenn Sie so weit sind.
 
 Das Tool führt folgende Schritte aus, während es den Fortschritt anzeigt:
 
@@ -84,7 +84,7 @@ Nachdem die Prozesse abgeschlossen sind, können Sie eine Instanz des generierte
 
 ## <a name="feedback--questions"></a>Feedback und Fragen
 
-Wenn Sie Fragen haben oder uns Feedback geben möchten, können Sie dies über die [Entwicklercommunity](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) mithilfe des Tools [Problem melden](https://developercommunity.visualstudio.com/) tun.
+Wenn Sie uns Feedback zum Produkt geben möchten, können Sie dies in der [Entwicklercommunity](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) mithilfe des Tools [Problem melden](https://aka.ms/feedback/report?space=61) tun.
 
 ## <a name="release-notes"></a>Anmerkungen zu diesem Release
 

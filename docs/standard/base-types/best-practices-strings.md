@@ -1,6 +1,6 @@
 ---
-title: Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
-description: Erfahren Sie, wie Sie Zeichenfolgen effektiv in .NET-Anwendungen verwenden können.
+title: Bewährte Methoden zum Vergleichen von Zeichenfolgen in .NET
+description: Erfahren Sie, wie Sie Zeichenfolgen in .NET-Anwendungen effektiv vergleichen können.
 ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: ed85d04ffbee0493745c4a5ef63313571b44628b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 167b9b865fb0f674559e2b87db3ed4d6d5048ffe
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889100"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400825"
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET
+# <a name="best-practices-for-comparing-strings-in-net"></a>Bewährte Methoden zum Vergleichen von Zeichenfolgen in .NET
 
 .NET bietet umfangreiche Unterstützung für das Entwickeln von lokalisierten und globalisierten Anwendungen und erleichtert bei der Ausführung allgemeiner Operationen das Übernehmen von Konventionen der aktuellen oder einer anderen Kultur, beispielsweise bei der Sortierung und Anzeige von Zeichenfolgen. Das Sortieren oder Vergleichen von Zeichenfolgen stellt jedoch nicht immer eine kulturabhängige Operation dar. Beispielsweise sollten interne Zeichenfolgen von Anwendungen i. d. R. in allen Kulturen gleich behandelt werden. Wenn kulturabhängige Zeichenfolgendaten, z. B. XML-Tags, HTML-Tags, Benutzernamen, Dateipfade und Systemobjektnamen, kulturabhängig interpretiert werden, können Fehler im Anwendungscode auftreten, die Leistung kann sich verschlechtern, und in einigen Fällen kann es zu Sicherheitsproblemen kommen.
 
-In diesem Thema werden die Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen in .NET untersucht. Darüber hinaus werden Empfehlungen zum Auswählen einer entsprechenden Zeichenfolgen-Verarbeitungsmethode gegeben und weitere Informationen dazu bereitgestellt. Er wird außerdem untersucht, wie formatierte Daten, z. B. numerische Daten und Datums-/Uhrzeitdaten, für die Anzeige und Speicherung behandelt werden.
+In diesem Artikel werden die Methoden für die Sortierung, den Vergleich und die Schreibweise von Zeichenfolgen in .NET untersucht. Darüber hinaus werden Empfehlungen zum Auswählen einer entsprechenden Zeichenfolgen-Behandlungsmethode gegeben und weitere Informationen dazu bereitgestellt.
 
 ## <a name="recommendations-for-string-usage"></a>Empfehlungen zur Zeichenfolgenverwendung
 
-Beachten Sie folgende grundlegende Empfehlungen zur Verwendung von Zeichenfolgen bei der Entwicklung mit .NET:
+Beachten Sie bei der Entwicklung mit .NET folgende grundlegende Empfehlungen zum Vergleichen von Zeichenfolgen:
 
 - Verwenden Sie Überladungen, die die Regeln für Zeichenfolgenvergleiche in Zeichenfolgenoperationen explizit angeben. Normalerweise müssen Sie dazu eine Methodenüberladung mit einem Parameter vom Typ <xref:System.StringComparison>aufrufen.
 - Verwenden Sie <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> oder <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> als sichere Standardeinstellung für kulturunabhängige Zeichenfolgenvergleiche.
@@ -45,12 +45,11 @@ Beachten Sie folgende grundlegende Empfehlungen zur Verwendung von Zeichenfolgen
 - Verwenden Sie die <xref:System.String.Compare%2A?displayProperty=nameWithType> - und <xref:System.String.CompareTo%2A?displayProperty=nameWithType> -Methoden zum Sortieren von Zeichenfolgen, und nicht, um eine Überprüfung auf Gleichheit durchzuführen.
 - Verwenden Sie kulturabhängige Formatierung, um Daten, die keine Zeichenfolge sind, z. B. Zahlen und Datumsangaben, auf einer Benutzeroberfläche anzuzeigen. Verwenden Sie Formatierung mit der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture), um für Daten, die keine Zeichenfolge sind, das Zeichenfolgenformat beizubehalten.
 
-Vermeiden Sie folgende Vorgehensweisen bei der Verwendung von Zeichenfolgen:
+Vermeiden Sie beim Vergleichen von Zeichenfolgen folgende Vorgehensweisen:
 
 - Verwenden Sie keine Überladungen, die die Regeln für Zeichenfolgenvergleiche in Zeichenfolgenoperationen nicht explizit oder implizit angeben.
 - Verwenden Sie keine Zeichenfolgenoperationen, die auf <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> basieren. Eine der wenigen Ausnahmen stellt dabei die Beibehaltung von Zeichenfolgen dar, die zwar linguistisch relevant, jedoch kulturunabhängig sind.
 - Verwenden Sie keine Überladung der <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode oder der <xref:System.String.CompareTo%2A> -Methode, und führen Sie eine Überprüfung mit einem Rückgabewert von 0 (null) durch, um zu bestimmten, ob zwei Zeichenfolgen übereinstimmen.
-- Verwenden Sie nicht kulturabhängige Formatierung, um numerische Daten oder Datums-/Uhrzeitdaten im Zeichenfolgenformat beizubehalten.
 
 ## <a name="specifying-string-comparisons-explicitly"></a>Explizites Angeben von Zeichenfolgenvergleichen
 
@@ -153,7 +152,7 @@ Im folgenden Beispiel wird ein kulturabhängiger Vergleich der Zeichenfolge „A
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
 Wie das folgende Beispiel zeigt, werden die Zeichenfolgen bei einem Ordinalvergleich jedoch nicht als gleich betrachtet:
-  
+
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
 
@@ -176,7 +175,7 @@ Diese Vergleiche werden immer noch sehr schnell durchgeführt.
 
 Ordinalemantik ist die Standardeinstellung für <xref:System.String.Equals%2A?displayProperty=nameWithType> -Überladungen, die kein <xref:System.StringComparison> -Argument (einschließlich des Gleichheitsoperators) enthalten. In jedem Fall wird empfohlen, eine Überladung mit einem <xref:System.StringComparison> -Parameter aufzurufen.
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>Zeichenfolgenvorgänge mit der invarianten Kultur
+### <a name="string-operations-that-use-the-invariant-culture"></a>Zeichenfolgenoperationen mit der invarianten Kultur
 
 Vergleiche mit der invarianten Kultur verwenden die <xref:System.Globalization.CultureInfo.CompareInfo%2A> -Eigenschaft, die von der statischen <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird. Dieses Verhalten ist in allen Systemen gleich: Zeichen außerhalb des Bereichs werden in Zeichen übersetzt, von denen angenommen wird, dass es sich um die invarianten Entsprechungen handelt. Diese Richtlinie kann für das kulturübergreifende Beibehalten eines Satzes von Zeichenfolgenverhalten hilfreich sein, führt jedoch oftmals zu unerwarteten Ergebnissen.
 
@@ -304,51 +303,6 @@ Im folgenden Beispiel wird ein <xref:System.Collections.Hashtable> -Objekt insta
 [!code-csharp[Conceptual.Strings.BestPractices#10](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect2.cs#10)]
 [!code-vb[Conceptual.Strings.BestPractices#10](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect2.vb#10)]
 
-## <a name="displaying-and-persisting-formatted-data"></a>Anzeigen und Beibehalten von formatierten Daten
+## <a name="see-also"></a>Weitere Informationen
 
-Wenn Sie Benutzern Daten anzeigen, die keine Zeichenfolge sind, z. B. Zahlen sowie Datumsangaben und Zeitangaben, formatieren Sie diese den Kultureinstellungen des Benutzers entsprechend. In den folgenden Fällen wird bei Formatierungsvorgängen jeweils standardmäßig die aktuelle Threadkultur verwendet:
-
-- Bei interpolierten Zeichenfolgen, die von den [C#](../../csharp/language-reference/tokens/interpolated.md)- und [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)-Compilern unterstützt werden.
-- Bei Zeichenfolgenverkettungen, bei denen [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation)- oder [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)-Verkettungsoperatoren verwendet werden oder die Methode <xref:System.String.Concat%2A?displayProperty=nameWithType> direkt aufgerufen wird.
-- Die <xref:System.String.Format%2A?displayProperty=nameWithType> -Methode.
-- Bei den `ToString`-Methoden der numerischen Typen sowie der Datums- und Uhrzeittypen.
-
-Wenn Sie explizit angeben möchten, dass eine Zeichenfolge unter Verwendung der Konventionen einer bestimmten Kultur oder der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) formatiert werden soll, haben Sie folgende Möglichkeiten:
-
-- Rufen Sie bei Verwendung der Methoden <xref:System.String.Format%2A?displayProperty=nameWithType> und `ToString` eine Überladung mit einem Parameter vom Typ `provider` (beispielsweise <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> oder <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>) auf, und übergeben Sie die Eigenschaft <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, eine Instanz vom Typ <xref:System.Globalization.CultureInfo>, die die gewünschte Kultur darstellt, oder die Eigenschaft <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.
-
-- Lassen Sie bei der Verkettung von Zeichenfolgen keine impliziten Konvertierungen durch den Compiler zu. Rufen Sie stattdessen eine Überladung vom Typ `ToString` mit einem Parameter vom Typ `provider` auf, um eine explizite Konvertierung durchzuführen. Der Compiler verwendet beispielsweise implizit die aktuelle Kultur, wenn ein Wert vom Typ <xref:System.Double> in folgendem Code in eine Zeichenfolge konvertiert wird:
-
-  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
-  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
-
-  Alternativ können Sie explizit die Kultur angeben, deren Formatierungskonventionen bei der Konvertierung verwendet werden sollen. Rufen Sie hierzu die Methode <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> auf, wie im folgenden Code zu sehen:
-
-  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
-  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
-
-- Weisen Sie für die Zeichenfolgeninterpolation eine interpolierte Zeichenfolge einer Instanz vom Typ <xref:System.FormattableString> (anstatt einer Instanz vom Typ <xref:System.String>) zu. Anschließend können Sie die Methode <xref:System.FormattableString.ToString?displayProperty=nameWithType> aufrufen, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen der aktuellen Kultur entspricht, oder die Methode <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType>, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen einer angegebenen Kultur entspricht. Sie können auch die formatierbare Zeichenfolge an die statische Methode <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> übergeben, um eine Ergebniszeichenfolge zu erzeugen, die den Konventionen der invarianten Kultur entspricht. Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht. (Bei der Ausgabe des Beispiels wird als aktuelle Kultur „en-US“ verwendet.)
-
-  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
-  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
-
-Sie können Daten, die keine Zeichenfolge sind, entweder als Binärdaten oder als formatierte Daten beibehalten. Wenn Sie möchten, dass sie als formatierte Daten gespeichert werden, sollten Sie eine Überladung einer Formatierungsmethode aufrufen, die einen `provider` -Parameter einschließt, und dabei die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> -Eigenschaft übergeben. Die invariante Kultur stellt ein konsistentes Format für formatierte Daten bereit, das unabhängig von der Kultur und dem Computers ist. Im Gegensatz dazu bringt das Beibehalten von Daten, die mit anderen Kulturen als der invarianten Kultur formatiert werden, einige Einschränkungen mit sich:
-
-- Die Daten sind wahrscheinlich unbrauchbar, wenn sie auf einem System mit einer andere Kultur abgerufen werden oder wenn der Benutzer des aktuellen Systems die aktuelle Kultur ändert und versucht, die Daten abzurufen.
-- Die Eigenschaften einer Kultur auf einem bestimmten Computer können von den Standardwerten abweichen. Ein Benutzer kann kulturabhängige Anzeigeeinstellungen jederzeit anpassen. Aufgrund dessen können formatierte Daten, die in einem System gespeichert sind, möglicherweise nicht mehr gelesen werden, wenn der Benutzer die Kultureinstellungen anpasst. Die computerübergreifende Portabilität von formatierten Daten wird wahrscheinlich sogar noch eingeschränkter.
-- Internationale, regionale oder nationale Standards, die die Formatierung von Zahlen oder Datumsangaben und Uhrzeiten regeln, ändern sich mit der Zeit, und diese Änderungen werden in Windows-Betriebssystemupdates integriert. Wenn sich die Formatierungskonventionen ändern, können Daten, die anhand früherer Konventionen formatiert wurden, möglicherweise nicht mehr gelesen werden.
-
-Das folgende Beispiel veranschaulicht die eingeschränkte Portabilität, die sich aus der Verwendung von kulturabhängiger Formatierung zum Beibehalten von Daten ergibt. In dem Beispiel wird ein Array von Daten- und Uhrzeitwerten in einer Datei gespeichert. Diese werden anhand der Konventionen der Kultur Englisch (USA) formatiert. Nachdem die aktuelle Threadkultur der Anwendung in Französisch (Schweiz) geändert wird, versucht die Anwendung, die gespeicherten Werte mithilfe der Formatierungskonventionen der aktuellen Kultur zu lesen. Der Versuch, zwei der Datenelemente zu lesen, löst eine <xref:System.FormatException> -Ausnahme aus, und das Array von Datumsangaben enthält nun zwei falsche Elemente, die <xref:System.DateTime.MinValue>entsprechen.
-
-[!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
-[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
-
-Wenn Sie jedoch die <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft in den Aufrufen von <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> und <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> durch <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ersetzen, werden wie in der folgenden Ausgabe gezeigt die beibehaltenen Datums- und Uhrzeitdaten erfolgreich wiederhergestellt:
-
-```console
-06.05.1758 21:26
-05.05.1818 07:19
-22.04.1870 23:54
-08.09.1890 06:47
-18.02.1905 15:12
-```
+- [Globalisierung in .NET-Apps](../globalization-localization/globalization.md)

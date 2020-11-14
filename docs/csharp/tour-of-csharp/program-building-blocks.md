@@ -2,24 +2,24 @@
 title: Bausteine der C#-Programme
 description: Hier lernen Sie Member, Ausdrücke und Anweisungen von C# kennen. Typen enthalten Member, die Sie schreiben. Diese Member werden aus Anweisungen und Ausdrücken erstellt.
 ms.date: 08/06/2020
-ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358816"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342695"
 ---
 # <a name="program-building-blocks"></a>Programmbausteine
 
-Die im vorherigen Artikel beschriebenen Typen werden mithilfe der folgenden Bausteine erstellt: [***Member***](../programming-guide/classes-and-structs/members.md), [***Ausdrücke*** und ***Anweisungen***](../programming-guide/statements-expressions-operators/index.md).
+Die im vorherigen Artikel beschriebenen Typen werden mithilfe der folgenden Bausteine erstellt: [***Member** _](../programming-guide/classes-and-structs/members.md), [_*_Ausdrücke_*_ und _*_Anweisungen_*_](../programming-guide/statements-expressions-operators/index.md).
 
 ## <a name="members"></a>Member
 
-Die Member von `class` sind entweder ***statische Member*** oder ***Instanzmember***. Statische Member gehören zu Klassen, Instanzmember gehören zu Objekten (Instanzen von Klassen).
+Die Member von `class` sind entweder _*_statische Member_*_ oder _*_Instanzmember_*_. Statische Member gehören zu Klassen, Instanzmember gehören zu Objekten (Instanzen von Klassen).
 
 In der folgenden Liste finden Sie einen Überblick über die Memberarten, die eine Klasse enthalten kann.
 
-- **Konstanten:** Konstante Werte, die der Klasse zugeordnet sind
+- _*Konstanten**: Konstante Werte, die der Klasse zugeordnet sind
 - **Felder:**  Variablen, die der Klasse zugeordnet werden
 - **Methods** (Methoden):  Aktionen, die von der Klasse ausgeführt werden
 - **Properties:** Aktionen im Zusammenhang mit dem Lesen und Schreiben von benannten Eigenschaften der Klasse
@@ -49,7 +49,7 @@ Ein Feld, das mit dem static-Modifizierer deklariert wurde, definiert ein statis
 
 Ein Feld, das ohne den static-Modifizierer deklariert wurde, definiert ein Instanzfeld. Jede Instanz einer Klasse enthält eine separate Kopie aller Instanzfelder dieser Klasse.
 
-Im folgenden Beispiel weist jede Instanz der `Color`-Klasse eine separate Kopie der Instanzfelder `r`, `g` und `b` auf, aber es gibt nur eine Kopie der statischen Felder `Black`, `White`, `Red`, `Green` und `Blue`:
+Im folgenden Beispiel weist jede Instanz der `Color`-Klasse eine separate Kopie der Instanzfelder `R`, `G` und `B` auf, aber es gibt nur eine Kopie der statischen Felder `Black`, `White`, `Red`, `Green` und `Blue`:
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ColorClassDefinition":::
 
@@ -59,7 +59,7 @@ Wie im vorherigen Beispiel gezeigt, können *schreibgeschützte Felder* mit eine
 
 Eine *Methode* ist ein Member, das eine Berechnung oder eine Aktion implementiert, die durch ein Objekt oder eine Klasse durchgeführt werden kann. Auf *statische Methoden* wird über die Klasse zugegriffen. Auf *Instanzmethoden* wird über Instanzen der Klasse zugegriffen.
 
-Methoden verfügen über eine Liste von *Parametern*, die Werte oder Variablenverweise darstellen, die an die Methode übergeben werden. Methoden besitzen einen *Rückgabetyp*, der den Typ des Werts festlegt, der von der Methode berechnet und zurückgegeben wird. Der Rückgabetyp einer Methode lautet `void`, wenn kein Wert zurückgegeben wird.
+Methoden verfügen über eine Liste von *Parametern* , die Werte oder Variablenverweise darstellen, die an die Methode übergeben werden. Methoden besitzen einen *Rückgabetyp* , der den Typ des Werts festlegt, der von der Methode berechnet und zurückgegeben wird. Der Rückgabetyp einer Methode lautet `void`, wenn kein Wert zurückgegeben wird.
 
 Ebenso wie Typen können Methoden einen Satz an Typparametern aufweisen, für den beim Aufruf der Methode Typargumente angegeben werden müssen. Im Gegensatz zu Typen können die Typargumente häufig aus den Argumenten eines Methodenaufrufs abgeleitet werden und müssen nicht explizit angegeben werden.
 
@@ -68,12 +68,12 @@ Die *Signatur* einer Methode muss innerhalb der Klasse eindeutig sein, in der di
 Wenn es sich bei einem Methodenkörper um einen einzelnen Ausdruck handelt, kann die Methode mithilfe eines kompakten Ausdrucksformat definiert werden. Dies wird im folgenden Beispiel veranschaulicht:
 
 ```csharp
-public override ToString() => "This is an object";
+public override string ToString() => "This is an object";
 ```
 
 ### <a name="parameters"></a>Parameter
 
-Parameter werden dazu verwendet, Werte oder Variablenverweise an Methoden zu übergeben. Die Parameter einer Methode erhalten ihre tatsächlichen Werte über *Argumente*, die angegeben werden, wenn die Methode aufgerufen wird. Es gibt vier Arten von Parametern: Wertparameter, Verweisparameter, Ausgabeparameter und Parameterarrays.
+Parameter werden dazu verwendet, Werte oder Variablenverweise an Methoden zu übergeben. Die Parameter einer Methode erhalten ihre tatsächlichen Werte über *Argumente* , die angegeben werden, wenn die Methode aufgerufen wird. Es gibt vier Arten von Parametern: Wertparameter, Verweisparameter, Ausgabeparameter und Parameterarrays.
 
 Ein *Wertparameter* wird zum Übergeben von Eingabeargumenten verwendet. Ein Wertparameter entspricht einer lokalen Variablen, die ihren Anfangswert von dem Argument erhält, das für den Parameter übergeben wurde. Änderungen an einem Wertparameter wirken sich nicht auf das Argument aus, das für den Parameter übergeben wurde.
 
@@ -159,7 +159,7 @@ Das folgende Programm verwendet die `Expression`-Klassen zum Auswerten des Ausdr
 
 ### <a name="method-overloading"></a>Methodenüberladung
 
-Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in derselben Klasse denselben Namen verwenden, solange sie eindeutige Signaturen aufweisen. Beim Kompilieren des Aufrufs einer überladenen Methode verwendet der Compiler die *Überladungsauflösung*, um die spezifische Methode zu ermitteln, die aufgerufen werden soll. Die Überladungsauflösung ermittelt die Methode, die den Argumenten am besten entspricht. Wenn keine optimale Übereinstimmung gefunden wird, wird ein Fehler gemeldet. Das folgende Beispiel zeigt die Verwendung der Überladungsauflösung. Der Kommentar für jeden Aufruf in der `UsageExample`-Methode zeigt, welche Methode aufgerufen wird.
+Das *Überladen* von Methoden macht es möglich, dass mehrere Methoden in derselben Klasse denselben Namen verwenden, solange sie eindeutige Signaturen aufweisen. Beim Kompilieren des Aufrufs einer überladenen Methode verwendet der Compiler die *Überladungsauflösung* , um die spezifische Methode zu ermitteln, die aufgerufen werden soll. Die Überladungsauflösung ermittelt die Methode, die den Argumenten am besten entspricht. Wenn keine optimale Übereinstimmung gefunden wird, wird ein Fehler gemeldet. Das folgende Beispiel zeigt die Verwendung der Überladungsauflösung. Der Kommentar für jeden Aufruf in der `UsageExample`-Methode zeigt, welche Methode aufgerufen wird.
 
 :::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="Overloading":::
 
@@ -187,9 +187,9 @@ Im Gegensatz zu anderen Membern werden Instanzkonstruktoren nicht geerbt. Eine K
 
 ### <a name="properties"></a>Eigenschaften
 
-*Eigenschaften* sind eine natürliche Erweiterung der Felder. Beide sind benannte Member mit zugeordneten Typen, und für den Zugriff auf Felder und Eigenschaften wird dieselbe Syntax verwendet. Im Gegensatz zu Feldern geben Eigenschaften jedoch keine Speicherorte an. Stattdessen verfügen Eigenschaften über *Zugriffsmethoden*, die die ausgeführten Anweisungen angeben, wenn ihre Werte gelesen oder geschrieben werden.
+*Eigenschaften* sind eine natürliche Erweiterung der Felder. Beide sind benannte Member mit zugeordneten Typen, und für den Zugriff auf Felder und Eigenschaften wird dieselbe Syntax verwendet. Im Gegensatz zu Feldern geben Eigenschaften jedoch keine Speicherorte an. Stattdessen verfügen Eigenschaften über *Zugriffsmethoden* , die die ausgeführten Anweisungen angeben, wenn ihre Werte gelesen oder geschrieben werden.
 
-Eine Eigenschaft wird wie ein Feld deklariert, abgesehen davon, dass die Deklaration nicht auf ein Semikolon, sondern auf einen get- oder set-Accessor endet, der von den Trennzeichen `{` und `}` umschlossen wird. Eine Eigenschaft, die sowohl einen get- als auch einen set-Accessor aufweist, ist eine *Eigenschaft mit Lese- und Schreibzugriff*. Eine Eigenschaft, die nur einen get-Accessor aufweist, ist *schreibgeschützt*, eine Eigenschaft, die nur einen set-Accessor aufweist, ist *lesegeschützt*.
+Eine Eigenschaft wird wie ein Feld deklariert, abgesehen davon, dass die Deklaration nicht auf ein Semikolon, sondern auf einen get- oder set-Accessor endet, der von den Trennzeichen `{` und `}` umschlossen wird. Eine Eigenschaft, die sowohl einen get- als auch einen set-Accessor aufweist, ist eine *Eigenschaft mit Lese- und Schreibzugriff*. Eine Eigenschaft, die nur einen get-Accessor aufweist, ist *schreibgeschützt* , eine Eigenschaft, die nur einen set-Accessor aufweist, ist *lesegeschützt*.
 
 Ein get-Accessor entspricht einer Methode ohne Parameter mit einem Rückgabewert des Eigenschaftstyps. Ein set-Accessor entspricht einer Methode mit einem einzigen Parameter namens „value“ ohne Rückgabetyp. Die get-Zugriffsmethode berechnet den Wert der Eigenschaft. Die set-Zugriffsmethode stellt einen neuen Wert für die Eigenschaft bereit. Wenn die Eigenschaft das Ziel einer Zuweisung oder der Operand von `++` oder `--` ist, wird die set-Zugriffsmethode aufgerufen. In anderen Fällen, in denen die Eigenschaft referenziert wird, wird die get-Zugriffsmethode aufgerufen.
 
@@ -251,8 +251,8 @@ Wenn ein Ausdruck mehrere Operatoren enthält, steuert die *Rangfolge* der Opera
 
 Tritt ein Operand zwischen zwei Operatoren mit gleicher Rangfolge auf, steuert die *Assoziativität* der Operatoren die Reihenfolge, in der die Vorgänge ausgeführt werden:
 
-* Mit Ausnahme der Zuweisungs- und NULL-Sammeloperatoren sind alle binären Operatoren *linksassoziativ*, was bedeutet, dass Vorgänge von links nach rechts ausgeführt werden. `x + y + z` wird beispielsweise als `(x + y) + z` ausgewertet.
-* Die Zuweisungsoperatoren, die NULL-Sammeloperatoren `??` und `??=` und der bedingte Operator `?:` sind *rechtsassoziativ*, d.h., die Operationen werden von rechts nach links ausgeführt. `x = y = z` wird beispielsweise als `x = (y = z)` ausgewertet.
+* Mit Ausnahme der Zuweisungs- und NULL-Sammeloperatoren sind alle binären Operatoren *linksassoziativ* , was bedeutet, dass Vorgänge von links nach rechts ausgeführt werden. `x + y + z` wird beispielsweise als `(x + y) + z` ausgewertet.
+* Die Zuweisungsoperatoren, die NULL-Sammeloperatoren `??` und `??=` und der bedingte Operator `?:` sind *rechtsassoziativ* , d.h., die Operationen werden von rechts nach links ausgeführt. `x = y = z` wird beispielsweise als `x = (y = z)` ausgewertet.
 
 Rangfolge und Assoziativität können mit Klammern gesteuert werden. In `x + y * z` wird beispielsweise zuerst `y` mit `z` multipliziert und dann das Ergebnis zu `x` addiert, aber in `(x + y) * z` werden zunächst `x` und `y` addiert, und dann wird das Ergebnis mit `z` multipliziert.
 

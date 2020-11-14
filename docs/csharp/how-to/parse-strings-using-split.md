@@ -1,6 +1,6 @@
 ---
-title: Analysieren von Zeichenfolgen mithilfe von „String.Split“ (C#-Anleitung)
-description: Die Split-Methode gibt ein Array mit Zeichenfolgen an, die von mehreren Trennzeichen getrennt werden. So können Sie auf einfache Weise Zeichenfolgen analysieren.
+title: Teilen von Zeichenfolgen mithilfe von String.Split (Anleitung für C#)
+description: Die Split-Methode gibt ein Array mit Zeichenfolgen an, die von mehreren Trennzeichen getrennt werden. Sie stellt eine einfache Möglichkeit zum Extrahieren von Teilzeichenfolgen aus einer Zeichenfolge dar.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 5361a3c60905edd19b180c5ddb14064a85f64337
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324141"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400499"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Analysieren von Zeichenfolgen mithilfe von String.Split in C\#
+# <a name="how-to-separate-strings-using-stringsplit-in-c"></a>Teilen von Zeichenfolgen mithilfe von String.Split in C\#
 
 Die <xref:System.String.Split%2A?displayProperty=nameWithType>-Methode erstellt ein Array mit Teilzeichenfolgen, indem die Eingabezeichenfolge von mindestens einem Trennzeichen geteilt wird. Sie stellt in der Regel die einfachste Möglichkeit dar, eine Zeichenfolge an Wortgrenzen zu teilen. Sie wird außerdem verwendet, um Zeichenfolgen nach anderen bestimmten Zeichen und Zeichenfolgen zu trennen.
 
@@ -50,6 +50,7 @@ Aufeinander folgende Instanzen einer beliebigen Trennlinie geben die leere Zeich
 
 ## <a name="see-also"></a>Siehe auch
 
+- [Extrahieren von Elementen aus einer Zeichenfolge](../../standard/base-types/divide-up-strings.md)
 - [C#-Programmierhandbuch](../programming-guide/index.md)
 - [Zeichenfolgen](../programming-guide/strings/index.md)
 - [Reguläre Ausdrücke in .NET](../../standard/base-types/regular-expressions.md)
