@@ -1,19 +1,21 @@
 ---
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
-ms.date: 09/02/2020
-ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.date: 11/10/2020
+ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379134"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507266"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v3.1.2:** für ASP.NET Core 3.1 aktualisiert
+**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/MicroservicesEbookChangelog).
 
 Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
 

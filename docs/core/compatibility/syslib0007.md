@@ -3,12 +3,12 @@ title: Warnung SYSLIB0007
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung SYSLIB0007 generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d5410a3b3d33515e2ee6f578cad2f4deaec9c25d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333088"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439941"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: Standardimplementierungen von Kryptografiealgorithmen werden nicht unterstützt
 
@@ -20,7 +20,7 @@ Das im .NET Framework vorhandene kryptografische Konfigurationssystem bietet kei
 - <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=fullName>
 
-## <a name="workaround"></a>Problemumgehung
+## <a name="workarounds"></a>Problemumgehung
 
 - Es wird empfohlen, Aufrufe der jetzt veralteten APIs für bestimmte Algorithmen, z. B. <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType>, durch Aufrufe von Factorymethoden zu ersetzen. So haben Sie die vollständige Kontrolle darüber, welche Algorithmen instanziiert werden.
 
@@ -33,6 +33,8 @@ Das im .NET Framework vorhandene kryptografische Konfigurationssystem bietet kei
   | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | Der HMACSHA1-Algorithmus sollte für die meisten modernen Anwendungen nicht verwendet werden. Sie sollten wenn möglich einen stärkeren Algorithmus verwenden. Wenden Sie sich an Ihren Sicherheitsberater, um weitere Schritte abzusprechen. |
   | <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | Der HMACSHA1-Algorithmus sollte für die meisten modernen Anwendungen nicht verwendet werden. Sie sollten wenn möglich einen stärkeren Algorithmus verwenden. Wenden Sie sich an Ihren Sicherheitsberater, um weitere Schritte abzusprechen. |
   | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> |
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

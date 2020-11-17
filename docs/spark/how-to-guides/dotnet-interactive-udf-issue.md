@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224133"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441075"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Schreiben und Aufrufen von benutzerdefinierten Funktionen in interaktiven Umgebungen von .NET für Apache Spark
 
@@ -49,7 +49,7 @@ Als Nächstes sehen Sie, was geschieht, wenn die benutzerdefinierte Funktion in 
 
 Der oben hervorgehobene Fehler wird dadurch verursacht, dass die Assemblys der benutzerdefinierten Funktion zunächst kompiliert und an die Worker übermittelt werden müssen, bevor sie für ein DataFrame aufgerufen werden kann.
 
-Es gibt einige wichtige Dinge, die Sie beim Implementieren von benutzerdefinierten Funktionen in interaktiven Umgebungen von .NET für Apache Spark beachten müssen (z. B. [Azure Synapse-Notebooks](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
+Es gibt einige wichtige Dinge, die Sie beim Implementieren von benutzerdefinierten Funktionen in interaktiven Umgebungen von .NET für Apache Spark beachten müssen (z. B. [Azure Synapse-Notebooks](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
 
 ## <a name="faqs"></a>Häufig gestellte Fragen
 
@@ -61,7 +61,7 @@ Es gibt einige wichtige Dinge, die Sie beim Implementieren von benutzerdefiniert
 
     Wie bei `udf2_fails` zu sehen ist, wird die Fehlermeldung mit dem Text „Type `Submission#7`“ nicht als serialisierbar gekennzeichnet. Das liegt daran, dass .NET Interactive alle in einer Zelle definierten Objekte mit der `Submission#`-Klasse umschließt, die bei Bedarf generiert wird und daher nicht mit `Serializable` gekennzeichnet wird.
 
-    Aus diesem Grund ist es **erforderlich, dass eine benutzerdefinierte Funktion, die auf ein benutzerdefiniertes Objekt verweist, in derselben Zelle wie das Objekt definiert wird** .
+    Aus diesem Grund ist es **erforderlich, dass eine benutzerdefinierte Funktion, die auf ein benutzerdefiniertes Objekt verweist, in derselben Zelle wie das Objekt definiert wird**.
 
 2. **Wieso funktionieren Broadcastvariablen nicht in .NET Interactive?**
     Broadcastvariablen funktionieren aufgrund der zuvor genannten Gründe nicht in .NET Interactive. Es empfiehlt sich, [diesen Leitfaden zu Broadcastvariablen](broadcast-guide.md) zu lesen, um ein besseres Verständnis darüber zu erlangen, was Broadcastvariablen sind und wie sie verwendet werden. Broadcastvariablen funktionieren in interaktiven Szenarios aufgrund des Entwurfs von .NET Interactive nicht, bei dem einzelnen in einer Zelle definierten Objekten die Zellenübermittlungsklasse angefügt wird. Dies führt zur zuvor gezeigten Ausnahme, da die Klasse nicht als serialisierbar gekennzeichnet ist.

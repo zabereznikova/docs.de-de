@@ -2,12 +2,12 @@
 title: Erstellen von ASP.NET Core-Anwendungen, die als Linux-Container in AKS-/Kubernetes-Clustern bereitgestellt werden
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 ms.date: 08/06/2020
-ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844562"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440828"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von als Linux-Container in einem AKS-/Kubernetes-Orchestrator bereitgestellten ASP.NET Core-Anwendungen
 
@@ -200,7 +200,7 @@ az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku 
 ```
 
 > [!NOTE]
-> Der Containerregistrierungsname (z. B. `exploredocker`) muss innerhalb von Azure eindeutig sein und zwischen 5 und 50 alphanumerische Zeichen enthalten. Weitere Informationen finden Sie unter [Erstellen einer Containerregistrierung](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry).
+> Der Containerregistrierungsname (z. B. `exploredocker`) muss innerhalb von Azure eindeutig sein und zwischen 5 und 50 alphanumerische Zeichen enthalten. Weitere Informationen finden Sie unter [Erstellen einer Containerregistrierung](/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry).
 
 ### <a name="create-the-image-in-release-mode"></a>Erstellen des Images im Releasemodus
 
@@ -369,7 +369,7 @@ spec:
 > Die vorherigen `.yml`-Dateien aktivieren nur die `HTTP`-Ports mithilfe des Parameters `ASPNETCORE_URLS`, um Probleme mit dem fehlenden Zertifikat in der Beispiel-App zu vermeiden.
 
 > [!TIP]
-> Informationen zum Erstellen des AKS-Clusters für dieses Beispiel finden Sie in Abschnitt [**Bereitstellen für Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) in diesem Handbuch.
+> Informationen zum Erstellen des AKS-Clusters für dieses Beispiel finden Sie in Abschnitt [**Bereitstellen für Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) in diesem Handbuch.
 
 Jetzt sind Sie fast für die Bereitstellung mit **kubectl** bereit. Zunächst müssen Sie jedoch die Anmeldeinformationen aus dem AKS-Cluster mit diesem Befehl abrufen:
 

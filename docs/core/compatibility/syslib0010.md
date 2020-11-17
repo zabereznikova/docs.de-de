@@ -3,12 +3,12 @@ title: Warnung SYSLIB0010
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung SYSLIB0010 generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: dcd331aa5c68381ea29848bc54ee4b1a5e75330d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 824423d58802d4a286bfed98422341097985990f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333059"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440607"
 ---
 # <a name="syslib0010-unsupported-remoting-apis"></a>SYSLIB0010: Nicht unterstützte Remoting-APIs
 
@@ -17,9 +17,11 @@ ms.locfileid: "92333059"
 - <xref:System.MarshalByRefObject.GetLifetimeService?displayProperty=nameWithType>
 - <xref:System.MarshalByRefObject.InitializeLifetimeService?displayProperty=nameWithType>
 
-## <a name="workaround"></a>Problemumgehung
+## <a name="workarounds"></a>Problemumgehung
 
 Sie sollten unter Umständen WCF- oder HTTP-basierte REST-Dienste verwenden, um mit Objekten in anderen Anwendungen oder auf anderen Computern zu kommunizieren. Weitere Informationen finden Sie unter [In .NET Core nicht verfügbare .NET Framework-Technologien](../porting/net-framework-tech-unavailable.md).
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

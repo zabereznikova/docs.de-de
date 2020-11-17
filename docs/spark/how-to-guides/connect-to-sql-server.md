@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b20710000d8717b5df238aa9a782371fbe586037
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1fecd796aeefd6c5681c4c2ea623e89f3a5a3c1d
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224022"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439533"
 ---
 # <a name="connect-net-for-apache-spark-to-sql-server"></a>Herstellen einer Verbindung zwischen .NET für Apache Spark und SQL Server
 
@@ -29,7 +29,7 @@ In diesem Artikel erfahren Sie, wie Sie über Ihre [.NET für Apache Spark](http
 
     ![Aktivieren von TCP/IP in SQL Server](./media/connect-external-sources/SqlServerTCPIP.png)
 
-    Notieren Sie sich auch den Wert für **Alle überwachen** in obiger Registerkarte unter **Protokoll** .
+    Notieren Sie sich auch den Wert für **Alle überwachen** in obiger Registerkarte unter **Protokoll**.
 
 5. Konfigurieren Sie Port 1433 als TCP/IP-Port für alle erforderlichen IP-Adressen, wenn `Listen All` auf `No` festgelegt ist. Legen Sie andernfalls den TCP-Port in IPAll fest.
 
@@ -37,7 +37,7 @@ In diesem Artikel erfahren Sie, wie Sie über Ihre [.NET für Apache Spark](http
 
 ## <a name="connect-to-sql-server-from-your-application"></a>Herstellen einer Verbindung von Ihrer Anwendung zu SQL Server
 
-1. Verwenden Sie den Microsoft JDBC-Treiber für SQL Server, um für Datenbankverbindungen über Ihre Anwendungen zu sorgen. Der Download ist über [diese offizielle Website](https://docs.microsoft.com/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15) möglich.
+1. Verwenden Sie den Microsoft JDBC-Treiber für SQL Server, um für Datenbankverbindungen über Ihre Anwendungen zu sorgen. Der Download ist über [diese offizielle Website](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server?view=sql-server-ver15) möglich.
 2. Legen Sie die folgenden Konfigurationen fest, um eine Verbindung zur SQL Server-Instanz und zur entsprechenden Datenbank in Ihrer Anwendung herzustellen:
     1. **connection_url:** Hierbei handelt es sich um die URL, die zum Herstellen einer Verbindung zur SQL Server-Instanz bzw. zur entsprechenden Datenbank genutzt wird. Sie weist das folgende Format auf:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166839"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440880"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -52,7 +52,7 @@ Für Dateien mit den Erweiterungen *.exe*, *.dll* und *.winmd* stehen die folgen
 |**/linenum**|Enthält Verweise auf die ursprünglichen Quellzeilen.|
 |**/nobar**|Unterdrückt die Anzeige des Popupfensters mit der Statusanzeige für die Disassembly.|
 |**/noca**|Unterdrückt die Ausgabe von benutzerdefinierten Attributen.|
-|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in der nativen Windows-Runtime. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Zeigt Metadaten so an, wie sie in verwalteten Code angezeigt werden, nicht wie in der nativen Windows-Runtime. Wenn `PEfilename` keine Windows-Metadatendatei ( *.winmd*) ist, hat diese Option keine Auswirkungen. Informationen finden Sie unter [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Disassembliert ausschließlich öffentliche Typen und Member. Entspricht **/visibility:PUB**.|
 |**/quoteallnames**|Schließt alle Namen in einfache Anführungszeichen ein.|
 |**/raweh**|Zeigt Klauseln für die Ausnahmebehandlung in unformatierter Form an.|

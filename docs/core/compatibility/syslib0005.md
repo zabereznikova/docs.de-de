@@ -3,12 +3,12 @@ title: Warnung „SYSLIB0005“
 description: In diesem Artikel erfahren Sie mehr über das veraltete Element, das zur Kompilierzeit den Fehler „SYSLIB0005“ generiert.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 8a9893d81c781335014c8b970c460b5a4241ed18
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 8e5420b5cfaa9515ed7a3ac4472dc5d4e49f5bcb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333089"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440001"
 ---
 # <a name="syslib0005-the-global-assembly-cache-gac-is-not-supported"></a>SYSLIB0005: Der globale Assemblycache (GAC) wird nicht unterstützt.
 
@@ -20,9 +20,11 @@ Die folgenden GAC-bezogenen APIs sind als veraltet markiert:
 
   Bibliotheken und Apps sollten die <xref:System.Reflection.Assembly.GlobalAssemblyCache>-API nicht beim Festlegen des Laufzeitverhaltens verwenden, da diese in .NET Core und .NET 5 (oder höher) immer `false` zurückgibt.
 
-## <a name="workaround"></a>Problemumgehung
+## <a name="workarounds"></a>Problemumgehung
 
 Wenn die Anwendung die <xref:System.Reflection.Assembly.GlobalAssemblyCache>-Eigenschaft abfragt, sollten Sie den Aufruf entfernen. Wenn Sie den Wert <xref:System.Reflection.Assembly.GlobalAssemblyCache> verwenden, um zur Laufzeit zwischen Flows zu wählen, bei denen sich die Assembly entweder im GAC oder nicht im GAC befindet, sollten Sie sich überlegen, ob der Flow auch für eine .NET 5-Anwendung (oder höher) geeignet ist.
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

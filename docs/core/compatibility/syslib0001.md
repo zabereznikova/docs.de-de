@@ -3,12 +3,12 @@ title: Warnung „SYSLIB0001“
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung „SYSLIB0001“ generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 58c16879b7d91598ea0848bb0ba95f8fa0200cfe
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: d38d915e902d3c37cc461452f805e8349f11deeb
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333092"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439988"
 ---
 # <a name="syslib0001-the-utf-7-encoding-is-insecure"></a>SYSLIB0001: Die UTF-7-Codierung ist unsicher.
 
@@ -46,6 +46,8 @@ Aufgrund dessen sind die folgenden APIs ab .NET 5.0 als veraltet markiert. Die 
       }
   }
   ```
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Siehe auch
 

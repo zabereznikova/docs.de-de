@@ -4,12 +4,12 @@ description: Hier erfahren Sie mehr über die kostenlose Open-Source-Entwicklung
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329793"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506739"
 ---
 # <a name="introduction-to-net"></a>Einführung in .NET
 
@@ -24,7 +24,7 @@ ms.locfileid: "94329793"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Universelle Windows-Plattform (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Spiele](https://dotnet.microsoft.com/apps/games)
-* [Internet der Dinge (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Internet der Dinge (IoT)](/dotnet/iot)
 * [Maschinelles Lernen](../machine-learning/index.yml)
 * [Konsolen-Apps](tutorials/with-visual-studio-code.md)
 * [Windows-Dienste](/aspnet/core/host-and-deploy/windows-service)
@@ -153,7 +153,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 ### <a name="project-system-and-msbuild"></a>Projektsystem und MSBuild
 
-Eine .NET-App wird mithilfe von [MSBuild](/visualstudio/msbuild/msbuild) aus Quellcode erstellt. Eine Projektdatei ( *.csproj* , *.fsproj* oder *.vbproj* ) gibt [Ziele](/visualstudio/msbuild/msbuild-targets) und zugeordnete [Aufgaben](/visualstudio/msbuild/msbuild-tasks) an, die für das Kompilieren, Packen und Veröffentlichen von Code zuständig sind. Es gibt SDK-Bezeichner, die auf Standardsammlungen von Zielen und Aufgaben verweisen. Die Verwendung dieser Bezeichner trägt dazu bei, dass Projektdateien klein und einfach zu verwenden sind. Dies ist beispielsweise eine Projektdatei für eine Konsolen-App:
+Eine .NET-App wird mithilfe von [MSBuild](/visualstudio/msbuild/msbuild) aus Quellcode erstellt. Eine Projektdatei ( *.csproj*, *.fsproj* oder *.vbproj*) gibt [Ziele](/visualstudio/msbuild/msbuild-targets) und zugeordnete [Aufgaben](/visualstudio/msbuild/msbuild-tasks) an, die für das Kompilieren, Packen und Veröffentlichen von Code zuständig sind. Es gibt SDK-Bezeichner, die auf Standardsammlungen von Zielen und Aufgaben verweisen. Die Verwendung dieser Bezeichner trägt dazu bei, dass Projektdateien klein und einfach zu verwenden sind. Dies ist beispielsweise eine Projektdatei für eine Konsolen-App:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -191,7 +191,7 @@ Weitere Informationen finden Sie unter [Verwenden des .NET Core SDK und der zuge
 
 ### <a name="nuget"></a>NuGet
 
-[NuGet](/nuget/what-is-nuget) ist ein Open-Source-Paket-Manager, der für .NET konzipiert ist. Ein NuGet-Paket ist eine *ZIP* -Datei mit der Erweiterung `.nupkg`, die kompilierten Code (DLLs), andere Dateien im Zusammenhang mit diesem Code und ein beschreibendes Manifest enthält, in dem Informationen wie die Versionsnummer des Pakets enthalten sind. Entwickler, die Code teilen möchten, erstellen und veröffentlichen Pakete auf [nuget.org](https://nuget.org) oder einem privaten Host. Entwickler, die freigegebenen Code verwenden möchten, fügen ein Paket zu ihrem Projekt hinzu und können dann die API abrufen, die vom Paket in ihrem Projektcode verfügbar gemacht wird.
+[NuGet](/nuget/what-is-nuget) ist ein Open-Source-Paket-Manager, der für .NET konzipiert ist. Ein NuGet-Paket ist eine *ZIP*-Datei mit der Erweiterung `.nupkg`, die kompilierten Code (DLLs), andere Dateien im Zusammenhang mit diesem Code und ein beschreibendes Manifest enthält, in dem Informationen wie die Versionsnummer des Pakets enthalten sind. Entwickler, die Code teilen möchten, erstellen und veröffentlichen Pakete auf [nuget.org](https://nuget.org) oder einem privaten Host. Entwickler, die freigegebenen Code verwenden möchten, fügen ein Paket zu ihrem Projekt hinzu und können dann die API abrufen, die vom Paket in ihrem Projektcode verfügbar gemacht wird.
 
 Weitere Informationen finden Sie in der [NuGet-Dokumentation](/nuget/).
 
@@ -254,7 +254,7 @@ Weitere Informationen finden Sie unter [Bereinigen von nicht verwalteten Ressour
 
 * Bei der Veröffentlichung als *eigenständige* App wird eine ausführbare Datei erstellt, die die [.NET-Runtime](#sdk-and-runtimes) und [-Bibliotheken](#runtime-libraries) sowie die Anwendung und zugehörige Abhängigkeiten enthält. Benutzer der Anwendung können diese auf einem Computer ausführen, auf dem die .NET-Runtime nicht installiert ist. Eigenständige Apps sind plattformspezifisch und können optional mithilfe einer Form der [AOT-Kompilierung](#aot-compiler) veröffentlicht werden.
 
-* Bei der Veröffentlichung als *frameworkabhängige* App werden eine ausführbare Datei und Binärdateien ( *DLL* -Dateien) erstellt, die nur die Anwendung selbst und ihre Abhängigkeiten enthalten. Benutzer der Anwendung müssen die [.NET-Runtime](#sdk-and-runtimes) separat installieren. Die ausführbare Datei ist plattformspezifisch, die *DLL-Dateien* der frameworkabhängigen Anwendungen gelten aber als plattformübergreifend verwendbar.
+* Bei der Veröffentlichung als *frameworkabhängige* App werden eine ausführbare Datei und Binärdateien (*DLL*-Dateien) erstellt, die nur die Anwendung selbst und ihre Abhängigkeiten enthalten. Benutzer der Anwendung müssen die [.NET-Runtime](#sdk-and-runtimes) separat installieren. Die ausführbare Datei ist plattformspezifisch, die *DLL-Dateien* der frameworkabhängigen Anwendungen gelten aber als plattformübergreifend verwendbar.
 
   Sie können parallel mehrere Versionen der Runtime installieren, um frameworkabhängige Apps auszuführen, die auf verschiedene Runtimeversionen abzielen. Weitere Informationen finden Sie unter [Zielframeworks in Projekten im SDK-Format](../standard/frameworks.md).
 

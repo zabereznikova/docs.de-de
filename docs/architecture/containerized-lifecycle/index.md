@@ -1,19 +1,21 @@
 ---
 title: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 description: Hier erhalten Sie einen allgemeinen Überblick über den Entwicklungs- und Bereitstellungsprozess für containerisierte Anwendungen mit Docker- und Microsoft-Plattformen und -Tools.
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160696"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506661"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 
 ![Bucheinband](./media/devops-book-cover-large-we.png)
 
 **EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/DockerLifecycleEbookChangelog).
 
 Dieser Leitfaden bietet eine allgemeine Übersicht über die Entwicklung und Bereitstellung containerisierter ASP.NET Core-Anwendungen in Docker mithilfe der Microsoft-Plattform und -Tools. Zudem ist eine allgemeine Einführung in Azure DevOps für die Implementierung von CI/CD-Pipelines und in Azure Container Registry (ACR) und Azure Kubernetes Service (AKS) für die Bereitstellung enthalten.
 
@@ -37,7 +39,7 @@ Entwicklungslektor:
 
 > **Bob Russell**, Solutions Professional bei Microsoft
 >
-> [**Octal Publishing, Inc.** ](http://www.octalpub.com/)
+> [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
 Redaktionelle Produktion:
 

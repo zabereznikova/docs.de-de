@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e8d3a95b58cd2cabc41be31b7a4b66b1a79317d6
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547908"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439429"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>Entwickeln von Clientanwendungen mit .NET Framework
 
@@ -39,7 +39,7 @@ Hier wird beschrieben, wie Sie UWP-Anwendungen erstellen, die Sie den Benutzern 
 [.NET-API für UWP-Apps](../../api/index.md?view=dotnet-uwp-10.0)\
 Referenz für .NET-Typen, die UWP-Apps unterstützen.
   
-[Entwickeln für mehrere Plattformen](../standard/cross-platform/index.md)\
+[Entwickeln für mehrere Plattformen](./cross-platform/index.md)\
 Beschreibt die verschiedenen Methoden, mit denen Sie .NET Framework verwenden können, um für mehrere Client-App-Typen zu entwickeln.
 
 [Erste Schritte mit ASP.NET-Websites](https://dotnet.microsoft.com/apps/aspnet/web-apps)\

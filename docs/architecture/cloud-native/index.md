@@ -2,19 +2,21 @@
 title: Entwickeln cloudnativer .NET-Anwendungen für Azure
 description: Leitfaden zum Erstellen cloudnativer Anwendungen, die Container, Microservices und serverlose Features von Azure nutzen.
 author: ardalis
-ms.date: 05/13/2020
-ms.openlocfilehash: 172097b4915deb2d6f0b06441d7c4ca389bbca25
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.date: 11/10/2020
+ms.openlocfilehash: 673bfef27c3767f68b1c30d4383cee010ba377f0
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051505"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506648"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Entwickeln cloudnativer .NET-Anwendungen für Azure
 
 ![Titelbild](./media/cover.png)
 
-**Edition 1.0**
+**Edition v1.0**
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/cn-ebook-changelog).
 
 VERÖFFENTLICHT VON
 

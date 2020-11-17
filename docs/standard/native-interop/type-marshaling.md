@@ -2,12 +2,12 @@
 title: Marshalling von Typen – .NET
 description: Erfahren Sie, wie .NET Ihre Strukturen in eine native Darstellung marshallt.
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188392"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440997"
 ---
 # <a name="type-marshaling"></a>Marshalling von Typen
 
@@ -65,7 +65,7 @@ Die folgende Tabelle enthält die standardmäßigen Marshallingregeln, die nur f
 | `System.ArgIterator` | `va_list` | Nicht zulässig |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | Nicht zulässig |
 | `System.Collections.IEnumerable` | `IDispatch*` | Nicht zulässig |
-| `System.DateTimeOffset` | `int64_t` – repräsentiert die Anzahl von Takten seit dem 1. Januar 1601 um Mitternacht || `int64_t` – repräsentiert die Anzahl von Takten seit dem 1. Januar 1601 um Mitternacht |
+| `System.DateTimeOffset` | `int64_t` – repräsentiert die Anzahl von Takten seit dem 1. Januar 1601 um Mitternacht | `int64_t` – repräsentiert die Anzahl von Takten seit dem 1. Januar 1601 um Mitternacht |
 
 Für einige Typen ist das Marshalling nur als Parameter möglich, nicht als Felder. Diese Typen werden in der folgenden Tabelle aufgeführt:
 

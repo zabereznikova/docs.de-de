@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet list package“
 description: Der Befehl „dotnet list package“ bietet eine praktische Option zum Listen von Pakettverweisen auf ein Projekt oder eine Projektmappe.
-ms.date: 02/14/2020
-ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.date: 11/11/2020
+ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164755"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556887"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -24,7 +24,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
     [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
-    [--outdated] [--source <SOURCE>]
+    [--outdated] [--source <SOURCE>] [-v|--verbosity <LEVEL>]
 
 dotnet list package -h|--help
 ```
@@ -118,6 +118,10 @@ Die zu verwendende Projekt- oder Projektmappendatei. Wenn keine angegeben ist, s
 - **`-s|--source <SOURCE>`**
 
   Die bei der Suche nach neueren Paketen zu verwendenden NuGet-Quellen. Hierfür ist die Option `--outdated` oder `--deprecated` erforderlich.
+
+- **`-v|--verbosity <LEVEL>`**
+
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Der Standardwert ist `minimal`.
 
 ## <a name="examples"></a>Beispiele
 

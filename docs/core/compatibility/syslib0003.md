@@ -3,12 +3,12 @@ title: Warnung SYSLIB0003
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung SYSLIB0003 generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333091"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439962"
 ---
 # <a name="syslib0003-code-access-security-is-not-supported"></a>SYSLIB0003: Codezugriffssicherheit wird nicht unterstützt
 
@@ -209,6 +209,8 @@ Die vollständige Liste der veralteten CAS-APIs lautet wie folgt:
   ```
 
 - Wenn Sie <xref:System.Security.Permissions.PrincipalPermission> anfordern, lesen Sie den Leitfaden für [SYSLIB0002: PrincipalPermissionAttribute ist veraltet](syslib0002.md#workarounds). Dieser Leitfaden gilt sowohl für <xref:System.Security.Permissions.PrincipalPermission> als auch für <xref:System.Security.Permissions.PrincipalPermissionAttribute>.
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
