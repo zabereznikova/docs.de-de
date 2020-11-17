@@ -52,7 +52,7 @@ Die folgende Liste liefert eine Zusammenfassung wichtiger Arbeitsspeicherkonzept
 
   | Zustand | Beschreibung |
   |---------|---------|
-  | Kostenlos | Es sind keine Verweise auf den Speicherblock vorhanden, und der Speicherblock ist für eine Speicherbelegung verfügbar. |
+  | Frei | Es sind keine Verweise auf den Speicherblock vorhanden, und der Speicherblock ist für eine Speicherbelegung verfügbar. |
   | Reserviert | Der Speicherblock ist für die Verwendung verfügbar und kann nicht durch andere Anforderungen belegt werden. Sie können jedoch keine Daten in diesem Speicherblock speichern, bis eine Zusicherung erfolgt ist. |
   | Committet | Der Speicherblock ist einem physischen Speicher zugewiesen. |
 
