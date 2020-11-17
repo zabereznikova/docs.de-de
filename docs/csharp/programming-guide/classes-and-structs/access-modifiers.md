@@ -22,7 +22,7 @@ Alle Typen und Typmember verfügen über eine Zugriffsebene. Diese Zugriffsebene
 - [protected:](../../language-reference/keywords/protected.md) Der Zugriff auf den Typ oder Member kann nur über Code in derselben `class`- oder in einer `class`-Instanz erfolgen, die von dieser `class`-Instanz abgeleitet wurde.
 - [internal:](../../language-reference/keywords/internal.md) Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.
 - [protected internal:](../../language-reference/keywords/protected-internal.md) Der Zugriff auf den Typ oder Member kann über beliebigen Code in der Assembly, in der er deklariert wurde, oder innerhalb einer abgeleiteten `class`-Instanz in einer anderen Assembly erfolgen.
-- [private protected:](../../language-reference/keywords/private-protected.md) Auf den Typ oder Member kann nur innerhalb der deklarierenden Assembly, von Code in derselben `class`-Instanz oder in einem Typ zugegriffen werden, der von dieser `class`-Instanz abgeleitet ist.
+- [private protected:](../../language-reference/keywords/private-protected.md) Auf den Typ oder Member kann nur innerhalb der deklarierenden Assembly zugegriffen werden, und zwar von Code in derselben `class`-Instanz oder in einem Typ, der von dieser `class`-Instanz abgeleitet ist.
 
 Die folgenden Beispiele veranschaulichen, wie Zugriffsmodifizierer für einen Typ und Member angegeben werden:
 
