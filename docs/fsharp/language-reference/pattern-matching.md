@@ -1,13 +1,13 @@
 ---
 title: Musterabgleich
 description: 'Erfahren Sie, wie Muster in F # verwendet werden, um Daten mit logischen Strukturen zu vergleichen, Daten in Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811508"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687804"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -47,6 +47,7 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |Muster zusammen mit Typanmerkung|*Pattern* : *Type*|`a : int`|
 |Typtestmuster|:? *Type* [as *Identifier* ]|`:? System.DateTime as dt`|
 |NULL-Muster|NULL|`null`|
+|Nameof-Muster|*nameof-expr*|`nameof str`|
 
 ## <a name="constant-patterns"></a>Konstantenmuster
 
@@ -139,7 +140,7 @@ Das folgende Beispiel ist ähnlich wie `detectZeroTuple` im Abschnitt tupelmuste
 
 ## <a name="cons-pattern"></a>Cons-Muster
 
-Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste *mit den restlichen*Elementen, dem Ende, zu zerlegen.
+Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf* und eine Liste *mit den restlichen* Elementen, dem Ende, zu zerlegen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -215,7 +216,23 @@ Im folgenden Beispiel werden das NULL-Muster und das Variablenmuster verwendet.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="nameof-pattern"></a>Nameof-Muster
+
+Das `nameof` Muster entspricht einer Zeichenfolge, wenn sein Wert gleich dem Ausdruck ist, der dem `nameof` Schlüsselwort folgt. Beispiel:
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+[`nameof`](nameof.md)Informationen dazu, wie Sie einen Namen verwenden können, finden Sie unter dem-Operator.
+
+## <a name="see-also"></a>Siehe auch
 
 - [Vergleichsausdrücke](match-expressions.md)
 - [Aktive Muster](active-patterns.md)

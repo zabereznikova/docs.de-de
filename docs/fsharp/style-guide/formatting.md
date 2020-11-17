@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: 'Hier finden Sie Richtlinien zum Formatieren von F #'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359284"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688253"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -29,7 +29,7 @@ Wenn Einzug erforderlich ist, müssen Sie Leerzeichen und keine Tabulatoren verw
 
 **Es werden vier Leerzeichen pro Einzug empfohlen.**
 
-Dies bedeutet, dass der Einzug von Programmen eine subjektive Angelegenheit ist. Variationen sind in Ordnung, aber die erste Regel, die Sie befolgen sollten, ist die *Konsistenz des*Einzugs. Wählen Sie eine im allgemeinen akzeptierte Art von Einzug aus, und verwenden Sie sie systematisch in der gesamten Codebasis.
+Dies bedeutet, dass der Einzug von Programmen eine subjektive Angelegenheit ist. Variationen sind in Ordnung, aber die erste Regel, die Sie befolgen sollten, ist die *Konsistenz des* Einzugs. Wählen Sie eine im allgemeinen akzeptierte Art von Einzug aus, und verwenden Sie sie systematisch in der gesamten Codebasis.
 
 ## <a name="formatting-white-space"></a>Formatieren von Leerraum
 
@@ -201,7 +201,7 @@ Inline Kommentare sollten den ersten Buchstaben ausnutzen.
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>Benennungskonventionen
+## <a name="naming-conventions"></a>Namenskonventionen
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden Sie "CamelCase" für Klassen gebundene, Ausdrucks gebundene und Muster gebundene Werte und Funktionen.
 
@@ -642,21 +642,17 @@ In einigen Fällen kann die Lesbarkeit von unter `do...yield` stützen. Diese F�
 
 ## <a name="formatting-if-expressions"></a>Formatieren von Ausdrücken
 
-Der Einzug von Bedingungen hängt von den Größen der Ausdrücke ab, die Sie bilden. Wenn `cond` , `e1` und `e2` kurz sind, schreiben Sie diese einfach in eine Zeile:
+Der Einzug von Bedingungen hängt von der Größe und Komplexität der Ausdrücke ab, die Sie bilden.
+Schreiben Sie diese einfach in eine Zeile, wenn:
+
+- `cond`, `e1` und `e2` sind kurz
+- `e1` und `e2` sind keine `if/then/else` Ausdrücke selbst.
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Wenn entweder `cond` `e1` oder `e2` länger, aber nicht mehrzeilige Zeilen:
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-Wenn einer der Ausdrücke mehrzeilige Ausdrücke ist:
+Wenn einer der Ausdrücke mehrzeilige oder Ausdrücke ist `if/then/else` .
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-Mehrere Bedingungen mit `elif` und `else` werden im gleichen Gültigkeitsbereich wie die eingezogen `if` :
+Mehrere Bedingungen mit `elif` und `else` werden im gleichen Gültigkeitsbereich wie das `if` eingerückt, wenn Sie den Regeln der einzeiligen `if/then/else` Ausdrücke folgen.
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+Wenn eine der Bedingungen oder Ausdrücke mehrzeilige Bedingungen hat, ist der gesamte `if/then/else` Ausdruck mehrzeilige Zeilen:
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>Musterabgleichkonstrukte
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>Formatierungskonstruktoren, statische Member und Element Aufrufe
+
+Wenn der Ausdruck kurz ist, trennen Sie Argumente mit Leerzeichen, und bewahren Sie Sie in einer Zeile auf.
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+Wenn der Ausdruck lang ist, verwenden Sie Zeilenumbrüche und einen Bereich, anstatt in die eckige Klammer einzuschließen.
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>Formatieren von Attributen
