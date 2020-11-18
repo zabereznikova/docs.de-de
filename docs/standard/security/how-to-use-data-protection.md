@@ -2,7 +2,6 @@
 title: 'Vorgehensweise: Verwenden des Datenschutzes'
 description: Erfahren Sie, wie Sie Datenschutz durchzugreifen auf die Datenschutz-API (Data Protection API, DPAPI) in .NET verwenden.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ed1b18e2c6456b53559e8fb7e989f148fefd35c7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282054"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820097"
 ---
 # <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden des Datenschutzes
 
@@ -64,7 +63,7 @@ Dieses Beispiel wird nur kompiliert und ausgeführt, wenn .NET Framework und unt
   
 - Fügen Sie die Namespaces <xref:System>, <xref:System.IO>, <xref:System.Security.Cryptography> und <xref:System.Text> ein.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)

@@ -1,7 +1,6 @@
 ---
 title: Wechseln und Zurücksetzen der Identität
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - security [.NET], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-ms.openlocfilehash: 7eecc7d6cb3fa4cc1c1bd971d36f9d3ca47a7144
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 90f43510eb0e71fb324012fa00ac08f9ee3292ac
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555673"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820058"
 ---
 # <a name="impersonating-and-reverting"></a>Wechseln und Zurücksetzen der Identität
 
@@ -60,11 +59,11 @@ Es kann vorkommen, dass Sie das Token eines Windows-Kontos abrufen müssen, um d
     myImpersonation.Undo()  
     ```  
   
- Wenn vertrauenswürdiger Code bereits ein- <xref:System.Security.Principal.WindowsPrincipal> Objekt an den Thread angefügt hat, können Sie die **Impersonate**Instanzmethode als Identitätswechsel verwenden, die kein Konto Token übernimmt. Dies ist aber nur sinnvoll, wenn das **WindowsPrincipal**-Objekt im Thread einem Benutzer entspricht, der nicht der Benutzer ist, für den der Prozess derzeit ausgeführt wird. Diese Situation kann z. B. gegeben sein, wenn Sie ASP.NET mit aktivierter Windows-Authentifizierung und deaktiviertem Identitätswechsel verwenden. In diesem Fall wird der Prozess unter einem in Internetinformationsdienste (IIS) konfigurierten Konto ausgeführt, während der aktuelle Prinzipal dem Windows-Benutzer entspricht, der auf die Seite zugreift.  
+ Wenn vertrauenswürdiger Code bereits ein- <xref:System.Security.Principal.WindowsPrincipal> Objekt an den Thread angefügt hat, können Sie die **Impersonate** Instanzmethode als Identitätswechsel verwenden, die kein Konto Token übernimmt. Dies ist aber nur sinnvoll, wenn das **WindowsPrincipal**-Objekt im Thread einem Benutzer entspricht, der nicht der Benutzer ist, für den der Prozess derzeit ausgeführt wird. Diese Situation kann z. B. gegeben sein, wenn Sie ASP.NET mit aktivierter Windows-Authentifizierung und deaktiviertem Identitätswechsel verwenden. In diesem Fall wird der Prozess unter einem in Internetinformationsdienste (IIS) konfigurierten Konto ausgeführt, während der aktuelle Prinzipal dem Windows-Benutzer entspricht, der auf die Seite zugreift.  
   
  Beachten Sie, dass weder der Identitäts **Wechsel noch** **Rückgängig** das **Prinzipal** Objekt () ändert, das <xref:System.Security.Principal.IPrincipal> dem aktuellen-Kontext zugeordnet ist. Vielmehr ändern Identitätswechsel und Zurücksetzen das Token, das dem aktuellen Betriebssystem Prozess zugeordnet ist.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>

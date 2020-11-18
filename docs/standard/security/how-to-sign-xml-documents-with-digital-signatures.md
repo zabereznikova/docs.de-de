@@ -2,7 +2,6 @@
 title: 'Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen'
 description: Erfahren Sie, wie Sie XML-Dokumente mit digitalen Signaturen signieren. Verwenden Sie Klassen im System.Security.Cryptography.Xml-Namespace in .net.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: e1457fd659ab63489bd4cfafd7731a4b098a2791
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557072"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820162"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen
 
@@ -124,11 +123,11 @@ Sie sollten den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals
   
 Sie sollten einen privaten Schlüssel niemals direkt in Ihren Quellcode einbetten.  Eingebettete Schlüssel können problemlos aus einer Assembly gelesen werden, indem Sie die [Ildasm.exe (IL-Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) verwenden, oder Sie öffnen die Assembly in einem Text-Editor wie Notepad.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)
 - [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten](how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten](how-to-verify-the-digital-signatures-of-xml-documents.md)
 - [ASP.net Core Datenschutz](/aspnet/core/security/data-protection/introduction)

@@ -2,7 +2,6 @@
 title: 'Gewusst wie: Speichern von asymmetrischen Schlüsseln in einem Schlüssel Container'
 description: Erfahren Sie, wie Sie asymmetrische Schlüssel in einem Schlüssel Container in .net speichern. Erfahren Sie, wie Sie einen asymmetrischen Schlüssel erstellen, ihn in einem Schlüssel Container speichern und den Schlüssel abrufen und löschen.
 ms.date: 05/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 946657f0c96aa80705575d8203ff158c63a72780
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554409"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820149"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Speichern von asymmetrischen Schlüsseln in einem Schlüssel Container
 

@@ -1,7 +1,6 @@
 ---
 title: 'Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource'
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063403"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817600"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource
 
@@ -68,7 +67,7 @@ In diesem Beispiel <xref:System.TimeZoneInfo> werden-Objekte so serialisiert, da
 
 Da die- <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> Methode einer .NET-XML-Ressourcen Datei umfassende Header Informationen hinzufügt, kann Sie nicht zum Hinzufügen von Ressourcen zu einer vorhandenen Datei verwendet werden. Im Beispiel wird dies behandelt, indem die Datei "SerializedTimeZones. resx" überprüft und, falls vorhanden, alle anderen Ressourcen als die beiden serialisierten Zeitzonen in einem generischen Objekt gespeichert werden <xref:System.Collections.Generic.Dictionary%602> . Die vorhandene Datei wird dann gelöscht, und die vorhandenen Ressourcen werden der neuen Datei "SerializedTimeZones. resx" hinzugefügt. Die serialisierten Zeit Zonendaten werden dieser Datei ebenfalls hinzugefügt.
 
-Die Schlüsselfelder (oder **Namen** ) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die- <xref:System.String.Replace%28System.String%2CSystem.String%29> Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
+Die Schlüsselfelder (oder **Namen**) der Ressourcen dürfen keine eingebetteten Leerzeichen enthalten. Die- <xref:System.String.Replace%28System.String%2CSystem.String%29> Methode wird aufgerufen, um alle eingebetteten Leerzeichen in den Zeit Zonen bezeichgern zu entfernen, bevor Sie der Ressourcen Datei zugewiesen werden.
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
