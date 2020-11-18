@@ -2,20 +2,18 @@
 title: SqlClient-Unterstützung für LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55ab1346de6f5c14f15d01344a984c18edf30e02
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203422"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824479"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient-Unterstützung für LocalDB
 
-Ab der SQL Server-Version mit dem Codenamen „Denali“ ist eine vereinfachte Version von SQL Server mit dem Namen „LocalDB“ verfügbar. In diesem Artikel wird erläutert, wie Sie eine Verbindung mit einer LocalDB-Datenbank herstellen können.  
+In diesem Artikel wird erläutert, wie eine Verbindung mit einer localdb-Datenbank hergestellt wird. Localdb ist eine vereinfachte Version von SQL Server.
   
-## <a name="remarks"></a>Bemerkungen  
-
- Weitere Informationen zu LocalDB, einschließlich der Installation von LocalDB und der Konfiguration der LocalDB-Instanz, finden Sie in der SQL Server-Onlinedokumentation.  
+## <a name="remarks"></a>Hinweise
   
  Sie können LocalDB für Folgendes nutzen:  
   
@@ -31,7 +29,7 @@ Ab der SQL Server-Version mit dem Codenamen „Denali“ ist eine vereinfachte V
   
  `User Instance=True` ist nicht zulässig, wenn eine Verbindung mit einer LocalDB-Datenbank hergestellt wird.  
   
- Sie können LocalDB aus dem [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065) herunterladen. Wenn Sie sqlcmd.exe verwenden, um Daten in der LocalDB-Instanz zu ändern, benötigen Sie sqlcmd von SQ 2012, das auch aus dem SQL Server 2012 Feature Pack abrufbar ist.  
+Weitere Informationen zum Installieren von localdb finden Sie unter [SQL Server Express localdb](/sql/database-engine/configure-windows/sql-server-express-localdb).
   
 ## <a name="programmatically-create-a-named-instance"></a>Programmgesteuertes Erstellen einer benannten Instanz  
 
@@ -59,7 +57,7 @@ Ab der SQL Server-Version mit dem Codenamen „Denali“ ist eine vereinfachte V
   
 - Verwenden Sie das Schlüsselwort `AttachDBFilename` für die Verbindungszeichenfolge, um die MDF-Datei anzugeben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [SQL Server Features und ADO.net](sql-server-features-and-adonet.md)
+- [SQL Server-Funktionen und ADO.NET](sql-server-features-and-adonet.md)
 - [Übersicht über ADO.NET](../ado-net-overview.md)

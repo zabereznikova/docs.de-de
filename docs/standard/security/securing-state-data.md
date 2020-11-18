@@ -2,19 +2,18 @@
 title: Sichern von Statusdaten
 description: Deklarieren Sie Zustandsdaten als private oder interne Variablen, um den Zugriff darauf einzuschränken. Auf solche Daten kann weiterhin über Reflektion, Serialisierung und Debuggen zugegriffen werden.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - security [.NET], state data
 - code security, state data
 - secure coding, state data
 - state data security
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
-ms.openlocfilehash: 73bd0ace28e5b9661cc86d6749ceef9aa4c9ac92
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 849ed993befaceda1b04becbb7fb2530c5c62a77
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557124"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824160"
 ---
 # <a name="securing-state-data"></a>Sichern von Statusdaten
 
@@ -28,7 +27,7 @@ Anwendungen, die vertrauliche Daten verarbeiten oder irgendwelche Sicherheitsent
   
  Stellen Sie sicher, dass diese Werte in keiner Ihrer Methoden oder Eigenschaften versehentlich verfügbar gemacht werden.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Richtlinien für das Schreiben von sicherem Code](secure-coding-guidelines.md)
 - [ASP.net Core Sicherheit](/aspnet/core/security/)

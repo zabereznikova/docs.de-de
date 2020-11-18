@@ -2,19 +2,18 @@
 title: Sicherheit und dynamische Codegenerierung
 description: Das Generieren von Code im Namen von weniger vertrauenswürdigem Code, der auf einer höheren Vertrauens Ebene ausgeführt wird, ist ein Sicherheitsproblem, insbesondere wenn ein Aufrufer die Codegenerierung beeinflussen kann.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - code security, on-the-fly code generation
 - on-the-fly code generation
 - security [.NET], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: a3fc51c346feffa85537d95ccdbd23d943827edf
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c94da31f464a5272dd3f3c9f767a40ba7ad88a47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555694"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824147"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>Sicherheit und dynamische Codegenerierung
 
@@ -26,7 +25,7 @@ Es wird empfohlen, dass Sie Code mit Reflektionsausgabe generieren, wodurch sich
   
 Wenn Sie den Code kompilieren, sollten Sie überlegen, ob für Malware eine Möglichkeit besteht, den Code zu ändern. Gibt es ein kleines Zeitfenster, in dem Malware den Quellcode auf dem Datenträger ändern kann, bevor der Quellcode vom Compiler gelesen wird oder bevor Ihr Code die DLL-Datei lädt? Ist dies der Fall, müssen Sie das Verzeichnis, das diese Dateien enthält, entsprechend mit einer Zugriffssteuerungsliste im Dateisystem schützen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Richtlinien für das Schreiben von sicherem Code](secure-coding-guidelines.md)
 - [ASP.net Core Sicherheit](/aspnet/core/security/)

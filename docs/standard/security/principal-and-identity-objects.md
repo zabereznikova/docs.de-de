@@ -2,7 +2,6 @@
 title: Principal- und Identitätsobjekte
 description: Erfahren Sie mehr über Identitäts Objekte, die Benutzer in .net darstellen. Lesen Sie auch Informationen zu Prinzipal Objekten, die sowohl ein Identitäts Objekt & eine Rolle Kapseln.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: 79caeed6ed64a07238e398af1e12f51640b88b62
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda506fc29e9a86e97b3c99faf2d4155c894f03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555253"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824238"
 ---
 # <a name="principal-and-identity-objects"></a>Principal- und Identitätsobjekte
 
@@ -49,7 +48,7 @@ Vertrauenswürdiger Code, der eine Anwendungsdomäne erstellt, kann die Anwendun
   
 Wird ein **Principal**-Objekt zwischen Anwendungsdomänen, aber im selben Prozesses (und daher auf demselben Computer) übertragen, kopiert die Remoteinfrastruktur einen Verweis auf das **Principal**-Objekt, das dem Kontext des Aufrufers zugeordnet ist, in den Kontext des Aufgerufenen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts](how-to-create-a-windowsprincipal-object.md)
 - [Vorgehensweise: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten](how-to-create-genericprincipal-and-genericidentity-objects.md)

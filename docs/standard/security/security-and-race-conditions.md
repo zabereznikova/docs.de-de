@@ -2,7 +2,6 @@
 title: Sicherheit und Racebedingungen
 'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: a667bf69ba72cbe203bd2603c4c6b7a1e58a6d43
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 870dc0ac956bad045cb87b9c0968b4a8e9733812
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555109"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824121"
 ---
 # <a name="security-and-race-conditions"></a>Sicherheit und Racebedingungen
 
@@ -47,7 +46,7 @@ void Dispose()
 }  
 ```  
   
-Da diese **Lösch** Implementierung nicht synchronisiert wird, kann es vorkommen, dass Sie `Cleanup` durch den ersten Thread aufgerufen wird und ein zweiter Thread vor `_myObj` auf **null**festgelegt ist. Ob dies ein Sicherheitsproblem ist, hängt davon ab, was geschieht, wenn der Code ausgeführt wird `Cleanup` . Ein schwerwiegendes Problem bei **nicht synchronisierten** Lösch Implementierungen umfasst die Verwendung von Ressourcen Handles wie z. b. Dateien. Eine nicht ordnungsgemäße Löschung kann dazu führen, dass das falsche Handle verwendet wird. Dies führt häufig zu Sicherheitsrisiken.  
+Da diese **Lösch** Implementierung nicht synchronisiert wird, kann es vorkommen, dass Sie `Cleanup` durch den ersten Thread aufgerufen wird und ein zweiter Thread vor `_myObj` auf **null** festgelegt ist. Ob dies ein Sicherheitsproblem ist, hängt davon ab, was geschieht, wenn der Code ausgeführt wird `Cleanup` . Ein schwerwiegendes Problem bei **nicht synchronisierten** Lösch Implementierungen umfasst die Verwendung von Ressourcen Handles wie z. b. Dateien. Eine nicht ordnungsgemäße Löschung kann dazu führen, dass das falsche Handle verwendet wird. Dies führt häufig zu Sicherheitsrisiken.  
   
 ## <a name="race-conditions-in-constructors"></a>Racebedingungen in Konstruktoren
 
@@ -108,7 +107,7 @@ Wenn Ihr Code Sicherheitsinformationen zwischenspeichert, stellen Sie sicher, da
 
 Racebedingungen können auch in einem Objekt auftreten, das auf eine statische oder nicht verwaltete Ressource verweist, die Sie dann im Finalizer freigibt. Wenn mehrere Objekte eine Ressource gemeinsam verwenden, die im Finalizer einer Klasse bearbeitet wird, müssen die Objekte den gesamten Zugriff auf diese Ressource synchronisieren.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Richtlinien für das Schreiben von sicherem Code](secure-coding-guidelines.md)
 - [ASP.net Core Sicherheit](/aspnet/core/security/)

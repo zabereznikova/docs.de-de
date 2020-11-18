@@ -1,7 +1,6 @@
 ---
 title: Ersetzen eines Principalobjekts
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - security [.NET], replacing principal objects
 - security [.NET], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-ms.openlocfilehash: fced91aef991bc228e65128d5e8d69e6a46588e5
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b8f7a8fbd3b9c65126d6a3a65a5f6722f2ad93de
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557098"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824173"
 ---
 # <a name="replacing-a-principal-object"></a>Ersetzen eines Principalobjekts
 
@@ -34,7 +33,7 @@ Im folgenden Beispiel wird veranschaulicht, wie ein allgemeines Principal-Objekt
 [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
 [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [Principal- und Identitätsobjekte](principal-and-identity-objects.md)
