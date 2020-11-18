@@ -1,16 +1,15 @@
 ---
 title: Verwendungsrichtlinien
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-ms.openlocfilehash: 03eaba3e52cb25619f65637efb4f414c22770440
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6ea7c7b9ada95e3d0c425aaea18be6cdbb4ce35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291343"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828503"
 ---
 # <a name="usage-guidelines"></a>Verwendungsrichtlinien
 
@@ -27,7 +26,7 @@ Die- <xref:System.IDisposable?displayProperty=nameWithType> Schnittstelle wird i
 [Attribute](attributes.md)  
 [Sammlungen](guidelines-for-collections.md)  
 [Serialisierung](serialization.md)  
-[Verwendung von System. XML](system-xml-usage.md)  
+[System.Xml Verwendung](system-xml-usage.md)  
 [Gleichheits Operatoren](equality-operators.md)  
 
 *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*

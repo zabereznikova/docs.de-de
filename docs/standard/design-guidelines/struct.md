@@ -1,7 +1,6 @@
 ---
 title: Strukturentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
 - deallocating structures
@@ -11,21 +10,21 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: c6ac53014e048da3a90dd7b8e961176f61e90355
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: da831d1477b451131bb27372d65ad7229fcf3f77
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290810"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828620"
 ---
 # <a name="struct-design"></a>Strukturentwurf
 Der allgemeine Werttyp wird am häufigsten als eine Struktur bezeichnet, dessen c#-Schlüsselwort. Dieser Abschnitt enthält Richtlinien für allgemeine Struktur Entwürfe.
 
- ❌Stellen Sie keinen Parameter losen Konstruktor für eine Struktur bereit.
+ ❌ Stellen Sie keinen Parameter losen Konstruktor für eine Struktur bereit.
 
  Durch Befolgen dieser Richtlinie können Arrays von Strukturen erstellt werden, ohne dass der Konstruktor für jedes Element des Arrays ausgeführt werden muss. Beachten Sie, dass es in c# nicht zulässig ist, dass Strukturen Parameter lose Konstruktoren aufweisen.
 
- ❌Definieren Sie keine änderbaren Werttypen.
+ ❌ Definieren Sie keine änderbaren Werttypen.
 
  Änderbare Werttypen haben mehrere Probleme. Wenn z. b. ein Eigenschaften Getter einen Werttyp zurückgibt, empfängt der Aufrufer eine Kopie. Da die Kopie implizit erstellt wird, wissen Entwickler möglicherweise nicht, dass Sie die Kopie und nicht den ursprünglichen Wert muziieren. Außerdem haben einige Sprachen (insbesondere dynamische Sprachen) Probleme bei der Verwendung änderbarer Werttypen, da bei der Dereferenzierung auch lokale Variablen dazu führen, dass eine Kopie erstellt wird.
 
@@ -35,9 +34,9 @@ Der allgemeine Werttyp wird am häufigsten als eine Struktur bezeichnet, dessen 
 
  ✔️ Implementieren Sie <xref:System.IEquatable%601> für Werttypen.
 
- Die <xref:System.Object.Equals%2A?displayProperty=nameWithType> -Methode für Werttypen bewirkt Boxing, und die Standard Implementierung ist nicht sehr effizient, da Sie Reflektion verwendet. <xref:System.IEquatable%601.Equals%2A>kann eine viel bessere Leistung aufweisen und so implementiert werden, dass keine Boxing ausgelöst werden kann.
+ Die <xref:System.Object.Equals%2A?displayProperty=nameWithType> -Methode für Werttypen bewirkt Boxing, und die Standard Implementierung ist nicht sehr effizient, da Sie Reflektion verwendet. <xref:System.IEquatable%601.Equals%2A> kann eine viel bessere Leistung aufweisen und so implementiert werden, dass keine Boxing ausgelöst werden kann.
 
- ❌Erweitern Sie nicht explizit <xref:System.ValueType> . In den meisten Sprachen wird dies verhindert.
+ ❌ Erweitern Sie nicht explizit <xref:System.ValueType> . In den meisten Sprachen wird dies verhindert.
 
  Im Allgemeinen können Strukturen sehr nützlich sein, sollten aber nur für kleine, einzelne, unveränderliche Werte verwendet werden, die nicht häufig geschachtelt werden.
 

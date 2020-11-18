@@ -1,17 +1,16 @@
 ---
 title: Eigenschaftenentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291941"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828737"
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
 Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, unterscheiden Sie sich in Bezug auf Ihre Verwendungs Szenarien erheblich. Sie sollten als intelligente Felder betrachtet werden. Sie verfügen über die Aufruf Syntax der Felder und die Flexibilität der Methoden.
@@ -20,7 +19,7 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  Beachten Sie, dass der Eigenschafts Wert auch dann geändert werden kann, wenn es sich bei dem Typ der Eigenschaft um einen änderbaren Referenztyp handelt.
 
- ❌Stellen Sie keine festgelegten Eigenschaften oder Eigenschaften mit dem Setter bereit, der über breitere Zugriffsmöglichkeiten verfügt als der Getter.
+ ❌ Stellen Sie keine festgelegten Eigenschaften oder Eigenschaften mit dem Setter bereit, der über breitere Zugriffsmöglichkeiten verfügt als der Getter.
 
  Verwenden Sie z. b. keine Eigenschaften mit einem öffentlichen Setter und einem geschützten Getter.
 
@@ -34,7 +33,7 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  ✔️ behalten Sie den vorherigen Wert bei, wenn ein Eigenschaften Setter eine Ausnahme auslöst.
 
- ❌Vermeiden Sie das Auslösen von Ausnahmen von Eigenschaften Getter.
+ ❌ Vermeiden Sie das Auslösen von Ausnahmen von Eigenschaften Getter.
 
  Eigenschaften Getter sollten einfache Vorgänge sein und sollten keine Vorbedingungen aufweisen. Wenn ein Getter eine Ausnahme auslösen kann, sollte er wahrscheinlich neu gestaltet werden, um eine Methode zu sein. Beachten Sie, dass diese Regel nicht für Indexer gilt, bei denen Ausnahmen aufgrund der Validierung der Argumente erwartet werden.
 
@@ -47,11 +46,11 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  ✔️ sollten Indexer für Typen bereitgestellt werden, die Element Auflistungen darstellen.
 
- ❌Vermeiden Sie die Verwendung von indizierten Eigenschaften mit mehr als einem Parameter.
+ ❌ Vermeiden Sie die Verwendung von indizierten Eigenschaften mit mehr als einem Parameter.
 
  Wenn der Entwurf mehrere Parameter erfordert, überdenken Sie, ob die-Eigenschaft tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie stattdessen-Methoden. Sie sollten den Methodennamen ggf `Get` . mit oder Starten `Set` .
 
- ❌Vermeiden Sie Indexer mit anderen Parametertypen als <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> , <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> oder einer Enumeration.
+ ❌ Vermeiden Sie Indexer mit anderen Parametertypen als <xref:System.Int32?displayProperty=nameWithType> , <xref:System.Int64?displayProperty=nameWithType> , <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> oder einer Enumeration.
 
  Wenn der Entwurf andere Typen von Parametern erfordert, sollten Sie nachdrücklich neu auswerten, ob die API tatsächlich einen Accessor für eine logische Auflistung darstellt. Wenn dies nicht der Fall ist, verwenden Sie eine-Methode. Sie sollten den Methodennamen ggf `Get` . mit oder Starten `Set` .
 
@@ -59,13 +58,13 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  In c# sind Indexer standardmäßig benannte Elemente. <xref:System.Runtime.CompilerServices.IndexerNameAttribute>Kann verwendet werden, um diesen Namen anzupassen.
 
- ❌Geben Sie keinen Indexer und keine Methoden an, die semantisch äquivalent sind.
+ ❌ Geben Sie keinen Indexer und keine Methoden an, die semantisch äquivalent sind.
 
- ❌Geben Sie nicht mehr als eine Familie überladener Indexer in einem Typ an.
+ ❌ Geben Sie nicht mehr als eine Familie überladener Indexer in einem Typ an.
 
  Dies wird vom c#-Compiler erzwungen.
 
- ❌Verwenden Sie keine nicht standardmäßigen indizierten Eigenschaften.
+ ❌ Verwenden Sie keine nicht standardmäßigen indizierten Eigenschaften.
 
  Dies wird vom c#-Compiler erzwungen.
 

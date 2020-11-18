@@ -1,26 +1,25 @@
 ---
 title: Versiegeln
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - limiting extensibility
 - classes [.NET Framework], sealing
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: a54c68efb4ac114fe0e5a5712eca877bef35c103
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290109"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828685"
 ---
 # <a name="sealing"></a>Versiegeln
 Eines der Features von objektorientierten Frameworks besteht darin, dass Entwickler diese auf eine Weise erweitern und anpassen können, die von den Framework-Designern nicht erwartet wird. Dies ist sowohl die Leistungsfähigkeit als auch die Gefahr des erweiterbaren Entwurfs. Wenn Sie Ihr Framework entwerfen, ist es daher sehr wichtig, die Erweiterbarkeit bei Bedarf sorgfältig zu entwerfen und die Erweiterbarkeit zu begrenzen, wenn dies gefährlich ist.
 
  Ein leistungsfähiger Mechanismus, der die Erweiterbarkeit verhindert, ist das versiegeln. Sie können entweder die Klasse oder einzelne Member versiegeln. Durch das Versiegeln einer Klasse wird verhindert, dass Benutzer von der-Klasse erben. Das Versiegeln eines Members verhindert, dass Benutzer ein bestimmtes Element überschreiben.
 
- ❌Versiegeln Sie keine Klassen, ohne einen guten Grund dafür zu haben.
+ ❌ Versiegeln Sie keine Klassen, ohne einen guten Grund dafür zu haben.
 
  Das Versiegeln einer Klasse, da Sie sich kein Erweiterbarkeits Szenario vorstellen können, ist kein guter Grund. Frameworkbenutzer, die aus verschiedenen nicht offensichtlichen Gründen von Klassen erben, wie das Hinzufügen von hilfsmembern. Unter [nicht versiegelte Klassen](unsealed-classes.md) finden Sie Beispiele für nicht offensichtliche Gründe, warum Benutzer von einem Typ erben möchten.
 
@@ -34,7 +33,7 @@ Eines der Features von objektorientierten Frameworks besteht darin, dass Entwick
 
 - Bei der-Klasse handelt es sich um ein Attribut, das eine sehr schnelle Lauf Zeit Suche erfordert. Versiegelte Attribute haben etwas höhere Leistungsstufen als nicht versiegelte. Siehe [Attribute](attributes.md).
 
- ❌Deklarieren Sie keine geschützten oder virtuellen Member für versiegelte Typen.
+ ❌ Deklarieren Sie keine geschützten oder virtuellen Member für versiegelte Typen.
 
  Definitionsgemäß können versiegelte Typen nicht von geerbt werden. Dies bedeutet, dass geschützte Member in versiegelten Typen nicht aufgerufen werden können, und virtuelle Methoden für versiegelte Typen können nicht überschrieben werden.
 

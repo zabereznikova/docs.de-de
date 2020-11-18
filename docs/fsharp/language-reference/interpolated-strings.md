@@ -2,12 +2,12 @@
 title: Interpolierte Zeichenfolgen
 description: 'Erfahren Sie mehr über interpoliert Zeichen folgen, eine spezielle Form von Zeichen folgen, die es Ihnen ermöglicht, F #-Ausdrücke direkt in Sie einzubetten.'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688624"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829686"
 ---
 # <a name="interpolated-strings"></a>Interpolierte Zeichenfolgen
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>Typisierte interpoliert Zeichen folgen
 
-Interinterpolierte Zeichen folgen können auch F #-Format Bearbeiter aufweisen, um den Typ Safey zu erzwingen.
+Interinterpolierte Zeichen folgen können auch F #-Format Bearbeiter aufweisen, um Typsicherheit zu erzwingen.
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>Ausrichten von Ausdrücken in interpoliert-Zeichen folgen
 
-Sie können Ausdrücke in interinterpolierten Zeichen folgen mit linksbündig ausrichten oder mit `|` der Angabe, wie viele Leerzeichen übereinstimmen. Mit der folgenden interinterierten Zeichenfolge werden die linken und rechten Ausdrücke Links und rechts um 7 Leerzeichen ausgerichtet.
+Sie können Ausdrücke in interinterpolierten Zeichen folgen mit linksbündig ausrichten oder mit `|` der Angabe, wie viele Leerzeichen übereinstimmen. Mit der folgenden interinterierten Zeichenfolge werden die linken und rechten Ausdrücke Links und rechts um sieben Leerzeichen ausgerichtet.
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-Außerdem kann eine interinterpolierte Zeichenfolge <xref:System.FormattableString> über eine Typanmerkung auch als typeCheck-Wert angegeben werden:
+Außerdem kann eine interinterpolierte Zeichenfolge auch als <xref:System.FormattableString> über eine Typanmerkung als überprüfte Typ markiert werden:
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

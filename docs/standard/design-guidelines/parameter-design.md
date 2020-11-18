@@ -1,7 +1,6 @@
 ---
 title: Parameterentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621586"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828802"
 ---
 # <a name="parameter-design"></a>Parameterentwurf
 
@@ -24,11 +23,11 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  Angenommen, Sie möchten eine Methode entwerfen, die eine Auflistung auflistet und jedes Element in der Konsole ausgibt. Eine solche Methode sollte z <xref:System.Collections.IEnumerable> . b. den-Parameter, nicht <xref:System.Collections.ArrayList> oder verwenden <xref:System.Collections.IList> .
 
- ❌Verwenden Sie keine reservierten Parameter.
+ ❌ Verwenden Sie keine reservierten Parameter.
 
  Wenn in einer zukünftigen Version mehr Eingaben für einen Member erforderlich sind, kann eine neue Überladung hinzugefügt werden.
 
- ❌Sie verfügen nicht über öffentlich verfügbar gemachte Methoden, die Zeiger, Zeiger Arrays oder mehrdimensionale Arrays als Parameter verwenden.
+ ❌ Sie verfügen nicht über öffentlich verfügbar gemachte Methoden, die Zeiger, Zeiger Arrays oder mehrdimensionale Arrays als Parameter verwenden.
 
  Zeiger und mehrdimensionale Arrays sind relativ schwierig zu verwenden. In fast allen Fällen können APIs umgestaltet werden, um zu vermeiden, dass diese Typen als Parameter übernommen werden.
 
@@ -43,7 +42,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Auswählen zwischen Aufzählungs-und booleschen Parametern  
  ✔️ verwenden Enumerationswerte, wenn ein Member andernfalls mindestens zwei boolesche Parameter aufweisen würde.
 
- ❌Verwenden Sie keine booleschen Werte, es sei denn, Sie sind sicher, dass nie mehr als zwei Werte benötigt werden.
+ ❌ Verwenden Sie keine booleschen Werte, es sei denn, Sie sind sicher, dass nie mehr als zwei Werte benötigt werden.
 
  Enumerationen geben Ihnen einen gewissen Raum für eine zukünftige Addition von Werten. Sie sollten jedoch alle Implikationen beachten, die sich aus dem Hinzufügen von Werten zu Enumerationen machen, die im [Enumerationsentwurf](enum.md)beschrieben werden.
 
@@ -60,7 +59,7 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  Gehen Sie nicht davon aus, dass sich die Aufzählungs Argumente in dem von der-Aufzählung definierten Bereich befinden. Die CLR ermöglicht das Umwandeln eines beliebigen ganzzahligen Werts in einen Enumerationswert, auch wenn der Wert nicht in der Enumeration definiert ist.
 
- ❌Verwenden Sie nicht für Aufzählungs <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> Bereichs Überprüfungen.
+ ❌ Verwenden Sie nicht für Aufzählungs <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> Bereichs Überprüfungen.
 
  ✔️ Beachten Sie, dass änderbare Argumente möglicherweise geändert wurden, nachdem Sie überprüft wurden.
 
@@ -71,15 +70,15 @@ Dieser Abschnitt enthält allgemeine Richtlinien zum Parameter Entwurf, einschli
 
  Wenn ein Argument durch einen by-value-Parameter übergeben wird, empfängt der Member eine Kopie des tatsächlich übergebenen Arguments. Wenn das Argument ein Werttyp ist, wird eine Kopie des Arguments auf dem Stapel abgelegt. Wenn das Argument ein Referenztyp ist, wird eine Kopie des Verweises auf dem Stapel abgelegt. Bei den beliebtesten CLR-Sprachen, wie z. b. c#, VB.net und C++, wird standardmäßig die Übergabe von Parametern nach Wert angegeben.
 
- Wenn ein Argument durch einen Parameter übergeben wird `ref` , erhält der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref`Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.
+ Wenn ein Argument durch einen Parameter übergeben wird `ref` , erhält der Member einen Verweis auf das tatsächlich übergebene Argument. Wenn das Argument ein Werttyp ist, wird ein Verweis auf das Argument auf dem Stapel abgelegt. Wenn es sich bei dem Argument um einen Verweistyp handelt, wird ein Verweis auf den Verweis auf den Stapel eingefügt. `Ref` Parameter können verwendet werden, um zuzulassen, dass der Member vom Aufrufer übergeben wird.
 
- `Out`Parameter ähneln `ref` Parametern mit einigen kleinen unterschieden. Der-Parameter wird anfänglich als nicht zugewiesen betrachtet und kann nicht im Element Text gelesen werden, bevor ihm ein Wert zugewiesen wird. Außerdem muss dem-Parameter ein Wert zugewiesen werden, bevor der Member zurückgegeben wird.
+ `Out` Parameter ähneln `ref` Parametern mit einigen kleinen unterschieden. Der-Parameter wird anfänglich als nicht zugewiesen betrachtet und kann nicht im Element Text gelesen werden, bevor ihm ein Wert zugewiesen wird. Außerdem muss dem-Parameter ein Wert zugewiesen werden, bevor der Member zurückgegeben wird.
 
- ❌Verwenden Sie keine- `out` oder- `ref` Parameter.
+ ❌ Verwenden Sie keine- `out` oder- `ref` Parameter.
 
  Die `out` Verwendung `ref` von-oder-Parametern erfordert die Verwendung von Zeigern, die Unterschiede zwischen Werttypen und Verweis Typen sowie die Behandlung von Methoden mit mehreren Rückgabe Werten Außerdem wird der Unterschied zwischen `out` -und- `ref` Parametern nicht häufig verstanden. Frameworkarchitekten, die für eine allgemeine Zielgruppe entwerfen, sollten nicht erwarten, dass Benutzer mit- `out` oder- `ref` Parametern arbeiten
 
- ❌Übergeben Sie Verweis Typen nicht als Verweis.
+ ❌ Übergeben Sie Verweis Typen nicht als Verweis.
 
  Es gibt einige begrenzte Ausnahmen für die Regel, z. b. eine Methode, die zum Austauschen von Verweisen verwendet werden kann.
 
@@ -112,11 +111,11 @@ public class String {
 
  ✔️ Sie ggf. das params-Schlüsselwort zu Array Parametern hinzufügen, wenn Sie erwarten, dass die Endbenutzer Arrays mit einer kleinen Anzahl von Elementen übergeben. Wenn davon ausgegangen wird, dass viele Elemente in gängigen Szenarien übergeben werden, werden diese Elemente wahrscheinlich nicht von den Benutzern Inline übergeben, sodass das params-Schlüsselwort nicht erforderlich ist.
 
- ❌Vermeiden Sie die Verwendung von params-Arrays, wenn der Aufrufer fast immer die Eingabe in einem Array haben würde.
+ ❌ Vermeiden Sie die Verwendung von params-Arrays, wenn der Aufrufer fast immer die Eingabe in einem Array haben würde.
 
  Beispielsweise werden Elemente mit Bytearray-Parametern fast nie aufgerufen, indem einzelne Bytes übergeben werden. Aus diesem Grund verwenden Bytearray-Parameter im .NET Framework nicht das params-Schlüsselwort.
 
- ❌Verwenden Sie keine params-Arrays, wenn das Array durch den Member geändert wird, der den Parameter "params Array" annimmt.
+ ❌ Verwenden Sie keine params-Arrays, wenn das Array durch den Member geändert wird, der den Parameter "params Array" annimmt.
 
  Aufgrund der Tatsache, dass viele Compiler die Argumente für den Member in ein temporäres Array an der aufrufssite umwandeln, kann das Array ein temporäres Objekt sein. Daher gehen alle Änderungen am Array verloren.
 
@@ -136,7 +135,7 @@ public class String {
 
  Vor der Verarbeitung sollten Sie überprüfen, ob das Array nicht NULL ist.
 
- ❌Verwenden Sie die- `varargs` Methoden, die auch als Ellipsen bezeichnet werden.
+ ❌ Verwenden Sie die- `varargs` Methoden, die auch als Ellipsen bezeichnet werden.
 
  Einige CLR-Sprachen, wie z. b. C++, unterstützen eine alternative Konvention zum Übergeben von Variablen Parameterlisten mit dem Namen `varargs` Methoden. Die Konvention sollte nicht in Frameworks verwendet werden, da Sie nicht CLS-kompatibel ist.
 
@@ -145,7 +144,7 @@ public class String {
 
  ✔️ eine Alternative für alle Member bereitstellen, die ein Zeigerargument verwenden, da Zeiger nicht CLS-kompatibel sind.
 
- ❌Vermeiden Sie eine teure Argument Überprüfung von Zeiger Argumenten.
+ ❌ Vermeiden Sie eine teure Argument Überprüfung von Zeiger Argumenten.
 
  beim Entwerfen von Membern mit Zeigern folgen ✔️ allgemeinen Zeiger bezogenen Konventionen.
 
@@ -155,7 +154,7 @@ public class String {
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Entwurfs Richtlinien für Member](member.md)
 - [Framework-Entwurfs Richtlinien](index.md)

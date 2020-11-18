@@ -1,14 +1,13 @@
 ---
 title: Serialisierung
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: d07549da371e403adca089c601ee5b028b268086
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291681"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828672"
 ---
 # <a name="serialization"></a>Serialisierung
 Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wird, das leicht persistent gespeichert oder transportiert werden kann. Beispielsweise können Sie ein Objekt serialisieren, über das Internet mithilfe von http transportieren und auf dem Zielcomputer deserialisieren.
@@ -32,7 +31,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
 
  ✔️ sollten die Laufzeitserialisierung unterstützen, wenn Instanzen des Typs über .NET-Remoting-Grenzen hinweg übertragen werden müssen.
 
- ❌Vermeiden Sie die Unterstützung der Laufzeitserialisierung oder XML-Serialisierung nur aus Gründen allgemeiner Persistenz. Bevorzugen Sie stattdessen die Datenvertragsserialisierung.
+ ❌ Vermeiden Sie die Unterstützung der Laufzeitserialisierung oder XML-Serialisierung nur aus Gründen allgemeiner Persistenz. Bevorzugen Sie stattdessen die Datenvertragsserialisierung.
 
 ## <a name="supporting-data-contract-serialization"></a>Unterstützen der Datenvertragsserialisierung
  Typen können die Datenvertragsserialisierung unterstützen, indem <xref:System.Runtime.Serialization.DataContractAttribute> Sie auf den Typ und auf die Member <xref:System.Runtime.Serialization.DataMemberAttribute> (Felder und Eigenschaften) des Typs anwenden.
@@ -47,7 +46,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
 
  Konstruktoren werden beim Deserialisieren von Objekten nicht aufgerufen. (Es gibt Ausnahmen für die Regel. Konstruktoren von mit markierten Sammlungen <xref:System.Runtime.Serialization.CollectionDataContractAttribute> werden während der Deserialisierung aufgerufen.) Daher muss jede Logik, die während der normalen Erstellung ausgeführt wird, als eine der Serialisierungsrückrufe implementiert werden.
 
- `OnDeserializedAttribute`ist das am häufigsten verwendete Rückruf Attribut. Weitere Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.
+ `OnDeserializedAttribute` ist das am häufigsten verwendete Rückruf Attribut. Weitere Attribute in der Familie sind <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> und <xref:System.Runtime.Serialization.OnSerializedAttribute>. Mit ihnen können Rückrufe gekennzeichnet werden, die entsprechend vor der Deserialisierung, vor der Serialisierung oder nach der Serialisierung ausgeführt werden.
 
  ✔️ die Verwendung <xref:System.Runtime.Serialization.KnownTypeAttribute> von in Erwägung gezogen, um konkrete Typen anzugeben, die beim Deserialisieren eines komplexen Objekt Diagramms verwendet werden sollen.
 
@@ -66,7 +65,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
 ## <a name="supporting-xml-serialization"></a>Unterstützen der XML-Serialisierung
  Die Datenvertragsserialisierung ist die wichtigste (standardmäßige) serialisierungstechnologie im .NET Framework, aber es gibt Serialisierungsszenarien, die die Datenvertragsserialisierung nicht unterstützt Beispielsweise kann die Form des vom Serialisierungsprogramm erzeugten bzw. verarbeiteten XML nicht vollständig kontrolliert werden. Wenn eine solche feine Kontrolle erforderlich ist, muss die XML-Serialisierung verwendet werden, und Sie müssen die Typen für die Unterstützung dieser serialisierungstechnologie entwerfen.
 
- ❌Vermeiden Sie das Entwerfen von Typen speziell für die XML-Serialisierung, es sei denn, Sie haben einen sehr starken Grund, die Form des erzeugten XML zu steuern. Diese Serialisierungstechnologie wurde durch die im vorherigen Abschnitt behandelte Datenvertragsserialisierung abgelöst.
+ ❌ Vermeiden Sie das Entwerfen von Typen speziell für die XML-Serialisierung, es sei denn, Sie haben einen sehr starken Grund, die Form des erzeugten XML zu steuern. Diese Serialisierungstechnologie wurde durch die im vorherigen Abschnitt behandelte Datenvertragsserialisierung abgelöst.
 
  ✔️ sollten Sie die Implementierung der- <xref:System.Xml.Serialization.IXmlSerializable> Schnittstelle in Erwägung nehmen, wenn Sie die Form des serialisierten XML-Codes noch besser steuern möchten, als durch Anwenden der XML-Serialisierungsattribute. Die beiden Methoden <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> der Schnittstelle erlauben eine vollständige Kontrolle des serialisierten XML-Streams. Sie können auch das XML-Schema steuern, das für den Typ generiert wird, indem Sie das Anwenden `XmlSchemaProviderAttribute` .
 

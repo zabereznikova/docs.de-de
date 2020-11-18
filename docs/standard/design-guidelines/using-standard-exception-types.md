@@ -2,32 +2,31 @@
 title: Verwenden von Standardausnahmetypen
 description: Informieren Sie sich über Standard Ausnahme Typen in .net. Erfahren Sie mehr über "SystemException", "ApplicationException", "argumumtexception", "COMException" und mehr.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - throwing exceptions, standard types
 - catching exceptions
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d8e75f7104b755476f255563c9c1f7ece14f67db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663056"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828464"
 ---
 # <a name="using-standard-exception-types"></a>Verwenden von Standardausnahmetypen
 In diesem Abschnitt werden die Standard Ausnahmen, die vom Framework bereitgestellt werden, und die Details ihrer Verwendung beschrieben. Die Liste ist keineswegs vollständig. Weitere Informationen zur Verwendung von frameworkausnahmetypen finden Sie in der .NET Framework Referenz Dokumentation.
 
 ## <a name="exception-and-systemexception"></a>Exception und SystemException
- ❌Lösen Sie nicht <xref:System.Exception?displayProperty=nameWithType> oder aus <xref:System.SystemException?displayProperty=nameWithType> .
+ ❌ Lösen Sie nicht <xref:System.Exception?displayProperty=nameWithType> oder aus <xref:System.SystemException?displayProperty=nameWithType> .
 
- ❌Fangen `System.Exception` Sie oder nicht `System.SystemException` im Frameworkcode ab, es sei denn, Sie möchten erneut auslösen.
+ ❌ Fangen `System.Exception` Sie oder nicht `System.SystemException` im Frameworkcode ab, es sei denn, Sie möchten erneut auslösen.
 
- ❌Vermeiden Sie das Abfangen von `System.Exception` oder `System.SystemException` , außer in Ausnahme Handlern der obersten Ebene.
+ ❌ Vermeiden Sie das Abfangen von `System.Exception` oder `System.SystemException` , außer in Ausnahme Handlern der obersten Ebene.
 
 ## <a name="applicationexception"></a>ApplicationException
- ❌Lösen Sie nicht aus oder leiten Sie von ab <xref:System.ApplicationException> .
+ ❌ Lösen Sie nicht aus oder leiten Sie von ab <xref:System.ApplicationException> .
 
 ## <a name="invalidoperationexception"></a>InvalidOperationException
  ✔️ lösen eine <xref:System.InvalidOperationException> aus, wenn sich das Objekt in einem unzulässigen Zustand befindet.
@@ -42,28 +41,28 @@ In diesem Abschnitt werden die Standard Ausnahmen, die vom Framework bereitgeste
  ✔️ Verwenden Sie `value` für den Namen des impliziten value-Parameters von Eigenschaften Settern.
 
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, indexouesfrangeexception und AccessViolationException
- ❌Lassen Sie nicht zu, dass öffentlich Aufruf Bare APIs, oder explizit oder implizit auslösen <xref:System.NullReferenceException> <xref:System.AccessViolationException> <xref:System.IndexOutOfRangeException> . Diese Ausnahmen sind von der Ausführungs-Engine reserviert und werden ausgelöst und weisen in den meisten Fällen auf einen Fehler hin.
+ ❌ Lassen Sie nicht zu, dass öffentlich Aufruf Bare APIs, oder explizit oder implizit auslösen <xref:System.NullReferenceException> <xref:System.AccessViolationException> <xref:System.IndexOutOfRangeException> . Diese Ausnahmen sind von der Ausführungs-Engine reserviert und werden ausgelöst und weisen in den meisten Fällen auf einen Fehler hin.
 
  Argument Überprüfung, um das Auslösen dieser Ausnahmen zu vermeiden. Wenn Sie diese Ausnahmen auslösen, werden Implementierungsdetails der Methode angezeigt, die sich im Laufe der Zeit ändern können.
 
 ## <a name="stackoverflowexception"></a>StackOverflowException
- ❌Nicht explizit auslösen <xref:System.StackOverflowException> . Die Ausnahme sollte explizit nur durch die CLR ausgelöst werden.
+ ❌ Nicht explizit auslösen <xref:System.StackOverflowException> . Die Ausnahme sollte explizit nur durch die CLR ausgelöst werden.
 
- ❌Nicht abfangen `StackOverflowException` .
+ ❌ Nicht abfangen `StackOverflowException` .
 
  Es ist beinahe unmöglich, verwalteten Code zu schreiben, der bei der Anwesenheit beliebiger Stapel Überläufe konsistent bleibt. Die nicht verwalteten Teile der CLR bleiben konsistent, indem Sie die Stapel Überläufe mithilfe von Tests an klar definierte Orte verschieben, anstatt Sie aus willkürlichen Stapel Überläufen zu sichern.
 
 ## <a name="outofmemoryexception"></a>OutOfMemoryException
- ❌Nicht explizit auslösen <xref:System.OutOfMemoryException> . Diese Ausnahme wird nur durch die CLR-Infrastruktur ausgelöst.
+ ❌ Nicht explizit auslösen <xref:System.OutOfMemoryException> . Diese Ausnahme wird nur durch die CLR-Infrastruktur ausgelöst.
 
 ## <a name="comexception-sehexception-and-executionengineexception"></a>COMException, Seh Exception und ExecutionEngineException
- ❌Lösen Sie, und nicht explizit aus <xref:System.Runtime.InteropServices.COMException> <xref:System.ExecutionEngineException> <xref:System.Runtime.InteropServices.SEHException> . Diese Ausnahmen müssen nur von der CLR-Infrastruktur ausgelöst werden.
+ ❌ Lösen Sie, und nicht explizit aus <xref:System.Runtime.InteropServices.COMException>  <xref:System.ExecutionEngineException> <xref:System.Runtime.InteropServices.SEHException> . Diese Ausnahmen müssen nur von der CLR-Infrastruktur ausgelöst werden.
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwurfsrichtlinien für Ausnahmen](exceptions.md)
