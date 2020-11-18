@@ -1,45 +1,44 @@
 ---
 title: Richtlinien für Auflistungen
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: cc853be2310cf72c4eb559f625c6a37a44ed7db8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276048"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821085"
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde, die über ein gemeinsames Merkmal verfügen, kann als Sammlung angesehen werden. Es ist fast immer für solche Typen geeignet, oder zu implementieren <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> , daher berücksichtigen wir in diesem Abschnitt nur Typen, die eine oder beide dieser Schnittstellen implementieren, um Auflistungen zu sein.
 
- ❌Verwenden Sie keine schwach typisierten Auflistungen in öffentlichen APIs.
+ ❌ Verwenden Sie keine schwach typisierten Auflistungen in öffentlichen APIs.
 
  Der Typ aller Rückgabewerte und Parameter, die Sammel Elemente darstellen, sollte der exakte Elementtyp und nicht einer seiner Basis Typen sein (Dies gilt nur für öffentliche Member der Auflistung).
 
- ❌Verwenden Sie <xref:System.Collections.ArrayList> <xref:System.Collections.Generic.List%601> in öffentlichen APIs nicht oder.
+ ❌ Verwenden Sie <xref:System.Collections.ArrayList> <xref:System.Collections.Generic.List%601> in öffentlichen APIs nicht oder.
 
- Bei diesen Typen handelt es sich um Datenstrukturen, die in der internen Implementierung, nicht in öffentlichen APIs verwendet werden sollen. `List<T>`ist für die Leistung und die Leistung auf Kosten der Bereinigung der APIs und Flexibilität optimiert. Wenn Sie z `List<T>` . b. zurückgeben, sind Sie nicht mehr in der Lage, Benachrichtigungen zu empfangen, wenn der Client Code die Auflistung ändert. Darüber hinaus macht viele Member verfügbar `List<T>` , z <xref:System.Collections.Generic.List%601.BinarySearch%2A> . b., die in vielen Szenarios nicht nützlich oder anwendbar sind. In den folgenden beiden Abschnitten werden Typen (Abstraktionen) beschrieben, die speziell für die Verwendung in öffentlichen APIs entworfen wurden.
+ Bei diesen Typen handelt es sich um Datenstrukturen, die in der internen Implementierung, nicht in öffentlichen APIs verwendet werden sollen. `List<T>` ist für die Leistung und die Leistung auf Kosten der Bereinigung der APIs und Flexibilität optimiert. Wenn Sie z `List<T>` . b. zurückgeben, sind Sie nicht mehr in der Lage, Benachrichtigungen zu empfangen, wenn der Client Code die Auflistung ändert. Darüber hinaus macht viele Member verfügbar `List<T>` , z <xref:System.Collections.Generic.List%601.BinarySearch%2A> . b., die in vielen Szenarios nicht nützlich oder anwendbar sind. In den folgenden beiden Abschnitten werden Typen (Abstraktionen) beschrieben, die speziell für die Verwendung in öffentlichen APIs entworfen wurden.
 
- ❌Verwenden Sie `Hashtable` `Dictionary<TKey,TValue>` in öffentlichen APIs nicht oder.
+ ❌ Verwenden Sie `Hashtable` `Dictionary<TKey,TValue>` in öffentlichen APIs nicht oder.
 
  Diese Typen sind Datenstrukturen, die für die Verwendung in der internen Implementierung entwickelt wurden. Öffentliche APIs sollten <xref:System.Collections.IDictionary> , `IDictionary <TKey, TValue>` oder einen benutzerdefinierten Typ verwenden, der eine oder beide Schnittstellen implementiert.
 
- ❌Verwenden Sie nicht <xref:System.Collections.Generic.IEnumerator%601> , <xref:System.Collections.IEnumerator> oder einen anderen Typ, der eine dieser Schnittstellen implementiert, außer als Rückgabetyp einer `GetEnumerator` Methode.
+ ❌ Verwenden Sie nicht <xref:System.Collections.Generic.IEnumerator%601> , <xref:System.Collections.IEnumerator> oder einen anderen Typ, der eine dieser Schnittstellen implementiert, außer als Rückgabetyp einer `GetEnumerator` Methode.
 
  Typen, die Enumeratoren von anderen Methoden als zurück `GetEnumerator` geben, können nicht mit der-Anweisung verwendet werden `foreach` .
 
- ❌Implementieren Sie nicht sowohl `IEnumerator<T>` als auch `IEnumerable<T>` für denselben Typ. Das gleiche gilt für die nicht generischen Schnittstellen `IEnumerator` und `IEnumerable` .
+ ❌ Implementieren Sie nicht sowohl `IEnumerator<T>` als auch `IEnumerable<T>` für denselben Typ. Das gleiche gilt für die nicht generischen Schnittstellen `IEnumerator` und `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Sammlungs Parameter
  ✔️ Verwenden Sie den am wenigsten spezialisierten Typ, der als Parametertyp möglich ist. Die meisten Member, die Sammlungen als Parameter verwenden, verwenden die- `IEnumerable<T>` Schnittstelle
 
- ❌Vermeiden Sie <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> die Verwendung von oder als Parameter nur für den Zugriff auf die- `Count` Eigenschaft.
+ ❌ Vermeiden Sie <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> die Verwendung von oder als Parameter nur für den Zugriff auf die- `Count` Eigenschaft.
 
  Verwenden Sie stattdessen oder, und überprüfen Sie, `IEnumerable<T>` `IEnumerable` ob das Objekt `ICollection<T>` oder implementiert `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Sammlungs Eigenschaften und Rückgabewerte
- ❌Stellen Sie keine festleg baren Sammlungs Eigenschaften bereit.
+ ❌ Stellen Sie keine festleg baren Sammlungs Eigenschaften bereit.
 
  Benutzer können den Inhalt der Auflistung ersetzen, indem Sie zuerst die Auflistung löschen und dann den neuen Inhalt hinzufügen. Wenn das Ersetzen der gesamten Auflistung ein gängiges Szenario ist, sollten Sie die- `AddRange` Methode in der Auflistung bereitstellen.
 
@@ -65,14 +64,14 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
 
  Schlüssel gebundene Sammlungen verfügen in der Regel über eine größere Speicherauslastung und sollten nicht verwendet werden, wenn der Arbeitsspeicher Aufwand die Vorteile der Schlüssel auswiegt.
 
- ❌Geben Sie keine NULL-Werte aus Sammlungs Eigenschaften oder Methoden zurück, die Auflistungen zurückgeben. Gibt stattdessen eine leere Auflistung oder ein leeres Array zurück.
+ ❌ Geben Sie keine NULL-Werte aus Sammlungs Eigenschaften oder Methoden zurück, die Auflistungen zurückgeben. Gibt stattdessen eine leere Auflistung oder ein leeres Array zurück.
 
  Die allgemeine Regel ist, dass NULL-und leere (0 Element) Auflistungen oder Arrays gleich behandelt werden sollen.
 
 ### <a name="snapshots-versus-live-collections"></a>Momentaufnahmen im Vergleich zu Live Sammlungen
  Sammlungen, die einen Zustand zu einem bestimmten Zeitpunkt darstellen, werden als Momentaufnahme Auflistungen bezeichnet. Beispielsweise wäre eine Auflistung, die Zeilen enthält, die von einer Datenbankabfrage zurückgegeben werden, eine Momentaufnahme. Sammlungen, die den aktuellen Zustand immer darstellen, werden als Live Auflistungen bezeichnet. Eine Auflistung von `ComboBox` Elementen ist beispielsweise eine Live Auflistung.
 
- ❌Momentaufnahme Auflistungen von Eigenschaften nicht zurückgeben. Eigenschaften sollten Live Auflistungen zurückgeben.
+ ❌ Momentaufnahme Auflistungen von Eigenschaften nicht zurückgeben. Eigenschaften sollten Live Auflistungen zurückgeben.
 
  Eigenschaften Getter sollten sehr einfach sein. Zum Zurückgeben einer Momentaufnahme muss eine Kopie einer internen Sammlung in einem O (n)-Vorgang erstellt werden.
 
@@ -91,7 +90,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
 
  ✔️ verwenden Byte Arrays anstelle von Byte Auflistungen.
 
- ❌Verwenden Sie keine Arrays für Eigenschaften, wenn die Eigenschaft jedes Mal, wenn der Eigenschaften Getter aufgerufen wird, ein neues Array (z. b. eine Kopie eines internen Arrays) zurückgeben muss.
+ ❌ Verwenden Sie keine Arrays für Eigenschaften, wenn die Eigenschaft jedes Mal, wenn der Eigenschaften Getter aufgerufen wird, ein neues Array (z. b. eine Kopie eines internen Arrays) zurückgeben muss.
 
 ## <a name="implementing-custom-collections"></a>Implementieren von benutzerdefinierten Sammlungen
  ✔️ sollten beim Entwerfen von neuen Auflistungen von `Collection<T>` , `ReadOnlyCollection<T>` oder Erben `KeyedCollection<TKey,TItem>` .
@@ -102,12 +101,12 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
 
  ✔️ sollten Sie die Implementierung von nicht generischen Auflistungs Schnittstellen ( `IList` und `ICollection` ) in Erwägung ziehen, wenn die Auflistung häufig an APIs übermittelt wird, die diese Schnittstellen
 
- ❌Vermeiden Sie das Implementieren von Auflistungs Schnittstellen für Typen mit komplexen APIs, die nicht mit dem Konzept einer Auflistung zusammenhängen
+ ❌ Vermeiden Sie das Implementieren von Auflistungs Schnittstellen für Typen mit komplexen APIs, die nicht mit dem Konzept einer Auflistung zusammenhängen
 
- ❌Erben nicht von nicht generischen Basis Auflistungen wie z `CollectionBase` . b.. Verwenden `Collection<T>` Sie `ReadOnlyCollection<T>` stattdessen, und `KeyedCollection<TKey,TItem>` .
+ ❌ Erben nicht von nicht generischen Basis Auflistungen wie z `CollectionBase` . b.. Verwenden `Collection<T>` Sie `ReadOnlyCollection<T>` stattdessen, und `KeyedCollection<TKey,TItem>` .
 
 ### <a name="naming-custom-collections"></a>Benennen von benutzerdefinierten Sammlungen
- Auflistungen (Typen, die implementieren `IEnumerable` ) werden hauptsächlich aus zwei Gründen erstellt: (1) zum Erstellen einer neuen Datenstruktur mit Struktur spezifischen Vorgängen und oft unterschiedlichen Leistungsmerkmalen als vorhandene Datenstrukturen (z. b., <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> , <xref:System.Collections.Generic.Stack%601> ) und (2) zum Erstellen einer spezialisierten Sammlung zum Speichern eines bestimmten Satzes von Elementen (z. b. <xref:System.Collections.Specialized.StringCollection> ). Datenstrukturen werden am häufigsten in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Sammlungen werden hauptsächlich in APIs verfügbar gemacht (als Eigenschaften-und Parametertypen).
+ Auflistungen (Typen, die implementieren `IEnumerable` ) werden hauptsächlich aus zwei Gründen erstellt: (1) zum Erstellen einer neuen Datenstruktur mit Struktur spezifischen Vorgängen und oft unterschiedlichen Leistungsmerkmalen als vorhandene Datenstrukturen (z. b.,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> , <xref:System.Collections.Generic.Stack%601> ) und (2) zum Erstellen einer spezialisierten Sammlung zum Speichern eines bestimmten Satzes von Elementen (z. b.  <xref:System.Collections.Specialized.StringCollection> ). Datenstrukturen werden am häufigsten in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Sammlungen werden hauptsächlich in APIs verfügbar gemacht (als Eigenschaften-und Parametertypen).
 
  ✔️ Verwenden Sie das Suffix "Dictionary" in Namen von Abstraktionen, die `IDictionary` oder implementieren `IDictionary<TKey,TValue>` .
 
@@ -115,7 +114,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
 
  ✔️ den passenden Datenstruktur Namen für benutzerdefinierte Datenstrukturen verwenden.
 
- ❌Vermeiden Sie die Verwendung von Suffixen, die eine bestimmte Implementierung implizieren, wie z. b. "LinkedList" oder "Hashtable" in Namen von Sammlungs Abstraktionen.
+ ❌ Vermeiden Sie die Verwendung von Suffixen, die eine bestimmte Implementierung implizieren, wie z. b. "LinkedList" oder "Hashtable" in Namen von Sammlungs Abstraktionen.
 
  ✔️ in Erwägung gezogen, Sammlungsnamen mit dem Namen des Elementtyps vorab zu beheben. Beispielsweise sollte eine Auflistung, die Elemente des Typs `Address` (implementiert) speichert, `IEnumerable<Address>` benannt werden `AddressCollection` . Wenn der Elementtyp eine Schnittstelle ist, kann das Präfix "I" des Elementtyps ausgelassen werden. Daher kann eine Auflistung von <xref:System.IDisposable> Elementen aufgerufen werden `DisposableCollection` .
 

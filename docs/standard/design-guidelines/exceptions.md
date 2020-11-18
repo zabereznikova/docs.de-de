@@ -1,19 +1,18 @@
 ---
 title: Entwurfsrichtlinien für Ausnahmen
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], exceptions
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-ms.openlocfilehash: d7580d4d3953b279824bba76b44c4134a7293b7a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 776e559bb1629245c275cb4463531a8dd4b230ae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289771"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821150"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Entwurfsrichtlinien für Ausnahmen
 Die Ausnahmebehandlung bietet viele Vorteile gegenüber der Rückgabewert basierten Fehlerberichterstattung. Ein guter Framework-Entwurf unterstützt den Anwendungsentwickler bei der Umsetzung der Vorteile von Ausnahmen. In diesem Abschnitt werden die Vorteile von Ausnahmen erläutert und Richtlinien für die effektive Verwendung von Richtlinien vorgestellt.  

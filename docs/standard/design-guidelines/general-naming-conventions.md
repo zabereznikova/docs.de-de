@@ -2,7 +2,6 @@
 title: Allgemeine Benennungskonventionen
 description: Verwenden Sie allgemeine Benennungs Konventionen im Zusammenhang mit der Wort Auswahl, Richtlinien zur Verwendung von Abkürzungen und Akronymen sowie Anleitungen zum Vermeiden von sprachspezifischen Namen.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - type names, conflicts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769079"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821098"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 
@@ -35,22 +34,22 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  Der Eigenschaftsname `CanScrollHorizontally` ist besser als `ScrollableX` (ein undurchsichtiger Verweis auf die X-Achse).
 
- ❌Verwenden Sie keine Unterstriche, Bindestriche oder andere nicht alphanumerische Zeichen.
+ ❌ Verwenden Sie keine Unterstriche, Bindestriche oder andere nicht alphanumerische Zeichen.
 
- ❌Verwenden Sie keine ungarische Notation.
+ ❌ Verwenden Sie keine ungarische Notation.
 
- ❌Vermeiden Sie die Verwendung von bezeichlern, die mit Schlüsselwörtern häufig verwendeter Programmiersprachen in Konflikt stehen
+ ❌ Vermeiden Sie die Verwendung von bezeichlern, die mit Schlüsselwörtern häufig verwendeter Programmiersprachen in Konflikt stehen
 
  Gemäß Regel 4 der Common Language Specification (CLS) müssen alle kompatiblen Sprachen einen Mechanismus bereitstellen, der den Zugriff auf benannte Elemente ermöglicht, die ein Schlüsselwort dieser Sprache als Bezeichner verwenden. C# verwendet in diesem Fall z. b. das @-Zeichen als Escapezeichen. Es ist jedoch immer noch eine gute Idee, gängige Schlüsselwörter zu vermeiden, da es weitaus schwieriger ist, eine Methode mit der Escapesequenz zu verwenden, als Sie ohne Sie.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Verwenden von Abkürzungen und Akronymen
- ❌Verwenden Sie keine Abkürzungen oder gegen übereinstigkeiten als Teil der Bezeichnernamen.
+ ❌ Verwenden Sie keine Abkürzungen oder gegen übereinstigkeiten als Teil der Bezeichnernamen.
 
  Verwenden Sie z `GetWindow` . b. anstelle von `GetWin` .
 
- ❌Verwenden Sie keine Akronyme, die nicht weitgehend akzeptiert werden, und auch dann nicht, wenn dies der Fall ist.
+ ❌ Verwenden Sie keine Akronyme, die nicht weitgehend akzeptiert werden, und auch dann nicht, wenn dies der Fall ist.
 
-## <a name="avoiding-language-specific-names"></a>Vermeiden von sprachspezifischen Namen
+## <a name="avoiding-language-specific-names"></a>Vermeiden von Language-Specific Namen
  ✔️ verwenden semantisch interessante Namen anstelle von sprachspezifischen Schlüsselwörtern für Typnamen.
 
  Beispielsweise `GetLength` ist ein besserer Name als `GetInt` .
@@ -62,7 +61,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
-|**Byte**|**Byte**|**unsigned char**|**Byte**|
+|**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
 |**int**|**Integer**|**int**|**Int32**|
@@ -91,7 +90,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  in ✔️ wird ein numerisches Suffix verwendet, um eine neue Version einer vorhandenen API anzugeben. Dies gilt insbesondere, wenn der vorhandene Name der API der einzige Name ist, der sinnvoll ist (d. h., wenn es sich um einen Industriestandard handelt) und das Hinzufügen eines sinnvollen Suffixes (oder Ändern des Namens) keine geeignete Option ist.
 
- ❌Verwenden Sie das Suffix "ex" (oder ein ähnliches Suffix) nicht für einen Bezeichner, um ihn von einer früheren Version derselben API zu unterscheiden.
+ ❌ Verwenden Sie das Suffix "ex" (oder ein ähnliches Suffix) nicht für einen Bezeichner, um ihn von einer früheren Version derselben API zu unterscheiden.
 
  in ✔️ wird das Suffix "64" verwendet, wenn Versionen von APIs eingeführt werden, die mit einer 64-Bit-Ganzzahl (Long Integer) anstelle einer 32-Bit-Ganzzahl arbeiten. Diese Vorgehensweise ist nur dann erforderlich, wenn die vorhandene 32-Bit-API vorhanden ist. Verwenden Sie dies nicht für neue APIs mit einer 64-Bit-Version.
 
@@ -99,7 +98,7 @@ In diesem Abschnitt werden allgemeine Benennungs Konventionen im Zusammenhang mi
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Framework-Entwurfsrichtlinien](index.md)
 - [Richtlinien für die Benennung](naming-guidelines.md)

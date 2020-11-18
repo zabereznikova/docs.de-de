@@ -1,14 +1,13 @@
 ---
 title: Abhängigkeitseigenschaften
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-ms.openlocfilehash: 476ef1bb1ac5ec1f551979c64a41cbae55c554bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c6cebd7c6c630af6a1a439b48faccad2aea74a91
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280256"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821371"
 ---
 # <a name="dependency-properties"></a>Abhängigkeitseigenschaften
 Eine Abhängigkeits Eigenschaft (DP) ist eine reguläre Eigenschaft, die ihren Wert in einem Eigenschafts Speicher speichert, anstatt Sie in einer Typvariablen (Feld) zu speichern, z. b..
@@ -26,15 +25,15 @@ Eine Abhängigkeits Eigenschaft (DP) ist eine reguläre Eigenschaft, die ihren W
 
  ✔️ dem statischen Feld der Abhängigkeits Eigenschaft einen Namen, indem Sie den Namen der Eigenschaft mit "Property" versehen.
 
- ❌Legen Sie Standardwerte von Abhängigkeits Eigenschaften nicht explizit im Code fest. Legen Sie Sie stattdessen in den Metadaten fest.
+ ❌ Legen Sie Standardwerte von Abhängigkeits Eigenschaften nicht explizit im Code fest. Legen Sie Sie stattdessen in den Metadaten fest.
 
  Wenn Sie einen Standardwert für die Eigenschaft explizit festlegen, können Sie verhindern, dass diese Eigenschaft auf implizite Weise festgelegt wird, z. b. in Form einer Formatierung.
 
- ❌Fügen Sie keinen Code in den Eigenschaftenaccessoren außer dem Standard Code ein, um auf das statische Feld zuzugreifen.
+ ❌ Fügen Sie keinen Code in den Eigenschaftenaccessoren außer dem Standard Code ein, um auf das statische Feld zuzugreifen.
 
  Dieser Code wird nicht ausgeführt, wenn die Eigenschaft durch implizites Mittel (z. b. eine Formatierung) festgelegt wird, da die Formatierung das statische Feld direkt verwendet.
 
- ❌Verwenden Sie keine Abhängigkeits Eigenschaften, um sichere Daten zu speichern. Auch private Abhängigkeits Eigenschaften können öffentlich aufgerufen werden.
+ ❌ Verwenden Sie keine Abhängigkeits Eigenschaften, um sichere Daten zu speichern. Auch private Abhängigkeits Eigenschaften können öffentlich aufgerufen werden.
 
 ## <a name="attached-dependency-property-design"></a>Design der angefügten Abhängigkeits Eigenschaften
  Abhängigkeits Eigenschaften, die im vorangehenden Abschnitt beschrieben werden, stellen intrinsische Eigenschaften des deklarierenden Typs dar. Beispielsweise ist die- `Text` Eigenschaft eine Eigenschaft von `TextButton` , die Sie deklariert. Eine besondere Art von Abhängigkeits Eigenschaft ist die angefügte Abhängigkeits Eigenschaft.
@@ -80,15 +79,15 @@ public class Grid {
 
  Leider können Abhängigkeits Eigenschaftenaccessoren keinen beliebigen Validierungscode enthalten. Stattdessen muss bei der Eigenschaften Registrierung eine Validierungs Logik für die Abhängigkeits Eigenschaft angegeben werden.
 
- ❌Fügen Sie die Validierungs Logik für die Abhängigkeits Eigenschaft nicht in die Accessoren der Eigenschaft ein. Übergeben Sie stattdessen einen Validierungs Rückruf an die- `DependencyProperty.Register` Methode.
+ ❌ Fügen Sie die Validierungs Logik für die Abhängigkeits Eigenschaft nicht in die Accessoren der Eigenschaft ein. Übergeben Sie stattdessen einen Validierungs Rückruf an die- `DependencyProperty.Register` Methode.
 
 ## <a name="dependency-property-change-notifications"></a>Änderungs Benachrichtigungen für Abhängigkeits Eigenschaften
- ❌Implementieren Sie keine Änderungs Benachrichtigungs Logik in Accessoren für Abhängigkeits Eigenschaften. Abhängigkeits Eigenschaften verfügen über eine integrierte Änderungs Benachrichtigungsfunktion, die verwendet werden muss, wenn ein Änderungs Benachrichtigungs Rückruf an den übergeben wird <xref:System.Windows.PropertyMetadata> .
+ ❌ Implementieren Sie keine Änderungs Benachrichtigungs Logik in Accessoren für Abhängigkeits Eigenschaften. Abhängigkeits Eigenschaften verfügen über eine integrierte Änderungs Benachrichtigungsfunktion, die verwendet werden muss, wenn ein Änderungs Benachrichtigungs Rückruf an den übergeben wird <xref:System.Windows.PropertyMetadata> .
 
 ## <a name="dependency-property-value-coercion"></a>Umwandlung von Abhängigkeits Eigenschafts Werten
  Die Eigenschafts Umwandlung erfolgt, wenn der Wert, der an einen Eigenschaften Setter übergeben wird, vom Setter geändert wird, bevor der Eigenschaften Speicher tatsächlich geändert wird.
 
- ❌Implementieren Sie keine Umwandlungs Logik in Abhängigkeits Eigenschaften Accessoren.
+ ❌ Implementieren Sie keine Umwandlungs Logik in Abhängigkeits Eigenschaften Accessoren.
 
  Abhängigkeits Eigenschaften verfügen über eine integrierte Umwandlungs Funktion und können verwendet werden, indem ein Umwandlungs Rückruf an den übergeben wird `PropertyMetadata` .
 

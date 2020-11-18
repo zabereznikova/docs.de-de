@@ -1,18 +1,17 @@
 ---
 title: Schnittstellenentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], design guidelines
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: f589d47d5b945179430275598996b2fb77e92848
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289030"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821007"
 ---
 # <a name="interface-design"></a>Schnittstellenentwurf
 Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert werden, gibt es Fälle, in denen Schnittstellen besser geeignet sind oder die einzige Option sind.
@@ -25,7 +24,7 @@ Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert
 
  ✔️ sollten Sie eine Schnittstelle definieren, wenn Sie die Funktionalität von Typen unterstützen müssen, die bereits von einem anderen Typ erben.
 
- ❌Vermeiden Sie die Verwendung von Markerschnittstellen (Schnittstellen ohne Member).
+ ❌ Vermeiden Sie die Verwendung von Markerschnittstellen (Schnittstellen ohne Member).
 
  Wenn Sie eine Klasse als ein bestimmtes Merkmal (Marker) markieren müssen, verwenden Sie im Allgemeinen ein benutzerdefiniertes Attribut anstelle einer Schnittstelle.
 
@@ -37,7 +36,7 @@ Obwohl die meisten APIs am besten mithilfe von Klassen und Strukturen modelliert
 
  Auf diese Weise kann der Schnittstellen Entwurf überprüft werden. Beispielsweise verwendet <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> die- <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> Schnittstelle.
 
- ❌Fügen Sie keine Member zu einer Schnittstelle hinzu, die zuvor ausgeliefert wurde.
+ ❌ Fügen Sie keine Member zu einer Schnittstelle hinzu, die zuvor ausgeliefert wurde.
 
  Dies würde die Implementierungen der-Schnittstelle unterbrechen. Sie sollten eine neue Schnittstelle erstellen, um Versions Probleme zu vermeiden.
 

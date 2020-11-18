@@ -1,7 +1,6 @@
 ---
 title: Überladen von Membern
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - default arguments
 - members [.NET Framework], overloaded
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: 6a2cd6d4dd293a7f4a408e1ee97a125c9454be41
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 16e84f06ec388fe7e3c221f35c3e970b9b483ba5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289004"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820968"
 ---
 # <a name="member-overloading"></a>Überladen von Membern
 Das Überladen von Elementen bedeutet, dass zwei oder mehr Member für denselben Typ erstellt werden, die sich nur in der Anzahl oder dem Typ der Parameter unterscheiden, aber denselben Namen aufweisen. Im folgenden Beispiel wird die- `WriteLine` Methode überladen:
@@ -34,17 +33,17 @@ public static class Console {
 
  versuchen Sie ✔️, beschreibende Parameternamen zu verwenden, um den von kürzeren über Ladungen verwendeten Standardwert anzugeben.
 
- ❌Vermeiden Sie beliebig abweichende Parameternamen in über Ladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe wie ein Parameter in einer anderen Überladung darstellt, sollten die Parameter denselben Namen haben.
+ ❌ Vermeiden Sie beliebig abweichende Parameternamen in über Ladungen. Wenn ein Parameter in einer Überladung dieselbe Eingabe wie ein Parameter in einer anderen Überladung darstellt, sollten die Parameter denselben Namen haben.
 
- ❌Vermeiden Sie eine Inkonsistenz bei der Reihenfolge von Parametern in überladenen Elementen. Parameter mit dem gleichen Namen sollten in allen über Ladungen an derselben Position angezeigt werden.
+ ❌ Vermeiden Sie eine Inkonsistenz bei der Reihenfolge von Parametern in überladenen Elementen. Parameter mit dem gleichen Namen sollten in allen über Ladungen an derselben Position angezeigt werden.
 
  ✔️ machen nur die längste Überladung virtuell (wenn Erweiterbarkeit erforderlich ist). Kürzere über Ladungen sollten einfach bis zu einer längeren Überladung aufrufen.
 
- ❌Verwenden Sie keine- `ref` oder- `out` Modifizierer, um Member überladen.
+ ❌ Verwenden Sie keine- `ref` oder- `out` Modifizierer, um Member überladen.
 
  Einige Sprachen können keine Aufrufe von über Ladungen wie diesem auflösen. Außerdem verfügen solche über Ladungen in der Regel über eine ganz andere Semantik und sollten wahrscheinlich nicht über Ladungen, sondern auch über zwei separate Methoden verfügen.
 
- ❌Sie verfügen über keine über Ladungen mit Parametern an derselben Position und ähnlichen Typen, die noch über eine andere Semantik verfügen.
+ ❌ Sie verfügen über keine über Ladungen mit Parametern an derselben Position und ähnlichen Typen, die noch über eine andere Semantik verfügen.
 
  ✔️ zulassen `null` , dass optionale Argumente übermittelt werden.
 

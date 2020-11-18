@@ -2,7 +2,6 @@
 title: Namen von Typmembern
 description: Erfahren Sie mehr über die Richtlinien für die Benennung von Typmembern in .net, z. b. Methoden, Eigenschaften, Ereignisse und Felder.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662497"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820912"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.
@@ -41,7 +40,7 @@ public class String {
 
  ✔️ Sie namens Eigenschaften mit einem Substantiv, nominalen Ausdruck oder Adjektiv.
 
- ❌Verwenden Sie keine Eigenschaften, die mit dem Namen der Get-Methoden identisch sind, wie im folgenden Beispiel gezeigt:
+ ❌ Verwenden Sie keine Eigenschaften, die mit dem Namen der Get-Methoden identisch sind, wie im folgenden Beispiel gezeigt:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  Beispielsweise wird ein Schließereignis, das ausgelöst wird, bevor ein Fenster geschlossen wird, als `Closing` bezeichnet. Ein Ereignis, das nach dem Schließen des Fensters ausgelöst wird, wird als `Closed` bezeichnet.
 
- ❌Verwenden Sie nicht die Präfixe "Before" oder "After" oder postfixes, um Pre-und Post-Ereignisse anzugeben. Verwenden Sie wie oben beschrieben die Gegenwarts- und Vergangenheitsformen.
+ ❌ Verwenden Sie nicht die Präfixe "Before" oder "After" oder postfixes, um Pre-und Post-Ereignisse anzugeben. Verwenden Sie wie oben beschrieben die Gegenwarts- und Vergangenheitsformen.
 
  ✔️ Do-Ereignishandler (Delegaten, die als Typen von Ereignissen verwendet werden) mit dem Suffix "EventHandler", wie im folgenden Beispiel gezeigt:
 
@@ -92,7 +91,7 @@ public class Control {
 
  ✔️ Felder mit einem Substantiv, Substantiv Ausdruck oder Adjektiv benennen.
 
- ❌Verwenden Sie kein Präfix für Feldnamen.
+ ❌ Verwenden Sie kein Präfix für Feldnamen.
 
  Verwenden Sie beispielsweise nicht „g_“ oder „s_“, um statische Felder anzugeben.
 
@@ -100,7 +99,7 @@ public class Control {
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

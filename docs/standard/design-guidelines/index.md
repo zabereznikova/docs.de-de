@@ -3,18 +3,17 @@ title: Frameworkentwurfsrichtlinien
 description: Weitere Informationen finden Sie unter Framework-Entwurfs Richtlinien für das Entwerfen von Bibliotheken, die .NET erweitern und mit ihnen interagieren, um API-Konsistenz und Benutzerfreundlichkeit sicherzustellen
 titleSuffix: ''
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 17998adb1d18579f6763a80a82944e742e284e4e
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 9dc764492e1ac565c51d49d07e6566295bb76bc1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769066"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821033"
 ---
 # <a name="framework-design-guidelines"></a>Frameworkentwurfsrichtlinien
 Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die die .NET Framework erweitern und mit ihnen interagieren. Ziel ist es, Bibliotheks-Designern zu helfen, die API-Konsistenz und Benutzerfreundlichkeit sicherzustellen, indem Sie ein einheitliches Programmiermodell bereitstellen, das von der für die Entwicklung verwendeten Programmiersprache unabhängig ist. Es wird empfohlen, dass Sie diese Entwurfs Richtlinien befolgen, wenn Sie Klassen und Komponenten entwickeln, mit denen die .NET Framework erweitert wird. Inkonsistentes Bibliotheks Design wirkt sich negativ auf die Produktivität von Entwicklern aus und verhindert die Übernahme  

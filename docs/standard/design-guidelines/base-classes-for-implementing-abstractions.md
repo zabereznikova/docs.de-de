@@ -1,17 +1,16 @@
 ---
 title: Basisklassen zum Implementieren von Abstraktionen
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 6af63373b7cbb571265f14ac36028953525fcc7f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280568"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821592"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Basisklassen zum Implementieren von Abstraktionen
 Streng genommen wird eine Klasse zu einer Basisklasse, wenn eine andere Klasse davon abgeleitet wird. Für den Zweck dieses Abschnitts ist eine Basisklasse jedoch eine Klasse, die hauptsächlich zum Bereitstellen einer gemeinsamen Abstraktion entworfen wurde, oder für andere Klassen, die eine Standard Implementierung als Vererbung wieder verwenden soll. Basisklassen befinden sich in der Regel in der Mitte der Vererbungs Hierarchien, zwischen einer Abstraktion am Stamm einer Hierarchie und mehreren benutzerdefinierten Implementierungen im unteren Bereich.
@@ -26,7 +25,7 @@ Streng genommen wird eine Klasse zu einer Basisklasse, wenn eine andere Klasse d
 
  ✔️ erwägen, Basisklassen in einem separaten Namespace aus den Haupt-szenariotypen zu platzieren. Definitionsgemäß sind Basisklassen für erweiterte Erweiterungs Szenarien gedacht und daher für die meisten Benutzer nicht interessant.
 
- ❌Vermeiden Sie das Benennen von Basisklassen mit dem Suffix "Base", wenn die Klasse für die Verwendung in öffentlichen APIs vorgesehen ist.
+ ❌ Vermeiden Sie das Benennen von Basisklassen mit dem Suffix "Base", wenn die Klasse für die Verwendung in öffentlichen APIs vorgesehen ist.
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 

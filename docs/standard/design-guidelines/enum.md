@@ -2,7 +2,6 @@
 title: Enum-Entwurf
 description: Entwurf für Enumerationswerte, die eine besondere Art von Werttyp sind. Einfache Enumerationen enthalten kleine, geschlossene Sätze von Optionen. Flag-Enumerationen unterstützen bitweise Vorgänge für Enumerationswerte.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
 - simple enumerations
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a2e19197b114daa2a0956a6fc87231a6a81de916
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768536"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821358"
 ---
 # <a name="enum-design"></a>Enum-Entwurf
 
@@ -29,17 +28,17 @@ Flag-Enumerationen sind so konzipiert, dass bitweise Vorgänge für die Enumerat
 
 ✔️ bevorzugen die Verwendung einer Enumeration anstelle von statischen Konstanten.
 
-❌Verwenden Sie keine Enumeration für geöffnete Sätze (z. b. die Betriebssystemversion, die Namen der Freunde usw.).
+❌ Verwenden Sie keine Enumeration für geöffnete Sätze (z. b. die Betriebssystemversion, die Namen der Freunde usw.).
 
-❌Geben Sie keine reservierten Enumerationswerte an, die für die zukünftige Verwendung vorgesehen sind.
+❌ Geben Sie keine reservierten Enumerationswerte an, die für die zukünftige Verwendung vorgesehen sind.
 
 Sie können der vorhandenen Enumeration jederzeit einfach Werte hinzufügen. Weitere Informationen zum Hinzufügen von Werten zu enumeraten finden [Sie unter Hinzufügen von Werten zu](#add_value) Enumerationswerten Reservierte Werte verschmutzen lediglich den Satz realer Werte und führen tendenziell zu Benutzerfehlern.
 
-❌Vermeiden Sie die öffentliche Offenlegung von Enumerationswerten mit nur einem Wert
+❌ Vermeiden Sie die öffentliche Offenlegung von Enumerationswerten mit nur einem Wert
 
 Eine gängige Vorgehensweise, um die zukünftige Erweiterbarkeit von C-APIs sicherzustellen, besteht darin, den Methoden Signaturen reservierte Parameter hinzuzufügen. Solche reservierten Parameter können als Enumerationswerte mit einem einzelnen Standardwert ausgedrückt werden. Dies sollte nicht in verwalteten APIs erfolgen. Die Methoden Überladung ermöglicht das Hinzufügen von Parametern in zukünftigen Versionen.
 
-❌Fügen Sie keine Sentinel-Werte in Enumerationswerte ein.
+❌ Fügen Sie keine Sentinel-Werte in Enumerationswerte ein.
 
 Obwohl Sie für Frameworkentwickler manchmal hilfreich sind, sind Sentinel-Werte für Benutzer des Frameworks verwirrend. Sie werden verwendet, um den Zustand der Enumeration zu verfolgen, anstatt einen der Werte aus dem Satz zu verwenden, der durch die Enumeration repräsentiert wird.
 
@@ -65,9 +64,9 @@ Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte immer `DWORD`
 
 ✔️ durch eine namensflag-Enumerationen mit Plural-Nomen oder nominalen Ausdrücken und einfachen Enumerationen mit Singular-Nomen oder Substantiv Ausdrücken.
 
-❌Nicht direkt erweitern <xref:System.Enum?displayProperty=nameWithType> .
+❌ Nicht direkt erweitern <xref:System.Enum?displayProperty=nameWithType> .
 
-<xref:System.Enum?displayProperty=nameWithType>ist ein spezieller Typ, der von der CLR verwendet wird, um benutzerdefinierte Enumerationen zu erstellen. Die meisten Programmiersprachen bieten ein Programmier Element, das Ihnen den Zugriff auf diese Funktionalität ermöglicht. Beispielsweise wird in c# das- `enum` Schlüsselwort verwendet, um eine Enumeration zu definieren.
+<xref:System.Enum?displayProperty=nameWithType> ist ein spezieller Typ, der von der CLR verwendet wird, um benutzerdefinierte Enumerationen zu erstellen. Die meisten Programmiersprachen bieten ein Programmier Element, das Ihnen den Zugriff auf diese Funktionalität ermöglicht. Beispielsweise wird in c# das- `enum` Schlüsselwort verwendet, um eine Enumeration zu definieren.
 
 <a name="design"></a>
 
@@ -79,11 +78,11 @@ Beachten Sie bei der in-Memory-Verwendung, dass verwaltete Objekte immer `DWORD`
 
 ✔️ sollten besondere Enumerationswerte für häufig verwendete Kombinationen von Flags bereitgestellt werden.
 
-Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nicht erforderlich ist. <xref:System.IO.FileAccess.ReadWrite>ein Beispiel für einen solchen besonderen Wert.
+Bitweise Vorgänge sind ein erweitertes Konzept, das für einfache Aufgaben nicht erforderlich ist. <xref:System.IO.FileAccess.ReadWrite> ein Beispiel für einen solchen besonderen Wert.
 
-❌Vermeiden Sie das Erstellen von Flag-enumeraten, wenn bestimmte Kombinationen von Werten ungültig sind
+❌ Vermeiden Sie das Erstellen von Flag-enumeraten, wenn bestimmte Kombinationen von Werten ungültig sind
 
-❌Vermeiden Sie die Verwendung von Flag-Enumerationswerten von 0 (null), es sei denn, der Wert steht für "alle Flags sind gelöscht" und entsprechend der Bezeichnung durch die nächste Richtlinie
+❌ Vermeiden Sie die Verwendung von Flag-Enumerationswerten von 0 (null), es sei denn, der Wert steht für "alle Flags sind gelöscht" und entsprechend der Bezeichnung durch die nächste Richtlinie
 
 ✔️ den Wert 0 (null) der Flag-Enumerationsnamen `None` . Bei einer Flag-Enumeration muss der Wert immer lauten, dass alle Flags gelöscht werden.
 
@@ -101,7 +100,7 @@ Wenn Sie über echte Daten über Anwendungs Inkompatibilitäten verfügen, die d
 
 *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)

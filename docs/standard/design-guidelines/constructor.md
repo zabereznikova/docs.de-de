@@ -1,7 +1,6 @@
 ---
 title: Konstruktorentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, constructors
 - constructors, design guidelines
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27fb73aa01adf31117d1b82724873db3a03fd269
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280347"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821397"
 ---
 # <a name="constructor-design"></a>Konstruktorentwurf
 
@@ -55,11 +54,11 @@ Wenn Sie nicht explizit Konstruktoren für einen Typ deklarieren, fügen viele S
 
 Durch das Hinzufügen eines parametrisierten Konstruktors zu einer Klasse wird verhindert, dass der Compiler den Parameter losen Konstruktor hinzufügt. Dies verursacht häufig versehentlich wichtige Änderungen.
 
-❌Vermeiden Sie das explizite Definieren von Parameter losen Konstruktoren für Strukturen.
+❌ Vermeiden Sie das explizite Definieren von Parameter losen Konstruktoren für Strukturen.
 
 Dadurch wird die Array Erstellung beschleunigt, denn wenn der Parameter lose Konstruktor nicht definiert ist, muss er nicht an jedem Slot im Array ausgeführt werden. Beachten Sie, dass viele Compiler, einschließlich c#, nicht zulassen, dass Strukturen aus diesem Grundparameter lose Konstruktoren aufweisen.
 
-❌Vermeiden Sie das Aufrufen von virtuellen Membern für ein Objekt innerhalb des Konstruktors.
+❌ Vermeiden Sie das Aufrufen von virtuellen Membern für ein Objekt innerhalb des Konstruktors.
 
 Das Aufrufen eines virtuellen Members bewirkt, dass die am meisten abgeleitete außer Kraft Setzung aufgerufen wird, auch wenn der Konstruktor des am weitesten abgeleiteten Typs noch nicht vollständig ausgeführt wurde.
 
@@ -69,7 +68,7 @@ Das Aufrufen eines virtuellen Members bewirkt, dass die am meisten abgeleitete a
 
 Ein statischer Konstruktor, der auch als Klassenkonstruktor bezeichnet wird, wird verwendet, um einen Typ zu initialisieren. Die CLR ruft den statischen Konstruktor auf, bevor die erste Instanz des Typs erstellt wird oder statische Member dieses Typs aufgerufen werden. Der Benutzer hat keine Kontrolle darüber, wann der statische Konstruktor aufgerufen wird. Wenn ein statischer Konstruktor nicht privat ist, kann er von Code aufgerufen werden, der nicht die CLR ist. Abhängig von den Vorgängen, die im Konstruktor ausgeführt werden, kann dies zu unerwartetem Verhalten führen. Der c#-Compiler erzwingt, dass statische Konstruktoren privat sind.
 
-❌Lösen Sie keine Ausnahmen von statischen Konstruktoren aus.
+❌ Lösen Sie keine Ausnahmen von statischen Konstruktoren aus.
 
 Wenn von einem Typkonstruktor eine Ausnahme ausgelöst wird, kann der Typ in der aktuellen Anwendungsdomäne nicht verwendet werden.
 

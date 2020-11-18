@@ -1,7 +1,6 @@
 ---
 title: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 1c824b00a1df920108cfcd8c4590b680020cdf3e
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7254079c12926dbe055ea58f045862afd17bab1e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555786"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820266"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln
 
@@ -143,10 +142,10 @@ Sie sollten einen Schlüssel niemals direkt in Ihren Quellcode einbetten.  Einge
   
 Wenn Sie einen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  Kryptografische Schlüssel können manchmal von einem Debugger aus dem Arbeitsspeicher oder von einer Festplatte gelesen werden, falls der entsprechende Arbeitsspeicherbereich auf den Datenträger ausgelagert wurde.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)
 - [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)- <xref:System.Security.Cryptography.Xml>
-- [Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
+- [Gewusst wie: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](how-to-decrypt-xml-elements-with-asymmetric-keys.md)
 - [ASP.net Core Datenschutz](/aspnet/core/security/data-protection/introduction)

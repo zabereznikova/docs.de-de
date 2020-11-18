@@ -1,20 +1,19 @@
 ---
 title: Attribute
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617560"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821618"
 ---
 # <a name="attributes"></a>Attribute
-<xref:System.Attribute?displayProperty=nameWithType>ist eine Basisklasse, die zum Definieren von benutzerdefinierten Attributen verwendet wird.
+<xref:System.Attribute?displayProperty=nameWithType> ist eine Basisklasse, die zum Definieren von benutzerdefinierten Attributen verwendet wird.
 
  Attribute sind Anmerkungen, die Programmier Elementen wie Assemblys, Typen, Membern und Parametern hinzugefügt werden können. Sie werden in den Metadaten der Assembly gespeichert und können zur Laufzeit mithilfe der reflektionsapis aufgerufen werden. Das Framework definiert z. b. das-Element <xref:System.ObsoleteAttribute> , das auf einen Typ oder einen Member angewendet werden kann, um anzugeben, dass der Typ oder Member veraltet ist.
 
@@ -34,11 +33,11 @@ ms.locfileid: "85617560"
 
  ✔️ die Konstruktorparameter bereitstellen, um die Eigenschaften zu initialisieren, die den erforderlichen Argumenten entsprechen. Jeder Parameter sollte denselben Namen haben (obwohl er mit unterschiedlicher Groß-/Kleinschreibung identisch ist) wie die entsprechende Eigenschaft.
 
- ❌Vermeiden Sie die Angabe von Konstruktorparametern, um die Eigenschaften zu initialisieren, die den optionalen Argumenten entsprechen.
+ ❌ Vermeiden Sie die Angabe von Konstruktorparametern, um die Eigenschaften zu initialisieren, die den optionalen Argumenten entsprechen.
 
  Mit anderen Worten, Sie verfügen nicht über Eigenschaften, die sowohl mit einem Konstruktor als auch mit einem Setter festgelegt werden können. Diese Richtlinie gibt explizit an, welche Argumente optional und welche erforderlich sind, und vermeidet zwei Möglichkeiten, das gleiche zu tun.
 
- ❌Vermeiden Sie das überladen benutzerdefinierter Attributkonstruktoren.
+ ❌ Vermeiden Sie das überladen benutzerdefinierter Attributkonstruktoren.
 
  Nur ein Konstruktor kommuniziert eindeutig mit dem Benutzer, welche Argumente erforderlich und welche optional sind.
 
@@ -48,7 +47,7 @@ ms.locfileid: "85617560"
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Verwendungs Richtlinien](usage-guidelines.md)

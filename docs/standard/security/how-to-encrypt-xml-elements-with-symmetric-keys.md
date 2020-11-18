@@ -1,7 +1,6 @@
 ---
 title: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - XML encryption
 - Advanced Encryption Standard algorithm
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: dd69ec6a5317f7f6f800cd225d920a1934c77a0c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda1835a1390b025f2ee0509a91c59104a77ae9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555812"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820227"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln
 
@@ -102,7 +101,7 @@ Speichern Sie einen kryptografischen Schlüssel nie im Klartextformat, und über
   
 Wenn Sie einen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
 - [Kryptografische Dienste](cryptographic-services.md)

@@ -1,7 +1,6 @@
 ---
 title: Ereignisentwurf
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289823"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821332"
 ---
 # <a name="event-design"></a>Ereignisentwurf
-Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, die dem Framework das Aufrufen von Benutzercode ermöglichen). Andere Rückruf Mechanismen beinhalten Member, die Delegaten, virtuelle Member und Schnittstellen basierte Plug-Ins verwenden. Daten aus Nutzbarkeits Studien zeigen an, dass die Mehrzahl der Entwickler die Verwendung von Ereignissen leichter machen, als Sie die anderen Rückruf Mechanismen verwenden. Ereignisse sind gut in Visual Studio und viele Sprachen integriert.
+Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, die dem Framework das Aufrufen von Benutzercode ermöglichen). Andere Rückruf Mechanismen beinhalten Member, die Delegaten, virtuelle Member und Schnittstellen basierte Plug-ins nutzen. Daten aus Nutzbarkeits Studien zeigen an, dass die Mehrzahl der Entwickler die Verwendung von Ereignissen leichter machen, als Sie mit den anderen Rückruf Mechanismen arbeiten. Ereignisse sind gut in Visual Studio und viele Sprachen integriert.
 
  Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignissen gibt: Ereignisse, die vor dem Systemwechsel ausgelöst werden, als präereignisse bezeichnet werden, und Ereignisse, die nach einem Zustands Wechsel ausgelöst werden, die als nach Ereignissen bezeichnet werden. Ein Beispiel für ein präereignis wäre `Form.Closing` , das ausgelöst wird, bevor ein Formular geschlossen wird. Ein Beispiel für ein Post-Ereignis wäre `Form.Closed` , das ausgelöst wird, nachdem ein Formular geschlossen wurde.
 
@@ -40,11 +39,11 @@ Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, d
 
  Der-Parameter muss benannt werden `e` und als Ereignis Argument Klasse eingegeben werden.
 
- ❌Übergeben Sie NULL nicht als Absender, wenn Sie ein nicht statisches Ereignis auslassen.
+ ❌ Übergeben Sie NULL nicht als Absender, wenn Sie ein nicht statisches Ereignis auslassen.
 
  ✔️ bei der Erstellung eines statischen Ereignisses NULL als Absender übergeben.
 
- ❌Übergeben Sie NULL nicht als Ereignisdaten Parameter, wenn Sie ein Ereignis aufrufen.
+ ❌ Übergeben Sie NULL nicht als Ereignisdaten Parameter, wenn Sie ein Ereignis aufrufen.
 
  Sie sollten übergeben, `EventArgs.Empty` Wenn Sie keine Daten an die Ereignis Behandlungsmethode übergeben möchten. Entwickler erwarten, dass dieser Parameter nicht NULL ist.
 
@@ -63,7 +62,7 @@ Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, d
 
  ✔️ Verwenden Sie oder die zugehörige <xref:System.EventArgs?displayProperty=nameWithType> Unterklasse als Typ des zweiten Parameters des Ereignis Handlers, und nennen Sie Sie `e` .
 
- ❌Für Ereignishandler sind nicht mehr als zwei Parameter vorhanden.
+ ❌ Für Ereignishandler sind nicht mehr als zwei Parameter vorhanden.
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 

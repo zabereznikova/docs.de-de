@@ -1,19 +1,18 @@
 ---
 title: Ereignisse und Rückrufe
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], extensibility
 - methods [.NET Framework], callback
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 82c1df01197e04d14436b6e5b3b2c6aaa249add2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619532"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821228"
 ---
 # <a name="events-and-callbacks"></a>Ereignisse und Rückrufe
 Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegaten den Benutzercode aufrufen kann. Diese Delegaten werden in der Regel über einen Parameter einer Methode an das Framework übergeben.
@@ -26,15 +25,15 @@ Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegate
 
  ✔️ bevorzugen Ereignisse über einfache Rückrufe, da Sie einer breiteren Palette von Entwicklern vertraut sind und in die Visual Studio-Anweisungs Vervollständigung integriert sind.
 
- ❌Vermeiden Sie die Verwendung von Rückrufen in Leistungs sensiblen APIs.
+ ❌ Vermeiden Sie die Verwendung von Rückrufen in Leistungs sensiblen APIs.
 
  `Func<...>` `Action<...>` beim Definieren von APIs mit Rückrufen ✔️ die neuen Typen, oder `Expression<...>` anstelle von benutzerdefinierten Delegaten verwenden.
 
- `Func<...>`und `Action<...>` stellen generische Delegaten dar. `Expression<...>`stellt Funktionsdefinitionen dar, die kompiliert und anschließend zur Laufzeit aufgerufen werden können, aber auch serialisiert und an Remote Prozesse weitergegeben werden können.
+ `Func<...>` und `Action<...>` stellen generische Delegaten dar. `Expression<...>` stellt Funktionsdefinitionen dar, die kompiliert und anschließend zur Laufzeit aufgerufen werden können, aber auch serialisiert und an Remote Prozesse weitergegeben werden können.
 
  durch die Verwendung von ✔️ werden die Auswirkungen auf die Leistung und die Verwendung von `Expression<...>` `Func<...>` -und-Delegaten gemessen `Action<...>` .
 
- `Expression<...>`Typen sind in den meisten Fällen logisch äquivalent zu `Func<...>` -und-Delegaten `Action<...>` . Der Hauptunterschied besteht darin, dass die Delegaten in lokalen Prozess Szenarien verwendet werden sollen. Ausdrücke sind für Fälle gedacht, in denen es vorteilhaft und möglich ist, den Ausdruck in einem Remote Prozess oder-Computer auszuwerten.
+ `Expression<...>` Typen sind in den meisten Fällen logisch äquivalent zu `Func<...>` -und-Delegaten `Action<...>` . Der Hauptunterschied besteht darin, dass die Delegaten in lokalen Prozess Szenarien verwendet werden sollen. Ausdrücke sind für Fälle gedacht, in denen es vorteilhaft und möglich ist, den Ausdruck in einem Remote Prozess oder-Computer auszuwerten.
 
  ✔️ verstehen, dass Sie durch Aufrufen eines Delegaten beliebigen Code ausführen, der Sicherheits-, Richtigkeit-und Kompatibilitäts Auswirkungen haben kann.
 
@@ -42,7 +41,7 @@ Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegate
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)
 - [Framework-Entwurfs Richtlinien](index.md)
