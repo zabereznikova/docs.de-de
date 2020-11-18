@@ -1,7 +1,6 @@
 ---
 title: 'Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-ms.openlocfilehash: 7cd3aab80a8388c1d4ce08e4ae94aae84cfff239
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: c4f0b77985dea1818729af41b69a4a7d30427415
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557137"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829894"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung
 
@@ -65,7 +64,7 @@ Aufgrund von Konnektivitätsproblemen mit SHA1 empfehlen wir SHA256 oder eine be
   
 - Sie müssen das <xref:System.Security.Cryptography.CspParameters>-Objekt mit den entsprechenden Informationen über den Kartenleser initialisieren.  Weitere Informationen finden Sie in der Dokumentation zu Ihrem Kartenleser.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)

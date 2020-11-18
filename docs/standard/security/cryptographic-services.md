@@ -2,7 +2,6 @@
 title: Kryptografische Dienste
 description: Eine Übersicht über die von .NET unterstützten Verschlüsselungsmethoden und-Methoden.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography [.NET]
 - pattern of derived class inheritance
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5558c60768b992984c3800b482961128d3bf5d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281722"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829907"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -216,7 +215,7 @@ Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl z
 
 - <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
 - [Plattformübergreifende Kryptografie](cross-platform-cryptography.md)

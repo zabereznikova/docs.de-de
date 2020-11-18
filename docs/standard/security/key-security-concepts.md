@@ -1,7 +1,6 @@
 ---
 title: Schlüsselbegriffe der Sicherheit
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554396"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831064"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 
@@ -71,7 +70,7 @@ Im folgenden Beispiel muss der aktive Prinzipal ein Administrator sein. Der `nam
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Authorization  
+## <a name="authorization"></a>Autorisierung  
 
 Bei der Autorisierung wird bestimmt, ob das Ausführen einer angeforderten Aktion durch einen Prinzipal zulässig ist. Die Autorisierung findet nach der Authentifizierung statt. Sie bestimmt anhand der Informationen zur Identität und Rollen des Prinzipals, auf welche Ressourcen dieser zugreifen darf. Sie können die rollenbasierte .NET-Sicherheit verwenden, um die Autorisierung zu implementieren.
 

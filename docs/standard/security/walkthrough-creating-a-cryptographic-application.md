@@ -2,7 +2,6 @@
 title: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung'
 description: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung Erfahren Sie, wie Sie Inhalte in einer Windows Forms Anwendung verschlüsseln und entschlüsseln.'
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557189"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830557"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 
@@ -60,7 +59,7 @@ Zum Abschließen dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
 
 Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button-Steuerelemente konzipiert. In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.  
   
-|Steuerelement|Name|Texteigenschaft (nach Bedarf)|  
+|Control|Name|Texteigenschaft (nach Bedarf)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Datei verschlüsseln|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Datei entschlüsseln|  
@@ -225,7 +224,7 @@ Nachdem Sie die Anwendung erstellt haben, führen Sie die folgenden Testszenarie
   
 2. Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Kryptografiemodell](cryptography-model.md) : Beschreibt, wie Kryptografie in der Basisklassen Bibliothek implementiert wird.
 - [Kryptografische Dienste](cryptographic-services.md)

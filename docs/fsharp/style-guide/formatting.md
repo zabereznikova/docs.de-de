@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: 'Hier finden Sie Richtlinien zum Formatieren von F #'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688253"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830518"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Parameter für lange Definitionen in einer neuen Zeile platzieren
 
-Wenn Sie über eine sehr lange Funktionsdefinition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie ein, damit Sie der Einzugs Ebene des nachfolgenden Parameters entsprechen.
+Wenn Sie über eine lange Funktionsdefinition verfügen, platzieren Sie die Parameter in neuen Zeilen, und fügen Sie Sie so ein, dass Sie der Einzugs Ebene des nachfolgenden Parameters entsprechen.
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ Namespaces, Ausnahmen, Ereignisse und Projekt/ `.dll` Namen sollten ebenfalls Pa
 
 ### <a name="avoid-underscores-in-names"></a>Unterstriche in Namen vermeiden
 
-In der Vergangenheit haben einige F #-Bibliotheken Unterstriche in Namen verwendet. Dies wird jedoch nicht mehr weitgehend akzeptiert, weil es Konflikte mit .net-Benennungs Konventionen verursacht. Das heißt, einige F #-Programmierer verwenden Unterstriche stark, teilweise aus historischen Gründen, und Toleranz und Respekt ist wichtig. Beachten Sie jedoch, dass der Stil oft von anderen Benutzern nicht gefällt, die entscheiden können, ob diese verwendet werden sollen.
+In der Vergangenheit haben einige F #-Bibliotheken Unterstriche in Namen verwendet. Dies wird jedoch nicht mehr weitgehend akzeptiert, weil es Konflikte mit .net-Benennungs Konventionen verursacht. Das heißt, einige F #-Programmierer verwenden Unterstriche stark, teilweise aus historischen Gründen, und Toleranz und Respekt ist wichtig. Allerdings ist der Stil oft nicht für andere Personen beliebt, die entscheiden können, ob diese verwendet werden sollen.
 
 Eine Ausnahme umfasst die Interoperabilität mit systemeigenen Komponenten, bei denen Unterstriche häufig vorkommen.
 
@@ -643,7 +643,7 @@ In einigen Fällen kann die Lesbarkeit von unter `do...yield` stützen. Diese F�
 ## <a name="formatting-if-expressions"></a>Formatieren von Ausdrücken
 
 Der Einzug von Bedingungen hängt von der Größe und Komplexität der Ausdrücke ab, die Sie bilden.
-Schreiben Sie diese einfach in eine Zeile, wenn:
+Schreiben Sie Sie in einer Zeile, wenn:
 
 - `cond`, `e1` und `e2` sind kurz
 - `e1` und `e2` sind keine `if/then/else` Ausdrücke selbst.
@@ -992,7 +992,7 @@ Vermeiden Sie das Platzieren des Attributs in derselben Zeile wie den Wert.
 
 ## <a name="formatting-computation-expression-operations"></a>Formatieren von Ausdrucks Operationen für Berechnungen
 
-Beim Erstellen von benutzerdefinierten Vorgängen für [Berechnungs Ausdrücke](../language-reference/computation-expressions.md) empfiehlt es sich, die Namensgebung in CamelCase zu verwenden:
+Beim Erstellen von benutzerdefinierten Vorgängen für [Berechnungs Ausdrücke](../language-reference/computation-expressions.md)empfiehlt es sich, die Namensgebung in CamelCase zu verwenden:
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-Die verwendete Benennungs Konvention sollte letztendlich von der zu modellierenden Domäne gesteuert werden.
+Die zu modellierende Domäne sollte letztendlich die Benennungs Konvention steuern.
 Wenn es idiomatisch ist, eine andere Konvention zu verwenden, sollte diese Konvention stattdessen verwendet werden.

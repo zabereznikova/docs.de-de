@@ -1,26 +1,25 @@
 ---
 title: Operatorüberladungen
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - operators [.NET Framework], overloads
 - names [.NET Framework], overloaded operators
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289732"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830037"
 ---
 # <a name="operator-overloads"></a>Operatorüberladungen
 Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wären Sie integrierte Sprach primitive.
 
  Obwohl es in manchen Situationen zulässig und nützlich ist, sollten Operator Überladungen vorsichtig verwendet werden. Es gibt viele Fälle, in denen das Überladen von Operatoren missbraucht wurde, z. b. wenn frameworkdesigner die Verwendung von Operatoren für Vorgänge gestartet haben, die einfache Methoden sein sollten. Die folgenden Richtlinien sollten Sie bei der Entscheidung unterstützen, wann und wie die Operator Überladung verwendet werden soll.
 
- ❌Vermeiden Sie das Definieren von Operator Überladungen, außer in Typen, die sich wie primitive (integrierte) Typen fühlen sollten.
+ ❌ Vermeiden Sie das Definieren von Operator Überladungen, außer in Typen, die sich wie primitive (integrierte) Typen fühlen sollten.
 
  ✔️ in Erwägung gezogen, Operator Überladungen in einem Typ zu definieren, der wie ein primitiver Typ aussehen sollte.
 
@@ -28,11 +27,11 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 
  ✔️ definieren Operator Überladungen in Strukturen, die Zahlen darstellen (z. b <xref:System.Decimal?displayProperty=nameWithType> .).
 
- ❌Beim Definieren von Operator Überladungen sind Sie nicht nett.
+ ❌ Beim Definieren von Operator Überladungen sind Sie nicht nett.
 
  Die Operator Überladung ist in Fällen nützlich, in denen es sofort offensichtlich ist, was das Ergebnis des Vorgangs sein wird. Beispielsweise ist es sinnvoll, einen von einem anderen subtrahieren <xref:System.DateTime> `DateTime` und einen zu erhalten <xref:System.TimeSpan> . Es ist jedoch nicht geeignet, den logischen Union-Operator für die Union zweier Datenbankabfragen zu verwenden oder den Shift-Operator zum Schreiben in einen Stream zu verwenden.
 
- ❌Geben Sie keine Operator Überladungen an, es sei denn, mindestens einer der Operanden ist vom Typ, der die Überladung definiert.
+ ❌ Geben Sie keine Operator Überladungen an, es sei denn, mindestens einer der Operanden ist vom Typ, der die Überladung definiert.
 
  ✔️ Überladungs Operatoren auf symmetrische Weise.
 
@@ -91,17 +90,17 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 ### <a name="conversion-operators"></a>Konvertierungsoperatoren
  Konvertierungs Operatoren sind unäre Operatoren, die eine Konvertierung von einem Typ in einen anderen ermöglichen. Die Operatoren müssen als statische Member entweder für den Operanden oder den Rückgabetyp definiert werden. Es gibt zwei Typen von Konvertierungs Operatoren: implizit und explizit.
 
- ❌Geben Sie keinen Konvertierungs Operator an, wenn eine solche Konvertierung von den Endbenutzern nicht eindeutig erwartet wird.
+ ❌ Geben Sie keinen Konvertierungs Operator an, wenn eine solche Konvertierung von den Endbenutzern nicht eindeutig erwartet wird.
 
- ❌Definieren Sie keine Konvertierungs Operatoren außerhalb der Domäne eines Typs.
+ ❌ Definieren Sie keine Konvertierungs Operatoren außerhalb der Domäne eines Typs.
 
  Beispielsweise <xref:System.Int32> sind, <xref:System.Double> und <xref:System.Decimal> alle numerischen Typen, während <xref:System.DateTime> nicht ist. Daher sollte kein Konvertierungs Operator vorhanden sein, um eine `Double(long)` in eine zu konvertieren `DateTime` . Ein Konstruktor wird in einem solchen Fall bevorzugt.
 
- ❌Geben Sie keinen impliziten Konvertierungs Operator an, wenn die Konvertierung potenziell Verlust Haft ist.
+ ❌ Geben Sie keinen impliziten Konvertierungs Operator an, wenn die Konvertierung potenziell Verlust Haft ist.
 
  Beispielsweise sollte keine implizite Konvertierung von in vorhanden sein, `Double` `Int32` da `Double` über einen größeren Bereich als verfügt `Int32` . Ein expliziter Konvertierungs Operator kann auch dann bereitgestellt werden, wenn die Konvertierung potenziell Verlust Haft ist.
 
- ❌Lösen Sie keine Ausnahmen von impliziten Umwandlungen aus.
+ ❌ Lösen Sie keine Ausnahmen von impliziten Umwandlungen aus.
 
  Es ist für Endbenutzer sehr schwierig, herauszufinden, was passiert, da Sie möglicherweise nicht erkennen, dass eine Konvertierung stattfindet.
 
