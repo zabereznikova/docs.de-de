@@ -2,7 +2,6 @@
 title: Generics in .NET
 description: Hier erfahren Sie mehr über Generics in .NET. Außerdem erfahren Sie, wie Sie Generics definieren und verwenden. Darüber hinaus lernen Sie ihre Vor- und Nachteile, die Klassenbibliothek, die Sprachunterstützung und mehr kennen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063155"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827255"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -56,9 +55,9 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
   
 - Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
   
-- *Generische Typparameter* , oder *Typparameter* , sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
+- *Generische Typparameter*, oder *Typparameter*, sind die Platzhalter in einer generischen Typ- oder Methodendefinition. Der generische Typ <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> verfügt über zwei Typparameter, `TKey` und `TValue`, die die Typen seiner Schlüssel und Werte darstellen.  
   
-- Ein *konstruierter generischer Typ* , oder *konstruierter Typ* , ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
+- Ein *konstruierter generischer Typ*, oder *konstruierter Typ*, ist das Ergebnis der Angabe von Typen für die generischen Typparameter einer generischen Typdefinition.  
   
 - Ein *generisches Typargument* ist jeder Typ, der durch einen generischen Typparameter ersetzt wird.  
   

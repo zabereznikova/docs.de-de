@@ -2,7 +2,6 @@
 title: Garbage Collection für .NET
 description: Erfahren Sie mehr über die Garbage Collection in .NET. Der Garbage Collector von .NET verwaltet die Belegung und Freigabe von Arbeitsspeicher für die Anwendung.
 ms.date: 04/21/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - memory, garbage collection
 - garbage collection, automatic memory management
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: 39b5bf62935054bd4b9be2d228cc42202aa89144
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8b1fad3420778c17656614994684930fcd1b62ca
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063188"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827775"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 

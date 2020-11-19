@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 9948d5313c5168965f3ff991b26a4bc913f7d7ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817028"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
 
@@ -59,7 +59,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
 - Bereitstellen von .NET Framework (für OEMs und Administratoren):
 
-  - [Windows Assessment and Deployment Kit (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
+  - [Windows Assessment and Deployment Kit (ADK)](/windows-hardware/get-started/adk-install)
 
   - [Administratorhandbuch](guide-for-administrators.md)
 

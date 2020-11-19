@@ -2,7 +2,6 @@
 title: Behandeln und Auslösen von Ereignissen
 description: Hier erfahren Sie, wie .NET-Ereignisse verarbeitet und ausgelöst werden, die auf dem Delegatmodell basieren. Mit diesem Modell können sich Abonnenten bei Anbietern registrieren oder Benachrichtigungen von diesen erhalten.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064092"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828269"
 ---
 # <a name="handle-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 
@@ -32,7 +31,7 @@ Ein Ereignis ist eine Meldung, die von einem Objekt gesendet wird, um das Auftre
   
 Zum Definieren eines Ereignisses verwenden Sie entweder das Schlüsselwort [`event`](../../csharp/language-reference/keywords/event.md) (in C#) oder das Schlüsselwort [`Event`](../../visual-basic/language-reference/statements/event-statement.md) (in Visual Basic) in der Signatur der Ereignisklasse und geben den Typ des Delegaten für das Ereignis an. Delegaten werden im nächsten Abschnitt erläutert.  
   
-In der Regel fügen Sie zum Auslösen eines Ereignisses eine Methode hinzu, die als `protected` und `virtual` (in C#) bzw. `Protected` und `Overridable` (in Visual Basic) gekennzeichnet ist. Nennen Sie diese Methode `On`*EventName* (zum Beispiel `OnDataReceived`). Von dieser Methode muss ein Parameter akzeptiert werden, der ein Ereignisdatenobjekt angibt, welches ein Objekt des Typs <xref:System.EventArgs> oder eines abgeleiteten Typs ist. Sie stellen diese Methode bereit, damit abgeleitete Klassen die Logik zum Auslösen des Ereignisses überschreiben können. Eine abgeleitete Klasse sollte immer die `On`*EventName* -Methode der Basisklasse aufrufen, um sicherzustellen, dass registrierte Delegaten das Ereignis empfangen.  
+In der Regel fügen Sie zum Auslösen eines Ereignisses eine Methode hinzu, die als `protected` und `virtual` (in C#) bzw. `Protected` und `Overridable` (in Visual Basic) gekennzeichnet ist. Nennen Sie diese Methode `On`*EventName* (zum Beispiel `OnDataReceived`). Von dieser Methode muss ein Parameter akzeptiert werden, der ein Ereignisdatenobjekt angibt, welches ein Objekt des Typs <xref:System.EventArgs> oder eines abgeleiteten Typs ist. Sie stellen diese Methode bereit, damit abgeleitete Klassen die Logik zum Auslösen des Ereignisses überschreiben können. Eine abgeleitete Klasse sollte immer die `On`*EventName*-Methode der Basisklasse aufrufen, um sicherzustellen, dass registrierte Delegaten das Ereignis empfangen.  
 
 Im folgenden Beispiel wird die Deklaration eines Ereignisses namens `ThresholdReached`erläutert. Das Ereignis wird dem <xref:System.EventHandler>-Delegaten zugeordnet, und es wird in einer Methode namens `OnThresholdReached` ausgelöst.  
   

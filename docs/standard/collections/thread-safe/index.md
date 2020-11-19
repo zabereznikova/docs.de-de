@@ -2,16 +2,15 @@
 title: Threadsichere Auflistungen
 description: Legen Sie mit threadsicheren Sammlungen los, indem Sie den Namespace System.Collections.Concurrent in .NET nutzen, der threadsichere und skalierbare Sammlungsklassen enthält.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547687"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827749"
 ---
 # <a name="thread-safe-collections"></a>Threadsichere Auflistungen
 Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace ein, der mehrere Auflistungsklassen einschließt, die sowohl threadsicher als auch skalierbar sind. Mehrere Threads können diesen Auflistungen sicher und effizient Elemente hinzufügen bzw. daraus entfernen, ohne dass zusätzliche Synchronisierung in Benutzercode erforderlich ist. Wenn Sie neuen Code schreiben, verwenden Sie immer dann die Klassen für parallele Auflistungsvorgänge, wenn mehrere Threads gleichzeitig Schreibvorgänge in der Auflistung ausführen. Wenn Sie nur von einer freigegebenen Auflistung lesen, können Sie die Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Es wird empfohlen, keine 1.0-Auflistungsklassen zu verwenden, sofern als Zielversion nicht .NET Framework 1.1 oder eine frühere Laufzeit festgelegt wird.  

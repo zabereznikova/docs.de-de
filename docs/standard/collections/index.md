@@ -2,7 +2,6 @@
 title: Auflistungen und Datenstrukturen
 description: Erfahren Sie, wie Sie Auflistungen und Datenstrukturen in .NET verwenden. Verwenden Sie generische und nicht generische Auflistungen in threadsicheren Vorgängen.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
 - objects [.NET], grouping in collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889347"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823848"
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
 
@@ -37,7 +36,7 @@ Alle Sammlungen bieten Methoden zum Hinzufügen, Entfernen oder Suchen von Eleme
 
 - **Die Möglichkeit, den Inhalt der Auflistung in ein Array zu kopieren**
 
-    Alle Auflistungen können mit der **CopyTo** -Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von 0 (Null).
+    Alle Auflistungen können mit der **CopyTo**-Methode in ein Array kopiert werden. Die Reihenfolge der Elemente im neuen Array basiert jedoch auf der Reihenfolge, in der sie vom Enumerator zurückgegeben werden. Das resultierende Array ist stets eindimensional mit einer unteren Grenze von 0 (Null).
 
 Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
 
@@ -51,7 +50,7 @@ Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
 
 - **Eine konsistente Untergrenze**
 
-    Die untere Grenze einer Auflistung ist der Index des ersten darin enthaltenen Elements. Alle indizierten Auflistungen in den <xref:System.Collections>-Namespaces haben eine untere Grenze von 0 (Null), d. h. sie sind 0-indiziert. <xref:System.Array> hat standardmäßig eine untere Grenze von 0; es kann jedoch eine andere Untergrenze definiert werden, wenn Sie eine Instanz der **Array** -Klasse mit <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> erstellen.
+    Die untere Grenze einer Auflistung ist der Index des ersten darin enthaltenen Elements. Alle indizierten Auflistungen in den <xref:System.Collections>-Namespaces haben eine untere Grenze von 0 (Null), d. h. sie sind 0-indiziert. <xref:System.Array> hat standardmäßig eine untere Grenze von 0; es kann jedoch eine andere Untergrenze definiert werden, wenn Sie eine Instanz der **Array**-Klasse mit <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> erstellen.
 
 - **Synchronisierung für den Zugriff von mehreren Threads** (nur <xref:System.Collections>-Klassen).
 
