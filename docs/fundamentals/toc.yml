@@ -180,7 +180,7 @@ items:
           - name: Übersicht
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: Referenz
+          - name: Verweis
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -312,7 +312,7 @@ items:
             items:
               - name: Übersicht
                 href: ../core/project-sdk/overview.md
-              - name: Referenz
+              - name: Verweis
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -376,6 +376,26 @@ items:
             href: ../core/diagnostics/eventpipe.md
           - name: Protokollierung und Ablaufverfolgung
             href: ../core/diagnostics/logging-tracing.md
+          - name: Laufzeitereignisse
+            items:
+              - name: Übersicht
+                href: ../fundamentals/diagnostics/runtime-events.md
+              - name: Konfliktereignisse
+                href: ../fundamentals/diagnostics/runtime-contention-events.md
+              - name: Ausnahmeereignisse
+                href: ../fundamentals/diagnostics/runtime-exception-events.md
+              - name: Garbage Collection-Ereignisse
+                href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
+              - name: Interop-Ereignisse
+                href: ../fundamentals/diagnostics/runtime-interop-events.md
+              - name: Loader- und Binderereignisse
+                href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
+              - name: Methodenereignisse
+                href: ../fundamentals/diagnostics/runtime-method-events.md
+              - name: ThreadPool-Ereignisse
+                href: ../fundamentals/diagnostics/runtime-thread-events.md
+              - name: Typsystemereignisse
+                href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Sammeln von Diagnosen in Containern
             href: ../core/diagnostics/diagnostics-in-containers.md
           - name: Globale .NET Core-CLI-Tools
@@ -394,6 +414,8 @@ items:
                 href: ../core/diagnostics/dotnet-sos.md
           - name: Tutorials zur .NET Core-Diagnose
             items:
+              - name: Erfassen der Leistungsüberwachung in Linux mit PerfCollect
+                href: ../core/diagnostics/trace-perfcollect-lttng.md
               - name: Abrufen von Leistungsmetriken mit EventCounters
                 href: ../core/diagnostics/event-counter-perf.md
               - name: Debuggen eines Speicherverlusts
@@ -1592,8 +1614,6 @@ items:
                 href: ../standard/serialization/how-to-chunk-serialized-data.md
               - name: 'Vorgehensweise: Ermitteln, ob ein .NET Standard-Objekt serialisierbar ist'
                 href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-              - name: Beispiel
-                href: ../standard/serialization/basic-serialization-technology-sample.md
           - name: XML- und SOAP-Serialisierung
             items:
               - name: Übersicht
