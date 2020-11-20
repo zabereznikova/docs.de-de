@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 96f3ef0160144322f77413995c842b745bb5bb1e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c05af045d2d9666b20f36e36c68cc853f906eae
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920736"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506857"
 ---
 
-Beim Installieren des .NET Core-Pakets wird möglicherweise ein Fehler wie `signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'` angezeigt. Allgemein gesagt, bedeutet dieser Fehler, dass ein Upgrade des Paketfeeds für .NET Core mit neueren Paketversionen durchgeführt wird, und dass Sie den Vorgang zu einem späteren Zeitpunkt wiederholen sollten. Während eines Upgrades sollte der Paketfeed maximal 2 Stunden lang nicht verfügbar sein. Wenn dieser Fehler länger als 2 Stunden auftritt, melden Sie ein Issue auf <https://github.com/dotnet/core/issues>.
+Beim Installieren des .NET-Pakets wird möglicherweise ein Fehler wie `signature verification failed for file 'repomd.xml' from repository 'packages-microsoft-com-prod'` angezeigt. Dieser Fehler bedeutet, dass ein Upgrade des Paketfeeds für .NET mit neueren Paketversionen durchgeführt wird, und dass Sie den Vorgang zu einem späteren Zeitpunkt wiederholen sollten. Während eines Upgrades sollte der Paketfeed maximal 2 Stunden lang nicht verfügbar sein. Wenn dieser Fehler länger als 2 Stunden auftritt, melden Sie ein Issue auf <https://github.com/dotnet/core/issues>.

@@ -3,16 +3,16 @@ title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 3995fad864b80d024209c723a0197281e1b0f523
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471549"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634180"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
-Das [.NET Core SDK](https://dotnet.microsoft.com/download) enthält viele Vorlagen, die bereits installiert und sofort einsatzbereit sind. Der Befehl [`dotnet new`](dotnet-new.md) bietet nicht nur eine Möglichkeit, eine Vorlage zu verwenden, sondern auch, um Vorlagen zu installieren und zu deinstallieren. Ab .NET Core 2.0 können Sie Ihre eigenen benutzerdefinierten Vorlagen für jeden Projekttyp (App, Dienst, Tool, Klassenbibliothek usw.) erstellen. Sie könne sogar eine Vorlage erstellen, die mindestens eine unabhängige Datei ausgibt, wie z.B. eine Konfigurationsdatei.
+Das [.NET SDK](https://dotnet.microsoft.com/download) enthält viele Vorlagen, die sofort einsatzbereit sind. Der Befehl [`dotnet new`](dotnet-new.md) bietet nicht nur eine Möglichkeit, eine Vorlage zu verwenden, sondern auch, um Vorlagen zu installieren und zu deinstallieren. Sie können Ihre eigenen benutzerdefinierten Vorlagen für jeden Projekttyp (App, Dienst, Tool, Klassenbibliothek usw.) erstellen. Sie könne sogar eine Vorlage erstellen, die mindestens eine unabhängige Datei ausgibt, wie z.B. eine Konfigurationsdatei.
 
 Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed installieren, indem Sie direkt auf eine NuGet-Datei des Typs *.nupkg* verweisen, oder indem Sie ein Dateisystemverzeichnis angeben, das die Vorlage enthält. Das Vorlagenmodul bietet Features, mit denen Sie Werte ersetzen, Dateien ein- oder ausschließen und benutzerdefinierte Verarbeitungsvorgänge ausführen können, wenn Ihre Vorlage verwendet wird.
 
@@ -25,7 +25,7 @@ Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tuto
 
 ### <a name="net-default-templates"></a>.NET-Standardvorlagen
 
-Wenn Sie das [.NET Core SDK](https://dotnet.microsoft.com/download) installieren, erhalten Sie mehr als zwölf integrierte Vorlagen zum Erstellen von Projekten und Dateien, einschließlich Konsolenanwendungen, Klassenbibliotheken, Komponententestprojekten, ASP.NET Core-Apps (einschließlich [Angular](https://angular.io/)- und [React](https://reactjs.org/)-Projekten), und von Konfigurationsdateien. Um die integrierten Vorlagen aufzulisten, führen Sie den `dotnet new`-Befehl mit der `-l|--list`-Option aus:
+Wenn Sie das [.NET SDK](https://dotnet.microsoft.com/download) installieren, erhalten Sie mehr als zwölf integrierte Vorlagen zum Erstellen von Projekten und Dateien, einschließlich Konsolenanwendungen, Klassenbibliotheken, Komponententestprojekten, ASP.NET Core-Apps (einschließlich [Angular](https://angular.io/)- und [React](https://reactjs.org/)-Projekten) und Konfigurationsdateien. Um die integrierten Vorlagen aufzulisten, führen Sie den `dotnet new`-Befehl mit der `-l|--list`-Option aus:
 
 ```dotnetcli
 dotnet new --list
@@ -36,7 +36,7 @@ dotnet new --list
 Eine Vorlage besteht aus den folgenden Teilen:
 
 - Quelldateien und -ordner
-- Konfigurationsdatei ( *template.json* )
+- Konfigurationsdatei (*template.json*)
 
 ### <a name="source-files-and-folders"></a>Quelldateien und -ordner
 
@@ -57,7 +57,7 @@ Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichn
 
 | Member            | Typ          | Beschreibung |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | URI           | Das JSON-Schema für die Datei *template.json* . Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
+| `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
 | `author`          | string        | Der Autor der Vorlage. |
 | `classifications` | array(string) | Null (0) oder mehr Merkmale der Vorlage, die ein Benutzer verwenden kann, um die Vorlage zu finden. Die Klassifizierungen werden auch in der Spalte *Tags* angezeigt, wenn diese in einer Liste von Vorlagen angezeigt wird, die mit dem `dotnet new -l|--list`-Befehl erzeugt wurden. |
 | `identity`        | string        | Ein eindeutiger Namen für diese Vorlage |
@@ -70,7 +70,7 @@ Das vollständige Schema für die Datei *template.json* finden Sie im [JSON-Sche
 
 #### <a name="example"></a>Beispiel
 
-Hier ist zum Beispiel ein Vorlagenordner, der zwei Inhaltsdateien enthält: *console.cs* und *readme.txt* . Beachten Sie, dass es den erforderlichen Ordner namens *.template.config* gibt, der die Datei *template.json* enthält.
+Hier ist zum Beispiel ein Vorlagenordner, der zwei Inhaltsdateien enthält: *console.cs* und *readme.txt*. Beachten Sie, dass es den erforderlichen Ordner namens *.template.config* gibt, der die Datei *template.json* enthält.
 
 ```text
 └───mytemplate
@@ -98,9 +98,9 @@ Der Ordner *mytemplate* ist ein installierbares Vorlagenpaket. Sobald das Paket 
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Verpacken einer Vorlage in ein NuGet-Paket (NUPKG-Datei)
 
-Eine benutzerdefinierte Vorlage wird mit dem Befehl [dotnet pack](dotnet-pack.md) und *CSPROJ* -Datei gepackt. Alternativ kann [NuGet](/nuget/tools/nuget-exe-cli-reference) mit dem Befehl [nuget pack](/nuget/tools/cli-ref-pack) zusammen mit einer *NUSPEC* -Datei verwendet werden. NuGet setzt jedoch .NET Framework unter Windows und [Mono](https://www.mono-project.com/) unter Linux und macOS voraus.
+Eine benutzerdefinierte Vorlage wird mit dem Befehl [dotnet pack](dotnet-pack.md) und *CSPROJ*-Datei gepackt. Alternativ kann [NuGet](/nuget/tools/nuget-exe-cli-reference) mit dem Befehl [nuget pack](/nuget/tools/cli-ref-pack) zusammen mit einer *NUSPEC*-Datei verwendet werden. NuGet setzt jedoch .NET Framework unter Windows und [Mono](https://www.mono-project.com/) unter Linux und macOS voraus.
 
-Die *CSPROJ* -Datei unterscheidet sich geringfügig von einer herkömmlichen Codeprojektdatei des Typs *.csproj* . Beachten Sie die folgenden Einstellungen:
+Die *CSPROJ*-Datei unterscheidet sich geringfügig von einer herkömmlichen Codeprojektdatei des Typs *.csproj*. Beachten Sie die folgenden Einstellungen:
 
 01. Die Einstellung `<PackageType>` wird hinzugefügt und auf `Template` festgelegt.
 01. Die Einstellung `<PackageVersion>` wird hinzugefügt und auf eine gültige [NuGet-Versionsnummer](/nuget/reference/package-versioning) festgelegt.
@@ -108,7 +108,7 @@ Die *CSPROJ* -Datei unterscheidet sich geringfügig von einer herkömmlichen Cod
 01. Allgemeine Metadateneinstellungen müssen festgelegt werden: `<Title>`, `<Authors>`, `<Description>` und `<PackageTags>`.
 01. Die Einstellung `<TargetFramework>` muss festgelegt werden, auch wenn die vom Vorlagenprozess generierte Binärdatei nicht verwendet wird. Im folgenden Beispiel wird sie auf `netstandard2.0` festgelegt.
 
-Ein Vorlagenpaket in Form eines NuGet-Paket des Typs *.nupkg* . erfordert, dass alle Vorlagen im Ordner *content* innerhalb des Pakets gespeichert werden. Es gibt noch einige weitere Einstellungen, die einer *CSPROJ* -Datei hinzugefügt werden müssen, um sicherzustellen, dass die generierte *NUPKG* -Datei als Vorlagenpaket installiert werden kann:
+Ein Vorlagenpaket in Form eines NuGet-Paket des Typs *.nupkg*. erfordert, dass alle Vorlagen im Ordner *content* innerhalb des Pakets gespeichert werden. Es gibt noch einige weitere Einstellungen, die einer *CSPROJ*-Datei hinzugefügt werden müssen, um sicherzustellen, dass die generierte *NUPKG*-Datei als Vorlagenpaket installiert werden kann:
 
 01. Die Einstellung `<IncludeContentInPack>` wird auf `true` festgelegt, um jede Datei, die das Projekt als **Inhalt** einstuft, in das NuGet-Paket aufzunehmen.
 01. Die Einstellung `<IncludeBuildOutput>` wird auf `false` festgelegt, um alle vom Compiler erzeugten Binärdateien aus dem NuGet-Paket auszuschließen.
@@ -116,9 +116,9 @@ Ein Vorlagenpaket in Form eines NuGet-Paket des Typs *.nupkg* . erfordert, dass 
 
 Eine einfache Möglichkeit, alle Codedateien von der Kompilierung durch Ihr Vorlagenprojekt auszuschließen, besteht darin, das Element `<Compile Remove="**\*" />` in Ihrer Projektdatei innerhalb eines Elements des Typs `<ItemGroup>` zu verwenden.
 
-Eine einfache Möglichkeit, Ihr Vorlagenpaket zu strukturieren, besteht darin, alle Vorlagen in einzelnen Ordnern und dann jeden Vorlagenordner innerhalb eines Ordners des Typs *templates* abzulegen, der sich im gleichen Verzeichnis wie Ihre *CSPROJ* -Datei befindet. Auf diese Weise können Sie ein einzelnes Projektelement verwenden, um alle Dateien und Ordner als **Inhalt** in die *Vorlagen* aufzunehmen. Erstellen Sie innerhalb eines `<ItemGroup>`-Elements ein `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`-Element.
+Eine einfache Möglichkeit, Ihr Vorlagenpaket zu strukturieren, besteht darin, alle Vorlagen in einzelnen Ordnern und dann jeden Vorlagenordner innerhalb eines Ordners des Typs *templates* abzulegen, der sich im gleichen Verzeichnis wie Ihre *CSPROJ*-Datei befindet. Auf diese Weise können Sie ein einzelnes Projektelement verwenden, um alle Dateien und Ordner als **Inhalt** in die *Vorlagen* aufzunehmen. Erstellen Sie innerhalb eines `<ItemGroup>`-Elements ein `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`-Element.
 
-Hier ein Beispiel einer *CSPROJ* -Datei, die alle obigen Vorgaben erfüllt. Der untergeordnete Ordner *templates* wird im Paketordner *content* gepackt, wobei alle Codedateien von der Kompilierung ausgeschlossen werden.
+Hier ein Beispiel einer *CSPROJ*-Datei, die alle obigen Vorgaben erfüllt. Der untergeordnete Ordner *templates* wird im Paketordner *content* gepackt, wobei alle Codedateien von der Kompilierung ausgeschlossen werden.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -146,7 +146,7 @@ Hier ein Beispiel einer *CSPROJ* -Datei, die alle obigen Vorgaben erfüllt. Der 
 </Project>
 ```
 
-Das folgende Beispiel veranschaulicht die Datei- und Ordnerstruktur bei Verwendung einer *CSPROJ* -Datei zum Erstellen eines Vorlagenpakets. Die Datei *MyDotnetTemplates.csproj* und der Ordner *templates* befinden sich beide im Stammverzeichnis eines Verzeichnisses namens *project_folder* . Der Ordner *templates* enthält zwei Vorlagen: *mytemplate1* und *mytemplate2* . Jede Vorlage weist Inhaltsdateien und den Ordner *.template.config* mit der Konfigurationsdatei *template.json* auf.
+Das folgende Beispiel veranschaulicht die Datei- und Ordnerstruktur bei Verwendung einer *CSPROJ*-Datei zum Erstellen eines Vorlagenpakets. Die Datei *MyDotnetTemplates.csproj* und der Ordner *templates* befinden sich beide im Stammverzeichnis eines Verzeichnisses namens *project_folder*. Der Ordner *templates* enthält zwei Vorlagen: *mytemplate1* und *mytemplate2*. Jede Vorlage weist Inhaltsdateien und den Ordner *.template.config* mit der Konfigurationsdatei *template.json* auf.
 
 ```text
 project_folder
@@ -206,7 +206,7 @@ dotnet new -u
 Dieser Befehl gibt etwas Ähnliches wie die folgende Ausgabe zurück:
 
 ```console
-Template Instantiation Commands for .NET Core CLI
+Template Instantiation Commands for .NET CLI
 
 Currently installed items:
   Microsoft.DotNet.Common.ItemTemplates
@@ -227,13 +227,13 @@ Currently installed items:
 ...
 ```
 
-Die erste Ebene der Elemente nach `Currently installed items:` sind die Bezeichner, die bei der Deinstallation einer Vorlage verwendet werden. Und im obigen Beispiel sind `Microsoft.DotNet.Common.ItemTemplates` und `Microsoft.DotNet.Common.ProjectTemplates.3.0` aufgelistet. Wenn die Vorlage unter Verwendung eines Dateisystempfads installiert wurde, wird dieser Bezeichner zum Ordnerpfad des Ordners *.template.config* .
+Die erste Ebene der Elemente nach `Currently installed items:` sind die Bezeichner, die bei der Deinstallation einer Vorlage verwendet werden. Und im obigen Beispiel sind `Microsoft.DotNet.Common.ItemTemplates` und `Microsoft.DotNet.Common.ProjectTemplates.3.0` aufgelistet. Wenn die Vorlage unter Verwendung eines Dateisystempfads installiert wurde, wird dieser Bezeichner zum Ordnerpfad des Ordners *.template.config*.
 
 ## <a name="uninstalling-a-template"></a>Deinstallieren einer Vorlage
 
 Verwenden Sie den Befehl [dotnet new -u|--uninstall](dotnet-new.md), um ein Paket zu deinstallieren.
 
-Wenn das Paket entweder über einen NuGet-Feed oder direkt über eine *NUPKG* -Datei installiert wurde, geben Sie den Bezeichner an.
+Wenn das Paket entweder über einen NuGet-Feed oder direkt über eine *NUPKG*-Datei installiert wurde, geben Sie den Bezeichner an.
 
 ```dotnetcli
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -259,4 +259,4 @@ dotnet new <TEMPLATE>
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
 - [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
-- [*template.json* -Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)
+- [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)

@@ -1,21 +1,21 @@
 ---
-title: .NET Core-Tools
+title: .NET-Tools
 description: Informationen zum Installieren, Verwenden, Aktualisieren und Entfernen von .NET Core-Tools. In diesem Artikel werden globale, Toolpfad- und lokale Tools vorgestellt.
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598134"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556900"
 ---
-# <a name="how-to-manage-net-core-tools"></a>Verwalten von .NET Core-Tools
+# <a name="how-to-manage-net-tools"></a>Verwalten von .NET-Tools
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-Ein .NET Core-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung enthält. Ein Tool kann auf folgende Weisen auf dem Computer installiert werden:
+Ein .NET-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung enthält. Ein Tool kann auf folgende Weisen auf dem Computer installiert werden:
 
 * Als globales Tool.
 
@@ -29,24 +29,25 @@ Ein .NET Core-Tool ist ein spezielles NuGet-Paket, das eine Konsolenanwendung en
 
   Die Binärdateien des Tools werden in einem Standardverzeichnis installiert. Sie rufen das Tool im Installationsverzeichnis oder einem seiner Unterverzeichnisse auf. Verschiedene Verzeichnisse können unterschiedliche Versionen desselben Tools verwenden.
   
-  Die .NET-CLI nutzt Manifestdateien, um nachzuverfolgen, welche Tools lokal in einem Verzeichnis installiert sind. Wenn die Manifestdatei im Stammverzeichnis eines Quellcoderepositorys gespeichert ist, kann ein Mitwirkender das Repository klonen und einen einzelnen .NET Core-CLI-Befehl aufrufen, mit dem alle in den Manifestdateien aufgeführten Tools installiert werden.
+  Die .NET-CLI nutzt Manifestdateien, um nachzuverfolgen, welche Tools lokal in einem Verzeichnis installiert sind. Wenn die Manifestdatei im Stammverzeichnis eines Quellcoderepositorys gespeichert ist, kann ein Mitwirkender das Repository klonen und einen einzelnen .NET-CLI-Befehl aufrufen, mit dem alle in den Manifestdateien aufgeführten Tools installiert werden.
 
 > [!IMPORTANT]
-> .NET Core-Tools werden mit voller Vertrauenswürdigkeit ausgeführt. Installieren Sie .NET Core-Tools nur von Autoren, denen Sie vertrauen.
+> .NET-Tools werden mit voller Vertrauenswürdigkeit ausgeführt. Installieren Sie .NET-Tools nur von Autoren, denen Sie vertrauen.
 
 ## <a name="find-a-tool"></a>Suchen eines Tools
 
-Derzeit bietet .NET Core keine Suchfunktion für Tools. Es folgen einige Möglichkeiten, Tools zu finden:
+Es folgen einige Möglichkeiten, Tools zu finden:
 
+* Verwenden Sie den Befehl [dotnet tool search](dotnet-tool-search.md), um nach einem Tool zu suchen, das auf NuGet.org veröffentlicht wird.
 * Durchsuchen Sie die [NuGet](https://www.nuget.org)-Website mithilfe des Pakettypfilters „.NET tool“. Weitere Informationen finden Sie unter [Finding and choosing packages (Suchen und Auswählen von Paketen)](/nuget/consume-packages/finding-and-choosing-packages).
 * Sehen Sie sich die Liste der Tools im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) an.
 * Verwenden Sie [ToolGet](https://www.toolget.net/), um nach .NET-Tools zu suchen.
 * Sehen Sie sich den Quellcode der vom ASP.NET Core-Team im [GitHub-Repository dotnet/aspnetcore im Verzeichnis „Tools“](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) erstellten Tools an.
-* Weitere Informationen zu Diagnosetools finden Sie unter [Globale .NET Core-dotnet-Diagnosetools](../diagnostics/index.md#net-core-diagnostic-global-tools).
+* Weitere Informationen zu Diagnosetools finden Sie unter [.NET-Diagnosetools](../diagnostics/index.md#net-core-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Überprüfen des Autors und der Statistiken
 
-Da .NET Core-Tools mit voller Vertrauenswürdigkeit ausgeführt und globale Tools der Umgebungsvariablen PATH hinzugefügt werden, können sie sehr leistungsfähig sein. Laden Sie keine Tools von Personen herunter, denen Sie nicht vertrauen.
+Da .NET-Tools mit voller Vertrauenswürdigkeit ausgeführt und globale Tools der Umgebungsvariablen PATH hinzugefügt werden, können sie sehr leistungsfähig sein. Laden Sie keine Tools von Personen herunter, denen Sie nicht vertrauen.
 
 Wenn das Tool auf NuGet gehostet wird, können Sie den Autor und seine Statistiken überprüfen, indem Sie nach dem Tool suchen.
 
@@ -92,7 +93,7 @@ Unter Linux oder macOS:
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-Das .NET Core SDK fügt diesen Speicherort nicht automatisch der Umgebungsvariablen PATH hinzu. Zum [Aufrufen eines Toolpfadtools](#invoke-a-tool-path-tool) müssen Sie sicherstellen, dass der Befehl verfügbar ist, indem Sie eine der folgenden Methoden verwenden:
+Das .NET SDK fügt diesen Speicherort nicht automatisch der Umgebungsvariablen PATH hinzu. Zum [Aufrufen eines Toolpfadtools](#invoke-a-tool-path-tool) müssen Sie sicherstellen, dass der Befehl verfügbar ist, indem Sie eine der folgenden Methoden verwenden:
 
 * Fügen Sie das Installationsverzeichnis der Umgebungsvariablen PATH hinzu.
 * Geben Sie den vollständigen Pfad zum Tool an, wenn Sie es aufrufen.
@@ -273,10 +274,10 @@ Um Anweisungen zur Nutzung des Tools zu erhalten, geben Sie einen der folgenden 
 dotnet <command> --help
 ```
 
-Wenn ein Tool nicht installiert oder ausgeführt werden kann, finden Sie unter [Behandlung von Problemen bei der Nutzung von .NET Core-Tools](troubleshoot-usage-issues.md) weitere Informationen.
+Wenn ein Tool nicht installiert oder ausgeführt werden kann, finden Sie unter [Behandlung von Problemen bei der Nutzung von .NET-Tools](troubleshoot-usage-issues.md) weitere Informationen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Erstellen eines .NET Core-Tool mithilfe der .NET Core-CLI](global-tools-how-to-create.md)
-- [Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI](global-tools-how-to-use.md)
-- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)
+- [Tutorial: Erstellen eines .NET-Tools mithilfe der .NET-CLI](global-tools-how-to-create.md)
+- [Tutorial: Installieren und Verwenden eines globalen .NET-Tools mithilfe der .NET-CLI](global-tools-how-to-use.md)
+- [Tutorial: Installieren und Verwenden eines lokalen .NET-Tools mithilfe der .NET-CLI](local-tools-how-to-use.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2edb06106283c26573863f230e5e9956728cdfa3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 53cac9ca49502c88f5d3cf63bf113365e7b85d18
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93136144"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507052"
 ---
 
 ### <a name="install-the-sdk"></a>Installieren des SDKs
@@ -23,7 +23,7 @@ Die .NET Core-Runtime ermöglicht Ihnen die Ausführung von Apps, die mit .NET C
 sudo dnf install aspnetcore-runtime-3.1
 ```
 
-Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet: Ersetzen Sie im vorangegangenen Befehl `aspnetcore-runtime-3.1` durch `dotnet-runtime-3.1`.
+Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet: Ersetzen Sie dazu im vorangegangenen Befehl `aspnetcore-runtime-3.1` durch `dotnet-runtime-3.1`.
 
 ```bash
 sudo dnf install dotnet-runtime-3.1

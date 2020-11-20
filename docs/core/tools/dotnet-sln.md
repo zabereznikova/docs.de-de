@@ -2,12 +2,12 @@
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 ms.date: 02/14/2020
-ms.openlocfilehash: efe52f64a29c8825070bae9ee96b430b32176ffa
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053030"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634369"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -15,7 +15,7 @@ ms.locfileid: "89053030"
 
 ## <a name="name"></a>name
 
-`dotnet sln`: Listet die Projekte in einer .NET Core-Projektmappendatei auf oder ändert sie.
+`dotnet sln`: Der Befehl listet die Projekte in einer .NET-Projektmappendatei auf oder ändert sie.
 
 ## <a name="synopsis"></a>Übersicht
 

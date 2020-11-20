@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247708"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556841"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambdaausdrücke (C#-Referenz)
 
@@ -56,7 +56,7 @@ Ein Lambdaausdruck mit einem Ausdruck auf der rechten Seite des `=>`-Operators w
 (input-parameters) => expression
 ```
 
-Der Text eines Ausdruckslambdas kann aus einem Methodenaufruf bestehen. Wenn Sie jedoch [Ausdrucksbaumstrukturen](../../programming-guide/concepts/expression-trees/index.md) erstellen, die außerhalb des Kontexts der .NET Common Language Runtime ausgewertet werden, z. B. in SQL Server, sollten Sie in Lambdaausdrücken keine Methodenaufrufe verwenden. Die Methoden haben außerhalb des Kontexts der .NET Common Language Runtime keine Bedeutung.
+Der Text eines Ausdruckslambdas kann aus einem Methodenaufruf bestehen. Wenn Sie jedoch [Ausdrucksbaumstrukturen](../../programming-guide/concepts/expression-trees/index.md) erstellen, die außerhalb des Kontexts der .NET Common Language Runtime (CLR) ausgewertet werden, z. B. in SQL Server, sollten Sie in Lambdaausdrücken keine Methodenaufrufe verwenden. Die Methoden haben außerhalb des Kontexts der .NET Common Language Runtime (CLR) keine Bedeutung.
 
 ## <a name="statement-lambdas"></a>Anweisungslambdas
 

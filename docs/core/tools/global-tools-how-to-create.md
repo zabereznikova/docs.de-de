@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: Erstellen eines .NET Core-Tools'
-description: Erfahren Sie, wie Sie ein .NET Core-Tool erstellen. Ein Tool ist eine Konsolenanwendung, die mithilfe der .NET Core-CLI installiert wird.
+title: 'Tutorial: Erstellen eines .NET-Tools'
+description: In diesem Artikel erfahren Sie, wie Sie ein .NET-Tool erstellen. Ein Tool ist eine Konsolenanwendung, die über die .NET-CLI installiert wird.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062781"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633777"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Tutorial: Erstellen eines .NET Core-Tool mithilfe der .NET Core-CLI
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: Erstellen eines .NET-Tools mithilfe der .NET-CLI
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 2.1 SDK und neuere Versionen
 
-In diesem Tutorial erfahren Sie, wie Sie ein .NET Core-Tool erstellen und packen. Die .NET Core-CLI ermöglicht Ihnen, eine Konsolenanwendung als Tool zu erstellen, das von anderen installiert und ausgeführt werden kann. .NET Core-Tools sind NuGet-Pakete, die über die .NET Core-CLI installiert werden. Weitere Informationen zu Tools finden Sie unter [Übersicht über .NET Core-Tools](global-tools.md).
+In diesem Tutorial erfahren Sie, wie Sie ein .NET-Tool erstellen und packen. Die .NET-CLI ermöglicht es Ihnen, eine Konsolenanwendung als Tool zu erstellen, das von anderen installiert und ausgeführt werden kann. .NET-Tools sind NuGet-Pakete, die über die .NET-CLI installiert werden. Weitere Informationen zu Tools finden Sie unter [Übersicht über die .NET-Tools](global-tools.md).
 
 Das von Ihnen erstellte Tool ist eine Konsolenanwendung, die eine Nachricht als Eingabe verwendet und sie zusammen mit Textzeilen anzeigt, die das Bild eines Roboters erzeugen.
 
@@ -191,7 +191,7 @@ Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die P
 
 ## <a name="troubleshoot"></a>Problembehandlung
 
-Falls im Verlauf des Tutorials eine Fehlermeldung angezeigt wird, finden Sie unter [Behandlung von Problemen bei der Nutzung von .NET Core-Tools](troubleshoot-usage-issues.md) weitere Informationen.
+Falls im Verlauf des Tutorials eine Fehlermeldung angezeigt wird, finden Sie unter [Behandlung von Problemen bei der Nutzung von .NET-Tools](troubleshoot-usage-issues.md) weitere Informationen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

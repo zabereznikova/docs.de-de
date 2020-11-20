@@ -1,16 +1,16 @@
 ---
 title: Befehl „dotnet new“
-description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
+description: Der Befehl „dotnet new“ erstellt neue .NET-Projekte auf Basis der angegebenen Vorlage.
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400590"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634454"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet new` erstellt ein .NET Core-Projekt oder andere Artefakte auf Grundlage einer Vorlage.
+Der Befehl `dotnet new` erstellt ein .NET-Projekt oder andere Artefakte auf Grundlage einer Vorlage.
 
 Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum Erstellen der Elemente auf dem Datenträger auf, die auf der angegebenen Vorlage und den Optionen basieren.
 
@@ -56,7 +56,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
   - Wenn die CLI beim Aufruf von `dotnet new` keine Übereinstimmung oder Teilübereinstimmung mit einer Vorlage finden kann.
   - Wenn eine neuere Version der Vorlage verfügbar ist. In diesem Fall wird das Projekt oder Artefakt erstellt, wobei die CLI Sie über eine aktualisierte Version der Vorlage warnt.
 
-  In der folgenden Tabelle sind die Vorlagen angegeben, die bereits mit dem .NET Core SDK vorinstalliert sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt. Klicken Sie auf den Kurznamenlink, um die spezifischen Vorlagenoptionen einzusehen.
+  Die folgende Tabelle zeigt die Vorlagen, die im Lieferumfang des .NET SDK enthalten sind. Die Standardsprache für die Vorlage wird in den Klammern angezeigt. Klicken Sie auf den Kurznamenlink, um die spezifischen Vorlagenoptionen einzusehen.
 
 | Vorlagen                                    | Kurzname                      | Sprache     | Tags                                  | Eingeführt |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
 
 - **`--nuget-source <SOURCE>`**
 
-  Gibt eine NuGet-Quelle an, die bei der Installation verwendet werden soll. Verfügbar ab .NET Core 2.1 SDK.
+  Gibt eine NuGet-Quelle an, die bei der Installation verwendet werden soll.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -152,7 +152,7 @@ Der Befehl ruft die [Vorlagen-Engine](https://github.com/dotnet/templating) zum 
   Wenn Sie für diese Option keinen Parameter angeben, listet der Befehl die installierten Vorlagen und Details dazu auf.
 
   > [!NOTE]
-  > Um eine Vorlage durch einen `PATH` zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* , jedoch nicht *./GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
+  > Um eine Vorlage durch einen `PATH` zu deinstallieren, müssen Sie den Pfad vollständig qualifizieren. Beispielsweise funktioniert zwar *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, jedoch nicht *./GarciaSoftware.ConsoleTemplate.CSharp* aus dem übergeordneten Ordner.
   > Schließen Sie keinen letzten abschließenden Schrägstrich in den Vorlagenpfad Ihres Verzeichnisses ein.
 
 - **`--update-apply`**
@@ -177,6 +177,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Gibt das [Zielframework](../../standard/frameworks.md) an. Werte: `netcoreapp<version>`, um eine .NET Core-Klassenbibliothek zu erstellen, oder `netstandard<version>`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert ist `netstandard2.0`.
+  Gibt das [Zielframework](../../standard/frameworks.md) an. Werte: `net5.0` oder `netcoreapp<version>`, um eine .NET-Klassenbibliothek zu erstellen, oder `netstandard<version>`, um eine .NET Standard-Klassenbibliothek zu erstellen. Der Standardwert für das .NET 5.0 SDK ist `net5.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `netcoreapp3.1`. Verfügbar seit .NET Core 3.1 SDK.
+  Gibt das [Zielframework](../../standard/frameworks.md) an. Der Standardwert ist `net5.0`. Verfügbar seit .NET Core 3.1 SDK.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
   | SDK-Version | Standardwert   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  Gibt die .NET Core SDK-Version an, die in der Datei *global.json* verwendet werden soll.
+  Gibt die Version des .NET SDK an, die in der Datei *global.json* verwendet werden soll
 
 ***
 
@@ -839,7 +847,7 @@ Für jede Projektvorlage kann es zusätzliche Optionen geben. Die Core-Vorlagen 
   dotnet new -u
   ```
 
-- Erstellen Sie im aktuellen Verzeichnis die Datei *global.json* , und legen Sie die SDK-Version auf 3.1.101 fest:
+- Erstellen Sie im aktuellen Verzeichnis die Datei *global.json*, und legen Sie die SDK-Version auf 3.1.101 fest:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

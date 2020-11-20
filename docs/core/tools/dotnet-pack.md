@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet pack“
-description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
+description: Der Befehl „dotnet pack“ erstellt NuGet-Pakete für ein .NET-Projekt.
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537827"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634232"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -188,4 +188,4 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
   
   - [Packen mithilfe einer NUSPEC-Datei](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Verbesserte Erweiterungspunkte zum Erstellen benutzerdefinierter Pakete](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Globale Eigenschaften](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [Globale Eigenschaften](/visualstudio/msbuild/msbuild-properties#global-properties)

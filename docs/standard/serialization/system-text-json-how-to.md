@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2c1358b2b63a92cb50b853043adbfaae23ccd897
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329871"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440815"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Marshallen und Marshallen rückgängig machen) von JSON-Daten in .NET
 
@@ -990,9 +990,11 @@ Der vorangehende Code setzt voraus, dass es sich bei der `jsonUtf8`-Variablen um
 
 ### <a name="filter-data-using-utf8jsonreader"></a>Filtern von Daten mithilfe von „Utf8JsonReader“
 
-Das folgende Beispiel zeigt, wie Sie eine Datei synchron lesen und nach einem Wert suchen:
+Im folgenden Beispiel wird gezeigt, wie eine Datei synchron gelesen und nach einem Wert gesucht wird.
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/Utf8ReaderFromFile.cs)]
+
+(Von diesem Beispiel ist auch eine [asynchrone Version](https://github.com/dotnet/samples/blob/18e31a5f1abd4f347bf96bfdc3e40e2cfb36e319/core/json/Program.cs) verfügbar.)
 
 Der vorangehende Code:
 

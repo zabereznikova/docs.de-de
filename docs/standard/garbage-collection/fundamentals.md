@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917030"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441010"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 
@@ -52,7 +52,7 @@ Die folgende Liste liefert eine Zusammenfassung wichtiger Arbeitsspeicherkonzept
 
   | Zustand | Beschreibung |
   |---------|---------|
-  | Frei | Es sind keine Verweise auf den Speicherblock vorhanden, und der Speicherblock ist für eine Speicherbelegung verfügbar. |
+  | Kostenlos | Es sind keine Verweise auf den Speicherblock vorhanden, und der Speicherblock ist für eine Speicherbelegung verfügbar. |
   | Reserviert | Der Speicherblock ist für die Verwendung verfügbar und kann nicht durch andere Anforderungen belegt werden. Sie können jedoch keine Daten in diesem Speicherblock speichern, bis eine Zusicherung erfolgt ist. |
   | Committet | Der Speicherblock ist einem physischen Speicher zugewiesen. |
 
@@ -70,7 +70,7 @@ Das Belegen von Speicher im verwalteten Heap beansprucht weniger Zeit als die ni
 
 ### <a name="memory-release"></a>Speicherfreigabe
 
-Durch die Optimierungs-Engine des Garbage Collectors wird der beste Zeitpunkt für das Ausführen einer Garbage Collection bestimmt, die auf den erfolgten Speicherbelegungen basiert. Beim Ausführen einer Garbage Collection wird Speicher freigegeben, den von der Anwendung nicht mehr benötigte Objekte beanspruchen. Durch Überprüfen der *Stammelemente* der Anwendung wird ermittelt, welche Objekte nicht mehr verwendet werden. Die Stammelemente einer Anwendung beinhalten statische Felder, lokale Variablen und Parameter im Stapel des Threads sowie CPU-Register. Jedes Stammelement bezieht sich entweder auf ein Objekt im verwalteten Heap oder ist auf NULL festgelegt. Der Garbage Collector hat Zugriff auf eine Liste der aktiven Stammelemente, die vom JIT-Compiler (Just-In-Time) und der Common Language Runtime verwaltet wird. Mithilfe dieser Liste erstellt der Garbage Collector ein Diagramm mit allen Objekten, die von den Stammelementen aus erreichbar sind.
+Durch die Optimierungs-Engine des Garbage Collectors wird der beste Zeitpunkt für das Ausführen einer Garbage Collection bestimmt, die auf den erfolgten Speicherbelegungen basiert. Beim Ausführen einer Garbage Collection wird Speicher freigegeben, den von der Anwendung nicht mehr benötigte Objekte beanspruchen. Durch Überprüfen der *Stammelemente* der Anwendung wird ermittelt, welche Objekte nicht mehr verwendet werden. Die Stammelemente einer Anwendung beinhalten statische Felder, lokale Variablen im Stapel des Threads sowie CPU-Register, GC-Handles und die Finalize-Warteschlange. Jedes Stammelement bezieht sich entweder auf ein Objekt im verwalteten Heap oder ist auf NULL festgelegt. Der Garbage Collector kann diese Stämme während der verbleibenden Laufzeit abrufen. Mithilfe dieser Liste erstellt der Garbage Collector ein Diagramm mit allen Objekten, die von den Stammelementen aus erreichbar sind.
 
 Objekte, die nicht in diesem Diagramm aufgeführt werden, können von den Stammelementen aus nicht erreicht werden. Diese nicht erreichbaren Objekte werden vom Garbage Collector als Abfall betrachtet, und der von diesen Objekten belegte Speicherplatz wird wieder freigegeben. Während einer Garbage Collection wird der verwaltete Heap nach den Blöcken des Adressraums durchsucht, in denen sich nicht erreichbare Objekte befinden. Beim Auffinden dieser Objekte werden die erreichbaren Objekte mithilfe einer Speicherkopierfunktion im Speicher komprimiert, und die von den nicht erreichbaren Objekten belegten Blöcke des Adressraums werden freigegeben. Nach dem Komprimieren des Speichers für die erreichbaren Objekte werden vom Garbage Collector die erforderlichen Korrekturen am Zeiger vorgenommen, sodass die Stammelemente der Anwendung auf die neuen Speicherorte der Objekte verweisen. Außerdem wird der Zeiger des verwalteten Heaps auf die Position hinter dem letzten erreichbaren Objekt gesetzt.
 

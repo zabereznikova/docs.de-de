@@ -3,12 +3,12 @@ title: Erhöhte Zugriffsrechte für dotnet-Befehle
 description: Erfahren Sie mehr über die Best Practices für dotnet-Befehle, die erhöhte Zugriffsrechte erfordern.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: b34a4d631ec0e5ef641e1ffbc91e081d25645157
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805794"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634050"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Erhöhte Zugriffsrechte für dotnet-Befehle
 
@@ -22,11 +22,11 @@ Die folgenden Befehle können mit erhöhten Rechten ausgeführt werden:
 
 Wir empfehlen nicht, andere Befehle mit erhöhten Rechten auszuführen. Insbesondere empfehlen wir keine Erhöhung der Rechte mit Befehlen, die MSBuild verwenden, wie z.B. [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md) und [dotnet run](dotnet-run.md). Das Hauptproblem ist die Berechtigungsverwaltung, wenn ein Benutzer nach der Ausgabe von dotnet-Befehlen zwischen einem Root- und einem eingeschränkten Konto hin und her wechselt. Sie stellen als eingeschränkter Benutzer möglicherweise fest, dass Sie keinen Zugriff auf die von einem Root-Benutzer erstellte Datei haben. Es gibt Möglichkeiten, diese Situation zu lösen, aber sie sind zunächst unnötig.
 
-Sie können Befehle als Root ausführen, solange Sie nicht zwischen dem Stammkonto und einem eingeschränkten Konto hin und her wechseln. Beispielsweise werden Dockercontainer standardmäßig als Root ausgeführt, daher haben sie dieses Merkmal.
+Sie können Befehle als Root-Benutzer ausführen, solange Sie nicht zwischen dem Stammkonto und einem eingeschränkten Konto hin und her wechseln. Beispielsweise werden Dockercontainer standardmäßig als Root ausgeführt, daher haben sie dieses Merkmal.
 
 ## <a name="global-tool-installation"></a>Installation des globalen Tools
 
-Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installation, Ausführung und Deinstallation von.NET Core-Tools, die erhöhte Berechtigungen für die Ausführung erfordern.
+Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installation, Ausführung und Deinstallation von.NET-Tools, die erhöhte Berechtigungen für die Ausführung erfordern.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -37,7 +37,7 @@ Die folgenden Anweisungen zeigen die empfohlene Vorgehensweise bei der Installat
 Wenn der Ordner `%ProgramFiles%\dotnet-tools` bereits vorhanden ist, überprüfen Sie anhand der folgenden Schritte, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern:
 
 - Klicken Sie mit der rechten Maustaste auf den Ordner `%ProgramFiles%\dotnet-tools`, und wählen Sie **Eigenschaften** aus. Das Dialogfeld **Allgemeine Eigenschaften** wird geöffnet.
-- Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen-oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, dieses Verzeichnis zu schreiben oder zu ändern.
+- Wählen Sie die Registerkarte **Sicherheit** aus. Überprüfen Sie unter **Gruppen- oder Benutzernamen**, ob die Gruppe „Benutzer“ die Berechtigung hat, in dieses Verzeichnis zu schreiben oder es zu ändern.
 - Wenn die Gruppe „Benutzer“ das Verzeichnis schreiben oder ändern kann, verwenden Sie bei der Installation der Tools einen anderen Verzeichnisnamen als *dotnet-tools*.
 
 Führen Sie den folgenden Befehl in einer Eingabeaufforderung mit erhöhten Rechten aus, um Tools zu installieren. Damit wird während der Installation der Ordner *dotnet-tools* erstellt.
@@ -108,4 +108,4 @@ Während der Entwicklung benötigen Sie möglicherweise erhöhte Zugriffsrechte,
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über globale .NET Core-Tools](global-tools.md)
+- [Übersicht über die .NET-Tools](global-tools.md)

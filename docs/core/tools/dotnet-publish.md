@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet publish“
-description: Der Befehl „dotnet publish“ dient zum Veröffentlichen eines .NET Core-Projekts oder einer .NET Core-Projektmappe in einem Verzeichnis.
-ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+description: Der Befehl „dotnet publish“ veröffentlicht ein .NET-Projekt oder eine .NET-Projektmappe in einem Verzeichnis.
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654893"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634428"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,11 +41,11 @@ dotnet publish -h|--help
 - Die Datei *.runtimeconfig.json*, die die Shared Runtime, die von der Anwendung erwartet wird, sowie andere Konfigurationsoptionen für die Runtime festlegt (z. B. die Art der Garbage Collection).
 - Die Abhängigkeiten der Anwendung, die aus dem NuGet-Cache in den Ausgabeordner kopiert werden.
 
-Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausführung auf einem Hostsystem bereit (z.B. ein Server, Computer, Mac oder Laptop). Es ist die einzige offiziell unterstützte Methode zum Vorbereiten der Anwendung für die Bereitstellung. Je nach Art der Bereitstellung, die im Projekt angegeben ist, hat das Hostsystem die freigegebene .NET Core-Laufzeit installiert oder nicht. Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md).
+Die Ausgabe des Befehls `dotnet publish` steht für die Bereitstellung zur Ausführung auf einem Hostsystem bereit (z.B. ein Server, Computer, Mac oder Laptop). Es ist die einzige offiziell unterstützte Methode zum Vorbereiten der Anwendung für die Bereitstellung. Je nach Art der Bereitstellung, die im Projekt angegeben ist, ist die Shared Runtime von .NET im Hostsystem installiert oder nicht. Weitere Informationen finden Sie unter [Veröffentlichen von .NET-Apps mit der .NET-CLI](../deploying/deploy-with-cli.md).
 
 ### <a name="implicit-restore"></a>Implizite Wiederherstellung
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -165,7 +165,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 - **`--self-contained [true|false]`**
 
-  Veröffentlicht die .NET Core-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Der Standardwert ist `true`, wenn ein Laufzeitbezeichner angegeben wird und das Projekt ein ausführbares Projekt (kein Bibliotheksprojekt) ist. Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Anwendungen](../deploying/index.md) und [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md).
+  Veröffentlicht die .NET-Runtime mit Ihrer Anwendung, sodass die Runtime nicht auf dem Zielcomputer installiert werden muss. Der Standardwert ist `true`, wenn ein Laufzeitbezeichner angegeben wird und das Projekt ein ausführbares Projekt (kein Bibliotheksprojekt) ist. Weitere Informationen finden Sie unter [Veröffentlichen von .NET-Anwendungen](../deploying/index.md) und [Veröffentlichen von .NET-Apps mit der .NET-CLI](../deploying/deploy-with-cli.md).
 
   Wenn diese Option verwendet wird, ohne `true` oder `false` anzugeben, ist der Standardwert `true`. Fügen Sie in diesem Fall das Projektmappen- oder Projektargument nicht unmittelbar nach `--self-contained` ein, da an dieser Position `true` oder `false` erwartet wird.
 
@@ -175,7 +175,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Weitere Informationen finden Sie unter [Veröffentlichen von .NET Core-Anwendungen](../deploying/index.md) und [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md).
+  Veröffentlicht die Anwendung für eine bestimmte Laufzeit. Eine Liste der Runtime-IDs (RIDs) finden Sie unter [RID-Katalog](../rid-catalog.md). Weitere Informationen finden Sie unter [Veröffentlichen von .NET-Anwendungen](../deploying/index.md) und [Veröffentlichen von .NET-Apps mit der .NET-CLI](../deploying/deploy-with-cli.md).
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die .NET Core-Anwendungsveröffentlichung](../deploying/index.md)
-- [Veröffentlichen von .NET Core-Apps mit der .NET Core-CLI](../deploying/deploy-with-cli.md)
+- [Übersicht über die .NET-Anwendungsveröffentlichung](../deploying/index.md)
+- [Veröffentlichen von .NET-Apps mit der .NET-CLI](../deploying/deploy-with-cli.md)
 - [Zielframeworks](../../standard/frameworks.md)
 - [Runtime-ID-Katalog (RID)](../rid-catalog.md)
 - [Verwenden der macOS Catalina-Notarisierung](../install/macos-notarization-issues.md)

@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet tool restore“
-description: Der Befehl dotnet tool restore installiert auf Ihrem Computer die lokalen .NET Core-Tools, die im Geltungsbereich des aktuellen Verzeichnisses liegen.
+description: Der Befehl „dotnet tool restore“ installiert die lokalen .NET-Tools des aktuellen Verzeichnisses auf Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302671"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634271"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "87302671"
 
 ## <a name="name"></a>name
 
-`dotnet tool restore`: installiert auf Ihrem Computer die lokalen .NET Core-Tools, die im Geltungsbereich des aktuellen Verzeichnisses liegen.
+`dotnet tool restore`: Dieser Befehl installiert die lokalen .NET-Tools des aktuellen Verzeichnisses auf Ihrem Computer.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -79,5 +79,5 @@ Der Befehl `dotnet tool restore` findet die Manifestdatei des Tools, die im Gelt
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core-Tools](global-tools.md)
-- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)
+- [.NET-Tools](global-tools.md)
+- [Tutorial: Installieren und Verwenden eines lokalen .NET-Tools mithilfe der .NET-CLI](local-tools-how-to-use.md)

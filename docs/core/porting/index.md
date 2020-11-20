@@ -3,12 +3,12 @@ title: Portieren von .NET Framework zu .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439741"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687411"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Übersicht über das Portieren von .NET Framework zu .NET Core
 
@@ -55,7 +55,7 @@ Die folgende Vorgehensweise wird empfohlen, um Ihr Projekt zu .NET Core zu porti
 
    .NET Core verwendet ein einfacheres (und anderes) [Projektdateiformat](../tools/csproj.md) als .NET Framework. Sie müssen Ihre Projektdateien in dieses Format konvertieren, um sie weiter nutzen zu können. Mit diesem Projekttyp können Sie auch auf .NET Framework abzielen, das Sie zu diesem Zeitpunkt auch noch als Ziel haben sollten.
 
-   Sie können versuchen, kleinere Lösungen oder einzelne Projekte mit dem Tool [dotnet try-convert](https://github.com/dotnet/try-convert) in einem einzigen Vorgang in das .NET Core-Projektdateiformat zu portieren. Es kann nicht garantiert werden, dass `dotnet try-convert` für all Ihre Projekte funktioniert, und es kann zu leichten Abweichungen bei Verhalten kommen, das Sie unbedingt benötigen. Verwenden Sie das Tool als _Ausgangspunkt_ , um grundlegende Elemente zu automatisieren, die sich für eine Automatisierung eignen. Dies ist keine garantierte Lösung für die Migration eines Projekts, da es viele Unterschiede bei den Zielen gibt, die von den SDK-artigen Projekten verwendet werden, im Vergleich zu den Projektdateien im alten Stil.
+   Sie können versuchen, kleinere Lösungen oder einzelne Projekte mit dem Tool [dotnet try-convert](https://github.com/dotnet/try-convert) in einem einzigen Vorgang in das .NET Core-Projektdateiformat zu portieren. Es kann nicht garantiert werden, dass `dotnet try-convert` für all Ihre Projekte funktioniert, und es kann zu leichten Abweichungen bei Verhalten kommen, das Sie unbedingt benötigen. Verwenden Sie das Tool als _Ausgangspunkt_, um grundlegende Elemente zu automatisieren, die sich für eine Automatisierung eignen. Dies ist keine garantierte Lösung für die Migration eines Projekts, da es viele Unterschiede bei den Zielen gibt, die von den SDK-artigen Projekten verwendet werden, im Vergleich zu den Projektdateien im alten Stil.
 
 1. Legen Sie für alle zu portierenden Projekte .NET Framework 4.7.2 oder höher als neues Ziel fest.
 

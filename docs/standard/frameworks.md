@@ -1,15 +1,15 @@
 ---
 title: Zielframeworks in Projekten im SDK-Format – .NET
 description: In diesem Artikel erfahren Sie mehr über Zielframeworks für .NET-Anwendungen und -Bibliotheken.
-ms.date: 09/08/2020
+ms.date: 11/06/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: a37634bc9f4cbee5f7901fcb085d3801a7452573
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223456"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441037"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Zielframeworks in Projekten im SDK-Format
 
@@ -21,7 +21,7 @@ Eine App oder Bibliothek kann auch eine spezifische .NET-Implementierung als Zie
 
 Für einige Zielframeworks (z. B. das .NET Framework) werden die APIs von den Assemblys definiert, die das Framework in einem System installiert. Zu diesen APIs können auch Anwendungsframework-APIs zählen (z. B. ASP.NET).
 
-Für paketbasierte Zielframeworks (z.B. .NET Standard und .NET Core) werden die APIs von den Paketen definiert, die in der App oder der Bibliothek enthalten sind. Ein *Metapaket* ist ein NuGet-Paket ohne eigenen Inhalt, das aus einer Liste von Abhängigkeiten oder Paketen besteht. Ein Zielframework, das auf einem NuGet-Paket basiert, gibt implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
+Für paketbasierte Zielframeworks (z. B. .NET 5, .NET Core und .NET Standard) werden die APIs von den Paketen definiert, die in der App oder der Bibliothek enthalten sind. Ein *Metapaket* ist ein NuGet-Paket ohne eigenen Inhalt, das aus einer Liste von Abhängigkeiten oder Paketen besteht. Ein Zielframework, das auf einem NuGet-Paket basiert, gibt implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
 
 ## <a name="latest-versions"></a>Neueste Versionen
 
@@ -29,6 +29,7 @@ In der folgenden Tabelle wird aufgelistet, wie die häufigsten Zielframeworks la
 
 | Zielframework      | Latest <br/> Stabile Version | TFM | Implementiert <br/> .NET Standard-Version |
 | :-: | :-: | :-: | :-: |
+| .NET 5                | 5.0                         | net5.0                         | –                                     |
 | .NET Standard         | 2.1                         | netstandard2.1                 | –                                     |
 | .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2,0                                     |
@@ -63,13 +64,54 @@ Für jeden TFM in .NET 5.0 und höher, z. B. `net5.0`, gibt es TFM-Varianten, 
 | \<base-tfm>-watchos | net5.0-watchos |
 | \<base-tfm>-windows | net5.0-windows |
 
-Sie können ebenfalls eine optionale Betriebssystemversion angeben, z. B. `net5.0-ios12.0`.
+Der `net5.0`-TFM beinhaltet ausschließlich Technologien, die plattformübergreifend genutzt werden können. Das Angeben eines betriebssystemspezifischen TFM führt dazu, dass APIs für ein Betriebssystem spezifisch sind, das für Ihre App verfügbar ist, z. B. Windows Forms oder iOS-Bindungen. Betriebssystemspezifische TFMs erben auch alle APIs, die für den `net5.0`-TFM verfügbar sind.
 
-Weitere Informationen zu den TFMs in .NET 5 finden Sie unter [Namen der Zielframeworks in .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md).
+Damit Ihre App auf verschiedenen Plattformen genutzt werden kann, können Sie als Ziel mehrere betriebssystemspezifische TFMs verwenden und Plattformwächter für betriebssystemspezifische API-Aufrufe hinzufügen, indem Sie `#if`-Präprozessoranweisungen nutzen.
+
+In der folgenden Tabelle sehen Sie die Kompatibilität der .NET 5-TFMs mit TFMs für vorherige .NET-Versionen.
+
+| TFM             | Kompatibel mit                                            | Hinweise |
+|-----------------|------------------------------------------------------------|-|
+| net5.0          | net1..4 (mit NU1701-Warnung)<br />netcoreapp1..3.1 (Warnung bei Verweis auf WinForms oder WPF)<br />netstandard1..2.1 | |
+| net5.0-android  | xamarin.android (plus alles Ererbte von `net5.0`) | |
+| net5.0-ios      | xamarin.ios (plus alles Ererbte von `net5.0`) | |
+| net5.0-macos    | xamarin.mac (plus alles Ererbte von `net5.0`) | |
+| net5.0-tvos     | xamarin.tvos (plus alles Ererbte von `net5.0`) | |
+| net5.0-watchos  | xamarin.watchos (plus alles Ererbte von `net5.0`) | |
+| net5.0-windows  | netcoreapp1..3.1 (plus alles Ererbte von `net5.0`) | Dazu gehören WinForms-, WPF- und UWP-APIs.<br />Weitere Informationen finden Sie unter [Windows-Runtime-APIs in Desktop-Apps aufrufen](/windows/apps/desktop/modernize/desktop-to-uwp-enhance). |
+
+#### <a name="suggested-targets"></a>Vorgeschlagene Ziele
+
+Verwenden Sie diese Richtlinien, um zu bestimmen, welchen TFM Sie für Ihre App verwenden:
+
+- Apps, die für mehrere Plattformen genutzt werden können, sollten `net5.0` als Ziel verwenden. Dazu gehören die meisten Bibliotheken, jedoch auch ASP.NET Core und Entity Framework.
+
+- Plattformspezifische Bibliotheken sollten plattformspezifische Varianten als Ziel verwenden. WinForms- und WPF-Projekte sollten beispielsweise `net5.0-windows` als Ziel verwenden.
+
+- Plattformübergreifende Anwendungsmodelle (Xamarin Forms, ASP.NET Core) und Überbrückungspakete (Xamarin.Essentials) sollten mindestens `net5.0` als Ziel verwenden. Sie können aber auch zusätzliche plattformspezifische Varianten verwenden, um für weitere APIs oder Features nutzbar zu sein.
+
+#### <a name="os-version-in-tfms"></a>Betriebssystemversion in TFMs
+
+Sie können auch eine optionale Betriebssystemversion am Ende des TFM angeben, z. B. `net5.0-ios13.0`, die angibt, welche APIs für Ihre App verfügbar sind. (Das .NET 5 SDK wird aktualisiert, sodass es auch neuere Betriebssystemversionen unterstützt, sobald diese veröffentlicht werden.) Wenn Sie Zugriff auf neu veröffentlichte APIs erhalten möchten, erhöhen Sie die Betriebssystemversion im TFM. Sie können weiterhin dafür sorgen, dass Ihre App mit älteren Betriebssystemversionen kompatibel ist (und Aufrufe für APIs mit älteren Versionen mit Wächtern umschließen), indem Sie das `SupportedOSPlatformVersion`-Element in Ihrer Projektdatei hinzufügen. Das `SupportedOSPlatformVersion`-Element weist auf die Betriebssystemmindestversion hin, die erforderlich ist, um Ihre App ausführen zu können.
+
+Im folgenden Ausschnitt aus einer Projektdatei wird beispielsweise angegeben, dass iOS 14-APIs für die App verfügbar sind, dass sie jedoch auch mit iOS 13 oder älteren Computern ausgeführt werden kann.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-ios14.0</TargetFramework>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion> (minimum os platform version)
+  </PropertyGroup>
+
+  ...
+
+</Project>
+```
 
 ## <a name="how-to-specify-a-target-framework"></a>Angeben eines Zielframeworks
 
-Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Framework angegeben wird, verwenden Sie das Element **TargetFramework** . Die folgende Projektdatei einer Konsolen-App veranschaulicht, wie Sie .NET 5.0 als Zielframework festlegen:
+Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Zielframework angegeben wird, verwenden Sie das [Element „TargetFramework“](../core/project-sdk/msbuild-props.md#targetframework). Die folgende Projektdatei einer Konsolen-App veranschaulicht, wie Sie .NET 5.0 als Zielframework festlegen:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,9 +124,9 @@ Zielframeworks werden in einer Projektdatei angegeben. Wenn ein einzelnes Framew
 </Project>
 ```
 
-Wenn Sie mehrere Zielframeworks angeben, können Sie bedingt auf Assemblys für jedes Zielframework verweisen. Sie können in Ihrem Code bedingt mit diesen Assemblys kompilieren, indem Sie die Präprozessorsymbole mit *wenn-dann-sonst* -Logik verwenden.
+Wenn Sie mehrere Zielframeworks angeben, können Sie bedingt auf Assemblys für jedes Zielframework verweisen. Sie können in Ihrem Code bedingt mit diesen Assemblys kompilieren, indem Sie die Präprozessorsymbole mit *wenn-dann-sonst*-Logik verwenden.
 
-Die folgende Bibliotheksprojektdatei ist auf APIs von .NET Standard (`netstandard1.4`) und des .NET Framework (`net40` und `net45`) ausgerichtet. Verwenden Sie das Element **TargetFrameworks** im Plural für mehrer Zielframeworks. Die `Condition`-Attribute enthalten implementierungsspezifische Pakete, wenn die Bibliothek für die zwei .NET Framework-TFMs kompiliert wird:
+Die folgende Bibliotheksprojektdatei ist auf APIs von .NET Standard (`netstandard1.4`) und des .NET Framework (`net40` und `net45`) ausgerichtet. Verwenden Sie das [Element „TargetFrameworks“](../core/project-sdk/msbuild-props.md#targetframeworks) im Plural für mehrere Zielframeworks. Die `Condition`-Attribute enthalten implementierungsspezifische Pakete, wenn die Bibliothek für die zwei .NET Framework-TFMs kompiliert wird:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -148,9 +190,11 @@ Die folgenden Zielframeworks sind veraltet. Pakete, die auf diese Zielframeworks
 
 ## <a name="see-also"></a>Weitere Informationen
 
+- [Namen von Zielframeworks in .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../core/tutorials/libraries.md)
 - [.NET-Standard](net-standard.md)
 - [.NET Core-Versionskontrolle](../core/versions/index.md)
 - [dotnet/standard-GitHub-Repository](https://github.com/dotnet/standard)
 - [GitHub-Repository NuGet-Tools)](https://github.com/joelverhagen/NuGetTools)
 - [Frameworkprofile in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+- [Analysetool für die Plattformkompatibilität](analyzers/platform-compat-analyzer.md)

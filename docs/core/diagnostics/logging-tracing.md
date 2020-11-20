@@ -2,12 +2,12 @@
 title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997701"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439923"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core
 
@@ -53,11 +53,12 @@ Die folgenden APIs sind eher ereignisorientiert. Anstelle von einfachen Zeichenf
   - EventSource ist die primäre Stamm-API für die .NET Core-Ablaufverfolgung.
   - In allen .NET-Standardversionen verfügbar.
   - Ermöglicht nur die Ablaufverfolgung serialisierbarer Objekte.
-  - Schreibt in die angefügten [Ereignislistener](xref:System.Diagnostics.Tracing.EventListener).
-  - .NET Core stellt Listener für Folgendes bereit:
+  - Kann innerhalb des Prozesses über alle [EventListener](xref:System.Diagnostics.Tracing.EventListener)-Instanzen, die für die Verwendung von EventSource konfiguriert sind, genutzt werden
+  - Kann außerhalb des Prozesses über Folgendes verwendet werden:
     - EventPipe von .NET Core auf allen Plattformen
     - [Ereignisablaufverfolgung für Windows (ETW)](/windows/win32/etw/event-tracing-portal)
     - [LTTng-Ablaufverfolgungs-Framework für Linux](https://lttng.org/)
+      - Exemplarische Vorgehensweise: [Erfassen einer LTTng-Ablaufverfolgung mit PerfCollect](trace-perfcollect-lttng.md)
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Enthalten in .NET Core sowie als [NuGet-Paket](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) für .NET Framework.

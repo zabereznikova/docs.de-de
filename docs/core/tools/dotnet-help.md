@@ -2,12 +2,12 @@
 title: Befehl „dotnet help“
 description: Der Befehl „dotnet help“ zeigt ausführlichere Onlinedokumentation für den angegebenen Befehl.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59e74a318118b6fd39d1895df02d76daa6fc9e1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d583142edabb24df972bdf9a06dbfe04688f9d97
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463691"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634467"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
@@ -31,7 +31,7 @@ Der Befehl `dotnet help` öffnet die Referenzseite mit ausführlicheren Informat
 
 - **`COMMAND_NAME`**
 
-  Der Name des .NET Core-CLI-Befehls. Eine Liste der zulässigen CLI-Befehle finden Sie unter [CLI-Befehle](index.md#cli-commands).
+  Der Name des .NET-CLI-Befehls. Eine Liste der zulässigen CLI-Befehle finden Sie unter [CLI-Befehle](index.md#cli-commands).
 
 ## <a name="options"></a>Optionen
 

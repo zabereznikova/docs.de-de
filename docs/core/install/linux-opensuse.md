@@ -1,19 +1,19 @@
 ---
-title: Installieren von .NET Core unter openSUSE (.NET Core)
-description: Veranschaulicht verschiedene Möglichkeiten, das .NET Core SDK und die NET Core-Runtime unter openSUSE zu installieren.
+title: Installieren von .NET unter openSUSE (.NET)
+description: Veranschaulicht verschiedene Möglichkeiten, das .NET SDK und die NET-Runtime unter openSUSE zu installieren
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539229"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506909"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Installieren des .NET Core SDK oder der .NET Core-Runtime unter openSUSE
+# <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Installieren des .NET SDK oder der .NET-Runtime unter openSUSE
 
-.NET Core wird unter openSUSE unterstützt. In diesem Artikel wird beschrieben, wie Sie .NET Core unter openSUSE installieren.
+.NET wird unter openSUSE unterstützt. In diesem Artikel wird beschrieben, wie Sie .NET unter openSUSE installieren.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,17 +21,17 @@ ms.locfileid: "90539229"
 
 ## <a name="supported-distributions"></a>Unterstützte Distributionen
 
-Die folgende Tabelle ist eine Liste der derzeit unter openSUSE 15 unterstützten .NET Core-Versionen. Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) erreicht oder die Version von openSUSE nicht mehr unterstützt wird.
+Die folgende Tabelle enthält die derzeit unter openSUSE 15 unterstützten .NET-Releases. Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) erreicht oder die Version von openSUSE nicht mehr unterstützt wird.
 
-- ✔️ gibt an, dass die Version von openSUSE oder .NET Core weiterhin unterstützt wird.
-- ❌ gibt an, dass die Version von openSUSE oder .NET Core in dieser openSUSE-Version nicht unterstützt wird.
-- Wenn sowohl eine Version von openSUSE als auch eine Version von .NET Core über ✔️ verfügen, wird diese Kombination aus Betriebssystem und .NET unterstützt.
+- ✔️ gibt an, dass die Version von openSUSE oder .NET weiterhin unterstützt wird.
+- ❌ gibt an, dass die Version von openSUSE oder .NET in diesem openSUSE-Release nicht unterstützt wird.
+- Wenn sowohl eine Version von openSUSE als auch eine Version von .NET über ✔️ verfügen, wird diese Kombination aus Betriebssystem und .NET unterstützt.
 
-| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview (nur manuelle Installation) |
+| openSUSE                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |----------------------------|---------------|---------------|----------------|
-| ✔️ [15](#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
+| ✔️ [15](#opensuse-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
-Die folgenden Versionen von .NET Core werden nicht mehr unterstützt. Die Downloads dafür bleiben weiterhin veröffentlicht:
+Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads dafür bleiben weiterhin veröffentlicht:
 
 - 3.0
 - 2.2
@@ -53,11 +53,11 @@ sudo mv prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
 
-Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.
+Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET auftreten können.
 
 ### <a name="unable-to-find-package"></a>Paket konnte nicht gefunden werden
 
@@ -73,7 +73,7 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
-Wenn die Installation mit einem Paket-Manager erfolgt, werden diese Bibliotheken für Sie installiert. Wenn Sie jedoch .NET Core manuell installieren oder eine eigenständige Anwendung veröffentlichen, müssen Sie sicherstellen, dass diese Bibliotheken installiert sind:
+Wenn die Installation mit einem Paket-Manager erfolgt, werden diese Bibliotheken für Sie installiert. Wenn Sie jedoch .NET manuell installieren oder eine eigenständige Anwendung veröffentlichen, müssen Sie sicherstellen, dass diese Bibliotheken installiert sind:
 
 - krb5
 - libicu
@@ -83,7 +83,7 @@ Wenn die OpenSSL-Version der Zielruntime-Umgebung 1.1 oder neuer ist, müssen S
 
 Weitere Informationen zu den Abhängigkeiten finden Sie unter [Eigenständige Linux-Apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-Für .NET Core-Apps, die die Assembly *System.Drawing.Common* verwenden, benötigen Sie außerdem die folgende Abhängigkeit:
+Für .NET-Anwendungen, die die Assembly *System.Drawing.Common* verwenden, benötigen Sie außerdem die folgende Abhängigkeit:
 
 - [libgdiplus (Version 6.0.1 oder höher)](https://www.mono-project.com/docs/gui/libgdiplus/)
 
@@ -100,4 +100,4 @@ Für .NET Core-Apps, die die Assembly *System.Drawing.Common* verwenden, benöti
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET Core SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

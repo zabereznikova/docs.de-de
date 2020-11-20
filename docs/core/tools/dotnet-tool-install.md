@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet tool install“
-description: Der Befehl „dotnet tool install“ installiert das angegebene .NET Core-Tool auf Ihrem Computer.
+description: Der Befehl „dotnet tool install“ installiert das angegebene .NET-Tool auf Ihrem Computer.
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702817"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634323"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702817"
 
 ## <a name="name"></a>name
 
-`dotnet tool install`: Installiert das angegebene [.NET Core-Tool](global-tools.md) auf Ihrem Computer.
+`dotnet tool install`: Der Befehl installiert das angegebene [.NET-Tool](global-tools.md) auf Ihrem Computer.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet tool install` ermöglicht Ihnen das Installieren von .NET Core-Tools auf Ihrem Computer. Um den Befehl zu verwenden, geben Sie eine der folgenden Installationsoptionen an:
+Der Befehl `dotnet tool install` ermöglicht Ihnen das Installieren von .NET-Tools auf Ihrem Computer. Um den Befehl zu verwenden, geben Sie eine der folgenden Installationsoptionen an:
 
 * Verwenden Sie zum Installieren eines globalen Tools am Standardspeicherort die Option `--global`.
 * Verwenden Sie zum Installieren eines globalen Tools an einem benutzerdefinierten Speicherort die Option `--tool-path`.
@@ -67,7 +67,7 @@ Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global
 
 - **`PACKAGE_NAME`**
 
-  Name oder ID des NuGet-Pakets, das das zu installierende .NET Core-Tool enthält.
+  Der Name oder die ID des NuGet-Pakets, das das zu installierende .NET-Tool enthält
 
 ## <a name="options"></a>Optionen
 
@@ -81,7 +81,7 @@ Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global
 
 - **`framework <FRAMEWORK>`**
 
-  Legt das [Zielframework](../../standard/frameworks.md) des zu installierenden Tools fest. Das .NET Core SDK versucht standardmäßig, das am besten geeignete Zielframework auszuwählen.
+  Legt das [Zielframework](../../standard/frameworks.md) des zu installierenden Tools fest. Das .NET SDK versucht standardmäßig, das am besten geeignete Zielframework auszuwählen.
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ Weitere Informationen finden Sie unter [Installieren eines lokalen Tools](global
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core-Tools](global-tools.md)
-- [Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI](global-tools-how-to-use.md)
-- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)
+- [.NET-Tools](global-tools.md)
+- [Tutorial: Installieren und Verwenden eines globalen .NET-Tools mithilfe der .NET-CLI](global-tools-how-to-use.md)
+- [Tutorial: Installieren und Verwenden eines lokalen .NET-Tools mithilfe der .NET-CLI](local-tools-how-to-use.md)

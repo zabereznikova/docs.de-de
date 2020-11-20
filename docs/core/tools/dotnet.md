@@ -1,13 +1,13 @@
 ---
 title: dotnet-Befehl
-description: Erfahren Sie mehr über den dotnet-Befehl (den generischen Treiber für die .NET Core-CLI) und dessen Verwendung.
-ms.date: 02/13/2020
-ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+description: In diesem Artikel erfahren Sie mehr über den dotnet-Befehl (den generischen Treiber für die .NET-CLI) und dessen Verwendung.
+ms.date: 11/11/2020
+ms.openlocfilehash: 7a0c8f2eb7ab407bd725db56cbf31da4689970e4
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281622"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634024"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -15,7 +15,7 @@ ms.locfileid: "93281622"
 
 ## <a name="name"></a>name
 
-`dotnet`: Der generische Treiber für die .NET Core-CLI.
+`dotnet`: Der generische Treiber für die .NET-CLI
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -52,13 +52,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 Der Befehl `dotnet` hat zwei Funktionen:
 
-- Es stellt Befehle für die Arbeit mit .NET Core-Projekten bereit.
+- Er stellt Befehle für die Arbeit mit .NET-Projekten bereit.
 
   Beispielsweise erstellt [`dotnet build`](dotnet-build.md) ein Projekt. Jeder Befehl definiert seine eigenen Optionen und Argumente. Alle Befehle unterstützen die Option `--help` zum Ausdrucken einer kurzen Dokumentation über die Verwendung des Befehls.
 
-- Sie führt .NET Core-Anwendungen aus.
+- Er führt .NET-Anwendungen aus.
 
-  Sie geben den Pfad zu einer `.dll`-Datei einer Anwendung zur Ausführung der Anwendung an.  Das Ausführen der Anwendung bedeutet, den Einstiegspunkt zu finden und auszuführen. Im Falle von Konsolen-Apps ist dies die `Main`-Methode. Beispiel: `dotnet myapp.dll` führt die Anwendung `myapp` aus. Weitere Informationen über Bereitstellungsoptionen finden Sie unter [.NET Core-Anwendungsbereitstellung](../deploying/index.md).
+  Sie geben den Pfad zu einer `.dll`-Datei einer Anwendung zur Ausführung der Anwendung an.  Das Ausführen der Anwendung bedeutet, den Einstiegspunkt zu finden und auszuführen. Im Falle von Konsolen-Apps ist dies die `Main`-Methode. Beispiel: `dotnet myapp.dll` führt die Anwendung `myapp` aus. Weitere Informationen über Bereitstellungsoptionen finden Sie unter [.NET-Anwendungsbereitstellung](../deploying/index.md).
 
 ## <a name="options"></a>Optionen
 
@@ -70,19 +70,19 @@ Die folgenden Optionen gelten für `dotnet` allein. Beispielsweise `dotnet --inf
 
 - **`--info`**
 
-  Gibt ausführliche Informationen über eine .NET Core-Installation und die Computerumgebung aus, z.B. das aktuelle Betriebssystem und den Commit-SHA für die .NET Core-Version.
+  Gibt ausführliche Informationen über eine .NET-Installation und die Computerumgebung aus, z. B. das aktuelle Betriebssystem und den Commit-SHA für die .NET-Version
 
 - **`--version`**
 
-  Druckt die Version des verwendeten .NET Core-SDK aus.
+  Gibt die Version des verwendeten .NET SDK aus
 
 - **`--list-runtimes`**
 
-  Druckt eine Liste der installierten .NET Core-Runtimes aus. Eine x86-Version des SDK listet nur x86-Runtimes auf, und eine x64-Version des SDK listet nur x64-Runtimes auf.
+  Gibt eine Liste der installierten .NET-Runtimes aus. Eine x86-Version des SDK listet nur x86-Runtimes auf, und eine x64-Version des SDK listet nur x64-Runtimes auf.
 
 - **`--list-sdks`**
 
-  Druckt eine Liste der installierten .NET Core-SDKs aus.
+  Gibt eine Liste der installierten .NET SDKs aus
 
 - **`-h|--help`**
 
@@ -118,15 +118,15 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
 
 - **`--additional-deps <PATH>`**
 
-  Pfad zu einer zusätzlichen *.deps.json* -Datei. Eine *deps.json* -Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+  Pfad zu einer zusätzlichen *.deps.json*-Datei. Eine *deps.json*-Datei enthält eine Liste mit Abhängigkeiten, Kompilierungsabhängigkeiten und Versionsinformationen, die verwendet werden, um Assemblykonflikte zu bearbeiten. Weitere Informationen finden Sie auf GitHub unter [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  Pfad zur *deps.json* -Datei. Eine Datei mit Namen *deps.json* ist eine Konfigurationsdatei, die Informationen zu Abhängigkeiten enthält, die zum Ausführen der Anwendung erforderlich sind. Diese Datei wird vom .NET Core SDK generiert.
+  Pfad zur *deps.json*-Datei. Eine Datei mit Namen *deps.json* ist eine Konfigurationsdatei, die Informationen zu Abhängigkeiten enthält, die zum Ausführen der Anwendung erforderlich sind. Diese Datei wird vom .NET SDK generiert.
 
 - **`--runtimeconfig`**
 
-  Der Pfad zu einer *runtimeconfig.json* -Datei. Eine *runtimeconfig.json* -Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md#runtimeconfigjson).
+  Der Pfad zu einer *runtimeconfig.json*-Datei. Eine *runtimeconfig.json*-Datei ist eine Konfigurationsdatei mit Einstellungen für die Runtime. Weitere Informationen finden Sie unter [Konfigurationseinstellungen für die .NET-Runtime](../run-time-config/index.md#runtimeconfigjson).
 
 - **`--roll-forward <SETTING>`** **Verfügbar ab .NET Core SDK 3.0.**
 
@@ -157,7 +157,7 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
 
 - **`--fx-version <VERSION>`**
 
-  Version der .NET Core-Runtime, die zum Ausführen der Anwendung verwendet werden soll.
+  Version der .NET-Runtime, die zum Ausführen der Anwendung verwendet werden soll
 
   Diese Option überschreibt die Version des ersten Frameworkverweises in der `.runtimeconfig.json`-Datei der Anwendung. Dies bedeutet, dass sie nur dann wie erwartet funktioniert, wenn nur ein Frameworkverweis vorliegt. Wenn die Anwendung über mehrere Frameworkverweise verfügt, kann die Verwendung dieser Option zu Fehlern führen.
 
@@ -167,7 +167,7 @@ Die folgenden Optionen sind verfügbar, wenn `dotnet` eine Anwendung ausführt. 
 
 | Befehl                                       | Funktion                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | Erstellt eine .NET Core-Anwendung.                                     |
+| [dotnet build](dotnet-build.md)               | Erstellt eine .NET-Anwendung                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interagiert mit Servern, die von einem Build gestartet wurden.                          |
 | [dotnet clean](dotnet-clean.md)               | Bereinigen von Buildausgaben.                                                |
 | [dotnet help](dotnet-help.md)                 | Zeigt eine ausführlichere Onlinedokumentation für den Befehl.           |
@@ -213,18 +213,19 @@ Befehl | Funktion
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Befehle für globale, Toolpfad- und lokale Tools
 
-Tools sind Konsolenanwendungen, die über NuGet-Pakete installiert und über die Eingabeaufforderung aufgerufen werden. Sie können Tools selbst schreiben oder Drittanbietertools installieren. Tools werden auch als globale Tools, Toolpfadtools und lokale Tools bezeichnet. Weitere Informationen finden Sie unter [Übersicht über .NET Core-Tools](global-tools.md). Globale und Toolpfadtools sind ab .NET Core SDK 2.1 verfügbar. Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.
+Tools sind Konsolenanwendungen, die über NuGet-Pakete installiert und über die Eingabeaufforderung aufgerufen werden. Sie können Tools selbst schreiben oder Drittanbietertools installieren. Tools werden auch als globale Tools, Toolpfadtools und lokale Tools bezeichnet. Weitere Informationen finden Sie unter [Übersicht über die .NET-Tools](global-tools.md). Globale und Toolpfadtools sind ab .NET Core SDK 2.1 verfügbar. Lokale Tools sind ab .NET Core SDK 3.0 verfügbar.
 
 Befehl | Funktion
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Installiert ein Tool auf dem Computer.
 [dotnet tool list](dotnet-tool-list.md) | Listet alle globalen, Toolpfad- und lokalen Tools auf, die derzeit auf Ihrem Computer installiert sind.
+[dotnet tool search](dotnet-tool-list.md) | Durchsucht NuGet.org nach Tools mit dem angegebenen Suchbegriff im Namen oder in den Metadaten
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Deinstalliert ein Tool von Ihrem Computer.
 [dotnet tool update](dotnet-tool-update.md) | Aktualisiert ein Tool, das auf Ihrem Computer installiert ist.
 
 ### <a name="additional-tools"></a>Weitere Tools
 
-Beginnend mit .NET Core SDK 2.1.300 steht eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, jetzt als Teil des .NET Core SDK zur Verfügung. Diese Tools werden in der folgenden Tabelle aufgeführt:
+Ab dem .NET Core SDK 2.1.300 stehen viele Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, jetzt als Teil des .NET SDK zur Verfügung. Diese Tools werden in der folgenden Tabelle aufgeführt:
 
 | Tool                                              | Funktion                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -238,7 +239,7 @@ Geben Sie `dotnet <tool-name> --help` ein, um weitere Informationen zu den einze
 
 ## <a name="examples"></a>Beispiele
 
-Erstellen einer neuen .NET Core-Konsolenanwendung:
+Erstellen einer neuen .NET-Konsolenanwendung:
 
 ```dotnetcli
 dotnet new console
@@ -260,7 +261,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  Gibt den Speicherort der .NET Core-Runtimes an, wenn sie nicht am Standardspeicherort installiert sind. Der Standardspeicherort unter Windows ist `C:\Program Files\dotnet`. Der Standardspeicherort unter Linux und macOS ist `/usr/share/dotnet`. Diese Umgebungsvariable wird nur beim Ausführen von Anwendungen über generierte ausführbare Dateien (Apphosts) verwendet. `DOTNET_ROOT(x86)` wird stattdessen verwendet, wenn eine ausführbare 32-Bit-Datei auf einem 64-Bit-Betriebssystem ausgeführt wird.
+  Gibt den Speicherort der .NET-Runtimes an, wenn sie nicht am Standardspeicherort installiert sind. Der Standardspeicherort unter Windows ist `C:\Program Files\dotnet`. Der Standardspeicherort unter Linux und macOS ist `/usr/share/dotnet`. Diese Umgebungsvariable wird nur beim Ausführen von Anwendungen über generierte ausführbare Dateien (Apphosts) verwendet. `DOTNET_ROOT(x86)` wird stattdessen verwendet, wenn eine ausführbare 32-Bit-Datei auf einem 64-Bit-Betriebssystem ausgeführt wird.
 
 - `NUGET_PACKAGES`
 
@@ -272,15 +273,15 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  Gibt an, ob bei der ersten Ausführung .NET Core-Willkommens- und Telemetriemeldungen angezeigt werden. Bei Festlegung auf `true` werden diese Meldungen unterdrückt (akzeptierte Werte: `true`, `1` oder `yes`), bei Festlegung auf `false` werden die Meldungen zugelassen (akzeptierte Werte: `false`, `0` oder `no`). Sofern nicht festgelegt, lautet der Standardwert `false`, und die Meldungen werden bei der ersten Ausführung angezeigt. Dieses Flag besitzt keine Auswirkung auf die Telemetrie (siehe `DOTNET_CLI_TELEMETRY_OPTOUT` zum Deaktivieren der Übermittlung von Telemetriedaten).
+  Gibt an, ob bei der ersten Ausführung .NET-Willkommensnachrichten und -Telemetriemeldungen angezeigt werden. Bei Festlegung auf `true` werden diese Meldungen unterdrückt (akzeptierte Werte: `true`, `1` oder `yes`), bei Festlegung auf `false` werden die Meldungen zugelassen (akzeptierte Werte: `false`, `0` oder `no`). Sofern nicht festgelegt, lautet der Standardwert `false`, und die Meldungen werden bei der ersten Ausführung angezeigt. Dieses Flag besitzt keine Auswirkung auf die Telemetrie (siehe `DOTNET_CLI_TELEMETRY_OPTOUT` zum Deaktivieren der Übermittlung von Telemetriedaten).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-  Gibt an, ob Daten zur Nutzung von .NET Core-Tools gesammelt und an Microsoft gesendet werden. Legen Sie `true` fest, um die Telemetriefunktion zu deaktivieren (Wert `true`, `1` oder `yes` wird akzeptiert). Legen Sie andernfalls `false` fest, um die Telemetriefunktionen zu aktivieren (Wert `false`, `0` oder `no` wird akzeptiert). Ohne Festlegung ist der Standardwert `false`, und die Telemetriefunktion ist aktiviert.
+  Gibt an, ob Daten zur Nutzung von .NET-Tools gesammelt und an Microsoft gesendet werden. Legen Sie `true` fest, um die Telemetriefunktion zu deaktivieren (Wert `true`, `1` oder `yes` wird akzeptiert). Legen Sie andernfalls `false` fest, um die Telemetriefunktionen zu aktivieren (Wert `false`, `0` oder `no` wird akzeptiert). Ohne Festlegung ist der Standardwert `false`, und die Telemetriefunktion ist aktiviert.
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  Gibt an, ob die .NET Core-Runtime, das freigegebene Framework oder das SDK vom globalen Speicherort aus aufgelöst werden. Ohne Festlegung ist der Standardwert 1 (logisch `true`). Auf 0 (logisch `false`) festgelegt, um nicht vom globalen Speicherort aus aufzulösen und isolierte .NET Core-Installationen zu verwenden. Weitere Informationen zu Lookup mit mehreren Ebenen finden Sie unter [Multi-level SharedFX lookup (SharedFX-Lookup mit mehreren Ebenen)](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+  Gibt an, ob die .NET-Runtime, das gemeinsame Framework oder das SDK vom globalen Speicherort aus aufgelöst werden. Ohne Festlegung ist der Standardwert 1 (logisch `true`). Auf 0 (logisch `false`) festgelegt, damit keine Auflösung vom globalen Speicherort aus erfolgt und isolierte .NET-Installationen verwendet werden. Weitere Informationen zu Lookup mit mehreren Ebenen finden Sie unter [Multi-level SharedFX lookup (SharedFX-Lookup mit mehreren Ebenen)](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 - `DOTNET_ROLL_FORWARD` **Verfügbar ab .NET Core 3.x.**
 
@@ -288,7 +289,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **Verfügbar ab .NET Core 3.x.**
 
-  Wenn diese Option auf `1` (aktiviert) festgelegt ist, wird das Rollforward von einer endgültigen Produktversion zu einer Vorabversion aktiviert. Wenn eine endgültige Produktversion der .NET Core-Runtime angefordert wird, werden standardmäßig (`0` – deaktiviert) nur installierte endgültige Produktversionen beim Rollforward berücksichtigt.
+  Wenn diese Option auf `1` (aktiviert) festgelegt ist, wird das Rollforward von einer endgültigen Produktversion zu einer Vorabversion aktiviert. Wenn eine endgültige Releaseversion der .NET-Runtime angefordert wird, werden standardmäßig (`0` – deaktiviert) nur installierte endgültige Releaseversionen beim Rollforward berücksichtigt.
 
   Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
 
@@ -300,7 +301,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  Legt die Sprache der CLI-Benutzeroberfläche mit einem Gebietsschemawert wie `en-us` fest. Die unterstützten Werte sind identisch mit denen für Visual Studio. Weitere Informationen finden Sie im Abschnitt zum Ändern der Sprache des Installationsprogramms in der [Visual Studio-Installationsdokumentation](/visualstudio/install/install-visual-studio?view=vs-2019). Es gelten die Regeln des .NET-Ressourcen-Managers, sodass Sie keine genaue Übereinstimmung auswählen müssen, sondern auch Nachfolger in der `CultureInfo`-Struktur auswählen können. Bei einer Festlegung auf `fr-CA` findet und verwendet die Befehlszeilenschnittstelle z. B. die `fr`-Übersetzungen. Wenn Sie eine nicht unterstützte Sprache festlegen, greift die Befehlszeilenschnittstelle auf Englisch zurück.
+  Legt die Sprache der CLI-Benutzeroberfläche mit einem Gebietsschemawert wie `en-us` fest. Die unterstützten Werte sind identisch mit denen für Visual Studio. Weitere Informationen finden Sie im Abschnitt zum Ändern der Sprache des Installationsprogramms in der [Visual Studio-Installationsdokumentation](/visualstudio/install/install-visual-studio). Es gelten die Regeln des .NET-Ressourcen-Managers, sodass Sie keine genaue Übereinstimmung auswählen müssen, sondern auch Nachfolger in der `CultureInfo`-Struktur auswählen können. Bei einer Festlegung auf `fr-CA` findet und verwendet die Befehlszeilenschnittstelle z. B. die `fr`-Übersetzungen. Wenn Sie eine nicht unterstützte Sprache festlegen, greift die Befehlszeilenschnittstelle auf Englisch zurück.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -345,4 +346,4 @@ dotnet myapp.dll
 ## <a name="see-also"></a>Siehe auch
 
 - [Laufzeitkonfigurationsdateien](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
-- [Konfigurationseinstellungen für die .NET Core-Runtime](../run-time-config/index.md)
+- [Konfigurationseinstellungen für die .NET-Runtime](../run-time-config/index.md)

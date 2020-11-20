@@ -2,12 +2,12 @@
 title: Befehl „dotnet restore“
 description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925475"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634402"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,7 +46,7 @@ Manchmal kann es unpraktisch sein, die implizite NuGet-Wiederherstellung mit die
 
 ### <a name="specify-feeds"></a>Angeben von Feeds
 
-Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden normalerweise über die *nuget.config*-Konfigurationsdatei bereitgestellt. Eine standardmäßige Konfigurationsdatei wird bereitgestellt, wenn das .NET Core SDK installiert sind. Führen Sie eine der folgenden Schritte durch, um zusätzliche Feeds anzugeben:
+Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden normalerweise über die *nuget.config*-Konfigurationsdatei bereitgestellt. Eine Standardkonfigurationsdatei wird bereitgestellt, wenn das .NET SDK installiert sind. Führen Sie eine der folgenden Schritte durch, um zusätzliche Feeds anzugeben:
 
 - Erstellen Sie eine eigene *nuget.config*-Datei im Projektverzeichnis. Weitere Informationen finden Sie unter [Gängige NuGet-Konfigurationen](/nuget/consume-packages/configuring-nuget-behavior) und unter [Unterschiede bei „nuget.config“](#nugetconfig-differences) weiter unten in diesem Artikel.
 - Verwenden Sie `dotnet nuget`-Befehle wie [`dotnet nuget add source`](dotnet-nuget-add-source.md).
@@ -71,11 +71,11 @@ Es gibt drei bestimmte Einstellungen, die von `dotnet restore` ignoriert werden:
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  Bindungsumleitungen funktionieren nicht mit `<PackageReference>`-Elementen, und .NET Core unterstützt nur `<PackageReference>`-Elemente für NuGet-Pakete.
+  Bindungsumleitungen funktionieren nicht mit `<PackageReference>`-Elementen, und .NET unterstützt nur `<PackageReference>`-Elemente für NuGet-Pakete.
 
 - [solution](/nuget/schema/nuget-config-file#solution-section)
 
-  Diese Einstellung ist spezifisch für Visual Studio und gilt nicht für .NET Core. .NET Core verwendet keine `packages.config`-Datei, aber stattdessen `<PackageReference>`-Elemente für NuGet-Pakete.
+  Diese Einstellung ist spezifisch für Visual Studio und gilt nicht für .NET. .NET verwendet keine `packages.config`-Datei, aber stattdessen `<PackageReference>`-Elemente für NuGet-Pakete.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 

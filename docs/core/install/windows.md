@@ -1,17 +1,17 @@
 ---
-title: Installieren von .NET Core unter Windows
-description: Informationen zu den Windows-Versionen, unter denen Sie .NET Core installieren können
+title: Installieren von .NET unter Windows
+description: In diesem Artikel erhalten Sie Informationen zu den Windows-Versionen, unter denen Sie .NET installieren können.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/22/2020
-ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: fe18cda64e0c9986884486298adf4a83b604f323
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538288"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594535"
 ---
-# <a name="install-net-core-on-windows"></a>Installieren von .NET Core unter Windows
+# <a name="install-net-on-windows"></a>Installieren von .NET unter Windows
 
 > [!div class="op_single_selector"]
 >
@@ -19,39 +19,39 @@ ms.locfileid: "90538288"
 > - [Installieren unter macOS](macos.md)
 > - [Installieren unter Linux](linux.md)
 
-In diesem Artikel wird erläutert, wie Sie .NET Core unter Windows installieren. .NET Core besteht aus der Runtime und dem SDK. Die Runtime wird zum Ausführen von .NET Core-Apps verwendet und ist möglicherweise bereits in der App enthalten. Dies ist allerdings keine Voraussetzung. Das SDK wird zum Erstellen von .NET Core-Apps und -Bibliotheken verwendet. Die .NET Core-Runtime wird immer mit dem SDK installiert.
+In diesem Artikel wird erläutert, wie Sie .NET unter Windows installieren. .NET besteht aus der Runtime und dem SDK. Die Runtime wird zum Ausführen von .NET-Apps verwendet und ist möglicherweise bereits in der App enthalten. Das SDK wird zum Erstellen von .NET-Apps und -Bibliotheken verwendet. Die .NET-Runtime wird immer mit dem SDK installiert.
 
-Version 3.1 ist die aktuelle Version von .NET Core.
+Version 5.0 ist die aktuelle Version von .NET.
 
 > [!div class="button"]
-> [.NET Core herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [Herunterladen von .NET](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Unterstützte Versionen
 
-Die folgende Tabelle enthält die derzeit unterstützten .NET Core-Releases und die Windows-Versionen, die diese unterstützen. Diese Versionen werden so lange unterstützt, bis entweder die Version von [.NET Core das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) oder die Version von [Windows das Ende ihrer Lebensdauer](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) erreicht.
+Die folgende Tabelle enthält die derzeit unterstützten .NET-Releases und die Windows-Versionen, die diese unterstützen. Diese Versionen werden so lange unterstützt, bis entweder die Version von [.NET das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) oder die Version von [Windows das Ende ihrer Lebensdauer](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) erreicht.
 
 Die Enddaten für den Support der einzelnen Windows 10-Versionen sind nach Editionen unterteilt. In der folgenden Tabelle werden nur die Editionen **Home**, **Pro**, **Pro Education** und **Pro for Workstations** berücksichtigt. Weitere Details finden Sie im [Informationsblatt zum Lebenszyklus von Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 - ✔️ gibt an, dass die Version von Windows oder .NET Core weiterhin unterstützt wird.
 - ❌ gibt an, dass die Version von Windows oder .NET Core in dieser Windows-Version nicht unterstützt wird.
-- Wenn sowohl für eine Version von Windows als auch für eine Version von .NET Core ein Häkchen (✔️) angegeben ist, wird diese Kombination aus Betriebssystem und .NET unterstützt.
+- Wenn sowohl eine Version von Windows als auch eine Version von .NET Core mit einem Häkchen (✔️) markiert ist, wird diese Kombination aus Betriebssystem und .NET unterstützt.
 
-| Betriebssystem                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 Preview |
+| Betriebssystem                      | .NET Core 2.1 | .NET Core 3.1 | .NET 5 |
 |-----------------------------|---------------|---------------|----------------|
-| ✔️ Windows 10, Version 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10, Version 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10, Version 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ✔️ Windows 10, Version 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 Preview |
-| ❌ Windows 10, Version 1803 | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10, Version 1709 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10, Version 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10, Version 1607 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10, Version 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
-| ❌ Windows 10, Version 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 Preview |
+| ✔️ Windows 10, Version 2004 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10, Version 1909 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10, Version 1903 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ Windows 10, Version 1809 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10, Version 1803 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10, Version 1709 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10, Version 1703 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ Windows 10, Version 1607 | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ Windows 10, Version 1511 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ Windows 10, Version 1507 | ❌ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
 ## <a name="unsupported-releases"></a>Nicht unterstützte Versionen
 
-Die folgenden Versionen von .NET Core werden ❌ nicht mehr unterstützt. Die Downloads dafür bleiben weiterhin veröffentlicht:
+Die folgenden Versionen von .NET werden nicht mehr unterstützt (❌). Die Downloads dafür bleiben weiterhin veröffentlicht:
 
 - 3.0
 - 2.2
@@ -59,33 +59,47 @@ Die folgenden Versionen von .NET Core werden ❌ nicht mehr unterstützt. Die Do
 
 ## <a name="runtime-information"></a>Informationen zur Runtime
 
-Die Runtime wird zur Ausführung der mit .NET Core erstellten Apps verwendet. Wenn ein App-Autor eine App veröffentlicht, kann er die Runtime zusammen mit seiner App bereitstellen. Wenn er die Runtime nicht hinzufügt, ist es dem Benutzer überlassen, die Runtime zu installieren.
+Die Runtime wird zur Ausführung der mit .NET erstellten Apps verwendet. Wenn ein App-Autor eine App veröffentlicht, kann er die Runtime zusammen mit seiner App bereitstellen. Wenn er die Runtime nicht hinzufügt, ist es dem Benutzer überlassen, die Runtime zu installieren.
 
 Es gibt drei verschiedene Runtimes, die Sie unter Windows installieren können:
 
 *ASP.NET Core-Runtime*\
-Diese führt ASP.NET Core-Apps aus. Sie umfasst die .NET Core-Runtime.
+Diese führt ASP.NET Core-Apps aus. Diese Runtime schließt die .NET-Runtime ein.
 
 *Desktopruntime*\
-Diese führt .NET Core-Desktop-Apps für Windows aus, die unter WPF oder Windows Forms erstellt wurden. Sie umfasst die .NET Core-Runtime.
+Diese führt .NET-Desktop-Apps für Windows aus, die unter WPF oder Windows Forms erstellt wurden. Diese Runtime schließt die .NET-Runtime ein.
 
-*.NET Core-Runtime*\
-Hierbei handelt es sich um die einfachste Runtime, die keine weiteren Runtimes beinhaltet. Es wird dringend empfohlen, dass Sie sowohl die *ASP.NET Core-Runtime* als auch die *Desktop-Runtime* installieren, um die bestmögliche Kompatibilität mit .NET Core-Apps zu erzielen.
+*.NET-Runtime*\
+Hierbei handelt es sich um die einfachste Runtime, die keine weiteren Runtimes beinhaltet. Es wird dringend empfohlen, dass Sie sowohl die *ASP.NET Core-Runtime* als auch die *Desktop-Runtime* installieren, um die bestmögliche Kompatibilität mit .NET-Apps zu erzielen.
 
 > [!div class="button"]
-> [.NET Core-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+> [.NET-Runtime herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>Informationen zum SDK
 
-Das SDK wird zum Erstellen und Veröffentlichen von .NET Core-Apps und -Bibliotheken verwendet. Die Installation des SDK umfasst alle drei [Runtimes](#runtime-information): ASP.NET Core, Desktop und .NET Core.
-
-> [!div class="button"]
-> [.NET Core SDK herunterladen](https://dotnet.microsoft.com/download/dotnet-core)
+Das SDK wird zum Erstellen und Veröffentlichen von .NET-Apps und -Bibliotheken verwendet. Die Installation des SDK umfasst alle drei [Runtimes](#runtime-information): ASP.NET Core, Desktop und .NET.
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
+
+# <a name="net-50"></a>[.NET 5.0](#tab/net50)
+
+Die folgenden Windows-Versionen werden von .NET 5.0 unterstützt:
+
+> [!NOTE]
+> Die mindestens erforderliche Version ist mit einem `+`-Zeichen markiert.
+
+| Betriebssystem                  | Version       | Architekturen   |
+|---------------------|---------------|-----------------|
+| Windows 10-Client   | Version 1607 oder höher | x64, x86, ARM64 |
+| Windows-Client      | 7 SP1 oder höher, 8.1   | x64, x86        |
+| Windows Server      | 2012 R2 oder höher      | x64, x86        |
+| Windows Server Core | 2012 R2 oder höher      | x64, x86        |
+| Nano Server         | Version 1809 und höher | x64             |
+
+Weitere Informationen zu den von .NET 5.0 unterstützten Betriebssystemen, Distributionen und Lebenszyklusrichtlinien finden Sie unter [Von .NET 5.0 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md).
 
 # <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
@@ -190,10 +204,10 @@ Die oben aufgeführten Anforderungen sind auch erforderlich, wenn einer der folg
 
 Die [dotnet-install-Skripts](../tools/dotnet-install-script.md) werden für die CI-Automatisierung und Installationen der Runtime durch Benutzer ohne Administratorrechte verwendet. Sie können das Skript über die Seite [dotnet-install-Skriptverweis](../tools/dotnet-install-script.md) herunterladen.
 
-Das Skript installiert standardmäßig die neueste [Langzeitunterstützungsversion](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), nämlich .NET Core 3.1. Sie können eine bestimmte Version durch Angeben der `Channel`-Option auswählen. Schließen Sie die `Runtime`-Option mit ein, um eine Runtime zu installieren. Andernfalls installiert das Skript das SDK nicht.
+Das Skript installiert standardmäßig die aktuelle Version von [LTS (Long-Term Support)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), die derzeit .NET 3.1 entspricht. Sie können eine bestimmte Version durch Angeben der `Channel`-Option auswählen. Schließen Sie die `Runtime`-Option mit ein, um eine Runtime zu installieren. Andernfalls installiert das Skript das SDK nicht.
 
 ```powershell
-dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
+dotnet-install.ps1 -Channel 5.0 -Runtime aspnetcore
 ```
 
 Installieren Sie das SDK, und lassen Sie dabei den Parameter `-Runtime` weg. Der Parameter `-Channel` wird in diesem Beispiel auf `Current` festgelegt, wodurch die neuste unterstützte Version installiert wird.
@@ -204,10 +218,11 @@ dotnet-install.ps1 -Channel Current
 
 ## <a name="install-with-visual-studio"></a>Installieren mit Visual Studio
 
-Für den Fall, dass Sie Visual Studio zum Entwickeln von .NET Core-Apps verwenden, finden Sie in der folgenden Tabelle basierend auf der .NET Core SDK-Zielversion die mindestens erforderliche Version von Visual Studio.
+Für den Fall, dass Sie Visual Studio zum Entwickeln von .NET-Apps verwenden, finden Sie in der folgenden Tabelle basierend auf der .NET SDK-Zielversion die mindestens erforderliche Version von Visual Studio.
 
-| .NET Core SDK-Version | Visual Studio-Version                      |
+| .NET SDK-Version      | Visual Studio-Version                      |
 | --------------------- | ------------------------------------------ |
+| 5.0                   | Visual Studio 2019 Version 16.8 oder höher |
 | 3.1                   | Visual Studio 2019 Version 16.4 oder höher |
 | 3.0                   | Visual Studio 2019 Version 16.3 oder höher |
 | 2.2                   | Visual Studio 2017 Version 15.9 oder höher |
@@ -219,7 +234,7 @@ Wenn Sie Visual Studio bereits installiert haben, können Sie Ihre Version mit d
 01. Klicken Sie auf **Hilfe** > **Info**.
 01. Informieren Sie sich über die Versionsnummer im Dialogfeld **Info**.
 
-Visual Studio kann das neueste .NET Core SDK und die Runtime installieren.
+Visual Studio kann das neueste .NET SDK und die Runtime installieren.
 
 > [!div class="button"]
 > [Visual Studio herunterladen](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
@@ -247,18 +262,18 @@ Zwar verfügt Visual Studio Code im Gegensatz zu Visual Studio über keine autom
 
 ## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
 
-Alternativ zu den Windows-Installationsprogrammen für .NET Core können Sie das SDK oder die Runtime herunterladen und manuell installieren. Die manuelle Installation wird normalerweise im Rahmen von CI-Tests (Continuous Integration) durchgeführt. Für Entwickler oder Benutzer eignet sich in der Regel die Verwendung eines [Installationsprogramms](https://dotnet.microsoft.com/download/dotnet-core) besser.
+Alternativ zu den Windows-Installationsprogrammen für .NET können Sie das SDK oder die Runtime herunterladen und manuell installieren. Die manuelle Installation wird normalerweise im Rahmen von CI-Tests (Continuous Integration) durchgeführt. Für Entwickler oder Benutzer eignet sich in der Regel die Verwendung eines [Installationsprogramms](https://dotnet.microsoft.com/download/dotnet-core) besser.
 
-Sowohl das .NET Core SDK als auch die .NET Core-Runtime können nach dem Herunterladen manuell installiert werden. Wenn Sie das .NET Core SDK installieren, müssen Sie die entsprechende Runtime nicht installieren. Laden Sie zunächst eine binäre Version entweder für das SDK oder die Runtime von einer der folgenden Websites herunter:
+Sowohl das .NET SDK als auch die .NET-Runtime können nach dem Herunterladen manuell installiert werden. Wenn Sie das .NET SDK installieren, müssen Sie die entsprechende Runtime nicht installieren. Laden Sie zunächst eine binäre Version entweder für das SDK oder die Runtime von einer der folgenden Websites herunter:
 
-- ✔️ [.NET 5.0 Preview herunterladen](https://dotnet.microsoft.com/download/dotnet/5.0)
+- ✔️ [.NET 5.0-Downloads](https://dotnet.microsoft.com/download/dotnet/5.0)
 - ✔️ [.NET Core 3.1 herunterladen](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - ✔️ [.NET Core 2.1 herunterladen](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 - [Alle .NET Core-Downloads](https://dotnet.microsoft.com/download/dotnet-core)
 
 Erstellen Sie ein Verzeichnis, in das .NET extrahiert werden soll, z. B. `%USERPROFILE%\dotnet`. Extrahieren Sie anschließend die heruntergeladene ZIP-Datei in dieses Verzeichnis.
 
-Standardmäßig nutzen die Befehle und Anwendungen der .NET Core CLI auf diese Weise installiertes .NET Core nicht. Sie müssen sich explizit dafür entscheiden, es zu nutzen. Ändern Sie hierzu die Umgebungsvariablen, mit denen eine Anwendung gestartet wird:
+Standardmäßig nutzen die Befehle und Anwendungen der .NET-CLI auf diese Weise installierte .NET-Instanzen nicht. Sie müssen sich explizit dafür entscheiden, .NET zu nutzen. Ändern Sie hierzu die Umgebungsvariablen, mit denen eine Anwendung gestartet wird:
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
@@ -268,17 +283,17 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 Bei diesem Ansatz können Sie mehrere Versionen in separaten Speicherorten installieren und dann explizit auswählen, welcher Installationsspeicherort von einer Anwendung verwendet werden soll, indem die Anwendung mit Umgebungsvariablen ausgeführt wird, die auf diesen Speicherort zeigen.
 
-Wenn `DOTNET_MULTILEVEL_LOOKUP` auf `0` festgelegt ist, ignoriert .NET Core alle global installierten .NET Core-Versionen. Entfernen Sie diese Umgebungseinstellung, damit .NET Core den globalen Standartinstallationsort bei der Auswahl des besten Frameworks zum Ausführen der Anwendung berücksichtigt. Das Standardverzeichnis ist in der Regel `C:\Program Files\dotnet`. Dort wird .NET Core von den Installationsprogrammen installiert.
+Wenn `DOTNET_MULTILEVEL_LOOKUP` auf `0` festgelegt ist, ignoriert .NET alle global installierten .NET-Versionen. Entfernen Sie diese Umgebungseinstellung, damit .NET den globalen Standartinstallationsspeicherort bei der Auswahl des besten Frameworks zum Ausführen der Anwendung berücksichtigt. Das Standardverzeichnis ist in der Regel `C:\Program Files\dotnet`. Dort wird .NET von den Installationsprogrammen installiert.
 
 ## <a name="docker"></a>Docker
 
 Container bieten eine einfache Möglichkeit, Ihre Anwendung vom Rest des Hostsystems zu isolieren. Container auf demselben Computer teilen nur den Kernel und verwenden die Ihrer Anwendung zur Verfügung gestellten Ressourcen.
 
-.NET Core kann in einem Docker-Container ausgeführt werden. Offizielle.NET Core Docker-Images werden in Microsoft Container Registry (MCR) veröffentlicht und sind im [Microsoft.NET Core Docker-Hub-Repository](https://hub.docker.com/_/microsoft-dotnet-core/) verfügbar. Jedes Repository enthält Images für verschiedene Kombinationen von .NET (SDK oder Runtime) und dem Betriebssystem, die Sie verwenden können.
+.NET kann in einem Docker-Container ausgeführt werden. Offizielle Docker-Images für .NET werden in Microsoft Container Registry (MCR) veröffentlicht und sind im [Microsoft.NET Docker-Hub-Repository](https://hub.docker.com/_/microsoft-dotnet) verfügbar. Jedes Repository enthält Images für verschiedene Kombinationen von .NET (SDK oder Runtime) und dem Betriebssystem, die Sie verwenden können.
 
-Microsoft stellt Images bereit, die auf bestimmte Szenarien zugeschnitten sind. So stellt beispielsweise das [ASP.NET Core-Repository](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Images bereit, die für die Ausführung von ASP.NET Core-Apps in der Produktion erstellt wurden.
+Microsoft stellt Images bereit, die auf bestimmte Szenarien zugeschnitten sind. So stellt beispielsweise das [ASP.NET Core-Repository](https://hub.docker.com/_/microsoft-dotnet-aspnet) Images bereit, die für die Ausführung von ASP.NET Core-Apps in der Produktion erstellt wurden.
 
-Weitere Informationen zur Verwendung von .NET Core in einem Docker-Container finden Sie unter [Einführung in .NET und Docker](../docker/introduction.md) und [Beispiele](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+Weitere Informationen zur Verwendung von .NET in einem Docker-Container finden Sie unter [Einführung zu .NET und Docker](../docker/introduction.md) und [Docker-Beispiele für .NET](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

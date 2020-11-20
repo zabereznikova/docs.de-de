@@ -3,12 +3,12 @@ title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8.0 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160879"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440392"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -23,7 +23,7 @@ Mit den in C# 8.0 eingeführten **Nullable-Verweistypen** und **Nicht-Nullable-V
 
 Dieses neue Feature bietet große Vorteile hinsichtlich der Verarbeitung von Verweisvariablen in früheren Versionen von C#, bei denen die Entwurfsabsicht nicht über die Variablendeklaration bestimmt werden kann. Der Compiler bot keinen Schutz gegen Nullverweisausnahmen für Verweistypen:
 
-- **Ein Verweis kann NULL sein**. Wenn ein Verweistyp mit NULL initialisiert oder später NULL zugewiesen wird, gibt der Compiler keine Warnungen aus. Der Compiler gibt Warnungen aus, wenn diese Variablen ohne NULL-Überprüfungen dereferenziert werden.
+- **Ein Verweis kann NULL sein**. Wenn eine Verweistypvariable mit `null` initialisiert oder später `null` zugewiesen wird, gibt der Compiler keine Warnungen aus. Der Compiler gibt Warnungen aus, wenn diese Variablen ohne NULL-Überprüfungen dereferenziert werden.
 - **Es wird angenommen, dass ein Verweis nicht NULL ist**. Der Compiler gibt keine Warnungen aus, wenn Verweistypen dereferenziert werden. Der Compiler gibt Warnungen aus, wenn eine Variable auf einen Ausdruck festgelegt ist, der NULL sein kann.
 
 Diese Warnungen werden zum Zeitpunkt der Kompilierung ausgegeben. Der Compiler fügt keine NULL-Überprüfungen oder andere Laufzeitkonstrukte in einem Nullable-Kontext hinzu. Zur Laufzeit sind ein Nullable-Verweis und ein Non-Nullable-Verweis gleichwertig.
@@ -119,7 +119,7 @@ Der Nullable-Warnungskontext unterscheidet sich vom Nullable-Anmerkungskontext. 
 1. Die Variable wurde definitiv einem Wert ungleich NULL zugewiesen.
 1. Die Variable oder der Ausdruck wurde vor der Dereferenzierung auf NULL überprüft.
 
-Der Compiler generiert Warnungen, wenn Sie in einem Nullable-Warnungskontext eine Variable oder einen Ausdruck dereferenzieren, die oder der **vielleicht NULL** ist. Darüber hinaus generiert der Compiler Warnungen, wenn einer Variable oder einem Ausdruck, die oder der **vielleicht NULL** ist, in einem aktivierten Nullable-Anmerkungskontext ein Non-Nullable-Verweistyp zugewiesen wird.
+Der Compiler generiert Warnungen, wenn Sie in einem Nullable-Warnungskontext eine Variable oder einen Ausdruck dereferenzieren, die oder der **vielleicht NULL** ist. Darüber hinaus generiert der Compiler Warnungen, wenn einer Variable oder einem Ausdruck, die oder der **vielleicht NULL** ist, in einem aktivierten Nullable-Anmerkungskontext eine Non-Nullable-Verweistypvariable zugewiesen wird.
 
 ## <a name="attributes-describe-apis"></a>Beschreiben von APIs mit Attributen
 

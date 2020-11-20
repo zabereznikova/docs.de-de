@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet tool list“
-description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET Core-Tools auf.
+description: Der Befehl „dotnet tool list“ listet die auf Ihrem Computer installierten .NET-Tools auf.
 ms.date: 02/14/2020
-ms.openlocfilehash: 4035c5be233232e53c6d7150485f737108c1e18d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: d884f2c41834dd9704de3a8ca15417ba368fde4b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925461"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634284"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -15,7 +15,7 @@ ms.locfileid: "86925461"
 
 ## <a name="name"></a>name
 
-`dotnet tool list`: Listet alle [.NET Core-Tools](global-tools.md) des angegebenen Typs auf, der derzeit auf dem Computer installiert sind.
+`dotnet tool list`: Der Befehl listet alle [.NET-Tools](global-tools.md) des angegebenen Typs auf, die derzeit auf Ihrem Computer installiert sind.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -33,7 +33,7 @@ dotnet tool list -h|--help
 
 ## <a name="description"></a>Beschreibung
 
-Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- oder lokalen .NET Core-Tools aufzulisten, die auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das Tool auf.  Um den Befehl zu verwenden, geben Sie eine der folgenden Optionen an:
+Der Befehl `dotnet tool list` bietet die Ihnen Möglichkeit, alle globalen, tool-path- oder lokalen .NET-Tools aufzulisten, die auf Ihrem Computer installiert sind. Der Befehl listet den Paketnamen, die installierte Version und den Befehl für das Tool auf.  Um den Befehl zu verwenden, geben Sie eine der folgenden Optionen an:
 
 * Verwenden Sie zum Auflisten globaler Tools am Standardspeicherort die Option `--global`.
 * Verwenden Sie zum Auflisten globaler Tools an einem benutzerdefinierten Speicherort die Option `--tool-path`.
@@ -79,6 +79,6 @@ Der Befehl `dotnet tool list` bietet die Möglichkeit, alle globalen, Toolpfad- 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core-Tools](global-tools.md)
-- [Tutorial: Erstellen und Verwenden eines globalen .NET Core-Tools mithilfe der .NET Core-CLI](global-tools-how-to-use.md)
-- [Tutorial: Erstellen und Verwenden eines lokalen .NET Core-Tools mithilfe der .NET Core-CLI](local-tools-how-to-use.md)
+- [.NET-Tools](global-tools.md)
+- [Tutorial: Installieren und Verwenden eines globalen .NET-Tools mithilfe der .NET-CLI](global-tools-how-to-use.md)
+- [Tutorial: Installieren und Verwenden eines lokalen .NET-Tools mithilfe der .NET-CLI](local-tools-how-to-use.md)

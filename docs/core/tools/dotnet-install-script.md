@@ -1,19 +1,19 @@
 ---
 title: Dotnet-Installationsskripts
-description: Erfahren Sie mehr über die dotnet-Installationsskripts zur Installation des .NET Core SDK und der Shared Runtime.
+description: In diesem Artikel erfahren Sie mehr über die dotnet-install-Skripts zur Installation des .NET SDK und der Shared Runtime.
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078202"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634441"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
 ## <a name="name"></a>name
 
-`dotnet-install.ps1` | `dotnet-install.sh`: Skript, mit dem das .NET Core SDK und die Shared Runtime installiert werden.
+`dotnet-install.ps1` | `dotnet-install.sh`: Skript für die Installation des .NET SDK und der Shared Runtime
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -48,7 +48,7 @@ Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter m
 
 ## <a name="description"></a>Beschreibung
 
-Die `dotnet-install`-Skripts werden verwendet, um eine Nicht-Administrator-Installation des .NET Core SDK durchzuführen, die die .NET Core-CLI und die freigegebene Runtime enthält. Es gibt zwei Skripts:
+Die `dotnet-install`-Skripts führen eine Nicht-Administrator-Installation des .NET SDK durch, das die .NET-CLI und die Shared Runtime enthält. Es gibt zwei Skripts:
 
 * Ein PowerShell-Skript, das unter Windows verwendet werden kann
 * Ein Bash-Skript für Linux/macOS
@@ -86,13 +86,13 @@ Bevor Sie das Skript ausführen, installieren Sie die erforderlichen [Abhängigk
 
 Installieren Sie eine bestimmte Version mithilfe des Arguments `-Version|--version`. Die Version muss als dreiteilige Versionsnummer (z. B. `2.1.0`) angegeben werden. Wenn die Version nicht angegeben wird, installiert das Skript die `latest`-Version.
 
-Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Sie laden nur die gezippten Binärdateien herunter und kopieren sie in einen Ordner. Wenn Sie möchten, dass die Registrierungsschlüsselwerte aktualisiert werden, verwenden Sie die .NET Core-Installationsprogramme.
+Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Sie laden nur die gezippten Binärdateien herunter und kopieren sie in einen Ordner. Wenn Sie möchten, dass die Registrierungsschlüsselwerte aktualisiert werden, verwenden Sie die .NET-Installer.
 
 ## <a name="options"></a>Optionen
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  Architektur der zu installierenden .NET Core-Binärdateien. Mögliche Werte sind `<auto>`, `amd64`, `x64`, `x86`, `arm64` und `arm`. Der Standardwert ist `<auto>`, was die derzeit ausgeführte Betriebssystemarchitektur darstellt.
+  Architektur der zu installierenden .NET-Binärdateien. Mögliche Werte sind `<auto>`, `amd64`, `x64`, `x86`, `arm64` und `arm`. Der Standardwert ist `<auto>`, was die derzeit ausgeführte Betriebssystemarchitektur darstellt.
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
 
 - **`-DryRun|--dry-run`**
 
-  Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET Core-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
+  Wenn festgelegt, führt das Skript die Installation nicht aus. Es zeigt stattdessen an, welche Befehlszeile verwendet werden soll, um die derzeit erforderliche Version der .NET-CLI konsistent zu installieren. Wenn Sie z.B. Version `latest` angeben, wird eine Verbindung mit der bestimmten Version angezeigt, damit dieser Befehl deterministisch in einem Buildskript verwendet werden kann. Außerdem wird der Speicherort der Binärdatei angezeigt, wenn Sie sie selbst installieren oder herunterladen möchten.
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -135,7 +135,7 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
 
 - **`-NoPath|--no-path`**
 
-  Wenn festgelegt, wird der Installationsordner nicht in den Pfad für die aktuelle Sitzung exportiert. Standardmäßig ändert das Skript den Pfad, wodurch die .NET Core-CLI sofort nach der Installation zur Verfügung gestellt wird.
+  Wenn festgelegt, wird der Installationsordner nicht in den Pfad für die aktuelle Sitzung exportiert. Standardmäßig ändert das Skript den Pfad (PATH), wodurch die .NET-CLI sofort nach der Installation zur Verfügung steht.
 
 - **`-ProxyAddress`**
 
@@ -240,7 +240,7 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- Rufen Sie das Skript ab, und installieren Sie die Beispiele für die .NET Core-CLI:
+- Rufen Sie das Skript ab, und installieren Sie die einzeiligen Beispiele für die .NET-CLI:
 
   Windows:
 
@@ -257,5 +257,5 @@ Die Installationsskripts aktualisieren die Registrierung unter Windows nicht. Si
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core-Releases](https://github.com/dotnet/core/releases)
-- [Downloadarchiv von .NET Core Runtime und des SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [.NET-Releases](https://github.com/dotnet/core/releases)
+- [Downloadarchiv für die .NET-Runtime und das .NET SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

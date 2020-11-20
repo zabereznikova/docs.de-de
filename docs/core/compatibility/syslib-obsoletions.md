@@ -2,12 +2,12 @@
 title: Veraltete Features in .NET 5.0 und höher
 description: In diesem Artikel erfahren Sie mehr über APIs, die in .NET 5.0 und höher als veraltet markiert sind und SYSLIB-Compilerwarnungen auslösen.
 ms.date: 10/20/2020
-ms.openlocfilehash: 13f5fb10cfe693ed621b3f45fc22e024875890c8
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333093"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440763"
 ---
 # <a name="obsolete-features-in-net-5"></a>Veraltete Features in .NET 5.0
 
@@ -61,9 +61,14 @@ Projektdatei:
    <TargetFramework>net5.0</TargetFramework>
    <!-- NoWarn below suppresses SYSLIB0001 project-wide -->
    <NoWarn>$(NoWarn);SYSLIB0001</NoWarn>
+   <!-- To suppress multiple warnings, you can use multiple NoWarn elements -->
+   <NoWarn>$(NoWarn);SYSLIB0002</NoWarn>
+   <NoWarn>$(NoWarn);SYSLIB0003</NoWarn>
+   <!-- Alternatively, you can suppress multiple warnings by using a semicolon-delimited list -->
+   <NoWarn>$(NoWarn);SYSLIB0001;SYSLIB0002;SYSLIB0003</NoWarn>
   </PropertyGroup>
 </Project>
 ```
 
 > [!NOTE]
-> Wenn Sie eine Warnung auf diese Weise unterdrücken, wird nur die Warnung vor diesem spezifischen veralteten Element deaktiviert. Andere Warnungen, einschließlich anderer Veraltungswarnungen, bleiben weiterhin aktiviert.
+> Wenn Sie eine Warnung auf diese Weise unterdrücken, werden nur von Ihnen festgelegte Veraltungswarnungen deaktiviert. Andere Warnungen, einschließlich anderer Veraltungswarnungen, mit unterschiedlichen Diagnose-IDs bleiben weiterhin aktiviert.

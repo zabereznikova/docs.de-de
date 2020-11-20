@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7723892a33bf7dd8e475b2f696db5d9ab287e182
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab1006f706439bcf5129854da3d14538e5b690a2
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602753"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506862"
 ---
 
 Die Pakete, die dem Paket-Manager-Feed hinzugefügt werden, werden in einem Format benannt, das gehackt werden kann: `{product}-{type}-{version}`.
@@ -24,6 +24,7 @@ Wählt das SDK oder die Runtime aus. Folgende Optionen sind gültig:
 - **Version**\
 Die Version des zu installierenden SDK oder der zu installierenden Runtime. In diesem Artikel erhalten Sie stets die Anweisungen für die neueste unterstützte Version. Gültige Optionen sind alle veröffentlichte Versionen, wie z. B.:
 
+  - 5.0
   - 3.1
   - 3.0
   - 2.1
@@ -32,10 +33,11 @@ Die Version des zu installierenden SDK oder der zu installierenden Runtime. In d
 
 ### <a name="examples"></a>Beispiele
 
-- Installieren der ASP.NET Core 3.1-Runtime: `aspnetcore-runtime-3.1`
+- Installieren der ASP.NET Core 5.0-Runtime: `aspnetcore-runtime-5.0`
 - Installieren der .NET Core 2.1-Runtime: `dotnet-runtime-2.1`
+- Installieren des .NET 5.0 SDK: `dotnet-sdk-5.0`
 - Installieren des .NET Core 3.1 SDK: `dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Fehlendes Paket
 
-Wenn die Kombination aus Paket und Version nicht funktioniert, ist sie nicht verfügbar. Beispielsweise gibt es keine ASP.NET Core SDK, die SDK-Komponenten sind in der .NET Core SDK enthalten. Der Wert `aspnetcore-sdk-2.2` ist falsch und sollte `dotnet-sdk-2.2` lauten. Eine Liste der von .NET Core unterstützten Linux-Distributionen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](../linux.md).
+Wenn die Kombination aus Paket und Version nicht funktioniert, ist sie nicht verfügbar. Beispielsweise gibt es kein ASP.NET Core SDK, die SDK-Komponenten sind im .NET SDK enthalten. Der Wert `aspnetcore-sdk-2.2` ist falsch und sollte `dotnet-sdk-2.2` lauten. Eine Liste der von .NET Core unterstützten Linux-Distributionen finden Sie unter [.NET-Abhängigkeiten und -Anforderungen](../linux.md).

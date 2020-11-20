@@ -1,18 +1,18 @@
 ---
-title: .NET Core SDK-Telemetrie
-description: Entdecken Sie die Telemetriefeatures des .NET Core SDK, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Erfahren Sie außerdem, wie Sie diese Features deaktivieren können.
+title: .NET SDK-Telemetrie
+description: In diesem Artikel lernen Sie die Telemetriefeatures des .NET SDK kennen, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Sie erfahren außerdem, wie Sie diese Features deaktivieren können.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
-ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
+ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91206353"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633868"
 ---
-# <a name="net-core-sdk-telemetry"></a>.NET Core SDK-Telemetrie
+# <a name="net-sdk-telemetry"></a>.NET SDK-Telemetrie
 
-Das [.NET Core SDK](index.md) umfasst ein Telemetriefeature, das Daten zur Nutzung und zu Ausnahmen erfasst, wenn die .NET Core-CLI abstürzt. Die .NET Core-CLI umfasst das .NET Core SDK und besteht aus mehreren Verben, die es Ihnen ermöglichen, Ihre .NET Core-Apps zu erstellen, zu testen und zu veröffentlichen. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit diese verbessert werden können. Informationen zu Fehlern helfen dem Team, Probleme und Fehler zu beheben.
+Das [.NET SDK](index.md) umfasst ein Telemetriefeature, das Daten zur Nutzung und zu Ausnahmen erfasst, wenn die .NET-CLI abstürzt. Die .NET-CLI umfasst das .NET SDK und besteht aus mehreren Verben, die es Ihnen ermöglichen, Ihre .NET-Apps zu erstellen, zu testen und zu veröffentlichen. Es ist wichtig, dass das .NET-Team versteht, wie die Tools verwendet werden, damit diese verbessert werden können. Informationen zu Fehlern helfen dem Team, Probleme und Fehler zu beheben.
 
 Die erfassten Daten werden unter der [Creative Commons Attribution-Lizenz](https://creativecommons.org/licenses/by/4.0/) in aggregierter Form veröffentlicht.
 
@@ -22,7 +22,7 @@ Die erfassten Daten werden unter der [Creative Commons Attribution-Lizenz](https
 
 - `dotnet [path-to-app].dll`
 
-Es werden *Telemetrie erfasst*, wenn einer der [.NET Core-CLI-Befehle](index.md) verwendet wird, zum Beispiel:
+Es werden *Telemetriedaten erfasst*, wenn einer der [.NET-CLI-Befehle](index.md) verwendet wird, zum Beispiel:
 
 - `dotnet build`
 - `dotnet pack`
@@ -30,23 +30,23 @@ Es werden *Telemetrie erfasst*, wenn einer der [.NET Core-CLI-Befehle](index.md)
 
 ## <a name="how-to-opt-out"></a>Deaktivierung der Telemetriefunktion
 
-Die Telemetriefeature des .NET Core SDK ist standardmäßig aktiviert. Sie können das Telemetriefeature deaktivieren, indem Sie die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen.
+Das Telemetriefeature des .NET SDK ist standardmäßig aktiviert. Sie können das Telemetriefeature deaktivieren, indem Sie die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen.
 
-Ebenfalls wird ein einzelner Telemetrieeintrag auch vom .NET Core SDK-Installer gesendet, wenn eine Installation erfolgreich ist. Sie können zur Deaktivierung die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` festlegen, bevor Sie das .NET Core SDK installieren.
+Außerdem wird ein einzelner Telemetrieeintrag vom .NET SDK-Installationsprogramm gesendet, wenn eine Installation erfolgreich ist. Sie können zur Deaktivierung die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` festlegen, bevor Sie das .NET SDK installieren.
 
 ## <a name="disclosure"></a>Offenlegung
 
-Das .NET Core SDK zeigt beim ersten Ausführen eines der [.NET Core-CLI-Befehle](index.md) (z.B. `dotnet build`) den folgenden Text an. Der Text kann abhängig von der von Ihnen ausgeführten Version des SDK leicht variieren. Über diese erste Ausführung benachrichtigt Microsoft Sie über die Datensammlung.
+Das .NET SDK zeigt beim ersten Ausführen eines der [.NET-CLI-Befehle](index.md) (z. B. `dotnet build`) den folgenden Text an. Der Text kann abhängig von der von Ihnen ausgeführten Version des SDK leicht variieren. Über diese erste Ausführung benachrichtigt Microsoft Sie über die Datensammlung.
 
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
-Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-Um diese Meldung und die .NET Core-Willkommensmeldung zu deaktivieren, legen Sie die Umgebungsvariable `DOTNET_NOLOGO` auf `true` fest. Beachten Sie, dass mit dieser Variable nicht die Übertragung von Telemetriedaten deaktiviert wird.
+Legen Sie die Umgebungsvariable `DOTNET_NOLOGO` auf `true` fest, um diese Meldung und die .NET-Willkommensmeldung zu deaktivieren. Beachten Sie, dass mit dieser Variable nicht die Übertragung von Telemetriedaten deaktiviert wird.
 
 ## <a name="data-points"></a>Datenpunkte
 
@@ -63,7 +63,7 @@ Das Telemetriefeature erfasst die folgenden Daten:
 | Alle          | Die aus drei Oktetten bestehende IP-Adresse, die zur Bestimmung des geografischen Standorts verwendet wird |
 | Alle          | Betriebssystem und Version |
 | Alle          | Die Runtime-ID (RID), auf der das SDK ausgeführt wird |
-| Alle          | Die Version des .NET Core SDK |
+| Alle          | Version des .NET SDK |
 | Alle          | Telemetrieprofil: ein optionaler Wert, der nur bei der expliziten Benutzeranmeldung und intern bei Microsoft verwendet wird. |
 | Mindestens Version 2.0        | Befehlsargumente und -optionen: Es werden mehrere Argumente und Optionen erfasst (keine beliebigen Zeichenfolgen). Weitere Informationen finden Sie unter [Gesammelte Optionen](#collected-options). Ab Version 2.1.300 gehasht |
 | Mindestens Version 2.0         | Ob das SDK in einem Container ausgeführt wird. |
@@ -74,7 +74,7 @@ Das Telemetriefeature erfasst die folgenden Daten:
 | Mindestens Version 2.1.300     | Kernelversion |
 | Mindestens Version 2.1.300     | Libc-Version |
 | Mindestens Version 3.0.100     | Gibt an, ob die Ausgabe umgeleitet wurde (TRUE oder FALSE) |
-| Mindestens Version 3.0.100     | Bei einem CLI- bzw. SDK-Absturz der Ausnahmetyp und seine Stapelüberwachung (es ist nur CLI- bzw. SDK-Code in der gesendeten Stapelüberwachung enthalten) Weitere Informationen finden Sie unter [Gesammelte Telemetrie zu einer .NET Core-CLI- bzw. -SDK-Ausnahme](#net-core-clisdk-crash-exception-telemetry-collected). |
+| Mindestens Version 3.0.100     | Bei einem CLI- bzw. SDK-Absturz der Ausnahmetyp und seine Stapelüberwachung (es ist nur CLI- bzw. SDK-Code in der gesendeten Stapelüberwachung enthalten) Weitere Informationen finden Sie unter [Gesammelte Telemetrie zu einer .NET-CLI- bzw. SDK-Ausnahme](#net-clisdk-crash-exception-telemetry-collected). |
 
 ### <a name="collected-options"></a>Gesammelte Optionen
 
@@ -105,13 +105,13 @@ Eine Teilmenge der Befehle sendet die ausgewählten Optionen, wenn diese zusamme
 
 Mit Ausnahme von `--verbosity` und `--sdk-package-version` werden alle anderen Werte ab dem .NET Core SDK, Version 2.1.100 gehasht.
 
-## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>Gesammelte Telemetrie zu einer .NET Core-CLI- bzw. -SDK-Ausnahme
+## <a name="net-clisdk-crash-exception-telemetry-collected"></a>Gesammelte Telemetrie zu einer .NET-CLI- bzw. SDK-Ausnahme
 
-Wenn die .NET Core-CLI bzw. das -SDK abstürzt, sammelt es den Namen der Ausnahme und die Stapelüberwachung des CLI- bzw. SDK-Codes. Diese Informationen werden gesammelt, um Probleme zu bewerten und die Qualität des .NET Core SDK und der -CLI zu verbessern. Dieser Artikel enthält Informationen zu den von uns erfassten Daten. Außerdem erhalten Sie Tipps dazu, wie Benutzer, die ihre eigene Version des .NET Core SDK die unbeabsichtigte Offenlegung von personenbezogenen und vertraulichen Informationen vermeiden können.
+Wenn die .NET-CLI bzw. das SDK abstürzt, sammelt es den Namen der Ausnahme und die Stapelüberwachung des CLI- bzw. SDK-Codes. Diese Informationen werden gesammelt, um Probleme zu bewerten und die Qualität des .NET SDK und der .NET-CLI zu verbessern. Dieser Artikel enthält Informationen zu den von uns erfassten Daten. Außerdem erhalten Sie Tipps dazu, wie Benutzer, die ihre eigene Version des .NET SDK erstellen, die unbeabsichtigte Offenlegung von personenbezogenen und vertraulichen Informationen vermeiden können.
 
 ### <a name="types-of-collected-data"></a>Gesammelte Datentypen
 
-Die .NET Core-CLI erfasst nur Informationen zu CLI- bzw. SDK-Ausnahmen und nicht zu Ausnahmen in der Anwendung. Die erfassten Daten enthalten den Namen der Ausnahme und die Stapelüberwachung. Diese Stapelüberwachung besteht aus CLI- bzw. SDK-Code.
+Die .NET-CLI erfasst nur Informationen zu CLI- bzw. SDK-Ausnahmen und nicht zu Ausnahmen in der Anwendung. Die erfassten Daten enthalten den Namen der Ausnahme und die Stapelüberwachung. Diese Stapelüberwachung besteht aus CLI- bzw. SDK-Code.
 
 Im folgenden Beispiel sehen Sie, welche Art von Daten erfasst wird:
 
@@ -132,11 +132,11 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 ### <a name="avoid-inadvertent-disclosure-of-information"></a>Vermeiden der unbeabsichtigten Offenlegung von Informationen
 
-.NET Core-Mitwirkende und jeder andere, der eine Version des .NET Core SDK ausführt, die Sie selbst erstellt haben, sollte den Pfad zu Ihrem SDK-Quellcode berücksichtigen. Wenn ein Absturz bei der Verwendung eines .NET Core SDK auftritt, bei dem es sich um einen benutzerdefinierten Debugbuild handelt oder der mit benutzerdefinierten Buildsymboldateien konfiguriert ist, wird der Pfad der SDK-Quelldatei auf dem Buildcomputer als Teil der Stapelüberwachung zwar erfasst, aber nicht gehasht.
+.NET-Mitwirkende und jeder andere, der eine Version des .NET SDK ausführt, die selbst erstellt wurde, sollte den Pfad zum SDK-Quellcode berücksichtigen. Wenn ein Absturz bei der Verwendung eines .NET SDK auftritt, bei dem es sich um einen benutzerdefinierten Debugbuild handelt oder der mit benutzerdefinierten Buildsymboldateien konfiguriert ist, wird der Pfad der SDK-Quelldatei auf dem Buildcomputer als Teil der Stapelüberwachung zwar erfasst, aber nicht gehasht.
 
-Aus diesem Grund sollten benutzerdefinierte Builds des .NET Core SDK nicht in Verzeichnissen gespeichert werden, deren Pfadnamen persönliche oder vertrauliche Informationen offenlegen.
+Aus diesem Grund sollten benutzerdefinierte Builds des .NET SDK nicht in Verzeichnissen gespeichert werden, deren Pfadnamen persönliche oder vertrauliche Informationen offenlegen.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Telemetriedaten der .NET Core-CLI](https://dotnet.microsoft.com/platform/telemetry)
+- [.NET-CLI-Telemetriedaten](https://dotnet.microsoft.com/platform/telemetry)
 - [Telemetrieverweisquelle (dotnet/sdk-Repository)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)

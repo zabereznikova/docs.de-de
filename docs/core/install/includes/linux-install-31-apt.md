@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 56f5d27eb9be2f8eb3e335c5ec161dba1bcfdb1e
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: cac1fbd2369277b3a322247a7008f07929502437
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93136296"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507017"
 ---
 
 ### <a name="install-the-sdk"></a>Installieren des SDKs
@@ -35,7 +35,7 @@ sudo apt-get update; \
 > [!IMPORTANT]
 > Wenn Sie eine ähnliche Fehlermeldung wie **Das Paket aspnetcore-runtime-3.1 wurde nicht gefunden** erhalten, lesen Sie den Abschnitt [Problembehandlung für APT](#apt-troubleshooting).
 
-Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet: Ersetzen Sie im vorangegangenen Befehl `aspnetcore-runtime-3.1` durch `dotnet-runtime-3.1`.
+Als Alternative zur ASP.NET Core-Runtime können Sie die .NET Core-Runtime installieren, die keine ASP.NET Core-Unterstützung bietet: Ersetzen Sie dazu im vorangegangenen Befehl `aspnetcore-runtime-3.1` durch `dotnet-runtime-3.1`.
 
 ```bash
 sudo apt-get install -y dotnet-runtime-3.1

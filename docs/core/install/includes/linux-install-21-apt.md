@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 188fef66444cd60f59a3cb9619c0d86efd155f99
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: f7cd60f02a51516b8e35cdb9014fa8b96a188ae2
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93136113"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506955"
 ---
 
 ### <a name="install-the-sdk"></a>Installieren des SDKs

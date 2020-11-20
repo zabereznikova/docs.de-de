@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: e0ca78871d1ddf851148096c8c6cfd10076763ab
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: ca579e837b801de237859963ede0e5a9a4bfbcbf
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400878"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439468"
 ---
 # <a name="net-globalization-and-icu"></a>.NET-Globalisierung und ICU
 
@@ -37,6 +37,29 @@ Das Windows 10-Update von Mai 2019 und höhere Versionen enthalten [icu.dll](/
 
 > [!NOTE]
 > Selbst bei Verwendung von ICU verwenden die `CurrentCulture`-, `CurrentUICulture`- und `CurrentRegion`-Member weiterhin Windows-Betriebssystem-APIs, um Benutzereinstellungen zu berücksichtigen.
+
+### <a name="behavioral-differences"></a>Verhaltensunterschiede
+
+Wenn Sie Ihre Anwendung auf .NET 5 aktualisieren, bemerken Sie möglicherweise Änderungen in Ihrer Anwendung, auch wenn Sie sich nicht bewusst sind, dass Sie Globalisierungsfunktionen nutzen. In diesem Abschnitt finden Sie eine der Behavior Changes, die Sie möglicherweise beobachten, aber es gibt noch weitere.
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+Betrachten Sie den folgenden Code, der <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> aufruft, um den Index des Zeilenvorschubzeichens in einer Zeichenfolge zu finden.
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- In früheren Versionen von .NET unter Windows gibt der Ausschnitt `6` aus.
+- Ab .NET 5.0 unter Windows 10 (Update vom 10. Mai 2019) und höheren Versionen gibt der Ausschnitt `-1` aus.
+
+Um diesen Code durch eine ordinale Suche anstelle einer kulturabhängigen Suche zu korrigieren, rufen Sie die Überladung <xref:System.String.IndexOf(System.String,System.StringComparison)> auf, an die Sie <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> als Argument übergeben.
+
+Sie können Codeanalyseregeln entsprechend [CA1307: Angeben von StringComparison für mehr Klarheit](../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) und [CA1309: Verwenden eines ordinalen StringComparison](../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) ausführen, um diese Aufrufstellen in Ihrem Code zu finden.
+
+Weitere Informationen finden Sie unter [Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5](../base-types/string-comparison-net-5-plus.md).
 
 ### <a name="use-nls-instead-of-icu"></a>Verwenden von NLS anstelle von ICU
 
