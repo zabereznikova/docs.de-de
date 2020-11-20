@@ -2,12 +2,12 @@
 title: XML-Dokumentation
 description: 'Erfahren Sie mehr über die Unterstützung in F # zum Erstellen von Dokumentationen aus Kommentaren.'
 ms.date: 09/15/2020
-ms.openlocfilehash: a5bec20f27c23caee951cda2dc5d17808f69d384
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679402"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982478"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -57,10 +57,10 @@ Wenn Sie XML-Tags verwenden, werden in der folgenden Tabelle die äußeren Tags 
 |---------------------------------------------|-----------|
 | `<summary>`**_Text_**`</summary>`           | Gibt an, dass der *Text* eine kurze Beschreibung des Programm Elements ist. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
 | `<remarks>`**_Text_**`</remarks>`           | Gibt an, dass der *Text* zusätzliche Informationen zum Programmelement enthält.|
-| `<param name="`**_Name_** `">` ** _Beschreibung_**`</param>` | Gibt den Namen und die Beschreibung für einen Funktions-oder Methoden Parameter an.|
-| `<typeparam name="`**_Name_** `">` ** _Beschreibung_**`</typeparam>` | Gibt den Namen und die Beschreibung für einen Typparameter an.|
+| `<param name="`**_Name_** `">` **_Beschreibung_**`</param>` | Gibt den Namen und die Beschreibung für einen Funktions-oder Methoden Parameter an.|
+| `<typeparam name="`**_Name_** `">` **_Beschreibung_**`</typeparam>` | Gibt den Namen und die Beschreibung für einen Typparameter an.|
 | `<returns>`**_Text_**`</returns>`           | Gibt an, dass *Text* den Rückgabewert einer Funktion oder Methode beschreibt.|
-| `<exception cref="`**_Typ_** `">` ** _Beschreibung_**`</exception>` |Gibt den Typ der Ausnahme an, die generiert werden kann, sowie die Umstände, unter denen Sie ausgelöst wird.|
+| `<exception cref="`**_Typ_** `">` **_Beschreibung_**`</exception>` |Gibt den Typ der Ausnahme an, die generiert werden kann, sowie die Umstände, unter denen Sie ausgelöst wird.|
 | `<seealso cref="`**_Angabe_**`"/>`      | Gibt einen Link zum Anzeigen von Links zur Dokumentation für einen anderen Typ an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Siehe auch Links unten auf einer Dokumentationsseite.|
 
 In der folgenden Tabelle werden die Tags für die Verwendung in Beschreibungs Abschnitten beschrieben:
@@ -72,7 +72,7 @@ In der folgenden Tabelle werden die Tags für die Verwendung in Beschreibungs Ab
 | `<paramref name="`**_Benennen_**`"/>`         | Gibt einen Verweis auf einen Parameter im gleichen Dokumentations Kommentar an.|
 | `<typeparamref name="`**_Benennen_**`"/>`     | Gibt einen Verweis auf einen Typparameter im gleichen Dokumentations Kommentar an.|
 | `<c>`**_Text_**`</c>`                     | Gibt an, dass der *Text* Inline Code ist. Dieses Tag kann von Dokumentations Generatoren zum Anzeigen von Text in einer Schriftart verwendet werden, die für Code geeignet ist.|
-| `<see cref="`**_Verweis_** `">` ** _Text_**`</see>` | Gibt einen Inline Link zu einem anderen Programmelement an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Der *Text* ist der Text, der im Link angezeigt wird.|
+| `<see cref="`**_Verweis_** `">` **_Text_**`</see>` | Gibt einen Inline Link zu einem anderen Programmelement an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Der *Text* ist der Text, der im Link angezeigt wird.|
 
 ### <a name="user-defined-tags"></a>Benutzerdefinierter Tags
 
@@ -104,7 +104,7 @@ type SomeType
 Einige Features der XML-Dokumentation in c# und anderen .NET-Sprachen werden in c# nicht unterstützt.
 
 - In F # müssen Querverweise die vollständige XML-Signatur des entsprechenden Symbols verwenden, z. b `cref="T:System.Console"` ..
-  Einfache Kreuz Verweise im c#-Format, z `cref="Console"` . b., werden nicht vollständig in vollständige XML-Signaturen erläutert, und diese Elemente werden vom F #-Compiler nicht geprüft. Einige Dokumentations Tools können diese Querverweise durch nachfolgende Verarbeitung zulassen, aber die vollständigen Signaturen sollten verwendet werden.
+  Einfache Kreuz Verweise im c#-Format, z `cref="Console"` . b., werden nicht vollständig in vollständige XML-Signaturen erläutert, und diese Elemente werden vom F #-Compiler nicht geprüft. Einige Dokumentations Tools können die Verwendung dieser Querverweise durch nachfolgende Verarbeitung zulassen, aber die vollständigen Signaturen sollten verwendet werden.
   
 - Die Tags `<include>` `<inheritdoc>` werden vom F #-Compiler nicht unterstützt. Wenn Sie verwendet werden, wird kein Fehler ausgegeben, aber Sie werden einfach in die generierte Dokumentations Datei kopiert, ohne dass sich dies auf die generierte Dokumentation auswirkt.
 

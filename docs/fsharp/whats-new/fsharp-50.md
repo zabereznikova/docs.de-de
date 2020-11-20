@@ -2,18 +2,18 @@
 title: 'Neues in f # 5,0-f #-Handbuch'
 description: 'Verschaffen Sie sich einen Überblick über die neuen Features, die in F # 5,0 verfügbar sind.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 51d6dd2457ee9966a86d0d9ac686f2af15772999
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557141"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982465"
 ---
 # <a name="whats-new-in-f-50"></a>Neues in F# 5.0
 
 F # 5,0 fügt mehrere Verbesserungen der Sprache f # und F# Interactive hinzu. Sie wird mit **.net 5** veröffentlicht.
 
-Sie können das neueste .NET SDK von der [.net-Downloadseite](https://dotnet.microsoft.com/download)herunterladen.
+Sie können das neueste .NET SDK über die [.NET-Downloadseite](https://dotnet.microsoft.com/download) herunterladen.
 
 ## <a name="get-started"></a>Erste Schritte
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-Weitere Informationen zu Paket verweisen finden Sie im [F# Interactive](../tutorials/fsharp-interactive/index.md) Tutorial.
+Diese Funktion implementiert [F #-Tools RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md). Weitere Informationen zu Paket verweisen finden Sie im [F# Interactive](../tutorials/fsharp-interactive/index.md) Tutorial.
 
 ## <a name="string-interpolation"></a>Zeichenfolgeninterpolierung
 
@@ -102,6 +102,8 @@ let str =
 ```
 
 Wir empfehlen zwar nicht, dies in der Praxis zu tun.
+
+Diese Funktion implementiert [F # RFC FS-1001](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1001-StringInterpolation.md).
 
 ## <a name="support-for-nameof"></a>Unterstützung für "nameof"
 
@@ -176,6 +178,8 @@ let deserialize (e: RecordedEvent) : MyEvent =
 
 Im vorangehenden Code wird "nameof" anstelle des Zeichenfolgenliterals im Vergleichs Ausdruck verwendet.
 
+Diese Funktion implementiert [F # RFC FS-1003](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1003-nameof-operator.md).
+
 ## <a name="open-type-declarations"></a>Open-Typdeklarationen
 
 F # 5 bietet auch Unterstützung für Open-Type-Deklarationen. Eine offene Typdeklaration ähnelt dem Öffnen einer statischen Klasse in c#, außer mit einer anderen Syntax und einem leicht abweichenden Verhalten, das für die F #-Semantik geeignet ist.
@@ -200,6 +204,8 @@ printfn "%A" A
 
 Anders als bei c#, wenn Sie zwei Typen haben, die `open type` einen Member mit demselben Namen verfügbar machen, wird das Element aus dem letzten Typ, der mit dem letzten Typ identisch ist, mit `open` dem anderen Namen Dies ist mit der F #-Semantik um shadowingkonsistent, die bereits vorhanden ist.
 
+Diese Funktion implementiert [F # RFC FS-1068](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1068-open-type-declaration.md).
+
 ## <a name="consistent-slicing-behavior-for-built-in-data-types"></a>Konsistentes aufteilen-Verhalten für integrierte Datentypen
 
 Das Verhalten für das Aufteilen der integrierten `FSharp.Core` Datentypen (Array, Liste, Zeichenfolge, 2D-Array, 3D-Array, 4D-Array), das vor F # 5 nicht konsistent ist. Einige Edge-Case-Verhalten haben eine Ausnahme ausgelöst, und andere nicht. In F # 5 geben alle integrierten Typen nun leere Slices für Slices zurück, die nicht generiert werden können:
@@ -221,6 +227,8 @@ let emptyArray = a.[-2..(-1)]
 // F# 5: returns empty string
 let emptyString = s.[-2..(-1)]
 ```
+
+Diese Funktion implementiert [F # RFC FS-1077](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-tolerant-slicing.md).
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays-in-fsharpcore"></a>Festgelegte Index Slices für 3D-und 4D-Arrays in FSharp. Core
 
@@ -260,9 +268,11 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
+Diese Funktion implementiert [F # RFC FS-1077b](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1077-3d-4d-fixed-index-slicing.md).
+
 ## <a name="f-quotations-improvements"></a>Verbesserungen in F #
 
-F #- [Code Zitate](../language-reference/code-quotations.md) haben jetzt die Möglichkeit, Informationen zur Typeinschränkung beizubehalten. Betrachten Sie das folgende Beispiel:
+F #- [Code Zitate](../language-reference/code-quotations.md) haben jetzt die Möglichkeit, Informationen zur Typeinschränkung beizubehalten. Betrachten Sie das folgenden Beispiel:
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
@@ -276,6 +286,8 @@ let inline negate x = -x
 ```
 
 Die von der Funktion generierte Einschränkung `inline` wird im Code-QUUM beibehalten. Das `negate` Formular der Funktion kann nun ausgewertet werden.
+
+Diese Funktion implementiert [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).
 
 ## <a name="applicative-computation-expressions"></a>Anwendungsberechnungs-Ausdrücke
 
@@ -326,6 +338,8 @@ let printApplicatives () =
 
 Wenn Sie ein Autor der Bibliothek sind, der heute CES in der Bibliothek verfügbar macht, müssen Sie einige zusätzliche Aspekte beachten.
 
+Diese Funktion implementiert [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).
+
 ## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>Schnittstellen können in unterschiedlichen generischen Instanziierungen implementiert werden.
 
 Nun können Sie die gleiche Schnittstelle in unterschiedlichen generischen Instanziierungen implementieren:
@@ -347,6 +361,8 @@ let iaString = mc :> IA<string>
 iaInt.Get() // 1
 iaString.Get() // "hello"
 ```
+
+Diese Funktion implementiert [F # RFC FS-1031](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1031-Allow%20implementing%20the%20same%20interface%20at%20different%20generic%20instantiations%20in%20the%20same%20type.md).
 
 ## <a name="default-interface-member-consumption"></a>Standardmäßige Verwendung von Schnittstellen Elementen
 
@@ -387,6 +403,8 @@ printfn "DIM from C# but via Object Expression: %d" md'.Z
 
 Auf diese Weise können Sie den c#-Code und .NET-Komponenten, die in modernem c# geschrieben sind, sicher nutzen, wenn Sie erwarten, dass Benutzer eine Standard Implementierung nutzen können.
 
+Diese Funktion implementiert [F # RFC FS-1074](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1074-default-interface-member-consumption.md).
+
 ## <a name="simplified-interop-with-nullable-value-types"></a>Vereinfachtes Interop mit Werte zulässt-Werttypen
 
 [Typen](https://docs.microsoft.com/dotnet/api/system.nullable-1) , die NULL-Werte zulassen (in der Vergangenheit als Nullable-Typen bezeichnet), wurden schon seit langem von F # unterstützt, aber die Interaktion mit Ihnen war bisher schon etwas komplizierter, da Sie `Nullable` `Nullable<SomeType>` jedes Mal, wenn Sie einen Wert übergeben wollten, einen-oder-Wrapper erstellen mussten. Nun konvertiert der Compiler einen Werttyp implizit in eine, `Nullable<ThatValueType>` Wenn der Zieltyp übereinstimmt. Der folgende Code ist nun möglich:
@@ -404,6 +422,8 @@ dateTimes.Append(DateTime.Parse("2019/01/01"))
 // The previous line is now equivalent to this line
 dateTimes.Append(Nullable<DateTime>(DateTime.Parse("2019/01/01")))
 ```
+
+Diese Funktion implementiert [F # RFC FS-1075](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1075-nullable-interop.md).
 
 ## <a name="preview-reverse-indexes"></a>Vorschau: Reverse-Indizes
 
@@ -463,6 +483,8 @@ let run () =
 
 run() // Prints the same thing twice
 ```
+
+Diese Funktion implementiert [F # RFC FS-1076](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1076-from-the-end-slicing.md).
 
 ## <a name="preview-overloads-of-custom-keywords-in-computation-expressions"></a>Vorschau: über Ladungen von benutzerdefinierten Schlüsselwörtern in Berechnungs Ausdrücken
 
@@ -535,3 +557,5 @@ let password =
 ```
 
 Vor dieser Änderung konnten Sie den `InputBuilder` Typ wie folgt schreiben, aber Sie konnten ihn nicht so verwenden, wie er im Beispiel verwendet wird. Da über Ladungen, optionale Parameter und jetzt- `System.ParamArray` Typen zulässig sind, funktioniert alles genau wie erwartet.
+
+Diese Funktion implementiert [F # RFC FS-1056](https://github.com/fsharp/fslang-design/blob/master/preview/FS-1056-allow-custom-operation-overloads.md).

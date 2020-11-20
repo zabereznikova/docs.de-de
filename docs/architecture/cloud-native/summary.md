@@ -1,13 +1,13 @@
 ---
 title: Zusammenfassung
-description: Hier finden Sie eine Zusammenfassung der wichtigsten Schlussfolgerungen aus dem Leitfaden zum Entwerfen von Cloud-Native .net-apps für Azure.
+description: Hier finden Sie eine Zusammenfassung der wichtigsten Schlussfolgerungen im Leitfaden zum Entwerfen von Cloud-Native .net-apps für Azure.
 ms.date: 05/13/2020
-ms.openlocfilehash: b1a195c0c081565c57f5aac2e234411bb904ca08
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e0325b1bb6961c865e904779496950031db8db0b
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613654"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982354"
 ---
 # <a name="summary"></a>Zusammenfassung
 
@@ -15,7 +15,7 @@ Zusammenfassend sind die folgenden wichtigen Schlussfolgerungen in diesem Handbu
 
 - **Cloud-Native** ist das Entwerfen moderner Anwendungen, die eine schnelle Änderung, große Skalierbarkeit und Resilienz in modernen, dynamischen Umgebungen wie öffentlichen, privaten und Hybriden Clouds umfassen.
 
-- Die ** [Cloud Native Computing Foundation](https://www.cncf.io/) (cncf)** ist ein einflussreiches Open-Source-Konsortium von über 300 großen Unternehmen. Er ist dafür verantwortlich, die Übernahme von Cloud-Native Computing über Technologie-und cloudstapel hinweg zu fördern.
+- Die **[Cloud Native Computing Foundation](https://www.cncf.io/) (cncf)** ist ein einflussreiches Open-Source-Konsortium von über 300 großen Unternehmen. Er ist dafür verantwortlich, die Übernahme von Cloud-Native Computing über Technologie-und cloudstapel hinweg zu fördern.
 
 - **Cncf-Richtlinien** empfehlen, dass cloudnative Anwendungen sechs wichtige Säulen akzeptieren, wie in Abbildung 11-1 dargestellt:
 
@@ -54,4 +54,4 @@ Zusammenfassend sind die folgenden wichtigen Schlussfolgerungen in diesem Handbu
 - Die **Code Automatisierung** ist eine Voraussetzung für Native Cloud-Anwendungen. Moderne CI/CD-Systeme helfen dabei, dieses Prinzip zu erfüllen. Sie bieten separate Build-und Bereitstellungs Schritte, die den konsistenten und qualitativ hochwertigen Code sicherstellen. Die Buildphase wandelt den Code in ein binäres artefaktelement um. Die Releasephase übernimmt das binäre artefaktelement, wendet die Konfiguration der externen Umgebung an und stellt Sie in einer angegebenen Umgebung bereit. Azure devops und GitHub sind voll funktionsfähigen devops-Umgebungen.
 
 >[!div class="step-by-step"]
->[Vorherige](application-bundles.md)
+>[Zurück](application-bundles.md)

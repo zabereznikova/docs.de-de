@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 2ed2a88b91f06bb02c72d3e310ae09d58637205f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2dda65f605ea9de616f01d6e52eb4e0e5def4db7
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197468"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982517"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 
@@ -94,7 +94,7 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Außerdem gelten die folgenden Regeln für eine Instanz von NULL-Zuweisungen für `DataRow.["columnName"]`:  
   
-1. Für alle Spalten (mit Ausnahme der stark typisierten NULL-Spalten) lautet der *default*-Standardwert `DbNull.Value`. In den stark typisierten NULL-Spalten ist es der entsprechende stark typisierte NULL-Wert.  
+1. Der *Standard* Wert ist `DbNull.Value` für alle außer den stark typisierten NULL-Spalten, bei denen es sich um den entsprechenden stark typisierten NULL-Wert handelt.  
   
 2. NULL-Werte werden niemals bei der Serialisierung in XML-Dateien geschrieben (wie in „xsi: nil“).  
   
