@@ -180,7 +180,7 @@ items:
           - name: Übersicht
             displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
-          - name: Verweis
+          - name: Referenz
             items:
               - name: dotnet
                 href: ../core/tools/dotnet.md
@@ -312,7 +312,7 @@ items:
             items:
               - name: Übersicht
                 href: ../core/project-sdk/overview.md
-              - name: Verweis
+              - name: Referenz
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -372,6 +372,8 @@ items:
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
+          - name: EventPipe
+            href: ../core/diagnostics/eventpipe.md
           - name: Protokollierung und Ablaufverfolgung
             href: ../core/diagnostics/logging-tracing.md
           - name: Sammeln von Diagnosen in Containern
