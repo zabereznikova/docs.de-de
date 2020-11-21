@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie F# Interactive (dotnet fsi) zum interaktiven
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 6f865483762e92964c8baa51498f07974c109691
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400865"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982504"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
@@ -76,7 +76,7 @@ let getOddSquares xs =
     |> List.filter (fun x -> x % 2 <> 0)
     |> List.map (fun x -> x * x)
 
-getOddSquares [1..10]
+printfn "%A" (getOddSquares [1..10])
 ```
 
 Wenn diese Datei auf Ihrem Computer erstellt wird, können Sie sie mit `dotnet fsi` ausführen. Die Ausgabe wird unmittelbar in Ihrem Terminalfenster angezeigt:
@@ -237,7 +237,7 @@ Wenn Sie Code in F# Interactive kompilieren (unabhängig davon, ob die Ausführ
 
 Zum Ausführen von F# Interactive über Visual Studio können Sie auf die entsprechende Symbolleistenschaltfläche **F# Interactive** klicken oder die Tastenkombination **Strg+Alt+F** verwenden. Dadurch wird das Interactive-Fenster geöffnet, ein Toolfenster, in dem eine F# Interactive-Sitzung ausgeführt wird. Sie können auch Code auswählen, den Sie im interaktiven Fenster ausführen möchten, und die Tastenkombination **ALT+EINGABETASTE** drücken. F# Interactive wird in einem Toolfenster mit der Bezeichnung **F# Interactive** gestartet. Wenn Sie diese Tastenkombination verwenden, überprüfen Sie, ob das Editorfenster den Fokus besitzt.
 
-Unabhängig davon, ob Sie die Konsole oder Visual Studio verwenden, wird eine Eingabeaufforderung angezeigt, und der Interpreter erwartet Ihre Eingabe. Sie können Code auf die gleiche Weise wie in einer Codedatei eingeben. Geben Sie zum Kompilieren und Ausführen des Codes zwei Semikolons ( **;;** ) ein, um eine oder mehrere Zeilen der Eingabe zu beenden.
+Unabhängig davon, ob Sie die Konsole oder Visual Studio verwenden, wird eine Eingabeaufforderung angezeigt, und der Interpreter erwartet Ihre Eingabe. Sie können Code auf die gleiche Weise wie in einer Codedatei eingeben. Geben Sie zum Kompilieren und Ausführen des Codes zwei Semikolons (**;;**) ein, um eine oder mehrere Zeilen der Eingabe zu beenden.
 
 F# Interactive beginnt mit der Kompilierung des Codes, und wenn der Code erfolgreich kompiliert wurde, führt F# Interactive den Code aus und gibt die Signatur der kompilierten Typen und Werte aus. Wenn Fehler auftreten, gibt der Interpreter die Fehlermeldungen aus.
 
@@ -245,7 +245,7 @@ In der gleichen Sitzung eingegebener Code kann auf alle zuvor eingegebenen Konst
 
 In Visual Studio wird F# Interactive unabhängig vom Projekt ausgeführt. Daher können Sie im Projekt definierte Konstrukte nur dann in F# Interactive verwenden, wenn Sie den Code für die Funktion in das Interactive-Fenster kopieren.
 
-Sie können die Befehlszeilenargumente (Optionen) von F# Interactive steuern, indem Sie die Einstellungen anpassen. Wählen Sie im Menü **Extras** den Eintrag **Optionen** aus, und erweitern Sie anschließend **F#-Tools**. Die beiden Einstellungen, die Sie ändern können, sind die F# Interactive-Optionen und die Einstellung **64-Bit-F# Interactive** , die nur relevant ist, wenn Sie F# Interactive auf einem 64-Bit-Computer ausführen. Mit dieser Einstellung legen Sie fest, ob Sie die dedizierte 64-Bit-Version von **fsi.exe** oder aber **fsianycpu.exe** ausführen möchten, die anhand der Computerarchitektur ermittelt, ob sie als 32-Bit- oder 64-Bit-Prozess ausgeführt werden soll.
+Sie können die Befehlszeilenargumente (Optionen) von F# Interactive steuern, indem Sie die Einstellungen anpassen. Wählen Sie im Menü **Extras** den Eintrag **Optionen** aus, und erweitern Sie anschließend **F#-Tools**. Die beiden Einstellungen, die Sie ändern können, sind die F# Interactive-Optionen und die Einstellung **64-Bit-F# Interactive**, die nur relevant ist, wenn Sie F# Interactive auf einem 64-Bit-Computer ausführen. Mit dieser Einstellung legen Sie fest, ob Sie die dedizierte 64-Bit-Version von **fsi.exe** oder aber **fsianycpu.exe** ausführen möchten, die anhand der Computerarchitektur ermittelt, ob sie als 32-Bit- oder 64-Bit-Prozess ausgeführt werden soll.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
