@@ -2,12 +2,12 @@
 title: XML-Dokumentation
 description: 'Erfahren Sie mehr über die Unterstützung in F # zum Erstellen von Dokumentationen aus Kommentaren.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982478"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099008"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -17,7 +17,7 @@ XML-Dokumentationskommentare sind eine besondere Art von Kommentaren, die über 
 Sie sind besonders, da sie vom Compiler verarbeitet werden können, um eine XML-Dokumentationsdatei zur Kompilierzeit zu generieren.
 Die vom Compiler generierte XML-Datei kann zusammen mit Ihrer .NET-Assembly verteilt werden, damit IDES Quick Infos zum Anzeigen von Informationen über Typen oder Member verwenden kann. Außerdem kann die XML-Datei mithilfe von Tools wie [fsdocs](http://fsprojects.github.io/FSharp.Formatting/) ausgeführt werden, um API-Referenz Websites zu generieren.
 
-XML-Dokumentations Kommentare, wie alle anderen Kommentare, werden vom Compiler ignoriert, es sei denn, die unten beschriebenen Optionen sind aktiviert, um die Gültigkeit und Vollständigkeit von Kommentaren zur Kompilierzeit zu überprüfen.
+XML-Dokumentations Kommentare, wie alle anderen Kommentare, werden vom Compiler ignoriert, es sei denn, die unten beschriebenen Optionen sind aktiviert, um die Gültigkeit und Vollständigkeit von Kommentaren zum Zeitpunkt der Kompilierung zu überprüfen.
 
 Sie können die XML-Datei zur Kompilierzeit generieren, indem Sie eine der folgenden Aktionen durchführen:
 
@@ -35,7 +35,7 @@ Es gibt zwei Möglichkeiten, XML-Dokumentations Kommentare zu schreiben: mit und
 
 Wenn ein `///` Kommentar nicht mit einem beginnt `<` , wird der gesamte Kommentartext als Zusammenfassungs Dokumentation für das direkt nachfolgende Code Konstrukt entnommen. Verwenden Sie diese Methode, wenn Sie nur eine kurze Zusammenfassung für jedes Konstrukt schreiben möchten.
 
-Der Kommentar wird während der Vorbereitung der Dokumentation in XML codiert, sodass Zeichen wie und nicht mit Escapezeichen versehen `<` `>` `&` werden müssen. Wenn Sie ein Zusammenfassungs Kennzeichen nicht explizit angeben, sollten Sie keine anderen Tags angeben, z. b. " **param** " oder " **Returns** Tags".
+Der Kommentar wird während der Vorbereitung der Dokumentation in XML codiert, sodass Zeichen wie,, und nicht mit Escapezeichen versehen `<` `>` `&` werden müssen. Wenn Sie ein Zusammenfassungs Kennzeichen nicht explizit angeben, sollten Sie keine anderen Tags angeben, z. b. " **param** " oder " **Returns** Tags".
 
 Das folgende Beispiel zeigt die alternative Methode ohne XML-Tags. In diesem Beispiel wird der gesamte Text im Kommentar als Zusammenfassung angesehen.
 
@@ -105,7 +105,7 @@ Einige Features der XML-Dokumentation in c# und anderen .NET-Sprachen werden in 
 
 - In F # müssen Querverweise die vollständige XML-Signatur des entsprechenden Symbols verwenden, z. b `cref="T:System.Console"` ..
   Einfache Kreuz Verweise im c#-Format, z `cref="Console"` . b., werden nicht vollständig in vollständige XML-Signaturen erläutert, und diese Elemente werden vom F #-Compiler nicht geprüft. Einige Dokumentations Tools können die Verwendung dieser Querverweise durch nachfolgende Verarbeitung zulassen, aber die vollständigen Signaturen sollten verwendet werden.
-  
+
 - Die Tags `<include>` `<inheritdoc>` werden vom F #-Compiler nicht unterstützt. Wenn Sie verwendet werden, wird kein Fehler ausgegeben, aber Sie werden einfach in die generierte Dokumentations Datei kopiert, ohne dass sich dies auf die generierte Dokumentation auswirkt.
 
 - Querverweise werden vom F #-Compiler nicht geprüft, auch wenn `-warnon:3390` verwendet wird.
@@ -124,7 +124,7 @@ Das Dokumentieren von Code wird aus vielen Gründen empfohlen. Im folgenden find
 
 - Aus Gründen der Konsistenz sollten alle öffentlich sichtbaren Typen und deren Member dokumentiert werden. Tun Sie dies wenn nötig vollständig.
 
-- Module, Typen und ihre Member sollten zumindest einen einfachen `///` Kommentar oder ein `<summary>` Tag enthalten. Dies wird in einem QuickInfo-Fenster für die automatische Vervollständigung in F #-Bearbeitungs Tools angezeigt.
+- Die minimale Anzahl von Modulen, Typen und deren Membern sollte einen einfachen `///` Kommentar oder ein `<summary>` Tag aufweisen. Dies wird in einem QuickInfo-Fenster für die automatische Vervollständigung in F #-Bearbeitungs Tools angezeigt.
 
 - Dokumentationstext sollte in vollständigen Sätze geschrieben werden, die mit Punkten enden.
 

@@ -1,25 +1,25 @@
 ---
 title: Slices
 description: 'Erfahren Sie, wie Sie Slices für vorhandene F #-Datentypen verwenden und wie Sie eigene Slices für andere Datentypen definieren.'
-ms.date: 12/23/2019
-ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.date: 11/20/2020
+ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557076"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098956"
 ---
 # <a name="slices"></a>Slices
 
-In F # ist ein Slice eine Teilmenge eines beliebigen Datentyps, der über eine- `GetSlice` Methode in seiner Definition oder eine in-Scope- [Typerweiterung](type-extensions.md)verfügt. Dies wird am häufigsten bei F #-Arrays und-Listen verwendet. In diesem Artikel wird erläutert, wie Sie Slices aus vorhandenen F #-Typen erstellen und eigene Slices definieren.
+In diesem Artikel wird erläutert, wie Sie Slices aus vorhandenen F #-Typen erstellen und eigene Slices definieren.
 
-Slices ähneln [Indexer](./members/indexed-properties.md), aber anstelle eines einzelnen Werts aus der zugrunde liegenden Datenstruktur ergeben sich mehrere Segmente.
+In F # ist ein Slice eine Teilmenge eines beliebigen Datentyps.  Slices ähneln [Indexer](./members/indexed-properties.md), aber anstelle eines einzelnen Werts aus der zugrunde liegenden Datenstruktur ergeben sich mehrere Segmente. Slices verwenden die `..` Operator Syntax, um den Bereich der angegebenen Indizes in einem Datentyp auszuwählen. Weitere Informationen finden Sie im [Referenz Artikel zum Schleifen Ausdruck](./loops-for-in-expression.md).
 
-F # verfügt zurzeit über eine intrinsische Unterstützung für das Aufteilen von Zeichen folgen, Listen, Arrays und 2D-Arrays.
+F # verfügt zurzeit über eine intrinsische Unterstützung für das Aufteilen von Zeichen folgen, Listen, Arrays und mehrdimensionalen Arrays (2D, 3D, 4D). Die Slicing wird am häufigsten bei F #-Arrays und-Listen verwendet. Sie können den benutzerdefinierten Datentypen aufteilen hinzufügen, indem Sie die- `GetSlice` Methode in ihrer Typdefinition oder in einer [Typerweiterung](type-extensions.md)im Gültigkeitsbereich verwenden.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Einfache aufteilen mit F #-Listen und-Arrays
+## <a name="slicing-f-lists-and-arrays"></a>Aufteilen von F #-Listen und-Arrays
 
-Die häufigsten Datentypen, die in Slices aufgeteilt sind, sind F #-Listen und-Arrays. Im folgenden Beispiel wird die Vorgehensweise mit Listen veranschaulicht:
+Die häufigsten Datentypen, die in Slices aufgeteilt sind, sind F #-Listen und-Arrays.  Im folgenden Beispiel wird veranschaulicht, wie Listen aufgeteilt werden:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -89,8 +89,6 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Die F #-Kernbibliothek definiert derzeit nicht `GetSlice` für 3D-Arrays. Wenn Sie 3D-Arrays oder andere Arrays von mehr Dimensionen in Scheiben teilen möchten, definieren Sie den `GetSlice` Member selbst.
-
 ## <a name="defining-slices-for-other-data-structures"></a>Definieren von Slices für andere Datenstrukturen
 
 Die F #-Kernbibliothek definiert Slices für einen begrenzten Satz von Typen. Wenn Sie Slices für weitere Datentypen definieren möchten, können Sie dies entweder in der Typdefinition selbst oder in einer Typerweiterung tun.
@@ -151,9 +149,9 @@ printfn "%A" xs.[2..5] // Includes the 5th index
 
 ## <a name="built-in-f-empty-slices"></a>Integrierte F #-Slices
 
-F #-Listen, Arrays, Sequenzen, Zeichen folgen, 2D-Arrays, 3D-Arrays und 4D-Arrays erzeugen ein leeres Slice, wenn die Syntax einen Slice erzeugen könnte, der nicht vorhanden ist.
+F #-Listen, Arrays, Sequenzen, Zeichen folgen, mehrdimensionale (2D, 3D, 4D) Arrays erzeugen ein leeres Slice, wenn die Syntax einen Slice erzeugen könnte, der nicht vorhanden ist.
 
-Beachten Sie Folgendes:
+Betrachten Sie das folgenden Beispiel:
 
 ```fsharp
 let l = [ 1..10 ]
@@ -165,7 +163,8 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-C#-Entwickler erwarten möglicherweise, dass diese eine Ausnahme auslösen, anstatt einen leeren Slice zu liefern. Dies ist eine Entwurfs Entscheidung, die auf die Tatsache beruht, dass leere Auflistungen in F # verfasst werden. Eine leere f #-Liste kann mit einer anderen f #-Liste zusammengesetzt werden, eine leere Zeichenfolge kann einer vorhandenen Zeichenfolge hinzugefügt werden usw. Es kann üblich sein, Slices auf der Grundlage von Werten zu nehmen, die als Parameter weitergegeben werden, und die Toleranz von außerhalb der Grenzen durch das Erstellen einer leeren Sammlung ist mit der festgelegten Natur von F #-Code zu erreichen.
+> [!IMPORTANT]
+> C#-Entwickler erwarten möglicherweise, dass diese eine Ausnahme auslösen, anstatt einen leeren Slice zu liefern. Dies ist eine Entwurfs Entscheidung, die auf die Tatsache beruht, dass leere Auflistungen in F # verfasst werden. Eine leere f #-Liste kann mit einer anderen f #-Liste zusammengesetzt werden, eine leere Zeichenfolge kann einer vorhandenen Zeichenfolge hinzugefügt werden usw. Es kann üblich sein, Slices auf der Grundlage von Werten zu verwenden, die als Parameter weitergegeben werden, und die Toleranz außerhalb der Grenzen > durch die Erstellung einer leeren Auflistung, die mit der kompositorischen Natur von F #-Code zu erreichen ist.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Blöcke mit fester Indexgröße für 3D-und 4D-Arrays
 
@@ -174,12 +173,14 @@ Bei F #-3D-und 4D-Arrays können Sie einen bestimmten Index "korrigieren" und an
 Um dies zu veranschaulichen, sehen Sie sich das folgende 3D-Array an:
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -203,8 +204,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-Die letzte Zeile korrigiert die `y` `z` -und-Indizien des 3D-Arrays und übernimmt die restlichen `x` Werte, die der Matrix entsprechen.
+Die letzte Zeile korrigiert die `y` `z` Indizes und des 3D-Arrays und übernimmt die restlichen `x` Werte, die der Matrix entsprechen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Indizierte Eigenschaften](./members/indexed-properties.md)

@@ -2,12 +2,12 @@
 title: 'Neues in f # 5,0-f #-Handbuch'
 description: 'Verschaffen Sie sich einen Überblick über die neuen Features, die in F # 5,0 verfügbar sind.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982465"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098696"
 ---
 # <a name="whats-new-in-f-50"></a>Neues in F# 5.0
 
@@ -285,7 +285,7 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-Die von der Funktion generierte Einschränkung `inline` wird im Code-QUUM beibehalten. Das `negate` Formular der Funktion kann nun ausgewertet werden.
+Die von der Funktion generierte Einschränkung `inline` wird im Code Anführungszeichen beibehalten. Das Formular in Anführungszeichen der `negate` Funktion kann nun ausgewertet werden.
 
 Diese Funktion implementiert [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).
 
@@ -340,7 +340,7 @@ Wenn Sie ein Autor der Bibliothek sind, der heute CES in der Bibliothek verfügb
 
 Diese Funktion implementiert [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>Schnittstellen können in unterschiedlichen generischen Instanziierungen implementiert werden.
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>Schnittstellen können in unterschiedlichen generischen Instanziierungen implementiert werden.
 
 Nun können Sie die gleiche Schnittstelle in unterschiedlichen generischen Instanziierungen implementieren:
 
@@ -490,7 +490,7 @@ Diese Funktion implementiert [F # RFC FS-1076](https://github.com/fsharp/fslang-
 
 Berechnungs Ausdrücke sind ein leistungsfähiges Feature für Bibliotheks-und Frameworkautoren. Sie ermöglichen es Ihnen, die Ausdrucksfähigkeit ihrer Komponenten deutlich zu verbessern, indem Sie bekannte Member definieren und eine DSL für die Domäne bilden, in der Sie arbeiten.
 
-F # 5 fügt eine Vorschau Unterstützung für das Überladen von benutzerdefinierten Vorgängen in Berechnungs Ausdrücken hinzu. Dadurch kann der folgende Code geschrieben und verwendet werden:
+F # 5 fügt eine Vorschau Unterstützung für das Überladen von benutzerdefinierten Vorgängen in Berechnungs Ausdrücken hinzu. Der folgende Code kann geschrieben und verwendet werden:
 
 ```fsharp
 open System
