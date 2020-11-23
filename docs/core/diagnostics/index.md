@@ -3,12 +3,12 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437991"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982308"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -62,6 +62,10 @@ Mit dem Tool [dotnet-gcdump](dotnet-gcdump.md) können Sie GC-Speicherabbilder (
 
 [dotnet-sos](dotnet-sos.md) wird verwendet, um die [SOS-Debugerweiterung](../../framework/tools/sos-dll-sos-debugging-extension.md) unter Linux oder MacOS (oder unter Windows, wenn ältere Debugtools verwendet werden) zu installieren.
 
+### <a name="perfcollect"></a>PerfCollect
+
+[Perfcollect](trace-perfcollect-lttng.md) ist ein Bash-Skript, das Sie verwenden können, um Ablaufverfolgungen mit `perf` und `LTTng` für eine ausführlichere Leistungsanalyse von .NET-Apps zu erfassen, die unter Linux-Distributionen ausgeführt werden.
+
 ## <a name="net-core-diagnostics-tutorials"></a>Tutorials zur .NET Core-Diagnose
 
 ### <a name="debug-a-memory-leak"></a>Debuggen eines Speicherverlusts
@@ -75,3 +79,7 @@ Mit dem Tool [dotnet-gcdump](dotnet-gcdump.md) können Sie GC-Speicherabbilder (
 ### <a name="debug-deadlock"></a>Debuggen eines Deadlocks
 
 [Tutorial: Debuggen eines Deadlocks](debug-deadlock.md). Hier erfahren Sie, wie Sie das Tool [dotnet-dump](dotnet-dump.md) verwenden, um Threads und Sperren zu untersuchen.
+
+### <a name="measure-performance-using-eventcounters"></a>Messen der Leistung mithilfe von EventCounters
+
+[Tutorial: Messen der Leistung mithilfe von EventCounters in .NET](event-counter-perf.md) zeigt, wie Sie die <xref:System.Diagnostics.Tracing.EventCounter>-API zum Messen der Leistung in Ihrer .NET-App verwenden.

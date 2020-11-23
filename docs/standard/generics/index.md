@@ -26,16 +26,16 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827255"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098813"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
-Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau an den Datentyp anpassen, der von ihnen verarbeitet wird. Anstatt beispielsweise die <xref:System.Collections.Hashtable> -Klasse zu verwenden, bei der Schlüssel und Werte einen beliebigen Typ haben dürfen, können Sie die generische Klasse <xref:System.Collections.Generic.Dictionary%602> verwenden und den für den Schlüssel und Wert zulässigen Typ angeben. Zu den Vorteilen von Generics zählen bessere Wiederverwendbarkeit des Codes und Typsicherheit.  
+Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau an den Datentyp anpassen, der von ihnen verarbeitet wird. Anstatt beispielsweise die <xref:System.Collections.Hashtable> -Klasse zu verwenden, bei der Schlüssel und Werte einen beliebigen Typ haben dürfen, können Sie die generische Klasse <xref:System.Collections.Generic.Dictionary%602> verwenden und die für den Schlüssel und Wert zulässigen Typen angeben. Zu den Vorteilen von Generics zählen bessere Wiederverwendbarkeit des Codes und Typsicherheit.  
 
 ## <a name="defining-and-using-generics"></a>Definieren und Verwenden von Generics
  Generics sind Klassen, Strukturen, Schnittstellen und Methoden, die über Platzhalter (Typparameter) für einen oder mehrere der Typen verfügen, die sie speichern oder verwenden. Eine generische Auflistungsklasse kann beispielsweise einen Typparameter als Platzhalter für den Typ von Objekten verwenden, die in ihr gespeichert werden; die Typparameter werden als die Typen ihrer Felder und die Parametertypen ihrer Methoden angezeigt. Eine generische Methode kann ihren Typparameter als den Typen ihres Rückgabewerts oder als den Typen einer ihrer formalen Parameter verwenden. Der folgende Code zeigt eine einfache generische Klassendefinition.  
