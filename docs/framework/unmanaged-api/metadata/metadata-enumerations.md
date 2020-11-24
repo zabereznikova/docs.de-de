@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-ms.openlocfilehash: 2409998c53aee8cb76e66cbc9a6cd92ad9fb6cd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d0a146ff5b6887e6678ee69d7e39731bd109c6d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489620"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672902"
 ---
 # <a name="metadata-enumerations"></a>Metadatenenumerationen
+
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die die Metadaten-API verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [AssemblyFlags-Enumeration](assemblyflags-enumeration.md)  
  Enthält Werte, in denen die Laufzeitfunktionen einer Assembly beschrieben werden.  
   
@@ -156,6 +158,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt die Konstanten an, die von " [zählinitializeee](../hosting/couninitializeee-function.md) " beim Initialisieren der Common Language Runtime verwendet werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Metadatenschnittstellen](metadata-interfaces.md)  
   
  [Globale statische Metadatenfunktionen](metadata-global-static-functions.md)  

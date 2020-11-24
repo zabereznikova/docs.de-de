@@ -7,19 +7,21 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e19502672973f292991b72c7ea9b4fdc17f5707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673123"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Veraltete CLR-Hostingfunktionen
+
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von früheren Versionen der Hosting-API verwendet wurden.  
   
  Mit Ausnahme der Infrastrukturfunktionen ( `_Cor*` Funktionen), die nur vom .NET Framework verwendet werden, wurden diese Funktionen in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="activation-functions"></a>Aktivierungsfunktionen  
+
  [ClrCreateManagedInstance-Funktion](clrcreatemanagedinstance-function.md)  
  Veraltet. Erstellt eine Instanz des angegebenen verwalteten Typs.  
   
@@ -57,6 +59,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet. Ruft Version und Verzeichnisinformationen über die CLR ab, die von einer Anwendung angefordert wurden.  
   
 ## <a name="clr-version-functions"></a>CLR-Versionsfunktionen  
+
  Die Funktionen in diesem Abschnitt geben eine CLR-Version zurück; sie aktivieren nicht die CLR.  
   
  [GetCORVersion-Funktion](getcorversion-function.md)  
@@ -78,6 +81,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet. Ermöglicht dem Host, zu bestimmen, welche Version der CLR innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
   
 ## <a name="hosting-functions"></a>Hostingfunktionen  
+
  [CallFunctionShim-Funktion](callfunctionshim-function.md)  
  Veraltet. Ruft eine Funktion mit dem angegebenen Namen und den angegebenen Parametern in der angegebenen Bibliothek auf.  
   
@@ -139,6 +143,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet. Zeigt auf eine Funktion, die den Host benachrichtigt, dass ein Wait-Handle signalisiert wurde oder das Zeitlimit überschritten hat.  
   
 ## <a name="infrastructure-functions"></a>Infrastrukturfunktionen  
+
  Die Funktionen in diesem Abschnitt gelten nur für .NET Framework.  
   
  [_CorDllMain-Funktion](cordllmain-function.md)  
@@ -156,6 +161,6 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  [_CorValidateImage-Funktion](corvalidateimage-function.md)  
  Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten globaler statischer .NET Framework 4-Funktionen](net-framework-4-hosting-global-static-functions.md)

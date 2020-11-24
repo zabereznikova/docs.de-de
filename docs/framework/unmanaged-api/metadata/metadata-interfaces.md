@@ -6,17 +6,19 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-ms.openlocfilehash: 4d947388afb8d7f8f935ae3b8e8aff81efaf2ee4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5d9b48df740668797a7c901219401e9ea304a8f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672880"
 ---
 # <a name="metadata-interfaces"></a>Metadatenschnittstellen
+
 In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die Zugriff auf die Metadaten bereitstellen, die von den .NET Framework-Typen, -Methoden, -Feldern usw. zur Verfügung gestellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ICeeGen-Schnittstelle](iceegen-interface.md)  
  Stellt Methoden zur dynamischen Codekompilierung bereit.  
   
@@ -72,6 +74,7 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  Stellt Methoden zum Validieren von Metadatensignaturen bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Globale statische Metadatenfunktionen](metadata-global-static-functions.md)  
   
  [Metadatenenumerationen](metadata-enumerations.md)  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb4e4ce0-06e7-4469-bbc4-edc2eb5da4b1
 topic_type:
 - apiref
-ms.openlocfilehash: cc8ab6f0c8115da4d74280023dc692b66846ed94
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a029784a28036e531670ad373893b4256c5864c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497750"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671186"
 ---
 # <a name="icorprofilerinfo-interface"></a>ICorProfilerInfo-Schnittstelle
+
 Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (CLR) kommunizieren können, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
   
 > [!NOTE]
@@ -65,7 +66,8 @@ Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (
 |[SetILFunctionBody-Methode](icorprofilerinfo-setilfunctionbody-method.md)|Ersetzt den Text der angegebenen Funktion im angegebenen Modul.|  
 |[SetILInstrumentedCodeMap-Methode](icorprofilerinfo-setilinstrumentedcodemap-method.md)|Gibt an, wie die Offsets der ursprünglichen MSIL einer angegebenen Funktion den neuen Offsets der vom Profiler geänderten MSIL der Funktion zugeordnet werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Ein Profiler Ruft eine Methode in der- `ICorProfilerInfo` Schnittstelle auf, um mit der CLR zu kommunizieren, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
   
  Die Methoden der- `ICorProfilerInfo` Schnittstelle werden von der CLR mithilfe des frei Hand Thread Modells implementiert. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie unter CorError. h.  
@@ -73,6 +75,7 @@ Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (
  Die CLR übergibt über die Implementierung von [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)des Profilers eine `ICorProfilerInfo` Schnittstelle für jeden Codeprofiler während der Initialisierung. Ein Codeprofiler kann dann Methoden der- `ICorProfilerInfo` Schnittstelle aufzurufen, um Informationen zu verwaltetem Code abzurufen, der unter der Kontrolle der CLR ausgeführt wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -81,7 +84,7 @@ Stellt Methoden bereit, mit denen Codeprofiler mit der Common Language Runtime (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

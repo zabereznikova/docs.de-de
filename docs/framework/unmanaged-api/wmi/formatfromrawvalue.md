@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672330"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue-Funktion
+
 Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ in Der zähtertyp. Eine Liste der Leistungs Zählers finden Sie unter [WMI-Leist
 `dwFormat`\
 in Das Format, in das die rohleistungs Daten konvertiert werden sollen. Es kann sich um einen der folgenden Werte handeln:
 
-|Konstant  |Wert  |BESCHREIBUNG |
+|Konstante  |Wert  |BESCHREIBUNG |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Gibt den berechneten Wert als Gleit Komma Wert mit doppelter Genauigkeit zurück. |
 | `PDH_FMT_LARGE` | 0x00000400 | Gibt den berechneten Wert als 64-Bit-Ganzzahl zurück. |
@@ -55,7 +56,7 @@ in Das Format, in das die rohleistungs Daten konvertiert werden sollen. Es kann 
 
 Einer der vorherigen Werte kann mit einem der folgenden Skalierungsflags ORed lauten:
 
-|Konstant  |Wert  |BESCHREIBUNG |
+|Konstante  |Wert  |BESCHREIBUNG |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Wenden Sie die Skalierungsfaktoren des Zählers nicht an. |
 | `PDH_FMT_1000` | 0x00002000 | Multiplizieren Sie den endgültigen Wert um 1.000. |
@@ -76,7 +77,7 @@ vorgenommen Ein Zeiger auf eine- [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh
 
 Von dieser Funktion werden die folgenden Werte zurückgegeben:
 
-|Konstant  |Wert  |BESCHREIBUNG  |
+|Konstante  |Wert  |BESCHREIBUNG  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | Der Funktions Aufrufvorgang ist erfolgreich. |
 | `PDH_INVALID_ARGUMENT` | 0xc0000bbd | Ein erforderliches Argument fehlt oder ist falsch. |
@@ -86,7 +87,7 @@ Von dieser Funktion werden die folgenden Werte zurückgegeben:
 
 Diese Funktion umschließt einen Aufrufen der [formatfromrawvalue](/previous-versions/ms231047(v=vs.85)) -Funktion.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
@@ -94,6 +95,6 @@ Diese Funktion umschließt einen Aufrufen der [formatfromrawvalue](/previous-ver
 
  **.NET Framework Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

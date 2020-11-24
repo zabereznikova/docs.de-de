@@ -5,17 +5,19 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
-ms.openlocfilehash: 91f311818b615ea8f166bb3362ec52d39fcd0297
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 49f026b8e1a3dd78a62091e77a5aba0c9a2e09d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671836"
 ---
 # <a name="silverlight-debugging"></a>Silverlight-Debugging
+
 In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschrieben, mit denen die Common Language Runtime (CLR) das Debuggen von Silverlight-basierten Anwendungen unterstützt, die unter Windows oder auf der Macintosh-Plattform ausgeführt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [EnumerateCLRs-Funktion](enumerateclrs-function.md)  
  Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
   
@@ -52,10 +54,10 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  [ShutdownDbgTransportManager-Funktion](shutdowndbgtransportmanager-function.md)  
  Fährt den Transport-Manager für eine Verbindung mit einem Remotecomputer herunter.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Co-Klassen](debugging-coclasses.md)
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen von globalen statischen Funktionen](debugging-global-static-functions.md)
-- [Debuggen von Enumerationen](debugging-enumerations.md)
+- [Debugenumerationen](debugging-enumerations.md)
 - [Debuggen von Strukturen](debugging-structures.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7a7f733-677d-481c-b3d5-444fcc502b8e
 topic_type:
 - apiref
-ms.openlocfilehash: e748a731f2c6934f58a1cd838cc40ce4fd0e4652
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d321ce08edf4780fc5f26ac627849b9129c2f283
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804718"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673220"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads-Methode
+
 Ruft die Mindestanzahl von Threads ab, die der Host für die Verarbeitung von e/a-Anforderungen bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetMinThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pdwMinIOCompletionThreads`  
  vorgenommen Ein Zeiger auf die Mindestanzahl von Threads, die der Host für die Verarbeitung von e/a-Anforderungen bereitstellt.  
   
@@ -41,7 +43,7 @@ HRESULT GetMinThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetMinThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetMinThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,14 +52,16 @@ HRESULT GetMinThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `GetMinThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Host möchte möglicherweise die exklusive Kontrolle über die Anzahl von Threads, die für e/a-Anforderungen des Diensts zugewiesen sind, aus Gründen wie Implementierung, Leistung oder Skalierbarkeit. Aus diesem Grund ist es nicht erforderlich, dass der Host implementiert `GetMinThreads` . In diesem Fall sollte der Host E_NOTIMPL aus dieser Methode zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

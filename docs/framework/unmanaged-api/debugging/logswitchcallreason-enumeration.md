@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-ms.openlocfilehash: 4d29bb3886ffb51e1dfb9654f4d70ef7c568fd43
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: dfb34595530a47b74762610f5824b68ea00a8a69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420707"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671940"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason-Enumeration
+
 Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,13 +37,14 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`SWITCH_CREATE`|Ein Debugger/Ablauf Verfolgungs Schalter wurde erstellt.|  
 |`SWITCH_MODIFY`|Ein Debugger/Ablauf Verfolgungs Schalter wurde geändert.|  
 |`SWITCH_DELETE`|Ein Debugger/Ablauf Verfolgungs Schalter wurde gelöscht.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -51,6 +53,6 @@ typedef enum LogSwitchCallReason {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugenumerationen](debugging-enumerations.md)

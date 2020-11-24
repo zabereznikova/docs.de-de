@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673110"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager-Schnittstelle
+
 Stellt Methoden bereit, mit denen die Common Language Runtime (CLR) mit Aufgaben über den Host arbeiten kann, anstatt die Threading-oder Fiber-Funktionen des Standard Betriebssystems zu verwenden.  
   
 ## <a name="methods"></a>Methoden  
@@ -47,19 +48,21 @@ Stellt Methoden bereit, mit denen die Common Language Runtime (CLR) mit Aufgaben
 |[Sleep-Methode](ihosttaskmanager-sleep-method.md)|Benachrichtigt den Host, dass die aktuelle Aufgabe in den Standbymodus wechselt.|  
 |[SwitchToTask-Methode](ihosttaskmanager-switchtotask-method.md)|Benachrichtigt den Host, dass der aktuelle Task gewechselt werden soll.|  
   
-## <a name="remarks"></a>Bemerkungen  
- `IHostTaskManager`ermöglicht der CLR das Erstellen und Verwalten von Tasks, um dem Host die Möglichkeit zu geben, Aktionen auszuführen, wenn die Steuerung von verwaltetem zu nicht verwaltetem Code und umgekehrt ist, und bestimmte Aktionen anzugeben, die der Host während der Codeausführung nicht ausführen kann.  
+## <a name="remarks"></a>Hinweise  
+
+ `IHostTaskManager` ermöglicht der CLR das Erstellen und Verwalten von Tasks, um dem Host die Möglichkeit zu geben, Aktionen auszuführen, wenn die Steuerung von verwaltetem zu nicht verwaltetem Code und umgekehrt ist, und bestimmte Aktionen anzugeben, die der Host während der Codeausführung nicht ausführen kann.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

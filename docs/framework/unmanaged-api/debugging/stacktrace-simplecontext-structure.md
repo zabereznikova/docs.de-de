@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 45ae947cda5b4ddadfb10f5b2bdc78a95f031703
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 30775b4a6f904d06b9c77e6b2b64aec693c446d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420686"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671797"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext-Struktur
+
 Stellt einen einfachen Kontext bereit, der statt einer vollständigen `CONTEXT`-Struktur verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,23 +39,25 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`StackOffset`|Der Stapelzeiger oder der Eingabe Stapelzeiger (ESP) auf x86-Plattformen.|  
 |`FrameOffset`|Der Frame Offset oder das EBP-Register auf x86-Plattformen.|  
 |`InstructionOffset`|Der Anweisungs Zeiger oder der Eingabe Anweisungs Zeiger (EIP) auf x86-Plattformen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Da Stapel Überwachungsfunktionen in der Regel nur die Adresse, den Frame Offset und die Stapel Adresse zurückgeben müssen, können Sie optional die `SimpleContext` Struktur anstelle einer großen `CONTEXT` Struktur verwenden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen von Strukturen](debugging-structures.md)
 - [Debuggen](index.md)

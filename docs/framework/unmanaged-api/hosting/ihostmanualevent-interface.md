@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-ms.openlocfilehash: 7c46f00063cdf9281a5f1080594e8d6dbc6c101e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 50e37b770e3ee6e0a5cdfca61fc5b09749e5735f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804595"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673198"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent-Schnittstelle
+
 Stellt die Implementierung eines Hosts für ein manuelles Zurücksetzungs Ereignis bereit.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,12 +33,13 @@ Stellt die Implementierung eines Hosts für ein manuelles Zurücksetzungs Ereign
 |[Set-Methode](ihostmanualevent-set-method.md)|Legt die aktuelle `IHostManualEvent` Instanz auf einen signalisierten Zustand fest.|  
 |[Wait-Methode](ihostmanualevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostManualEvent` Instanz wartet, bis Sie im Besitz ist oder eine angegebene Zeitspanne abläuft.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -47,4 +49,4 @@ Stellt die Implementierung eines Hosts für ein manuelles Zurücksetzungs Ereign
 - [IHostAutoEvent-Schnittstelle](ihostautoevent-interface.md)
 - [IHostSemaphore-Schnittstelle](ihostsemaphore-interface.md)
 - [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

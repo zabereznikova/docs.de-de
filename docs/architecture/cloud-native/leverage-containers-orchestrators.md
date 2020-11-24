@@ -2,12 +2,12 @@
 title: Nutzen von Containern und Orchestratoren
 description: Nutzen von Docker-Containern und Kubernetes-orchestratoren in Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877573"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672512"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Nutzen von Containern und Orchestratoren
 
@@ -31,7 +31,7 @@ Außerdem ist ein Neustart der Anwendung erforderlich, was sich vorübergehend a
 
 Eine monolithische Anwendung wird vollständig auf einer einzelnen Computer Instanz gehostet, die häufig Hochleistungs Hardware erfordert. Wenn für einen Teil der monolithische Skalierung erforderlich ist, muss eine andere Kopie der gesamten Anwendung auf einem anderen Computer bereitgestellt werden. Bei einer monolithischen Anwendung können Anwendungskomponenten nicht einzeln skaliert werden, sondern alles oder nichts. Das Skalieren von Komponenten, die keine Skalierung erfordern, führt zu ineffizient und kostspieliger Ressourcennutzung
 
-### <a name="environment"></a>Umgebung
+### <a name="environment"></a>Environment
 
 Monolithische Anwendungen werden in der Regel in einer Hostingumgebung mit vorinstallierter Betriebssystem-, Lauf Zeit-und Bibliotheksabhängigkeiten bereitgestellt. Diese Umgebung stimmt möglicherweise nicht mit der Umgebung identisch, auf der die Anwendung entwickelt oder getestet wurde. Inkonsistenzen zwischen Anwendungsumgebungen sind eine häufige Ursache für Probleme bei monolithischen bereit Stellungen.
 
@@ -78,7 +78,7 @@ AKS ist eine Cluster basierte Technologie. Ein Pool mit virtuellen Verbund Compu
 
 ## <a name="what-are-the-scaling-benefits"></a>Welche Vorteile bietet die Skalierung?
 
-In Containern aufgebaute Dienste können Skalierungs Vorteile nutzen, die von Orchestrierungs Tools wie Kubernetes bereitgestellt werden. Entwurfs Container wissen nur von sich selbst. Wenn Sie über mehrere Container verfügen, die zusammenarbeiten müssen, sollten Sie diese auf einer höheren Ebene organisieren. Wenn Sie eine große Anzahl von Containern und deren freigegebenen Abhängigkeiten organisieren, wie z. b. die Netzwerkkonfiguration, werden Orchestrierungs Tools zum Speichern des Tages verwendet! Kubernetes erstellt eine Abstraktions Ebene für Gruppen von Containern und organisiert Sie in *Pods*. Pods werden auf workercomputern ausgeführt, die als *Knoten*bezeichnet werden. Diese organisierte Struktur wird als *Cluster*bezeichnet. Abbildung 3-3 zeigt die verschiedenen Komponenten eines Kubernetes-Clusters.
+In Containern aufgebaute Dienste können Skalierungs Vorteile nutzen, die von Orchestrierungs Tools wie Kubernetes bereitgestellt werden. Entwurfs Container wissen nur von sich selbst. Wenn Sie über mehrere Container verfügen, die zusammenarbeiten müssen, sollten Sie diese auf einer höheren Ebene organisieren. Wenn Sie eine große Anzahl von Containern und deren freigegebenen Abhängigkeiten organisieren, wie z. b. die Netzwerkkonfiguration, werden Orchestrierungs Tools zum Speichern des Tages verwendet! Kubernetes erstellt eine Abstraktions Ebene für Gruppen von Containern und organisiert Sie in *Pods*. Pods werden auf workercomputern ausgeführt, die als *Knoten* bezeichnet werden. Diese organisierte Struktur wird als *Cluster* bezeichnet. Abbildung 3-3 zeigt die verschiedenen Komponenten eines Kubernetes-Clusters.
 
 ![Kubernetes-Cluster Komponenten ](./media/kubernetes-cluster-components.png)
  **Abbildung 3-3**. Kubernetes-Cluster Komponenten
@@ -184,12 +184,12 @@ Visual Studio unterstützt die Docker-Entwicklung für webbasierte Anwendungen. 
 Wenn diese Option ausgewählt ist, wird das Projekt mit einem im Stammverzeichnis erstellt `Dockerfile` , das verwendet werden kann, um die app in einem docker-Container zu erstellen und zu hosten. Ein Beispiel für eine dockerfile-Datei finden Sie in Abbildung 3.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"
@@ -216,7 +216,7 @@ Das Standardverhalten, wenn die app ausgeführt wird, ist so konfiguriert, dass 
 
 Neben der lokalen Entwicklung bietet [Azure dev Spaces](/azure/dev-spaces/) eine bequeme Möglichkeit für mehrere Entwickler, mit ihren eigenen Kubernetes-Konfigurationen in Azure zu arbeiten. Wie Sie in Abbildung 3-7 sehen können, können Sie die Anwendung auch in Azure dev Spaces ausführen.
 
-Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das **Add**Projekt, und wählen Sie  >  **docker-Unterstützung**hinzufügen aus, wie in Abbildung 3-8 dargestellt.
+Außerdem können Sie einer vorhandenen ASP.net Core Anwendung jederzeit docker-Unterstützung hinzufügen. Klicken Sie in der Visual Studio-Projektmappen-Explorer mit der rechten Maustaste auf das **Add** Projekt, und wählen Sie  >  **docker-Unterstützung** hinzufügen aus, wie in Abbildung 3-8 dargestellt.
 
 ![Visual Studio-docker-Unterstützung hinzufügen](./media/visual-studio-add-docker-support.png)
 
