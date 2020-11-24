@@ -2,19 +2,18 @@
 title: 'Vorgehensweise: Auflisten von Verzeichnissen und Dateien'
 description: Erfahren Sie, wie Sie in .NET Verzeichnisse und Dateien mithilfe von aufzählbaren Sammlungen auflisten, die eine bessere Leistung als Arrays bieten können.
 ms.date: 12/27/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: 7a757fc97fd934f02592264c3a495c3efc435fd5
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: da55881b9ca517abd045d4ebd2a5307c67d06560
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187891"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830895"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Vorgehensweise: Auflisten von Verzeichnissen und Dateien
 Aufzählbare Sammlungen bieten bei der Arbeit mit großen Sammlungen von Verzeichnissen und Dateien eine bessere Leistung als Arrays. Verwenden Sie zum Auflisten von Verzeichnissen und Dateien Methoden, die eine aufzählbare Collection von Verzeichnis- oder Dateinamen zurückgeben, oder ihre <xref:System.IO.DirectoryInfo>-, <xref:System.IO.FileInfo>- oder <xref:System.IO.FileSystemInfo>-Objekte.  

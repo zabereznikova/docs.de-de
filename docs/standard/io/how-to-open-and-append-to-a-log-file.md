@@ -2,7 +2,6 @@
 title: 'Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei'
 description: Öffnen Sie eine Protokolldatei, und fügen Sie etwas an mithilfe der Klassen StreamWriter und StreamReader in .NET, die Zeichen in Datenströme schreiben bzw. Zeichen daraus lesen.
 ms.date: 01/21/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,16 +11,16 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: ed8345901dc5f44e947bd076944d7e61eac561da
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: f92dd34b15ca79f229b365c7c2db4ace411d9353
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188171"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830752"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei
 
-<xref:System.IO.StreamWriter> und <xref:System.IO.StreamReader> schreiben Zeichen in Streams und lesen Zeichen daraus. Im folgenden Codebeispiel wird die *log.txt* -Datei für die Eingabe geöffnet bzw. diese Datei erstellt, falls sie noch nicht vorhanden ist, und Protokollinformationen an das Ende der Datei angefügt. Der Inhalt der Datei wird in diesem Beispiel dann zur Anzeige in die Standardausgabe geschrieben.
+<xref:System.IO.StreamWriter> und <xref:System.IO.StreamReader> schreiben Zeichen in Streams und lesen Zeichen daraus. Im folgenden Codebeispiel wird die *log.txt*-Datei für die Eingabe geöffnet bzw. diese Datei erstellt, falls sie noch nicht vorhanden ist, und Protokollinformationen an das Ende der Datei angefügt. Der Inhalt der Datei wird in diesem Beispiel dann zur Anzeige in die Standardausgabe geschrieben.
 
 Alternativ zu diesem Beispiel könnten die Informationen als einzelne Zeichenfolge oder Zeichenfolgenarray gespeichert werden, und die <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType>- bzw. <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType>-Methode könnte verwendet werden, um die gleiche Funktionalität zu erreichen.  
   

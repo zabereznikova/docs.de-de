@@ -2,7 +2,6 @@
 title: Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen in .NET
 description: Erfahren Sie, wie Sie Leerzeichen am Anfang oder Ende einer Zeichenfolge kürzen, oder wie Sie eine beliebige Anzahl von Leerzeichen oder Zeichen ab einer angegebenen Position in der Zeichenfolge in .NET entfernen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: d0057d503474f3f6ff886acda3ce1d72fb3ebe21
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 8bc2980aa887dc652485e135058b9f6f718e7b45
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888593"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831272"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Herausnehmen und Entfernen von Zeichen aus Zeichenfolgen in .NET
-Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise Wörter mit Leerzeichen (auch als Leerräume bezeichnet) auf beiden Seiten des jeweiligen Wortes. In diesem Fall können Sie eine der Entfernungsmethoden aus der **System.String** -Klasse verwenden, um an einer bestimmten Position der Zeichenfolge eine beliebige Anzahl von Leerzeichen oder anderen Zeichen zu entfernen. In der folgenden Tabelle sind die verfügbaren Entfernungsmethoden aufgeführt.  
+Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise Wörter mit Leerzeichen (auch als Leerräume bezeichnet) auf beiden Seiten des jeweiligen Wortes. In diesem Fall können Sie eine der Entfernungsmethoden aus der **System.String**-Klasse verwenden, um an einer bestimmten Position der Zeichenfolge eine beliebige Anzahl von Leerzeichen oder anderen Zeichen zu entfernen. In der folgenden Tabelle sind die verfügbaren Entfernungsmethoden aufgeführt.  
   
 |Methodenname|Verwendung|  
 |-----------------|---------|  
@@ -48,9 +47,9 @@ Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise 
   
 ## <a name="trimend"></a>TrimEnd
 
- Mit der **String.TrimEnd** -Methode werden Zeichen am Ende einer Zeichenfolge entfernt, wodurch ein neues Zeichenfolgenobjekt entsteht. An diese Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Die Reihenfolge der Elemente im Zeichenarray hat keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
+ Mit der **String.TrimEnd**-Methode werden Zeichen am Ende einer Zeichenfolge entfernt, wodurch ein neues Zeichenfolgenobjekt entsteht. An diese Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Die Reihenfolge der Elemente im Zeichenarray hat keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
   
- Im folgenden Beispiel werden die letzten Buchstaben einer Zeichenfolge mit der **TrimEnd** -Methode entfernt. In diesem Beispiel werden die Positionen der Zeichen `'r'` und `'W'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt. Beachten Sie, dass durch diesen Code das letzte Wort von `MyString` sowie ein Teil des ersten Wortes entfernt wird.  
+ Im folgenden Beispiel werden die letzten Buchstaben einer Zeichenfolge mit der **TrimEnd**-Methode entfernt. In diesem Beispiel werden die Positionen der Zeichen `'r'` und `'W'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt. Beachten Sie, dass durch diesen Code das letzte Wort von `MyString` sowie ein Teil des ersten Wortes entfernt wird.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -58,7 +57,7 @@ Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise 
   
  Durch diesen Code wird `He` auf der Konsole angezeigt.  
   
- Im folgenden Beispiel wird das letzte Wort einer Zeichenfolge mit der **TrimEnd** -Methode entfernt. Im Code folgt auf das Wort `Hello` ein Komma. Da das Komma im Zeichenarray nicht als zu entfernendes Zeichen angegeben ist, wird der Vorgang beim Komma beendet.  
+ Im folgenden Beispiel wird das letzte Wort einer Zeichenfolge mit der **TrimEnd**-Methode entfernt. Im Code folgt auf das Wort `Hello` ein Komma. Da das Komma im Zeichenarray nicht als zu entfernendes Zeichen angegeben ist, wird der Vorgang beim Komma beendet.  
   
  [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
  [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
@@ -68,7 +67,7 @@ Wenn Sie einen Satz in einzelne Wörter auflösen, erhalten Sie möglicherweise 
   
 ## <a name="trimstart"></a>TrimStart
 
- Die **String.TrimStart** -Methode ist mit der **String.TrimEnd** -Methode vergleichbar, außer dass eine neue Zeichenfolge erstellt wird, indem Zeichen am Anfang eines bestehenden Zeichenfolgenobjekts entfernt werden. An die **TrimStart** -Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Wie bei der **TrimEnd** -Methode hat die Reihenfolge der Elemente im Zeichenarray keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
+ Die **String.TrimStart**-Methode ist mit der **String.TrimEnd**-Methode vergleichbar, außer dass eine neue Zeichenfolge erstellt wird, indem Zeichen am Anfang eines bestehenden Zeichenfolgenobjekts entfernt werden. An die **TrimStart**-Methode wird ein Zeichenarray übergeben, das die zu entfernenden Zeichen enthält. Wie bei der **TrimEnd**-Methode hat die Reihenfolge der Elemente im Zeichenarray keine Auswirkungen auf den Entfernungsvorgang. Der Vorgang wird beendet, sobald ein nicht im Array angegebenes Zeichen gefunden wird.  
   
  Im folgenden Beispiel wird das erste Wort einer Zeichenfolge entfernt. In diesem Beispiel werden die Positionen der Zeichen `'l'` und `'H'` vertauscht, um zu veranschaulichen, dass die Reihenfolge der Zeichen im Array keine Rolle spielt.  
   

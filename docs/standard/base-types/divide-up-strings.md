@@ -2,18 +2,17 @@
 title: Aufteilen von Zeichenfolgen in Teilzeichenfolgen
 description: Lernen Sie verschiedene Techniken zum Extrahieren von Teilzeichenfolgen kennen, darunter String.Split, reguläre Ausdrücke und String.Substring.
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403475"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829648"
 ---
 # <a name="extract-substrings-from-a-string"></a>Extrahieren von Teilzeichenfolgen aus einer Zeichenfolge
 
@@ -44,7 +43,7 @@ Die Punkte sind aus den Teilzeichenfolgen verschwunden, aber jetzt wurden zwei z
 
 ## <a name="regular-expressions"></a>Reguläre Ausdrücke
 
-Wenn Ihre Zeichenfolge mit einem festen Muster übereinstimmt, können Sie mit einem regulären Ausdruck dessen Elemente extrahieren und verarbeiten. Wenn Zeichenfolgen zum Beispiel die Form „ *Zahl* *Operand* *Zahl* “ haben, können Sie einen [regulären Ausdruck](regular-expressions.md) verwenden, um die Zeichenfolge zu extrahieren und die Elemente der Zeichenfolge zu verarbeiten. Hier sehen Sie ein Beispiel:
+Wenn Ihre Zeichenfolge mit einem festen Muster übereinstimmt, können Sie mit einem regulären Ausdruck dessen Elemente extrahieren und verarbeiten. Wenn Zeichenfolgen zum Beispiel die Form „*Zahl* *Operand* *Zahl*“ haben, können Sie einen [regulären Ausdruck](regular-expressions.md) verwenden, um die Zeichenfolge zu extrahieren und die Elemente der Zeichenfolge zu verarbeiten. Hier sehen Sie ein Beispiel:
 
 :::code language="csharp" source="snippets/parse-strings/csharp/regex.cs" id="1" interactive="try-dotnet":::
 :::code language="vb" source="snippets/parse-strings/vb/regex.vb" id="1":::

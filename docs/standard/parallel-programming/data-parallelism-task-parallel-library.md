@@ -2,19 +2,18 @@
 title: Datenparallelität (Task Parallel Library)
 description: Hier erfahren Sie, wie die Task Parallel Library (TPL) Datenparallelität unterstützt, um denselben Vorgang gleichzeitig in einer Quellsammlung oder in den Elementen eines Arrays in .NET auszuführen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558913"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829374"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Datenparallelität (Task Parallel Library)
 *Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird. In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.  

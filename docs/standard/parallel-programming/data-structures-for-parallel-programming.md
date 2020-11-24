@@ -1,16 +1,15 @@
 ---
 title: Datenstrukturen für die parallele Programmierung
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925323"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829530"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 
@@ -42,7 +41,7 @@ ms.locfileid: "92925323"
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Vereinfacht Fork- und Join-Szenarien durch einen einfachen Rendezvousmechanismus. Weitere Informationen finden Sie unter [CountdownEvent](../threading/countdownevent.md).|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Eine Synchronisierungsprimitive, ähnlich wie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> ist einfacher, kann aber nur für prozessinterne Kommunikation verwendet werden.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Eine Synchronisierungsprimitive, die die Anzahl von Threads beschränkt, die parallel auf eine Ressource oder einen Ressourcenpool zugreifen können. Weitere Informationen finden Sie unter [Semaphore und SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Eine gegenseitige Ausschlusssperrprimitive, durch die der Thread, der die Sperre zu erlangen versucht, für eine gewisse Zeit in einer Schleife warten (oder *rotieren* ) muss, bevor er sein Quantum liefert. In Szenarien, in denen die Wartezeit für die Sperre nur kurz ist, bietet <xref:System.Threading.SpinLock> eine bessere Leistung als andere Arten von Sperren. Weitere Informationen finden Sie unter [SpinLock](../threading/spinlock.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Eine gegenseitige Ausschlusssperrprimitive, durch die der Thread, der die Sperre zu erlangen versucht, für eine gewisse Zeit in einer Schleife warten (oder *rotieren*) muss, bevor er sein Quantum liefert. In Szenarien, in denen die Wartezeit für die Sperre nur kurz ist, bietet <xref:System.Threading.SpinLock> eine bessere Leistung als andere Arten von Sperren. Weitere Informationen finden Sie unter [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Ein kleiner, einfacher Typ, der für eine bestimmte Zeit rotiert und schließlich den Thread in einen Wartezustand versetzt, wenn die Schleifenzahl überschritten wird.  Weitere Informationen finden Sie unter [SpinWait](../threading/spinwait.md).|  
   
  Weitere Informationen finden Sie unter  

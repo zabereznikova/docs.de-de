@@ -1,14 +1,13 @@
 ---
 title: Navigieren in Knotengruppen mit "XPathNavigator"
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: 132154afdfd3e5bd6769bfcce338e598136e7515
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf0058f553488e453d0227291110d9edc96638f6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288757"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830128"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Navigieren in Knotengruppen mit "XPathNavigator"
 Sie können mit den Navigationsmethoden für Knotengruppen der <xref:System.Xml.XPath.XPathDocument>-Klasse durch Knoten in einem <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathNavigator> navigieren. Sie können durch alle Knoten oder durch eine von den Auswahlmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegebene Gruppe von Knoten navigieren.  

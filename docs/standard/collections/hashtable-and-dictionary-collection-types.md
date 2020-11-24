@@ -1,8 +1,7 @@
 ---
 title: Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
-helpviewer_keywords:
+'\helpviewer_keywords':
 - Hashtable class, grouping data in collections
 - Hashtable collection type
 - hash tables
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: 83bc5e8f3f1a55e2c4d1b9853c4974cfe86218f4
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889360"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831220"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable-Sammlungstyp und Dictionary-Sammlungstyp
 Die Klasse <xref:System.Collections.Hashtable?displayProperty=nameWithType> und die generischen Klassen <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> und <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementieren die <xref:System.Collections.IDictionary?displayProperty=nameWithType>-Schnittstelle. Die generische Klasse <xref:System.Collections.Generic.Dictionary%602> implementiert außerdem die generische <xref:System.Collections.Generic.IDictionary%602>-Schnittstelle. Daher ist jedes Element in diesen Auflistungen ein Schlüssel-Wert-Paar.  

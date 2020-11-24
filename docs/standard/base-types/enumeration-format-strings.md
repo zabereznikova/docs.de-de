@@ -2,7 +2,6 @@
 title: Enumerationsformatzeichenfolgen
 description: In diesem Artikel erfahren Sie, wie Sie Enumerationsformatzeichenfolgen mithilfe der Methode „Enum.ToString“ in .NET erstellen. Außerdem formatieren Sie numerische Werte, hexadezimale Werte oder Zeichenfolgenwerte von Enumerationsmembern.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: e4d8ca27d99c211653269b2477be8f5632b78229
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 02a12c36e47a82c15c01e578333e1c4465bab142
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888658"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829621"
 ---
 # <a name="enumeration-format-strings"></a>Enumerationsformatzeichenfolgen
 
@@ -26,14 +25,14 @@ In den folgenden Abschnitten werden die Enumerationsformatzeichenfolgen sowie di
 
 ## <a name="g-or-g"></a>G oder g
 
-Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an, zeigt andernfalls den ganzzahligen Wert der aktuellen Instanz an. Wenn die Enumeration mit festgelegtem **Flags** -Attribut definiert ist, werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn das **Flags** -Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt. Das folgende Beispiel veranschaulicht den Formatbezeichner „G“.
+Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an, zeigt andernfalls den ganzzahligen Wert der aktuellen Instanz an. Wenn die Enumeration mit festgelegtem **Flags**-Attribut definiert ist, werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn das **Flags**-Attribut nicht festgelegt ist, wird ein ungültiger Wert als numerischer Eintrag angezeigt. Das folgende Beispiel veranschaulicht den Formatbezeichner „G“.
 
 [!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
 [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]
 
 ## <a name="f-or-f"></a>F oder f
 
-Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an. Wenn der Wert vollständig als Summe der Einträge in der Enumeration angezeigt werden kann (selbst wenn das **Flags** -Attribut nicht vorhanden ist), werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn der Wert nicht vollständig durch die Enumerationseinträge ermittelt werden kann, wird der Wert als ganzzahliger Wert formatiert. Das folgende Beispiel veranschaulicht den Formatbezeichner „F“.
+Zeigt den Enumerationseintrag nach Möglichkeit als Zeichenfolgenwert an. Wenn der Wert vollständig als Summe der Einträge in der Enumeration angezeigt werden kann (selbst wenn das **Flags**-Attribut nicht vorhanden ist), werden die Zeichenfolgenwerte jedes gültigen Eintrags miteinander verkettet und durch Kommas getrennt. Wenn der Wert nicht vollständig durch die Enumerationseinträge ermittelt werden kann, wird der Wert als ganzzahliger Wert formatiert. Das folgende Beispiel veranschaulicht den Formatbezeichner „F“.
 
 [!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
 [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]

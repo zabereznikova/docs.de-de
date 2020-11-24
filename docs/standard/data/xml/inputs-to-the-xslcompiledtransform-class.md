@@ -1,17 +1,16 @@
 ---
 title: Eingaben für die XslCompiledTransform-Klasse
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 1452bc19940a33aeebaccf3041857a07c976964d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287648"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830219"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Eingaben für die XslCompiledTransform-Klasse
 Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.  

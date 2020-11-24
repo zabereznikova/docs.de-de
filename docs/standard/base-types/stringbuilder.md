@@ -2,7 +2,6 @@
 title: Verwenden der StringBuilder-Klasse in .NET
 description: Hier erfahren Sie mehr über das Verwenden der StringBuilder-Klasse in .NET. Verwenden Sie diese Klasse, um eine Zeichenfolge zu ändern, ohne dabei ein neues Objekt zu erstellen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888957"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831298"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Verwenden der StringBuilder-Klasse in .NET
 Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine der Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse verwenden, erstellen Sie ein neues Zeichenfolgenobjekt im Speicher, das eine neue Speicherbelegung für dieses neue Objekt erfordert. In Fällen, in denen Sie wiederholte Änderungen an einer Zeichenfolge vornehmen müssen, kann der Mehraufwand, der mit dem Erstellen eines neuen <xref:System.String>-Objekts verbunden ist, erheblich sein. Die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse kann verwendet werden, wenn Sie eine Zeichenfolge ändern möchten, ohne ein neues Objekt zu erstellen. Beispielsweise lässt sich durch Verwenden der <xref:System.Text.StringBuilder>-Klasse die Leistung steigern, wenn zahlreiche Zeichenfolgen in einer Schleife verkettet werden.  
@@ -48,29 +47,29 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]
  [!code-vb[Conceptual.StringBuilder#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#2)]  
   
- Darüber hinaus können Sie die <xref:System.Text.StringBuilder.Capacity%2A>-Eigenschaft mit Lese-/Schreibzugriff verwenden, um die maximale Länge Ihres Objekts festzulegen. Im folgenden Beispiel wird die **Capacity** -Eigenschaft verwendet, um die maximale Objektlänge zu definieren.  
+ Darüber hinaus können Sie die <xref:System.Text.StringBuilder.Capacity%2A>-Eigenschaft mit Lese-/Schreibzugriff verwenden, um die maximale Länge Ihres Objekts festzulegen. Im folgenden Beispiel wird die **Capacity**-Eigenschaft verwendet, um die maximale Objektlänge zu definieren.  
   
  [!code-cpp[Conceptual.StringBuilder#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#3)]
  [!code-csharp[Conceptual.StringBuilder#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#3)]
  [!code-vb[Conceptual.StringBuilder#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#3)]  
   
- Mithilfe der <xref:System.Text.StringBuilder.EnsureCapacity%2A>-Methode kann die Kapazität des aktuellen **StringBuilder** -Objekts überprüft werden. Ist die Kapazität größer als der übergebene Wert, wird keine Änderung vorgenommen. Ist die Kapazität dagegen kleiner als der übergebene Wert, wird die aktuelle Kapazität entsprechend dem übergebenen Wert geändert.  
+ Mithilfe der <xref:System.Text.StringBuilder.EnsureCapacity%2A>-Methode kann die Kapazität des aktuellen **StringBuilder**-Objekts überprüft werden. Ist die Kapazität größer als der übergebene Wert, wird keine Änderung vorgenommen. Ist die Kapazität dagegen kleiner als der übergebene Wert, wird die aktuelle Kapazität entsprechend dem übergebenen Wert geändert.  
   
- Die <xref:System.Text.StringBuilder.Length%2A>-Eigenschaft kann auch angezeigt oder festgelegt werden. Wenn Sie für die **Length** -Eigenschaft einen Wert festlegen, der größer ist als der Wert der **Capacity** -Eigenschaft, wird die **Capacity** -Eigenschaft automatisch auf den Wert der **Length** -Eigenschaft festgelegt. Ist die **Length** -Eigenschaft auf einen Wert festgelegt, der kleiner als die Länge der Zeichenfolge im aktuellen **StringBuilder** -Objekt ist, wird die Zeichenfolge gekürzt.  
+ Die <xref:System.Text.StringBuilder.Length%2A>-Eigenschaft kann auch angezeigt oder festgelegt werden. Wenn Sie für die **Length**-Eigenschaft einen Wert festlegen, der größer ist als der Wert der **Capacity**-Eigenschaft, wird die **Capacity**-Eigenschaft automatisch auf den Wert der **Length**-Eigenschaft festgelegt. Ist die **Length**-Eigenschaft auf einen Wert festgelegt, der kleiner als die Länge der Zeichenfolge im aktuellen **StringBuilder**-Objekt ist, wird die Zeichenfolge gekürzt.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>Ändern der StringBuilder-Zeichenfolge  
- In der folgenden Tabelle sind die Methoden aufgeführt, mit denen Sie den Inhalt eines **StringBuilder** -Objekts ändern können.  
+ In der folgenden Tabelle sind die Methoden aufgeführt, mit denen Sie den Inhalt eines **StringBuilder**-Objekts ändern können.  
   
 |Methodenname|Verwendung|  
 |-----------------|---------|  
-|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Fügt Informationen an das Ende des aktuellen **StringBuilder** -Objekts an.|  
+|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Fügt Informationen an das Ende des aktuellen **StringBuilder**-Objekts an.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Ersetzt einen in einer Zeichenfolge übergebenen Formatbezeichner durch formatierten Text.|  
-|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Fügt eine Zeichenfolge oder ein Objekt in den angegebenen Index des aktuellen **StringBuilder** -Objekts ein.|  
-|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Entfernt eine angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder** -Objekt.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Hiermit werden alle Vorkommen eines angegebenen Zeichens bzw. einer angegebenen Zeichenfolge im aktuellen **StringBuilder** -Objekt durch ein anderes Zeichen bzw. eine andere Zeichenfolge ersetzt.|  
+|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Fügt eine Zeichenfolge oder ein Objekt in den angegebenen Index des aktuellen **StringBuilder**-Objekts ein.|  
+|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Entfernt eine angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder**-Objekt.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Hiermit werden alle Vorkommen eines angegebenen Zeichens bzw. einer angegebenen Zeichenfolge im aktuellen **StringBuilder**-Objekt durch ein anderes Zeichen bzw. eine andere Zeichenfolge ersetzt.|  
   
 ### <a name="append"></a>Append  
- Mithilfe der **Append** -Methode kann Text oder eine Zeichenfolgendarstellung eines Objekts am Ende einer Zeichenfolge hinzugefügt werden, die durch den aktuellen **StringBuilder** dargestellt wird. Im folgenden Beispiel wird ein **StringBuilder** -Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt. Speicherplatz wird automatisch nach Bedarf zugeordnet.  
+ Mithilfe der **Append**-Methode kann Text oder eine Zeichenfolgendarstellung eines Objekts am Ende einer Zeichenfolge hinzugefügt werden, die durch den aktuellen **StringBuilder** dargestellt wird. Im folgenden Beispiel wird ein **StringBuilder**-Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt. Speicherplatz wird automatisch nach Bedarf zugeordnet.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
  [!code-csharp[Conceptual.StringBuilder#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#4)]
@@ -91,14 +90,14 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
 ### <a name="remove"></a>Remove  
- Über die **Remove** -Methode können Sie, beginnend bei einem angegebenen nullbasierten Index, eine bestimmte Anzahl von Zeichen aus dem aktuellen <xref:System.Text.StringBuilder>-Objekt entfernen. Im folgenden Beispiel wird die **Remove** -Methode verwendet, um ein <xref:System.Text.StringBuilder>-Objekt zu kürzen.  
+ Über die **Remove**-Methode können Sie, beginnend bei einem angegebenen nullbasierten Index, eine bestimmte Anzahl von Zeichen aus dem aktuellen <xref:System.Text.StringBuilder>-Objekt entfernen. Im folgenden Beispiel wird die **Remove**-Methode verwendet, um ein <xref:System.Text.StringBuilder>-Objekt zu kürzen.  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
 ### <a name="replace"></a>Replace  
- Mithilfe der **Replace** -Methode können Zeichen im <xref:System.Text.StringBuilder>-Objekt durch ein anderes angegebenes Zeichen ersetzt werden. Im folgenden Beispiel wird die **Replace** -Methode verwendet, um in einem <xref:System.Text.StringBuilder>-Objekt nach allen Vorkommen des Ausrufezeichens (!) zu suchen und diese durch das Fragezeichen (?) zu ersetzen.  
+ Mithilfe der **Replace**-Methode können Zeichen im <xref:System.Text.StringBuilder>-Objekt durch ein anderes angegebenes Zeichen ersetzt werden. Im folgenden Beispiel wird die **Replace**-Methode verwendet, um in einem <xref:System.Text.StringBuilder>-Objekt nach allen Vorkommen des Ausrufezeichens (!) zu suchen und diese durch das Fragezeichen (?) zu ersetzen.  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
  [!code-csharp[Conceptual.StringBuilder#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#8)]

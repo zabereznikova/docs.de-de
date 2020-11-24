@@ -6,13 +6,15 @@ helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864344"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099047"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Gewusst wie: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung (C#-Programmierhandbuch)
 

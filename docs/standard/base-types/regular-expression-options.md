@@ -2,7 +2,6 @@
 title: Optionen für reguläre Ausdrücke
 description: Informationen zur Verwendung von Optionen für reguläre Ausdrücke in .NET, z. B. Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung, der Mehrzeilenmodus und der Modus „Von rechts nach links“
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 5687d1e5a11e69cc9ecf2bd34067329cc52955d2
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a77409476c8b2c1b32429118edbe6ad6542a7b09
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888996"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828945"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
@@ -267,7 +266,7 @@ In den folgenden Fällen werden Leerzeichen in regulären Ausdrücken jedoch nic
 
 - Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Zum Beispiel:
 
-  - Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression* .
+  - Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.
 
   - Das Sprachelement `\p{`*Name*`}`, das für eine Unicode-Kategorie oder einen benannten Block steht, darf im `\p{`-Teil des Elements kein eingebettetes Leerzeichen enthalten. Falls Sie trotzdem ein Leerzeichen einfügen, löst das Element zur Laufzeit eine <xref:System.ArgumentException> aus.
 

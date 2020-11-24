@@ -1,7 +1,6 @@
 ---
 title: Garbage Collection-Benachrichtigungen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-ms.openlocfilehash: 389e851782edb82578c216951be440070b92723c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c91712b9d25221f1ffd9e9e980c420be32e2379a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286001"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831181"
 ---
 # <a name="garbage-collection-notifications"></a>Garbage Collection-Benachrichtigungen
 Es gibt Situationen, in denen eine vollständige Garbage Collection (d.h. eine Garbage Collection der Generation 2) der Common Language Runtime die Leistung beeinträchtigen kann. Dies kann vor allem bei Servern, die eine hohe Zahl an Anforderungen verarbeiten, ein Problem sein; in diesem Fall kann eine lange Garbage Collection einen Anforderungstimeout verursachen. Um eine vollständige Garbage Collection im Rahmen eines kritischen Zeitraums zu verhindern, können Sie benachrichtigt werden, wenn eine vollständige Garbage Collection bevorsteht, und Maßnahmen ergreifen, um die Workload auf eine andere Serverinstanz umzuleiten. Sie können auch selbst eine Garbage Collection auslösen, vorausgesetzt, dass die aktuelle Serverinstanz keine Anforderungen verarbeiten muss.  

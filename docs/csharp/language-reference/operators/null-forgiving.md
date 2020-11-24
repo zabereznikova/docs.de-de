@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5418f96a3b4515224c49a1c1aa38784c348a86db
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: f2eb57bba462d471a041c17024fa7031c2c7f87d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516150"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830583"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! NULL-toleranter Operator (C#-Referenz)
 
@@ -51,7 +51,7 @@ Im vorherigen Beispiel müssen Sie den NULL-toleranten Operator nicht verwenden,
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie im Abschnitt [Der NULL-tolerante Operator](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) des [Entwurfs der Spezifikation von Nullable-Verweistypen](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md).
+Weitere Informationen finden Sie im Abschnitt [Der NULL-tolerante Operator](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md#the-null-forgiving-operator) des [Entwurfs der Spezifikation von Nullable-Verweistypen](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md).
 
 ## <a name="see-also"></a>Siehe auch
 

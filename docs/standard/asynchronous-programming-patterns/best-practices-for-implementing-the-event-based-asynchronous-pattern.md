@@ -1,7 +1,6 @@
 ---
 title: Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 8f2b1b4d6793be3e4de6fbc9fc09e8a7e690762c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6c2df4c2877f9191bd2b8190869c359a74de8e8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888918"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830492"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
 
@@ -35,11 +34,11 @@ Das ereignisbasierte asynchrone Muster bietet Ihnen eine effektive Methode, um a
   
 ### <a name="completed-event-and-eventargs"></a>Abgeschlossenes Event und EventArgs
 
-Wenden Sie für jede separate <em>MethodName</em>**Async** -Methode die folgenden Entwurfsanforderungen an:  
+Wenden Sie für jede separate <em>MethodName</em>**Async**-Methode die folgenden Entwurfsanforderungen an:  
   
-- Definieren Sie ein <em>MethodName</em>**Completed** -Ereignis in derselben Klasse wie die Methode.  
+- Definieren Sie ein <em>MethodName</em>**Completed**-Ereignis in derselben Klasse wie die Methode.  
   
-- Definieren Sie eine <xref:System.EventArgs>-Klasse und einen begleitenden Delegaten für das <em>MethodName</em>**Completed** -Ereignis, das von der <xref:System.ComponentModel.AsyncCompletedEventArgs>-Klasse abgeleitet ist. Der Standardklassenname sollte die Form <em>MethodName</em>**CompletedEventArgs** aufweisen.  
+- Definieren Sie eine <xref:System.EventArgs>-Klasse und einen begleitenden Delegaten für das <em>MethodName</em>**Completed**-Ereignis, das von der <xref:System.ComponentModel.AsyncCompletedEventArgs>-Klasse abgeleitet ist. Der Standardklassenname sollte die Form <em>MethodName</em>**CompletedEventArgs** aufweisen.  
   
 - Stellen Sie sicher, dass die Klasse <xref:System.EventArgs> für die Rückgabewerte der Methode <em>MethodName</em> spezifisch ist. Wenn Sie die Klasse <xref:System.EventArgs> verwenden, sollten Sie von Entwicklern niemals verlangen, das Ergebnis umzuwandeln.  
   
@@ -61,27 +60,27 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Definieren Sie keine <xref:System.EventArgs>-Klasse zum Zurückgeben von Methoden, die `void` zurückgeben. Verwenden Sie stattdessen eine Instanz der <xref:System.ComponentModel.AsyncCompletedEventArgs>-Klasse.  
   
-- Stellen Sie sicher, dass Sie immer das <em>MethodName</em>**Completed** -Ereignis auslösen. Dieses Ereignis sollte bei einem erfolgreichen Abschluss, einem Fehler oder einem Abbruch ausgelöst werden. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt.  
+- Stellen Sie sicher, dass Sie immer das <em>MethodName</em>**Completed**-Ereignis auslösen. Dieses Ereignis sollte bei einem erfolgreichen Abschluss, einem Fehler oder einem Abbruch ausgelöst werden. Anwendungen sollten niemals auf eine Situation treffen, in der sie im Leerlauf bleiben und ein Abschluss niemals erfolgt.  
   
 - Stellen Sie sicher, dass Sie alle Ausnahmen abfangen, die im asynchronen Vorgang auftreten und die abgefangene Ausnahme der Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> zuweisen.  
   
 - Wenn beim Abschließen der Aufgabe ein Fehler aufgetreten ist, sollte auf die Ergebnisse nicht zugegriffen werden können. Wenn die Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> nicht `null` entspricht, stellen Sie sicher, dass der Zugriff auf eine beliebige Eigenschaft in der <xref:System.EventArgs>-Struktur eine Ausnahme auslöst. Verwenden Sie die Methode <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A>, um diese Überprüfung durchzuführen.  
   
-- Modellieren Sie einen Timeout als Fehler. Wenn es zu einem Timeout kommt, lösen Sie das <em>MethodName</em>**Completed** -Ereignis aus und weisen der Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> eine <xref:System.TimeoutException> zu.  
+- Modellieren Sie einen Timeout als Fehler. Wenn es zu einem Timeout kommt, lösen Sie das <em>MethodName</em>**Completed**-Ereignis aus und weisen der Eigenschaft <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> eine <xref:System.TimeoutException> zu.  
   
-- Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass das <em>MethodName</em>**Completed** -Ereignis das geeignete `userSuppliedState`-Objekt enthält.  
+- Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass das <em>MethodName</em>**Completed**-Ereignis das geeignete `userSuppliedState`-Objekt enthält.  
   
-- Stellen Sie sicher, dass das <em>MethodName</em>**Completed** -Ereignis im geeigneten Thread und zum geeigneten Zeitpunkt im Anwendungslebenszyklus ausgelöst wird. Weitere Informationen finden Sie im Abschnitt „Threading und Kontexte“.  
+- Stellen Sie sicher, dass das <em>MethodName</em>**Completed**-Ereignis im geeigneten Thread und zum geeigneten Zeitpunkt im Anwendungslebenszyklus ausgelöst wird. Weitere Informationen finden Sie im Abschnitt „Threading und Kontexte“.  
   
 ### <a name="simultaneously-executing-operations"></a>Gleichzeitige Ausführung von Vorgängen  
   
-- Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, ermöglichen Sie dem Entwickler, jeden Aufruf separat nachzuverfolgen. Hierzu definieren Sie die <em>MethodName</em>**Async** -Überladung, die einen State-Parameter mit Objektwert oder eine Task-ID namens `userSuppliedState` akzeptiert. Dieser Parameter sollte immer der letzte Parameter in der Signatur der <em>MethodName</em>**Async** -Methode sein.  
+- Wenn Ihre Klasse mehrere gleichzeitige Aufrufe unterstützt, ermöglichen Sie dem Entwickler, jeden Aufruf separat nachzuverfolgen. Hierzu definieren Sie die <em>MethodName</em>**Async**-Überladung, die einen State-Parameter mit Objektwert oder eine Task-ID namens `userSuppliedState` akzeptiert. Dieser Parameter sollte immer der letzte Parameter in der Signatur der <em>MethodName</em>**Async**-Methode sein.  
   
-- Wenn Ihre Klasse die <em>MethodName</em>**Async** -Überladung definiert, die einen State-Parameter mit Objektwert oder eine Task-ID akzeptiert, stellen Sie sicher, dass Sie die Lebensdauer des Vorgangs mit dieser Task-ID nachverfolgen und eine Rückgabe an den Abschlusshandler erfolgt. Es sind Hilfsklassen zur Unterstützung verfügbar. Weitere Informationen zur Parallelitätsverwaltung finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md).  
+- Wenn Ihre Klasse die <em>MethodName</em>**Async**-Überladung definiert, die einen State-Parameter mit Objektwert oder eine Task-ID akzeptiert, stellen Sie sicher, dass Sie die Lebensdauer des Vorgangs mit dieser Task-ID nachverfolgen und eine Rückgabe an den Abschlusshandler erfolgt. Es sind Hilfsklassen zur Unterstützung verfügbar. Weitere Informationen zur Parallelitätsverwaltung finden Sie unter [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md).  
   
-- Wenn Ihre Klasse die <em>MethodName</em>**Async** -Methode ohne den State-Parameter definiert und nicht mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass jeder Versuch, <em>MethodName</em>**Async** aufzurufen, bevor der vorherige <em>MethodName</em>**Async** -Aufruf abgeschlossen wurde, eine <xref:System.InvalidOperationException> auslöst.  
+- Wenn Ihre Klasse die <em>MethodName</em>**Async**-Methode ohne den State-Parameter definiert und nicht mehrere gleichzeitige Aufrufe unterstützt, stellen Sie sicher, dass jeder Versuch, <em>MethodName</em>**Async** aufzurufen, bevor der vorherige <em>MethodName</em>**Async**-Aufruf abgeschlossen wurde, eine <xref:System.InvalidOperationException> auslöst.  
   
-- Im Allgemeinen sollte keine Ausnahme ausgelöst werden, wenn die <em>MethodName</em>**Async** -Methode ohne den `userSuppliedState`-Parameter mehrmals aufgerufen wird, sodass mehrere ausstehende Vorgänge vorhanden sind. Sie können eine Ausnahme auslösen, wenn Ihre Klasse diese Situation explizit nicht verarbeiten kann, aber gehen Sie davon aus, dass Entwickler diese mehrfachen, nicht unterscheidbare Rückrufe handhaben können.  
+- Im Allgemeinen sollte keine Ausnahme ausgelöst werden, wenn die <em>MethodName</em>**Async**-Methode ohne den `userSuppliedState`-Parameter mehrmals aufgerufen wird, sodass mehrere ausstehende Vorgänge vorhanden sind. Sie können eine Ausnahme auslösen, wenn Ihre Klasse diese Situation explizit nicht verarbeiten kann, aber gehen Sie davon aus, dass Entwickler diese mehrfachen, nicht unterscheidbare Rückrufe handhaben können.  
   
 ### <a name="accessing-results"></a>Zugreifen auf Ergebnisse  
   
@@ -93,7 +92,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Unterstützen Sie die Statusberichterstellung, wenn möglich. Damit können Entwickler eine bessere Benutzerfreundlichkeit für die Anwendung bereitstellen, wenn sie Ihre Klasse verwenden.  
   
-- Wenn Sie ein **ProgressChanged** - oder <em>MethodName</em>**ProgressChanged** -Ereignis implementieren, stellen Sie sicher, dass solche Ereignisse nicht für einen bestimmten asynchronen Vorgang ausgelöst werden, nachdem das <em>MethodName</em>**Completed** -Ereignis dieses Vorgangs ausgelöst wurde.  
+- Wenn Sie ein **ProgressChanged**- oder <em>MethodName</em>**ProgressChanged**-Ereignis implementieren, stellen Sie sicher, dass solche Ereignisse nicht für einen bestimmten asynchronen Vorgang ausgelöst werden, nachdem das <em>MethodName</em>**Completed**-Ereignis dieses Vorgangs ausgelöst wurde.  
   
 - Wenn der Standardwert für <xref:System.ComponentModel.ProgressChangedEventArgs> ausgefüllt wird, stellen Sie sicher, dass <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> immer als ein Prozentsatz interpretiert werden kann. Der Prozentsatz muss nicht präzise sein, sollte aber einen Prozentsatz darstellen. Wenn die Metrik für Ihre Statusberichterstellung etwas anderes als ein Prozentsatz sein muss, leiten Sie eine Klasse von der <xref:System.ComponentModel.ProgressChangedEventArgs>-Klasse ab, und behalten Sie 0 für <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> bei. Vermeiden Sie die Verwendung einer anderen Berichtsmetrik als einen Prozentsatz.  
   
@@ -103,7 +102,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Machen Sie keine `IsBusy`-Eigenschaft verfügbar, wenn Ihre Klasse mehrere parallele Aufrufe unterstützt. XML-Webdienstproxies machen beispielsweise keine `IsBusy`-Eigenschaft verfügbar, weil sie mehrere parallele Aufrufe von asynchronen Methoden unterstützen.  
   
-- Die `IsBusy`-Eigenschaft sollte `true` zurückgeben, nachdem die <em>MethodName</em>**Async** -Methode aufgerufen wurde und bevor das <em>MethodName</em>**Completed** -Ereignis ausgelöst wird. Andernfalls sollte `false` zurückgegeben werden. Die Komponenten <xref:System.ComponentModel.BackgroundWorker> und <xref:System.Net.WebClient> sind Beispiele für Klassen, die eine `IsBusy`-Eigenschaft verfügbar machen.  
+- Die `IsBusy`-Eigenschaft sollte `true` zurückgeben, nachdem die <em>MethodName</em>**Async**-Methode aufgerufen wurde und bevor das <em>MethodName</em>**Completed**-Ereignis ausgelöst wird. Andernfalls sollte `false` zurückgegeben werden. Die Komponenten <xref:System.ComponentModel.BackgroundWorker> und <xref:System.Net.WebClient> sind Beispiele für Klassen, die eine `IsBusy`-Eigenschaft verfügbar machen.  
   
 ### <a name="cancellation"></a>Abbruch  
   
@@ -115,7 +114,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Stellen Sie sicher, dass die Aufrufe an eine Abbruchmethode immer erfolgreich zurückgegeben werden und niemals eine Ausnahme auslösen. Im Allgemeinen wird ein Client nicht benachrichtigt, ob ein Vorgang zu einem gegebenen Zeitpunkt wirklich abbrechbar ist und ob ein zuvor ausgegebener Abbruch erfolgreich war. Die Anwendung wird jedoch immer benachrichtigt, wenn ein Abbruch erfolgreich war, da die Anwendung am Abschlussstatus teilnimmt.  
   
-- Lösen Sie das <em>MethodName</em>**Completed** -Ereignis aus, wenn der Vorgang abgebrochen wird.  
+- Lösen Sie das <em>MethodName</em>**Completed**-Ereignis aus, wenn der Vorgang abgebrochen wird.  
   
 ### <a name="errors-and-exceptions"></a>Fehler und Ausnahmen  
   
@@ -125,7 +124,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 
  Für die korrekte Funktionsweise Ihrer Klasse ist es wichtig, dass die Ereignishandler des Clients im richtigen Thread oder Kontext des entsprechenden Anwendungsmodells aufgerufen werden, einschließlich ASP.NET- und Windows Forms-Anwendungen. Es werden zwei wichtige Hilfsklassen bereitgestellt, um sicherzustellen, dass sich Ihre asynchrone Klasse unter jedem Anwendungsmodell korrekt verhält: <xref:System.ComponentModel.AsyncOperation> und <xref:System.ComponentModel.AsyncOperationManager>.  
   
- <xref:System.ComponentModel.AsyncOperationManager> stellt eine Methode bereit, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, die <xref:System.ComponentModel.AsyncOperation> zurückgibt. Ihre <em>MethodName</em>**Async** -Methode ruft <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> auf, und Ihre Klasse verwendet den zurückgegebenen <xref:System.ComponentModel.AsyncOperation>, um die Lebensdauer des asynchronen Tasks nachzuverfolgen.  
+ <xref:System.ComponentModel.AsyncOperationManager> stellt eine Methode bereit, <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, die <xref:System.ComponentModel.AsyncOperation> zurückgibt. Ihre <em>MethodName</em>**Async**-Methode ruft <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> auf, und Ihre Klasse verwendet den zurückgegebenen <xref:System.ComponentModel.AsyncOperation>, um die Lebensdauer des asynchronen Tasks nachzuverfolgen.  
   
  Für einen Statusbericht, inkrementelle Ergebnisse und Abschluss auf dem Client rufen Sie die Methoden <xref:System.ComponentModel.AsyncOperation.Post%2A> und <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> in <xref:System.ComponentModel.AsyncOperation> auf. <xref:System.ComponentModel.AsyncOperation> ist für das Marshalling von Aufrufen an die Ereignishandler des Clients an den richtigen Thread oder Kontext verantwortlich.  
   

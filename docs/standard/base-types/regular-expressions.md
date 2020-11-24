@@ -2,7 +2,6 @@
 title: Reguläre Ausdrücke von .NET
 description: Verwenden Sie reguläre Ausdrücke, um in .NET nach bestimmten Zeichenmustern zu suchen, Text zu überprüfen, mit Text-Teilzeichenfolgen zu arbeiten und extrahierte Zeichenfolgen einer Sammlung hinzuzufügen.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - .NET regular expressions
 - strings [.NET], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 6704ab4a99789e2e0bb4c4336f8c73aa8a89671d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 6fa791005aa9fa9956a3169f8f9ddecfa201bcda
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888983"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831337"
 ---
 # <a name="net-regular-expressions"></a>Reguläre Ausdrücke von .NET
 

@@ -2,7 +2,6 @@
 title: Asynchrones Aufrufen von synchronen Methoden
 description: Erfahren Sie, wie Sie synchrone Methoden in .NET über die Methoden BeginInvoke und EndInvoke asynchron aufrufen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: d518e5f64096fde5c9b14222dc4fe0634e6bb7b1
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 668ac7552289a9d1015b62ed9e68f53415dd6211
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888892"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830440"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Asynchrones Aufrufen von synchronen Methoden
 

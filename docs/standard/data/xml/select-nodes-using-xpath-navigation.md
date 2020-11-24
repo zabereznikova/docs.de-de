@@ -2,17 +2,16 @@
 title: Auswählen von Knoten mithilfe der XPath-Navigation
 description: Hier erfahren Sie, wie Sie XML-Knoten in .NET auswählen. Verwenden Sie DOM-Methoden (Dokumentobjektmodell), um die XPath-Navigation (XML Path Language) zum Abfragen von DOM-Informationen zu verwenden.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662510"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829244"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Auswählen von Knoten mithilfe der XPath-Navigation
 Das XML-DOM (Document Object Model) enthält Methoden, die Ihnen ermöglichen, mithilfe der XPath-Navigation (XML Path Language) Informationen im DOM abzufragen. Mit XPath können Sie einen bestimmten einzelnen Knoten oder alle Knoten suchen, die bestimmte Kriterien erfüllen.  

@@ -2,23 +2,22 @@
 title: Aufgabenbasiertes asynchrones Programmieren – .NET
 description: In diesem Artikel erfahren Sie mehr über das aufgabenbasierte asynchrone Programmieren über die Task Parallel Library (TPL) in .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925245"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830024"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
 
-Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe* , die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:
+Die Task Parallel Library (TPL) basiert auf dem Konzept einer *Aufgabe*, die einen asynchronen Vorgang darstellt. In einigen Dingen ist eine Aufgabe vergleichbar mit einer <xref:System.Threading.ThreadPool>, weist jedoch eine höhere Abstraktionsebene auf. Der Begriff *Aufgabenparallelität* bezeichnet eine oder mehrere eigenständige Aufgaben, die gleichzeitig ausgeführt werden. Aufgaben bieten zwei Hauptvorteile:
 
 - Effiziente und skalierbare Verwendung von Systemressourcen.
 
@@ -94,7 +93,7 @@ Jeder Aufgabe wird eine ganzzahlige ID zugeordnet, durch die diese in einer Anwe
 
 ## <a name="task-creation-options"></a>Aufgabenerstellungsoptionen
 
-Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe mindestens einer dieser Optionen teilen Sie dem Taskplaner mit, wie die Task im Threadpool geplant werden soll. Die Optionen können mit einem bitweisen **OR** -Vorgang kombiniert werden.
+Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die einen <xref:System.Threading.Tasks.TaskCreationOptions>-Parameter akzeptieren. Durch Angabe mindestens einer dieser Optionen teilen Sie dem Taskplaner mit, wie die Task im Threadpool geplant werden soll. Die Optionen können mit einem bitweisen **OR**-Vorgang kombiniert werden.
 
 Im folgenden Beispiel wird eine Task veranschaulicht, die über die <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>-Option und die <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>-Option verfügt.
 

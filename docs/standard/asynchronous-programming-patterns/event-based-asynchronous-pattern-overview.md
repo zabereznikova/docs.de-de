@@ -2,7 +2,6 @@
 title: Übersicht über ereignisbasierte asynchrone Muster
 description: In diesem Artikel werden ereignisbasierte asynchrone Muster in .NET erläutert, die die Vorteile von Multithreadanwendungen verfügbar machen und gewisse Designschwierigkeiten beseitigen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 5ab3229f71e264bbcd26d3d4c7bb52430b02865a
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 88bdb1cb88a5d6ca5c948d5f3110ddb13bdda6ae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888827"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830388"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Übersicht über ereignisbasierte asynchrone Muster
 Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin auf Benutzerinteraktionen reagieren, ist oft ein Entwurf erforderlich, der mehrere Threads verwendet. Der <xref:System.Threading>-Namespace bietet alle erforderlichen Tools für die Erstellung von leistungsstarken Multithreadanwendungen, aber für eine effektive Verwendung dieser Tools ist eine umfassende Erfahrung mit der Multithread-Softwareentwicklung erforderlich. Für relativ einfache Multithreadanwendungen bietet die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine unkomplizierte Lösung. Für komplexere asynchrone Anwendungen sollten Sie die Implementierung einer Klasse in Betracht ziehen, die den ereignisbasierten asynchronen Muster entspricht.  
@@ -37,7 +36,7 @@ Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin a
   
 - Kommunizieren Sie mit ausstehenden asynchronen Vorgängen über das vertraute Modell mit Ereignissen und Delegaten. Weitere Informationen zum Verwenden von Ereignishandlern und Delegaten finden Sie unter [Ereignisse](../events/index.md).  
   
- Eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt, verfügt über mindesten eine Methode namens _MethodName_**Async** . Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein _MethodName_**Completed** -Ereignis und eine _MethodName_**AsyncCancel** -Methode (kurz **CancelAsync** ) verfügen.  
+ Eine Klasse, die das ereignisbasierte asynchrone Muster unterstützt, verfügt über mindesten eine Methode namens _MethodName_**Async**. Diese Methoden spiegeln möglicherweise synchrone Versionen wider, die denselben Vorgang im aktuellen Thread durchführen. Die Klasse kann darüber hinaus auch über ein _MethodName_**Completed**-Ereignis und eine _MethodName_**AsyncCancel**-Methode (kurz **CancelAsync**) verfügen.  
   
  <xref:System.Windows.Forms.PictureBox> ist eine typische Komponente, die das ereignisbasierte asynchrone Muster unterstützt. Sie können ein Image synchron herunterladen, indem Sie seine <xref:System.Windows.Forms.PictureBox.Load%2A>-Methode aufrufen, aber wenn das Image groß oder die Netzwerkverbindung langsam ist, reagiert Ihre Anwendung nicht mehr, bis der Downloadvorgang abgeschlossen ist und der Aufruf an <xref:System.Windows.Forms.PictureBox.Load%2A> zurückgegeben wird.  
   
@@ -49,7 +48,7 @@ Für Anwendungen, die viele Aufgaben gleichzeitig durchführen, aber weiterhin a
 > Es ist möglich, dass der Download gerade in dem Moment abgeschlossen wird, in dem die <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>-Anforderung erfolgt, sodass <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> die Anforderung zum Abbrechen möglicherweise nicht widerspiegelt. Dies wird als *Racebedingung* bezeichnet und ist ein typisches Problem bei der Multithreadprogrammierung. Weitere Informationen zu Problemen bei der Multithreadprogrammierung finden Sie unter [Empfohlene Vorgehensweise für das verwaltete Threading](../threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Eigenschaften des ereignisbasierten asynchronen Musters  
- Das ereignisbasierte asynchrone Muster kann je nach Komplexität der von einer bestimmten Klasse unterstützten Vorgänge mehrere Formen annehmen. Die einfachsten Klassen verfügen möglicherweise über eine einzige _MethodName_**Async** -Methode und ein entsprechendes _MethodName_**Completed** -Ereignis. Komplexere Klassen verfügen möglicherweise über mehrere _MethodName_**Async** -Methoden mit jeweils einem entsprechenden _MethodName_**Completed** -Ereignis sowie synchronen Versionen dieser Methoden. Klassen können optional das Abbrechen, die Statusberichterstellung und inkrementelle Ergebnisse für jede asynchrone Methode unterstützen.  
+ Das ereignisbasierte asynchrone Muster kann je nach Komplexität der von einer bestimmten Klasse unterstützten Vorgänge mehrere Formen annehmen. Die einfachsten Klassen verfügen möglicherweise über eine einzige _MethodName_**Async**-Methode und ein entsprechendes _MethodName_**Completed**-Ereignis. Komplexere Klassen verfügen möglicherweise über mehrere _MethodName_**Async**-Methoden mit jeweils einem entsprechenden _MethodName_**Completed**-Ereignis sowie synchronen Versionen dieser Methoden. Klassen können optional das Abbrechen, die Statusberichterstellung und inkrementelle Ergebnisse für jede asynchrone Methode unterstützen.  
   
  Eine asynchrone Methode kann außerdem mehrere ausstehende Aufrufe (mehrere parallele Aufrufe) unterstützen, sodass Ihr Code diese beliebig oft aufrufen kann, bevor andere ausstehende Vorgänge abgeschlossen werden. Für eine ordnungsgemäße Handhabung dieser Situation muss Ihre Anwendung möglicherweise den Abschluss jedes Vorgangs nachverfolgen.  
   
@@ -119,7 +118,7 @@ public class AsyncExample
 > Sie müssen darauf achten, einen eindeutigen Wert für `userState` in Ihren Aufrufen an Überladungen mit mehreren Aufrufen bereitzustellen. Nicht eindeutige Aufgaben-IDs führen dazu, dass die asynchrone Klasse eine <xref:System.ArgumentException> auslöst.  
   
 ### <a name="canceling-pending-operations"></a>Abbrechen ausstehender Vorgänge  
- Es ist wichtig, dass asynchrone Vorgänge jederzeit vor Ihrem Abschluss abgebrochen werden können. Klassen, die das ereignisbasierte asynchrone Muster implementieren, verfügen über eine `CancelAsync`-Methode (wenn nur eine asynchrone Methode vorhanden ist) oder eine _MethodName_**AsyncCancel** -Methode (wenn mehrere asynchrone Methoden vorhanden sind).  
+ Es ist wichtig, dass asynchrone Vorgänge jederzeit vor Ihrem Abschluss abgebrochen werden können. Klassen, die das ereignisbasierte asynchrone Muster implementieren, verfügen über eine `CancelAsync`-Methode (wenn nur eine asynchrone Methode vorhanden ist) oder eine _MethodName_**AsyncCancel**-Methode (wenn mehrere asynchrone Methoden vorhanden sind).  
   
  Methoden, die mehrere Aufrufe zulassen, nehmen einen `userState`-Parameter an, der verwendet werden kann, um die Lebensdauer jeder Aufgabe nachzuverfolgen. `CancelAsync` nimmt einen `userState`-Parameter an, mit dem Sie bestimmte ausstehende Aufgaben abbrechen können.  
   

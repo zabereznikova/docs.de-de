@@ -2,7 +2,6 @@
 title: Übersicht über die .NET-Klassenbibliothek
 description: Informationen zur .NET-Klassenbibliothek. .NET-APIs enthalten Klassen, Schnittstellen, Delegate und Werttypen, die den Zugriff auf Systemfunktionen ermöglichen.
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687522"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831259"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -69,7 +68,7 @@ In .NET stehen neben zahlreichen Schnittstellen abstrakte und konkrete (nicht ab
   
  Dieses Benennungsschema erleichtert es Entwicklern von Bibliotheken, Erweiterungen für .NET zu entwerfen, um hierarchische Typengruppen zu erstellen und diese konsistent und aussagekräftig zu benennen. Außerdem können Typen nach ihrem vollständigen Namen (d. h. ihrem Namespace und Typnamen) eindeutig identifiziert werden, wodurch Konflikte bei Typnamen vermieden werden. Von Entwicklern von Bibliotheken wird erwartet, dass sie sich beim Erstellen der Namen für eigene Namespaces an die nachstehende Konvention halten:  
   
- *CompanyName*. *TechnologyName*  
+ *CompanyName*.*TechnologyName*  
   
  Der Namespace `Microsoft.Word` entspricht beispielsweise dieser Richtlinie.  
   

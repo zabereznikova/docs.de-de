@@ -1,17 +1,16 @@
 ---
 title: Ändern der Eigenschaften von Namespacepräfixen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: b817a68ff9789be414118ff4c1a3d88ca3ea9f01
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 14a59a9fdc602e63822a62c102cbffa32d6ba850
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290914"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830271"
 ---
 # <a name="changing-namespace-prefix-properties"></a>Ändern der Eigenschaften von Namespacepräfixen
 Mit der **XmlNode**-Klasse können Sie das Namespacepräfix ändern, das mit einem bestimmten Knoten verknüpft ist. Im folgenden Code wird beispielsweise die Änderung des Präfixes eines Elements dargestellt.  

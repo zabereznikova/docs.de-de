@@ -1,14 +1,13 @@
 ---
 title: Auswirkungen von Namespaces auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 64359aee-aab0-4042-9a32-d19789af6ca7
-ms.openlocfilehash: 05ec622f09106978281cd3e6f0a82f13703c2097
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8ef86f05d2b39639ad5faae792eb9b2854ff0673
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288809"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830167"
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Auswirkungen von Namespaces auf die Entitätsverweiserweiterung für neue Knoten mit Elementen und Attributen
 Da in einer Entitätsdeklaration beinahe alles enthalten sein kann, besteht die Möglichkeit, dass ein Element wie `<!ENTITY aname "<elem>test</elem>">` enthalten ist.  

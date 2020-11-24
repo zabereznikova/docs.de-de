@@ -1,7 +1,6 @@
 ---
 title: Verwenden von AsyncCallback-Delegat und Zustandsobjekt
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - asynchronous programming, state objects
 - IAsyncResult interface, samples
 ms.assetid: e3e5475d-c5e9-43f0-928e-d18df8ca1f1d
-ms.openlocfilehash: e52ed550510253aba9401931c0f612211c7d1bf5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0a33c852d822e7d25d14ab17324459ec005853f9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276425"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829140"
 ---
 # <a name="using-an-asynccallback-delegate-and-state-object"></a>Verwenden von AsyncCallback-Delegat und Zustandsobjekt
 Wenn Sie einen <xref:System.AsyncCallback>-Delegaten zur Verarbeitung der Ergebnisse des asynchronen Vorgangs in einem separaten Thread verwenden, können Sie mithilfe eines Statusobjekts Informationen zwischen den Rückrufen übergeben und ein Endergebnis abrufen. In diesem Thema wird diese Vorgehensweise durch eingehendere Erläuterung des Beispiels unter [Verwenden eines AsyncCallback-Delegaten zum Beenden eines asynchronen Vorgangs](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md) veranschaulicht.  

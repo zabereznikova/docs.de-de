@@ -1,17 +1,16 @@
 ---
 title: 'Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 623f997d1c11bc643ea4605614cac147b6069be5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 62f3ec511edb7f695580dbfc386773b1dd7b7121
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287726"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829478"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Vorgehensweise: Ausführen einer XSLT-Transformation mittels einer Assembly
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Die Assembly kann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden.  

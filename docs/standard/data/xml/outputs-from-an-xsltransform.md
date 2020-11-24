@@ -1,14 +1,13 @@
 ---
 title: Ausgaben aus "XslTransform"
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-ms.openlocfilehash: 5fa8c8228382f7f326a8d2243ed0450fca31f6fb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 765f6f9a91cc44a55ab0d66ed71f19f60ef81a56
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288692"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830063"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Ausgaben aus "XslTransform"
 Stylesheets bestimmen das Ausgabeformat mithilfe einer `<xsl:output>`-Anweisung mit dem `method`-Attribut. In der folgenden Tabelle wird das Ausgabeformat bei Verwendung der <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode für das Schreiben der Ausgabe beschrieben; außerdem wird das Ausgabeformat als <xref:System.IO.Stream> oder <xref:System.IO.TextWriter> deklariert.  

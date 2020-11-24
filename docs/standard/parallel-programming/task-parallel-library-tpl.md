@@ -2,18 +2,17 @@
 title: Task Parallel Library (TPL)
 description: Erkunden Sie die Task Parallel Library (TPL), eine Sammlung von öffentlichen Typen und APIs zum Vereinfachen des Hinzufügungsprozesses für Parallelität und Nebenläufigkeit zu Anwendungen in .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 596671b267484561a8697546caa5a4764242ebd3
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: 5c26799338b46f5f0420c3b082e7d84fade27a26
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925232"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829998"
 ---
 # <a name="task-parallel-library-tpl"></a>Task Parallel Library (TPL)
 

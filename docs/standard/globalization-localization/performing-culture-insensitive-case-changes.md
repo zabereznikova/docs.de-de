@@ -1,7 +1,6 @@
 ---
 title: Durchführen kulturunabhängiger Schreibungsänderungen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: 6baef7b0a5bbdacd33d84df01b1aa943897a9e3d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 777904654eceb0c6b0a7ca0a82cea98dd81b3010
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276815"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829816"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Durchführen kulturunabhängiger Schreibungsänderungen
 Die Methoden <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> und <xref:System.Char.ToLower%2A?displayProperty=nameWithType> stellen Überladungen bereit, die keine Parameter akzeptieren. Standardmäßig führen diese Überladungen ohne Parameter die Schreibungsänderungen auf Basis des <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Werts durch. Die unter Berücksichtigung der Groß-/Kleinschreibung erzielten Ergebnisse variieren je nach Kultur. Um klar anzugeben, ob die Schreibungsänderungen kulturabhängig oder kulturunabhängig erfolgen sollen, empfiehlt sich die Verwendung der Überladungen dieser Methoden, für die explizit ein `culture`-Parameter festgelegt werden muss. Um kulturabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.CurrentCulture` für den `culture`-Parameter an. Um kulturunabhängige Schreibungsänderungen zu aktivieren, geben Sie `CultureInfo.InvariantCulture` für den `culture`-Parameter an.  

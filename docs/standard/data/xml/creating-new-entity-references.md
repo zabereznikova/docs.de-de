@@ -1,14 +1,13 @@
 ---
 title: Erstellen von neuen Entitätsverweisen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-ms.openlocfilehash: 7c94d121d00c169f0d74bc9b12c8710fb6055250
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5d1411b38ee79705cad3375aea1b95265c1ab61a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283350"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829322"
 ---
 # <a name="creating-new-entity-references"></a>Erstellen von neuen Entitätsverweisen
 Mit der **CreateEntityReference**-Methode wird ein neuer **XmlEntityReference**-Knoten erstellt. Das Dokumentobjektmodell (DOM) überprüft, ob der Entitätsname, auf den verwiesen wird, bereits deklariert ist. Wenn dies der Fall ist, wird eine Kopie der untergeordneten Knoten des **XmlEntityReference**-Knotens aus dem Entitätsdeklarationsknoten erstellt. Wenn keine übereinstimmende Entitätsdeklaration vorhanden ist, wird eine leerer Textknoten als einziger untergeordneter Knoten des Entitätsdeklarationsknotens angefügt. Da es sich bei den untergeordneten Knoten des **XmlEntityReference**-Knotens um Kopien anderer Knoten handelt, sind diese Knoten schreibgeschützt und können nicht geändert werden.  

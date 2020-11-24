@@ -1,14 +1,13 @@
 ---
 title: Knotensätze in Transformationen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-ms.openlocfilehash: 33cbae05cf35904903189ce767090d3d3cca8e4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72b3af5b471d73cc159dd700ddd29c4ffb5ea639
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288744"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830115"
 ---
 # <a name="node-sets-in-transformations"></a>Knotensätze in Transformationen
 Knotengruppen stellen einen von vier Grunddatentypen dar, die von XPath-Ausdrücken (XML Path) zurückgegeben werden. Eine Knotengruppe ist eine unsortierte Auflistung von Knoten ohne Duplikate, die in der Reihenfolge der Dokumente erstellt wurde. Eine Knotengruppe kann einer Variablen in einem Stylesheet zugeordnet werden.  

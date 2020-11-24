@@ -1,7 +1,6 @@
 ---
 title: Anwenden von Attributen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET], attributes
 - attributes [.NET], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-ms.openlocfilehash: 24fe58ddf48e40b422652baa4c5bba86eea6b84f
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 83cfb1d5b5aa3ebc8651406850a758146fd329d4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889230"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829101"
 ---
 # <a name="apply-attributes"></a>Anwenden von Attributen
 

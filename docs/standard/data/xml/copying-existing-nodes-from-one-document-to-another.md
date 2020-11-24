@@ -1,14 +1,13 @@
 ---
 title: Kopieren bestehender Knoten aus einem Dokument in ein anderes
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289199"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829608"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopieren bestehender Knoten aus einem Dokument in ein anderes
 Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine ganze Knotenunterstruktur von einem **XmlDocument** in ein anderes kopieren können. Der Knoten, der von dem Aufruf zurückgegeben wird, ist eine Kopie des Knotens aus dem Quelldokument, einschließlich Attributwerten, Knotennamen, Knotentyp und allen namespacebezogenen Attributen wie Präfix, lokaler Name und Namespace-URI (Uniform Resource Identifier). Das Quelldokument bleibt dabei unverändert. Nachdem Sie den Knoten importiert haben, müssen Sie ihn noch der Struktur hinzufügen, indem Sie eine der Methoden zum Einfügen von Knoten verwenden.  

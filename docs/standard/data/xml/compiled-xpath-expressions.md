@@ -1,17 +1,16 @@
 ---
 title: Kompilierte XPath-Ausdrücke
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: e74b52e471699fc663504fa42d6c7e502859adda
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291525"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831012"
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
