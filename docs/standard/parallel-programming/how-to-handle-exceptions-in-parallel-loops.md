@@ -2,19 +2,18 @@
 title: 'Vorgehensweise: Behandeln von Ausnahmen in parallelen Schleifen'
 description: Erfahren Sie, wie Sie Ausnahmen in parallelen Schleifen in .NET verarbeiten. In diesem Artikel wird ein Beispiel dafür gezeigt, wie Sie alle Ausnahmen aus der Schleife in System.AggregateException umschließen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e8478f27b21b9b9dbf85d68f766c24aa5b9cf600
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768975"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825753"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Vorgehensweise: Behandeln von Ausnahmen in parallelen Schleifen
 Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Überladungen verfügen über keinen speziellen Mechanismus zur Behandlung von Ausnahmen, die möglicherweise ausgelöst werden. In dieser Hinsicht ähneln sie herkömmlichen `for`- und `foreach`-Schleifen (`For` und `For Each` in Visual Basic). Eine nicht behandelte Ausnahme bewirkt, dass die Schleife sofort beendet wird, sobald alle momentan laufenden Iterationen abgeschlossen sind.

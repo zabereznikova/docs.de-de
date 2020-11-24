@@ -4,14 +4,13 @@ description: Erfahren Sie mehr über die asynchrone Programmierung als eine wich
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159727"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824804"
 ---
 # <a name="async-overview"></a>Async (Übersicht)
 
@@ -33,7 +32,7 @@ Asynchroner Code weist folgende Merkmale auf:
 - Viele der neueren .NET-APIs sind asynchron.
 - In .NET schreiben Sie im Handumdrehen asynchronen Code!
 
-## <a name="whats-next"></a>Ausblick
+## <a name="whats-next"></a>Wie geht es weiter?
 
 Weitere Informationen finden Sie im Artikel zu [Async](async-in-depth.md).
 

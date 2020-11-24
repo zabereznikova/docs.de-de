@@ -2,16 +2,15 @@
 title: Allgemeine E/A-Aufgaben
 description: In diesem Artikel erfahren Sie, wie Sie gängige Datei- und Verzeichnistasks mithilfe von Klassen und Methoden im System.IO-Namespace in .NET ausführen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: baabfc477ff8df30c9cac4db1b6d47e0e12f2f37
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598605"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823393"
 ---
 # <a name="common-io-tasks"></a>Allgemeine E/A-Aufgaben
 Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [File and Stream I/O (Datei- und Datenstrom-E/A)](index.md).  

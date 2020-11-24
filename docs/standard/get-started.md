@@ -3,13 +3,12 @@ title: Tutorials für die ersten Schritte mit .NET
 description: Hier können Sie ein Tutorial auswählen, um weitere Informationen zur Entwicklung von .NET-Apps oder zu einer der .NET-Programmiersprachen zu erhalten.
 author: tdykstra
 ms.date: 09/30/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755875"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827177"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>Tutorials für die ersten Schritte mit .NET
 
@@ -19,7 +18,7 @@ Die folgenden detaillierten Tutorials können, wenn nicht anders angegeben, unte
 
 * Erstellen einer Konsolenanwendung
   * [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](../core/tutorials/with-visual-studio-code.md)
-  * [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)
+  * [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)
   * [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](../core/tutorials/with-visual-studio-mac.md) (macOS)
 * Erstellen einer Web-App
   * [Tutorial: Erste Schritte mit Razor Pages in ASP.NET Core](/aspnet/core/tutorials/razor-pages/razor-pages-start)

@@ -2,7 +2,6 @@
 title: 'Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“'
 description: Erfahren Sie, wie Sie die Methode Parallel.Invoke aus der Task Parallel Library (TPL) verwenden, die parallele Vorgänge für eine gemeinsame Datenquelle in .NET ausführt.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 084ade48b1406d23a11eb311739525f35ac973df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6ec8f03216cc6225e909f5dc3128469047826166
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596344"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825480"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Vorgehensweise: Ausführen von parallelen Vorgängen mithilfe von „Parallel.Invoke“
 

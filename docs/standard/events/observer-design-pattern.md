@@ -2,7 +2,6 @@
 title: Beobachterentwurfsmuster
 description: Erfahren Sie mehr über das Beobachterentwurfsmuster in .NET. Mit diesem Muster kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1fda2b692d7bbaeedcf881801eb224f114da41e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064066"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828243"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 

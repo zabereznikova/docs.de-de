@@ -2,17 +2,16 @@
 title: Verwenden von Threads und Threading
 description: Erfahren Sie mehr über die Verwendung von Threads und Threading in .NET, um Anwendungen erstellen zu können, die viele Vorgänge gleichzeitig ausführen (Multithreading).
 ms.date: 08/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 127ea9e28d9ce303270512bf86bf4eecf2f86437
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 85968cfb1a228826429876e525f0c8452f97cfc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188704"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826091"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 

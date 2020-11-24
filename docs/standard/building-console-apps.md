@@ -1,18 +1,17 @@
 ---
 title: Erstellen von Konsolenanwendungen in .NET
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET, creating console applications
 - application development [.NET], console
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
-ms.openlocfilehash: b9c38e1311379037695879565b33ade29c6bf632
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 8046b1b8cb50476860fee53654de93c924d23346
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687546"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823971"
 ---
 # <a name="console-apps-in-net"></a>Konsolen-Apps in .NET
 
@@ -25,7 +24,7 @@ Der Wert der <xref:System.Console.In%2A?displayProperty=nameWithType>-Eigenschaf
 
 Wenn keine Konsole vorhanden ist, beispielsweise bei einer Windows Forms-Anwendung, ist die Ausgabe, die in den Standardausgabestream geschrieben wird, nicht sichtbar. Dies liegt daran, dass keine Konsole vorhanden ist, in die die Information geschrieben werden kann. Werden Informationen in eine Konsole geschrieben, auf die nicht zugegriffen werden kann, wird keine Ausnahme ausgelöst. (Sie können den Anwendungstyp jederzeit in **Konsolenanwendung** ändern, z. B. auf den Projekteigenschaftenseiten in Visual Studio).
 
-Die **System.Console** -Klasse verfügt über Methoden, die individuelle Zeichen oder ganze Zeilen aus der Konsole lesen können. Andere Methoden konvertieren Daten und formatieren Zeichenfolgen. Dann schreiben sie die formatierten Zeichenfolgen in die Konsole. Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatieren von Typen in .NET](base-types/formatting-types.md).
+Die **System.Console**-Klasse verfügt über Methoden, die individuelle Zeichen oder ganze Zeilen aus der Konsole lesen können. Andere Methoden konvertieren Daten und formatieren Zeichenfolgen. Dann schreiben sie die formatierten Zeichenfolgen in die Konsole. Weitere Informationen zum Formatieren von Zeichenfolgen finden Sie unter [Formatieren von Typen in .NET](base-types/formatting-types.md).
 
 > [!TIP]
 > Konsolenanwendungen verfügen nicht über eine Meldungsverteilschleife, die standardmäßig gestartet wird. Daher können Konsolenaufrufe von Microsoft Win32-Timern möglicherweise fehlschlagen.

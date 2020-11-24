@@ -2,17 +2,16 @@
 title: Garbage Collection und Leistung
 description: In diesem Artikel werden die Probleme im Zusammenhang mit der Garbage Collection und der Arbeitsspeicherauslastung besprochen. Außerdem erfahren Sie, wie Sie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimieren.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062970"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827541"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 
@@ -282,7 +281,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist
 
-1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen ( **pe** ) ein:
+1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:
 
     **!pe**
 
@@ -330,7 +329,7 @@ In diesem Abschnitt werden die folgenden Verfahren beschrieben, um die Ursache d
 
   - oder -
 
-- Verwenden Sie den Befehl **vmstat** :
+- Verwenden Sie den Befehl **vmstat**:
 
   **!vmstat**
 

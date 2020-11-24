@@ -2,16 +2,15 @@
 title: Bewährte Methoden für das Anzeigen und Beibehalten formatierter Daten in .NET
 description: Erfahren Sie, wie Sie numerische und Datumsdaten in .NET-Anwendungen effektiv anzeigen und beibehalten.
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 83a491f6c843225c6242a343fe4132c2ce7caa74
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 1748363089a80538a19e91b1955fe9257de39a4e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403471"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825142"
 ---
 # <a name="best-practices-for-displaying-and-persisting-formatted-data"></a>Bewährte Methoden für das Anzeigen und Beibehalten formatierter Daten
 

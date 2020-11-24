@@ -2,7 +2,6 @@
 title: Bewährte Methoden zum Vergleichen von Zeichenfolgen in .NET
 description: Erfahren Sie, wie Sie Zeichenfolgen in .NET-Anwendungen effektiv vergleichen können.
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 167b9b865fb0f674559e2b87db3ed4d6d5048ffe
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400825"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825077"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Bewährte Methoden zum Vergleichen von Zeichenfolgen in .NET
 

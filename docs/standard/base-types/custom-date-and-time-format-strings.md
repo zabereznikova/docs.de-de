@@ -2,7 +2,6 @@
 title: Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 description: Erfahren Sie, wie Sie benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit zum Konvertieren von DateTime- oder DateTimeOffset-Werten in Textdarstellungen oder zum Analysieren von Zeichenfolgen für Daten und Zeiten verwenden.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.topic: reference
 dev_langs:
 - csharp
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888710"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824453"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit
 
@@ -92,7 +91,7 @@ Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Da
 | "zzz" | Offset von UTC in Stunden und Minuten.<br /><br /> Weitere Informationen finden Sie unter: [Der benutzerdefinierte Formatbezeichner „zzz“](#zzzSpecifier). | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | Das Zeittrennzeichen.<br /><br /> Weitere Informationen finden Sie unter: [„:“ (benutzerdefinierter Formatbezeichner)](#timeSeparator). | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | Das Datumstrennzeichen.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „/“](#dateSeparator). | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| " *Zeichenfolge* "<br /><br /> ' *Zeichenfolge* ' | Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter: [Zeichenliterale](#Literals) | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
+| "*Zeichenfolge*"<br /><br /> '*Zeichenfolge*' | Trennzeichen für Literalzeichenfolge.<br /><br /> Weitere Informationen finden Sie unter: [Zeichenliterale](#Literals) | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
 | % | Definiert das nächste Zeichen als benutzerdefinierten Formatbezeichner.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von einzelnen benutzerdefinierten Formatbezeichnern](#UsingSingleSpecifiers). | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | Das Escapezeichen.<br /><br /> Weitere Informationen finden Sie unter: [Zeichenliterale](#Literals) und [Verwenden des Escapezeichens](#escape). | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | Jedes andere Zeichen | Das Zeichen wird unverändert in die Ergebniszeichenfolge kopiert.<br /><br /> Weitere Informationen finden Sie unter: [Zeichenliterale](#Literals) | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |

@@ -4,18 +4,17 @@ description: Hier erfahren Sie, wie Sie die Methoden „DisposeAsync“ und „D
 author: IEvangelist
 ms.author: dapine
 ms.date: 10/26/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 5aa82c507c22a4795f39267ac8f435599fb9cd92
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 551dbc30f6f5c99c7bfa468d7d708789c06acb7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687723"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827801"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementieren einer DisposeAsync-Methode
 

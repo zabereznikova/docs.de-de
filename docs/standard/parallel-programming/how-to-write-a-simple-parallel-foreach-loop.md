@@ -2,7 +2,6 @@
 title: Schreiben eines einfachen parallelen Programms mit Parallel.ForEach
 description: In diesem Artikel erfahren Sie, wie Sie Datenparallelität in .NET aktivieren. Schreiben Sie eine Parallel.ForEach-Schleife über eine beliebige IEnumerable- oder IEnumerable<T>-Datenquelle.
 ms.date: 02/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 59c8710a8e3fc878b2ceded8595f7f3319d4c953
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e4f67f6fbe5a79e925ecd6aaec3f833704cda38c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447198"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825415"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Vorgehensweise: Schreiben einer einfachen Parallel.ForEach-Schleife
 

@@ -2,7 +2,6 @@
 title: Asynchrone Datei-E/A
 description: Informationen zu asynchronen E/A-Dateivorgängen in .NET. Informationen zu asynchronen Methoden zur Vereinfachung von asynchronen Vorgängen, z. B. ReadAsync und WriteAsync
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-ms.openlocfilehash: a148e6e13ec0ee4ee469a0630f150199c5a3af13
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: aaf722c4af1598b639ffc56e30639e93dbc8a514
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188600"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823458"
 ---
 # <a name="asynchronous-file-io"></a>Asynchrone Datei-E/A
 
