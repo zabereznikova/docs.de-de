@@ -16,19 +16,20 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679545"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome-Schnittstelle
+
 Stellt eine lokale Variable oder ein Argument einer Funktion dar.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetArgumentIndex-Methode](icordebugvariablehome-getargumentindex-method.md)|Ruft den Index eines Funktionsarguments ab.|  
 |[GetCode-Methode](icordebugvariablehome-getcode-method.md)|Ruft die ICorDebugCode-Instanz ab, die dieses- `ICorDebugVariableHome` Objekt enthält.|  
@@ -39,6 +40,7 @@ Stellt eine lokale Variable oder ein Argument einer Funktion dar.
 |[GetSlotIndex-Methode](icordebugvariablehome-getslotindex-method.md)|Ruft den verwalteten Slot-Index einer lokalen Variablen ab.|  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Code Fragment wird das [ICorDebugCode4](icordebugcode4-interface.md) -Objekt mit dem Namen verwendet `pCode4` .  
   
 ```cpp  
@@ -80,7 +82,8 @@ for (int i = 0; i < celtFetched; i++)
 }  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -89,7 +92,7 @@ for (int i = 0; i < celtFetched; i++)
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum-Schnittstelle](icordebugvariablehomeenum-interface.md)

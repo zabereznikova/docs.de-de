@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-ms.openlocfilehash: 25e931ec17cad3508d548fb4ca7e53b0ade3f119
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e340dcb5dc093f965e6c08a24a3d65ed0aa6e07a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804952"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680823"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager-Methode
+
 Ruft einen Schnittstellen Zeiger auf die Implementierung der-Schnittstelle des Hosts mit dem angegebenen ab `IID` .  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetHostManager (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `riid`  
  in Der `IID` der Schnittstelle, für die der Common Language Runtime (CLR) eine Abfrage durchläuft.  
   
@@ -45,7 +47,7 @@ HRESULT GetHostManager (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetHostManager` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -55,6 +57,7 @@ HRESULT GetHostManager (
 |E_NOINTERFACE|Die angeforderte Schnittstelle wird nicht unterstützt.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die CLR fragt den Host ab, um zu bestimmen, ob eine oder mehrere der folgenden Schnittstellen unterstützt werden:  
   
 - [IHostMemoryManager](ihostmemorymanager-interface.md)  
@@ -79,12 +82,13 @@ HRESULT GetHostManager (
   
  Die CLR ruft `Release` auf Host-Managern nicht auf, auch wenn Sie Sie Herunterfahren.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

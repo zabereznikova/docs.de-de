@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179387"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680039"
 ---
 # <a name="setpekind-method"></a>SetPEKind-Methode
-Bestimmt den portablen ausführbaren Typ, entweder maschinenspezifisch oder maschinenunabhängig.  
+
+Bestimmt den Typ der portablen ausführbaren Datei, entweder Computer spezifisch oder Computer agnostisch.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,27 +37,30 @@ HRESULT SetPEKind(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
- ID der Assembly.  
+ Die ID der Assembly.  
   
  `FileToken`  
- Token der Datei, für die der PE-Typ festgelegt werden soll. Kann NULL `AssemblyID` sein, wenn es nicht auf ein ungebundenes Netmodule hinweist.  
+ Das Token der Datei, für die der PE-Typ festgelegt werden soll. Kann NULL sein, wenn `AssemblyID` kein ungebundenes NetModule angibt.  
   
  `dwPEKind`  
- Der Pe-Typ, wie durch die [CorPEKind-Enumeration](../metadata/corpekind-enumeration.md)angegeben.  
+ Der Typ des PE, wie von der [corpeer Kind-Enumeration](../metadata/corpekind-enumeration.md)angegeben.  
   
  `dwMachine`  
- Die Zielcomputerarchitektur, wie im NT-Header angegeben.  
+ Die Architektur des Ziel Computers, wie im NT-Header angegeben.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- Erfordert alink.h.  
+
+ Erfordert Alink. h.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [GetPEKind-Methode](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

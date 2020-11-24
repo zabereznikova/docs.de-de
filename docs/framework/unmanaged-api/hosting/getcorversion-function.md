@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 23d68e8e4bbd87779e3b49f0c40f5a5ab9f5124f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e7ef3f300c8cfa0c275d15913e171abe09385eea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681209"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion-Funktion
+
 Gibt die Versionsnummer der Common Language Runtime (CLR) zurück, die im aktuellen Prozess ausgeführt wird.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -38,6 +39,7 @@ HRESULT GetCORVersion (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbuffer`  
  Ein Zeiger auf einen Puffer, in dem die CLR eine Zeichenfolge zurückgibt, die die Version der Laufzeit angibt, die gerade in den Prozess geladen wird. Die zurückgegebene Zeichenfolge hat dieselbe Form wie Zeichen folgen, die an [corbindtoriuntimeex](corbindtoruntimeex-function.md)übermittelt werden, z. b. "v 1.0.1216". Wenn die Laufzeit noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die aktuelle Version der Laufzeit zurück, die auf dem Computer installiert ist.  
   
@@ -47,15 +49,16 @@ HRESULT GetCORVersion (
  `dwLength`  
  Ein Zeiger auf die Anzahl von Zeichen, die tatsächlich in zurückgegeben werden `pbuffer` . Wenn `pbuffer` ein NULL-Zeiger ist, gibt die Laufzeit E_POINTER zurück. Wenn die Anzahl der Zeichen größer als die Länge von ist `pbuffer` , gibt die Laufzeit ERROR_INSUFFICIENT_BUFFER zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

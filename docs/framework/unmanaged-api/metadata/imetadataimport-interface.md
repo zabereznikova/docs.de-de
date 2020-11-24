@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679090"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport-Schnittstelle
+
 Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer portablen ausführbaren Datei (PE-Datei) oder einer anderen Quelle wie einer Typbibliothek oder einer eigenständigen Laufzeit-Metadatenbinärdatei bereit  
   
 ## <a name="methods"></a>Methoden  
@@ -91,7 +92,8 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 |[ResetEnum-Methode](imetadataimport-resetenum-method.md)|Setzt den angegebenen Enumerator auf die der angegebene Position zurück.|  
 |[ResolveTypeRef-Methode](imetadataimport-resolvetyperef-method.md)|Ruft Typinformationen für den Typ ab, auf den durch das angegebene TypeRef-Token verwiesen wird.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das Design der `IMetaDataImport`-Schnittstelle soll primär von Tools und Diensten verwendet werden, die Typinformationen importieren (z. B. Entwicklungstools) oder Bereitstellungskomponenten (z. B. Auflösungs-/Aktivierungsdienste) verwalten. Die Methoden in `IMetaDataImport` können in die folgenden Aufgabenkategorien eingeteilt werden:  
   
 - Auzählen von Elementauflistungen im Metadatenbereich.  
@@ -103,15 +105,16 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 - Die Get-Methoden wurden speziell dafür entwickelt, um einwertige Eigenschaften eines Metadatenelements zurückzugeben. Wenn die Eigenschaft ein Verweis auf ein anderes Element ist, wird ein Token für dieses Element zurückgegeben. Jeder Zeigereingabetyp kann NULL sein, um anzugeben, dass der betreffende Wert nicht angefordert wird. Verwenden Sie zum Abrufen von Eigenschaften, die im Wesentlichen Auflistungsobjekte sind (z. B. die Auflistung der Schnittstellen, die eine Klasse implementiert) die Enumerationsmethoden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

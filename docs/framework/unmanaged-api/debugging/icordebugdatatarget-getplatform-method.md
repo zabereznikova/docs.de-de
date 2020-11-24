@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-ms.openlocfilehash: 3df35d52a4e5209b282ccef653b065bdcf1f8fe4
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: e8612b23cbfa506fddb2fad712848b285b9ac28e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679792"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform-Methode
+
 Bietet Informationen zur-Plattform, einschließlich Prozessorarchitektur und Betriebssystem, auf denen der Ziel Prozess ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,13 +33,15 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pTargetPlatform`  
  vorgenommen Ein Zeiger auf eine [cordebugplatformenum](cordebugplatform-enumeration.md) -Enumeration, die die Zielplattform beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der `CorDebugPlatformEnum` Rückgabewert der-Enumeration wird von der [ICorDebug](icordebug-interface.md) -Schnittstelle verwendet, um Details des Ziel Prozesses zu bestimmen, z. b. die Zeiger Größe, das Adressraum Layout, den Register Satz, das Anweisungs Format, das Kontext Layout und die Aufruf Konventionen.  
   
- Der `pTargetPlatform` Wert verweist möglicherweise auf eine Plattform, die für das Ziel emuliert wird, anstatt die tatsächlich verwendete Hardware anzugeben. Beispielsweise sollte ein Prozess, der in der WOW-Umgebung (Windows on Windows) auf einer 64-Bit-Edition des Windows-Betriebssystems ausgeführt wird `CORDB_PLATFORM_WINDOWS_X86` , den Wert der [cordebugplatformenum](cordebugplatform-enumeration.md) -Enumeration verwenden.  
+ Der `pTargetPlatform` Wert verweist möglicherweise auf eine Plattform, die für das Ziel emuliert wird, anstatt die tatsächlich verwendete Hardware anzugeben. Beispielsweise sollte ein Prozess, der in der WOW-Umgebung (Windows on Windows) auf einer 64-Bit-Edition des Windows-Betriebssystems ausgeführt wird, den `CORDB_PLATFORM_WINDOWS_X86` Wert der [cordebugplatformenum](cordebugplatform-enumeration.md) -Enumeration verwenden.  
   
  Diese Methode muss erfolgreich sein. Wenn dies nicht möglich ist, ist die Zielplattform unbrauchbar. Die-Methode kann aus den folgenden Gründen fehlschlagen:  
   
@@ -46,7 +49,8 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
 - Die tatsächliche Hardware auf der Zielplattform ist unbrauchbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

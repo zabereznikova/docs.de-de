@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a4ae0d1f-ade9-4b0a-a122-93ed11a5e6b3
 topic_type:
 - apiref
-ms.openlocfilehash: 9dd89abb332853b966aa81dc506099b7af6ca3b2
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 1bffef31702aa051d9ca865b18a67ac90c00cd00
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680656"
 ---
 # <a name="ihostcontrol-interface"></a>IHostControl-Schnittstelle
+
 Bietet Methoden zum Konfigurieren des Ladens von Assemblys und zum bestimmen, welche Hostingschnittstellen der Host unterstützt.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,12 +32,13 @@ Bietet Methoden zum Konfigurieren des Ladens von Assemblys und zum bestimmen, we
 |[GetHostManager-Methode](ihostcontrol-gethostmanager-method.md)|Ruft einen Schnittstellen Zeiger auf die Implementierung der-Schnittstelle des Hosts mit dem angegebenen ab `IID` .|  
 |[SetAppDomainManager-Methode](ihostcontrol-setappdomainmanager-method.md)|Benachrichtigt den Host, dass eine Anwendungsdomäne erstellt wurde.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -45,4 +47,4 @@ Bietet Methoden zum Konfigurieren des Ladens von Assemblys und zum bestimmen, we
 - <xref:System.AppDomainManager>
 - [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c76b587-f941-4fa1-8b86-f3494fb10c8e
 topic_type:
 - apiref
-ms.openlocfilehash: c630daa50d465622c421381ac080eaa8d9d8d01d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1507715e80761c871dfdb0b8d25dc708a2130678
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379075"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678687"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID-Methode
+
 Ruft den Verbindungs Bezeichner für dieses ICorDebugThread2-Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT GetConnectionID (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pdwConnectionId`  
  vorgenommen Ein `CONNID` , der den Verbindungs Bezeichner darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `GetConnectionID` Methode gibt 0 (null) im- `pdwConnectionId` Parameter zurück, wenn dieser Thread nicht Teil einer Verbindung ist.  
   
  Wenn dieser Thread mit einer Instanz von Microsoft SQL Server 2005 Analysis Services (SSAS) verbunden ist, wird `CONNID` eine SPID (Server Process Identifier) zugeordnet.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

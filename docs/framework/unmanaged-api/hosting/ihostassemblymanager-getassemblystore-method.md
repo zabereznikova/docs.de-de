@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-ms.openlocfilehash: 587861529c340fad9fd817b904e4d3651b236e8d
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 936ea068f3cc5567a00af5f2bdd5f3d9cd52bc81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681183"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore-Methode
+
 Ruft einen Schnittstellen Zeiger auf einen [IHostAssemblyStore](ihostassemblystore-interface.md) ab, der die Liste der vom Host geladenen Assemblys darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetAssemblyStore (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppAssemblyStore`  
  vorgenommen Ein Funktionszeiger auf eine- `IHostAssemblyStore` Instanz oder NULL, wenn der Host nicht implementiert `IHostAssemblyStore` .  
   
@@ -41,7 +43,7 @@ HRESULT GetAssemblyStore (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetAssemblyStore` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,17 +52,19 @@ HRESULT GetAssemblyStore (
 |E_NOINTERFACE|Der Host stellt keine Implementierung von bereit `IHostAssemblyStore` .|  
   
 ## <a name="remarks"></a>Hinweise  
- `IHostAssemblyStore`stellt Methoden bereit, mit denen ein Host unabhängig von der CLR an Assemblys und Module gebunden werden kann. Hosts stellen in der Regel Assemblyspeicher bereit, damit Assemblys aus anderen Formaten als dem Dateisystem geladen werden können.  
+
+ `IHostAssemblyStore` stellt Methoden bereit, mit denen ein Host unabhängig von der CLR an Assemblys und Module gebunden werden kann. Hosts stellen in der Regel Assemblyspeicher bereit, damit Assemblys aus anderen Formaten als dem Dateisystem geladen werden können.  
   
 > [!NOTE]
 > Wenn der Host nicht implementiert `IHostAssemblyStore` , `GetAssemblyStore` sollte den HRESULT-Wert E_NOINTERFACE zurückgeben und `ppAssemblyStore` auf NULL festlegen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

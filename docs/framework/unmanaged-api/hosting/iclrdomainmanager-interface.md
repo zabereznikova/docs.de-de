@@ -12,14 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - ICLRDomainManager interface [.NET Framework hosting]
 ms.assetid: f08b2390-d872-4521-a815-e9c237c4c45d
-ms.openlocfilehash: dda243ccbf18f396c1bcc03358997ea0f06c42a8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a5abb601fe795a0c615403eec69f68ad9f66f00f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681170"
 ---
 # <a name="iclrdomainmanager-interface"></a>ICLRDomainManager-Schnittstelle
+
 Ermöglicht es dem Host, den Anwendungs Domänen-Manager anzugeben, der verwendet wird, um die Standard Anwendungsdomäne zu initialisieren und Initialisierungs Eigenschaften anzugeben.  
   
 ## <a name="methods"></a>Methoden  
@@ -30,18 +31,20 @@ Ermöglicht es dem Host, den Anwendungs Domänen-Manager anzugeben, der verwende
 |[SetPropertiesForDefaultAppDomain-Methode](iclrdomainmanager-setpropertiesfordefaultappdomain-method.md)|Legt Eigenschaften fest, die verwendet werden, um die Standard Anwendungsdomäne zu initialisieren.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Um eine Instanz dieser Schnittstelle abzurufen, wenden Sie die [ICLRControl:: GetCLRManager](iclrcontrol-getclrmanager-method.md) -Methode mit dem Manager-Typ IID an `IID_ICLRDomainManager` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

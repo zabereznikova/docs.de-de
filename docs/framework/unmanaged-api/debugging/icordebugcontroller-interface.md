@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1ca9e55a2183ca4293d30607496b588cbf21d6dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892775"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679948"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt einen Bereich dar, in dem der Kontext der Codeausführung gesteuert werde
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|Diese Methode ist veraltet.|  
 |`ICorDebugController::CommitChanges`|Diese Methode ist veraltet.|  
@@ -41,12 +41,14 @@ Stellt einen Bereich dar, in dem der Kontext der Codeausführung gesteuert werde
 |[Terminate-Methode](icordebugcontroller-terminate-method.md)|Beendet den Prozess mit dem angegebenen Exitcode.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn `ICorDebugController` einen Prozess steuert, schließt der Bereich alle Threads des Prozesses ein. Wenn `ICorDebugController` eine Anwendungsdomäne steuert, umfasst der Bereich nur die Threads dieser bestimmten Anwendungsdomäne.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: f8eb4cb6bad95295e10a72812fa8dbb0adfcc898
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dcab63b603d4a9a8e1430228043d2a5e597bbf4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678291"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo-Methode
+
 Gibt die erforderlichen Informationen zurück, damit ein Compiler den Debugverzeichniseintrag im PE-Dateiheader schreiben muss. Der Symbolwriter füllt alle Felder mit Ausnahme von `TimeDateStamp` und aus `PointerToRawData` . (Der Compiler ist dafür verantwortlich, diese beiden Felder entsprechend festzulegen.)  
   
  Ein Compiler sollte diese Methode abrufen, das Daten-BLOB an die PE-Datei ausgeben, das Feld in der IMAGE_DEBUG_DIRECTORY so festlegen, dass es `PointerToRawData` auf die ausgegebenen Daten verweist, und die IMAGE_DEBUG_DIRECTORY in die PE-Datei schreiben. Der Compiler sollte außerdem festlegen `TimeDateStamp` , dass das-Feld gleich dem `TimeDateStamp` der generierten PE-Datei ist.  
@@ -39,6 +40,7 @@ HRESULT GetDebugInfo(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pIDD`  
  [in, out] Ein Zeiger auf einen IMAGE_DEBUG_DIRECTORY, den der Symbolwriter ausfüllen wird.  
   
@@ -52,11 +54,13 @@ HRESULT GetDebugInfo(
  vorgenommen Ein Zeiger auf einen Puffer, der groß genug ist, um die Debugdaten für den Symbol Speicher zu speichern.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

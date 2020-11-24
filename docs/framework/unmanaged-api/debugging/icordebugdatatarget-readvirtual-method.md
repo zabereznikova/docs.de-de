@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 36a18d92f05db55957bba55de84490c0da1a1f86
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679727"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual-Methode
+
 Ruft einen Block von zusammenhängenden Arbeitsspeicher ab, der bei der angegebenen Adresse beginnt, und gibt ihn im angegebenen Puffer zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT ReadVirtual(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `address`  
  in Die Startadresse des angeforderten Speichers.  
   
@@ -47,12 +49,14 @@ HRESULT ReadVirtual(
  in Die Anzahl der Bytes, die von der Zieladresse abgeleitet werden sollen.  
   
  `pBytesRead`  
- vorgenommen Die Anzahl der tatsächlich von der Zieladresse gelesenen Bytes. Dies kann weniger als `bytesRequested`sein.  
+ vorgenommen Die Anzahl der tatsächlich von der Zieladresse gelesenen Bytes. Dies kann weniger als sein `bytesRequested` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn das erste Byte (an der angegebenen Startadresse) gelesen werden kann, sollte der-Befehl einen Erfolg zurückgeben (um das effiziente Lesen von Datenstrukturen mit selbst beschreibender Länge zu unterstützen, wie z. b. auf NULL endende Zeichen folgen).  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

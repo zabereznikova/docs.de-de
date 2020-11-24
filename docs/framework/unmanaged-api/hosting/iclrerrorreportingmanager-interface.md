@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ea8af0d5-4133-4472-8a1f-50570d7e85fa
 topic_type:
 - apiref
-ms.openlocfilehash: dbe4129cf4160a1a9b31bc6f418095ea4b392d57
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d3816c8a3b6204b053505aa888eb28d696f8990b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616995"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677843"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager-Schnittstelle
+
 Stellt Methoden bereit, die es dem Host ermöglichen, benutzerdefinierte stackdumps für die Fehlerberichterstattung zu konfigurieren.  
   
 ## <a name="methods"></a>Methoden  
@@ -33,21 +34,23 @@ Stellt Methoden bereit, die es dem Host ermöglichen, benutzerdefinierte stackdu
 |[GetBucketParametersForCurrentException-Methode](iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md)|Ruft den Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `BeginCustomDump` Methode legt die benutzerdefinierte Stapel Sicherungs Konfiguration fest. Die `EndCustomDump` -Methode löscht die benutzerdefinierte Stapel Sicherungs Konfiguration und gibt jeden zugeordneten Zustand frei. Er sollte aufgerufen werden, nachdem der benutzerdefinierte Dump fertiggestellt wurde.  
   
 > [!IMPORTANT]
 > Wenn Sie den Vorgang nicht aufzurufen, ist der `EndCustomDump` Speicherfehler  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ECustomDumpItemKind-Enumeration](ecustomdumpitemkind-enumeration.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

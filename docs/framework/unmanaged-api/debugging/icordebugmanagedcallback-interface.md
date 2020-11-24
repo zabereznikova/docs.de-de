@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6eebabc3a08027eab4ac55c1e46dd75b1f75bd21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679701"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback-Schnittstelle
+
 Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Break-Methode](icordebugmanagedcallback-break-method.md)|Benachrichtigt den Debugger, wenn eine <xref:System.Reflection.Emit.OpCodes.Break> Anweisung im Codestream ausgeführt wird.|  
 |[Breakpoint-Methode](icordebugmanagedcallback-breakpoint-method.md)|Benachrichtigt den Debugger, wenn ein Breakpoint erreicht wird.|  
@@ -56,6 +57,7 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
 |[UpdateModuleSymbols-Methode](icordebugmanagedcallback-updatemodulesymbols-method.md)|Benachrichtigt den Debugger, dass sich die Symbole für ein CLR-Modul geändert haben.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Alle Rückrufe werden serialisiert, im gleichen Thread aufgerufen und mit dem Prozess im synchronisierten Zustand aufgerufen.  
   
  Jede Rückruf Implementierung muss [icordbugcontroller:: Continue](icordebugcontroller-continue-method.md) aufrufen, um die Ausführung fortzusetzen. Wenn `ICorDebugController::Continue` nicht vor der Rückgabe des Rückrufs aufgerufen wird, bleibt der Prozess angehalten, und es werden keine weiteren Ereignis Rückrufe ausgeführt, bis `ICorDebugController::Continue` aufgerufen wird.  
@@ -66,6 +68,7 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -74,7 +77,7 @@ Stellt Methoden zum Verarbeiten von Debuggerrückrufen zur Verfügung.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebug-Schnittstelle](icordebug-interface.md)
 - [ICorDebugManagedCallback2-Schnittstelle](icordebugmanagedcallback2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55cb673a-e240-43a6-a406-6912e7c0fe66
 topic_type:
 - apiref
-ms.openlocfilehash: 8cb8699c103f48b42694449a2bb2bbd25c42d3c6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 243a1661ce2910cf1713ef8884bb6ae5422e8013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212727"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679688"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly-Methode
+
 Benachrichtigt den Debugger, dass eine Common Language Runtime-Assembly (CLR) erfolgreich geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT LoadAssembly (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in die die Assembly geladen wurde.  
   
@@ -42,6 +44,7 @@ HRESULT LoadAssembly (
  in Ein Zeiger auf ein ICorDebug-Objekt, das die Assembly darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -50,7 +53,7 @@ HRESULT LoadAssembly (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [UnloadAssembly-Methode](icordebugmanagedcallback-unloadassembly-method.md)
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

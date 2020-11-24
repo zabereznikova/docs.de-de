@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-ms.openlocfilehash: 79708aa5a2abcb8d7465f82a8beb918484c193b9
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: faacea6a2f04ef20025fd33adb4ce76eaf54f32c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976550"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679740"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext-Methode
+
 Gibt den aktuellen Thread Kontext für den angegebenen Thread zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetThreadContext(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwThreadID`  
  in Der Bezeichner des Threads, dessen Kontext abgerufen werden soll. Der Bezeichner wird vom Betriebssystem definiert.  
   
@@ -49,9 +51,11 @@ HRESULT GetThreadContext(
  vorgenommen Der Puffer, in dem der Thread Kontext gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Auf Windows-Platt `pContext` Formen muss eine `CONTEXT` Struktur (in Winnt. h definiert) sein, die für den Computertyp geeignet ist, der durch die [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) -Methode angegeben wird. `contextFlags`muss die gleichen Werte wie das `ContextFlags` -Feld der- `CONTEXT` Struktur aufweisen. Die `CONTEXT` Struktur ist Prozessor spezifisch. Ausführliche Informationen finden Sie in der Datei "Winnt. h".  
+
+ Auf Windows-Plattformen `pContext` muss eine `CONTEXT` Struktur (in Winnt. h definiert) sein, die für den Computertyp geeignet ist, der durch die [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) -Methode angegeben wird. `contextFlags` muss die gleichen Werte wie das- `ContextFlags` Feld der- `CONTEXT` Struktur aufweisen. Die `CONTEXT` -Struktur ist Prozessor spezifisch. Weitere Informationen finden Sie in der Datei "Winnt. h".  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

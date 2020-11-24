@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
-ms.openlocfilehash: 33b8f47813a3bf43bd69741c9febb150fa3a92e3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 989e99198efd1519f607a2e3164ff4de584e88af
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099905"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679883"
 ---
-# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_axlpublickeyblobtopublickeytoken-Funktion
+# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_Axlpublickeyblobtopublickeytoken-Funktion
+
 Berechnet das öffentliche Schlüsseltoken für einen starken Namen aus einem CSP PUBLICKEYBLOB-Format.  
   
 ## <a name="syntax"></a>Syntax  
@@ -28,6 +29,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCspPublicKeyBlob`  
  [in] Der Blob für den öffentlichen CSP-Schlüssel  
   
@@ -35,8 +37,9 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [out] Ein Zeiger auf WCHAR *, um den hexadezimal codierten Hash für den öffentlichen Schlüssel zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  `S_OK`,wenn die Funktion erfolgreich ausgeführt wird, sonst `S_FALSE`.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Authenticode](index.md)

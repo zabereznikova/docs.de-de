@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b33ff059-40c4-4dfe-9cb2-21bfed2de0b0
 topic_type:
 - apiref
-ms.openlocfilehash: 89ea9f221ad55063e4186cc27cc8038334d800d4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 73ed86ee12b02d292dc6dfc1d652459a679f81ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679935"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning-Methode
+
 Ruft einen Wert ab, der angibt, ob die Threads im Prozess momentan frei ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT IsRunning (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbRunning`  
- vorgenommen Ein Zeiger auf einen Wert, der `true` ist, wenn die Threads im Prozess frei ausgeführt werden. andernfalls `false`.  
+ vorgenommen Ein Zeiger auf einen-Wert, `true` der ist, wenn die Threads im Prozess frei ausgeführt werden, andernfalls `false` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
