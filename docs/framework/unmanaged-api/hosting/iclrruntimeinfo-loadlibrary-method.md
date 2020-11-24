@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4517ada3-4417-4ac5-a150-73da7a87c686
 topic_type:
 - apiref
-ms.openlocfilehash: 09c80c3a56d86943ebe00e5222bb5452ab44e150
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: aa45c814568188a5fe93e3acd2514cb54bb0f984
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762174"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688613"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary-Methode
+
 Lädt eine .NET Framework Bibliothek aus der Common Language Runtime (CLR), die durch eine [iclrruntimeingefo](iclrruntimeinfo-interface.md) -Schnittstelle dargestellt wird.  
   
  Diese Methode löst die [LoadLibraryShim](loadlibraryshim-function.md) -Funktion aus.  
@@ -36,6 +37,7 @@ HRESULT LoadLibrary(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzDllName`  
  in Der Name der Assembly, die geladen werden soll.  
   
@@ -43,6 +45,7 @@ HRESULT LoadLibrary(
  vorgenommen Ein Handle für die geladene Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -52,19 +55,21 @@ HRESULT LoadLibrary(
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die Anforderung zu verarbeiten.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Methode lädt nur DLLs, die in der .NET Framework verteilbaren Pakets enthalten sind. Benutzergenerierte Assemblys können nicht geladen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRRuntimeInfo-Schnittstelle](iclrruntimeinfo-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

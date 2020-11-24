@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-ms.openlocfilehash: fe378307ce2bda6e1a267e46433ead70a0e2299e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cd4e675b4ba50b47146428d204c28cc943c23c69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688002"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost-Co-Klasse
+
 Stellt Schnittstellen für die Verwaltung von Anwendungen bereit, die von der Common Language Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -46,15 +47,16 @@ coclass CorRuntimeHost {
 |[IGCHost-Schnittstelle](igchost-interface.md)|Bietet Methoden zum Abrufen von Informationen über das Garbage Collection System und zum Steuern einiger Aspekte von Garbage Collection.|  
 |IValidator|Stellt Methoden für die Validierung von portablen ausführbaren Images und die ausführliche Berichterstellung zu Validierungs Fehlern bereit.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hosting-Co-Klassen](hosting-coclasses.md)
+- [Hosten von Co-Klassen](hosting-coclasses.md)

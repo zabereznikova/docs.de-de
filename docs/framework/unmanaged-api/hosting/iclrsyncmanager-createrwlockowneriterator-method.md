@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: f8fde4905c41dffde90c6361b5a8cdffa15deb4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2b6a2082d27fca4c78dcb15a13cfd87e8066e388
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503964"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687215"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator-Methode
+
 Fordert an, dass die Common Language Runtime (CLR) einen Iterator erstellt, mit dem der Host den Satz von Tasks bestimmt, die auf eine Lese-/Schreibsperre warten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT CreateRWLockOwnerIterator (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cookie`  
  in Das Cookie, das der gewünschten Lese-/Schreibsperre zugeordnet ist.  
   
@@ -45,15 +47,16 @@ HRESULT CreateRWLockOwnerIterator (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateRWLockOwnerIterator` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`wurde in einem Thread aufgerufen, der derzeit verwalteten Code ausgeführt hat.|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` wurde in einem Thread aufgerufen, der derzeit verwalteten Code ausgeführt hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Hosts ruft in der Regel die `CreateRWLockOwnerIterator` `DeleteRWLockOwnerIterator` Methoden, und während der `GetRWLockOwnerNext` Deadlockerkennung auf. Der Host ist dafür verantwortlich, sicherzustellen, dass die Lese-/Schreibsperre weiterhin gültig ist, da die CLR keinen Versuch macht, die Lese-/Schreibsperre aufrechtzuerhalten. Es stehen mehrere Strategien für den Host zur Verfügung, um die Gültigkeit der Sperre sicherzustellen:  
   
 - Der Host kann Freigabe Aufrufe für die Reader-Writer-Sperre blockieren (z. b. [IHostSemaphore:: ReleaseSemaphore](ihostsemaphore-releasesemaphore-method.md)) und gleichzeitig sicherstellen, dass dieser Block keinen Deadlock verursacht.  
@@ -61,18 +64,19 @@ HRESULT CreateRWLockOwnerIterator (
 - Der Host kann das warten auf das Ereignis Objekt, das der Lese-/Schreibsperre zugeordnet ist, blockieren und sicherstellen, dass dieser Block keinen Deadlock verursacht.  
   
 > [!NOTE]
-> `CreateRWLockOwnerIterator`muss nur für Threads aufgerufen werden, die derzeit nicht verwalteten Code ausführen.  
+> `CreateRWLockOwnerIterator` muss nur für Threads aufgerufen werden, die derzeit nicht verwalteten Code ausführen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRSyncManager-Schnittstelle](iclrsyncmanager-interface.md)
 - [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)

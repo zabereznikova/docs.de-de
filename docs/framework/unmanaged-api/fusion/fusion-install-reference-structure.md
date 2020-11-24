@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae181ec8-36bf-4ed1-9a02-ca27d417c80b
 topic_type:
 - apiref
-ms.openlocfilehash: 3859752fd92a76f3fef1ceced0e792109b65106a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d5ff08e62b94d7f164b103ae0535bb62e4e60aea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688808"
 ---
 # <a name="fusion_install_reference-structure"></a>FUSION_INSTALL_REFERENCE-Struktur
+
 Stellt einen Verweis auf eine Assembly dar, die von der Anwendung im globalen Assemblycache installiert wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,22 +39,23 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`cbSize`|Die Größe der Struktur in Bytes.|  
 |`dwFlags`|Reserviert für zukünftige Erweiterbarkeit. Dieser Wert muss 0 (null) sein.|  
-|`guidScheme`|Die Entität, die den Verweis hinzufügt. Dieses Feld kann einen der folgenden Werte aufweisen:<br /><br /> -FUSION_REFCOUNT_MSI_GUID: auf die Assembly wird von einer Anwendung verwiesen, die mithilfe des-Microsoft Windows Installer installiert wurde. Das Feld `szIdentifier` ist auf `MSI`festgelegt, und das Feld `szNonCanonicalData` wird auf `Windows Installer`festgelegt. Dieses Schema wird für parallele Assemblys von Windows verwendet.<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: auf die Assembly wird von einer Anwendung verwiesen, die in der Schnittstelle " **Programme hinzufügen/entfernen** " angezeigt wird. Das `szIdentifier` Feld stellt das Token bereit, das die Anwendung bei der Schnittstelle " **Programme hinzufügen/entfernen** " registriert.<br />-FUSION_REFCOUNT_FILEPATH_GUID: auf die Assembly wird von einer Anwendung verwiesen, die durch eine Datei im Dateisystem dargestellt wird. Das `szIdentifier` Feld gibt den Pfad zu dieser Datei an.<br />-FUSION_REFCOUNT_OPAQUE_STRING_GUID: auf die Assembly wird von einer Anwendung verwiesen, die nur durch eine nicht transparente Zeichenfolge dargestellt wird. Das `szIdentifier` Feld stellt diese nicht transparente Zeichenfolge bereit. Der globale Assemblycache prüft nicht, ob nicht transparente Verweise vorhanden sind, wenn Sie diesen Wert entfernen.<br />-FUSION_REFCOUNT_OSINSTALL_GUID: dieser Wert ist reserviert.|  
-|`szIdentifier`|Eine eindeutige Zeichenfolge, die die Anwendung identifiziert, die die Assembly im globalen Assemblycache installiert hat. Der Wert hängt vom Wert des `guidScheme` Felds ab.|  
+|`guidScheme`|Die Entität, die den Verweis hinzufügt. Dieses Feld kann einen der folgenden Werte aufweisen:<br /><br /> -FUSION_REFCOUNT_MSI_GUID: auf die Assembly wird von einer Anwendung verwiesen, die mithilfe des Microsoft Windows Installer installiert wurde. Das `szIdentifier` Feld wird auf festgelegt `MSI` , und das `szNonCanonicalData` Feld wird auf festgelegt `Windows Installer` . Dieses Schema wird für parallele Assemblys von Windows verwendet.<br />-FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: auf die Assembly wird von einer Anwendung verwiesen, die in der Schnittstelle " **Programme hinzufügen/entfernen** " angezeigt wird. Das- `szIdentifier` Feld stellt das Token bereit, das die Anwendung bei der Schnittstelle zum **Hinzufügen/Entfernen von Programmen** registriert.<br />-FUSION_REFCOUNT_FILEPATH_GUID: auf die Assembly wird von einer Anwendung verwiesen, die durch eine Datei im Dateisystem dargestellt wird. Das `szIdentifier` Feld enthält den Pfad zu dieser Datei.<br />-FUSION_REFCOUNT_OPAQUE_STRING_GUID: auf die Assembly wird von einer Anwendung verwiesen, die nur durch eine nicht transparente Zeichenfolge dargestellt wird. Das- `szIdentifier` Feld stellt diese nicht transparente Zeichenfolge bereit. Der globale Assemblycache prüft nicht, ob nicht transparente Verweise vorhanden sind, wenn Sie diesen Wert entfernen.<br />-FUSION_REFCOUNT_OSINSTALL_GUID: dieser Wert ist reserviert.|  
+|`szIdentifier`|Eine eindeutige Zeichenfolge, die die Anwendung identifiziert, die die Assembly im globalen Assemblycache installiert hat. Der Wert hängt vom Wert des Felds ab `guidScheme` .|  
 |`szNonCanonicalData`|Eine Zeichenfolge, die nur von der Entität verstanden wird, die den Verweis hinzufügt. Der globale Assemblycache speichert diese Zeichenfolge, verwendet Sie jedoch nicht.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fusion-Strukturen](fusion-structures.md)
+- [Fusionsstrukturen](fusion-structures.md)
 - [Globaler Assemblycache](../../app-domains/gac.md)

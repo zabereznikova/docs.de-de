@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688743"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion – Globale statistische Funktionen
+
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von der Fusion-API verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ClearDownloadCache-Funktion](cleardownloadcache-function.md)  
  Löscht den globalen Assemblycache der heruntergeladenen Assemblys.  
   
@@ -45,7 +47,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Ruft einen Zeiger auf eine [IAppIdAuthority](iappidauthority-interface.md) -Instanz ab, die Schlüssel für Anwendungs Identitäten und-Verweise verwaltet.  
   
  [GetAssemblyIdentityFromFile-Funktion](getassemblyidentityfromfile-function.md)  
- Ruft einen Zeiger auf ein `IUnknown`-Objekt mit dem angegebenen `IID` in der Assembly am angegebenen Dateipfad ab.  
+ Ruft einen Zeiger auf ein- `IUnknown` Objekt mit dem angegebenen `IID` in der Assembly am angegebenen Dateipfad ab.  
   
  [GetCachePath-Funktion](getcachepath-function.md)  
  Ruft den Pfad zur zwischengespeicherten Assembly unter Verwendung der angegebenen Flags ab.  
@@ -66,10 +68,11 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Ruft den anzeigen Amen für eine Assembly nach der Richtlinie ab.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Fusion-Schnittstellen](fusion-interfaces.md)  
   
- [Fusion-Enumerationen](fusion-enumerations.md)  
+ [Fusionsenumerationen](fusion-enumerations.md)  
   
- [Fusion-Strukturen](fusion-structures.md)  
+ [Fusionsstrukturen](fusion-structures.md)  
   
  [Globaler Assemblycache](../../app-domains/gac.md)

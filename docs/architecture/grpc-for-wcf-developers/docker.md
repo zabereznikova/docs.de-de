@@ -2,12 +2,12 @@
 title: Docker-GrpC für WCF-Entwickler
 description: Erstellen von Docker-Images für ASP.net Core GrpC-Anwendungen
 ms.date: 09/02/2019
-ms.openlocfilehash: 379750edfa1a9fc282e43ffa83e5695425f31a26
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0a680d0918868829042e521506fa8c1a1628bf5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152714"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688444"
 ---
 # <a name="create-docker-images"></a>Erstellen von Docker-Images
 
@@ -20,10 +20,10 @@ Microsoft bietet eine Reihe von Basis Images zum entwickeln und Ausführen von .
 - Ein SDK-Image zum Erstellen und Veröffentlichen der Anwendung.
 - Ein Lauf Zeit Image für die Bereitstellung.
 
-| Image | Beschreibung |
+| Bild | BESCHREIBUNG |
 | ----- | ----------- |
-| [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Zum Entwickeln von Anwendungen mit `docker build` . Nicht zur Verwendung in der Produktion. |
-| [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Enthält die Lauf Zeit-und ASP.net Core Abhängigkeiten. Für Produktionszwecke. |
+| [mcr.microsoft.com/dotnet/sdk](https://hub.docker.com/_/microsoft-dotnet-sdk/) | Zum Entwickeln von Anwendungen mit `docker build` . Nicht zur Verwendung in der Produktion. |
+| [mcr.microsoft.com/dotnet/aspnet](https://hub.docker.com/_/microsoft-dotnet-aspnet/) | Enthält die Lauf Zeit-und ASP.net Core Abhängigkeiten. Für Produktionszwecke. |
 
 Für jedes Image gibt es vier Varianten, die auf verschiedenen Linux-Distributionen basieren und durch Tags unterschieden werden.
 
@@ -41,11 +41,11 @@ Das Alpine Base-Image ist um 100 MB im Vergleich zu 200 MB für die Debian-und U
 
 ## <a name="create-a-docker-image"></a>Erstellen eines Docker-Image
 
-Ein docker-Image wird durch eine *dockerfile-Datei*definiert. Dabei handelt es sich um eine Textdatei, die alle Befehle enthält, die zum Erstellen der Anwendung und zum Installieren von Abhängigkeiten erforderlich sind, die zum Erstellen oder Ausführen der Anwendung erforderlich sind. Das folgende Beispiel zeigt die einfachste dockerfile-Datei für eine ASP.net Core 3,0-Anwendung:
+Ein docker-Image wird durch eine *dockerfile-Datei* definiert. Dabei handelt es sich um eine Textdatei, die alle Befehle enthält, die zum Erstellen der Anwendung und zum Installieren von Abhängigkeiten erforderlich sind, die zum Erstellen oder Ausführen der Anwendung erforderlich sind. Das folgende Beispiel zeigt die einfachste dockerfile-Datei für eine ASP.net Core 3,0-Anwendung:
 
 ```dockerfile
 # Application build steps
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:3.0 as builder
 
 WORKDIR /src
 
@@ -56,7 +56,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o /published src/StockData/StockData.csproj
 
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 # Uncomment the line below if running with HTTPS
 # ENV ASPNETCORE_URLS=https://+:443
@@ -72,7 +72,7 @@ Die dockerfile-Datei besteht aus zwei Teilen: der erste verwendet das `sdk` Basi
 
 ### <a name="the-build-steps"></a>Die Buildschritte
 
-| Schritt | Beschreibung |
+| Schritt | BESCHREIBUNG |
 | ---- | ----------- |
 | `FROM ...` | Deklariert das Basis Image und weist den `builder` Alias zu. |
 | `WORKDIR /src` | Erstellt das `/src` Verzeichnis und legt es als Aktuelles Arbeitsverzeichnis fest. |
@@ -82,7 +82,7 @@ Die dockerfile-Datei besteht aus zwei Teilen: der erste verwendet das `sdk` Basi
 
 ### <a name="the-runtime-image-steps"></a>Die Schritte zum Lauf Zeit Image
 
-| Schritt | Beschreibung |
+| Schritt | BESCHREIBUNG |
 | ---- | ----------- |
 | `FROM ...` | Deklariert ein neues Basis Image. |
 | `WORKDIR /app` | Erstellt das `/app` Verzeichnis und legt es als Aktuelles Arbeitsverzeichnis fest. |
@@ -95,7 +95,7 @@ Microsoft Base Images für docker legen die `ASPNETCORE_URLS` Umgebungsvariable 
 
 ```dockerfile
 # Runtime image creation
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0
+FROM mcr.microsoft.com/dotnet/aspnet:3.0
 
 ENV ASPNETCORE_URLS=https://+:443
 ```

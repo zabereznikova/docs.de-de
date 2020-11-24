@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04b3e73e2166efb2ec0821d21da3da4c53b0ca4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688652"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty-Methode
+
 Legt den Wert der Eigenschaft fest, auf die durch den angegebenen Eigenschaften Bezeichner verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,22 +37,24 @@ HRESULT SetProperty (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `PropertyId`  
  in Der eindeutige Bezeichner der Eigenschaft, deren Wert festgelegt wird.  
   
  `pvProperty`  
- in Der Wert, auf den die Eigenschaft festgelegt werden soll, auf die `PropertyId`verweist.  
+ in Der Wert, auf den die Eigenschaft festgelegt werden soll, auf die verweist `PropertyId` .  
   
  `cbProperty`  
- in Die Größe `pvProperty`in Byte.  
+ in Die Größe von in Bytes `pvProperty` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion enumerations [.NET Framework]
 - enumerations [.NET Framework fusion]
 ms.assetid: 5817b4bc-b0ba-4b2f-a11c-a03dd8cb8f84
-ms.openlocfilehash: 9a030d1f0ec6cc4fd7ca526574caa4c281e2573e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c014d6fcf8ac34ebc82b43214a358039d8c28907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108504"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688756"
 ---
 # <a name="fusion-enumerations"></a>Fusionsenumerationen
+
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die von der Fusion-API verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ASM_CACHE_FLAGS-Enumeration](asm-cache-flags-enumeration.md)  
  Gibt die Quelle einer Assembly an, die von [IAssemblyCacheItem im globalen Assemblycache](iassemblycacheitem-interface.md) dargestellt wird.  
   
@@ -33,11 +35,12 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Gibt die Äquivalenz zweier Assemblyidentitäten an, die durch die [CompareAssemblyIdentity](compareassemblyidentity-function.md) -Funktion bestimmt werden.  
   
  [CREATE_ASM_NAME_OBJ_FLAGS-Enumeration](create-asm-name-obj-flags-enumeration.md)  
- Gibt die Attribute eines `IAssemblyName` Objekts an, wenn es von [der Funktion "](createassemblynameobject-function.md) -Funktion von" erstellt wird.  
+ Gibt die Attribute eines Objekts an, `IAssemblyName` Wenn es von der Funktion " [kreateassemblynameobject](createassemblynameobject-function.md) " erstellt wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Fusion-Schnittstellen](fusion-interfaces.md)  
   
- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)  
+ [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)  
   
- [Fusion-Strukturen](fusion-structures.md)
+ [Fusionsstrukturen](fusion-structures.md)

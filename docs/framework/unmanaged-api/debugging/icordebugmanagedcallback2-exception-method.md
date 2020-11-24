@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: 612b63ba9aa3504cab5196932293946d486955ce
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c5be9231bcd5aaddfa0cf1b0051f8e1184faef04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210201"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687631"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception-Methode
+
 Benachrichtigt den Debugger, dass eine Suche nach einem Ausnahmehandler gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT Exception (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne mit dem Thread darstellt, für den die Ausnahme ausgelöst wurde.  
   
@@ -58,6 +60,7 @@ HRESULT Exception (
  in Ein Wert der [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) -Enumeration, der zusätzliche Informationen über die Ausnahme angibt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der `Exception` Rückruf wird an verschiedenen Punkten während der Suchphase des Ausnahme Behandlungsprozesses aufgerufen. Das heißt, dass Sie mehrmals aufgerufen werden kann, während Sie eine Ausnahme entwickeln.  
   
  Die verarbeitete Ausnahme kann aus dem ICorDebugThread-Objekt abgerufen werden, auf das durch den-Parameter verwiesen wird `pThread` .  
@@ -72,6 +75,7 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Nicht definiert.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -80,7 +84,7 @@ HRESULT Exception (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugManagedCallback2-Schnittstelle](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

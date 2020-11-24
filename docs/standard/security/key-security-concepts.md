@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831064"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687546"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 
@@ -49,6 +49,7 @@ Ein Prinzipal stellt die Identität und die Rolle eines Benutzers dar und handel
 Weitere Informationen finden Sie unter [Prinzipal- und Identitätsobjekte](principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Authentifizierung  
+
 Bei der Authentifizierung wird die Identität eines Prinzipals anhand der Anmeldeinformationen des Benutzers abgerufen und überprüft. Anschließend wird die Gültigkeit dieser Anmeldeinformationen mithilfe einer autorisierten Stelle überprüft. Die bei der Authentifizierung abgerufenen Informationen können vom Code direkt verwendet werden. Sie können auch die rollenbasierte .NET-Sicherheit verwenden, um den aktuellen Benutzer zu authentifizieren und zu bestimmen, ob dieser Prinzipal auf Ihren Code zugreifen darf. Beispiele zur Authentifizierung des Prinzipals für bestimmte Rollen finden Sie in den Überladungen der <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType>-Methode. Sie können z. B. mit der <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType>-Überladung ermitteln, ob der aktuelle Benutzer Mitglied der Administratorgruppe ist.  
   
 Heute werden viele verschiedene Authentifizierungsmechanismen verwendet, von denen viele mit der rollenbasierten Sicherheit von .NET verwendet werden können. Am häufigsten werden Standard-, Digest-, Passport- und Betriebssystemverfahren (z. B. NTLM oder Kerberos) sowie anwendungsdefinierte Verfahren verwendet.  
@@ -70,10 +71,10 @@ Im folgenden Beispiel muss der aktive Prinzipal ein Administrator sein. Der `nam
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Autorisierung  
+## <a name="authorization"></a>Authorization  
 
 Bei der Autorisierung wird bestimmt, ob das Ausführen einer angeforderten Aktion durch einen Prinzipal zulässig ist. Die Autorisierung findet nach der Authentifizierung statt. Sie bestimmt anhand der Informationen zur Identität und Rollen des Prinzipals, auf welche Ressourcen dieser zugreifen darf. Sie können die rollenbasierte .NET-Sicherheit verwenden, um die Autorisierung zu implementieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ASP.net Core Sicherheit](/aspnet/core/security/)

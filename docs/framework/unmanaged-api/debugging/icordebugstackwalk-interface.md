@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 5f71dfcdffaaa683ca4f2abebaa99115ef90e0ff
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b37a89c0a86df49c894dc43676f8feafb80f5c95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378903"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687514"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk-Schnittstelle
+
 Stellt Methoden zum Abrufen der verwalteten Methoden oder Frames auf dem Stapel eines Threads bereit.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetContext-Methode](icordebugstackwalk-getcontext-method.md)|Gibt den Kontext für den aktuellen Frame im- `ICorDebugStackWalk` Objekt zurück.|  
 |[SetContext-Methode](icordebugstackwalk-setcontext-method.md)|Legt den `ICorDebugStackWalk` aktuellen Kontext des Objekts auf einen gültigen Kontext für den Thread fest.|  
@@ -39,6 +40,7 @@ Stellt Methoden zum Abrufen der verwalteten Methoden oder Frames auf dem Stapel 
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -47,7 +49,7 @@ Stellt Methoden zum Abrufen der verwalteten Methoden oder Frames auf dem Stapel 
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f62b05ebbd8b27dba160c8281c1d40748c90fc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688834"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum-Funktion
+
 Ruft einen Zeiger auf eine [IInstallReferenceEnum](iinstallreferenceenum-interface.md) -Instanz ab, die eine Liste der Verweise einer Anwendung auf die angegebene Assembly darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT CreateInstallReferenceEnum (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppRefEnum`  
  vorgenommen Der zurückgegebene `IInstallReferenceEnum` Zeiger.  
   
@@ -50,17 +52,18 @@ HRESULT CreateInstallReferenceEnum (
  `pvReserved`  
  [in] Für zukünftige Erweiterungen reserviert. `pvReserved` muss ein NULL-Verweis sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Bibliothek:** "Fusion. dll" und "mscorwert. dll". Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
+ **Bibliothek:** Fusion.dll und Mscorwks.dll. Verwenden Sie Fusion.dll anstelle von Mscorwks.dll, um sicherzustellen, dass Sie die richtige Version der .NET Framework als Ziel verwenden.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IInstallReferenceEnum-Schnittstelle](iinstallreferenceenum-interface.md)
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
-- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
+- [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)

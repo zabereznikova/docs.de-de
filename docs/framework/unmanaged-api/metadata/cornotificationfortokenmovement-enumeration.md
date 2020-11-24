@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007597"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687670"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement-Enumeration
+
 Gibt die Benachrichtigungen an, die an den metadatenapi-Client gesendet werden, wenn eine Neuzuordnung eines Tokens auftritt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -61,7 +62,7 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`MDNotifyDefault`|Benachrichtigen, wenn-,-,- `mdTypeRef` `mdMethodDef` oder- `mdMemberRef` `mdFieldDef` Token verschoben werden.|  
 |`MDNotifyAll`|Benachrichtigen, wenn ein beliebiges Token verschoben wird.|  
@@ -88,15 +89,17 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyResource`|Benachrichtigen, wenn ein `mdManifestResource` Token verschoben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Token kann während einer Metadatenzusammenführung neu zugeordnet (d. h. verschoben) werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

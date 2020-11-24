@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1dd71dbe0ddb894cb5ed05c32e50429d27c66aa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689328"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile-Methode
+
 Erstellt eine `File`-Metadatenstruktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT DefineFile (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `szName`  
  in Der Name der zu verwendenden Datei.  
   
@@ -54,17 +56,19 @@ HRESULT DefineFile (
  vorgenommen Ein Zeiger auf das zurückgegebene `File` Token.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Für jede Datei, die zum Zeitpunkt der Erstellung `File` dieser Assembly Bestandteil dieser Assembly war, muss eine Metadatenstruktur definiert werden, ausgenommen die Datei, die die Metadaten enthält.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

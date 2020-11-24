@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7e99879-421f-43ce-b193-34733cf30085
 topic_type:
 - apiref
-ms.openlocfilehash: 06a331e24622e0a155d974ca869818a6532baa1f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 58055d9ea56d7928729d289198965752985d8e0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688899"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum-Methode
+
 Legt Prüfsummeninformationen fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT SetCheckSum(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `algorithmId`  
  in Die GUID, die den Algorithmusbezeichner darstellt.  
   
@@ -45,11 +47,13 @@ HRESULT SetCheckSum(
  in Der Puffer, der die Prüfsummeninformationen speichert.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedDocumentWriter-Schnittstelle](isymunmanageddocumentwriter-interface.md)
