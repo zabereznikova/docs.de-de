@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8adbf092-c3ba-4bee-b25b-0de6e43a4ce5
 topic_type:
 - apiref
-ms.openlocfilehash: 9797c419251127ef07a8c2bee22132c3c2b82e36
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 189fbb1943d049dc4f52ea6cb626c02e9e25b3c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703321"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686139"
 ---
 # <a name="iclrreferenceassemblyenum-interface"></a>ICLRReferenceAssemblyEnum-Schnittstelle
+
 Stellt Methoden bereit, die es dem Host ermöglichen, den Satz von Assemblys, auf die von einer Datei oder einem Stream verwiesen wird, mithilfe von Assemblyidentitätsdaten zu bearbeiten, die für die Common Language Runtime (CLR) intern sind, ohne dass diese Identitäten  
   
 ## <a name="methods"></a>Methoden  
@@ -30,17 +31,18 @@ Stellt Methoden bereit, die es dem Host ermöglichen, den Satz von Assemblys, au
 |------------|-----------------|  
 |[Get-Methode](iclrreferenceassemblyenum-get-method.md)|Ruft die Assemblyidentität am angegebenen Index ab.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRAssemblyIdentityManager-Schnittstelle](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

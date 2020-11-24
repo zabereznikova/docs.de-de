@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: ce4a842bc71ff144e46efb0d6f7068dfca9d207d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd41463af0acac1bbe1a3d4515350905b6784f79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500441"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685330"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished-Methode
+
 Benachrichtigt den Profiler, dass eine Assembly den Ladevorgang abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,12 +44,14 @@ HRESULT AssemblyLoadFinished(
 
   \[in] ein HRESULT, das angibt, ob die Assembly erfolgreich geladen wurde.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Wert von `assemblyId` ist für eine Informationsanforderung erst gültig, wenn die- `AssemblyLoadFinished` Methode aufgerufen wird.  
   
  Einige Teile des Ladens der Assembly können nach dem Rückruf fortgesetzt werden `AssemblyLoadFinished` . Ein Fehler HRESULT in `hrStatus` weist auf einen Fehler hin. Ein HRESULT-Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil des Ladens der Assembly erfolgreich war.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -57,6 +60,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

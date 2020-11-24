@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 56d5cfde2efb322521615977f72b0d308ad378f6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 30c19af5f579ea5abb88d062a4f536fa2a876625
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500540"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685339"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling-Schnittstelle
+
 Stellt die [iclrprofiling:: attachprofiler](iclrprofiling-attachprofiler-method.md) -Methode bereit, die einem Profiler das Anfügen an einen laufenden Prozess ermöglicht.  
   
 ## <a name="methods"></a>Methoden  
@@ -33,6 +34,7 @@ Stellt die [iclrprofiling:: attachprofiler](iclrprofiling-attachprofiler-method.
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -41,7 +43,7 @@ Stellt die [iclrprofiling:: attachprofiler](iclrprofiling-attachprofiler-method.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

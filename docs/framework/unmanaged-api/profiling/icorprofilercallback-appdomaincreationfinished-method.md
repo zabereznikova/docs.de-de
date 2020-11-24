@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 76f56971223154d3ed966c272081049adf30de54
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 688b9975cc68463de066e5225c6ab1e04cbb5337
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685371"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished-Methode
+
 Benachrichtigt den Profiler, dass eine Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,12 +44,14 @@ HRESULT AppDomainCreationFinished(
 
   \[in] ein HRESULT, das angibt, ob die Erstellung der Anwendungsdomäne erfolgreich abgeschlossen wurde.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die Anwendungs-ID ist für eine beliebige Informationsanforderung erst gültig, wenn die- `AppDomainCreationFinished` Methode aufgerufen wird.  
   
  Einige Teile des Ladens der Anwendungsdomäne können nach dem Rückruf fortgesetzt werden `AppDomainCreationFinished` . Ein Fehler HRESULT in `hrStatus` weist auf einen Fehler hin. Ein HRESULT-Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil der Erstellung der Anwendungsdomäne erfolgreich war.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -57,6 +60,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

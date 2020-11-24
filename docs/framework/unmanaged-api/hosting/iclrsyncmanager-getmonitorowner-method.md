@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 840983a4-396d-47b4-86a0-d35f9b437cdb
 topic_type:
 - apiref
-ms.openlocfilehash: 77debe047f5b379237022f44ef8f9d96718b227d
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a2cb82d8071518af4d4bc3276871f3846a5a5693
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687081"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner-Methode
+
 Ruft die [IHostTask](ihosttask-interface.md) -Instanz ab, die den Monitor besitzt, der durch das angegebene Cookie identifiziert wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetMonitorOwner (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cookie`  
  in Das Cookie, das dem Monitor zugeordnet ist.  
   
@@ -45,7 +47,7 @@ HRESULT GetMonitorOwner (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetMonitorOwner` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,19 +55,21 @@ HRESULT GetMonitorOwner (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host ruft in der Regel `GetMonitorOwner` als Teil eines Deadlock-Erkennungsmechanismus auf. Das Cookie ist einem Monitor zugeordnet, wenn er mithilfe eines [IHostSyncManager:: | atemonitorevent](ihostsyncmanager-createmonitorevent-method.md)-Aufrufens erstellt wird.  
   
 > [!NOTE]
 > Ein aufzurufende Ereignis, das dem Monitor zugrunde liegt, blockiert möglicherweise –, aber keinen Deadlock –, wenn aktuell ein aufrufungs Vorgang für das diesem Monitor zugeordnete Cookie wirksam ist. Andere Tasks können auch blockiert werden, wenn Sie versuchen, diesen Monitor zu erwerben.  
   
- `GetMonitorOwner`gibt immer sofort zurück und kann nach einem Aufruf von jederzeit aufgerufen werden `CreateMonitorEvent` . Der Host muss nicht warten, bis ein Task auf das Ereignis wartet.  
+ `GetMonitorOwner` gibt immer sofort zurück und kann nach einem Aufruf von jederzeit aufgerufen werden `CreateMonitorEvent` . Der Host muss nicht warten, bis ein Task auf das Ereignis wartet.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

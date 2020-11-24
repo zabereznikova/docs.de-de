@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: db98608a-e85c-4f50-9d7b-5f57a426ddb6
 topic_type:
 - apiref
-ms.openlocfilehash: 2dbd4559bad54aee69f6980e8baf6441480f482c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 518ee65bc684f643bf4f608223c0fa40ea3f0dd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685538"
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate-Schnittstelle
+
 Stellt Methoden zum Überprüfen von Metadatensignaturen bereit.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,14 +33,15 @@ Stellt Methoden zum Überprüfen von Metadatensignaturen bereit.
 |[ValidatorInit-Methode](imetadatavalidate-validatorinit-method.md)|Setzt ein Flag, das den Typ des Moduls im aktuellen Metadatenbereich angibt, und registriert die angegebene Rückrufmethode für Überprüfungsfehler.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)

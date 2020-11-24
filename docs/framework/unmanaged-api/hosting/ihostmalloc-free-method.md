@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d4c9048c89d55ed048a55a771572823905a056df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687136"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free-Methode
+
 Gibt Arbeitsspeicher frei, der mithilfe der [Zuordnungs](ihostmalloc-alloc-method.md) Funktion zugeordnet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT Free (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pMem`  
  in Ein Zeiger auf den Speicher, der freigegeben werden soll.  
   
@@ -41,7 +43,7 @@ HRESULT Free (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Free`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Free` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,14 +52,16 @@ HRESULT Free (
 |HOST_E_INVALIDOPERATION|Es wurde versucht, Arbeitsspeicher freizugeben, der nicht über den Host zugeordnet wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn der- `pMem` Parameter auf einen Speicherbereich verweist, der nicht mithilfe eines Aufrufes zugeordnet wurde `Alloc` , sollte der Host HOST_E_INVALIDOPERATION zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

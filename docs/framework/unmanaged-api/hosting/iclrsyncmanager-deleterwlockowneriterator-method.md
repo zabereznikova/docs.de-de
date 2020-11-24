@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-ms.openlocfilehash: a4094a64d27072ce257341398bb49419bef9b8bb
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: db651e3fe51f90b84449874f2c60a12050b0350e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687111"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator-Methode
+
 Fordert an, dass die Common Language Runtime (CLR) einen Iterator zerstört, der durch einen [ICLRSyncManager:: foraterwlockowneriterator](iclrsyncmanager-createrwlockowneriterator-method.md)erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT DeleteRWLockOwnerIterator (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `Iterator`  
  in Der Iterator, der mithilfe eines Aufrufes erstellt wurde `CreateRWLockOwnerIterator` .  
   
@@ -41,7 +43,7 @@ HRESULT DeleteRWLockOwnerIterator (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`DeleteRWLockOwnerIterator`wurde erfolgreich zurückgegeben.|  
+|S_OK|`DeleteRWLockOwnerIterator` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder Sie befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,14 +51,16 @@ HRESULT DeleteRWLockOwnerIterator (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host kann diese Methode abrufen und `CreateRWLockOwnerIterator` sicherstellen, dass die Threading Implementierung synchronisiert bleibt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

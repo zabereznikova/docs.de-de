@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500558"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685421"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler-Methode
+
 Fügt den angegebenen Profiler an den angegebenen Prozess an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -64,6 +65,7 @@ HRESULT AttachProfiler(
   \[in] die Größe der Daten in Bytes, `pvClientData` auf die verweist.
 
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden HRESULTs zurück.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -81,12 +83,14 @@ HRESULT AttachProfiler(
 |E_FAIL|Ein anderer, nicht angegebener Fehler ist aufgetreten.|  
 |Sonstige Fehlercodes|Wenn die [ICorProfilerCallback3:: InitializeForAttach](icorprofilercallback3-initializeforattach-method.md) -Methode des Profilers ein HRESULT zurückgibt, das einen Fehler angibt, wird `AttachProfiler` dieses HRESULT zurückgegeben. In diesem Fall wird E_NOTIMPL in CORPROF_E_PROFILER_NOT_ATTACHABLE konvertiert.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="memory-management"></a>Speicherverwaltung  
+
  Entsprechend den COM-Konventionen ist der Aufrufer von `AttachProfiler` (z. B. der vom Profilerentwickler erstellte Triggercode) für das Zuordnen und Freigeben des Arbeitsspeichers für die Daten zuständig, auf die der `pvClientData`-Parameter verweist. Wenn die CLR den `AttachProfiler`-Aufruf ausführt, erstellt sie eine Kopie des Arbeitsspeichers, auf den `pvClientData` verweist, und sie überträgt die Kopie an den Zielprozess. Wenn die CLR im Zielprozess ihre eigene Kopie des `pvClientData`-Blocks empfängt, übergibt sie den Block über die `InitializeForAttach`-Methode an den Profiler, und dann gibt sie ihre Kopie der `pvClientData`-Blocks aus dem Zielprozess frei.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -95,7 +99,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3-Schnittstelle](icorprofilerinfo3-interface.md)

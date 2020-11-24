@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686435"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException-Enumeration
+
 Beschreibt die verfügbaren Optionen zum Verwalten von Ausnahmen, die im Benutzercode nicht behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,24 +36,26 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`eRuntimeDeterminedPolicy`|Gibt an, dass das Standardverhalten auftritt. Der Prozess wird beendet.|  
 |`eHostDeterminedPolicy`|Gibt an, dass die Common Language Runtime (CLR) nicht behandelte Ausnahmen ignoriert und der Host jede weitere Aktion bestimmen kann.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Um anzugeben, dass die CLR sich wie frühere Versionen verhält, verwenden Sie den- `eHostDeterminedPolicy` Member.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [EClrFailure-Enumeration](eclrfailure-enumeration.md)
 - [EClrOperation-Enumeration](eclroperation-enumeration.md)

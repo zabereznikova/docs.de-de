@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: 615637813b08629aaea74b23fa2737f52d61bafb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d2ba7d8e66472f771a932a2dfb05bb9e1ee96290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616917"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685876"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo-Struktur
+
 Bietet ausführliche Informationen über die Assembly, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,7 +38,7 @@ typedef struct _AssemblyBindInfo {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`dwAppDomainId`|Ein eindeutiger Bezeichner für das `IStream` , das durch einen [IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md)zurückgegeben wird, aus dem die referenzierte Assembly geladen werden soll.|  
 |`lpReferencedIdentity`|Eine eindeutige ID für die Assembly, auf die verwiesen wird.|  
@@ -45,20 +46,22 @@ typedef struct _AssemblyBindInfo {
 |`ePolicyLevel`|Einer der [EPolicyAction](epolicyaction-enumeration.md) -Werte, die angeben, welche Versions Verwaltungsrichtlinien ggf. auf die Assembly angewendet werden sollen, auf die verwiesen wird.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host stellt den eindeutigen Bezeichner `dwAppDomainId` für die Common Language Runtime (CLR) bereit. Nachdem ein Rückruf `IHostAssemblyStore::ProvideAssembly` von zurückgegeben wurde, verwendet die Common Language Runtime den Bezeichner, um zu bestimmen, ob der Inhalt des `IStream` zugeordnet wurde. Wenn dies der Fall ist, lädt die Laufzeit die vorhandene Kopie, anstatt den Stream neu zuzuordnen. Die Laufzeit verwendet diesen Bezeichner auch als Suchschlüssel für Streams, die von Aufrufen an [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md)zurückgegeben werden. Daher muss der Bezeichner für Modul Anforderungen und für Assemblyanforderungen eindeutig sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hostingstrukturen](hosting-structures.md)
+- [Hosten von Strukturen](hosting-structures.md)
 - [ICLRAssemblyIdentityManager-Schnittstelle](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager-Schnittstelle](ihostassemblymanager-interface.md)

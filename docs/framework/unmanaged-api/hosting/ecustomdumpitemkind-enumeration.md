@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-ms.openlocfilehash: 12a1142759532890f541a7c81006f8b3aed4d299
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6520815106ae1084d4281d5ebeb0680bb9bb91c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686305"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind-Enumeration
+
 Reserviert für zukünftige Erweiterungen der [CustomDumpItem](customdumpitem-structure.md) -Struktur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,20 +35,21 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`DUMP_ITEM_None`|Für die zukünftige Verwendung reserviert.|  
+|`DUMP_ITEM_None`|Für zukünftige Verwendung reserviert.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRErrorReportingManager-Schnittstelle](iclrerrorreportingmanager-interface.md)
 - [Hosten von Enumerationen](hosting-enumerations.md)
