@@ -4,52 +4,54 @@ description: Hier erfahren Sie, wie Sie einen anonymen Typ in einem Abfrageausdr
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 0ef68921b9d45e58024b37d559ee8291d8744af8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3e30793ed16204943e2398984ed200b93db7f86f
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204020"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098852"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="ab802-103">Gewusst wie: Zurückgeben von Teilmengen von Elementeigenschaften in einer Abfrage (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="ab802-103">How to return subsets of element properties in a query (C# Programming Guide)</span></span>
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="9784e-103">Gewusst wie: Zurückgeben von Teilmengen von Elementeigenschaften in einer Abfrage (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="9784e-103">How to return subsets of element properties in a query (C# Programming Guide)</span></span>
 
-<span data-ttu-id="ab802-104">Verwenden Sie einen anonymen Typ in einem Abfrageausdruck, wenn die folgenden Bedingungen beide erfüllt sind:</span><span class="sxs-lookup"><span data-stu-id="ab802-104">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  
+<span data-ttu-id="9784e-104">Verwenden Sie einen anonymen Typ in einem Abfrageausdruck, wenn die folgenden Bedingungen beide erfüllt sind:</span><span class="sxs-lookup"><span data-stu-id="9784e-104">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  
   
-- <span data-ttu-id="ab802-105">Sie möchte nur manche der Eigenschaften jedes Quellelements zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="ab802-105">You want to return only some of the properties of each source element.</span></span>  
+- <span data-ttu-id="9784e-105">Sie möchte nur manche der Eigenschaften jedes Quellelements zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="9784e-105">You want to return only some of the properties of each source element.</span></span>  
   
-- <span data-ttu-id="ab802-106">Sie müssen die Abfrageergebnisse nicht außerhalb des Geltungsbereichs der Methode speichern, in der die Abfrage ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ab802-106">You do not have to store the query results outside the scope of the method in which the query is executed.</span></span>  
+- <span data-ttu-id="9784e-106">Sie müssen die Abfrageergebnisse nicht außerhalb des Geltungsbereichs der Methode speichern, in der die Abfrage ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="9784e-106">You do not have to store the query results outside the scope of the method in which the query is executed.</span></span>  
   
- <span data-ttu-id="ab802-107">Wenn Sie nur eine Eigenschaft oder ein Feld jeder Quelldatei zurückgeben möchten, können Sie dazu den Punktoperator in der `select`-Klausel verwenden.</span><span class="sxs-lookup"><span data-stu-id="ab802-107">If you only want to return one property or field from each source element, then you can just use the dot operator in the `select` clause.</span></span> <span data-ttu-id="ab802-108">Wenn Sie z.B. die `ID` jedes `student` zurückgeben möchten, schreiben Sie die `select`-Klausel wie folgt:</span><span class="sxs-lookup"><span data-stu-id="ab802-108">For example, to return only the `ID` of each `student`, write the `select` clause as follows:</span></span>  
+ <span data-ttu-id="9784e-107">Wenn Sie nur eine Eigenschaft oder ein Feld jeder Quelldatei zurückgeben möchten, können Sie dazu den Punktoperator in der `select`-Klausel verwenden.</span><span class="sxs-lookup"><span data-stu-id="9784e-107">If you only want to return one property or field from each source element, then you can just use the dot operator in the `select` clause.</span></span> <span data-ttu-id="9784e-108">Wenn Sie z.B. die `ID` jedes `student` zurückgeben möchten, schreiben Sie die `select`-Klausel wie folgt:</span><span class="sxs-lookup"><span data-stu-id="9784e-108">For example, to return only the `ID` of each `student`, write the `select` clause as follows:</span></span>  
   
 ```csharp  
 select student.ID;  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ab802-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ab802-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9784e-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9784e-109">Example</span></span>  
 
- <span data-ttu-id="ab802-110">Im folgenden Beispiel erfahren Sie, wie Sie einen anonymen Typ verwenden können, um lediglich eine Teilmenge der Eigenschaften jedes Quellelements zurückzugeben, das die angegebenen Bedingungen erfüllt.</span><span class="sxs-lookup"><span data-stu-id="ab802-110">The following example shows how to use an anonymous type to return only a subset of the properties of each source element that matches the specified condition.</span></span>  
+ <span data-ttu-id="9784e-110">Im folgenden Beispiel erfahren Sie, wie Sie einen anonymen Typ verwenden können, um lediglich eine Teilmenge der Eigenschaften jedes Quellelements zurückzugeben, das die angegebenen Bedingungen erfüllt.</span><span class="sxs-lookup"><span data-stu-id="9784e-110">The following example shows how to use an anonymous type to return only a subset of the properties of each source element that matches the specified condition.</span></span>  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  
   
- <span data-ttu-id="ab802-111">Beachten Sie, dass der anonyme Typ den Namen des Quellelements für dessen Eigenschaften verwendet, wenn keine Namen angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="ab802-111">Note that the anonymous type uses the source element's names for its properties if no names are specified.</span></span> <span data-ttu-id="ab802-112">Um die Eigenschaften im anonymen Typen zu benennen, schreiben Sie die `select`-Anweisung wie folgt:</span><span class="sxs-lookup"><span data-stu-id="ab802-112">To give new names to the properties in the anonymous type, write the `select` statement as follows:</span></span>  
+ <span data-ttu-id="9784e-111">Beachten Sie, dass der anonyme Typ den Namen des Quellelements für dessen Eigenschaften verwendet, wenn keine Namen angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="9784e-111">Note that the anonymous type uses the source element's names for its properties if no names are specified.</span></span> <span data-ttu-id="9784e-112">Um die Eigenschaften im anonymen Typen zu benennen, schreiben Sie die `select`-Anweisung wie folgt:</span><span class="sxs-lookup"><span data-stu-id="9784e-112">To give new names to the properties in the anonymous type, write the `select` statement as follows:</span></span>  
   
 ```csharp  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   
- <span data-ttu-id="ab802-113">Wenn Sie dies mit vorherigem Beispiel durchführen möchten, müssen Sie die `Console.WriteLine`-Anweisung anpassen:</span><span class="sxs-lookup"><span data-stu-id="ab802-113">If you try this in the previous example, then the `Console.WriteLine` statement must also change:</span></span>  
+ <span data-ttu-id="9784e-113">Wenn Sie dies mit vorherigem Beispiel durchführen möchten, müssen Sie die `Console.WriteLine`-Anweisung anpassen:</span><span class="sxs-lookup"><span data-stu-id="9784e-113">If you try this in the previous example, then the `Console.WriteLine` statement must also change:</span></span>  
   
 ```csharp  
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ab802-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="ab802-114">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="9784e-114">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="9784e-114">Compiling the Code</span></span>  
   
-<span data-ttu-id="ab802-115">Zum Ausführen dieses Codes müssen Sie die Klasse kopieren und in eine C#-Konsolenanwendung mit einer `using`-Anweisung für „System.Linq“ einfügen.</span><span class="sxs-lookup"><span data-stu-id="ab802-115">To run this code, copy and paste the class into a C# console application  with a `using` directive for System.Linq.</span></span>
+<span data-ttu-id="9784e-115">Zum Ausführen dieses Codes müssen Sie die Klasse kopieren und in eine C#-Konsolenanwendung mit einer `using`-Anweisung für „System.Linq“ einfügen.</span><span class="sxs-lookup"><span data-stu-id="9784e-115">To run this code, copy and paste the class into a C# console application  with a `using` directive for System.Linq.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="ab802-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ab802-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9784e-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9784e-116">See also</span></span>
 
-- [<span data-ttu-id="ab802-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="ab802-117">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="ab802-118">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="ab802-118">Anonymous Types</span></span>](./anonymous-types.md)
-- [<span data-ttu-id="ab802-119">LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="ab802-119">LINQ in C#</span></span>](../../linq/index.md)
+- [<span data-ttu-id="9784e-117">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="9784e-117">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="9784e-118">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="9784e-118">Anonymous Types</span></span>](./anonymous-types.md)
+- [<span data-ttu-id="9784e-119">LINQ in C#</span><span class="sxs-lookup"><span data-stu-id="9784e-119">LINQ in C#</span></span>](../../linq/index.md)
