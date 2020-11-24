@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-ms.openlocfilehash: 856e01c7934709a17556aa53851204bf6a917de8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1da8f414ccf0c1eed3ec7dde842dd381440a3fa9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674956"
 ---
 # <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION-Struktur
+
 Bietet eine eindeutige Darstellung einer Funktion aus der Kombination ihrer ID mit der ID der neu kompilierten Version.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,7 +33,7 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`functionId`|Die ID der Funktion.|  
 |`reJitId`|Die ID der neu kompilierten Funktion. Der Wert 0 (null) stellt die ursprüngliche Version der Funktion dar.|  
@@ -40,6 +41,7 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
@@ -48,6 +50,6 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsstrukturen](profiling-structures.md)

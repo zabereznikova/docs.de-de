@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: 0a433ccb81ef62ac92a4553a838a2c98a04fc7c1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 18416954517c3cac09d013b8075bd097305a1dca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673963"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory-Methode
+
 Schreibt Daten in diesem Prozess in einen Arbeitsspeicher Bereich.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT WriteMemory(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `address`  
  in Ein- `CORDB_ADDRESS` Wert, der die Basisadresse des Speicherbereichs ist, in den Daten geschrieben werden. Vor der Datenübertragung überprüft das System, ob der Speicherbereich der angegebenen Größe, beginnend bei der Basisadresse, zum Schreiben zugänglich ist. Wenn nicht auf Sie zugegriffen werden kann, schlägt die Methode fehl.  
   
@@ -49,11 +51,13 @@ HRESULT WriteMemory(
  vorgenommen Ein Zeiger auf eine Variable, die die Anzahl von Bytes empfängt, die in diesem Prozess in den Speicherbereich geschrieben werden. Wenn `written` NULL ist, wird dieser Parameter ignoriert.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Daten werden automatisch hinter Breakpoints geschrieben. In der .NET Framework Version 2,0 sollten Native Debugger diese Methode nicht verwenden, um Breakpoints in den Anweisungs Datenstrom einzufügen. Verwenden Sie stattdessen [ICorDebugProcess2:: Abort](icordebugprocess2-setunmanagedbreakpoint-method.md) .  
   
  Die- `WriteMemory` Methode sollte nur außerhalb von verwaltetem Code verwendet werden. Diese Methode kann die Laufzeit beschädigt werden, wenn Sie nicht ordnungsgemäß verwendet wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

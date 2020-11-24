@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-ms.openlocfilehash: 935ac478fb966315e81fdcc004761038b28e3178
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af1d0e2039024a51341e30bec497c581a0bcacb3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673669"
 ---
 # <a name="_corexemain-function"></a>_CorExeMain-Funktion
+
 Initialisiert den Common Language Runtime (CLR), den verwalteten Einstiegspunkt im CLR-Header der ausführbaren Assembly und beginnt die Ausführung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Funktion wird vom Lade Programm in Prozessen aufgerufen, die aus verwalteten ausführbaren Assemblys erstellt wurden. Bei dll-Assemblys Ruft das Lade Modul stattdessen die [_CorDllMain](cordllmain-function.md) -Funktion auf.  
   
  Das Betriebssystem-Lade Modul ruft diese Methode unabhängig vom Einstiegspunkt auf, der in der Bilddatei angegeben ist.  
@@ -42,15 +44,16 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
   
  Weitere Informationen finden Sie im Abschnitt "Hinweise" im [_CorValidateImage](corvalidateimage-function.md) Thema.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Globale statische Metadatenfunktionen](../metadata/metadata-global-static-functions.md)

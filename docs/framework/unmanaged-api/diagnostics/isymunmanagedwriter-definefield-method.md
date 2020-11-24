@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-ms.openlocfilehash: aba551a1973a41a909869316cda07e8d655e9882
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5683c10938873821cbe998dbf13937a6a7d24d7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675086"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField-Methode
+
 Definiert eine einzelne Variable, die sich nicht innerhalb einer Methode befindet. Diese Methode wird für bestimmte Felder in Klassen, Bitfeldern usw. verwendet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,6 +42,7 @@ HRESULT DefineField(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `parent`  
  in Der Metadatentyp oder das Methoden Token.  
   
@@ -69,11 +71,13 @@ HRESULT DefineField(
  in Die dritte Adresse für die Feld Angabe.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

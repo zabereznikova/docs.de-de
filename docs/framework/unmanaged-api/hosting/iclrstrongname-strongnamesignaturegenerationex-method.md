@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3529eceb179cc4b08d39f83d97d001a16e716918
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674514"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx-Methode
+
 Generiert gemäß den angegebenen Flags eine Signatur mit starkem Namen für die angegebene Assembly.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT StrongNameSignatureGenerationEx (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `wszFilePath`  
  in Der Pfad zu der Datei, die das Manifest der Assembly enthält, für die die starke namens Signatur generiert wird.  
   
@@ -67,14 +69,16 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  in Einer oder mehrere der folgenden Werte:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001)-berechnen Sie alle Hashes für verknüpfte Module neu.  
+- `SN_SIGN_ALL_FILES` (0x00000001)-berechnen Sie alle Hashes für verknüpfte Module neu.  
   
-- `SN_TEST_SIGN`(0x00000002): Test-Signieren der Assembly.  
+- `SN_TEST_SIGN` (0x00000002): Test-Signieren der Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK`, wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
+
+ `S_OK` , wenn die Methode erfolgreich abgeschlossen wurde. andernfalls ein HRESULT-Wert, der einen Fehler angibt (siehe [Allgemeine HRESULT-Werte](/windows/win32/seccrypto/common-hresult-values) für eine Liste).  
   
 ## <a name="remarks"></a>Hinweise  
+
  Geben Sie NULL für `wszFilePath` an, um die Größe der Signatur zu berechnen, ohne die Signatur zu erstellen.  
   
  Die Signatur kann entweder direkt in der Datei gespeichert oder an den Aufrufer zurückgegeben werden.  
@@ -84,11 +88,12 @@ HRESULT StrongNameSignatureGenerationEx (
  Wenn `SN_TEST_SIGN` angegeben wird, wird der Common Language Runtime-Header nicht geändert, um anzugeben, dass die Assembly mit einem starken Namen signiert ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

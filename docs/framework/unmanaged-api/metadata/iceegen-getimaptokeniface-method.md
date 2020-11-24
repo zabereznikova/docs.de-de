@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-ms.openlocfilehash: 074279a0f5757b0d8ee96aa7075f9422be8da0c1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 079a599ff87146c4eed4b15d57696338fb25f530
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008351"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674306"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface-Methode
+
 Ruft die Schnittstelle ab, auf die vom angegebenen Token verwiesen wird.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
@@ -36,18 +37,20 @@ HRESULT GetIMapTokenIface (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pIMapToken`  
  [in, out] Das Metadatentoken für die zurück zugegende Schnittstelle.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

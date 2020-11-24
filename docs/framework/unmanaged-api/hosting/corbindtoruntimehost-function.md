@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7ba35823ccb670ad0201d1950687dc83cc9ba64a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504406"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673738"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost-Funktion
+
 Ermöglicht es Hosts, eine angegebene Version der Common Language Runtime (CLR) in einen Prozess zu laden.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -42,6 +43,7 @@ HRESULT CorBindToRuntimeHost (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwszVersion`  
  [in] Eine Zeichenfolge, welche die Version der zu ladenden CLR beschreibt.  
   
@@ -78,15 +80,16 @@ HRESULT CorBindToRuntimeHost (
  [out] Ein Schnittstellenzeiger auf die Version der Common Language Runtime, die geladen wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. idl  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime-Funktion](corbindtoruntime-function.md)

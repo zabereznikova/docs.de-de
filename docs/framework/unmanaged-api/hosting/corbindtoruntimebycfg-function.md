@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504432"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673773"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg-Funktion
+
 Lädt die Common Language Runtime (CLR) in einen Prozess, indem Versionsinformationen verwendet werden, die aus einer XML-Datei gelesen werden.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -40,6 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCfgStream`  
  in Ein Zeiger auf ein `IStream` Objekt, das die XML-Datei liest.  
   
@@ -58,19 +60,21 @@ HRESULT CorBindToRuntimeByCfg (
  `ppv`  
  vorgenommen Ein Zeiger auf die Adresse der zurückgegebenen-Schnittstelle.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das Format der XML-Datei wird nach der Standard Anwendungs Konfigurationsdatei modelliert. Weitere Informationen zu XML-Dateien finden Sie unter [Schema der Konfigurationsdatei](../../configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime-Funktion](corbindtoruntime-function.md)

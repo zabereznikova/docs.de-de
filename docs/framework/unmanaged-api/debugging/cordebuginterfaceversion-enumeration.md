@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: ae65c60440a90959006cd8db94dda479e80613d4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795806"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675307"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion-Enumeration
+
 Legt eine Schnittstelle fest, eine Version des .NET Frameworks oder eine Version des .NET Frameworks, in dem eine Schnittstelle eingeführt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -131,6 +132,7 @@ typedef enum CorDebugInterfaceVersion {
 ```  
   
 ## <a name="members"></a>Member  
+
  Die folgende Tabelle enthält Links von jedem Enumerationswert zur entsprechenden Schnittstelle. Außerdem zeigt die Tabelle die erste .NET Framework Version, in der die Schnittstelle unterstützt wurde.  
   
 |Member|Bedeutung|.NET Framework-Version|  
@@ -220,9 +222,11 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|Die Version von .NET Frameworks einschließlich sämtlicher Service Packs ist die neueste Version.|-|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Debugger kann die `CorDebugInterfaceVersion` -Enumeration in der Funktion " [deedebugginginterfakefromversion](../hosting/createdebugginginterfacefromversion-function.md) " verwenden, um die höchste Version der .NET Framework anzugeben, die der Debugger unterstützt.  
+
+ Ein Debugger kann die- `CorDebugInterfaceVersion` Enumeration in der Funktion " [deedebugginginterfakefromversion](../hosting/createdebugginginterfacefromversion-function.md) " verwenden, um die höchste Version der .NET Framework anzugeben, die der Debugger unterstützt.  
   
 ## <a name="interface-names"></a>Schnittstellennamen  
+
  Der Name, der am Ende der Schnittstellennamen in der Debugging-API enthalten ist (z. B. die "3" in `ICorDebugThread3`) legt die Version der Schnittstelle fest, nicht die des .NET Frameworks. Alle Schnittstellennamen in der Debugging-API enthalten Versionsnummern; ausgenommen sind Schnittstellen, die im .NET Framework Version 1 eingeführt wurden. Sämtliche Übereinstimmungen zwischen den Schnittstellenversionsnummern und .NET Framework-Versionsnummern sind zufällig.  
   
 - Schnittstellen, die mit der .NET Framework Version 1.0 eingeführt wurden, enthalten keine Zahlen, da es sich dabei implizit immer um die Version 1 handelt.  
@@ -233,9 +237,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
   
-- Der .NET Framework 4 führt eine Mischung aus Schnittstellen Versionen ein. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Der .NET Framework 4 führt außerdem die erste Version der- `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` -Schnitt`ICorDebugNativeFrame2`Stelle () ein.  
+- Der .NET Framework 4 führt eine Mischung aus Schnittstellen Versionen ein. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Der .NET Framework 4 führt außerdem die erste Version der `ICorDebugStackWalk` -Schnittstelle und die zweite Version der- `ICorDebugNativeFrame` Schnittstelle ( `ICorDebugNativeFrame2` ) ein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

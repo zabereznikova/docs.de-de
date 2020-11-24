@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72fa83a1-8997-41d7-b355-ab177a24a303
 topic_type:
 - apiref
-ms.openlocfilehash: 08dc0f0891d960cb7b402b30455e606aaff7bcea
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 84c53f0666d0e04b898e28c1d8e146eab566ca1b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616007"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674696"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor-Schnittstelle
+
 Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anwendungsdomäne überprüfen.  
   
 ## <a name="methods"></a>Methoden  
@@ -33,6 +34,7 @@ Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anw
 |[GetCurrentCpuTime-Methode](iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Ruft die gesamte Prozessorzeit ab, die während der Ausführung in der aktuellen Anwendungsdomäne von allen Threads verwendet wurde, seit die Anwendungsdomäne erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ICLRAppDomainResourceMonitor` Schnittstelle bietet eine ähnliche Funktionalität wie die folgenden verwalteten Eigenschaften:  
   
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
@@ -45,18 +47,19 @@ Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anw
   
 - <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<appdomainresourcemonitoring-> Element](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
+- [\<appDomainResourceMonitoring>-Element](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [Überwachung von Anwendungs Domänen Ressourcen](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

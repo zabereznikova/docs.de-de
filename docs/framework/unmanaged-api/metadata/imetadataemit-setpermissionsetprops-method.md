@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4c3e0953d71020ba62ee4ab68aa9e21ea3f0f521
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007805"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675034"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps-Methode
+
 Legt die Features der Metadatensignatur eines Berechtigungs Satzes fest, der durch einen vorherigen [IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md)definiert ist, oder aktualisiert diese.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT SetPermissionSetProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `tk`  
  in Ein Metadatentoken, das das zu ergänzte Objekt darstellt.  
   
@@ -54,15 +56,16 @@ HRESULT SetPermissionSetProps (
  vorgenommen Ein `mdPermission` Metadatentoken, das die aktualisierten Berechtigungen darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

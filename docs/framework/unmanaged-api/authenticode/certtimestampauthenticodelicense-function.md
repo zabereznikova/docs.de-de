@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-ms.openlocfilehash: 3c5e803c874e1254510f75189846d7cb12cb1ee2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc1a99572406a38aee8133d6435134b78a134175
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674098"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense-Funktion
+
 Fügt einer Authenticode-XrML-Lizenz einen Zeitstempel hinzu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,21 +30,24 @@ HRESULT CertTimestampAuthenticodeLicense (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pSignedLicenseBlob`  
- [in] Die signierte Authenticode-XrML-Lizenz, die einen Zeitstempel erhalten soll. Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
+ [in] Die signierte Authenticode-XrML-Lizenz, die einen Zeitstempel erhalten soll. Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) Struktur.  
   
  `pwszTimestampURI`  
  [in] Die URL des Zeitstempelservers.  
   
  `pTimestampSignatureBlob`  
- [out] Ein Zeiger auf CRYPT_DATA_BLOB, um die Base64-codierte Zeitstempelsignatur zu erhalten. Es liegt in der Verantwortung des Aufrufers, `pTimestampSignatureBlob`->`pbData` mit `HepFree()` nach der Verwendung freizugeben. Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) -Struktur.  
+ [out] Ein Zeiger auf CRYPT_DATA_BLOB, um die Base64-codierte Zeitstempelsignatur zu erhalten. Es liegt in der Verantwortung des Aufrufers, `pTimestampSignatureBlob` -> `pbData` nach Verwendung von freizugeben `HepFree()` . Siehe [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) Struktur.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Zeitstempelsignatur ist eigentlich eine PKCS #7-SignedData-Nachricht, deren Inhalt die Binärform des SignatureValue aus der Signatur der Lizenz ist. Im Prinzip agiert sie als Gegensignatur für die Lizenz.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  `S_OK`, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird ein Fehlercode zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Authenticode](index.md)

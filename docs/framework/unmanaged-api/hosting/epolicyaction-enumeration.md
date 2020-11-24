@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674733"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction-Enumeration
+
 Beschreibt die Richtlinien Aktionen, die der Host für Vorgänge festlegen kann, die durch [eclroperations](eclroperation-enumeration.md) und Fehler beschrieben werden, die von [EClrFailure](eclrfailure-enumeration.md)beschrieben werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +44,7 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`eAbortThread`|Gibt an, dass die Common Language Runtime (CLR) den Thread ordnungsgemäß abbrechen soll. Ein ordnungsgemäßer Abbruch umfasst den Versuch, alle `finally` Blöcke auszuführen, alle `catch` Blöcke im Zusammenhang mit Thread Abbrüchen und Finalizern.|  
 |`eDisableRuntime`|Gibt an, dass die CLR einen deaktivierten Zustand aufweisen soll. Im betroffenen Prozess kann kein weiterer verwalteter Code ausgeführt werden, und Threads können nicht in die CLR-Datei eingegeben werden.|  
@@ -56,15 +57,17 @@ typedef enum {
 |`eThrowException`|Gibt an, dass eine für die Bedingung geeignete Ausnahme, z. b. nicht genügend Arbeitsspeicher, Pufferüberlauf usw., ausgelöst werden soll.|  
 |`eUnloadAppDomain`|Gibt an, dass das <xref:System.AppDomain> entladen werden soll. Die CLR versucht, Finalizer auszuführen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Host legt Richtlinien Aktionen durch Aufrufen von Methoden der [ICLRPolicyManager](iclrpolicymanager-interface.md) -Schnittstelle fest. Informationen über grobe und ordnungsgemäße Abbrüche finden Sie in der [EClrOperation](eclroperation-enumeration.md) -Enumeration.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

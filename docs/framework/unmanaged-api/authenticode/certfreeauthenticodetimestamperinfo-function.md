@@ -8,15 +8,16 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
-ms.openlocfilehash: 4f0806e0273b111e3398fb8f2884231b96cf1116
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ef71b14faf66c179030dff2a7d953e27463c1f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674163"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo-Funktion
-Gibt Ressourcen frei, die der [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) -Struktur zugeordnet sind.  
+
+Gibt Ressourcen frei, die der [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) Struktur zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -27,12 +28,14 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pTimestamperInfo`  
- [in, out] Informationen über den Ersteller des Zeitstempels, die veröffentlicht werden sollen. Siehe [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) -Struktur.  
+ [in, out] Informationen über den Ersteller des Zeitstempels, die veröffentlicht werden sollen. Siehe [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  `S_OK`, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird ein Fehlercode zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Authenticode](index.md)
