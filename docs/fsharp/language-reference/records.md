@@ -2,12 +2,12 @@
 title: Datensätze
 description: 'Erfahren Sie, wie F #-Datensätze einfache Aggregate benannter Werte darstellen, optional mit Membern.'
 ms.date: 08/15/2020
-ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812353"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682028"
 ---
 # <a name="records"></a>Datensätze
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax ist *tykame* der Name des Daten Satz Typs, *Label1* und *Label2* sind Namen von Werten, die als *Bezeichnungen*bezeichnet werden, und *Typ1* und *Typ2* sind die Typen dieser Werte. "Element *-List* " ist die optionale Liste der Member für den Typ.  Mit dem-Attribut können Sie `[<Struct>]` einen Strukturdaten Satz anstelle eines Datensatzes erstellen, bei dem es sich um einen Verweistyp handelt.
+In der vorherigen Syntax ist *tykame* der Name des Daten Satz Typs, *Label1* und *Label2* sind Namen von Werten, die als *Bezeichnungen* bezeichnet werden, und *Typ1* und *Typ2* sind die Typen dieser Werte. "Element *-List* " ist die optionale Liste der Member für den Typ.  Mit dem-Attribut können Sie `[<Struct>]` einen Strukturdaten Satz anstelle eines Datensatzes erstellen, bei dem es sich um einen Verweistyp handelt.
 
 Hier einige Beispiele.
 
@@ -34,7 +34,7 @@ Hier einige Beispiele.
 
 Wenn sich jede Bezeichnung in einer separaten Zeile befindet, ist das Semikolon optional.
 
-Sie können Werte in Ausdrücken festlegen, die als *Daten Satz Ausdrücke*bezeichnet werden. Der Compiler leitet den Typ von den verwendeten Bezeichnungen ab (wenn sich die Bezeichnungen ausreichend von denen anderer Daten Satz Typen unterscheiden). Geschweifte Klammern ({}) schließen den Daten Satz Ausdruck ein. Der folgende Code zeigt einen Datensatz-Ausdruck, der einen Datensatz mit drei float-Elementen mit den Bezeichnungen `x` , und initialisiert `y` `z` .
+Sie können Werte in Ausdrücken festlegen, die als *Daten Satz Ausdrücke* bezeichnet werden. Der Compiler leitet den Typ von den verwendeten Bezeichnungen ab (wenn sich die Bezeichnungen ausreichend von denen anderer Daten Satz Typen unterscheiden). Geschweifte Klammern ({}) schließen den Daten Satz Ausdruck ein. Der folgende Code zeigt einen Datensatz-Ausdruck, der einen Datensatz mit drei float-Elementen mit den Bezeichnungen `x` , und initialisiert `y` `z` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -50,7 +50,7 @@ Methoden können für Daten Satz Typen genau wie für Klassentypen definiert wer
 
 ## <a name="creating-records-by-using-record-expressions"></a>Erstellen von Datensätzen mithilfe von Daten Satz Ausdrücken
 
-Sie können Datensätze mit den Bezeichnungen initialisieren, die im Datensatz definiert sind. Ein Ausdruck, der dies bewirkt, wird als *Daten Satz Ausdruck*bezeichnet. Verwenden Sie geschweifte Klammern, um den Daten Satz Ausdruck einzuschließen und das Semikolon als Trennzeichen zu verwenden.
+Sie können Datensätze mit den Bezeichnungen initialisieren, die im Datensatz definiert sind. Ein Ausdruck, der dies bewirkt, wird als *Daten Satz Ausdruck* bezeichnet. Verwenden Sie geschweifte Klammern, um den Daten Satz Ausdruck einzuschließen und das Semikolon als Trennzeichen zu verwenden.
 
 Im folgenden Beispiel wird gezeigt, wie ein Datensatz erstellt wird.
 
@@ -68,7 +68,7 @@ Eine andere Form der Daten Satz Erstellung kann nützlich sein, wenn Sie einen v
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Diese Form des Daten Satz Ausdrucks wird als *Kopier-und Update Daten Satz Ausdruck*bezeichnet.
+Diese Form des Daten Satz Ausdrucks wird als *Kopier-und Update Daten Satz Ausdruck* bezeichnet.
 
 Datensätze sind standardmäßig unveränderlich. mithilfe eines Kopier-und Update Ausdrucks können Sie jedoch problemlos geänderte Datensätze erstellen. Sie können auch explizit ein änderbares Feld angeben.
 
@@ -157,7 +157,7 @@ type Person =
     member this.WeirdToString() =
         this.Name + this.Address + string this.Age
 
-let p = { Name = "a"; Age = 12; Address = "abc123 }
+let p = { Name = "a"; Age = 12; Address = "abc123" }
 let weirdString = p.WeirdToString()
 ```
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 5ef5d9ae3da4dff13a461162f0ba3466d3d8192c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501260"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682389"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping-Methode
+
 Ruft den Speicherbereich der zugeordneten Datei und den Typ der Zuordnung ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetFileMapping (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppvData`  
  vorgenommen Ein Zeiger auf den Anfang der zugeordneten Datei.  
   
@@ -53,7 +55,8 @@ HRESULT GetFileMapping (
 |`E_INVALIDARG`|NULL wurde als Argument Wert übermittelt.|  
 |`COR_E_NOTSUPPORTED`|Die CLR-Implementierung kann keine Informationen über die Speicher Region bereitstellen. Dies kann aus folgenden Gründen geschehen:<br /><br /> -Der Metadatenbereich wurde mit dem- `ofWrite` Flag oder dem- `ofCopyMemory` Flag geöffnet.<br />-Der Metadatenbereich wurde ohne das- `ofReadOnly` Flag geöffnet.<br />-Die [IMetaDataDispenser:: OpenScopeOnMemory](imetadatadispenser-openscopeonmemory-method.md) -Methode wurde verwendet, um nur den Metadatenteil der Datei zu öffnen.<br />-Die Datei ist keine portable ausführbare Datei (PE). **Hinweis:**  Diese Bedingungen sind von der CLR-Implementierung abhängig und werden wahrscheinlich in zukünftigen Versionen der CLR geschwächt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Arbeitsspeicher, `ppvData` auf den verweist, ist nur gültig, solange der zugrunde liegende Metadatenbereich geöffnet ist.  
   
  Damit diese Methode funktioniert, müssen Sie das-Flag angeben, wenn Sie die Metadaten einer Datei auf dem Datenträger durch Aufrufen der [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) -Methode im Arbeitsspeicher zuordnen, `ofReadOnly` und Sie dürfen das-Flag oder das-Flag nicht angeben `ofWrite` `ofCopyMemory` .  
@@ -63,15 +66,16 @@ HRESULT GetFileMapping (
  Das übergeben von NULL für einen der drei Parameter wird nicht unterstützt. Die-Methode gibt zurück `E_INVALIDARG` , und keine der Ausgaben wird ausgefüllt. Wenn Sie den Mapping-Typ oder die Größe des Bereichs ignorieren, kann dies zu einem ungewöhnlichen Programmabbruch führen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataInfo-Schnittstelle](imetadatainfo-interface.md)
 - [CorFileMapping-Enumeration](corfilemapping-enumeration.md)

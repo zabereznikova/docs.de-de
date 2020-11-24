@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 4480fefa51eec2f2751bd71910db87b72a1c32cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496712"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681577"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2-Schnittstelle
+
 Stellt Methoden bereit, die Code Profiler für die Kommunikation mit dem Common Language Runtime (CLR) verwenden, um die Ereignisüberwachung und Anforderungs Informationen zu steuern. Die- `ICorProfilerInfo2` Schnittstelle ist eine Erweiterung der [ICorProfilerInfo](icorprofilerinfo-interface.md) -Schnittstelle. Das heißt, es werden neue Methoden bereitstellt, die in der .NET Framework Version 2,0 und höheren Versionen unterstützt werden.  
   
 ## <a name="methods"></a>Methoden  
@@ -50,7 +51,8 @@ Stellt Methoden bereit, die Code Profiler für die Kommunikation mit dem Common 
 |[GetThreadStaticAddress-Methode](icorprofilerinfo2-getthreadstaticaddress-method.md)|Ruft die Adresse des angegebenen Thread statischen Felds ab, das sich im Gültigkeitsbereich des angegebenen Threads befindet.|  
 |[SetEnterLeaveFunctionHooks2-Methode](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Gibt vom Profiler implementierte Funktionen an, die für die "Enter"-, "Leave"-und "Tailcall"-Hooks von verwalteten Funktionen aufgerufen werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Ein Profiler Ruft eine Methode in der- `ICorProfilerInfo2` Schnittstelle auf, um mit der CLR zu kommunizieren, um die Ereignisüberwachung und Anforderungs Informationen zu steuern.  
   
  Die Methoden der- `ICorProfilerInfo2` Schnittstelle werden von der CLR mithilfe des frei Hand Thread Modells implementiert. Jede Methode gibt ein HRESULT zurück, um einen Erfolg oder einen Fehler anzugeben. Eine Liste möglicher Rückgabecodes finden Sie in der Datei "CorError.h".  
@@ -58,6 +60,7 @@ Stellt Methoden bereit, die Code Profiler für die Kommunikation mit dem Common 
  Die CLR übergibt eine `ICorProfilerInfo2` Schnittstelle während der Initialisierung mithilfe der Implementierung von [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)des Profilers an jeden Codeprofiler. Ein Codeprofiler kann dann Methoden der- `ICorProfilerInfo2` Schnittstelle aufzurufen, um Informationen zu verwaltetem Code abzurufen, der unter der Kontrolle der CLR ausgeführt wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -66,7 +69,7 @@ Stellt Methoden bereit, die Code Profiler für die Kommunikation mit dem Common 
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

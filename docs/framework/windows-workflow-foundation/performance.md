@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 – Leistung
 description: In diesem Artikel werden die Leistungsmerkmale der Haupt Revision von Windows Workflow Foundation erläutert, die Teil von .NET Framework 4 ist.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558341"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682340"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -20,7 +20,7 @@ ms.locfileid: "90558341"
 
  Die Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)] , die in .NET Framework 4 eingeführt wurde, wird im weiteren Verlauf dieses Themas als WF4 bezeichnet. [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde in .NET Framework 3,0 eingeführt und enthielt einige geringfügige Revisionen durch .NET Framework 3,5 SP1. Die .NET Framework 3,5-Version von Workflow Foundation wird im weiteren Verlauf dieses Themas als WF3 bezeichnet. WF3 wird in .NET Framework 4 nebeneinander mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie im [Migrations Handbuch zu Windows Workflow Foundation 4](migration-guidance.md).
 
- Windows Communication Foundation (WCF) ist das vereinheitlichte Programmiermodell von Microsoft zum entwickeln Dienst orientierter Anwendungen. Sie wurde zuerst als Teil von .NET 3,0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten des .NET Framework.
+ Windows Communication Foundation (WCF) ist das vereinheitlichte Programmiermodell von Microsoft zum entwickeln Dienst orientierter Anwendungen. Sie wurde zuerst als Teil von .NET Framework 3,0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten des .NET Framework.
 
  Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558341"
  Anwendungen weisen in der Regel bessere Leistung und Skalierbarkeit mit asynchroner Programmierung für lang ausgeführte blockierende Vorgänge auf, wie z. B. E/A oder verteilte Computervorgänge. WF4 stellt asynchrone Unterstützung durch die Basisaktivitätstypen <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.AsyncCodeActivity%601> bereit. Die Laufzeit versteht asynchrone Aktivitäten systemintern und kann daher die Instanz automatisch in eine Zone ohne Persistenz verschieben, während die asynchrone Arbeit aussteht. Benutzerdefinierte Aktivitäten können von diesen Typen abgeleitet werden, um asynchrone Aufgaben auszuführen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die möglicherweise parallel ausgeführt werden, blockiert werden.
 
 ### <a name="messaging"></a>Nachrichten
- Anfänglich hatte WF3 sehr beschränkte Messagingunterstützung über externe Ereignisse oder Webdienstaufrufe. In .NET 3,5 können Workflows als WCF-Clients implementiert oder über und als WCF-Dienste verfügbar gemacht werden <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> . In WF4 wurde das Konzept der Workflow basierten Messaging Programmierung durch die enge Integration von WCF-Messaging Logik in WF weiter gestärkt.
+ Anfänglich hatte WF3 sehr beschränkte Messagingunterstützung über externe Ereignisse oder Webdienstaufrufe. In .NET Framework 3,5 können Workflows als WCF-Clients implementiert oder über und als WCF-Dienste verfügbar gemacht werden <xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity> . In WF4 wurde das Konzept der Workflow basierten Messaging Programmierung durch die enge Integration von WCF-Messaging Logik in WF weiter gestärkt.
 
  Die vereinheitlichte Pipeline zur Nachrichtenverarbeitung in WCF in .NET 4 unterstützt WF4-Dienste bei einer deutlich besseren Leistung und Skalierbarkeit als bei WF3. WF4 stellt außerdem eine umfangreichere Messagingprogrammierungsunterstützung bereit, die komplexe Nachrichtenaustauschmuster (MEPs) modellieren kann. Entwickler verwenden entweder typisierte Dienstverträge, um eine einfache Programmierung zu erreichen, oder nicht typisierte Dienstverträge, um bessere Leistung ohne Bezahlung von Serialisierungskosten zu erzielen. Die clientseitige Channelzwischenspeicherunterstützung über die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse in WF4 hilft Entwicklern beim Erstellen schneller Anwendungen mit minimalem Aufwand. Weitere Informationen finden Sie unter [Ändern der Cache Freigabe Ebenen für Sendeaktivitäten](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
@@ -183,7 +183,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
 
  Die zwei Back-End-Dienste, Bestellungsvalidierungsdienst und Warehouse-Dienst, bleiben für beide Tests gleich.  Der Teil, der sich ändert, ist der Onlineshopdienst, von dem die Orchestrierung ausgeführt wird.  In einem Fall ist der Dienst handcodiert als WCF-Dienst.  Im anderen Fall wird der Dienst als WCF-Workflow Dienst in WF4 geschrieben. [!INCLUDE[wf1](../../../includes/wf1-md.md)]-spezifische Funktionen wie Nachverfolgen und Persistenz sind für diesen Test deaktiviert.
 
-### <a name="environment"></a>Umgebung
+### <a name="environment"></a>Environment
 ![Einrichten der Umgebung für die Leistungsmessung](./media/performance/performance-test-environment.gif)
 
  Clientanforderungen werden dem Onlineshopdienst über HTTP von mehreren Computern gestellt.  Ein einzelner Computer hostet alle drei Dienste.  Die Transportebene zwischen dem Onlineshopdienst und den Back-End-Diensten ist TCP oder HTTP.  Die Messung der Vorgänge pro Sekunde basiert auf der Anzahl der beim Onlineshopdienst eingegangenen `PurchaseOrder`-Aufrufe.  Channelpooling ist eine neue, in WF4 verfügbare Funktion.  Im WCF-Teil dieses Test Kanal-Pooling wird nicht standardmäßig bereitgestellt, sodass eine Hand codierte Implementierung einer einfachen Pooling-Technik im Online Store-Dienst verwendet wurde.
@@ -285,7 +285,7 @@ Im folgenden Diagramm wird der grundlegende Kompensations Workflow gezeigt. Der 
 
  Sogar mit komplexen Workflows mit viel Tiefe und einer hohen Anzahl Aktivitäten sind die Leistungsergebnisse mit anderen, weiter oben in diesem Artikel angezeigten Durchsatzzahlen konsistent.  Der Durchsatz von WF4 ist größer und muss auf einer logarithmischen Skala verglichen werden.
 
-### <a name="memory"></a>Arbeitsspeicher
+### <a name="memory"></a>Memory
  Der Arbeitsspeicheraufwand von Windows Workflow Foundation wird in zwei Hauptbereichen gemessen: Workflowkomplexität und Anzahl von Workflowdefinitionen.  Arbeitsspeichermessungen wurden auf einem Windows 7-64-Bit-PC vorgenommen.  Es gibt viele Möglichkeiten, die Größe der Workingsetgröße zu ermitteln, wie z. b. das Überwachen von Leistungsindikatoren, der Abruf Umgebung. WorkingSet oder die Verwendung eines Tools wie VMMap, das in [VMMap](/sysinternals/downloads/vmmap)verfügbar ist Eine Kombination von Methoden wurde verwendet, um die Ergebnisse aller Tests abzurufen und zu überprüfen.
 
 ### <a name="workflow-complexity-test"></a>Workflowkomplexitätstest
