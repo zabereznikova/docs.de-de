@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e5d03cb-97c9-4ff4-8dbd-17d94ee374d3
 topic_type:
 - apiref
-ms.openlocfilehash: 3be8a004be752af8a8675a3499bdb6cbfd785840
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3d5989d43644088403a77f26c02af9ffaae0732b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677218"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions-Enumeration
+
 Enthält Flagwerte, die das Verhalten beim Import einer Assembly außerhalb des aktuellen Bereichs steuern.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,7 +45,7 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`MDImportOptionDefault`|Gibt das Standardverhalten an, das zum Überspringen gelöschter Datensätze dient.|  
 |`MDImportOptionAll`|Gibt an, dass alle Metadaten aufgezählt werden sollen.|  
@@ -57,12 +58,13 @@ typedef enum CorImportOptions {
 |`MDImportOptionAllExportedTypes`|Gibt an, dass alle exportierten Typen, einschließlich gelöschter Typen, aufgezählt werden sollen.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

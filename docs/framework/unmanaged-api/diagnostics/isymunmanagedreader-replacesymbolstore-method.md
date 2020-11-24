@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43257761-8cb1-4eaf-8fb5-1f3980cb66cd
 topic_type:
 - apiref
-ms.openlocfilehash: db2137146ded5200e05bbf88e23ae599f3eb7dec
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3fa94094ad066496cc8a1fc4dd2ccb0ee16b5aac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675840"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore-Methode
+
 Ersetzt den vorhandenen Symbolspeicher durch einen Deltasymbolspeicher. Diese Methode ähnelt der [UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md) -Methode, mit der Ausnahme, dass das angegebene Delta anstelle eines Updates als kompletter Ersatz fungiert.  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ HRESULT ReplaceSymbolStore (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `filename`  
  in Der Name der Datei, die den Symbol Speicher enthält.  
   
@@ -44,11 +46,13 @@ HRESULT ReplaceSymbolStore (
  in Der Dateistream, der als Alternative zum- `filename` Parameter verwendet wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

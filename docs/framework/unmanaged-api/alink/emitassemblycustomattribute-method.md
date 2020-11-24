@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446510"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676360"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute-Methode
+
 Aufgerufen, um benutzerdefinierte Attribute auf Assemblyebene festzulegen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,11 +41,12 @@ HRESULT EmitAssemblyCustomAttribute(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
  `FileToken`  
- Die Datei, die das Attribut deaktiviert. Kann NULL sein, wenn `AssemblyID` keinen ungebundenen NetModule angibt.  
+ Die Datei, die das Attribut deaktiviert. Kann NULL sein, wenn `AssemblyID` kein ungebundenes NetModule angibt.  
   
  `tkType`  
  Der Typ des benutzerdefinierten Attributs.  
@@ -62,13 +64,15 @@ HRESULT EmitAssemblyCustomAttribute(
  TRUE, wenn mehrere Attribute ausgegeben werden sollen.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert "Alink. h"  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

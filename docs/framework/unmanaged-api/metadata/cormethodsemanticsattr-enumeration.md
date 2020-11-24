@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-ms.openlocfilehash: 1572c206f4a5a5fe0fd189ca84d0bcda2249c6d4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 347b323951b0125ffa5f82626b2d9b235079492c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007649"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676945"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr-Enumeration
+
 Enthält Werte, die die Beziehung zwischen einer Methode und einer zugeordneten Eigenschaft oder einem zugeordneten Ereignis beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,7 +42,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`msSetter`|Gibt an, dass die Methode ein- `set` Accessor für eine Eigenschaft ist.|  
 |`msGetter`|Gibt an, dass die Methode ein- `get` Accessor für eine Eigenschaft ist.|  
@@ -51,12 +52,13 @@ typedef enum CorMethodSemanticsAttr {
 |`msFire`|Gibt an, dass die Methode ein Ereignis auslöst.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

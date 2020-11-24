@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: b372021fcda39d9973d96a9c39e93e38617887a6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675866"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader-Schnittstelle
-Stellt einen Symbol Reader dar, der den Zugriff auf Dokumente, Methoden und Variablen in einem Symbol Speicher ermöglicht.  
+
+Stellt einen Symbolreader dar, der Zugriff auf Dokumente, Methoden und Variablen innerhalb eines Symbolspeichers bietet.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -46,10 +47,11 @@ Stellt einen Symbol Reader dar, der den Zugriff auf Dokumente, Methoden und Vari
 |[ReplaceSymbolStore-Methode](isymunmanagedreader-replacesymbolstore-method.md)|Ersetzt den vorhandenen Symbolspeicher durch einen Deltasymbolspeicher.|  
 |[UpdateSymbolStore-Methode](isymunmanagedreader-updatesymbolstore-method.md)|Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader2-Schnittstelle](isymunmanagedreader2-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676971"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl-Enumeration
+
 Enthält Werte, die Funktionen zur Implementierung von Methoden beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
@@ -54,7 +55,7 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`miCodeTypeMask`|Flags, die den Codetyp beschreiben.|  
 |`miIL`|Gibt an, dass die Methoden Implementierung Microsoft Intermediate Language (MSIL) ist.|  
@@ -74,12 +75,13 @@ typedef enum CorMethodImpl {
 |`miMaxMethodImplVal`|Der Höchstwert für einen `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

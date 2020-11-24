@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008988"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677114"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation-Enumeration
+
 Enthält Flagwerte für die Behandlung von lokalen Verweisen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,19 +38,20 @@ typedef enum CorLocalRefPreservation
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`MDPreserveLocalRefsNone`|Behalten Sie keine lokalen Verweise bei.|  
 |`MDPreserveLocalTypeRef`|Lokale Typverweise beibehalten.|  
 |`MDPreserveLocalMemberRef`|Lokale Member-Verweise beibehalten.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

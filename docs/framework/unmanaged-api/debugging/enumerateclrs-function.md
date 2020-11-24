@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676100"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs-Funktion
+
 Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT EnumerateCLRs (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `debuggeePID`  
  [in] Die Prozess-ID des Prozesses aus dem geladene CLRs aufgezählt werden.  
   
@@ -51,6 +53,7 @@ HRESULT EnumerateCLRs (
  [out] Ein Zeiger auf ein DWORD, das die Länge des gleichlangen `ppHandleArrayOut` und `pdwArrayLengthOut` enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK  
  Die Anzahl der CLRs im Prozess wurde erfolgreich ermittelt, und das entsprechende Handle und die Pfadarrays wurden ordnungsgemäß aufgefüllt.  
   
@@ -64,6 +67,7 @@ HRESULT EnumerateCLRs (
  Geladene CLRs können nicht aufgezählt werden.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Für einen Zielprozess, der durch `debuggeePID` identifiziert wird, gibt die Funktion ein Array von Pfaden, `ppStringArrayOut`, an im Prozess geladene CLRs, ein Array von Ereignishandles, `ppHandleArrayOut`, das möglicherweise ein Ereignis zur Startfortsetzung für die CLR in demselben Index enthält, und die Größe der Arrays zurück, `pdwArrayLengthOut`, die die Anzahl der geladenen CLRs angibt.  
   
  Unter dem Windows-Betriebssystem wird `debuggeePID` einem Betriebssystem-Prozessbezeichner zugeordnet.  
@@ -72,11 +76,12 @@ HRESULT EnumerateCLRs (
   
  Diese Funktion kann mit beiden auf null festgelegten Arrayparametern aufgerufen werden, um die Anzahl der CLRs im Zielprozess zurückzugeben. Aus dieser Anzahl kann ein Aufrufer die Größe des Puffers ableiten, der erstellt wird: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   
- **Bibliothek:** dbgshim. dll  
+ **Bibliothek:** dbgshim.dll  
   
  **.NET Framework Versionen:** 3,5 SP1

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c6cbbea-c27c-4695-bda3-17c1910d8ddb
 topic_type:
 - apiref
-ms.openlocfilehash: aa906e314c408b7653e611b07d7ad21d4519b715
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 90ce4e888ddb3a10dd0dfd7e68463311db86742f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616982"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677764"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect-Methode
+
 Erzwingt eine Garbage Collection für die angegebene Generierung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT Collect (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `Generation`  
  in Die zu sammelnde Generation. Der Wert-1 erzwingt eine Auflistung aller Generationen.  
   
@@ -41,7 +43,7 @@ HRESULT Collect (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Collect`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Collect` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,23 +51,25 @@ HRESULT Collect (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `Collect` -Methode erzwingt, dass die CLR-Garbage Collector eine Auflistung unabhängig vom aktuellen Zustand ausführen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Automatische Speicherverwaltung](../../../standard/automatic-memory-management.md)
 - [Garbage Collection](../../../standard/garbage-collection/index.md)
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICLRGCManager-Schnittstelle](iclrgcmanager-interface.md)
 - [CLR-Hostingschnittstellen](clr-hosting-interfaces.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

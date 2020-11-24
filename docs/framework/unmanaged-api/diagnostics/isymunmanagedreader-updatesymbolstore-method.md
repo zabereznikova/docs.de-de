@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a17d723-86b9-4f27-bd0d-b70c3259011c
 topic_type:
 - apiref
-ms.openlocfilehash: ccc787aa1c820a486d9a513055c9c9834b90bd1a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6670d985eed4c55550b23d3f4110ee20f3b75661
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615435"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675827"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore-Methode
+
 Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher. Diese Methode wird in "Bearbeiten und Fortfahren"-Szenarios verwendet, um den Symbol Speicher zu aktualisieren, sodass er mit der ursprünglichen portablen ausführbaren Datei (PE-Datei) identisch ist.  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ HRESULT UpdateSymbolStore (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `filename`  
  in Der Name der Datei, die den Symbol Speicher enthält.  
   
@@ -44,11 +46,13 @@ HRESULT UpdateSymbolStore (
  in Der Dateistream, der als Alternative zum- `filename` Parameter verwendet wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

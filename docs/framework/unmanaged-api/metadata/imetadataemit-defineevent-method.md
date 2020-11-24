@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 7babd0a90b9882acb03b6360753f55c57a399b9e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c03497f48b8199da545d796637e5f8a5c532362
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005629"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675684"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent-Methode
+
 Erstellt eine Definition für ein Ereignis mit der angegebenen Metadatensignatur und ruft ein Token für diese Ereignis Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,6 +43,7 @@ HRESULT DefineEvent (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `td`  
  in Das Token für die Zielklasse oder Schnittstelle. Dabei handelt es sich entweder um ein- `mdTypeDef` oder- `mdTypeDefNil` Token.  
   
@@ -70,15 +72,16 @@ HRESULT DefineEvent (
  vorgenommen Das Metadatentoken, das dem Ereignis zugewiesen ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

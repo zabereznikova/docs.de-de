@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f098a74-201e-4628-a468-8dee9ab99b4a
 topic_type:
 - apiref
-ms.openlocfilehash: 9715369f4cf1b2a7078be14a2fc597f735ab6fd3
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: df570f32d694ec21e9642e75b4965e169afaccfc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677647"
 ---
 # <a name="iclrstrongname2-interface"></a>ICLRStrongName2-Schnittstelle
+
 Bietet die Möglichkeit, starke Namen mithilfe der SHA-2-Gruppe von sicheren Hash Algorithmen (SHA-256, SHA-384 und SHA-512) zu erstellen.  
   
 ## <a name="methods"></a>Methoden  
@@ -34,10 +35,11 @@ Bietet die Möglichkeit, starke Namen mithilfe der SHA-2-Gruppe von sicheren Has
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

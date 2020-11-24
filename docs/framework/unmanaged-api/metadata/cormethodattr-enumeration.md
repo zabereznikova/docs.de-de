@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007675"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677011"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr-Enumeration
+
 Enthält Werte, die die Funktionen einer Methode beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
@@ -64,7 +65,7 @@ typedef enum CorMethodAttr {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`mdMemberAccessMask`|Gibt den Element Zugriff an.|  
 |`mdPrivateScope`|Gibt an, dass auf den Member nicht verwiesen werden kann.|  
@@ -79,7 +80,7 @@ typedef enum CorMethodAttr {
 |`mdVirtual`|Gibt an, dass die Methode überschrieben werden kann.|  
 |`mdHideBySig`|Gibt an, dass die Methode nach Name und Signatur und nicht nur nach Namen ausgeblendet wird.|  
 |`mdVtableLayoutMask`|Gibt das Layout der virtuellen Tabelle an.|  
-|`mdReuseSlot`|Gibt an, dass der für diese Methode in der virtuellen Tabelle verwendete Slot wieder verwendet werden soll. Dies ist der Standardwert.|  
+|`mdReuseSlot`|Gibt an, dass der für diese Methode in der virtuellen Tabelle verwendete Slot wieder verwendet werden soll. Dies ist die Standardoption.|  
 |`mdNewSlot`|Gibt an, dass die Methode immer einen neuen Slot in der virtuellen Tabelle erhält.|  
 |`mdCheckAccessOnOverride`|Gibt an, dass die Methode von denselben Typen überschrieben werden kann, auf die Sie sichtbar ist.|  
 |`mdAbstract`|Gibt an, dass die Methode nicht implementiert ist.|  
@@ -92,12 +93,13 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|Gibt an, dass die Methode eine andere Methode aufruft, die Sicherheitscode enthält.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

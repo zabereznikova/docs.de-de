@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-ms.openlocfilehash: 07d2de5d12fd769cb5cce243d9e721bb6fc185a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6193d91c8cbe0efa7cd68b97b9262acf72c9ea0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675879"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize-Methode
+
 Initialisiert den Symbol Reader mit der metadatenimporterschnittstelle, der dieser Reader zugeordnet ist, zusammen mit dem Dateinamen des Moduls.  
   
 > [!NOTE]
@@ -39,6 +40,7 @@ HRESULT Initialize (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `importer`  
  in Die metadatenimporterschnittstelle, der dieser Reader zugeordnet wird.  
   
@@ -52,14 +54,17 @@ HRESULT Initialize (
  in Der Dateistream, der als Alternative zum filename-Parameter verwendet wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Sie müssen nur einen der `filename` Parameter oder angeben `pIStream` , nicht beides. Das `searchPath` ist optional.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

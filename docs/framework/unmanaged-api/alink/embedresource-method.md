@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667bd954-6dc6-4020-a3cb-0e8224179993
 topic_type:
 - apiref
-ms.openlocfilehash: 24279870e7406de649df56e8aad31252513e95c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34439b7c01dee7d7789d989b58e8944c6282b71b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676386"
 ---
 # <a name="embedresource-method"></a>EmbedResource-Methode
+
 Deklariert eine eingebettete Ressource. Diese Methode bettet die Ressource nicht ein.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT EmbedResource(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
@@ -45,22 +47,24 @@ HRESULT EmbedResource(
  Dateitoken oder Assembly-ID der Datei, die die Ressource enthält.  
   
  `pszResourceName`  
- Name der Ressource.  
+ Der Name der Ressource.  
   
  `dwOffset`  
  Offset der Ressource von RVA.  
   
  `dwFlags`  
- Barrierefreiheits Flags wie `mrPublic` und `mrPrivate`. Diese Flags können an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
+ Barrierefreiheits Flags wie `mrPublic` und `mrPrivate` . Diese Flags können an die [DefineExportedType-Methode](../metadata/imetadataassemblyemit-defineexportedtype-method.md)übermittelt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

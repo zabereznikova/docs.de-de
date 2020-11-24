@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f5f0f11683043f1c287dd3ca3071830bcfb46502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677556"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes-Methode
+
 Stellt einen Enumerator für die Schnittstellentypen bereit, in die das aktuelle-Objekt umgewandelt oder verwendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,15 +33,17 @@ HRESULT GetCachedInterfaceTypes(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `bIInspectableOnly`  
- in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen`IInspectable` (Schnittstellen) oder alle COM-Schnittstellen zurückgibt, die vom Runtime Callable Wrapper (RCW) zwischengespeichert werden.  
+ in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen ( `IInspectable` Schnittstellen) oder alle COM-Schnittstellen zurückgibt, die vom Runtime Callable Wrapper (RCW) zwischengespeichert werden.  
   
  `ppInterfacesEnum`  
- vorgenommen Ein Zeiger auf die Adresse eines icordebugtypeenumerators, der Zugriff auf ICorDebugType-Objekte bereitstellt, die zwischengespeicherte Schnittstellentypen darstellen, `bIInspectableOnly`die nach gefiltert sind.  
+ vorgenommen Ein Zeiger auf die Adresse eines icordebugtypeenumerators, der Zugriff auf ICorDebugType-Objekte bereitstellt, die zwischengespeicherte Schnittstellentypen darstellen, die nach gefiltert sind `bIInspectableOnly` .  
   
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

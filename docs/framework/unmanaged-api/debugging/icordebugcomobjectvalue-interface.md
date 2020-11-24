@@ -14,27 +14,30 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-ms.openlocfilehash: 528db447df4d71d67441b05ad29e6a900c59afbb
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 40df1416e68c86efe6d404119cb37277fe21ac56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677543"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue-Schnittstelle
+
 Stellt Methoden bereit, um Informationen abzurufen, die einem Runtime Callable Wrapper (RCW) zugeordnet sind.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetCachedInterfacePointers-Methode](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|Ruft die unformatierten Schnittstellen Zeiger ab, die im aktuellen RCW zwischengespeichert werden.|  
 |[GetCachedInterfaceTypes-Methode](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|Stellt einen Enumerator für die Schnittstellentypen bereit, in die das aktuelle-Objekt geschrieben oder verwendet wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Um zu überprüfen, ob eine Instanz der Schnittstelle "ICorDebugValue" einen RCW darstellt, ruft `QueryInterface` ein Debugger mit `IID_ICorDebugComObjectValue`"ICorDebugValue" auf.  
+
+ Um zu überprüfen, ob eine Instanz der Schnittstelle "ICorDebugValue" einen RCW darstellt, Ruft ein Debugger `QueryInterface` mit "ICorDebugValue" auf `IID_ICorDebugComObjectValue` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

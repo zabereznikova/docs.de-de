@@ -2,14 +2,15 @@
 title: Verwendung von System.Xml
 ms.date: 10/22/2008
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-ms.openlocfilehash: a01799bd130de0222d4d66dee4955375c1a1911f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 46282afa6548c731b04c40d8de91a1fed997c57c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828594"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677569"
 ---
 # <a name="systemxml-usage"></a>Verwendung von System.Xml
+
 In diesem Abschnitt wird die Verwendung mehrerer Typen in <xref:System.Xml?displayProperty=nameWithType> Namespaces erläutert, die zum Darstellen von XML-Daten verwendet werden können.
 
  ❌ Verwenden Sie <xref:System.Xml.XmlNode> oder nicht <xref:System.Xml.XmlDocument> , um XML-Daten darzustellen. Bevorzugen Sie stattdessen die Verwendung von Instanzen der-,-,- <xref:System.Xml.XPath.IXPathNavigable> <xref:System.Xml.XmlReader> oder- <xref:System.Xml.XmlWriter> Untertypen von <xref:System.Xml.Linq.XNode> . `XmlNode` und `XmlDocument` sind nicht für die Bereitstellung in öffentlichen APIs konzipiert.
@@ -24,7 +25,7 @@ In diesem Abschnitt wird die Verwendung mehrerer Typen in <xref:System.Xml?displ
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Verwendungs Richtlinien](usage-guidelines.md)

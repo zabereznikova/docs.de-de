@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78232e6f-ae18-4cfa-a6cd-e79471cf9d76
 topic_type:
 - apiref
-ms.openlocfilehash: a21f3b36e418bbde5dcb90f25a39dae03fde77c9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a163667ea7eca1ed817d642efdb8fc4efa2a0651
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895211"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676061"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject-Methode
+
 Ruft einen Schnittstellen Zeiger auf die Common Language Runtime (CLR)-Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,16 +35,20 @@ HRESULT GetObject (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppObject`  
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Schnittstellen Objekts, das die CLR-Anwendungsdomäne darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Wenn ein <xref:System.AppDomain?displayProperty=nameWithType> verwaltetes Objekt für diese Anwendungsdomäne nicht erstellt wurde, gibt die `S_FALSE` Methode zurück `NULL` und `*ppObject`stellt in dar.  
+
+ Wenn ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt für diese Anwendungsdomäne nicht erstellt wurde, gibt die Methode zurück `S_FALSE` und stellt `NULL` in dar `*ppObject` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Jede Anwendungsdomäne in einem Prozess kann über ein verwaltetes <xref:System.AppDomain?displayProperty=nameWithType> Objekt in der Laufzeit verfügen, das Sie darstellt. Diese Funktion Ruft ein ICorDebug Value-Schnittstellen Objekt ab, das diesem verwalteten <xref:System.AppDomain?displayProperty=nameWithType> Objekt entspricht.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

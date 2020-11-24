@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ef9b177bee0651b6b8ea994610315ce93524e8e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676932"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags-Enumeration
+
 Stellt Flagwerte bereit, die beim Verknüpfen von nativem Code vom Linker verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,7 +39,7 @@ typedef enum
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`nlfNone`|Gibt keine Flags an.|  
 |`nlfLastError`|Gibt ein `setLastError` Schlüsselwort an.|  
@@ -46,14 +47,15 @@ typedef enum
 |`nlfMaxValue`|Wird nicht verwendet.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

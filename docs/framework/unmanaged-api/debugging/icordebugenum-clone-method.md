@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-ms.openlocfilehash: 9f0fda803ba3a1ce35017d85e84b3bf6f567eda0
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 28e0cded33b49e3aadc0564bae3a60bee76c4396
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677387"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone-Methode
+
 Erstellt eine Kopie dieses ICorDebugEnum-Objekts.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT Clone (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppEnum`  
- vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugEnum` Objekts, das eine Kopie dieses `ICorDebugEnum` Objekts ist.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugEnum` Objekts, das eine Kopie dieses Objekts ist `ICorDebugEnum` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
