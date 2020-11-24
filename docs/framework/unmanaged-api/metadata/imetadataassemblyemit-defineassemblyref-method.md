@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-ms.openlocfilehash: 612463bca18c23fac0b086adde2d208a0fbc5ae5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ba53ff30f0b6d0ae7fed7db422b7c0a242204a2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008169"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689432"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef-Methode
+
 Erstellt eine `AssemblyRef`-Struktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,6 +42,7 @@ HRESULT DefineAssemblyRef (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbPublicKeyOrToken`  
  in Der öffentliche Schlüssel des Verlegers der Assembly, auf die verwiesen wird. Die Hilfsfunktion [StrongNameTokenFromAssembly](../strong-naming/strongnametokenfromassembly-function.md) kann verwendet werden, um den Hash des öffentlichen Schlüssels zu erhalten, der als dieser Parameter übergeben werden soll.  
   
@@ -54,7 +56,7 @@ HRESULT DefineAssemblyRef (
  in Eine ASSEMBLYMETADATA-Instanz, die die Informationen zu Version, Plattform und Gebiets Schema der Assembly enthält, auf die verwiesen wird.  
   
  `pbHashValue`  
- in Die der referenzierten Assembly zugeordneten Hashdaten. Optional.  
+ in Die der referenzierten Assembly zugeordneten Hashdaten. Dies ist optional.  
   
  `cbHashValue`  
  in Die Größe von in Bytes `pbHashValue` .  
@@ -66,19 +68,21 @@ HRESULT DefineAssemblyRef (
  vorgenommen Ein Zeiger auf das zurückgegebene Metadatentoken `AssemblyRef` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  `AssemblyRef`Für jede Assembly, auf die diese Assembly verweist, muss eine Metadatenstruktur definiert werden.  
   
  Zur Laufzeit werden die Details einer Assembly, auf die verwiesen wird, an den Assemblyresolver übermittelt, die darauf hinweist, dass Sie die "als erstellt"-Informationen darstellen. Der Assemblyresolver wendet dann die Richtlinie an  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)
