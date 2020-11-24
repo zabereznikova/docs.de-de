@@ -1,23 +1,22 @@
 ---
 title: Zuordnen von XML-Datentypen zu CLR-Typen
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1a79d178a4e027973591061634cfb5904dd3e0cc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289108"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822580"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="69c33-102">Zuordnen von XML-Datentypen zu CLR-Typen</span><span class="sxs-lookup"><span data-stu-id="69c33-102">Mapping XML Data Types to CLR Types</span></span>
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="00e4b-102">Zuordnen von XML-Datentypen zu CLR-Typen</span><span class="sxs-lookup"><span data-stu-id="00e4b-102">Mapping XML Data Types to CLR Types</span></span>
 
-<span data-ttu-id="69c33-103">In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="69c33-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
+<span data-ttu-id="00e4b-103">In der folgenden Tabelle wird die Zuordnung zwischen XML-Datentypen und CLR-Typen (Common Language Runtime) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="00e4b-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="69c33-104">Die Präfixe `xs` und `xdt` sind den Namespace-URIs <https://www.w3.org/2001/XMLSchema> bzw. <https://www.w3.org/2003/05/xpath-datatypes> zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="69c33-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
+> <span data-ttu-id="00e4b-104">Die Präfixe `xs` und `xdt` sind den Namespace-URIs <https://www.w3.org/2001/XMLSchema> bzw. <https://www.w3.org/2003/05/xpath-datatypes> zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="00e4b-104">The `xs` and the `xdt` prefixes are mapped to the <https://www.w3.org/2001/XMLSchema> and the <https://www.w3.org/2003/05/xpath-datatypes> namespace URIs respectively.</span></span>
 
-|<span data-ttu-id="69c33-105">XML-Typ</span><span class="sxs-lookup"><span data-stu-id="69c33-105">XML Type</span></span>|<span data-ttu-id="69c33-106">CLR-Typ</span><span class="sxs-lookup"><span data-stu-id="69c33-106">CLR Type</span></span>|
+|<span data-ttu-id="00e4b-105">XML-Typ</span><span class="sxs-lookup"><span data-stu-id="00e4b-105">XML Type</span></span>|<span data-ttu-id="00e4b-106">CLR-Typ</span><span class="sxs-lookup"><span data-stu-id="00e4b-106">CLR Type</span></span>|
 |--------------|--------------|
 |`xs:anyURI`|<xref:System.Uri>|
 |`xs:base64Binary`|`Byte[]`|
@@ -68,14 +67,14 @@ ms.locfileid: "84289108"
 |`xdt:untypedAtomic`|<xref:System.String>|
 |`xdt:anyAtomicType`|<xref:System.Object>|
 |`xs:anySimpleType`|<xref:System.String>|
-|<span data-ttu-id="69c33-107">Dokumentknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-108">Elementknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-109">Attributknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-110">Namespaceknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-111">Textknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-112">Kommentarknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
-|<span data-ttu-id="69c33-113">Verarbeitungsanweisungsknoten</span><span class="sxs-lookup"><span data-stu-id="69c33-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-107">Dokumentknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-107">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-108">Elementknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-108">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-109">Attributknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-109">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-110">Namespaceknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-110">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-111">Textknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-111">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-112">Kommentarknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-112">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
+|<span data-ttu-id="00e4b-113">Verarbeitungsanweisungsknoten</span><span class="sxs-lookup"><span data-stu-id="00e4b-113">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a><span data-ttu-id="69c33-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69c33-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00e4b-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="00e4b-114">See also</span></span>
 
-- [<span data-ttu-id="69c33-115">Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)</span><span class="sxs-lookup"><span data-stu-id="69c33-115">Type Support in the System.Xml Classes</span></span>](type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="00e4b-115">Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)</span><span class="sxs-lookup"><span data-stu-id="00e4b-115">Type Support in the System.Xml Classes</span></span>](type-support-in-the-system-xml-classes.md)
