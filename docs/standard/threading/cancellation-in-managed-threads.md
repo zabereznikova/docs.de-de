@@ -2,19 +2,18 @@
 title: Abbruch in verwalteten Threads
 description: Machen Sie sich mit dem Abbrechen in verwalteten Threads vertraut. Erfahren Sie mehr über Abbruchtoken bei kooperativem Abbruch von asynchronen Vorgängen oder synchronen Vorgängen mit langer Laufzeit.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188470"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819954"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
 

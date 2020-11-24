@@ -1,18 +1,17 @@
 ---
 title: Sprachunabhängigkeit und sprachunabhängige Komponenten
 description: 'Erfahren Sie, wie Sie in einer der vielen in .NET unterstützten Sprachen entwickeln können: u.a. C#, C++/CLI, F#, IronPython, VB, Visual COBOL und PowerShell.'
-ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
-ms.technology: dotnet-standard
+ms.date: 07/22/2016
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 259db1b9d33dd3b068f4d4fa18d2118db34bf0b0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92162985"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819083"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
@@ -2042,9 +2041,9 @@ Eigenschaften in den CLS-kompatiblen Typen müssen die folgenden Regeln beachten
 
 Ein Ereignis wird vom Namen und dem Typ definiert. Der Ereignistyp ist ein Delegat, der zum Angeben des Ereignisses verwendet wird. Zum Beispiel hat das `DbConnection.StateChange`-Ereignis den Typ `StateChangeEventHandler`. Neben dem Ereignis selbst, stellen drei Methoden mit Namen basierend auf dem Ereignisnamen die Implementierung des Ereignisses bereit und werden in den Metadaten der Assembly als `SpecialName` gekennzeichnet:
 
-* Eine Methode zum Hinzufügen eines Ereignishandlers namens `add`_*Ereignisname*. Die Ereignisabonnementmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `add_StateChange`.
+* Eine Methode zum Hinzufügen eines Ereignishandlers namens `add`_ *Ereignisname*. Die Ereignisabonnementmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `add_StateChange`.
 
-* Eine Methode zum Enternen eines Ereignishandlers namens `remove`_*Ereignisname*. Die Entfernenmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `remove_StateChange`.
+* Eine Methode zum Enternen eines Ereignishandlers namens `remove`_ *Ereignisname*. Die Entfernenmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `remove_StateChange`.
 
 * Eine Methode für den Hinweis, dass das Ereignis namens `raise`\_*EventName* aufgetreten ist.
 

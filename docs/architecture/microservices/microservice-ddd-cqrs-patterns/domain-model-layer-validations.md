@@ -2,12 +2,12 @@
 title: Entwerfen von Validierungen auf der Domänenmodellebene
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wichtige Konzepte für Validierungen von Domänenmodellen
 ms.date: 10/08/2018
-ms.openlocfilehash: f1e2d7430c642ad47f79cdd34d3a65e2cc70e239
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 18c8350d0bf514a8a01a210a2a2a6d8f73317580
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164271"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820630"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
@@ -15,7 +15,7 @@ In DDD können Validierungsregeln als Invarianten betrachtet werden. Die wichtig
 
 Domänenentitäten sollten immer gültige Entitäten sein. Es gibt eine bestimmte Anzahl an Invarianten für ein Objekt, die immer zutreffen sollten. Beispielsweise muss ein Bestellelementobjekt immer über eine Menge mit einer positiven ganzen Zahl plus Artikelnamen und Artikelpreis verfügen. Aus diesem Grund liegt die Erzwingung von Invarianten in der Verantwortung der Domänenentitäten (insbesondere des Aggregatstamms) und ein Entitätsobjekt sollte nicht existieren können, wenn es nicht gültig ist. Invariante Regeln werden einfach als Verträge angegeben, und Ausnahmen oder Benachrichtigungen werden ausgelöst, wenn sie verletzt werden.
 
-Die Überlegung dahinter ist, dass viele Fehler auftreten, weil sich Objekte in einem Zustand befinden, in dem sie nie sein sollten. Im Folgenden finden Sie eine übersichtliche Erläuterung von Greg Young in einer [Onlinediskussion](http://codebetter.com/gregyoung/2009/05/22/always-valid/):
+Die Überlegung dahinter ist, dass viele Fehler auftreten, weil sich Objekte in einem Zustand befinden, in dem sie nie sein sollten.
 
 Nehmen wir an, dass wir SendUserCreationEmailService haben, der ein UserProfile akzeptiert... Wie können wir innerhalb dieses Diensts begründen, dass Name nicht NULL ist? Überprüfen wir ihn erneut? Oder wahrscheinlicher... Sie kümmern sich einfach nicht darum und „hoffen auf das Beste“ – Sie hoffen, dass jemand die Validierung durchführt, bevor es an Sie gesendet wird. Natürlich sollten wir bei der Verwendung von TDD einen der ersten Tests schreiben, bei dem ein Fehler ausgelöst wird, wenn ich einen Kunden mit einem Namen mit einem Wert von NULL schicke. Sobald Sie diese Art von Tests immer wieder schreiben, erkennen Sie: „Wenn Namen nie NULL sein dürften, wären alle diese Tests gar nicht nötig.“
 

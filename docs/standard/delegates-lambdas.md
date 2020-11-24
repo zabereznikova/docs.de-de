@@ -4,14 +4,13 @@ description: Erfahren Sie, wie Delegaten, die einen Typ definieren, der eine bes
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 1307599a3832be5f48cd62a7b8c1be7f76a3d4a5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9be4fcdc29eac433dc7416578acbc664ac2e431c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063743"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821683"
 ---
 # <a name="delegates-and-lambdas"></a>Delegaten und Lambdas
 

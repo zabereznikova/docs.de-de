@@ -3,13 +3,12 @@ title: .NET-Architekturkomponenten
 description: Hier werden .NET-Architekturkomponenten wie .NET Standard, .NET-Implementierungen, .NET-Runtimes und Tools beschrieben.
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224387"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819421"
 ---
 # <a name="net-architectural-components"></a>.NET-Architekturkomponenten
 
@@ -89,7 +88,7 @@ Eine Laufzeit ist die Ausführungsumgebung eines verwalteten Programms. Das Betr
 Es stehen verschiedene Tools und Infrastrukturkomponenten zur Verfügung, die in allen Implementierungen von .NET funktionieren, Zu diesen Tools und Komponenten zählen:
 
 - Die .NET-Sprachen und deren Compiler
-- Das .NET-Projektsystem, das auf *CSPROJ* -, *VBPROJ* - und *FSPROJ* -Dateien basiert)
+- Das .NET-Projektsystem, das auf *CSPROJ*-, *VBPROJ*- und *FSPROJ*-Dateien basiert)
 - [MSBuild](/visualstudio/msbuild/msbuild), die Build-Engine, mit dem Projekte erstellt werden
 - [NuGet](/nuget/), der Paket-Manager von Microsoft für .NET
 - Open-Source-Buildorchestrierungtools, z.B. [CAKE](https://cakebuild.net/) und [FAKE](https://fake.build/)

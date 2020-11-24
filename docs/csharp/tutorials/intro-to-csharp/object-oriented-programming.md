@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 description: C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Abstraktion, Kapselung, Vererbung und Polymorphie.
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471594"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687993"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-Jede dieser Klassen *erbt* das gemeinsame Verhalten von der gemeinsamen *Basisklasse* , der `BankAccount`-Klasse. Schreiben Sie die Implementierungen für neue und andere Funktionen in jede der *abgeleiteten Klassen* .  Diese abgeleiteten Klassen verfügen bereits über das gesamte Verhalten, das in der `BankAccount`-Klasse definiert ist.
+Jede dieser Klassen *erbt* das gemeinsame Verhalten von der gemeinsamen *Basisklasse*, der `BankAccount`-Klasse. Schreiben Sie die Implementierungen für neue und andere Funktionen in jede der *abgeleiteten Klassen*.  Diese abgeleiteten Klassen verfügen bereits über das gesamte Verhalten, das in der `BankAccount`-Klasse definiert ist.
 
-Es empfiehlt sich, jede neue Klasse in einer anderen Quelldatei zu erstellen. In [Visual Studio](https://visualstudio.com) können Sie mit der rechten Maustaste auf das Projekt klicken und *Klasse hinzufügen* auswählen, um eine neue Klasse in einer neuen Datei hinzuzufügen. Wählen Sie in [Visual Studio Code](https://code.visualstudio.com) die Option *Datei* und dann *Neu* aus, um eine neue Quelldatei zu erstellen. Benennen Sie in beiden Tools die Datei entsprechend dem Klassennamen um: *InterestEarningAccount.cs* , *LineOfCreditAccount.cs* und *GiftCardAccount.cs* .
+Es empfiehlt sich, jede neue Klasse in einer anderen Quelldatei zu erstellen. In [Visual Studio](https://visualstudio.com) können Sie mit der rechten Maustaste auf das Projekt klicken und *Klasse hinzufügen* auswählen, um eine neue Klasse in einer neuen Datei hinzuzufügen. Wählen Sie in [Visual Studio Code](https://code.visualstudio.com) die Option *Datei* und dann *Neu* aus, um eine neue Quelldatei zu erstellen. Benennen Sie in beiden Tools die Datei entsprechend dem Klassennamen um: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs* und *GiftCardAccount.cs*.
 
 Wenn Sie die Klassen wie im obigen Beispiel gezeigt erstellen, werden Sie feststellen, dass keine der abgeleiteten Klassen kompiliert wird. Ein Konstruktor ist für die Initialisierung eines Objekts verantwortlich. Der Konstruktor einer abgeleiteten Klasse muss die abgeleitete Klasse initialisieren und Anweisungen dazu bereitstellen, wie das in der abgeleiteten Klasse enthaltene Basisklassenobjekt zu initialisieren ist. Die ordnungsgemäße Initialisierung erfolgt normalerweise ohne zusätzlichen Code. Die `BankAccount`-Klasse deklariert einen öffentlichen Konstruktor mit der folgenden Signatur:
 
@@ -73,7 +73,7 @@ Die Parameter für diesen neuen Konstruktor entsprechen dem Parametertyp und den
 - Ein Geschenkkartenkonto:
   - Kann einmal monatlich am letzten Tag des Monats mit einem angegebenen Betrag aufgefüllt werden.
 
-Sie sehen, dass alle drei Kontotypen über eine Aktion verfügen, die am Ende jedes Monats stattfindet. Jeder Kontotyp führt jedoch unterschiedliche Aufgaben aus. Sie verwenden *Polymorphie* , um diesen Code zu implementieren. Erstellen Sie eine einzelne `virtual`-Methode in der `BankAccount`-Klasse:
+Sie sehen, dass alle drei Kontotypen über eine Aktion verfügen, die am Ende jedes Monats stattfindet. Jeder Kontotyp führt jedoch unterschiedliche Aufgaben aus. Sie verwenden *Polymorphie*, um diesen Code zu implementieren. Erstellen Sie eine einzelne `virtual`-Methode in der `BankAccount`-Klasse:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="DeclareMonthEndTransactions":::
 
@@ -173,6 +173,8 @@ Die Außerkraftsetzung gibt bei Überziehen des Kontos eine Gebührentransaktion
 Führen Sie das Programm aus, und überprüfen Sie die Ergebnisse.
 
 ## <a name="summary"></a>Zusammenfassung
+
+Wenn Sie nicht weiterkommen, sehen Sie sich die Quelle für dieses Tutorial [in unserem GitHub-Repository](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming) an.
 
 In diesem Tutorial wurden viele Verfahren vorgestellt, die bei der objektorientierten Programmierung verwendet werden:
 

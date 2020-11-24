@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 47c716db931dc912b80844fe69283b12d030c238
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 3a02ac52155971f480c7f0c338d4a2a9a7d1d81c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955576"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688019"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: Structured Streaming mit .NET für Apache Spark
 
@@ -47,7 +47,7 @@ Wenn dies Ihre erste .NET für Apache Spark-Anwendung ist, beginnen Sie mit dem 
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>Einrichten eines Datenstroms und Herstellen einer Verbindung
 
-Eine beliebte Methode zum Testen der Datenstromverarbeitung ist **netcat**. netcat (auch als *nc*bezeichnet) ermöglicht Ihnen das Lesen von Daten aus und Schreiben von Daten in Netzwerkverbindungen. Sie stellen in einem Terminalfenster eine Netzwerkverbindung mit netcat her.
+Eine beliebte Methode zum Testen der Datenstromverarbeitung ist **netcat**. netcat (auch als *nc* bezeichnet) ermöglicht Ihnen das Lesen von Daten aus und Schreiben von Daten in Netzwerkverbindungen. Sie stellen in einem Terminalfenster eine Netzwerkverbindung mit netcat her.
 
 ### <a name="create-a-data-stream-with-netcat"></a>Erstellen eines Datenstroms mit netcat
 
@@ -152,7 +152,7 @@ Beim strukturierten Streaming in Spark werden die Daten in einer Folge kleiner *
 Nach dem Start einer neuen netcat-Sitzung öffnen Sie ein neues Terminal, und führen Sie den Befehl `spark-submit` aus, der dem folgenden Befehl ähnelt:
 
 ```powershell
-spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
+spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]

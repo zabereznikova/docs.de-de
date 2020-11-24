@@ -2,7 +2,6 @@
 title: Konvertieren von Zeichenfolgen in DateTime-Objekte
 description: Lernen Sie Techniken zum Analysieren von Zeichenfolgen kennen, die Datums- und Uhrzeitwerte repräsentieren, um ein DateTime-Objekt aus der Datums- und Uhrzeitzeichenfolge zu erstellen.
 ms.date: 02/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: f6ac4672a81db7047069f726f7eb1b920a82b3db
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 557955b5c47695dea686527fd99653ef2efe19bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889035"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821919"
 ---
 # <a name="parse-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -53,7 +52,7 @@ Der Formatanbieter wird auch zum Interpretieren mehrdeutiger numerischer Datumsa
 Das folgende Codebeispiel veranschaulicht die Verwendung der <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>-Methode zum Konvertieren eines `string`-Werts in ein <xref:System.DateTime>-Objekt. In diesem Beispiel wird die dem aktuellen Thread zugeordnete Kultur verwendet. Wenn die der aktuellen Kultur zugeordnete <xref:System.Globalization.CultureInfo>-Klasse nicht die Eingabezeichenfolge analysieren kann, wird eine <xref:System.FormatException> ausgelöst.
 
 > [!TIP]
-> Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen** , um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
+> Alle C#-Beispiele in diesem Artikel werden in Ihrem Browser ausgeführt. Klicken Sie auf die Schaltfläche **Ausführen**, um die Ausgabe anzuzeigen. Sie können auch Bearbeitungen vornehmen, um ein wenig zu experimentieren.
 
 > [!NOTE]
 > Diese Beispiele sind im GitHub-docs-Repository sowohl für [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) als auch für [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions) verfügbar.

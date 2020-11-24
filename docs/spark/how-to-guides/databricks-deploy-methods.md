@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit spark-submit und Set JAR einen .NET für
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 4d37383ccb3c9b311e0fbd0ada195ac20113e505
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954996"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688201"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Übermitteln eines .NET für Apache Spark-Auftrags an Databricks
 
@@ -22,7 +22,7 @@ Mit dem Befehl [spark-submit](https://spark.apache.org/docs/latest/submitting-ap
 1. Wechseln Sie zu Ihrem Databricks-Arbeitsbereich, und erstellen Sie einen Auftrag. Wählen Sie einen Titel für Ihren Auftrag aus, und wählen Sie dann **spark-submit konfigurieren** aus. Fügen Sie die folgenden Parameter in die Auftragskonfiguration ein, und wählen Sie dann **Bestätigen** aus.
 
     ```
-    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
     ```
 
     > [!NOTE]
@@ -40,7 +40,7 @@ Alternativ können Sie in Ihrem Databricks-Arbeitsbereich [Set JAR](/azure/data
 
 1. Wechseln Sie zu Ihrem Databricks-Cluster, und klicken Sie im Menü auf der linken Seite erst auf **Jobs** (Aufträge) und dann auf **Set JAR**.
 
-2. Laden Sie die entsprechende Datei `microsoft-spark-<spark-version>-<spark-dotnet-version>.jar` hoch.
+2. Laden Sie die entsprechende Datei `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` hoch.
 
 3. Ändern Sie die folgenden Parameter so, dass sie den richtigen Namen für die ausführbare Datei enthalten, die Sie anstelle von `<your-app-name>` veröffentlicht haben:
 

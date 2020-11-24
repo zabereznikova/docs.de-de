@@ -2,7 +2,6 @@
 title: Isolierte Speicherung
 description: Hier erfahren Sie mehr über die isolierte Speicherung. Dies ist ein Datenspeichermechanismus, der die Isolierung und Sicherheit ermöglicht, indem standardisierte Methoden zum Zuordnen von Code mit gespeicherten Daten definiert werden.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data storage using isolated storage
 - stores
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1b123b231a7b6856ca527d00b5927c1a8d0e08b6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282029"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819135"
 ---
 # <a name="isolated-storage"></a>Isolierter Speicher
 
@@ -165,7 +164,7 @@ Sie hat Bob dann das Starten der App im Kontext seines eigenen Benutzerkontos ve
 
 #### <a name="information-disclosure"></a>Offenlegung vertraulicher Informationen
 
-Ein Angriff durch die __Veröffentlichung von Informationen__ liegt vor, wenn Mallory Bob dazu bringen kann, den Inhalt einer Datei offenzulegen, auf die Mallory normalerweise keinen Zugriff hat. Angenommen, Bob verfügt über die Geheimnisdatei *C:\Users\Bob\secret.txt* , die Mallory lesen möchte. Sie kennt den Pfad zu dieser Datei, kann sie aber nicht lesen, da Windows ihr den Zugriff auf Bobs Benutzerprofilverzeichnis verbietet.
+Ein Angriff durch die __Veröffentlichung von Informationen__ liegt vor, wenn Mallory Bob dazu bringen kann, den Inhalt einer Datei offenzulegen, auf die Mallory normalerweise keinen Zugriff hat. Angenommen, Bob verfügt über die Geheimnisdatei *C:\Users\Bob\secret.txt*, die Mallory lesen möchte. Sie kennt den Pfad zu dieser Datei, kann sie aber nicht lesen, da Windows ihr den Zugriff auf Bobs Benutzerprofilverzeichnis verbietet.
 
 Stattdessen platziert Mallory einen Hardlink zum computerweiten Speicher. Dabei handelt es sich um eine spezielle Datei, die selbst keinen Inhalt enthält, sondern auf eine andere Datei auf dem Datenträger verweist. Beim Versuch, die Hardlinkdatei zu lesen, wird stattdessen der Inhalt der Datei gelesen, auf die der Hardlink verweist. Nachdem Mallory den Hardlink erstellt hat, kann sie den Inhalt der Datei noch immer nicht lesen, da sie keinen Zugriff auf das Ziel (`C:\Users\Bob\secret.txt`) des Links hat. Bob hingegen _hat Zugriff auf diese Datei_.
 

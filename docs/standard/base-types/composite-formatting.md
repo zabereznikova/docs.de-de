@@ -2,7 +2,6 @@
 title: Kombinierte Formatierung
 description: Lernen Sie die kombinierte Formatierung in .NET kennen, die als Eingabe eine Liste von Objekten und eine kombinierte Formatzeichenfolge akzeptiert, die festgelegten Text mit indizierten Platzhaltern enthält.
 ms.date: 10/26/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 588efff637359586630554decf57072597365d32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889464"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823094"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -56,12 +55,12 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 ## <a name="format-item-syntax"></a>Formatelementsyntax  
  Alle Formatelemente weisen die folgende Form auf und bestehen aus folgenden Komponenten:  
   
- `{` *Index* [`,`*Ausrichtung* ][`:`*formatString* ]`}`  
+ `{` *Index*[`,`*Ausrichtung*][`:`*formatString*]`}`  
   
  Die übereinstimmenden geschweiften Klammern ("{" and "}") sind erforderlich.  
   
 ### <a name="index-component"></a>Indexkomponente  
- Bei der obligatorischen Komponente *Index* , dem so genannten Parameterbezeichner, handelt es sich um eine bei 0 (null) beginnende Zahl, mit der ein entsprechendes Element in der Objektliste angegeben wird. Das bedeutet, dass das Formatelement mit dem Parameterbezeichner 0 (null) das erste Objekt in der Liste formatiert, und das Formatelement mit dem Parameterbezeichner 1 formatiert das zweite Objekt in der Liste usw. Das folgende Beispiel enthält vier von null bis drei nummerierte Parameterbezeichner zur Darstellung von Primzahlen, die kleiner als zehn sind:  
+ Bei der obligatorischen Komponente *Index*, dem so genannten Parameterbezeichner, handelt es sich um eine bei 0 (null) beginnende Zahl, mit der ein entsprechendes Element in der Objektliste angegeben wird. Das bedeutet, dass das Formatelement mit dem Parameterbezeichner 0 (null) das erste Objekt in der Liste formatiert, und das Formatelement mit dem Parameterbezeichner 1 formatiert das zweite Objekt in der Liste usw. Das folgende Beispiel enthält vier von null bis drei nummerierte Parameterbezeichner zur Darstellung von Primzahlen, die kleiner als zehn sind:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
@@ -121,9 +120,9 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
 1. Wenn der zu formatierende Wert `null` ist, wird eine leere Zeichenfolge (<xref:System.String.Empty?displayProperty=nameWithType>) zurückgegeben.  
   
-2. Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Sie übergibt den *formatString* -Wert des Formatelements, sofern vorhanden, oder andernfalls `null` zusammen mit der <xref:System.IFormatProvider>-Implementierung an die Methode. Wenn durch den Aufruf der <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Methode `null` zurückgegeben wird, wird der nächste Schritt ausgeführt. Andernfalls wird das Ergebnis des <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Aufrufs zurückgegeben.
+2. Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Sie übergibt den *formatString*-Wert des Formatelements, sofern vorhanden, oder andernfalls `null` zusammen mit der <xref:System.IFormatProvider>-Implementierung an die Methode. Wenn durch den Aufruf der <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Methode `null` zurückgegeben wird, wird der nächste Schritt ausgeführt. Andernfalls wird das Ergebnis des <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Aufrufs zurückgegeben.
   
-3. Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge* -Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
+3. Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge*-Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
   
     - Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.NumberFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.NumberFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
@@ -131,7 +130,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
     - Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
   
-4. Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *formatString* -Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
+4. Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *formatString*-Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
   
  Die Ausrichtung wird angewendet, nachdem die vorhergehenden Schritte durchgeführt wurden.  
   

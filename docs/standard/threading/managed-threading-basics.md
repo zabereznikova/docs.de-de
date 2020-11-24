@@ -2,19 +2,18 @@
 title: Grundlagen des verwalteten Threadings
 description: In diesem Artikel finden Sie Links zu anderen Artikeln über verwaltetes Threading, in denen unter anderem Themen wie Ausnahmen, das Synchronisieren von Daten, Vordergrund- und Hintergrundthreads und lokaler Speicher behandelt werden.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189133"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819668"
 ---
 # <a name="managed-threading-basics"></a>Grundlagen des verwalteten Threadings
 
@@ -48,7 +47,7 @@ Die ersten fünf Artikel in diesem Abschnitt sollen Ihnen helfen, zu bestimmen, 
 ## <a name="reference"></a>Referenz
 
  <xref:System.Threading.Thread>  
- Stellt die Referenzdokumentation für die **Thread** -Klasse bereit, die einen verwalteten Thread repräsentiert, und zwar unabhängig davon, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  
+ Stellt die Referenzdokumentation für die **Thread**-Klasse bereit, die einen verwalteten Thread repräsentiert, und zwar unabhängig davon, ob er von nicht verwaltetem Code stammt oder in einer verwalteten Anwendung erstellt wurde.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Bietet eine sichere Möglichkeit zum Implementieren von Multithreading in Verbindung mit Benutzeroberflächenobjekten.  

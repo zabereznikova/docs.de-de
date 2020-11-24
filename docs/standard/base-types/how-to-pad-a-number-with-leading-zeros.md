@@ -2,7 +2,6 @@
 title: 'Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen'
 description: Erfahren Sie, wie Sie eine Zahl mit führenden Nullen auffüllen. Fügen Sie führende Nullen zu ganzen Zahlen oder numerischen Werten bis zu einer bestimmten Gesamtlänge oder einer bestimmten Anzahl führender Nullen hinzu.
 ms.date: 02/25/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - number formatting [.NET]
 - numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 911d6059d3594ca35eb1c1c3e2d29a5684bce738
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888455"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822047"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen
 
@@ -29,9 +28,9 @@ Führende Nullen können Sie mithilfe der [numerischen Standardformatzeichenfolg
 
 1. Bestimmen Sie, ob die Ganzzahl als Dezimalwert oder als Hexadezimalwert angezeigt werden soll.
 
-    - Um sie als Dezimalwert anzuzeigen, rufen Sie ihre `ToString(String)`-Methode auf, und übergeben Sie die Zeichenfolge "D *n* " als Wert des `format`-Parameters, wobei *n* die minimale Länge der Zeichenfolge darstellt.
+    - Um sie als Dezimalwert anzuzeigen, rufen Sie ihre `ToString(String)`-Methode auf, und übergeben Sie die Zeichenfolge "D *n*" als Wert des `format`-Parameters, wobei *n* die minimale Länge der Zeichenfolge darstellt.
 
-    - Um die ganze Zahl als Hexadezimalwert anzuzeigen, rufen Sie ihre `ToString(String)`-Methode auf, und übergeben Sie die Zeichenfolge „X *n* “ als Wert des format-Parameters, wobei *n* die Mindestlänge der Zeichenfolge darstellt.
+    - Um die ganze Zahl als Hexadezimalwert anzuzeigen, rufen Sie ihre `ToString(String)`-Methode auf, und übergeben Sie die Zeichenfolge „X *n*“ als Wert des format-Parameters, wobei *n* die Mindestlänge der Zeichenfolge darstellt.
 
 Sie können auch die Formatzeichenfolge in einer interpolierten Zeichenfolge sowohl in [C#](../../csharp/language-reference/tokens/interpolated.md) als auch [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) verwenden, oder Sie können eine Methode aufrufen, z. B. <xref:System.String.Format%2A?displayProperty=nameWithType> oder <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, die [kombinierte Formatierung](composite-formatting.md) verwendet.
 
@@ -54,7 +53,7 @@ Im folgenden Beispiel sind mehrere Ganzzahlwerte so mit führenden Nullen format
 
 1. Fügen Sie die Anzahl der führenden Nullen, die in die formatierte Zeichenfolge eingefügt werden sollen, zur Länge der nicht aufgefüllten numerischen Zeichenfolge hinzu. Durch Hinzufügen der Anzahl der führenden Nullen wird die Gesamtlänge der aufgefüllten Zeichenfolge definiert.
 
-1. Rufen Sie die `ToString(String)`-Methode des Ganzzahlwerts auf, und übergeben Sie die Zeichenfolge „D *n* “ für Dezimalzeichenfolgen und „X *n* “ für Hexadezimalzeichenfolgen, wobei *n* die Gesamtlänge der aufgefüllten Zeichenfolge darstellt. Sie können die Formatzeichenfolge „D *n* “ oder „X *n* “ auch in Methoden verwenden, die die kombinierte Formatierung unterstützen.
+1. Rufen Sie die `ToString(String)`-Methode des Ganzzahlwerts auf, und übergeben Sie die Zeichenfolge „D *n*“ für Dezimalzeichenfolgen und „X *n*“ für Hexadezimalzeichenfolgen, wobei *n* die Gesamtlänge der aufgefüllten Zeichenfolge darstellt. Sie können die Formatzeichenfolge „D *n*“ oder „X *n*“ auch in Methoden verwenden, die die kombinierte Formatierung unterstützen.
 
 Im folgenden Beispiel wird ein Ganzzahlwert mit fünf führenden Nullen aufgefüllt.
 

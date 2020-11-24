@@ -2,18 +2,17 @@
 title: Datensynchronisierung für Multithreading
 description: Informationen zum Synchronisieren von Daten zum Multithreading in .NET Wählen Sie Strategien wie synchronisierte Coderegionen, die manuelle Synchronisierung oder synchronisierte Kontexte aus.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 63ee85f3d8bab865ce34566ec381d23676b27991
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188587"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819642"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -62,7 +61,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
 ### <a name="compiler-support"></a>Compilerunterstützung  
  Visual Basic und C# unterstützen ein Sprachschlüsselwort, das <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> zum Sperren des Objekts verwendet. Visual Basic unterstützt die [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)-Anweisung und C# unterstützt die [lock](../../csharp/language-reference/keywords/lock-statement.md)-Anweisung.  
   
- Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally** -Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally** -Block aus. Wenn eine Ausnahme innerhalb eines **lock** - oder **SyncLock** -Blocks ausgelöst wird, wird der **finally** -Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  
+ Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally**-Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally**-Block aus. Wenn eine Ausnahme innerhalb eines **lock**- oder **SyncLock**-Blocks ausgelöst wird, wird der **finally**-Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  
   
 ## <a name="synchronized-context"></a>Synchronisierter Kontexte  
 

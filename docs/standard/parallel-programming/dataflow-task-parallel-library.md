@@ -2,7 +2,6 @@
 title: Datenfluss (Task Parallel Library)
 description: Erfahren Sie, wie Sie Datenflusskomponenten aus der Task Parallel Library (TPL) verwenden, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu verbessern.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662549"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817639"
 ---
 # <a name="dataflow-task-parallel-library"></a>Datenfluss (Task Parallel Library)
 Die Task Parallel Library (TPL) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. Diese Datenflusskomponenten werden zusammen als *TPL-Datenflussbibliothek* bezeichnet. Dieses Datenflussmodell begünstigt die akteurbasierte Programmierung durch eine prozessinterne Nachrichtenübergabe für simple Datenfluss- und Pipelineaufgaben. Die Datenflusskomponenten basieren auf den Typen und der Planungsinfrastruktur der TPL und sind in die C#-, Visual Basic- und F#-Sprachunterstützung für asynchrone Programmierung integriert. Diese Datenflusskomponenten sind hilfreich, wenn mehrere Vorgänge vorliegen, die asynchron miteinander kommunizieren müssen, oder wenn Sie Daten verarbeiten möchten, die gerade verfügbar werden. Denken Sie beispielsweise an eine Anwendung, die Bilddaten von einer Webcam verarbeitet. Durch das Datenflussmodell kann die Anwendung Bildframes verarbeiten, sobald diese verfügbar sind. Wenn die Anwendung Bildframes beispielsweise durch Lichtkorrektur oder Rote-Augen-Reduktion aufbessert, können Sie eine *Pipeline* von Datenflusskomponenten erstellen. Jede Phase der Pipeline kann grober strukturierte Parallelitätsfunktionen verwenden, wie z. B. die von der TPL bereitgestellten Funktionen zum Transformieren des Bilds.  

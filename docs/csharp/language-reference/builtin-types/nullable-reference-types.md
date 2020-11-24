@@ -2,12 +2,12 @@
 title: 'Nullable-Verweistypen: C#-Referenz'
 description: Informationen zu Nullable-Verweistypen in C# und deren Verwendung
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471862"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822424"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Nullable-Verweistypen (C#-Referenz)
 
@@ -72,7 +72,7 @@ Es gibt zwei Möglichkeiten, den NULL-kompatiblen Kontext festzulegen. Auf Proje
 Weitere Informationen finden Sie in den folgenden Vorschlägen für die [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
 
 - [Nullwerte zulassende Verweistypen](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [Entwurf der Spezifikation für Nullable-Verweistypen](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Entwurf der Spezifikation für Nullable-Verweistypen](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>Siehe auch
 

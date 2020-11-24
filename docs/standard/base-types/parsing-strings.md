@@ -2,7 +2,6 @@
 title: Konvertieren von Zeichenfolgen in Typen
 description: Machen Sie sich mit dem Analysieren von Zeichenfolgen in .NET vertraut. Beim Analysieren wird eine Zeichenfolge, die einen .NET-Basistyp darstellt, in diesen Basistyp konvertiert. Das Analysieren ist der entgegengesetzte Vorgang zum Formatieren.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing strings, about parsing strings
 - IFormatProvider interface, parsing strings
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: 3d23fa9c7ecc3593f03f70dbd5ea7bda841e8f4f
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 8fbfe8596e49ed101ea7d6bb65298e432a6fac13
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400852"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821904"
 ---
 # <a name="parse-strings-in-net"></a>Analysieren von Zeichenfolgen in .NET
 
@@ -26,10 +25,10 @@ Bei einem *Analysevorgang* wird eine Zeichenfolge, die einen .NET-Basistyp darst
  Beschreibt das Konvertieren von Zeichenfolgen in numerische .NET-Typen.
 
  [Analysieren von Zeichenfolgen für Datum und Uhrzeit](parsing-datetime.md)\
- Beschreibt das Konvertieren von Zeichenfolgen in **DateTime** -Typen in .NET.
+ Beschreibt das Konvertieren von Zeichenfolgen in **DateTime**-Typen in .NET.
 
  [Analysieren anderer Zeichenfolgen](parsing-other.md)\
- Beschreibt das Konvertieren von Zeichenfolgen in **Char** -, **Boolean** - und **Enum** -Typen.
+ Beschreibt das Konvertieren von Zeichenfolgen in **Char**-, **Boolean**- und **Enum**-Typen.
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
  [Formatierung von Typen](formatting-types.md)\

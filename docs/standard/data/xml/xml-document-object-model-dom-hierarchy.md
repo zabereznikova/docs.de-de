@@ -1,14 +1,13 @@
 ---
 title: Hierarchie im XML-Dokumentobjektmodell (DOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
-ms.openlocfilehash: a6099b6c5e30fbf2e4d5d4ed046369bc8f884845
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2a8bbd4f7cb3feb2a555af9862632a2fa493be32
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291434"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819252"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarchie im XML-Dokumentobjektmodell (DOM)
 In der folgenden Abbildung wird die Klassenhierarchie für das XML-Document Object Model (DOM – Dokumentobjektmodell) veranschaulicht; dabei ist der W3C-Name (World Wide Web Consortium) an den relevanten Stellen zusammen mit dem Klassennamen angegeben.  

@@ -2,7 +2,6 @@
 title: Gruppierungskonstrukte in regulären Ausdrücken
 description: Erfahren Sie, wie Sie Gruppierungskonstrukte in .NET verwenden. Gruppierungskonstrukte grenzen Teilausdrücke eines regulären Ausdrucks ab und erfassen Teilzeichenfolgen einer Eingabezeichenfolge.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888507"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823003"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -172,7 +171,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 `(?'name1-name2' subexpression)`
   
- wobei *name1* die aktuelle Gruppe (optional), *name2* eine zuvor definierte Gruppe und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Die Ausgleichsgruppendefinition löscht die Definition von *name2* und speichert das Intervall zwischen *name2* und *name1* in *name1* . Wenn keine *name2* -Gruppe definiert ist, wird die Übereinstimmung rückwärts verarbeitet. Da durch Löschen der letzten Definition von *name2* die vorherige Definition von *name2* angezeigt wird, kann mithilfe dieses Konstrukts der Erfassungsstapel für die *name2* -Gruppe als Zähler für die Erfassung von geschachtelten Konstrukten, z. B. Anführungszeichen oder öffnende bzw. schließende Klammern, verwendet werden.  
+ wobei *name1* die aktuelle Gruppe (optional), *name2* eine zuvor definierte Gruppe und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Die Ausgleichsgruppendefinition löscht die Definition von *name2* und speichert das Intervall zwischen *name2* und *name1* in *name1*. Wenn keine *name2* -Gruppe definiert ist, wird die Übereinstimmung rückwärts verarbeitet. Da durch Löschen der letzten Definition von *name2* die vorherige Definition von *name2* angezeigt wird, kann mithilfe dieses Konstrukts der Erfassungsstapel für die *name2* -Gruppe als Zähler für die Erfassung von geschachtelten Konstrukten, z. B. Anführungszeichen oder öffnende bzw. schließende Klammern, verwendet werden.  
   
  Die Ausgleichsgruppendefinition verwendet *name2* als Stapel. Das Anfangszeichen jedes geschachtelten Konstrukts wird in die Gruppe sowie in die zugehörige <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> -Auflistung eingefügt. Wenn das schließende Zeichen abgeglichen wird, wird das entsprechende öffnende Zeichen aus der Gruppe entfernt, und die <xref:System.Text.RegularExpressions.Group.Captures%2A> -Auflistung wird um eins verringert. Nachdem die öffnenden und schließenden Zeichen aller geschachtelten Konstrukte abgeglichen wurden, ist *name2* leer.  
   

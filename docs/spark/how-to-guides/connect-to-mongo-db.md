@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 928cc8e3559e13af66268f3d1b3766cf2df9041f
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 945e494e8a027d438bf4659d989da6033a13f6f0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223980"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687602"
 ---
 # <a name="connect-net-for-apache-spark-to-mongodb"></a>Herstellen einer Verbindung zwischen .NET für Apache Spark und MongoDB
 
@@ -82,7 +82,7 @@ Damit .NET für Apache Spark mit Ihrer MongoDB-Instanz kommunizieren kann, müss
 Zum Ausführen Ihrer .NET für Apache Spark-Anwendung sollten Sie das `mongo-spark-connector`-Modul als Teil der Builddefinition in Ihrem Spark-Projekt mithilfe von `libraryDependency` in `build.sbt` für sbt-Projekte definieren. Für Spark-Umgebungen wie `spark-submit` (oder `spark-shell`) sollten Sie die Befehlszeilenoption `--packages` wie folgt verwenden:
 
 ```bash
-spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<version>.jar yourApp.exe
+spark-submit --master local --packages org.mongodb.spark:mongo-spark-connector_2.12:3.0.0 --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar yourApp.exe
 ```
 
 > [!NOTE]

@@ -1,7 +1,6 @@
 ---
 title: Typkonvertierungstabellen in .NET
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - widening conversions
 - narrowing conversions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: 27578d46a80b0372c6ddc2266a751cd0e6e9aa91
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c84b1eae8a36a8d4e844cb7b1eb110c32c35993f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889451"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823016"
 ---
 # <a name="type-conversion-tables-in-net"></a>Typkonvertierungstabellen in .NET
 Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der gleich groß oder größer ist. Eine einschränkende Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der kleiner ist. Die Tabellen in diesem Thema veranschaulichen die Verhaltensweisen dieser beiden Konvertierungsarten.  

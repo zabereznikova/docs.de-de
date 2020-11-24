@@ -1,14 +1,13 @@
 ---
 title: XML-Schemaobjektmodell (SOM)
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: 1de9fdf9950ba3ae356779ca802afb71f24a345e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290317"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818400"
 ---
 # <a name="xml-schema-object-model-som"></a>XML-Schemaobjektmodell (SOM)
 Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Validieren von Strukturen in XML-kompatiblen Dokumenten. Wie bei der Datenmodellierung in einer relationalen Datenbank kann mithilfe eines Schemas die Struktur von XML-Dokumenten definiert werden. Dies erfolgt durch Festlegen der Elemente, die in Dokumenten verwendet werden dürfen, einschließlich der Struktur und der Typen, denen diese Elemente entsprechen müssen, um für dieses spezielle Schema gültig zu sein.  

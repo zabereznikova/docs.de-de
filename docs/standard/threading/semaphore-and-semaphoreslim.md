@@ -2,7 +2,6 @@
 title: Semaphore und SemaphoreSlim
 description: Erfahren Sie mehr über Semaphore und SemaphoreSlim. Bei der Klasse Semaphore handelt es sich um einen einfachen Wrapper um das Win32-Semaphorobjekt. Die Klasse SemaphoreSlim ist eine schnelle, einfache Variante der Klasse Semaphore.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - counting semaphores
 - semaphores
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: b9c13ace086b4df08108a844aea78e5d550e6958
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: bda88012fde60481d8870f701e98924acdeeb5a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188938"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817144"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 

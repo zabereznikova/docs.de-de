@@ -2,15 +2,16 @@
 title: .NET-Standard
 description: Erfahren Sie mehr über .NET Standard, dessen Versionen und die .NET-Implementierungen, von denen es unterstützt wird.
 ms.date: 10/05/2020
+ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224164"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822308"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -60,7 +61,7 @@ Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die 
 
 ### <a name="official-artifacts"></a>Offizielle Artefakte
 
-Die offizielle Spezifikation ist eine Reihe von *CS* -Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) im [dotnet/standard-Repository](https://github.com/dotnet/standard) definiert die .NET Standard-APIs.
+Die offizielle Spezifikation ist eine Reihe von *CS*-Dateien zur Definition der APIs, die Bestandteile des Standards sind. Das [ref-Verzeichnis](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) im [dotnet/standard-Repository](https://github.com/dotnet/standard) definiert die .NET Standard-APIs.
 
 Das [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library)-Metapaket ([Quelle](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) beschreibt den Satz von Bibliotheken, die (teilweise) eine oder mehrere Versionen von .NET Standard definieren.
 

@@ -1,18 +1,17 @@
 ---
 title: Post-Schema-Compilation-Infoset
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 3bd0c6063fee1fa1a9f046a8be2ebfde07aea9ee
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2b91a74f7dbb31ee47535dbed7cf5fa5243e364c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291512"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820439"
 ---
 # <a name="post-schema-compilation-infoset"></a>Post-Schema-Compilation-Infoset
 In der [W3C-Empfehlung (World Wide Web Consortium) zum XML Schema](https://www.w3.org/XML/Schema) wird der Informationssatz (Infoset) erörtert, der für die Pre-Schema-Validierung und die Post-Schema-Kompilierung verfügbar gemacht werden muss. Das XML-SOM (Schema Object Model) zeigt dieses Offenlegen vor und nachdem die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode vom <xref:System.Xml.Schema.XmlSchemaSet> aufgerufen wird an.  

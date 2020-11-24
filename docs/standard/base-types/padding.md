@@ -2,7 +2,6 @@
 title: Auffüllen von Zeichenfolgen in .NET
 description: Erfahren Sie, wie Sie Zeichenfolgen in .NET auffüllen. Verwenden Sie die Methoden String.PadLeft und String.PadRight, um vorangestellte oder nachgestellte Zeichen zu ergänzen, sodass eine bestimmte Gesamtlänge erreicht wird.
 ms.date: 03/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: f90a95f0ceb5ad7cc32d451897544fffe56afb6d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889048"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822944"
 ---
 # <a name="padding-strings-in-net"></a>Auffüllen von Zeichenfolgen in .NET
 

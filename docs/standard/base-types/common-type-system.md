@@ -2,7 +2,6 @@
 title: Allgemeines Typsystem
 description: Erkunden Sie das Typsystem in .NET. Erfahren Sie mehr über Typen in .NET (Werttypen oder Verweistypen), Typdefinitionen, Typmember und Merkmale von Typmembern.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889503"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823185"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 
@@ -249,7 +248,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Die Microsoft Intermediate Language (MSIL) schließt nicht nur die Eigenschaft ein, sondern für einen Typ mit einer lesbaren Eigenschaft darüber hinaus eine `get_`*Eigenschaftsname* -Methode und für einen Typ mit einer beschreibbaren Eigenschaft eine `set_`*Eigenschaftsname* -Methode.  
+ Die Microsoft Intermediate Language (MSIL) schließt nicht nur die Eigenschaft ein, sondern für einen Typ mit einer lesbaren Eigenschaft darüber hinaus eine `get_`*Eigenschaftsname*-Methode und für einen Typ mit einer beschreibbaren Eigenschaft eine `set_`*Eigenschaftsname*-Methode.  
 
 ### <a name="methods"></a>Methoden
 

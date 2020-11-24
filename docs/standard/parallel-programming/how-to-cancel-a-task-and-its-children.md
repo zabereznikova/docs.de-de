@@ -2,19 +2,18 @@
 title: 'Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente'
 description: Erfahren Sie, wie Sie Tasks und deren untergeordnete Elemente in .NET abbrechen. In den gezeigten Beispielen werden die Schritte von der Erstellung eines abbrechbaren Tasks bis hin zur Benachrichtigung über den Abbruch des Tasks beschrieben.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662679"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817262"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  

@@ -1,16 +1,15 @@
 ---
 title: SpinLock
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: a5202be5e3055702954ad7a1565999ad2496eaea
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 071bde6e8b32d5712256e24c83d713cd63f2bffb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291122"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819005"
 ---
 # <a name="spinlock"></a>SpinLock
 Die <xref:System.Threading.SpinLock>-Struktur ist eine Synchronisierungsprimitive auf niedriger Ebene mit gegenseitigem Ausschluss, die die Schleife durchläuft, während sie darauf wartet, eine Sperre abzurufen. Wenn Wartezeiten auf Mehrkerncomputern kurz und Konflikte minimal sein sollen, bietet <xref:System.Threading.SpinLock> einen Leistungsvorteil gegenüber anderen Arten von Sperren. Sie sollten <xref:System.Threading.SpinLock> jedoch nur verwenden, wenn Sie durch Profilerstellung bestimmen, dass die <xref:System.Threading.Monitor?displayProperty=nameWithType>- oder <xref:System.Threading.Interlocked>-Methode die Leistung des Programms erheblich beeinträchtigen.  
