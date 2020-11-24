@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: 3eec84624866b2be7068d7875cd650828c283fd2
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: dfe247bda75c3695c7c09b85729b4e057c13c62d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421097"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692630"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged-Methode
+
 Ruft einen Wert ab, der angibt, ob der Prozess, auf den von diesem [ICorPublishProcess](icorpublishprocess-interface.md) verwiesen wird, über verwalteten Code verfügt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT IsManaged (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbManaged`  
  vorgenommen Ein Zeiger auf einen booleschen Wert, der angibt, ob der Prozess verwalteten Code aufweist. Der Wert ist `true` , wenn der Prozess verwalteten Code aufweist, andernfalls `false` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Da die aktuelle Version von `ICorPublishProcess` nur auf Prozesse mit verwaltetem Code zugreifen kann, `IsManaged` gibt immer zurück `true` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -49,6 +53,6 @@ HRESULT IsManaged (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishProcess-Schnittstelle](icorpublishprocess-interface.md)

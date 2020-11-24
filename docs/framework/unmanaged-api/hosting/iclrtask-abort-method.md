@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3594b5f-2e41-4e36-9096-3586276a138c
 topic_type:
 - apiref
-ms.openlocfilehash: 76f216b12bccc950a34e2b23404ac305de519f4a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: aadbbb5fc6abd3829f14670e42149174f6ef238d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690849"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort-Methode
+
 Fordert an, dass die Common Language Runtime (CLR) den Task abbrechen, den die aktuelle [ICLRTask](iclrtask-interface.md) -Instanz darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,7 +36,7 @@ HRESULT Abort ();
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Abort`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Abort` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -43,14 +44,16 @@ HRESULT Abort ();
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die CLR löst eine aus, <xref:System.Threading.ThreadAbortException> Wenn der Host aufruft `Abort` . Sie wird unmittelbar nach der Initialisierung der Ausnahme Informationen zurückgegeben, ohne darauf zu warten, dass Benutzercode (z. b. Finalizer oder Ausnahme Behandlungs Mechanismen) ausgeführt wird. Aufrufe von werden `Abort` daher schnell zurückgegeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

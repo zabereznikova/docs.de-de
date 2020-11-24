@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-ms.openlocfilehash: a7a8d96548704f223f05826af79a4e227bdfab06
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fd4ad536d7d3df2b8f91f206459122cf083c8b9c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379831"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691135"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2-Schnittstelle
+
 Dient als logische Erweiterung der ICorDebugThread-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetActiveFunctions-Methode](icordebugthread2-getactivefunctions-method.md)|Ruft ein Array von COR_ACTIVE_FUNCTION-Instanzen ab, die Daten über die aktiven Funktionen in den Frames eines Threads enthalten.|  
 |[GetConnectionID-Methode](icordebugthread2-getconnectionid-method.md)|Ruft einen Verbindungs Bezeichner für dieses ab `ICorDebugThread2` .|  
@@ -40,6 +41,7 @@ Dient als logische Erweiterung der ICorDebugThread-Schnittstelle.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -48,6 +50,6 @@ Dient als logische Erweiterung der ICorDebugThread-Schnittstelle.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

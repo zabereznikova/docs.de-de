@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdb7f047-1e90-40fc-9e3b-d44a16509073
 topic_type:
 - apiref
-ms.openlocfilehash: e1b93356fd40aacdec2e764946e3e3b12d0bd306
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: d1f731e00d4917b997dfba392cb9b6ce2afc082e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690745"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier-Methode
+
 Weist den Common Language Runtime (CLR) an, den angegebenen Bezeichnerwert der Aufgabe zuzuordnen, die durch die aktuelle [ICLRTask](iclrtask-interface.md) -Instanz dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetTaskIdentifier (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `Asked`  
  in Der eindeutige Bezeichner für den Common Language Runtime, der der durch die aktuelle Instanz dargestellten Aufgabe zugeordnet werden soll `ICLRTask` .  
   
@@ -41,7 +43,7 @@ HRESULT SetTaskIdentifier (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetTaskIdentifier`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetTaskIdentifier` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,14 +51,16 @@ HRESULT SetTaskIdentifier (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host kann einem Task einen Bezeichner zuordnen, um die Integration der CLR und des Hosts in eine Debugumgebung zu erleichtern. Der Bezeichner hat keine Bedeutung für die CLR. Die CLR übergibt sie an eine Debugger-Anwendung. Der Debugger kann diesen Bezeichner verwenden, um eine CLR-Aufrufe einer Host-aufrufsliste zuzuordnen und die jeweiligen Ablauf Verfolgungs Informationen zu aktivieren, wenn Sie in der Benutzeroberfläche des Debuggers angezeigt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

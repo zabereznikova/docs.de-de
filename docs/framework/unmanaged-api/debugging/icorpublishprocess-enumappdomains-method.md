@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: 0c3b5da52b78150198fa9f910bf01b4657e4eba8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 2acf8fb507ab617e066a31c9c2657b1ef0d18e47
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421162"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693280"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains-Methode
+
 Ruft einen Enumerator für die Anwendungs Domänen in dem Prozess ab, auf den von diesem [ICorPublishProcess](icorpublishprocess-interface.md)verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT EnumAppDomains (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppEnum`  
  vorgenommen Ein Zeiger auf die Adresse einer [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md) -Instanz, die Iterationen durch die Auflistung von Anwendungs Domänen in diesem Prozess ermöglicht.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Liste der Anwendungs Domänen basiert auf einer Momentaufnahme der Anwendungs Domänen, die beim Aufrufen der- `EnumAppDomains` Methode vorhanden sind. Diese Methode kann mehrmals aufgerufen werden, um eine neue aktuelle Liste zu erstellen. Bei nachfolgenden Aufrufen dieser Methode werden vorhandene Listen nicht beeinträchtigt.  
   
  Wenn der Prozess beendet wurde, `EnumAppDomains` schlägt mit dem HRESULT-Wert CORDBG_E_PROCESS_TERMINATED fehl.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -51,6 +55,6 @@ HRESULT EnumAppDomains (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishProcess-Schnittstelle](icorpublishprocess-interface.md)

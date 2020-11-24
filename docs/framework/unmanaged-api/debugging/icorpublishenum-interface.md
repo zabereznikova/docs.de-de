@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 76a136b5-e444-417a-8ade-f1596d597dc7
 topic_type:
 - apiref
-ms.openlocfilehash: acbc37d0f49af21c60ff6989932c5d341673512b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 492d4b727ce507340fec47d30a791aa49d0cecb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421175"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693345"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum-Schnittstelle
+
 Dient als abstrakte Basisschnittstelle für die Enumeratoren, die bei der Veröffentlichung von Informationen zu Prozessen und Anwendungs Domänen verwendet werden.  
   
 ## <a name="methods"></a>Methoden  
@@ -34,13 +35,15 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die bei der Veröf
 |[Skip-Methode](icorpublishenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die folgenden Enumeratoren werden von abgeleitet `ICorPublishEnum` :  
   
 - [ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)  
   
 - [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -49,7 +52,7 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die bei der Veröf
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorpubPublish-Co-Klasse](corpubpublish-coclass.md)
 - [Debugschnittstellen](debugging-interfaces.md)

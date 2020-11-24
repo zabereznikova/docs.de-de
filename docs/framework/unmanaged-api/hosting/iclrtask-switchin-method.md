@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d37ce20-aa65-4043-8f13-7c728b5d8a52
 topic_type:
 - apiref
-ms.openlocfilehash: d8f57af459d1bb3f338cfbfcbb29f69f533ea927
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e98ae17d55c74d32844da96137c258d076ebc2db
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762928"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691057"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn-Methode
+
 Benachrichtigt den Common Language Runtime (CLR), dass die Aufgabe, die die aktuelle [ICLRTask](iclrtask-interface.md) -Instanz darstellt, jetzt in einem eines ausführbaren-Zustand ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SwitchIn (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `threadHandle`  
  in Ein Handle für den physischen Thread, in dem die von der aktuellen Instanz dargestellte Aufgabe `ICLRTask` ausgeführt wird.  
   
@@ -41,26 +43,28 @@ HRESULT SwitchIn (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SwitchIn`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SwitchIn` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_INVALIDOPERATION|`SwitchIn`wurde aufgerufen, ohne dass ein früherer Aufruf der [SwitchOut-Methode](iclrtask-switchout-method.md)aufgerufen wurde.|  
+|HOST_E_INVALIDOPERATION|`SwitchIn` wurde aufgerufen, ohne dass ein früherer Aufruf der [SwitchOut-Methode](iclrtask-switchout-method.md)aufgerufen wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der- `threadHandle` Parameter stellt ein Handle für den Betriebssystem Thread dar, auf dem der von der aktuellen Instanz dargestellte Task `ICLRTask` geplant wurde. Wenn in diesem Thread ein Identitätswechsel aufgetreten ist, müssen Sie [IHostSecurityManager:: revertdeself](ihostsecuritymanager-reverttoself-method.md) vor dem Umschalten in der Aufgabe anrufen.  
   
 > [!NOTE]
 > Ein-Rückruf `SwitchIn` ohne einen früheren-Rückruf `SwitchOut` schlägt mit einem HRESULT-Wert von HOST_E_INVALIDOPERATION fehl.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

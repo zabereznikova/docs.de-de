@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c9db3f3-26bf-4317-88de-5eb926a22a1d
 topic_type:
 - apiref
-ms.openlocfilehash: df20e98a9e88c10bac748a5acfc91adcb133da79
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 86e0899b883f09f2e7b27c0f957e943deb73bb66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690797"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling-Methode
+
 Ruft einen Wert ab, der angibt, ob der aktuelle Task, der ausgeschaltet wird, als hohe Priorität für die Neuplanung gekennzeichnet werden muss.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT NeedsPriorityScheduling (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbNeedsPriorityRescheduling`  
  [out] `true` , wenn der Host versuchen soll, die aktuelle Task Instanz so bald wie möglich neu zu planen; andernfalls `false` .  
   
@@ -41,7 +43,7 @@ HRESULT NeedsPriorityScheduling (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`NeedsPriorityRescheduling`wurde erfolgreich zurückgegeben.|  
+|S_OK|`NeedsPriorityRescheduling` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,14 +51,16 @@ HRESULT NeedsPriorityScheduling (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  In Fällen, in denen die Aufgabe in der Nähe ist, vom Garbage Collector gesammelt zu werden, legt die CLR den Wert von `pbNeedsPriorityScheduling` auf fest, um eine `true` Neuplanung mit hoher Priorität anzugeben. Dies ermöglicht es dem Host, den Task schnell neu zu planen. Dadurch wird das Potenzial für Verzögerungen in Garbage Collection minimiert, und der Host und die Laufzeit können zusammenarbeiten, um Speicherressourcen zu sparen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

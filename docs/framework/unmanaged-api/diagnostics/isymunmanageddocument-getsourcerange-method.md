@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f5d7df60a7b9c728b73fe6592226a8b6734b1e66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615604"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692149"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange-Methode
+
 Gibt den angegebenen Bereich der eingebetteten Quelle in den angegebenen Puffer zurück. Der Puffer muss groß genug sein, um die Quelle zu speichern.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT GetSourceRange(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `startLine`  
  in Die Anfangs Zeile im aktuellen Dokument.  
   
@@ -62,8 +64,9 @@ HRESULT GetSourceRange(
  vorgenommen Die Größe und die Länge des angegebenen Bereichs des Quelldokuments in Bytes.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedDocument-Schnittstelle](isymunmanageddocument-interface.md)

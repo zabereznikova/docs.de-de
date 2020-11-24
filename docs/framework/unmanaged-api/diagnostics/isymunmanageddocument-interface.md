@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-ms.openlocfilehash: a8ff6d3a925773e58e0713a87b167420c246f85b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 83c683e1f60f13f7cee4ddc6fe5af5a94e36eb93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692175"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument-Schnittstelle
+
 Stellt ein Dokument dar, auf das von einem Symbolspeicher verwiesen wird. Ein Dokument wird durch eine URL (Uniform Resource Serverlocatorpunkt) und eine Dokumenttyp-GUID definiert. Sie können das Dokument unabhängig davon, wie es gespeichert wird, mithilfe der URL-und Dokumenttyp-GUID suchen. Sie können die Dokument Quelle im Symbol Speicher speichern und über diese Schnittstelle abrufen.  
   
 ## <a name="methods"></a>Methoden  
@@ -39,6 +40,6 @@ Stellt ein Dokument dar, auf das von einem Symbolspeicher verwiesen wird. Ein Do
 |[GetURL-Methode](isymunmanageddocument-geturl-method.md)|Gibt die URL für dieses Dokument zurück.|  
 |[HasEmbeddedSource-Methode](isymunmanageddocument-hasembeddedsource-method.md)|Gibt zurück, `true` Wenn das Dokument in die Debugsymbole eingebettet ist; andernfalls wird zurückgegeben `false` .|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
