@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: e5fd1730bbe5b6f2905691dce41a7f503227534a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e0df443e691292817ff37900fbc87204a8325ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684498"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes-Methode
-Ruft einen Enumerator für alle zwischengespeicherten Windows-Runtime-Typen ab.  
+
+Ruft einen Enumerator für alle zwischengespeicherten Windows-Runtime Typen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,17 +35,19 @@ HRESULT GetCachedWinRTTypes (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppGuidToTypeEnum`  
- [out] Ein Zeiger auf ein [ICorDebugGuidToTypeEnum-Schnittstellenobjekt,](icordebugguidtotypeenum-interface.md) das die verwalteten Darstellungen von Windows-Runtime-Typen aufzählen kann, die derzeit in der Anwendungsdomäne geladen sind.  
+ vorgenommen Ein Zeiger auf ein [icordebugguidtotypeenum](icordebugguidtotypeenum-interface.md) -Schnittstellen Objekt, das die verwalteten Darstellungen von Windows-Runtime Typen aufzählen kann, die zurzeit in der Anwendungsdomäne geladen sind.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

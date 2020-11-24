@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6961922-46ec-4d2c-8369-85f880731f37
 topic_type:
 - apiref
-ms.openlocfilehash: 4331728a4766d81b723c439747e5e1181815394f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 394832d6144509717d2f79a78afaff50ad81c01d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683302"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit-Methode
+
 Führt einen Commit für die bisher geschriebenen Änderungen in den Stream aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,11 +33,13 @@ HRESULT Commit();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter3-Schnittstelle](isymunmanagedwriter3-interface.md)

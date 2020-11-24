@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72d3d927-f590-4f2d-8f60-448f3dfb96af
 topic_type:
 - apiref
-ms.openlocfilehash: 5e28ccb53771be4a2b6681e2491094d15f01904e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: defd2623b85225f4139ff0bfce8495d16e3b4182
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379981"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684417"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank-Methode
+
 Ruft die Anzahl der Dimensionen in einem Arraytyp ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT GetRank (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pnRank`  
  vorgenommen Ein Zeiger auf die Anzahl von Dimensionen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

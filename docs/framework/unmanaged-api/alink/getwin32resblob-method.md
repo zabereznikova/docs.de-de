@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36997e04-f9f6-4254-a041-6767ac6c51d9
 topic_type:
 - apiref
-ms.openlocfilehash: ff3103a46390c880a56ff443bfe20744f2ba0bfd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 03f6c97b4a5bbbdc0aeaf7b3f07277e66d7d0e9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684511"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob-Methode
+
 Ruft das Win32-ressourcenblob ab. Diese Methode nach dem Festlegen der Assemblyoptionen aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetWin32ResBlob(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
@@ -57,13 +59,15 @@ HRESULT GetWin32ResBlob(
  Empfängt die Größe des BLOBs.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert "Alink. h"  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

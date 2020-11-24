@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a034c21e-e371-4360-b470-29e88288948f
 topic_type:
 - apiref
-ms.openlocfilehash: 006045ce101884119f676e4f6324815eb21a10a4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: dfc2e39a6a39e7386bd7358d422d5c6978ec42ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614655"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683289"
 ---
 # <a name="isymunmanagedwriter3-interface"></a>ISymUnmanagedWriter3-Schnittstelle
-Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit. Diese Schnittstelle erweitert die [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) -Schnittstelle.  
+
+Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit. Diese Schnittstelle erweitert die [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) -Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -31,10 +32,11 @@ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten,
 |[Commit-Methode](isymunmanagedwriter3-commit-method.md)|Führt einen Commit für die bisher geschriebenen Änderungen in den Stream aus.|  
 |[OpenMethod2-Methode](isymunmanagedwriter3-openmethod2-method.md)|Öffnet eine-Methode und stellt den tatsächlichen Abschnitts Offset im Bild bereit.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

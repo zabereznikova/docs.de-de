@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-ms.openlocfilehash: e4348cc59924b65b6c6bb53a9c2a98f1a1161b50
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6404252f2c1eb14f0cd723451beb82b4c65960fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683484"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace-Methode
+
 Gibt an, dass der angegebene voll qualifizierte Namespace Name innerhalb des derzeit geöffneten lexikalischen Gültigkeits Bereichs verwendet wird. Der-Namespace wird innerhalb aller Bereiche verwendet, die vom derzeit geöffneten Bereich erben. Wenn Sie den aktuellen Bereich schließen, wird auch die Verwendung des-Namespaces beendet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,15 +34,18 @@ HRESULT UsingNamespace(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `fullName`  
  in Ein Zeiger auf den voll qualifizierten Namen des Namespace.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

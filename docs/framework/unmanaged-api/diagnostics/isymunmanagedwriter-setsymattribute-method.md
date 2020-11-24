@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64d9b80e-b883-4539-89c7-03573185a1eb
 topic_type:
 - apiref
-ms.openlocfilehash: 39b0c065a324f2b3939467901739f995bc9abbad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 484affb2ca87ca50a805d1bb46b7749d294d09f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683510"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute-Methode
+
 Definiert ein benutzerdefiniertes Attribut basierend auf seinem Namen. Diese Attribute werden im Symbol Speicher gespeichert, im Gegensatz zu benutzerdefinierten Metadaten-Attributen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT SetSymAttribute(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `parent`  
  in Das Metadatentoken, für das das Attribut definiert wird.  
   
@@ -49,11 +51,13 @@ HRESULT SetSymAttribute(
  in Der Attribut Wert.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

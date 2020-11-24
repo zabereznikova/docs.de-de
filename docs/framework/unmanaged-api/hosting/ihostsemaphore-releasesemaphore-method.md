@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a343d197-979a-4ac6-ab8c-cb8a05f3120e
 topic_type:
 - apiref
-ms.openlocfilehash: aa67aabbe8a7a47a9b3036f508e2f8bb6082c3e0
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 660062fb69bb8fe0a06bbca9046d65175fb72f9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803556"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683029"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore-Methode
+
 Erhöht die Anzahl der aktuellen [IHostSemaphore](ihostsemaphore-interface.md) -Instanz um den angegebenen Betrag.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT ReleaseSemaphore (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lReleaseCount`  
  in Der Betrag, um den die Anzahl der aktuellen Instanz vergrößert werden soll `IHostSemaphore` . Dieser Wert muss größer als 0 (null) sein.  
   
@@ -45,7 +47,7 @@ HRESULT ReleaseSemaphore (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`ReleaseSemaphore`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ReleaseSemaphore` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,14 +55,16 @@ HRESULT ReleaseSemaphore (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die CLR ruft in der Regel `ReleaseSemaphore` auf, um den Host zu benachrichtigen, dass die Verwendung einer Ressource abgeschlossen ist, und übergibt den Wert 1 für den `lReleaseCount` Parameter.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

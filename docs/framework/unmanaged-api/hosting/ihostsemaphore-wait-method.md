@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da962a3-ce55-44dd-ab7a-14ad7105af4a
 topic_type:
 - apiref
-ms.openlocfilehash: 22d570711c293dd8c0cc6fefd198dd46d6489bea
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 69b2338e6992c386a3cd34a632d69b73a67f14fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803541"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683003"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait-Methode
+
 Bewirkt, dass die aktuelle [IHostSemaphore](ihostsemaphore-interface.md) -Instanz wartet, bis Sie im Besitz ist oder die angegebene Zeitspanne verstrichen ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwMilliseconds`  
  in Die Anzahl von Millisekunden, die vor der Rückgabe gewartet werden soll, wenn die aktuelle `IHostSemaphore` Instanz nicht im Besitz ist.  
   
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Wait`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Wait` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,12 +55,13 @@ HRESULT Wait (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |HOST_E_DEADLOCK|Der Host hat während des warte Intervalls einen Deadlock erkannt, und die aktuelle `IHostSemaphore` Instanz wurde als Deadlockopfer ausgewählt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

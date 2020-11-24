@@ -2,21 +2,21 @@
 title: Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f37938b603d0eec53a37e4f146376e3202f13d7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558432"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684134"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Unterstützung für neue Workflow Foundation 4.5-Funktionen im neu gehosteten Workflow-Designer
 Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Features eingeführt, einschließlich verschiedener Erweiterungen der Workflow-Designer-Darstellung. In diesem Thema wird erörtert, welche dieser Funktionen im neu gehosteten Designer bzw. derzeit überhaupt nicht unterstützt werden.
 
 > [!NOTE]
-> Eine Liste aller in .NET Framework 4,5 eingeführten neuen Features der neuen Windows Workflow Foundation (WF), einschließlich derjenigen, die nicht im Zusammenhang mit dem Designer-neuhosting stehen, finden Sie unter [What es New in Windows Workflow Foundation in .NET 4,5](whats-new-in-wf-in-dotnet.md).
+> Eine Liste aller in .NET Framework 4,5 eingeführten neuen Features der neuen Windows Workflow Foundation (WF), einschließlich derjenigen, die nicht im Zusammenhang mit dem Designer-neuhosting stehen, finden Sie unter [What es New in Windows Workflow Foundation in .NET Framework 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="activities"></a>Aktivitäten
- Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten. Alle diese neuen Aktivitäten werden im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen neuen Aktivitäten finden Sie im Abschnitt " [Aktivitäten](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) " unter [Neues in Windows Workflow Foundation in .NET 4,5](whats-new-in-wf-in-dotnet.md).
+ Die integrierte Aktivitätsbibliothek enthält neue Aktivitäten und neue Funktionen für vorhandene Aktivitäten. Alle diese neuen Aktivitäten werden im neu gehosteten Designer unterstützt. Weitere Informationen zu diesen neuen Aktivitäten finden Sie im Abschnitt [Activities](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) der [Neuerungen in Windows Workflow Foundation in .NET Framework 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>C#-Ausdrücke
  Vor .NET Framework 4,5 konnten alle Ausdrücke in Workflows nur in Visual Basic geschrieben werden. In .NET Framework 4,5 werden Visual Basic Ausdrücke nur für Projekte verwendet, die mit Visual Basic erstellt werden. Visual C#-Projekte verwenden jetzt die Programmiersprache C# für Ausdrücke. Beim Erstellen von Workflows in Visual Studio 2012 wird ein voll funktionsfähiger c#-Ausdrucks-Editor bereitgestellt, der Funktionen wie Grammatik Hervorhebung und IntelliSense bietet. Die in früheren Versionen erstellten C#-Workflowprojekte, die Visual Basic-Ausdrücke verwenden, sind weiterhin funktionsfähig.
@@ -65,7 +65,7 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  Mehrere ausgewählte Aktivitäten können auch im Designer gezogen und abgelegt und über das Kontextmenü bearbeitet werden.
 
 ### <a name="outline-view-of-workflow-items"></a>Gliederungsansicht der Workflowelemente
- Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungs Ansicht wird in der Ansicht **Dokument** Gliederung angezeigt. Um diese Ansicht in Visual Studio zu öffnen, wählen Sie im oberen Menü **Ansicht**, **Weitere Fenster**, **Dokument**Gliederung aus, oder drücken Sie STRG W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.
+ Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungs Ansicht wird in der Ansicht **Dokument** Gliederung angezeigt. Um diese Ansicht in Visual Studio zu öffnen, wählen Sie im oberen Menü **Ansicht**, **Weitere Fenster**, **Dokument** Gliederung aus, oder drücken Sie STRG W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen. Diese Funktion wird im neu gehosteten Designer unterstützt.
 
  Der folgende Screenshot des abgeschlossenen Workflows aus dem [Tutorial "Getting Started](getting-started-tutorial.md) " zeigt die Gliederungs Ansicht mit einem sequenziellen Workflow.
 
@@ -103,43 +103,43 @@ Mit Windows Workflow Foundation (WF) in .NET Framework 4,5 wurden viele neue Fea
  In .NET Framework 4 wurden Workflow Validierungs Fehler während der Erstellung eines Workflow Projekts nicht als Buildfehler gezählt. Das bedeutete, dass das Erstellen eines Workflowprojekts erfolgreich gewesen sein konnte, obwohl Workflowvalidierungsfehler auftraten. In .NET Framework 4,5 bewirken Workflow Validierungs Fehler, dass der Build fehlschlägt.
 
 > [!WARNING]
-> Die Validierung zur Buildzeit wird im neu gehosteten Designer nicht unterstützt.  
-  
-### <a name="design-time-background-validation"></a>Hintergrundvalidierung zur Entwurfszeit  
- In .NET Framework 4 wurden Workflows als Vordergrund Prozess überprüft, der die Benutzeroberfläche bei komplexen oder zeitaufwändigen Validierungs Prozessen potenziell blockieren kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.  
-  
- Die Hintergrundvalidierung zur Entwurfszeit wird im neu gehosteten Designer unterstützt.  
-  
-### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Der Ansichtszustand wird an einem separaten Ort in XAML-Dateien gespeichert  
- In .NET Framework 4 werden die Ansichts Zustandsinformationen für einen Workflow in der XAML-Datei an vielen verschiedenen Speicherorten gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In .NET Framework 4,5 werden die Ansichts Zustandsinformationen in der XAML-Datei als separates Element in der XAML-Datei serialisiert.  Entwickler können die Ansichts Zustandsinformationen einer Aktivität leicht finden und bearbeiten oder den Ansichts Zustand vollständig entfernen.  
-  
- Diese Funktion wird im neu gehosteten Workflow-Designer unterstützt.  
-  
-### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Opt-In für Workflow 4.5-Funktionen im neu gehosteten Designer  
- Um die Abwärtskompatibilität aufrechtzuerhalten, sind einige neue Features, die in .NET Framework 4,5 enthalten sind, im neu gehosteten Designer standardmäßig nicht aktiviert. Dadurch wird sichergestellt, dass vorhandene Anwendungen, die den neu gehosteten Designer verwenden, nicht beeinträchtigt werden, indem ein Update auf die neueste Version ausgeführt wird. Um neue Funktionen im neu gehosteten Designer zu aktivieren, legen Sie entweder <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> auf „.NET Framework 4.5“ oder einzelne Member von <xref:System.Activities.Presentation.DesignerConfigurationService> so fest, dass sie einzelne Funktionen aktivieren.  
-  
-## <a name="new-workflow-development-models"></a>Neue Modelle für die Workflowentwicklung  
- Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Workflows umfasst dieses Release Zustandsautomatworkflows und Vertrag zuerst-Workflowdienste.  
-  
-### <a name="state-machine-workflows"></a>Zustandsautomatworkflows  
- Zustandsautomatworkflows wurden als Teil der .NET Framework 4.0.1 im [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:  
-  
-1. Festlegen von Haltepunkten für Zustände  
-  
-2. Kopieren und Einfügen von Übergängen im Workflow-Designer  
-  
-3. Designerunterstützung für das Erstellen von freigegebenen Triggerübergängen  
-  
-4. Aktivitäten, die zum Erstellen von Zustandsautomatworkflows verwendet werden, darunter: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> und <xref:System.Activities.Statements.Transition>  
-  
- Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " Gewusst [wie: Erstellen eines Zustands Automaten Workflows](how-to-create-a-state-machine-workflow.md).  
-  
- ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
-  
- Weitere Informationen zum Erstellen von Zustands Automaten Workflows finden Sie [State Machine Workflows](state-machine-workflows.md)unter Zustandsautomatworkflows. Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.  
-  
-### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung  
- Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter Gewusst [wie: Erstellen eines Workflow Dienstanbieter, der einen vorhandenen Dienstvertrag](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.  
-  
+> Die Validierung zur Buildzeit wird im neu gehosteten Designer nicht unterstützt.
+
+### <a name="design-time-background-validation"></a>Hintergrundvalidierung zur Entwurfszeit
+ In .NET Framework 4 wurden Workflows als Vordergrund Prozess überprüft, der die Benutzeroberfläche bei komplexen oder zeitaufwändigen Validierungs Prozessen potenziell blockieren kann. Da die Workflowvalidierung nun in einem Hintergrundthread stattfindet, wird die Benutzeroberfläche nicht blockiert.
+
+ Die Hintergrundvalidierung zur Entwurfszeit wird im neu gehosteten Designer unterstützt.
+
+### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Der Ansichtszustand wird an einem separaten Ort in XAML-Dateien gespeichert
+ In .NET Framework 4 werden die Ansichts Zustandsinformationen für einen Workflow in der XAML-Datei an vielen verschiedenen Speicherorten gespeichert. Dies ist für Entwickler, die XAML direkt lesen oder Code zum Entfernen von Ansichtszustandsinformationen schreiben möchten, ungünstig. In .NET Framework 4,5 werden die Ansichts Zustandsinformationen in der XAML-Datei als separates Element in der XAML-Datei serialisiert.  Entwickler können die Ansichts Zustandsinformationen einer Aktivität leicht finden und bearbeiten oder den Ansichts Zustand vollständig entfernen.
+
+ Diese Funktion wird im neu gehosteten Workflow-Designer unterstützt.
+
+### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Opt-In für Workflow 4.5-Funktionen im neu gehosteten Designer
+ Um die Abwärtskompatibilität aufrechtzuerhalten, sind einige neue Features, die in .NET Framework 4,5 enthalten sind, im neu gehosteten Designer standardmäßig nicht aktiviert. Dadurch wird sichergestellt, dass vorhandene Anwendungen, die den neu gehosteten Designer verwenden, nicht beeinträchtigt werden, indem ein Update auf die neueste Version ausgeführt wird. Um neue Funktionen im neu gehosteten Designer zu aktivieren, legen Sie entweder <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> auf „.NET Framework 4.5“ oder einzelne Member von <xref:System.Activities.Presentation.DesignerConfigurationService> so fest, dass sie einzelne Funktionen aktivieren.
+
+## <a name="new-workflow-development-models"></a>Neue Modelle für die Workflowentwicklung
+ Zusätzlich zu den Entwicklungsmodellen für sequenzielle oder Flussdiagramm-Workflows umfasst dieses Release Zustandsautomatworkflows und Vertrag zuerst-Workflowdienste.
+
+### <a name="state-machine-workflows"></a>Zustandsautomatworkflows
+ Zustandsautomatworkflows wurden als Teil der .NET Framework 4.0.1 im [Microsoft .NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)eingeführt. Dieses Update umfasste verschiedene neue Klassen und Aktivitäten, die es den Entwicklern ermöglichten, Zustandsautomatworkflows zu erstellen. Diese Klassen und Aktivitäten wurden für .NET Framework 4,5 aktualisiert. Updates umfassen:
+
+1. Festlegen von Haltepunkten für Zustände
+
+2. Kopieren und Einfügen von Übergängen im Workflow-Designer
+
+3. Designerunterstützung für das Erstellen von freigegebenen Triggerübergängen
+
+4. Aktivitäten, die zum Erstellen von Zustandsautomatworkflows verwendet werden, darunter: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> und <xref:System.Activities.Statements.Transition>
+
+ Der folgende Screenshot zeigt den abgeschlossenen Zustandsautomatworkflow aus dem Schritt " [Getting Started Tutorial](getting-started-tutorial.md) " Gewusst [wie: Erstellen eines Zustands Automaten Workflows](how-to-create-a-state-machine-workflow.md).
+
+ ![Die Abbildung zeigt den abgeschlossenen Zustandsautomatworkflow.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)
+
+ Weitere Informationen zum Erstellen von Zustands Automaten Workflows finden Sie [State Machine Workflows](state-machine-workflows.md)unter Zustandsautomatworkflows. Zustandsautomatworkflows werden im neu gehosteten Designer unterstützt.
+
+### <a name="contract-first-workflow-development"></a>Vertrag zuerst-Workflowentwicklung
+ Mit dem Contract-First-Workflow-Entwicklungs Tool können Entwickler zunächst einen Vertrag im Code entwerfen und dann mit wenigen Klicks in Visual Studio automatisch eine Aktivitäts Vorlage in der Toolbox generieren, die die einzelnen Vorgänge darstellt. Diese Aktivitäten werden dann verwendet, um einen Workflow zu erstellen, der die vom Vertrag definierten Vorgänge implementiert. Der Workflow-Designer überprüft den Workflowdienst, um sicherzustellen, dass diese Vorgänge implementiert wurden und dass die Signatur des Workflows mit der Vertragssignatur übereinstimmt. Der Entwickler kann einen Workflowdienst auch einer Auflistung implementierter Verträge zuordnen. Weitere Informationen zur Entwicklung von Vertrag zuerst-Workflow Diensten finden Sie unter Gewusst [wie: Erstellen eines Workflow Dienstanbieter, der einen vorhandenen Dienstvertrag](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)verwendet.
+
 > [!WARNING]
 > Die Vertrag zuerst-Workflowentwicklung wird im Workflow-Designer nicht unterstützt.

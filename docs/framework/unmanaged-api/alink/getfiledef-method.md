@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 42935813579d7f1d55a9f1daf9d8c6c1241f85be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426050"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684706"
 ---
 # <a name="getfiledef-method"></a>GetFileDef-Methode
+
 Ruft das tatsächliche FileDef-Token ab, das in den Metadaten verwendet wird (im Gegensatz zum von ALink zugewiesenen Token).  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetFileDef(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
@@ -45,13 +47,15 @@ HRESULT GetFileDef(
  Empfängt das FileDef-Token.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert "Alink. h"  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

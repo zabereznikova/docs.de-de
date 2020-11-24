@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8e78faa4-cf43-44fb-a91d-94d6df692a25
 topic_type:
 - apiref
-ms.openlocfilehash: 1fe6055d930c6d30e947d6bc774d0520a9e175ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6feb48b7c78dda64ba372e470b83ffb14f21f2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683328"
 ---
 # <a name="isymunmanagedwriter2-interface"></a>ISymUnmanagedWriter2-Schnittstelle
-Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit. Diese Schnittstelle erweitert die [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) -Schnittstelle.  
+
+Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit. Diese Schnittstelle erweitert die [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) -Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -32,10 +33,11 @@ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten,
 |[DefineGlobalVariable2-Methode](isymunmanagedwriter2-defineglobalvariable2-method.md)|Definiert eine einzelne globale Variable.|  
 |[DefineLocalVariable2-Methode](isymunmanagedwriter2-definelocalvariable2-method.md)|Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-ms.openlocfilehash: ee856dbd398d0fa5e3eee7d9b2b2cfc7c7a57ecf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d5ad3a18c102422e90621c7d1e23b2692c0000
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683230"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS-Enumeration
-Gibt die Attribute eines [IAssemblyName](iassemblyname-interface.md) Interface-Objekts an, wenn es von der [Funktion CreateAssemblyNameObject](createassemblynameobject-function.md) erstellt wird.  
+
+Gibt die Attribute eines [IAssemblyName-Schnittstellen](iassemblyname-interface.md) Objekts an, wenn es von der Funktion " [kreateassemblynameobject](createassemblynameobject-function.md) " erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,21 +39,22 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|Gibt an, dass es sich bei dem übergebenen Parameter um eine Textidentität handelt.|  
+|`CANOF_PARSE_DISPLAY_NAME`|Gibt an, dass der übergebenen Parameter eine Text Identität ist.|  
 |`CANOF_SET_DEFAULT_VALUES`|Legt einige Standardwerte fest.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Überprüft die Friend-Assemblyregel (nur Name und öffentlicher Schlüssel). Dieses Mitglied ist nur für den internen Gebrauch vorgesehen.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Eine Kombination `CANOF_PARSE_DISPLAY_NAME` aus `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` und Flags. Dieses Mitglied ist nur für den internen Gebrauch vorgesehen.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Überprüft die Friend-Assemblyregel (nur Name und öffentlicher Schlüssel). Dieser Member ist nur für die interne Verwendung vorgesehen.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Eine Kombination der `CANOF_PARSE_DISPLAY_NAME` -und- `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` Flags. Dieser Member ist nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Fusion.h  
+ **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1c005e58f18b03a7da5f3836f719b95c41bca95
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446482"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684940"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest-Methode
+
 Gibt das endgültige Manifest aus. Ruft diese Methode auf, nachdem alle anderen Dateien importiert und alle Optionen festgelegt wurden. Diese Methode darf nicht für ungebundene Module aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT EmitManifest(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
@@ -46,13 +48,15 @@ HRESULT EmitManifest(
  Empfängt optional das assemblymanifestoken.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

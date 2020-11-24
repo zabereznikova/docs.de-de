@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3153643e-cf5c-4b44-8e0e-c2b22cb08208
 topic_type:
 - apiref
-ms.openlocfilehash: ba221beaa0edce49e75f75edddaee72e1beb9747
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 37c306df76a796d6e0a2b7540ebd85c13865dfbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803498"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682977"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent-Methode
+
 Erstellt ein Ereignis Objekt für automatisches Zurücksetzen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT CreateAutoEvent (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppEvent`  
  vorgenommen Ein Zeiger auf die Adresse einer vom Host implementierten [IHostAutoEvent](ihostautoevent-interface.md) -Instanz oder NULL, wenn das Ereignis Objekt nicht erstellt werden konnte.  
   
@@ -41,7 +43,7 @@ HRESULT CreateAutoEvent (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`CreateAutoEvent`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateAutoEvent` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,14 +52,16 @@ HRESULT CreateAutoEvent (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis Objekt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateAutoEvent`erstellt ein Auto-Ereignis Objekt, dessen Zustand automatisch in nicht signalisiert geändert wird, nachdem der Warte Thread freigegeben wurde. Diese Methode spiegelt die Win32- `CreateEvent` Funktion mit einem Wert von, der `false` für den- `bManualReset` Parameter angegeben ist.  
+
+ `CreateAutoEvent` erstellt ein Auto-Ereignis Objekt, dessen Zustand automatisch in nicht signalisiert geändert wird, nachdem der Warte Thread freigegeben wurde. Diese Methode spiegelt die Win32- `CreateEvent` Funktion mit einem Wert von, der `false` für den- `bManualReset` Parameter angegeben ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

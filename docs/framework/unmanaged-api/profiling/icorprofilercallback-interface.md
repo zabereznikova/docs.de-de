@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684069"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback-Schnittstelle
+
 Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, um einen Codeprofiler zu benachrichtigen, wenn die Ereignisse, die der Profiler abonniert hat, auftreten.  
   
 ## <a name="methods"></a>Methoden  
@@ -60,8 +61,8 @@ Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, 
 |[ExceptionUnwindFunctionLeave-Methode](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Benachrichtigt den Profiler, dass die Entladephase der Ausnahmebehandlung das Entladen einer Funktion abgeschlossen hat.|  
 |[FunctionUnloadStarted-Methode](icorprofilercallback-functionunloadstarted-method.md)|Benachrichtigt den Profiler, dass die Laufzeit begonnen hat, eine Funktion zu entladen.|  
 |[Initialize-Methode](icorprofilercallback-initialize-method.md)|Wird aufgerufen, um den Profiler zu initialisieren, wenn eine neue CLR-Anwendung gestartet wird.|  
-|[JITCachedFunctionSearchFinished-Methode](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Benachrichtigt den Profiler, dass eine Suche für eine Funktion abgeschlossen wurde, die zuvor mithilfe von "ngen. exe" kompiliert wurde.|  
-|[JITCachedFunctionSearchStarted-Methode](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Benachrichtigt den Profiler, dass eine Suche für eine Funktion gestartet wurde, die zuvor mithilfe von "ngen. exe" kompiliert wurde.|  
+|[JITCachedFunctionSearchFinished-Methode](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Benachrichtigt den Profiler, dass eine Suche für eine Funktion abgeschlossen wurde, die zuvor mit NGen.exe kompiliert wurde.|  
+|[JITCachedFunctionSearchStarted-Methode](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Benachrichtigt den Profiler, dass eine Suche für eine Funktion gestartet wurde, die zuvor mit NGen.exe kompiliert wurde.|  
 |[JITCompilationFinished-Methode](icorprofilercallback-jitcompilationfinished-method.md)|Benachrichtigt den Profiler, dass der JIT-Compiler die Kompilierung einer Funktion abgeschlossen hat.|  
 |[JITCompilationStarted-Methode](icorprofilercallback-jitcompilationstarted-method.md)|Benachrichtigt den Profiler, dass der JIT-Compiler (Just-in-Time) die Kompilierung einer Funktion gestartet hat.|  
 |[JITFunctionPitched-Methode](icorprofilercallback-jitfunctionpitched-method.md)|Benachrichtigt den Profiler, dass eine JIT-kompilierte Funktion aus dem Arbeitsspeicher entfernt wurde.|  
@@ -98,7 +99,8 @@ Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, 
 |[ThreadDestroyed-Methode](icorprofilercallback-threaddestroyed-method.md)|Benachrichtigt den Profiler, dass ein Thread zerstört wurde.|  
 |[UnmanagedToManagedTransition-Methode](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Benachrichtigt den Profiler, dass ein Übergang von nicht verwaltetem Code zu verwaltetem Code erfolgt ist.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die CLR ruft eine Methode in der- `ICorProfilerCallback` Schnittstelle (oder der [ICorProfilerCallback2](icorprofilercallback2-interface.md)) auf, um den Profiler zu benachrichtigen, wenn ein Ereignis auftritt, das der Profiler abonniert hat. Dies ist die primäre Rückruf Schnittstelle, über die die CLR mit dem Codeprofiler kommuniziert.  
   
  Ein Codeprofiler muss die Methoden der- `ICorProfilerCallback` Schnittstelle implementieren. Für den .NET Framework, Version 2,0 oder höher, muss der Profiler auch die- `ICorProfilerCallback2` Methoden implementieren. Jede Methoden Implementierung muss ein HRESULT zurückgeben, das bei Erfolg oder E_FAIL bei einem Fehler den Wert S_OK hat. Derzeit ignoriert die CLR das HRESULT, das von jedem Rückruf zurückgegeben wird, mit Ausnahme von [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md).  
@@ -109,6 +111,7 @@ Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, 
 > Der Profiler registriert ein einzelnes COM-Objekt. Wenn der Profiler auf die .NET Framework Version 1,0 oder 1,1 abzielt, muss dieses COM-Objekt nur die Methoden von implementieren `ICorProfilerCallback` . Wenn .NET Framework Version 2,0 oder höher als Zielversion verwendet wird, muss das COM-Objekt auch die Methoden von implementieren `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -117,7 +120,7 @@ Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, 
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerCallback2-Schnittstelle](icorprofilercallback2-interface.md)

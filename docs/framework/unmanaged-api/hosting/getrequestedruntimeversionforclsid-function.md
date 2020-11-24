@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684186"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID-Funktion
+
 Ruft die entsprechenden Common Language Runtime (CLR)-Versionsinformationen für die-Klasse mit dem angegebenen ab `CLSID` .  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -39,6 +40,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `rclsid`  
  in  Der der `CLSID` Komponente.  
   
@@ -66,15 +68,16 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|Einer der Parameter weist einen ungültigen Typ oder ein ungültiges Format auf.|  
 |ERROR_INSUFFICIENT_BUFFER|Der `pVersion` Puffer ist nicht groß genug, um die gesamte Versions Zeichenfolge zu speichern.|  
 |REGDB_E_CLASSNOTREG|Es ist keine Klasse mit dem angegebenen registriert `CLSID` .|  
-|E_POINTER|`dwLength`ist NULL, oder `cchBuffer` ist groß genug, um die Versions Zeichenfolge aufzunehmen, aber `pVersion` ist NULL.|  
+|E_POINTER|`dwLength` ist NULL, oder `cchBuffer` ist groß genug, um die Versions Zeichenfolge aufzunehmen, aber `pVersion` ist NULL.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

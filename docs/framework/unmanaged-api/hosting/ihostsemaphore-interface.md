@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0765321-656c-441e-bab5-58176292be1e
 topic_type:
 - apiref
-ms.openlocfilehash: 8345d85502087568cb05dd262cccf181e3ca07ac
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: cccbf9a28b16ffee14b3fd3ec43c376109d6ccec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683055"
 ---
 # <a name="ihostsemaphore-interface"></a>IHostSemaphore-Schnittstelle
+
 Stellt die Host Implementierung eines Semaphors für das Threading dar.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,12 +32,13 @@ Stellt die Host Implementierung eines Semaphors für das Threading dar.
 |[ReleaseSemaphore-Methode](ihostsemaphore-releasesemaphore-method.md)|Erhöht die Anzahl der aktuellen `IHostSemaphore` Instanz um den angegebenen Betrag.|  
 |[Wait-Methode](ihostsemaphore-wait-method.md)|Bewirkt, dass die aktuelle `IHostSemaphore` Instanz wartet, bis Sie im Besitz ist oder die angegebene Zeitspanne verstrichen ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -46,4 +48,4 @@ Stellt die Host Implementierung eines Semaphors für das Threading dar.
 - [IHostAutoEvent-Schnittstelle](ihostautoevent-interface.md)
 - [IHostManualEvent-Schnittstelle](ihostmanualevent-interface.md)
 - [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

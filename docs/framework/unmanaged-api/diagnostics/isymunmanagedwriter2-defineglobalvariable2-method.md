@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04d569d6-a151-4957-9872-f3f694c3e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: ed3c841c34b71b30f740117899353aa289e478d5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e417854f5f82ba2e0f16848f53b2b605dccf9eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614707"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683458"
 ---
 # <a name="isymunmanagedwriter2defineglobalvariable2-method"></a>ISymUnmanagedWriter2::DefineGlobalVariable2-Methode
+
 Definiert eine einzelne globale Variable.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT DefineGlobalVariable2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `name`  
  in Der Name der globalen Variablen.  
   
@@ -61,12 +63,14 @@ HRESULT DefineGlobalVariable2(
  in Die dritte Adresse für die Parameter Spezifikation.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter2-Schnittstelle](isymunmanagedwriter2-interface.md)
 - [DefineGlobalVariable-Methode](isymunmanagedwriter-defineglobalvariable-method.md)
