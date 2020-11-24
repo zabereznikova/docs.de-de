@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670406"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit-Methode
-Überträgt den zwischengespeicherten Assemblyverweis auf den Speicher.  
+
+Führt einen Commit für den zwischengespeicherten Assemblyverweis zum  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,18 +36,20 @@ HRESULT Commit (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwFlags`  
- [in] Flags, die in Fusion.idl definiert sind.  
+ in In Fusion. idl definierte Flags.  
   
  `pulDisposition`  
- [out, optional] Ein Wert, der das Ergebnis des Vorgangs angibt.  
+ [out, optional] Ein-Wert, der das Ergebnis des Vorgangs angibt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Fusion.h  
+ **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 
