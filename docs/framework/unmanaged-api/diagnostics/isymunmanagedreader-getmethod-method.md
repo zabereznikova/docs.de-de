@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-ms.openlocfilehash: 864acb07797676c825afe62321b0d65e37938fa6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3f0d0e060bba832080dd8fbfab62f3115fec0aab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615006"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689640"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod-Methode
+
 Ruft eine Symbol Lesemethode ab, wenn ein Methoden Token angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetMethod (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `token`  
  in Das Methoden Token.  
   
@@ -41,11 +43,13 @@ HRESULT GetMethod (
  vorgenommen Ein Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: bba0fc039c403d45e8a5b60f2b0231eb24226280
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5298dd0f53693d96b748f6c839660838fdfad4ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614954"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689549"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition-Methode
+
 Gibt ein Array von-Methoden zurück, von denen jede den Haltepunkt an der angegebenen Position in einem Dokument enthält.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT GetMethodsFromDocumentPosition (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `document`  
  in Das angegebene Dokument.  
   
@@ -58,11 +60,13 @@ HRESULT GetMethodsFromDocumentPosition (
  vorgenommen Ein Array von Zeigern, von denen jedes auf ein [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) -Objekt verweist, das eine Methode darstellt, die den Breakpoint enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)

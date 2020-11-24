@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-ms.openlocfilehash: 4117c1297f02032fda80520a7709833217ec94b1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9342233317535ebecbcddea48b9029b81868eb0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690147"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop-Methode
+
 Beendet die Ausführung von Code in der Laufzeit für den aktuellen Prozess.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,17 +42,19 @@ HRESULT Stop ();
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Es ist normalerweise nicht erforderlich, die-Methode aufzurufen `Stop` , da der Code nicht mehr ausgeführt wird, wenn der Prozess beendet wird.  
   
 > [!NOTE]
 > Nach einem- `Stop` Aufrufvorgang kann die CLR nicht mehr in demselben Prozess initialisiert werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:** 1,0, 1,1  
   

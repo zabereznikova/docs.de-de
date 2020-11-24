@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: b8fabea78f85448e39fc6d31f0a7969458343877
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 40ab610110e96018b1c598d04b24a762ecb50717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690486"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls-Methode
+
 Zählt MethodBody- und MethodDeclaration-Token auf, die Methoden des angegebenen Typs darstellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT EnumMethodImpls (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
@@ -61,19 +63,20 @@ HRESULT EnumMethodImpls (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumMethodImpls` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Methoden Token zum Auflisten vorhanden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

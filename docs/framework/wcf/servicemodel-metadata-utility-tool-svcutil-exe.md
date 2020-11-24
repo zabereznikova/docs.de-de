@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9f8e8e0239f8f8cd149bc6e8b1d7921124731087
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65013f43aa0075b6de6999741afb448c2a35afb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245946"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689926"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata Utility-Tool (Svcutil.exe)
 
@@ -46,11 +46,11 @@ Das Tool hat beim Abrufen von Metadaten ein Timeout von fünf Minuten. Dieses Ti
 
 ### <a name="multi-targeting"></a>Festlegung von Zielversionen
 
-Das Tool unterstützt die Festlegung von Zielversionen nicht. Wenn Sie ein .NET 4-Element aus *svcutil.exe*generieren möchten, verwenden Sie die *svcutil.exe* aus dem .NET 4 SDK. Verwenden Sie die ausführbare Datei aus dem .NET 3.5-SDK, um ein .NET 3.5-Artefakt zu generieren.
+Das Tool unterstützt die Festlegung von Zielversionen nicht. Wenn Sie ein .NET Framework 4-Element aus *svcutil.exe* generieren möchten, verwenden Sie die *svcutil.exe* aus dem SDK für .NET Framework 4. Verwenden Sie die ausführbare Datei aus dem .NET Framework 3,5 SDK, um ein .NET Framework 3,5-artefaktelement zu generieren.
 
 ### <a name="accessing-wsdl-documents"></a>Zugreifen auf WSDL-Dokumente
 
-Wenn Sie mit Svcutil auf ein WSDL-Dokument zugreifen, das einen Verweis auf einen Sicherheitstokendienst (STS) enthält, führt Svcutil einen WS-MetadataExchange-Aufruf zu STS aus. Der Dienst kann jedoch seine WSDL-Dokumente entweder mithilfe von WS-MetadataExchange oder mithilfe von HTTP GET verfügbar machen. Wenn der STS das WSDL-Dokument nur mithilfe von HTTP GET verfügbar gemacht hat, schlägt ein in WinFX geschriebener Client fehl. Bei Clients, die in .NET Framework 3,5 geschrieben wurden, versucht Svcutil sowohl WS-MetadataExchange als auch HTTP Get zum Abrufen der STS-WSDL zu verwenden.
+Wenn Sie mit Svcutil auf ein WSDL-Dokument zugreifen, das einen Verweis auf einen Sicherheitstokendienst (STS) enthält, führt Svcutil einen WS-MetadataExchange-Aufruf zu STS aus. Der Dienst kann jedoch seine WSDL-Dokumente entweder mithilfe von WS-MetadataExchange oder mithilfe von HTTP GET verfügbar machen. Wenn der STS das WSDL-Dokument nur mithilfe von HTTP GET verfügbar gemacht hat, schlägt ein in WinFX geschriebener Client fehl. Bei Clients, die in .NET Framework 3,5 geschrieben wurden, versucht Svcutil, sowohl WS-MetadataExchange als auch HTTP Get zu verwenden, um die STS-WSDL abzurufen.
 
 ## <a name="using-svcutilexe"></a>Verwenden von SvcUtil.exe
 
@@ -79,7 +79,7 @@ Für einen Dienst mit einem BasicHttpContextbinding-Endpunkt generiert *Svcutil.
 
 `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`epr`|Der Pfad zu einer XML-Datei, die einen WS-Addressing-EndpointReference für einen Dienstendpunkt enthält, der WS-Metadata Exchange unterstützt. Weitere Informationen finden Sie im Abschnitt Metadatendownload.|
 |`metadataDocumentPath`|Der Pfad zu einem Metadatendokument (*WSDL* oder *XSD*), das den Vertrag enthält, der in den Code importiert werden soll (WSDL-, XSD-, WSPolicy-oder wsmex-Datei).<br /><br /> Svcutil folgt Importen und bezieht eine Remote-URL für Metadaten ein, sofern diese angegeben wird. Wenn Metadatendateien im lokalen Dateisystem verarbeitet werden sollen, müssen Sie alle Dateien in diesem Argument angeben. Auf diese Art können Sie Svcutil in einer Buildumgebung verwenden, in der keine Netzwerkabhängigkeiten möglich sind. Sie können Platzhalter (*. xsd, \* . WSDL) für dieses Argument verwenden.|
@@ -98,7 +98,7 @@ Für einen Dienst mit einem BasicHttpContextbinding-Endpunkt generiert *Svcutil.
 |/Language\<language>|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie sollten entweder einen in der Machine.config-Datei registrierten Sprachnamen oder den voll qualifizierten Namen einer Klasse angeben, die von erbt <xref:System.CodeDom.Compiler.CodeDomProvider> .<br /><br /> Werte: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.|
 |/mergeConfig|Fügt die generierte Konfiguration in eine vorhandene Datei ein, statt die vorhandene Datei zu überschreiben.|
 |/messageContract|Generiert Nachrichtenvertragstypen.<br /><br /> Kurzform: `/mc`.|
-|/Namespace\<string,string>|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-targetNamespace zu einem CLR-Namespace an. Durch \* die Verwendung von "" für den targetNamespace werden alle targetNamespaces ohne explizite Zuordnung zu diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit `::` angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Wird vom Zielnamespace des Schemadokuments für Datenverträge abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n` **Hinweis:** beim Erstellen von Typen, die mit XmlSerializer verwendet werden sollen, wird nur eine einzige Namespace Zuordnung unterstützt. Alle generierten Typen befinden sich entweder im Standard Namespace oder im durch "*" angegebenen Namespace.|
+|/Namespace\<string,string>|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-targetNamespace zu einem CLR-Namespace an. Durch \* die Verwendung von "" für den targetNamespace werden alle targetNamespaces ohne explizite Zuordnung zu diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit `::` angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Wird vom Zielnamespace des Schemadokuments für Datenverträge abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n` **Hinweis:**  beim Erstellen von Typen, die mit XmlSerializer verwendet werden sollen, wird nur eine einzige Namespace Zuordnung unterstützt. Alle generierten Typen befinden sich entweder im Standard Namespace oder im durch "*" angegebenen Namespace.|
 |/noConfig|Es werden keine Konfigurationsdateien generiert.|
 |/noStdLib|Verweist nicht auf Standardbibliotheken.<br /><br /> Standard: Es wird auf Mscorlib.dll und System.servicemodel.dll verwiesen.|
 |/Out\<file>|Gibt den Dateinamen für den generierten Code an.<br /><br /> Standard: Wird vom WSDL-Definitionsnamen, WSDL-Dienstnamen oder Zielnamespace eines der Schemas abgeleitet.<br /><br /> Kurzform: `/o`.|
@@ -120,7 +120,7 @@ Svcutil.exe kann Metadaten für Dienste, Verträge und Datentypen in kompilierte
 
 `svcutil.exe [/t:metadata] [/serviceName:<serviceConfigName>] [/dataContractOnly] <assemblyPath>*`
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assemblyPath`|Gibt den Pfad zu einer Assembly an, die zu exportierende Dienste, Verträge oder Datenvertragstypen enthält. Sie können standardmäßige Befehlszeilenplatzhalter verwenden, um mehrere Dateien anzugeben.|
 
@@ -137,7 +137,7 @@ Die Validierung kann nicht zum Erkennen von Fehlern in Dienstimplementierungen v
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assemblyPath`|Gibt den Pfad zu einer Assembly an, die zu überprüfende Diensttypen enthält. Die Assembly muss über eine zugeordnete Konfigurationsdatei verfügen, um die Dienstkonfiguration bereitzustellen. Sie können standardmäßige Befehlszeilenplatzhalter verwenden, um mehrere Assemblys anzugeben.|
 
@@ -165,7 +165,7 @@ Standardmäßig verwendet „Svcutil.exe“ die in der <xref:System.ServiceModel
 
 `svcutil.exe /t:metadata  <url>* | <epr>`
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`url`|Die URL zu einem Dienstendpunkt, der Metadaten bereitstellt, oder zu einem Metadatendokument, das online gehostet wird.|
 |`epr`|Der Pfad zu einer XML-Datei, die einen WS-Addressing-EndpointReference für einen Dienstendpunkt enthält, der WS-Metadata Exchange unterstützt.|
@@ -184,7 +184,7 @@ Svcutil.exe kann den erforderlichen C#-Serialisierungscode aus den kompilierten 
 
 `svcutil.exe /t:xmlSerializer  <assemblyPath>*`
 
-|Argument|Beschreibung|
+|Argument|BESCHREIBUNG|
 |--------------|-----------------|
 |`assemblyPath`|Gibt den Pfad zu einer Assembly an, die Dienstvertragstypen enthält. Serialisierungstypen werden für alle serialisierbaren XML-Typen in jedem Vertrag generiert.|
 

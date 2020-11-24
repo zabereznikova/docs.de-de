@@ -14,17 +14,19 @@ helpviewer_keywords:
 - asymmetric keys [.NET]
 - cryptography [.NET], keys
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
-ms.openlocfilehash: aa95204a90f2aee684cdd20095d1816e890a0306
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2af54cef4f233b7bcae5c476f1aa49fdbf7ef2fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831077"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689718"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
+
 Das Erstellen und Verwalten von Schlüsseln ist ein wichtiger Bestandteil des kryptografischen Prozesses. Bei symmetrischen Algorithmen müssen ein Schlüssel und ein Initialisierungsvektor (IV) erstellt werden. Der Schlüssel muss vor Unbefugten, die Ihre Daten nicht entschlüsseln können sollen, geheim gehalten werden. Der IV muss nicht geheim sein, sollte aber für jede Sitzung geändert werden. Bei asymmetrischen Algorithmen müssen ein öffentlicher und ein privater Schlüssel erstellt werden. Der öffentliche Schlüssel kann allgemein zugänglich sein, während der private Schlüssel nur dem Teilnehmer bekannt sein darf, der die mit dem öffentlichen Schlüssel verschlüsselten Daten entschlüsselt. In diesem Abschnitt wird beschrieben, wie Schlüssel für symmetrische und asymmetrische Algorithmen erzeugt und verwaltet werden.  
   
 ## <a name="symmetric-keys"></a>Symmetrische Schlüssel  
+
  Für die von .NET bereitgestellten symmetrischen Verschlüsselungs Klassen sind ein Schlüssel und ein neuer Initialisierungs Vektor (IV) erforderlich, um Daten zu verschlüsseln und zu entschlüsseln. Wenn Sie eine neue Instanz einer der verwalteten symmetrischen Kryptografieklassen mithilfe der Parameter losen `Create()` -Methode erstellen, werden automatisch ein neuer Schlüssel und IV erstellt. Alle Benutzer, die zum Entschlüsseln der Daten berechtigt sind, müssen über den gleichen Schlüssel und IV verfügen und den gleichen Algorithmus verwenden. Generell sollten für jede Sitzung ein neuer Schlüssel und IV erstellt und weder Schlüssel noch IV für eine spätere Sitzung gespeichert werden.  
   
  Um den symmetrischen Schlüssel und IV der Gegenseite mitzuteilen, wird der symmetrische Schlüssel in der Regel asymmetrisch verschlüsselt. Das Senden des unverschlüsselten Schlüssels über ein nicht sicheres Netzwerk birgt ein großes Sicherheitsrisiko, da jeder, der den Schlüssel und den IV abfängt, die Daten entschlüsseln kann.  
@@ -91,7 +93,7 @@ RSA rsa = RSA.Create();
 RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verschlüsseln von Daten](encrypting-data.md)
 - [Entschlüsseln von Daten](decrypting-data.md)

@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-ms.openlocfilehash: b00be90316598e458f01f6cd440d0ad0a2e79c50
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 937a2fb322eb63461d90e215635e1b10ab6afd09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689783"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>ICorDebugManagedCallback2-Schnittstelle
-Stellt Methoden bereit, um Debugger-Ausnahmebehandlung und Assistenten für verwaltetes Debuggen (MDA) zu unterstützen. `ICorDebugManagedCallback2`ist eine logische Erweiterung der [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) -Schnittstelle.  
+
+Stellt Methoden bereit, um Debugger-Ausnahmebehandlung und Assistenten für verwaltetes Debuggen (MDA) zu unterstützen. `ICorDebugManagedCallback2` ist eine logische Erweiterung der [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) -Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ChangeConnection-Methode](icordebugmanagedcallback2-changeconnection-method.md)|Benachrichtigt den Debugger, dass sich der Satz der Tasks, die der angegebenen Verbindung zugeordnet sind, geändert hat.|  
 |[CreateConnection-Methode](icordebugmanagedcallback2-createconnection-method.md)|Benachrichtigt den Debugger, dass eine neue Verbindung erstellt wurde.|  
@@ -38,6 +39,7 @@ Stellt Methoden bereit, um Debugger-Ausnahmebehandlung und Assistenten für verw
 |[MDANotification-Methode](icordebugmanagedcallback2-mdanotification-method.md)|Stellt eine Benachrichtigung bereit, dass bei der Codeausführung eine MDA-Nachricht (Managed Debug Assistant) aufgetreten ist.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ICorDebugManagedCallback2` Schnittstelle erweitert die- `ICorDebugManagedCallback` Schnittstelle, um neue Debugereignisse zu verarbeiten, die in der .NET Framework Version 2,0  
   
  Ein Debugger muss implementieren, `ICorDebugManagedCallback2` Wenn er .NET Framework 2,0-Anwendungen debuggt. Eine Instanz von `ICorDebugManagedCallback` oder `ICorDebugManagedCallback2` wird als Rückruf Objekt an [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md)übermittelt.  
@@ -46,6 +48,7 @@ Stellt Methoden bereit, um Debugger-Ausnahmebehandlung und Assistenten für verw
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -54,7 +57,7 @@ Stellt Methoden bereit, um Debugger-Ausnahmebehandlung und Assistenten für verw
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Debugschnittstellen](debugging-interfaces.md)

@@ -2,14 +2,15 @@
 title: ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-ms.openlocfilehash: ac61ffc553191aa70bdf5c04822a25b1074c2099
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 56795c6879d95253383c26c92e060f252a018914
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209356"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690211"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
+
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -21,10 +22,12 @@ HRESULT EnableVirtualModuleSplitting(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `enableSplitting`  
  `true`, um die virtuelle Modulteilung zu aktivieren; `false`, um sie zu deaktivieren.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Durch die Aufteilung virtueller Module erkennt [ICorDebug](icordebug-interface.md) Module, die während des Buildprozesses zusammengeführt wurden, und stellt Sie als eine Gruppe von separaten Modulen anstelle eines einzelnen großen Moduls dar. Dadurch wird das Verhalten der verschiedenen [ICorDebug](icordebug-interface.md) -Methoden geändert, die unten beschrieben werden.  
   
 > [!NOTE]
@@ -33,6 +36,7 @@ HRESULT EnableVirtualModuleSplitting(
  Diese Methode ist aufrufbar, und der `enableSplitting`-Wert kann jederzeit geändert werden. Sie verursacht keine Zustands behafteten funktionalen Änderungen in einem [ICorDebug](icordebug-interface.md) -Objekt, außer das Ändern des Verhaltens der Methoden, die in der [Aufteilung virtueller Module und der nicht verwalteten Debug-APIs](#APIs) zum Zeitpunkt des Aufrufs aufgeführt sind. Die Verwendung virtueller Module führt beim Aufrufen dieser Methoden durchaus zu Leistungseinbußen. Außerdem ist möglicherweise ein signifikantes in-Memory-Caching der virtualisierten Metadaten erforderlich, um die [IMetaDataImport](../metadata/imetadataimport-interface.md) -APIs ordnungsgemäß zu implementieren. Diese Caches können auch nach der Deaktivierung der virtuellen Modul Aufteilung beibehalten werden.  
   
 ## <a name="terminology"></a>Begriff  
+
  Die folgenden Begriffe werden verwendet, um das Teilen virtueller Module zu beschreiben:  
   
  Container-Module oder Container  
@@ -44,12 +48,14 @@ HRESULT EnableVirtualModuleSplitting(
  reguläre Module  
  Module, die zur Zeit der Erstellung nicht zusammengeführt wurden. Hierbei handelt es sich weder um Containermodule noch um untergeordnete Module.  
   
- Containermodule und untergeordnete Module werden durch ICorDebugModule-Oberflächenobjekte dargestellt. Das Verhalten der-Schnittstelle unterscheidet sich jedoch in jedem Fall geringfügig, wie im Abschnitt " \< x-ref to section>" beschrieben.  
+ Containermodule und untergeordnete Module werden durch ICorDebugModule-Oberflächenobjekte dargestellt. Das Verhalten der-Schnittstelle unterscheidet sich jedoch in jedem Fall geringfügig, wie im \<x-ref to section> Abschnitt beschrieben.  
   
 ## <a name="modules-and-assemblies"></a>Module und Assemblys  
+
  Assemblys mit mehreren Modulen werden nicht bei Zusammenführungen nicht unterstützt, somit stehen ein Modul und eine Assembly im Verhältnis 1:1. Zu jedem ICorDebugModule -Objekt gibt es ein entsprechendes ICorDebugAssembly-Objekt, unabhängig davon, ob es ein Container-Modul oder ein untergeordnetes Modul darstellt. Die [ICorDebugModule:: GetAssembly](icordebugmodule-getassembly-method.md) -Methode konvertiert vom Modul in die Assembly. Um in der anderen Richtung zuzuordnen, listet die [ICorDebugAssembly:: EnumerateModules](icordebugassembly-enumeratemodules-method.md) -Methode nur ein Modul auf. Da Assembly und Modul in diesem Fall eng miteinander verknüpft sind, sind die Begriffe Assembly und Modul weitgehend austauschbar.  
   
 ## <a name="behavioral-differences"></a>Verhaltensunterschiede  
+
  Container-Module weisen folgende Verhaltensweisen und Merkmale auf:  
   
 - Die Metadaten sind für alle enthaltenen untergeordneten Module zusammengeführt.  
@@ -81,6 +87,7 @@ HRESULT EnableVirtualModuleSplitting(
 - Die ICorDebugAssembly3.GetContainerAssembly-Methode gibt das enthaltende Modul aus.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Aus Modulen abgerufene Schnittstellen  
+
  Es können verschiedene Schnittstellen erstellt oder aus Modulen abgerufen werden. Dazu zählen:  
   
 - Ein ICorDebugClass-Objekt, das von der [ICorDebugModule:: GetClassFromToken](icordebugmodule-getclassfromtoken-method.md) -Methode zurückgegeben wird.  
@@ -90,7 +97,9 @@ HRESULT EnableVirtualModuleSplitting(
  Diese Objekte werden immer von [ICorDebug](icordebug-interface.md)zwischengespeichert und weisen die gleiche Zeiger Identität auf, unabhängig davon, ob Sie vom Containermodul oder einem Untermodul erstellt oder abgefragt wurden. Das untergeordnete Modul bietet eine gefilterte Ansicht dieser zwischengespeicherten Objekte, jedoch keinen separaten Cache mit eigenen Kopien.  
   
 <a name="APIs"></a>
+
 ## <a name="virtual-module-splitting-and-the-unmanaged-debugging-apis"></a>Teilen virtueller Module und nicht verwalteter Debug-APIs  
+
  In der folgende Tabelle wird gezeigt, wie sich das Teilen virtueller Module auf das Verhalten anderer Methoden in der nicht verwalteten Debug-API auswirkt.  
   
 |Methode|`enableSplitting` = `true`|`enableSplitting` = `false`|  
@@ -102,6 +111,7 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugCode:: GetCode](icordebugcode-getcode-method.md) (nur bei verweisen auf IL-Code)|Gibt die IL aus, die in einem Assemblybild vor dem Merge gültig wäre. Insbesondere werden Inline-Metadatentoken korrekt zu TypeRef-Token oder MemberRef-Token, wenn die Typen, auf die verwiesen wird, nicht im virtuellen Modul definiert werden, das den IL-Code enthält. Diese TypeRef-oder Mitgliedschafts Token können im [IMetaDataImport](../metadata/imetadataimport-interface.md) -Objekt für das entsprechende virtuelle ICorDebug Module-Objekt gesucht werden.|Gibt die IL im Assemblybild nach der Zusammenführung aus.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -110,7 +120,7 @@ HRESULT EnableVirtualModuleSplitting(
   
  **.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugProcess6-Schnittstelle](icordebugprocess6-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)
