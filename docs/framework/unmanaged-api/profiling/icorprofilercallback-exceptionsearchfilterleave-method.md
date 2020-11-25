@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-ms.openlocfilehash: fbece20701fbde5551e025b4f116f9873abf444d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e9679b75e773ec884905ea773e804e03607a61d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699845"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a>ICorProfilerCallback::ExceptionSearchFilterLeave-Methode
+
 Benachrichtigt den Profiler, dass die Ausführung eines Benutzer Filters soeben abgeschlossen ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ HRESULT ExceptionSearchFilterLeave();
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -40,7 +42,7 @@ HRESULT ExceptionSearchFilterLeave();
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ExceptionSearchFilterEnter-Methode](icorprofilercallback-exceptionsearchfilterenter-method.md)

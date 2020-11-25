@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: 4be2a50664b001e865b5ecdd9aabe8ba727b8c26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3be00d278a92398ad282a071f3e313e5de0e65a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700287"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished-Methode
+
 Benachrichtigt den Profiler, dass eine Klasse den Ladevorgang abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,12 +44,14 @@ HRESULT ClassLoadFinished(
 
   \[in] ein HRESULT, das angibt, ob die Klasse erfolgreich geladen wurde.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Wert von `classId` ist für eine Informationsanforderung erst gültig, wenn die- `ClassLoadFinished` Methode aufgerufen wird.  
   
  Einige Teile des Ladens der-Klasse können nach dem Rückruf fortgesetzt werden `ClassLoadFinished` . Ein Fehler HRESULT in `hrStatus` weist auf einen Fehler hin. Ein HRESULT-Erfolg in `hrStatus` gibt jedoch nur an, dass der erste Teil des Ladens der Klasse erfolgreich war.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -57,7 +60,7 @@ HRESULT ClassLoadFinished(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ClassLoadStarted-Methode](icorprofilercallback-classloadstarted-method.md)

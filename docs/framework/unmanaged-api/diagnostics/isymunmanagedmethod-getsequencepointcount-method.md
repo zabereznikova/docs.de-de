@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 836133e8-6108-4b9b-b0a9-bce4e08dccda
 topic_type:
 - apiref
-ms.openlocfilehash: a44f81deb2d57b49f1fd0650fa52c06383210352
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 44472c7beff72d24853b7fb9865071a9b15ef0e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614434"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699429"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount-Methode
+
 Ruft die Anzahl von Sequenz Punkten innerhalb dieser Methode ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,15 +34,18 @@ HRESULT GetSequencePointCount(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRetVal`  
  vorgenommen Ein Zeiger auf einen `ULONG32` , der die Größe des Puffers empfängt, der die Sequenz Punkte enthalten muss.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

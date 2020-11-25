@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-ms.openlocfilehash: 28aea8534eed3bcd1f645844e28849be89e130d0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4216658eb562c5c57b75c3c257cd8e53a7a34221
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700586"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption-Methode
+
 Legt die angegebene Option auf einen angegebenen Wert für den aktuellen Metadatenbereich fest. Mit der-Option wird gesteuert, wie Aufrufe des aktuellen Metadatenbereichs behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,16 +36,18 @@ HRESULT SetOption (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `optionId`  
  in Ein Zeiger auf eine GUID, die die festzulegende Option angibt.  
   
  `pValue`  
  in Der Wert, der zum Festlegen der Option verwendet werden soll. Der Typ dieses Werts muss eine Variante des Typs der angegebenen Option sein.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  In der folgenden Tabelle sind die verfügbaren GUIDs aufgelistet, auf die der `optionId` -Parameter verweisen kann, sowie die entsprechenden gültigen Werte für den- `pValue` Parameter.  
   
-|GUID|Beschreibung|`pValue`Parame|  
+|GUID|Beschreibung|`pValue` Parameter|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Steuert, welche Elemente auf Duplikate geprüft werden. Jedes Mal, wenn Sie eine [IMetaDataEmit](imetadataemit-interface.md) -Methode aufzurufen, die ein neues Element erstellt, können Sie die Methode bitten, zu überprüfen, ob das Element bereits im aktuellen Gültigkeitsbereich vorhanden ist. Beispielsweise können Sie überprüfen, ob Elemente vorhanden sind `mdMethodDef` . in diesem Fall überprüfen Sie, ob die Methode nicht bereits im aktuellen Gültigkeitsbereich vorhanden ist, wenn Sie [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md)aufgerufen haben. Bei dieser Überprüfung wird der Schlüssel verwendet, der eine bestimmte Methode eindeutig identifiziert: Übergeordneter Typ, Name und Signatur.|Muss eine Variante vom Typ UI4 sein und muss eine Kombination der Werte der [corcheckdupli-](corcheckduplicatesfor-enumeration.md) Enumeration enthalten.|  
 |MetaDataRefToDefCheck|Steuert, welche referenzierten Elemente in Definitionen konvertiert werden. Standardmäßig optimiert die metadatenengine den Code, indem ein referenziertes Element in seine Definition umgerechnet wird, wenn das Element, auf das verwiesen wird, tatsächlich im aktuellen Gültigkeitsbereich definiert ist.|Muss eine Variante vom Typ "UI4" sein und muss eine Kombination der Werte der [corref/defcheck](correftodefcheck-enumeration.md) -Enumeration enthalten.|  
@@ -56,20 +59,21 @@ HRESULT SetOption (
 |MetaDataGenerateTCEAdapters|Steuert, ob das Typbibliothek-Import Programm die eng verknüpften Ereignis Adapter (TCE) für com-Verbindungspunkt Container generieren soll.|Muss eine Variante vom Typ "bool" sein. Wenn `pValue` auf festgelegt ist `true` , generiert das Typbibliothek-Import Programm die TCE-Adapter.|  
 |MetaDataTypeLibImportNamespace|Gibt einen nicht standardmäßigen Namespace für die Typbibliothek an, die importiert wird.|Muss entweder ein NULL-Wert oder eine Variante vom Typ BSTR sein. Wenn `pValue` ein NULL-Wert ist, wird der aktuelle Namespace auf NULL festgelegt, andernfalls wird der aktuelle Namespace auf die Zeichenfolge festgelegt, die im BSTR-Typ der Variante enthalten ist.|  
 |MetaDataLinkerOptions|Steuert, ob der Linker eine Assembly oder eine .NET Framework Modul Datei generieren soll.|Muss eine Variante vom Typ UI4 sein und muss eine Kombination der Werte der [CorLinkerOptions](corlinkeroptions-enumeration.md) -Enumeration enthalten.|  
-|MetaDataRuntimeVersion|Gibt die Version der Common Language Runtime an, für die das Image erstellt wurde. Die Version wird als Zeichenfolge gespeichert, z. b. "v 1.0.3705".|Muss ein NULL-Wert, ein VT_EMPTY Wert oder eine Variante vom Typ BSTR sein. Wenn `pValue` NULL ist, wird die Laufzeitversion auf NULL festgelegt. Wenn `pValue` VT_EMPTY ist, wird die Version auf einen Standardwert festgelegt, der aus der Version von mscorwert. dll gezeichnet wird, in der der metadatencode ausgeführt wird. Andernfalls wird die Laufzeitversion auf die Zeichenfolge festgelegt, die im BSTR-Typ der Variante enthalten ist.|  
+|MetaDataRuntimeVersion|Gibt die Version der Common Language Runtime an, für die das Image erstellt wurde. Die Version wird als Zeichenfolge gespeichert, z. b. "v 1.0.3705".|Muss ein NULL-Wert, ein VT_EMPTY Wert oder eine Variante vom Typ BSTR sein. Wenn `pValue` NULL ist, wird die Laufzeitversion auf NULL festgelegt. Wenn `pValue` VT_EMPTY ist, wird die Version auf einen Standardwert festgelegt, der aus der Version von Mscorwks.dll gezeichnet wird, in der der metadatencode ausgeführt wird. Andernfalls wird die Laufzeitversion auf die Zeichenfolge festgelegt, die im BSTR-Typ der Variante enthalten ist.|  
 |MetaDataMergerOptions|Gibt Optionen zum Zusammenführen von Metadaten an.|Muss eine Variante vom Typ "UI4" sein und muss eine Kombination der Werte der- `MergeFlags` Enumeration enthalten, die in der Datei "corhdr. h" beschrieben wird.|  
 |MetaDataPreserveLocalRefs|Deaktiviert die Optimierung lokaler Verweise in Definitionen.|Muss eine Kombination der Werte der [corlocalref Preservation](corlocalrefpreservation-enumeration.md) -Enumeration enthalten.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataDispenserEx-Schnittstelle](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)

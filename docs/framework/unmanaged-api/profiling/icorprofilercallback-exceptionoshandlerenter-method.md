@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09238b9b-9359-4780-89dc-2f5e4f57920e
 topic_type:
 - apiref
-ms.openlocfilehash: c2c9ed848984d36ddf10d32d120deda76a4d47cc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 273c3cefa2e67a7d8c429982b4da4126168b2830
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500285"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699962"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerenter-method"></a>ICorProfilerCallback::ExceptionOSHandlerEnter-Methode
+
 Nicht implementiert. Ein Profiler, der Informationen zu nicht verwalteten Ausnahmen benötigt, muss diese Informationen auf andere Weise abrufen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,6 +34,7 @@ HRESULT ExceptionOSHandlerEnter(
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -41,6 +43,6 @@ HRESULT ExceptionOSHandlerEnter(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

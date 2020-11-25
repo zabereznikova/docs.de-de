@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f0d7e49b-2394-4ae0-8820-1b64cae0cfe8
 topic_type:
 - apiref
-ms.openlocfilehash: b3c5fc4731029561129609601b8e0635f6a9516c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5198efc14a57bf0a496a9c78569af45595d0b4a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617034"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698428"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices-Schnittstelle
+
 Stellt Methoden für das Katalogisieren von Diensten bereit.  
   
  Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
@@ -33,6 +34,6 @@ Stellt Methoden für das Katalogisieren von Diensten bereit.
 |[Autodone-Methode](icatalogservices-autodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
 |[NotAutodone-Methode](icatalogservices-notautodone-method.md)|Nur für die interne Verwendung vorgesehen.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

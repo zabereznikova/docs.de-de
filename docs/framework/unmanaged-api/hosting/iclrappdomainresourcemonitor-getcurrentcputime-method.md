@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebc9cc33-fcd6-4cae-9ecb-ea21c51874e6
 topic_type:
 - apiref
-ms.openlocfilehash: b411190ff36410c1d293f1e48b31975be8a13aee
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a0b966e85bedcbef622aba2f6b181b98e0950e01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616033"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700677"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime-Methode
+
 Ruft die gesamte Prozessorzeit ab, die während der Ausführung in der aktuellen Anwendungsdomäne von allen Threads verwendet wurde, seit die Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,6 +34,7 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwAppDomainId`  
  in Die ID der angeforderten Anwendungsdomäne.  
   
@@ -48,20 +50,22 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |E_FAIL|Die Überwachung der Anwendungs Domänen Ressource ist nicht aktiviert.<br /><br /> - oder -<br /><br /> Alle anderen Fehler.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Bei dieser Methode handelt es sich um das nicht verwaltete Äquivalent der verwalteten- <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType> Eigenschaft.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [ICLRAppDomainResourceMonitor-Schnittstelle](iclrappdomainresourcemonitor-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Überwachung von Anwendungs Domänen Ressourcen](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Hosting](index.md)

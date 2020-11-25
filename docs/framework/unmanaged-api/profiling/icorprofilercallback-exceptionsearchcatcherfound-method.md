@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-ms.openlocfilehash: 70c03d34bdf9bd315994b2bfa09631efac2565ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ef25d55defee2fdcfc7d744e481060eb7a7782ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699871"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound-Methode
+
 Benachrichtigt den Profiler, dass die Such Phase der Ausnahmebehandlung einen Handler für die ausgelöste Ausnahme gefunden hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ RESULT ExceptionSearchCatcherFound(
   \[in] die ID der Funktion, die den Ausnahmehandler enthält.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -47,6 +49,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7f941cd-e25b-4b85-b1ce-5f77c9208fa9
 topic_type:
 - apiref
-ms.openlocfilehash: a76435be591d9f73d5975c5315f6e744f8972fc7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3c82cf45bca3cc9ec73255586db73a903edaf1ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698571"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId-Methode
+
 Ruft den Prüfsummen Algorithmus-Bezeichner ab oder gibt eine GUID aller Nullen zurück, wenn keine Prüfsumme vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,12 +34,14 @@ HRESULT GetCheckSumAlgorithmId(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRetVal`  
  vorgenommen Ein Zeiger auf eine Variable, die den Prüfsummen Algorithmus-Bezeichner empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedDocument-Schnittstelle](isymunmanageddocument-interface.md)

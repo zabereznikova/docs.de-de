@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0ef4da4ba6c8db49bcb0b40911756f7d9db66d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 97b9f517a24a7d82b7697cd0723628ede073b537
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700157"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter-Methode
+
 Benachrichtigt den Profiler, dass das Steuerelement an den entsprechenden-Block übermittelt wird `catch` .  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +44,8 @@ HRESULT ExceptionCatcherEnter(
 
   \[in] der Bezeichner der Ausnahme, die behandelt wird.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die- `ExceptionCatcherEnter` Methode wird nur aufgerufen, wenn sich der Catch-Punkt im Code befindet, der mit dem JIT-Compiler (Just-in-Time) kompiliert wurde. Eine Ausnahme, die in nicht verwaltetem Code oder im internen Code der Laufzeit abgefangen wird, ruft diese Benachrichtigung nicht auf. Der `objectId` Wert wird erneut weitergegeben, da ein Garbage Collection das Objekt seit der Benachrichtigung verschieben könnte `ExceptionThrown` .  
   
  Der Profiler sollte in seiner Implementierung dieser Methode nicht blockieren, da sich der Stapel möglicherweise nicht in einem Zustand befindet, der Garbage Collection zulässt, und daher können präemptiv Garbage Collection nicht aktiviert werden. Wenn der Profiler hier blockiert wird und Garbage Collection versucht wird, wird die Laufzeit blockiert, bis dieser Rückruf zurückgegeben wird.  
@@ -51,6 +53,7 @@ HRESULT ExceptionCatcherEnter(
  Die Implementierung dieser Methode des Profilers sollte nicht in verwalteten Code oder auf irgendeine Weise eine verwaltete Speicher Belegung verursachen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -59,7 +62,7 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ExceptionCatcherLeave-Methode](icorprofilercallback-exceptioncatcherleave-method.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 747ee407-ee8c-484d-9583-25089236d2d1
 topic_type:
 - apiref
-ms.openlocfilehash: 841827017262b731fd5e6f6bd0b5862fecaf2744
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 7730c2dddaca98e4cb06cdb381e8a46ff23c97f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841723"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699208"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale-Methode
+
 Benachrichtigt den Host, dass die Common Language Runtime (CLR) das Gebiets Schema oder die Kultur für den aktuell ausgeführten Task geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lcid`  
  in Der Wert für den Gebiets Schema Bezeichner, der der neu zugewiesenen geografischen Kultur und Sprache zugeordnet wird.  
   
@@ -41,7 +43,7 @@ HRESULT SetLocale (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetLocale`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetLocale` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,18 +52,20 @@ HRESULT SetLocale (
 |E_NOTIMPL|Der Host lässt nicht zu, dass das Gebiets Schema von verwaltetem Benutzercode geändert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Laufzeit wird aufgerufen, `SetLocale` Wenn der Wert der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> Eigenschaft von verwaltetem Code geändert wird. Diese Methode bietet dem Host die Möglichkeit, alle Mechanismen auszuführen, die möglicherweise für die Synchronisierung von Gebiets Schemas erforderlich sind. Wenn ein Host nicht zulässt, dass das Gebiets Schema aus verwaltetem Code geändert wird, oder keinen Mechanismus zum Synchronisieren von Gebiets Schemas implementiert, sollte er E_NOTIMPL aus dieser Methode zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
 topic_type:
 - apiref
-ms.openlocfilehash: 688abd210cca193bf03c40f000b74ecb66eb8ede
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c59114f78af1aa8705318af093e47d4f03a82ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008546"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699143"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate-Methode
+
 Überprüft die angegebene PE-Datei (portable ausführbare Datei) oder die MSIL-Datei (Microsoft Intermediate Language).  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,6 +42,7 @@ HRESULT Validate (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `veh`  
  in Ein Zeiger auf eine- `IVEHandler` Instanz, die Validierungs Fehler behandelt.  
   
@@ -66,10 +68,11 @@ HRESULT Validate (
  in Die Größe (in Bytes) der zu validierenden Datei.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-ms.openlocfilehash: cda30f3c73bf75c37ff79fc415e02382b053807e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7e26c272ee1ecf03f7d2a347cf7ca2cc3efa2122
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699559"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace-Methode
+
 Ruft den Namespace ab, in dem diese Methode definiert ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,15 +34,18 @@ HRESULT GetNamespace(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRetVal`  
  vorgenommen Ein Zeiger, der auf die zurückgegebene [ISymUnmanagedNamespace](isymunmanagednamespace-interface.md) -Schnittstelle festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

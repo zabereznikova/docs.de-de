@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 80054a8292c69b957664cb3573b0a8694c7f9fd2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: bb7dade1ccd46cb9e13d45468c2ca2a8b451b70b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700300"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted-Methode
+
 Benachrichtigt den Profiler, dass eine Assembly entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,10 +39,12 @@ HRESULT AssemblyUnloadStarted(
 
   \[in] identifiziert die Assembly, die entladen wird.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Wert von `assemblyId` ist für eine Informationsanforderung nach dem `AssemblyUnloadStarted` zurückkehren der Methode ungültig – Dies ist die letzte Möglichkeit des Profilers, Informationen zu dieser Assembly zu erhalten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -50,7 +53,7 @@ HRESULT AssemblyUnloadStarted(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [AssemblyUnloadFinished-Methode](icorprofilercallback-assemblyunloadfinished-method.md)

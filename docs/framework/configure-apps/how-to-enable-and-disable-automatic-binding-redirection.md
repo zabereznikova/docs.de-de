@@ -1,17 +1,17 @@
 ---
 title: Aktivieren oder Deaktivieren von automatisch generierten Bindungs Umleitungen
-description: Weitere Informationen finden Sie unter Aktivieren oder Deaktivieren der automatischen Bindungs Umleitung. Diese Funktion wirkt sich auf Desktop-Apps und Web-Apps aus, die auf .NET 4.5.1
+description: Weitere Informationen finden Sie unter Aktivieren oder Deaktivieren der automatischen Bindungs Umleitung. Diese Funktion wirkt sich auf Desktop-Apps und Web-Apps aus, die auf .NET Framework 4.5.1
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b099ab4958b1cf41b76884243e252e19a7a951b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105387"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698831"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung
 
@@ -35,8 +35,8 @@ Wenn Sie über Visual Studio 2017 Version 15,7 oder höher verfügen, können Si
 
 1. Öffnen Sie die Projektdatei zur Bearbeitung, indem Sie eine der folgenden Methoden verwenden:
 
-   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer**aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
-   - Klicken Sie in Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
+   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer** aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
+   - Klicken Sie in Visual Studio in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen** aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
 
 2. Suchen Sie in der Projektdatei den folgende Eigenschafteneintrag:
 
@@ -56,8 +56,8 @@ Sie können automatische Bindungs Umleitungen in vorhandenen apps aktivieren, di
 
 1. Öffnen Sie die Projektdatei zur Bearbeitung, indem Sie eine der folgenden Methoden verwenden:
 
-   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer**aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
-   - Klicken Sie in Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
+   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer** aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
+   - Klicken Sie in Visual Studio in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen** aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
 
 2. Fügen Sie der ersten Konfigurations Eigenschaften Gruppe (unter dem-Tag) das folgende-Element hinzu \<PropertyGroup> :
 
@@ -94,7 +94,7 @@ So fügen Sie einer **web.config** Datei Bindungs Umleitungen hinzu:
 
    ![Buildwarnung für Assemblyverweiskonflikte](./media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. Wenn Konflikte für eine Assemblybindung bestehen, wird eine Warnung angezeigt. Doppelklicken Sie auf die Warnung, oder wählen Sie die Warnung, und drücken **Sie die Eingabe**Taste.
+2. Wenn Konflikte für eine Assemblybindung bestehen, wird eine Warnung angezeigt. Doppelklicken Sie auf die Warnung, oder wählen Sie die Warnung, und drücken **Sie die Eingabe** Taste.
 
    Ein Dialogfeld, in dem Sie die erforderlichen Bindungs Umleitungen automatisch zur Quell **web.config** Datei hinzufügen können.
 

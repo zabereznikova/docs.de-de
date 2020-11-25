@@ -6,14 +6,15 @@ helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9f03eda511c2ef0c9565d270c52fd72bf54692d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698350"
 ---
 # <a name="naming-parameters"></a>Benennen von Parametern
+
 Neben dem offensichtlichen Grund für die Lesbarkeit ist es wichtig, den Richtlinien für Parameternamen zu folgen, da Parameter in der-Dokumentation und im-Designer angezeigt werden, wenn visuelle Entwurfs Tools IntelliSense-und Klassen Suchfunktionen bereitstellen.
 
  ✔️ Verwenden Sie "CamelCase" in Parameternamen.
@@ -23,6 +24,7 @@ Neben dem offensichtlichen Grund für die Lesbarkeit ist es wichtig, den Richtli
  ✔️ sollten Sie die Verwendung von Namen basierend auf der Bedeutung eines Parameters anstelle des Parameter Typs in Erwägung gezogen.
 
 ### <a name="naming-operator-overload-parameters"></a>Überladungs Parameter für Benennungs Operator
+
  ✔️ Verwenden Sie `left` und `right` für binäre Operator Überladungs Parameternamen, wenn es keine Bedeutung für die Parameter gibt.
 
  ✔️ `value` für Überladungs Parameternamen von unären Operatoren verwenden, wenn es keine Bedeutung für die Parameter gibt.
@@ -35,7 +37,7 @@ Neben dem offensichtlichen Grund für die Lesbarkeit ist es wichtig, den Richtli
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

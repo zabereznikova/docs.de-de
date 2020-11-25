@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3d3141-4662-4166-8f05-bc857c1b4216
 topic_type:
 - apiref
-ms.openlocfilehash: 177127c8c53e4fee31f7007d04c49cc337cca458
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 733a8f0bc7e8c19823827297a50f9c6906614ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698378"
 ---
 # <a name="icorprofilerfunctioncontrol-interface"></a>ICorProfilerFunctionControl-Schnittstelle
+
 Stellt Methoden bereit, die einem Codeprofiler ermöglichen, mit der CLR (Common Language Runtime) zu kommunizieren, um zu steuern, wie der JIT-Compiler Code generieren soll, wenn er eine bestimmte Methode neu kompiliert.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,10 +33,12 @@ Stellt Methoden bereit, die einem Codeprofiler ermöglichen, mit der CLR (Common
 |[SetILFunctionBody-Methode](icorprofilerfunctioncontrol-setilfunctionbody-method.md)|Ersetzt den CIL-Text (Common Intermediate Language) der Methode.|  
 |[SetILInstrumentedCodeMap-Methode](icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)|Legt eine Codezuordnung für die angegebene Funktion mit den angegebenen Common Intermediate Language (CIL)-Zuordnungseinträgen fest.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `ICorProfilerFunctionControl`-Schnittstelle stellt Methoden zum Steuern der Codegenerierung für eine einzelne neu kompilierte Funktion bereit. Der Profiler Ruft eine Instanz dieser Schnittstelle über den [ICorProfilerCallback4:: getrejitparameters](icorprofilercallback4-getrejitparameters-method.md) -Rückruf ab. Jede Instanz von `ICorProfilerFunctionControl` steuert alle Instanzen einer Funktion.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -44,7 +47,7 @@ Stellt Methoden bereit, die einem Codeprofiler ermöglichen, mit der CLR (Common
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo4-Schnittstelle](icorprofilerinfo4-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 38763e687c66dcb038a874c9c17cb0d67e547816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699351"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints-Methode
+
 Ruft alle Sequenz Punkte innerhalb dieser Methode ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT GetSequencePoints(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cPoints`  
  in Ein `ULONG32` , der die Größe der `offsets` Arrays, `documents` ,,, und empfängt `lines` `columns` `endLines` `endColumns` .  
   
@@ -65,11 +67,13 @@ HRESULT GetSequencePoints(
  in Das Array von Spalten in den Dokumenten, in denen die Sequenz Punkte enden.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

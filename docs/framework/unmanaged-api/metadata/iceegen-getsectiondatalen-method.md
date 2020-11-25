@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-ms.openlocfilehash: 1855c73849c35bf709b0af261a88e6cd7a40abfb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b45b0a59a29a27e7b0a395f3928215959450f9a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008299"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698467"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen-Methode
+
 Ruft die Länge des angegebenen Abschnitts ab.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
@@ -37,6 +38,7 @@ HRESULT GetSectionDataLen (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `section`  
  in Der Daten Abschnitt, dessen Länge abgerufen wird.  
   
@@ -44,17 +46,19 @@ HRESULT GetSectionDataLen (
  vorgenommen Die zurückgegebene Länge des angegebenen Abschnitts.  
   
 ## <a name="remarks"></a>Hinweise  
+
  `GetSectionDataLen`Wird nur aufgerufen, wenn Sie besondere Abschnitts Anforderungen haben, die nicht von anderen Methoden behandelt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-ms.openlocfilehash: 7a98a0c40f68cef9bab1ea2de0850208aaef77a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b72a77fecd15a43efbddd9dfd4618897c3372f88
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615123"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699273"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod-Schnittstelle
-Stellt eine Methode im Symbol Speicher dar. Diese Schnittstelle bietet Zugriff auf die Symbol bezogenen Attribute einer Methode anstelle der typbezogenen Attribute.  
+
+Stellt eine Methode im Symbolspeicher dar. Diese Schnittstelle bietet Zugriff auf die Symbol bezogenen Attribute einer Methode anstelle der typbezogenen Attribute.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -39,9 +40,10 @@ Stellt eine Methode im Symbol Speicher dar. Diese Schnittstelle bietet Zugriff a
 |[GetSourceStartEnd-Methode](isymunmanagedmethod-getsourcestartend-method.md)|Ruft die Start-und Enddokument Positionen für die Quelle dieser Methode ab.|  
 |[GetToken-Methode](isymunmanagedmethod-gettoken-method.md)|Gibt das Metadatentoken für diese Methode zurück.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

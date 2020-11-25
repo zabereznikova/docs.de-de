@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-ms.openlocfilehash: 9b0da8a06259fe99da52497da3011da94289d301
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3b12200dae23a7b6a2f6e1654e46fdf74dc90968
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700534"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes-Methode
+
 Listet benutzerdefinierte Attribut Definitions Token auf, die dem angegebenen Typ oder Member zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT EnumCustomAttributes (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den zurückgegebenen Enumerator.  
   
@@ -61,19 +63,20 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumCustomAttributes` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine benutzerdefinierten Attribute zum Auflisten vorhanden. In diesem Fall `pcCustomAttributes` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

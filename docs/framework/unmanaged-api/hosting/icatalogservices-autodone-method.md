@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3002f051-7aaa-4669-9314-cbc65b3a1772
 topic_type:
 - apiref
-ms.openlocfilehash: 631da8936873b57040f1c60e8db6867ea2eed2c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 958d36ee4d51d2975139acb9997cc19fb51a00c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617047"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698454"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone-Methode
+
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,6 +32,6 @@ Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für e
 HRESULT Autodone ( );  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

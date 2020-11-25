@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698792"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum-Schnittstelle
 
@@ -35,7 +35,8 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
 |[Skip-Methode](icordebugenum-skip-method.md)|Verschiebt den Cursor in der-Enumeration um die angegebene Anzahl von Elementen vorwärts.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden Enumeratoren werden von `ICorDebugEnum`abgeleitet:  
+
+ Die folgenden Enumeratoren werden von abgeleitet `ICorDebugEnum` :  
   
 - ICorDebugAppDomainEnum  
   
@@ -82,7 +83,8 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer debu
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

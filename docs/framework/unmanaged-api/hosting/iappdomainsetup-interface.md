@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-ms.openlocfilehash: 1726f8929404e0dde979972d7830a6951dd71891
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d504101747995557ba526c88de451ebab7b3c556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698558"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup-Schnittstelle
+
 Stellt Eigenschaften bereit, die es dem Host ermöglichen, einen <xref:System.AppDomain?displayProperty=nameWithType> Typ vor dem Aufrufen der [ICorRuntimeHost:: CreateDomainEx](icorruntimehost-createdomainex-method.md) -Methode zum Erstellen zu konfigurieren.  
   
 ## <a name="properties"></a>Eigenschaften  
@@ -40,22 +41,24 @@ Stellt Eigenschaften bereit, die es dem Host ermöglichen, einen <xref:System.Ap
 |<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Ruft eine Zeichenfolge ab, die angibt, ob das Schatten kopieren aktiviert oder deaktiviert ist, oder legt diese fest. Gültige Werte sind "true" oder "false".|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `IAppDomainSetup` Schnittstelle entspricht der verwalteten <xref:System.IAppDomainSetup> Schnittstelle, die vom <xref:System.AppDomainSetup> Typ implementiert wird. <xref:System.IAppDomainSetup?displayProperty=nameWithType>Ausführliche Beschreibungen der Eigenschaften finden Sie unter.  
   
- `IAppDomainSetup`stellt Assemblybindungsinformationen dar, die einer- <xref:System.AppDomain> Instanz vor deren Erstellung hinzugefügt werden können. Ein Host kann z. b. die-Eigenschaft festlegen, <xref:System.AppDomainSetup.ApplicationBase%2A> um ein Stammverzeichnis einzurichten, das die Common Language Runtime-Überprüfungen (CLR) für verwaltete Assemblys durchführen.  
+ `IAppDomainSetup` stellt Assemblybindungsinformationen dar, die einer- <xref:System.AppDomain> Instanz vor deren Erstellung hinzugefügt werden können. Ein Host kann z. b. die-Eigenschaft festlegen, <xref:System.AppDomainSetup.ApplicationBase%2A> um ein Stammverzeichnis einzurichten, das die Common Language Runtime-Überprüfungen (CLR) für verwaltete Assemblys durchführen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>
 - <xref:System.IAppDomainSetup>
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
