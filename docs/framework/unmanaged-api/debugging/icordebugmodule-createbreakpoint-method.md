@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c2541c30-fa6e-43b6-9682-77d8898f33e1
 topic_type:
 - apiref
-ms.openlocfilehash: 1a65f9f117ff013a1f6dc7403a5bc0c7b3dbb2c3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9bd6999fddb4e76642df60442ad679d604f0d7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136591"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710349"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>ICorDebugModule::CreateBreakpoint-Methode
+
 Diese Methode wurde in der aktuellen Version des .NET Framework nicht implementiert.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,5 +34,6 @@ HRESULT CreateBreakpoint(
 );  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** CorDebug.idl, CorDebug.h

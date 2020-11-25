@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26a82815-1982-4eb7-92d1-5c3d318d5be4
 topic_type:
 - apiref
-ms.openlocfilehash: 9270afa1d8c8ddd74cfe6dd05e39c1480f5767e6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4562318c87b79fba5f3d99860ee438c0144e9aae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206934"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710245"
 ---
 # <a name="icordebugmodulegetbaseaddress-method"></a>ICorDebugModule::GetBaseAddress-Methode
+
 Ruft die Basisadresse des Moduls ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetBaseAddress(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAddress`  
  vorgenommen Ein `CORDB_ADDRESS` , der die Basisadresse des Moduls angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn es sich bei dem Modul um ein natives Image handelt (d. h., wenn das Modul vom Native Image Generator, Ngen. exe) erstellt wurde, ist die Basisadresse 0 (null).  
+
+ Wenn es sich bei dem Modul um ein natives Image handelt (d. h., wenn das Modul vom systemeigenen Image Generator, NGen.exe) erstellt wurde, ist die Basisadresse 0 (null).  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -49,4 +53,4 @@ HRESULT GetBaseAddress(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

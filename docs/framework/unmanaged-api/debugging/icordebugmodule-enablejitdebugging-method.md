@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-ms.openlocfilehash: bdf027f94c8416d052cb807d04be76a39868ccf7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 359db27878ea4adf794bcd6221d4b5387026e5c0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710310"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging-Methode
+
 Steuert, ob der JIT-Compiler (Just-in-Time) Debuginformationen für Methoden in diesem Modul beibehält.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT EnableJITDebugging(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `bTrackJITInfo`  
  in Legen Sie diesen Wert auf fest, `true` um dem JIT-Compiler das Beibehalten von Zuordnungsinformationen zwischen der MSIL-Version (Microsoft Intermediate Language) und der JIT-kompilierten Version der einzelnen Methoden in diesem Modul zu ermöglichen.  
   
@@ -42,9 +44,11 @@ HRESULT EnableJITDebugging(
  in Legen Sie diesen Wert auf fest, `true` um dem JIT-Compiler das Generieren von Code mit bestimmten JIT-spezifischen Optimierungen für das Debuggen zu ermöglichen.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das JIT-Debuggen ist standardmäßig für alle Module aktiviert, die geladen werden, wenn der Debugger aktiv ist. Die programmgesteuerte Aktivierung oder Deaktivierung der Einstellungen überschreibt globale Einstellungen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
