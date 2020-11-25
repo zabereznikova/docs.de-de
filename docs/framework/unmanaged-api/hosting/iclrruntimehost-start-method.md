@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0a6dce5-0a8d-42e8-808b-6ca14df9d289
 topic_type:
 - apiref
-ms.openlocfilehash: e5ed1cbb640e760d75e1722871453a0bec283bde
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 2358af3dff97dbe648da924bc929dd2f83b12df0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703914"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728809"
 ---
 # <a name="iclrruntimehoststart-method"></a>ICLRRuntimeHost::Start-Methode
+
 Initialisiert die Common Language Runtime (CLR) in einen Prozess.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,7 +36,7 @@ HRESULT Start();
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Start`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Start` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -43,18 +44,20 @@ HRESULT Start();
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  In vielen Szenarien ist es nicht notwendig, aufzurufen `Start` , da die Laufzeit bei der ersten Anforderung zum Ausführen von verwaltetem Code automatisch initialisiert wird. Sie können jedoch verwenden, `Start` um genau anzugeben, wann die Laufzeit initialisiert werden soll.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.AppDomain>
 - [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)

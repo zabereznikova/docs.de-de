@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: edcc0ebcadc1bd95574b0276bfd0e2d42e5474fd
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379821"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729316"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread-Schnittstelle
+
 Stellt einen Thread in einem Prozess dar. Die Lebensdauer einer `ICorDebugThread`-Instanz ist identisch mit der Lebensdauer des von ihr dargestellten Threads.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ClearCurrentException-Methode](icordebugthread-clearcurrentexception-method.md)|Diese Methode ist nicht implementiert. Verwenden Sie sie nicht.|  
 |[CreateEval-Methode](icordebugthread-createeval-method.md)|Erstellt ein ICorDebugEval-Objekt, das auf diesem ausgeführt wird `ICorDebugThread` .|  
@@ -51,6 +52,7 @@ Stellt einen Thread in einem Prozess dar. Die Lebensdauer einer `ICorDebugThread
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -59,6 +61,6 @@ Stellt einen Thread in einem Prozess dar. Die Lebensdauer einer `ICorDebugThread
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

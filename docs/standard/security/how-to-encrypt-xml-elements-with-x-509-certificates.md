@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 5007404c1e6e872c169ce7ce71425f14d20d3a25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a336997a8cb81f1838d9c5b1ec82bbb04326ed0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820188"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729329"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten
 
@@ -93,6 +93,7 @@ Zum Ausführen dieses Beispiels müssen Sie ein Test Zertifikat erstellen und in
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
 ## <a name="example"></a>Beispiel  
+
  Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Außerdem wird angenommen, dass `"test.xml"` ein `"creditcard"`-Element enthält.  Sie können den folgenden XML-Code in eine Datei namens `test.xml` einfügen und mit diesem Beispiel verwenden.  
   
 ```xml  
@@ -119,7 +120,7 @@ Zum Ausführen dieses Beispiels müssen Sie ein Test Zertifikat erstellen und in
   
 Das in diesem Beispiel verwendete X.509-Zertifikat ist nur für Testzwecke vorgesehen.  Anwendungen sollten ein X. 509-Zertifikat verwenden, das von einer vertrauenswürdigen Zertifizierungsstelle generiert wurde.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: cb0c5f65-3791-47bc-b833-2f84f4101ba5
 topic_type:
 - apiref
-ms.openlocfilehash: 72caac0aafe7f9c5919057a6ad2565258aec6a50
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8d88222215eb31e1c63f3b26079517c4b088e81b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504075"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728835"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost-Schnittstelle
+
 Bietet ähnliche Funktionen wie die [ICorRuntimeHost](icorruntimehost-interface.md) -Schnittstelle, die in der .NET Framework Version 1 bereitgestellt wurde, mit den folgenden Änderungen:  
   
 - Das Hinzufügen der [SetHostControl](iclrruntimehost-sethostcontrol-method.md) -Methode zum Festlegen der Host Steuerelement-Schnittstelle.  
@@ -42,22 +43,24 @@ Bietet ähnliche Funktionen wie die [ICorRuntimeHost](icorruntimehost-interface.
 |[Stop-Methode](iclrruntimehost-stop-method.md)|Beendet die Ausführung des Codes durch die Laufzeit.|  
 |[UnloadAppDomain-Methode](iclrruntimehost-unloadappdomain-method.md)|Entlädt das <xref:System.AppDomain> , das dem angegebenen numerischen Bezeichner entspricht.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Beginnen Sie mit der .NET Framework 4, indem Sie die [ICLRMetaHost](iclrmetahost-interface.md) -Schnittstelle verwenden, um einen Zeiger auf die [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) -Schnittstelle zu erhalten, und dann die [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) -Methode aufrufen, um einen Zeiger auf zu erhalten `ICLRRuntimeHost` . In früheren Versionen der .NET Framework erhält der Host einen Zeiger auf eine `ICLRRuntimeHost` Instanz durch Aufrufen von [corbindtor untimeex](corbindtoruntimeex-function.md) oder [CorBindToCurrentRuntime](corbindtocurrentruntime-function.md). Zum Bereitstellen von Implementierungen der Technologien, die in der .NET Framework Version 2,0 bereitgestellt werden, müssen Sie `ICLRRuntimeHost` anstelle von verwenden `ICorRuntimeHost` .  
   
 > [!IMPORTANT]
 > Rufen Sie die [Start](iclrruntimehost-start-method.md) -Methode nicht auf, bevor Sie die [ExecuteApplication](iclrruntimehost-executeapplication-method.md) -Methode aufrufen, um eine Manifest-basierte Anwendung zu aktivieren. Wenn die- `Start` Methode zuerst aufgerufen wird, kann der `ExecuteApplication` Methodenaufruf nicht ausgeführt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeEx-Funktion](corbindtoruntimeex-function.md)

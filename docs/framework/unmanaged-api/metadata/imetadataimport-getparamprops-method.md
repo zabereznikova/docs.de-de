@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-ms.openlocfilehash: c2abf2813c6e1a9db4264bded32d9cb9c58a2bcb
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a16621f4c9b06f049239dc4e2335d70a167dd756
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729264"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps-Methode
+
 Ruft Metadatenwerte für den Parameter ab, auf den durch das angegebene ParamDef-Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,6 +44,7 @@ HRESULT GetParamProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `tk`  
  in Ein ParamDef-Token, das den Parameter darstellt, für den Metadaten zurückgegeben werden sollen.  
   
@@ -73,20 +75,21 @@ HRESULT GetParamProps (
  `pcchValue`  
  vorgenommen Die Größe von `ppValue` in breit Zeichen oder 0 (null), wenn `ppValue` keine Zeichenfolge enthält.  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Sequenzwerte in `pulSequence` beginnen mit 1 für Parameter. Ein Rückgabewert hat eine Sequenznummer von 0.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

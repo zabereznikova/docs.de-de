@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-ms.openlocfilehash: e901c65824ee8d6949c79c7778944148c0d9eb28
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 478772925dfb7ca7389b5267433f9b06ace3d5a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976056"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729615"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort-Methode
-Bricht die aktuell durchführte Berechnung `ICorDebugEval2` ab.  
+
+Bricht die `ICorDebugEval2` aktuell durchführte Berechnung ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,9 +33,11 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `RudeAbort`gibt keine Sperren frei, die der Auswertung enthält, sodass die Debugsitzung in einem unsicheren Zustand bleibt. Diese Methode wird mit äußerster Vorsicht aufgerufen.  
+
+ `RudeAbort` gibt keine Sperren frei, die der Auswertung enthält, sodass die Debugsitzung in einem unsicheren Zustand bleibt. Diese Methode wird mit äußerster Vorsicht aufgerufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

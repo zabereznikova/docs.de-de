@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: 4ee055812eb8dce2dc86f834dde92d7de5e1fdf9
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 5ac221b0b5837175b8073ab29f94c1f28078d3e4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976212"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729771"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive-Methode
+
 Ruft einen Wert ab, der angibt, ob dieses ICorDebugEval-Objekt gerade ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT IsActive (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbActive`  
  vorgenommen Ein Zeiger auf einen Wert, der angibt, ob diese Auswertung aktiv ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

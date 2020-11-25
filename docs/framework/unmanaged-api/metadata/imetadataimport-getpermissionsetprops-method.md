@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9855f0e4-12c0-4d3d-ab5d-d6bc52d25eae
 topic_type:
 - apiref
-ms.openlocfilehash: 54c75156c32e5b40aa933ef6530b2cc33edf7de4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 89c45c049ebadf9e1f16bef8d2626b4e2a17fb70
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490990"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729251"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps-Methode
+
 Ruft die Metadaten ab, die dem <xref:System.Security.PermissionSet?displayProperty=nameWithType> durch das angegebene Berechtigungs Token dargestellten zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetPermissionSetProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pm`  
  in Das Berechtigungs Metadatentoken, das den Berechtigungs Satz darstellt, für den die Metadateneigenschaften zu erhalten sind  
   
@@ -50,15 +52,16 @@ HRESULT GetPermissionSetProps (
  vorgenommen Die Größe von in Bytes `ppvPermission` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Security.PermissionSet>
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

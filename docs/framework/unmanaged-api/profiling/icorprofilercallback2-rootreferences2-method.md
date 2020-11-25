@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: 2ce58113f40c8eb67a89b6ab6c9bb8f755975bd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9e53e7bcecd900bb6c71d0a822e9b63ff6726e58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729511"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2-Methode
+
 Benachrichtigt den Profiler über Stamm Verweise, nachdem ein Garbage Collection aufgetreten ist. Diese Methode ist eine Erweiterung der [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT RootReferences2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cRootRefs`  
  in Die Anzahl der Elemente in den `rootRefIds` `rootKinds` Arrays,, `rootFlags` und `rootIds` .  
   
@@ -54,7 +56,8 @@ HRESULT RootReferences2(
   
  Wenn der Typ des Stamms ein Stapel ist, ist die Stamm-ID für die Funktion, die die Variable enthält. Wenn diese Stamm-ID 0 ist, handelt es sich bei der Funktion um eine unbenannte Funktion, die für die CLR intern ist. Wenn der Typ des Stamms ein Handle ist, ist die Stamm-ID für das Garbage Collection Handle. Bei den anderen Stamm Typen ist die ID ein nicht transparenter Wert und sollte ignoriert werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `rootRefIds` `rootKinds` Arrays,, `rootFlags` und `rootIds` sind parallele Arrays. Das heißt, `rootRefIds[i]` , `rootKinds[i]` , `rootFlags[i]` und `rootIds[i]` betreffen alle denselben Stamm.  
   
  `RootReferences`Und `RootReferences2` werden aufgerufen, um den Profiler zu benachrichtigen. Profiler implementieren normalerweise eine oder die andere Methode, aber nicht beides, da die übergebenen Informationen `RootReferences2` eine übergeordnete Menge von ist, die in übergebenen ist `RootReferences` .  
@@ -64,6 +67,7 @@ HRESULT RootReferences2(
  Die Objekt-IDs, die von zurückgegeben werden `RootReferences2` , sind während des Rückrufs selbst nicht gültig, da die Garbage Collection möglicherweise in der Mitte der Verschiebung von Objekten von alten Adressen zu neuen Adressen liegt. Deshalb sollten Profiler nicht versuchen, Objekte während eines `RootReferences2`-Aufrufs zu überprüfen. Wenn [ICorProfilerCallback2:: garbagecollectionabgeschlossene](icorprofilercallback2-garbagecollectionfinished-method.md) aufgerufen wird, wurden alle Objekte an Ihre neuen Speicherorte verschoben und können sicher überprüft werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -72,7 +76,7 @@ HRESULT RootReferences2(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2-Schnittstelle](icorprofilercallback2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 644b31ae8e8f0c51c08bcad57220a028406cfd3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 32483be43d4d4fe9d185c091e15a13c6feb95600
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504073"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728822"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl-Methode
+
 Legt den Schnittstellen Zeiger fest, den der Common Language Runtime (CLR) verwenden kann, um die Implementierung der [IHostControl-Schnittstelle](ihostcontrol-interface.md)des Hosts zu erhalten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetHostControl(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pHostControl`  
  in Ein Schnittstellen Zeiger auf die Implementierung der [IHostControl-Schnittstelle](ihostcontrol-interface.md)des Hosts.  
   
@@ -41,7 +43,7 @@ HRESULT SetHostControl(
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetHostControl`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetHostControl` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,19 +51,21 @@ HRESULT SetHostControl(
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
 |E_CLR_ALREADY_STARTED|Die CLR wurde bereits initialisiert.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Sie müssen `SetHostControl` vor dem Initialisieren der CLR aufzurufen, d. h. bevor Sie die [Start-Methode](iclrruntimehost-start-method.md) aufruft oder eine der [Metadatenschnittstellen](../metadata/metadata-interfaces.md)verwenden. Es wird empfohlen, dass Sie `SetHostControl` sofort nach dem Aufrufen der [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md) oder der [CorBindToRuntimeEx-Funktion](corbindtoruntimeex-function.md)aufrufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)
 - [IHostControl-Schnittstelle](ihostcontrol-interface.md)

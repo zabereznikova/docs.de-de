@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e7d3ccab-b0f0-4872-8935-0ed72920171b
 topic_type:
 - apiref
-ms.openlocfilehash: e1e114070f39e75254fc1bc0f8c1bf3e4733d5a2
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 6df08889af30542af5a128cbffc38a57ce640fde
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703369"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728926"
 ---
 # <a name="iclrprobingassemblyenum-interface"></a>ICLRProbingAssemblyEnum-Schnittstelle
+
 Stellt Methoden bereit, die es dem Host ermöglichen, die Such Identitäten einer Assembly mithilfe der internen Identitätsinformationen der Assembly zu erhalten, die für die Common Language Runtime (CLR) intern sind, ohne diese Identität erstellen oder verstehen zu müssen.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,19 +32,21 @@ Stellt Methoden bereit, die es dem Host ermöglichen, die Such Identitäten eine
 |[Get-Methode](iclrprobingassemblyenum-get-method.md)|Ruft die Assemblyidentität am angegebenen Index ab.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Methoden wie [ICLRAssemblyIdentityManager:: GetProbingAssembliesFromReference](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md) geben eine `ICLRProbingAssemblyEnum` Instanz zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRAssemblyIdentityManager-Schnittstelle](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

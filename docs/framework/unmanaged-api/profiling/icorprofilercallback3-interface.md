@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-ms.openlocfilehash: db07e2afa64ea2bf80416e6ab8cba5a4dcdc8dcf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd482bfe8e95a53cafd1530c88f09df146a1b150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499674"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729433"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3-Schnittstelle
+
 Stellt Rückruf Methoden bereit, die von der Common Language Runtime (CLR) zum Kommunizieren von Anfüge-und Trenn Zustandsinformationen an den Profiler verwendet werden.  
   
 ## <a name="methods"></a>Methoden  
@@ -35,6 +36,7 @@ Stellt Rückruf Methoden bereit, die von der Common Language Runtime (CLR) zum K
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -43,7 +45,7 @@ Stellt Rückruf Methoden bereit, die von der Common Language Runtime (CLR) zum K
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5c9815-832d-47e1-b7f7-bbba135d7cf1
 topic_type:
 - apiref
-ms.openlocfilehash: f13cd6d6cae5bae0c51674e00f275a2c4853c915
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 5d8fd79b242f2b88b82c5c3d78dfe45d80f1194f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729784"
 ---
 # <a name="icordebugeval-interface"></a>ICorDebugEval-Schnittstelle
 
@@ -29,19 +29,20 @@ Stellt Methoden bereit, mit denen der Debugger Code innerhalb des Kontexts des g
   
 |Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Abort-Methode](icordebugeval-abort-method.md)|Bricht die Berechnung ab, `ICorDebugEval` die von diesem Objekt gerade durchgeführt wird.|  
+|[Abort-Methode](icordebugeval-abort-method.md)|Bricht die Berechnung ab, die von diesem `ICorDebugEval` Objekt gerade durchgeführt wird.|  
 |[CallFunction-Methode](icordebugeval-callfunction-method.md)|Richtet einen Rückruf für die angegebene Funktion ein. (Veraltet in der .NET Framework Version 2,0; verwenden Sie stattdessen [ICorDebugEval2:: CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) .)|  
 |[CreateValue-Methode](icordebugeval-createvalue-method.md)|Ruft einen Schnittstellen Zeiger auf ein ICorDebugValue-Objekt des angegebenen Typs mit einem Anfangswert von 0 (null) oder NULL ab. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: foratevaluefortype](icordebugeval2-createvaluefortype-method.md) .)|  
-|[GetResult-Methode](icordebugeval-getresult-method.md)|Ruft einen Schnittstellen Zeiger auf einen `ICorDebugValue` -Wert ab, der die Ergebnisse der Auswertung enthält.|  
+|[GetResult-Methode](icordebugeval-getresult-method.md)|Ruft einen Schnittstellen Zeiger auf einen-Wert ab `ICorDebugValue` , der die Ergebnisse der Auswertung enthält.|  
 |[GetThread-Methode](icordebugeval-getthread-method.md)|Ruft einen Schnittstellen Zeiger auf den "ICorDebugThread" ab, in dem diese Auswertung ausgeführt wird oder ausgeführt wird.|  
-|[IsActive-Methode](icordebugeval-isactive-method.md)|Ruft einen Wert ab, der angibt `ICorDebugEval` , ob dieses-Objekt gerade ausgeführt wird.|  
+|[IsActive-Methode](icordebugeval-isactive-method.md)|Ruft einen Wert ab, der angibt, ob dieses- `ICorDebugEval` Objekt gerade ausgeführt wird.|  
 |[NewArray-Methode](icordebugeval-newarray-method.md)|Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedArray](icordebugeval2-newparameterizedarray-method.md) .)|  
 |[NewObject-Methode](icordebugeval-newobject-method.md)|Ordnet eine neue Objektinstanz zu und ruft die angegebene Konstruktormethode auf. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md) .)|  
 |[NewObjectNoConstructor-Methode](icordebugeval-newobjectnoconstructor-method.md)|Ordnet eine neue Objektinstanz des angegebenen Typs zu, ohne zu versuchen, eine Konstruktormethode aufzurufen. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObjectNoConstructor](icordebugeval2-newparameterizedobjectnoconstructor-method.md) .)|  
 |[NewString-Methode](icordebugeval-newstring-method.md)|Ordnet ein neues String-Objekt mit dem angegebenen Inhalt zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `ICorDebugEval` -Objekt wird im Kontext eines bestimmten Threads erstellt, der zum Ausführen der Auswertungen verwendet wird. Alle Objekte und Typen, die in einer bestimmten Auswertung verwendet werden, müssen sich in derselben Anwendungsdomäne befinden. Diese Anwendungsdomäne muss nicht mit der aktuellen Anwendungsdomäne des Threads identisch sein. Auswertungen können eingebettet werden.  
+
+ Ein- `ICorDebugEval` Objekt wird im Kontext eines bestimmten Threads erstellt, der zum Ausführen der Auswertungen verwendet wird. Alle Objekte und Typen, die in einer bestimmten Auswertung verwendet werden, müssen sich in derselben Anwendungsdomäne befinden. Diese Anwendungsdomäne muss nicht mit der aktuellen Anwendungsdomäne des Threads identisch sein. Auswertungen können eingebettet werden.  
   
  Die Vorgänge der Auswertung werden erst ausgeführt, wenn der Debugger [ICorDebugController:: Continue](icordebugcontroller-continue-method.md)aufruft und dann einen [ICorDebugManagedCallback:: EvalComplete](icordebugmanagedcallback-evalcomplete-method.md) -Rückruf empfängt. Wenn Sie die Evaluierungs Funktion verwenden müssen, ohne dass andere Threads ausgeführt werden dürfen, anhalten Sie die Threads mithilfe von [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) oder [ICorDebugController:: beenden](icordebugcontroller-stop-method.md) , bevor Sie [ICorDebugController:: Continue](icordebugcontroller-continue-method.md)aufrufen.  
   
@@ -52,7 +53,8 @@ Stellt Methoden bereit, mit denen der Debugger Code innerhalb des Kontexts des g
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

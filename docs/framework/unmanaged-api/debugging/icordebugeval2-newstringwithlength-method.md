@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-ms.openlocfilehash: a2b76cb59a95082e0cf9c0884b8277cca3c8fe8d
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: e5bab32f6d18c87b030f484a47bc3f1d525d2338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976069"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729628"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength-Methode
+
 Erstellt eine Zeichenfolge mit der angegebenen Länge und dem angegebenen Inhalt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT NewStringWithLength (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `string`  
  in Ein Zeiger auf den Zeichen folgen Wert.  
   
@@ -42,11 +44,13 @@ HRESULT NewStringWithLength (
  in Länge der Zeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn erwartet wird, dass das nachfolgende NULL-Zeichen in der verwalteten Zeichenfolge enthalten ist, muss `NewStringWithLength` der Aufrufer der-Methode sicherstellen, dass die Zeichen folgen Länge das nachfolgende NULL-Zeichen enthält.  
+
+ Wenn erwartet wird, dass das nachfolgende NULL-Zeichen in der verwalteten Zeichenfolge enthalten ist, muss der Aufrufer der- `NewStringWithLength` Methode sicherstellen, dass die Zeichen folgen Länge das nachfolgende NULL-Zeichen enthält.  
   
  Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

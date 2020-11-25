@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fce34531-2687-406d-9131-d6ad94f2ce0e
 topic_type:
 - apiref
-ms.openlocfilehash: b597d95b5b25e5ebf04fac48e4f3fda312a9594c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 090b587ef509795609250914ce8883ad96d28c18
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976121"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729680"
 ---
 # <a name="icordebugeval2-interface"></a>ICorDebugEval2-Schnittstelle
 
@@ -35,14 +35,15 @@ Erweitert "ICorDebugEval", um Unterstützung für generische Typen bereitzustell
 |[NewParameterizedObject-Methode](icordebugeval2-newparameterizedobject-method.md)|Instanziiert ein neues parametrisiertes Typobjekt und ruft die Konstruktormethode des Objekts auf.|  
 |[NewParameterizedObjectNoConstructor-Methode](icordebugeval2-newparameterizedobjectnoconstructor-method.md)|Instanziiert ein neues parametrisiertes Typobjekt der angegebenen Klasse, ohne dass versucht wird, eine Konstruktormethode aufzurufen.|  
 |[NewStringWithLength-Methode](icordebugeval2-newstringwithlength-method.md)|Erstellt eine neue Zeichenfolge mit der angegebenen Länge und dem angegebenen Inhalt.|  
-|[RudeAbort-Methode](icordebugeval2-rudeabort-method.md)|Bricht die aktuell durchführte Berechnung `ICorDebugEval2` ab.|  
+|[RudeAbort-Methode](icordebugeval2-rudeabort-method.md)|Bricht die `ICorDebugEval2` aktuell durchführte Berechnung ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

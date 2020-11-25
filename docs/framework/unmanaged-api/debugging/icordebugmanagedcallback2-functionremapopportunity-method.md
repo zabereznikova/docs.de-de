@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: d2fc59621cbb6752830c7a8392ce4e0c476ef9e7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 50fabec08a63d348b0a1934f029582ae1446519e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210058"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729056"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity-Methode
+
 Benachrichtigt den Debugger, dass die Codeausführung einen Sequenz Punkt in einer älteren Version einer bearbeiteten Funktion erreicht hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT FunctionRemapOpportunity (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die die bearbeitete Funktion enthält.  
   
@@ -54,11 +56,13 @@ HRESULT FunctionRemapOpportunity (
  in Der MSIL-Offset (Microsoft Intermediate Language) des Anweisungs Zeigers in der alten Version der Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Dieser Rückruf ermöglicht dem Debugger die erneute Zuordnung des Anweisungs Zeigers zu seiner ordnungsgemäßen Position in der neuen Version der angegebenen Funktion durch Aufrufen der [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) -Methode. Wenn der Debugger `RemapFunction` vor dem Aufrufen der [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) -Methode nicht aufruft, wird der alte Code von der Laufzeit weiterhin ausgeführt, und es wird ein weiterer `FunctionRemapOpportunity` Rückruf am nächsten Sequenz Punkt ausgelöst.  
   
  Dieser Rückruf wird für jeden Frame aufgerufen, der eine ältere Version der angegebenen Funktion ausführt, bis der Debugger S_OK zurückgibt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -67,7 +71,7 @@ HRESULT FunctionRemapOpportunity (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugManagedCallback2-Schnittstelle](icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

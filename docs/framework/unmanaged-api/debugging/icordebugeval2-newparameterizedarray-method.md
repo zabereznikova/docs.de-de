@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 14274932461fa7a5278c9a09b421f50be098cb91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976108"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729663"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray-Methode
+
 Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT NewParameterizedArray(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pElementType`  
  in Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.  
   
@@ -50,9 +52,11 @@ HRESULT NewParameterizedArray(
  [in] Optional. Die untere Grenze jeder Dimension des Arrays. Wenn dieser Wert weggelassen wird, wird für jede Dimension eine untere Grenze von 0 (null) angenommen.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Elemente des Arrays können Instanzen eines generischen Typs sein. Das Array wird immer in der Anwendungsdomäne erstellt, in der der Thread gerade ausgeführt wird. Im .NET Framework 2,0 muss der Wert von `rank` 1 sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

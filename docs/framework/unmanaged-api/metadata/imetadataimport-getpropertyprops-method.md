@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: cac5aaa7ed13b6a48b36ad550da8b73d0deb2ee7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: aded23e190de18d76bb2b9e2ffbae51cf2325419
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491042"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729225"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps-Methode
+
 Ruft die Metadaten für die Eigenschaft ab, die durch das angegebene Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -49,6 +50,7 @@ HRESULT GetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `prop`  
  in Ein Token, das die Eigenschaft darstellt, für die Metadaten zurückgegeben werden sollen.  
   
@@ -98,15 +100,16 @@ HRESULT GetPropertyProps (
  vorgenommen Die Anzahl der MethodDef-Token, die in zurückgegeben werden `rmdOtherMethod` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

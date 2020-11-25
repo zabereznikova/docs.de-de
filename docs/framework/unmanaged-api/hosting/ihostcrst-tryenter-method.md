@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a922fa98-beab-4f09-a342-cc94fc65687f
 topic_type:
 - apiref
-ms.openlocfilehash: 782a12a47de0196b90de06572520ef5ed36efb26
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 02f36068f12bf0a40e5f0ac477803abfb84c72a9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804865"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729533"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter-Methode
+
 Versucht, den kritischen Abschnitt einzugeben, der durch die aktuelle [IHostCrst](ihostcrst-interface.md) -Instanz dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT TryEnter (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `option`  
  in Einer der [WAIT_OPTION](wait-option-enumeration.md) -Werte, der angibt, welche Aktion der Host ausführen soll, wenn der Vorgang blockiert wird.  
   
@@ -45,7 +47,7 @@ HRESULT TryEnter (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`TryEnter`wurde erfolgreich zurückgegeben.|  
+|S_OK|`TryEnter` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,14 +55,16 @@ HRESULT TryEnter (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `TryEnter`gibt sofort zurück und gibt an, ob der aufrufenden Thread den kritischen Abschnitt eingegeben hat. Diese Methode spiegelt die Wind32- `TryEnterCriticalSection` Funktion wider.  
+
+ `TryEnter` gibt sofort zurück und gibt an, ob der aufrufenden Thread den kritischen Abschnitt eingegeben hat. Diese Methode spiegelt die Wind32- `TryEnterCriticalSection` Funktion wider.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

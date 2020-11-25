@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a59e70257064220e8138f9d267a815fcdbf3929
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729030"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB-Struktur
-Enthält Informationen zu einem einzelnen Attribut in `DWORD`einer Assembly und besteht aus drei s. Jeder `DWORD` ist ein Offset in einen `CurrentIntoBuffer` Zeichenpuffer, der durch die Methode der [IEnumIDENTITY_ATTRIBUTE-Schnittstelle](ienumidentity-attribute-interface.md) erzeugt wird.  
+
+Enthält Informationen zu einem einzelnen Attribut in einer Assembly und besteht aus drei `DWORD` s. Jeder `DWORD` ist ein Offset in einem Zeichen Puffer, der von der- `CurrentIntoBuffer` Methode der [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) -Schnittstelle erzeugt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,24 +37,25 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`ofsNamespace`|Der erste Offset in den Zeichenpuffer. Auf diesen Offset folgt nicht der Namespace des Attributs, sondern eine Reihe von Nullzeichen. Daher wird es nicht verwendet.|  
-|`ofsName`|Der zweite Offset in den Zeichenpuffer. Diese Position markiert den Anfang des Attributnamens.|  
-|`ofsValue`|Der dritte Offset in den Zeichenpuffer. Diese Position markiert den Beginn des Attributwerts.|  
+|`ofsNamespace`|Der erste Offset im Zeichen Puffer. Auf diesen Offset folgt nicht der Namespace des Attributs, sondern eine Reihe von NULL Zeichen. Daher wird Sie nicht verwendet.|  
+|`ofsName`|Der zweite Offset im Zeichen Puffer. Dieser Speicherort markiert den Anfang des Attribut namens.|  
+|`ofsValue`|Der dritte Offset im Zeichen Puffer. Dieser Speicherort markiert den Anfang des Attribut Werts.|  
   
 ## <a name="sample"></a>Beispiel  
- Das folgende Beispiel veranschaulicht mehrere grundlegende Schritte, `IDENTITY_ATTRIBUTE_BLOB` die schließlich zu einer aufgefüllten Struktur führen:  
+
+ Im folgenden Beispiel werden mehrere grundlegende Schritte veranschaulicht, die letztendlich zu einer aufgefüllten `IDENTITY_ATTRIBUTE_BLOB` Struktur führen:  
   
-1. Abrufen einer [IReferenceIdentity](ireferenceidentity-interface.md) für die Assembly.  
+1. Rufen Sie eine [IReferenceIdentity](ireferenceidentity-interface.md) für die Assembly ab.  
   
-2. Rufen `IReferenceIdentity::EnumAttributes` Sie die Methode auf, und rufen Sie eine [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)ab.  
+2. Rufen Sie die `IReferenceIdentity::EnumAttributes` -Methode auf, und rufen Sie eine [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)ab.  
   
-3. Erstellen Sie einen Zeichenpuffer, `IDENTITY_ATTRIBUTE_BLOB` und geben Sie ihn als Struktur um.  
+3. Erstellen Sie einen Zeichen Puffer, und wandeln Sie ihn als- `IDENTITY_ATTRIBUTE_BLOB` Struktur um.  
   
-4. Rufen `CurrentIntoBuffer` Sie die `IEnumIDENTITY_ATTRIBUTE` Methode der Schnittstelle auf. Diese Methode kopiert `Namespace`die `Name`Attribute `Value` , und in den Zeichenpuffer. Die drei Offsets zu diesen Zeichenfolgen werden in der `IDENTITY_ATTRIBUTE_BLOB` Struktur verfügbar.  
+4. Ruft die- `CurrentIntoBuffer` Methode der- `IEnumIDENTITY_ATTRIBUTE` Schnittstelle auf. Diese Methode kopiert die Attribute `Namespace` , `Name` und `Value` in den Zeichen Puffer. Die drei Offsets für diese Zeichen folgen werden in der- `IDENTITY_ATTRIBUTE_BLOB` Struktur verfügbar.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -219,26 +221,29 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a>Ausführen des Beispiels  
- C:\\> EnumAssemblyAttributes.exe C:-WINDOWS-Microsoft.NET-Framework-V2.0.50727-System.dll  
+### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
+
+ C: \\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Beispielausgabe  
- Kultur = neutral  
+
+ Culture = neutral  
   
  Name = System  
   
- prozessorArchitektur = MSIL  
+ ProcessorArchitecture = MSIL  
   
  PublicKeyToken = b77a5c561934e089  
   
  Version = 2.0.0.0  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Isolation.h  
+ **Header:** Isolation. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

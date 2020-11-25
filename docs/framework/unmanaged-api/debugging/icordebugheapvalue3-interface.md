@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9c421bb0-e647-4b2d-a986-f3d578cc7f20
 topic_type:
 - apiref
-ms.openlocfilehash: 5add6da1ace372ecf6e513902bbf98f5f79c6778
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a1f4964c89aa3b658c57946d4b5a0327797118f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210396"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728705"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3-Schnittstelle
+
 Macht die Bildschirmsperreigenschaften von Objekten verfügbar. Diese Schnittstelle erweitert die ICorDebugHeapValue-und ICorDebugHeapValue2-Schnittstellen.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetThreadOwningMonitorLock-Methode](icordebugheapvalue3-getthreadowningmonitorlock-method.md)|Gibt den verwalteten Thread zurück, der die Monitor Sperre für dieses Objekt besitzt.|  
 |[GetMonitorEventWaitList-Methode](icordebugheapvalue3-getmonitoreventwaitlist-method.md)|Stellt eine geordnete Liste von Threads bereit, die für das-Ereignis in die Warteschlange eingereiht werden, das einer Monitor Sperre zugeordnet ist.|  
@@ -37,6 +38,7 @@ Macht die Bildschirmsperreigenschaften von Objekten verfügbar. Diese Schnittste
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -45,7 +47,7 @@ Macht die Bildschirmsperreigenschaften von Objekten verfügbar. Diese Schnittste
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

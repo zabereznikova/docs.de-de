@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13c9f063-371c-4911-a5e7-e1e0b88ae382
 topic_type:
 - apiref
-ms.openlocfilehash: 1d00d150f98e44fb5c6484378266b7d9b238f4a9
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2b4d22fac7125ad113aaef5b093396a065f682c1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728718"
 ---
 # <a name="itypenamefactoryparsetypename-method"></a>ITypeNameFactory::ParseTypeName-Methode
+
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,14 +37,15 @@ HRESULT ParseTypeName (
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Schnittstellen](hosting-interfaces.md)

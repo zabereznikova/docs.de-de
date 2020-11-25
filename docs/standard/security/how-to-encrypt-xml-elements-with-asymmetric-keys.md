@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - encryption [.NET], asymmetric keys
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
-ms.openlocfilehash: 7254079c12926dbe055ea58f045862afd17bab1e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 29fe7c229664b08c9e1563413525818f2e883198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729342"
 ---
 # <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln
 
@@ -112,6 +112,7 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
      [!code-vb[HowToEncryptXMLElementAsymmetric#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#16)]  
   
 ## <a name="example"></a>Beispiel  
+
  Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Außerdem wird angenommen, dass `"test.xml"` ein `"creditcard"`-Element enthält.  Sie können den folgenden XML-Code in eine Datei namens `test.xml` einfügen und mit diesem Beispiel verwenden.  
   
 ```xml  
@@ -142,7 +143,7 @@ Sie sollten einen Schlüssel niemals direkt in Ihren Quellcode einbetten.  Einge
   
 Wenn Sie einen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  Kryptografische Schlüssel können manchmal von einem Debugger aus dem Arbeitsspeicher oder von einer Festplatte gelesen werden, falls der entsprechende Arbeitsspeicherbereich auf den Datenträger ausgelagert wurde.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)

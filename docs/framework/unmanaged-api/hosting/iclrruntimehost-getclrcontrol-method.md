@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e47e3655-efd5-4572-a1dc-50c69bf2a468
 topic_type:
 - apiref
-ms.openlocfilehash: 68bcdc33e34075cc5876ee721ef57282cdaa6e86
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 928ac05fbd3a19a17e7f37674b2a75f8bc799fc6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703688"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728870"
 ---
 # <a name="iclrruntimehostgetclrcontrol-method"></a>ICLRRuntimeHost::GetCLRControl-Methode
+
 Ruft einen Schnittstellen Zeiger vom Typ [ICLRControl-Schnittstelle](iclrcontrol-interface.md) ab, mit der Hosts Aspekte des Common Language Runtime (CLR) anpassen können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetCLRControl(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCLRControl`  
  vorgenommen Ein Schnittstellen Zeiger vom Typ [ICLRControl-Schnittstelle](iclrcontrol-interface.md) , mit der Hosts weitere Aspekte der CLR konfigurieren können.  
   
@@ -41,7 +43,7 @@ HRESULT GetCLRControl(
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetCLRControl`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetCLRControl` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,18 +52,20 @@ HRESULT GetCLRControl(
 |HOST_E_INVALIDOPERATION|Die CLR wurde bereits gestartet.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICLRControl`stellt die [Methode GetCLRManager-Methode](iclrcontrol-getclrmanager-method.md) bereit, die es dem Host ermöglicht, einen Schnittstellen Zeiger auf einen der Manager-Typen zu erhalten.  
+
+ `ICLRControl` stellt die [Methode GetCLRManager-Methode](iclrcontrol-getclrmanager-method.md) bereit, die es dem Host ermöglicht, einen Schnittstellen Zeiger auf einen der Manager-Typen zu erhalten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICLRRuntimeHost-Schnittstelle](iclrruntimehost-interface.md)

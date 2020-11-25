@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 3d3d4af8e9ee073c0aefec418a3b53c4589adf0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729108"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept-Enumeration
+
 Gibt die Codetypen an, die schrittweise abgefangen werden können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,9 +52,11 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_ALL`|Jeder Code kann abgefangen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie die [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md) -Methode, um die Codetypen festzulegen, die abgefangen werden können.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

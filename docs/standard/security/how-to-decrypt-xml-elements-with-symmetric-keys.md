@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
-ms.openlocfilehash: de53cc8ef728ddc40bc8e1138a1d649e5c3e600b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 67ace547fc539ab0a2d7affb339f908eb9670a29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729355"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln
 
@@ -53,6 +53,7 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
   
 ## <a name="example"></a>Beispiel  
+
  Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Außerdem wird angenommen, dass `"test.xml"` ein `"creditcard"`-Element enthält.  Sie können den folgenden XML-Code in eine Datei namens `test.xml` einfügen und mit diesem Beispiel verwenden.  
   
 ```xml  
@@ -81,7 +82,7 @@ Speichern Sie einen kryptografischen Schlüssel nie im Klartextformat, und über
   
 Wenn Sie einen symmetrischen kryptografischen Schlüssel nicht mehr benötigen, entfernen Sie ihn aus dem Arbeitsspeicher, indem Sie jedes Byte auf 0 (null) festlegen oder indem Sie die <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A>-Methode der verwalteten Kryptografieklasse aufrufen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Kryptografiemodell](cryptography-model.md)
 - [Kryptografische Dienste](cryptographic-services.md)

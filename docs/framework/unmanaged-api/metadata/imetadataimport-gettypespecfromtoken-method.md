@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 43e9671afa92d36966e51bbdc630db4a9d9083b7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62495aa4280bb1799af09fea2e550ae6107e09e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503501"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729147"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken-Methode
+
 Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angegebene Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetTypeSpecFromToken (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `typespec`  
  in Das TypeSpec-Token, das der angeforderten Metadatensignatur zugeordnet ist.  
   
@@ -46,18 +48,20 @@ HRESULT GetTypeSpecFromToken (
  vorgenommen Die Größe (in Bytes) der Metadatensignatur.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Ein HRESULT, das den Erfolg oder Misserfolg angibt. Fehler können mit dem fehlgeschlagenen Makro getestet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-ms.openlocfilehash: 6346b1e34e508e5c173bfd0119ac7451d7eef40e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9dd973fe3e0802c49c220db51a21c223730e5aec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729164"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps-Methode
+
 Gibt Metadateninformationen für das zurück, das <xref:System.Type> durch das angegebene TypeDef-Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT GetTypeDefProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `td`  
  in Das TypeDef-Token, das den Typ darstellt, für den Metadaten zurückgegeben werden sollen.  
   
@@ -58,15 +60,16 @@ HRESULT GetTypeDefProps (
  vorgenommen Ein TypeDef-oder TypeRef-Metadatentoken, das den Basistyp des angeforderten Typs darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

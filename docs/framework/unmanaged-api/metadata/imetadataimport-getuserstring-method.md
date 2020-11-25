@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-ms.openlocfilehash: 358ca84f32e1b233116605bf5486cc9a01b42e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af3de5454ce3d4a763c216de6e8efdb39407457b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503502"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729134"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString-Methode
+
 Ruft das Zeichenfolgenliteral ab, das durch das angegebene Metadatentoken dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetUserString (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `stk`  
  in Das Zeichen folgen Token, das die zugeordnete Zeichenfolge zurückgeben soll.  
   
@@ -50,15 +52,16 @@ HRESULT GetUserString (
  vorgenommen Die Größe der zurückgegebenen breit Zeichen `szString` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

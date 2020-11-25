@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: c24963a6e56adfb9f763c6521027744db82cc357
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179361"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729823"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance-Funktion
-Erstellt ein Schnittstellenobjekt für das angegebene Zielelement.  
+
+Erstellt ein Schnittstellen Objekt für das angegebene Ziel Element.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,26 +37,29 @@ HRESULT CLRDataCreateInstance (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `iid`  
- [in] Der Bezeichner der zu instanziierenden Schnittstelle.  
+ in Der Bezeichner der Schnittstelle, die instanziiert werden soll.  
   
  `target`  
- [in] Ein Zeiger auf ein vom Benutzer implementiertes [ICLRDataTarget-Objekt,](iclrdatatarget-interface.md) das das Zielelement darstellt, für das das Schnittstellenobjekt erstellt werden soll.  
+ in Ein Zeiger auf ein vom Benutzer implementiertes [ICLRDataTarget](iclrdatatarget-interface.md) -Objekt, das das Ziel Element darstellt, für das das Schnittstellen Objekt erstellt werden soll.  
   
  `iface`  
- [out] Ein Zeiger auf die Adresse des zurückgegebenen Schnittstellenobjekts.  
+ vorgenommen Ein Zeiger auf die Adresse des zurückgegebenen Schnittstellen Objekts.  
   
-## <a name="remarks"></a>Bemerkungen  
- Das `ICLRDataTarget` Objekt wird vom Writer der Debuganwendung implementiert. Die Implementierung hängt vom Typ des dargestellten Zielelements ab. Das Zielelement kann ein Prozess, Speicherabbild, Remotecomputer usw. sein.  
+## <a name="remarks"></a>Hinweise  
+
+ Das- `ICLRDataTarget` Objekt wird vom Writer der debugginganwendung implementiert. Die-Implementierung hängt vom Typ des dargestellten Ziel Elements ab. Das Ziel Element kann ein Prozess, ein Speicher Abbild, ein Remote Computer usw. sein.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** ClrData.idl  
+ **Header:** Clrdata. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

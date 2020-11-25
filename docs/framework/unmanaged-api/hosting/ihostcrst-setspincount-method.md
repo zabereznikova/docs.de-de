@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-ms.openlocfilehash: 2436809f35d5c46416f48987cc92feb51d291a6a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 22274759f931da614a234efe0a6f6eb3aade027c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729563"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount-Methode
+
 Legt die drehanzahl für die aktuelle [IHostCrst](ihostcrst-interface.md) -Instanz fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetSpinCount (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwSpinCount`  
  in Die neue Spin-Anzahl für die aktuelle `IHostCrst` Instanz.  
   
@@ -41,7 +43,7 @@ HRESULT SetSpinCount (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetSpinCount` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,16 +51,18 @@ HRESULT SetSpinCount (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn auf Multiprozessorsystemen der kritische, von der aktuellen Instanz dargestellte Abschnitt nicht `IHostCrst` verfügbar ist, wird ein aufrufenden Thread `dwSpinCount` vor dem Aufrufen von [IHostSemaphore:: Wait](ihostsemaphore-wait-method.md) für ein Semaphor, das dem kritischen Abschnitt zugeordnet ist, mehrmals aufgerufen. Wenn der kritische Abschnitt während des drehvorgangs frei wird, vermeidet der aufrufenden Thread den warte Vorgang.  
   
  Die Verwendung von `dwSpinCount` ist mit der Verwendung des-Parameters desselben Namens in der Win32- `InitializeCriticalSectionAndSpinCount` Funktion identisch.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

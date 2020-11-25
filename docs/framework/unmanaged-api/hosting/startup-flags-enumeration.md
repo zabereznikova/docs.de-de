@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-ms.openlocfilehash: b4694efffa0a3dd6fed1f97fc2359c5eb335d440
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c3f4d644bd7073655d2d77fe7f65a3a46cfea24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006414"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729903"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS-Enumeration
+
 Enthält Werte, die das Startverhalten der Common Language Runtime (CLR) angeben. Standardmäßig erfolgt die Garbage Collection nicht gleichzeitig, und nur die Basisklassenbibliothek wird in den domänenneutralen Bereich geladen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -53,7 +54,7 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis:**  Das parallele Garbage Collection wird in Anwendungen, die den WOW64 x86-Emulator auf 64-Bit-Systemen ausführen, die die Intel Itanium-Architektur (ehemals IA-64) implementieren, nicht unterstützt. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Gibt an, dass eine Ladeprogrammoptimierung stattfinden soll.|  
@@ -73,14 +74,15 @@ typedef enum {
 |`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Siehe die <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> -Eigenschaft und das- [ \<appDomainResourceMonitoring> Element](../../configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

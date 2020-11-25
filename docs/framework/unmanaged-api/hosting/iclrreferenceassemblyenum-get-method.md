@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f21c1612-9c5d-4abc-a337-577086d29c17
 topic_type:
 - apiref
-ms.openlocfilehash: 5afa7b37b804b6a11a894e0e6c7708c7787a20ae
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3968adf418fcea847ee2be5a412385d041a53544
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728904"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get-Methode
+
 Ruft die Assemblyidentität am angegebenen Index ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT Get (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwIndex`  
  in Der null basierte Index der zurück zugebende Assemblyidentität.  
   
@@ -49,7 +51,7 @@ HRESULT Get (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Get`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Get` wurde erfolgreich zurückgegeben.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` ist zu klein.|  
 |ERROR_NO_MORE_ITEMS|Die-Enumeration enthält keine weiteren Elemente.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
@@ -59,18 +61,20 @@ HRESULT Get (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `Get`wird in der Regel zweimal aufgerufen. Der erste-Befehl stellt einen NULL-Wert für bereit `pwzBuffer` und legt `pcchBufferSize` auf die für geeignete Größe fest `pwzBuffer` . Der zweite-Rückruf stellt eine angemessene Größenanpassung dar `pwzBuffer` und enthält die kanonischen Assemblyidentitätsdaten bei Abschluss.  
+
+ `Get` wird in der Regel zweimal aufgerufen. Der erste-Befehl stellt einen NULL-Wert für bereit `pwzBuffer` und legt `pcchBufferSize` auf die für geeignete Größe fest `pwzBuffer` . Der zweite-Rückruf stellt eine angemessene Größenanpassung dar `pwzBuffer` und enthält die kanonischen Assemblyidentitätsdaten bei Abschluss.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)
 - [ICLRReferenceAssemblyEnum-Schnittstelle](iclrreferenceassemblyenum-interface.md)

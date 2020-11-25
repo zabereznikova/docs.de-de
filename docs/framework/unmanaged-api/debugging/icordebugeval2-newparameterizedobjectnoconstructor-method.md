@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 796c6aa4c42a037fe612b4b1ee5267a678cf5224
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976082"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729641"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor-Methode
+
 Instanziiert ein neues parametrisiertes Typobjekt der angegebenen Klasse, ohne dass versucht wird, eine Konstruktormethode aufzurufen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT NewParameterizedObjectNoConstructor (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pClass`  
  in Ein Zeiger auf ein ICorDebugClass-Objekt, das die Klasse des Objekts darstellt, das instanziiert werden soll.  
   
@@ -46,9 +48,11 @@ HRESULT NewParameterizedObjectNoConstructor (
  in Ein Array von Zeigern, von denen jedes auf ein ICorDebugType-Objekt verweist, das ein Typargument für das Objekt darstellt, das instanziiert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei `NewParameterizedObjectNoConstructor` der-Methode tritt ein Fehler auf, wenn eine falsche Anzahl von Typargumenten oder falsche Typen von Typargumenten bestanden werden.  
+
+ Bei der- `NewParameterizedObjectNoConstructor` Methode tritt ein Fehler auf, wenn eine falsche Anzahl von Typargumenten oder falsche Typen von Typargumenten bestanden werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

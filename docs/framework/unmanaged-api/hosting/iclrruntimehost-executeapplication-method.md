@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 924d032c42dca95b253acea167d55dd6e2b811e5
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ef043dd2308c4b76e975bd2ad1f68725579e8fc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728907"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication-Methode
+
 Wird in Manifest-basierten ClickOnce-Bereitstellungs Szenarien verwendet, um die Anwendung anzugeben, die in einer neuen Domäne aktiviert werden soll. Weitere Informationen zu diesen Szenarien finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT ExecuteApplication(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzAppFullName`  
  in Der vollständige Name der Anwendung, wie für definiert <xref:System.ApplicationIdentity> .  
   
@@ -61,7 +63,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`wurde erfolgreich zurückgegeben.|  
+|S_OK|`ExecuteApplication` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -69,23 +71,25 @@ HRESULT ExecuteApplication(
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExecuteApplication`wird verwendet, um ClickOnce-Anwendungen in einer neu erstellten Anwendungsdomäne zu aktivieren.  
+
+ `ExecuteApplication` wird verwendet, um ClickOnce-Anwendungen in einer neu erstellten Anwendungsdomäne zu aktivieren.  
   
  Der `pReturnValue` Output-Parameter wird auf den Wert festgelegt, der von der Anwendung zurückgegeben wird. Wenn Sie für den Wert NULL angeben, `pReturnValue` schlägt `ExecuteApplication` nicht fehl, aber es wird kein Wert zurückgegeben.  
   
 > [!IMPORTANT]
 > Rufen Sie nicht die Methode [Start Methode](iclrruntimehost-start-method.md) auf, bevor Sie die- `ExecuteApplication` Methode aufrufen, um eine Manifest-basierte Anwendung zu aktivieren. Wenn die- `Start` Methode zuerst aufgerufen wird, kann der `ExecuteApplication` Methodenaufruf nicht ausgeführt werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ActivationContext>
 - <xref:System.AppDomainManager>
