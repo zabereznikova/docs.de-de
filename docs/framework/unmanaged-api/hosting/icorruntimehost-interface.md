@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: 420f22a242a20f8bdf5d5b84f47a297a2f503db0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9fcb5e189af9f72de7635aad550a5e8ab5522dbd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546020"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720619"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost-Schnittstelle
+
 Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtime (CLR) explizit zu starten und zu starten, um Anwendungs Domänen zu erstellen und zu konfigurieren, um auf die Standard Domäne zuzugreifen und um alle Domänen aufzulisten, die im Prozess ausgeführt werden.  
   
  In der .NET Framework Version 2,0 wird diese Schnittstelle von [ICLRRuntimeHost](iclrruntimehost-interface.md)ersetzt.  
@@ -45,12 +46,13 @@ Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtim
 |[MapFile-Methode](icorruntimehost-mapfile-method.md)|Ordnet die angegebene Datei dem Arbeitsspeicher zu. Diese Methode ist veraltet.|  
 |[NextDomain-Methode](icorruntimehost-nextdomain-method.md)|Ruft einen Schnittstellen Zeiger auf die nächste Domäne in der-Enumeration ab.|  
 |[Start-Methode](icorruntimehost-start-method.md)|Startet die CLR.|  
-|[Methode "Ende"](icorruntimehost-stop-method.md)|Beendet die Ausführung von Code in der Laufzeit für den aktuellen Prozess.|  
+|[Stop-Methode](icorruntimehost-stop-method.md)|Beendet die Ausführung von Code in der Laufzeit für den aktuellen Prozess.|  
 |[SwitchInLogicalThreadState-Methode](icorruntimehost-switchinlogicalthreadstate-method.md)|Darf nicht verwendet werden.|  
 |[SwitchOutLogicalThreadState-Methode](icorruntimehost-switchoutlogicalthreadstate-method.md)|Darf nicht verwendet werden.|  
 |[UnloadDomain-Methode](icorruntimehost-unloaddomain-method.md)|Entlädt die angegebene Anwendungsdomäne aus dem aktuellen Prozess.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
@@ -59,7 +61,7 @@ Stellt Methoden bereit, die es dem Host ermöglichen, die Common Language Runtim
   
  **.NET Framework Versionen:** 1,0, 1,1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.AppDomain>
 - [Hosting](index.md)

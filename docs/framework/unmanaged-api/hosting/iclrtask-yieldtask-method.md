@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8eb4095-3a8f-4be3-9446-63e9893dce7d
 topic_type:
 - apiref
-ms.openlocfilehash: ccfca2f685a88f5802dd58667fbf1fac14727c88
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 7b9b47daa96ffcb1f66b462ff8e227250c5a81ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720278"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask-Methode
+
 Fordert an, dass die Common Language Runtime (CLR) die Aufgabe, die die aktuelle [ICLRTask](iclrtask-interface.md) -Instanz darstellt, außer Kraft setzen und die Prozessorzeit für andere Tasks verfügbar machen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,7 +36,7 @@ HRESULT YieldTask ();
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`YieldTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`YieldTask` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -43,14 +44,16 @@ HRESULT YieldTask ();
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Host ruft `YieldTask` auf, um Prozessorressourcen für andere Tasks oder Prozesse anzufordern. Diese Methode ist primär dafür gedacht, Code mit langer Ausführungszeit zu ermöglichen, die CPU-Zeit zu Verb legen. Die Laufzeit versucht, die Aufgabe, die die aktuelle `ICLRTask` Instanz darstellt, in einem Zustand zu platzieren, in dem Sie Verarbeitungszeit erzeugen kann, jedoch keine Garantie für Erfolg hat.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

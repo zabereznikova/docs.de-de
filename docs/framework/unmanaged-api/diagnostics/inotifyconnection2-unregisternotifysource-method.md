@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2fc6c715-646f-41fd-9c12-c59b40575269
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0fcdcd4fe1561f7565586e3327c6d3d7e0fe0a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 90220c2bfea683ff0472473e180c9e11ea568672
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442045"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720034"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource-Methode
+
 Entfernt ein angegebenes Benachrichtigungs Quell Objekt aus der Verbindung.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,16 +36,19 @@ HRESULT UnregisterNotifySource
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `in_pNotifySource`  
  in Benachrichtigungs Objekt, deren Registrierung aufgehoben werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [INotifyConnection2-Schnittstelle](inotifyconnection2-interface.md)
 - [INotifySource2-Schnittstelle](inotifysource2-interface.md)

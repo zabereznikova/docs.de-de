@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f432fb85-5c78-43d1-8302-53b8fc605c97
 topic_type:
 - apiref
-ms.openlocfilehash: ffdeb452534de3308e77493c09d54e073a576bd0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: efb7ca77b2468bf05b8973d80c2c20b85a64faf6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719969"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2-Schnittstelle
+
 Deklariert eine Methode zum Festlegen von Benachrichtigungs filtern.  
   
 ## <a name="methods"></a>Methoden  
@@ -30,10 +31,11 @@ Deklariert eine Methode zum Festlegen von Benachrichtigungs filtern.
 |------------|-----------------|  
 |[SetNotifyFilter-Methode](inotifysource2-setnotifyfilter-method.md)|Weist einen Benachrichtigungs Filter zur Verwendung mit dieser Quelle zu.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [INotifyConnection2-Schnittstelle](inotifyconnection2-interface.md)
 - [INotifySink2-Schnittstelle](inotifysink2-interface.md)

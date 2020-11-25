@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-ms.openlocfilehash: 1a56c3ebe4b1c528f9c6555bdfbf1270a438410d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e3031bf123ff9107b4cebc0723f1be0d423bdaec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617112"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721750"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback-Methode
+
 Führt die angegebene Funktion in einem Apartment aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,21 +36,23 @@ HRESULT _stdcall DoCallback(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pFunc`  
  in Ein Zeiger auf die Funktion, die im Apartment ausgeführt werden soll.  
   
  `pData`  
  in Ein Zeiger auf das-Argument der Funktion.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IApartmentCallback-Schnittstelle](iapartmentcallback-interface.md)

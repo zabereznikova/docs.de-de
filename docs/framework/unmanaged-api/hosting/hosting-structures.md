@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616085"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721789"
 ---
 # <a name="hosting-structures"></a>Hostingstrukturen
+
 In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die Hosting-API verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [AssemblyBindInfo-Struktur](assemblybindinfo-structure.md)  
  Bietet ausführliche Informationen über die Assembly, auf die verwiesen wird.  
   
@@ -42,9 +44,10 @@ In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die die
  Speichert den Typ des aufgetretenen Überlaufs und Informationen zu der Ausnahme, die aufgrund des Überlaufs ausgelöst wurde.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hosting-Co-Klassen](hosting-coclasses.md)  
+
+ [Hosten von Co-Klassen](hosting-coclasses.md)  
   
- [Hostingschnittstellen](hosting-interfaces.md)  
+ [Hosten von Schnittstellen](hosting-interfaces.md)  
   
  [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)  
   

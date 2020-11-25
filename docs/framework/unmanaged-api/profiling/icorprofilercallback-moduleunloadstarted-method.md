@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: c7ad94bf766e0fcdbff95b0766cf68c2196a2c71
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 12d5f7e073337af6034b8f313a2e0161620a65ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503331"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720957"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted-Methode
+
 Benachrichtigt den Profiler, dass ein Modul entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,13 +34,16 @@ HRESULT ModuleUnloadStarted(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `moduleId`  
  in Die ID des Moduls, das entladen wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Wert von `moduleId` ist für eine Informationsanforderung nach dem `ModuleUnloadStarted` zurückkehren der Methode ungültig – Dies ist die letzte Möglichkeit des Profilers, Informationen zu diesem Modul zu erhalten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -48,7 +52,7 @@ HRESULT ModuleUnloadStarted(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)
 - [ModuleUnloadFinished-Methode](icorprofilercallback-moduleunloadfinished-method.md)

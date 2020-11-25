@@ -26,18 +26,19 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: eae1b52f5462cdc395504da877e40e62e5417b76
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: f361e0e250368694d7afa078183b1e5cb7ef1464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707866"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
 Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau an den Datentyp anpassen, der von ihnen verarbeitet wird. Anstatt beispielsweise die <xref:System.Collections.Hashtable> -Klasse zu verwenden, bei der Schlüssel und Werte einen beliebigen Typ haben dürfen, können Sie die generische Klasse <xref:System.Collections.Generic.Dictionary%602> verwenden und die für den Schlüssel und Wert zulässigen Typen angeben. Zu den Vorteilen von Generics zählen bessere Wiederverwendbarkeit des Codes und Typsicherheit.  
 
 ## <a name="defining-and-using-generics"></a>Definieren und Verwenden von Generics
+
  Generics sind Klassen, Strukturen, Schnittstellen und Methoden, die über Platzhalter (Typparameter) für einen oder mehrere der Typen verfügen, die sie speichern oder verwenden. Eine generische Auflistungsklasse kann beispielsweise einen Typparameter als Platzhalter für den Typ von Objekten verwenden, die in ihr gespeichert werden; die Typparameter werden als die Typen ihrer Felder und die Parametertypen ihrer Methoden angezeigt. Eine generische Methode kann ihren Typparameter als den Typen ihres Rückgabewerts oder als den Typen einer ihrer formalen Parameter verwenden. Der folgende Code zeigt eine einfache generische Klassendefinition.  
   
  [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
@@ -51,6 +52,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
  [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
 
 ### <a name="generics-terminology"></a>Generics-Terminologie  
+
  Die folgenden Begriffe werden bei der Erörterung von Generics in .NET verwendet:  
   
 - Eine *generische Typdefinition* ist eine Klassen-, Struktur- oder Schnittstellendeklaration, die als Vorlage fungiert und Platzhalter für die Typen besitzt, die sie enthalten oder verwenden kann. Die <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> -Klasse kann beispielsweise zwei Typen enthalten: Schlüssel und Werte. Da eine generische Typdefinition lediglich eine Vorlage ist, können Sie keine Instanzen einer Klasse, Struktur oder Schnittstelle erstellen, die eine generische Typdefinition ist.  
@@ -80,6 +82,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
  [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
 ## <a name="advantages-and-disadvantages-of-generics"></a>Vor- und Nachteile von Generics
+
  Es gibt viele Vorteile für die Verwendung von generischen Auflistungen und Delegaten:  
   
 - Typsicherheit. Generics übertragen die Last der Typsicherheit an den Compiler. Es ist nicht erforderlich, dass Sie Code schreiben, um auf den richtigen Datentyp hin zu testen, da dieser zum Zeitpunkt der Kompilierung erzwungen wird. Die Notwendigkeit einer Typumwandlung und die Möglichkeit von Laufzeitfehlern werden verringert.  
@@ -112,6 +115,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
      Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
 
 ## <a name="class-library-and-language-support"></a>Klassenbibliothek und Sprachunterstützung  
+
  .NET bietet eine Reihe generischer Auflistungsklassen in den folgenden Namespaces:  
   
 - Der Namespace <xref:System.Collections.Generic> enthält die meisten generischen Auflistungstypen, die von .NET bereitgestellt werden, z.B. die generischen Klassen <xref:System.Collections.Generic.List%601> und <xref:System.Collections.Generic.Dictionary%602>.  
@@ -127,6 +131,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
  Visual C++, C# und Visual Basic bieten alle vollständige Unterstützung für das Definieren und Verwenden von Generics. Weitere Informationen zur Sprachunterstützung finden Sie unter [Generische Typen in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Einführung in Generics](../../csharp/programming-guide/generics/index.md) und [Übersicht über Generics in C++](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Geschachtelte Typen und Generics  
+
  Ein Typ, der in einem generischen Typ geschachtelt ist, kann von den Typparametern des einschließenden generischen Typs abhängen. Die Common Language Runtime betrachtet geschachtelte Typen als generisch, auch wenn sie keinen eigenen generischen Typparameter haben. Beim Erstellen einer Instanz eines geschachtelten Typs müssen Sie Typargumente für alle einschließenden generischen Typen festlegen.  
 
 ## <a name="related-topics"></a>Verwandte Themen  
@@ -145,6 +150,7 @@ Mit Generics können Sie eine Methode, Klasse, Struktur oder Schnittstelle genau
 |[Übersicht über Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Beschreibt das Genericsfeature für C++-Benutzer, darunter die Unterschiede zwischen Generics und Vorlagen.|  
 
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

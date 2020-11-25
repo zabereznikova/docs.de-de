@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6330a9ee-8cd5-4299-86f1-b4de2c701a0d
 topic_type:
 - apiref
-ms.openlocfilehash: 68e29e932e477f286db00b0c989a3346bd13c9bc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e508bcae15e72ce592529cf4b68af5d75ea49038
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501221"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721958"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize-Methode
+
 Ruft die Größe des Binary Large Object (BLOB)-Heaps in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,19 +35,21 @@ HRESULT GetBlobHeapSize (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pcbBlobs`  
  vorgenommen Ein Zeiger auf die Größe des BLOB-Heaps in Bytes.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

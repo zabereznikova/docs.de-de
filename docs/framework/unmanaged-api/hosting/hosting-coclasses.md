@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged coclasses [.NET Framework], hosting
 - coclasses [.NET Framework hosting]
 ms.assetid: e32d8667-58ee-4760-814f-d22963881622
-ms.openlocfilehash: 8eb8702c29b6f9655de7ba9d48e2722674e34fe6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ef8ae7144b3dc625b14cf9fc19052f102ee7a1ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721841"
 ---
 # <a name="hosting-coclasses"></a>Hosting-Co-Klassen
+
 In diesem Abschnitt werden die nicht verwalteten API-Co-Klassen beschrieben, die die Hosting-API verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [CLRRuntimeHost-Co-Klasse](clrruntimehost-coclass.md)  
  Stellt Schnittstellen zum Verwalten der Codeausführung durch die Laufzeit bereit.  
   
@@ -30,10 +32,11 @@ In diesem Abschnitt werden die nicht verwalteten API-Co-Klassen beschrieben, die
  Stellt eine Schnittstelle zum Verwalten der Dekonstruktion eines Typnamens bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Hostingschnittstellen](hosting-interfaces.md)  
+
+ [Hosten von Schnittstellen](hosting-interfaces.md)  
   
  [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)  
   
  [Hosten von Enumerationen](hosting-enumerations.md)  
   
- [Hostingstrukturen](hosting-structures.md)
+ [Hosten von Strukturen](hosting-structures.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-ms.openlocfilehash: fbaf45da0902ded8a2f7bf0d470aaed3b5f531aa
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: da0d159da6eef7745c1fa7f7320d5e1355f6e413
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617125"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721880"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess-Funktion
+
 Ruft die Versionsnummer der Common Language Runtime (CLR) ab, die dem angegebenen Prozess Handle zugeordnet ist.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -39,6 +40,7 @@ HRESULT GetVersionFromProcess (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `hProcess`  
  in Ein Handle für einen Prozess.  
   
@@ -52,25 +54,27 @@ HRESULT GetVersionFromProcess (
  vorgenommen Ein Zeiger auf die Länge der Versionsnummern Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`pVersion`ist NULL und `cchBuffer` ist nicht NULL (oder umgekehrt).<br /><br /> - oder -<br /><br /> `hProcess`ist kein gültiges Handle für einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR ist nicht geladen.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`ist NULL oder kleiner als die Länge der Versions Zeichenfolge.|  
+|E_INVALIDARG|`pVersion` ist NULL und `cchBuffer` ist nicht NULL (oder umgekehrt).<br /><br /> - oder -<br /><br /> `hProcess` ist kein gültiges Handle für einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR ist nicht geladen.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ist NULL oder kleiner als die Länge der Versions Zeichenfolge.|  
 |E_NOTIMPL|Diese Methode ist nicht im Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetRequestedRuntimeInfo-Funktion](getrequestedruntimeinfo-function.md)
 - [GetRequestedRuntimeVersion-Funktion](getrequestedruntimeversion-function.md)

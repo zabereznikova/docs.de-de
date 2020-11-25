@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: d2b7e93866bf0aa79849925234a4d6e4cc9b5b52
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2213b674cce27c77156b8de1bbf20d2975e3e55c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502820"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721594"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2-Methode
+
 Gibt bei Angabe einer Modul-ID den Dateinamen des Moduls, die ID der übergeordneten Assembly des Moduls und eine Bitmaske zurück, die die Eigenschaften des Moduls beschreibt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT GetModuleInfo2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `moduleId`  
  [in] Die ID des Moduls, für das Informationen abgerufen werden sollen.  
   
@@ -61,7 +63,8 @@ HRESULT GetModuleInfo2(
  `pdwModuleFlags`  
  vorgenommen Eine Bitmaske von Werten aus der [COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md) Enumeration, die die Eigenschaften des Moduls angeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Bei dynamischen Modulen ist der `szName`-Parameter der Metadatenname des Moduls, und die Basisadresse ist 0 (null). Der Metadatenname ist der Wert in der Spalte "Name" der Modultabelle innerhalb der Metadaten. Dies wird auch als <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> Eigenschaft für verwalteten Code und als `szName` Parameter der [IMetaDataImport:: getscoperequierequic-](../metadata/imetadataimport-getscopeprops-method.md) Methode zu nicht verwaltetem metadatenclientcode verfügbar gemacht.  
   
  Obwohl die `GetModuleInfo2` -Methode aufgerufen werden kann, sobald die Modul-ID vorhanden ist, ist die ID der übergeordneten Assembly erst verfügbar, wenn der Profiler den [ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) -Rückruf empfängt.  
@@ -71,6 +74,7 @@ HRESULT GetModuleInfo2(
  Alternativ können Sie zuerst `GetModuleInfo2` mit einem `szName`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Sie können die Puffergröße dann auf den Wert festlegen, der von `pcchName` zurückgegeben wurde, und `GetModuleInfo2` erneut aufrufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -79,7 +83,7 @@ HRESULT GetModuleInfo2(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

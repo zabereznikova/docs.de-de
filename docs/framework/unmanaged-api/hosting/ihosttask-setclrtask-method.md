@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9d39c80-41a1-49e7-bb5e-ea3433bfb5d7
 topic_type:
 - apiref
-ms.openlocfilehash: b6eac134a4ffb1813cdc6957632ce5fb9b1a5fff
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: e6b9a4015a6139d6c8d7101fa7811c7ad9134e4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720463"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask-Methode
+
 Ordnet `ICLRTask` der aktuellen [IHostTask](ihosttask-interface.md) -Instanz eine Instanz zu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetCLRTask (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCLRTask`  
  in Ein Schnittstellen Zeiger auf die- `ICLRTask` Instanz, die der aktuellen-Instanz zugeordnet werden soll `IHostTask` .  
   
@@ -41,7 +43,7 @@ HRESULT SetCLRTask (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetCLRTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetCLRTask` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,18 +51,20 @@ HRESULT SetCLRTask (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die CLR ruft `SetCLRTask` auf, um eine `ICLRTask` Instanz der aktuellen `IHostTask` Instanz zuzuordnen, die durch einen Aufruf von [IHostTaskManager:: kreatetask](ihosttaskmanager-createtask-method.md)erstellt wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

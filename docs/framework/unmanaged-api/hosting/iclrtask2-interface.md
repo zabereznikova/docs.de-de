@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-ms.openlocfilehash: b067ca72e030bce24a7efde5e3488a00024e9613
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9332b3462ba389783a113d173e32850d40427ce2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762866"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720229"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2-Schnittstelle
+
 Stellt die gesamte Funktionalität der [ICLRTask](iclrtask-interface.md) -Schnittstelle bereit. Außerdem stellt Methoden bereit, mit denen Thread Abbrüche im aktuellen Thread verzögert werden können.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,6 +33,7 @@ Stellt die gesamte Funktionalität der [ICLRTask](iclrtask-interface.md) -Schnit
 |[EndPreventAsyncAbort-Methode](iclrtask2-endpreventasyncabort-method.md)|Ermöglicht es, dass neue oder ausstehende Thread Abbruch Anforderungen dazu führen, dass Threads im aktuellen Thread abgebrochen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `ICLRTask2` -Schnittstelle erbt die `ICLRTask` -Schnittstelle und fügt Methoden hinzu, die es dem Host ermöglichen, Thread Abbrüche zu verzögern, um einen Code Bereich zu schützen, der nicht fehlschlagen darf. Durch Aufrufen `BeginPreventAsyncAbort` von wird der Delay-Thread-Abort-Leistungswert für den aktuellen Thread Inkrementen erhöht, und der Aufruf verringert `EndPreventAsyncAbort` ihn. Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` können eingebettet werden. Solange der Leistungswert größer als 0 (null) ist, werden Thread Abbrüche für den aktuellen Thread verzögert.  
   
  Wenn Aufrufe von `BeginPreventAsyncAbort` und `EndPreventAsyncAbort` nicht gekoppelt sind, kann ein Zustand erreicht werden, in dem Thread Abbrüche nicht an den aktuellen Thread übermittelt werden können.  
@@ -43,11 +45,12 @@ Stellt die gesamte Funktionalität der [ICLRTask](iclrtask-interface.md) -Schnit
  Informationen zu Membern `ICLRTask` , die von und zu den anderen Verwendungsmöglichkeiten dieser Schnittstelle geerbt werden, finden Sie in der [ICLRTask](iclrtask-interface.md) -Schnittstelle.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
@@ -57,4 +60,4 @@ Stellt die gesamte Funktionalität der [ICLRTask](iclrtask-interface.md) -Schnit
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)
 - [IHostTask-Schnittstelle](ihosttask-interface.md)
 - [IHostTaskManager-Schnittstelle](ihosttaskmanager-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

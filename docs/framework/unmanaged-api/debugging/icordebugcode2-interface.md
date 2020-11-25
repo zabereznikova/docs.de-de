@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 39767ea2603018d088aaefc5da32879aaf49fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1e5b92d99d8ae52c88f1517f9c3d7db8e70598ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893484"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720801"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt Methoden bereit, mit denen die Funktionen von "ICorDebugCode" erweitert w
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetCodeChunks-Methode](icordebugcode2-getcodechunks-method.md)|Ruft die Codeabschnitte ab, aus denen dieses Codeobjekt besteht.|  
 |[GetCompilerFlags-Methode](icordebugcode2-getcompilerflags-method.md)|Ruft die Flags ab, die die Bedingungen angeben, unter denen dieses Codeobjekt JIT-kompiliert (Just-In-Time) oder unter Verwendung des Native Image Generator (Ngen.exe) generiert wurde.|  
@@ -37,7 +37,8 @@ Stellt Methoden bereit, mit denen die Funktionen von "ICorDebugCode" erweitert w
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

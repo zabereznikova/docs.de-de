@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: 213cbd955e3d47a49abde579a54af48641e225ec
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3d14aea92633c944d21d867c8152767ae6f1f291
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491913"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720970"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics-Methode
+
 Zählt die Eigenschaften und die Eigenschaftenänderungsereignisse auf, auf die sich die angegebene Methode bezieht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT EnumMethodSemantics (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
@@ -57,22 +59,24 @@ HRESULT EnumMethodSemantics (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumMethodSemantics` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Ereignisse oder Eigenschaften zum Auflisten vorhanden. In diesem Fall `pcEventProp` ist 0 (null).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Viele Common Language Runtime Typen definieren *Eigenschafts* `Changed` Ereignisse und `On` *Eigenschafts* `Changed` Methoden, die sich auf ihre Eigenschaften beziehen. Der <xref:System.Windows.Forms.Control?displayProperty=nameWithType> -Typ definiert z. b <xref:System.Windows.Forms.Control.Font%2A> . eine Eigenschaft, ein <xref:System.Windows.Forms.Control.FontChanged> -Ereignis und eine- <xref:System.Windows.Forms.Control.OnFontChanged%2A> Methode. Die Set-Accessor-Methode der- <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft ruft die- <xref:System.Windows.Forms.Control.OnFontChanged%2A> Methode auf, die wiederum das- <xref:System.Windows.Forms.Control.FontChanged> Ereignis auslöst. Zum Abrufen von `EnumMethodSemantics` <xref:System.Windows.Forms.Control.OnFontChanged%2A> verweisen auf die <xref:System.Windows.Forms.Control.Font%2A> -Eigenschaft und das-Ereignis wird die Verwendung von MethodDef für aufgerufen <xref:System.Windows.Forms.Control.FontChanged> .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

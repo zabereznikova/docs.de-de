@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720320"
 ---
 # <a name="ialink-interface"></a>IALink-Schnittstelle
+
 Unterstützt das Erstellen von .NET Framework Assemblys. Die-Schnittstelle enthält unter anderem Methoden, die das Schreiben von Assemblymanifesten für Assemblys mit mehreren Modulen, Signieren von Assemblys mit starken Namen und das Erstellen von netmodules  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [AddFile-Methode](addfile-method.md)  
   
  [AddImport-Methode](addimport-method.md)  
@@ -73,8 +75,8 @@ Unterstützt das Erstellen von .NET Framework Assemblys. Die-Schnittstelle enth�
   
  [SetNonAssemblyFlags-Methode](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Alink-API](index.md)
+- [ALink-API](index.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)

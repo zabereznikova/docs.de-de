@@ -6,14 +6,15 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: b1459bf78276abe0daefd7a7ee814841f3c65dfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f82301da1813b8d50deebf4452d8c07809c186c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721802"
 ---
 # <a name="hosting-interfaces"></a>Hostingschnittstellen
+
 In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwaltete Hosts die Common Language Runtime (CLR) in Ihre Anwendungen integrieren können.  
   
  Die .NET Framework-Hostingschnittstellen der Version 2,0 ersetzen die Schnittstellen .NET Framework der Version 1,0 und 1,1. Es gibt bedeutende Unterschiede zwischen den beiden Schnittstellen Sätzen. Das Mischen kann zu unerwartetem Verhalten führen und wird nicht empfohlen.  
@@ -23,6 +24,7 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
  Die .NET Framework 4-Hostingschnittstellen ersetzen die .NET Framework 2,0-Schnittstellen.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Veraltete CLR-Hostingschnittstellen und Co-Klassen](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Beschreibt die Hostingschnittstellen, die in den .NET Framework Versionen 1,0 und 1,1 eingeführt wurden.  
   
@@ -33,6 +35,7 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
  Beschreibt die Hostingschnittstellen, die in der .NET Framework 4 eingeführt wurden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Hosten von Co-Klassen](hosting-coclasses.md)  
   
  [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)  

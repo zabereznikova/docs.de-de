@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-ms.openlocfilehash: 8300daf0d39745ceda80f6c56da7e3c459a97468
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 4638672b1d64a9ea07618212cc514d00996470eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805114"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721672"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding-Methode
+
 Benachrichtigt den Host, dass die Laufzeit Threads nach einem Garbage Collection oder einer anderen Unterbrechung fortsetzt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,18 +35,21 @@ HRESULT SuspensionEnding (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `Generation`  
  in Die Generierung, auf der ein Garbage Collection ausgeführt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Planen Sie keine Threads während des `SuspensionEnding` Rückrufs neu.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-ms.openlocfilehash: e8dda83df8a320733f45dbcc13599cdf37d26492
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 31640ada28af8e35554b91d5931d427fbaa8dcbe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721854"
 ---
 # <a name="host_type-enumeration"></a>HOST_TYPE-Enumeration
+
 Enthält Werte, die den Typ des Hosts angeben, von dem eine Anwendung gestartet wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,21 +37,22 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung aus "AppLaunch. exe".<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdige Anwendungen.|  
+|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung aus AppLaunch.exe.<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdige Anwendungen.|  
 |`HOST_TYPE_CORFLAG`|Starten Sie die Anwendung direkt. Das heißt, Sie starten die Anwendung aus ihrer eigenen exe-Datei.<br /><br /> Verwenden Sie diesen Wert für voll vertrauenswürdige Anwendungen.|  
 |`HOST_TYPE_DEFAULT`|Identisch mit HOST_TYPE_APPLAUNCH.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

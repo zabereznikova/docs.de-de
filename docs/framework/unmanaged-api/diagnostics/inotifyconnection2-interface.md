@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-ms.openlocfilehash: 08daa26f60ca5935fed73494660426d58f398154
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5a8cece5ad72588b564890c8f21dabb6792a5641
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442084"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720060"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2-Schnittstelle
+
 Deklariert Methoden zum Registrieren und Aufheben der Registrierung einer Verbindungs Benachrichtigungs Quelle.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,10 +32,11 @@ Deklariert Methoden zum Registrieren und Aufheben der Registrierung einer Verbin
 |[RegisterNotifySource-Methode](inotifyconnection2-registernotifysource-method.md)|Installiert ein angegebenes Benachrichtigungs Quell Objekt.|  
 |[UnregisterNotifySource-Methode](inotifyconnection2-unregisternotifysource-method.md)|Entfernt ein angegebenes Benachrichtigungs Quell Objekt aus der Verbindung.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [INotifySink2-Schnittstelle](inotifysink2-interface.md)
 - [INotifySource2-Schnittstelle](inotifysource2-interface.md)

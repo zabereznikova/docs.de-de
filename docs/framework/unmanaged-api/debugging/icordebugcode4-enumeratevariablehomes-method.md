@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802c01ff-8b80-4733-b6dd-03ab6ff7fa11
 topic_type:
 - apiref
-ms.openlocfilehash: 5f731b1459542c3f5378790b21f2ea576e89ad97
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d58efa5629bb02158a275dec61c0313bca821a1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720751"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4:: enumeratevariablehomes-Methode
+
 Ruft einen Enumerator für die lokalen Variablen und Argumente in einer Funktion ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT EnumerateVariableHomes(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppEnum`  
  Ein Zeiger auf die Adresse eines [icordebugvariablehomeenum](icordebugvariablehomeenum-interface.md) -Schnittstellen Objekts, das ein Enumerator für die lokalen Variablen und Argumente in einer Funktion ist.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das [icordebugvariablehomeenum](icordebugvariablehomeenum-interface.md) -Schnittstellen Objekt ist ein Standard-Enumerator, der von der Schnittstelle "ICorDebugEnum" abgeleitet ist und die das Auflisten von [icordebugvariablehome](icordebugvariablehome-interface.md) -Objekten ermöglicht. Die Auflistung enthält möglicherweise mehrere [icorentbugvariablehome](icordebugvariablehome-interface.md) -Objekte für denselben Slot-oder Argument Index, wenn Sie an unterschiedlichen Punkten in der Funktion unterschiedliche Haushalte haben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

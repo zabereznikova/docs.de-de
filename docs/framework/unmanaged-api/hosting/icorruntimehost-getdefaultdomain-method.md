@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-ms.openlocfilehash: a23083777d0cd5965511f3689578a60220008420
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 673c32c86c808c36db6454b8a9f0d8e68f9b1258
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720632"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>ICorRuntimeHost::GetDefaultDomain-Methode
+
 Ruft einen Schnittstellen Zeiger vom Typ ab <xref:System._AppDomain?displayProperty=nameWithType> , der die Standard Domäne für den aktuellen Prozess darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetDefaultDomain (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  vorgenommen Ein Schnittstellen Zeiger vom Typ <xref:System._AppDomain?displayProperty=nameWithType> für die- <xref:System.AppDomain> Instanz, die die Standard Anwendungsdomäne für den Prozess darstellt.  
   
@@ -49,11 +51,12 @@ HRESULT GetDefaultDomain (
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:** 1,0, 1,1  
   
