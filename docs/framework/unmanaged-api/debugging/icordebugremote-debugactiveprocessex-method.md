@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c9847fd6122aa32c95aecd5643a62a6775ae38d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379066"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712117"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx-Methode
+
 Startet einen Prozess auf einem Remote Computer unter dem Debugger.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT DebugActiveProcessEx (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRemoteTarget`  
  in Zeiger auf eine [icordebugremotetarget-Schnittstelle](icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
   
@@ -50,6 +52,7 @@ HRESULT DebugActiveProcessEx (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugProcess-Objekts, das den Prozess darstellt, dem der Debugger angefügt wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK  
  Erfolgreich an den Prozess auf dem Remote Computer angefügt.  
   
@@ -57,9 +60,11 @@ HRESULT DebugActiveProcessEx (
  Das Anfügen an den Prozess auf dem Remote Computer ist nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -68,7 +73,7 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)

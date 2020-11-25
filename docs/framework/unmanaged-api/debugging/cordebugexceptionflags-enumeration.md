@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b22687a8-e9cf-4e65-a1b0-f92a81bc524e
 topic_type:
 - apiref
-ms.openlocfilehash: 45de821dd52f7e153fc79ffde056ed959c654fce
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a50272bce2e27963a1d684fef40bac30cf44e1f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795947"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712715"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags-Enumeration
+
 Stellt zusätzliche Informationen über eine Ausnahme bereit.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,9 +42,11 @@ typedef enum CorDebugExceptionFlags {
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|Die Ausnahme kann abgefangen werden.<br /><br /> Die Zeitsteuerung der Ausnahme bewirkt möglicherweise immer noch, dass der Debugger sie nicht abfangen kann. Wenn z. B. unter dem aktuellen Rückruf kein verwalteter Code vorliegt oder wenn das Ausnahmeereignis aus einer JIT-Anlage (Just-in-Time) resultierte, kann die Ausnahme nicht abgefangen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  In späteren Versionen werden dieser Enumeration möglicherweise neue Werte hinzugefügt, daher sollten Sie in Ihrem Code `CorDebugExceptionFlags` für unerwartete Werte verwenden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

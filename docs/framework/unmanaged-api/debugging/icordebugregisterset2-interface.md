@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c04bb3a7584fcb783af929e87713dbec67ad705f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378200"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712319"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2-Schnittstelle
+
 Erweitert die Funktionen der [ICorDebugRegisterSet](icordebugregisterset-interface.md) -Schnittstelle für Hardwareplattformen mit mehr als 64 Registern.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetRegisters-Methode](icordebugregisterset2-getregisters-method.md)|Ruft den Wert der einzelnen Register (auf dem momentan ausgeführten Code) ab, der durch die Bitmaske angegeben wird.|  
 |[GetRegistersAvailable-Methode](icordebugregisterset2-getregistersavailable-method.md)|Ruft ein Bytearray ab, das eine Bitmap der verfügbaren Register bereitstellt.|  
@@ -38,6 +39,7 @@ Erweitert die Funktionen der [ICorDebugRegisterSet](icordebugregisterset-interfa
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -46,7 +48,7 @@ Erweitert die Funktionen der [ICorDebugRegisterSet](icordebugregisterset-interfa
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [ICorDebugRegisterSet-Schnittstelle](icordebugregisterset-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: a044924810016eea60682b8765aeee448b552f0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501195"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711051"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo-Methode
+
 Ruft Daten über die angegebene Spalte in der angegebenen Tabelle ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT GetColumnInfo (
 ```  
   
 ## <a name="parameters"></a>Parameter
+
 =======
 
  `ixTbl`  
@@ -59,7 +61,7 @@ HRESULT GetColumnInfo (
  `ppName`  
  vorgenommen Ein Zeiger auf einen Zeiger auf den Spaltennamen.  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der zurückgegebene Spaltentyp liegt innerhalb eines Wertebereichs:
 
@@ -67,14 +69,14 @@ Der zurückgegebene Spaltentyp liegt innerhalb eines Wertebereichs:
 |--------------------------|---------------|-----------------------------------|
 | `0`..`iRidMax`<br>(0.. 63)   | Gesagt           | **Isridtype**<br>**Isridortoken** |
 | `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Codiertes Token | **Iscodeddekentype** <br>**Isridortoken** |
-| `iSHORT`(96)            | Int16         | **Isfixedtype**                   |
-| `iUSHORT`(97)           | UInt16        | **Isfixedtype**                   |
-| `iLONG`(98)             | Int32         | **Isfixedtype**                   |
-| `iULONG`(99)            | UInt32        | **Isfixedtype**                   |
-| `iBYTE`(100)            | Byte          | **Isfixedtype**                   |
-| `iSTRING`(101)          | String        | **Isheaptype**                    |
-| `iGUID`(102)            | Guid          | **Isheaptype**                    |
-| `iBLOB`(103)            | Blob          | **Isheaptype**                    |
+| `iSHORT` (96)            | Int16         | **Isfixedtype**                   |
+| `iUSHORT` (97)           | UInt16        | **Isfixedtype**                   |
+| `iLONG` (98)             | Int32         | **Isfixedtype**                   |
+| `iULONG` (99)            | UInt32        | **Isfixedtype**                   |
+| `iBYTE` (100)            | Byte          | **Isfixedtype**                   |
+| `iSTRING` (101)          | String        | **Isheaptype**                    |
+| `iGUID` (102)            | Guid          | **Isheaptype**                    |
+| `iBLOB` (103)            | Blob          | **Isheaptype**                    |
 
 Werte, die im *Heap* gespeichert sind (d. h. `IsHeapType == true` ), können mithilfe von gelesen werden:
 
@@ -86,15 +88,16 @@ Werte, die im *Heap* gespeichert sind (d. h. `IsHeapType == true` ), können mit
 > Um die in der obigen Tabelle definierten Konstanten zu verwenden, schließen Sie die-Anweisung ein, `#define _DEFINE_META_DATA_META_CONSTANTS` die von der-Header Datei *Cor. h* bereitgestellt wird
 
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

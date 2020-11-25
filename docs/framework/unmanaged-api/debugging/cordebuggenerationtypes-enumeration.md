@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 189a276b4228038ab1d70620ce3a4a0f4342b245
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795864"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712520"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes-Enumeration
+
 Gibt die Generierung eines Arbeitsspeicherbereichs auf dem verwalteten Heap an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,6 +48,7 @@ typedef enum CorDebugGenerationTypes {
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

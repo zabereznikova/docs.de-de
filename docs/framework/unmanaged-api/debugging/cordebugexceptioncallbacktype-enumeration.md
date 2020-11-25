@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: d5cdb8c6740970f6a7469be8c763961bf76d6ecc
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cddcf66939a2ae7ab9e7f63a6fd61b72c56f6c7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712728"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType-Enumeration
+
 Gibt den Typ des Rückrufs an, der von einem [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) -Ereignis stammt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,10 +42,11 @@ typedef enum CorDebugExceptionCallbackType {
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Eine Ausnahme wurde ausgelöst.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Der windup-Ausnahme Prozess hat den Benutzercode eingegeben.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der windup-Ausnahme Prozess hat `catch` einen Block im Benutzercode gefunden.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der windup-Ausnahme Prozess hat einen `catch` Block im Benutzercode gefunden.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Die Ausnahme wurde nicht behandelt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

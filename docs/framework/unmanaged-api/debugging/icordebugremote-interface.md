@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53d073c6-fa02-40d2-82e1-b9452bb6abaa
 topic_type:
 - apiref
-ms.openlocfilehash: ef11aa48f679592126f736c2877c697f02cb5e62
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 276d36c511105087190cb7e9dfeaa6932efc67ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712104"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote-Schnittstelle
+
 Bietet die Möglichkeit, einen verwalteten Debugger an einen Remotezielprozess anzufügen oder dort zu starten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -58,15 +59,17 @@ interface ICorDebugRemote : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ICorDebugRemote::CreateProcessEx-Methode](icordebugremote-createprocessex-method.md)|Erstellt einen Prozess auf einem Remote Computer für verwaltetes Debuggen.|  
 |[ICorDebugRemote::DebugActiveProcessEx-Methode](icordebugremote-debugactiveprocessex-method.md)|Startet einen Prozess auf einem Remote Computer unter dem Debugger.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Funktion wird zurzeit nur für das Debuggen eines Silverlight-basierten Anwendungs Ziels unterstützt, das auf einem Macintosh-Remote Computer ausgeführt wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -75,7 +78,7 @@ interface ICorDebugRemote : IUnknown
   
  **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)

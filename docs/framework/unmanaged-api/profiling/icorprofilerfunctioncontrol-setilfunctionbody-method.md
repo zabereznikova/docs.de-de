@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: a6b24fd59a183a4a59b117663772417d55cc67db
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fa82cd1e646777c9841c1b3d653134aa7ba7ed7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712741"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody-Methode
+
 Ersetzt den CIL-Text (Common Intermediate Language) der Methode.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetILFunctionBody(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cbNewILMethodHeader`  
  [in] Die Gesamtgröße der neuen CIL, einschließlich des Headers und aller Strukturen, die nach dem Text folgen.  
   
@@ -41,16 +43,19 @@ HRESULT SetILFunctionBody(
  [in] Ein Zeiger auf den neuen CIL-Header.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs zurück.  
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Die Ersetzung war erfolgreich.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Anders als bei der [ICorProfilerInfo:: abtilfunctionbody](icorprofilerinfo-setilfunctionbody-method.md) -Methode verwaltet die- `SetILFunctionBody` Methode den für den neuen cil-Text benötigten Arbeitsspeicher. Dies bedeutet, dass der vom Profiler bereitgestellte cil-Text nicht mithilfe der [IMethodMalloc](imethodmalloc-interface.md) -Schnittstelle zugeordnet oder innerhalb eines bestimmten Bereichs zugeordnet werden muss. Er kann auf jedem Heap zugeordnet werden. Der Profiler kann den für seinen cil-Text verwendeten Arbeitsspeicher freigeben, nachdem zurückgegeben wurde `SetILFunctionBody` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -59,6 +64,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerFunctionControl-Schnittstelle](icorprofilerfunctioncontrol-interface.md)

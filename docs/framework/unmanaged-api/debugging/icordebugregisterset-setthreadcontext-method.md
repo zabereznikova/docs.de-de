@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 73afa930-32cb-4c40-81f8-83e8e6fbe213
 topic_type:
 - apiref
-ms.openlocfilehash: 63ddce2f299133fcfe0da17897eaf0c6a9509a55
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 66e8cf3f73e92f58765b1fa98b3eef11b976094c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712273"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext-Methode
-`SetThreadContext`ist nicht in der .NET Framework Version 2,0 implementiert. Rufen Sie diese Methode nicht auf.  
+
+`SetThreadContext` ist nicht in der .NET Framework Version 2,0 implementiert. Rufen Sie diese Methode nicht auf.  
   
 > [!NOTE]
 > Verwenden Sie den übergeordneten Vorgang [ICorDebugNativeFrame:: SetIP](icordebugnativeframe-setip-method.md) , um den Kontext eines Threads festzulegen.  
@@ -39,6 +40,7 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -47,7 +49,7 @@ HRESULT SetThreadContext (
   
  **.NET Framework Versionen:** 1,1, 1,0  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRegisterSet-Schnittstelle](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2-Schnittstelle](icordebugregisterset2-interface.md)

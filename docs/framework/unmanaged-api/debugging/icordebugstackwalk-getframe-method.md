@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 452635764794e01858baab10464a03c966a55271
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379203"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711936"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame-Methode
+
 Ruft den aktuellen Frame im [ICorDebug](icordebugstackwalk-interface.md) -Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,10 +33,12 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pFrame`  
  in Ein Zeiger auf die Adresse des erstellten Frame Objekts, das den aktuellen Frame im Stapel darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -48,10 +51,12 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="exceptions"></a>Ausnahmen  
   
-## <a name="remarks"></a>Hinweise  
- `ICorDebugStackWalk`gibt nur tatsächliche Stapel Rahmen zurück. Verwenden Sie die [ICorDebugThread3:: getactiveingeternalframes](icordebugthread3-getactiveinternalframes-method.md) -Methode, um interne Frames zurückzugeben. (Interne Frames sind Datenstrukturen, die von der Laufzeit zur Speicherung temporärer Daten auf den Stapel verschoben werden.)  
+## <a name="remarks"></a>Bemerkungen  
+
+ `ICorDebugStackWalk` gibt nur tatsächliche Stapel Rahmen zurück. Verwenden Sie die [ICorDebugThread3:: getactiveingeternalframes](icordebugthread3-getactiveinternalframes-method.md) -Methode, um interne Frames zurückzugeben. (Interne Frames sind Datenstrukturen, die von der Laufzeit zur Speicherung temporärer Daten auf den Stapel verschoben werden.)  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -60,7 +65,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugStackWalk-Schnittstelle](icordebugstackwalk-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

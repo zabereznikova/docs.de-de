@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 910c40413075131765a37e00703ac892e3f39641
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0b040a2741a44b9d361dabc38c26b8934659003b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492186"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711519"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
+
 Listet alle Schnittstellen auf, die vom angegebenen implementiert werden `TypeDef` .
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT EnumInterfaceImpls (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator.  
   
@@ -57,23 +59,24 @@ HRESULT EnumInterfaceImpls (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumInterfaceImpls` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine MethodDef-Token zum Auflisten vorhanden. In diesem Fall `pcImpls` wird auf 0 (null) festgelegt.|  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die-Enumeration gibt eine Auflistung von `mdInterfaceImpl` Token für jede Schnittstelle zurück, die vom angegebenen implementiert wird `TypeDef` . Schnittstellen Token werden in der Reihenfolge zurückgegeben, in der die Schnittstellen angegeben wurden (über `DefineTypeDef` oder `SetTypeDefProps` ). Die Eigenschaften der zurückgegebenen `mdInterfaceImpl` Token können mithilfe von " [getinterfakeimplproperties](imetadataimport-getinterfaceimplprops-method.md)" abgefragt werden.
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

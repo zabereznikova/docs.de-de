@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 59e34a39bada1dcf5e66a0c5b92a7fcbfb41d884
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711688"
 ---
 # <a name="fusion-interfaces"></a>Fusion-Schnittstellen
+
 In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die die Fusion-API verwendet, um auf die Eigenschaften der Ressourcen einer Anwendung zuzugreifen und die richtigen Versionen dieser Ressourcen für die Anwendung zu finden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [IAppIdAuthority-Schnittstelle](iappidauthority-interface.md)  
  Stellt Methoden bereit, die Schlüssel für Anwendungs Identitäten und-Verweise generieren und vergleichen.  
   
@@ -27,7 +29,7 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  Stellt eine einzelne Assembly im globalen Assemblycache dar.  
   
  [IAssemblyEnum-Schnittstelle](iassemblyenum-interface.md)  
- Stellt einen Enumerator für ein Array von `IAssemblyName`-Objekten dar.  
+ Stellt einen Enumerator für ein Array von- `IAssemblyName` Objekten dar.  
   
  [IAssemblyName-Schnittstelle](iassemblyname-interface.md)  
  Stellt Methoden zum beschreiben und arbeiten mit der eindeutigen Identität einer Assembly bereit.  
@@ -39,13 +41,13 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  Stellt die eindeutige Signatur des Codes dar, der die Anwendung im aktuellen Gültigkeitsbereich definiert.  
   
  [IEnumDefinitionIdentity-Schnittstelle](ienumdefinitionidentity-interface.md)  
- Dient als Enumerator für eine Auflistung von `IDefinitionIdentity`-Objekten.  
+ Dient als Enumerator für eine Auflistung von- `IDefinitionIdentity` Objekten.  
   
  [IEnumIDENTITY_ATTRIBUTE-Schnittstelle](ienumidentity-attribute-interface.md)  
  Dient als Enumerator für die Attribute des Code-Objekts im aktuellen Gültigkeitsbereich.  
   
  [IEnumReferenceIdentity-Schnittstelle](ienumreferenceidentity-interface.md)  
- Dient als Enumerator für eine Auflistung von `IReferenceIdentity`-Objekten.  
+ Dient als Enumerator für eine Auflistung von- `IReferenceIdentity` Objekten.  
   
  [IIdentityAuthority-Schnittstelle](iidentityauthority-interface.md)  
  Verwaltet Identitätsschlüssel für Code Objekte.  
@@ -63,13 +65,15 @@ In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die
  Stellt einen Verweis auf die eindeutige Signatur eines Code Objekts dar.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)  
+
+ [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)  
   
- [Fusion-Enumerationen](fusion-enumerations.md)  
+ [Fusionsenumerationen](fusion-enumerations.md)  
   
- [Fusion-Strukturen](fusion-structures.md)
+ [Fusionsstrukturen](fusion-structures.md)

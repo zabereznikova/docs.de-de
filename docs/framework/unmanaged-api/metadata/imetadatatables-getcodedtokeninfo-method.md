@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31214d3a-715e-49af-92b3-0fd11e4f218a
 topic_type:
 - apiref
-ms.openlocfilehash: 8ab16ad5b2b2838125e07511ef47be737f40671c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b79ac7f71ec0551336298a90829e1f37e2e30b20
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711069"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo-Methode
+
 Ruft einen Zeiger auf ein Array von Token ab, die dem angegebenen Zeilen Index zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetCodedTokenInfo (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ixCdTkn`  
  in Die Art des zurück zugebende codierten Tokens.  
   
@@ -50,15 +52,16 @@ HRESULT GetCodedTokenInfo (
  vorgenommen Ein Zeiger auf einen Zeiger auf den Namen des Tokens bei `ixCdTkn` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88027c55-8ec6-4f1e-a55b-7eefdbbc3515
 topic_type:
 - apiref
-ms.openlocfilehash: 8874deede8b46b93df0e298fb3970fa153b51415
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3979ed19f8a61ac1fc045b83c52e23d7255ac364
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396574"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711870"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>Icordebugvariablehome:: getlocationtype-Methode
+
 Ruft den Typ des systemeigenen Speicher Orts der Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT GetLocationType(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pLocationType`  
  vorgenommen Ein Zeiger auf den Typ des nativen Speicher Orts der Variablen.  Weitere Informationen finden Sie in der [variablelocationtype](variablelocationtype-enumeration.md) -Enumeration.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -46,7 +49,7 @@ HRESULT GetLocationType(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugVariableHome-Schnittstelle](icordebugvariablehome-interface.md)
 - [VariableLocationType-Enumeration](variablelocationtype-enumeration.md)

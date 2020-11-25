@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4f34fdf9a0eeb47e027cc874afee5bd04f5bd9bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210240"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712390"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt einen Stapel Rahmen von MSIL-Code (Microsoft Intermediate Language) dar. 
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[CanSetIP-Methode](icordebugilframe-cansetip-method.md)|Ruft einen Wert ab, der angibt, ob es sicher ist, den Anweisungs Zeiger auf die angegebene Offset Position festzulegen.|  
 |[EnumerateArguments-Methode](icordebugilframe-enumeratearguments-method.md)|Ruft einen Enumerator für die Argumente in diesem Frame ab.|  
@@ -40,12 +40,14 @@ Stellt einen Stapel Rahmen von MSIL-Code (Microsoft Intermediate Language) dar. 
 |[SetIP-Methode](icordebugilframe-setip-method.md)|Legt den Anweisungs Zeiger auf die angegebene Offset Position im MSIL-Code fest.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ICorDebugILFrame` Schnittstelle ist eine spezialisierte ICorDebug-Frame-Schnittstelle. Sie wird entweder für MSIL-Code Rahmen oder for just-in-time (JIT)-kompilierte Frames verwendet. Die JIT-kompilierten Frames implementieren sowohl die `ICorDebugILFrame` -Schnittstelle als auch die ICorDebugNativeFrame-Schnittstelle.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -54,6 +56,6 @@ Stellt einen Stapel Rahmen von MSIL-Code (Microsoft Intermediate Language) dar. 
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

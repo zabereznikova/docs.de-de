@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 4b2689f04228c9ecbbbb18531a0aefd3c40e3072
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 37bf800f27754d1bf80aece962b7cbb85b1cbedc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83377980"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712182"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx-Methode
+
 Startet einen Prozess auf einem Remote Computer unter dem Debugger.  
   
 ## <a name="syntax"></a>Syntax  
@@ -46,6 +47,7 @@ HRESULT CreateProcessEx (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRemoteTarget`  
  in Zeiger auf eine [icordebugremotetarget-Schnittstelle](icordebugremotetarget-interface.md). Wird verwendet, um den Remote Computer zu ermitteln, auf dem der Prozess gestartet wird.  
   
@@ -86,6 +88,7 @@ HRESULT CreateProcessEx (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugProcess-Schnittstellen Objekts, das den Prozess darstellt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK  
  Der Prozess wurde erfolgreich auf dem Remote Computer gestartet, und es wurde eine ICorDebugProcess-Schnittstelle für das Debuggen zurückgegeben.  
   
@@ -93,9 +96,11 @@ HRESULT CreateProcessEx (
  Der Prozess kann auf dem Remote Computer nicht gestartet werden, und es wird eine ICorDebugProcess-Schnittstelle für das Debuggen zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cordebug. idl  
@@ -104,7 +109,7 @@ HRESULT CreateProcessEx (
   
  **.NET Framework Versionen:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRemote-Schnittstelle](icordebugremote-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)
