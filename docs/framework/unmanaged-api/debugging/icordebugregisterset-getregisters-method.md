@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 315e4cc3b93fc78e11a4fb399bbe6f8a9f55ac84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379155"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705006"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters-Methode
+
 Ruft den Wert der einzelnen Register (auf dem momentan ausgeführten Code) ab, der durch die Bitmaske angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetRegisters (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mask`  
  in Eine Bitmaske, die angibt, welche Registerwerte abgerufen werden sollen. Jedes Bit entspricht einem Register. Wenn ein Bit auf 1 festgelegt ist, wird der Wert des Registers abgerufen. Andernfalls wird der Wert des Registers nicht abgerufen.  
   
@@ -47,11 +49,13 @@ HRESULT GetRegisters (
  vorgenommen Ein Array von- `CORDB_REGISTER` Objekten, von denen jede den Wert eines Register erhält.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Größe des Arrays sollte gleich der Anzahl von Bits sein, die in der Bitmaske auf eins festgelegt ist. Der- `regCount` Parameter gibt die Anzahl der Elemente im Puffer an, die die Registerwerte erhalten. Wenn der `regCount` Wert für die Anzahl der von der Maske festgelegten Register zu klein ist, werden die höheren nummerierten Register von der Menge abgeschnitten. Wenn der `regCount` Wert zu groß ist, werden die `regBuffer` nicht verwendeten Elemente unverändert geändert.  
   
  Wenn die Bitmaske ein nicht verfügbares Register angibt, `GetRegisters` gibt einen unbestimmten Wert für dieses Register zurück.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -60,7 +64,7 @@ HRESULT GetRegisters (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRegisterSet-Schnittstelle](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2-Schnittstelle](icordebugregisterset2-interface.md)

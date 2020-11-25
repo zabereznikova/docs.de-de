@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: a7a450e85f7eaa765766ffa985d7c01538e2669c
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0e7afa386af1bd2eebc2b58592d01b764660248f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795793"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704694"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult-Enumeration
+
 Stellt Details darüber bereit, wie der Wert des Anweisungszeigers (IP) abgerufen wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -49,9 +50,11 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_APPROXIMATE`|Die Methode wurde erfolgreich zugeordnet, aber der Wert der IP-Adresse kann ungefähre Werte aufweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Sie können die [ICorDebugILFrame:: GetIP](icordebugilframe-getip-method.md) -Methode verwenden, um den Wert des Anweisungs Zeigers zu erhalten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860917"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704993"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType-Enumeration
+
 Identifiziert die Quelle eines Objekts, das speicherbereinigt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
@@ -46,7 +47,7 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
 |Membername|BESCHREIBUNG|  
 |-----------------|-----------------|  
@@ -65,13 +66,15 @@ typedef enum {
 |`CorHandleAll`|Gibt alle Verweise aus der Handle-Tabelle zurück. Dieser Wert wird nur von der [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorGCReferenceType` -Enumeration wird wie folgt verwendet:  
+
+ Die- `CorGCReferenceType` Enumeration wird wie folgt verwendet:  
   
 - Als Wert des- `type` Felds der [COR_GC_REFERENCE](cor-gc-reference-structure.md) Struktur wird die Quelle eines Verweises oder eines Handles angegeben.  
   
 - Als `types` Argument für die [ICorDebugProcess5:: enumeratehandles](icordebugprocess5-enumeratehandles-method.md) -Methode gibt es die Typen von Handles an, die in der-Enumeration enthalten sein sollen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -80,6 +83,6 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugenumerationen](debugging-enumerations.md)

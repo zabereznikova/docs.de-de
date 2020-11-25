@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a4de6805-e159-4280-99e5-3390c86166d0
 topic_type:
 - apiref
-ms.openlocfilehash: 354736061a2c50b7db16070c3d4ff9c2548d394d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff1670472b34292cb216a1a8817243ced6a938af
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499947"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704837"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationreturned-method"></a>ICorProfilerCallback::RemotingServerInvocationReturned-Methode
+
 Benachrichtigt den Profiler, dass der Prozess den Aufruf einer Methode als Reaktion auf eine Anforderung für eine Remote Methodenaufruf abgeschlossen hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ HRESULT RemotingServerInvocationReturned();
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -40,6 +42,6 @@ HRESULT RemotingServerInvocationReturned();
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02bc53676dd5afb0222a1ea366a8f2bd1f94f62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446983"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705227"
 ---
 # <a name="importfile2-method"></a>ImportFile2-Methode
+
 Importiert Assemblys und ungebundene Module. Diese Methode verhält sich wie die [ImportFile-Methode](importfile-method.md), funktioniert aber auch dann, wenn die zu importierende Datei nicht auf dem Datenträger vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT ImportFile2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pszFilename`  
  Der Name der zu importierenden Datei.  
   
@@ -61,13 +63,15 @@ HRESULT ImportFile2(
  Empfängt die gefundenen Dateien und/oder Bereiche, die importiert wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

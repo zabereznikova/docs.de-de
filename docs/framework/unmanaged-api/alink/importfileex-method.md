@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9e373f133830a5bc1f3cf7bdc8034cb67725d797
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446954"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705201"
 ---
 # <a name="importfileex-method"></a>ImportFileEx-Methode
+
 Importiert die angegebener Assembly oder das nicht gebundene Modul.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT ImportFileEx(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pszFilename`  
  Der voll qualifizierte Name der Datei, aus der importiert werden soll.  
   
@@ -61,13 +63,15 @@ HRESULT ImportFileEx(
  Empfängt die Anzahl importierter Dateien und/oder Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

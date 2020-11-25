@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 36c76266-71d8-48dc-bd89-54943fa659c1
 topic_type:
 - apiref
-ms.openlocfilehash: ea84b742c901ba58a3bb730f1f5033a0d90610ce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ea50430c3ae6cef9b47880bcb8ad969f62ce9c39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007376"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704915"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr-Enumeration
+
 Enthält Werte, die die <xref:System.Type> Parameter für generische Typen beschreiben, wie Sie in Aufrufen von [IMetaDataEmit2::D efinegenericparam](imetadataemit2-definegenericparam-method.md)verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,7 +46,7 @@ typedef enum CorGenericParamAttr {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`gpVarianceMask`|Die Parameter Varianz gilt nur für generische Parameter für Schnittstellen und Delegaten.|  
 |`gpNonVariant`|Gibt an, dass keine Varianz vorhanden ist.|  
@@ -58,12 +59,13 @@ typedef enum CorGenericParamAttr {
 |`gpDefaultConstructorConstraint`|Gibt an, dass der <xref:System.Type> Parameter über einen öffentlichen Standardkonstruktor verfügen muss, der keine Parameter annimmt.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

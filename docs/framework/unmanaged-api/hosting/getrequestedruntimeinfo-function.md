@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dfd7cdc-c116-4e25-b56a-ac7b0378c942
 topic_type:
 - apiref
-ms.openlocfilehash: 0efda458d51677fcd16140cd0f0a835b76c20173
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b120b854e1787824808dd64d95b0fa78ba6c9fa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617177"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705487"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo-Funktion
+
 Ruft Informationen zur Version und zum Verzeichnis der von einer Anwendung angeforderten Common Language Runtime (CLR) ab.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -46,6 +47,7 @@ HRESULT GetRequestedRuntimeInfo (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pExe`  
  in Der Name der Anwendung.  
   
@@ -80,6 +82,7 @@ HRESULT GetRequestedRuntimeInfo (
  vorgenommen Ein Zeiger auf die Länge der Versions Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|BESCHREIBUNG|  
@@ -88,6 +91,7 @@ HRESULT GetRequestedRuntimeInfo (
 |ERROR_INSUFFICIENT_BUFFER|Der Verzeichnis Puffer ist nicht groß genug zum Speichern des Verzeichnis Pfads.<br /><br /> - oder -<br /><br /> Der Versions Puffer ist nicht groß genug, um die Versions Zeichenfolge zu speichern.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `GetRequestedRuntimeInfo` Methode gibt Laufzeitinformationen zu der in den-Prozess geladenen Version zurück, die nicht notwendigerweise die neueste Version ist, die auf dem Computer installiert ist.  
   
  In der .NET Framework Version 2,0 können Sie mithilfe der-Methode wie folgt Informationen zur neuesten installierten Version erhalten `GetRequestedRuntimeInfo` :  
@@ -112,16 +116,17 @@ HRESULT GetRequestedRuntimeInfo (
   
 - RUNTIME_INFO_REQUEST_X86  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetRequestedRuntimeVersion-Funktion](getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess-Funktion](getversionfromprocess-function.md)

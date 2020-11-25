@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30817373-0a21-49c1-a0c4-8e8daeecb8db
 topic_type:
 - apiref
-ms.openlocfilehash: 308c501e17446719067d2dc0580d698c1770bf53
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 95ad3cbea4269173f22e662d15772ff97f7ee900
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610664"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705448"
 ---
 # <a name="isymunmanagedsymbolsearchinfo-interface"></a>ISymUnmanagedSymbolSearchInfo-Schnittstelle
+
 Stellt Methoden bereit, die Informationen über den Suchpfad erhalten. Rufen Sie diese Schnittstelle durch Aufrufen von `QueryInterface` für ein Objekt ab, das die [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle implementiert.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,9 +33,10 @@ Stellt Methoden bereit, die Informationen über den Suchpfad erhalten. Rufen Sie
 |[GetSearchPath-Methode](isymunmanagedsymbolsearchinfo-getsearchpath-method.md)|Ruft den Suchpfad ab.|  
 |[GetSearchPathLength-Methode](isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md)|Ruft die Länge des Suchpfads ab.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

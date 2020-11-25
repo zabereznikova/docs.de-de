@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2ec7708edd86b9f2656d0eee434992c3b73200ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705045"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2-Methode
+
 Initiiert den Import von-Typen. Mit dieser Methode können Sie beginnen, Typen aus jedem Bereich zu importieren, der über die [ImportFile-Methode](importfile-method.md)importiert wird  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT ImportTypes2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly, in die importiert werden soll.  
   
@@ -57,13 +59,15 @@ HRESULT ImportTypes2(
  Empfängt optional die Anzahl der Typen im angegebenen Bereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert "Alink. h"  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

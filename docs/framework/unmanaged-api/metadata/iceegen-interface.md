@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 383d20b0-efe9-4e71-8fb8-1186b2e7d0c0
 topic_type:
 - apiref
-ms.openlocfilehash: e6cf0aa6f731d0a417e1a2be0ca1d0f8c9299379
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2c180a135608350b0feec3f419be98f4f428b186
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704512"
 ---
 # <a name="iceegen-interface"></a>ICeeGen-Schnittstelle
+
 Stellt Methoden zur dynamischen Codekompilierung bereit.  
   
  Diese Schnittstelle ist veraltet und sollte nicht verwendet werden.  
@@ -47,14 +48,15 @@ Stellt Methoden zur dynamischen Codekompilierung bereit.
 |[TruncateSection-Methode](iceegen-truncatesection-method.md)|Veraltet. Verkürzt den angegebenen Code Abschnitt um die angegebene Länge.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)

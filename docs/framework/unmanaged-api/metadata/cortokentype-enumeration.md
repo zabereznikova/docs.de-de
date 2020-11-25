@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705474"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType-Enumeration
+
 Gibt den Typ eines Metadatentokens an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -61,7 +62,7 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`mdtModule`|Ein- `mdModule` Token.|  
 |`mdtTypeRef`|Ein- `mdTypeRef` Token.|  
@@ -91,15 +92,17 @@ typedef enum CorTokenType {
 |`mdtBaseType`|Wird nicht verwendet.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Jeder Wert entspricht dem Wert des obersten Bytes im entsprechenden Metadatentoken.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

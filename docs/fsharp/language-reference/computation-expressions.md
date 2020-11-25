@@ -4,12 +4,12 @@ description: 'Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von Berech
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812158"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705305"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -24,7 +24,7 @@ Berechnungen können viele Formen annehmen. Die häufigste Form der Berechnung i
 - Effektive Berechnungen
 - Generative Berechnungen
 
-Im Allgemeinen gibt es *kontextabhängige* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Das Schreiben von Kontext sensiblem Code kann eine Herausforderung darstellen, da es einfach ist, Berechnungen außerhalb eines bestimmten Kontexts ohne Abstraktionen zu "vermeiden, um dies zu verhindern. Diese Abstraktionen sind häufig schwierig zu schreiben, da F # eine generalisierte Methode zum Aufrufen von **Berechnungs Ausdrücken**hat.
+Im Allgemeinen gibt es *kontextabhängige* Berechnungen, die Sie in bestimmten Teilen einer Anwendung ausführen müssen. Das Schreiben von Kontext sensiblem Code kann eine Herausforderung darstellen, da es einfach ist, Berechnungen außerhalb eines bestimmten Kontexts ohne Abstraktionen zu "vermeiden, um dies zu verhindern. Diese Abstraktionen sind häufig schwierig zu schreiben, da F # eine generalisierte Methode zum Aufrufen von **Berechnungs Ausdrücken** hat.
 
 Berechnungs Ausdrücke bieten ein einheitliches Syntax-und Abstraktions Modell zum Codieren kontextbezogener Berechnungen.
 
@@ -181,7 +181,7 @@ Anders `yield` als `yield!` muss explizit angegeben werden. Das Verhalten ist in
 Das- `return` Schlüsselwort umschließt einen Wert in dem Typ, der dem Berechnungs Ausdruck entspricht. Abgesehen von Berechnungs Ausdrücken mit `yield` wird es verwendet, um einen Berechnungs Ausdruck zu vervollständigen:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 Das `return!` Schlüsselwort erkennt den Wert eines Berechnungs Ausdrucks und umschließt das Ergebnis in den Typ, der dem Berechnungs Ausdruck entspricht:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }

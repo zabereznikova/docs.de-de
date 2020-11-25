@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - IALink2 interface
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
-ms.openlocfilehash: 57998f8841ed952c8876fa6d36f090cf58866a8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53701a34e1466e03e91d99c27e5a2b345edf6556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705266"
 ---
 # <a name="ialink2-interface"></a>IALink2-Schnittstelle
+
 Ergänzt die [IALink-Schnittstelle](ialink-interface.md) durch Deklarieren von Methoden, die auf neueren Metadatenschnittstellen wie der [IMetaDataEmit2-Schnittstelle](../metadata/imetadataemit2-interface.md)funktionieren. Außerdem deklariert IALink2 Methoden, die zusätzliche Verwendungs Flexibilität über die ursprünglichen IALink-Schnittstellen bereitstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [AddFile2-Methode](addfile2-method.md)  
   
  [EmitAssembly-Methode](emitassembly-method.md)  
@@ -39,8 +41,8 @@ Ergänzt die [IALink-Schnittstelle](ialink-interface.md) durch Deklarieren von M
   
  [SetPEKind-Methode](setpekind-method.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Alink-API](index.md)
+- [ALink-API](index.md)
 - [IALink-Schnittstelle](ialink-interface.md)
 - [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)
