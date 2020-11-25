@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-ms.openlocfilehash: ab2121605f974fdf3f9053214a4d29d8b0dd72db
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2996c219ccf4e975c45fb531807abc4a608bae73
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210976"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694775"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub-Methode
+
 Ruft einen Wert ab, der angibt, ob sich eine Adresse in einem Stub befindet, der einen Übergang in verwalteten Code verursacht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT IsTransitionStub(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `address`  
  in Ein- `CORDB_ADDRESS` Wert, der die betreffende Adresse angibt.  
   
@@ -41,11 +43,13 @@ HRESULT IsTransitionStub(
  vorgenommen Ein Zeiger auf einen booleschen Wert, der ist, `true` Wenn sich die angegebene Adresse in einem Stub befindet, der einen Übergang in verwalteten Code verursacht; andernfalls * `pbTransitionStub` ist `false` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `IsTransitionStub` Methode kann von nicht verwaltetem Schritt Code verwendet werden, um zu entscheiden, wann die schrittweise Steuerung an den verwalteten Stepper zurückgegeben wird.  
   
  Sie können auch die übergangsstubübereinstisstubweise überprüfen, indem Sie die Informationen in der Datei "Portable  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

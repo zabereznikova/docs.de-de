@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: d6b05333b9e02c4202c0fd9bdee9b5c055aa4da3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396296"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694359"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName-Methode
+
 Ruft den Namen der Anwendungsdomäne ab, die von dieser [ICorPublishAppDomain](icorpublishappdomain-interface.md)dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cchName`  
  [in] Die Größe des `szName`-Arrays.  
   
@@ -46,12 +48,14 @@ HRESULT GetName (
  `szName`  
  vorgenommen Ein Array, in dem der Name gespeichert werden soll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn ungleich `szName` NULL ist, kopiert die `GetName` Methode bis zu `cchName` Zeichen (einschließlich des NULL-Terminator) in `szName` . Wenn ein nicht-NULL-Wert in zurückgegeben wird `pcchName` , wird die tatsächliche Anzahl von Zeichen im Namen (einschließlich des NULL-Abschluss Zeichens) im- `szName` Array gespeichert.  
   
  Die- `GetName` Methode gibt eine S_OK HRESULT zurück, unabhängig davon, wie viele Zeichen kopiert wurden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -60,6 +64,6 @@ HRESULT GetName (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishAppDomain-Schnittstelle](icorpublishappdomain-interface.md)

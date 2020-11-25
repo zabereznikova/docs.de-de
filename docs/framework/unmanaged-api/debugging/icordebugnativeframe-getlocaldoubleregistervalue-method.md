@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1f838215-ac8a-434f-8ce6-03021d3098d9
 topic_type:
 - apiref
-ms.openlocfilehash: 21c4d00e4156b9db27ae4188aace19764a2be53e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 10f06fb04099ef947711bc7c5641e5a7f1fa36b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213074"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695698"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue-Methode
+
 Ruft den Wert eines Arguments oder einer lokalen Variablen ab, das in den beiden angegebenen Registern für diesen systemeigenen Frame gespeichert ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetLocalDoubleRegisterValue (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `highWordReg`  
  in Ein Wert der CorDebugRegister-Enumeration, der das Register angibt, das das höchst Wort des Werts enthält.  
   
@@ -54,9 +56,11 @@ HRESULT GetLocalDoubleRegisterValue (
  vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den abgerufenen Wert darstellt, der in den angegebenen Registern gespeichert ist.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `GetLocalDoubleRegisterValue` -Methode kann entweder in einem nativen Frame oder einem JIT-kompilierten Frame (Just-in-Time) verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -65,4 +69,4 @@ HRESULT GetLocalDoubleRegisterValue (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

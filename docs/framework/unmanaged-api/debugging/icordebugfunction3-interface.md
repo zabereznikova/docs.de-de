@@ -10,14 +10,15 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17eda7470e5f2e4b41d1f2ed164843eaeeedea93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546971"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695868"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3-Schnittstelle
+
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
   
  Erweitert die ICorDebugFunction-Schnittstelle logisch, um Zugriff auf Code aus einer ReJIT-Anfrage zu bieten.  
@@ -31,6 +32,7 @@ ms.locfileid: "90546971"
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -39,8 +41,8 @@ ms.locfileid: "90546971"
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)
-- [ReJIT: Anleitung](/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: A How-To Guide](/archive/blogs/davbr/rejit-a-how-to-guide)

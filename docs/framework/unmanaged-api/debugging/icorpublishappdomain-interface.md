@@ -14,24 +14,26 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: 89952a93d5652fcb0c3755e52fb18a1a9f2f9894
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 62e3286c5f0c70d283e78dbb1e502dccd73a5a3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397056"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694268"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain-Schnittstelle
+
 Stellt Informationen zu einer Anwendungsdomäne dar und bereit.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetID-Methode](icorpublishappdomain-getid-method.md)|Ruft den eindeutigen Bezeichner für dieses ab `ICorPublishAppDomain` .|  
 |[GetName-Methode](icorpublishappdomain-getname-method.md)|Ruft den Namen der Anwendungsdomäne ab, auf die von verwiesen wird `ICorPublishAppDomain` .|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -40,7 +42,7 @@ Stellt Informationen zu einer Anwendungsdomäne dar und bereit.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [CorpubPublish-Co-Klasse](corpubpublish-coclass.md)
