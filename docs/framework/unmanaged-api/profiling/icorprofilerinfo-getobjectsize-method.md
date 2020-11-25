@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
 topic_type:
 - apiref
-ms.openlocfilehash: 15c843fe138be55a3480f46e0ef8b37bcb445ad0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4abcf9f4575b32dd125fd8a00783043900993c3e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497971"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724103"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize-Methode
+
 Ruft die Größe eines angegebenen-Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,16 +35,17 @@ HRESULT GetObjectSize(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `objectId`  
  in Die ID des Objekts.  
   
  `pcSize`  
  vorgenommen Ein Zeiger auf die Größe des-Objekts in Bytes.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]
-> Diese Methode ist veraltet. Er gibt COR_E_OVERFLOW für Objekte zurück, die größer als 4 GB auf 64-Bit-Plattformen sind. Verwenden Sie stattdessen die [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) -Methode.  
+> Diese Methode ist veraltet. Er gibt COR_E_OVERFLOW für Objekte zurück, die größer als 4 GB auf 64-Bit-Plattformen sind. Verwenden Sie stattdessen die  [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) -Methode.  
   
  Unterschiedliche Objekte der gleichen Typen haben oft dieselbe Größe. Einige Typen, z. b. Arrays oder Zeichen folgen, können jedoch für jedes Objekt eine andere Größe aufweisen.  
   
@@ -54,6 +56,7 @@ HRESULT GetObjectSize(
 - Bei 64-Bit-Fenstern ist die Ausrichtung immer 8 Bytes.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -62,6 +65,6 @@ HRESULT GetObjectSize(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

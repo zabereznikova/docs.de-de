@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b12bfcd9-1e29-48bf-9a3d-44bfae5df5e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4b44a16d143c1daea1ea6c36eb096ab9a937b272
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f24d49189ee81a80397b94ee4113c9514c083dbc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210042"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723986"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule-Methode
+
 Benachrichtigt den Debugger, dass ein Common Language Runtime Modul (dll) entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT UnloadModule (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die das Modul enthielt.  
   
@@ -42,9 +44,11 @@ HRESULT UnloadModule (
  in Ein Zeiger auf ein ICorDebug Module-Objekt, das das Modul darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das Modul sollte nach diesem-Befehl nicht verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -53,7 +57,7 @@ HRESULT UnloadModule (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [LoadModule-Methode](icordebugmanagedcallback-loadmodule-method.md)
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

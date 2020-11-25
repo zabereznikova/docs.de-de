@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-ms.openlocfilehash: 5991b0abaedabe2337cd754c7bd19f96c5e9b685
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f71d8956e8706cdc71b94b6e6e2e8210e5b9161e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725234"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind-Enumeration
+
 Gibt den Typ der Speicheradresse an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,7 +45,7 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|Gibt eine lokale MSIL-Variable (Microsoft Intermediate Language) oder einen Parameter Index an.|  
 |`ADDR_NATIVE_RVA`|Gibt eine relative virtuelle Adresse in einem Modul an.|  
@@ -57,9 +58,10 @@ typedef enum CorSymAddrKind
 |`ADDR_BITFIELD`|Gibt an, dass die erste Adresse der Anfang eines Felds und die zweite Adresse die Feldlänge ist.|  
 |`ADDR_NATIVE_ISECTOFFSET`|Gibt an, dass die erste Adresse der Abschnitt und die zweite Adresse ein Offset ist.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Enumerationen](diagnostics-symbol-store-enumerations.md)

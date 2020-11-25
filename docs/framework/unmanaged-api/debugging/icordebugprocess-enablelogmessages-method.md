@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 3b850a462ce354b81f4406fce7fd9d8d9b6013d8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86cb1a2eb18840419d2a4e8ee4f6475edafe8397
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207900"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724623"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages-Methode
+
 Aktiviert und deaktiviert die Übertragung von Protokollmeldungen an den Debugger.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,13 +33,16 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `fOnOff`  
- [in] `true` ermöglicht die Übertragung von Protokollmeldungen. `false`deaktiviert die Übertragung.  
+ [in] `true` ermöglicht die Übertragung von Protokollmeldungen. `false` deaktiviert die Übertragung.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Methode ist nur gültig, wenn der [ICorDebugManagedCallback::](icordebugmanagedcallback-createprocess-method.md) up-Prozess-Rückruf auftritt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

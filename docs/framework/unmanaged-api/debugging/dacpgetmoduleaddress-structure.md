@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: a65fa9974165fa36e59a7fb83dca6dd902f7d8dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724393"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress-Struktur
 
@@ -37,7 +37,7 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 | Member      | BESCHREIBUNG                |
 | ----------- | -------------------------- |
@@ -51,15 +51,16 @@ struct DacpGetModuleAddress
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben `CLRDATA_ADDRESS` , wobei eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
+Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben, wobei `CLRDATA_ADDRESS` eine 64-Bit-Ganzzahl ohne Vorzeichen ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
+
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)

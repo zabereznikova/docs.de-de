@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9da168b-366b-4b2b-bdb9-330b6bad5a6b
 topic_type:
 - apiref
-ms.openlocfilehash: 3cf2a945607bf85a51dbec35342ff5ac46878bca
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 49d1ee4dd0965d4ae5b54b53208809cfbdf7e718
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703568"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725628"
 ---
 # <a name="iclrhostbindingpolicymanager-interface"></a>ICLRHostBindingPolicyManager-Schnittstelle
+
 Stellt Methoden bereit, mit denen der Host die aktuelle Bindungs Richtlinie auswerten und Richtlinien Änderungen für eine angegebene Assembly übermitteln können.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,17 +32,18 @@ Stellt Methoden bereit, mit denen der Host die aktuelle Bindungs Richtlinie ausw
 |[EvaluatePolicy-Methode](iclrhostbindingpolicymanager-evaluatepolicy-method.md)|Wertet die Bindungs Richtlinie im Namen des Hosts aus.|  
 |[ModifyApplicationPolicy-Methode](iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|Ändert die Bindungs Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRAssemblyIdentityManager-Schnittstelle](iclrassemblyidentitymanager-interface.md)
 - [IHostAssemblyStore-Schnittstelle](ihostassemblystore-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

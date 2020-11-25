@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-ms.openlocfilehash: 55036fcdbd186f91c0e94fb05f3023cf614751f7
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: cfe884c3d26e7a52618eb9945f0af9a167132f05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724376"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged-Methode
+
 Ruft einen Wert ab, der angibt, ob diese Kette verwalteten Code ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT IsManaged (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pManaged`  
- vorgenommen `true` , wenn diese Kette verwalteten Code ausführen kann. andernfalls `false`.  
+ [out] `true` , wenn diese Kette verwalteten Code ausführen kann. andernfalls `false` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

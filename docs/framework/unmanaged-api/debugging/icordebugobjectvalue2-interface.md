@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a166648252215e49b206aae1c3ab1e08985fde2d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724636"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2-Schnittstelle
 
@@ -27,9 +27,9 @@ Erweitert die ICorDebugObjectValue-Schnittstelle zur Unterstützung von Vererbun
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType-Methode](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`wurde noch nicht implementiert.|  
+|[GetVirtualMethodAndType-Methode](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` wurde noch nicht implementiert.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -37,6 +37,7 @@ Erweitert die ICorDebugObjectValue-Schnittstelle zur Unterstützung von Vererbun
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -45,6 +46,6 @@ Erweitert die ICorDebugObjectValue-Schnittstelle zur Unterstützung von Vererbun
   
  .Net **Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: a11b7d5939c4c20504b1ff3dfb4613f85bca0db4
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 15f573ebc07bcf08a1ab8f5a5bbb88e940c5c8dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007974"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724168"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK-Struktur
+
 Enthält Informationen, die zum Verknüpfen von nativem Code verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,22 +38,23 @@ typedef struct
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`m_linkType`|Der Typ, der in nativem Code verknüpft werden soll. Dieser Wert ist einer der [CorNativeLinkType](cornativelinktype-enumeration.md) -Werte.|  
 |`m_flags`|Flags, die vom Linker beim Verknüpfen von System eigenem Code verwendet werden. Dieser Wert ist einer der [CorNativeLinkFlags](cornativelinkflags-enumeration.md) -Werte.|  
 |`m_entryPoint`|Das mitgliedfassungs-Metadatentoken, das den Einstiegspunkt darstellt. Das Format ist `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenstrukturen](metadata-structures.md)
 - [CorNativeLinkType-Enumeration](cornativelinktype-enumeration.md)

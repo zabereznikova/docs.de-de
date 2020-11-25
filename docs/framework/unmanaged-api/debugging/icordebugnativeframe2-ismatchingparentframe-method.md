@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: 5bcced647af6436bd8f5b1f3779d9368b6173d11
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 213bee96531fa0bbc9bf0ae76b2505019833abfc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213035"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724701"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
+
 Bestimmt, ob der angegebene Frame dem aktuellen Frame übergeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,15 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pPotentialParentFrame`  
  in Ein Zeiger auf das Frame Objekt, das Sie für den übergeordneten Status auswerten möchten.  
   
  `pIsParent`  
- [out] `true` `pPotentialParentFrame`, wenn das übergeordnete Element des aktuellen Frames ist, andernfalls `false` .  
+ [out] `true` `pPotentialParentFrame` , wenn das übergeordnete Element des aktuellen Frames ist, andernfalls `false` .  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -51,10 +54,12 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
 ## <a name="exceptions"></a>Ausnahmen  
   
-## <a name="remarks"></a>Hinweise  
- `IsMatchingParentFrame`Gibt zurück `true` , wenn das Frame Objekt, das Sie an die Methode übergeben, das übergeordnete Element des Frame Objekts ist, für das die Methode aufgerufen wurde. Wenn Sie die-Methode für einen Frame aufzurufen, der kein untergeordnetes Element des angegebenen Frames ist, wird ein Fehler zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+
+ `IsMatchingParentFrame` Gibt zurück `true` , wenn das Frame Objekt, das Sie an die Methode übergeben, das übergeordnete Element des Frame Objekts ist, für das die Methode aufgerufen wurde. Wenn Sie die-Methode für einen Frame aufzurufen, der kein untergeordnetes Element des angegebenen Frames ist, wird ein Fehler zurückgegeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -63,7 +68,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugNativeFrame2-Schnittstelle](icordebugnativeframe2-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

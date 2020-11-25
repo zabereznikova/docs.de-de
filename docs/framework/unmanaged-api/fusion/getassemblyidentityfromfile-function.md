@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-ms.openlocfilehash: 50ec5a23db4d2460480bcc3e463ecd88e7470bde
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9580dd3bc5a7279549e8deadac95d35a33da74f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134524"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724480"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile-Funktion
-Ruft einen Zeiger auf ein `IUnknown`-Objekt mit dem angegebenen `IID` in der Assembly am angegebenen Dateipfad ab.  
+
+Ruft einen Zeiger auf ein- `IUnknown` Objekt mit dem angegebenen `IID` in der Assembly am angegebenen Dateipfad ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,23 +38,25 @@ HRESULT GetAssemblyIdentityFromFile (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzFilePath`  
  in Ein gültiger Pfad zur angeforderten Assembly.  
   
  `riid`  
- in Der `IID` der zurück zugebende Schnittstelle.  
+ in Der der- `IID` Schnittstelle, die zurückgegeben werden soll.  
   
  `ppIdentity`  
  vorgenommen Der zurückgegebene Schnittstellen Zeiger.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IUnknown](/cpp/atl/iunknown)
-- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
+- [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)

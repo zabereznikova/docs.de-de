@@ -2,14 +2,15 @@
 title: ISymUnmanagedWriter5-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
-ms.openlocfilehash: d9204457b71b670e1c96ed228ad11116bdf41fe6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 894f3b0e45df2c681cbdec1f154703be64f32fc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493577"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725793"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5-Schnittstelle
+
 ISymUnmanagedWriter5-Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,6 +20,7 @@ ISymUnmanagedWriter5-Schnittstelle.
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Diese Schnittstelle enthält die folgenden Methoden:  
   
 |Methode|BESCHREIBUNG|  
@@ -28,9 +30,10 @@ ISymUnmanagedWriter5-Schnittstelle.
 |[OpenMapTokensToSourceSpans-Methode](isymunmanagedwriter5-openmaptokenstosourcespans-method.md)|Öffnen Sie einen speziellen benutzerdefinierten Daten Abschnitt, um die Informationen zur Zuordnung von Token zu Quell Informationen in zu übermitteln. Wenn Sie diesen Abschnitt öffnen, wenn eine Methode bereits geöffnet ist (oder umgekehrt), ist ein Fehler aufgetreten.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter4-Schnittstelle](isymunmanagedwriter4-interface.md)

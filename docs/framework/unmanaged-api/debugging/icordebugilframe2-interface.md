@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 2e0f284625e99215900c6aaab94e4eae611787ed
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3ada9e19bb1a92b3bd7e41340b99bf81b651dd37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212099"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725013"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[EnumerateTypeParameters-Methode](icordebugilframe2-enumeratetypeparameters-method.md)|Ruft ein ICorDebugTypeEnum-Objekt ab, das die <xref:System.Type> Parameter in diesem Frame enthält.|  
 |[RemapFunction-Methode](icordebugilframe2-remapfunction-method.md)|Ordnet eine bearbeitete Funktion neu zu, indem der neue MSIL-Offset angegeben wird.|  
@@ -38,6 +38,7 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -46,6 +47,6 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 5d0b231b4014e60a9e8778c6b9d6ed7758b2d8c5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 320b3ca55a60ec7751c88a246ab6ee90b6b6c4cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208472"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724350"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next-Methode
+
 Ruft die angegebene Anzahl von [COR_HEAPOBJECT](cor-heapobject-structure.md) Instanzen ab, die Informationen zu Objekten im verwalteten Heap enthalten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  celt  
  [in] Die Anzahl der abzurufenden Objekte.  
   
@@ -45,9 +47,11 @@ HRESULT Next(
  vorgenommen Ein Zeiger auf die Anzahl der [COR_HEAPOBJECT](cor-heapobject-structure.md) -Objekte, die tatsächlich in zurückgegeben werden `objects` . Dieser Wert kann `null` sein, wenn `celt` 1 ist.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das `COR_HEAPOBJECT.type`-Feld ist der Bezeichner einer geschachtelten COM-Schnittstelle mit Referenzzählung. Diese Referenz muss von dem Aufrufer von `ICorDebugHeapEnum::Next` freigegeben werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -56,7 +60,7 @@ HRESULT Next(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugHeapEnum-Schnittstelle](icordebugheapenum-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

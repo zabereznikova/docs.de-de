@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0fdeba3-c195-4ece-8caf-79b1f40025d2
 topic_type:
 - apiref
-ms.openlocfilehash: 83adea3d659eea6d4af9ae364aad18df67e69c03
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 78ea76033b0b83c84446e16fb330bd3ba34c6e21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725702"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next-Methode
+
 Ruft die Anzahl der "ICorDebugType"-Instanzen ab `celt` , die von der-Enumeration angegeben werden, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  in Die Anzahl der `ICorDebugType` abzurufenden Instanzen.  
   
@@ -46,7 +48,8 @@ HRESULT Next (
  `pceltFetched`  
  vorgenommen Ein Zeiger auf die Anzahl der `ICorDebugType` tatsächlich zurückgegebenen Instanzen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -55,4 +58,4 @@ HRESULT Next (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c02ec37-cdf0-46b2-890e-235092741236
 topic_type:
 - apiref
-ms.openlocfilehash: a3018d8477d5abd7d03ad8675503624d2e44e8f4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ca3c7fe813f22d3beab3087414100b3d8e5814ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504133"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725598"
 ---
 # <a name="iclroneventmanagerunregisteractiononevent-method"></a>ICLROnEventManager::UnregisterActionOnEvent-Methode
+
 Hebt die Registrierung eines zuvor registrierten Rückruf Zeigers für das angegebene Ereignis auf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT UnregisterActionOnEvent (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `event`  
  in Einer der [EClrEvent](eclrevent-enumeration.md) -Werte, der das Ereignis angibt, für das die Registrierung des von beschriebenen Rückruf Zeigers aufgehoben werden soll `pAction` .  
   
@@ -45,7 +47,7 @@ HRESULT UnregisterActionOnEvent (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`UnregisterActionOnEvent`wurde erfolgreich zurückgegeben.|  
+|S_OK|`UnregisterActionOnEvent` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,15 +55,16 @@ HRESULT UnregisterActionOnEvent (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [EClrEvent-Enumeration](eclrevent-enumeration.md)
 - [IActionOnCLREvent-Schnittstelle](iactiononclrevent-interface.md)

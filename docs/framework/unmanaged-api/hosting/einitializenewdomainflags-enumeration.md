@@ -12,14 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - EInitializeNewDomainFlags enumeration [.NET Framework hosting]
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
-ms.openlocfilehash: 7ff10f84d8d270d31c5d560fb3c9bd3c81cf3e24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8350b507609e63c060cda08514200d386c37a6b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724324"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags-Enumeration
+
 Ermöglicht dem Host, der Laufzeit Informationen zur Initialisierung einer Anwendungsdomäne bereitzustellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,24 +34,26 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`eInitializeNewDomainFlags_None`|Keine Flags.|  
 |`eInitializeNewDomainFlags_NoSecurityChanges`|Informiert den Common Language Runtime (CLR), dass der Host keine Änderungen am Sicherheitszustand der Anwendungsdomäne in der-Methode vornimmt <xref:System.AppDomainManager.InitializeNewDomain%2A> .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die [iclrdomainmanager:: abtappdomainmanagertype](iclrdomainmanager-setappdomainmanagertype-method.md) -Methode nimmt einen Parameter vom Typ an `EInitializeNewDomainFlags` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)
 - [SetAppDomainManagerType-Methode](iclrdomainmanager-setappdomainmanagertype-method.md)

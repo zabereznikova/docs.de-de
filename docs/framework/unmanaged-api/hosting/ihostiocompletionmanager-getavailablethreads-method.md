@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bab363d1-b859-47a4-9884-5661c611cce7
 topic_type:
 - apiref
-ms.openlocfilehash: 7ea7395bb1f185ba59940d76def562ab5440e560
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3e9f4e98962532efe4b2e2a779add841b7b3a835
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804763"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724259"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads-Methode
+
 Ruft die Anzahl der e/a-abschlusthreads von der Gesamtanzahl der vom Host verwalteten Threads ab, die zurzeit keine Anforderungen verarbeiten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetAvailableThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pdwAvailableIoCompletionThreads`  
  vorgenommen Ein Zeiger auf die Anzahl der e/a-abschlusthreads, die vom Host verwaltet werden und für die Service Requests zurzeit verfügbar sind.  
   
@@ -41,7 +43,7 @@ HRESULT GetAvailableThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetAvailableThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetAvailableThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,14 +52,16 @@ HRESULT GetAvailableThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `GetAvailableThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Host möchte möglicherweise eine exklusive Kontrolle über die Größe des e/a-Abschluss Thread Pools, wie z. b. Implementierung, Leistung oder Skalierbarkeit. Daher ist es nicht erforderlich, dass der Host implementiert `GetAvailableThreads` . In diesem Fall sollte der Host E_NOTIMPL aus dieser Methode zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

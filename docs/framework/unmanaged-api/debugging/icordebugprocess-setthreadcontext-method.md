@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: c9e403dc8cbb75a1e93c426a9e0b3a2083f1f10e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5b4052485a6d420eb83578d135ce51f8a918aab0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724519"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext-Methode
+
 Legt den Kontext für den angegebenen Thread in diesem Prozess fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT SetThreadContext(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `threadID`  
  in Die ID des Threads, für den der Kontext festgelegt werden soll.  
   
@@ -48,6 +50,7 @@ HRESULT SetThreadContext(
  Der Kontext gibt die Architektur des Prozessors an, auf dem der Thread ausgeführt wird.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Debugger sollte diese Methode anstelle der Win32-Funktion aufzurufen `SetThreadContext` , da der Thread tatsächlich den Zustand "entführt" aufweisen kann, in dem der Kontext vorübergehend geändert wurde. Diese Methode sollte nur verwendet werden, wenn sich ein Thread in nativem Code befindet. Verwenden Sie [ICorDebugRegisterSet](icordebugregisterset-interface.md) für Threads in verwaltetem Code. Sie sollten den Kontext eines Threads nie während eines OOB-Debugereignisses (Out-of-Band) ändern.  
   
  Die Daten, die übermittelt werden, müssen eine Kontext Struktur für die aktuelle Plattform sein.  
@@ -55,6 +58,7 @@ HRESULT SetThreadContext(
  Diese Methode kann die Laufzeit beschädigt werden, wenn Sie nicht ordnungsgemäß verwendet wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

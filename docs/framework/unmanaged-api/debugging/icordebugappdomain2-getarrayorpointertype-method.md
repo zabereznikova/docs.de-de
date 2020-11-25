@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-ms.openlocfilehash: bbf43f3936823b9a8e562cb32cfa2eef08840033
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 8b3f6ae92e39f5385bf29f8b29abbb1726136088
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724766"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType-Methode
+
 Ruft ein Array vom angegebenen Typ oder einen Zeiger oder einen Verweis auf den angegebenen Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,11 +38,12 @@ HRESULT GetArrayOrPointerType (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `elementType`  
  in Ein Wert der CorElementType-Enumeration, der den zugrunde liegenden systemeigenen Typ (ein Array, einen Zeiger oder einen Verweis) angibt, der erstellt werden soll.  
   
  `nRank`  
- in Der Rang (d. h. die Anzahl der Dimensionen) des Arrays. Dieser Wert muss 0 sein, `elementType` wenn einen Zeiger oder Verweistyp angibt.  
+ in Der Rang (d. h. die Anzahl der Dimensionen) des Arrays. Dieser Wert muss 0 sein, wenn `elementType` einen Zeiger oder Verweistyp angibt.  
   
  `pTypeArg`  
  in Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des zu erstellenden Arrays, Zeigers oder Verweises darstellt.  
@@ -50,6 +52,7 @@ HRESULT GetArrayOrPointerType (
  vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das das erstellte Array, den Zeigertyp oder den Verweistyp darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Wert von *ElementType* muss einer der folgenden sein:  
   
 - ELEMENT_TYPE_PTR  
@@ -60,7 +63,8 @@ HRESULT GetArrayOrPointerType (
   
  Wenn der Wert von *ElementType* ELEMENT_TYPE_PTR oder ELEMENT_TYPE_BYREF ist, muss *nRank* NULL sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

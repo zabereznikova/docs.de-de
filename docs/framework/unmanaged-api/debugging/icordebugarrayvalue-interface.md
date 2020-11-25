@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: bd1e86b83c43af20604416f158ab9e74f399821b
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 90688132b98f8316a4b08988c08b2f7cc7ce0fd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894967"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725047"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine Unterklasse von ICorDebugHeapValue, die ein eindimensionales oder mehrdimen
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetBaseIndicies-Methode](icordebugarrayvalue-getbaseindicies-method.md)|Ruft den Basis Index jeder Dimension im Array ab.|  
 |[GetCount-Methode](icordebugarrayvalue-getcount-method.md)|Ruft die Gesamtzahl der Elemente im Array ab.|  
@@ -39,12 +39,14 @@ Eine Unterklasse von ICorDebugHeapValue, die ein eindimensionales oder mehrdimen
 |[HasBaseIndicies-Methode](icordebugarrayvalue-hasbaseindicies-method.md)|Bestimmt, ob das Array über Basis Indizes verfügt.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugArrayValue`unterstützt sowohl eindimensionale als auch mehrdimensionale Arrays.  
+
+ `ICorDebugArrayValue` unterstützt sowohl eindimensionale als auch mehrdimensionale Arrays.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

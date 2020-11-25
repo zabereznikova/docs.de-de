@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: 772f1f0dee260ad3752b2f89e5fbe0d6bc27b87b
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e251bf67adcaf2bbd6565eda068d487eb0d70efd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795650"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725770"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop-Enumeration
+
 Gibt den Typ von nicht zugeordnetem Code an, der eine Unterbrechung der Codeausführung durch die Schritte auslösen kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,9 +52,11 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_ALL`|Wird in allen Typen von nicht zugeordnetem Code beendet.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie die [ICorDebugStepper:: SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) -Methode, um die Flags festzulegen, die den nicht zugeordneten Code angeben, in dem der Stepper angehalten wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

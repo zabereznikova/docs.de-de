@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: 08dbd558-bd39-4263-94c2-71e70687aaf0
 topic_type:
 - apiref
-ms.openlocfilehash: fa22c17ed7d5bcd689f21d2d855d9be7a6a8e164
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: c3120a0dd859f581e6356fc260043cb83250ae9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724831"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacepointers-method"></a>ICorDebugComObjectValue::GetCachedInterfacePointers-Methode
+
 Ruft die unformatierten Schnittstellen Zeiger ab, die auf dem aktuellen Runtime Callable Wrapper (RCW) zwischengespeichert werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,21 +35,23 @@ HRESULT GetCachedInterfacePointers(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `bIInspectableOnly`  
- in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen (`IInspectable` Schnittstellen) oder alle COM-Schnittstellen zurückgibt, die vom Runtime Callable Wrapper (RCW) zwischengespeichert werden.  
+ in Ein Wert, der angibt, ob die Methode nur Windows-Runtime Schnittstellen ( `IInspectable` Schnittstellen) oder alle COM-Schnittstellen zurückgibt, die vom Runtime Callable Wrapper (RCW) zwischengespeichert werden.  
   
  `celt`  
  in Die Anzahl der Objekte, deren Adressen abgerufen werden sollen.  
   
  `pceltFetched`  
- vorgenommen Ein Zeiger auf die Anzahl der `CORDB_ADDRESS` Werte, die tatsächlich `ptrs`in zurückgegeben werden.  
+ vorgenommen Ein Zeiger auf die Anzahl der `CORDB_ADDRESS` Werte, die tatsächlich in zurückgegeben werden `ptrs` .  
   
  `ptrs`  
- Ein Zeiger auf die Startadresse eines Arrays von `CORDB_ADDRESS` -Werten, die die Adressen von zwischengespeicherten Schnittstellen Objekten enthalten.  
+ Ein Zeiger auf die Startadresse eines Arrays von- `CORDB_ADDRESS` Werten, die die Adressen von zwischengespeicherten Schnittstellen Objekten enthalten.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

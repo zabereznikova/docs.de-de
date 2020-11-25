@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-ms.openlocfilehash: a3ec0af33f3f1201ce2f6b62291dfc67696fecab
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 791b92c30fc2bf3d506113620b59ba20015e077e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725819"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>ISymUnmanagedVariable::GetSignature-Methode
+
 Ruft die Signatur dieser Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cSig`  
  in Die Länge des Puffers, auf den der- `sig` Parameter zeigt.  
   
@@ -46,11 +48,13 @@ HRESULT GetSignature(
  vorgenommen Der Puffer, in dem die Signatur gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedVariable-Schnittstelle](isymunmanagedvariable-interface.md)

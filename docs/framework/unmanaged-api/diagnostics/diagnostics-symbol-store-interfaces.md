@@ -9,17 +9,19 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725182"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Diagnosesymbolspeicher-Schnittstellen
+
 In diesem Thema werden die nicht verwalteten Schnittstellen beschrieben, mit denen ein Compiler Symbol Informationen generieren kann, die von einem Debugger verwendet werden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [IBindingDisplay-Schnittstelle](ibindingdisplay-interface.md)  
  Stellt Methoden bereit, die aktuelle Bindungs Informationen zur ausgelaufenden Anwendung anzeigen.  
   
@@ -45,7 +47,7 @@ In diesem Thema werden die nicht verwalteten Schnittstellen beschrieben, mit den
  Ermöglicht die Definition Optionaler Async-Methoden Informationen pro Methoden Symbol. Muss mit einer geöffneten Methode (d. h. zwischen Aufrufen der [OpenMethod-Methode](isymunmanagedwriter-openmethod-method.md)und der [CloseMethod-Methode](isymunmanagedwriter-closemethod-method.md)) verwenden.  
   
  [ISymUnmanagedBinder-Schnittstelle](isymunmanagedbinder-interface.md)  
- Stellt einen Symbol Binder für nicht verwalteten Code dar.  
+ Stellt einen Symbolbinder für nicht verwalteten Code dar.  
   
  [ISymUnmanagedBinder2-Schnittstelle](isymunmanagedbinder2-interface.md)  
  Stellt einen Symbol Binder für nicht verwalteten Code dar und erweitert die- `ISymUnmanagedBinder` Schnittstelle.  
@@ -69,13 +71,13 @@ In diesem Thema werden die nicht verwalteten Schnittstellen beschrieben, mit den
  Stellt Methoden für die Funktion "Bearbeiten und Fortfahren" bereit.  
   
  [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)  
- Stellt eine Methode im Symbol Speicher dar.  
+ Stellt eine Methode im Symbolspeicher dar.  
   
  [ISymUnmanagedNamespace-Schnittstelle](isymunmanagednamespace-interface.md)  
  Stellt einen Namespace dar.  
   
  [ISymUnmanagedReader-Schnittstelle](isymunmanagedreader-interface.md)  
- Stellt einen Symbol Reader dar, der den Zugriff auf Dokumente, Methoden und Variablen in einem Symbol Speicher ermöglicht.  
+ Stellt einen Symbolreader dar, der Zugriff auf Dokumente, Methoden und Variablen innerhalb eines Symbolspeichers bietet.  
   
  [ISymUnmanagedReader2-Schnittstelle](isymunmanagedreader2-interface.md)  
  Ruft eine Symbol Lesemethode ab, wenn ein Methoden Token und eine Bearbeitungs-und Kopier Versionsnummer angegeben ist.  
@@ -96,16 +98,16 @@ In diesem Thema werden die nicht verwalteten Schnittstellen beschrieben, mit den
  Stellt Methoden bereit, die Informationen über den Suchpfad erhalten.  
   
  [ISymUnmanagedVariable-Schnittstelle](isymunmanagedvariable-interface.md)  
- Stellt eine Variable dar, z. b. einen Parameter, eine lokale Variable oder ein Feld.  
+ Stellt eine Variable dar (z. B. einen Parameter, eine lokale Variable oder ein Feld).  
   
  [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)  
- Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit.  
+ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit.  
   
  [ISymUnmanagedWriter2-Schnittstelle](isymunmanagedwriter2-interface.md)  
- Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit. Erweitert die- `ISymUnmanagedWriter` Schnittstelle.  
+ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit. Erweitert die- `ISymUnmanagedWriter` Schnittstelle.  
   
  [ISymUnmanagedWriter3-Schnittstelle](isymunmanagedwriter3-interface.md)  
- Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit. Erweitert die- `ISymUnmanagedWriter` Schnittstelle.  
+ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit. Erweitert die- `ISymUnmanagedWriter` Schnittstelle.  
   
  [ISymUnmanagedWriter4-Schnittstelle](isymunmanagedwriter4-interface.md)  
  ISymUnmanagedWriter4-Schnittstelle.  
@@ -114,6 +116,7 @@ In diesem Thema werden die nicht verwalteten Schnittstellen beschrieben, mit den
  ISymUnmanagedWriter5-Schnittstelle.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Diagnosesymbolspeicher-Enumerationen](diagnostics-symbol-store-enumerations.md)  
   
  [Diagnosesymbolspeicher-Strukturen](diagnostics-symbol-store-structures.md)  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed6a387-ba45-483e-9a1e-b0c69f67998b
 topic_type:
 - apiref
-ms.openlocfilehash: 886ba693183a6b99eb03635e95a9661d105de40e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 40c437e109eaa4352a83c5566185593cbc6b0eba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610859"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725832"
 ---
 # <a name="isymunmanagedscope2-interface"></a>ISymUnmanagedScope2-Schnittstelle
+
 Stellt einen lexikalischen Gültigkeitsbereich innerhalb einer Methode dar. Diese Schnittstelle erweitert die [ISymUnmanagedScope](isymunmanagedscope-interface.md) -Schnittstelle um Methoden, die Informationen zu konstanten erhalten, die innerhalb des Bereichs definiert sind.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,10 +32,11 @@ Stellt einen lexikalischen Gültigkeitsbereich innerhalb einer Methode dar. Dies
 |[GetConstantCount-Methode](isymunmanagedscope2-getconstantcount-method.md)|Ruft die Anzahl der in diesem Bereich definierten Konstanten ab.|  
 |[GetConstants-Methode](isymunmanagedscope2-getconstants-method.md)|Ruft die in diesem Bereich definierten lokalen Konstanten ab.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedScope-Schnittstelle](isymunmanagedscope-interface.md)

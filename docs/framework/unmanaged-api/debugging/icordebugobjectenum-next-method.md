@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: 70514464f27d6123a4de1d5800ed016a39541287
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8e188f304908a8029a57bb059046205c35346f3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724688"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next-Methode
+
 Ruft die relativen virtuellen Adressen (RVAs) der angegebenen Anzahl von Objekten aus der-Enumeration ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  [in] Die Anzahl der abzurufenden Objekte.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  vorgenommen Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -55,4 +58,4 @@ HRESULT Next (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

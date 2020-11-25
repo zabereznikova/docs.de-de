@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-ms.openlocfilehash: 8af71314cf8a24c710d3b8980c082daaf9186715
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2d5d19fb3fb7c727227827dacbaac2c910ac8b3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501871"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725221"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes-Enumeration
+
 Gibt die Richtlinie an, die bei einer Suche nach einem Symbol Leser verwendet werden soll. Diese Konstanten werden von der [ISymUnmanagedBinder2:: GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md) -Methode und der [ISymUnmanagedBinder3:: GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md) -Methode verwendet.  
   
 > [!IMPORTANT]
@@ -41,7 +42,7 @@ typedef enum CorSymSearchPolicyAttributes
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`AllowRegistryAccess`|Fragt die Registrierung nach Symbol Suchpfaden ab.|  
 |`AllowSymbolServerAccess`|Greift auf einen Symbol Server zu.|  
@@ -49,8 +50,9 @@ typedef enum CorSymSearchPolicyAttributes
 |`AllowReferencePathAccess`|Sucht die PDB an der Stelle, an der die exe-Datei gespeichert ist.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Enumerationen](diagnostics-symbol-store-enumerations.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-ms.openlocfilehash: e474cac6437413565a1ebddfa88c3e228fe59d41
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e676547d20dc9535241150d24b65e1fbaf9e89ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556348"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725104"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags-Enumeration
+
 Enthält Flagwerte, die das Verhalten von Metadaten beim Öffnen von Manifestdateien steuern.  
   
 ## <a name="syntax"></a>Syntax  
@@ -64,13 +65,14 @@ typedef enum CorOpenFlags
 |`ofReserved2`|Für die interne Verwendung reserviert.|  
 |`ofReserved`|Für die interne Verwendung reserviert.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

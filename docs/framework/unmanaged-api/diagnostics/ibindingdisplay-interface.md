@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442136"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725130"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay-Schnittstelle
+
 Stellt Methoden bereit, die aktuelle Bindungs Informationen zur ausgelaufenden Anwendung anzeigen.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,7 +32,8 @@ Stellt Methoden bereit, die aktuelle Bindungs Informationen zur ausgelaufenden A
 |[GetCurrentDisplay-Methode](ibindingdisplay-getcurrentdisplay-method.md)|Gibt die aktuellen Bindungs Anzeigeinformationen zurück.|  
 |[InitializeForProcess-Methode](ibindingdisplay-initializeforprocess-method.md)|Initialisiert das `IBindingDisplay`-Objekt.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Bindingdisplay. h  
@@ -40,6 +42,6 @@ Stellt Methoden bereit, die aktuelle Bindungs Informationen zur ausgelaufenden A
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

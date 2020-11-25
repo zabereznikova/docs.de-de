@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62ec65e3-3e9d-400b-ae61-d24b8963995b
 topic_type:
 - apiref
-ms.openlocfilehash: 137b1da853535985b2fd383d52f0bcfc48f728ed
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3ccf75523eb9362b8ef5c38d224a419502cb8b92
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503093"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724144"
 ---
 # <a name="icorprofilerfunctionenumgetcount-method"></a>ICorProfilerFunctionEnum::GetCount-Methode
+
 Ruft die Anzahl der Funktionen ab, die von der Anwendung oder erzwungen vom Profiler geladen wurden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,10 +33,12 @@ HRESULT GetCount([out] ULONG * pcelt);
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  vorgenommen Die Anzahl der Funktionen, die geladen wurden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -44,7 +47,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerFunctionEnum-Schnittstelle](icorprofilerfunctionenum-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

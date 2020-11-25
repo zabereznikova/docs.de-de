@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 0e480db953131d7771e493a8f367154a7d17dada
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 0d5fffe4350cc1f58acf588f288db3bdb7e213d0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396627"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725667"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2-Schnittstelle
+
 Erweitert die ICorDebugType-Schnittstelle zum Abrufen des Typbezeichners eines Basistyps oder eines komplexen (benutzerdefinierten) Typs.  
   
 ## <a name="methods"></a>Methoden  
@@ -30,13 +31,15 @@ Erweitert die ICorDebugType-Schnittstelle zum Abrufen des Typbezeichners eines B
 |------------|-|  
 |[GetTypeID-Methode](icordebugtype2-gettypeid-method.md)|Ruft eine [COR_TYPEID](cor-typeid-structure.md) für diesen Typ ab.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Diese Schnittstelle ist eine logische Erweiterung der ICorDebugType-Schnittstelle.  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Code Fragment veranschaulicht die Verwendung der [ICorDebugType2:: GetTypeId](icordebugtype2-gettypeid-method.md) -Methode.  
   
 ```cpp  
@@ -52,7 +55,8 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -61,6 +65,6 @@ pType2->GetTypeID(&id);
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

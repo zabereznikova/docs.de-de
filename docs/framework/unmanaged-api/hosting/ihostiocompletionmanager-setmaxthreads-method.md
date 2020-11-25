@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebad4f40-d9f1-4dc6-9b27-a89c9eb3926f
 topic_type:
 - apiref
-ms.openlocfilehash: 55727903a7f3c798e7472de6de5249de98af7ae7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3cb001db74587beb5417bf57738c5efb9a274591
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804677"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724818"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads-Methode
+
 Legt die maximale Anzahl von Threads fest, die der Host Dienst-e/a-Anforderungen zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetMaxThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwMaxIoCompletionThreads`  
  in Die maximale Anzahl von Threads für e/a-Anforderungen.  
   
@@ -41,7 +43,7 @@ HRESULT SetMaxThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetMaxThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,14 +52,16 @@ HRESULT SetMaxThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `SetMaxThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
- `SetMaxThreads`bietet der CLR die Möglichkeit, die maximale Anzahl von Threads festzulegen, die für Service Requests auf e/a-Ports verfügbar sind. Ein Host benötigt möglicherweise exklusive Kontrolle über die Größe des Thread Pools, wie z. b. Implementierung, Leistung oder Skalierbarkeit. Aus diesem Grund ist es nicht erforderlich, dass der Host implementiert `SetMaxThreads` . In diesem Fall sollte ein Host E_NOTIMPL von dieser Methode zurückgeben.  
+
+ `SetMaxThreads` bietet der CLR die Möglichkeit, die maximale Anzahl von Threads festzulegen, die für Service Requests auf e/a-Ports verfügbar sind. Ein Host benötigt möglicherweise exklusive Kontrolle über die Größe des Thread Pools, wie z. b. Implementierung, Leistung oder Skalierbarkeit. Aus diesem Grund ist es nicht erforderlich, dass der Host implementiert `SetMaxThreads` . In diesem Fall sollte ein Host E_NOTIMPL von dieser Methode zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

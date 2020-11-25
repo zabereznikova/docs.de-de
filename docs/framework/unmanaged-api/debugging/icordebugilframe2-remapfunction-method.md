@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-ms.openlocfilehash: 43f585417ed52b92c23087c0f02fd188ee09ea7e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5eb6299526d69624056961cfb7f0387ff8f873cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210214"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725026"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction-Methode
+
 Ordnet eine bearbeitete Funktion neu zu, indem der neue MSIL-Offset (Microsoft Intermediate Language) angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,12 +35,14 @@ HRESULT RemapFunction (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `newILOffset`  
  in Der neue MSIL-Offset des Stapel Rahmens, bei dem der Anweisungs Zeiger platziert werden soll. Dieser Wert muss ein Sequenz Punkt sein.  
   
  Es liegt in der Verantwortung des Aufrufers, die Gültigkeit dieses Werts sicherzustellen. Beispielsweise ist der MSIL-Offset nicht gültig, wenn er sich außerhalb der Grenzen der Funktion befindet.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn die Funktion eines Frames bearbeitet wurde, kann der Debugger die `RemapFunction` Methode zum austauschen in der aktuellen Version der Funktion des Frames aufzurufen, sodass Sie ausgeführt werden kann. Die Codeausführung beginnt am angegebenen MSIL-Offset.  
   
 > [!NOTE]
@@ -52,6 +55,7 @@ HRESULT RemapFunction (
 - Während die Codeausführung aufgrund eines [ICorDebugManagedCallback:: EditAndContinueRemap](icordebugmanagedcallback-editandcontinueremap-method.md) -Ereignisses für diesen Frame beendet wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
