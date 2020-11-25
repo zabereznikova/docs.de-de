@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b437f70-561d-48c7-abe0-0cb9ace10c08
 topic_type:
 - apiref
-ms.openlocfilehash: adcaac02526c7d72ffb75ba6c7552632173032cf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dc40b4a7cf61f8d6141b8e3e57c5e13fe2261b35
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009040"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731565"
 ---
 # <a name="imetadataassemblyimportgetassemblyfromscope-method"></a>IMetaDataAssemblyImport::GetAssemblyFromScope-Methode
+
 Ruft einen Zeiger auf die Assembly im aktuellen Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,18 +35,20 @@ HRESULT GetAssemblyFromScope (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ptkAssembly`  
  vorgenommen Ein Zeiger auf das abgerufene `mdAssembly` Token, das die Assembly identifiziert.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

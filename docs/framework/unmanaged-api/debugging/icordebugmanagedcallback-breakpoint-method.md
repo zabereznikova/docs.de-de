@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-ms.openlocfilehash: d8e62499a813419ecc30924624da553ca9f2c7b2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7cf966f407572cc681f641b63791906a5c015f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213399"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731864"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint-Methode
+
 Benachrichtigt den Debugger, wenn ein Breakpoint erreicht wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT Breakpoint (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAppDomain`  
  in Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die den Breakpoint enthält.  
   
@@ -46,6 +48,7 @@ HRESULT Breakpoint (
  in Ein Zeiger auf ein icordebubreakpoint-Objekt, das den Breakpoint darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -54,6 +57,6 @@ HRESULT Breakpoint (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-ms.openlocfilehash: 0acd31d85504688427cace0222a657885035c537
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3a2045466340f92dd8421090c74a442068e8bfaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731409"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals-Methode
+
 Ruft die in diesem Bereich definierten lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetLocals(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cLocals`  
  in Ein-Wert `ULONG32` , der die Größe des `locals` Arrays angibt.  
   
@@ -46,11 +48,13 @@ HRESULT GetLocals(
  vorgenommen Das Array, das die lokalen Variablen empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedScope-Schnittstelle](isymunmanagedscope-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7738a904-0cd7-4fde-a3eb-2323a5533157
 topic_type:
 - apiref
-ms.openlocfilehash: 2e857f951a837e1385d02dfc810fc12cfefd0d2b
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: c662e242cf6745223b1e87716ce4f64971347d2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841957"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731656"
 ---
 # <a name="ihosttaskmanagerendthreadaffinity-method"></a>IHostTaskManager::EndThreadAffinity-Methode
+
 Benachrichtigt den Host, dass verwalteter Code den Zeitraum verlässt, in dem die aktuelle Aufgabe nach einem früheren [IHostTaskManager:: beginthreadaffinität](ihosttaskmanager-beginthreadaffinity-method.md)nicht in einen anderen Betriebssystem Thread verschoben werden darf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,27 +36,29 @@ HRESULT EndThreadAffinity ();
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`EndThreadAffinity`wurde erfolgreich zurückgegeben.|  
+|S_OK|`EndThreadAffinity` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_UNEXPECTED|`EndThreadAffinity`wurde ohne einen früheren Aufruf von aufgerufen `BeginThreadAffinity` .|  
+|E_UNEXPECTED|`EndThreadAffinity` wurde ohne einen früheren Aufruf von aufgerufen `BeginThreadAffinity` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die CLR führt einen entsprechenden Aufruf `BeginThreadAffinity` von für die aktuelle Aufgabe aus, bevor aufgerufen wird `EndThreadAffinity` . Wenn kein solcher entsprechender-Befehl vorhanden ist, sollte die [IHostTaskManager](ihosttaskmanager-interface.md) -Implementierung des Hosts E_UNEXPECTED zurückgeben und keine Aktion durchführen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading>
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 560a6adf85fab7f421b86cba52224d5b1bfe1089
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c72e5b9544d1d8ae989405ac9bfdb22050b1aaaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006258"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731608"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources-Methode
+
 Ruft einen Zeiger auf einen Enumerator für die Ressourcen ab, auf die im aktuellen Assemblymanifest verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT EnumManifestResources (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert sein, wenn die- `EnumManifestResources` Methode zum ersten Mal aufgerufen wird.  
   
@@ -53,18 +55,19 @@ HRESULT EnumManifestResources (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumManifestResources` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` wird auf 0 (null) festgelegt.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

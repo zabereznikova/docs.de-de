@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: 33a68d11a8d17e46533b4f83bbf87aafe171e612
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0c38269ea4d730d8f3f9ba5d2c5d8f0edf6d7d45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731835"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap-Methode
+
 Benachrichtigt den Debugger, dass ein STRG + C in dem Prozess, der debuggt wird, eingeklemmt ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT ControlCTrap (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pProcess`  
  in Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem STRG + C eingefangen wird.  
   
@@ -45,9 +47,11 @@ HRESULT ControlCTrap (
 |S_FALSE|Der Debugger verarbeitet den STRG + C-Trap nicht.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Alle Anwendungs Domänen innerhalb des Prozesses werden für diesen Rückruf beendet.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -56,6 +60,6 @@ HRESULT ControlCTrap (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugManagedCallback-Schnittstelle](icordebugmanagedcallback-interface.md)

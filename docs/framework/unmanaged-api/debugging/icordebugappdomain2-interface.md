@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: 1643d91f373ff233540026440ee21aa4c146f3e3
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f20ae6977504f958b7bfa8e2f073b7db6e8b822b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731474"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt Methoden bereit, um mit Arrays, Zeigern, Funktions Zeigern und Verweis Ty
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetArrayOrPointerType-Methode](icordebugappdomain2-getarrayorpointertype-method.md)|Ruft ein Array vom angegebenen Typ oder einen Zeiger oder einen Verweis auf den angegebenen Typ ab.|  
 |[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|Ruft einen Zeiger auf eine Funktion ab, die über eine angegebene Signatur verfügt.|  
@@ -37,7 +37,8 @@ Stellt Methoden bereit, um mit Arrays, Zeigern, Funktions Zeigern und Verweis Ty
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e88a4dc3-02cc-4703-a474-292b71c40657
 topic_type:
 - apiref
-ms.openlocfilehash: c67f00acd61d6e0cdf3adfa0d3d0fda2a06a6f31
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 755dfed4107a602390a4402a2dde83e08986b623
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762981"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731695"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld-Methode
+
 Ruft die Anzahl der Sperren ab, die zurzeit für den Task ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT LocksHeld (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pLockCount`  
  vorgenommen Die Anzahl der Sperren für die Aufgabe zum Zeitpunkt des Methoden Aufrufes.  
   
@@ -41,7 +43,7 @@ HRESULT LocksHeld (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`LocksHeld`wurde erfolgreich zurückgegeben.|  
+|S_OK|`LocksHeld` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,11 +51,12 @@ HRESULT LocksHeld (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a2bf0335f8d75c7dbd1a651afdb54da8c7be2460
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503834"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731619"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName-Methode
+
 Ruft ein Array von Assemblys mit dem angegebenen `szAssemblyName` Parameter ab und verwendet dabei die Standardregeln, die vom Common Language Runtime (CLR) zum Auflösen von Verweisen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT FindAssembliesByName (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `szAppBase`  
  in Das Stammverzeichnis, in dem nach der angegebenen Assembly gesucht werden soll. Wenn dieser Wert auf festgelegt ist `null` , `FindAssembliesByName` sucht nur im globalen Assemblycache für die Assembly.  
   
@@ -61,24 +63,26 @@ HRESULT FindAssembliesByName (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`FindAssembliesByName` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Assemblys vorhanden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Bei Angabe eines Assemblynamens findet die- `FindAssembliesByName` Methode die Assembly, indem Sie den Standardregeln zum Auflösen von Assemblyverweisen folgt. (Weitere Informationen finden Sie unter [so](../../deployment/how-the-runtime-locates-assemblies.md)sucht Common Language Runtime nach Assemblys.) ermöglicht dem Aufrufer, `FindAssembliesByName` verschiedene Aspekte des Assemblyresolverkontexts zu konfigurieren, z. b. Anwendungs Basis und privater Suchpfad.  
   
  Die- `FindAssembliesByName` Methode erfordert, dass die CLR im Prozess initialisiert wird, um die Assemblyauflösungs-Logik aufzurufen. Daher müssen Sie vor dem Aufrufen von [CoInitializeEE](../hosting/coinitializeee-function.md) (Übergabe COINITEE_DEFAULT) aufrufen `FindAssembliesByName` und dann mit einem Aufruf von " [zählinitializecor](../hosting/couninitializecor-function.md)" folgen.  
   
- `FindAssembliesByName`Gibt einen [IMetaDataImport](imetadataimport-interface.md) -Zeiger auf die Datei zurück, die das Assemblymanifest für den weiter gegebenen Assemblynamen enthält. Wenn der angegebene Assemblyname nicht vollständig angegeben ist (z. b. wenn er keine Version enthält), werden möglicherweise mehrere Assemblys zurückgegeben.  
+ `FindAssembliesByName` Gibt einen [IMetaDataImport](imetadataimport-interface.md) -Zeiger auf die Datei zurück, die das Assemblymanifest für den weiter gegebenen Assemblynamen enthält. Wenn der angegebene Assemblyname nicht vollständig angegeben ist (z. b. wenn er keine Version enthält), werden möglicherweise mehrere Assemblys zurückgegeben.  
   
- `FindAssembliesByName`wird häufig von einem Compiler verwendet, der versucht, eine referenzierte Assembly zur Kompilierzeit zu finden.  
+ `FindAssembliesByName` wird häufig von einem Compiler verwendet, der versucht, eine referenzierte Assembly zur Kompilierzeit zu finden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
