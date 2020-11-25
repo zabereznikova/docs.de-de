@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 69fd3e2df4a4eafe91cc025f28e1387cc443ea04
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 543a1a3c79b6cf3eb799da5844f35286dfa91940
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212307"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709556"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3-Schnittstelle
+
 Erstellt einen Symbolreader für ein dynamisches Modul.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,17 +40,19 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[ICorDebugModule3::CreateReaderForInMemorySymbols-Methode](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Erstellt einen Symbol Reader (in der Regel [ISymUnmanagedReader-Schnittstelle](../diagnostics/isymunmanagedreader-interface.md)) für ein dynamisches Modul.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Schnittstelle erweitert logisch die Schnittstellen "ICorDebugModule" und "ICorDebugModule2".  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -58,7 +61,7 @@ interface ICorDebugModule3 : IUnknown
   
  **.NET Framework Versionen:** 4,5, 4, 3,5 SP1
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugRemoteTarget-Schnittstelle](icordebugremotetarget-interface.md)
 - [ICorDebug-Schnittstelle](icordebug-interface.md)

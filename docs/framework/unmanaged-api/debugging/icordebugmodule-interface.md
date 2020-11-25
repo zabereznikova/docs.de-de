@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 86e17b48bc491c45f8b46be23ab626dc1f2a6962
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212242"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709842"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt ein Common Language Runtime (CLR)-Modul dar, bei dem es sich entweder um 
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[CreateBreakpoint-Methode](icordebugmodule-createbreakpoint-method.md)|Nicht implementiert.|  
 |[EnableClassLoadCallbacks-Methode](icordebugmodule-enableclassloadcallbacks-method.md)|Bestimmt, ob die Rückrufe [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) und [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) für dieses Modul aufgerufen werden.|  
@@ -53,6 +53,7 @@ Stellt ein Common Language Runtime (CLR)-Modul dar, bei dem es sich entweder um 
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -61,7 +62,7 @@ Stellt ein Common Language Runtime (CLR)-Modul dar, bei dem es sich entweder um 
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebug-Schnittstelle](icordebug-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

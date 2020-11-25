@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-ms.openlocfilehash: 4517f266bbb500223214a6a8fe5881e8b29566c3
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 98c01993a85ed07d961902d8a098a96df4702c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206883"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709829"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic-Methode
+
 Ruft einen Wert ab, der angibt, ob dieses Modul dynamisch ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT IsDynamic(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pDynamic`  
  [out] `true` , wenn dieses Modul dynamisch ist. andernfalls `false` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein dynamisches Modul kann neue Klassen hinzufügen und vorhandene Klassen löschen, auch nachdem das Modul geladen wurde. Die [ICorDebugManagedCallback:: LoadClass](icordebugmanagedcallback-loadclass-method.md) -und [ICorDebugManagedCallback:: UnloadClass](icordebugmanagedcallback-unloadclass-method.md) -Rückrufe benachrichtigen den Debugger, wenn eine Klasse hinzugefügt oder gelöscht wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

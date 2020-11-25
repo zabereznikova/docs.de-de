@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 1b9700455da82fc7f4a39d4c208ac0b18ef79722
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 18cd9dd14e615a7e76bfff30c9ae584305bd1907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009118"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708937"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs-Methode
+
 Listet die `mdAssemblyRef` im Assemblymanifest definierten-Instanzen auf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT EnumAssemblyRefs (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dies muss ein NULL-Wert sein, wenn die- `EnumAssemblyRefs` Methode zum ersten Mal aufgerufen wird.  
   
@@ -53,18 +55,19 @@ HRESULT EnumAssemblyRefs (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumAssemblyRefs` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcTokens` wird auf 0 (null) festgelegt.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

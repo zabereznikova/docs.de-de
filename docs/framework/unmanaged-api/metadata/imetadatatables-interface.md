@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 31272cce-506a-4f18-bcbf-01ee45e36356
 topic_type:
 - apiref
-ms.openlocfilehash: 2105033e684ec172e24adfb14bcab7668b388af3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 073e73f082416308b893974471e39cbf5243d01c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501120"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708854"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables-Schnittstelle
+
 Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen bereit.  
   
 ## <a name="methods"></a>Methoden  
@@ -49,15 +50,16 @@ Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen
 |[GetUserStringHeapSize-Methode](imetadatatables-getuserstringheapsize-method.md)|Ruft die Größe des Benutzer Zeichen folgen Heaps in Bytes ab.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

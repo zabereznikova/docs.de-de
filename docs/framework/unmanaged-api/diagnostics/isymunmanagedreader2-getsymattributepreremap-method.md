@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-ms.openlocfilehash: e6248aba1c41b2815f2806942d419da869ed94b4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 812c0d08930efff9140c6e897d3f93c4909e8464
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709088"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap-Methode
+
 Ruft ein benutzerdefiniertes Attribut basierend auf seinem Namen ab. Im Gegensatz zu benutzerdefinierten Metadaten-Attributen werden diese Attribute im Symbol Speicher gespeichert.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetSymAttributePreRemap(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `parent`  
  in Das Metadatentoken des übergeordneten Elements.  
   
@@ -54,11 +56,13 @@ HRESULT GetSymAttributePreRemap(
  vorgenommen Ein Zeiger auf den Puffer, der die Attribut Bytes empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReader2-Schnittstelle](isymunmanagedreader2-interface.md)

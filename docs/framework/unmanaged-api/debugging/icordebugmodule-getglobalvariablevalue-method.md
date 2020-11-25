@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bbc0881c-6a59-41a0-b5ee-2f3d1b71684c
 topic_type:
 - apiref
-ms.openlocfilehash: 7e32f3f4f6613d34e2b40946ed3eadb8eb0a7c1f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 94fe7deb10c23ea0bc824bb2244e8d1d87f831e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710029"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>ICorDebugModule::GetGlobalVariableValu-Methode
+
 Ruft den Wert der angegebenen globalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetGlobalVariableValue(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `fieldDef`  
  in Ein `mdFieldDef` Token, das auf die Metadaten verweist, die die globale Variable beschreiben.  
   
@@ -42,6 +44,7 @@ HRESULT GetGlobalVariableValue(
  vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert der angegebenen globalen Variablen darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

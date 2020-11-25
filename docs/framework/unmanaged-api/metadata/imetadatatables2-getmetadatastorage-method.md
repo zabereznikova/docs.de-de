@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 667a6d1e-753d-4ea2-8fd8-a8337d1bb9cd
 topic_type:
 - apiref
-ms.openlocfilehash: 55fcde6c47705e515eb2d20f25ac870e257b92c0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 775b3919d1468f26fc3c374dd8ca143aa17853ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501130"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708737"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage-Methode
+
 Ruft die Größe und den Inhalt der Metadaten ab, die im angegebenen Abschnitt gespeichert werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetMetaDataStorage (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppvMd`  
  [in, out] Ein Zeiger auf einen Metadatenabschnitt.  
   
@@ -42,15 +44,16 @@ HRESULT GetMetaDataStorage (
  vorgenommen Die Größe des Metadatenstreams.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d350f69d-9aff-4f5a-8301-daea22dee2da
 topic_type:
 - apiref
-ms.openlocfilehash: f16150ad7d9ecec4b4aceee5c9266e9a7859f1cb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4b77ad2f31f10bd14ce7d8242a584da737428344
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213295"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709302"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue-Methode
+
 Ruft den Wert eines Arguments oder einer lokalen Variablen ab, von dem das niedrige Wort und das große Wort im Speicher Speicherort gespeichert sind, bzw. das angegebene Register für diesen systemeigenen Frame.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `highWordReg`  
  in Ein Wert der CorDebugRegister-Enumeration, der das Register angibt, das das höchst Wort des Werts enthält.  
   
@@ -54,6 +56,7 @@ HRESULT GetLocalRegisterMemoryValue (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den abgerufenen Wert darstellt, der im angegebenen Registrierungs-und Speicher Speicherort gespeichert ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -62,4 +65,4 @@ HRESULT GetLocalRegisterMemoryValue (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

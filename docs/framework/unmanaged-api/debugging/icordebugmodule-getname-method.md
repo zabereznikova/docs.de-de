@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-ms.openlocfilehash: 55342c803756aa10c2e7c835d9e1d58b439bb36c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2aecadf8688e763a69bd40ca877e44bc0ce5c29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212541"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710033"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
+
 Ruft den Dateinamen des Moduls ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cchname`  
  [in] Die Größe des `szName`-Arrays.  
   
@@ -46,9 +48,11 @@ HRESULT GetName(
  vorgenommen Ein Array, in dem der zurückgegebene Name gespeichert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` -Methode gibt eine S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName`gibt eine S_FALSE HRESULT zurück, wenn der Name erfunden ist, z. b. für ein dynamisches Modul oder ein in-Memory-Modul.  
+
+ Die `GetName` -Methode gibt eine S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName` gibt eine S_FALSE HRESULT zurück, wenn der Name erfunden ist, z. b. für ein dynamisches Modul oder ein in-Memory-Modul.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -57,4 +61,4 @@ HRESULT GetName(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

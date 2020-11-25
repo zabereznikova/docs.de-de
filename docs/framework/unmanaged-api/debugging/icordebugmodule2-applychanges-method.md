@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: 99824e9a7fd759fb30bfa377156fc28eb934a2b4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212216"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709699"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges-Methode
+
 Wendet die Änderungen an den Metadaten und den Änderungen im MSIL-Code (Microsoft Intermediate Language) auf den laufenden Prozess an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT ApplyChanges (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cbMetadata`  
  in Größe (in Bytes) der Delta Metadaten.  
   
@@ -52,7 +54,8 @@ HRESULT ApplyChanges (
  in Puffer, der den aktualisierten MSIL-Code enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Der- `pbMetadata` Parameter befindet sich in einem speziellen Delta-Metadatenformat (als Output by [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`nimmt vorherige Metadaten als Basis an und beschreibt individuelle Änderungen, die auf diese Basis angewendet werden sollen.  
+
+ Der- `pbMetadata` Parameter befindet sich in einem speziellen Delta-Metadatenformat (als Output by [IMetaDataEmit2:: SaveDeltaToMemory](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` nimmt vorherige Metadaten als Basis an und beschreibt individuelle Änderungen, die auf diese Basis angewendet werden sollen.  
   
  Im Gegensatz dazu `pbIL[` enthält der Parameter "]" die neue MSIL für die aktualisierte Methode und soll die vorherige MSIL für diese Methode vollständig ersetzen.  
   
@@ -63,6 +66,7 @@ HRESULT ApplyChanges (
  Wenn die `ApplyChanges` Methode fehlschlägt, befindet sich die Debugsitzung in einem ungültigen Zustand und muss neu gestartet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: 74111a175b0decbc1beef7c8df5ade59d31d845b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c46a3bc34ba7efa760e50416e9a6c39779727813
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009144"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708919"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps-Methode
+
 Ändert die angegebene `ManifestResource`-Metadatenstruktur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT SetManifestResourceProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mr`  
  in Das Token, das die `ManifestResource` zu ändernde Metadatenstruktur angibt.  
   
@@ -50,17 +52,19 @@ HRESULT SetManifestResourceProps (
  in Eine bitweise Kombination von Flagwerten, die die Attribute der Ressource angeben.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie zum Erstellen einer `ManifestResource` Metadatenstruktur die [IMetaDataAssemblyEmit::D efinemanifestresource](imetadataassemblyemit-definemanifestresource-method.md) -Methode.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

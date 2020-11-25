@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-ms.openlocfilehash: a81a5afeec8f97864e1772347c6575b9d09cb176
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5883b35bb3f1fec24ec108c9839501f0e81881fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614889"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708867"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount-Methode
+
 Ruft die Anzahl der Symbol Suchinformationen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,15 +34,18 @@ HRESULT GetSymbolSearchInfoCount(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pcSearchInfo`  
  ] out] ein Zeiger auf einen-Wert `ULONG32` , der die Größe des Puffers empfängt, der zum enthalten der Suchinformationen erforderlich ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](isymunmanagedreadersymbolsearchinfo-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf4d82200709971201da60d06d0cb929641a104
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6ffc74247a4ecafcc3744923c0def99220b5ca6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709881"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken-Methode
+
 Ruft das Token für den Tabelleneintrag für dieses Modul ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pToken`  
  vorgenommen Ein Zeiger auf das `mdModule` Token, das auf die Metadaten des Moduls verweist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das Token kann an die Metadatenimport-Schnittstellen [IMetaDataImport](../metadata/imetadataimport-interface.md), [IMetaDataImport2](../metadata/imetadataimport2-interface.md)und [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) übermittelt werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -49,6 +53,6 @@ HRESULT GetToken(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadaten](../metadata/index.md)
