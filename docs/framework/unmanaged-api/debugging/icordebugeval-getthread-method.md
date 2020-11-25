@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-ms.openlocfilehash: b985ada09e0e1914c5e60da61a45398fc6098b33
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 0680c47e4390e876c5df99ee7eb200e7d187f0ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976277"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722192"
 ---
-# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="69699-102">ICorDebugEval::GetThread-Methode</span><span class="sxs-lookup"><span data-stu-id="69699-102">ICorDebugEval::GetThread Method</span></span>
-<span data-ttu-id="69699-103">Ruft den Thread ab, in dem diese Auswertung ausgeführt wird oder ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="69699-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
+# <a name="icordebugevalgetthread-method"></a><span data-ttu-id="682b9-102">ICorDebugEval::GetThread-Methode</span><span class="sxs-lookup"><span data-stu-id="682b9-102">ICorDebugEval::GetThread Method</span></span>
+
+<span data-ttu-id="682b9-103">Ruft den Thread ab, in dem diese Auswertung ausgeführt wird oder ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="682b9-103">Gets the thread in which this evaluation is executing or will execute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69699-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="69699-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="682b9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="682b9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThread (  
@@ -33,15 +34,17 @@ HRESULT GetThread (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69699-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="69699-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="682b9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="682b9-105">Parameters</span></span>  
+
  `ppThread`  
- <span data-ttu-id="69699-106">vorgenommen Ein Zeiger auf die Adresse eines ICorDebugThread-Objekts, das den Thread darstellt.</span><span class="sxs-lookup"><span data-stu-id="69699-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
+ <span data-ttu-id="682b9-106">vorgenommen Ein Zeiger auf die Adresse eines ICorDebugThread-Objekts, das den Thread darstellt.</span><span class="sxs-lookup"><span data-stu-id="682b9-106">[out] A pointer to the address of an ICorDebugThread object that represents the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69699-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="69699-107">Requirements</span></span>  
- <span data-ttu-id="69699-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69699-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="682b9-107">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="682b9-107">Requirements</span></span>  
+
+ <span data-ttu-id="682b9-108">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="682b9-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69699-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="69699-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="682b9-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="682b9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="69699-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="69699-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="682b9-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="682b9-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="69699-111">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69699-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="682b9-111">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="682b9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
