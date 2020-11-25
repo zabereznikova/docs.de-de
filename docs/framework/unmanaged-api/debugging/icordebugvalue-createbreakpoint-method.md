@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87af9661-b59d-4077-aabf-d59fb8673602
 topic_type:
 - apiref
-ms.openlocfilehash: cae8ae374186e4bb9a022c11f7edab3c07ff3fa7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 5944d7f39d327c2787c517aeebdb302834551b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395870"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731149"
 ---
 # <a name="icordebugvaluecreatebreakpoint-method"></a>ICorDebugValue::CreateBreakpoint-Methode
+
 Die- `CreateBreakpoint` Methode ist zurzeit nicht implementiert.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,7 +34,8 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -42,4 +44,4 @@ HRESULT CreateBreakpoint (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

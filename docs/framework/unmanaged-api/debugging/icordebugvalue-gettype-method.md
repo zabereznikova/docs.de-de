@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: a3cd62384ad87d072cd715d23d0e9ee9dac23270
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 06f403f0b653866428a41240f99833ec1180eb86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396738"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731071"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType-Methode
+
 Ruft den primitiven Typ dieses ICorDebugValue-Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT GetType (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pType`  
  vorgenommen Ein Zeiger auf einen Wert der "CorElementType"-Enumeration, der den Typ des Werts angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn das-Objekt ein komplexer Lauf Zeittyp ist, kann dieser Typ durch die entsprechenden Unterklassen der- `ICorDebugValue` Schnittstelle überprüft werden. Beispielsweise stellt "ICorDebugObjectValue", der von erbt `ICorDebugValue` , einen komplexen Typ dar.  
   
  `GetType`Mit der-Methode und der [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) -Methode werden jeweils Informationen über den Typ eines Werts zurückgegeben. Beide werden durch die Generics-Aware [ICorDebugValue2:: GetExactType](icordebugvalue2-getexacttype-method.md) -Methode abgelöst.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -51,4 +55,4 @@ HRESULT GetType (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

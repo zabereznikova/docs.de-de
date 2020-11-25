@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 3df6e4decf1c4641116dee5fab3ca83189b427c0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496762"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731223"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress-Methode
+
 Ruft die Adresse des angegebenen Thread statischen Felds ab, das sich im Gültigkeitsbereich des angegebenen Threads befindet.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetThreadStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `classId`  
  in Die ID der Klasse, die das angeforderte Thread statische Feld enthält.  
   
@@ -48,7 +50,8 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  vorgenommen Ein Zeiger auf die Adresse des statischen Felds, das sich im angegebenen Thread befindet.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die- `GetThreadStaticAddress` Methode kann eine der folgenden Methoden zurückgeben:  
   
 - Ein CORPROF_E_DATAINCOMPLETE HRESULT, wenn dem angegebenen statischen Feld keine Adresse im angegebenen Kontext zugewiesen wurde.  
@@ -58,6 +61,7 @@ HRESULT GetThreadStaticAddress(
  Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, `GetThreadStaticAddress` gibt CORPROF_E_DATAINCOMPLETE für alle statischen Felder zurück, obwohl einige der statischen Felder möglicherweise bereits initialisiert sind und Garbage Collection Objekte mit rooting erstellt wurden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -66,7 +70,7 @@ HRESULT GetThreadStaticAddress(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

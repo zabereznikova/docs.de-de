@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3a2cd90-7c4e-4374-bb87-b41befb8344f
 topic_type:
 - apiref
-ms.openlocfilehash: bac29b5950f1547c5c60ac716d40d2ef4b1a2cc2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b6625b0ef4dc3de4067514a0b39849c7a958d5c4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842479"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730759"
 ---
 # <a name="ihostthreadpoolmanager-interface"></a>IHostThreadPoolManager-Schnittstelle
+
 Stellt Methoden bereit, mit denen der Common Language Runtime (CLR) den Thread Pool konfigurieren und Arbeitselemente in die Warteschlange für den Thread Pool einreihen kann.  
   
 ## <a name="methods"></a>Methoden  
@@ -36,19 +37,21 @@ Stellt Methoden bereit, mit denen der Common Language Runtime (CLR) den Thread P
 |[SetMinThreads-Methode](ihostthreadpoolmanager-setminthreads-method.md)|Legt die Mindestanzahl von Leerlaufthreads fest, die der Host in Erwartung von Anforderungen beibehalten muss.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host muss den Thread Pool nicht mit den Werten konfigurieren, die in Aufrufen der `SetMaxThreads` -Methode und der-Methode angegeben sind `SetMinThreads` . In diesem Fall sollte der Host den HRESULT-Wert E_NOTIMPL aus diesen Methoden zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading>
 - <xref:System.Threading.ThreadPool>
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

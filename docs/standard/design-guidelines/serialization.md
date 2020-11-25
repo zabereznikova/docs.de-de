@@ -2,14 +2,15 @@
 title: Serialisierung
 ms.date: 10/22/2008
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 58ed937df5b60daf9fcbcb7610d6026c5e9805fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828672"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730928"
 ---
 # <a name="serialization"></a>Serialisierung
+
 Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wird, das leicht persistent gespeichert oder transportiert werden kann. Beispielsweise können Sie ein Objekt serialisieren, über das Internet mithilfe von http transportieren und auf dem Zielcomputer deserialisieren.
 
  Der .NET Framework bietet drei wichtige Serialisierungstechnologien, die für verschiedene Serialisierungsszenarien optimiert sind. In der folgenden Tabelle werden diese Technologien und die zugehörigen Framework-Haupttypen für die jeweilige Technologie beschrieben.
@@ -23,6 +24,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
  Wenn Sie neue Typen entwerfen, ✔️ bei der Serialisierung nachzudenken.
 
 ## <a name="choosing-the-right-serialization-technology-to-support"></a>Auswählen einer geeigneten Serialisierungstechnologie, die unterstützt werden soll
+
  ✔️ in Erwägung ziehen, die Datenvertragsserialisierung zu unterstützen, wenn Instanzen des Typs möglicherweise persistent gespeichert oder in Webdiensten verwendet werden müssen.
 
  ✔️ sollten die XML-Serialisierung anstelle von oder zusätzlich zur Datenvertragsserialisierung unterstützen, wenn Sie mehr Kontrolle über das XML-Format benötigen, das bei der Serialisierung des Typs erzeugt wird.
@@ -34,6 +36,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
  ❌ Vermeiden Sie die Unterstützung der Laufzeitserialisierung oder XML-Serialisierung nur aus Gründen allgemeiner Persistenz. Bevorzugen Sie stattdessen die Datenvertragsserialisierung.
 
 ## <a name="supporting-data-contract-serialization"></a>Unterstützen der Datenvertragsserialisierung
+
  Typen können die Datenvertragsserialisierung unterstützen, indem <xref:System.Runtime.Serialization.DataContractAttribute> Sie auf den Typ und auf die Member <xref:System.Runtime.Serialization.DataMemberAttribute> (Felder und Eigenschaften) des Typs anwenden.
 
  ✔️ in Erwägung gezogen, Datenmember des Typs öffentlich zu markieren, wenn der Typ in teilweiser Vertrauenswürdigkeit verwendet werden kann.
@@ -63,6 +66,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
  Über die Schnittstelle kann das Serialisierungsprogramm sicherstellen, dass bei der wiederholten Umwandlung keine Daten verloren gehen. Die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A?displayProperty=nameWithType> -Eigenschaft wird zum Speichern von Daten aus der zukünftigen Version des Typs verwendet, der in der aktuellen Version unbekannt ist, und kann daher nicht in den Datenmembern gespeichert werden. Wenn die aktuelle Version anschließend serialisiert und in eine zukünftige Version deserialisiert wird, sind die zusätzlichen Daten im serialisierten Stream verfügbar.
 
 ## <a name="supporting-xml-serialization"></a>Unterstützen der XML-Serialisierung
+
  Die Datenvertragsserialisierung ist die wichtigste (standardmäßige) serialisierungstechnologie im .NET Framework, aber es gibt Serialisierungsszenarien, die die Datenvertragsserialisierung nicht unterstützt Beispielsweise kann die Form des vom Serialisierungsprogramm erzeugten bzw. verarbeiteten XML nicht vollständig kontrolliert werden. Wenn eine solche feine Kontrolle erforderlich ist, muss die XML-Serialisierung verwendet werden, und Sie müssen die Typen für die Unterstützung dieser serialisierungstechnologie entwerfen.
 
  ❌ Vermeiden Sie das Entwerfen von Typen speziell für die XML-Serialisierung, es sei denn, Sie haben einen sehr starken Grund, die Form des erzeugten XML zu steuern. Diese Serialisierungstechnologie wurde durch die im vorherigen Abschnitt behandelte Datenvertragsserialisierung abgelöst.
@@ -70,6 +74,7 @@ Serialisierung ist der Prozess, bei dem ein Objekt in ein Format umgewandelt wir
  ✔️ sollten Sie die Implementierung der- <xref:System.Xml.Serialization.IXmlSerializable> Schnittstelle in Erwägung nehmen, wenn Sie die Form des serialisierten XML-Codes noch besser steuern möchten, als durch Anwenden der XML-Serialisierungsattribute. Die beiden Methoden <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> der Schnittstelle erlauben eine vollständige Kontrolle des serialisierten XML-Streams. Sie können auch das XML-Schema steuern, das für den Typ generiert wird, indem Sie das Anwenden `XmlSchemaProviderAttribute` .
 
 ## <a name="supporting-runtime-serialization"></a>Unterstützen der Laufzeitserialisierung
+
  Die Laufzeitserialisierung ist eine von .NET-Remoting verwendete Technologie. Wenn Sie der Ansicht sind, dass Ihre Typen mithilfe von .NET-Remoting transportiert werden, müssen Sie sicherstellen, dass Sie die Laufzeitserialisierung unterstützen.
 
  Die grundlegende Unterstützung für die Laufzeitserialisierung kann durch Anwenden von bereitgestellt werden <xref:System.SerializableAttribute> . Erweiterte Szenarien umfassen die Implementierung eines einfachen laufzeitserialisierbaren Musters (implementieren <xref:System.Runtime.Serialization.ISerializable> und Bereitstellen des Serialisierungskonstruktors).
@@ -101,7 +106,7 @@ public class Person : ISerializable
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Verwendungs Richtlinien](usage-guidelines.md)

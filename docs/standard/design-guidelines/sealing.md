@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828685"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730941"
 ---
 # <a name="sealing"></a>Versiegeln
+
 Eines der Features von objektorientierten Frameworks besteht darin, dass Entwickler diese auf eine Weise erweitern und anpassen können, die von den Framework-Designern nicht erwartet wird. Dies ist sowohl die Leistungsfähigkeit als auch die Gefahr des erweiterbaren Entwurfs. Wenn Sie Ihr Framework entwerfen, ist es daher sehr wichtig, die Erweiterbarkeit bei Bedarf sorgfältig zu entwerfen und die Erweiterbarkeit zu begrenzen, wenn dies gefährlich ist.
 
  Ein leistungsfähiger Mechanismus, der die Erweiterbarkeit verhindert, ist das versiegeln. Sie können entweder die Klasse oder einzelne Member versiegeln. Durch das Versiegeln einer Klasse wird verhindert, dass Benutzer von der-Klasse erben. Das Versiegeln eines Members verhindert, dass Benutzer ein bestimmtes Element überschreiben.
@@ -45,7 +46,7 @@ Eines der Features von objektorientierten Frameworks besteht darin, dass Entwick
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)

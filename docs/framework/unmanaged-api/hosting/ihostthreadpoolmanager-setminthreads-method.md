@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: c5b150b161acba3820ced367049f08153dd091aa
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d6f56f689a35fa025a924be0db67c893f160fc7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842438"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730733"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads-Methode
+
 Legt die Mindestanzahl von Leerlaufthreads fest, die der Host in Erwartung von Anforderungen beibehalten muss.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetMinThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `MinThreads`  
  in Die neue Mindestanzahl von Threads, die vom Host gewartet werden müssen.  
   
@@ -41,7 +43,7 @@ HRESULT SetMinThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetMinThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,18 +52,20 @@ HRESULT SetMinThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `SetMinThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Host ist nicht erforderlich, um eine Implementierung von bereitzustellen `SetMinThreads` . In diesem Fall sollte ein HRESULT-Wert von E_NOTIMPL zurückgegeben werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.ThreadPool.SetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>

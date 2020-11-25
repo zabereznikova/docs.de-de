@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-ms.openlocfilehash: 9ff7128f55236ae4d0c3a9067a279c496cfb6798
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9f5688ae4f76f9ddfde231aa6252d666c9152eec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396754"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731079"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize-Methode
+
 Ruft die Größe des "ICorDebug Value"-Objekts in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT GetSize (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pSize`  
  vorgenommen Die Größe (in Bytes) dieses Wert Objekts.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn der Typ des Werts ein Referenztyp ist, gibt diese Methode die Größe des Zeigers anstelle der Größe des-Objekts zurück.  
   
  Die `ICorDebugValue::GetSize` -Methode gibt `COR_E_OVERFLOW` für Objekte, die größer als 4 GB sind, auf 64-Bit-Plattformen zurück. Verwenden Sie stattdessen die [ICorDebugValue3:: GetSize64](icordebugvalue3-getsize64-method.md) -Methode für Objekte, die größer als 4 GB sind.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -51,6 +55,6 @@ HRESULT GetSize (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetSize64-Methode](icordebugvalue3-getsize64-method.md)

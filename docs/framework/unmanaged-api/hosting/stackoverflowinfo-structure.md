@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 941093b9a0856c2b716ba359c854473f3c9ea26a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: a8a57cfcaf36949d4d10c6ec267a5f55a2aee5eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006518"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729927"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo-Struktur
+
 Speichert den Typ des aufgetretenen Überlaufs und Informationen zu der Ausnahme, die aufgrund des Überlaufs ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,23 +36,25 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`soType`|Ein Wert der [StackOverflowType](stackoverflowtype-enumeration.md) -Enumeration, der den Typ des Überlaufs angibt.|  
 |`pExceptionInfo`|Ein Zeiger auf ein Win32 `EXCEPTION_POINTERS` -Objekt, das einen Ausnahme Daten Satz mit einer Computer unabhängigen Beschreibung einer Ausnahme und einem Kontext Daten Satz mit einer vom Computer abhängigen Beschreibung des Prozessor Kontexts zum Zeitpunkt der Ausnahme enthält.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein- `StackOverflowInfo` Objekt wird für-Ereignisse an die [iaktiononclrevent:: OnEvent](iactiononclrevent-onevent-method.md) -Methode weitergegeben `Event_StackOverflow` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. idl  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Strukturen](hosting-structures.md)

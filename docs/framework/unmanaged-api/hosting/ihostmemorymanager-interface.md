@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0f71e4c45e43c2027b12998532f2b04401a51951
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501507"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731331"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager-Schnittstelle
+
 Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, virtuelle Speicheranforderungen über den Host zu erstellen, statt die standardmäßigen Win32-Funktionen für den virtuellen Arbeitsspeicher zu verwenden.  
   
 ## <a name="methods"></a>Methoden  
@@ -39,19 +40,21 @@ Stellt Methoden bereit, die es dem Common Language Runtime (CLR) ermöglichen, v
 |[VirtualProtect-Methode](ihostmemorymanager-virtualprotect-method.md)|Dient als logischer Wrapper für die entsprechende Win32-Funktion, mit der der Schutz für einen Bereich von zugegebenen Seiten im virtuellen Adressraum des aufrufenden Prozesses geändert wird.|  
 |[VirtualQuery-Methode](ihostmemorymanager-virtualquery-method.md)|Dient als logischer Wrapper für die entsprechende Win32-Funktion, die Informationen zu einem Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses abruft.|  
   
-## <a name="remarks"></a>Bemerkungen  
- `IHostMemoryManager`stellt außerdem Methoden bereit, mit denen die CLR einen Zeiger abrufen kann, über den Arbeitsspeicher Anforderungen für den Heap und die Arbeitsspeicher Auslastung im Prozess, wie vom Host gemeldet, abgerufen werden können.  
+## <a name="remarks"></a>Hinweise  
+
+ `IHostMemoryManager` stellt außerdem Methoden bereit, mit denen die CLR einen Zeiger abrufen kann, über den Arbeitsspeicher Anforderungen für den Heap und die Arbeitsspeicher Auslastung im Prozess, wie vom Host gemeldet, abgerufen werden können.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IHostMalloc-Schnittstelle](ihostmalloc-interface.md)
 - [Hosten von Schnittstellen](hosting-interfaces.md)

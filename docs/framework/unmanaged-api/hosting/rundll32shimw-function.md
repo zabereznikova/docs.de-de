@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-ms.openlocfilehash: 90304eb94e6f53d3132c97f5ababdc45f6053d7c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd053134792b80a006849e465bc0025cf77a9ad8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006570"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729953"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW-Funktion
+
 Führt den angegebenen Befehl aus.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -38,6 +39,7 @@ HRESULT RunDll32ShimW (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `hwnd`  
  in Ein Handle für ein Fenster, in dem die Befehlsausgabe angezeigt wird.  
   
@@ -51,14 +53,15 @@ HRESULT RunDll32ShimW (
  in Eine ganze Zahl, die den Anzeigemodus für das Ausgabefenster angibt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

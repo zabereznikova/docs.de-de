@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61d26dfd-7f24-4e7d-a63e-b30a463f08e1
 topic_type:
 - apiref
-ms.openlocfilehash: cc03960c2d45a6cf8aed58eaf048a0531decb08f
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 64d5ba9ad5557f99b175c277d48003529d77861c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842334"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730798"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads-Methoden
+
 Ruft die Anzahl der Threads im Thread Pool ab, die derzeit keine Arbeitselemente verarbeiten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetAvailableThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pdwAvailableWorkerThreads`  
  vorgenommen Ein Zeiger auf die Anzahl der Threads im Thread Pool, die derzeit keine Arbeitselemente verarbeiten.  
   
@@ -41,7 +43,7 @@ HRESULT GetAvailableThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetAvailableThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetAvailableThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,18 +52,20 @@ HRESULT GetAvailableThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `GetAvailableThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn der Host keine Implementierung von bereitstellt `GetAvailableThreads` , sollte er den HRESULT-Wert E_NOTIMPL zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.ThreadPool.GetAvailableThreads%2A>
 - <xref:System.Threading.ThreadPool>

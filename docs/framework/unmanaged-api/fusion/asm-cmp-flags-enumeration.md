@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fea06a3e6d06aeff56ba7e20e8e64f0a6feb5e69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178336"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731058"
 ---
 # <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS-Enumeration
-Gibt die Version, den Build, die Kultur, die Signatur usw. von zwei Assemblys an, die mit der [IAssemblyName::IsEqual-Methode](iassemblyname-isequal-method.md) verglichen werden sollen.  
+
+Gibt die Version, den Build, die Kultur, die Signatur usw. von zwei Assemblys an, die mit der [IAssemblyName:: IsEqual](iassemblyname-isequal-method.md) -Methode verglichen werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,13 +67,14 @@ typedef enum {
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Fusion.h  
+ **Header:** Fusion. h  
   
  **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

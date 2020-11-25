@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: da830aaaced179fed642340c33e7b7c37b350aa3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6f4fbb40053628d60ba7f094fcb5d50a94d63e1a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729940"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS-Enumeration
+
 Enthält Werte, die angeben, welche Informationen zum Common Language Runtime (CLR) zurückgegeben werden sollen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +44,7 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Gibt an, dass Verzeichnisinformationen nicht eingeschlossen werden sollen.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Gibt an, dass keine Versionsinformationen eingeschlossen werden sollen.|  
@@ -55,6 +56,7 @@ typedef enum {
 |`RUNTIME_INFO_UPGRADE_VERSION`|Gibt an, dass Informationen zur Versions Aktualisierung eingeschlossen werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die folgenden Plattformarchitektur-Flags können jeweils nur einzeln angegeben werden und können nicht kombiniert werden:  
   
 - RUNTIME_INFO_REQUEST_IA64  
@@ -64,14 +66,15 @@ typedef enum {
 - RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

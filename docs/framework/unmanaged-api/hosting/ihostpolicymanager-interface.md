@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c4aa124-5e00-46d9-b1e8-57ba6574bb0d
 topic_type:
 - apiref
-ms.openlocfilehash: d6b34403a45cc40863d79b59396041e496989045
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3c85bcbe8aee453b19217ebd1f48feea113e3bb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503938"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731218"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager-Schnittstelle
+
 Stellt Methoden bereit, die den Host über die Aktionen Benachrichtigen, die die Common Language Runtime (CLR) im Falle von Abbrüchen, Timeouts oder Fehlern ausführt.  
   
 ## <a name="methods"></a>Methoden  
@@ -33,15 +34,16 @@ Stellt Methoden bereit, die den Host über die Aktionen Benachrichtigen, die die
 |[OnTimeout-Methode](ihostpolicymanager-ontimeout-method.md)|Benachrichtigt den Host, dass die CLR im Begriff ist, die durch einen [ICLRPolicyManager:: Abtast Timeout](iclrpolicymanager-setactionontimeout-method.md) -Vorgang angegebene Aktion als Antwort auf ein Timeout auszuführen.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [EClrFailure-Enumeration](eclrfailure-enumeration.md)
 - [EClrOperation-Enumeration](eclroperation-enumeration.md)

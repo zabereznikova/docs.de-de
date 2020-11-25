@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-ms.openlocfilehash: b3d77e30cd48310c392d38dc29f62fab565c8b42
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4537d367518dd80b2559f8ca058684e234ff7a91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730746"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem-Methode
+
 Fügt eine Funktion zur Ausführung in die Warteschlange ein und gibt ein Objekt an, das von dieser Funktion zu verwendende Daten enthält. Die Funktion wird ausgeführt, wenn ein Thread verfügbar wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT QueueUserWorkItem (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `Function`  
  in Ein Funktionszeiger, der die auszuführende Funktion darstellt.  
   
@@ -49,7 +51,7 @@ HRESULT QueueUserWorkItem (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem`wurde erfolgreich zurückgegeben.|  
+|S_OK|`QueueUserWorkItem` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -57,18 +59,20 @@ HRESULT QueueUserWorkItem (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `QueueUserWorkItem`Fügt eine Arbeitsaufgabe einem Arbeits Thread im Thread Pool in die Warteschlange. Die Signatur-und Parametertypen sind identisch mit denen der entsprechenden Win32-Funktion, die denselben Namen hat. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
+
+ `QueueUserWorkItem` Fügt eine Arbeitsaufgabe einem Arbeits Thread im Thread Pool in die Warteschlange. Die Signatur-und Parametertypen sind identisch mit denen der entsprechenden Win32-Funktion, die denselben Namen hat. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-ms.openlocfilehash: 4d37b7d803509ebfa861b7502d419f868bd12e11
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: be006afaf5966aa4e6d11c73b92004d676c97c7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804386"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731266"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree-Methode
+
 Dient als logischer Wrapper für die entsprechende Win32-Funktion. Die Win32-Implementierung von `VirtualFree` Releases, decommitten oder gibt einen Seitenbereich innerhalb des virtuellen Adressraums des aufrufenden Prozesses aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT VirtualFree (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lpAddress`  
  in Ein Zeiger auf die Basisadresse der frei zulegenden virtuellen Speicherseiten.  
   
@@ -49,7 +51,7 @@ HRESULT VirtualFree (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree`wurde erfolgreich zurückgegeben.|  
+|S_OK|`VirtualFree` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -58,16 +60,18 @@ HRESULT VirtualFree (
 |HOST_E_INVALIDOPERATION|Es wurde versucht, Arbeitsspeicher freizugeben, der nicht über den Host zugeordnet wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- `VirtualFree`gibt `lpAddress` durch einen früheren Aufrufen der [IHostMemoryManager:: virtualbelegc](ihostmemorymanager-virtualalloc-method.md) -Funktion virtuelle Speicherseiten frei, die dem-Parameter zugeordnet sind. Versuche, Arbeitsspeicher freizugeben, der nicht über den Host zugeordnet wurde, sollten HOST_E_INVALIDOPERATION zurückgeben.  
+
+ `VirtualFree` gibt `lpAddress` durch einen früheren Aufrufen der [IHostMemoryManager:: virtualbelegc](ihostmemorymanager-virtualalloc-method.md) -Funktion virtuelle Speicherseiten frei, die dem-Parameter zugeordnet sind. Versuche, Arbeitsspeicher freizugeben, der nicht über den Host zugeordnet wurde, sollten HOST_E_INVALIDOPERATION zurückgeben.  
   
  Die Semantik ist identisch mit denen der Win32-Implementierung von `VirtualFree` . Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

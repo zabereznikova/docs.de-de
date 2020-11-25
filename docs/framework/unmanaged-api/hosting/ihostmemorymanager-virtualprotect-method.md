@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13be0299-df0d-4951-aabf-0676a30b385f
 topic_type:
 - apiref
-ms.openlocfilehash: 473a52b55f793abc76883b0a5cd5b2a04756d9f7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9822e5a1fb09e9d3bce541ff63cf766ae8611789
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731251"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect-Methode
+
 Dient als logischer Wrapper für die entsprechende Win32-Funktion. Die Win32-Implementierung von `VirtualProtect` ändert den Schutz für einen Bereich von zugegebenen Seiten im virtuellen Adressraum des aufrufenden Prozesses.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT VirtualProtect (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lpAddress`  
  in Ein Zeiger auf die Basisadresse des virtuellen Speichers, dessen Schutz Attribute geändert werden sollen.  
   
@@ -53,7 +55,7 @@ HRESULT VirtualProtect (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`VirtualProtect`wurde erfolgreich zurückgegeben.|  
+|S_OK|`VirtualProtect` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -61,14 +63,16 @@ HRESULT VirtualProtect (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Implementierung von `VirtualProtect` gibt einen HRESULT-Wert zurück, während die Win32-Implementierung einen Wert ungleich 0 (null) zurückgibt, um den Erfolg anzugeben, und einen Nullwert, um einen Fehler anzugeben. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

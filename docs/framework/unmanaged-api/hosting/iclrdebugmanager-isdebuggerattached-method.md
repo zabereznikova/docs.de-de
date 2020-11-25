@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f105fe0-f52d-49c5-bda5-583fb27e3aa6
 topic_type:
 - apiref
-ms.openlocfilehash: a21391f52a27e7f7a3abe533499c6b2581ec4a73
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 71e11d7db3bd679e7972fb2f6ce098edc3399885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615741"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731019"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached-Methode
+
 Ruft einen Wert ab, der angibt, ob ein Debugger an den Prozess angefügt ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT IsDebuggerAttached (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbAttached`  
  [out] `true` , wenn ein Debugger an den Prozess angefügt ist. andernfalls `false` .  
   
@@ -41,7 +43,7 @@ HRESULT IsDebuggerAttached (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`IsDebuggerAttached`wurde erfolgreich zurückgegeben.|  
+|S_OK|`IsDebuggerAttached` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,18 +51,20 @@ HRESULT IsDebuggerAttached (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `IsDebuggerAttached`ermöglicht dem Host, die CLR abzufragen, um zu bestimmen, ob ein Debugger an den Prozess angefügt ist.  
+
+ `IsDebuggerAttached` ermöglicht dem Host, die CLR abzufragen, um zu bestimmen, ob ein Debugger an den Prozess angefügt ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRControl-Schnittstelle](iclrcontrol-interface.md)
 - [ICLRDebugManager-Schnittstelle](iclrdebugmanager-interface.md)

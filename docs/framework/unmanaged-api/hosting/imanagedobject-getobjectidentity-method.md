@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: fc74b84bccceb1772bf3642e51ec88c562ce5dce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842412"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730712"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity-Methode
+
 Ruft die Identität dieses verwalteten Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetObjectIdentity (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pBSTRGUID`  
  vorgenommen Ein Zeiger auf die GUID des Prozesses, in dem sich das Objekt befindet.  
   
@@ -46,17 +48,19 @@ HRESULT GetObjectIdentity (
  vorgenommen Ein Zeiger auf den Index des Objekts in der klassischen com-Tabelle.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Identität eines verwalteten Objekts umfasst die Prozess-GUID, die Anwendungs Domänen-ID und den Index des Objekts in der klassischen com-Tabelle.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IManagedObject-Schnittstelle](imanagedobject-interface.md)

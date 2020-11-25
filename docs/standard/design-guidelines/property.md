@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828737"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730967"
 ---
 # <a name="property-design"></a>Eigenschaftenentwurf
+
 Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, unterscheiden Sie sich in Bezug auf Ihre Verwendungs Szenarien erheblich. Sie sollten als intelligente Felder betrachtet werden. Sie verfügen über die Aufruf Syntax der Felder und die Flexibilität der Methoden.
 
  ✔️ Erstellen Sie Get-only-Eigenschaften, wenn der Aufrufer den Wert der-Eigenschaft nicht ändern kann.
@@ -38,6 +39,7 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
  Eigenschaften Getter sollten einfache Vorgänge sein und sollten keine Vorbedingungen aufweisen. Wenn ein Getter eine Ausnahme auslösen kann, sollte er wahrscheinlich neu gestaltet werden, um eine Methode zu sein. Beachten Sie, dass diese Regel nicht für Indexer gilt, bei denen Ausnahmen aufgrund der Validierung der Argumente erwartet werden.
 
 ### <a name="indexed-property-design"></a>Design der indizierten Eigenschaft
+
  Eine indizierte Eigenschaft ist eine spezielle Eigenschaft, die über Parameter verfügen kann und mit spezieller Syntax ähnlich der Array Indizierung aufgerufen werden kann.
 
  Indizierte Eigenschaften werden im Allgemeinen als Indexer bezeichnet. Indexer sollten nur in APIs verwendet werden, die den Zugriff auf Elemente in einer logischen Auflistung ermöglichen. Beispielsweise ist eine Zeichenfolge eine Auflistung von Zeichen, und der Indexer für <xref:System.String?displayProperty=nameWithType> wurde hinzugefügt, um auf seine Zeichen zuzugreifen.
@@ -69,6 +71,7 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
  Dies wird vom c#-Compiler erzwungen.
 
 ### <a name="property-change-notification-events"></a>Benachrichtigungs Ereignisse für Eigenschafts Änderungen
+
  Manchmal ist es hilfreich, ein Ereignis anzugeben, das den Benutzer über Änderungen in einem Eigenschafts Wert benachrichtigt. Beispielsweise löst `System.Windows.Forms.Control` ein- `TextChanged` Ereignis aus, nachdem sich der Wert der- `Text` Eigenschaft geändert hat.
 
  ✔️ sollten Änderungs Benachrichtigungs Ereignisse in Erwägung ziehen, wenn Eigenschaftswerte in APIs auf hoher Ebene (normalerweise Designer Komponenten) geändert werden.
@@ -85,7 +88,7 @@ Obwohl die Eigenschaften den Methoden technisch ähnlich ähnlich sind, untersch
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfs Richtlinien für Member](member.md)
 - [Framework-Entwurfs Richtlinien](index.md)

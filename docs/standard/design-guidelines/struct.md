@@ -10,14 +10,15 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-ms.openlocfilehash: da831d1477b451131bb27372d65ad7229fcf3f77
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7bb7e63004df2eb7541ba8d4f1118ea2272db126
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828620"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730902"
 ---
 # <a name="struct-design"></a>Strukturentwurf
+
 Der allgemeine Werttyp wird am häufigsten als eine Struktur bezeichnet, dessen c#-Schlüsselwort. Dieser Abschnitt enthält Richtlinien für allgemeine Struktur Entwürfe.
 
  ❌ Stellen Sie keinen Parameter losen Konstruktor für eine Struktur bereit.
@@ -44,7 +45,7 @@ Der allgemeine Werttyp wird am häufigsten als eine Struktur bezeichnet, dessen 
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)

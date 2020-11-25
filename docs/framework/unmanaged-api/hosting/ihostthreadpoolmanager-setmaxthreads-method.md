@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-ms.openlocfilehash: 53d42afda6668acc6462c419fcefd6bc1435a34c
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 68e806daa63d13ad6c1f3b5de634c20ca02e8eb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730713"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads-Methode
+
 Legt die maximale Anzahl von Threads fest, die der Host im Thread Pool verwalten kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetMaxThreads (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `MaxThreads`  
  Die maximale Anzahl der Arbeitsthreads im Threadpool.  
   
@@ -41,7 +43,7 @@ HRESULT SetMaxThreads (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetMaxThreads` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -50,18 +52,20 @@ HRESULT SetMaxThreads (
 |E_NOTIMPL|Der Host stellt keine Implementierung von bereit `SetMaxThreads` .|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein Host ist nicht erforderlich, damit die CLR die Größe des Thread Pools konfigurieren kann. Einige Hosts möchten möglicherweise eine exklusive Kontrolle über den Thread Pool haben, wie z. b. Implementierung, Leistung oder Skalierbarkeit. In diesem Fall sollte ein Host den HRESULT-Wert E_NOTIMPL zurückgeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Threading.ThreadPool.SetMaxThreads%2A>
 - <xref:System.Threading.ThreadPool>

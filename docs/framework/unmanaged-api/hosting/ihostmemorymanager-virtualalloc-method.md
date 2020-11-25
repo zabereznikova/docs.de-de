@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: de41b5e0aaf835ee2d4e4f32696fe104d5830b57
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804452"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731279"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc-Methode
+
 Dient als logischer Wrapper für die entsprechende Win32-Funktion. Die Win32-Implementierung von `VirtualAlloc` reserviert oder übergibt einen Seitenbereich im virtuellen Adressraum des aufrufenden Prozesses.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT VirtualAlloc (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAddress`  
  in Ein Zeiger auf die Startadresse des zuzuordnenden Bereichs.  
   
@@ -61,7 +63,7 @@ HRESULT VirtualAlloc (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc`wurde erfolgreich zurückgegeben.|  
+|S_OK|`VirtualAlloc` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -70,16 +72,18 @@ HRESULT VirtualAlloc (
 |E_OUTOFMEMORY|Zum Abschluss der Zuordnungs Anforderung war nicht genügend Arbeitsspeicher verfügbar.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Sie reservieren eine Region im Adressraum Ihres Prozesses, indem Sie aufrufen `VirtualAlloc` . Der- `pAddress` Parameter enthält die Anfangsadresse des gewünschten Speicherblocks. Dieser Parameter ist in der Regel auf NULL festgelegt. Das Betriebssystem speichert einen Datensatz mit freien Adressbereichen, die für Ihren Prozess verfügbar sind. `pAddress`Der Wert NULL weist das System an, die Region zu reservieren, wo Sie für Sie geeignet ist. Alternativ können Sie eine bestimmte Startadresse für den Speicherblock bereitstellen. In beiden Fällen wird der Output-Parameter `ppMem` als Zeiger auf den zugeordneten Speicher zurückgegeben. Die Funktion selbst gibt einen HRESULT-Wert zurück.  
   
  Die Win32 `VirtualAlloc` -Funktion verfügt über keinen `ppMem` -Parameter und gibt stattdessen den Zeiger auf den zugeordneten Arbeitsspeicher zurück. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

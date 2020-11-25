@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 5ebe99dd8d1d7ec73cd140991a4b13dfa381791d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 73c9f07ff9a7bffc2fb01c0dde390ca8364500b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494643"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731175"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum-Schnittstelle
-Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die vom [Ngen. exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md)generiert werden.  
+
+Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die vomNgen.exe generiert werden [ (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="methods"></a>Methoden  
   
@@ -34,12 +35,14 @@ Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu
 |[Reset-Methode](icorprofilerobjectenum-reset-method.md)|Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.|  
 |[Skip-Methode](icorprofilerobjectenum-skip-method.md)|Verschiebt den Cursor dieses Enumerators von seiner aktuellen Position, sodass die angegebene Anzahl von Elementen übersprungen wird.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `ICorProfilerObjectEnum`-Schnittstelle ist ein Enumerator. Hiermit kann der Empfänger eines Arrays mit einer Rate, die für den Empfänger geeignet ist, Elemente vom Absender abrufen. Das heißt, der Empfänger kann den Fluss von Array Elementen explizit steuern und so Probleme vermeiden, die bei der Übergabe großer Arrays als Methoden Parameter auftreten.  
   
  Verwenden Sie [ICorProfilerInfo2:: EnumModuleFrozenObjects](icorprofilerinfo2-enummodulefrozenobjects-method.md) , um einen Zeiger auf die- `ICorProfilerObjectEnum` Schnittstelle zu erhalten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -48,7 +51,7 @@ Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)
 - [EnumModuleFrozenObjects-Methode](icorprofilerinfo2-enummodulefrozenobjects-method.md)
