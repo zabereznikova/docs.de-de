@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-ms.openlocfilehash: 972a981188c36236b81f3da17c09abeeb1e32857
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 493793c45e7d13511e4c36fe76e472a856b50d72
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705747"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue-Methode
+
 Kopiert einen neuen Wert aus dem angegebenen Puffer.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT SetValue (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pFrom`  
  in Ein Zeiger auf den Puffer, aus dem der Wert kopiert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Bei Verweis Typen ist der Wert der Verweis und nicht der Inhalt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

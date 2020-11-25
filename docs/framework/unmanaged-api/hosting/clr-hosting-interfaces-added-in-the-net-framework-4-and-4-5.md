@@ -6,14 +6,15 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: a524c0b0e01fbde95ce2341874511960b3e5738e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6ee3b8cdf348a5eade3903e2d26b4f9b93886305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706813"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen
+
 In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwaltete Hosts die Common Language Runtime (CLR) in den .NET Framework 4, .NET Framework 4,5 und höheren Versionen in Ihre Anwendungen integrieren können. Diese Schnittstellen bieten Methoden für einen Host zum Konfigurieren und Laden der Laufzeit in einen Prozess.  
   
  Beginnend mit dem .NET Framework 4 haben alle Hostingschnittstellen die folgenden Eigenschaften:  
@@ -25,6 +26,7 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
 - Es gibt keine Apartment Modelle, Aggregationen oder Registrierungs Aktivierung, die die [cokreateinzustance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ICLRAppDomainResourceMonitor-Schnittstelle](iclrappdomainresourcemonitor-interface.md)  
  Stellt Methoden bereit, die den Arbeitsspeicher und die CPU-Auslastung einer Anwendungsdomäne überprüfen.  
   
@@ -53,6 +55,7 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
  Stellt die gesamte Funktionalität der [ICLRTask-Schnittstelle](iclrtask-interface.md)bereit. Außerdem stellt Methoden bereit, mit denen Thread Abbrüche im aktuellen Thread verzögert werden können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Veraltete CLR-Hostingschnittstellen und Co-Klassen](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Beschreibt die Hostingschnittstellen, die mit den .NET Framework Versionen 1,0 und 1,1 bereitgestellt werden.  
   

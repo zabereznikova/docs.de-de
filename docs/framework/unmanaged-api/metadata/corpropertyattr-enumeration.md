@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d76de80f87a8e5a63eac9f6a413f2efb0e394b0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706124"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr-Enumeration
+
 Enthält Werte, in denen die Metadaten einer Eigenschaft beschrieben werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,7 +41,7 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`prSpecialName`|Gibt an, dass die Eigenschaft speziell ist, und dass Ihr Name beschreibt, wie.|  
 |`prReservedMask`|Reserviert für die interne Verwendung durch den Common Language Runtime.|  
@@ -49,12 +50,13 @@ typedef enum CorPropertyAttr {
 |`prUnused`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

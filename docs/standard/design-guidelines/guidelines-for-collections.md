@@ -2,14 +2,15 @@
 title: Richtlinien für Auflistungen
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821085"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706670"
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
+
 Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde, die über ein gemeinsames Merkmal verfügen, kann als Sammlung angesehen werden. Es ist fast immer für solche Typen geeignet, oder zu implementieren <xref:System.Collections.IEnumerable> <xref:System.Collections.Generic.IEnumerable%601> , daher berücksichtigen wir in diesem Abschnitt nur Typen, die eine oder beide dieser Schnittstellen implementieren, um Auflistungen zu sein.
 
  ❌ Verwenden Sie keine schwach typisierten Auflistungen in öffentlichen APIs.
@@ -31,6 +32,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  ❌ Implementieren Sie nicht sowohl `IEnumerator<T>` als auch `IEnumerable<T>` für denselben Typ. Das gleiche gilt für die nicht generischen Schnittstellen `IEnumerator` und `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Sammlungs Parameter
+
  ✔️ Verwenden Sie den am wenigsten spezialisierten Typ, der als Parametertyp möglich ist. Die meisten Member, die Sammlungen als Parameter verwenden, verwenden die- `IEnumerable<T>` Schnittstelle
 
  ❌ Vermeiden Sie <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.ICollection> die Verwendung von oder als Parameter nur für den Zugriff auf die- `Count` Eigenschaft.
@@ -38,6 +40,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  Verwenden Sie stattdessen oder, und überprüfen Sie, `IEnumerable<T>` `IEnumerable` ob das Objekt `ICollection<T>` oder implementiert `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Sammlungs Eigenschaften und Rückgabewerte
+
  ❌ Stellen Sie keine festleg baren Sammlungs Eigenschaften bereit.
 
  Benutzer können den Inhalt der Auflistung ersetzen, indem Sie zuerst die Auflistung löschen und dann den neuen Inhalt hinzufügen. Wenn das Ersetzen der gesamten Auflistung ein gängiges Szenario ist, sollten Sie die- `AddRange` Methode in der Auflistung bereitstellen.
@@ -69,6 +72,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  Die allgemeine Regel ist, dass NULL-und leere (0 Element) Auflistungen oder Arrays gleich behandelt werden sollen.
 
 ### <a name="snapshots-versus-live-collections"></a>Momentaufnahmen im Vergleich zu Live Sammlungen
+
  Sammlungen, die einen Zustand zu einem bestimmten Zeitpunkt darstellen, werden als Momentaufnahme Auflistungen bezeichnet. Beispielsweise wäre eine Auflistung, die Zeilen enthält, die von einer Datenbankabfrage zurückgegeben werden, eine Momentaufnahme. Sammlungen, die den aktuellen Zustand immer darstellen, werden als Live Auflistungen bezeichnet. Eine Auflistung von `ComboBox` Elementen ist beispielsweise eine Live Auflistung.
 
  ❌ Momentaufnahme Auflistungen von Eigenschaften nicht zurückgeben. Eigenschaften sollten Live Auflistungen zurückgeben.
@@ -80,6 +84,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  Im Allgemeinen sind alle Sammlungen, die eine freigegebene Ressource darstellen (z. b. Dateien in einem Verzeichnis), flüchtig. Solche Auflistungen sind sehr schwierig oder unmöglich, als Live Auflistungen zu implementieren, es sei denn, die Implementierung ist einfach ein vorwärts-Enumerator.
 
 ## <a name="choosing-between-arrays-and-collections"></a>Auswählen zwischen Arrays und Sammlungen
+
  ✔️ bevorzugen Sammlungen vor Arrays.
 
  Sammlungen bieten mehr Kontrolle über Inhalte, können sich im Laufe der Zeit weiterentwickeln und sind besser verwendbar. Außerdem wird davon abgeraten, Arrays für schreibgeschützte Szenarien zu verwenden, da die Kosten für das Klonen des Arrays unersetzen. Nutzbarkeits Studien haben gezeigt, dass einige Entwickler die Verwendung von Sammlungs basierten APIs besser fühlen.
@@ -93,6 +98,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  ❌ Verwenden Sie keine Arrays für Eigenschaften, wenn die Eigenschaft jedes Mal, wenn der Eigenschaften Getter aufgerufen wird, ein neues Array (z. b. eine Kopie eines internen Arrays) zurückgeben muss.
 
 ## <a name="implementing-custom-collections"></a>Implementieren von benutzerdefinierten Sammlungen
+
  ✔️ sollten beim Entwerfen von neuen Auflistungen von `Collection<T>` , `ReadOnlyCollection<T>` oder Erben `KeyedCollection<TKey,TItem>` .
 
  ✔️ implementieren, `IEnumerable<T>` Wenn neue Sammlungen entworfen werden. Sie sollten die Implementierung von `ICollection<T>` oder sogar den `IList<T>` Sinn machen.
@@ -106,6 +112,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
  ❌ Erben nicht von nicht generischen Basis Auflistungen wie z `CollectionBase` . b.. Verwenden `Collection<T>` Sie `ReadOnlyCollection<T>` stattdessen, und `KeyedCollection<TKey,TItem>` .
 
 ### <a name="naming-custom-collections"></a>Benennen von benutzerdefinierten Sammlungen
+
  Auflistungen (Typen, die implementieren `IEnumerable` ) werden hauptsächlich aus zwei Gründen erstellt: (1) zum Erstellen einer neuen Datenstruktur mit Struktur spezifischen Vorgängen und oft unterschiedlichen Leistungsmerkmalen als vorhandene Datenstrukturen (z. b.,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> , <xref:System.Collections.Generic.Stack%601> ) und (2) zum Erstellen einer spezialisierten Sammlung zum Speichern eines bestimmten Satzes von Elementen (z. b.  <xref:System.Collections.Specialized.StringCollection> ). Datenstrukturen werden am häufigsten in der internen Implementierung von Anwendungen und Bibliotheken verwendet. Spezialisierte Sammlungen werden hauptsächlich in APIs verfügbar gemacht (als Eigenschaften-und Parametertypen).
 
  ✔️ Verwenden Sie das Suffix "Dictionary" in Namen von Abstraktionen, die `IDictionary` oder implementieren `IDictionary<TKey,TValue>` .
@@ -126,7 +133,7 @@ Jeder Typ, der speziell zum Bearbeiten einer Gruppe von Objekten entworfen wurde
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Verwendungs Richtlinien](usage-guidelines.md)

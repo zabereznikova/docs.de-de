@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820812"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706397"
 ---
 # <a name="nested-types"></a>Geschachtelte Typen
+
 Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeits Bereichs eines anderen Typs definiert ist, der als einschließender Typ bezeichnet wird. Ein Typ, der einen Typ aufweist, hat Zugriff auf alle Member seines einschließenden Typs. Er hat z. b. Zugriff auf private Felder, die im einschließenden Typ definiert sind, sowie auf geschützte Felder, die in allen Vorgänger des einschließenden Typs definiert sind.
 
  Im Allgemeinen sollten die Typen von Typen sparsam verwendet werden. Hierfür gibt es mehrere Gründe: Einige Entwickler sind mit dem Konzept nicht vollständig vertraut. Diese Entwickler können z. b. Probleme mit der Syntax der Deklaration von Variablen geschieder Typen haben. Die Typen von Typen sind auch sehr eng mit ihren einschließenden Typen verknüpft und daher nicht als allgemeine Typen geeignet.
@@ -43,7 +44,7 @@ Ein geschachtelter Typ ist ein Typ, der innerhalb des Gültigkeits Bereichs eine
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)

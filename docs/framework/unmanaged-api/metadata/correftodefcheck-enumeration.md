@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-ms.openlocfilehash: ce6f5993b9c1aeb63e121b3567ee468cea1c9318
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e7ce604acddb88d5a15844cbce2622b21e364cc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007519"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706111"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck-Enumeration
+
 Gibt Flags an, mit denen gesteuert wird, welche Elemente, auf die verwiesen wird, zur Optimierung des Codes in ihre Definitionen konvertiert werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,7 +39,7 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`MDRefToDefDefault`|Gibt an, dass Typverweise und Element Verweise in Definitionen konvertiert werden sollen. Dies ist der Standardwert ( `MDTypeRefToDef` &#124; `MDMemberRefToDef` ).|  
 |`MDRefToDefAll`|Gibt an, dass alle referenzierten Elemente in Definitionen konvertiert werden sollen.|  
@@ -47,12 +48,13 @@ typedef enum CorRefToDefCheck {
 |`MDMemberRefToDef`|Gibt an, dass nur Member-Verweise in Definitionen konvertiert werden sollen. Das heißt, dass Element Verweise entweder in Methoden Definitionen oder Feld Definitionen konvertiert werden sollen.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

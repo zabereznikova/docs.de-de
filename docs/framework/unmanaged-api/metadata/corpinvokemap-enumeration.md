@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706137"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap-Enumeration
+
 Gibt Optionen für einen PInvoke-Befehl an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -63,7 +64,7 @@ typedef enum  CorPinvokeMap {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`pmNoMangle`|Verwenden Sie die einzelnen Elementnamen wie angegeben.|  
 |`pmCharSetMask`|Reserviert.|  
@@ -78,9 +79,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|Reserviert.|  
 |`pmThrowOnUnmappableCharEnabled`|Löst eine Ausnahme aus, wenn der Interop-Mars Haller auf ein nicht mappbares Zeichen stößt.|  
 |`pmThrowOnUnmappableCharDisabled`|Lösen Sie keine Ausnahme aus, wenn der Interop-Mars Haller auf ein nicht mappbares Zeichen stößt.|  
-|`pmThrowOnUnmappableCharMask`|Reserved|  
+|`pmThrowOnUnmappableCharMask`|Reserviert|  
 |`pmSupportsLastError`|Ermöglicht dem aufgerufenen das Abrufen der Win32- `SetLastError` Funktion vor der Rückgabe von der attributierten Methode.|  
-|`pmCallConvMask`|Reserved|  
+|`pmCallConvMask`|Reserviert|  
 |`pmCallConvWinapi`|Verwenden Sie die standardmäßige Platt Form Aufruf Konvention. Beispielsweise ist unter Windows der Standardwert, `StdCall` und auf Windows CE .net ist er `Cdecl` .|  
 |`pmCallConvCdecl`|Verwenden Sie die `Cdecl` Aufruf Konvention. In diesem Fall bereinigt der Aufrufer den Stapel. Dies ermöglicht das Aufrufen von Funktionen mit `varargs` (d. h. Funktionen, die eine Variable Anzahl von Parametern akzeptieren).|  
 |`pmCallConvStdcall`|Verwenden Sie die `StdCall` Aufruf Konvention. In diesem Fall bereinigt der aufgerufene den Stapel. Dies ist die Standardkonvention für das Aufrufen nicht verwalteter Funktionen mit Plattformaufruf.|  
@@ -89,12 +90,13 @@ typedef enum  CorPinvokeMap {
 |`pmMaxValue`|Reserviert.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

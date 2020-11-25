@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-ms.openlocfilehash: 5ac015f958d9504bbd14a66ead86548b8df32764
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 19731f34d259757e6de62dd4b4f0d4735d1c2e61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706163"
 ---
 # <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS-Enumeration
+
 Enthält Werte, die angeben, wie die Common Language Runtime (CLR) eine auflösen soll `CLSID` .  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,18 +36,19 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Gibt das Standardverhalten an.|  
 |`CLSID_RESOLUTION_REGISTERED`|Gibt an, dass die Laufzeit die Registrierung durchsucht und die Shim-Richtlinie anwendet.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

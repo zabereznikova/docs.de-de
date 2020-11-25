@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-ms.openlocfilehash: 97b9fa537fdd9147d6d9eda036013add5393e33c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e0fc6cf2a08de4a00cb8b7f98d3922df98f427c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441707"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706969"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2-Methode
+
 Gibt bei Angabe einer Metadatenschnittstelle und eines Datei namens die korrekte [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle zurück, die die dem Modul zugeordneten Debugsymbole liest.  
   
  Diese Methode bietet eine ausführlichere Suche nach der Programm Datenbankdatei (PDB) als die [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md) -Methode.  
@@ -39,6 +40,7 @@ HRESULT GetReaderForFile2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `importer`  
  in Ein Zeiger auf die Schnittstelle für den Metadatenimport.  
   
@@ -55,15 +57,18 @@ HRESULT GetReaderForFile2(
  vorgenommen Ein Zeiger, der auf die zurückgegebene [ISymUnmanagedReader](isymunmanagedreader-interface.md) -Schnittstelle festgelegt ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Version der-Methode kann nach der PDB-Datei in anderen Bereichen als rechts neben dem-Modul suchen. Die Such Richtlinie kann durch Kombinieren von [corsymsearchpolicyattribute](corsymsearchpolicyattributes-enumeration.md)gesteuert werden. Sucht z. b. `AllowReferencePathAccess | AllowSymbolServerAccess` nach der PDB neben der ausführbaren Datei und auf einem Symbol Server, fragt jedoch nicht die Registrierung ab oder verwendet den Pfad in der ausführbaren Datei. Wenn der- `searchPath` Parameter bereitgestellt wird, werden diese Verzeichnisse immer durchsucht.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedBinder2-Schnittstelle](isymunmanagedbinder2-interface.md)
 - [GetReaderForFile-Methode](isymunmanagedbinder-getreaderforfile-method.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-ms.openlocfilehash: 2d065d956319076d3b92eddafd4a2c25ffbfbac1
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 86c017f581c7b980b8b0cb8bd7bdc1b0aa439afe
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705821"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult-Methode
+
 Ruft die Ergebnisse dieser Auswertung ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT GetResult (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppResult`  
  vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das die Ergebnisse dieser Auswertung darstellt, wenn die Auswertung normal abgeschlossen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetResult` -Methode ist nur gültig, wenn die Auswertung abgeschlossen ist.  
+
+ Die- `GetResult` Methode ist nur gültig, wenn die Auswertung abgeschlossen ist.  
   
- Wenn die Auswertung normal abgeschlossen wird `ppResult` , gibt die Ergebnisse an. Wenn Sie mit einer Ausnahme beendet wird, ist das Ergebnis die ausgelöste Ausnahme. Wenn die Auswertung für ein neues Objekt erfolgte, ist das Ergebnis der Verweis auf das neue-Objekt.  
+ Wenn die Auswertung normal abgeschlossen wird, `ppResult` gibt die Ergebnisse an. Wenn Sie mit einer Ausnahme beendet wird, ist das Ergebnis die ausgelöste Ausnahme. Wenn die Auswertung für ein neues Objekt erfolgte, ist das Ergebnis der Verweis auf das neue-Objekt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

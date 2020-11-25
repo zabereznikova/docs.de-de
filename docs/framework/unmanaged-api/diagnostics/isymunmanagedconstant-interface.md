@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706865"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant-Schnittstelle
+
 Ermöglicht den Zugriff auf nicht verwaltete Konstanten.  
   
 ## <a name="methods"></a>Methoden  
@@ -32,9 +33,10 @@ Ermöglicht den Zugriff auf nicht verwaltete Konstanten.
 |[GetSignature-Methode](isymunmanagedconstant-getsignature-method.md)|Ruft die Signatur der Konstante ab.|  
 |[GetValue-Methode](isymunmanagedconstant-getvalue-method.md)| Ruft den Wert der Konstanten ab.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

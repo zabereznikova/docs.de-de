@@ -2,14 +2,15 @@
 title: ISymUnmanagedAsyncMethod-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
-ms.openlocfilehash: 448ed719331469dce8f15500f14d5c1b0707ecf7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 02b1866f2b9e89cdc8c8795f399ecc0c733c7202
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707164"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>ISymUnmanagedAsyncMethod-Schnittstelle
+
 Diese Schnittstelle ist die Lese Ergänzung zur [isymunmanagedasyncmethodpropertieswriter-Schnittstelle](isymunmanagedasyncmethodpropertieswriter-interface.md).  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,6 +20,7 @@ Diese Schnittstelle ist die Lese Ergänzung zur [isymunmanagedasyncmethodpropert
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Diese Schnittstelle enthält die folgenden Methoden:  
   
 |Methode|BESCHREIBUNG|  
@@ -31,8 +33,9 @@ Diese Schnittstelle ist die Lese Ergänzung zur [isymunmanagedasyncmethodpropert
 |[IsAsyncMethod-Methode](isymunmanagedasyncmethod-isasyncmethod-method.md)|Überprüft, ob die Methode über asynchrone Informationen verfügt oder nicht.<br /><br /> Wenn diese Methode zurückgibt `FALSE` , ist es ungültig, andere Methoden in dieser Schnittstelle aufzurufen. In diesem Fall werden alle zurückgegeben `E_UNEXPECTED` .|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

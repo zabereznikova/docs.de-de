@@ -2,14 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
-ms.openlocfilehash: 04876483fd42e3f6e55222416fd0747891734a52
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 779b737da43f61d1023a0a640dce936e11c4704c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707034"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle
+
 Ermöglicht das definieren Optionaler Async-Methoden Informationen für jedes Methoden Symbol. Immer mit einer geöffneten Methode verwenden; Das heißt, zwischen Aufrufen der [OpenMethod-Methode](isymunmanagedwriter-openmethod-method.md) und der [CloseMethod-Methode](isymunmanagedwriter-closemethod-method.md).  
   
 ## <a name="syntax"></a>Syntax  
@@ -19,6 +20,7 @@ Ermöglicht das definieren Optionaler Async-Methoden Informationen für jedes Me
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Diese Schnittstelle enthält die folgenden Methoden:  
   
 |Methode|BESCHREIBUNG|  
@@ -28,8 +30,9 @@ Ermöglicht das definieren Optionaler Async-Methoden Informationen für jedes Me
 |[DefineKickoffMethod-Methode](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)|Legt die Anfangs Methode fest, die den asynchronen Vorgang initiiert.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)

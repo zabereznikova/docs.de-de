@@ -13,14 +13,15 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-ms.openlocfilehash: b9de9329cc8e1bfc47a46523c7119bb3b2c244d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 49bafda0d5c362fa02313c5304436069d054cfd9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290213"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706514"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Namen von Klassen, Strukturen und Schnittstellen
+
 Die folgenden Benennungs Richtlinien gelten für die allgemeine Typbenennung.
 
  mit der Pass-/Schreibweise von ✔️ Klassen und Strukturen mit Nomen oder nominalen Ausdrücken benannt.
@@ -31,7 +32,7 @@ Die folgenden Benennungs Richtlinien gelten für die allgemeine Typbenennung.
 
  Nomen und nominale Ausdrücke sollten in seltenen Fällen verwendet werden, und Sie können darauf hinweisen, dass der Typ eine abstrakte Klasse und keine Schnittstelle sein sollte.
 
- ❌Nennen Sie keine Klassennamen als Präfix (z. b. "C").
+ ❌ Nennen Sie keine Klassennamen als Präfix (z. b. "C").
 
  ✔️ sollten den Namen abgeleiteter Klassen mit dem Namen der Basisklasse beenden.
 
@@ -44,7 +45,8 @@ Die folgenden Benennungs Richtlinien gelten für die allgemeine Typbenennung.
  Stellen Sie ✔️ sicher, dass sich die Namen nur durch das Präfix "I" für den Schnittstellennamen unterscheiden, wenn Sie ein Klassen –-Schnittstellen Paar definieren, bei dem die Klasse eine Standard Implementierung der Schnittstelle ist.
 
 ## <a name="names-of-generic-type-parameters"></a>Namen von generischen Typparametern
- Generika wurden .NET Framework 2,0 hinzugefügt. Mit der Funktion wurde eine neue Art von Bezeichner namens *Typparameter*eingeführt.
+
+ Generika wurden .NET Framework 2,0 hinzugefügt. Mit der Funktion wurde eine neue Art von Bezeichner namens *Typparameter* eingeführt.
 
  ✔️ Namen generischer Typparameter mit beschreibenden Namen verwenden, es sei denn, ein einzelner Buchstabe ist vollständig selbsterklärend, und ein beschreibender Name würde keinen Wert hinzufügen.
 
@@ -69,14 +71,15 @@ public interface ISessionChannel<TSession> where TSession : ISession {
  Beispielsweise kann ein Parameter, der auf eingeschränkt ist, `ISession` aufgerufen werden `TSession` .
 
 ## <a name="names-of-common-types"></a>Namen allgemeiner Typen
+
  ✔️ Befolgen Sie die in der folgenden Tabelle beschriebenen Richtlinien, wenn Sie Typen benennen, die von abgeleitet sind oder bestimmte .NET Framework Typen implementieren.
 
 |Basistyp|Abgeleitete/implementierende typrichtlinie|
 |---------------|------------------------------------------|
 |`System.Attribute`|Fügen Sie den Namen von benutzerdefinierten Attribut Klassen ✔️ das Suffix "Attribute" hinzu.|
-|`System.Delegate`|✔️ Fügen Sie das Suffix "EventHandler" den Namen von Delegaten hinzu, die in Ereignissen verwendet werden.<br /><br /> ✔️ fügen das Suffix "Callback" Namen von Delegaten hinzu, die nicht als Ereignishandler verwendet werden.<br /><br /> ❌Fügen Sie das Suffix "Delegat" nicht zu einem Delegaten hinzu.|
+|`System.Delegate`|✔️ Fügen Sie das Suffix "EventHandler" den Namen von Delegaten hinzu, die in Ereignissen verwendet werden.<br /><br /> ✔️ fügen das Suffix "Callback" Namen von Delegaten hinzu, die nicht als Ereignishandler verwendet werden.<br /><br /> ❌ Fügen Sie das Suffix "Delegat" nicht zu einem Delegaten hinzu.|
 |`System.EventArgs`|Fügen Sie ✔️ das Suffix "EventArgs" hinzu.|
-|`System.Enum`|❌Nicht von dieser Klasse ableiten; Verwenden Sie stattdessen das von Ihrer Sprache unterstützte Schlüsselwort; Verwenden Sie z. b. in c# das- `enum` Schlüsselwort.<br /><br /> ❌Fügen Sie das Suffix "Enum" oder "Flag" nicht hinzu.|
+|`System.Enum`|❌ Nicht von dieser Klasse ableiten; Verwenden Sie stattdessen das von Ihrer Sprache unterstützte Schlüsselwort; Verwenden Sie z. b. in c# das- `enum` Schlüsselwort.<br /><br /> ❌ Fügen Sie das Suffix "Enum" oder "Flag" nicht hinzu.|
 |`System.Exception`|Fügen Sie ✔️ das Suffix "Exception" hinzu.|
 |`IDictionary` <br /> `IDictionary<TKey,TValue>`|Fügen Sie ✔️ das Suffix "Dictionary" hinzu. Beachten Sie, dass es `IDictionary` sich um einen bestimmten Sammlungstyp handelt. diese Richtlinie hat jedoch Vorrang vor den folgenden allgemeinen Auflistungs Richtlinien.|
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|Fügen Sie ✔️ das Suffix "Collection" hinzu.|
@@ -84,23 +87,24 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`CodeAccessPermission IPermission`|✔️ Fügen Sie das Suffix "Berechtigung" hinzu.|
 
 ## <a name="naming-enumerations"></a>Benennen von Enumerationen
+
  Namen von Enumerationstypen (auch als Enumerationen bezeichnet) sollten im Allgemeinen den standardmäßigen typbenennungs Regeln (pascalnaming, usw.) entsprechen. Es gibt jedoch weitere Richtlinien, die speziell für-aufzählen gelten.
 
  ✔️ einen eindeutigen Typnamen für eine Enumeration verwenden, es sei denn, die Werte sind Bitfelder.
 
  ✔️ einen Plural Typnamen für eine Enumeration mit Bitfeldern als Werte verwenden, die auch als Flags-Enumeration bezeichnet werden.
 
- ❌Verwenden Sie kein "Enumeration"-Suffix in Enumeration-Typnamen.
+ ❌ Verwenden Sie kein "Enumeration"-Suffix in Enumeration-Typnamen.
 
- ❌Verwenden Sie keine "Flag"-oder "Flags"-Suffixe in Enumeration-Typnamen.
+ ❌ Verwenden Sie keine "Flag"-oder "Flags"-Suffixe in Enumeration-Typnamen.
 
- ❌Verwenden Sie kein Präfix für enumerationswertnamen (z. b. "AD" für ADO-Enumerationen, "RTF" für Rich-Text-Enumerationen usw.).
+ ❌ Verwenden Sie kein Präfix für enumerationswertnamen (z. b. "AD" für ADO-Enumerationen, "RTF" für Rich-Text-Enumerationen usw.).
 
  *Teile © 2005, 2009 Microsoft Corporation. Alle Rechte vorbehalten.*
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

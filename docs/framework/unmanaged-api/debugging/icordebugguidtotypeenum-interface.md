@@ -14,34 +14,37 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-ms.openlocfilehash: 2663e5604cdd55472cc148b2d2b38599df81f11e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 149c5b09639c8809e736ade09566e7b1b530e3eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705708"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum-Schnittstelle
+
 Stellt einen Enumerator bereit, der die Zuordnung zwischen einem Satz von GUIDs und den entsprechenden Typen definiert, die von ICorDebugType-Instanzen dargestellt werden. Diese Schnittstelle erbt die Methoden von der ICorDebugEnum-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
-|-Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[ICorDebugGuidToTypeEnum::Next](icordebugguidtotypeenum-next-method.md)|Ruft die angegebene Anzahl von [cordebugguidtoidetypemapping](cordebugguidtotypemapping-structure.md) -Instanzen ab, die GUIDs Typinformationen zuordnen.|  
+|[ICorDebug Type:: Next](icordebugguidtotypeenum-next-method.md)|Ruft die angegebene Anzahl von [cordebugguidtoidetypemapping](cordebugguidtotypemapping-structure.md) -Instanzen ab, die GUIDs Typinformationen zuordnen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `ICorDebugGuidToTypeEnum` Interface-Objekt kann durch Aufrufen der [ICorDebugAppDomain3:: getcachedwinrttypes](icordebugappdomain3-getcachedwinrttypes-method.md) -Methode abgerufen werden. Ein Debugger kann die [Next](icordebugguidtotypeenum-next-method.md) -Methode dieser Schnittstelle aufrufen, um [cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md) -Objekte abzurufen, die Zuordnungen verwalteter Darstellungen von Windows-Runtime Typen darstellen, die in der Anwendungsdomäne geladen wurden, die für den Aufrufen der [ICorDebugAppDomain3:: getcachedwinrttypes](icordebugappdomain3-getcachedwinrttypes-method.md) -Methode verwendet wird.  
+
+ Ein `ICorDebugGuidToTypeEnum` Schnittstellen Objekt kann durch Aufrufen der [ICorDebugAppDomain3:: getcachedwinrttypes](icordebugappdomain3-getcachedwinrttypes-method.md) -Methode abgerufen werden. Ein Debugger kann die [Next](icordebugguidtotypeenum-next-method.md) -Methode dieser Schnittstelle aufrufen, um [cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md) -Objekte abzurufen, die Zuordnungen verwalteter Darstellungen von Windows-Runtime Typen darstellen, die in der Anwendungsdomäne geladen wurden, die für den Aufrufen der [ICorDebugAppDomain3:: getcachedwinrttypes](icordebugappdomain3-getcachedwinrttypes-method.md) -Methode verwendet wird.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Schnittstellen](debugging-interfaces.md)
+- [Debugschnittstellen](debugging-interfaces.md)

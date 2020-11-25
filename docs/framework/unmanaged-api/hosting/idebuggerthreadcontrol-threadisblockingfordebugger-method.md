@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-ms.openlocfilehash: f7cdc3fe9d52db56d0280bc602d3a9f2f54e8246
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 8c2741d7db60781fef12293f3be0b515a55b7885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805251"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705508"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger-Methode
+
 Benachrichtigt den Host, dass der Thread, der diesen Rückruf sendet, innerhalb der Debugdienste blockiert wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,16 +33,18 @@ HRESULT ThreadIsBlockingForDebugger ( );
 ```  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ThreadIsBlockingForDebugger` Methode wird immer in einem Lauf Zeit Thread aufgerufen.  
   
  Die- `ThreadIsBlockingForDebugger` Methode gibt dem Host die Möglichkeit, eine andere Aktion auszuführen, während der Thread blockiert wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  .Net **Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -12,17 +12,19 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 409e881198a359fa28356e22ea73d5b724742a0d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820912"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706475"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
+
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.
 
 ## <a name="names-of-methods"></a>Namen von Methoden
+
  Da Methoden das Ausführen von Aktionen ermöglichen, erfordern die Entwurfsrichtlinien, dass Methodennamen Verben oder Verbalphrasen sind. Mit dieser Richtlinie ist es auch möglich, Methodennamen von Eigenschafts- und Typnamen zu unterscheiden, die Nominal- oder Adjektivphrasen sind.
 
  ✔️ Methodennamen, bei denen es sich um Verben oder Verb Ausdrücke handelt.
@@ -36,6 +38,7 @@ public class String {
 ```
 
 ## <a name="names-of-properties"></a>Namen von Eigenschaften
+
  Anders als bei anderen Membern sollten Sie Eigenschaften einen Namen geben, der eine Nominal- oder Adjektivphrase ist. Der Grund dafür ist, dass sich eine Eigenschaft auf Daten bezieht, und der Name der Eigenschaft dies widerspiegelt. Eigenschaftennamen werden immer in Pascal-Schreibweise geschrieben.
 
  ✔️ Sie namens Eigenschaften mit einem Substantiv, nominalen Ausdruck oder Adjektiv.
@@ -62,6 +65,7 @@ public class Control {
 ```
 
 ## <a name="names-of-events"></a>Namen von Ereignissen
+
  Ereignisse beziehen sich immer auf Aktionen, also entweder auf eine Aktion, die gerade passiert oder eine, die in der Vergangenheit liegt. Deshalb werden Ereignisse mit Verben benannt (wie Methoden auch), und die Verbkonjugation wird genutzt, um den Zeitpunkt anzugeben, wann das Ereignis ausgelöst wird.
 
  ✔️ Ereignisse mit einem Verb oder einem Verb Ausdruck zu benennen.
@@ -85,6 +89,7 @@ public class Control {
  ✔️ Do Event Argument-Klassen mit dem Suffix "EventArgs".
 
 ## <a name="names-of-fields"></a>Feldnamen
+
  Die Richtlinien für die Benennung von Feldern gelten für statische öffentliche und geschützte Felder. Interne und private Felder sind nicht Gegenstand von Richtlinien, und öffentliche oder geschützte Instanzfelder sind laut den [Entwurfsrichtlinien für Member](member.md) nicht zulässig.
 
  ✔️ Verwenden Sie die pascalschreibweise in Feldnamen.
@@ -99,7 +104,7 @@ public class Control {
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

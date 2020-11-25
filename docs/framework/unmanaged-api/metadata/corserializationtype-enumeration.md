@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-ms.openlocfilehash: 649a9159f99afa64615c40c23a98a80318ae0d7f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c9674bfe0e5a8006a4881e103b633ee8f2af1d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009170"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706050"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType-Enumeration
+
 Gibt an, wie ein Objekt vom Common Language Runtime serialisiert wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -55,7 +56,7 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|Die Serialisierung des Objekts ist nicht definiert.|  
 |`SERIALIZATION_TYPE_BOOLEAN`|Das Objekt wird als boolescher Typ serialisiert.|  
@@ -79,12 +80,13 @@ typedef enum CorSerializationType {
 |`SERIALIZATION_TYPE_ENUM`|Das Objekt wird als Enumeration serialisiert.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)
