@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: d4a254853256e1a1440f5588418b94e39eabcc9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dd1608badf553650b05b7de98d9bbcd76b2f3edf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894108"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728432"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue-Methode
+
 Ruft den Wert des angegebenen statischen Felds ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetStaticFieldValue (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `fieldDef`  
  in Ein Feld `Def` Token, das auf das Feld verweist, das abgerufen werden soll.  
   
@@ -48,9 +50,11 @@ HRESULT GetStaticFieldValue (
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den Wert des statischen Felds darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei parametrisierten Typen ist der Wert eines statischen Felds relativ zur jeweiligen Instanziierung. Wenn der Klassenkonstruktor Parameter vom Typ <xref:System.Type>annimmt, wird daher [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) anstelle von `ICorDebugClass::GetStaticFieldValue`aufgerufen.  
+
+ Bei parametrisierten Typen ist der Wert eines statischen Felds relativ zur jeweiligen Instanziierung. Wenn der Klassenkonstruktor Parameter vom Typ annimmt <xref:System.Type> , wird daher [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) anstelle von aufgerufen `ICorDebugClass::GetStaticFieldValue` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

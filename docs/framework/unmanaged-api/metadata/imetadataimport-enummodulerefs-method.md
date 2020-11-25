@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-ms.openlocfilehash: fe7350e6d8e400ae37b5b8b7854a56f3c5c53ea7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 788fd1815415bf8bcfa20d431a5451679d2025bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491748"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728276"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs-Methode
+
 Zählt ModuleRef-Token auf, die importierte Module darstellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT EnumModuleRefs (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss für den ersten-Rückruf dieser Methode NULL sein.  
   
@@ -51,17 +53,18 @@ HRESULT EnumModuleRefs (
   
 ## <a name="return-value"></a>Rückgabewert  
   
-|HRESULT|Beschreibung|  
+|HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs`wurde erfolgreich zurückgegeben.|  
+|`S_OK`|`EnumModuleRefs` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine Token zum Auflisten vorhanden. In diesem Fall `pcModuleRefs` ist 0 (null).|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

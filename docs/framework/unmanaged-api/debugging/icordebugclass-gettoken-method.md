@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: ee5c848a-eac4-4462-b07a-07ccd76a75df
 topic_type:
 - apiref
-ms.openlocfilehash: 3433f5f69927afb501c2596571f138e3a69fabb6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 59f450117d1a52ce7b900d9d67330fc98281afa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894123"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728419"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken-Methode
-Ruft das `TypeDef` Metadatentoken ab, das auf die Definition dieser Klasse verweist.  
+
+Ruft das Metadatentoken ab `TypeDef` , das auf die Definition dieser Klasse verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +35,12 @@ HRESULT GetToken (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pTypeDef`  
  vorgenommen Ein Zeiger auf ein `mdTypeDef` Token, das auf die Definition dieser Klasse verweist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

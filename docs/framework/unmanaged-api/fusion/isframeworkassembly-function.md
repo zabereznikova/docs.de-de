@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728562"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly-Funktion
+
 Ruft einen Wert ab, der angibt, ob die angegebene Assembly verwaltet wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzAssemblyReference`  
  in Der Name der zu Überprüfung enden Assembly.  
   
@@ -49,15 +51,17 @@ HRESULT IsFrameworkAssembly (
  [in] Die Größe des `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Hinweise  
- Der `pwzAssemblyReference`-Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
+
+ Der- `pwzAssemblyReference` Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
   
- Wenn diese Assembly Teil des .NET Framework ist, enthält der `pbIsFrameworkAssembly` Parameter den booleschen Wert `true`.  
+ Wenn diese Assembly Teil des .NET Framework ist, enthält der- `pbIsFrameworkAssembly` Parameter den booleschen Wert `true` .  
   
- Wenn die benannte Assembly nicht Teil der .NET Framework ist, oder wenn der `pwzAssemblyReference` Parameter keine Assembly benannt hat, enthält `pbIsFrameworkAssembly` den booleschen Wert `false`.  
+ Wenn die benannte Assembly nicht Teil der .NET Framework ist, oder wenn der- `pwzAssemblyReference` Parameter keine Assembly benannt hat, `pbIsFrameworkAssembly` enthält einen booleschen Wert von `false` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
+- [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)

@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: fac2b1c6-6fa3-4818-805b-b63972024c86
 topic_type:
 - apiref
-ms.openlocfilehash: 8f97614412eb2d49b202e86bdabc727159deb5d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ae0a887d666a150b717d495848c8a411d030a09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728575"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache-Funktion
+
 Löscht den Common Language Runtime Download Cache (CLR).  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,22 +34,25 @@ HRESULT NukeDownloadedCache();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt Standard-COM-Fehlercodes zurück, wie in WinError. h definiert.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der CLR-Download Cache ist der Bereich, in dem Assemblys mit starkem Namen, die von einer URL heruntergeladen werden, zur möglichen Wiederverwendung gespeichert werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Bibliothek:** "Fusion. dll" und "mscorwert. dll". Verwenden Sie "Fusion. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
+ **Bibliothek:** Fusion.dll und Mscorwks.dll. Verwenden Sie Fusion.dll anstelle von Mscorwks.dll, um sicherzustellen, dass Sie die richtige Version der .NET Framework als Ziel verwenden.  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [CreateHistoryReader-Funktion](createhistoryreader-function.md)
 - [GetHistoryFileDirectory-Funktion](gethistoryfiledirectory-function.md)
-- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
+- [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728445"
 ---
 # <a name="managed-threading"></a>Verwaltetes Threading
 
@@ -21,6 +21,7 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
 > Ab .NET Framework 4 wird die Multithreadprogrammierung durch die Klassen <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), parallele Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace und ein Programmiermodell, das auf dem Konzept von Tasks anstatt von Threads basiert, erheblich vereinfacht. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Grundlagen des verwalteten Threadings](managed-threading-basics.md)  
  Enthält eine Übersicht über das verwaltete Threading und erläutert, in welchen Fällen mehrere Threads verwendet werden.  
   
@@ -34,6 +35,7 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
  Beschreibt die verwalteten Klassen, mit denen Sie Threadingaktivitäten sowie die Daten von Objekten, auf die in verschiedenen Threads zugegriffen wird, synchronisieren können, und bietet eine Übersicht über Threadpoolthreads.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Threading>  
  Enthält Klassen zum Verwenden und Synchronisieren von verwalteten Threads.  
   
@@ -44,6 +46,7 @@ Unabhängig davon, ob eine Anwendung für einen Computer mit einem oder mehreren
  Enthält Klassen zum Erstellen und Planen von parallelen Verarbeitungsaufgaben.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  
  Übersicht über Anwendungsdomänen und deren Verwendung durch die Common Language-Infrastruktur.  
   

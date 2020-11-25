@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c8840be-ffea-447f-9c8d-178f1eaf8d06
 topic_type:
 - apiref
-ms.openlocfilehash: 5e5bf097a4b1e366fff807595b22c4696a91cf43
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9e907450b4ae985ee30d9958eec8baba797b495a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728601"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables-Methode
+
 Ruft die lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetLocalVariables(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mdMethodToken`  
  in Das Metadatentoken der Methode.  
   
@@ -50,11 +52,13 @@ HRESULT GetLocalVariables(
  vorgenommen Ein Zeiger auf einen `ULONG` , der die Größe des Puffers empfängt, der `rgLocals` zum enthalten der lokalen Variablen erforderlich ist.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedENCUpdate-Schnittstelle](isymunmanagedencupdate-interface.md)

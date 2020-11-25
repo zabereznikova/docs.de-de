@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-ms.openlocfilehash: 4652e4b34d614ad3b7b852925fcc63309bdd1498
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 76b96dfd9d22c7e770671dcc01cb421430df729f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728185"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next-Methode
+
 Ruft die angegebene Anzahl von ICorDebug-Frame-Instanzen ab, beginnend bei der aktuellen Position.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  in Die Anzahl der `ICorDebugFrame` abzurufenden Instanzen.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  vorgenommen Ein Zeiger auf die Anzahl der `ICorDebugFrame` tatsächlich zurückgegebenen Instanzen. Dieser Wert kann NULL sein, wenn `celt` ein Wert ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

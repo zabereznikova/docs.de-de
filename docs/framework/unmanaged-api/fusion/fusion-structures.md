@@ -6,17 +6,19 @@ helpviewer_keywords:
 - structures [.NET Framework fusion]
 - unmanaged structures [.NET Framework], fusion
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
-ms.openlocfilehash: d20a2eab2c7a9798c87a4431174d6f70f32149e7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e901ab6c78333a430ca43b01c65bfb01ee1b08e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728335"
 ---
 # <a name="fusion-structures"></a>Fusionsstrukturen
+
 In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die von der Fusion-API verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ASSEMBLY_INFO-Struktur](assembly-info-structure.md)  
  Enthält Informationen zu einer Assembly, die im globalen Assemblycache registriert ist.  
   
@@ -27,11 +29,12 @@ In diesem Abschnitt werden die nicht verwalteten Strukturen beschrieben, die von
  Enthält Metadaten-Attributinformationen zu einer [IDefinitionIdentity](idefinitionidentity-interface.md) -Instanz.  
   
  [IDENTITY_ATTRIBUTE_BLOB-Struktur](identity-attribute-blob-structure.md)  
- Enthält die Offset Informationen für eine zugeordnete [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) -Struktur.  
+ Enthält die Offset Informationen für eine zugeordnete [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) Struktur.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Fusion-Schnittstellen](fusion-interfaces.md)  
   
- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)  
+ [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)  
   
- [Fusion-Enumerationen](fusion-enumerations.md)
+ [Fusionsenumerationen](fusion-enumerations.md)

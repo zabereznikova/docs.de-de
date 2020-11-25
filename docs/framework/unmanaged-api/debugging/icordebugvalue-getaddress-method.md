@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-ms.openlocfilehash: 467ba53f90081f0c3499fb22acab96b5e380a3f4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 47c0c4dfa78e85bcc83f0bb2a333955c8e8666fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395845"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728367"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress-Methode
+
 Ruft die Adresse dieses ICorDebugValue-Objekts ab, das gerade gedebuggt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetAddress (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAddress`  
  vorgenommen Zeiger auf ein- `CORDB_ADDRESS` Objekt, das die Adresse dieses Wert Objekts angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn der Wert nicht verfügbar ist, wird 0 (null) zurückgegeben. Dies kann vorkommen, wenn der Wert mindestens teilweise in Registern oder in einem Garbage Collector handle () gespeichert ist `GCHandle` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -49,4 +53,4 @@ HRESULT GetAddress (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen

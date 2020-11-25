@@ -14,23 +14,25 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-ms.openlocfilehash: 5650a7e6e6cb0108f0d043914ea94debe2b703bf
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 12ce800cb83ef4f79710aa441b50be860526023c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728120"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum-Schnittstelle
+
 Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeben werden.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Next-Methode](icordebuggcreferenceenum-next-method.md)|Ruft die angegebene Anzahl von [COR_GC_REFERENCE](cor-gc-reference-structure.md) Instanzen ab, die Informationen über Objekte enthalten, für die eine Garbage Collection durchgeführt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `ICorDebugGCReferenceEnum` Schnittstelle implementiert die ICorDebugEnum-Schnittstelle.  
   
  Eine `ICorDebugGCReferenceEnum` Instanz wird durch Aufrufen der [ICorDebugProcess5:: enumerategcreferences](icordebugprocess5-enumerategcreferences-method.md) -Methode mit [COR_GC_REFERENCE](cor-gc-reference-structure.md) Instanzen aufgefüllt. [COR_GC_REFERENCE](cor-gc-reference-structure.md) Objekte können durch Aufrufen der [icordebuggcreferen:: Next](icordebuggcreferenceenum-next-method.md) -Methode aufgezählt werden.  
@@ -44,6 +46,7 @@ Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeb
 - Objekte aus der Finalizerwarteschlange. Die Finalizer-Warteschlange wurzelt Objekte, bis der Finalizer ausgeführt wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -52,6 +55,6 @@ Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeb
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
