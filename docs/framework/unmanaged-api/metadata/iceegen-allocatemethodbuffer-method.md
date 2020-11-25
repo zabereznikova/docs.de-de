@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e1849eb95401e3637a1fd1b00715332f9886071e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008884"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715516"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer-Methode
+
 Erstellt einen Puffer mit der angegebenen Größe für eine Methode und ruft die relative virtuelle Adresse der Methode ab.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
@@ -38,6 +39,7 @@ HRESULT AllocateMethodBuffer (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cchBuffer`  
  in Die Länge des zu erstellenden Puffers.  
   
@@ -48,14 +50,15 @@ HRESULT AllocateMethodBuffer (
  vorgenommen Die relative virtuelle Adresse der Methode.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

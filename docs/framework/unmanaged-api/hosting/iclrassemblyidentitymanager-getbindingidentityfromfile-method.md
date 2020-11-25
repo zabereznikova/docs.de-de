@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 5b537d59014afa783d3f8c5046cc02dad7ea7740
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716736"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile-Methode
+
 Ruft die assemblyidentitäts-Bindungs Daten für die Assembly am angegebenen Dateipfad ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetBindingIdentityFromFile(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzFilePath`  
  in Der Pfad zu der Datei, die ausgewertet werden soll.  
   
@@ -63,18 +65,20 @@ HRESULT GetBindingIdentityFromFile(
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `GetBindingIdentityFromFile`wird in der Regel zweimal aufgerufen. Der erste-Befehl liefert einen NULL-Wert für `pwzBuffer` , und die-Methode gibt die entsprechende Größe in zurück `pcchBufferSize` . Der zweite-Befehl stellt einen entsprechend zugewiesenen Puffer bereit, und die-Methode gibt nach Abschluss des Vorgangs mit den eigentlichen Puffer Daten zurück.  
+
+ `GetBindingIdentityFromFile` wird in der Regel zweimal aufgerufen. Der erste-Befehl liefert einen NULL-Wert für `pwzBuffer` , und die-Methode gibt die entsprechende Größe in zurück `pcchBufferSize` . Der zweite-Befehl stellt einen entsprechend zugewiesenen Puffer bereit, und die-Methode gibt nach Abschluss des Vorgangs mit den eigentlichen Puffer Daten zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRAssemblyIdentityManager-Schnittstelle](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList-Schnittstelle](iclrassemblyreferencelist-interface.md)

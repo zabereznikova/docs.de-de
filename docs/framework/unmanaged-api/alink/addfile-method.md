@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53ca4005f5681cfc5d550301d8aad1406aceb3a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446683"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717200"
 ---
 # <a name="addfile-method"></a>AddFile-Methode
+
 Fügt der Assembly Dateien hinzu. Kann auch verwendet werden, um ungebundene Module zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT AddFile(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Eindeutige ID der Assembly, die erweitert werden soll.  
   
@@ -45,7 +47,7 @@ HRESULT AddFile(
  Der voll qualifizierte Name der hinzu zufügenden Datei.  
   
  `dwFlags`  
- Com+-FileDef-Flags wie `ffContainsNoMetaData` und `ffWriteable`. `dwFlags` wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
+ Com+-FileDef-Flags, z `ffContainsNoMetaData` `ffWriteable` . b. und. `dwFlags` wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
   
  `pEmitter`  
  [IMetaDataEmit-Schnittstellen](../metadata/imetadataemit-interface.md) Schnittstelle, die zum Ausgeben von Metadaten verwendet werden soll, falls erforderlich.  
@@ -54,13 +56,15 @@ HRESULT AddFile(
  Ein Zeiger auf den Speicherort, an dem die eindeutige ID der hinzugefügten Datei gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

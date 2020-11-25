@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 32c27576-71fa-42ee-8230-67b92913ea08
 topic_type:
 - apiref
-ms.openlocfilehash: 63346c679efc083dea9ab0eaa4f983a5308695f8
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 88866d75cc97d40c827359450e8e7bdbe13ef3ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895257"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715887"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId-Methode
+
 Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pId`  
  vorgenommen Der eindeutige Bezeichner der Anwendungsdomäne.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Bezeichner für die Anwendungsdomäne ist innerhalb des enthaltenden Prozesses eindeutig.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

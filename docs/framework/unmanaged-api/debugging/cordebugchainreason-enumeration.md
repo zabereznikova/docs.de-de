@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132284"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716056"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason-Enumeration
+
 Gibt den Grund oder die Gründe für die Initiierung einer Aufrufkette an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -46,7 +47,7 @@ typedef enum CorDebugChainReason {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`CHAIN_NONE`|Es wurde keine Aufrufkette initiiert.|  
 |`CHAIN_CLASS_INIT`|Die Kette wurde durch einen Konstruktor initiiert.|  
@@ -63,17 +64,19 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|Die Kette wurde durch eine Funktionsauswertung initiiert.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie die [ICorDebugChain:: geverrat](icordebugchain-getreason-method.md) -Methode, um die Gründe für die Initiierung einer Rückruf Kette zu ermitteln.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Debuggen von Enumerationen](debugging-enumerations.md)
+- [Debugenumerationen](debugging-enumerations.md)

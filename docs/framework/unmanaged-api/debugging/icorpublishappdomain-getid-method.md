@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716862"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID-Methode
+
 Ruft den eindeutigen Bezeichner für diese [ICorPublishAppDomain](icorpublishappdomain-interface.md)ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `puId`  
  vorgenommen Ein Zeiger auf den Bezeichner der Anwendungsdomäne.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Bezeichner ist nur im Gültigkeitsbereich des enthaltenden Prozesses eindeutig.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corpub. idl, Corpub. h  
@@ -49,6 +53,6 @@ HRESULT GetID (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorPublishAppDomain-Schnittstelle](icorpublishappdomain-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: 84791eba7c95d3278bd4650bd7d660e98fcb79d8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: db36b94fafe20b58b9bcbb886b8d285326960f67
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008916"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715575"
 ---
 # <a name="cvstruct-structure"></a>CVStruct-Struktur
+
 Enthält Informationen, die bei der Installation eines Moduls oder eines zusammengesetzten Abbilds verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,22 +38,23 @@ typedef struct {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |Hauptversion|Buildnummer der Hauptversion.|  
-|Nebenversion|Buildnummer der neben Version.|  
+|Gering|Buildnummer der neben Version.|  
 |Sub|Subbuildnummer.|  
-|Entwickeln|Buildnummer.|  
+|Erstellen|Buildnummer.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenstrukturen](metadata-structures.md)

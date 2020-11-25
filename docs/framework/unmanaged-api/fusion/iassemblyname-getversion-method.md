@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42230928-2c33-41fd-9519-d96efef6c7af
 topic_type:
 - apiref
-ms.openlocfilehash: c0a43dc1640bdaa0ae104832eb4d1f8eb15b0392
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f37979c7a4873a7751db0296dc7d485c3444561
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134336"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715900"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion-Methode
+
 Ruft die Versionsinformationen für die Assembly ab, auf die von diesem [IAssemblyName](iassemblyname-interface.md) -Objekt verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,19 +36,21 @@ HRESULT GetVersion (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pdwVersionHi`  
  vorgenommen Die hohen 32 Bits der Version.  
   
  `pdwVersionLow`  
  vorgenommen Die unteren 32 Bits der Version.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

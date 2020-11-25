@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 352e1acd1fdd8297754e18b2e8c6448ea723a557
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717030"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions-Enumeration
+
 Listet die Assemblyoptionen auf.  
   
 ## <a name="syntax"></a>Syntax  
@@ -54,34 +55,35 @@ typedef enum _AssemblyOptions {
   
 ## <a name="fields"></a>Felder  
   
-|Field|Beschreibung|  
+|Feld|BESCHREIBUNG|  
 |-----------|-----------------|  
-|optAssemTitle|String: stellt den Assemblytitel dar.|  
-|optAssemDescription|String: enthält die Beschreibung der Assembly.|  
-|optAssemConfig|String: enthält die Assemblykonfiguration.|  
-|optAssemOS|Zeichenfolge codiert als: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
-|optAssemProcessor|ULONG|  
-|optAssemLocale|String: enthält das assemblygebiets Schema.|  
-|optAssemVersion|Zeichen folgen codiert als: "Major. Minor. Build. Revision".|  
-|optAssemCompany|String: enthält das Unternehmen.|  
-|optAssemProduct|String: enthält den Produktnamen.|  
-|optAssemProductVersion|String (auch als InformationalVersion bezeichnet).|  
-|optAssemCopyright|String: enthält Informationen zum Copyright.|  
-|optAssemTrademark|String: enthält die Markeninformationen.|  
-|optAssemKeyFile|Zeichenfolge (Dateiname).|  
-|optAssemKeyName|Zeichenfolge (der Schlüssel Name).|  
-|optAssemAlgID|ULONG|  
+|optassemblytitle|String: stellt den Assemblytitel dar.|  
+|optassemdescription|String: enthält die Beschreibung der Assembly.|  
+|optassemconfig|String: enthält die Assemblykonfiguration.|  
+|optassemos|Zeichenfolge codiert als: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
+|optassemprocessor|ULONG|  
+|optassemlocale|String: enthält das assemblygebiets Schema.|  
+|optassemversionsversion|Zeichen folgen codiert als: "Major. Minor. Build. Revision".|  
+|optassemcompany|String: enthält das Unternehmen.|  
+|optassemproduct|String: enthält den Produktnamen.|  
+|optassemproductversion|String (auch als InformationalVersion bezeichnet).|  
+|optassemcopyright|String: enthält Informationen zum Copyright.|  
+|optassemtrademark|String: enthält die Markeninformationen.|  
+|optassemkeyfile|Zeichenfolge (Dateiname).|  
+|optassemkeyname|Zeichenfolge (der Schlüssel Name).|  
+|optassemalgid|ULONG|  
 |optassemflags|ULONG|  
-|optAssemHalfSign|Bool (auch als "Delta Sign" bezeichnet).|  
-|optAssemFileVersion|Zeichen folgen codiert als "Major. Minor. Build. Revision"-identisch mit ProductVersion.|  
-|optAssemSatelliteVer|Zeichen folgen codiert als "Major. Minor. Build. Revision".|  
-|optLastAssemOption|Ein-Wert für die Anzahl der Elemente.|  
+|optassemhalfsign|Bool (auch als "Delta Sign" bezeichnet).|  
+|optassemfileversion|Zeichen folgen codiert als "Major. Minor. Build. Revision"-identisch mit ProductVersion.|  
+|optassemsatellitever|Zeichen folgen codiert als "Major. Minor. Build. Revision".|  
+|optlastassemsoption|Ein-Wert für die Anzahl der Elemente.|  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Alink. h  
   
- **Bibliothek**: Alink. dll  
+ **Bibliothek**: alink.dll  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Al.exe (Assembly Linker-Tool)](../../tools/al-exe-assembly-linker.md)

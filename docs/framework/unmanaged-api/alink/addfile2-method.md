@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: 8dadf9ec8f896b03e4918b21f5153c1b747010fd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446665"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717083"
 ---
 # <a name="addfile2-method"></a>AddFile2-Methode
+
 Fügt der Assembly Dateien hinzu. Kann auch verwendet werden, um ungebundene Module zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT AddFile2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  ID für die Assembly, der die Datei hinzugefügt wird.  
   
@@ -45,7 +47,7 @@ HRESULT AddFile2(
  Der Name der hinzu zufügenden Datei.  
   
  `dwFlags`  
- Com+ `FileDef` Flags wie `ffContainsNoMetaData` und `ffWriteable`. `dwFlags` wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
+ Com+ `FileDef` -Flags, wie z `ffContainsNoMetaData` `ffWriteable` . b. und. `dwFlags` wird an die [DefineFile-Methode](../metadata/imetadataassemblyemit-definefile-method.md)übermittelt.  
   
  `pEmitter`  
  Schnittstelle zur [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) -Schnittstelle.  
@@ -54,13 +56,15 @@ HRESULT AddFile2(
  Empfängt die ID für die Datei, die hinzugefügt wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink2-Schnittstelle](ialink2-interface.md)
 - [IALink-Schnittstelle](ialink-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

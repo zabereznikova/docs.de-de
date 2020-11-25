@@ -3,12 +3,12 @@ title: Windows Workflow Foundation-Funktionsdetails
 description: In diesem Artikel werden neue Features beschrieben, die von .NET Framework 4 Windows Workflow Foundation und Szenarien, in denen die Features nützlich sein können, hinzugefügt werden.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554605"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716290"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -54,7 +54,7 @@ Der <xref:System.ServiceModel.WorkflowServiceHost> ist der vorkonfigurierte Work
 
 Ein Best Price Finder-Dienst ruft bei mehreren Fluggesellschaften Dienste auf, um den besten Ticketpreis für eine bestimmte Route zu ermitteln. Das Implementieren dieses Szenarios erfordert, dass Sie den Workflow in hosten <xref:System.ServiceModel.WorkflowServiceHost> . Außerdem werden die Nachrichten Aktivitäten verwendet, um die Preis Anforderung zu empfangen, die Preise von den Back-End-Diensten abzurufen und auf die Preis Anforderung mit dem besten Preis zu antworten.
 
-## <a name="correlation"></a>Korrelation
+## <a name="correlation"></a>Correlation
 
 Eine Korrelation kann wie folgt definiert werden:
 
@@ -114,7 +114,7 @@ Das WCF-Konfigurations Schema ist komplex und bietet Benutzern viele schwer zu s
 
 ## <a name="data-contract-resolver"></a>Datenvertragsresolver
 
-In .NET 3.5 gab es einige Einschränkungen beim Entwurf bekannter Typen:
+In .NET Framework 3,5 gab es einige Einschränkungen beim Entwurf bekannter Typen:
 
 - Es war nicht möglich, während der Serialisierung oder Deserialisierung bekannte Typen dynamisch hinzuzufügen.
 
@@ -122,7 +122,7 @@ In .NET 3.5 gab es einige Einschränkungen beim Entwurf bekannter Typen:
 
 - Benutzer konnten nicht angeben, welche xsi:type-Informationen erscheinen sollten, um z. B. die Serialisierungsinstanz zu verkleinern.
 
-Der [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese Probleme in .NET 4,5.
+Der [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese Probleme in .NET Framework 4,5.
 
 ### <a name="getting-started"></a>Erste Schritte
 
@@ -144,7 +144,7 @@ Der [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese P
 
 ## <a name="flowchart"></a>Flussdiagramm
 
-Ein Flussdiagramm ist ein bekanntes Paradigma, um Domänenprobleme visuell darzustellen. Es handelt sich um einen neuen Ablauf Steuerungs Stil, den wir in .NET 4 eingeführt haben. Ein Kernmerkmal des Flussdiagrammes ist, dass zu einem beliebigen Zeitpunkt immer nur eine Aktivität ausgeführt wird. In Flussdiagrammen können Schleifen und alternative Ergebnisse ausgedrückt werden, aber nicht die gleichzeitige Ausführung mehrerer Knoten.
+Ein Flussdiagramm ist ein bekanntes Paradigma, um Domänenprobleme visuell darzustellen. Es handelt sich um einen neuen Ablauf Steuerungs Stil, den wir in .NET Framework 4 eingeführt haben. Ein Kernmerkmal des Flussdiagrammes ist, dass zu einem beliebigen Zeitpunkt immer nur eine Aktivität ausgeführt wird. In Flussdiagrammen können Schleifen und alternative Ergebnisse ausgedrückt werden, aber nicht die gleichzeitige Ausführung mehrerer Knoten.
 
 ### <a name="getting-started"></a>Erste Schritte
 
@@ -264,7 +264,7 @@ Ein Benutzer muss zur Eingabe aufgefordert werden. Unter normalen Umständen wü
 
 ## <a name="wcf-routing-service"></a>WCF-Routingdienst
 
-Der Routing Dienst ist als generischer Software Router konzipiert, mit dem Sie steuern können, wie WCF-Nachrichten zwischen Clients und Diensten fließen. Der Routing Dienst ermöglicht es Ihnen, Ihre Clients von Ihren Diensten zu entkoppeln, was Ihnen viel mehr Freiheit in Bezug auf die von Ihnen unterstützten Konfigurationen und die Flexibilität bietet, die Sie bei der Planung ihrer Dienste erreichen können. In .NET 3,5 waren Clients und Dienste eng gekoppelt. ein Client musste sich über alle Dienste informieren, mit denen er kommunizieren musste und wo Sie sich befinden. Außerdem wies WCF in .NET Framework 3,5 die folgenden Einschränkungen auf:
+Der Routing Dienst ist als generischer Software Router konzipiert, mit dem Sie steuern können, wie WCF-Nachrichten zwischen Clients und Diensten fließen. Der Routing Dienst ermöglicht es Ihnen, Ihre Clients von Ihren Diensten zu entkoppeln, was Ihnen viel mehr Freiheit in Bezug auf die von Ihnen unterstützten Konfigurationen und die Flexibilität bietet, die Sie bei der Planung ihrer Dienste erreichen können. In .NET Framework 3,5 waren Clients und Dienste eng gekoppelt. ein Client musste sich über alle Dienste informieren, mit denen er kommunizieren musste und wo Sie sich befinden. Außerdem wies WCF in .NET Framework 3,5 die folgenden Einschränkungen auf:
 
 - Die Fehlerbehandlung war komplex, da diese Logik fest in den Client codiert werden musste.
 
