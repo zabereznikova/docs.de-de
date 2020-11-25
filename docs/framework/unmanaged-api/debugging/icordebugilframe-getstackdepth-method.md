@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: da6a1123-871d-4492-9d35-3bdb49f94c93
 topic_type:
 - apiref
-ms.openlocfilehash: ad0c93dfcb4dc630793a6735ab00de9da6166e9a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4d03d1c3fccf0be7e8d8a79477fc5b48a565cf2a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130964"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703069"
 ---
-# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="e1232-102">ICorDebugILFrame::GetStackDepth-Methode</span><span class="sxs-lookup"><span data-stu-id="e1232-102">ICorDebugILFrame::GetStackDepth Method</span></span>
-<span data-ttu-id="e1232-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="e1232-103">This method has not been implemented.</span></span>  
+# <a name="icordebugilframegetstackdepth-method"></a><span data-ttu-id="f6a19-102">ICorDebugILFrame::GetStackDepth-Methode</span><span class="sxs-lookup"><span data-stu-id="f6a19-102">ICorDebugILFrame::GetStackDepth Method</span></span>
+
+<span data-ttu-id="f6a19-103">Diese Methode wurde nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="f6a19-103">This method has not been implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1232-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e1232-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f6a19-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f6a19-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStackDepth (  
@@ -33,5 +34,6 @@ HRESULT GetStackDepth (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e1232-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e1232-105">Requirements</span></span>  
- <span data-ttu-id="e1232-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e1232-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="f6a19-105">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="f6a19-105">Requirements</span></span>  
+
+ <span data-ttu-id="f6a19-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f6a19-106">**Header:** CorDebug.idl, CorDebug.h</span></span>
