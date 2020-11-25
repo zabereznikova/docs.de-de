@@ -14,26 +14,29 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 9f521eb942f37b8cf1d00bcc672071a69692b876
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 419efc7f21f4ac2e68657b2a4d69a8690a2938d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722309"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3-Schnittstelle
+
 Erweitert die Schnittstellen "ICorDebugValue" und "ICorDebugValue2", um Unterstützung für Arrays zu bieten, die größer als 2 GB sind.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetSize64-Methode](icordebugvalue3-getsize64-method.md)|Ruft die Größe des-Objekts in Bytes ab `ICorDebugValue3` .|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die [ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md) -Methode gibt eine Objektgröße zwischen 0 und 2.147.483.647 Byte zurück. Im .NET Framework 4,5 kann die Größe der Arrays 2 GB überschreiten. Die- `ICorDebugValue3` Schnittstelle ermöglicht es Ihnen, die Größe dieser Arrays zu bestimmen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -42,7 +45,7 @@ Erweitert die Schnittstellen "ICorDebugValue" und "ICorDebugValue2", um Unterst�
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

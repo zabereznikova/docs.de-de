@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5fa68a67-ced6-41c6-a2c0-467060fd0692
 topic_type:
 - apiref
-ms.openlocfilehash: 235bae64fe5e6a534f2a650050c6c9ad4aa8fe84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 69ee0ea78e0c7edbb61999ef8fba1791e6f682bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500623"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722244"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo-Funktion
+
 Benachrichtigt den Profiler, dass die Steuerung von einer Funktion zurückgegeben wird, und stellt ein Handle bereit, das an die [ICorProfilerInfo3:: GetFunctionLeave3Info-Methode](icorprofilerinfo3-getfunctionleave3info-method.md) zum Abrufen des Stapel Rahmens und des Rückgabewerts übermittelt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +43,8 @@ void __stdcall FunctionLeave3WithInfo(
 
   \[in] ein undurchsichtiges handle, das Informationen zu einem angegebenen Stapel Rahmen darstellt. Dieses Handle ist nur während des Rückrufs gültig, an den er übermittelt wird.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `FunctionLeave3WithInfo` Rückruf Methode benachrichtigt den Profiler, wenn Funktionen aufgerufen werden, und ermöglicht es dem Profiler, die [ICorProfilerInfo3:: GetFunctionLeave3Info-Methode](icorprofilerinfo3-getfunctionleave3info-method.md) zu verwenden, um den Rückgabewert zu überprüfen. Für den Zugriff auf Rückgabewert Informationen `COR_PRF_ENABLE_FUNCTION_RETVAL` muss das-Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask-Methode](icorprofilerinfo-seteventmask-method.md) verwenden, um die Ereignisflags festzulegen, und dann die [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo-Methode](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) verwenden, um die Implementierung dieser Funktion zu registrieren.  
   
  Die `FunctionLeave3WithInfo` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec(naked)` Speicher Klassen Attribut verwenden.  
@@ -58,6 +60,7 @@ void __stdcall FunctionLeave3WithInfo(
  Die `FunctionLeave3WithInfo` Funktion darf keinen verwalteten Code anrufen oder eine verwaltete Speicher Belegung in irgendeiner Weise auslösen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
@@ -66,7 +69,7 @@ void __stdcall FunctionLeave3WithInfo(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

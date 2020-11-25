@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 3630e25b6c24edaa366f1b0fae088e760e851fa4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1713623fa575bea6df649106b37212f7aeaee6db
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895410"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723466"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess-Methode
+
 Fügt den Debugger an einen vorhandenen Prozess an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,19 +37,22 @@ HRESULT DebugActiveProcess (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `id`  
  in Die ID des Prozesses, an den der Debugger angefügt werden soll.  
   
  `win32Attach`  
- in Boolescher Wert, der auf fest `true` gelegt wird, wenn sich der Debugger als Win32-Debugger für den Prozessverhalten soll und die nicht verwalteten Rückrufe versendet. andernfalls `false`.  
+ in Boolescher Wert, der auf festgelegt wird, `true` Wenn sich der Debugger als Win32-Debugger für den Prozessverhalten und die nicht verwalteten Rückrufe verteilen soll, andernfalls `false` .  
   
  `ppProcess`  
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugProcess-Objekts, das den Prozess darstellt, dem der Debugger angefügt wurde.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Interop-Debuggen wird auf Win9x-und nicht-x86-Plattformen wie IA-64-basierten und AMD64-basierten Plattformen nicht unterstützt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

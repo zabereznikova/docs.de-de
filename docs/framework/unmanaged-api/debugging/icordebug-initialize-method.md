@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-ms.openlocfilehash: aeecf19cb85ce5d7781c3dfedca079e97cab76ce
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 5cdd89ebdbb5abb9b001c1489a54bfb867808c5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895358"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723427"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize-Methode
+
 Initialisiert das `ICorDebug`-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,9 +33,11 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger muss zum `Initialize` Erstellungs Zeitpunkt aufzurufen, um die debuggingdienste zu initialisieren. Diese Methode muss aufgerufen werden, bevor eine andere Methode `ICorDebug` für aufgerufen wird.  
+
+ Der Debugger muss zum `Initialize` Erstellungs Zeitpunkt aufzurufen, um die debuggingdienste zu initialisieren. Diese Methode muss aufgerufen werden, bevor eine andere Methode für `ICorDebug` aufgerufen wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

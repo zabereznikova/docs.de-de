@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: fef0902aedbcd8572d2dc67fae7927f754af4489
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723310"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock-Methode
+
 Gibt den verwalteten Thread zurück, der die Monitor Sperre für dieses Objekt besitzt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetThreadOwningMonitorLock (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppThread`  
  vorgenommen Der verwaltete Thread, der die Monitor Sperre für dieses Objekt besitzt.  
   
@@ -42,6 +44,7 @@ HRESULT GetThreadOwningMonitorLock (
  vorgenommen Gibt an, wie oft dieser Thread die Sperre freigeben müsste, bevor die Sperre aufgehoben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -51,7 +54,8 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="exceptions"></a>Ausnahmen  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  Wenn ein verwalteter Thread die Monitor Sperre für dieses Objekt besitzt:  
   
 - Die Methode gibt S_OK zurück.  
@@ -65,6 +69,7 @@ HRESULT GetThreadOwningMonitorLock (
  Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, welcher Thread, sofern vorhanden, die Monitor Sperre für dieses Objekt besitzt, gibt die Methode ein HRESULT zurück, das einen Fehler anzeigt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -73,7 +78,7 @@ HRESULT GetThreadOwningMonitorLock (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

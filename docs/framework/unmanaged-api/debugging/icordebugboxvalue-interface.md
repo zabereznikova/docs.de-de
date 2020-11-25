@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-ms.openlocfilehash: bece1be7474c57d38f083e322c2af1b0ba705ee9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6d58ae048382a78c422703d5c6caeb3bbc739849
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723167"
 ---
 # <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine Unterklasse von "ICorDebugHeapValue", die ein geschachtelt-Wert Klassenobje
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetObject-Methode](icordebugboxvalue-getobject-method.md)|Ruft einen Schnittstellen Zeiger auf die geboxte ICorDebugObjectValue-Instanz ab.|  
   
@@ -36,7 +36,8 @@ Eine Unterklasse von "ICorDebugHeapValue", die ein geschachtelt-Wert Klassenobje
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

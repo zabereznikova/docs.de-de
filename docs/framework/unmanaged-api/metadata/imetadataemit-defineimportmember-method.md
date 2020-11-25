@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 60210bc8f93294c3c3380c36096f3e80e5b26643
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723258"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember-Methode
+
 Erstellt einen Verweis auf den angegebenen Member eines Typs oder Moduls, der außerhalb des aktuellen Bereichs definiert ist, und definiert ein Token für diesen Verweis.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,6 +42,7 @@ HRESULT DefineImportMember (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pAssemImport`  
  in Eine [IMetaDataAssemblyImport](imetadataassemblyimport-interface.md) -Schnittstelle, die die Assembly darstellt, aus der der Zielmember importiert wird.  
   
@@ -65,7 +67,8 @@ HRESULT DefineImportMember (
  `pmr`  
  vorgenommen Das `mdMemberRef` Token, das im aktuellen Gültigkeitsbereich für den Element Verweis definiert wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `DefineImportMember` -Methode sucht nach dem durch angegebenen Member, der `mbMember` in einem anderen Bereich definiert ist, der durch angegeben wird, `pImport` und ruft seine Eigenschaften ab. Diese Informationen werden verwendet, um die [IMetaDataEmit::D efinemembership Ref](imetadataemit-definememberref-method.md) -Methode im aktuellen Bereich aufzurufen, um den Element Verweis zu erstellen.  
   
  Im Allgemeinen müssen Sie vor der Verwendung der `DefineImportMember` -Methode im aktuellen Bereich einen Typverweis oder Modul Verweis für die übergeordnete Klasse, Schnittstelle oder das Modul des Zielmembers erstellen. Das Metadatentoken für diesen Verweis wird dann im-Argument weitergegeben `tkParent` . Sie müssen keinen Verweis auf das übergeordnete Element des Zielmembers erstellen, wenn es später durch den Compiler oder den Linker aufgelöst wird. Zusammenfassung:  
@@ -77,15 +80,16 @@ HRESULT DefineImportMember (
 - Wenn das übergeordnete Element des Zielmembers später durch den Compiler oder den Linker aufgelöst wird, übergeben Sie `mdTokenNil` `tkParent` . Das einzige Szenario, in dem dies zutrifft, ist, wenn eine globale Funktion oder globale Variable aus einer OBJ-Datei importiert wird, die letztendlich mit dem aktuellen Modul und den zusammengeführten Metadaten verknüpft wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

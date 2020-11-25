@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fb90cb7f-af88-45e8-a99f-80a0bbddb08b
 topic_type:
 - apiref
-ms.openlocfilehash: d2d16ab0a29fadd3a64d906a64fc46c422e01c45
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: deb3a28ffb73754b4c03496a6a72325418f1a4fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610040"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722907"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod-Methode
+
 Öffnet eine Methode, in die Symbol Informationen ausgegeben werden. Die angegebene Methode wird zur aktuellen Methode für Aufrufe zum Definieren von Sequenz Punkten, Parametern und lexikalischen Gültigkeitsbereichen. Es gibt einen impliziten lexikalischen Gültigkeitsbereich um die gesamte Methode. Durch das erneute Öffnen einer Methode, die zuvor geschlossen war, werden alle zuvor definierten Symbole für diese Methode gelöscht. Es kann immer nur eine offene Methode vorhanden sein.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,16 +34,19 @@ HRESULT OpenMethod(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `method`  
  in Das Metadatentoken für die Methode, die geöffnet werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)
 - [CloseMethod-Methode](isymunmanagedwriter-closemethod-method.md)

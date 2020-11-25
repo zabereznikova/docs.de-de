@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: b8c4b4e585bba4df39a743273221f38ce14a9b9d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: c135c051637858682c22db58d562e1d50eea562b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860533"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723700"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext-Methode
+
 Legt den aktuellen Kontext des angegebenen Threads im Ziel Prozess fest. Diese Methode wird vom Common Language Runtime (CLR)-Datenzugriffs Dienst aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `threadID`  
  in Der Betriebssystem Bezeichner eines Threads im Ziel Prozess.  
   
@@ -46,12 +48,14 @@ HRESULT SetThreadContext (
  `context`  
  in Zeiger auf einen Puffer, der den Kontext enthält.  
   
- Die Daten im `context` Puffer werden im Format der Win32 `CONTEXT` -Struktur angezeigt. Der Kontext gibt prozessorspezifische Register Daten an, sodass die Definition der Win32 `CONTEXT` -Struktur von der Architektur des Prozessors abhängig ist. Die Definition der Win32 `CONTEXT` -Struktur finden Sie in der Header Datei "Winnt. h".  
+ Die Daten im `context` Puffer werden im Format der Win32- `CONTEXT` Struktur angezeigt. Der Kontext gibt prozessorspezifische Register Daten an, sodass die Definition der Win32 `CONTEXT` -Struktur von der Architektur des Prozessors abhängig ist. Die Definition der Win32-Struktur finden Sie in der Header Datei "Winnt. h" `CONTEXT` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
@@ -60,6 +64,6 @@ HRESULT SetThreadContext (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRDataTarget-Schnittstelle](iclrdatatarget-interface.md)

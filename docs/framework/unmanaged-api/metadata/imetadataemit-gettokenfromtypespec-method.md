@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 1cd09fe785bb37c892417ddbf1efaaaa90e121bf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3a8f369728b8464850259518981bf6690cb17a01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009235"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722036"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec-Methode
+
 Ruft ein Metadatentoken für den Typ mit der angegebenen Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromTypeSpec (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pvSig`  
  in Die Signatur, die definiert wird.  
   
@@ -46,15 +48,16 @@ HRESULT GetTokenFromTypeSpec (
  vorgenommen Das `mdTypeSpec` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

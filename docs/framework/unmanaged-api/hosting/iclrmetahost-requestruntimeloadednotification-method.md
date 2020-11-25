@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-ms.openlocfilehash: 6813f72f9d27aeff90f797a6ca9370b22e03e6f0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: ac40e203cf7d32c1fe30c9915bac3171139403e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703706"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723282"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification-Methode
+
 Stellt eine Rückruffunktion bereit, die garantiert aufgerufen wird, wenn eine Common Language Runtime (CLR)-Version zum ersten Mal geladen, aber noch nicht gestartet wurde. Diese Methode löst die [LockClrVersion](lockclrversion-function.md) -Funktion aus.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,10 +34,12 @@ HRESULT RequestRuntimeLoadedNotification (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCallbackFunction`  
  in Die Rückruffunktion, die aufgerufen wird, wenn eine neue Laufzeit geladen wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -45,6 +48,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Rückruf funktioniert wie folgt:  
   
 - Der Rückruf wird nur aufgerufen, wenn eine Laufzeit zum ersten Mal geladen wird.  
@@ -78,25 +82,26 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  Wenn der Host geladen werden soll oder eine andere Laufzeit in eine Einstiegs Weise geladen werden soll, `pfnCallbackThreadSet` müssen die-und- `pfnCallbackThreadUnset` Parameter, die in der Rückruffunktion bereitgestellt werden, wie folgt verwendet werden:  
   
-- `pfnCallbackThreadSet`muss vom Thread aufgerufen werden, der eine Lauf Zeit Auslastung verursachen kann, bevor ein solcher Ladevorgang versucht wird.  
+- `pfnCallbackThreadSet` muss vom Thread aufgerufen werden, der eine Lauf Zeit Auslastung verursachen kann, bevor ein solcher Ladevorgang versucht wird.  
   
-- `pfnCallbackThreadUnset`muss aufgerufen werden, wenn der Thread eine solche Lauf Zeit Auslastung nicht mehr bewirkt (und bevor der anfängliche Rückruf zurückgegeben wird).  
+- `pfnCallbackThreadUnset` muss aufgerufen werden, wenn der Thread eine solche Lauf Zeit Auslastung nicht mehr bewirkt (und bevor der anfängliche Rückruf zurückgegeben wird).  
   
-- `pfnCallbackThreadSet`und `pfnCallbackThreadUnset` sind beide nicht Wiedereintritts fähig.  
+- `pfnCallbackThreadSet` und `pfnCallbackThreadUnset` sind beide nicht Wiedereintritts fähig.  
   
 > [!NOTE]
 > Host Anwendungen dürfen nicht und außerhalb des Gültigkeits `pfnCallbackThreadSet` `pfnCallbackThreadUnset` Bereichs des- `pCallbackFunction` Parameters aufrufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRMetaHost-Schnittstelle](iclrmetahost-interface.md)
 - [Hosting](index.md)

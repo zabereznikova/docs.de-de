@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795663"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722608"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState-Enumeration
+
 Gibt den Zustand eines Threads zum Debuggen an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,11 +42,13 @@ typedef enum CorDebugThreadState {
 |`THREAD_SUSPEND`|Der Thread kann nicht ausgeführt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Debugger steuert die `CorDebugThreadState` Ausführung eines Threads mithilfe der-Enumeration. Der Status eines Threads kann mithilfe der [ICorDebugThread:: SetDebugState](icordebugthread-setdebugstate-method.md) -Methode oder der [ICorDebugController:: SetAllThreadsDebugState](icordebugcontroller-setallthreadsdebugstate-method.md) -Methode festgelegt werden.  
   
  Ein für die Hosting- [API](../hosting/index.md) bereitgestellter Rückruf ermöglicht das Senden von Nachrichten, sodass ein unterbrochener Status nicht erforderlich ist.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

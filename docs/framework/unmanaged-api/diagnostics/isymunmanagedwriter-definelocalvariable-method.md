@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614824"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723024"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable-Methode
+
 Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich. Diese Methode kann mehrmals für eine Variable mit demselben Namen aufgerufen werden, die über mehrere Häuser innerhalb eines Bereichs verfügt. In diesem Fall dürfen sich die Werte des `startOffset` -Parameters und des- `endOffset` Parameters jedoch nicht überlappen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,6 +43,7 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `name`  
  in Ein Zeiger auf einen `WCHAR` , der den Namen der lokalen Variablen definiert.  
   
@@ -73,12 +75,14 @@ HRESULT DefineLocalVariable(
  in Der Endoffset für die Variable. Dieser Parameter ist optional. Wenn der Wert 0 ist, wird dieser Parameter ignoriert, und die Variable wird im gesamten Bereich definiert. Wenn es sich um einen Wert ungleich 0 (null) handelt, fällt die Variable innerhalb der Offsets des aktuellen Gültigkeits Bereichs.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedWriter-Schnittstelle](isymunmanagedwriter-interface.md)
 - [DefineGlobalVariable-Methode](isymunmanagedwriter-defineglobalvariable-method.md)

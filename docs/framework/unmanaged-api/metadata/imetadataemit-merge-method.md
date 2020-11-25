@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e64d644b511f7c3249c48b9642bfd3163142af3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004165"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722010"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge-Methode
+
 Fügt der Liste der zusammen zuführenden Bereiche den angegebenen importierten Bereich hinzu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT Merge (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pImport`  
  in Ein Zeiger auf ein [IMetaDataImport](imetadataimport-interface.md) -Objekt, das den importierten Bereich identifiziert, der zusammengeführt werden soll.  
   
@@ -46,18 +48,20 @@ HRESULT Merge (
  in Ein Zeiger auf ein [IUnknown](/cpp/atl/iunknown) -Objekt, das die Fehler angibt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Aufrufen von [IMetaDataEmit:: MergeEnd](imetadataemit-mergeend-method.md) , um die Zusammenführung von Metadaten in einem einzelnen Bereich zu initiieren.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

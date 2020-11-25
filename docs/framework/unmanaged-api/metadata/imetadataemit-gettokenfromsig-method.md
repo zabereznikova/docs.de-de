@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: 740dad54bc3a79ff546176abdc35487d89ed8f44
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b41891227d94b66bf59128d620eba9da117fe92a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009248"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722049"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig-Methode
+
 Ruft ein Token für die angegebene Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromSig (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pvSig`  
  in Die Signatur, die persistent gespeichert und gespeichert werden soll.  
   
@@ -46,15 +48,16 @@ HRESULT GetTokenFromSig (
  vorgenommen Das `mdSignature` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

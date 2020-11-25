@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722283"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2-Funktion
+
 Benachrichtigt den Profiler, dass eine Funktion im Begriff ist, zum Aufrufer zurückzukehren, und stellt Informationen zum Stapel Rahmen und Funktionsrückgabewert bereit.  
   
 ## <a name="syntax"></a>Syntax  
@@ -57,7 +58,8 @@ void __stdcall FunctionLeave2 (
 
   Um auf Rückgabewert Informationen zugreifen zu können, `COR_PRF_ENABLE_FUNCTION_RETVAL` muss das-Flag festgelegt werden. Der Profiler kann die [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) -Methode verwenden, um die Ereignisflags festzulegen.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die Werte des `func` -Parameters und des- `retvalRange` Parameters sind nach der Rückgabe der Funktion ungültig, `FunctionLeave2` da sich die Werte möglicherweise ändern oder zerstört werden.  
   
  Die `FunctionLeave2` Funktion ist ein Rückruf. Sie müssen Sie implementieren. Die-Implementierung muss das `__declspec` `naked` Speicher Klassen Attribut () verwenden.  
@@ -73,6 +75,7 @@ void __stdcall FunctionLeave2 (
  Außerdem darf die `FunctionLeave2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
@@ -81,7 +84,7 @@ void __stdcall FunctionLeave2 (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [FunctionEnter2-Funktion](functionenter2-function.md)
 - [FunctionTailcall2-Funktion](functiontailcall2-function.md)

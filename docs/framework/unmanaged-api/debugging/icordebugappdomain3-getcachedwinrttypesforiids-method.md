@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: f8e92ec4f813e8810273a1514298d0739a3d2406
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aff86fb63b87869ed13028bd7344afe11363f51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723180"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs-Methode
-Ruft einen Enumerator für zwischengespeicherte Windows-Runtime-Typen in einer Anwendungsdomäne basierend auf ihren Schnittstellenbezeichnern ab.  
+
+Ruft einen Enumerator für zwischengespeicherte Windows-Runtime Typen in einer Anwendungsdomäne auf der Grundlage ihrer Schnittstellen Bezeichner ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,26 +37,29 @@ HRESULT GetCachedWinRTTypesForIIDs (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cReqTypes`  
- [in] Die Anzahl der erforderlichen Typen.  
+ in Die Anzahl der erforderlichen Typen.  
   
  `iidsToResolve`  
- [in] Ein Zeiger auf ein Array, das die Schnittstellenbezeichner enthält, die den verwalteten Darstellungen der abzurufenden Windows-Runtime-Typen entsprechen.  
+ in Ein Zeiger auf ein Array, das die Schnittstellen Bezeichner enthält, die den verwalteten Darstellungen der Windows-Runtime Typen entsprechen, die abgerufen werden sollen.  
   
  `ppTypesEnum`  
- [out] Ein Zeiger auf die Adresse eines "ICorDebugTypeEnum"-Schnittstellenobjekts, das die Aufzählung der zwischengespeicherten verwalteten Darstellungen der `iidsToResolve`abgerufenen Windows-Runtime-Typen basierend auf den Schnittstellenbezeichnern in ermöglicht.  
+ vorgenommen Ein Zeiger auf die Adresse eines icorentbugtypeenum-Schnittstellen Objekts, das die Aufzählung der zwischengespeicherten verwalteten Darstellungen der Windows-Runtime abgerufenen Typen basierend auf den Schnittstellen Bezeichners in ermöglicht `iidsToResolve` .  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn die Methode keine Informationen für einen bestimmten Schnittstellenbezeichner abruft, enthält der entsprechende Eintrag `ELEMENT_TYPE_END` in der Auflistung "ICorDebugTypeEnum" eine Art von Fehlern aufgrund von Datenabrufproblemen oder `ELEMENT_TYPE_VOID` für unbekannte Schnittstellenbezeichner.  
+## <a name="remarks"></a>Hinweise  
+
+ Wenn die Methode keine Informationen für einen bestimmten Schnittstellen Bezeichner abrufen kann, weist der entsprechende Eintrag in der ICorDebugTypeEnum-Auflistung `ELEMENT_TYPE_END` aufgrund von Datenabruf Problemen oder `ELEMENT_TYPE_VOID` bei unbekannten Schnittstellen Bezeichnern den Typ "Fehler" auf.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

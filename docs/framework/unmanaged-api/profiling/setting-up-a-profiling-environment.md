@@ -10,14 +10,15 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: adf790e0b2d2b72b5a1f0b2a41b80db6d5026869
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9c712c5efe8d6d79454b70d0bf4f3ca2fa83b637
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494019"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722478"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Einrichten einer Profilerstellungsumgebung
+
 > [!NOTE]
 > Die Profilerstellung wurde in der .NET Framework 4 beträchtlich geändert.  
   
@@ -41,6 +42,7 @@ ms.locfileid: "84494019"
 > Wenn Sie die .NET Framework Versionen 2,0, 3,0 und 3,5 in den .NET Framework 4 und höheren Versionen verwenden möchten, müssen Sie die COMPLUS_ProfAPI_ProfilerCompatibilitySetting Umgebungsvariable festlegen.  
   
 ## <a name="environment-variable-scope"></a>Umgebungsvariablenbereich  
+
  Die Werte, die Sie für die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festlegen, bestimmen den Einflussbereich dieser Variablen. Sie haben folgende Möglichkeiten, diese Variablen festzulegen:  
   
 - Wenn Sie die Variablen in einem [ICorDebug:: deateprocess](../debugging/icordebug-createprocess-method.md) -Aufruf festlegen, gelten Sie nur für die Anwendung, die Sie zu diesem Zeitpunkt ausführen. (Sie gelten auch für andere Anwendungen, die von dieser Anwendung gestartet werden und die die Umgebung erben.)  
@@ -62,6 +64,7 @@ ms.locfileid: "84494019"
 - Da der Profiler ein COM-Objekt ist, das prozessintern instanziiert wird, verfügt jede Anwendung mit Profil über eine eigene Kopie des Profilers. Daher muss eine einzelne Profilerinstanz nicht Daten von mehreren Anwendungen behandeln. Sie müssen jedoch eine Logik zum Protokollierungscode des Profilers hinzufügen, um zu verhindern, dass die Protokolldatei durch andere Anwendungen mit Profil überschrieben wird.  
   
 ## <a name="initializing-the-profiler"></a>Initialisieren des Profilers  
+
  Wenn die Prüfung auf beide Umgebungsvariablen erfolgreich ist, erstellt die CLR eine Instanz des Profilers in ähnlicher Weise wie für die COM-`CoCreateInstance`-Funktion. Der Profiler wird nicht durch einen direkten Aufruf von `CoCreateInstance` geladen. Deshalb wird ein Aufruf von `CoInitialize`, der das Festlegen des Threadingmodells erfordert, vermieden. Die CLR ruft dann die [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) -Methode im Profiler auf. Die Signatur dieser Methode wird im Folgenden beschrieben.  
   
 ```cpp  
@@ -71,6 +74,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
  Der Profiler muss `pICorProfilerInfoUnk` einen [ICorProfilerInfo](icorprofilerinfo-interface.md) -oder [ICorProfilerInfo2](icorprofilerinfo2-interface.md) -Schnittstellen Zeiger Abfragen und speichern, damit er später während der Profilerstellung weitere Informationen anfordern kann.  
   
 ## <a name="setting-event-notifications"></a>Festlegen von Ereignisbenachrichtigungen  
+
  Der Profiler ruft dann die [ICorProfilerInfo:: setteventmask](icorprofilerinfo-seteventmask-method.md) -Methode auf, um anzugeben, an welchen Benachrichtigungs Kategorien Sie interessiert sind. Wenn für den Profiler z. B. nur Benachrichtigungen zum Starten und Verlassen von Funktionen und an Garbage Collection-Benachrichtigungen von Belang sind, wird Folgendes angegeben.  
   
 ```cpp  
@@ -84,7 +88,9 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  Bestimmte Profilerereignisse sind unveränderlich. Das bedeutet, dass diese Ereignisse unmittelbar nach ihrem Festlegen im `ICorProfilerCallback::Initialize`-Rückruf nicht deaktiviert und neue Ereignisse nicht aktiviert werden können. Versuche, ein unveränderliches Ereignis zu ändern, führen dazu, dass `ICorProfilerInfo::SetEventMask` ein fehlgeschlagenes HRESULT zurückgibt.  
   
 <a name="windows_service"></a>
+
 ## <a name="profiling-a-windows-service"></a>Profilerstellung für einen Windows-Dienst  
+
  Die Profilerstellung für einen Windows-Dienst ist mit der Profilerstellung für eine Common Language Runtime-Anwendung vergleichbar. Beide Profilerstellungsvorgänge werden durch Umgebungsvariablen aktiviert. Da ein Windows-Dienst gestartet wird, wenn das Betriebssystem gestartet wird, müssen die zuvor in diesem Thema erläuterten Umgebungsvariablen bereits vor dem Systemstart vorhanden und auf die erforderlichen Werte festgelegt sein. Außerdem muss die Profilerstellungs-DLL bereits auf dem System registriert sein.  
   
  Nachdem Sie die COR_ENABLE_PROFILING-Umgebungsvariable und die COR_PROFILER-Umgebungsvariable festgelegt und die Profiler-DLL registriert haben, sollten Sie den Zielcomputer neu starten, damit der Windows-Dienst diese Änderungen feststellen kann.  
@@ -93,6 +99,6 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Dieses Verfahren führt außerdem dazu, dass für jeden CLR-Prozess ein Profil erstellt wird. Der Profiler sollte dem [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) -Rückruf Logik hinzufügen, um zu ermitteln, ob der aktuelle Prozess von Interesse ist. Wenn dies nicht der Fall ist, kann der Profiler den Rückruf mit einem Fehler abschließen, ohne die Initialisierung auszuführen.  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die Profilerstellung](profiling-overview.md)

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: 8f0bbd26bde562df5482d167c9d2775e01426f55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610053"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722933"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter-Schnittstelle
-Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenz Punkten, lexikalischen Bereichen und Variablen bereit.  
+
+Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten, Sequenzpunkten, lexikalischen Bereichen und Variablen bereit.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -53,10 +54,11 @@ Stellt einen Symbolwriter dar und stellt Methoden zum Definieren von Dokumenten,
 |[SetUserEntryPoint-Methode](isymunmanagedwriter-setuserentrypoint-method.md)|Gibt die benutzerdefinierte Methode an, die der Einstiegspunkt für dieses Modul ist.|  
 |[UsingNamespace-Methode](isymunmanagedwriter-usingnamespace-method.md)|Gibt an, dass der angegebene voll qualifizierte Namespace Name innerhalb des derzeit geöffneten lexikalischen Gültigkeits Bereichs verwendet wird.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Diagnosesymbolspeicher-Schnittstellen](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter2-Schnittstelle](isymunmanagedwriter2-interface.md)

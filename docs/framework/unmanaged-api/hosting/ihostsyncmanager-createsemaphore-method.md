@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 37679e94-5ff9-4173-8fa5-457febeb89bf
 topic_type:
 - apiref
-ms.openlocfilehash: 680280e959d523356b95a5a4d9390c80720c0330
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9af38a58ce8786c56d9f50089605dc994167497e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803139"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722127"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore-Methode
+
 Erstellt ein [IHostSemaphore](ihostsemaphore-interface.md) -Objekt für die Common Language Runtime (CLR), die als Semaphor für warte Ereignisse verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT CreateSemaphore (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwInitial`  
  in Die anfängliche Anzahl für `ppSemaphore` .  
   
@@ -49,7 +51,7 @@ HRESULT CreateSemaphore (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`CreateSemaphore`wurde erfolgreich zurückgegeben.|  
+|S_OK|`CreateSemaphore` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -58,14 +60,16 @@ HRESULT CreateSemaphore (
 |E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis Objekt zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- `CreateSemaphore`spiegelt die Win32-Funktion mit dem gleichen Namen wider. Der `dwInitial` -Parameter und der- `dwMax` Parameter verwenden die gleiche Semantik für die Semaphor-Anzahl wie die Win32 `lInitialCount` - `lMaximumCount` bzw.-Parameter. `dwInitial`muss zwischen 0 (null) und (einschließlich) liegen `dwMax` . `dwMax`muss größer als 0 (null) sein.  
+
+ `CreateSemaphore` spiegelt die Win32-Funktion mit dem gleichen Namen wider. Der `dwInitial` -Parameter und der- `dwMax` Parameter verwenden die gleiche Semantik für die Semaphor-Anzahl wie die Win32 `lInitialCount` - `lMaximumCount` bzw.-Parameter. `dwInitial` muss zwischen 0 (null) und (einschließlich) liegen `dwMax` . `dwMax` muss größer als 0 (null) sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

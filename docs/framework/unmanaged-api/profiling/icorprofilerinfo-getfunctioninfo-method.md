@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: e7193526bb0da1d28da4bf6bde108fc4d3fba273
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6aaa02d72dd10fe72d773246d55216143786dabb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503015"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722536"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo-Methode
+
 Ruft die übergeordnete Klasse und das Metadatentoken für die angegebene Funktion ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetFunctionInfo(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `functionId`  
  in Die ID der Funktion, für die die übergeordnete Klasse und das Metadatentoken zu erhalten sind.  
   
@@ -48,12 +50,14 @@ HRESULT GetFunctionInfo(
  `pToken`  
  [out] Ein Zeiger auf das Metadatentoken für die Funktion.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Der Profiler-Code kann [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) aufrufen, um eine Metadatenschnittstelle für ein bestimmtes Modul zu erhalten. Das Metadatentoken, das an den Speicherort zurückgegeben wird, auf den durch `pToken` verwiesen wird, kann anschließend für den Zugriff auf die Metadaten für die Funktion verwendet werden.  
   
  Die einer `ClassID` Funktion einer generischen Klasse kann nicht ohne kontextabhängige Informationen zur Verwendung der Funktion nicht verwendet werden. In diesem Fall ist 0 (null) `pClassId` . Der Profiler-Code sollte [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) mit einem COR_PRF_FRAME_INFO Wert verwenden, um mehr Kontext bereitzustellen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -62,6 +66,6 @@ HRESULT GetFunctionInfo(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

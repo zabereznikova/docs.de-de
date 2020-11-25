@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: 78f3ea0d84c932732a752f3af2dc952100fef831
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: eaa465855c9e933286bcdd189e62048510088ec7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722075"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>IMetaDataEmit::DeleteToken-Methode
+
 Löscht das angegebene Token aus dem aktuellen Metadatenbereich.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,19 +35,21 @@ HRESULT DeleteToken (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `tkObj`  
  in Das Token, das gelöscht werden soll.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

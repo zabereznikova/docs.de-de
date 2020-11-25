@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a197d260c55d24f906da7d7f2768bb7ba1ad751f
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 97a4a464d3dfb7b333f44ac4206bd880fd171e16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895342"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723414"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler-Methode
+
 Gibt das Ereignishandlerobjekt für verwaltete Ereignisse an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,15 +35,18 @@ HRESULT SetManagedHandler (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pCallback`  
  in Ein Zeiger auf ein [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) -Objekt, das das Ereignishandlerobjekt ist.  
   
 ## <a name="remarks"></a>Hinweise  
- `SetManagedHandler`muss zur Erstellungszeit aufgerufen werden.  
+
+ `SetManagedHandler` muss zur Erstellungszeit aufgerufen werden.  
   
- Wenn die `ICorDebugManagedCallback` -Implementierung keine ausreichenden Schnittstellen zur Behandlung von debuggingereignissen für die zu debuggende Anwendung enthält, wird `SetManagedHandler` ein HRESULT E_NOINTERFACE zurückgegeben.  
+ Wenn die- `ICorDebugManagedCallback` Implementierung keine ausreichenden Schnittstellen zur Behandlung von debuggingereignissen für die zu debuggende Anwendung enthält, wird `SetManagedHandler` ein HRESULT E_NOINTERFACE zurückgegeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

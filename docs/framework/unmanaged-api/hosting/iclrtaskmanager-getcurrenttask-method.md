@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0b82a9f-edc6-4878-9c81-48de53c02142
 topic_type:
 - apiref
-ms.openlocfilehash: 9cb97d9f383b7b54b431457042c4c4a7fc9cd876
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: af855e3ba47dc329a4fb722c3e13d5f1816beba4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762830"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723271"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask-Methode
+
 Ruft die [ICLRTask](iclrtask-interface.md) -Instanz ab, die zurzeit auf dem Betriebssystem Thread ausgeführt wird, von dem aus der Methodenaufrufe stammt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetCurrentTask (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppTask`  
  vorgenommen Ein Zeiger auf die Adresse einer `ICLRTask` Instanz, die derzeit auf dem Betriebssystem Thread ausgeführt wird, von dem der-Befehl stammt, oder NULL, wenn zurzeit kein Task in diesem Thread ausgeführt wird.  
   
@@ -49,14 +51,16 @@ HRESULT GetCurrentTask (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ICLRTask` Instanz, auf die der- `ppTask` Parameter verweist, stellt die aktuell ausgeführte Aufgabe für die CLR dar. Die- `ICLRTask` Instanz ist einer entsprechenden [IHostTask](ihosttask-interface.md) -Instanz zugeordnet, die die Aufgabe für den Host darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

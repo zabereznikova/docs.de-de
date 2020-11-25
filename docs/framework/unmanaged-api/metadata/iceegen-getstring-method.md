@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-ms.openlocfilehash: b7b15261d825c1bd5f217c4cecd82ed36a716d0e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9d14ec33128596a148ca3509a49c8c97fafe82d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008260"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723102"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString-Methode
+
 Ruft die Zeichenfolge ab, die bei der angegebenen relativen virtuellen Adresse gespeichert wird.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
@@ -37,6 +38,7 @@ HRESULT GetString (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `RVA`  
  in Die relative virtuelle Adresse der zurück zugebende Zeichenfolge.  
   
@@ -44,14 +46,15 @@ HRESULT GetString (
  vorgenommen Die zurückgegebene Zeichenfolge.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

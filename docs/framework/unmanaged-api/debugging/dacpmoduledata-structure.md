@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723050"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData-Struktur
 
@@ -40,7 +40,7 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 | Member    | BESCHREIBUNG                                                             |
 | --------- | ----------------------------------------------------------------------- |
@@ -53,13 +53,14 @@ struct DacpModuleData
 
 Diese Struktur befindet sich innerhalb der Laufzeit und wird nicht durch Header oder Bibliotheksdateien verfügbar gemacht. Um es zu verwenden, definieren Sie die Struktur wie oben angegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
+
 **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
 **Header:** Gar  
 **Bibliothek:** Gar  
 **.NET Framework Versionen:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen](index.md)
 - [Debuggen von Strukturen](debugging-structures.md)

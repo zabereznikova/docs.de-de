@@ -6,19 +6,21 @@ helpviewer_keywords:
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-ms.openlocfilehash: 20ee2a9e045d839aa8ac043e035c438986b987ef
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1b0ad42e6b34e99212e112f6a594b0a36b6715e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860865"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723076"
 ---
 # <a name="profiling-global-static-functions"></a>Profilerstellung für globale statische Funktionen
+
 In diesem Abschnitt werden die von der Profilerstellungs-API verwendeten nicht verwalteten API-Funktionen beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 ## <a name="net-framework-version-1-profiling-functions"></a>Profil Erstellungs Funktionen der .NET Framework Version 1  
+
  [FunctionEnter-Funktion](functionenter-function.md)  
  Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übermittelt wird. Veraltet in .NET Framework 2,0.  
   
@@ -29,6 +31,7 @@ In diesem Abschnitt werden die von der Profilerstellungs-API verwendeten nicht v
  Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Endaufruf einer anderen Funktion ausführt. Veraltet in .NET Framework 2,0.  
   
 ## <a name="net-framework-version-2-profiling-functions"></a>Profil Erstellungs Funktionen der .NET Framework Version 2  
+
  [FunctionIDMapper-Funktion](functionidmapper-function.md)  
  Benachrichtigt den Profiler, dass der angegebene Bezeichner einer Funktion einer alternativen ID zugeordnet werden kann, die in den [FunctionEnter2](functionenter2-function.md)-, [FunctionLeave2](functionleave2-function.md)-und [FunctionTailcall2](functiontailcall2-function.md) -Rückrufe für diese Funktion verwendet werden soll. Ermöglicht es dem Profiler außerdem anzugeben, ob er Rückrufe für diese Funktion empfangen möchte.  
   
@@ -45,6 +48,7 @@ In diesem Abschnitt werden die von der Profilerstellungs-API verwendeten nicht v
  Stellt dem Profiler Informationen über jeden verwalteten Frame und jede ausführen nicht verwalteter Frames auf dem Stapel während eines Stackwalk bereit, der von der [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) -Methode initiiert wird.  
   
 ## <a name="net-framework-version-4-profiling-functions"></a>Profil Erstellungs Funktionen der .NET Framework Version 4  
+
  [FunctionIDMapper2-Funktion](functionidmapper2-function.md)  
  Benachrichtigt den Profiler, dass der angegebene Bezeichner einer Funktion einer alternativen ID zugeordnet werden kann, die in den [FunctionEnter3](functionenter3-function.md)-, [FunctionLeave3](functionleave3-function.md)-und [FunctionTailcall3](functiontailcall3-function.md)-und[FunctionEnter3WithInfo](functionenter3withinfo-function.md)-, [FunctionLeave3WithInfo](functionleave3withinfo-function.md)-und [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) -Rückrufe für diese Funktion verwendet werden kann. Ermöglicht es dem Profiler außerdem anzugeben, ob er Rückrufe für diese Funktion empfangen möchte.  
   
@@ -69,6 +73,7 @@ In diesem Abschnitt werden die von der Profilerstellungs-API verwendeten nicht v
  Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Tail-Aufruf einer anderen Funktion ausführt, und stellt ein Handle bereit, das an [ICorProfilerInfo3:: GetFunctionTailcall3Info](icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen des Stapel Rahmens übermittelt werden kann.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Übersicht über die Profilerstellung](profiling-overview.md)  
   
  [Profilerstellungsschnittstellen](profiling-interfaces.md)  
