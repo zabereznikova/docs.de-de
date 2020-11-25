@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2f82fb2c-a42e-48bf-af41-a15e40f636c6
 topic_type:
 - apiref
-ms.openlocfilehash: 8d3eafd9ca8df71a6644905e5abe6b15b7f180ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d81d9e964a4909dee57c3fe3835ed81472b04ad8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793514"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721464"
 ---
-# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="ac289-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode-Methode</span><span class="sxs-lookup"><span data-stu-id="ac289-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
-<span data-ttu-id="ac289-103">`GetErrorCode` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="ac289-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="ac289-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="ac289-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ac289-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac289-105">See also</span></span>
+# <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a><span data-ttu-id="13863-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode-Methode</span><span class="sxs-lookup"><span data-stu-id="13863-102">ICorDebugEditAndContinueErrorInfo::GetErrorCode Method</span></span>
 
-- [<span data-ttu-id="ac289-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="ac289-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="13863-103">`GetErrorCode` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="13863-103">`GetErrorCode` is obsolete.</span></span> <span data-ttu-id="13863-104">Rufen Sie diese Methode nicht auf.</span><span class="sxs-lookup"><span data-stu-id="13863-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="13863-105">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="13863-105">See also</span></span>
+
+- [<span data-ttu-id="13863-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="13863-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

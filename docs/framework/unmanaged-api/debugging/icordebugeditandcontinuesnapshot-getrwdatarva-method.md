@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-ms.openlocfilehash: 4fb19e10c3c1e7775d52496e7e7a9c07e0f2b33c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9b4e830836ae088b96589a8b01e5fd22ef861b93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721386"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="16bd4-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="16bd4-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
-<span data-ttu-id="16bd4-103">`GetRwDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="16bd4-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="16bd4-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="16bd4-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="16bd4-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16bd4-105">See also</span></span>
+# <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a><span data-ttu-id="820ad-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="820ad-102">ICorDebugEditAndContinueSnapshot::GetRwDataRVA Method</span></span>
 
-- [<span data-ttu-id="16bd4-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="16bd4-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="820ad-103">`GetRwDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="820ad-103">`GetRwDataRVA` is obsolete.</span></span> <span data-ttu-id="820ad-104">Rufen Sie diese Methode nicht auf.</span><span class="sxs-lookup"><span data-stu-id="820ad-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="820ad-105">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="820ad-105">See also</span></span>
+
+- [<span data-ttu-id="820ad-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="820ad-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

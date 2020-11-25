@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 590647c5-499f-44c3-b56c-0e1945088d3a
 topic_type:
 - apiref
-ms.openlocfilehash: e9c6cba3f06ebaa061679dbf1f8b49534bda153c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bb79802c58094d139551c95b8eaa73d08585d0a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783325"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721412"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="68e03-102">ICorDebugEditAndContinueErrorInfo::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="68e03-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="68e03-103">`GetToken` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="68e03-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="68e03-104">Diese Methode nicht aufzurufen.</span><span class="sxs-lookup"><span data-stu-id="68e03-104">Do not call this method.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="68e03-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="68e03-105">See also</span></span>
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="4bd99-102">ICorDebugEditAndContinueErrorInfo::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="4bd99-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
 
-- [<span data-ttu-id="68e03-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="68e03-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
+<span data-ttu-id="4bd99-103">`GetToken` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="4bd99-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="4bd99-104">Rufen Sie diese Methode nicht auf.</span><span class="sxs-lookup"><span data-stu-id="4bd99-104">Do not call this method.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4bd99-105">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="4bd99-105">See also</span></span>
+
+- [<span data-ttu-id="4bd99-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="4bd99-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
