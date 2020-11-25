@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: fdb03b9244d3cb351735f5f2214248a08a399188
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795741"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696400"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform-Enumeration
+
 Stellt Ziel Platt Form Werte bereit, die von der [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) -Methode verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -51,7 +52,8 @@ typedef enum CorDebugPlatform
 |CORDB_PLATFORM_WINDOWS_ARM|Die Zielplattform ist das Macintosh-Betriebssystem, das auf Windows-Arm-Hardware ausgeführt wird.|  
 |CORDB_PLATFORM_MAC_AMD64|Die Zielplattform ist das Macintosh-Betriebssystem, das auf AMD64-Hardware ausgeführt wird.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

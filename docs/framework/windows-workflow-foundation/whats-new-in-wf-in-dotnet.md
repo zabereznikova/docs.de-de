@@ -1,21 +1,21 @@
 ---
-title: Neues in Windows Workflow Foundation in .NET 4.5
+title: Neues in Windows Workflow Foundation in .NET Framework 4,5
 description: Windows Workflow Foundation in .NET Framework 4,5 führt viele neue Features ein, z. b. neue Aktivitäten, Designer Funktionen und Workflow Entwicklungsmodelle.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697908"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Neues in Windows Workflow Foundation in .NET 4.5
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>Neues in Windows Workflow Foundation in .NET Framework 4,5
 
-Windows Workflow Foundation (WF) in .NET Framework 4,5 führt viele neue Features ein, z. b. neue Aktivitäten, Designer Funktionen und Workflow Entwicklungsmodelle. Viele, aber nicht alle neuen Workflow Features, die in .NET Framework 4,5 eingeführt wurden, werden im neu gehosteten Workflow-Designer unterstützt. Weitere Informationen zu den neuen Funktionen, die unterstützt werden, finden Sie [unter Unterstützung für neue Workflow Foundation 4,5-Features in der neu gehosteten Workflow-Designer](wf-features-in-the-rehosted-workflow-designer.md). Weitere Informationen zum Migrieren von .NET 3,0-und .NET 3,5-Workflow Anwendungen, um die neueste Version zu verwenden, finden Sie in der [Migrations Anleitung](migration-guidance.md). Dieses Thema enthält eine Übersicht über die neuen Workflow Features, die in .NET Framework 4,5 eingeführt wurden.
+Windows Workflow Foundation (WF) in .NET Framework 4,5 führt viele neue Features ein, z. b. neue Aktivitäten, Designer Funktionen und Workflow Entwicklungsmodelle. Viele, aber nicht alle neuen Workflow Features, die in .NET Framework 4,5 eingeführt wurden, werden im neu gehosteten Workflow-Designer unterstützt. Weitere Informationen zu den neuen Funktionen, die unterstützt werden, finden Sie [unter Unterstützung für neue Workflow Foundation 4,5-Features in der neu gehosteten Workflow-Designer](wf-features-in-the-rehosted-workflow-designer.md). Weitere Informationen zum Migrieren von .NET Framework 3,0-und .NET Framework 3,5-Workflow Anwendungen zur Verwendung der neuesten Version finden Sie in der [Migrations Anleitung](migration-guidance.md). Dieser Artikel bietet eine Übersicht über die neuen Workflow Features, die in .NET Framework 4,5 eingeführt wurden.
 
 > [!WARNING]
-> Die neuen Windows Workflow Foundation Features, die in .NET Framework 4,5 eingeführt wurden, sind für Projekte, die auf frühere Versionen des Frameworks ausgerichtet sind, nicht verfügbar. Wenn ein Projekt, das .NET Framework 4,5, auf eine frühere Version des Frameworks ausgerichtet ist, können mehrere Probleme auftreten.
+> Die neuen Windows Workflow Foundation Features, die in .NET Framework 4,5 eingeführt wurden, sind für Projekte, die auf frühere Versionen des Frameworks ausgerichtet sind, nicht verfügbar. Wenn ein Projekt, das .NET Framework 4,5 als Ziel hat, einer früheren Version des Frameworks neu zugewiesen wird, können mehrere Probleme auftreten.
 >
 > - C#-Ausdrücke werden im Designer ersetzt, wobei der Nachrichten **Wert in XAML festgelegt wurde**.
 > - Viele Erstellungsfehler einschließlich des folgenden Fehlers treten auf.
@@ -151,7 +151,7 @@ Mehrere ausgewählte Aktivitäten können auch im Designer gezogen und abgelegt 
 
 ### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a> Gliederungsansicht von Workflow Elementen
 
-Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungs Ansicht wird in der Ansicht **Dokument** Gliederung angezeigt. Um diese Ansicht zu öffnen, wählen Sie im oberen Menü **Ansicht**, **Weitere Fenster**, **Dokument**Gliederung aus, oder drücken Sie STRG W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen.
+Um das Navigieren in hierarchischen Workflows zu erleichtern, werden die Komponenten eines Workflows in einer strukturähnlichen Gliederungsansicht angezeigt. Die Gliederungs Ansicht wird in der Ansicht **Dokument** Gliederung angezeigt. Um diese Ansicht zu öffnen, wählen Sie im oberen Menü **Ansicht**, **Weitere Fenster**, **Dokument** Gliederung aus, oder drücken Sie STRG W, U. Wenn Sie auf einen Knoten in der Gliederungsansicht klicken, wechseln Sie automatisch zur entsprechenden Aktivität im Workflow-Designer, und die Gliederungsansicht wird aktualisiert, um die im Designer ausgewählten Aktivitäten anzuzeigen.
 
 Der folgende Screenshot des abgeschlossenen Workflows aus dem [Tutorial "Getting Started](getting-started-tutorial.md) " zeigt die Gliederungs Ansicht mit einem sequenziellen Workflow.
 

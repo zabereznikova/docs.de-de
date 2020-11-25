@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb8c105e-4d9a-4684-8c05-ed6909cc1b8c
 topic_type:
 - apiref
-ms.openlocfilehash: 54e522aaaf23ae81b96b6be7168a9a13f28a16d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 44454b87bb656d2a4ad6e597ae001f64222b905f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496138"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697765"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3-Methode
+
 Ruft die Erweiterungen des systemeigenen Codes ab, die der JIT-kompilierten Version der angegebenen Funktion zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetCodeInfo3(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `functionID`  
  [in] Die ID der Funktion, der der systemeigene Code zugeordnet ist.  
   
@@ -53,11 +55,12 @@ HRESULT GetCodeInfo3(
  `codeInfos`  
  [out] Ein vom Aufrufer bereitgestellter Puffer. Nach dem Ausführen enthält die Methode ein Array aus `COR_PRF_CODE_INFO`-Strukturen, von denen jede einen Block des systemeigenen Codes beschreibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die `GetCodeInfo3` -Methode ähnelt [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md), mit der Ausnahme, dass Sie die JIT-neu kompilierte ID der Funktion erhält, die die angegebene IP-Adresse enthält.  
   
 > [!NOTE]
-> `GetCodeInfo3`kann eine Garbage Collection auslöst, während [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) nicht. Weitere Informationen finden Sie unter [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+> `GetCodeInfo3` kann eine Garbage Collection auslöst, während [GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md) nicht. Weitere Informationen finden Sie unter [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
   
  Die Wertebereiche sind in aufsteigender Reihenfolge des CIL-Offsets (Common Intermediate Language) sortiert.  
   
@@ -66,6 +69,7 @@ HRESULT GetCodeInfo3(
  Alternativ können Sie zuerst `GetCodeInfo3` mit einem `codeInfos`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Anschließend können Sie die `codeInfos` Puffergröße auf den in zurückgegebenen Wert `pcCodeInfos` , multipliziert mit der Größe einer [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) Struktur, und erneut aufzurufen `GetCodeInfo3` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -74,7 +78,7 @@ HRESULT GetCodeInfo3(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetCodeInfo2-Methode](icorprofilerinfo2-getcodeinfo2-method.md)
 - [ICorProfilerInfo4-Schnittstelle](icorprofilerinfo4-interface.md)

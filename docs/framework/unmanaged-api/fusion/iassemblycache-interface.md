@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 71ea170f-872d-4fc5-81b6-27da1dec9b19
 topic_type:
 - apiref
-ms.openlocfilehash: 5ed0075da1429c70900750f3f28e8ce36a41fb28
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4f0ba018b55202c22cb90b22b927a9c426c4ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696855"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache-Schnittstelle
+
 Stellt den globalen Assemblycache für die Verwendung durch die Fusion-Technologie dar.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[CreateAssemblyCacheItem-Methode](iassemblycache-createassemblycacheitem-method.md)|Ruft einen Verweis auf ein neues [IAssemblyCacheItem](iassemblycacheitem-interface.md)-Element ab.|  
 |[CreateAssemblyScavenger-Methode](iassemblycache-createassemblyscavenger-method.md)|Reserviert für die interne Verwendung durch die Fusion-Technologie.|  
@@ -34,14 +35,15 @@ Stellt den globalen Assemblycache für die Verwendung durch die Fusion-Technolog
 |[QueryAssemblyInfo-Methode](iassemblycache-queryassemblyinfo-method.md)|Ruft die angeforderten Daten zur angegebenen Assembly ab.|  
 |[UninstallAssembly-Methode](iassemblycache-uninstallassembly-method.md)|Deinstalliert die angegebene Assembly aus dem globalen Assemblycache.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Fusion-Schnittstellen](fusion-interfaces.md)
 - [Globaler Assemblycache](../../app-domains/gac.md)

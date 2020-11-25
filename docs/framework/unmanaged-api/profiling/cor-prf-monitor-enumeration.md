@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff167121a5bb752c70edd2c5901133503326bea
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500805"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696868"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR-Enumeration
+
 Enthält Werte, die zum Angeben von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren muss.  
   
 ## <a name="syntax"></a>Syntax  
@@ -98,6 +99,7 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>Member  
+
  In den folgenden Abschnitten `COR_PRF_MONITOR` werden Enumerationsmember nach Kategorie aufgelistet. Die Kategorien lauten:  
   
 - [Keine Flags festgelegt.](#None)  
@@ -111,16 +113,18 @@ typedef enum {
 - [Kombinierte Flags](#Composite)  
   
 <a name="None"></a>
+
 ### <a name="no-flags-set"></a>Keine Flags festgelegt.  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_NONE`|Es sind keine Flags festgelegt.|  
   
 <a name="Callback"></a>
+
 ### <a name="callback-flags"></a>Rückruf-Flags  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Aktiviert alle Rückrufereignisse.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Steuert die `AppDomainCreation*` `AppDomainShutdown*` Rückrufe und in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
@@ -133,20 +137,21 @@ typedef enum {
 |`COR_PRF_MONITOR_ENTERLEAVE`|Steuert die `FunctionEnter*` `FunctionLeave*` `FunctionTailCall*` [Profilerstellung für globale statische Funktionen](profiling-global-static-functions.md), und.|  
 |`COR_PRF_MONITOR_EXCEPTIONS`|Steuert den [exceptiondent](icorprofilercallback-exceptionthrown-method.md) -Rückruf und `ExceptionSearch*` die `ExceptionOSHandler*` `ExceptionUnwind*` Rückrufe,, und `ExceptionCatcher*` in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Steuert den [FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md) -Rückruf in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
-|`COR_PRF_MONITOR_GC`|Steuert die Rückrufe [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionfinished-method.md), [muvedreferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md), [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), [objectsallogatedbyclass](icorprofilercallback-objectsallocatedbyclass-method.md), [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [Lenker created](icorprofilercallback2-handlecreated-method.md), [Lenker](icorprofilercallback2-handledestroyed-method.md)und [FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) in den `ICorProfilerCallback*` Schnittstellen. Wenn `COR_PRF_MONITOR_GC` zugeordnet ist, wird das gleichzeitige Garbage Collection ausgeschaltet.|  
+|`COR_PRF_MONITOR_GC`|Steuert die Rückrufe [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md),   [GarbageCollectionStarted](icorprofilercallback2-garbagecollectionfinished-method.md),  [muvedreferences](icorprofilercallback-movedreferences-method.md), [MovedReferences2](icorprofilercallback4-movedreferences2-method.md),    [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md),  [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md),   [objectsallogatedbyclass](icorprofilercallback-objectsallocatedbyclass-method.md),  [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [Lenker created](icorprofilercallback2-handlecreated-method.md),  [Lenker](icorprofilercallback2-handledestroyed-method.md)und [FinalizeableObjectQueued](icorprofilercallback2-finalizeableobjectqueued-method.md) in den `ICorProfilerCallback*` Schnittstellen. Wenn `COR_PRF_MONITOR_GC` zugeordnet ist, wird das gleichzeitige Garbage Collection ausgeschaltet.|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|Steuert die `JITCompilation*` Rückrufe, [JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)und [JITInlining](icorprofilercallback-jitinlining-method.md) in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|Steuert die Rückrufe `ModuleLoad*` , `ModuleUnload*` und [moduleattachedonassembly](icorprofilercallback-moduleattachedtoassembly-method.md) in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|Steuert die Rückrufe `ModuleLoad*` ,  `ModuleUnload*` und [moduleattachedonassembly](icorprofilercallback-moduleattachedtoassembly-method.md) in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
 |`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Steuert den [ObjectAllocated](icorprofilercallback-objectallocated-method.md) -Rückruf in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
 |`COR_PRF_MONITOR_REMOTING`|Steuert die `Remoting*` Rückrufe in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|Steuert, ob die `Remoting*`-Rückrufe asynchrone Ereignisse überwachen.|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|Steuert, ob ein Cookie an `Remoting*`-Rückrufe übergeben wird.|  
 |`COR_PRF_MONITOR_SUSPENDS`|Steuert die Rückrufe `RuntimeSuspend*` , `RuntimeResume*` , [runtimethleseangeh](icorprofilercallback-runtimethreadsuspended-method.md)alten und [runtimethrerunning](icorprofilercallback-runtimethreadresumed-method.md) in der [ICorProfilerCallback](icorprofilercallback-interface.md) -Schnittstelle.|  
-|`COR_PRF_MONITOR_THREADS`|Steuert die Rückrufe [ThreadCreated](icorprofilercallback-threadcreated-method.md), [threadzerstört](icorprofilercallback-threaddestroyed-method.md), [threadassigneddeosthread](icorprofilercallback-threadassignedtoosthread-method.md)und [ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md) in den [ICorProfilerCallback](icorprofilercallback-interface.md) -und [ICorProfilerCallback2](icorprofilercallback2-interface.md) -Schnittstellen.|  
+|`COR_PRF_MONITOR_THREADS`|Steuert die Rückrufe [ThreadCreated](icorprofilercallback-threadcreated-method.md),  [threadzerstört](icorprofilercallback-threaddestroyed-method.md),  [threadassigneddeosthread](icorprofilercallback-threadassignedtoosthread-method.md)und [ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md) in den [ICorProfilerCallback](icorprofilercallback-interface.md) -und [ICorProfilerCallback2](icorprofilercallback2-interface.md) -Schnittstellen.|  
   
 <a name="Feature"></a>
+
 ### <a name="feature-enabling-flags"></a>Flags zur Aktivierung von Funktionen  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|Ermöglicht das Abrufen eines exakten `ClassID` für eine generische Funktion durch Aufrufen der [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode mit einem Wert, der `COR_PRF_FRAME_INFO` vom [FunctionEnter2](functionenter2-function.md) -Rückruf zurückgegeben wird.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Aktiviert die Argument Ablauf Verfolgung mit dem [FunctionEnter2](functionenter2-function.md) -Rückruf oder dem [FunctionEnter3WithInfo](functionenter3withinfo-function.md) -Rückruf und der [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) -Methode.|  
@@ -158,9 +163,10 @@ typedef enum {
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|Aktiviert Aufrufe der [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) -Methode.|  
   
 <a name="Config"></a>
+
 ### <a name="configuration-flags"></a>Konfigurationsflags  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Bewirkt, dass die systemeigene Abbildsuche nach Abbildern (einschließlich durch Profiler verbesserte) sucht.  Wenn dieses Flag und das `COR_PRF_USE_PROFILE_IMAGES`-Flag beide angegeben sind, wird `COR_PRF_DISABLE_ALL_NGEN_IMAGES` verwendet.|  
 |`COR_PRF_DISABLE_INLINING`|Deaktiviert das gesamte Inlining.|  
@@ -169,9 +175,10 @@ typedef enum {
 |`COR_PRF_USE_PROFILE_IMAGES`|Bewirkt, dass die systemeigene Abbildsuche nach durch Profiler verbesserten Abbildern sucht. Wenn für eine Assembly kein durch Profiler verbessertes Bild gefunden wird, greift die Common Language Runtime für die betreffende Assembly wieder auf JIT zurück. Wenn dieses Flag und das `COR_PRF_DISABLE_ALL_NGEN_IMAGES`-Flag beide angegeben sind, wird `COR_PRF_DISABLE_ALL_NGEN_IMAGES` verwendet.|  
   
 <a name="Composite"></a>
+
 ### <a name="composite-flags"></a>Kombinierte Flags  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Stellt alle `COR_PRF_MONITOR`-Flagwerte dar.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Stellt alle `COR_PRF_MONITOR`-Flags dar, die festgelegt werden können, wenn der Profiler mit einer ausgeführten App verknüpft wurde. Der Syntaxabschnitt gibt die einzelnen Flags an, die in dieser Bitmask vorhanden sind.|  
@@ -179,10 +186,12 @@ typedef enum {
 |`COR_PRF_MONITOR_IMMUTABLE`|Stellt alle `COR_PRF_MONITOR`-Flags dar, die nur während der Initialisierung festgelegt werden können. Wenn Sie versuchen, eines dieser Flags nach der Initialisierung zu ändern, führt dies zu einem `HRESULT`-Wert, der auf einen Fehler hinweist.|  
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|Stellt alle `COR_PRF_MONITOR`-Flags dar, die durch Profiler verbesserte Bilder erfordern.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Ein `COR_PRF_MONITOR` -Wert wird mit den Methoden [ICorProfilerInfo:: GetEventMask](icorprofilerinfo-geteventmask-method.md) und [ICorProfilerInfo:: lteventmask](icorprofilerinfo-seteventmask-method.md) verwendet, um die Ereignis Benachrichtigungen zu definieren, die die Common Language Runtime an den Profiler sendet.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -191,7 +200,7 @@ typedef enum {
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Profilerstellungsenumerationen](profiling-enumerations.md)
 - [GetEventMask-Methode](icorprofilerinfo-geteventmask-method.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-ms.openlocfilehash: 8b5a6f4447730ebc6e4b23d3cd06df85b2d7fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1deadef7517772460adc96cd0dd630d85cb21c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698161"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>ICorDebugArrayValue::GetElementType-Methode
+
 Ruft einen Wert ab, der den einfachen Typ der Elemente im Array angibt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT GetElementType (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pType`  
  vorgenommen Ein Zeiger auf einen Wert der CorElementType-Enumeration, der den Typ angibt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

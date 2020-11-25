@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4400fb8c-0407-4791-8557-f011fd2aee51
 topic_type:
 - apiref
-ms.openlocfilehash: b8e503af11fa1d02aac2ec83edde0ffbd562d8e5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fdb2b1601e0164de19bcc1e8f60856346aeaacb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496398"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698012"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation-Methode
+
 Stellt Versionsinformationen über die Common Language Runtime (CLR) bereit, für die ein Profil erstellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,6 +43,7 @@ HRESULT GetRuntimeInformation(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pClrInstanceId`  
  vorgenommen Die repräsentative ID einer laufenden CLR-Instanz in einem Prozess. Dies entspricht dem `ClrInstanceID` , das vom Ereignis Ablauf Verfolgungs für Windows (ETW)-Start Ereignis gemeldet wird.  
   
@@ -69,10 +71,12 @@ HRESULT GetRuntimeInformation(
  `szVersionString`  
  vorgenommen Die CLR-Versions Zeichenfolge.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Sie können für jeden Parameter NULL übergeben. Kann jedoch `pcchVersionString` nicht NULL sein, es sei denn, `szVersionString` ist ebenfalls NULL.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -81,7 +85,7 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo3-Schnittstelle](icorprofilerinfo3-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

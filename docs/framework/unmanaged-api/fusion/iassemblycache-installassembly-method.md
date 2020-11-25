@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 33c1d269-c85e-4cb1-b0e6-1c510c8fb5fa
 topic_type:
 - apiref
-ms.openlocfilehash: ec08c786992996ec6f44038ff3c1596cada88484
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 230b904dd1cca1a1289713e3df7a709bd1c3a22b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127084"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696896"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly-Methode
+
 Installiert die angegebene Assembly im globalen Assemblycache.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT InstallAssembly (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwFlags`  
  in In Fusion. idl definierte Flags. Die folgenden Werte werden unterstützt:  
   
@@ -49,13 +51,14 @@ HRESULT InstallAssembly (
  `pRefData`  
  in Eine [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) -Struktur, die Daten für die Installation enthält.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyCache-Schnittstelle](iassemblycache-interface.md)

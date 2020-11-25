@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 7a52e61f41bd1d7f68523dd16f70010ffbba401e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 0b6b6f46c7fff8f1d4c2ad555c93423f9ca8ac09
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895035"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698142"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement-Methode
+
 Ruft den Wert des angegebenen Array Elements ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetElement (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cdim`  
  in Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekts.  
   
@@ -50,7 +52,8 @@ HRESULT GetElement (
  `ppValue`  
  vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert des angegebenen Elements darstellt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

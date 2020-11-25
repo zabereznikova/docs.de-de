@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 4bc8d56bf116cd64e3e1c5d2238e557784c56711
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 4277a552d217ad7f601bfe72cae32a1f25dd6be4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696231"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum-Schnittstelle
 
@@ -27,7 +27,7 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugFrame-Arrays auf.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Next-Methode](icordebugframeenum-next-method.md)|Ruft die angegebene Anzahl von- `ICorDebugFrame` Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
   
@@ -37,6 +37,7 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugFrame-Arrays auf.
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -45,6 +46,6 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugFrame-Arrays auf.
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

@@ -2,14 +2,15 @@
 title: ICorDebugExceptionDebugEvent::GetStackPointer-Methode
 ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
-ms.openlocfilehash: 4f84183dfc23ebc0d0fee9feeb21329c217b9cca
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 46906e7d3ce7f257eb776e50dc6097946eb77d1f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697401"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetStackPointer-Methode
+
 Ruft den Stapelzeiger für dieses Ausnahmedebugereignis ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -21,10 +22,12 @@ HRESULT GetStackPointer(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pStackPointer`  
- [out] Ein Zeiger auf die Adresse des Stapelzeigers für dieses Ausnahmedebugereignis. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.  
+ [out] Ein Zeiger auf die Adresse des Stapelzeigers für dieses Ausnahmedebugereignis. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Bedeutung dieses Stapelzeigers hängt (wie in der folgenden Tabelle gezeigt) vom Ereignistyp ab.  
   
 |Ereignistyp|Bedeutung des `pStackPointer`-Werts|  
@@ -39,7 +42,8 @@ HRESULT GetStackPointer(
   
  Der Ereignistyp ist über die [icordebugdebugevent:: geteventkind](icordebugdebugevent-geteventkind-method.md) -Methode verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

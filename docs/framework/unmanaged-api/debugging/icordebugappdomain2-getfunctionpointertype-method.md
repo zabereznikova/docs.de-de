@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-ms.openlocfilehash: fb9b5ee329b41a8b842b94d59bd61c8bcf5f0bf5
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: be797b1b3f288fd367d7f624e9cf33015dd114ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895151"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698272"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType-Methode
+
 Ruft einen Zeiger auf eine Funktion ab, die über eine angegebene Signatur verfügt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetFunctionPointerType (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `nTypeArgs`  
  in Die Anzahl der Typargumente für die Funktion.  
   
@@ -45,7 +47,8 @@ HRESULT GetFunctionPointerType (
  `ppType`  
  vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugType` Objekts, das den Zeiger auf die Funktion darstellt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

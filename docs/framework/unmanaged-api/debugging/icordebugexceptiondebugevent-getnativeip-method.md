@@ -2,14 +2,15 @@
 title: ICorDebugExceptionDebugEvent::GetNativeIP-Methode
 ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
-ms.openlocfilehash: 82dc892f3081c9f33ff7a2f363c326091f7cf039
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: f3b29b3ceda521afe9543588af332531aa03e84e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976030"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697414"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP-Methode
+
 Ruft den systemeigenen Anweisungszeiger für dieses Ausnahmedebugereignis ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -21,10 +22,12 @@ HRESULT GetNativeIP(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pIP`  
- [out] Ein Zeiger auf den Anweisungszeiger für dieses Ausnahmedebugereignis. Weitere Informationen finden Sie im Abschnitt zu den Hinweisen.  
+ [out] Ein Zeiger auf den Anweisungszeiger für dieses Ausnahmedebugereignis. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Bedeutung dieses Anweisungszeigers hängt (wie in der folgenden Tabelle gezeigt) vom Ereignistyp ab.  
   
 |Ereignistyp|Bedeutung des `pStackPointer`-Werts|  
@@ -39,7 +42,8 @@ HRESULT GetNativeIP(
 > [!NOTE]
 > Diese Methode ist nur mit .NET Native verfügbar.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
