@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 953b7c1cb5e471072776fe03e53a46d3ff19c0ac
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2ca3bf94298b45e404c930ffe52e101085ee482d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379853"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726209"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames-Methode
+
 Gibt ein Array interner Frames ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) -Objekte) auf dem Stapel zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetActiveInternalFrames
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cInternalFrames`  
  in Die Anzahl der in erwarteten internen Frames `ppInternalFrames` .  
   
@@ -48,26 +50,29 @@ HRESULT GetActiveInternalFrames
  [in, out] Ein Zeiger auf die Adresse eines Arrays interner Frames auf dem Stapel.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Das [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) -Objekt wurde erfolgreich erstellt.|  
-|E_INVALIDARG|`cInternalFrames`ist nicht NULL `ppInternalFrames` , und ist `null` , oder `pcInternalFrames` ist `null` .|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`ist kleiner als die Anzahl interner Frames.|  
+|E_INVALIDARG|`cInternalFrames` ist nicht NULL `ppInternalFrames` , und ist `null` , oder `pcInternalFrames` ist `null` .|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` ist kleiner als die Anzahl interner Frames.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
+
  Interne Frames sind Datenstrukturen, die von der Laufzeit zur Speicherung temporärer Daten auf den Stapel verschoben werden.  
   
  Beim ersten Aufrufen `GetActiveInternalFrames` von sollten Sie den `cInternalFrames` -Parameter auf 0 (null) und den- `ppInternalFrames` Parameter auf NULL festlegen. `GetActiveInternalFrames`Enthält bei der ersten Rückgabe `pcInternalFrames` die Anzahl der internen Frames auf dem Stapel.  
   
- `GetActiveInternalFrames`sollte dann ein zweites Mal aufgerufen werden. Sie sollten die richtige Anzahl ( `pcInternalFrames` ) im `cInternalFrames` -Parameter übergeben und einen Zeiger auf ein Array mit entsprechender Größenangabe in angeben `ppInternalFrames` .  
+ `GetActiveInternalFrames` sollte dann ein zweites Mal aufgerufen werden. Sie sollten die richtige Anzahl ( `pcInternalFrames` ) im `cInternalFrames` -Parameter übergeben und einen Zeiger auf ein Array mit entsprechender Größenangabe in angeben `ppInternalFrames` .  
   
  Verwenden Sie die [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) -Methode, um tatsächliche Stapel Rahmen zurückzugeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -76,7 +81,7 @@ HRESULT GetActiveInternalFrames
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

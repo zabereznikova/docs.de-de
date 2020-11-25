@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-ms.openlocfilehash: ca2d00611a7530dfb0d1c2a27123947bdf69820d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ca6c89a671c4d7882e7cefdb820d07ac5636530
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179352"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727405"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT-Struktur
+
 Bietet Informationen zum Layout eines Arrayobjekts im Speicher.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,32 +40,34 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`componentID`|Der Bezeichner des Objekttyps, den das Array enthält.|  
-|`componentType`|Ein CorElementType-Enumerationswert, der angibt, ob es sich bei der Komponente um einen Garbage Collection-Verweis, eine Wertklasse oder einen Primitiv handelt.|  
+|`componentID`|Der Bezeichner des Objekt Typs, der im Array enthalten ist.|  
+|`componentType`|Ein CorElementType-Enumerationswert, der angibt, ob die Komponente ein Garbage Collection Verweis, eine Wert Klasse oder ein primitiver ist.|  
 |`firstElementOffset`|Der Offset zum ersten Element im Array.|  
-|`elementSize`|Die Größe jedes Elements.|  
-|`countOffset`|Der Offset zur Anzahl der Elemente im Array.|  
+|`elementSize`|Die Größe der einzelnen Elemente.|  
+|`countOffset`|Der Offset für die Anzahl der Elemente im Array.|  
 |`rankSize`|Die Größe des Rangs in Bytes.|  
 |`numRanks`|Die Anzahl der Ränge im Array.|  
-|`rankOffset`|Der Offset, bei dem die Ränge beginnen.|  
+|`rankOffset`|Der Offset, an dem die Ränge gestartet werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
- Das `rankSize` Feld gibt die Größe eines Rangs in einem mehrdimensionalen Array an. Es ist auch für eindimensionale Arrays genau.  
+## <a name="remarks"></a>Hinweise  
+
+ Das- `rankSize` Feld gibt die Größe eines Rang in einem mehrdimensionalen Array an. Dies gilt auch für eindimensionale Arrays.  
   
- Der Wert `numRanks` von ist 1 für `N` ein eindimensionales Array `N` und für ein mehrdimensionales Array von Dimensionen.  
+ Der Wert von `numRanks` ist 1 für ein eindimensionales Array und `N` für ein mehrdimensionales Array von `N` Dimensionen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

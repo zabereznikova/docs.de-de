@@ -3,12 +3,12 @@ title: Leitfaden für DataSet und Datentabelle
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679454"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726066"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Leitfaden für DataSet und Datentabelle
 
@@ -18,7 +18,7 @@ Dieser Artikel bezieht sich auf:
 * .Net Core und höher
 * .NET 5.0 und höher
 
-Bei [DataSets](/dotnet/api/system.data.dataset) und [Datentypen handelt](/dotnet/api/system.data.datatable) es sich um Legacy-.NET-Komponenten, die das darstellen von Datasets als verwaltete Objekte ermöglichen. Diese Komponenten wurden in .NET 1,0 als Teil der ursprünglichen ADO.net- [Infrastruktur](./index.md)eingeführt. Ihr Ziel bestand darin, eine verwaltete Sicht über ein relationales Dataset bereitzustellen und dabei zu abstrahieren, ob die zugrunde liegende Quelle der Daten XML, SQL oder eine andere Technologie war.
+Bei [DataSets](/dotnet/api/system.data.dataset) und [Datentypen handelt](/dotnet/api/system.data.datatable) es sich um Legacy-.NET-Komponenten, die das darstellen von Datasets als verwaltete Objekte ermöglichen. Diese Komponenten wurden in .NET Framework 1,0 als Teil der ursprünglichen ADO.net- [Infrastruktur](./index.md)eingeführt. Ihr Ziel bestand darin, eine verwaltete Sicht über ein relationales Dataset bereitzustellen und dabei zu abstrahieren, ob die zugrunde liegende Quelle der Daten XML, SQL oder eine andere Technologie war.
 
 Weitere Informationen zu ADO.net, einschließlich modernerer Daten Ansichts Paradigmen, finden Sie in [der ADO.NET-Dokumentation](../index.md).
 
@@ -34,13 +34,9 @@ Unter allen unterstützten Versionen von .NET Framework, .net Core und .net, `Da
 
 Wenn die eingehenden XML-Daten ein Objekt enthalten, dessen Typ nicht in dieser Liste enthalten ist:
 
-* Eine Ausnahme wird mit der folgenden Meldung und Stapel Überwachung ausgelöst.  
-Fehlermeldung:  
-System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' ist hier nicht zulässig. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) .  
-Stapelüberwachung:  
-bei System. Data. typelimiter. ensuretypeisallowed (Type type, typelimiter capturedlimiter)  
-bei System. Data. datacolenn. updatecolumschlag Type (Type type, StorageType TypeCode)  
-System. Data. datacolenumn. set_DataType (Typwert)  
+* Eine Ausnahme wird mit der folgenden Meldung und Stapel Überwachung ausgelöst.
+Fehlermeldung: System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' ist hier nicht zulässig. Weitere Informationen finden Sie unter [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) .
+Stapel Überwachung: System. Data. typelimiter. ensuretypeisallowed (Type-Typ, typelimiter capturedlimiter) unter System. Data. DataColumn. updatecolumntype (Type type, StorageType TypeCode) at System.Data.DataColumn.set_DataType (Type-Wert)
 
 * Der Deserialisierungsvorgang schlägt fehl.
 
@@ -134,7 +130,7 @@ Wenn Ihre APP auf .NET Framework 2,0 oder 3,5 ausgerichtet ist, können Sie weit
 
 #### <a name="extend-programmatically-net-framework-net-core-net-50"></a>Programm gesteuertes erweitern (.NET Framework, .net Core, .net 5.0 und höher)
 
-Die Liste der zulässigen Typen kann auch Programm gesteuert erweitert werden, indem " [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) " mit dem bekannten Schlüssel _System. Data. datasetdefaultallowedtypes_verwendet wird, wie im folgenden Code gezeigt.
+Die Liste der zulässigen Typen kann auch Programm gesteuert erweitert werden, indem " [AppDomain. SetData](/dotnet/api/system.appdomain.setdata) " mit dem bekannten Schlüssel _System. Data. datasetdefaultallowedtypes_ verwendet wird, wie im folgenden Code gezeigt.
 
 ```csharp
 Type[] extraAllowedTypes = new Type[]
@@ -157,7 +153,7 @@ In .NET Framework werden `DataSet` und `DataTable` eine Funktion für den Überw
 > [!WARNING]
 > Das Ausführen einer APP im Überwachungsmodus sollte nur ein temporäres Measure sein, das zum Testen verwendet wird. Wenn der Überwachungsmodus aktiviert ist `DataSet` , `DataTable` erzwingen und erzwingen keine Typeinschränkungen, wodurch eine Sicherheitslücke in der APP eingeführt werden kann. Weitere Informationen finden Sie in den Abschnitten [Entfernen aller Typeinschränkungen](#ratr) und [Sicherheit in Bezug auf nicht vertrauenswürdige Eingaben](#swr).
 
-Der Überwachungsmodus kann über _App.config_aktiviert werden:
+Der Überwachungsmodus kann über _App.config_ aktiviert werden:
 
 * Weitere Informationen über den richtigen Wert für das-Element finden Sie im Abschnitt [Erweitern der Konfiguration](#etc) in diesem Dokument `<configSections>` .
 * Verwenden `<allowedTypes auditOnly="true">` Sie, um den Überwachungsmodus zu aktivieren, wie im folgenden Markup gezeigt.
@@ -224,7 +220,7 @@ Wenn eine APP alle typeinschränkungs Einschränkungen von und entfernen muss `D
 
 `AppContext`Wenn der Schalter `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` auf festgelegt ist, werden `true` alle typeinschränkungs Einschränkungen von `DataSet` und entfernt `DataTable` .
 
-In .NET Framework kann dieser Schalter über _App.config_aktiviert werden, wie in der folgenden Konfiguration gezeigt:
+In .NET Framework kann dieser Schalter über _App.config_ aktiviert werden, wie in der folgenden Konfiguration gezeigt:
 
 ```xml
 <configuration>
@@ -235,7 +231,7 @@ In .NET Framework kann dieser Schalter über _App.config_aktiviert werden, wie i
 </configuration>
 ```
 
-In ASP.net ist das- `<AppContextSwitchOverrides>` Element nicht verfügbar. Stattdessen kann der Schalter über _Web.config_aktiviert werden, wie in der folgenden Konfiguration gezeigt:
+In ASP.net ist das- `<AppContextSwitchOverrides>` Element nicht verfügbar. Stattdessen kann der Schalter über _Web.config_ aktiviert werden, wie in der folgenden Konfiguration gezeigt:
 
 ```xml
 <configuration>
@@ -248,7 +244,7 @@ In ASP.net ist das- `<AppContextSwitchOverrides>` Element nicht verfügbar. Stat
 
 Weitere Informationen finden Sie unter dem- [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) Element.
 
-In .net Core, .net 5 und ASP.net Core wird diese Einstellung durch _runtimeconfig.jsauf_gesteuert, wie im folgenden JSON-Code gezeigt:
+In .net Core, .net 5 und ASP.net Core wird diese Einstellung durch _runtimeconfig.jsauf_ gesteuert, wie im folgenden JSON-Code gezeigt:
 
 ```json
 {
@@ -278,7 +274,7 @@ Wenn `AppContext` nicht verfügbar ist, können typeinschränkungs Überprüfung
 * Ein Administrator muss die Registrierung konfigurieren.
 * Die Verwendung der Registrierung ist eine Computer weite Änderung und wirkt sich auf _alle_ Apps aus, die auf dem Computer ausgeführt werden.
 
-| Typ  |  Wert |
+| type  |  Wert |
 |---|---|
 | **Registrierungsschlüssel** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Wertname** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
@@ -293,7 +289,7 @@ Weitere Informationen zum Verwenden der Registrierung zum Konfigurieren von `App
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>Sicherheit in Bezug auf nicht vertrauenswürdige Eingaben
 
-Während `DataSet` und `DataTable` erzwingen Standardbeschränkungen für die Typen, die während der Deserialisierung von XML-Nutzlasten vorhanden sein dürfen, __ `DataSet` und `DataTable` sind im Allgemeinen nicht sicher, wenn Sie mit nicht vertrauenswürdiger Eingabe__ aufgefüllt werden. Im folgenden finden Sie eine nicht vollständige Liste der Methoden, mit denen eine- `DataSet` oder- `DataTable` Instanz möglicherweise nicht vertrauenswürdige Eingaben liest.
+Während `DataSet` und `DataTable` erzwingen Standardbeschränkungen für die Typen, die während der Deserialisierung von XML-Nutzlasten vorhanden sein dürfen, __`DataSet` und `DataTable` sind im Allgemeinen nicht sicher, wenn Sie mit nicht vertrauenswürdiger Eingabe__ aufgefüllt werden. Im folgenden finden Sie eine nicht vollständige Liste der Methoden, mit denen eine- `DataSet` oder- `DataTable` Instanz möglicherweise nicht vertrauenswürdige Eingaben liest.
 
 * Ein `DataAdapter` verweist auf eine-Datenbank, und die- `DataAdapter.Fill` Methode wird verwendet, um eine `DataSet` mit dem Inhalt einer Datenbankabfrage aufzufüllen.
 * Die `DataSet.ReadXml` -Methode oder die- `DataTable.ReadXml` Methode wird zum Lesen einer XML-Datei mit Spalten-und Zeilen Informationen verwendet.
@@ -479,9 +475,9 @@ Das Deserialisieren `DataSet` `DataTable` von oder auf diese Weise aus einem nic
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserialisieren eines Datasets oder einer Datentabelle über BinaryFormatter
 
-Entwickler dürfen niemals `BinaryFormatter` , `NetDataContractSerializer` , `SoapFormatter` oder verwandte ***unsichere*** Formatierer verwenden, um eine-oder- `DataSet` `DataTable` Instanz aus einer nicht vertrauenswürdigen Nutzlast zu deserialisieren:
+Entwickler dürfen niemals `BinaryFormatter` , `NetDataContractSerializer` , `SoapFormatter` oder verwandte ***unsichere** _-Formatierer verwenden, um eine- `DataSet` oder- `DataTable` Instanz aus einer nicht vertrauenswürdigen Nutzlast zu deserialisieren:
 
-* Dies ist anfällig für einen vollständigen Remote Code Ausführungs Angriff.
+_ Dies ist anfällig für einen vollständigen Remote Code Ausführungs Angriff.
 * Die Verwendung eines benutzerdefinierten `SerializationBinder` ist nicht ausreichend, um solche Angriffe zu verhindern.
 
 ## <a name="safe-replacements"></a>Sichere Ersetzung

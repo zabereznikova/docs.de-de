@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: 525fa2efa39909390d874fb97d9f11e647340ea9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ea4f6f129cf2919124b1bef1fd837f2b1e13760e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727054"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress-Methode
+
 Ruft die Adresse des angegebenen statischen Felds der relativen virtuellen Adresse (RVA) ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetRVAStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `classId`  
  in Die ID der Klasse, die das angeforderte RVA-statische Feld enthält.  
   
@@ -44,7 +46,8 @@ HRESULT GetRVAStaticAddress(
  `ppAddress`  
  vorgenommen Ein Zeiger auf die Adresse des Felds RVA-static.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die- `GetRVAStaticAddress` Methode kann eine der folgenden Methoden zurückgeben:  
   
 - Ein CORPROF_E_DATAINCOMPLETE HRESULT, wenn dem angegebenen statischen Feld keine Adresse im angegebenen Kontext zugewiesen wurde.  
@@ -54,6 +57,7 @@ HRESULT GetRVAStaticAddress(
  Bevor der Klassenkonstruktor einer Klasse abgeschlossen ist, `GetRVAStaticAddress` gibt CORPROF_E_DATAINCOMPLETE für alle statischen Felder zurück, obwohl einige der statischen Felder möglicherweise bereits initialisiert sind und Garbage Collection-Objekten als rooting verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -62,7 +66,7 @@ HRESULT GetRVAStaticAddress(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

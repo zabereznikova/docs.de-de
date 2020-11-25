@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 8bd0292ddf22453f8892ed8bddd10c2144877097
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 16f95f8fce20f2cf46d4cda214e4494bd288bf60
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008513"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727548"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC-Funktion
+
 Übersetzt einen HRESULT-Wert in eine Fehlermeldung, wobei die Standardkultur des aktuellen Threads verwendet wird.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -38,6 +39,7 @@ HRESULT LoadStringRC (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `iResourceID`  
  [in] Ein HRESULT.  
   
@@ -51,26 +53,29 @@ HRESULT LoadStringRC (
  in Erten.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`szBuffer`ist NULL oder `iMax` ist NULL (0).|  
+|E_INVALIDARG|`szBuffer` ist NULL oder `iMax` ist NULL (0).|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn die Methode nicht erfolgreich abgeschlossen wird, `szBuffer` enthält eine leere Zeichenfolge.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** "Mscoree. dll" und "mscorwert. dll". Verwenden Sie "mscoree. dll" anstelle von "mscorwert. dll", um sicherzustellen, dass Sie die richtige Version des .NET Framework als Ziel verwenden.  
+ **Bibliothek:** MSCorEE.dll und Mscorwks.dll. Verwenden Sie MSCorEE.dll anstelle von Mscorwks.dll, um sicherzustellen, dass Sie die richtige Version der .NET Framework als Ziel verwenden.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [LoadStringRCEx-Funktion](loadstringrcex-function.md)
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

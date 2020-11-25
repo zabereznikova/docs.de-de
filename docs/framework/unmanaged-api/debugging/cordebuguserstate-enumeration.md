@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d502b4098016fb14793bccd6feb641e92e3c2611
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726950"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState-Enumeration
+
 Gibt den Benutzerzustand eines Threads an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +43,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Member  
   
-|Value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Die Beendigung des Threads wurde angefordert.|  
 |`USER_SUSPEND_REQUESTED`|Es wurde eine Unterbrechung des Threads angefordert.|  
@@ -55,11 +56,13 @@ typedef enum CorDebugUserState {
 |`USER_THREADPOOL`|Der Thread wird aus dem Thread Pool entfernt.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Benutzer Zustand eines Threads ist der Zustand, den der Thread aufweist, wenn er vom Debugger überprüft wird. Ein Thread kann eine Kombination aus Benutzer Zuständen aufweisen.  
   
  Verwenden Sie die [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) -Methode, um den Benutzer Zustand eines Threads abzurufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

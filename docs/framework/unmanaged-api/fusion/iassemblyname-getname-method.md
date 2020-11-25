@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58b8b83ce1db9338612cbaa01a0db0862cf1054e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727899"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName-Methode
+
 Ruft den einfachen, unverschlüsselten Namen der Assembly ab, auf die von diesem [IAssemblyName](iassemblyname-interface.md) -Objekt verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,19 +36,21 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lpcwBuffer`  
- [in, out] Die Größe der `pwzName` in breit Zeichen, einschließlich des NULL-Abschluss Zeichens.  
+ [in, out] Die Größe von `pwzName` in breit Zeichen, einschließlich des NULL-Abschluss Zeichens.  
   
  `pwzName`  
  vorgenommen Ein Puffer, der den Namen der Assembly enthalten soll, auf die verwiesen wird.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

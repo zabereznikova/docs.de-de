@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727236"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
+
 Führt die verwalteten Frames auf dem Stapel für den angegebenen Thread durch und sendet Informationen über einen Rückruf an den Profiler.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT DoStackSnapshot(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `thread`  
  in Die ID des Ziel Threads.  
   
@@ -65,6 +67,7 @@ HRESULT DoStackSnapshot(
  in Die Größe der- `CONTEXT` Struktur, auf die vom-Parameter verwiesen wird `context` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Durch die Übergabe von NULL für wird `thread` eine Momentaufnahme des aktuellen Threads erstellt. Momentaufnahmen können nur von anderen Threads übernommen werden, wenn der Zielthread zu diesem Zeitpunkt angehalten wird.  
   
  Wenn der Profiler den Stapel durchlaufen möchte, wird aufgerufen `DoStackSnapshot` . Bevor die CLR von diesem Aufruf zurückkehrt, ruft Sie `StackSnapshotCallback` mehrmals auf, und zwar für jeden verwalteten Frame (bzw. durch Ausführen von nicht verwalteten Frames) auf dem Stapel. Wenn nicht verwaltete Frames gefunden werden, müssen Sie Sie selbst durchgehen.  
@@ -76,11 +79,13 @@ HRESULT DoStackSnapshot(
  Ein Stackwalk kann synchron oder asynchron sein, wie in den folgenden Abschnitten erläutert.  
   
 ## <a name="synchronous-stack-walk"></a>Synchroner Stackwalk  
+
  Ein synchroner Stackwalk umfasst das Durchlaufen des Stapels des aktuellen Threads als Reaktion auf einen Rückruf. Das Seeding oder das Anhalten ist nicht erforderlich.  
   
  Sie führen einen synchronen Aufruf aus, wenn Sie als Antwort auf die CLR, die eine der [ICorProfilerCallback](icorprofilercallback-interface.md) (oder [ICorProfilerCallback2](icorprofilercallback2-interface.md))-Methoden Ihres Profilers aufruft, aufrufen, `DoStackSnapshot` um den Stapel des aktuellen Threads zu durchlaufen. Dies ist hilfreich, wenn Sie sehen möchten, wie der Stapel in einer Benachrichtigung wie z. b. [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)aussieht. Sie können nur in `DoStackSnapshot` `ICorProfilerCallback` der-Methode aufzurufen und dabei NULL im `context` -Parameter und im- `thread` Parameter übergeben.  
   
 ## <a name="asynchronous-stack-walk"></a>Asynchroner Stackwalk  
+
  Ein asynchroner Stapel Durchlauf umfasst das Durchlaufen des Stapels eines anderen Threads oder das Durchlaufen des Stapels des aktuellen Threads, nicht als Reaktion auf einen Rückruf, sondern durch das Hijacking des Anweisungs Zeigers des aktuellen Threads. Ein asynchroner Durchlauf erfordert einen Ausgangswert, wenn der obere Rand des Stapels nicht verwalteter Code ist, der nicht Teil eines Platt Form Aufrufs (PInvoke) oder com-Aufrufs ist, sondern Hilfscode in der CLR selbst ist. Beispielsweise ist Code, der Just-in-time (JIT)-Kompilierung oder-Garbage Collection durchführt, Hilfscode.  
   
  Sie erhalten einen Ausgangswert, indem Sie den Zielthread direkt anhalten und den Stapel selbst durchlaufen, bis Sie den obersten verwalteten Frame gefunden haben. Nachdem der Zielthread angehalten wurde, wird der aktuelle Registrierungs Kontext des Zielthreads angezeigt. Legen Sie als nächstes fest, ob der Registrierungs Kontext auf nicht verwalteten Code zeigt, indem Sie [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) – aufrufen, wenn ein `FunctionID` gleich NULL zurückgegeben wird, der Frame nicht verwalteter Code ist. Durchlaufen Sie nun den Stapel, bis Sie den ersten verwalteten Frame erreichen, und berechnen Sie dann den Seed-Kontext basierend auf dem Registrierungs Kontext für diesen Frame.  
@@ -97,7 +102,8 @@ HRESULT DoStackSnapshot(
   
  Außerdem besteht das Risiko eines Deadlocks, wenn Sie `DoStackSnapshot` von einem Thread aufgerufen werden, den Ihr Profiler erstellt hat, sodass Sie den Stapel eines separaten Zielthreads durchlaufen können. Beim ersten Mal, wenn der von Ihnen erstellte Thread bestimmte `ICorProfilerInfo*` Methoden (einschließlich) eingibt `DoStackSnapshot` , führt die CLR die Thread spezifische Initialisierung pro Thread in diesem Thread aus. Wenn Ihr Profiler den Zielthread angehalten hat, dessen Stapel Sie durchlaufen möchten, und wenn der Zielthread eine Sperre besitzt, die für die Durchführung dieser Thread spezifischen Initialisierung erforderlich ist, tritt ein Deadlock auf. Um diesen Deadlock zu vermeiden, führen Sie einen ersten Rückruf `DoStackSnapshot` von aus dem vom Profiler erstellten Thread aus, um einen separaten Zielthread zu durchlaufen, aber halten Sie den Zielthread nicht an erster Stelle. Dieser anfängliche-Befehl stellt sicher, dass die Initialisierung pro Thread ohne deadlockvorgang durchgeführt werden kann. Wenn `DoStackSnapshot` erfolgreich ist und mindestens einen Frame meldet, ist es nach diesem Punkt sicher, dass der vom Profiler erstellte Thread sicher ist, dass ein beliebiger Zielthread angehalten und aufgerufen wird, `DoStackSnapshot` um den Stapel dieses Zielthreads zu durchlaufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -106,7 +112,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

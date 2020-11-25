@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 61544d0dfe876f35fdfbe5afa945fad0620c0eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726651"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP-Struktur
+
 Enthält die Offsets, die genutzt werden, um Microsoft Intermediate Language (MSIL)-Code nativem Code zuzuordnen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,22 +37,23 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`ilOffset`|Der Offset des MSIL-Codes.|  
 |`nativeStartOffset`|Der Offset des Starts des systemeigenen Codes.|  
 |`nativeEndOffset`|Der Offset des Endes des systemeigenen Codes.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl, Cordebug. idl  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetILToNativeMapping-Methode](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
 - [GetILToNativeMapping-Methode](icordebugcode-getiltonativemapping-method.md)

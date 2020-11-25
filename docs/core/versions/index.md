@@ -2,12 +2,12 @@
 title: Versionsverwaltung für .NET Core-Runtime und SDK
 description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
 ms.date: 06/24/2020
-ms.openlocfilehash: 5e315f49227f3c2ea40652a30fabbf566bdfe495
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619753"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726703"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -113,4 +113,4 @@ Eine interaktive Tabelle der .NET Standard-Versionen und deren Entsprechung mit 
 - [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../distribution-packaging.md)
 - [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)
-- [Docker-Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [Docker-Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet/)

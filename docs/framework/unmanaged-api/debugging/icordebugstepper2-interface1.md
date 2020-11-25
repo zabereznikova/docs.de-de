@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: ef7aa164c43751fa39e49d0ab6486a9f29e23c20
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ecbedfbca37a3630fc6d40c173f8a6cd05b4d3fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727639"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2-Schnittstelle
+
 Bietet Unterstützung für das Debuggen von nur eigenen Code (JMC).  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[SetJMC-Methode](icordebugstepper2-setjmc-method.md)|Legt einen Wert fest, der angibt, ob dieser ICorDebugStepper nur durch Code ausgeführt wird, der vom Entwickler einer Anwendung erstellt wurde.|  
   
@@ -36,6 +37,7 @@ Bietet Unterstützung für das Debuggen von nur eigenen Code (JMC).
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ Bietet Unterstützung für das Debuggen von nur eigenen Code (JMC).
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

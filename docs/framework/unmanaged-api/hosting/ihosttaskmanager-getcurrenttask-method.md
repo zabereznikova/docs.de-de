@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f17bca49-90bd-4dee-a5e1-b9a57ea46f85
 topic_type:
 - apiref
-ms.openlocfilehash: 874951d6b5efed0dc08e6d0e166962767e295c3e
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 72b7f6e3a5a09bd06e8a7fbb94680ed3ea89b225
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842048"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727301"
 ---
 # <a name="ihosttaskmanagergetcurrenttask-method"></a>IHostTaskManager::GetCurrentTask-Methode
+
 Ruft einen Schnittstellen Zeiger auf die Aufgabe ab, die derzeit auf dem Betriebssystem Thread ausgeführt wird, von dem dieser aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetCurrentTask (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pTask`  
  vorgenommen Ein Zeiger auf die Adresse einer [IHostTask](ihosttask-interface.md) -Instanz, die den derzeit ausgeführten Task darstellt, oder NULL, wenn derzeit keine Aufgabe ausgeführt wird.  
   
@@ -41,27 +43,29 @@ HRESULT GetCurrentTask (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentTask`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetCurrentTask` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
 |HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_INVALIDOPERATION|`GetCurrentTask`wurde in einem Betriebssystem Thread außerhalb der Kontrolle des Hosts aufgerufen.|  
+|HOST_E_INVALIDOPERATION|`GetCurrentTask` wurde in einem Betriebssystem Thread außerhalb der Kontrolle des Hosts aufgerufen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Host kann auch den- `pTask` Parameter auf NULL festlegen, um zu verhindern, dass eine Aufgabe, die nicht initiiert wurde, in die CLR wechselt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

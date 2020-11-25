@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-ms.openlocfilehash: 3a4da6f958407c0b704ffb7372a77b7f022fc824
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c21be7b062b7e2d4129bafabae004351442ab853
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379770"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728055"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException-Methode
+
 Ruft einen Schnittstellen Zeiger auf ein ICorDebugValue-Objekt ab, das eine Ausnahme darstellt, die zurzeit von verwaltetem Code ausgelöst wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,17 +35,20 @@ HRESULT GetCurrentException (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppExceptionObject`  
  vorgenommen Ein Zeiger auf die Adresse eines `ICorDebugValue` Objekts, das die Ausnahme darstellt, die derzeit von verwaltetem Code ausgelöst wird.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das Ausnahme Objekt ist von dem Zeitpunkt, an dem die Ausnahme ausgelöst wird, bis zum Ende des `catch` Blocks vorhanden. Bei einer Funktions Auswertung, die von den ICorDebugEval-Methoden ausgeführt wird, wird das Ausnahme Objekt beim Setup gelöscht und bei Abschluss wieder hergestellt.  
   
- Ausnahmen können gescht werden (z. b. Wenn eine Ausnahme in einem Filter oder in einer Funktions Auswertung ausgelöst wird), sodass es möglicherweise mehrere ausstehende Ausnahmen in einem einzelnen Thread gibt. `GetCurrentException`Gibt die aktuelle Ausnahme zurück.  
+ Ausnahmen können gescht werden (z. b. Wenn eine Ausnahme in einem Filter oder in einer Funktions Auswertung ausgelöst wird), sodass es möglicherweise mehrere ausstehende Ausnahmen in einem einzelnen Thread gibt. `GetCurrentException` Gibt die aktuelle Ausnahme zurück.  
   
  Das Ausnahme Objekt und der Typ können sich während der gesamten Lebensdauer der Ausnahme ändern. Wenn z. b. eine Ausnahme vom Typ "x" ausgelöst wird, kann die Common Language Runtime (CLR) nicht genügend Arbeitsspeicher aufweisen und Sie auf eine Ausnahme aufgrund von nicht genügend Arbeitsspeicher herauf Stufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

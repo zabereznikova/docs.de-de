@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 610e792d-98ef-411f-90b0-5b9a3813f547
 topic_type:
 - apiref
-ms.openlocfilehash: 15c421471704ffc085da2af6ac74350bd099fdb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 842b878fac1e2590eb6ea0b29ebee0d46e818474
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134359"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727925"
 ---
 # <a name="iassemblynamefinalize-method"></a>IAssemblyName::Finalize-Methode
+
 Ermöglicht diesem [IAssemblyName](iassemblyname-interface.md) -Objekt, Ressourcen freizugeben und andere Bereinigungs Vorgänge durchzuführen, bevor der Dekonstruktor aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,13 +32,14 @@ Ermöglicht diesem [IAssemblyName](iassemblyname-interface.md) -Objekt, Ressourc
 HRESULT Finalize ();  
 ```  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: 611091d39da6d7f646457457f20ce1eaf37db361
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213204"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726274"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2-Schnittstelle
 
@@ -27,7 +27,7 @@ Erweitert die ICorDebugFunction-Schnittstelle logisch, um Unterstützung für nu
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[EnumerateNativeCode-Methode](icordebugfunction2-enumeratenativecode-method.md)|(Noch nicht implementiert.) Ruft einen Schnittstellen Zeiger auf eine ICorDebugCodeEnum ab, die die systemeigenen Code Anweisungen in der Funktion enthält, auf die von diesem ICorDebugFunction2-Objekt verwiesen wird.|  
 |[GetJMCStatus-Methode](icordebugfunction2-getjmcstatus-method.md)|Ruft einen Wert ab, der angibt, ob diese Funktion als Benutzercode gekennzeichnet ist.|  
@@ -40,6 +40,7 @@ Erweitert die ICorDebugFunction-Schnittstelle logisch, um Unterstützung für nu
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -48,6 +49,6 @@ Erweitert die ICorDebugFunction-Schnittstelle logisch, um Unterstützung für nu
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

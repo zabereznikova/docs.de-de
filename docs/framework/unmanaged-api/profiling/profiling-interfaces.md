@@ -6,17 +6,19 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dd6999e9f9e16264bde3cf62ce3a888841347607
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494032"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727470"
 ---
 # <a name="profiling-interfaces"></a>Profilerstellungsschnittstellen
+
 In diesem Abschnitt werden die nicht verwalteten Schnittstellen beschrieben, die die Profilerstellung eines Programms ermöglichen, das von der Common Language Runtime (CLR) ausgeführt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ICLRProfiling-Schnittstelle](iclrprofiling-interface.md)  
  Stellt die [attachprofiler](iclrprofiling-attachprofiler-method.md) -Methode bereit, die einem Profiler das Anfügen an einen laufenden Prozess ermöglicht.  
   
@@ -81,7 +83,7 @@ Stellt eine Rückruf Methode bereit, die der Common Language Runtime verwendet, 
  Stellt Methoden bereit, um eine Auflistung von Modulen, die von der Anwendung oder dem Profiler geladen wurden, sequenziell zu durchlaufen.  
   
  [ICorProfilerObjectEnum-Schnittstelle](icorprofilerobjectenum-interface.md)  
- Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die von [Ngen. exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md)generiert werden.  
+ Stellt Methoden bereit, um eine Auflistung von fixierten Objekten sequenziell zu durchlaufen, die von [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md)generiert werden.  
   
  [ICorProfilerThreadEnum-Schnittstelle](icorprofilerthreadenum-interface.md)  
  Stellt Methoden bereit, um eine Auflistung von Threads in der CLR sequenziell zu durchlaufen.  
@@ -90,6 +92,7 @@ Stellt eine Rückruf Methode bereit, die der Common Language Runtime verwendet, 
  Stellt die [Alloc](imethodmalloc-alloc-method.md) -Methode bereit, um Arbeitsspeicher für einen neuen MSIL-Funktions Text (Microsoft Intermediate Language) zuzuweisen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Übersicht über die Profilerstellung](profiling-overview.md)  
   
  [Profilerstellung für globale statische Funktionen](profiling-global-static-functions.md)  

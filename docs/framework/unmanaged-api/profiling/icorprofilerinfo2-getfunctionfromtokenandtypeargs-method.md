@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 7f1276e1adeece086ca7b6791eb6e870faf4d010
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 17a6220598010c0bee9c3f0485860aa0b2dc5f3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502872"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727106"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs-Methode
+
 Ruft den einer `FunctionID` Funktion mit dem angegebenen Metadatentoken, der Klasse und den `ClassID` Werten beliebiger Typargumente ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `moduleID`  
  in Die ID des Moduls, in dem sich die Funktion befindet.  
   
@@ -56,7 +58,8 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  `pFunctionID`  
  vorgenommen Ein Zeiger auf die `FunctionID` der angegebenen Funktion.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das Aufrufen der- `GetFunctionFromTokenAndTypeArgs` Methode mit `mdMethodRef` Metadaten anstelle eines `mdMethodDef` Metadatentokens kann zu unvorhersehbaren Ergebnissen führen. Aufrufer sollten `mdMethodRef` bei der Übergabe in eine auflösen `mdMethodDef` .  
   
  Wenn die Funktion nicht bereits geladen ist, bewirkt das Aufrufen `GetFunctionFromTokenAndTypeArgs` von, dass geladen wird. Dies ist ein gefährlicher Vorgang in vielen Kontexten. Wenn Sie diese Methode beispielsweise beim Laden von Modulen oder Typen aufrufen, kann dies zu einer Endlosschleife führen, da die Laufzeit versucht, Vorgänge zirkulär zu laden.  
@@ -64,6 +67,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  Im Allgemeinen wird von der Verwendung von abgeraten `GetFunctionFromTokenAndTypeArgs` . Wenn Profiler an Ereignissen für eine bestimmte Funktion interessiert sind, sollten Sie die `ModuleID` und `mdMethodDef` dieser Funktion Speichern und [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) verwenden, um zu überprüfen, ob ein bestimmtes der `FunctionID` gewünschten Funktion entspricht.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -72,7 +76,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](icorprofilerinfo2-interface.md)

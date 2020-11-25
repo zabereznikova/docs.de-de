@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 840a71ed-bf5a-4f5e-8ed6-762222b34493
 topic_type:
 - apiref
-ms.openlocfilehash: 56dc5f87b32b3aaa0bfbb69541d5a01ae26606ab
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 747f165a98dfd1264ea58d61aaa1615c6d71e073
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213232"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726291"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus-Methode
+
 Ruft einen Wert ab, der angibt, ob die Funktion, die durch dieses ICorDebugFunction2-Objekt dargestellt wird, als Benutzercode gekennzeichnet ist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbIsJustMyCode`  
  vorgenommen Ein Zeiger auf einen booleschen Wert `true` , der ist, wenn diese Funktion als Benutzercode gekennzeichnet ist, andernfalls ist der Wert `false` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn die Funktion, die von diesem dargestellt `ICorDebugFunction2` wird, nicht deentschlbelt werden kann, ist `pbIsJustMyCode` immer `false` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

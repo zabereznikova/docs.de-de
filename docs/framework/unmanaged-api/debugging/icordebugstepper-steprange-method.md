@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-ms.openlocfilehash: b040d9454a5a3a0d550bb645953c783357419f73
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9698afa2723a5d772ecf5a055f09c5ee3bc13f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727652"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange-Methode
+
 Bewirkt, dass ICorDebugStepper den enthaltenden Thread mit einem einzelnen Schritt durchläuft und zurückgegeben wird, wenn er Code über den letzten der angegebenen Bereiche hinaus erreicht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT StepRange (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `bStepIn`  
  in Legen Sie diese Einstellung auf fest, `true` um eine Funktion innerhalb des Threads zu durchlaufen. Legen Sie auf fest `false` , um die Funktion zu überspringen.  
   
@@ -46,6 +48,7 @@ HRESULT StepRange (
  [in] Die Größe des `ranges`-Arrays.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `StepRange` Methode funktioniert wie die [ICorDebugStepper:: Step](icordebugstepper-step-method.md) -Methode, mit dem Unterschied, dass Sie nicht vervollständigt wird, bis Code außerhalb des angegebenen Bereichs erreicht wird.  
   
  Dies kann effizienter sein als die Schritt-für-Schritt-Anleitung für eine Anweisung. Bereiche werden als Liste der Offset Paare ab dem Anfang des Frame Bilds angegeben.  
@@ -53,6 +56,7 @@ HRESULT StepRange (
  Bereiche sind relativ zum MSIL-Code (Microsoft Intermediate Language) einer Methode. Aufrufen von [ICorDebugStepper:: SetRangeIL](icordebugstepper-setrangeil-method.md) mit `false` , um die Bereiche relativ zum systemeigenen Code einer Methode zu machen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

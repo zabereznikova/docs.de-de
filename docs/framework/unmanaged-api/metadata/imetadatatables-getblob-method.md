@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94667c1c-6d58-4aa7-b74e-530b11e2a276
 topic_type:
 - apiref
-ms.openlocfilehash: ff97e419c5309fa7cb820cb7e82db96fee34f30c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 32f32625ee40d50249ce3e009add543c4137b196
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501273"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726469"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob-Methode
+
 Ruft einen Zeiger auf den Binary Large Object (BLOB) am angegebenen Spalten Index ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetBlob (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ixBlob`  
  in Die Speicheradresse, von der aus Sie abgeleitet werden soll `ppData` .  
   
@@ -46,15 +48,16 @@ HRESULT GetBlob (
  vorgenommen Ein Zeiger auf einen Zeiger auf die abgerufenen Binärdaten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataTables-Schnittstelle](imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](imetadatatables2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: bf9b0b7a9bcd09d6e4b3a2cecac1f1b1e711b6bb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c959856e8c019f95d38cac9bc4d8d03bc31ef195
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213776"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726547"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine Erweiterung von ICorDebugHeapValue, die Unterstützung für Common Language
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[CreateHandle-Methode](icordebugheapvalue2-createhandle-method.md)|Erstellt ein Handle vom angegebenen Typ für dieses `ICorDebugHeapValue2` Objekt.|  
   
@@ -37,6 +37,7 @@ Eine Erweiterung von ICorDebugHeapValue, die Unterstützung für Common Language
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -45,6 +46,6 @@ Eine Erweiterung von ICorDebugHeapValue, die Unterstützung für Common Language
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
