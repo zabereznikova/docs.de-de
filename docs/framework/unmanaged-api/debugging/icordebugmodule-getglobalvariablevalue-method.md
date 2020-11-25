@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: bbc0881c-6a59-41a0-b5ee-2f3d1b71684c
 topic_type:
 - apiref
-ms.openlocfilehash: 7e32f3f4f6613d34e2b40946ed3eadb8eb0a7c1f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 94fe7deb10c23ea0bc824bb2244e8d1d87f831e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710029"
 ---
-# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="98cd6-102">ICorDebugModule::GetGlobalVariableValu-Methode</span><span class="sxs-lookup"><span data-stu-id="98cd6-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
-<span data-ttu-id="98cd6-103">Ruft den Wert der angegebenen globalen Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="98cd6-103">Gets the value of the specified global variable.</span></span>  
+# <a name="icordebugmodulegetglobalvariablevalue-method"></a><span data-ttu-id="162b6-102">ICorDebugModule::GetGlobalVariableValu-Methode</span><span class="sxs-lookup"><span data-stu-id="162b6-102">ICorDebugModule::GetGlobalVariableValue Method</span></span>
+
+<span data-ttu-id="162b6-103">Ruft den Wert der angegebenen globalen Variablen ab.</span><span class="sxs-lookup"><span data-stu-id="162b6-103">Gets the value of the specified global variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="98cd6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="98cd6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="162b6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="162b6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetGlobalVariableValue(  
@@ -34,18 +35,20 @@ HRESULT GetGlobalVariableValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="98cd6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="98cd6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="162b6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="162b6-105">Parameters</span></span>  
+
  `fieldDef`  
- <span data-ttu-id="98cd6-106">in Ein `mdFieldDef` Token, das auf die Metadaten verweist, die die globale Variable beschreiben.</span><span class="sxs-lookup"><span data-stu-id="98cd6-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
+ <span data-ttu-id="162b6-106">in Ein `mdFieldDef` Token, das auf die Metadaten verweist, die die globale Variable beschreiben.</span><span class="sxs-lookup"><span data-stu-id="162b6-106">[in] An `mdFieldDef` token that references the metadata describing the global variable.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="98cd6-107">vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert der angegebenen globalen Variablen darstellt.</span><span class="sxs-lookup"><span data-stu-id="98cd6-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
+ <span data-ttu-id="162b6-107">vorgenommen Ein Zeiger auf die Adresse eines icorentbugvalue-Objekts, das den Wert der angegebenen globalen Variablen darstellt.</span><span class="sxs-lookup"><span data-stu-id="162b6-107">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified global variable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="98cd6-108">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="98cd6-108">Requirements</span></span>  
- <span data-ttu-id="98cd6-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="98cd6-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="162b6-108">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="162b6-108">Requirements</span></span>  
+
+ <span data-ttu-id="162b6-109">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="162b6-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="98cd6-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="98cd6-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="162b6-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="162b6-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="98cd6-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="98cd6-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="162b6-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="162b6-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="98cd6-112">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="98cd6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="162b6-112">**.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="162b6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
