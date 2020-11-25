@@ -2,19 +2,20 @@
 title: ICorDebugMergedAssemblyRecord-Schnittstelle
 ms.date: 03/30/2017
 ms.assetid: fe280b11-9479-4e34-a07c-0d1ea8088422
-ms.openlocfilehash: 721f6c1cf468b3b518d2ea213588ae2410249690
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a26702c6b21e4bfe352d861387a80b976a8dc556
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710492"
 ---
 # <a name="icordebugmergedassemblyrecord-interface"></a>ICorDebugMergedAssemblyRecord-Schnittstelle
+
 Enthält Informationen zu einer zusammengeführten Assembly.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetCulture-Methode](icordebugmergedassemblyrecord-getculture-method.md)|Ruft die Kulturnamen-Zeichenfolge der Assembly ab.|  
 |[GetIndex-Methode](icordebugmergedassemblyrecord-getindex-method.md)|Ruft den Präfixindex der Assembly ab.|  
@@ -29,6 +30,7 @@ Enthält Informationen zu einer zusammengeführten Assembly.
 > Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Wenn Sie diese Schnittstelle für ICorDebug-Szenarien außerhalb von .NET Native implementieren, ignoriert die Common Language Runtime diese Schnittstelle.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -37,7 +39,7 @@ Enthält Informationen zu einer zusammengeführten Assembly.
   
  **.NET Framework Versionen:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)
 - [Debuggen](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87ce7c5b-fd82-453e-bf55-c8a32150b183
 topic_type:
 - apiref
-ms.openlocfilehash: 4e5939e9e74899a33f28927c4fda09d0a8fb30a0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 38a5c2da900530b6bf78f24e224714496ceaa62c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710960"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags-Methode
+
 Ruft die Flags ab, die dem von [ICorDebugMDA](icordebugmda-interface.md)dargestellten Assistenten für verwaltetes Debuggen (MDA) zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT GetFlags (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pFlags`  
  in Eine bitweise Kombination der [CorDebugMDAFlags](cordebugmdaflags-enumeration.md) -Enumerationswerte, die die Einstellungen der Flags für diesen MDA angeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -46,7 +49,7 @@ HRESULT GetFlags (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugMDA-Schnittstelle](icordebugmda-interface.md)
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

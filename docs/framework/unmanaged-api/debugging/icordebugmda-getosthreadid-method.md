@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-ms.openlocfilehash: c7ab77e9316023a97d2eafe8bcccc2b45e240cd0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 80248bba6d11b8af07aa0517cb41c8a4f783b5e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710895"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId-Methode
+
 Ruft den Thread Bezeichner des Betriebssystems ab, auf dem der von [ICorDebugMDA](icordebugmda-interface.md) dargestellte Assistent für verwaltetes Debuggen (MDA) ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT GetOSThreadId (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pOsTid`  
  vorgenommen Ein Zeiger auf den Thread Bezeichner des Betriebssystems.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Der Betriebssystem Thread wird anstelle eines ICorDebugThread verwendet, um Situationen zuzulassen, in denen ein MDA entweder in einem systemeigenen Thread oder in einem verwalteten Thread ausgelöst wird, der noch keinen verwalteten Code eingegeben hat.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -49,7 +53,7 @@ HRESULT GetOSThreadId (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugMDA-Schnittstelle](icordebugmda-interface.md)
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
