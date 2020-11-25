@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: 20be3114908ef78966eead05ae8ba6333a491404
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89556cf0e1ef65c35278a526e10fc791063ea2c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175056"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708347"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey-Funktion
+
 Ruft ein Token ab, das einen öffentlichen Schlüssel darstellt. Ein Token mit starkem Namen ist die verkürzte Form eines öffentlichen Schlüssels.  
   
- Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName::StrongNameTokenFromPublicKey-Methode.](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
+ Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,34 +43,38 @@ BOOLEANStrongNameTokenFromPublicKey (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbPublicKeyBlob`  
- [in] Eine Struktur vom Typ [PublicKeyBlob,](publickeyblob-structure.md) die den öffentlichen Teil des Schlüsselpaars enthält, der zum Generieren der Signatur mit starkem Namen verwendet wird.  
+ in Eine Struktur vom Typ [PublicKeyBlob](publickeyblob-structure.md) , die den öffentlichen Teil des Schlüssel Paars enthält, das zum Generieren der starken Namens Signatur verwendet wird.  
   
  `cbPublicKeyBlob`  
- [in] Die Größe von in `pbPublicKeyBlob`Bytes von .  
+ in Die Größe von in Bytes `pbPublicKeyBlob` .  
   
  `ppbStrongNameToken`  
- [out] Das Token mit starkem Namen, das dem in `pbPublicKeyBlob`übergebenen Schlüssel entspricht. Die Common Language Runtime weist den Speicher zu, in dem das Token zurückgegeben werden soll. Der Aufrufer muss diesen Speicher mithilfe der [StrongNameFreeBuffer-Funktion](strongnamefreebuffer-function.md) freizugeben.  
+ vorgenommen Das Token für den starken Namen, das dem übergebenen Schlüssel entspricht `pbPublicKeyBlob` . Der Common Language Runtime ordnet den Speicher zu, in den das Token zurückgegeben werden soll. Der Aufrufer muss diesen Arbeitsspeicher mithilfe der [StrongNameFreeBuffer](strongnamefreebuffer-function.md) -Funktion freigeben.  
   
  `pcbStrongNameToken`  
- [out] Die Größe des zurückgegebenen Tokens für starken Namen in Bytes.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen Token für den starken Namen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`bei erfolgreichem Abschluss; andernfalls `false`.  
+
+ `true` nach erfolgreichem Abschluss: andernfalls `false` .  
   
-## <a name="remarks"></a>Bemerkungen  
- Ein Token mit starkem Namen ist die verkürzte Form eines öffentlichen Schlüssels, der zum Speichern von Schlüsselinformationen in Metadaten verwendet wird. Insbesondere werden Token mit starkem Namen in Assemblyverweisen verwendet, um auf die abhängige Assembly zu verweisen.  
+## <a name="remarks"></a>Hinweise  
+
+ Ein Token mit starkem Namen ist die verkürzte Form eines öffentlichen Schlüssels, mit dem Speicherplatz beim Speichern von Schlüsselinformationen in Metadaten eingespart wird. Insbesondere werden starke namens Token in Assemblyverweisen verwendet, um auf die abhängige Assembly zu verweisen.  
   
- Wenn `StrongNameTokenFromPublicKey` die Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo-Funktion](strongnameerrorinfo-function.md) auf, um den zuletzt generierten Fehler abzurufen.  
+ Wenn die `StrongNameTokenFromPublicKey` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** StrongName.h  
+ **Header:** StrongName. h  
   
  **Bibliothek:** Als Ressource in mscoree.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

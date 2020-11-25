@@ -2,14 +2,15 @@
 title: ISymUnmanagedAsyncMethod::GetKickoffMethod-Methode
 ms.date: 03/30/2017
 ms.assetid: ba084444-9e68-4cde-9388-54b950670987
-ms.openlocfilehash: 879b9eac7cb6df06ffe4f994b505ea9cb2396d7f
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2d4515087812b2b7c9303228ac5e5bbf34e8aa91
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707190"
 ---
 # <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a>ISymUnmanagedAsyncMethod::GetKickoffMethod-Methode
+
 Siehe [definekickoffmethod-Methode](isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md).  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,11 +26,13 @@ HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);
 |`kickoffMethod`||  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt `HRESULT` zurück.  
+
+ Gibt `HRESULT`zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedAsyncMethod-Schnittstelle](isymunmanagedasyncmethod-interface.md)

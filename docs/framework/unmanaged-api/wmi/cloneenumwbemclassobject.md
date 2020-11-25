@@ -1,6 +1,6 @@
 ---
-title: CloneEnumWbemClassObject-Funktion (Nicht verwaltete API-Referenz)
-description: Die CloneEnumWbemClassObject-Funktion erstellt eine logische Kopie eines Enumerators.
+title: Cloneenumwbemclassobject-Funktion (Referenz zur nicht verwalteten API)
+description: Die cloneenumwbemclassobject-Funktion erstellt eine logische Kopie eines Enumerators.
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CloneEnumWbemClassObject function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: f2a3a7e848108e50c04f0ec70cf42586755a0a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa8a7f436c018e3e083be452d300eb21e17f93f3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175017"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708126"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject-Funktion
+
 Erstellt eine logische Kopie eines Enumerators unter Beibehaltung der aktuellen Position in einer Enumeration.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -43,56 +44,57 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>Parameter
 
 `ppEnum`\
-[out] Empfängt einen Zeiger auf ein neues [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
+vorgenommen Empfängt einen Zeiger auf ein neues [ienumwbemclassobject-Objekt](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
 `authLevel`\
-[in] Die Berechtigungsstufe.
+in Die Autorisierungs Ebene.
 
 `impLevel`\
-[in] Die Identitätswechselebene.
+in Die Ebene des Identitäts Wechsels.
 
 `pCurrentEnumWbemClassObject`\
-[out] Ein Zeiger auf die zu klonende [IEnumWbemClassObject-Instanz.](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject)
+vorgenommen Ein Zeiger auf die Instanz von [ienumwbemclassobject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) , die geklont werden soll.
 
 `strUser`\
-[in] Der Benutzername. Weitere Informationen finden Sie in der [ConnectServerWmi-Funktion.](connectserverwmi.md)
+in Der Benutzername. Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.
 
 `strPassword`\
-[in] Das Kennwort. Weitere Informationen finden Sie in der [ConnectServerWmi-Funktion.](connectserverwmi.md)
+in Das Kennwort. Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.
 
 `strAuthority`\
-[in] Der Domänenname des Benutzers. Weitere Informationen finden Sie in der [ConnectServerWmi-Funktion.](connectserverwmi.md)
+in Der Domänen Name des Benutzers. Weitere Informationen finden Sie in der [connectserverwmi](connectserverwmi.md) -Funktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *PseCli.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
-|Dauerhaft  |value  |Beschreibung  |
+|Konstante  |Wert  |BESCHREIBUNG  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0x80041001 | Es ist ein allgemeines Versagen aufgetreten. |
+| `WBEM_E_FAILED` | 0x80041001 | Es ist ein allgemeiner Fehler aufgetreten. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Die RPC-Verbindung (Remote Procedure Call) zwischen dem aktuellen Prozess und WMI ist fehlgeschlagen. |
-| `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Fehler beim Remote Prozedur Aufruf (RPC)-Link zwischen dem aktuellen Prozess und WMI. |
+| `WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IEnumWbemClassObject::Clone-Methode.](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)
+Diese Funktion umschließt einen Aufrufe der [ienumwbemclassobject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) -Methode.
 
-Diese Methode macht nur eine "beste Anstrengung" Kopie. Aufgrund der dynamischen Natur vieler CIM-Objekte ist es möglich, dass der neue Enumerator nicht den gleichen Satz von Objekten wie der Quellenumerator aufgibt.
+Mit dieser Methode wird nur eine "bestmögliche" Kopie erstellt. Aufgrund der dynamischen Natur vieler CIM-Objekte ist es möglich, dass der neue Enumerator nicht denselben Satz von Objekten aufzählt wie der Quell Enumerator.
 
-Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, indem Sie die [GetErrorInfo-Funktion](geterrorinfo.md) aufrufen.
+Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, indem Sie die [GetErrorInfo](geterrorinfo.md) -Funktion aufrufen.
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel finden Sie unter die [IEnumWbemClassObject::Clone-Methode.](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone)
+Ein Beispiel finden Sie unter der [ienumwbemclassobject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) -Methode.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).
 
- **Kopfzeile:** WMINet_Utils.idl
+ **Header:** WMINet_Utils. idl
 
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Weitere Informationen
 

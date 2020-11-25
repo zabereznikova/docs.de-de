@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176889"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708477"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize-Funktion
-Gibt die Größe der Signatur mit starkem Namen zurück. `StrongNameSignatureSize`wird in der Regel von Compilern verwendet, um zu bestimmen, wie viel Speicherplatz in der Datei reserviert werden soll, wenn eine mit Verzögerung signierte Assembly erstellt wird.  
+
+Gibt die Größe der Signatur mit starkem Namen zurück. `StrongNameSignatureSize` wird in der Regel von Compilern verwendet, um zu bestimmen, wie viel Speicherplatz in der Datei reserviert werden soll, wenn eine verzögert signierte Assembly erstellt wird.  
   
- Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName::StrongNameSignatureSize-Methode.](../hosting/iclrstrongname-strongnamesignaturesize-method.md)  
+ Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,29 +38,33 @@ BOOLEAN StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbPublicKeyBlob`  
- [in] Eine Struktur vom Typ [PublicKeyBlob,](publickeyblob-structure.md) die den öffentlichen Teil des Schlüsselpaars enthält, der zum Generieren der Signatur mit starkem Namen verwendet wird.  
+ in Eine Struktur vom Typ [PublicKeyBlob](publickeyblob-structure.md) , die den öffentlichen Teil des Schlüssel Paars enthält, das zum Generieren der starken Namens Signatur verwendet wird.  
   
  `cbPublicKeyBlob`  
- [in] Die Größe von in `pbPublicKeyBlob`Bytes von .  
+ in Die Größe von in Bytes `pbPublicKeyBlob` .  
   
  `pcbSize`  
- [in] Die Anzahl der Bytes, die zum Speichern der Signatur mit starkem Namen erforderlich sind.  
+ in Die Anzahl der Bytes, die zum Speichern der starken Namens Signatur erforderlich sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`bei erfolgreichem Abschluss; andernfalls `false`.  
+
+ `true` nach erfolgreichem Abschluss: andernfalls `false` .  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn `StrongNameSignatureSize` die Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo-Funktion](strongnameerrorinfo-function.md) auf, um den zuletzt generierten Fehler abzurufen.  
+## <a name="remarks"></a>Hinweise  
+
+ Wenn die `StrongNameSignatureSize` Funktion nicht erfolgreich abgeschlossen wird, rufen Sie die [StrongNameErrorInfo](strongnameerrorinfo-function.md) -Funktion auf, um den zuletzt generierten Fehler abzurufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** StrongName.h  
+ **Header:** StrongName. h  
   
  **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-ms.openlocfilehash: 3ac8bb3a20ce82b734a572832a9cbb75fa2568c4
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2cd362279f5c5ff281b9674fe3d1e293ddbab5f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441902"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707294"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument-Methode
+
 Ruft die kleinste anfangs Linie und die größte Endzeile für die Methode in einem bestimmten Dokument ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetSourceExtentInDocument(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `document`  
  in Ein Zeiger auf das Dokument.  
   
@@ -45,11 +47,13 @@ HRESULT GetSourceExtentInDocument(
  vorgenommen Ein Zeiger auf einen `ULONG32` , der die Endzeile empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymENCUnmanagedMethod-Schnittstelle](isymencunmanagedmethod-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 196993df9058d3eb8167e0144255c5fe366c54f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707359"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset-Methode
+
 Ruft die einem Offset zugeordneten Zeilen Informationen ab. Wenn der Offset Parameter ( `dwOffset` ) kein Sequenz Punkt ist, ruft diese Methode die dem vorherigen Offset zugeordneten Zeilen Informationen ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT GetLineFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwOffset`  
  in Ein-Wert `ULONG32` , der den Offset enthält.  
   
@@ -57,11 +59,13 @@ HRESULT GetLineFromOffset(
  vorgenommen Ein Zeiger auf einen `ULONG32` , der den zugeordneten Sequenz Punkt empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymENCUnmanagedMethod-Schnittstelle](isymencunmanagedmethod-interface.md)
