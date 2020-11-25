@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 12a0792e8fafc73b480de6bacc86f98470dfedf7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9485e3ca657ab108d2bcc9d00b1c475f8ee3c086
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503288"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703953"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences-Methode
+
 Benachrichtigt den Profiler über Objekte im Speicher, auf die vom angegebenen-Objekt verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT ObjectReferences(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `objectId`  
  in Die ID des Objekts, das auf Objekte verweist.  
   
@@ -48,7 +50,8 @@ HRESULT ObjectReferences(
  `objectRefIds`  
  in Ein Array von IDs von Objekten, auf die von verwiesen wird `objectId` .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die- `ObjectReferences` Methode wird für jedes Objekt aufgerufen, das nach Abschluss eines Garbage Collection im Heap verbleiben. Wenn der Profiler einen Fehler von diesem Rückruf zurückgibt, brechen die Profil Erstellungs Dienste den Aufruf dieses Rückrufs bis zum nächsten Garbage Collection ab.  
   
  Der `ObjectReferences` Rückruf kann in Verbindung mit dem [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md) -Rückruf verwendet werden, um ein umfassendes Objekt Verweis Diagramm für die Laufzeit zu erstellen. Der Common Language Runtime (CLR) stellt sicher, dass jeder Objekt Verweis nur einmal von der-Methode gemeldet wird `ObjectReferences` .  
@@ -58,6 +61,7 @@ HRESULT ObjectReferences(
  Ein NULL-Wert `ClassId` gibt an, dass `objectId` einen Typ aufweist, der entladen wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -66,6 +70,6 @@ HRESULT ObjectReferences(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerCallback-Schnittstelle](icorprofilercallback-interface.md)

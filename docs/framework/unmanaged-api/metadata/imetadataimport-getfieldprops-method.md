@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 458a90bc47711d9f831805faa8468a49f3e0d305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703996"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps-Methode
+
 Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,6 +45,7 @@ HRESULT GetFieldProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mb`  
  in Ein FieldDef-Token, das das Feld darstellt, für das zugeordnete Metadaten zu erhalten sind.  
   
@@ -54,7 +56,7 @@ HRESULT GetFieldProps (
  vorgenommen Der Name des Felds.  
   
  `cchField`  
- in Die Größe des Puffers für *szField*in breit Zeichen.  
+ in Die Größe des Puffers für *szField* in breit Zeichen.  
   
  `pchField`  
  vorgenommen Die tatsächliche Größe des zurückgegebenen Puffers.  
@@ -78,15 +80,16 @@ HRESULT GetFieldProps (
  vorgenommen Die Größe in Zeichen von `ppValue` , oder 0 (null), wenn keine Zeichenfolge vorhanden ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

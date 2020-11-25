@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e1cd3ef78d303aaa325699e1bcdec95f077fef21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500571"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703979"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2-Funktion
+
 Benachrichtigt den Profiler, dass die gerade ausgeführte Funktion gerade einen Endaufruf einer anderen Funktion ausführt und Informationen über den Stapel Rahmen bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,7 +51,8 @@ void __stdcall FunctionTailcall2 (
 
   Der Profiler sollte dies als ein undurchsichtiges Handle behandeln, das an die Ausführungs-Engine in der [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) -Methode zurückgegeben werden kann.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die Zielfunktion des Tail-Aufrufs verwendet den aktuellen Stapel Rahmen und kehrt direkt zum Aufrufer der Funktion zurück, die den Tail-Aufruf durchgeführt hat. Dies bedeutet, dass ein [FunctionLeave2](functionleave2-function.md) -Rückruf nicht für eine Funktion ausgegeben wird, die das Ziel eines Tail-Aufrufs ist.  
   
  Der Wert des- `func` Parameters ist nicht gültig, nachdem die Funktion zurückgegeben wurde, `FunctionTailcall2` da sich der Wert ändern oder zerstört werden kann.  
@@ -68,6 +70,7 @@ void __stdcall FunctionTailcall2 (
  Außerdem darf die `FunctionTailcall2` Funktion keinen verwalteten Code aufruft oder eine verwaltete Speicher Belegung verursachen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corprof. idl  
@@ -76,7 +79,7 @@ void __stdcall FunctionTailcall2 (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [FunctionEnter2-Funktion](functionenter2-function.md)
 - [FunctionLeave2-Funktion](functionleave2-function.md)

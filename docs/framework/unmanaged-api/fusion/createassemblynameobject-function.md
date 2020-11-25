@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 995f1064c2f40005c4a19ef034d7edfd668b5d51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704161"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject-Funktion
+
 Ruft einen Schnittstellen Zeiger auf eine [IAssemblyName](iassemblyname-interface.md) -Instanz ab, die die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,11 +39,12 @@ HRESULT CreateAssemblyNameObject (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppAssemblyNameObj`  
- vorgenommen Der zurückgegebene `IAssemblyName`.  
+ vorgenommen Der zurückgegebene `IAssemblyName` .  
   
  `szAssemblyName`  
- in Der Name der Assembly, für die die neue `IAssemblyName` Instanz erstellt werden soll.  
+ in Der Name der Assembly, für die die neue Instanz erstellt werden soll `IAssemblyName` .  
   
  `dwFlags`  
  in Flags, die an den Objektkonstruktor übergeben werden sollen.  
@@ -50,16 +52,17 @@ HRESULT CreateAssemblyNameObject (
  `pvReserved`  
  [in] Für zukünftige Erweiterungen reserviert. `pvReserved` muss ein NULL-Verweis sein.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)
-- [Fusion: Globale statistische Funktionen](fusion-global-static-functions.md)
+- [Fusion – Globale statistische Funktionen](fusion-global-static-functions.md)

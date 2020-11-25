@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-ms.openlocfilehash: 031bfc3d7fcd9f1f04e616e460cb3201813eae55
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca427439f03d92b20e7714b9724d90b240e9cecb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704070"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication-Funktion
+
 Startet die Anwendung im angegebenen Netzwerkpfad, wobei die angegebenen Manifeste und sonstigen Anwendungsdaten verwendet werden.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -42,6 +43,7 @@ HRESULT CorLaunchApplication (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `dwClickOnceHost`  
  in Ein Wert der [HOST_TYPE](host-type-enumeration.md) -Enumeration, die den Typ des Hosts angibt, der die Anwendung startet.  
   
@@ -63,15 +65,16 @@ HRESULT CorLaunchApplication (
  `lpProcessInformation`  
  vorgenommen Ein Zeiger auf Informationen über den Prozess, in dem die Anwendung geladen wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)
