@@ -2,12 +2,12 @@
 title: WCF-Vereinfachungsfunktionen
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: d582c075377cf53d75ddf1bb9f37764e24e486ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8a818ec0852cfae20ef23fede04b55b08a7449a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545076"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732917"
 ---
 # <a name="wcf-simplification-features"></a>WCF-Vereinfachungsfunktionen
 
@@ -88,7 +88,7 @@ WCF bietet einen ASP.NET-Kompatibilitätsmodus, der Entwicklern beim Schreiben v
 
 - Der WCF wurde neue Unterstützung für asynchrones Streaming hinzugefügt. Um das asynchrone Streaming zu aktivieren, fügen Sie dem Diensthost das <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>-Endpunktverhalten hinzu und legen dessen <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A>-Eigenschaft auf `true` fest. Dies begünstigt die Skalierbarkeit, wenn ein Dienst gestreamte Nachrichten an mehrere Clients mit niedriger Lesegeschwindigkeit sendet. Von WCF wird nicht mehr ein Thread pro Client blockiert; der Thread steht für weitere Clients zur Verfügung.
 
-- Einschränkungen im Hinblick auf die Nachrichtenpufferung bei von IIS gehosteten Diensten wurden aufgehoben. Wenn in früheren WCF-Versionen eine Nachricht für einen IIS-gehosteten Dienst einging, der die Nachrichtenübertragung per Stream nutzte, wurde die gesamte Nachricht vor der Übertragung an WCF von ASP.NET gepuffert. Dieser Vorgang beanspruchte viel Arbeitsspeicher. Da diese Pufferung in .NET 4.5 entfernt wurde, können IIS-gehostete WCF-Dienste jetzt mit der Verarbeitung des eingehenden Datenstroms beginnen, bevor die Nachricht vollständig empfangen wurde. Das schafft die Voraussetzungen für echtes Streaming. Dadurch kann WCF sofort auf Nachrichten reagieren, was eine verbesserte Leistung bedeutet. Außerdem muss für das ASP.NET-Größenlimit für eingehende Anforderungen `maxRequestLength` kein Wert mehr angegeben werden. Wenn diese Eigenschaft festgelegt ist, wird sie ignoriert. Weitere Informationen zum `maxRequestLength` [ \<httpRuntime> Konfigurationselement](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))finden Sie unter. Sie müssen weiterhin maxzuordwedcontentlength konfigurieren. Weitere Informationen finden Sie unter Einschränkungen für [IIS-Anforderungen](/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
+- Einschränkungen im Hinblick auf die Nachrichtenpufferung bei von IIS gehosteten Diensten wurden aufgehoben. Wenn in früheren WCF-Versionen eine Nachricht für einen IIS-gehosteten Dienst einging, der die Nachrichtenübertragung per Stream nutzte, wurde die gesamte Nachricht vor der Übertragung an WCF von ASP.NET gepuffert. Dieser Vorgang beanspruchte viel Arbeitsspeicher. Diese Pufferung wurde in .NET Framework 4,5 entfernt, und jetzt können IIS-gehostete WCF-Dienste mit der Verarbeitung des eingehenden Datenstroms beginnen, bevor die gesamte Nachricht empfangen wurde. Dadurch wird das echte Streaming ermöglicht. Dadurch kann WCF sofort auf Nachrichten reagieren, was eine verbesserte Leistung bedeutet. Außerdem muss für das ASP.NET-Größenlimit für eingehende Anforderungen `maxRequestLength` kein Wert mehr angegeben werden. Wenn diese Eigenschaft festgelegt ist, wird sie ignoriert. Weitere Informationen zum `maxRequestLength` [ \<httpRuntime> Konfigurationselement](/previous-versions/dotnet/netframework-1.1/e1f13641(v=vs.71))finden Sie unter. Sie müssen weiterhin maxzuordwedcontentlength konfigurieren. Weitere Informationen finden Sie unter Einschränkungen für [IIS-Anforderungen](/previous-versions/iis/settings-schema/ms689462(v=vs.90)).
 
 ## <a name="new-transport-default-values"></a>Neue Standardwerte für Transporte
 

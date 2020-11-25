@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 60b7d77542a5065fb1e09a98e659cac17fb093e9
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 1b944034251b34350057866b2a52e63e934d72d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733346"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule-Funktion
+
 Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT CreateVersionStringFromModule (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pidDebuggee`  
  [in] Bezeichner des Prozesses, in den die Ziel-CLR geladen wird.  
   
@@ -56,6 +58,7 @@ HRESULT CreateVersionStringFromModule (
  [out] Länge der von `pBuffer` zurückgegebenen Versionszeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK  
  Die Versionszeichenfolge für die Ziel-CLR wurde erfolgreich in `pBuffer` zurückgegeben.  
   
@@ -72,15 +75,17 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` verweist auf keinen gültigen Prozess, oder anderer Fehler,  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Funktion akzeptiert einen CLR-Prozess, der von `pidDebuggee` und einem Zeichenfolgepfad identifiziert wird, der durch `szModuleName` angegeben wird. Die Versionszeichenfolge wird im Puffer zurückgegeben, auf den `pBuffer` zeigt. Diese Zeichenfolge ist für den Funktionsbenutzer nicht transparent. Das heißt, gibt es keine systeminterne Bedeutung in der Versionszeichenfolge selbst. Sie wird nur im Kontext dieser Funktion und der Funktion "| [atedebugginginterfakefromversion](createdebugginginterfacefromversion-function-for-silverlight.md)" verwendet.  
   
  Diese Funktion sollte zweimal aufgerufen werden. Übergeben Sie beim ersten Aufruf NULL für `pBuffer` und `cchBuffer`. In diesem Fall wird die für `pBuffer` erforderliche Größe des Puffers in `pdwLength` zurückgegeben. Sie können dann die Funktion ein zweites Mal aufrufen und den Puffer in `pBuffer` und dessen Größe in `cchBuffer` übergeben.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** dbgshim. h  
   
- **Bibliothek:** dbgshim. dll  
+ **Bibliothek:** dbgshim.dll  
   
  **.NET Framework Versionen:** 3,5 SP1

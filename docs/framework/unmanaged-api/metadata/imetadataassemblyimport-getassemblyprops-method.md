@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-ms.openlocfilehash: a90deaf3e9ddf326c6fca558cbb4681fc40e022d
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1e1a86cdf55812197aae653dca256fb910a7f168
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009053"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733892"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps-Methode
+
 Ruft den Satz von Eigenschaften für die Assembly mit der angegebenen Metadatensignatur ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,6 +43,7 @@ HRESULT GetAssemblyProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mda`  
  [in] Das `mdAssembly` Metadatentoken, das die Assembly darstellt, für die die Eigenschaften zu erhalten sind.  
   
@@ -70,14 +72,15 @@ HRESULT GetAssemblyProps (
  vorgenommen Flags, die die auf eine Assembly angewendeten Metadaten beschreiben. Dieser Wert ist eine Kombination aus einem oder mehreren [CorAssemblyFlags](corassemblyflags-enumeration.md) -Werten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyImport-Schnittstelle](imetadataassemblyimport-interface.md)

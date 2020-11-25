@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 1cb84b94b37a2e9e8dd4d20d09cbca82db290c0f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009449"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732776"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags-Enumeration
+
 Enthält Werte, die Lauf Zeitfunktionen einer Assembly beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`afImplicitExportedTypes`|Gibt an, dass die exportierten Typdefinitionen in den Dateien implizit sind, aus denen die Assembly besteht. In den .NET Framework Versionen 1,0 und 1,1 wird dieser Wert immer als festgelegt angenommen.|  
 |`afImplicitResources`|Gibt an, dass Ressourcen Definitionen in den Dateien implizit sind, aus denen die Assembly besteht. In den .NET Framework 1,0 und 1,1 wird dieser Wert immer als festgelegt angenommen.|  
@@ -47,18 +48,20 @@ typedef enum {
 |`afNonSideBySideMachine`|Gibt an, dass die Assembly nicht mit anderen Versionen ausgeführt werden kann, wenn Sie auf demselben Computer ausgeführt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Werte zwischen 0x0010 und 0x0070, einschließlich, werden verwendet, um die parallelen Kompatibilitäts Features der Assembly zu beschreiben, auf die verwiesen wird. Wenn keiner dieser Werte festgelegt wird, wird davon ausgegangen, dass die Assembly nebeneinander kompatibel ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

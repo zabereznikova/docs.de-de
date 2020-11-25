@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 799740aa-46ec-4532-95da-6444565b4971
 topic_type:
 - apiref
-ms.openlocfilehash: 52594c36c54c74941371f9950fbc6fb543b86de0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 426e95281b648217642ca06f04dfbd9ec991221e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733775"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime-Funktion
+
 Ermöglicht es nicht verwalteten Hosts, die Common Language Runtime (CLR) in einen Prozess zu laden.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -40,6 +41,7 @@ HRESULT CorBindToRuntime (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwszVersion`  
  [in] Eine Zeichenfolge, die die Version der zu ladenden CLR beschreibt.  
   
@@ -63,10 +65,12 @@ HRESULT CorBindToRuntime (
  `ppv`  
  [out] Der zurückgegebene Schnittstellenzeiger auf `riid`.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn `pwszVersion` eine Laufzeitversion angibt, die nicht vorhanden ist, gibt `CorBindToRuntimeEx` den HRESULT-Wert CLR_E_SHIM_RUNTIMELOAD zurück.  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Ausführungskontext und Übergabe der Windows-Identität  
+
  In Version 1 der CLR wird das <xref:System.Security.Principal.WindowsIdentity>-Objekt nicht über asynchrone Punkte wie neue Threads, Threadpools oder Timerrückrufe übergeben. In Version 2.0 der CLR umschließt ein <xref:System.Threading.ExecutionContext>-Objekt einige Informationen zum aktuell ausgeführten Thread und übergibt ihn über einen asynchronen Punkt, aber innerhalb der Anwendungsdomäne. Auf ähnliche Weise wird auch das <xref:System.Security.Principal.WindowsIdentity>-Objekt über einen asynchronen Punkt übergeben. Deshalb wird auch der aktuelle Identitätswechsel auf dem Thread (sofern vorhanden) übergeben.  
   
  Sie können den Fluss auf zwei Weisen ändern:  
@@ -81,19 +85,21 @@ HRESULT CorBindToRuntime (
   
      Der Kompatibilitätsmodus für Version 1 gilt für den gesamten Prozess und alle Anwendungsdomänen im Prozess.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  [CorBindToRuntimeEx](corbindtoruntimeex-function.md) und `CorBindToRuntime` führen denselben Vorgang aus, aber mit der- `CorBindToRuntimeEx` Funktion können Sie Flags festlegen, um das Verhalten der CLR anzugeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [CorBindToCurrentRuntime-Funktion](corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeByCfg-Funktion](corbindtoruntimebycfg-function.md)

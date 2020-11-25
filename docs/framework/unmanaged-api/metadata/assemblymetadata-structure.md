@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1af98e57-9145-4d35-bb78-77d1da7c91a5
 topic_type:
 - apiref
-ms.openlocfilehash: 5c7211fc2523b70313a1e4d4d9d2da0dcecd1d32
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8071c3f43775975de37e3255582b6fc8f13f7de3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009430"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732783"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA-Struktur
+
 Enthält Informationen über die Assembly, auf die verwiesen wird, einschließlich ihrer Version und ihrer Unterstützung für Gebiets Schemas, Prozessoren und Betriebssysteme.  
   
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +44,7 @@ typedef struct {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`usMajorVersion`|Die Hauptversionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht NULL sein. Wenn alle Bits von `usMajorVersion` festgelegt sind, wird die Hauptversion nicht angegeben.|  
 |`usMinorVersion`|Die neben Versionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht NULL sein. Wenn alle Bits von `usMinorVersion` festgelegt sind, wird die neben Version nicht angegeben.|  
@@ -57,15 +58,16 @@ typedef struct {
 |`ulOS`|Die Länge des `rOS`-Arrays.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenstrukturen](metadata-structures.md)
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

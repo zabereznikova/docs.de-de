@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: 78b30f624bd71234e8f1b56600b3a23d15fdf517
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f7aa9699e9929608c90020c6b2d66c301fc11955
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006029"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732709"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType-Enumeration
+
 Stellt Werte bereit, die den Typ der Anweisung beeinflussen, die `reloc` bei einem [callegen:: AddSectionReloc](iceegen-addsectionreloc-method.md)-Befehl ausgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,7 +51,7 @@ typedef enum  {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`srRelocAbsolute`|Generiert nur einen Abschnitt (relativ) `reloc` und sendet nichts an einen. reloc-Abschnitt.|  
 |`srRelocHighLow`|Generiert einen `reloc` für einen Speicherort mit Zeiger Größen. Dies wird abhängig von der Plattform in BASED_HIGHLOW oder BASED_DIR64 transformiert.|  
@@ -69,15 +70,16 @@ typedef enum  {
 |`srRelocPtr`|Ein-Wert, der angibt, dass der vorfixupinhalt des Arbeitsspeichers ein Zeiger anstelle eines Abschnitts Offsets ist.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b0de5f9759491f1303edc978b1548e91214daf8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733749"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps-Methode
+
 Weist Eigenschaften auf Assemblyebene zu.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,11 +37,12 @@ HRESULT SetAssemblyProps(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `AssemblyID`  
  Die ID der Assembly.  
   
  `FileToken`  
- Eine Datei, die die Eigenschaft definiert. Kann NULL sein, wenn `AssemblyID` keinen ungebundenen NetModule angibt.  
+ Eine Datei, die die Eigenschaft definiert. Kann NULL sein, wenn `AssemblyID` kein ungebundenes NetModule angibt.  
   
  `Option`  
  Gibt die Option an, die geändert werden soll.  
@@ -49,13 +51,15 @@ HRESULT SetAssemblyProps(
  Neuer Wert der Option.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

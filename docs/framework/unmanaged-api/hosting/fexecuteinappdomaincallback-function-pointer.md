@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-ms.openlocfilehash: 6fd7a19d9fc77b43bbceb1b5e5399a455429e700
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b9c6bb41b7438b9764ac2a8a7fc1677bc08557a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616150"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733684"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback-Funktionszeiger
+
 Verweist auf eine Funktion, die vom Common Language Runtime (CLR) aufgerufen wird, um verwalteten Code auszuführen.  
   
  Dieser Funktionszeiger wurde in der .NET Framework 4 als veraltet markiert.  
@@ -35,20 +36,22 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cookie`  
  in Ein Zeiger auf den nicht transparenten vom Aufrufer zugewiesenen Speicher, der den verwalteten Code enthält, der ausgeführt werden soll.  
   
  Die Zuordnung und die Lebensdauer dieses Speichers werden vom Aufrufer (d. h. der CLR) gesteuert. Dabei handelt es sich nicht um CLR-verwalteten Heap Speicher.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscorwert. dll  
+ **Bibliothek:** MSCorWks.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-ms.openlocfilehash: 36a485413490045ca49b99fca4fe5d43edc37114
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ee3ea319360bba1a113c15daf8cf143ea512e5cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213009"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733320"
 ---
 # <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue-Schnittstelle
 
@@ -27,7 +27,7 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, das von der Com
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[CreateRelocBreakpoint-Methode](icordebugheapvalue-createrelocbreakpoint-method.md)|Nicht implementiert.|  
 |[IsValid-Methode](icordebugheapvalue-isvalid-method.md)|Ruft einen Wert ab, der angibt, ob das von diesem dargestellte Objekt `ICorDebugHeapValue` gültig ist oder vom Garbage Collector freigegeben wurde. Diese Methode ist in der .NET Framework Version 2,0 veraltet.|  
@@ -38,6 +38,7 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, das von der Com
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -46,6 +47,6 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, das von der Com
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

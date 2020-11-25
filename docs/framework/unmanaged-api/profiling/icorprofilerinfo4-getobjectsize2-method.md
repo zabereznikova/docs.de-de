@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e43ed-3ee3-4395-ab14-f78b903be13e
 topic_type:
 - apiref
-ms.openlocfilehash: b605419a291f7bee76ecad7e07be9a7a989f9fe9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 960f8f1fe2315e068d599aa5a31e03f521b235a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496008"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733866"
 ---
 # <a name="icorprofilerinfo4getobjectsize2-method"></a>ICorProfilerInfo4::GetObjectSize2-Methode
+
 Gibt die Größe eines angegebenen-Objekts zurück. Ersetzt die [ICorProfilerInfo:: GetObjectSize](icorprofilerinfo-getobjectsize-method.md) -Methode durch berichtsgrößen von Objekten, die größer sind als die, die in einem-Objekt angegeben werden können `ULONG` .  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,16 +35,19 @@ HRESULT GetObjectSize2(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `objectId`  
  in Die ID des Objekts.  
   
  `pcSize`  
  vorgenommen Ein Zeiger auf die Größe des-Objekts in Bytes.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Unterschiedliche Objekte der gleichen Typen haben oft dieselbe Größe. Einige Typen, z. b. Arrays oder Zeichen folgen, können jedoch für jedes Objekt eine andere Größe aufweisen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -52,6 +56,6 @@ HRESULT GetObjectSize2(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo4-Schnittstelle](icorprofilerinfo4-interface.md)

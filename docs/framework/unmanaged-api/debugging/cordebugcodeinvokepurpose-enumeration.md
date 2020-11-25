@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 31833a2d-a0d6-48a1-b05f-995ca307a08f
 topic_type:
 - apiref
-ms.openlocfilehash: 2e59d02093b9c2e2bda72c45de25975cbbdb7a29
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cb65663ec1c1562009d0281c2e176b628b6366b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732176"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose-Aufzählung
+
 Beschreibt, warum durch eine exportierte Funktion verwalteter Code aufgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,12 +43,14 @@ typedef enum CorDebugCodeInvokePurpose
 |`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|Der verwaltete Code führt die Implementierung für eine bestimmte Schnittstellenmethode aus, die aufgerufen wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Enumeration wird von der [ICorDebugProcess6:: getexportstepinfo](icordebugprocess6-getexportstepinfo-method.md) -Methode verwendet, um Informationen über das Durchlaufen von verwaltetem Code bereitzustellen.  
   
 > [!NOTE]
 > Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

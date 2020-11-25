@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fca7b11a83b5a695feae82fe5f25218f87afbce2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732891"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName-Methode
+
 Ruft den Namen der Konstante ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cchName`  
  in Die Länge des Puffers, auf den der- `szName` Parameter verweist.  
   
@@ -46,12 +48,14 @@ HRESULT GetName(
  vorgenommen Der Puffer, in dem der Name gespeichert wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedConstant-Schnittstelle](isymunmanagedconstant-interface.md)
 - [GetSignature-Methode](isymunmanagedconstant-getsignature-method.md)

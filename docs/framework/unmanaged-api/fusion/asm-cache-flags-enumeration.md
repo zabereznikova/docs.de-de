@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c6fab627f21977e85f9885ca4b49a0276faa5ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109491"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732163"
 ---
 # <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS-Enumeration
+
 Gibt die Quelle einer Assembly an, die von [IAssemblyCacheItem im globalen Assemblycache](iassemblycacheitem-interface.md) dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,25 +39,26 @@ typedef enum {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|Listet den Cache von vorkompilierten Assemblys mithilfe von "ngen. exe" auf.|  
+|`ASM_CACHE_ZAP`|Listet den Cache von vorkompilierten Assemblys mithilfe von Ngen.exe auf.|  
 |`ASM_CACHE_GAC`|Listet den globalen Assemblycache auf.|  
 |`ASM_CACHE_DOWNLOAD`|Listet die Assemblys auf, die bei Bedarf heruntergeladen wurden oder auf die eine Schatten Kopie kopiert wurde.|  
 |`ASM_CACHE_ROOT`|Gibt an, dass die [GetCachePath](getcachepath-function.md) -Funktion den Pfad zum globalen Assemblycache für die Common Language Runtime (CLR) Version 2,0 zurückgeben soll. Nur im Kontext eines Aufrufens von [GetCachePath](getcachepath-function.md)sinnvoll.|  
 |`ASM_CACHE_ROOT_EX`|Gibt an, dass die [GetCachePath](getcachepath-function.md) -Funktion den Pfad zum globalen Assemblycache für CLR, Version 4, zurückgeben soll. Nur im Kontext eines Aufrufens von [GetCachePath](getcachepath-function.md)sinnvoll.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetCachePath-Funktion](getcachepath-function.md)
 - [IAssemblyCacheItem-Schnittstelle](iassemblycacheitem-interface.md)
-- [Fusion-Enumerationen](fusion-enumerations.md)
+- [Fusionsenumerationen](fusion-enumerations.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d48106fca6008955409581ad9ac202aebe785cb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733225"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress-Funktion
+
 Ruft die Adresse der angegebenen Funktion ab, die von der neuesten installierten Version des Common Language Runtime (CLR) exportiert wird.  
   
  Diese Funktion wurde im .NET Framework 4 als veraltet markiert.  
@@ -36,6 +37,7 @@ HRESULT GetRealProcAddress (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwszProcName`  
  in Der Name der Funktion.  
   
@@ -43,6 +45,7 @@ HRESULT GetRealProcAddress (
  vorgenommen Die Position, an der ein Zeiger auf die Adresse der Funktion empfangen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt zusätzlich zu den folgenden Werten, die in "CorError. h" definiert sind, Standard-Component Object Model (com)-Fehlercodes zurück, wie in WinError. h definiert.  
   
 |Rückgabecode|BESCHREIBUNG|  
@@ -51,15 +54,16 @@ HRESULT GetRealProcAddress (
 |E_POINTER|`ppv` ist nicht gültig.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|Die Funktion wird nicht aus der Laufzeit exportiert.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

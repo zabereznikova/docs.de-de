@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed16bb7f-4206-43a8-b9e9-c5737b69e3af
 topic_type:
 - apiref
-ms.openlocfilehash: 8f316d91aab4c3862a0ad45b41539a4b80791ab9
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 5f799c140705a5279c996b6bec90ab1f29bd42ef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732434"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale-Methode
+
 Benachrichtigt den Common Language Runtime (CLR), dass der Host den Wert des Gebiets Schema Bezeichners (der der geografischen Kultur und Sprache zugeordnet ist) in der aktuell ausgeführten Aufgabe geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetLocale (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lcid`  
  in Der Wert für den Gebiets Schema Bezeichner, der der neu zugewiesenen geografischen Kultur und Sprache zugeordnet wird.  
   
@@ -49,14 +51,16 @@ HRESULT SetLocale (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `SetLocale`bietet dem Host die Möglichkeit, alle Mechanismen auszuführen, die möglicherweise für die Synchronisierung von Gebiets Schemas erforderlich sind.  
+
+ `SetLocale` bietet dem Host die Möglichkeit, alle Mechanismen auszuführen, die möglicherweise für die Synchronisierung von Gebiets Schemas erforderlich sind.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

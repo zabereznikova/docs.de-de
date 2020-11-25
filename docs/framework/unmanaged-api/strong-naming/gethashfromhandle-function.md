@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732330"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle-Funktion
+
 Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihandle unter Verwendung des angegebenen Hashalgorithmus.  
   
  Diese Funktion ist veraltet. Verwenden Sie stattdessen die [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) -Methode.  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `hFile`  
  in Das Handle der Datei, für die der Hashwert verwendet werden soll.  
   
@@ -49,21 +51,22 @@ HRESULT GetHashFromHandle (
  vorgenommen Der zurückgegebene Hash Puffer.  
   
  `cchHash`  
- in Die angeforderte maximale Größe `pbHash`.  
+ in Die angeforderte maximale Größe von `pbHash` .  
   
  `pchHash`  
- vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash`.  
+ vorgenommen Die Größe (in Bytes) des zurückgegebenen `pbHash` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** StrongName. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [GetHashFromHandle-Methode](../hosting/iclrstrongname-gethashfromhandle-method.md)
 - [ICLRStrongName-Schnittstelle](../hosting/iclrstrongname-interface.md)

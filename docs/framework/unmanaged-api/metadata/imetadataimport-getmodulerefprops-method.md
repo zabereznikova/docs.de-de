@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 606a3f2cfba05b014960842c5db77149f449193d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503575"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733125"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps-Methode
+
 Ruft den Namen des Moduls ab, auf das vom angegebenen Metadatentoken verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT GetModuleRefProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mur`  
  in Das ModuleRef-Metadatentoken, das auf das Modul verweist, um Metadateninformationen zu erhalten  
   
@@ -50,15 +52,16 @@ HRESULT GetModuleRefProps (
  vorgenommen Die zurückgegebene Größe von `szName` in breit Zeichen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

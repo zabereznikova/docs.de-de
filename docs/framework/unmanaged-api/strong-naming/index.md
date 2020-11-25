@@ -6,14 +6,15 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e431f3a41fadb7247f20d7ab9bb9120e827b0cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140630"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732293"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Verwenden von starken Namen (Referenz zur nicht verwalteten API)
+
 Die API für starke Namen ermöglicht es einem Client, die starke Namenssignierung für Assemblys zu verwalten.  
   
  Beim Signieren einer Assembly mit einem starken Namen wird der Datei, die das Assemblymanifest enthält, eine Verschlüsselung mit einem öffentlichen Schlüssel hinzugefügt. Das Signieren mit starkem Namen gewährleistet die Eindeutigkeit der Namen, verhindert das Vortäuschen von Namen (Spoofing) und stellt Aufrufern beim Auflösen eines Verweises eine eindeutige Identität bereit. Mit einem starken Namen ist jedoch keine Vertrauensebene verknüpft.  

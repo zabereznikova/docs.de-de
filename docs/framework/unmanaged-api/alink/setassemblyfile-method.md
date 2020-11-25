@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a912787-f139-43ca-a841-8bbda3107ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 1db4c4ab7e47e223a492e08297ac3cedcb3a27eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45eed17b91f70d4188d1d89fc91a41455f3e845b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732644"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile-Methode
+
 Weist den Namen der Assembly zu, die erstellt werden soll. Nicht für die Verwendung beim Erstellen von ungebundenen Modulen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT SetAssemblyFile(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pszFilename`  
  Der voll qualifizierte Name der Manifest-Datei.  
   
@@ -49,13 +51,15 @@ HRESULT SetAssemblyFile(
  Zeiger auf die ID der resultierenden Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
-## <a name="requirements"></a>Voraussetzungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  Erfordert Alink. h.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IALink-Schnittstelle](ialink-interface.md)
 - [IALink2-Schnittstelle](ialink2-interface.md)
-- [Alink-API](index.md)
+- [ALink-API](index.md)

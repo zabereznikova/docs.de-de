@@ -1,17 +1,17 @@
 ---
 title: Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
-description: Lesen Sie eine Zusammenfassung, und sehen Sie sich die Links zur Kompatibilität und Migration der Code Zugriffssicherheit in .NET 4 an.
+description: Lesen Sie eine Zusammenfassung, und sehen Sie sich die Links zur Kompatibilität und Migration der Code Zugriffssicherheit in .NET Framework 4 an.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281731"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733385"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 
@@ -73,7 +73,7 @@ Im Folgenden sind Beispiele dafür aufgeführt:
 
 Mehrere Überladungen beim Laden einer Assembly generieren Fehler aufgrund ihrer impliziten Verwendung der CAS-Richtlinie. Diese Überladungen nehmen einen Parameter <xref:System.Security.Policy.Evidence> an, der verwendet wird, um die CAS-Richtlinie aufzulösen und einen Berechtigungssatz für eine Assembly bereitzustellen.
 
-Die folgende Auflistung enthält einige Beispiele: Die veralteten Überladungen sind die Überladungen, die <xref:System.Security.Policy.Evidence> als Parameter annehmen:
+Beispiele: Die veralteten Überladungen sind die Überladungen, die <xref:System.Security.Policy.Evidence> als Parameter annehmen:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 

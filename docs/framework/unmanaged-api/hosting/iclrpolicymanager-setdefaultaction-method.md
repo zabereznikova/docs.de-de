@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-ms.openlocfilehash: c0d8b66c8b85710b0365bfc410188c81431720ff
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 93070690ea6b30b22949953f1ed0b8c5b1e92764
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703439"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732476"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction-Methode
+
 Gibt die Richtlinien Aktion an, die vom Common Language Runtime (CLR) ausgeführt werden soll, wenn der angegebene Vorgang auftritt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT SetDefaultAction (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `operation`  
  in Einer der [eclroperations](eclroperation-enumeration.md) -Werte, der die Aktion angibt, für die das CLR-Verhalten angepasst werden soll.  
   
@@ -45,7 +47,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetDefaultAction` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -54,9 +56,10 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|`action`Für das wurde ein ungültiges angegeben `operation` , oder für wurde ein ungültiger Wert angegeben `operation` .|  
   
 ## <a name="remarks"></a>Hinweise  
- Nicht alle Richtlinien Aktionswerte können als Standardverhalten für CLR-Vorgänge angegeben werden. `SetDefaultAction`kann in der Regel nur zum eskalieren des Verhaltens verwendet werden. Beispielsweise kann ein Host angeben, dass Thread Abbrüche in grobe Thread Abbrüche umgewandelt werden, aber nicht das Gegenteil angeben können. In der folgenden Tabelle werden die gültigen `action` Werte für die einzelnen möglichen Werte beschrieben `operation` .  
+
+ Nicht alle Richtlinien Aktionswerte können als Standardverhalten für CLR-Vorgänge angegeben werden. `SetDefaultAction` kann in der Regel nur zum eskalieren des Verhaltens verwendet werden. Beispielsweise kann ein Host angeben, dass Thread Abbrüche in grobe Thread Abbrüche umgewandelt werden, aber nicht das Gegenteil angeben können. In der folgenden Tabelle werden die gültigen `action` Werte für die einzelnen möglichen Werte beschrieben `operation` .  
   
-|Wert für`operation`|Gültige Werte für `action`|  
+|Wert für `operation`|Gültige Werte für `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eabortthread<br />-erudeabortthread<br />-eUnloadAppDomain<br />-erudeunloadappdomain<br />-eexitprocess<br />-efastexitprocess<br />-eRudeExitProcess<br />-edisableruntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-erudeabortthread<br />-eUnloadAppDomain<br />-erudeunloadappdomain<br />-eexitprocess<br />-efastexitprocess<br />-eRudeExitProcess<br />-edisableruntime|  
@@ -65,16 +68,17 @@ HRESULT SetDefaultAction (
 |OPR_ProcessExit|-eexitprocess<br />-efastexitprocess<br />-eRudeExitProcess<br />-edisableruntime|  
 |OPR_FinalizerRun|-enoaction<br />-eabortthread<br />-erudeabortthread<br />-eUnloadAppDomain<br />-erudeunloadappdomain<br />-eexitprocess<br />-efastexitprocess<br />-eRudeExitProcess<br />-edisableruntime|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [EClrOperation-Enumeration](eclroperation-enumeration.md)
 - [EPolicyAction-Enumeration](epolicyaction-enumeration.md)

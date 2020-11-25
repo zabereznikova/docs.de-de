@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732135"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS-Enumeration
-Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Anzeigename von der [IAssemblyName::GetDisplayName-Methode](iassemblyname-getdisplayname-method.md) abgerufen wird.  
+
+Gibt die Version, den Build, die Kultur, die Signatur usw. der Assembly an, deren Anzeige Name von der [IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md) -Methode abgerufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,17 +50,19 @@ typedef enum {
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
- `ASM_DISPLAYF_FULL`spiegelt alle Änderungen wider, die an der Version des [IAssemblyName-Objekts](iassemblyname-interface.md) vorgenommen wurden. Gehen Sie nicht davon aus, dass der zurückgegebene Wert unveränderlich ist.  
+## <a name="remarks"></a>Hinweise  
+
+ `ASM_DISPLAYF_FULL` spiegelt alle Änderungen wider, die an der Version des [IAssemblyName](iassemblyname-interface.md) -Objekts vorgenommen wurden. Gehen Sie nicht davon aus, dass der zurückgegebene Wert unveränderlich ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** Fusion.h  
+ **Header:** Fusion. h  
   
  **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

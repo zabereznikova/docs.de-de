@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 137b2e30916cb1934d4389c5668bfb7eb5066064
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 21b01156afceb24ab5c132894fae6922d7b97e59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617229"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733294"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory-Funktion
+
 Gibt das Installationsverzeichnis des Common Language Runtime (CLR) zurück, das in den Prozess geladen wird. Das Installationsverzeichnis ist voll qualifiziert, z. b. "c:\WINDOWS\Microsoft.NET\Framework\v1.0.3705".  
   
  Diese Funktion ist als veraltet markiert. Sie wird durch die [iclrruntimumfo:: getruntimedirectory](iclrruntimeinfo-getruntimedirectory-method.md) -Methode abgelöst, die in der .NET Framework 4 bereitgestellt wird.  
@@ -38,6 +39,7 @@ HRESULT GetCORSystemDirectory (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbuffer`  
  vorgenommen Ein Puffer, in dem die Laufzeit eine Zeichenfolge zurückgibt, die den voll qualifizierten Namen des Installationsverzeichnisses für die Laufzeit enthält, die in den Prozess geladen wird. Wenn die Laufzeit noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die aktuelle Version der Laufzeit zurück, die auf dem Computer installiert ist.  
   
@@ -52,15 +54,16 @@ HRESULT GetCORSystemDirectory (
 > [!CAUTION]
 > Verwenden Sie diese Funktion nicht in Prozessen, in denen Version 4 der CLR ausgeführt wird. Wenn eine frühere Version der CLR auf dem Computer installiert ist, gibt diese Funktion das Installationsverzeichnis für diese Version zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md)

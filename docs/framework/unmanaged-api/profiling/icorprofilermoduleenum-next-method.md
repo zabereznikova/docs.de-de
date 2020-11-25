@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 7a3ad94a4149d6ebb70e077926771e28d7f82779
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94c2c159cf386e00dfc0d1df97536d7ade53407e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732943"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next-Methode
+
 Ruft die angegebene Anzahl von zusammenhängenden Modulen aus einer sequenziellen Auflistung von Modulen ab der Position ab, die der Enumerator aktuell in der Sequenz hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT Next([in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  [in] Die Anzahl von abzurufenden Modulen.  
   
@@ -45,6 +47,7 @@ HRESULT Next([in]  ULONG      celt,
  [out] Ein Zeiger auf die Anzahl von Elementen, die tatsächlich im `ids`-Array zurückgegeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -53,6 +56,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_FALSE|Es wurden weniger als `celt`-Elemente zurückgegeben, wodurch angegeben ist, dass die Enumeration abgeschlossen ist.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -61,7 +65,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerModuleEnum-Schnittstelle](icorprofilermoduleenum-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

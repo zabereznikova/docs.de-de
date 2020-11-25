@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501650"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733632"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName-Schnittstelle
+
 Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit starken Namen bereit. Alle `ICLRStrongName` Methoden geben Standard-com-HRESULTs zurück.  
   
 ## <a name="methods"></a>Methoden  
@@ -54,19 +55,21 @@ Stellt grundlegende globale statische Funktionen zum Signieren von Assemblys mit
 |[StrongNameTokenFromAssemblyEx-Methode](iclrstrongname-strongnametokenfromassemblyex-method.md)|Erstellt ein Token mit starkem Namen aus der angegebenen Assemblydatei und gibt den öffentlichen Schlüssel zurück.|  
 |[StrongNameTokenFromPublicKey-Methode](iclrstrongname-strongnametokenfrompublickey-method.md)|Ruft ein Token ab, das einen öffentlichen Schlüssel darstellt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Sie können eine Instanz von abrufen, `ICLRStrongName` indem Sie die [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) -Methode mithilfe von `CLSID_CLRStrongName` und `IID_ICLRStrongName` als Parameter aufrufen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

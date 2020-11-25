@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03adaa9a-2beb-49b3-b2c4-6b4fc3f10715
 topic_type:
 - apiref
-ms.openlocfilehash: e6ab7c7af1cf9f30f6708c4e970db619ca071343
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a426fca1b7ca4bfb9cbb30a221859f7c114db682
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762772"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732423"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale-Methode
+
 Benachrichtigt den Common Language Runtime (CLR), dass der Host das Gebiets Schema der Benutzeroberfläche (UI) für den aktuell ausgeführten Task geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT SetUILocale (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `lcid`  
  in Der Wert für den Gebiets Schema Bezeichner, der der neu zugewiesenen geografischen Kultur und Sprache für die Benutzeroberfläche zugeordnet ist.  
   
@@ -41,7 +43,7 @@ HRESULT SetUILocale (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`SetUILocale`wurde erfolgreich zurückgegeben.|  
+|S_OK|`SetUILocale` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,14 +51,16 @@ HRESULT SetUILocale (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `SetUILocale`bietet dem Host die Möglichkeit, alle Mechanismen auszuführen, die möglicherweise für die Synchronisierung von Gebiets Schemas vorhanden sind.  
+
+ `SetUILocale` bietet dem Host die Möglichkeit, alle Mechanismen auszuführen, die möglicherweise für die Synchronisierung von Gebiets Schemas vorhanden sind.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

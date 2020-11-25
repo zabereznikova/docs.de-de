@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: ce5ba888-5fbe-4efd-91cf-f0ff94d8428b
 topic_type:
 - apiref
-ms.openlocfilehash: 59578e1d3a66809c86f7daad1b208df2ae09568d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f08fbbf9c8be16dff092327713e731c5aa14661
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108030"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732871"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity-Schnittstelle
+
 Stellt die eindeutige Signatur des Codes dar, der die Anwendung im aktuellen Gültigkeitsbereich definiert.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf ein neues `IDefinitionIdentity` Objekt ab, das mit diesem `IDefinitionIdentity`identisch ist, mit Ausnahme der angegebenen Attribut Änderungen.|  
-|`IDefinitionIdentity::EnumAttributes`|Ruft einen Schnittstellen Zeiger auf ein [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) -Objekt ab, das die diesem `IDefinitionIdentity`zugeordneten Attribute enthält.|  
+|`IDefinitionIdentity::Clone`|Ruft einen Schnittstellen Zeiger auf ein neues-Objekt ab, `IDefinitionIdentity` das mit diesem identisch ist `IDefinitionIdentity` , mit Ausnahme der angegebenen Attribut Änderungen.|  
+|`IDefinitionIdentity::EnumAttributes`|Ruft einen Schnittstellen Zeiger auf ein [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) -Objekt ab, das die diesem zugeordneten Attribute enthält `IDefinitionIdentity` .|  
 |`IDefinitionIdentity::GetAttribute`|Ruft den Wert des Attributs mit dem angegebenen Namen im angegebenen Namespace ab.|  
 |`IDefinitionIdentity::SetAttribute`|Legt das Attribut mit dem angegebenen Namen im angegebenen Namespace auf den angegebenen Wert fest.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Isolation. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Fusion-Schnittstellen](fusion-interfaces.md)

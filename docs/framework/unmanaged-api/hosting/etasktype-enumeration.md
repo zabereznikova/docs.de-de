@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493317"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733697"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType-Enumeration
+
 Enthält Werte, die den Typ der Aufgabe angeben, die durch eine [ICLRTask](iclrtask-interface.md) -oder [IHostTask](ihosttask-interface.md) -Schnittstelle dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,7 +45,7 @@ typedef enum ETaskType {
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`TT_ADUNLOAD`|Die-Schnittstelle stellt eine Aufgabe zum Entladen einer Anwendungsdomäne dar.|  
 |`TT_DEBUGGERHELPER`|Die-Schnittstelle stellt eine Debugger-hilfsaufgabe dar.|  
@@ -59,14 +60,15 @@ typedef enum ETaskType {
 |`TT_USER`|Die-Schnittstelle stellt eine Benutzer Aufgabe dar.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Mscoree. dll  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Enumerationen](hosting-enumerations.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: def77bb64e21b1421983cf263d488ecc1ddb9452
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ed3c20fe8272ca3205079d26df0b7bde12e58307
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009318"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732696"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString-Methode
+
 Ruft ein Metadatentoken für die angegebene Literalzeichenfolge ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT DefineUserString (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `szString`  
  in Die zu Speicher-Benutzer Zeichenfolge.  
   
@@ -46,15 +48,16 @@ HRESULT DefineUserString (
  vorgenommen Das zugewiesene Zeichen folgen Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

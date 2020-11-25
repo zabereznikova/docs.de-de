@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-ms.openlocfilehash: 9cf9d48bf50ffc1fc56270c13215acfef6d9c3af
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 192163ed8af680e39f7f3a03aee3f46546bc7450
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504055"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732072"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface-Methode
+
 Lädt die CLR in den aktuellen Prozess und gibt Lauf Zeit Schnittstellen Zeiger zurück, z. [b. ICLRRuntimeHost](iclrruntimehost-interface.md), [ICLRStrongName](iclrstrongname-interface.md)und [IMetaDataDispenserEx](../metadata/imetadatadispenser-interface.md).  
   
  Diese Methode ersetzt alle *- `CorBindTo` Funktionen im Abschnitt [Veraltete CLR-Hostingfunktionen](deprecated-clr-hosting-functions.md) .  
@@ -37,6 +38,7 @@ HRESULT GetInterface(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `rclsid`  
  in Die CLSID-Schnittstelle für die Co-Klasse.  
   
@@ -47,6 +49,7 @@ HRESULT GetInterface(
  vorgenommen Ein Zeiger auf die abgefragte Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -56,7 +59,8 @@ HRESULT GetInterface(
 |E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die Anforderung zu verarbeiten.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Eine andere Laufzeit wurde bereits an die Legacy-Aktivierungs Richtlinie der CLR-Version 2 gebunden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Diese Methode bewirkt, dass die CLR geladen, aber nicht initialisiert wird.  
   
  In der folgenden Tabelle werden die unterstützten Kombinationen für `rclsid` und angezeigt `riid` .  
@@ -73,15 +77,16 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRRuntimeInfo-Schnittstelle](iclrruntimeinfo-interface.md)
 - [Hosten von Schnittstellen](hosting-interfaces.md)

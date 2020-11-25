@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733515"
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
 
@@ -26,6 +26,7 @@ Es gibt zwei Grundarten von Auflistungen: generische Auflistungen und nicht gene
 Ab .NET Framework 4 stellen die Auflistungen im <xref:System.Collections.Concurrent>-Namespace effiziente threadsichere Vorgänge für den Zugriff auf Auflistungselemente aus mehreren Threads bereit. Die unveränderlichen Sammlungsklassen im Namespace <xref:System.Collections.Immutable> ([NuGet-Paket](https://www.nuget.org/packages/System.Collections.Immutable)) sind grundsätzlich threadsicher, da Vorgänge mit einer Kopie der ursprünglichen Sammlung ausgeführt werden und die ursprüngliche Sammlung nicht geändert werden kann.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>Allgemeine Auflistungsfunktionen
 
 Alle Sammlungen bieten Methoden zum Hinzufügen, Entfernen oder Suchen von Elementen in der Sammlung. Darüber hinaus teilen sich alle Auflistungen, die die <xref:System.Collections.ICollection>-Schnittstelle oder die <xref:System.Collections.Generic.ICollection%601>-Schnittstelle direkt oder indirekt implementieren, diese Funktionen:
@@ -57,6 +58,7 @@ Viele Auflistungsklassen enthalten außerdem die folgenden Funktionen:
     Nicht generische Auflistungstypen im <xref:System.Collections>-Namespace bieten ein gewisses Maß an Thread-Sicherheit durch die Synchronisierung; in der Regel werden sie durch die <xref:System.Collections.ICollection.SyncRoot%2A>- und <xref:System.Collections.ICollection.IsSynchronized%2A>-Member verfügbar gemacht. Diese Auflistungen sind nicht standardmäßig Thread-sicher. Wenn Sie skalierbaren und effizienten Multithreadzugriff auf eine Auflistung benötigen, verwenden Sie eine der Klassen im <xref:System.Collections.Concurrent>-Namespace oder ziehen Sie den Einsatz einer unveränderlichen Auflistung in Erwägung. Weitere Informationen finden Sie unter [Threadsichere Auflistungen](thread-safe/index.md).
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>Auswählen einer Sammlung
 
 Im Allgemeinen sollten Sie generische Auflistungen verwenden. Die folgende Tabelle beschreibt einige häufig auftretende Auflistungsszenarios sowie die Auflistungsklassen, die Sie für diese Szenarien verwenden können. Wenn Sie sich mit der Arbeit mit generischen Auflistungen noch nicht auskennen, hilft Ihnen diese Tabelle bei der Auswahl der generischen Auflistung, die am besten für Ihre Aufgabe geeignet ist.
@@ -94,6 +96,7 @@ Eine `List<T>`-Klasse kann effizient mithilfe einer `for`-Schleife oder einer `f
 Außerdem ist `SortedSet<T>` genauso komplex wie `ImmutableSortedSet<T>`. Das liegt daran, dass beide binäre Strukturen verwenden. Der wesentliche Unterschied besteht darin, dass `ImmutableSortedSet<T>` eine unveränderliche binäre Struktur verwendet. Da `ImmutableSortedSet<T>` auch eine <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType>-Klasse bietet, die Mutation zulässt, können Sie sowohl von Unveränderlichkeit als auch von guten Leistungen profitieren.
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>Verwandte Themen
 
 |Titel|Beschreibung|
@@ -108,7 +111,9 @@ Außerdem ist `SortedSet<T>` genauso komplex wie `ImmutableSortedSet<T>`. Das li
 |System.Collections.Immutable|Enthält einführende Informationen zu unveränderlichen Auflistungen und Links zu den Auflistungstypen.|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>Referenz
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

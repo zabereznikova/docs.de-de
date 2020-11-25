@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3237b67f8f711e9ef213d6fc66f1513c534fbdeb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503614"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733203"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps-Methode
+
 Ruft Metadaten ab, die dem Element zugeordnet sind, auf das durch das angegebene Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT GetMemberRefProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `mr`  
  in Das Element, für das die zugeordneten Metadaten zurückgegeben werden sollen.  
   
@@ -62,15 +64,16 @@ HRESULT GetMemberRefProps (
  vorgenommen Die Größe von in Bytes `ppvSigBlob` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](imetadataimport2-interface.md)

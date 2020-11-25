@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b85a7893cf5271c65bc842bb6ea598c825225376
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495722"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733814"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert-Methode
+
 Setzt alle Instanzen der angegebenen Funktionen auf die ursprünglichen Versionen zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT RequestRevert (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `cFunctions`  
  [in] Die Anzahl der zurückzusetzenden Funktionen.  
   
@@ -49,6 +51,7 @@ HRESULT RequestRevert (
  [out] Ein Array von HRESULTs, das im Abschnitt "Status HRESULTs" weiter unten in diesem Thema aufgeführt ist. Jedes HRESULT gibt das erfolgreiche oder fehlgeschlagene Zurücksetzen der einzelnen Funktionen an, die in den parallelen Arrays `moduleIds` und `methodIds` angegeben sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -68,12 +71,14 @@ HRESULT RequestRevert (
 |CORPROF_E_DATAINCOMPLETE|Das Modul ist noch nicht vollständig geladen, oder es wird gerade entladen.|  
 |CORPROF_E_MODULE_IS_DYNAMIC|Das angegebene Modul wurde dynamisch generiert (z. B. durch `Reflection.Emit`). Daher wird es von dieser Methode nicht unterstützt.|  
 |CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|Die angegebene Funktion konnte von der CLR nicht zurückgesetzt werden, da keine entsprechende aktive Neukompilierungsanforderung gefunden wurde. Entweder wurde die Neukompilierung nie angefordert, oder die Funktion wurde bereits zurückgesetzt.|  
-|Andere|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Wenn beispielsweise ein Systemaufruf zum Ändern des Zugriffsschutz einer Speicherseite fehlschlägt, wird der Betriebssystemfehler angezeigt.|  
+|Sonstiges|Das Betriebssystem hat einen Fehler außerhalb der Kontrolle der CLR zurückgegeben. Wenn beispielsweise ein Systemaufruf zum Ändern des Zugriffsschutz einer Speicherseite fehlschlägt, wird der Betriebssystemfehler angezeigt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Beim nächsten Aufruf einer der zurückgesetzten Funktionsinstanzen werden die ursprünglichen Versionen der Funktionen ausgeführt. Wenn eine Funktion bereits ausgeführt wird, wird die Ausführung der aktiven Version abgeschlossen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -82,7 +87,7 @@ HRESULT RequestRevert (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo4-Schnittstelle](icorprofilerinfo4-interface.md)
 - [Profilerstellungsschnittstellen](profiling-interfaces.md)

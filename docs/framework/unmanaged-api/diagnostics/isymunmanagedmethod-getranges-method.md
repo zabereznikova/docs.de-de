@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8ed492b573215736c82ab6c231cc5f2e188ea013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615175"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732150"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges-Methode
+
 Gibt ein Array von Start-und Endoffset Paaren zurück, die den Bereichen der Microsoft Intermediate Language (MSIL) entsprechen, die von der Position innerhalb dieser Methode abgedeckt werden, wenn eine Position in einem Dokument verfügbar ist. Das Array ist ein Array aus ganzen Zahlen und hat das Format [Start, End, Start, End]. Die Anzahl der Bereichs Paare ist die Länge des Arrays dividiert durch 2.  
   
 ## <a name="syntax"></a>Syntax  
@@ -39,6 +40,7 @@ HRESULT GetRanges(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `document`  
  in Das Dokument, für das der Offset angefordert wird.  
   
@@ -58,11 +60,13 @@ HRESULT GetRanges(
  vorgenommen Ein Zeiger auf den Puffer, der die Bereiche empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

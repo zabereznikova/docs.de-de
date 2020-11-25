@@ -18,14 +18,15 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-ms.openlocfilehash: d5eedc34b75d3a0c02969c06454b0f7ec942ed17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90abfcd573795ae529714e21b13f90d6e15c7dad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732267"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo-Funktion
+
 Ruft den letzten Fehlercode ab, der von einer der Funktionen mit starkem Namen ausgelöst wurde.  
   
  Diese Funktion ist veraltet.  
@@ -37,16 +38,19 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der letzte COM-Fehlercode, der durch eine der Funktionen mit starkem Namen festgelegt wurde.  
+
+ Der letzte com-Fehlercode, der von einer der Funktionen für starke Namen festgelegt wurde.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die meisten der Methoden mit `true` `false` starkem Namen geben einen einfachen oder Hinweis auf einen erfolgreichen Abschluss zurück. Verwenden `StrongNameErrorInfo` Sie die Funktion, um ein HRESULT abzurufen, das den letzten Fehler angibt, der von den Funktionen des starken Namens generiert wurde.  
+## <a name="remarks"></a>Hinweise  
+
+ Die meisten der Methoden für starke Namen geben eine `true` einfache `false` Angabe oder einen Hinweis auf einen erfolgreichen Abschluss zurück. Verwenden Sie die- `StrongNameErrorInfo` Funktion, um ein HRESULT abzurufen, das den letzten Fehler angibt, der von den Funktionen für starke Namen generiert wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** StrongName.h  
+ **Header:** StrongName. h  
   
  **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
