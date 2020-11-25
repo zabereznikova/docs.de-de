@@ -6,14 +6,15 @@ helpviewer_keywords:
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-ms.openlocfilehash: 6f22878a9ddfb394f6705a335930ef2cc270895f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d41467b971e43ca9b22c59e3b64bdd45d16c740b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734399"
 ---
 # <a name="exception-throwing"></a>Auslösen von Ausnahmen
+
 Die in diesem Abschnitt beschriebenen Richtlinien zum Auslösen von Ausnahmen erfordern eine gute Definition der Bedeutung von Ausführungsfehlern. Ein Ausführungsfehler tritt auf, wenn ein Member nicht die Aufgaben ausführen kann, die er ausführen soll (was der Elementname impliziert). Wenn die Methode beispielsweise `OpenFile` kein geöffnetes Datei Handle an den Aufrufer zurückgeben kann, wird Sie als Ausführungsfehler betrachtet.
 
  Die meisten Entwickler sind mit der Verwendung von Ausnahmen für Verwendungs Fehler wie der Division durch Null oder NULL-Verweise vertraut. Im Framework werden Ausnahmen für alle Fehlerbedingungen verwendet, einschließlich Ausführungsfehlern.
@@ -62,7 +63,7 @@ Die in diesem Abschnitt beschriebenen Richtlinien zum Auslösen von Ausnahmen er
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwurfsrichtlinien für Ausnahmen](exceptions.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: acd74cb5-7e22-4a07-83c3-82288e1abd9f
 topic_type:
 - apiref
-ms.openlocfilehash: 8d18e6c1dca7f52b17c19f4638410a08866905f7
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 5231db8de6129ed593e4e0d508b312b7034c01f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804800"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733905"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind-Methode
+
 Bindet das angegebene Handle an einen e/a-Abschlussport, der durch einen früheren Aufrufen von " [kreateiocompletionport](ihostiocompletionmanager-createiocompletionport-method.md)" erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT Bind (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `hPort`  
  in Der e/a-Abschlussport, an den gebunden werden soll `hHandle` . Wenn der Wert von `hPort` NULL ist, `hHandle` wird an den Standard-e/a-Abschlussport gebunden.  
   
@@ -45,7 +47,7 @@ HRESULT Bind (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`Bind`wurde erfolgreich zurückgegeben.|  
+|S_OK|`Bind` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -53,17 +55,19 @@ HRESULT Bind (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Ein e/a-Abschlussport wird mithilfe eines Aufrufes erstellt `CreateIoCompletionPort` . Die CLR ruft `Bind` auf, um ein Handle an diesen Port zu binden.  
   
 > [!NOTE]
 > Wenn eine e/a-Anforderung abgeschlossen ist, muss der Host die [ICLRIoCompletionManager:: OnComplete](iclriocompletionmanager-oncomplete-method.md) -Methode abrufen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

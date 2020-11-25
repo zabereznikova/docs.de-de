@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734425"
 ---
 # <a name="equality-operators"></a>Gleichheitsoperatoren
+
 In diesem Abschnitt wird das Überladen von Gleichheits Operatoren erläutert und `operator==` `operator!=` als Gleichheits Operatoren bezeichnet.
 
  ❌ Überladen Sie nicht einen der Gleichheits Operatoren und nicht den anderen.
@@ -29,11 +30,13 @@ In diesem Abschnitt wird das Überladen von Gleichheits Operatoren erläutert un
  Geben Sie beispielsweise false zurück, wenn eines der Argumente NULL ist, anstatt auszulösen `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Gleichheits Operatoren für Werttypen
+
  ✔️ überladen die Gleichheits Operatoren für Werttypen, wenn die Gleichheit sinnvoll ist.
 
  In den meisten Programmiersprachen gibt es keine Standard Implementierung von `operator==` für Werttypen.
 
 ## <a name="equality-operators-on-reference-types"></a>Gleichheits Operatoren für Verweis Typen
+
  ❌ Vermeiden Sie das Überladen von Gleichheits Operatoren für änderbare Verweis Typen.
 
  Viele Sprachen verfügen über integrierte Gleichheits Operatoren für Verweis Typen. Die integrierten Operatoren implementieren in der Regel die Verweis Gleichheit, und viele Entwickler sind überrascht, wenn das Standardverhalten in den Wert Gleichheit geändert wird.
@@ -46,7 +49,7 @@ In diesem Abschnitt wird das Überladen von Gleichheits Operatoren erläutert un
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Verwendungs Richtlinien](usage-guidelines.md)

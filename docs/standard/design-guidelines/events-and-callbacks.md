@@ -7,14 +7,15 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 82c1df01197e04d14436b6e5b3b2c6aaa249add2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c63a88cb4e500504f993352a03478f40cad58400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821228"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734730"
 ---
 # <a name="events-and-callbacks"></a>Ereignisse und Rückrufe
+
 Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegaten den Benutzercode aufrufen kann. Diese Delegaten werden in der Regel über einen Parameter einer Methode an das Framework übergeben.
 
  Ereignisse sind ein Sonderfall von Rückrufen, die eine bequeme und konsistente Syntax für die Bereitstellung des Delegaten (eines Ereignis Handlers) unterstützen. Außerdem bieten die Visual Studio-Anweisungs Vervollständigung und Designer Hilfe bei der Verwendung von ereignisbasierten APIs. (Siehe [Ereignis Entwurf](event.md).)
@@ -41,7 +42,7 @@ Rückrufe sind Erweiterungs Punkte, mit denen ein Framework über einen Delegate
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)
 - [Framework-Entwurfs Richtlinien](index.md)

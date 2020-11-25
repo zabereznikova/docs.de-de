@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821332"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734412"
 ---
 # <a name="event-design"></a>Ereignisentwurf
+
 Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, die dem Framework das Aufrufen von Benutzercode ermöglichen). Andere Rückruf Mechanismen beinhalten Member, die Delegaten, virtuelle Member und Schnittstellen basierte Plug-ins nutzen. Daten aus Nutzbarkeits Studien zeigen an, dass die Mehrzahl der Entwickler die Verwendung von Ereignissen leichter machen, als Sie mit den anderen Rückruf Mechanismen arbeiten. Ereignisse sind gut in Visual Studio und viele Sprachen integriert.
 
  Es ist wichtig zu beachten, dass es zwei Gruppen von Ereignissen gibt: Ereignisse, die vor dem Systemwechsel ausgelöst werden, als präereignisse bezeichnet werden, und Ereignisse, die nach einem Zustands Wechsel ausgelöst werden, die als nach Ereignissen bezeichnet werden. Ein Beispiel für ein präereignis wäre `Form.Closing` , das ausgelöst wird, bevor ein Formular geschlossen wird. Ein Beispiel für ein Post-Ereignis wäre `Form.Closed` , das ausgelöst wird, nachdem ein Formular geschlossen wurde.
@@ -52,6 +53,7 @@ Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, d
  Verwenden Sie oder die zugehörige <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> Unterklasse als Ereignis Argument, damit der Endbenutzer Ereignisse abbrechen kann.
 
 ### <a name="custom-event-handler-design"></a>Design des benutzerdefinierten Ereignis Handlers
+
  Es gibt Fälle, in denen nicht `EventHandler<T>` verwendet werden kann, z. b. wenn das Framework mit früheren Versionen der CLR arbeiten muss, die keine Generika unterstützen. In solchen Fällen müssen Sie möglicherweise einen benutzerdefinierten Ereignishandlerdelegaten entwerfen und entwickeln.
 
  ✔️ den Rückgabetyp "void" für Ereignishandler verwenden.
@@ -68,7 +70,7 @@ Ereignisse sind die am häufigsten verwendete Form von Rückrufe (-Konstrukte, d
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfs Richtlinien für Member](member.md)
 - [Framework-Entwurfs Richtlinien](index.md)

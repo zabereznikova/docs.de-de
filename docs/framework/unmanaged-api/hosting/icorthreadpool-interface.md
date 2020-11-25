@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18485a27-cae3-4c6a-baa8-f7df601122d5
 topic_type:
 - apiref
-ms.openlocfilehash: c50c109dc786a0749cca1543d10b7d172e03f0b1
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2be1c5273a5450ce0f793ffa1fc10746e2f1161f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733944"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool-Schnittstelle
+
 Stellt Methoden für den Zugriff auf den Thread Pool bereit.  
   
 > [!NOTE]
@@ -43,15 +44,16 @@ Stellt Methoden für den Zugriff auf den Thread Pool bereit.
 |[CorGetMaxThreads-Methode](icorthreadpool-corgetmaxthreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
 |[CorGetAvailableThreads-Methode](icorthreadpool-corgetavailablethreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)

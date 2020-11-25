@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-ms.openlocfilehash: 81936052c3fa2ad4fb77b503341b8b4873b80695
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 55a798bcc575aee3f309c35eb454a0675e0cbd97
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894931"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734074"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain-Methode
-Ruft einen Schnittstellen Zeiger auf die Anwendungsdomäne ab, die `ICorDebugAssembly` diese Instanz enthält.  
+
+Ruft einen Schnittstellen Zeiger auf die Anwendungsdomäne ab, die diese `ICorDebugAssembly` Instanz enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +35,16 @@ HRESULT GetAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ppAppDomain`  
  vorgenommen Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn diese Assembly die Systemassembly ist, `GetAppDomain` gibt NULL zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

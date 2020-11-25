@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: 1d9e4ff3cfb02b1db358c19786322622621329fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734750"
 ---
 # <a name="exceptions-and-performance"></a>Ausnahmen und Leistung
+
 Ein häufiges Problem im Zusammenhang mit Ausnahmen besteht darin, dass die Leistung der Implementierung nicht akzeptabel ist, wenn Ausnahmen für Code verwendet werden, der routinemäßig fehlschlägt. Dieses Bedenken ist berechtigt. Wenn ein Member eine Ausnahme auslöst, kann die Leistung der Größenordnung langsamer sein. Es ist jedoch möglich, eine gute Leistung zu erzielen, während Sie strikt den Ausnahme Richtlinien entsprechen, die die Verwendung von Fehlercodes nicht zulassen. In den beiden in diesem Abschnitt beschriebenen Mustern werden Möglichkeiten vorgeschlagen.
 
  ❌ Fehlercodes sollten nicht verwendet werden, da sich Ausnahmen möglicherweise negativ auf die Leistung auswirken.
@@ -23,6 +24,7 @@ Ein häufiges Problem im Zusammenhang mit Ausnahmen besteht darin, dass die Leis
  Um die Leistung zu verbessern, können Sie entweder das Tester-Doer Muster oder das Try-Parse Muster verwenden, das in den folgenden beiden Abschnitten beschrieben wird.
 
 ## <a name="tester-doer-pattern"></a>Tester-Doer Muster
+
  Manchmal kann die Leistung eines Ausnahme auslösenden Members verbessert werden, indem der Member in zwei unterteilt wird. Sehen wir uns die- <xref:System.Collections.Generic.ICollection%601.Add%2A> Methode der- <xref:System.Collections.Generic.ICollection%601> Schnittstelle an.
 
 ```csharp
@@ -46,6 +48,7 @@ if (!numbers.IsReadOnly)
  Beachten Sie ✔️ die Tester-Doer Muster für Member, die möglicherweise Ausnahmen in häufigen Szenarien auslösen, um Leistungsprobleme im Zusammenhang mit Ausnahmen zu vermeiden.
 
 ## <a name="try-parse-pattern"></a>Try-Parse Muster
+
  Bei extrem leistungsabhängigen APIs sollte ein noch schnelleres Muster verwendet werden, das nicht das im vorherigen Abschnitt beschriebene Tester-Doer Muster ist. Das Muster erfordert, dass der Elementname angepasst wird, um einen klar definierten Testfall zu einem Teil der Element Semantik zu machen. <xref:System.DateTime>Definiert z. b <xref:System.DateTime.Parse%2A> . eine Methode, die eine Ausnahme auslöst, wenn die Verarbeitung einer Zeichenfolge fehlschlägt. Außerdem wird eine entsprechende Methode definiert, <xref:System.DateTime.TryParse%2A> die versucht, eine Analyse durchzuführen, aber false zurückgibt, wenn die Analyse nicht erfolgreich ist und das Ergebnis einer erfolgreichen Analyse mithilfe eines- `out` Parameters zurückgibt.
 
 ```csharp
@@ -74,7 +77,7 @@ public struct DateTime
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwurfsrichtlinien für Ausnahmen](exceptions.md)

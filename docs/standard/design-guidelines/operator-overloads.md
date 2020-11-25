@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734815"
 ---
 # <a name="operator-overloads"></a>Operatorüberladungen
+
 Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wären Sie integrierte Sprach primitive.
 
  Obwohl es in manchen Situationen zulässig und nützlich ist, sollten Operator Überladungen vorsichtig verwendet werden. Es gibt viele Fälle, in denen das Überladen von Operatoren missbraucht wurde, z. b. wenn frameworkdesigner die Verwendung von Operatoren für Vorgänge gestartet haben, die einfache Methoden sein sollten. Die folgenden Richtlinien sollten Sie bei der Entscheidung unterstützen, wann und wie die Operator Überladung verwendet werden soll.
@@ -85,9 +86,11 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>Überladen des Operators = =
+
  Das überladen `operator ==` ist recht kompliziert. Die Semantik des Operators muss mit mehreren anderen Membern kompatibel sein, z. b <xref:System.Object.Equals%2A?displayProperty=nameWithType> ..
 
 ### <a name="conversion-operators"></a>Konvertierungsoperatoren
+
  Konvertierungs Operatoren sind unäre Operatoren, die eine Konvertierung von einem Typ in einen anderen ermöglichen. Die Operatoren müssen als statische Member entweder für den Operanden oder den Rückgabetyp definiert werden. Es gibt zwei Typen von Konvertierungs Operatoren: implizit und explizit.
 
  ❌ Geben Sie keinen Konvertierungs Operator an, wenn eine solche Konvertierung von den Endbenutzern nicht eindeutig erwartet wird.
@@ -110,7 +113,7 @@ Mit Operator Überladungen können Frameworktypen so angezeigt werden, als wäre
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwurfs Richtlinien für Member](member.md)
 - [Framework-Entwurfs Richtlinien](index.md)
