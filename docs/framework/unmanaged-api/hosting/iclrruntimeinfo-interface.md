@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-ms.openlocfilehash: 71e2c7f6790f29872c051bb5cea50755068057e9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9f485728ddb050abf815bf8ba26c69be9c909785
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504042"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714971"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo-Schnittstelle
+
 Stellt Methoden bereit, die Informationen zu einer bestimmten Common Language Runtime (CLR) zurückgeben, einschließlich Version, Verzeichnis und Ladestatus. Diese Schnittstelle bietet auch Lauf zeitspezifische Funktionen, ohne dass die Laufzeit initialisiert wird. Sie enthält die Lauf Zeit relative [LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) -Methode, die Lauf Zeit Modul-spezifische [GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) -Methode und die von der Laufzeit bereitgestellte Schnittstellen über die [GetInterface](iclrruntimeinfo-getinterface-method.md) -Methode.  
   
 ## <a name="methods"></a>Methoden  
@@ -42,15 +43,16 @@ Stellt Methoden bereit, die Informationen zu einer bestimmten Common Language Ru
 |[SetDefaultStartupFlags-Methode](iclrruntimeinfo-setdefaultstartupflags-method.md)|Legt die CLR-startflags und die Host Konfigurationsdatei fest.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

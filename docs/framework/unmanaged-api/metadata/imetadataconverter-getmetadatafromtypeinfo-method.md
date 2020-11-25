@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d44484bb-23a3-49c3-9e46-69d0d9ab4f0f
 topic_type:
 - apiref
-ms.openlocfilehash: f9f3e3f196f74a7dea3c722925f1d03968688882
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1f45310bc65bc8614033182a81db451b79bcf97f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009001"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714717"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>IMetaDataConverter::GetMetaDataFromTypeInfo-Methode
+
 Ruft einen Zeiger auf eine [IMetaDataImport](imetadataimport-interface.md) -Instanz ab, die die Metadatensignatur der Typbibliothek darstellt, auf die von der angegebenen-Instanz verwiesen wird `ITypeInfo` .  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetMetaDataFromTypeInfo (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pITI`  
  in Ein Zeiger auf ein `ITypeInfo` Objekt, das auf die Typbibliothek verweist.  
   
@@ -42,15 +44,16 @@ HRESULT GetMetaDataFromTypeInfo (
  vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse der- `IMetaDataImport` Instanz empfängt, die die Metadatensignatur darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataImport-Schnittstelle](imetadataimport-interface.md)

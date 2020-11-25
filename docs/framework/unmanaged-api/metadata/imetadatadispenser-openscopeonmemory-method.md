@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 69e5e05012d2b44a76a986591ec990f66bf8ae20
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 26293e38a275ca691c7d48dceb12c1e7dd316536
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713417"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>IMetaDataDispenser::OpenScopeOnMemory-Methode
+
 Öffnet einen Arbeitsspeicher Bereich, der vorhandene Metadaten enthält. Das heißt, diese Methode öffnet einen angegebenen Bereich des Speichers, in dem die vorhandenen Daten als Metadaten behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT OpenScopeOnMemory (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pData`  
  in Ein-Zeiger, der die Startadresse des Speicherbereichs angibt.  
   
@@ -56,6 +58,7 @@ HRESULT OpenScopeOnMemory (
  vorgenommen Der Zeiger auf die zurückgegebene Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die in-Memory-Kopie der Metadaten kann mithilfe von Methoden einer der "Import"-Schnittstellen abgefragt oder mithilfe von Methoden aus einer der "Ausgabe"-Schnittstellen hinzugefügt werden.  
   
  Die- `OpenScopeOnMemory` Methode ähnelt der [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) -Methode, mit der Ausnahme, dass die relevanten Metadaten bereits im Arbeitsspeicher vorhanden sind, und nicht in einer Datei auf dem Datenträger.  
@@ -63,15 +66,16 @@ HRESULT OpenScopeOnMemory (
  Wenn der Zielspeicher Bereich keine Common Language Runtime (CLR)-Metadaten enthält, schlägt die `OpenScopeOnMemory` Methode fehl.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx-Schnittstelle](imetadatadispenserex-interface.md)

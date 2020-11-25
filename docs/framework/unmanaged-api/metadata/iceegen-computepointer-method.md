@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 41a3b9c77fc766b2fa39b406dedbb3203cc97ad9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008871"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715471"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer-Methode
+
 Bestimmt den Puffer für den angegebenen Code Abschnitt.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
@@ -38,6 +39,7 @@ HRESULT ComputePointer (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `section`  
  in Der Code Abschnitt, für den ein Puffer zurückgegeben werden soll.  
   
@@ -48,14 +50,15 @@ HRESULT ComputePointer (
  vorgenommen Ein Zeiger auf den zurückgegebenen Puffer.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICeeGen-Schnittstelle](iceegen-interface.md)

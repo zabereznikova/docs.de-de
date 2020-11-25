@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 78b3629e-77a2-4406-89c3-56b5cc2c4594
 topic_type:
 - apiref
-ms.openlocfilehash: 96f0c0c254ce255581ac2937c805096918ab29e8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 60d321c1a87a5da433437c9d4587fa9f8947acf4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008052"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713378"
 ---
 # <a name="imetadatadispenserex-interface"></a>IMetaDataDispenserEx-Schnittstelle
+
 Erweitert die Schnittstelle der [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md) und bietet die Möglichkeit, zu steuern, wie die Metadaten-APIs mit dem aktuellen Metadatenbereich arbeiten.  
   
 ## <a name="methods"></a>Methoden  
@@ -36,15 +37,16 @@ Erweitert die Schnittstelle der [IMetaDataDispenser-Schnittstelle](imetadatadisp
 |[SetOption-Methode](imetadatadispenserex-setoption-method.md)|Legt die angegebene Option auf einen angegebenen Wert für den aktuellen Metadatenbereich fest. Mit der-Option wird gesteuert, wie Aufrufe des aktuellen Metadatenbereichs behandelt werden.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)
 - [IMetaDataDispenser-Schnittstelle](imetadatadispenser-interface.md)

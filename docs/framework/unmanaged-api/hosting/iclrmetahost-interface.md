@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-ms.openlocfilehash: bb7c3659930f308328cba121c06a88cb6a95eb26
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75c8d550e572795a291f4639f9f28bd5214ff188
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504159"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714015"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost-Schnittstelle
+
 Stellt Methoden bereit, die eine bestimmte Version des Common Language Runtime (CLR) basierend auf Ihrer Versionsnummer zurückgeben, alle installierten clrs auflisten, alle Laufzeiten auflisten, die in einem angegebenen Prozess geladen wurden, die CLR-Version ermitteln, die zum Kompilieren einer Assembly verwendet wird, einen Prozess mit einem fehlerhaften Herunterfahren der Laufzeit beenden und eine Abfrage der Legacy-API-Bindung ausführen.  
   
 ## <a name="methods"></a>Methoden  
@@ -36,7 +37,8 @@ Stellt Methoden bereit, die eine bestimmte Version des Common Language Runtime (
 |[QueryLegacyV2RuntimeBinding-Methode](iclrmetahost-querylegacyv2runtimebinding-method.md)|Gibt eine-Schnittstelle zurück, die eine Laufzeit darstellt, an die die Legacy Aktivierungs Richtlinie gebunden wurde, z. b. durch die Verwendung des- `useLegacyV2RuntimeActivationPolicy` Attributs für den Eintrag der [ \<startup> Element](../../configure-apps/file-schema/startup/startup-element.md) Konfigurationsdatei, durch direkte Verwendung der Legacy-Aktivierungs-APIs oder durch Aufrufen der [ICLRRuntimeInfo:: BindAsLegacyV2Runtime](iclrruntimeinfo-bindaslegacyv2runtime-method.md) -Methode.|  
 |[RequestRuntimeLoadedNotification-Methode](iclrmetahost-requestruntimeloadednotification-method.md)|Garantiert einen Rückruf für den angegebenen Funktionszeiger, wenn eine CLR-Version zum ersten Mal geladen, aber noch nicht gestartet wurde. Diese Methode ersetzt [LockClrVersion](lockclrversion-function.md) .|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Sie können eine Instanz dieser Schnittstelle nur abrufen, indem Sie die [CLRCreateInstance](clrcreateinstance-function.md) -Funktion wie folgt aufrufen:  
   
 ```cpp  
@@ -46,15 +48,16 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ```  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

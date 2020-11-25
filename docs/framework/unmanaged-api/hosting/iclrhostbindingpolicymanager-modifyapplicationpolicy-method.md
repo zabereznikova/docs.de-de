@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: e32714bba2403752f1ac2551ab182f2655f1fa75
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 8da9c9fea5cf5b3a27eeb9d0222f0845c832b7da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703856"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714197"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
+
 Ändert die Bindungs Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT  ModifyApplicationPolicy (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pwzSourceAssemblyIdentity`  
  in Die Identität der Assembly, die geändert werden soll.  
   
@@ -66,7 +68,7 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
 |S_OK|Die Richtlinie wurde erfolgreich geändert.|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`oder `pwzTargetAssemblyIdentity` war ein NULL-Verweis.|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` oder `pwzTargetAssemblyIdentity` war ein NULL-Verweis.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` ist zu klein.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
@@ -75,17 +77,19 @@ HRESULT  ModifyApplicationPolicy (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Nachdem eine Methode E_FAIL zurückgegeben hat, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ModifyApplicationPolicy` Methode kann zweimal aufgerufen werden. Der erste-Befehl sollte einen NULL-Wert für den- `pbNewApplicationPolicy` Parameter angeben. Dieser Rückruf gibt mit dem erforderlichen Wert für zurück `pcbNewAppPolicySize` . Der zweite-Befehl sollte diesen Wert für angeben `pcbNewAppPolicySize` und auf einen Puffer dieser Größe für zeigen `pbNewApplicationPolicy` .  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRHostBindingPolicyManager-Schnittstelle](iclrhostbindingpolicymanager-interface.md)

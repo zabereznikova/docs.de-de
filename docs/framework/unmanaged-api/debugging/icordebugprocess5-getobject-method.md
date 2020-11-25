@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ff2913399e1dbeb33bbfb697058db3caf2a8d1fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207293"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713105"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject-Methode
+
 Konvertiert eine Objekt Adresse in ein ICorDebugObjectValue-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT GetObject(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `addr`  
  in Die Objekt Adresse.  
   
@@ -42,9 +44,11 @@ HRESULT GetObject(
  vorgenommen Ein Zeiger auf die Adresse eines ICorDebugObjectValue-Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn `addr` nicht auf ein gültiges verwaltetes Objekt zeigt, `GetObject` gibt die Methode zurück `E_FAIL` .  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -53,7 +57,7 @@ HRESULT GetObject(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorDebugProcess5-Schnittstelle](icordebugprocess5-interface.md)
 - [Debugschnittstellen](debugging-interfaces.md)

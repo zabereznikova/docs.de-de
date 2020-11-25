@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 29c6fba5-4cea-417d-b484-7ed22ebff1c9
 topic_type:
 - apiref
-ms.openlocfilehash: 2a67f50fa1042e8d3957a9a0394507f260a328c6
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c556fe247754b363ece0c5dc60750068276ddcc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714756"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport-Schnittstelle
+
 Stellt Methoden zum Zugreifen auf und Untersuchen der Inhalte eines Assemblymanifests bereit.  
   
 ## <a name="methods"></a>Methoden  
@@ -44,15 +45,16 @@ Stellt Methoden zum Zugreifen auf und Untersuchen der Inhalte eines Assemblymani
 |[GetManifestResourceProps-Methode](imetadataassemblyimport-getmanifestresourceprops-method.md)|Ruft die Eigenschafts Einstellungen der angegebenen Manifestressource ab.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)

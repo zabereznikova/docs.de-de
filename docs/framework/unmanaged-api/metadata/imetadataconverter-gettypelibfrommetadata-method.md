@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: 79bd8901641ee587e94861c0aec85b812591ea48
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: eed8661f8885ca16492ab336a599b5290057843a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008416"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714600"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>IMetaDataConverter::GetTypeLibFromMetaData-Methode
+
 Ruft einen Zeiger auf eine- `ITypeLib` Instanz ab, die die Typbibliothek mit den angegebenen Bibliotheks-und Modulnamen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,6 +37,7 @@ HRESULT GetTypeLibFromMetaData (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `strModule`  
  in Der Name des Moduls der Typbibliothek.  
   
@@ -46,14 +48,15 @@ HRESULT GetTypeLibFromMetaData (
  vorgenommen Ein Zeiger auf einen Speicherort, der die Adresse der- `ITypeLib` Instanz empfängt, die die Typbibliothek darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattform:** Siehe [System Anforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataConverter-Schnittstelle](imetadataconverter-interface.md)

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-ms.openlocfilehash: 85a7adddf395e07297c8fb6ceab4aa81e0aaf012
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 1dfeb6101a6b8e33ab2fe35f318087d7f1834b6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762200"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714886"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted-Methode
+
 Gibt an, ob die Laufzeit gestartet wurde (d. h. ob die [ICLRRuntimeHost:: Start-Methode](iclrruntimehost-start-method.md) aufgerufen wurde und erfolgreich war).  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,6 +33,7 @@ HRESULT IsStarted(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbStarted`  
  [out] `true` , wenn diese Laufzeit gestartet wird. andernfalls `false` .  
   
@@ -39,6 +41,7 @@ HRESULT IsStarted(
  vorgenommen Gibt die Flags zurück, die zum Starten der Laufzeit verwendet wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -47,19 +50,21 @@ HRESULT IsStarted(
 |E_NOTIMPL|Die Common Language Runtime (CLR)-Version ist älter als die CLR-Version in .NET Framework 4.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Methode funktioniert nicht mit CLR-Versionen, die älter sind als die CLR-Version in der .NET Framework 4.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** MetaHost. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRRuntimeInfo-Schnittstelle](iclrruntimeinfo-interface.md)
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Hosten von Schnittstellen](hosting-interfaces.md)
 - [Hosting](index.md)

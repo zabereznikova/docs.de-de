@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4b463cd6-77c1-4f9a-8518-346ad8fc4b70
 topic_type:
 - apiref
-ms.openlocfilehash: e41fcf2f03b024c1b4ae0032c0ff025d6e2aa1c3
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d30dcbe4e7c289c23c5af00e4bdadedc186809b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842503"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714769"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority-Methode
+
 Ruft die Thread Prioritäts Ebene der Aufgabe ab, die durch die aktuelle [IHostTask](ihosttask-interface.md) -Instanz dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,6 +35,7 @@ HRESULT GetPriority (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pPriority`  
  vorgenommen Ein Zeiger auf eine ganze Zahl, die die Thread Prioritäts Ebene der Aufgabe angibt, die durch die aktuelle Instanz dargestellt wird `IHostTask` .  
   
@@ -41,7 +43,7 @@ HRESULT GetPriority (
   
 |HRESULT|BESCHREIBUNG|  
 |-------------|-----------------|  
-|S_OK|`GetPriority`wurde erfolgreich zurückgegeben.|  
+|S_OK|`GetPriority` wurde erfolgreich zurückgegeben.|  
 |HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
 |HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
@@ -49,18 +51,20 @@ HRESULT GetPriority (
 |E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR innerhalb des Prozesses nicht mehr verwendbar. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Werte der Thread Prioritäts Ebene werden von der Win32- `SetThreadPriority` Funktion definiert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Mscoree. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRTask-Schnittstelle](iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](iclrtaskmanager-interface.md)

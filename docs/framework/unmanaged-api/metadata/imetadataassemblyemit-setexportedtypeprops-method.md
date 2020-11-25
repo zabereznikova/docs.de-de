@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: fa4f1f57cb8fe1ca81bbad6438a88bb43c48e7bf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 076d027945dc27942e4b0989e14e86d829f76679
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008078"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713485"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps-Methode
+
 Ändert die angegebene `ExportedType`-Metadatenstruktur.  
   
 ## <a name="syntax"></a>Syntax  
@@ -37,6 +38,7 @@ HRESULT SetExportedTypeProps (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `ct`  
  in Das Metadatentoken, das die `ExportedType` zu ändernde Metadatenstruktur angibt.  
   
@@ -50,17 +52,19 @@ HRESULT SetExportedTypeProps (
  in Eine bitweise Kombination von-Werten, die Attribute des Typs angeben.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Verwenden Sie zum Erstellen einer `ExportedType` Metadatenstruktur die [IMetaDataAssemblyEmit::D efineexportedtype](imetadataassemblyemit-defineexportedtype-method.md) -Methode.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataAssemblyEmit-Schnittstelle](imetadataassemblyemit-interface.md)
