@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3a912787-f139-43ca-a841-8bbda3107ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 1db4c4ab7e47e223a492e08297ac3cedcb3a27eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45eed17b91f70d4188d1d89fc91a41455f3e845b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445602"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732644"
 ---
-# <a name="setassemblyfile-method"></a><span data-ttu-id="283c7-102">SetAssemblyFile-Methode</span><span class="sxs-lookup"><span data-stu-id="283c7-102">SetAssemblyFile Method</span></span>
-<span data-ttu-id="283c7-103">Weist den Namen der Assembly zu, die erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="283c7-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="283c7-104">Nicht für die Verwendung beim Erstellen von ungebundenen Modulen.</span><span class="sxs-lookup"><span data-stu-id="283c7-104">Not for use when producing unbound modules.</span></span>  
+# <a name="setassemblyfile-method"></a><span data-ttu-id="7be51-102">SetAssemblyFile-Methode</span><span class="sxs-lookup"><span data-stu-id="7be51-102">SetAssemblyFile Method</span></span>
+
+<span data-ttu-id="7be51-103">Weist den Namen der Assembly zu, die erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="7be51-103">Assigns the name of the assembly to be built.</span></span> <span data-ttu-id="7be51-104">Nicht für die Verwendung beim Erstellen von ungebundenen Modulen.</span><span class="sxs-lookup"><span data-stu-id="7be51-104">Not for use when producing unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="283c7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="283c7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7be51-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="7be51-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetAssemblyFile(  
@@ -35,27 +36,30 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="283c7-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="283c7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7be51-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="7be51-106">Parameters</span></span>  
+
  `pszFilename`  
- <span data-ttu-id="283c7-107">Der voll qualifizierte Name der Manifest-Datei.</span><span class="sxs-lookup"><span data-stu-id="283c7-107">Fully qualified name of the manifest file.</span></span>  
+ <span data-ttu-id="7be51-107">Der voll qualifizierte Name der Manifest-Datei.</span><span class="sxs-lookup"><span data-stu-id="7be51-107">Fully qualified name of the manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="283c7-108">Zeiger auf die [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) -Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="283c7-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
+ <span data-ttu-id="7be51-108">Zeiger auf die [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) -Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="7be51-108">Pointer to [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="283c7-109">Flags, wie in [AssemblyFlags-Enumeration](../metadata/assemblyflags-enumeration.md)definiert.</span><span class="sxs-lookup"><span data-stu-id="283c7-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="7be51-109">Flags, wie in [AssemblyFlags-Enumeration](../metadata/assemblyflags-enumeration.md)definiert.</span><span class="sxs-lookup"><span data-stu-id="7be51-109">Flags as defined in [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="283c7-110">Zeiger auf die ID der resultierenden Assembly.</span><span class="sxs-lookup"><span data-stu-id="283c7-110">Pointer to ID of resulting assembly.</span></span>  
+ <span data-ttu-id="7be51-110">Zeiger auf die ID der resultierenden Assembly.</span><span class="sxs-lookup"><span data-stu-id="7be51-110">Pointer to ID of resulting assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="283c7-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="283c7-111">Return Value</span></span>  
- <span data-ttu-id="283c7-112">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="283c7-112">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="283c7-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="283c7-113">Requirements</span></span>  
- <span data-ttu-id="283c7-114">Erfordert Alink. h.</span><span class="sxs-lookup"><span data-stu-id="283c7-114">Requires alink.h.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="283c7-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="283c7-115">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="7be51-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7be51-111">Return Value</span></span>  
 
-- [<span data-ttu-id="283c7-116">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="283c7-116">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="283c7-117">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="283c7-117">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="283c7-118">Alink-API</span><span class="sxs-lookup"><span data-stu-id="283c7-118">ALink API</span></span>](index.md)
+ <span data-ttu-id="7be51-112">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="7be51-112">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="7be51-113">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="7be51-113">Requirements</span></span>  
+
+ <span data-ttu-id="7be51-114">Erfordert Alink. h.</span><span class="sxs-lookup"><span data-stu-id="7be51-114">Requires alink.h.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="7be51-115">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="7be51-115">See also</span></span>
+
+- [<span data-ttu-id="7be51-116">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7be51-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="7be51-117">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7be51-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="7be51-118">ALink-API</span><span class="sxs-lookup"><span data-stu-id="7be51-118">ALink API</span></span>](index.md)
