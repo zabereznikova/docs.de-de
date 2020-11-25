@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 75508c55-3e09-4135-80da-cc811003fa82
 topic_type:
 - apiref
-ms.openlocfilehash: 8544b8d7b1f23853465bbb2aea697dfe021d77f2
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 64751032c017473ffd82248b310b14c087f74129
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842178"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727834"
 ---
-# <a name="itypenamegetmodifiers-method"></a><span data-ttu-id="900fe-102">ITypeName::GetModifiers-Methode</span><span class="sxs-lookup"><span data-stu-id="900fe-102">ITypeName::GetModifiers Method</span></span>
-<span data-ttu-id="900fe-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="900fe-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamegetmodifiers-method"></a><span data-ttu-id="c4714-102">ITypeName::GetModifiers-Methode</span><span class="sxs-lookup"><span data-stu-id="c4714-102">ITypeName::GetModifiers Method</span></span>
+
+<span data-ttu-id="c4714-103">Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="c4714-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="900fe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="900fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4714-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c4714-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetModifiers (  
@@ -35,15 +36,16 @@ HRESULT GetModifiers (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="900fe-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="900fe-105">Requirements</span></span>  
- <span data-ttu-id="900fe-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="900fe-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="900fe-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="900fe-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="900fe-108">**Bibliothek:** Als Ressource in Mscoree. dll enthalten</span><span class="sxs-lookup"><span data-stu-id="900fe-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="900fe-109">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="900fe-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="900fe-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="900fe-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="c4714-105">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="c4714-105">Requirements</span></span>  
 
-- [<span data-ttu-id="900fe-111">Hostingschnittstellen</span><span class="sxs-lookup"><span data-stu-id="900fe-111">Hosting Interfaces</span></span>](hosting-interfaces.md)
+ <span data-ttu-id="c4714-106">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4714-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c4714-107">**Header:** Mscoree. h</span><span class="sxs-lookup"><span data-stu-id="c4714-107">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="c4714-108">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c4714-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="c4714-109">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4714-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c4714-110">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="c4714-110">See also</span></span>
+
+- [<span data-ttu-id="c4714-111">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="c4714-111">Hosting Interfaces</span></span>](hosting-interfaces.md)

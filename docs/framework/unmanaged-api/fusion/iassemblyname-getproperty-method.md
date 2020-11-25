@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: e59fda62-77d5-4e37-89cb-ce7ae4627975
 topic_type:
 - apiref
-ms.openlocfilehash: b86828e01fb00b12feff2ed451793c240e16e240
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3a6f19d9fc90972e767625fadf30cc4af50d9017
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134383"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727886"
 ---
-# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="e1892-102">IAssemblyName::GetProperty-Methode</span><span class="sxs-lookup"><span data-stu-id="e1892-102">IAssemblyName::GetProperty Method</span></span>
-<span data-ttu-id="e1892-103">Ruft einen Zeiger auf die Eigenschaft ab, auf die durch den angegebenen Eigenschaften Bezeichner verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="e1892-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
+# <a name="iassemblynamegetproperty-method"></a><span data-ttu-id="94616-102">IAssemblyName::GetProperty-Methode</span><span class="sxs-lookup"><span data-stu-id="94616-102">IAssemblyName::GetProperty Method</span></span>
+
+<span data-ttu-id="94616-103">Ruft einen Zeiger auf die Eigenschaft ab, auf die durch den angegebenen Eigenschaften Bezeichner verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="94616-103">Gets a pointer to the property referenced by the specified property identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1892-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e1892-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94616-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="94616-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetProperty (  
@@ -35,23 +36,25 @@ HRESULT GetProperty (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e1892-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e1892-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94616-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="94616-105">Parameters</span></span>  
+
  `PropertyId`  
- <span data-ttu-id="e1892-106">in Der eindeutige Bezeichner für die angeforderte Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="e1892-106">[in] The unique identifier for the requested property.</span></span>  
+ <span data-ttu-id="94616-106">in Der eindeutige Bezeichner für die angeforderte Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="94616-106">[in] The unique identifier for the requested property.</span></span>  
   
  `pvProperty`  
- <span data-ttu-id="e1892-107">vorgenommen Die zurückgegebenen Eigenschafts Daten.</span><span class="sxs-lookup"><span data-stu-id="e1892-107">[out] The returned property data.</span></span>  
+ <span data-ttu-id="94616-107">vorgenommen Die zurückgegebenen Eigenschafts Daten.</span><span class="sxs-lookup"><span data-stu-id="94616-107">[out] The returned property data.</span></span>  
   
  `pcbProperty`  
- <span data-ttu-id="e1892-108">[in, out] Die Größe `pvProperty`in Byte.</span><span class="sxs-lookup"><span data-stu-id="e1892-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
+ <span data-ttu-id="94616-108">[in, out] Die Größe von in Bytes `pvProperty` .</span><span class="sxs-lookup"><span data-stu-id="94616-108">[in, out] The size, in bytes, of `pvProperty`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1892-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e1892-109">Requirements</span></span>  
- <span data-ttu-id="e1892-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1892-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="e1892-111">**Header:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="e1892-111">**Header:** Fusion.h</span></span>  
-  
- <span data-ttu-id="e1892-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1892-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="e1892-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e1892-113">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="94616-109">Requirements (Anforderungen)</span><span class="sxs-lookup"><span data-stu-id="94616-109">Requirements</span></span>  
 
-- [<span data-ttu-id="e1892-114">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e1892-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+ <span data-ttu-id="94616-110">**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="94616-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="94616-111">**Header:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="94616-111">**Header:** Fusion.h</span></span>  
+  
+ <span data-ttu-id="94616-112">**.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94616-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="94616-113">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="94616-113">See also</span></span>
+
+- [<span data-ttu-id="94616-114">IAssemblyName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="94616-114">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
