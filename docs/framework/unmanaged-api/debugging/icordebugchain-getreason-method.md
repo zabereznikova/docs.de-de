@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-ms.openlocfilehash: 94672c88864efc431acde8f29e406f4fbbc644ee
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 58e40995012d98c1af6a41eb12d898c6b9b1d47b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894549"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719670"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason-Methode
+
 Ruft den Grund für die Entstehung dieser aufrufenden Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,10 +35,12 @@ HRESULT GetReason (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pReason`  
  vorgenommen Ein Zeiger auf einen Wert (eine bitweise Kombination) der CorDebugChainReason-Enumeration, die den Grund für die Entstehung dieser aufrufenden Kette angibt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

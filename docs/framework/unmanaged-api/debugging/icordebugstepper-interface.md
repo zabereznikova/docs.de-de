@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 622fdfa37c93e406950e73941775828ae4b112fa
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379420"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718292"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper-Schnittstelle
+
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Deactivate-Methode](icordebugstepper-deactivate-method.md)|Dies bewirkt `ICorDebugStepper` , dass der letzte Schritt Befehl abgebrochen wird.|  
 |[IsActive-Methode](icordebugstepper-isactive-method.md)|Ruft einen Wert ab, der angibt, ob dieser `ICorDebugStepper` gerade einen Schritt ausführt.|  
@@ -38,6 +39,7 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
 |[StepRange-Methode](icordebugstepper-steprange-method.md)|Bewirkt, dass dieser `ICorDebugStepper` den enthaltenden Thread in einen Schritt einschlägt und zurückgibt, wenn er Code über den letzten der angegebenen Bereiche hinaus erreicht.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die- `ICorDebugStepper` Schnittstelle dient folgenden Zwecken:  
   
 - Er fungiert als Bezeichner zwischen einem ausgegebene Schritt Befehl und dem Abschluss dieses Befehls.  
@@ -54,6 +56,7 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
@@ -62,6 +65,6 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debugschnittstellen](debugging-interfaces.md)

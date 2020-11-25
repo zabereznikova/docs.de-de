@@ -2,14 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-ms.openlocfilehash: 5a501cca16f06e7ccd5da9f65a213c6b24c1092c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f8c77e44183fd92704aa91ca1cfd7e3fa68aa27f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719618"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
+
 Definieren Sie eine Gruppe von asynchronen warte Vorgängen in der aktuellen Methode.  
   
  Jeder yield-Offset entspricht der Return-Anweisung, die eine mögliche Rendite identifiziert. Jedes `breakpointMethod` / `breakpointOffset` paar teilt uns mit, wo der asynchrone Vorgang fortgesetzt wird, der sich in einer anderen Methode befinden könnte.  
@@ -30,11 +31,13 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
 |`breakpointMethod`||  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt `HRESULT` zurück.  
+
+ Gibt `HRESULT`zurück.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle](isymunmanagedasyncmethodpropertieswriter-interface.md)

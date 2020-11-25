@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-ms.openlocfilehash: 988637956b1176235618bf8f4aee7ecec9ce1187
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: dea5c0fd5d4ed1f830d9e75097d49c544dac2e57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719243"
 ---
 # <a name="icordebugassemblyenum-interface"></a>ICorDebugAssemblyEnum-Schnittstelle
 
@@ -27,16 +27,17 @@ Implementiert ICorDebugEnum-Methoden und listet ICorDebugAssembly-Arrays auf.
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Next-Methode](icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugAssembly` -Instanzen in der-Enumeration ab der aktuellen Position ab.|  
+|[Next-Methode](icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von- `ICorDebugAssembly` Instanzen in der-Enumeration ab der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

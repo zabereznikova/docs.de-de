@@ -2,17 +2,19 @@
 title: Authenticode (Referenz zur nicht verwalteten API)
 ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
-ms.openlocfilehash: 1b8b2222950c75f7f9d2ec2704f722087645cd7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b3e1585278bda82dedf7542e866a551867b9c9f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132457"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674046"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Referenz zur nicht verwalteten API)
+
 Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [_AxlGetIssuerPublicKeyHash-Funktion](axlgetissuerpublickeyhash-function.md)  
  Ruft den SHA-1-Hash des öffentlichen Schlüssels ab, der dem privaten Schlüssel zugeordnet wurde, der beim Signieren des festgelegten Zertifikats zur Verwendung kam.  
   

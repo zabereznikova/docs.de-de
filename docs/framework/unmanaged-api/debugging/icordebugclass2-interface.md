@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5416de70-43f2-4cdf-a11f-d570759c9c0c
 topic_type:
 - apiref
-ms.openlocfilehash: ff15297eb479f7474c9f07123a29263fb4da3205
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ce3f289ae914817071fad5274c45d1e5fae71a06
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717980"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2-Schnittstelle
 
@@ -27,7 +27,7 @@ Stellt eine generische Klasse oder eine Klasse mit einem Methodenparameter des T
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
 |[GetParameterizedType-Methode](icordebugclass2-getparameterizedtype-method.md)|Ruft die Typdeklaration für diese Klasse ab.|  
 |[SetJMCStatus-Methode](icordebugclass2-setjmcstatus-method.md)|Legt für jede Methode dieser Klasse einen Wert fest, der angibt, ob es sich bei der Methode um einen benutzerdefinierten Code handelt.|  
@@ -37,7 +37,8 @@ Stellt eine generische Klasse oder eine Klasse mit einem Methodenparameter des T
 > [!NOTE]
 > Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

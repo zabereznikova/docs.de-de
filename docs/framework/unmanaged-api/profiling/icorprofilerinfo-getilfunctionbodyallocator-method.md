@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 967f38add9ae5996c6ac33388203b55161a84e39
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b18de87cf89985e0f7ec11edf58b43d67720251c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498270"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718019"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator-Methode
+
 Ruft eine-Schnittstelle ab, die eine Methode bereitstellt, um Speicher zuzuweisen, der zum Austauschen des Texts einer Methode im MSIL-Code (Microsoft Intermediate Language) verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,16 +35,19 @@ HRESULT GetILFunctionBodyAllocator(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `moduleId`  
  in Die ID des Moduls, in dem sich die Methode befindet.  
   
  `ppMalloc`  
  vorgenommen Ein Zeiger auf eine [IMethodMalloc](imethodmalloc-interface.md) -Schnittstelle, die eine Methode zum Zuordnen des Arbeitsspeichers bereitstellt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Ein Methoden Text im MSIL-Code muss sich in Relation zum geladenen Modul als relative virtuelle Adresse (RVA) befinden, was bedeutet, dass er auf das Modul innerhalb von 4 GB folgt. Um einem Tool das Austauschen des Texts einer Methode zu erleichtern, stellt die- `GetILFunctionBodyAllocator` Methode sicher, dass der Arbeitsspeicher innerhalb dieses Bereichs zugeordnet wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
@@ -52,6 +56,6 @@ HRESULT GetILFunctionBodyAllocator(
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICorProfilerInfo-Schnittstelle](icorprofilerinfo-interface.md)

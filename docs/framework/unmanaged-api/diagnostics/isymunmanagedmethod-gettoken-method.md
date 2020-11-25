@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4effbe95-c36e-4a45-8b2a-ee21339415fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0803f0b55f19b779f5b6608a9f8200d2b085b504
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 76134a2447cbc40b5c97304540d9907648bc89e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615156"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719917"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken-Methode
+
 Gibt das Metadatentoken für diese Methode zurück.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,15 +34,18 @@ HRESULT GetToken(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pToken`  
  vorgenommen Ein Zeiger auf einen `mdMethodDef` , der die Größe des Puffers, der die Metadaten enthalten muss, in Zeichen empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist. andernfalls E_FAIL oder ein anderer Fehlercode.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Header:** Corsym. idl, corsym. h  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedMethod-Schnittstelle](isymunmanagedmethod-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b35e7a9-b40e-40a9-8d8e-b82e823fc575
 topic_type:
 - apiref
-ms.openlocfilehash: faddf30248b58c68037635480d8977f22ad077d0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 0a57dfe5bb4dfdc08a5e3f2238da6794e62bd958
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379022"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718279"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive-Methode
+
 Ruft einen Wert ab, der angibt, ob dieser ICorDebug-Stepper gerade einen Schritt ausführt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,13 +35,16 @@ HRESULT IsActive (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pbActive`  
  vorgenommen Gibt zurück, `true` Wenn der Stepper gerade einen Schritt ausführt; andernfalls wird zurückgegeben `false` .  
   
 ## <a name="remarks"></a>Hinweise  
+
  Jede Schritt Aktion bleibt aktiv, bis der Debugger einen [ICorDebugManagedCallback:: StepComplete](icordebugmanagedcallback-stepcomplete-method.md) -Befehl empfängt, der den Stepper automatisch deaktiviert. Ein Stepper kann auch vorzeitig durch Aufrufen von [ICorDebugStepper::D eaktivierungs](icordebugstepper-deactivate-method.md) deaktiviert werden, bevor die Rückruf Bedingung erreicht wird.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

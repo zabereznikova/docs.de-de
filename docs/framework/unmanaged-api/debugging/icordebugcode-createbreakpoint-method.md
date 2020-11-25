@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-ms.openlocfilehash: 40582b1289875d5151ea96e3153c6e4760737e84
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: ade428ce001a6b40e2fed67f4f23b12cef5ea30f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717655"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint-Methode
+
 Erstellt in diesem Codesegment am angegebenen Offset einen Haltepunkt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT CreateBreakpoint (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `offset`  
  in Der Offset, bei dem der Breakpoint erstellt werden soll.  
   
@@ -42,11 +44,13 @@ HRESULT CreateBreakpoint (
  vorgenommen Ein Zeiger auf die Adresse eines icorentbugfunctionbreakpoint-Objekts, das den Breakpoint darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Bevor der Breakpoint aktiv ist, muss er dem Prozess Objekt hinzugefügt werden.  
   
  Wenn dieser Code MSIL-Code (Microsoft Intermediate Language) ist und eine JIT (Just-in-Time)-kompilierte, systemeigene Version des Codes vorhanden ist, wird der Breakpoint ebenfalls im JIT-kompilierten Code angewendet. (Das gleiche gilt, wenn der Code später JIT-kompiliert wird.)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 0ef49d2d833841eac62b2b964a0fdc902b4fb6a9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 232068a5fee8f7bd3dfbddf4d9452e80d6fd6170
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894774"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719189"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next-Methode
+
 Ruft die angegebene Anzahl von [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Objekten ab der aktuellen Position aus der-Enumeration ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,6 +36,7 @@ HRESULT Next([in] ULONG  celt,
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `celt`  
  in Die Anzahl der abzurufenden-Objekte.  
   
@@ -45,6 +47,7 @@ HRESULT Next([in] ULONG  celt,
  vorgenommen Ein Zeiger auf die Anzahl der abgerufenen Objekte.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  Diese Methode gibt die folgenden spezifischen HRESULTs zurück.  
   
 |HRESULT|BESCHREIBUNG|  
@@ -53,14 +56,16 @@ HRESULT Next([in] ULONG  celt,
 |S_FALSE|`pceltFetched` entspricht nicht `celt`.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Diese Methode funktioniert wie ein typischer com-Enumerator.  
   
- Die Eingabe Array Werte müssen mindestens eine Größe `celt`aufweisen. Das Array wird entweder mit den nächsten `celt` Werten in der-Enumeration oder mit allen verbleibenden Werten aufgefüllt, wenn `celt` weniger als vorhanden sind. Wenn diese Methode zurückgegeben `pceltFetched` wird, wird mit der Anzahl der abgerufenen Werte aufgefüllt. Wenn `values` ungültige Zeiger enthält oder auf einen Puffer verweist, der kleiner `celt`als ist, `pceltFetched` oder wenn ein ungültiger Zeiger ist, ist das Ergebnis nicht definiert.  
+ Die Eingabe Array Werte müssen mindestens eine Größe aufweisen `celt` . Das Array wird entweder mit den nächsten `celt` Werten in der-Enumeration oder mit allen verbleibenden Werten aufgefüllt, wenn weniger als vorhanden `celt` sind. Wenn diese Methode zurückgegeben wird, `pceltFetched` wird mit der Anzahl der abgerufenen Werte aufgefüllt. Wenn `values` ungültige Zeiger enthält oder auf einen Puffer verweist, der kleiner als ist `celt` , oder wenn `pceltFetched` ein ungültiger Zeiger ist, ist das Ergebnis nicht definiert.  
   
 > [!NOTE]
 > Obwohl die [Cordebug-blockingobject](cordebugblockingobject-structure.md) -Struktur nicht freigegeben werden muss, muss die Schnittstelle "ICorDebug Value" in der IT-Abteilung freigegeben werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2a4a15126f34666a58021a59e9e193685b15a49
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009376"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719488"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty-Methode
+
 Erstellt eine Eigenschafts Definition für den angegebenen Typ mit dem angegebenen `get` und den `set` Methoden Accessoren und ruft ein Token für diese Eigenschafts Definition ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,6 +46,7 @@ HRESULT DefineProperty (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `td`  
  in Das Token für die Klasse oder Schnittstelle, für die die Eigenschaft definiert wird.  
   
@@ -82,15 +84,16 @@ HRESULT DefineProperty (
  vorgenommen Das `mdProperty` zugewiesene Token.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MSCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)

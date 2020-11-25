@@ -1,6 +1,6 @@
 ---
-title: BeginMethodEnumeration-Funktion (Nicht verwaltete API-Referenz)
-description: Die BeginMethodEnumeration-Funktion beginnt mit einer Enumeration der Methoden des Objekts.
+title: Beginmethodenumeration-Funktion (Referenz zur nicht verwalteten API)
+description: Die beginmethodenumeration-Funktion beginnt eine Enumeration der Methoden des Objekts.
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - BeginMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 876f5810fffab7fa98cd4d46715e13569ab95f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a72d61a572a0582ed8c03e56a8a9933c5f2775f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719761"
 ---
 # <a name="beginmethodenumeration-function"></a>BeginMethodEnumeration-Funktion
-Beginnt eine Aufzählung der für das Objekt verfügbaren Methoden.  
+
+Beginnt eine Enumeration der Methoden, die für das-Objekt verfügbar sind.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -39,40 +40,41 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter ist nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf eine [IWbemClassObject-Instanz.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `lEnumFlags`  
-[in] Null (0) für alle Methoden oder ein Flag, das den Bereich der Enumeration angibt. Die folgenden Flags sind in der *PsemCli.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:
+in NULL (0) für alle Methoden oder ein Flag, das den Bereich der Enumeration angibt. Die folgenden Flags sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
-Dauerhaft  |value  |Beschreibung  |
+Konstante  |Wert  |BESCHREIBUNG  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Methoden, die in der Klasse selbst definiert sind. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Basisklassen geerbt werden. |
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *PseCli.h-Headerdatei* definiert, oder Sie können sie als Konstanten im Code definieren:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
-|Dauerhaft  |value  |Beschreibung  |
+|Konstante  |Wert  |BESCHREIBUNG  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags`ist ungleich Null und gehört nicht zu den angegebenen Flags. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` ist ungleich 0 (null) und ist nicht eines der angegebenen Flags. |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::BeginMethodEnumeration-Methode.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration)
+Diese Funktion umschließt einen [aufzurufenden Befehl der IWbemClassObject:: beginmethodenumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) -Methode.
 
-Dieser Methodenaufruf wird nur unterstützt, wenn das aktuelle Objekt eine Klassendefinition ist. Die Methodenmanipulation ist von [IWbemClassObject-Zeigern, die](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) auf Instanzen verweisen, nicht verfügbar. Die Reihenfolge, in der Methoden aufgezählt werden, ist garantiert invariant für eine bestimmte Instanz von [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
+Dieser Methoden Aufrufwert wird nur unterstützt, wenn das aktuelle-Objekt eine Klassendefinition ist. Die Methoden Bearbeitung ist nicht in [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Zeigern verfügbar, die auf-Instanzen verweisen. Die Reihenfolge, in der Methoden aufgelistet werden, ist für eine bestimmte Instanz von [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)garantiert invariante.
 
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
- **Kopfzeile:** WMINet_Utils.idl  
+ **Header:** WMINet_Utils. idl  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen
 

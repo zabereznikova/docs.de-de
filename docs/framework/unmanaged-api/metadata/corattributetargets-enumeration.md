@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: fbe721bad56ec2be434039f00e741ad9a177815f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718968"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets-Enumeration
+
 Gibt die Anwendungselemente an, auf die Attribute angewendet werden können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -60,7 +61,7 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Member  
   
-|Member|Beschreibung|  
+|Member|BESCHREIBUNG|  
 |------------|-----------------|  
 |`catAssembly`|Auf Assemblys können Attribute angewendet werden.|  
 |`catModule`|Das Attribut kann auf ein ausführbares ausführbares ausführbares Modul (. dll oder. exe) angewendet werden.|  
@@ -80,17 +81,19 @@ typedef enum CorAttributeTargets
 |`catClassMembers`|Das Attribut kann auf einen Member einer Klasse angewendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die `CorAttributeTargets` Enumerationswerte können mit einer bitweisen OR-Operation kombiniert werden, um die bevorzugte Kombination zu erhalten.  
   
  Der entspricht `CorAttributeTargets` der verwalteten <xref:System.AttributeTargets?displayProperty=nameWithType> Enumeration.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Corhdr. h  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenenumerationen](metadata-enumerations.md)

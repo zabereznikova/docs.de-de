@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22fcdb834f84bb3a9304e22a4b45ebb340f3590f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719878"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum-Schnittstelle
-Stellt einen Enumerator für ein Array von `IAssemblyName`-Objekten dar.  
+
+Stellt einen Enumerator für ein Array von- `IAssemblyName` Objekten dar.  
   
 ## <a name="methods"></a>Methoden  
   
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[Clone-Methode](iassemblyenum-clone-method.md)|Erstellt eine flache Kopie dieses `IAssemblyEnum` Objekts.|  
-|[GetNextAssembly-Methode](iassemblyenum-getnextassembly-method.md)|Ruft einen Zeiger auf den nächsten `IAssemblyName` ab, der in diesem `IAssemblyEnum`-Objekt enthalten ist.|  
-|[Reset-Methode](iassemblyenum-reset-method.md)|Setzt dieses `IAssemblyEnum`-Objekt auf seine Anfangsposition zurück.|  
+|[Clone-Methode](iassemblyenum-clone-method.md)|Erstellt eine flache Kopie des- `IAssemblyEnum` Objekts.|  
+|[GetNextAssembly-Methode](iassemblyenum-getnextassembly-method.md)|Ruft einen Zeiger auf den nächsten `IAssemblyName` in diesem- `IAssemblyEnum` Objekt ab.|  
+|[Reset-Methode](iassemblyenum-reset-method.md)|Setzt dieses- `IAssemblyEnum` Objekt auf seine Anfangsposition zurück.|  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Fusion. h  
   
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Fusion-Schnittstellen](fusion-interfaces.md)
 - [IAssemblyName-Schnittstelle](iassemblyname-interface.md)

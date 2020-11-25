@@ -6,19 +6,21 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 2.0
 - .NET Framework 2.0, hosting interfaces
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
-ms.openlocfilehash: e6913e18a4ff6e616f357a4ef43fb8b892264943
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 77f2ba64d9bdbe9793d56e88dae46fd506119ab8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719046"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR-Hostingschnittstellen
+
 In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwaltete Hosts die Common Language Runtime (CLR) in Ihre Anwendungen integrieren können. Die Informationen beziehen sich auf den .NET Framework Version 2,0 und höhere Versionen. Diese Schnittstellen ermöglichen es dem Host, viele weitere Aspekte der Laufzeit zu steuern, als dies in den Versionen 1,0 und 1,1 möglich war, und eine weitaus engere Integration zwischen der CLR und dem Ausführungs Modell des Hosts bereitzustellen.  
   
  In den .NET Framework, Version 1,0 und 1,1, ermöglichte das Hostingmodell einen nicht verwalteten Host, die CLR in einen Prozess zu laden, bestimmte Einstellungen zu konfigurieren und Ereignis Benachrichtigungen zu empfangen. Im allgemeinen wurden der Host und die CLR in diesem Prozess jedoch unabhängig ausgeführt. In der .NET Framework Version 2,0 und höheren Versionen ermöglichen neue Abstraktions Ebenen dem Host die Bereitstellung zahlreicher Ressourcen, die derzeit von den Typen in der Win32-Assembly bereitgestellt werden, und erweitern den Satz von Funktionen, die der Host konfigurieren kann.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [IActionOnCLREvent-Schnittstelle](iactiononclrevent-interface.md)  
  Stellt eine Methode bereit, die einen Rückruf für ein registriertes Ereignis ausführt.  
   
@@ -185,6 +187,7 @@ In diesem Abschnitt werden die Schnittstellen beschrieben, mit denen nicht verwa
  Stellt Methoden zum Überprüfen von PE-Images (portable ausführbare Dateien) und zum Melden von Validierungs Fehlern bereit.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Veraltete CLR-Hostingschnittstellen und Co-Klassen](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Enthält Themen, in denen die Hostingschnittstellen in den .NET Framework Version 1,0 und 1,1 beschrieben werden.  
   
