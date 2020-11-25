@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c9ff918121e7bb4ee972e674207810358b3f36f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712910"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam-Methode
+
 Erstellt eine Definition für einen generischen Typparameter und ruft ein Token für diesen generischen Typparameter ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,6 +41,7 @@ HRESULT DefineGenericParam (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `tk`  
  in Ein- `mdTypeDef` oder- `mdMethodDef` Token, das die Methode oder den Konstruktor darstellt, für die ein generischer Parameter definiert werden soll.  
   
@@ -62,15 +64,16 @@ HRESULT DefineGenericParam (
  vorgenommen Ein Token, das den generischen Parameter darstellt.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataEmit2-Schnittstelle](imetadataemit2-interface.md)
 - [IMetaDataEmit-Schnittstelle](imetadataemit-interface.md)
