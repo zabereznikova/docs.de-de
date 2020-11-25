@@ -9,17 +9,19 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 8df136fb57ad61ddfd87f4dec1f6490c63c3d977
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e416a8346952a41d9c89f526bfce990dfc277fc1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701262"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
+
 Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall dar, dass, wenn Sie konsistent angewendet wird, Bezeichner für Typen, Member und Parameter leicht lesbar werden.
 
 ## <a name="capitalization-rules-for-identifiers"></a>Regeln für die Groß Schreibung für Bezeichner
+
  Um Wörter in einem Bezeichner zu unterscheiden, sollten Sie den ersten Buchstaben jedes Worts im Bezeichner Großbuchstaben. Verwenden Sie keine Unterstriche zur Unterscheidung von Wörtern oder an einer beliebigen Stelle in bezeichlern. Es gibt zwei geeignete Möglichkeiten, Bezeichner in Abhängigkeit von der Verwendung des Bezeichners zu nutzen:
 
 - Pascalschreibweise
@@ -60,6 +62,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 |Parameter|Groß-/Kleinschreibung gemischt|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Groß Schreibung von zusammengesetzten Wörtern und allgemeinen Begriffen
+
  Die meisten zusammengesetzten Begriffe werden als einzelne Wörter für die Groß-/Kleinschreibung behandelt.
 
  ❌ Schreiben Sie nicht jedes Wort in so genannten zusammengesetzten Wörtern mit geschlossenen Formen.
@@ -95,6 +98,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 |`Writable`|`writable`|`Writeable`|
 
 ## <a name="case-sensitivity"></a>Groß- und Kleinschreibung
+
  Für Sprachen, die in der CLR ausgeführt werden können, ist es nicht erforderlich, die Groß-/Kleinschreibung zu unterstützen. Auch wenn Ihre Sprache Sie unterstützt, sind andere Sprachen, die möglicherweise auf Ihr Framework zugreifen, nicht. Alle APIs, die extern zugänglich sind, können sich daher nicht allein auf die Groß-/Kleinschreibung verlassen, um zwischen zwei Namen im gleichen Kontext zu unterscheiden.
 
  ❌ Nehmen Sie nicht an, dass die Groß-/Kleinschreibung für alle Programmiersprachen Das sind sie nicht. Namen dürfen nicht allein durch die Groß-/Kleinschreibung abweichen
@@ -103,7 +107,7 @@ Die Richtlinien in diesem Kapitel stellen eine einfache Methode für den Fall da
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Benennungs Richtlinien](naming-guidelines.md)

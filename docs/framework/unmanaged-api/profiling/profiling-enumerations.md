@@ -6,17 +6,19 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-ms.openlocfilehash: 1a9781fa1b4b608152faa7d5edc80bd4866f0c81
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8956a09cf76aa54452e8c020239e650e55d8a0d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868134"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701613"
 ---
 # <a name="profiling-enumerations"></a>Profilerstellungsenumerationen
+
 Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profilerstellungs-API verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [COR_PRF_CLAUSE_TYPE-Enumeration](cor-prf-clause-type-enumeration.md)  
  Zeigt den Typ der Ausnahmeklausel an, die der Code gerade eben eingegeben oder zurückgelassen hat.  
   
@@ -69,6 +71,7 @@ Dieser Abschnitt beschreibt die nicht verwalteten Enumerationen, die die Profile
  Zeigt den Grund für einen Übergang von verwaltetem zu nicht verwaltetem Code an oder umgekehrt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Übersicht über die Profilerstellung](profiling-overview.md)  
   
  [Profilerstellungsschnittstellen](profiling-interfaces.md)  

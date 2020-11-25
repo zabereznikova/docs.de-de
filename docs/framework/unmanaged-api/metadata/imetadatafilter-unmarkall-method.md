@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-ms.openlocfilehash: 9c969f4f8f2327e6ddf45b8f0423ecaafc95d81b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0be94e55b2838e543686b84be736a228ce7dae57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492478"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701821"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll-Methode
+
 Entfernt die Verarbeitungs Markierungen aus allen Token im aktuellen Metadatenbereich.  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,17 +33,19 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `UnmarkAll`nimmt keine Parameter an.  
+
+ `UnmarkAll` nimmt keine Parameter an.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [IMetaDataFilter-Schnittstelle](imetadatafilter-interface.md)

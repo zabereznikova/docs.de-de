@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
 topic_type:
 - apiref
-ms.openlocfilehash: e84639c1d63e6935b9b363f01c12bf0fbd3390e3
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c384fe6c4357c63bc56f9f9b1cc907dea64fddf7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615617"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700937"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength-Methode
+
 Ruft die Länge der eingebetteten Quelle in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,12 +34,14 @@ HRESULT GetSourceLength(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `pRetVal`  
  vorgenommen Ein Zeiger auf eine Variable, die die Länge der eingebetteten Quelle in Bytes angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
+
  S_OK, wenn die Methode erfolgreich ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ISymUnmanagedDocument-Schnittstelle](isymunmanageddocument-interface.md)

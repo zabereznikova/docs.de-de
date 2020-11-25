@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 3455397345451cc0c39cc98a0ea4374eab8350a8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860554"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703381"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual-Methode
+
 Liest Daten aus der angegebenen Adresse des virtuellen Speichers in den angegebenen Puffer.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT ReadVirtual (
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `address`  
  in Ein-CLRDATA_ADDRESS, in dem die Adresse des virtuellen Speichers gespeichert wird.  
   
@@ -50,7 +52,8 @@ HRESULT ReadVirtual (
  `bytesRead`  
  vorgenommen Ein Zeiger auf die Anzahl der zurückgegebenen Bytes.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Clrdata. idl, Clrdata. h  
@@ -59,6 +62,6 @@ HRESULT ReadVirtual (
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [ICLRDataTarget-Schnittstelle](iclrdatatarget-interface.md)

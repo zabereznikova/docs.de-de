@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-ms.openlocfilehash: 0c60631b5e034bc46d74412440d35d526359d043
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c5c89e0eda6e93e34775c00d5ec8fb4ff0940707
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701015"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo-Methode
+
 Ruft die Fehlermeldung ab, die dem angegebenen Validierungs Fehler entspricht.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,6 +39,7 @@ HRESULT FormatEventInfo(
 ```  
   
 ## <a name="parameters"></a>Parameter  
+
  `hVECode`  
  in Der HRESULT-Wert, der an den Validierungs Fehlerhandler übermittelt wurde.  
   
@@ -54,10 +56,11 @@ HRESULT FormatEventInfo(
  in Ein sicheres Array, das zusätzliche Parameter enthält, die den Fehler beschreiben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** IValidator. idl, IValidator. h  
   
- **Bibliothek:** Als Ressource in Mscoree. dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821631"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701405"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstraktionen (abstrakte Typen und Schnittstellen)
+
 Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollständige Implementierung des Vertrags bereitstellt. Abstraktionen werden normalerweise als abstrakte Klassen oder Schnittstellen implementiert, und Sie verfügen über eine klar definierte Referenz Dokumentation, die die erforderliche Semantik der Typen beschreibt, die den Vertrag implementieren. Zu den wichtigsten Abstraktionen in der .NET Framework zählen <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.Object> .
 
  Sie können Frameworks erweitern, indem Sie einen konkreten Typ implementieren, der den Vertrag einer Abstraktion unterstützt, und diesen konkreten Typ mit Framework-APIs verwenden, die die Abstraktion verwenden (Betriebssystem).
@@ -35,7 +36,7 @@ Eine Abstraktion ist ein Typ, der einen Vertrag beschreibt, aber keine vollstän
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Framework-Entwurfs Richtlinien](index.md)
 - [Entwerfen für Erweiterbarkeit](designing-for-extensibility.md)

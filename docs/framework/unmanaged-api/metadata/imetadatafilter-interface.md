@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ec0856ef-8c56-40ba-bf60-86e0ce8b337f
 topic_type:
 - apiref
-ms.openlocfilehash: 821936d20a421739e8eb3d5df228888df7f022e3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2c22e45ca3d33b0a81ff0ecd90bf7574c45676bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701847"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter-Schnittstelle
+
 Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.  
   
 ## <a name="methods"></a>Methoden  
@@ -33,14 +34,15 @@ Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederke
 |[UnmarkAll-Methode](imetadatafilter-unmarkall-method.md)|Entfernt die Verarbeitungs Markierungen aus allen Token im aktuellen Metadatenbereich.|  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
+
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** Cor. h  
   
- **Bibliothek:** Wird als Ressource in Mscoree. dll verwendet.  
+ **Bibliothek:** Wird als Ressource in MsCorEE.dll verwendet.  
   
  **.NET Framework Versionen:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadatenschnittstellen](metadata-interfaces.md)

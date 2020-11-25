@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821475"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701249"
 ---
 # <a name="choosing-between-class-and-struct"></a>Auswählen zwischen Klasse und Struktur
+
 Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht darin, einen Typ als Klasse (einen Verweistyp) oder als Struktur (Werttyp) zu entwerfen. Ein gutes Verständnis der Unterschiede im Verhalten von Verweis Typen und Werttypen ist wichtig für diese Auswahl.
 
  Der erste Unterschied zwischen Verweis Typen und Werttypen, die wir in Erwägung gezogen werden, besteht darin, dass Verweis Typen auf dem Heap und der Garbage Collection zugeordnet werden, wohingegen Werttypen entweder auf dem Stapel oder Inline in enthaltenden Typen zugeordnet werden und die Zuordnung aufgehoben wird, wenn der Stapel entladen wird oder wenn deren Zuordnung aufgehoben wird. Daher sind Zuordnungen und Aufhebungen von Werttypen im allgemeinen günstiger als Zuordnungen und Aufhebungen von Verweis Typen.
@@ -52,7 +53,7 @@ Eine der grundlegenden Entwurfsentscheidungen jedes Framework-Designers besteht 
 
  *Nachdruck mit Genehmigung von Pearson Education, Inc aus [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) von Krzysztof Cwalina und Brad Abrams, veröffentlicht am 22. Oktober 2008 durch Addison-Wesley Professional als Teil der Microsoft Windows Development Series.*
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typentwurfs Richtlinien](type.md)
 - [Framework-Entwurfs Richtlinien](index.md)
