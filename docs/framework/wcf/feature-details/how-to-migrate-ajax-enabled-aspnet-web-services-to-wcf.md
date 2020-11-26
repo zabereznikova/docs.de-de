@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597006"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241901"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF
+
 In diesem Thema werden die Verfahren zum Migrieren eines einfachen ASP.NET-AJAX-Dienstanbieter zu einem entsprechenden AJAX-fähigen Windows Communication Foundation (WCF)-Dienst beschrieben. Es wird gezeigt, wie eine funktionell äquivalente WCF-Version eines ASP.NET AJAX-Dienstanbieter erstellt wird. Die beiden Dienste können dann nebeneinander verwendet werden, oder der WCF-Dienst kann verwendet werden, um den ASP.NET AJAX-Dienst zu ersetzen.
 
  Das Migrieren eines vorhandenen ASP.NET AJAX-Dienstanbieter zu einem WCF AJAX-Dienst bietet die folgenden Vorteile:
@@ -28,15 +29,15 @@ In diesem Thema werden die Verfahren zum Migrieren eines einfachen ASP.NET-AJAX-
 
 1. Öffnen Sie Visual Studio 2012.
 
-2. Wählen Sie im Menü **Datei** die Option **neu**, dann **Projekt**und dann **Web**aus, und wählen Sie dann **ASP.NET-Webdienst Anwendung**aus.
+2. Wählen Sie im Menü **Datei** die Option **neu**, dann **Projekt** und dann **Web** aus, und wählen Sie dann **ASP.NET-Webdienst Anwendung** aus.
 
 3. Benennen Sie das Projekt, `ASPHello` und klicken Sie auf **OK**.
 
 4. Entfernen Sie in der Datei Service1.asmx.cs die Kommentarzeichen vor der Zeile, die `System.Web.Script.Services.ScriptService]` enthält, damit AJAX für diesen Dienst aktiviert wird.
 
-5. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen**aus.
+5. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
 
-6. Wählen Sie im Menü **Debuggen** die Option **Starten ohne Debuggen** aus.
+6. Wählen Sie im Menü **Debuggen** die Option **Ohne Debuggen starten** aus.
 
 7. Wählen Sie auf der generierten Webseite den Vorgang `HelloWorld` aus.
 
@@ -53,7 +54,7 @@ In diesem Thema werden die Verfahren zum Migrieren eines einfachen ASP.NET-AJAX-
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>So erstellen Sie eine äquivalente WCF AJAX-Dienstanwendung
 
-1. Klicken Sie mit der rechten Maustaste auf das Projekt **ASPHello** , und wählen Sie **Hinzufügen**, **Neues Element**und anschließend **AJAX-aktivierter WCF-Dienst**aus.
+1. Klicken Sie mit der rechten Maustaste auf das Projekt **ASPHello** , und wählen Sie **Hinzufügen**, **Neues Element** und anschließend **AJAX-aktivierter WCF-Dienst** aus.
 
 2. Benennen Sie den Dienst, `WCFHello` und klicken Sie auf **Hinzufügen**.
 
@@ -98,9 +99,9 @@ In diesem Thema werden die Verfahren zum Migrieren eines einfachen ASP.NET-AJAX-
     }
     ```
 
-8. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen**aus.
+8. Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
 
-9. Öffnen Sie die Datei WCFHello. svc, und wählen Sie im Menü **Debuggen** die Option **Starten ohne Debugging**aus.
+9. Öffnen Sie die Datei WCFHello. svc, und wählen Sie im Menü **Debuggen** die Option **Starten ohne Debugging** aus.
 
 10. Der Dienst macht jetzt einen Endpunkt bei verfügbar `WCFHello.svc/HelloWorld` , der auf HTTP POST-Anforderungen antwortet. HTTP POST-Anforderungen können im Browser nicht getestet werden, aber der Endpunkt gibt die folgenden XML-Daten zurück.
 
@@ -111,6 +112,7 @@ In diesem Thema werden die Verfahren zum Migrieren eines einfachen ASP.NET-AJAX-
 11. Die `WCFHello.svc/HelloWorld` -und- `Service1.aspx/HelloWorld` Endpunkte sind nun funktional äquivalent.
 
 ## <a name="example"></a>Beispiel
+
  Der Code, der sich aus den hier besprochenen Verfahren ergibt, wird im folgenden Beispiel bereitgestellt.
 
 ```csharp
@@ -195,7 +197,7 @@ d.Add("two", 2);
 
 - [{"Key":"one","Value":1},{"Key":"two","Value":2}] vom <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"One": 1, "Two": 2} von ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"One": 1, "Two": 2} von ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  Der <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ist insofern leistungsfähiger, als dass er Wörterbücher handhaben kann, bei denen der Schlüsseltyp keine Zeichenfolge ist. Der <xref:System.Web.Script.Serialization.JavaScriptSerializer> kann dies nicht. Letzterer ist jedoch JSON-freundlicher.
 
@@ -204,7 +206,7 @@ d.Add("two", 2);
 |Unterschiedskategorie|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Deserialisieren des leeren Puffers (new byte[0]) in <xref:System.Object> (oder <xref:System.Uri> oder andere Klassen).|SerializationException|NULL|
-|Serialisierung von <xref:System.DBNull.Value>|{}(oder {"__type": "#System"})|Null|
+|Serialisierung von <xref:System.DBNull.Value>|{} (oder {"__type": "#System"})|Null|
 |Serialisierung der privaten Member von [Serializable]-Typen.|serialisiert|nicht serialisiert|
 |Serialisierung der öffentlichen Eigenschaften von <xref:System.Runtime.Serialization.ISerializable>-Typen|nicht serialisiert|serialisiert|
 |"Erweiterungen" von JSON|Entspricht der JSON-Spezifikation, die erfordert, dass Objektmembernamen in Anführungszeichen gesetzt werden müssen ({"a":"hello"}).|Lässt Namen von Objektmembern ohne Anführungszeichen zu ({a:"hello"}).|

@@ -8,20 +8,22 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: b7c3e425312652fb37ed8e2203d0a0155fea25b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95ac13409156b553962aee5ea4f5ca717375c133
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163923"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241979"
 ---
 # <a name="ui-automation-clients-for-managed-code"></a>Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  Dieser Abschnitt enthält Übersichten und Gewusst wie-Themen über das Entwickeln von Benutzeroberflächenautomatisierungs-Clients.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Benutzeroberflächenautomatisierung und Bildschirmskalierung](ui-automation-and-screen-scaling.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente](ui-automation-support-for-standard-controls.md)  
  [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](ui-automation-events-for-clients.md)  
@@ -34,4 +36,5 @@ ms.locfileid: "87163923"
  [Artikel zu Vorgehensweisen](ui-automation-clients-for-managed-code-how-to-topics.md)  
   
 ## <a name="reference"></a>Verweis  
+
  <xref:System.Windows.Automation>

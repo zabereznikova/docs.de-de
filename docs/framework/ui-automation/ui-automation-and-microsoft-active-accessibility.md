@@ -8,31 +8,38 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 79545c292cf0f04620a78105833a2f2c76dc5f78
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164066"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242005"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
- Microsoft Active Accessibility war die frühere Lösung, mit der Anwendungen zugänglich gemacht werden konnten. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]ist das neue Barrierefreiheits Modell für Microsoft Windows und soll den Anforderungen von Hilfstechnologieprodukten und automatisierten Testtools gerecht werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bietet viele Verbesserungen gegenüber Active Accessibility.  
+ Microsoft Active Accessibility war die frühere Lösung, mit der Anwendungen zugänglich gemacht werden konnten. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Barrierefreiheits Modell für Microsoft Windows und soll den Anforderungen von Hilfstechnologieprodukten und automatisierten Testtools gerecht werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet viele Verbesserungen gegenüber Active Accessibility.  
   
  Dieses Thema enthält die wichtigsten Funktionen von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] und erläutert, wie sich diese Features von Active Accessibility unterscheiden.  
   
 <a name="Programming_Languages_compare"></a>
+
 ## <a name="programming-languages"></a>Programmiersprachen  
-Active Accessibility basiert auf der Component Object Model (com) mit Unterstützung für duale Schnittstellen und kann daher in C/C++, Microsoft Visual Basic 6,0 und Skriptsprachen programmiert werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)](einschließlich der Client seitigen Anbieter Bibliothek für Standard Steuerelemente) ist in verwaltetem Code geschrieben, und Benutzeroberflächenautomatisierungs-Client Anwendungen können mit c# oder Visual Basic .net am einfachsten programmiert werden. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
+
+Active Accessibility basiert auf der Component Object Model (com) mit Unterstützung für duale Schnittstellen und kann daher in C/C++, Microsoft Visual Basic 6,0 und Skriptsprachen programmiert werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (einschließlich der Client seitigen Anbieter Bibliothek für Standard Steuerelemente) ist in verwaltetem Code geschrieben, und Benutzeroberflächenautomatisierungs-Client Anwendungen können mit c# oder Visual Basic .net am einfachsten programmiert werden. Benutzeroberflächenautomatisierungs-Anbieter, die Schnittstellenimplementierungen darstellen, können in verwaltetem Code oder in C/C++ geschrieben werden.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>
+
 ## <a name="support-in-windows-presentation-foundation"></a>Unterstützung in der Windows Presentation Foundation  
+
  Windows Presentation Foundation (WPF) ist das neue Modell zum Erstellen von Benutzeroberflächen. WPF-Elemente enthalten keine systemeigene Unterstützung für Active Accessibility; Sie unterstützen jedoch [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] die Unterstützung der Überbrückungs Unterstützung für Active Accessibility-Clients. Nur speziell für geschriebene Clients [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] können die Barrierefreiheits Funktionen von WPF in vollem Umfang nutzen, z. b. die umfangreiche Unterstützung für Text.  
   
 <a name="Servers_and_Clients_compare"></a>
+
 ## <a name="servers-and-clients"></a>Server und Clients  
+
  In Active Accessibility kommunizieren Server und Clients direkt, größtenteils über die-Implementierung des Servers `IAccessible` .  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]liegt ein Kerndienst zwischen Server (auch als Anbieter bezeichnet) und Client. Der Kerndienst führt Aufrufe an die von Anbietern implementierten Schnittstellen aus und bietet zusätzliche Dienste, z. B. das Generieren eindeutiger Laufzeitbezeichner für Elemente. Clientanwendungen verwenden Bibliotheksfunktionen zum Aufrufen des [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Diensts.  
@@ -40,13 +47,17 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
  Benutzeroberflächenautomatisierungs-Anbieter können Informationen für Active Accessibility Clients bereitstellen, und Active Accessibility Server können Informationen für Benutzeroberflächenautomatisierungs-Client Anwendungen bereitstellen. Da Active Accessibility jedoch nicht so viele Informationen wie bereitstellt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , sind die beiden Modelle nicht vollständig kompatibel.  
   
 <a name="UI_Elements_compare"></a>
+
 ## <a name="ui-elements"></a>Benutzeroberflächenelemente  
+
  Active Accessibility stellt [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Elemente entweder als `IAccessible` Schnittstelle oder als untergeordneten Bezeichner dar. Es ist schwierig, zwei `IAccessible` -Zeiger zu vergleichen, um festzustellen, ob sie auf dasselbe Element verweisen.  
   
  In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]wird jedes Element als <xref:System.Windows.Automation.AutomationElement> -Objekt dargestellt. Der Vergleich erfolgt mithilfe des Gleichheitsoperators oder der <xref:System.Windows.Automation.AutomationElement.Equals%2A> -Methode, die beide die eindeutigen Laufzeitbezeichner der Elemente vergleichen.  
   
 <a name="Tree_Views_and_Navigation_compare"></a>
+
 ## <a name="tree-views-and-navigation"></a>Strukturansichten und Navigation  
+
  Die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente auf dem Bildschirm können als Baumstruktur betrachtet werden, wobei der Desktop den Stamm, die Anwendungsfenster direkt untergeordnete Elemente und Elemente in Anwendungen weitere Nachfolger darstellen.  
   
  In Active Accessibility werden viele Automatisierungselemente, die für Endbenutzer nicht relevant sind, in der Struktur verfügbar gemacht. Clientanwendungen müssen alle Elemente betrachten, um die erforderlichen Elemente zu ermitteln.  
@@ -60,7 +71,9 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
  Die Navigation in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ist konsistent als in Active Accessibility. Einige Elemente, wie z. b. Dropdown Listen und Popup Fenster, werden zweimal in der Active Accessibility Struktur angezeigt, und die Navigation von Ihnen kann zu unerwarteten Ergebnissen führen. Es ist unmöglich, Active Accessibility für ein Grund leisten-Steuerelement ordnungsgemäß zu implementieren. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht die erneute Zuordnung zu übergeordneten Elementen und die Neupositionierung, sodass ein Element ungeachtet der Hierarchie, die sich durch den Besitz von Fenstern ergibt, an eine beliebige Stelle in der Struktur platziert werden kann.  
   
 <a name="Roles_and_Control_Types"></a>
+
 ## <a name="roles-and-control-types"></a>Rollen und Steuerelementtypen  
+
  Active Accessibility verwendet die `accRole` -Eigenschaft ( `IAccessible::get_actRole` ) zum Abrufen einer Beschreibung der Rolle des Elements in der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , z. b. ROLE_SYSTEM_SLIDER oder ROLE_SYSTEM_MENUITEM. Die Rolle eines Elements ist der wichtigste Anhaltspunkt für seine verfügbaren Funktionen. Die Interaktion mit einem Steuerelement wird mithilfe fester Methoden wie `IAccessible::accSelect` und `IAccessible::accDoDefaultAction`erreicht. Die Interaktion zwischen der Clientanwendung und der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ist durch die Möglichkeiten von `IAccessible`beschränkt.  
   
  Im Gegensatz dazu entkoppelt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] den Steuerelementtyp des Elements (durch die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> -Eigenschaft beschrieben) größtenteils von dessen zu erwartender Funktionalität. Die Funktionalität wird durch die Steuerelementmuster bestimmt, die vom Anbieter durch Implementieren spezieller Schnittstellen unterstützt werden. Steuerelementmuster können kombiniert werden, um sämtliche Funktionen zu beschreiben, die von einem bestimmten [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Element unterstützt werden. Einige Anbieter müssen ein bestimmtes Steuerelementmuster unterstützen. Der Anbieter für ein Kontrollkästchen muss z. B. ein Toggle-Steuerelementmuster unterstützen. Andere Anbieter müssen mindestens einen Satz von Steuerelementmustern unterstützen. Eine Schaltfläche muss z. B. entweder „Toggle“ oder „Invoke“ unterstützen. Wieder andere Anbieter unterstützen überhaupt keine Steuerelementmuster. Ein Bereich, der z. B. nicht vergrößert, verkleinert, verschoben oder angedockt werden kann, besitzt keine Steuerelementmuster.  
@@ -91,7 +104,7 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |ROLE_SYSTEM_MENUBAR|Menüleiste|  
 |ROLE_SYSTEM_MENUITEM|Menüelement|  
 |ROLE_SYSTEM_PANE|Bereich|  
-|ROLE_SYSTEM_PROGRESSBAR|Statusleiste|  
+|ROLE_SYSTEM_PROGRESSBAR|Statusanzeige|  
 |ROLE_SYSTEM_RADIOBUTTON|Optionsfeld|  
 |ROLE_SYSTEM_SCROLLBAR|Bildlaufleiste|  
 |ROLE_SYSTEM_SEPARATOR|Trennzeichen|  
@@ -106,7 +119,7 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |ROLE_SYSTEM_INDICATOR|Ziehpunkt|  
 |ROLE_SYSTEM_TITLEBAR|Titelleiste|  
 |ROLE_SYSTEM_TOOLBAR|Symbolleiste|  
-|ROLE_SYSTEM_TOOLTIP|QuickInfo|  
+|ROLE_SYSTEM_TOOLTIP|ToolTip|  
 |ROLE_SYSTEM_OUTLINE|Struktur|  
 |ROLE_SYSTEM_OUTLINEITEM|Strukturelement|  
 |ROLE_SYSTEM_WINDOW|Fenster|  
@@ -114,10 +127,12 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
  Weitere Informationen zu den verschiedenen Steuerelementtypen finden Sie unter [UI Automation Control Types](ui-automation-control-types.md).  
   
 <a name="States_and_Properties"></a>
+
 ## <a name="states-and-properties"></a>Zustände und Eigenschaften  
+
  In Active Accessibility unterstützen Elemente einen gemeinsamen Satz von Eigenschaften, und einige Eigenschaften (z. b. `accState` ) müssen in Abhängigkeit von der Rolle des Elements sehr unterschiedliche Dinge beschreiben. Server müssen alle Methoden von `IAccessible` implementieren, die eine Eigenschaft zurückgeben, auch solche Methoden, die für das Element nicht relevant sind.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]definiert viele weitere Eigenschaften, von denen einige den Zuständen in Active Accessibility entsprechen. Manche beziehen sich auf alle Elemente, während andere nur für Steuerelementtypen und Steuerelementmuster gelten. Eigenschaften werden durch eindeutige Bezeichner unterschieden, und die meisten Eigenschaften können über eine einzelne Methode, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, abgerufen werden. Viele Eigenschaften können auch leicht über die <xref:System.Windows.Automation.AutomationElement.Current%2A> - und <xref:System.Windows.Automation.AutomationElement.Cached%2A> - Eigenschaftenaccessoren abgerufen werden.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] definiert viele weitere Eigenschaften, von denen einige den Zuständen in Active Accessibility entsprechen. Manche beziehen sich auf alle Elemente, während andere nur für Steuerelementtypen und Steuerelementmuster gelten. Eigenschaften werden durch eindeutige Bezeichner unterschieden, und die meisten Eigenschaften können über eine einzelne Methode, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, abgerufen werden. Viele Eigenschaften können auch leicht über die <xref:System.Windows.Automation.AutomationElement.Current%2A> - und <xref:System.Windows.Automation.AutomationElement.Cached%2A> - Eigenschaftenaccessoren abgerufen werden.  
   
  Ein Benutzeroberflächenautomatisierungs-Anbieter muss keine irrelevanten Eigenschaften implementieren, sondern kann einfach einen `null` -Wert für alle nicht unterstützten Eigenschaften zurückgeben. Darüber hinaus kann der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kerndienst einige Eigenschaften aus dem Standardfenster abrufen. Diese werden dann mit Eigenschaften vereinigt, die vom Anbieter explizit implementiert wurden.  
   
@@ -125,7 +140,7 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
  Die folgende Tabelle zeigt die Übereinstimmung zwischen Eigenschaften der beiden Modelle.  
   
-|Active Accessibility-Eigenschafts Accessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Bemerkungen|  
+|Active Accessibility-Eigenschafts Accessor|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften-ID|Hinweise|  
 |-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|-------------|  
 |`get_accKeyboardShortcut`|<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty> oder <xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|`AccessKeyProperty` hat Vorrang, wenn beide vorhanden sind.|  
 |`get_accName`|<xref:System.Windows.Automation.AutomationElement.NameProperty>||  
@@ -138,11 +153,11 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
   
  In der folgenden Tabelle wird gezeigt, welche [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften Active Accessibility Zustands Konstanten entsprechen.  
   
-|Active Accessibility Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaft|Löst Zustandsänderung aus?|  
+|Active Accessibility Status|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Löst Zustandsänderung aus?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|„Y“ zugeordnet ist|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|„Y“ zugeordnet ist|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> oder <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|„Y“ zugeordnet ist|  
+|STATE_SYSTEM_CHECKED|Für Kontrollkästchen ist dies <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Für Optionsfelder ist dies <xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|J|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|J|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded> oder <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|J|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern> für Menüelemente|N|  
@@ -157,11 +172,11 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> wird unterstützt|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|„Y“ zugeordnet ist|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|J|  
   
  Die folgenden Zustände wurden entweder von den meisten Active Accessibility-Steuerungs Servern nicht implementiert oder verfügen in über keine Entsprechung [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-|Active Accessibility Status|Bemerkungen|  
+|Active Accessibility Status|Hinweise|  
 |-----------------------------------------------------------------------|-------------|  
 |STATE_SYSTEM_BUSY|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
 |STATE_SYSTEM_DEFAULT|Nicht verfügbar in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|  
@@ -180,7 +195,9 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
  Eine vollständige Liste von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaftenbezeichnern finden Sie unter [UI Automation Properties Overview](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>
-## <a name="events"></a>Events  
+
+## <a name="events"></a>Ereignisse  
+
  Der Ereignis Mechanismus in [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] beruht im Gegensatz zum in Active Accessibility nicht auf dem Windows-Ereignis Routing (das eng mit Fenster Handles verbunden ist) und erfordert nicht, dass die Client Anwendung Hooks einrichtet. Abonnements von Ereignissen können nicht nur auf bestimmte Ereignisse, sondern auch auf bestimmte Teile der Struktur abgestimmt werden. Anbieter können zudem das Auslösen von Ereignissen optimieren, indem sie verfolgen, wofür Ereignisse aufgeführt werden.  
   
  Es ist für Clients außerdem einfacher, die Elemente abzurufen, die Ereignisse auslösen, da diese direkt an den Ereignisrückruf übergeben werden. Eigenschaften des Elements werden automatisch vorab abgerufen, wenn eine Cacheanforderung aktiv gewesen ist, als der Client das Ereignis abonniert hat.  
@@ -245,11 +262,13 @@ Active Accessibility basiert auf der Component Object Model (com) mit Unterstüt
 |Keine Entsprechung|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>
+
 ## <a name="security"></a>Sicherheit  
+
  Einige `IAccessible` -Anpassungsszenarien erfordern das Umschließen eines grundlegenden `IAccessible` und den Aufruf über dieses. Dadurch ergeben sich Sicherheitsrisiken, da eine teilweise vertrauenswürdige Komponente kein Zwischenelement eines Codepfads darstellen sollte.  
   
  Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Modell beseitigt die Notwendigkeit, dass Anbieter anderen Anbietercode aufrufen müssen. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kerndienst führt alle erforderlichen Aggregationen aus.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlagen der Benutzeroberflächenautomatisierung](index.md)

@@ -2,17 +2,19 @@
 title: Nachverfolgung von Variablen und Argumenten
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 85cecbfaf1db224152d4582325326f1f80e08266
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242902"
 ---
 # <a name="variable-and-argument-tracking"></a>Nachverfolgung von Variablen und Argumenten
+
 Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Daten oft als nützlich erweisen. Sie stellt zusätzlichen Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] können Sie alle sichtbaren Variablen oder Argumente innerhalb des Bereichs einer Aktivität in einem Workflow mithilfe der Nachverfolgung extrahieren. Überwachungsprofile vereinfachen das Extrahieren von Daten.  
   
 ## <a name="variables-and-arguments"></a>Variablen und Argumente  
+
  Variablen und Argumente werden extrahiert, wenn eine Aktivität einen ActivityStateRecord ausgibt.  Eine Variable kann nur extrahiert werden, wenn sie innerhalb des Bereichs der Aktivität liegt. Eine Variable, die in einer Aktivität extrahiert werden soll, wird wie folgt angegeben:  
   
 - Wenn eine Variable über den Variablennamen angegeben wird, sucht die Nachverfolgung in der aktuellen Aktivität, die nachverfolgt wird, und in den übergeordneten Aktivitäten nach der Variable. Es wird im aktuellen Aktivitätsbereich und im übergeordneten Bereich nach der Variablen gesucht.  
@@ -38,6 +40,7 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
 ```  
   
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>Schützen von Informationen in Variablen und Argumenten  
+
  Eine nachverfolgte Variable oder ein nachverfolgtes Argument wird standardmäßig von der WF-Laufzeit sichtbar gemacht. Workflowentwickler können mit folgenden Schritten einen Schutz vor Zugriffen erreichen:  
   
 1. Verschlüsseln Sie den Wert einer Variablen.  
@@ -46,7 +49,7 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
   
 3. Stellen Sie bei benutzerdefinierten Überwachungsteilnehmern sicher, dass im WF-Code keine vertraulichen Informationen angegeben sind, die in Variablen oder Argumenten gespeichert werden.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Server-App-Fabric-Überwachung](/previous-versions/appfabric/ee677251(v=azure.10))
 - [Überwachen von Anwendungen mit App-Fabric](/previous-versions/appfabric/ee677276(v=azure.10))

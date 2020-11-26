@@ -2,17 +2,19 @@
 title: Benutzerdefinierte Zusammensetzungen mit NativeActivity
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: bf2b8123619df8977b0687c72663c6b482e35654
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82cfd8605d66e2cb489326c40f6ae3e960123788
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242239"
 ---
 # <a name="custom-composite-using-native-activity"></a>Benutzerdefinierte Zusammensetzungen mit NativeActivity
+
 In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.NativeActivity> geschrieben wird, die andere <xref:System.Activities.Activity>-Objekte plant, um den Fluss der Ausführung eines Workflows zu steuern. Zur Veranschaulichung dieses Vorgangs werden in diesem Beispiel zwei häufige Ablaufsteuerungen verwendet: Sequence und While.
 
 ## <a name="sample-details"></a>Beispieldetails
+
  Beginnend bei `MySequence` muss als Erstes beachtet werden, dass diese von <xref:System.Activities.NativeActivity> abgeleitet ist. <xref:System.Activities.NativeActivity> ist das <xref:System.Activities.Activity>-Objekt, das die volle Bandbreite der Workflowlaufzeit durch den <xref:System.Activities.NativeActivityContext> verfügbar macht, der an die `Execute`-Methode übergeben wurde.
 
  `MySequence` macht eine öffentliche Auflistung von <xref:System.Activities.Activity>-Objekten verfügbar, die vom Workflowautor aufgefüllt werden. Bevor der Workflow ausgeführt wird, ruft die Workflowlaufzeit die <xref:System.Activities.Activity.CacheMetadata%2A>-Methode in jeder Aktivität in einem Workflow auf. Während dieses Prozesses legt die Laufzeit Beziehungen zwischen übergeordneten und untergeordneten Elementen für Datenbereiche und Lebensdauerverwaltung fest. Die Standard Implementierung der- <xref:System.Activities.Activity.CacheMetadata%2A> Methode verwendet die- <xref:System.ComponentModel.TypeDescriptor> Instanzklasse für die- `MySequence` Aktivität, um eine beliebige öffentliche Eigenschaft des Typs <xref:System.Activities.Activity> oder <xref:System.Collections.IEnumerable> \<<xref:System.Activities.Activity>> als `MySequence` untergeordnete Elemente der-Aktivität hinzuzufügen.
@@ -25,7 +27,7 @@ In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.Native
 
  Wenn die untergeordnete Aktivität abgeschlossen wird, wird der <xref:System.Activities.CompletionCallback> ausgeführt. Die Schleife fängt wieder von vorne an. Wie auch `Execute`, verwendet ein <xref:System.Activities.CompletionCallback> einen <xref:System.Activities.NativeActivityContext>, sodass die Implementierung Zugriff auf die Laufzeit erhält.
 
- `MyWhile`unterscheidet sich von `MySequence` insofern, dass es ein einzelnes- <xref:System.Activities.Activity> Objekt wiederholt plant und in dem ein<boolescher Wert verwendet wird, <xref:System.Activities.Activity%601> \> `Condition` um zu bestimmen, ob diese Planung stattfinden soll. Wie auch `MySequence`, verwendet `MyWhile` eine `InternalExecute`-Methode, um seine Planungslogik zu zentralisieren. Sie plant den `Condition` <xref:System.Activities.Activity><bool \> mit einem <xref:System.Activities.CompletionCallback%601> \<bool> Namen `OnEvaluationCompleted` . Wenn die Ausführung von `Condition` abgeschlossen ist, wird das Ergebnis über dieses <xref:System.Activities.CompletionCallback> in einem stark typisierten Parameter mit dem Namen verfügbar `result` . Wenn `true`, `MyWhile`<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> aufruft, werden das `Body`<xref:System.Activities.Activity>-Objekt und `InternalExecute` als <xref:System.Activities.CompletionCallback> übergeben. Wenn die Ausführung von `Body` abgeschlossen ist, wird `Condition` erneut in `InternalExecute` geplant, und die Starte beginn erneut von vorne. Wenn der `Condition``false` zurückgibt, gibt eine Instanz von `MyWhile` die Steuerung an die Laufzeit zurück, ohne den `Body` zu planen, und die Laufzeit verschiebt diesen in den Zustand <xref:System.Activities.ActivityInstanceState.Closed>.
+ `MyWhile` unterscheidet sich von `MySequence` insofern, dass es ein einzelnes- <xref:System.Activities.Activity> Objekt wiederholt plant und in dem ein<boolescher Wert verwendet wird, <xref:System.Activities.Activity%601> \> `Condition` um zu bestimmen, ob diese Planung stattfinden soll. Wie auch `MySequence`, verwendet `MyWhile` eine `InternalExecute`-Methode, um seine Planungslogik zu zentralisieren. Sie plant den `Condition` <xref:System.Activities.Activity><bool \> mit einem <xref:System.Activities.CompletionCallback%601> \<bool> Namen `OnEvaluationCompleted` . Wenn die Ausführung von `Condition` abgeschlossen ist, wird das Ergebnis über dieses <xref:System.Activities.CompletionCallback> in einem stark typisierten Parameter mit dem Namen verfügbar `result` . Wenn `true`, `MyWhile`<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> aufruft, werden das `Body`<xref:System.Activities.Activity>-Objekt und `InternalExecute` als <xref:System.Activities.CompletionCallback> übergeben. Wenn die Ausführung von `Body` abgeschlossen ist, wird `Condition` erneut in `InternalExecute` geplant, und die Starte beginn erneut von vorne. Wenn der `Condition``false` zurückgibt, gibt eine Instanz von `MyWhile` die Steuerung an die Laufzeit zurück, ohne den `Body` zu planen, und die Laufzeit verschiebt diesen in den Zustand <xref:System.Activities.ActivityInstanceState.Closed>.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 

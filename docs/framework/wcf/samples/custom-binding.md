@@ -2,17 +2,19 @@
 title: Benutzerdefinierte Bindung
 ms.date: 03/30/2017
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
-ms.openlocfilehash: b00df1c57e1ff9dd39a14be1c61024f439536142
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 940bb68a0a5214abad0fc597b109c2358c2746c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592566"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241746"
 ---
 # <a name="custom-binding"></a>Benutzerdefinierte Bindung
+
 Dieser Abschnitt enthält grundlegende Beispiele, in denen die Verwendung des benutzerdefinierten Bindungsattributs eines Endpunktelements veranschaulicht wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Imperativ für benutzerdefinierte Bindungen](custom-binding-imperative.md)  
  Veranschaulicht, wie imperativer Code geschrieben wird, um benutzerdefinierte Bindungen ohne Verwendung einer Konfigurationsdatei oder eines von WCF generierten Clients zu definieren und zu verwenden.  
   
