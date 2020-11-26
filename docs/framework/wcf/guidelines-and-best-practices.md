@@ -8,18 +8,20 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: eeca4ee47db2aef139567e37cba60cab863e6d53
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319812"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238131"
 ---
 # <a name="guidelines-and-best-practices"></a>Richtlinien und empfohlene Vorgehensweisen
+
 Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Communication Foundation (WCF)-Anwendungen bereitstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](best-practices-data-contract-versioning.md)  
+
+ [Bewährte Methoden: Datenvertragsversionsverwaltung](best-practices-data-contract-versioning.md)  
  Erläutert, wie und wann Datenverträge zu erstellen sind, die auch mit zukünftigen Versionen verwendet werden können.  
   
  [Dienstversionsverwaltung](service-versioning.md)  
@@ -35,18 +37,20 @@ Dieser Abschnitt enthält Themen, die Richtlinien zum Erstellen von Windows Comm
  Erläutert notwendige Überlegungen bei der Verwendung von ClickOnce-Funktionen.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Konzeptionelle Übersicht](conceptual-overview.md)  
   
  [Einfache WCF-Programmierung](basic-wcf-programming.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Was ist die Windows Communication Foundation?](whats-wcf.md)
-- [Windows Communication Foundation (WCF)-Beispiele](./samples/index.md)
+- [Windows Communication Foundation-Beispiele (WCF)](./samples/index.md)
 - [Konzeptionelle Übersicht](conceptual-overview.md)
 - [Erstellen von Clients](building-clients.md)

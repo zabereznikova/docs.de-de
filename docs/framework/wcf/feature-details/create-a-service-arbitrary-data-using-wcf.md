@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601334"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237832"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert
+
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienst Vorgang Daten in einem Format zurückgeben muss, das von bywcf nicht unterstützt wird. In diesem Thema wird die Verwendung des WCF Rest-Programmiermodells erläutert, um einen Dienst zu erstellen, der beliebige Daten empfängt.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
@@ -124,6 +125,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im Folgenden finden Sie eine vollständige Liste des Codes für dieses Beispiel:  
   
 ```csharp  

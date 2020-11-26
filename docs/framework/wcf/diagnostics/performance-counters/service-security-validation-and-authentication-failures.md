@@ -2,17 +2,19 @@
 title: 'Dienst: Sicherheitsvalidierung und Authentifizierungsfehler'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d89419d7d579d29a1c57370d61eefb8b26333a40
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204578"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236857"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Dienst: Sicherheitsvalidierung und Authentifizierungsfehler
+
 Indikatorname: Sicherheitsvalidierung und Authentifizierungsfehler  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieser Zähler wird jedes Mal inkrementiert, wenn eine Nachricht wegen eines Sicherheitsproblems abgelehnt wird, das nicht von dem Zähler "Nicht autorisierte Sicherheitsanrufe" abgedeckt wird. Zu derartigen Problemen gehören:  
   
 - Clienttoken kann nicht aus der Nachricht gelesen werden.  

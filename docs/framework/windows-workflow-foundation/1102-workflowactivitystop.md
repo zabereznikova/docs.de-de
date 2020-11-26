@@ -2,32 +2,35 @@
 title: 1102 - WorkflowActivityStop
 ms.date: 03/30/2017
 ms.assetid: 285e5cb8-e90d-4914-ac06-e9b176ffefa2
-ms.openlocfilehash: 44617e9f53be0e601424746f83b171d33956197e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b5c7874946ae494f41e73f3e7c90f3944a3521d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238690"
 ---
 # <a name="1102---workflowactivitystop"></a>1102 - WorkflowActivityStop
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|1102|  
-|Schlüsselwörter|WFRuntime|  
+|id|1102|  
+|Keywords|WFRuntime|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Gibt an, dass eine Workflowaktivität beendet wurde.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  WorkflowInstance-ID: '%1' E2E-Aktivität  
   
 ## <a name="details"></a>Details  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
+|Datenelementname|Datenelementtyp|BESCHREIBUNG|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:string|Die Instanz-ID für den Workflow.|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

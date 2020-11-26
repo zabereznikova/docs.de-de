@@ -2,14 +2,15 @@
 title: Kontextaustauschprotokoll
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ba613a2d12843ad00034057f8bbf08d5357d7f04
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597435"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237819"
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
+
 In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Release .NET Framework Version 3,5 eingeführte Kontext Austausch Protokoll beschrieben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Zur Implementierung des Kontextaustauschprotokolls kann einer der beiden folgenden Mechanismen verwendet werden, um den Kontext zwischen dem Server und dem Client zu propagieren: HTTP-Cookies oder ein SOAP-Header.  
   
  Das Kontextaustauschprotokoll wird in einer benutzerdefinierten Kanalebene implementiert. Der Kontext wird mithilfe der <xref:System.ServiceModel.Channels.ContextMessageProperty>-Eigenschaft von der Kanalebene an die Anwendungsebene (und umgekehrt) übermittelt. Zur Übertragung zwischen Endpunkten wird der Wert des Kontexts entweder auf der Kanalebene in einen SOAP-Header serialisiert oder in die bzw. aus den Nachrichteneigenschaften konvertiert, die eine HTTP-Anforderung bzw. eine HTTP-Antwort darstellen. Im zweiten Fall wird erwartet, das eine der zugrunde liegenden Kanalebenen die Eigenschaften der HTTP-Anforderungs- bzw. HTTP-Antwortnachrichten in bzw. aus HTTP-Cookies umwandelt. Der für den Kontextaustausch zu verwendende Mechanismus wird mithilfe der <xref:System.ServiceModel.Channels.ContextExchangeMechanism>-Eigenschaft für das <xref:System.ServiceModel.Channels.ContextBindingElement> ausgewählt Gültige Werte sind `HttpCookie` und `SoapHeader`.  
@@ -17,6 +18,7 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Release .
  Auf dem Client kann eine Kanalinstanz abhängig von der Einstellung der Kanaleigenschaft <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> in zwei Modi arbeiten.  
   
 ## <a name="mode-1-channel-context-management"></a>Modus 1: Kanalkontextverwaltung  
+
  Dies ist der Standardmodus, wobei <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> auf `true` festgelegt wird. In diesem Modus verwaltet der Kontextkanal den Kontext und speichert den Kontext während seiner Lebensdauer zwischen. Der Kontext kann über die Kanaleigenschaft `IContextManager` durch einen Aufruf der `GetContext`-Methode vom Kanal abgerufen werden. Der Kanal kann auch vor dem Öffnen vorab mit einem bestimmten Kontext initialisiert werden, indem die `SetContext`-Methode für die Kanaleigenschaft aufgerufen wird. Sobald der Kanal mit einem Kontext initialisiert wurde, kann er nicht mehr zurückgesetzt werden.  
   
  Im Folgenden finden Sie eine Liste der Dinge, die in diesem Modus nicht verändert werden können:  
@@ -33,6 +35,7 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Release .
 - Bei eingehenden Nachrichten hat <xref:System.ServiceModel.Channels.ContextMessageProperty> stets den Wert NULL.  
   
 ## <a name="mode-2-application-context-management"></a>Modus 2: Anwendungskontextverwaltung  
+
  Dieser Modus wird verwendet, wenn <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> auf `false` festgelegt wurde. In diesem Modus verwaltet der Kontextkanal keinen Kontext. Es liegt in der Verantwortung der Anwendung, den Kontext mithilfe von <xref:System.ServiceModel.Channels.ContextMessageProperty> abzurufen, zu verwalten und zu übernehmen. Jeder Versuch, `GetContext` oder `SetContext` aufzurufen, führt zu einer <xref:System.InvalidOperationException>.  
   
  Unabhängig vom ausgewählten Modus unterstützt die Clientkanalfactory die Nachrichtenaustauschmuster <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel> und <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  

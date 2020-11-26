@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 538fd8634094aa6fbf097ddb94469d7bca749a63
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7f77c406e1cfd4def116a1abe24aa92be74c6abe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247025"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237741"
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
+
 Windows Communication Foundation (WCF) kann Nachrichten mit gepufferten oder Streamingübertragungen senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
  Um den Streamingmodus zu aktivieren, definieren Sie den `OperationContract` angemessen, und aktivieren Sie den Streamingmodus auf Transportebene.  
