@@ -2,14 +2,15 @@
 title: Beispiel zur Net.TCP-Portfreigabe
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6c196380951d0da912cd937e3ebc38a03f80489c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa62734ed6a4a016011c9f29b3665dae05a000c6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584310"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235375"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Beispiel zur Net.TCP-Portfreigabe
+
 Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) zwischen Verbindungen mit mehreren Netzwerkanwendungen unterschieden, die auf demselben Computer ausgeführt werden. Wenn eine Anwendung einen Port überwacht, wird der gesamte TCP-Verkehr für diesen Port an die entsprechende Anwendung geleitet. Andere Anwendungen können nicht gleichzeitig an diesem Port lauschen.  
   
 > [!IMPORTANT]
@@ -34,6 +35,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  Die Portfreigabe wird auf dem Server aktiviert, indem die <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>-Eigenschaft der <xref:System.ServiceModel.NetTcpBinding>-Bindung oder des <xref:System.ServiceModel.Channels.TcpTransportBindingElement>-Bindungselements festgelegt wird. Der Client muss nicht wissen, wie die Portfreigabe konfiguriert wurde, um sie auf dem Server zu verwenden.  
   
 ## <a name="enabling-port-sharing"></a>Aktivieren der Portfreigabe  
+
  Im folgenden Code wird das Aktivieren der Portfreigabe auf dem Server veranschaulicht. Es wird eine Instanz des `ICalculator`-Diensts auf einem festen Port mit einem zufälligen URI-Pfad gestartet. Zwei Dienste können zwar denselben Port verwenden, ihre allgemeinen Endpunktadressen müssen jedoch eindeutig sein, damit der NetTcp-Portfreigabedienst Nachrichten an die richtige Anwendung weiterleiten kann.  
 
 ```csharp
@@ -56,6 +58,7 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
 ```  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
+
  Sie können mithilfe des Testclients überprüfen, ob Nachrichten richtig an die Dienste weitergeleitet werden, die den Port gemeinsam verwenden.  
 
 ```csharp

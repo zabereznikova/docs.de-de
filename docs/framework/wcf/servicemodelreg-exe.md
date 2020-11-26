@@ -3,14 +3,15 @@ title: ServiceModel Registration-Tool (ServiceModelReg.exe)
 description: Verwenden Sie dieses Befehlszeilen Tool, um die Registrierung von WCF-und WF-Komponenten auf einem einzelnen Computer zu verwalten, wenn Probleme bei der Dienst Aktivierung auftreten.
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 347b1b8071abe7d8eb7e16ffd879c1fdb9825bc7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d8d5bc4dc3de021e2110fb953dbc4d6c7d7972d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245894"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235921"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel Registration-Tool (ServiceModelReg.exe)
+
 Dieses Befehlszeilentool bietet die Möglichkeit, die Registrierung von WCF- und WF-Komponenten auf einem einzelnen Computer zu verwalten. Unter normalen Umständen müssen Sie dieses Tool nicht verwenden, da WCF- und WF-Komponenten bei der Installation konfiguriert werden. Wenn jedoch bei der Dienstaktivierung Probleme auftreten, können Sie versuchen, die Komponenten mithilfe dieses Tools zu registrieren.  
   
 ## <a name="syntax"></a>Syntax  
@@ -20,12 +21,13 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 ```  
   
 ## <a name="remarks"></a>Hinweise  
+
  Das Tool befindet sich an folgendem Speicherort:  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
 > [!NOTE]
-> Wenn das Service Model-Registrierungs Tool unter Windows Vista ausgeführt wird, zeigt das Dialogfeld **Windows-Features** möglicherweise nicht an, dass die **Windows Communication Foundation http-Aktivierungs** Option unter **Microsoft .NET Framework 3,0** aktiviert ist. Sie können auf das Dialogfeld " **Windows-Features** " zugreifen, indem Sie auf **Start**und dann auf **Ausführen** klicken und dann **OptionalFeatures**eingeben.  
+> Wenn das Service Model-Registrierungs Tool unter Windows Vista ausgeführt wird, zeigt das Dialogfeld **Windows-Features** möglicherweise nicht an, dass die **Windows Communication Foundation http-Aktivierungs** Option unter **Microsoft .NET Framework 3,0** aktiviert ist. Sie können auf das Dialogfeld " **Windows-Features** " zugreifen, indem Sie auf **Start** und dann auf **Ausführen** klicken und dann **OptionalFeatures** eingeben.  
   
  Die folgenden Tabellen beschreiben die Optionen, die mit ServiceModelReg.exe verwendet werden können.  
   
@@ -43,6 +45,7 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Zeigt Hilfetext an.|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Beheben des FileLoadException-Fehlers  
+
  Wenn Sie frühere Versionen von WCF auf dem Computer installiert haben, erhalten Sie möglicherweise einen `FileLoadFoundException` Fehler, wenn Sie das Service Model reg-Tool ausführen, um eine neue Installation zu registrieren. Dies kann auch auftreten, wenn Sie Dateien von der vorherigen Installation manuell entfernt haben, aber die machine.config-Einstellungen unverändert gelassen haben.  
   
  Die Fehlermeldung lautet ungefähr folgendermaßen:  
@@ -69,6 +72,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
  Suchen Sie alle XML-Knoten in dieser Datei, die auf "System. Service Model, Version = 2.0.0.0" verweisen, löschen Sie Sie und alle untergeordneten Knoten. Speichern Sie die Datei, und führen Sie ServiceModelReg.exe erneut aus, um dieses Problem zu beheben.  
   
 ## <a name="examples"></a>Beispiele  
+
  In den folgenden Beispielen wird gezeigt, wie die häufigsten Optionen des Tools ServiceModelReg.exe verwendet werden.  
   
 ```console  

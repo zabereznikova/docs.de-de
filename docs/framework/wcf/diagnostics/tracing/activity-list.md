@@ -2,20 +2,22 @@
 title: Liste der Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602166"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236090"
 ---
 # <a name="activity-list"></a>Liste der Aktivitäten
+
 In diesem Thema werden alle durch Windows Communication Foundation (WCF) definierten Aktivitäten aufgelistet.  
   
 > [!NOTE]
-> Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter ausgeben von [Benutzer Code-](emitting-user-code-traces.md)Ablauf Verfolgungen.  
+> Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter ausgeben [User-Code](emitting-user-code-traces.md)Ablauf Verfolgungen.  
   
 ## <a name="servicemodel-activities"></a>ServiceModel-Aktivitäten  
+
  In der folgenden Tabelle werden alle Aktivitäten für die wichtigsten Verwendungsszenarien aufgeführt.  
   
 |Bezeichnung|Activity Name|Activity Type|BESCHREIBUNG|  
@@ -34,6 +36,7 @@ In diesem Thema werden alle durch Windows Communication Foundation (WCF) definie
 |T|"[IContract.Operation]" ausführen.|ExecuteUserCode|Benutzercode wird dienstseitig nach dem Verteilen ausgeführt. Diese Aktivität stellt eine Grenze zwischen ServiceHost-Code und Benutzercode bereit.|  
   
 ## <a name="security-activities"></a>Sicherheitsaktivitäten  
+
  In der folgenden Tabelle werden alle sicherheitsbezogenen Aktivitäten aufgeführt.  
   
 |Activity Name|Activity Type|BESCHREIBUNG|  
@@ -46,9 +49,10 @@ In diesem Thema werden alle durch Windows Communication Foundation (WCF) definie
 |Activity Name|Activity Type|BESCHREIBUNG|  
 |-------------------|-------------------|-----------------|  
 |COM+-Instanz erstellen|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
-|Com+ ausführen\<operation>|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
+|Com+ ausführen \<operation>|TransferToCOMPlus|1 Aktivitäts Instanz für jeden com+-Befehl von WCF-Code|  
   
 ## <a name="wmi-activities"></a>WMI-Aktivitäten  
+
  In der folgenden Tabelle werden alle WMI-bezogenen Aktivitäten aufgeführt.  
   
 |Activity Name|Activity Type|BESCHREIBUNG|  

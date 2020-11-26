@@ -2,20 +2,23 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 ms.date: 03/30/2017
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
-ms.openlocfilehash: ab1c2c8afe3a66536810a614cc6deac12519cb9b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9ad9dc9fd078f7ad4c0934c8bf9bb73feb935014
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236649"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
+
 Der WS-AT-Protokolldienst hat eine Prepared- oder eine Replay-Nachricht von einem nicht erkannten flüchtigen Teilnehmer empfangen. Dem Teilnehmer wurde ein Fehler zurückgegeben, der aussagt, dass das Ergebnis der Transaktion zweifelhaft ist.  
   
 ## <a name="description"></a>BESCHREIBUNG  
+
  Verfolgt nach, wann der lokale Transaktions-Manager eine Prepared- oder Replay-Nachricht von einer flüchtigen Eintragung erhält, die er bereits vergessen hat.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
+
  Untersuchen Sie die potenziellen Ursachen von verspätet ankommenden Nachrichten vom flüchtigen Teilnehmer.  
   
 ## <a name="see-also"></a>Weitere Informationen

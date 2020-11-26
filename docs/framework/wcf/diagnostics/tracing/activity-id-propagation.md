@@ -2,36 +2,42 @@
 title: Weitergabe der Aktivitäts-ID
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-ms.openlocfilehash: 642d4da49f90d3fc6f2b0dfc9896d724acb075b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0f0478b16bf2ca0975ae0290a8855756ecfc383e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651810"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236103"
 ---
 # <a name="activity-id-propagation"></a>Weitergabe der Aktivitäts-ID
+
 Die Weitergabe erfolgt, wenn die ServiceModel-Aktivitätsablaufverfolgung aktiviert (ServiceModel-Weitergabe) oder deaktiviert (Benutzer-zu-Benutzer-Aktivitätsweitergabe) ist.  
   
 ## <a name="servicemodel-activity-tracing-is-enabled"></a>ServiceModel-Aktivitätsablaufverfolgung ist aktiviert  
+
  Wenn die ServiceModel-Aktivitätsablaufverfolgung aktiviert ist, erfolgt die Weitergabe zwischen ProcessAction-Aktivitäten.  
   
 ### <a name="server"></a>Server  
- Wenn die `propagateActivity` -Attributsatz auf `true` auf dem Client und den Server, die ID des der `ProcessAction` Aktivität auf dem Server ist identisch mit der ID im weitergegebenen `ActivityId` Nachrichtenheader.  
+
+ Wenn das `propagateActivity` `true` -Attribut sowohl auf dem Client als auch auf dem Server auf festgelegt ist, ist die ID der `ProcessAction` Aktivität auf dem Server mit der ID im propagierten `ActivityId` Nachrichten Header identisch.  
   
- Wenn kein `ActivityId` Header in der Nachricht vorhanden ist (d. h. `propagateActivity` = `false` auf dem Client), oder wenn `propagateActivity` = `false` auf dem Server, generiert der Server eine neue Aktivitäts-ID.  
+ Wenn kein `ActivityId` Header in der Nachricht vorhanden ist (d. h. `propagateActivity` = `false` auf dem Client) oder wenn `propagateActivity` = `false` auf dem Server, generiert der Server eine neue Aktivitäts-ID.  
   
 ### <a name="client"></a>Client  
- Wenn der Client ein synchroner Singlethread-Client ist, ignoriert er alle Einstellungen von `propagateActivity` auf dem Client oder Server. Stattdessen wird die Antwort in der Anforderungsaktivität behandelt. Wenn der Client asynchron oder synchron ausgerichtet ist Multithread, `propagateActivity` = `true` im Client und ein Aktivitäts-ID-Header vorhanden ist, in der vom Server gesendete Nachricht ist, wird der Client Ruft die Aktivitäts-ID aus der Nachricht ab und überträgt an das Verarbeiten Sie Aktion-Aktivität, die die weitergegebene Aktivitäts-ID enthält. Andernfalls überträgt der Client aus der ProcessMessage-Aktivität zu einer neuen ProcessAction-Aktivität. Diese zusätzliche Übertragung zu einer neuen ProcessAction-Aktivität erfolgt im Hinblick auf die Konsistenz. Innerhalb dieser Aktivität ruft der Client die Aktivitäts-ID der BeginCall-Aktivität aus dem lokalen Threadkontext ab, wenn der Thread für die Verarbeitung der Antwortnachricht reserviert wird. Er überträgt dann zur ursprünglichen ProcessAction-Aktivität.  
+
+ Wenn der Client ein synchroner Singlethread-Client ist, ignoriert er alle Einstellungen von `propagateActivity` auf dem Client oder Server. Stattdessen wird die Antwort in der Anforderungsaktivität behandelt. Wenn der Client asynchron oder synchron Multithreaded ist, `propagateActivity` = `true` auf dem Client und ein Aktivitäts-ID-Header in der vom Server gesendeten Nachricht vorhanden ist, ruft der Client die Aktivitäts-ID aus der Nachricht ab und überträgt sie an die Prozess Aktions Aktivität, die die propagierte Aktivitäts-ID enthält. Andernfalls überträgt der Client aus der ProcessMessage-Aktivität zu einer neuen ProcessAction-Aktivität. Diese zusätzliche Übertragung zu einer neuen ProcessAction-Aktivität erfolgt im Hinblick auf die Konsistenz. Innerhalb dieser Aktivität ruft der Client die Aktivitäts-ID der BeginCall-Aktivität aus dem lokalen Threadkontext ab, wenn der Thread für die Verarbeitung der Antwortnachricht reserviert wird. Er überträgt dann zur ursprünglichen ProcessAction-Aktivität.  
   
  Wenn der Client ein Duplexclient ist, fungiert der Client beim Empfangen der Nachricht als Server.  
   
 ### <a name="propagation-in-fault-messages"></a>Weitergabe in Fehlermeldungen  
- Es gibt keinen Unterschied bei der Behandlung von gültigen Meldungen und Fehlermeldungen. Wenn `propagateActivity` = `true`, die Aktivitäts-ID, die die SOAP-Fehler Nachrichtenheader hinzugefügt ist identisch mit der ambient-Aktivität.  
+
+ Es gibt keinen Unterschied bei der Behandlung von gültigen Meldungen und Fehlermeldungen. `propagateActivity` = `true` Gibt an, dass die dem SOAP-Fehlermeldungs Header hinzugefügte Aktivitäts-ID mit der Ambient-Aktivität identisch ist.  
   
 ## <a name="servicemodel-activity-tracing-is-disabled"></a>ServiceModel-Aktivitätsablaufverfolgung ist deaktiviert  
+
  Wenn die ServiceModel-Aktivitätsablaufverfolgung deaktiviert ist, erfolgt die Weitergabe direkt zwischen Benutzercodeaktivitäten ohne Durchlaufen von ServiceModel-Aktivitäten. Eine benutzerdefinierte Aktivitäts-ID wird auch durch den Nachrichtenaktivitäts-ID-Header weitergegeben.  
   
- Wenn `propagateActivity` = `true` und `ActivityTracing` = `off` für einen ServiceModel-Ablaufverfolgungslistener (unabhängig davon, ob die Ablaufverfolgung für ServiceModel aktiviert ist), die folgenden auftreten, auf dem Client oder Server:  
+ Wenn und für einen Service Model-Ablaufverfolgungslistener `propagateActivity` = `true` `ActivityTracing` = `off` (unabhängig davon, ob die Ablauf Verfolgung für Service Model aktiviert ist), geschieht Folgendes auf dem Client oder auf dem Server:  
   
 - Bei einer Vorgangsanforderung oder beim Senden von Antworten wird die Aktivitäts-ID im TLS aus Benutzercode weitergegeben, bis eine Nachricht erstellt wird. Außerdem wird ein Aktivitäts-ID-Header in die Nachricht eingefügt, bevor sie gesendet wird.  
   

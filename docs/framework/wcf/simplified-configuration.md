@@ -3,17 +3,19 @@ title: Vereinfachte Konfiguration
 description: Erfahren Sie mehr über die vereinfachte Konfiguration für WCF-Dienste. .NET Framework 4.6.1 bietet eine Möglichkeit, die Größe und Komplexität der Dienst Konfiguration zu reduzieren.
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: defaf536d5a5b9f1479271c0976b43e9b1eb5bc4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 248fe05e5854dbbec1a66b046c4def3d11d30327
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235947"
 ---
 # <a name="simplified-configuration"></a>Vereinfachte Konfiguration
+
 Das Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine komplexe Aufgabe sein. Es gibt viele verschiedene Optionen, und es ist nicht immer einfach zu bestimmen, welche Einstellungen erforderlich sind. Konfigurationsdateien erhöhen zwar die Flexibilität von WCF-Diensten, Sie sind jedoch auch die Quelle für viele schwer zu suchende Probleme. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] behandelt diese Probleme und gibt Benutzern die Möglichkeit, den Umfang und die Komplexität der Dienstkonfiguration zu reduzieren.  
   
 ## <a name="simplified-configuration"></a>Vereinfachte Konfiguration  
+
  In den WCF-Dienst Konfigurationsdateien `system.serviceModel` enthält der Abschnitt <> ein <`service`>-Element für jeden gehosteten Dienst. Das <`service`>-Element enthält eine Auflistung <`endpoint`> Elemente, die die für jeden Dienst verfügbar gemachten Endpunkte und optional einen Satz von Dienst Verhaltensweisen angeben. Die <`endpoint`>-Elemente geben die Adresse, die Bindung und den Vertrag an, die vom Endpunkt verfügbar gemacht werden, und optional die Bindungs Konfiguration und das Endpunkt Verhalten. Der `system.serviceModel` Abschnitt <> enthält auch ein <`behaviors`> Element, mit dem Sie Dienst-oder Endpunkt Verhaltensweisen angeben können. Das folgende Beispiel zeigt den `system.serviceModel` Abschnitt <> einer Konfigurationsdatei.  
   
 ```xml  
@@ -47,7 +49,7 @@ Das Konfigurieren von Windows Communication Foundation (WCF)-Diensten kann eine 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]vereinfacht das Konfigurieren eines WCF-Dienstanbieter, indem die Anforderung für das <>-Element entfernt wird `service` . Wenn Sie keine <`service`> Abschnitt hinzufügen oder Endpunkte in einem <`service`> Abschnitt hinzufügen und der Dienst keine Endpunkte Programm gesteuert definiert, wird dem Dienst automatisch ein Satz von Standard Endpunkten hinzugefügt, einer für jede Dienst Basisadresse und für jeden Vertrag, der vom Dienst implementiert wird. An jedem dieser Endpunkte entspricht die Endpunktadresse der Basisadresse, die Bindung wird anhand des Basisadressenschemas bestimmt, und der Vertrag ist der Vertrag, der vom Dienst implementiert wird. Wenn es nicht erforderlich ist, Endpunkte oder Dienstverhalten anzugeben oder Änderungen an den Bindungseinstellungen vorzunehmen, müssen Sie keine Dienstkonfigurationsdatei angeben. Wenn ein Dienst zwei Verträge implementiert und der Host sowohl HTTP- als auch TCP-Transporte zulässt, erstellt der Diensthost vier Standardendpunkte, einen für jeden Vertrag mit den einzelnen Transporten. Um Standardendpunkte zu erstellen, muss der Diensthost wissen, welche Bindungen verwendet werden können. Diese Einstellungen werden in einem <`protocolMappings`> Abschnitt innerhalb des Abschnitts <`system.serviceModel`> angegeben. Der `protocolMappings` Abschnitt <> enthält eine Liste von Transportprotokoll Schemas, die Bindungs Typen zugeordnet sind. Der Diensthost verwendet die übergebene Basisadresse, um die zu verwendende Bindung zu ermitteln. Im folgenden Beispiel wird das <`protocolMappings`>-Element verwendet.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] vereinfacht das Konfigurieren eines WCF-Dienstanbieter, indem die Anforderung für das <>-Element entfernt wird `service` . Wenn Sie keine <`service`> Abschnitt hinzufügen oder Endpunkte in einem <`service`> Abschnitt hinzufügen und der Dienst keine Endpunkte Programm gesteuert definiert, wird dem Dienst automatisch ein Satz von Standard Endpunkten hinzugefügt, einer für jede Dienst Basisadresse und für jeden Vertrag, der vom Dienst implementiert wird. An jedem dieser Endpunkte entspricht die Endpunktadresse der Basisadresse, die Bindung wird anhand des Basisadressenschemas bestimmt, und der Vertrag ist der Vertrag, der vom Dienst implementiert wird. Wenn es nicht erforderlich ist, Endpunkte oder Dienstverhalten anzugeben oder Änderungen an den Bindungseinstellungen vorzunehmen, müssen Sie keine Dienstkonfigurationsdatei angeben. Wenn ein Dienst zwei Verträge implementiert und der Host sowohl HTTP- als auch TCP-Transporte zulässt, erstellt der Diensthost vier Standardendpunkte, einen für jeden Vertrag mit den einzelnen Transporten. Um Standardendpunkte zu erstellen, muss der Diensthost wissen, welche Bindungen verwendet werden können. Diese Einstellungen werden in einem <`protocolMappings`> Abschnitt innerhalb des Abschnitts <`system.serviceModel`> angegeben. Der `protocolMappings` Abschnitt <> enthält eine Liste von Transportprotokoll Schemas, die Bindungs Typen zugeordnet sind. Der Diensthost verwendet die übergebene Basisadresse, um die zu verwendende Bindung zu ermitteln. Im folgenden Beispiel wird das <`protocolMappings`>-Element verwendet.  
   
 > [!WARNING]
 > Das Ändern von Standardkonfigurationselementen, z. B. Bindungen oder Verhalten, wirkt sich möglicherweise auf Dienste aus, die auf niedrigeren Ebenen der Konfigurationshierarchie definiert sind, da sie eventuell diese Standardbindungen bzw. dieses Standardverhalten verwenden. Daher muss jede Person, die Standardbindungen und -verhalten ändert, berücksichtigen, dass sich diese Änderungen auf andere Dienste in der Hierarchie auswirken können.  

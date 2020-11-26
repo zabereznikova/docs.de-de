@@ -6,14 +6,15 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 8b00c20e82ee1b1efa6a8a123e66a4cfc239143b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236168"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
+
 Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
   
  Es gibt zwei Gruppen von Threadpoolereignissen:  
@@ -23,9 +24,11 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 - [E/A-Threadpoolereignisse](#io-thread-events), die Aufschluss über E/A-Threads geben, die im Threadpool erstellt, deaktiviert, erneut aktiviert oder beendet werden.  
 
 ## <a name="worker-thread-pool-events"></a>Arbeitsthreadpoolereignisse
+
  Diese Ereignisse beziehen sich auf den Arbeitsthreadpool der Laufzeit und stellen Benachrichtigungen für Threadereignisse bereit (wenn z. B. ein Thread erstellt oder beendet wird). Der Arbeitsthreadpool verwendet einen adaptiven Algorithmus für die Parallelitätssteuerung, bei dem die Anzahl der Threads auf Basis des gemessenen Durchsatzes berechnet wird. Arbeitsthreadpoolereignisse können dazu verwendet werden zu verstehen, wie eine Anwendung den Threadpool verwendet und welche Auswirkungen bestimmte Arbeitsauslastungen möglicherweise auf die Parallelitätssteuerung haben.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart und ThreadPoolWorkerThreadStop  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene für diese Ereignisse an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -50,9 +53,11 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
+
  Diese Threadpoolereignisse bieten Informationen, um das Verhalten des Algorithmus zur Threadinjektion (Parallelitätssteuerung) zu verstehen und zu debuggen. Die Informationen werden intern vom Arbeitsthreadpool verwendet.  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -73,6 +78,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -95,6 +101,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -124,9 +131,11 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
 
 ## <a name="io-thread-events"></a>E/A-Threadereignisse  
+
  Diese Threadpoolereignisse treten für Threads im E/A-Threadpool (Abschlussanschluss) auf, der asynchron ist.  
   
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -148,6 +157,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -169,6 +179,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -190,6 +201,7 @@ Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.
 |ClrInstanceID|Win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  

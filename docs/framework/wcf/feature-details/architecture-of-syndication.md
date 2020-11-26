@@ -2,14 +2,15 @@
 title: Architektur von Syndication
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234803"
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
+
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -36,6 +37,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
 > Die Atom&#160;1.0-Spezifikation lässt zu, dass Sekundenbruchteile in beliebigen Datenkonstrukten angegeben werden. Beim Serialisieren und Deserialisieren ignoriert die WCF-Implementierung die Sekundenbruchteile.  
   
 ## <a name="object-model"></a>Objektmodell  
+
  Das Objektmodell für Syndication besteht aus den in den folgenden Tabellen dargestellten Klassengruppen.  
   
  Formatierungsklassen:  
@@ -58,7 +60,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|Eine Klasse, die die Kategorie eines Syndication-Feeds darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Eine Basisklasse, die Syndication-Inhalte darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Eine Klasse, die eine Syndication-Elementerweiterung darstellt.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Eine Collection der <xref:System.ServiceModel.Syndication.SyndicationElementExtension>-Objekte.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Eine Auflistung von <xref:System.ServiceModel.Syndication.SyndicationElementExtension>-Objekten.|  
 |<xref:System.ServiceModel.Syndication.SyndicationFeed>|Eine Klasse, die ein Feedobjekt der obersten Ebene darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Eine Klasse, die ein Feedelement darstellt.|  
 |<xref:System.ServiceModel.Syndication.SyndicationLink>|Eine Klasse, die eine Verknüpfung innerhalb eines Syndication-Feeds oder -Elements darstellt.|  
@@ -73,7 +75,7 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
  Die in einer Feed-Instanz enthaltenen Informationen können in eine Reihe von XML-Formaten konvertiert werden. Die Konvertierungsprozesse in und aus XML werden von der <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Klasse verwaltet. Diese Klasse ist abstrakt. Für Atom&#160;1.0 und RSS&#160;2.0 sowie <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> und <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> werden konkrete Implementierungen bereitgestellt. Um abgeleitete Feedklassen einzusetzen, verwenden Sie entweder <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> oder <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>, da Sie damit eine abgeleitete Feedklasse angeben können. Um abgeleitete Elementklassen einzusetzen, verwenden Sie entweder <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> oder <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>, da Sie damit eine abgeleitete Feedklasse angeben können. Verwender von Drittanbietern können ihre eigene Implementierung von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> ableiten, um andere Syndication-Formate zu unterstützen.  
   
-## <a name="extensibility"></a>Erweiterungen  
+## <a name="extensibility"></a>Erweiterbarkeit  
   
 - Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&#160;1.0 als auch RSS&#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Das WCF-Syndizierungs-Programmiermodell bietet zwei Möglichkeiten, mit benutzerdefinierten Attributen und Erweiterungen zu arbeiten: das Ableiten einer neuen Klasse und lose typisierte Zugriffe. Weitere Informationen finden Sie unter [Syndikation Extensibility](syndication-extensibility.md).  
   

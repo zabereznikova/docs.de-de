@@ -2,17 +2,19 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: 31fb8d466c76c7490aa80dfcab089332af4036a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bfa279887339f025e4cb7c9c455fd25098684073
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589131"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236610"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
+
 Der WS-AT-Protokolldienst hat eine Replay-Nachricht von einem permanenten Teilnehmer empfangen, der nicht auf die Prepare-Nachricht geantwortet hat. Infolgedessen wurde die Transaktion abgebrochen.  
   
 ## <a name="description"></a>BESCHREIBUNG  
+
  Aufgezeichnet, wenn eine Replay-Nachricht empfangen wird, während ein permanenter Teilnehmer sich immer noch in der Vorbereitung befindet. Dies ist eine ungültige Nachricht für diesen Zustand, und die Transaktion wird abgebrochen.  
   
 ## <a name="troubleshooting"></a>Problembehandlung

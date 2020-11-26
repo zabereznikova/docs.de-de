@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 4ff835f767852da586a3a35b7f4ce2edf99db283
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 359364228c4ab4d5b247f4f42f3ef3391f774197
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320910"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236597"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft
-Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anwenden und die Eigenschaft einrichten. Sie können den Schutz auf Dienstebene einrichten, um alle Teile einer Nachricht anzupassen. Darüber hinaus können Sie den Schutz auf stärker unterteilten Ebenen einrichten – von den Methoden zu den Nachrichtenteilen. Weitere Informationen zur `ProtectionLevel`-Eigenschaft finden Sie Untergrund Legendes zu [Schutz Ebenen](understanding-protection-level.md).  
+
+Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anwenden und die Eigenschaft einrichten. Sie können den Schutz auf Dienstebene einrichten, um alle Teile einer Nachricht anzupassen. Darüber hinaus können Sie den Schutz auf stärker unterteilten Ebenen einrichten – von den Methoden zu den Nachrichtenteilen. Weitere Informationen zur- `ProtectionLevel` Eigenschaft finden Sie Untergrund Legendes zu [Schutz Ebenen](understanding-protection-level.md).  
   
 > [!NOTE]
 > Schutzebenen können nur im Code, nicht in der Konfiguration festgelegt werden.  
@@ -42,6 +43,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Schützen von Fehlernachrichten  
+
  Ausnahmen, die für einen Dienst ausgelöst werden, können als SOAP-Fehler an einen Client gesendet werden. Weitere Informationen zum Erstellen stark typisierter Fehler finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](specifying-and-handling-faults-in-contracts-and-services.md) und Gewusst [wie: Deklarieren von Fehlern in Dienstverträgen](how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>So schützen Sie eine Fehlernachricht  
@@ -61,6 +63,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Schützen von Nachrichtenteilen  
+
  Verwenden Sie einen Nachrichtenvertrag, um Teile einer Nachricht zu schützen. Weitere Informationen zu Nachrichten Verträgen finden Sie unter [Verwenden von Nachrichten Verträgen](./feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>So schützen Sie einen Nachrichtentext  
@@ -71,24 +74,26 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
   
 3. Wenden Sie das <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut auf ein Feld an, das als Nachrichtenheader ausgedrückt wird, und setzen Sie die `ProtectionLevel`-Eigenschaft auf <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-4. Wenden Sie die <xref:System.ServiceModel.MessageBodyMemberAttribute> auf jedes Feld an, das als Teil des Nachrichten Texts ausgedrückt wird, und legen Sie die Eigenschaft `ProtectionLevel` auf <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> fest, wie im folgenden Beispiel gezeigt.  
+4. Wenden <xref:System.ServiceModel.MessageBodyMemberAttribute> Sie auf ein beliebiges Feld an, das als Teil des Nachrichten Texts ausgedrückt wird, und legen Sie die- `ProtectionLevel` Eigenschaft auf fest <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> , wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die `ProtectionLevel`-Eigenschaft mehrerer Attributklassen an verschiedenen Stellen in einem Dienst festgelegt.  
   
  [!code-csharp[C_ProtectionLevel#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#6)]
  [!code-vb[C_ProtectionLevel#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#6)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Der folgende Code zeigt die für die Kompilierung des Beispielcodes erforderlichen Namespaces.  
   
  [!code-csharp[C_ProtectionLevel#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#0)]
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>

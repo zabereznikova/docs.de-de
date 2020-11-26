@@ -7,14 +7,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: af6515bcad67ee6a53ff3da01503cf7e5a9a8e5e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5518151c26c528095ec91116b53e82e22e23d25f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235207"
 ---
 # <a name="caching-in-net-framework-applications"></a>Caching in .NET Framework-Anwendungen
+
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
 
  .NET Framework bietet Funktionen zum Zwischenspeichern, die Sie verwenden können, um die Leistung und Skalierbarkeit von Windows Client- und Serveranwendungen, einschließlich ASP.NET, zu verbessern.
@@ -23,6 +24,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 > In der .NET Framework 3,5 und früheren Versionen stellte ASP.net im-Namespace eine in-Memory-Cache Implementierung bereit <xref:System.Web.Caching> . In früheren Versionen der .NET Framework war das Zwischenspeichern nur im <xref:System.Web> -Namespace verfügbar und erforderte daher eine Abhängigkeit von ASP.NET-Klassen. In .NET Framework 4 enthält der <xref:System.Runtime.Caching>-Namespace APIs, die für Web- und nicht-Webanwendungen konzipiert sind.
 
 ## <a name="caching-data"></a>Zwischenspeichern von Daten
+
  Sie können Informationen mithilfe von Klassen im <xref:System.Runtime.Caching>-Namespace zwischenspeichern. Die zwischenspeichernden Klassen in diesem Namespace stellen die folgenden Features zur Verfügung:
 
 - Abstrakte Typen, die die Grundlage für das Erstellen von benutzerdefinierten Cache-Implementierungen bereitstellen.
@@ -45,6 +47,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  Ein Beispiel zum Verwenden der Zwischenspeicherung in WPF-Anwendungen finden Sie unter [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung](/dotnet/desktop/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application).
 
 ## <a name="caching-in-aspnet-applications"></a>Zwischenspeichern in ASP.NET-Anwendungen
+
  Die zwischenspeichernden Klassen im <xref:System.Runtime.Caching>-Namespace bieten Funktionen zum Zwischenspeichern von Daten in ASP.NET.
 
 > [!NOTE]
@@ -54,16 +57,19 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 > Wenn Sie neue Anwendungen entwickeln, empfehlen wir die Verwendung der <xref:System.Runtime.Caching.MemoryCache>-Klasse. Die API, die im <xref:System.Runtime.Caching>-Namespace bereitgestellt wird, ist wie die API, die im <xref:System.Web.Caching.Cache>-Namespace bereitgestellt wird. Aus diesem Grund wird Ihnen die API vertraut sein, wenn Sie den Zwischenspeicher bereits in früheren Versionen von ASP.NET verwendet haben. Ein Beispiel zum Verwenden der Zwischenspeicherung in ASP.NET-Anwendungen finden Sie unter [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in ASP.NET](/previous-versions/ff477235(v=vs.100)).
 
 ### <a name="output-caching"></a>Ausgabezwischenspeicherung
+
  Sie können die <xref:System.Runtime.Caching.MemoryCache>-Klasse in ASP.NET verwenden, um manuell Anwendungsdaten zwischenzuspeichern. ASP.NET unterstützt auch das Zwischenspeichern der Ausgabe, das die generierte Ausgabe von Seiten, Steuerelementen und HTTP-Antworten im Arbeitsspeicher speichert. Sie können das Zwischenspeichern der Ausgabe deklarativ in einer ASP.NET-Webseite oder mithilfe von Einstellungen in der Datei „Web.config“ konfigurieren. Weitere Information finden Sie unter [OutputCache-Element für Caching (ASP.NET-Einstellungsschema)](/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).
 
  Mit ASP.NET können Sie das Zwischenspeichern der Ausgabe durch das Erstellen von benutzerdefinierten Ausgabecacheanbietern erweitern. Indem Sie benutzerdefinierte Anbieter verwenden, können Sie zwischengespeicherte Inhalte mit anderen Speichergeräten wie Festplatten, Cloudspeichern und verteilter Cache-Engines speichern. Erstellen Sie eine Klasse, die aus der <xref:System.Web.Caching.OutputCacheProvider>-Klasse abgeleitet ist, und konfigurieren Sie die Anwendung zur Verwendung des benutzerdefinierten Ausgabecacheanbieters, um einen benutzerdefinierten Ausgabecacheanbieter zu erstellen.
 
 ## <a name="caching-in-wcf-rest-services"></a>Zwischenspeichern in WCF REST-Diensten
+
  Durch .NET Framework können Sie für WCF REST-Dienste den deklarativen Ausgabecache nutzen, der nicht in ASP.NET verfügbar ist. Auf diese Weise können Sie Antworten der WCF REST-Dienstvorgänge zwischenspeichern. Wenn ein Benutzer eine HTTP GET-Anforderung an den Dienst sendet, der zum Zwischenspeichern konfiguriert ist, sendet ASP.NET die zwischengespeicherte Antwort zurück, und die Dienstmethode wird nicht aufgerufen. Wenn der Cache abgelaufen ist, wird beim nächsten Senden einer HTTP GET-Anforderung durch einen Benutzer die Dienstmethode aufgerufen und die Antwort erneut zwischengespeichert.
 
  Mit .NET Framework können Sie auch den bedingten HTTP GET-Zwischenspeicher implementieren. In REST-Szenarios wird eine bedingte HTTP GET-Anforderung häufig von Diensten verwendet, um die intelligente HTTP-Zwischenspeicherung zu implementieren. Dies ist in der [HTTP-Spezifikation](https://www.w3.org/Protocols/rfc2616/rfc2616.html) beschrieben. Weitere Information finden Sie unter [Cacheunterstützung für WCF-Web-HTTP-Dienste](../wcf/feature-details/caching-support-for-wcf-web-http-services.md).
 
 ## <a name="extending-caching-in-the-net-framework"></a>Erweitern von Caching in .NET Framework
+
  Die Zwischenspeicherung in .NET Framework ist erweiterbar. Mit der <xref:System.Runtime.Caching.ObjectCache>-Klasse können Sie eine benutzerdefinierte Cacheimplementierung erstellen. Diese Klasse enthält Elemente, die auf allen verwalteten Anwendungen, einschließlich Windows Forms, Windows Presentation Foundation (WPF) und Windows Communications Foundation (WCF), verfügbar sind. Sie können dies vornehmen, um eine Cacheklasse zu erstellen, die einen anderen Speichermechanismus verwendet, oder wenn Sie eine präzise Kontrolle über Cachevorgänge erhalten möchten.
 
  Zur Erweiterung der Zwischenspeicherung können Sie Folgendes tun:
