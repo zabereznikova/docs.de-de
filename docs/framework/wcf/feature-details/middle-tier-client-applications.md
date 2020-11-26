@@ -2,17 +2,19 @@
 title: Clientanwendungen mittlerer Ebene
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c50223a55765f211dae710f96bffa7716ce36b32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5019215567f4c9127f2e53fd4cdf0d4a67b84d17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248252"
 ---
 # <a name="middle-tier-client-applications"></a>Clientanwendungen mittlerer Ebene
+
 In diesem Thema werden verschiedene Probleme behandelt, die spezifisch für Client Anwendungen der mittleren Ebene sind, die Windows Communication Foundation (WCF) verwenden.  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Verbessern der Leistung von Clients mittlerer Ebene  
+
  Im Vergleich zu früheren Kommunikationstechnologien, wie z. b. Webdiensten mit ASP.net, kann die Erstellung einer WCF-Client Instanz aufgrund der umfangreichen Funktionsgruppe von WCF komplexer sein. Beispiel: Beim Öffnen eines <xref:System.ServiceModel.ChannelFactory%601>-Objekts kann von diesem Objekt eine sichere Sitzung mit dem Dienst hergestellt werden, was zu einer Verlängerung der Startzeit der Clientinstanz führt. In der Regel wirken sich diese zusätzlichen Funktionen nicht auf Client Anwendungen aus, da der WCF-Client mehrere Aufrufe ausführt und dann beendet wird.  
   
  Client Anwendungen der mittleren Ebene können jedoch viele WCF-Client Objekte schnell erstellen und somit die Initialisierungs Anforderungen steigern. Für die Leistungsoptimierung von Anwendungen mittlerer Ebene beim Aufrufen von Diensten haben Sie die Wahl zwischen zwei grundsätzlichen Vorgehensweisen:  
@@ -33,7 +35,7 @@ In diesem Thema werden verschiedene Probleme behandelt, die spezifisch für Clie
   
  Ein Beispiel, das bewährte Methoden für die Wiederverwendung eines Clients für mehrere Anforderungen veranschaulicht, finden Sie unter [Datenbindung in einem ASP.NET-Client](../samples/data-binding-in-an-aspnet-client.md).  
   
- Darüber hinaus können Sie die Leistung beim Starten von Clients verbessern, von denen serialisierbare Datentypen verwendet werden. Für die Serialisierung dieser Datentypen wird der Serialisierungscode von <xref:System.Xml.Serialization.XmlSerializer> zum Generieren und Kompilieren zur Laufzeit verwendet, was eine Beeinträchtigung der Leistung beim Start zur Folge haben kann. Das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kann die Startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung erzeugt wird. Weitere Informationen finden Sie unter Vorgehens [Weise: verbessern der Startzeit von WCF-Client Anwendungen mit dem XmlSerializer](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
+ Darüber hinaus können Sie die Leistung beim Starten von Clients verbessern, von denen serialisierbare Datentypen verwendet werden. Für die Serialisierung dieser Datentypen wird der Serialisierungscode von <xref:System.Xml.Serialization.XmlSerializer> zum Generieren und Kompilieren zur Laufzeit verwendet, was eine Beeinträchtigung der Leistung beim Start zur Folge haben kann. Das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kann die Startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung erzeugt wird. Weitere Informationen finden Sie unter Vorgehens [Weise: verbessern der Startzeit von WCF-Client Anwendungen mit dem XmlSerializer](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 

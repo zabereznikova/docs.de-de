@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247537"
 ---
 # <a name="authentication-in-wcf"></a>Authentifizierung in WCF
+
 In den folgenden Themen werden verschiedene Mechanismen in Windows Communication Foundation (WCF) gezeigt, die die Authentifizierung bereitstellen, z. b. die Windows-Authentifizierung, X. 509-Zertifikate sowie Benutzername und Kenn Wörter.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](how-to-use-the-aspnet-membership-provider.md)  
  Zu den ASP.NET-Funktionen gehören eine Mitgliedschaft und ein Rollenanbieter, eine Datenbank, um Benutzernamen/Kennwort-Paare für die Authentifizierung zu speichern, sowie Benutzerrollen zur Autorisierung. In diesem Thema wird erläutert, wie WCF-Dienste dieselbe Datenbank verwenden können, um Benutzer zu authentifizieren und zu autorisieren.  
   
@@ -33,12 +35,14 @@ In den folgenden Themen werden verschiedene Mechanismen in Windows Communication
  Der Fokus liegt auf allgemeinen Problemen, die bei der Verwendung der Windows-Authentifizierung auftreten.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Häufige Sicherheitsszenarien](common-security-scenarios.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

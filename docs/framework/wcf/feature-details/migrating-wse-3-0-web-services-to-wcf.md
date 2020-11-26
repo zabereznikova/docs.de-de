@@ -2,19 +2,21 @@
 title: Migrieren von WSE 3.0-Webdiensten zu WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: c7feac0a44883e8019acfeaa288752fb051c667f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 84d227a46c4d17291ccf35a759018ffbe6f48b82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248161"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrieren von WSE 3.0-Webdiensten zu WCF
+
 Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication Foundation (WCF) zählen die verbesserte Leistung und die Unterstützung zusätzlicher Transporte, zusätzliche Sicherheitsszenarien und WS-*-Spezifikationen. Ein Webdienst, der von WSE 3,0 zu WCF migriert wird, kann eine Leistungsverbesserung von bis zu 200% bis 400% haben. Weitere Informationen zu den von WCF unterstützten Transporten finden Sie unter [Auswählen eines Transports](choosing-a-transport.md). Eine Liste der Szenarien, die von WCF unterstützt werden, finden Sie unter [Allgemeine Sicherheitsszenarien](common-security-scenarios.md). Eine Liste der Spezifikationen, die von WCF unterstützt werden, finden Sie im [Handbuch zur Interoperabilität von Webdienst Protokollen](web-services-protocols-interoperability-guide.md).  
   
  Die folgenden Abschnitte bieten Anleitungen zum Migrieren einer bestimmten Funktion eines WSE 3,0-Webdiensts zu WCF.  
   
 ## <a name="general"></a>Allgemein  
+
  WSE 3,0-und WCF-Anwendungen umfassen Interoperabilität auf Wire-Ebene und einen allgemeinen Satz von Terminologie. WSE 3,0-und WCF-Anwendungen sind auf der Grundlage des Satzes von WS-*-Spezifikationen, die beide unterstützen, interoperabel. Wenn eine WSE 3,0-oder WCF-Anwendung entwickelt wird, gibt es einen allgemeinen Satz von Terminologie, wie z. b. die Namen der sofort einsetzbaren Sicherheits Assertionen in WSE und die Authentifizierungs Modi.  
   
  Obwohl es viele ähnliche Aspekte zwischen den Programmier Modellen WCF und ASP.net oder WSE 3,0 gibt, unterscheiden Sie sich. Ausführliche Informationen zum WCF-Programmiermodell finden Sie unter [grundlegender Programmier Lebenszyklus](../basic-programming-lifecycle.md).  
@@ -25,6 +27,7 @@ Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication 
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>WSE 3.0-Webdienste, die mit einer Richtliniendatei gesichert werden  
+
  WCF-Dienste können eine Konfigurationsdatei verwenden, um einen Dienst zu sichern. dieser Mechanismus ähnelt einer WSE 3,0-Richtlinien Datei. Wenn Sie in WSE 3.0 einen Webdienst mit einer Richtliniendatei sichern, verwenden Sie entweder eine sofort verwendbare Sicherheitsassertion oder eine benutzerdefinierte Richtlinienassertion. Die sofort einsetzbaren Sicherheits Assertionen werden dem Authentifizierungsmodus eines WCF-sicherheitsbindungs Elements genau zugeordnet. Nicht nur die WCF-Authentifizierungs Modi und die sofort verwendbaren WSE 3,0-Sicherheits Assertionen werden gleich oder ähnlich benannt, Sie sichern die Nachrichten mit denselben Anmelde Informationstypen. Beispielsweise wird die sofort einsetzbare `usernameForCertificate` Sicherheitserklärung in WSE 3,0 dem `UsernameForCertificate` Authentifizierungsmodus in WCF zugeordnet. Die folgenden Codebeispiele veranschaulichen, wie eine minimale Richtlinie, die die sofort einsetzbare `usernameForCertificate` Sicherheitserklärung in WSE 3,0 verwendet, einem `UsernameForCertificate` Authentifizierungsmodus in WCF in einer benutzerdefinierten Bindung zugeordnet wird.  
   
  **WSE 3.0**  
@@ -66,9 +69,11 @@ Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication 
  Weitere Informationen zum Erstellen von benutzerdefinierten Bindungen in WCF finden Sie unter [benutzerdefinierte Bindungen](../extending/custom-bindings.md).  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>WSE 3.0-Webdienste, die mit einem Anwendungscode gesichert werden  
+
  Unabhängig davon, ob WSE 3,0 oder WCF verwendet wird, können die Sicherheitsanforderungen im Anwendungscode anstelle der Konfiguration angegeben werden. Bei WSE 3.0 wird dies durch Erstellen einer Klasse, die sich von der `Policy`-Klasse ableitet, und dann durch Hinzufügen der Anforderungen durch Aufrufen der `Add`-Methode erreicht. Weitere Informationen zum Angeben der Sicherheitsanforderungen im Code finden Sie unter Gewusst [wie: Sichern eines Webdiensts ohne Verwendung einer Richtlinien Datei](/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10)). Wenn Sie in WCF Sicherheitsanforderungen im Code angeben möchten, erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection> -Klasse, und fügen Sie dem eine Instanz von hinzu <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> . Die Anforderungen an die Sicherheitsassertionen werden mit den statischen Hilfsmethoden des Authentifizierungsmodus der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse festgelegt. Weitere Informationen zum Angeben von Sicherheitsanforderungen im Code mithilfe von WCF finden Sie unter Gewusst [wie: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md) und Gewusst [wie: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ### <a name="wse-30-custom-policy-assertion"></a>Benutzerdefinierte WSE 3.0-Richtlinienassertion  
+
  Bei WSE 3.0 gibt es zwei Typen von benutzerdefinierten Richtlinienassertionen: solche, die eine SOAP-Nachricht sichern, und solche, die keine SOAP-Nachricht sichern. Richtlinien Assertionen, die SOAP-Nachrichten schützen, werden von der WSE 3,0 `SecurityPolicyAssertion` -Klasse und der konzeptionellen Entsprechung in WCF abgeleitet <xref:System.ServiceModel.Channels.SecurityBindingElement> .  
   
  Ein wichtiger Punkt ist, dass die schlüsselfertigen WSE 3,0-Sicherheits Assertionen eine Teilmenge der WCF-Authentifizierungs Modi sind. Wenn Sie eine benutzerdefinierte Richtlinien Assertionen in WSE 3,0 erstellt haben, ist möglicherweise ein entsprechender WCF-Authentifizierungsmodus vorhanden. WSE 3.0 stellt z. B. keine CertificateOverTransport-Sicherheitsassertion bereit, die der sofort anwendbaren `UsernameOverTransport`-Sicherheitsassertion entspricht, verwendet aber ein X.509-Zertifikat für Clientauthentifizierungszwecke. Wenn Sie Ihre eigene benutzerdefinierte Richtlinien Assertionen für dieses Szenario definiert haben, macht WCF die Migration unkompliziert. WCF definiert einen Authentifizierungsmodus für dieses Szenario, sodass Sie die statischen Hilfsmethoden des Authentifizierungsmodus nutzen können, um WCF zu konfigurieren <xref:System.ServiceModel.Channels.SecurityBindingElement> .  
@@ -78,15 +83,18 @@ Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication 
  Informationen zum Konvertieren einer benutzerdefinierten Richtlinien Assertion, die eine SOAP-Nachricht nicht sichert, finden Sie unter [Filterung](filtering.md) und das Beispiel für einen [benutzerdefinierten Nachrichteninterceptor](../samples/custom-message-interceptor.md).  
   
 ### <a name="wse-30-custom-security-token"></a>Benutzerdefiniertes WSE 3.0 Sicherheitstoken  
+
  Das WCF-Programmiermodell zum Erstellen eines benutzerdefinierten Tokens unterscheidet sich von WSE 3,0. Ausführliche Informationen zum Erstellen eines benutzerdefinierten Tokens in WSE finden Sie unter [Erstellen benutzerdefinierter Sicherheits Token](/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10)). Ausführliche Informationen zum Erstellen eines benutzerdefinierten Tokens in WCF finden [Sie unter Gewusst wie: Erstellen eines benutzerdefinierten](../extending/how-to-create-a-custom-token.md)Tokens.  
   
 ### <a name="wse-30-custom-token-manager"></a>Benutzerdefinierter WSE 3.0 Token-Manager  
+
  Das Programmiermodell zum Erstellen eines benutzerdefinierten Token-Managers ist in WCF anders als WSE 3,0. Ausführliche Informationen zum Erstellen eines benutzerdefinierten Token-Managers und der anderen Komponenten, die für ein benutzerdefiniertes Sicherheits Token erforderlich sind, finden Sie unter Gewusst [wie: Erstellen eines benutzerdefinierten](../extending/how-to-create-a-custom-token.md)Tokens.  
   
 > [!NOTE]
 > Wenn Sie einen benutzerdefinierten `UsernameToken` Sicherheits Token-Manager erstellt haben, bietet WCF einen einfacheren Mechanismus, um die Authentifizierungs Logik anzugeben, als einen benutzerdefinierten Sicherheits Token-Manager zu erstellen. Weitere Informationen finden Sie unter Gewusst [wie: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungs](how-to-use-a-custom-user-name-and-password-validator.md)Steuer Elements.  
   
 ### <a name="wse-30-web-services-that-use-mtom-encoded-soap-messages"></a>WSE 3.0-Webdienste, die MTOM-codierte SOAP-Nachrichten verwenden  
+
  Wie eine WSE 3-Anwendung kann eine WCF-Anwendung die MTOM-Nachrichten Codierung in der Konfiguration angeben. Um diese Einstellung zu migrieren, fügen Sie der [\<mtomMessageEncoding>](../../configure-apps/file-schema/wcf/mtommessageencoding.md) Bindung für den Dienst hinzu. Im folgenden Codebeispiel wird veranschaulicht, wie die MTOM-Codierung in WSE 3,0 für einen Dienst angegeben wird, der in WCF Äquivalent ist.  
   
  **WSE 3.0**  
@@ -107,7 +115,7 @@ Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication 
 </customBinding>  
 ```  
   
-## <a name="messaging"></a>Nachrichten  
+## <a name="messaging"></a>Messaging  
   
 ### <a name="wse-30-applications-that-use-the-wse-messaging-api"></a>WSE 3.0-Anwendungen, die die WSE-Messaging-API verwenden  
 
@@ -116,14 +124,16 @@ Zu den Vorteilen der Migration von WSE 3,0-Webdiensten zu Windows Communication 
 ## <a name="transports"></a>Transportprotokolle  
   
 ### <a name="tcp"></a>TCP  
+
  Standardmäßig interagieren WSE 3,0-Clients und-Webdienste, die SOAP-Nachrichten über den TCP-Transport senden, nicht mit WCF-Clients und-Webdiensten. Diese Inkompatibilität beruht auf Unterschieden in dem im TCP-Protokoll verwendeten Rahmen und auf Leistungsgründen. In einem WCF-Beispiel wird jedoch ausführlich erläutert, wie eine benutzerdefinierte TCP-Sitzung implementiert wird, die mit WSE 3,0 interagiert. Ausführliche Informationen zu diesem Beispiel finden Sie unter [Transport: WSE 3,0 TCP-Interoperabilität](../samples/transport-wse-3-0-tcp-interoperability.md).  
   
  Um anzugeben, dass eine WCF-Anwendung den TCP-Transport verwendet, verwenden Sie die [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md) .  
   
 ### <a name="custom-transport"></a>Benutzerdefinierter Transport  
+
  Die Entsprechung eines benutzerdefinierten WSE 3,0-Transports in WCF ist eine Kanalerweiterung. Ausführliche Informationen zum Erstellen einer Kanalerweiterung finden Sie unter [Erweitern der Kanal Ebene](../extending/extending-the-channel-layer.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Grundlegender Programmierlebenszyklus](../basic-programming-lifecycle.md)
 - [Benutzerdefinierte Bindungen](../extending/custom-bindings.md)

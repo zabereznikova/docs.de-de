@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247485"
 ---
 # <a name="authorization-in-wcf"></a>Autorisierung in WCF
+
 Autorisierung ist der Prozess, Zugriff und Rechte für Ressourcen zu steuern, z. B. Dienste oder Dateien. In den Themen in diesem Abschnitt wird erläutert, wie Sie diese grundlegende Aufgabe in Windows Communication Foundation (WCF) auf unterschiedlichste Weise ausführen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Zugriffssteuerungsmechanismen](access-control-mechanisms.md)  
  Bietet eine kurze Übersicht über die Autorisierungs Mechanismen in WCF und empfohlene Verwendungsmöglichkeiten.  
   
@@ -35,6 +37,7 @@ Autorisierung ist der Prozess, Zugriff und Rechte für Ressourcen zu steuern, z.
  Erläutert den Unterschied zwischen Delegierung und Identitätswechsel.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,9 +47,10 @@ Autorisierung ist der Prozess, Zugriff und Rechte für Ressourcen zu steuern, z.
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Authentifizierung](authentication-in-wcf.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

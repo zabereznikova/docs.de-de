@@ -2,17 +2,19 @@
 title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: baf7758bc83419a68f900aa51233006ecb61d8e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247992"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
+
 Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von Funktionen, wenn Sie in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
   
 ## <a name="minimum-permission-requirements"></a>Minimal erforderliche Berechtigungen  
+
  WCF unterstützt eine Teilmenge von Funktionen in Anwendungen, die unter einem der folgenden benannten Standard Berechtigungs Sätze ausgeführt werden:  
   
 - Berechtigungen für mittlere Vertrauenswürdigkeit  
@@ -22,6 +24,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  Der Versuch, WCF in teilweise vertrauenswürdigen Anwendungen mit restriktiveren Berechtigungen zu verwenden, kann zur Laufzeit zu Sicherheits Ausnahmen führen.  
   
 ## <a name="contracts"></a>Verträge  
+
  Beim Ausführen in teilweise vertrauenswürdigen Umgebungen unterliegen Verträge den folgenden Einschränkungen:  
   
 - Die Dienstklasse, durch die die `[ServiceContract]` -Schnittstelle implementiert wird, muss `public` sein und über einen `public` -Konstruktor verfügen. Werden `[OperationContract]` -Methoden definiert, müssen diese `public`sein. Wird stattdessen eine `[ServiceContract]` -Schnittstelle implementiert, können diese Methodenimplementierungen explizit oder `private`sein, vorausgesetzt, die `[ServiceContract]` -Schnittstelle ist `public`.  
@@ -31,17 +34,21 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
 - `[MessageContract]` -Klassen und ihre Member können `public`sein. Ist in der Anwendungsassembly die `[MessageContract]` -Klasse definiert, kann diese `internal` sein und Member vom Typ `internal` besitzen.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
+
  Sowohl <xref:System.ServiceModel.BasicHttpBinding> als auch <xref:System.ServiceModel.WebHttpBinding> werden in einer teilweise vertrauenswürdigen Umgebung vollständig unterstützt. <xref:System.ServiceModel.WSHttpBinding> wird nur für den Transportsicherheitsmodus unterstützt.  
   
  Bindungen, die andere Transportoptionen als HTTP verwenden, etwa <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.NetNamedPipeBinding>oder <xref:System.ServiceModel.NetMsmqBinding>, werden in einer teilweise vertrauenswürdigen Umgebung nicht unterstützt.  
   
 ## <a name="custom-bindings"></a>Benutzerdefinierte Bindungen  
+
  Benutzerdefinierte Bindungen können in einer teilweise vertrauenswürdigen Umgebung erstellt und verwendet werden. Für sie gelten jedoch die in diesem Abschnitt genannten Einschränkungen.  
   
 ### <a name="transports"></a>Transportprotokolle  
+
  Die einzigen zulässigen Transportbindungselemente sind <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
 ### <a name="encoders"></a>Encoder  
+
  Folgende Encoder sind zulässig:  
   
 - Der Textencoder (<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
@@ -53,12 +60,15 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  MTOM (Message Transmission Optimization Mechanism)-Encoder werden nicht unterstützt.  
   
 ### <a name="security"></a>Sicherheit  
+
  Teilweise vertrauenswürdige Anwendungen können zum Schutz Ihrer Kommunikation WCF-Sicherheitsfeatures auf Transport Ebene verwenden. Sicherheit auf Nachrichtenebene wird nicht unterstützt. Wird eine Bindung für die Verwendung von Sicherheit auf Nachrichtenebene konfiguriert, löst dies zur Laufzeit eine Ausnahme aus.  
   
 ### <a name="unsupported-bindings"></a>Nicht unterstützte Bindungen  
+
  Bindungen, die zuverlässiges Messaging, Transaktionen oder Sicherheit auf Nachrichtenebene verwenden, werden nicht unterstützt.  
   
 ## <a name="serialization"></a>Serialisierung  
+
  Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Xml.Serialization.XmlSerializer> werden in einer teilweise vertrauenswürdigen Umgebung unterstützt. Allerdings unterliegt die Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> den folgenden Bedingungen:  
   
 - Alle serialisierbaren `[DataContract]` -Typen müssen als `public`deklariert sein.  
@@ -74,11 +84,13 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  Im Abschnitt zur Serialisierung finden Sie unter [Partial Trust Best Practices](partial-trust-best-practices.md) weitere Informationen zur Sicherheit bei der Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> in einer teilweise vertrauenswürdigen Umgebung.  
   
 ### <a name="collection-types"></a>Auflistungstypen  
+
  Einige Auflistungstypen implementieren sowohl <xref:System.Collections.Generic.IEnumerable%601> als auch <xref:System.Collections.IEnumerable>. Beispiele dafür sind Typen, die <xref:System.Collections.Generic.ICollection%601>implementieren. Solche Typen können eine `public` -Implementierung von `GetEnumerator()`und eine explizite Implementierung von `GetEnumerator()`enthalten. In diesem Fall ruft <xref:System.Runtime.Serialization.DataContractSerializer> die `public` -Implementierung von `GetEnumerator()`auf, und nicht die explizite Implementierung von `GetEnumerator()`. Wenn keine der `GetEnumerator()` -Implementierungen `public` ist, sondern es sich bei allen um explizite Implementierungen handelt, ruft <xref:System.Runtime.Serialization.DataContractSerializer>`IEnumerable.GetEnumerator()`auf.  
   
  Bei Auflistungs Typen, bei denen WCF in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird, wenn keine der `GetEnumerator()` Implementierungen ist `public` oder keine von Ihnen explizite Schnittstellen Implementierungen sind, wird eine Sicherheits Ausnahme ausgelöst.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
+
  Viele .NET Framework-Auflistungstypen (wie <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Hashtable> ) werden vom <xref:System.Runtime.Serialization.NetDataContractSerializer> in teilweise vertrauenswürdigen Umgebungen nicht unterstützt. Für diese Typen ist das `[Serializable]` -Attribut festgelegt. Wie bereits im Abschnitt zur Serialisierung erwähnt, wird dieses Attribut in teilweise vertrauenswürdigen Umgebungen nicht unterstützt. Der <xref:System.Runtime.Serialization.DataContractSerializer> behandelt Auflistungen auf besondere Weise, weshalb diese Einschränkung von ihm umgangen werden kann, <xref:System.Runtime.Serialization.NetDataContractSerializer> verfügt jedoch über keine Möglichkeit zum Umgehen dieser Einschränkung.  
   
  Der <xref:System.DateTimeOffset> -Typ wird vom <xref:System.Runtime.Serialization.NetDataContractSerializer> in teilweiser vertrauenswürdigen Umgebungen nicht unterstützt.  
@@ -86,6 +98,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  Beim Ausführen in teilweise vertrauenswürdigen Umgebungen kann mit dem <xref:System.Runtime.Serialization.NetDataContractSerializer> (unter Verwendung des <xref:System.Runtime.Serialization.SurrogateSelector> -Mechanismus) kein Ersatzzeichen verwendet werden. Beachten Sie, dass diese Einschränkung für die Verwendung (und nicht für die Serialisierung) eines Ersatzzeichens gilt.  
   
 ## <a name="enabling-common-behaviors-to-run"></a>Aktivieren von gemeinsamem Verhalten für die Ausführung  
+
  Dienst-oder Endpunkt Verhaltensweisen, die nicht mit dem- <xref:System.Security.AllowPartiallyTrustedCallersAttribute> Attribut (APTCA) markiert sind und dem-Abschnitt einer Konfigurationsdatei hinzugefügt werden, [\<commonBehaviors>](../../configure-apps/file-schema/wcf/commonbehaviors.md) werden nicht ausgeführt, wenn die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. wenn dies auftritt, wird keine Ausnahme ausgelöst. Um die Ausführung gemeinsamer Verhalten zu erzwingen, müssen Sie einen der beiden folgenden Schritte ausführen:  
   
 - Markieren Sie das gemeinsame Verhalten mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut, damit es ausgeführt werden kann, wenn es als teilweise vertrauenswürdige Anwendung bereitgestellt wird. Beachten Sie, dass auf dem Computer ein Registrierungseintrag festgelegt werden kann, um die Ausführung von mit APTCA markierten Assemblys zu verhindern. .  
@@ -95,6 +108,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  Ein Beispiel für ein häufiges Verhalten finden Sie unter Gewusst [wie: Sperren von Endpunkten im Unternehmen](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguration  
+
  Mit einer Ausnahme kann teilweise vertrauenswürdiger Code nur WCF-Konfigurations Abschnitte in der lokalen `app.config` Datei laden. Zum Laden von WCF-Konfigurations Abschnitten, die auf WCF-Abschnitte in machine.config oder in einer Stamm web.config Datei verweisen, ist configurationberechtigung (uneingeschränkt) erforderlich. Ohne diese Berechtigung führen Verweise auf WCF-Konfigurations Abschnitte (Verhalten, Bindungen) außerhalb der lokalen Konfigurationsdatei zu einer Ausnahme, wenn die Konfiguration geladen wird.  
   
  Die Ausnahme ist die Konfiguration für die Serialisierung mit bekannten Typen, wie im Serialisierungsabschnitt dieses Themas beschrieben.  
@@ -105,12 +119,15 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
 ## <a name="diagnostics"></a>Diagnose  
   
 ### <a name="event-logging"></a>Ereignisprotokollierung  
+
  In teilweise vertrauenswürdigen Umgebungen wird eine eingeschränkte Ereignisprotokollierung unterstützt. Nur Dienstaktivierungsfehler und Fehler bei der Ablaufverfolgung/Nachrichtenprotokollierung werden im Ereignisprotokoll protokolliert. Pro Prozess können maximal fünf Ereignisse protokolliert werden. Dadurch soll vermieden werden, dass zu viele Meldungen in das Ereignisprotokoll geschrieben werden.  
   
 ### <a name="message-logging"></a>Nachrichtenprotokollierung  
+
  Die Nachrichten Protokollierung funktioniert nicht, wenn WCF in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. Wird sie in einer teilweise vertrauenswürdigen Umgebung aktiviert, schlägt zwar die Dienstaktivierung nicht fehl, jedoch wird keine Nachricht protokolliert.  
   
 ### <a name="tracing"></a>Ablaufverfolgung  
+
  In einer teilweise vertrauenswürdigen Umgebung ist nur eine eingeschränkte Funktionalität der Ablaufverfolgung verfügbar. Im <`listeners`>-Element in der Konfigurationsdatei sind die einzigen Typen, die Sie hinzufügen können, <xref:System.Diagnostics.TextWriterTraceListener> und die neue <xref:System.Diagnostics.EventSchemaTraceListener> . Die Verwendung des Standardtyps <xref:System.Diagnostics.XmlWriterTraceListener> führt möglicherweise zu unvollständigen oder falschen Protokollen.  
   
  Unterstützte Ablaufverfolgungsquellen sind:  
@@ -141,6 +158,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
 > Um die Überflutung der Ablauf Verfolgungs Dateien mit doppelten Fehlern zu vermeiden, deaktiviert WCF die Ablauf Verfolgung der Ressource oder Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
 ## <a name="wcf-service-host"></a>WCF-Diensthost  
+
  Der WCF-Dienst Host unterstützt keine teilweise Vertrauenswürdigkeit. Wenn Sie einen WCF-Dienst mit teilweiser Vertrauenswürdigkeit verwenden möchten, verwenden Sie nicht die WCF-Dienst Bibliothek-Projektvorlage in Visual Studio, um den Dienst zu erstellen. Erstellen Sie stattdessen eine neue Website in Visual Studio, indem Sie die Vorlage WCF-Dienst Website auswählen, die den Dienst auf einem Webserver hosten kann, auf dem eine teilweise vertrauenswürdige WCF-Verbindung unterstützt wird.  
   
 ## <a name="other-limitations"></a>Weitere Einschränkungen  
@@ -158,9 +176,10 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge von
  Die Verwendung von WCF-Funktionen, die in einer teilweise vertrauenswürdigen Umgebung nicht unterstützt werden, kann zur Laufzeit zu Ausnahmen führen.  
   
 ## <a name="unlisted-features"></a>Nicht aufgeführte Funktionen  
+
  Die beste Möglichkeit festzustellen, ob in einer teilweise vertrauenswürdigen Umgebung auf eine bestimmte Ressource zugegriffen oder eine Aktion ausgeführt werden kann, besteht darin, innerhalb eines `try` -Blocks auf die Ressource zuzugreifen oder die Aktion auszuführen, und dann einen möglichen Fehlschlag mit `catch` abzufangen. Um die Überflutung der Ablauf Verfolgungs Dateien mit doppelten Fehlern zu vermeiden, deaktiviert WCF die Ablauf Verfolgung der Ressource oder Aktion nach dem ersten Sicherheitsfehler. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
