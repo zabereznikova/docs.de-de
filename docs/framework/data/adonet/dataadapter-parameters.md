@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 1264d678b4823149498150f13d8783a82890f6a0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177711"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter-Parameter
@@ -49,9 +49,9 @@ parameter.SourceVersion = DataRowVersion.Original
   
  Die folgende Tabelle zeigt die <xref:System.Data.DataRowVersion>-Enumerationswerte an, die für die Verwendung mit `SourceVersion` zur Verfügung stehen.  
   
-|DataRowVersion-Enumeration|Beschreibung|  
+|DataRowVersion-Enumeration|BESCHREIBUNG|  
 |--------------------------------|-----------------|  
-|`Current`|Der Parameter verwendet den aktuellen Wert der Spalte. Dies ist die Standardeinstellung.|  
+|`Current`|Der Parameter verwendet den aktuellen Wert der Spalte. Dies ist die Standardoption.|  
 |`Default`|Der Parameter verwendet den `DefaultValue` der Spalte.|  
 |`Original`|Der Parameter verwendet den ursprünglichen Wert der Spalte.|  
 |`Proposed`|Der Parameter verwendet einen vorgeschlagenen Wert.|  
@@ -167,7 +167,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> Wenn für einen Parameter kein Parameter Name angegeben wird, erhält der Parameter den inkrementellen Standardnamen des Parameters*N* *,* beginnend mit "parameter1". Wenn Sie einen Parameternamen angeben, empfiehlt es sich, den Parameter*N* zu vermeiden, wenn Sie einen Parameternamen angeben, da der von Ihnen bereitgestellte Name möglicherweise mit einem vorhandenen Standard Parameter Namen in in Konflikt steht `ParameterCollection` . Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
+> Wenn für einen Parameter kein Parameter Name angegeben wird, erhält der Parameter den inkrementellen Standardnamen des Parameters *N* *,* beginnend mit "parameter1". Wenn Sie einen Parameternamen angeben, empfiehlt es sich, den Parameter *N* zu vermeiden, wenn Sie einen Parameternamen angeben, da der von Ihnen bereitgestellte Name möglicherweise mit einem vorhandenen Standard Parameter Namen in in Konflikt steht `ParameterCollection` . Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

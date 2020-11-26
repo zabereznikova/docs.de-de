@@ -3,10 +3,10 @@ title: Allgemeine Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f822de27e53554aba4011a701f59a8feda847c67
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91203812"
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
@@ -31,7 +31,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 
  Mithilfe dieser Schemaauflistung werden Informationen zu der Datenquelle verfügbar gemacht, mit der der verwaltete Anbieter für .NET Framework derzeit verbunden ist.  
   
-|ColumnName|DataType|Beschreibung|  
+|ColumnName|DataType|BESCHREIBUNG|  
 |----------------|--------------|-----------------|  
 |CompositeIdentifierSeparatorPattern|Zeichenfolge|Der reguläre Ausdruck, der den Trennzeichen zum Trennen der Bestandteile in einem zusammengesetzten Bezeichner entspricht. Beispiel: „\\“. (für SQL Server) oder " \@&#124;" \\ . (für Oracle).<br /><br /> Ein zusammengesetzter Bezeichner wird in der Regel für einen Datenbankobjekt Namen verwendet, z. b.: Pubs. dbo. Authors oder Pubs \@ dbo. Authors.<br /><br /> Verwenden Sie für SQL Server den regulären Ausdruck " \\ .". Verwenden Sie für OracleClient " \@&#124;\\ .".<br /><br /> Verwenden Sie Catalog_name_separator für ODBC.<br /><br /> Verwenden Sie DBLITERAL_CATALOG_SEPARATOR oder DBLITERAL_SCHEMA_SEPARATOR für OLE DB.|  
 |DataSourceProductName|Zeichenfolge|Der Name des Produkts, auf das durch den Anbieter zugegriffen wird, z. B. "Oracle" oder "SQLServer".|  
@@ -55,7 +55,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 
  Mithilfe dieser Schemaauflistung werden Informationen zu den Datentypen verfügbar gemacht, die von der Datenbank unterstützt werden, mit der der verwaltete Anbieter für .NET Framework derzeit verbunden ist.  
   
-|ColumnName|DataType|Beschreibung|  
+|ColumnName|DataType|BESCHREIBUNG|  
 |----------------|--------------|-----------------|  
 |TypName|Zeichenfolge|Der anbieterspezifische Datentypname.|  
 |ProviderDbType|INT|Der anbieterspezifische Typwert, der verwendet werden soll, wenn der Typ eines Parameters angegeben wird. Beispiel: SqlDbType.Money oder OracleType.Blob.|  
@@ -96,7 +96,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 
  Mithilfe dieser Schemaauflistung werden Informationen zu den Wörtern verfügbar gemacht, die von der Datenbank reserviert sind, mit der der verwaltete Anbieter für .NET Framework derzeit verbunden ist.  
   
-|ColumnName|DataType|Beschreibung|  
+|ColumnName|DataType|BESCHREIBUNG|  
 |----------------|--------------|-----------------|  
 |ReservedWord|Zeichenfolge|Anbieter spezifisches reserviertes Wort.|  
   
