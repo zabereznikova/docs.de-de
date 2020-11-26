@@ -2,33 +2,36 @@
 title: 303 - UserDefinedInformationEventOccured
 ms.date: 03/30/2017
 ms.assetid: 5ed5acaf-3755-4417-92c4-4ebc8e854ca1
-ms.openlocfilehash: 0b782b5ac0527b5acb3ebf0bf11c117563042495
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8597d84184caea9fc5dc7778cfc6d05e7dc592db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595776"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243429"
 ---
 # <a name="303---userdefinedinformationeventoccured"></a>303 - UserDefinedInformationEventOccured
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|303|  
-|Schlüsselwörter|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
+|id|303|  
+|Keywords|Troubleshooting, HealthMonitoring, UserEvents, ServiceModel, EndToEndMonitoring|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis wird vom Benutzercode ausgegeben. Entwickler können dieses Ereignis ausgeben, wenn ein benutzerdefiniertes Informationsereignis im Dienst auftritt. Sie können dafür die <xref:System.Diagnostics.Eventing>-APIs verwenden. Zusätzlich ist ein WCF-Beispiel vorhanden, das als Wrapper dieser API fungiert und veranschaulicht, wie Sie dieses Ereignis ordnungsgemäß ausgeben.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  Name:'%1', Verweis:'%2', Nutzlast:%3  
   
 ## <a name="details"></a>Details  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
+|Datenelementname|Datenelementtyp|BESCHREIBUNG|  
 |--------------------|--------------------|-----------------|  
 |Name|`xs:string`|Der benutzerdefinierte Name des Ereignisses.|  
-|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Das Format ist definiert als "Website Namen virtueller Anwendungspfad&#124;virtueller Dienstpfad&#124;ServiceName". Beispiel: "Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.|  
-|Payload|`xs:string`|Die benutzerdefinierte Nutzlast des Ereignisses.|
+|HostReference|`xs:string`|Für im Internet gehostete Dienste identifiziert dieses Feld den Dienst in der Webhierarchie eindeutig. Sein Format ist als "Website Name Anwendungspfad für virtuelle Computer&#124;virtuellen Dienst Pfad&#124;Dienst Name '" definiert. Beispiel: "Default Web Site/calculatorapplication&#124;/CalculatorService.svc&#124;CalculatorService '.|  
+|Nutzlast|`xs:string`|Die benutzerdefinierte Nutzlast des Ereignisses.|

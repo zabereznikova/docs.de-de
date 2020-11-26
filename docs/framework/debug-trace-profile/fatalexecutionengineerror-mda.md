@@ -13,23 +13,27 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-ms.openlocfilehash: 0806d2eaa1752c88bebd03304fbe5c8094416a48
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: a9347338d53755b74b3ff291f75cb6b221134130
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415926"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244274"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError-MDA
+
 Der `fatalExecutionEngineError`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn ein schwerwiegender Fehler in der Common Language Runtime (CLR) erkannt wurde. Der Prozess wird beendet.  
   
 ## <a name="symptoms"></a>Symptome  
+
  Unerwartete Prozessbeendigung. Andere Symptome können nicht bestimmt werden, weil es eine Vielzahl von Gründen gibt, warum ein CLR Fehler auftritt.  
   
 ## <a name="cause"></a>Ursache  
+
  Die CLR wurde schwerwiegend beschädigt. Dies wird meist durch Datenbeschädigung verursacht, die durch eine Reihe von Problemen verursacht werden kann, wie z.B. das Aufrufen falsch formatierter Plattformfunktionen und die Weitergabe ungültiger Daten an die CLR.  
   
 ## <a name="resolution"></a>Lösung  
+
  Das Aktivieren zusätzlicher MDAs kann dabei helfen, das Problem zu identifizieren. Die folgenden MDAs können besonders hilfreich bei der Problemdiagnose sein:  
   
 - [invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)  
@@ -57,9 +61,11 @@ Der `fatalExecutionEngineError`-Assistent für verwaltetes Debuggen (MDA) wird a
 - [invalidGCHandleCookie](invalidgchandlecookie-mda.md)  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Dieser MDA hat keine Auswirkung auf das Verhalten der CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
+
  Die Adresse der CLR-Funktion, die den schwerwiegenden Fehler verursacht hat, die ID des Threads, in dem der Fehler aufgetreten ist, und der Fehlercode.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -72,7 +78,7 @@ Der `fatalExecutionEngineError`-Assistent für verwaltetes Debuggen (MDA) wird a
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

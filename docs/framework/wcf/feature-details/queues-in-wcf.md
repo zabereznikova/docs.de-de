@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d63b03e519484ad6ec90b4267a49b77738593e45
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596733"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244651"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Warteschlangen in Windows Communication Foundation
+
 In den Themen in diesem Abschnitt wird Windows Communication Foundation (WCF)-Unterstützung für Warteschlangen beschrieben. WCF bietet Unterstützung für Warteschlangen, indem Microsoft Message Queuing (früher als MSMQ bezeichnet) als Transport genutzt wird, und ermöglicht die folgenden Szenarien:  
   
 - Lose verbundene Anwendungen: Die sendenden Anwendungen können Nachrichten an Warteschlangen senden, unabhängig davon, ob die empfangende Anwendung für die Verarbeitung der Nachricht zur Verfügung steht. Die Warteschlange macht die Verarbeitung unabhängig. So kann die sendende Anwendung Nachrichten mit einer Frequenz an die Warteschlange senden, die unabhängig davon ist, wie schnell die empfangenden Anwendungen die Nachrichten verarbeiten können. Die Gesamtverfügbarkeit des Systems verbessert sich, wenn das Senden von Nachrichten an eine Warteschlange und die Nachrichtenverarbeitung nur lose miteinander verbunden sind.  
@@ -25,6 +26,7 @@ In den Themen in diesem Abschnitt wird Windows Communication Foundation (WCF)-Un
  Wenn Sie die Warteschlangen Funktion in einer WCF-Anwendung verwenden möchten, können Sie eine der Standard Bindungen verwenden, oder Sie können eine benutzerdefinierte Bindung erstellen, wenn eine der Standard Bindungen Ihre Anforderungen nicht erfüllt. Weitere Informationen über relevante Standard Bindungen und deren Auswahl finden Sie unter Vorgehens [Weise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing Anwendungen](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Warteschlangenübersicht](queues-overview.md)  
  Eine Übersicht über die Konzepte des Message Queuings (Nachrichtenwarteschlangen).  
   

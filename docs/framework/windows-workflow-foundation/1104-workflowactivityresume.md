@@ -2,32 +2,35 @@
 title: 1104 - WorkflowActivityResume
 ms.date: 03/30/2017
 ms.assetid: 7fe95d1e-34bd-43ca-b92e-587d2d248fff
-ms.openlocfilehash: 4c9ae5fd386fc93ea19578097aa4e0afdda527e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2a9c40e2c403d43dc980af116e4b6e98b3b2090b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924123"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243559"
 ---
 # <a name="1104---workflowactivityresume"></a>1104 - WorkflowActivityResume
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|1104|  
-|Schlüsselwörter|WFRuntime|  
+|id|1104|  
+|Keywords|WFRuntime|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Gibt an, dass eine Workflowaktivität fortgesetzt wurde.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  WorkflowInstance-ID: '%1' E2E-Aktivität  
   
 ## <a name="details"></a>Details  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
+|Datenelementname|Datenelementtyp|BESCHREIBUNG|  
 |--------------------|--------------------|-----------------|  
 |WorkflowInstanceId|xs:string|Die Instanz-ID für den Workflow.|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

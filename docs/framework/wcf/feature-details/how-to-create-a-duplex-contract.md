@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 9320e5b36b8faba3602fbe1df1b95c05dcc7fa7e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: cce1784865a1599e69c3f604c288ef62c9c43652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243715"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Vorgehensweise: Erstellen eines Duplexvertrags
+
 Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen Duplexvertrag (bidirektionalen Vertrag) verwenden. Ein Duplexvertrag ermöglicht die unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils Anderen initiieren können. Der Duplex Vertrag ist eines von drei Nachrichten Mustern, die für Windows Communication Foundation (WCF)-Dienste verfügbar sind. Die anderen beiden Nachrichtenmuster zeichnen sich durch unidirektionale Anforderungen bzw. Antworten aus. Ein Duplexvertrag besteht aus zwei unidirektionalen Verträgen zwischen Client und Server und erfordert nicht, dass die Methodenaufrufe korrelieren. Sie verwenden diese Art von Vertrag, wenn der Dienst vom Client weitere Informationen anfordern muss oder auf dem Client ausdrücklich Ereignisse auslösen muss. Weitere Informationen zum Erstellen einer Client Anwendung für einen Duplex Vertrag finden Sie unter Gewusst [wie: Zugreifen auf Dienste mit einem Duplex Vertrag](how-to-access-services-with-a-duplex-contract.md). Ein funktionierendes Beispiel finden Sie im [Duplex](../samples/duplex.md) Beispiel.  
   
 ### <a name="to-create-a-duplex-contract"></a>So erstellen Sie einen Duplexvertrag  
@@ -57,6 +58,7 @@ Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die ei
 3. Rufen Sie die in der Rückrufschnittstelle definierten Methoden auf.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Beispielcode veranschaulicht die Duplexkommunikation. Der Vertrag des Diensts enthält Dienstvorgänge zum vorwärts- und rückwärtsgerichteten Navigieren. Der Vertrag des Clients enthält einen Dienstvorgang zur Ausgabe seiner Position.  
   
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]
@@ -76,4 +78,4 @@ Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die ei
 - [Duplex](../samples/duplex.md)
 - [Entwerfen und Implementieren von Diensten](../designing-and-implementing-services.md)
 - [Vorgehensweise: Definieren eines Dienstvertrags](../how-to-define-a-wcf-service-contract.md)
-- [Sitzung](../samples/session.md)
+- [Sitzungskonsistenz](../samples/session.md)

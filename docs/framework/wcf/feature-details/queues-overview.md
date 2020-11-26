@@ -4,23 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 3e75b6d5926b65a93204241eb7c71ca23a5694af
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 464b82c41fe1268d53d77f7bf3cb9463cf235072
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596720"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244638"
 ---
 # <a name="queues-overview"></a>Übersicht über Warteschlangen
 
 In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. In den nachfolgenden Abschnitten wird erläutert, wie sich die hier beschriebenen queuingkonzepte in Windows Communication Foundation (WCF) manifestieren.  
   
 ## <a name="basic-queuing-concepts"></a>Grundlegende Warteschlangenbegriffe  
+
  Beim Entwerfen einer verteilten Anwendung ist das Wählen der richtigen Transportart für die Kommunikation zwischen Diensten und Clients sehr wichtig. Mehrere Faktoren beeinflussen, für welche Transportart Sie sich entscheiden sollten. Ein wichtiger Faktor, nämlich die Isolation zwischen Dienst, Client und Transport, bestimmt die Verwendung eines Warteschlangentransports oder eines direkten Transports wie TCP oder HTTP. Aufgrund des Aufbaus von direkten Transporten (wie TCP und HTTP) wird die Kommunikation vollständig gestoppt, wenn der Dienst oder der Client nicht ordnungsgemäß funktioniert oder wenn Netzwerkprobleme auftreten. Der Dienst, der Client und das Netzwerk müssen gleichzeitig ausgeführt werden, damit die Anwendung funktioniert. Warteschlangentransporte ermöglichen eine Isolation. Dies bedeutet, dass der Client und der Dienst weiterhin funktionieren, wenn der Dienst bzw. der Client ausfallen oder wenn die jeweiligen Kommunikationsverbindungen ausfallen.  
   
  Warteschlangen sorgen sogar für die zuverlässige Kommunikation, wenn Ausfälle bei den Kommunikationspartnern oder im Netzwerk auftreten. Warteschlangen erfassen Nachrichten, die zwischen den Kommunikationspartnern ausgetauscht werden, und stellen diese zu. Warteschlangen werden in der Regel von einem Speicher eines bestimmten Typs unterstützt, beispielsweise flüchtiger oder permanenter Speicher. Warteschlangen speichern Nachrichten für einen Dienst und leiten diese Nachrichten später dann an den Dienst weiter. Die Dereferenzierungswarteschlangen ermöglichen eine sichere Fehlerisolation für beide Parteien. Aus diesem Grund ist dies der bevorzugte Kommunikationsmechanismus für Systeme, die eine hohe Verfügbarkeit erfordern, sowie für verteilte Dienste. Die Dereferenzierung führt jedoch zu einer hohen Latenz. *Latenz* ist die Zeitverzögerung zwischen dem Zeitpunkt, an dem der Client eine Nachricht sendet, und dem Zeitpunkt, zu dem der Dienst den Dienst empfängt. Dies bedeutet, dass Sie nach dem Senden einer Nachricht nicht wissen, wann die Nachricht verarbeitet wird. Die meisten Warteschlangenanwendungen weisen eine hohe Latenz auf. Die folgende Abbildung zeigt ein Modell einer Warteschlangenkommunikation.  
   
- ![Modell einer Warteschlangenkommunikation](media/qconceptual-figure1c.gif "Qkonzeptionelle-Figure1c")  
+ ![Modell einer Warteschlangenkommunikation](media/qconceptual-figure1c.gif "QConceptual-Figure1c")  
   
  Modell einer Warteschlangenkommunikation  
   
@@ -35,6 +36,7 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  Der Warteschlangen-Manager stellt die erforderliche Isolation bereit, damit es sich nicht auf die Kommunikation auswirkt, wenn der Absender und Empfänger einzeln ausfallen. Der Vorteil der zusätzlichen Dereferenzierung, den Warteschlangen bieten, ermöglicht es außerdem, dass mehrere Anwendungsinstanzen aus ein und derselben Warteschlange auslesen, damit beim Farming zwischen den Knoten ein höherer Durchsatz erzielt wird. Deshalb ist es nicht ungewöhnlich, dass Warteschlangen verwendet werden, um höhere Skalierungs- und Durchsatzanforderungen zu erfüllen.  
   
 ## <a name="queues-and-transactions"></a>Warteschlangen und Transaktionen  
+
  Transaktionen ermöglichen es Ihnen, mehrere Vorgänge zu gruppieren, so dass alle Vorgänge fehlschlagen, wenn ein Vorgang fehlschlägt. Ein Beispiel für die Verwendung von Transaktionen ist, wenn eine Person einen ATM-Wert verwendet, um $1.000 aus Ihrem Einsparungs Konto an Ihr Überprüfungs Konto zu übertragen. Dazu sind die folgenden Vorgänge erforderlich:  
   
 - Das Abbuchen von 1.000 € vom Sparkonto.  
@@ -54,6 +56,7 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  Die Clienttransaktion verarbeitet und sendet die Nachricht. Wenn ein Commit für die Transaktion ausgeführt wird, befindet sich die Nachricht in der Übertragungswarteschlange. Beim Dienst liest die Transaktion die Nachricht aus der Zielwarteschlange aus und führt für die Transaktion einen Commit aus. Wenn während der Verarbeitung ein Fehler auftritt, wird für die Nachricht ein Rollback ausgeführt, und sie wird wieder in die Zielwarteschlange eingefügt.  
   
 ## <a name="asynchronous-communication-using-queues"></a>Asynchrone Kommunikation mit Warteschlangen  
+
  Warteschlangen sind ein asynchrones Mittel der Kommunikation. Anwendungen, die Nachrichten mithilfe von Warteschlangen senden, können nicht darauf warten, dass die Nachricht vom Empfänger empfangen und verarbeitet wird. Dies liegt an der hohen Latenz des Warteschlangen-Managers. Nachrichten verbleiben ggf. für einen weit längeren Zeitraum in der Warteschlange, als die Anwendung beabsichtigt hat. Um dies zu vermeiden, kann die Anwendung für die Nachricht einen Gültigkeitsdauerwert angeben. Dieser Wert gibt an, wie lange die Nachricht in der Übertragungswarteschlange verbleiben soll. Wenn dieser Zeitwert überschritten wird und die Nachricht noch nicht an die Zielwarteschlange gesendet wurde, kann die Nachricht an eine Warteschlange für unzustellbare Nachrichten übertragen werden.  
   
  Wenn der Absender eine Nachricht sendet, sagt die Rückgabe des Sendevorgangs aus, dass die Nachricht nur bis in die Übertragungswarteschlange des Absenders gelangt ist. Wenn beim Senden der Nachricht an die Zielwarteschlange also ein Fehler auftritt, erfährt die sendende Anwendung dies nicht sofort. Um solche Fehler anzuzeigen, wird die fehlgeschlagene Nachricht in eine Warteschlange für unzustellbare Nachrichten übertragen.  
@@ -67,11 +70,13 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  Diese Begriffe werden in den folgenden Abschnitten erläutert.  
   
 ## <a name="dead-letter-queue-programming"></a>Programmierung der Warteschlange für unzustellbare Nachrichten  
+
  Warteschlangen für unzustellbare Nachrichten enthalten Nachrichten, die die Zielwarteschlange aus verschiedenen Gründen nicht erreichen. Die Gründe können von abgelaufenen Nachrichten bis zu Konnektivitätsproblemen reichen, die die Übertragung der Nachricht an die Zielwarteschlange verhindern.  
   
  Normalerweise ist eine Anwendung dazu in der Lage, Nachrichten aus einer systemweiten Warteschlange für unzustellbare Nachrichten auszulesen, zu ermitteln, welcher Fehler vorliegt, und entsprechende Schritte einzuleiten, wie das Beheben der Fehler und das erneute Senden der Nachricht bzw. das Aufzeichnen des Status.  
   
 ## <a name="poison-message-queue-programming"></a>Programmierung für Warteschlangen für potenziell schädliche Nachrichten  
+
  Nachdem eine Nachricht in der Zielwarteschlange eingetroffen ist, schlägt der Dienst beim Verarbeiten der Nachricht ggf. wiederholt fehl. Eine Anwendung, die im Rahmen einer Transaktion eine Nachricht aus einer Warteschlange ausliest und eine Datenbank aktualisiert, kann zum Beispiel auf das Problem treffen, dass die Verbindung zur Datenbank vorübergehend unterbrochen ist. In diesem Fall wird für die Transaktion ein Rollback ausgeführt, es wird eine neue Transaktion erstellt, und die Nachricht wird erneut aus der Warteschlange ausgelesen. Ein zweiter Versuch kann erfolgreich sein oder fehlschlagen. Es kann je nach Fehlerursache auch vorkommen, dass die Nachricht wiederholt nicht an die Anwendung zugestellt wird. In diesem Fall wird die Nachricht als "potenziell schädlich" eingestuft. Nachrichten dieser Art werden in eine Warteschlange für potenziell schädliche Nachrichten verschoben, die von einer Anwendung zur Bearbeitung von potenziell schädlichen Nachrichten gelesen werden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen

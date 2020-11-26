@@ -2,22 +2,25 @@
 title: Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555041"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243876"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
+
 Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, verfügbar gemacht zu werden, sowie nützliche Tipps zur Verwendung von WebHost.  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>Verwenden eines benutzerdefinierten Ablaufverfolgungslisteners mit WebHost  
+
  Wenn Sie einen eigenen Ablaufverfolgungslistener schreiben, sollten Sie beachten, dass Ablaufverfolgungen bei einem im Internet gehosteten Dienst verloren gehen können. Wenn WebHost zur Wiederverwendung genutzt wird, wird der Liveprozess heruntergefahren, während ein Duplikat übernimmt. Die beiden Prozesse müssen jedoch trotzdem, abhängig vom Listenertyp, eine Zeit lang Zugriff auf dieselbe Ressource haben. In diesem Fall erstellt `XmlWriterTraceListener` eine neue Ablaufverfolgungsdatei für den zweiten Prozess, während die Windows-Ereignisablaufverfolgung mehrere Prozesse innerhalb derselben Sitzung verwaltet und Zugriff auf dieselbe Datei gewährt. Wenn Ihr Listener keine ähnlichen Funktionalitäten bereitstellt, können Ablaufverfolgungen verloren gehen, wenn die Datei durch die beiden Prozesse gesperrt wird.  
   
  Sie müssen außerdem berücksichtigen, dass ein benutzerdefinierter Ablaufverfolgungslistener Ablaufverfolgungen und Nachrichten z. B. an eine Remotedatenbank senden kann. Als Anwendungsbereitsteller sollten Sie benutzerdefinierte Listener mit entsprechender Zugriffssteuerung konfigurieren. Sie sollten außerdem eine Sicherheitskontrolle auf alle persönlichen Informationen, die am Remotespeicherort verfügbar gemacht werden können, anwenden.  
   
 ## <a name="logging-sensitive-information"></a>Protokollieren vertraulicher Informationen  
+
  Ablaufverfolgungen enthalten Nachrichtenheader, wenn sich eine Nachricht im Gültigkeitsbereich befindet. Bei aktivierter Ablaufverfolgung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations- und Ablaufverfolgungsdateien verantwortlich. Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Ablaufverfolgung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Ablaufverfolgungsprotokolle freigeben möchten.  
   
  Mithilfe der folgenden Tipps können Sie verhindern, dass der Inhalt einer Ablaufverfolgungsdatei unbeabsichtigt verfügbar gemacht wird:  
@@ -90,6 +93,6 @@ Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, ver
   
  Außerdem wird die IP-Adresse des Nachrichtenabsenders einmal pro Verbindung bei verbindungsorientierten Transporten und einmal pro Nachricht bei anderen Übertragungen protokolliert. Dies geschieht ohne Bestätigung durch den Absender. Diese Protokollierung erfolgt jedoch nur auf den Ablaufverfolgungsebenen "Information" oder "Ausführlich", die nicht die Standard- oder empfohlenen Ablaufverfolgungsebenen für die Produktion sind, außer für das Livedebuggen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung](index.md)

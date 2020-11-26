@@ -9,17 +9,19 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: bbd8d5644f8620444d80845b9920b925b6891176
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415939"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244326"
 ---
 # <a name="failedqi-mda"></a>failedQI-MDA
+
 Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die CLR stellvertretend für einen RCW (Runtime Callable Wrapper) `QueryInterface` für einen COM-Schnittstellenzeiger aufruft und der Aufruf von `QueryInterface` fehlschlägt.  
   
 ## <a name="symptoms"></a>Symptome  
+
  Eine Umwandlung für einen RCW schlägt fehl, oder ein Aufruf von COM von einem RCW aus schlägt unerwartet fehl.  
   
 ## <a name="cause"></a>Ursache  
@@ -31,12 +33,15 @@ Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debu
 - Ein OLE zugehöriger Proxy hat einen falschen Wert für HRESULT zurückgegeben.  
   
 ## <a name="resolution"></a>Lösung  
+
  Informationen hierzu finden Sie in der MSDN-Dokumentation zu COM-Regeln.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Wenn ein Aufruf von `QueryInterface` fehlschlägt, erfolgt ein Kontextwechsel, und der Aufruf von `QueryInterface` wird erneut ausgeführt, um zu ermitteln, ob ein falscher Kontext für das Fehlschlagen verantwortlich war.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
+
  Der verwaltete Name der Schnittstelle, die GUID der Schnittstelle und das HRESULT des Fehlers.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -49,7 +54,7 @@ Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debu
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

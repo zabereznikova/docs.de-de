@@ -5,14 +5,15 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 103d68d4ccb4cc243d28037260c1f9f380485ff6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a03902c9a0d36ebd6e2c38f4a827737cacec447
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245031"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, die verwendet wird, um Signaturen (WCF) zu überprüfen
+
 Wenn Windows Communication Foundation (WCF) eine mit einem X. 509-Zertifikat signierte SOAP-Nachricht empfängt, wird standardmäßig überprüft, ob das X. 509-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde. Dies erfolgt, indem ein Zertifikatspeicher überprüft und bestimmt wird, ob das Zertifikat für diese Zertifizierungsstelle als vertrauenswürdig bestimmt wurde. Damit WCF diese Entscheidung treffen kann, muss die Zertifizierungsstellen-Zertifikat Kette im richtigen Zertifikat Speicher installiert werden.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>So installieren Sie eine Zertifizierungsstellenzertifikatkette  
@@ -25,7 +26,7 @@ Wenn Windows Communication Foundation (WCF) eine mit einem X. 509-Zertifikat sig
   
     1. Exportieren Sie die Zertifizierungsstellenzertifikatkette.  
   
-         Wie dies genau erfolgt, hängt von der Zertifizierungsstelle ab. Wenn die Zertifizierungsstelle Microsoft-Zertifikat Dienste ausgeführt wird, wählen Sie ein Zertifizierungsstellen **Zertifikat, eine Zertifikat Kette oder eine CRL Herunterladen**aus, und wählen Sie dann **Zertifizierungsstellen Zertifikat herunterladen**aus.  
+         Wie dies genau erfolgt, hängt von der Zertifizierungsstelle ab. Wenn die Zertifizierungsstelle Microsoft-Zertifikat Dienste ausgeführt wird, wählen Sie ein Zertifizierungsstellen **Zertifikat, eine Zertifikat Kette oder eine CRL Herunterladen** aus, und wählen Sie dann **Zertifizierungsstellen Zertifikat herunterladen** aus.  
   
     2. Importieren Sie die Zertifizierungsstellenzertifikatkette.  
   

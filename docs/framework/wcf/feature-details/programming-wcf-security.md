@@ -8,15 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535897"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244768"
 ---
 # <a name="programming-wcf-security"></a>Programmieren der WCF-Sicherheit
-In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zum Erstellen einer Secure Windows Communication Foundation (WCF)-Anwendung verwendet werden. In diesem Thema werden nur Authentifizierung, Vertraulichkeit und Integrität behandelt, die zusammen als *Übertragungssicherheit*bezeichnet werden. In diesem Thema wird die Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste) nicht behandelt. Informationen zur Autorisierung finden Sie unter [Autorisierung](authorization-in-wcf.md).  
+
+In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zum Erstellen einer Secure Windows Communication Foundation (WCF)-Anwendung verwendet werden. In diesem Thema werden nur Authentifizierung, Vertraulichkeit und Integrität behandelt, die zusammen als *Übertragungssicherheit* bezeichnet werden. In diesem Thema wird die Autorisierung (Kontrolle des Zugriffs auf Ressourcen oder Dienste) nicht behandelt. Informationen zur Autorisierung finden Sie unter [Autorisierung](authorization-in-wcf.md).  
   
 > [!NOTE]
 > Eine wertvolle Einführung in Sicherheitskonzepte, insbesondere im Hinblick auf WCF, finden Sie in den Tutorials zu Mustern und Vorgehensweisen auf MSDN unter [Szenarien, Muster und Implementierungs Leit Faden für Web Services-Erweiterungen (WSE) 3,0](/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
@@ -24,6 +25,7 @@ In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zu
  Das Programmieren der WCF-Sicherheit basiert auf drei Schritten, die Folgendes festlegen: der Sicherheitsmodus, ein Client Anmelde Informationstyp und die Anmelde Informationswerte. Sie können diese Schritte durch Code oder die Konfiguration durchführen.  
   
 ## <a name="setting-the-security-mode"></a>Festlegen des Sicherheitsmodus  
+
  Im folgenden werden die allgemeinen Schritte zum Programmieren mit dem Sicherheitsmodus in WCF erläutert:  
   
 1. Wählen Sie eine der vordefinierten Bindungen, die den Anwendungsanforderungen entsprechen. Eine Liste der Bindungs Optionen finden Sie unter vom [System bereitgestellte Bindungen](../system-provided-bindings.md). Standardmäßig ist beinahe jede Bindung sicherheitsaktiviert. Die einzige Ausnahme ist die- <xref:System.ServiceModel.BasicHttpBinding> Klasse (mithilfe der-Konfiguration, der [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ).  
@@ -55,6 +57,7 @@ In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zu
      Eine sichere Sitzung entsteht, wenn ein Client und ein Dienst einen Kanal mithilfe eines symmetrischen Schlüssels erstellen (sowohl Client als auch Server verwenden den gleichen Schlüssel für die Dauer einer Konversation und bis der Dialog geschlossen wird).  
   
 ## <a name="setting-the-client-credential-type"></a>Festlegen des Clientanmeldeinformationstyps  
+
  Wählen Sie wie erforderlich einen Clientanmeldeinformationstyp aus. Weitere Informationen finden Sie unter [Auswählen eines](selecting-a-credential-type.md)Anmelde Informations Typs. Die folgenden Clientanmeldeinformationstypen sind verfügbar:  
   
 - `Windows`  
@@ -92,12 +95,14 @@ In diesem Thema werden die grundlegenden Programmieraufgaben beschrieben, die zu
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>Festlegen von Dienstanmeldeinformationswerten  
+
  Nachdem Sie einen Dienstanmeldeinformationstyp ausgewählt haben, müssen Sie die tatsächlichen Anmeldeinformationen für den zu verwendenden Dienst und Client festlegen. Für den Dienst werden die Anmeldeinformationen mit der <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse festgelegt und von der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft der <xref:System.ServiceModel.ServiceHostBase>-Klasse zurückgegeben. Die verwendete Bindung gibt den Dienstanmeldeinformationstyp, den ausgewählten Sicherheitsmodus und den Typ der Clientanmeldeinformationen an. Mit dem folgenden Code wird ein Zertifikat für die Dienstanmeldeinformationen festgelegt:  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>Festlegen der Werte der Clientanmeldeinformationen  
+
  Für den Client werden die Clientanmeldeinformationswerte mit der <xref:System.ServiceModel.Description.ClientCredentials>-Klasse festgelegt und von der <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>-Eigenschaft der <xref:System.ServiceModel.ClientBase%601>-Klasse zurückgegeben. Mit dem folgenden Code wird ein Zertifikat als Anmeldeinformationen auf einem Client mit dem TCP-Protokoll festgelegt.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

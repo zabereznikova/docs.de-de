@@ -2,14 +2,15 @@
 title: Hosten in einer Windows-Dienstanwendung
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555847"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243071"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
+
 Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das besonders für Anwendungen geeignet ist, die sich in ausführbaren Dateien mit langer Laufzeit befinden müssen und keinerlei Benutzeroberfläche anzeigen. Die Prozesslebensdauer einer Windows-Dienstanwendung wird vom Dienststeuerungs-Manager (Service Control Manager, SCM) verwaltet, mit dem Sie Windows-Dienstanwendungen starten, beenden und anhalten können. Sie können einen Windows-Dienst Prozess so konfigurieren, dass er beim Starten des Computers automatisch gestartet wird. Dadurch wird er zu einer geeigneten Hostingumgebung für "Always on"-Anwendungen. Weitere Informationen zu Windows-Dienst Anwendungen finden Sie unter [Windows-Dienst Anwendungen](https://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Anwendungen, die WCF-Dienste (Long-Running Windows Communication Foundation) hosten, haben viele Merkmale mit Windows-Diensten. Bei WCF-Diensten handelt es sich insbesondere um ausführbare Server Dateien mit langer Ausführungsdauer, die nicht direkt mit dem Benutzer interagieren und daher keine Form von Benutzeroberflächen implementieren. Daher ist das Hosting von WCF-Diensten innerhalb einer Windows-Dienst Anwendung eine Option zum entwickeln robuster, lang laufender WCF-Anwendungen.  

@@ -2,14 +2,15 @@
 title: ConcurrencyMode Reentrant
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 67e719afd40b52f37c777cf9791291a16878592f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f5b36e57a45850fec7ac27fb333af3860f1e73d3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600087"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243253"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
+
 In diesem Beispiel werden die Notwendigkeit und Auswirkungen der Verwendung von ConcurrencyMode.Reentrant in einer Dienstimplementierung veranschaulicht. ConcurrencyMode.Reentrant impliziert, dass der Dienst (oder Rückruf) nur jeweils eine Nachricht verarbeitet (analog zu `ConcurencyMode.Single`). Um die Thread Sicherheit sicherzustellen, sperrt Windows Communication Foundation (WCF) die `InstanceContext` Verarbeitung einer Nachricht, sodass keine anderen Nachrichten verarbeitet werden können. Im Reentrant-Modus wird der `InstanceContext` entsperrt, kurz bevor der Dienst einen ausgehenden Aufruf ausführt. So kann der folgende Aufruf (der wie in diesem Beispiel dargestellt wiedereintrittsfähig sein kann) beim nächsten Mal gesperrt werden, wenn er den Dienst erreicht. Zum Veranschaulichen des Verhaltens wird im Beispiel gezeigt, wie ein Client und ein Dienst untereinander Nachrichten mit einem Duplexvertrag senden können.  
   
  Bei dem definierten Vertrag handelt es sich um einen Duplexvertrag, bei dem die `Ping`-Methode vom Dienst und die Rückrufmethode `Pong` vom Client implementiert wird. Ein Client ruft die `Ping`-Methode des Servers mit einer Tickanzahl auf und initiiert so den Aufruf. Der Dienst überprüft, ob die Anzahl der Ticks ungleich 0 (null) ist, und ruft dann die `Pong`-Methode des Rückrufs auf, während die Tickanzahl verringert wird. Dies wird im Beispiel mit dem folgenden Code ausgeführt.  
@@ -53,7 +54,8 @@ public void Pong(int ticks)
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
 ## <a name="demonstrates"></a>Zeigt  
- Erstellen Sie zum Ausführen des Beispiels das Client- und Serverprojekt. Öffnen Sie dann zwei Befehlsfenster, und ändern Sie die Verzeichnisse in die \<sample> Verzeichnisse "\CS\Service\bin\debug" und " \<sample> \CS\Client\bin\debug". Starten Sie dann den Dienst, indem Sie eingeben `service.exe` und dann "Client. exe" aufrufen, wobei der anfängliche Wert von Ticks als Eingabe Argument weitergegeben wurde. Es wird eine Beispielausgabe für 10 Ticks veranschaulicht.  
+
+ Erstellen Sie zum Ausführen des Beispiels das Client- und Serverprojekt. Öffnen Sie dann zwei Befehlsfenster, und ändern Sie die Verzeichnisse in die \<sample> Verzeichnisse "\CS\Service\bin\debug" und " \<sample> \CS\Client\bin\debug". Starten Sie dann den Dienst, indem Sie eingeben `service.exe` und dann die Client.exe mit dem anfänglichen Wert von Ticks aufrufen, die als Eingabe Argument weitergegeben wurden. Es wird eine Beispielausgabe für 10 Ticks veranschaulicht.  
   
 ```console  
 Prompt>Service.exe  

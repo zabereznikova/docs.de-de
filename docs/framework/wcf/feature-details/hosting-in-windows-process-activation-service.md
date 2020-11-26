@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c0549d93d7898b1d49b31c1a5fde4af71c4d5a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243006"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosten in WAS (Windows Process Activation Service)
+
 Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) verwaltet die Aktivierung und Lebensdauer der Workerprozesse, die Anwendungen enthalten, die WCF-Dienste (Windows Communication Foundation) hosten. Das WAS-Prozessmodell generalisiert das IIS 6.0-Prozessmodell für den HTTP-Server, indem die Abhängigkeit von HTTP entfernt wird. Dadurch können WCF-Dienste sowohl HTTP-als auch nicht-HTTP-Protokolle, wie z. b. net. TCP, in einer Hostingumgebung verwenden, die Nachrichten basierte Aktivierung unterstützt und die Möglichkeit bietet, eine große Anzahl von Anwendungen auf einem bestimmten Computer zu hosten.  
   
  Weitere Informationen zum Aufbau eines WCF-Diensts, der in der was-Host Umgebung ausgeführt wird, finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](how-to-host-a-wcf-service-in-was.md).  
@@ -29,7 +30,8 @@ Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) 
 [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) funktioniert mit IIS 7,0 und Windows Process Activation Service (was), um eine umfangreiche anwendungshostingumgebung für NET4 WCF-und WF-Dienste bereitzustellen. Vorteile sind u. a. die Verwaltung von Prozesslebenszyklen, die Prozesswiederverwendung, freigegebenes Hosting, rascher Ausfallschutz, Verwaisen von Prozessen, die Aktivierung bei Bedarf und die Systemüberwachung. Ausführliche Informationen finden Sie unter [AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10)) und [AppFabric-hostingkonzepte](/previous-versions/appfabric/ee677371(v=azure.10)).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elemente des WAS-Adressierungsmodells  
- Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren Anwendungen in Gruppen, die als *Sites*bezeichnet werden. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  
+
+ Anwendungen besitzen Uniform Resource Identifier (URI)-Adressen. Diese stellen die Codeeinheiten dar, deren Lebensdauer und Ausführungsumgebung vom Server verwaltet werden. Eine einzelne WAS-Serverinstanz kann viele verschiedene Anwendungen beherbergen. Server organisieren Anwendungen in Gruppen, die als *Sites* bezeichnet werden. Innerhalb einer Site sind die Anwendungen entsprechend der Struktur der URIs, die als ihre externen Adressen dienen, hierarchisch angeordnet.  
   
  Anwendungsadressen bestehen aus zwei Teilen: einem Basis-URI-Präfix und einer anwendungsspezifischen, relativen Adresse (Pfad), die zusammen die externe Adresse einer Anwendung ergeben. Das Basis-URI-Präfix wird aus der Sitebindung erstellt und für alle Anwendungen innerhalb dieser Site verwendet. Anwendungs Adressen werden dann mithilfe von anwendungsspezifischen Pfad Fragmenten (z. b. "/applicationOne") erstellt und an das Basis-URI-Präfix angehängt (z. b. "net. TCP://localhost"), um den vollständigen Anwendungs-URI zu erhalten.  
   
@@ -47,6 +49,7 @@ Der Windows-Prozessaktivierungsdienst (Windows Process Activation Service, WAS) 
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>Die WAS-Laufzeit  
+
  Anwendungen werden für die Zwecke der Adressierung und Verwaltung in Sites organisiert. Zur Laufzeit werden Anwendungen auch in Anwendungspools zusammengefasst. Ein Anwendungspool kann viele verschiedene Anwendungen vieler anderer Sites enthalten. Alle Anwendungen innerhalb eines Anwendungspools teilen sich einen Satz allgemeiner Laufzeiteigenschaften. Sie alle werden beispielsweise unter der gleichen Version der Common Language Runtime (CLR) ausgeführt und verwenden eine gemeinsame Prozessidentität. Jeder Anwendungspool entspricht einer Instanz eines Arbeitsprozesses (w3wp.exe). Jede innerhalb eines gemeinsamen Anwendungspools ausgeführte verwaltete Anwendung ist mittels einer CLR-AppDomain von anderen Anwendungen isoliert.  
   
 ## <a name="see-also"></a>Weitere Informationen

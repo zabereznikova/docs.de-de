@@ -14,12 +14,12 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-ms.openlocfilehash: f266bf7278f472c51dd355df5ba04a123cbd7df0
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 2e556358490409a0fa7b345c4454eb43cf607e32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415965"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244365"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Verbessern des Debuggens mit den Debuggeranzeigeattributen
 
@@ -42,6 +42,7 @@ Attribute, die auf Eigenschaften angewendet werden, auf die im Ausdruck verwiese
 Wenn bei einem C#-Objekt beispielsweise `ToString()` überschrieben wurde, ruft der Debugger die Überschreibung auf und zeigt deren Ergebnisse anstelle des standardmäßigen `{<typeName>}.` an. Wenn Sie also `ToString()` überschrieben haben, müssen Sie <xref:System.Diagnostics.DebuggerDisplayAttribute> nicht verwenden. Wenn Sie beides verwenden, hat das <xref:System.Diagnostics.DebuggerDisplayAttribute>-Attribut Vorrang gegenüber der `ToString()`-Überschreibung.
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>Verwenden von DebuggerBrowsableAttribute
+
  Wenden Sie <xref:System.Diagnostics.DebuggerBrowsableAttribute> auf ein Feld oder eine Eigenschaft an, um anzugeben, wie das Feld oder die Eigenschaft im Debuggerfenster angezeigt werden soll. Der Konstruktor für dieses Attribut nimmt einen der <xref:System.Diagnostics.DebuggerBrowsableState>-Enumerationswerte an, die einen der folgenden Zustände angeben:
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> gibt an, dass das Element nicht im Datenfenster angezeigt wird.  Verwenden Sie diesen Wert beispielsweise für den <xref:System.Diagnostics.DebuggerBrowsableAttribute> eines Felds, um das Feld aus der Hierarchie zu entfernen. Das Feld wird nicht angezeigt, wenn Sie den einschließenden Typ erweitern, indem Sie auf das Pluszeichen (+) für die Typinstanz klicken.
@@ -61,6 +62,7 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>Verwenden von DebuggerTypeProxy
+
  Verwenden Sie das <xref:System.Diagnostics.DebuggerTypeProxyAttribute>-Attribut, wenn Sie die Debuggingansicht eines Typs erheblich und grundlegend ändern müssen, ohne den Typ selbst zu ändern. Das <xref:System.Diagnostics.DebuggerTypeProxyAttribute>-Attribut wird verwendet, um einen Anzeigeproxy für einen Typ anzugeben. Dadurch wird es einem Entwickler ermöglicht, die Ansicht des Typs anzupassen.  Dieses Attribut kann genau wie <xref:System.Diagnostics.DebuggerDisplayAttribute> auf Assemblyebene verwendet werden. In diesem Fall gibt die <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A>-Eigenschaft den Typ an, für den der Proxy verwendet wird. Es wird empfohlen, dass das Attribut einen privaten geschachtelten Typ angibt, der innerhalb des Typs auftritt, auf den das Attribut angewendet wird.  Eine Ausdrucksauswertung, die Überprüfungen für die Ansichten von Typen für dieses Attribut unterstützt, wenn ein Typ angezeigt wird. Wenn das Attribut gefunden wird, ersetzt die Ausdrucksauswertung den Anzeigeproxytyp für den Typ, auf den das Attribut angewendet wird.
 
  Wenn <xref:System.Diagnostics.DebuggerTypeProxyAttribute> vorhanden ist, werden im Debuggervariablenfenster nur die öffentlichen Member des Proxytyps angezeigt. Private Member werden nicht angezeigt. Das Verhalten des Datenfensters wird durch von Attributen erweiterte Ansichten nicht verändert.
@@ -94,7 +96,7 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>Beispiel
 
-### <a name="description"></a>Beschreibung
+### <a name="description"></a>BESCHREIBUNG
 
 Das folgende Codebeispiel kann in Visual Studio angezeigt werden, um die Ergebnisse der Anwendung der <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerBrowsableAttribute> Attribute, und anzuzeigen <xref:System.Diagnostics.DebuggerTypeProxyAttribute> .
 
