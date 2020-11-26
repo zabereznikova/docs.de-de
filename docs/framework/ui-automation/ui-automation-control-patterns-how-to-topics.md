@@ -8,22 +8,24 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-ms.openlocfilehash: ff8602382c8064cc5b7f6df44bda3413a7e67de1
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 929f44ca2d4daa75d733059b4072690a6b8f8d91
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163855"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241953"
 ---
-# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="ff10e-103">Hilfethemen zum Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ff10e-103">UI Automation Control Patterns How-to Topics</span></span>
+# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="979c8-103">Hilfethemen zum Steuerelementmuster für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="979c8-103">UI Automation Control Patterns How-to Topics</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="ff10e-104">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="ff10e-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ff10e-105">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="ff10e-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="979c8-104">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="979c8-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="979c8-105">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="979c8-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="ff10e-106">Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Steuerelementmustern.</span><span class="sxs-lookup"><span data-stu-id="ff10e-106">This section contains detailed information about implementing control patterns.</span></span>  
+ <span data-ttu-id="979c8-106">Dieser Abschnitt enthält ausführliche Informationen zum Implementieren von Steuerelementmustern.</span><span class="sxs-lookup"><span data-stu-id="979c8-106">This section contains detailed information about implementing control patterns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ff10e-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="ff10e-107">In This Section</span></span>  
- [<span data-ttu-id="ff10e-108">Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ff10e-108">Expose the Content of a Table Using UI Automation</span></span>](expose-the-content-of-a-table-using-ui-automation.md)  
- [<span data-ttu-id="ff10e-109">Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ff10e-109">Get Supported UI Automation Control Patterns</span></span>](get-supported-ui-automation-control-patterns.md)  
- [<span data-ttu-id="ff10e-110">Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ff10e-110">Get the Toggle State of a Check Box Using UI Automation</span></span>](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [<span data-ttu-id="ff10e-111">Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="ff10e-111">Invoke a Control Using UI Automation</span></span>](invoke-a-control-using-ui-automation.md)  
- [<span data-ttu-id="ff10e-112">Verschieben eines Benutzeroberflächenautomatisierungs-Elements</span><span class="sxs-lookup"><span data-stu-id="ff10e-112">Move a UI Automation Element</span></span>](move-a-ui-automation-element.md)
+## <a name="in-this-section"></a><span data-ttu-id="979c8-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="979c8-107">In This Section</span></span>  
+
+ [<span data-ttu-id="979c8-108">Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="979c8-108">Expose the Content of a Table Using UI Automation</span></span>](expose-the-content-of-a-table-using-ui-automation.md)  
+ [<span data-ttu-id="979c8-109">Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="979c8-109">Get Supported UI Automation Control Patterns</span></span>](get-supported-ui-automation-control-patterns.md)  
+ [<span data-ttu-id="979c8-110">Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="979c8-110">Get the Toggle State of a Check Box Using UI Automation</span></span>](get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="979c8-111">Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="979c8-111">Invoke a Control Using UI Automation</span></span>](invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="979c8-112">Verschieben eines Benutzeroberflächenautomatisierungs-Elements</span><span class="sxs-lookup"><span data-stu-id="979c8-112">Move a UI Automation Element</span></span>](move-a-ui-automation-element.md)
