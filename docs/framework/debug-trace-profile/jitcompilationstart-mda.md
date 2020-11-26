@@ -8,38 +8,44 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 228226d90e70d296681e48ffe85dada8eb18209a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325533"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247368"
 ---
-# <a name="jitcompilationstart-mda"></a><span data-ttu-id="5588f-103">jitCompilationStart-MDA</span><span class="sxs-lookup"><span data-stu-id="5588f-103">jitCompilationStart MDA</span></span>
+# <a name="jitcompilationstart-mda"></a><span data-ttu-id="37cb9-103">jitCompilationStart-MDA</span><span class="sxs-lookup"><span data-stu-id="37cb9-103">jitCompilationStart MDA</span></span>
 
-<span data-ttu-id="5588f-104">Der Assistent für verwaltetes Debuggen (MDA) `jitCompilationStart` berichtet, wann der JIT-Compiler mit der Kompilierung einer Funktion beginnt.</span><span class="sxs-lookup"><span data-stu-id="5588f-104">The `jitCompilationStart` managed debugging assistant (MDA) is activated to report when the just-in-time (JIT) compiler starts to compile a function.</span></span>  
+<span data-ttu-id="37cb9-104">Der Assistent für verwaltetes Debuggen (MDA) `jitCompilationStart` berichtet, wann der JIT-Compiler mit der Kompilierung einer Funktion beginnt.</span><span class="sxs-lookup"><span data-stu-id="37cb9-104">The `jitCompilationStart` managed debugging assistant (MDA) is activated to report when the just-in-time (JIT) compiler starts to compile a function.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="5588f-105">Symptome</span><span class="sxs-lookup"><span data-stu-id="5588f-105">Symptoms</span></span>  
- <span data-ttu-id="5588f-106">Die Workingsetgröße erhöht sich für ein Programm, das bereits im systemeigenen Bildformat vorliegt, da mscorjit.dll in den Prozess geladen wird.</span><span class="sxs-lookup"><span data-stu-id="5588f-106">The working set size increases for a program that's already in native image format, because mscorjit.dll is loaded into the process.</span></span>  
-  
-## <a name="cause"></a><span data-ttu-id="5588f-107">Ursache</span><span class="sxs-lookup"><span data-stu-id="5588f-107">Cause</span></span>  
-<span data-ttu-id="5588f-108">Nicht alle Assemblys, von denen das Programm abhängt, wurden im nativen Format generiert, oder eine Assembly ist nicht ordnungsgemäß registriert.</span><span class="sxs-lookup"><span data-stu-id="5588f-108">Not all the assemblies the program depends on have been generated into native format, or an assembly is not registered correctly.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="37cb9-105">Symptome</span><span class="sxs-lookup"><span data-stu-id="37cb9-105">Symptoms</span></span>  
 
-## <a name="resolution"></a><span data-ttu-id="5588f-109">Lösung</span><span class="sxs-lookup"><span data-stu-id="5588f-109">Resolution</span></span>  
- <span data-ttu-id="5588f-110">Wenn Sie diesen MDA aktivieren, können Sie identifizieren, welche Funktion JIT-kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="5588f-110">Enabling this MDA allows you to identify which function is being JIT-compiled.</span></span> <span data-ttu-id="5588f-111">Stellen Sie sicher, dass die Assembly, die die Funktion enthält, in das systemeigene Format generiert und ordnungsgemäß registriert wird.</span><span class="sxs-lookup"><span data-stu-id="5588f-111">Make sure that the assembly that contains the function is generated to native format and properly registered.</span></span>
+ <span data-ttu-id="37cb9-106">Die Workingsetgröße erhöht sich für ein Programm, das bereits im systemeigenen Bildformat vorliegt, da mscorjit.dll in den Prozess geladen wird.</span><span class="sxs-lookup"><span data-stu-id="37cb9-106">The working set size increases for a program that's already in native image format, because mscorjit.dll is loaded into the process.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="5588f-112">Auswirkung auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="5588f-112">Effect on the runtime</span></span>  
- <span data-ttu-id="5588f-113">Dieser MDA protokolliert eine Meldung, kurz bevor eine Methode JIT-kompiliert wird. Deshalb hat die Aktivierung dieses MDA erhebliche Auswirkungen auf die Leistung.</span><span class="sxs-lookup"><span data-stu-id="5588f-113">This MDA logs a message just before a method is JIT-compiled, so enabling this MDA has significant impact on performance.</span></span> <span data-ttu-id="5588f-114">Wenn eine Methode Inline ist, generiert dieser MDA keine separate Nachricht.</span><span class="sxs-lookup"><span data-stu-id="5588f-114">If a method is inline, this MDA will not generate a separate message.</span></span>  
+## <a name="cause"></a><span data-ttu-id="37cb9-107">Ursache</span><span class="sxs-lookup"><span data-stu-id="37cb9-107">Cause</span></span>  
+
+<span data-ttu-id="37cb9-108">Nicht alle Assemblys, von denen das Programm abhängt, wurden im nativen Format generiert, oder eine Assembly ist nicht ordnungsgemäß registriert.</span><span class="sxs-lookup"><span data-stu-id="37cb9-108">Not all the assemblies the program depends on have been generated into native format, or an assembly is not registered correctly.</span></span>  
+
+## <a name="resolution"></a><span data-ttu-id="37cb9-109">Lösung</span><span class="sxs-lookup"><span data-stu-id="37cb9-109">Resolution</span></span>  
+
+ <span data-ttu-id="37cb9-110">Wenn Sie diesen MDA aktivieren, können Sie identifizieren, welche Funktion JIT-kompiliert wird.</span><span class="sxs-lookup"><span data-stu-id="37cb9-110">Enabling this MDA allows you to identify which function is being JIT-compiled.</span></span> <span data-ttu-id="37cb9-111">Stellen Sie sicher, dass die Assembly, die die Funktion enthält, in das systemeigene Format generiert und ordnungsgemäß registriert wird.</span><span class="sxs-lookup"><span data-stu-id="37cb9-111">Make sure that the assembly that contains the function is generated to native format and properly registered.</span></span>
   
-## <a name="output"></a><span data-ttu-id="5588f-115">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="5588f-115">Output</span></span>  
- <span data-ttu-id="5588f-116">Das folgende Codebeispiel zeigt eine Beispielausgabe.</span><span class="sxs-lookup"><span data-stu-id="5588f-116">The following code sample shows sample output.</span></span> <span data-ttu-id="5588f-117">In diesem Fall zeigt die Ausgabe, dass die Methode "m" für die Klasse "ns2.co" im assemblytest JIT-kompiliert wurde.</span><span class="sxs-lookup"><span data-stu-id="5588f-117">In this case, the output shows that, in assembly Test, the method "m" on class "ns2.CO" was JIT-compiled.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="37cb9-112">Auswirkung auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="37cb9-112">Effect on the runtime</span></span>  
+
+ <span data-ttu-id="37cb9-113">Dieser MDA protokolliert eine Meldung, kurz bevor eine Methode JIT-kompiliert wird. Deshalb hat die Aktivierung dieses MDA erhebliche Auswirkungen auf die Leistung.</span><span class="sxs-lookup"><span data-stu-id="37cb9-113">This MDA logs a message just before a method is JIT-compiled, so enabling this MDA has significant impact on performance.</span></span> <span data-ttu-id="37cb9-114">Wenn eine Methode Inline ist, generiert dieser MDA keine separate Nachricht.</span><span class="sxs-lookup"><span data-stu-id="37cb9-114">If a method is inline, this MDA will not generate a separate message.</span></span>  
+  
+## <a name="output"></a><span data-ttu-id="37cb9-115">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="37cb9-115">Output</span></span>  
+
+ <span data-ttu-id="37cb9-116">Das folgende Codebeispiel zeigt eine Beispielausgabe.</span><span class="sxs-lookup"><span data-stu-id="37cb9-116">The following code sample shows sample output.</span></span> <span data-ttu-id="37cb9-117">In diesem Fall zeigt die Ausgabe, dass die Methode "m" für die Klasse "ns2.co" im assemblytest JIT-kompiliert wurde.</span><span class="sxs-lookup"><span data-stu-id="37cb9-117">In this case, the output shows that, in assembly Test, the method "m" on class "ns2.CO" was JIT-compiled.</span></span>  
   
 ```output
 method name="Test!ns2.C0::m"  
 ```  
   
-## <a name="configuration"></a><span data-ttu-id="5588f-118">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="5588f-118">Configuration</span></span>  
- <span data-ttu-id="5588f-119">Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die filtern können, welche Methoden gemeldet werden, wenn sie zuerst JIT-kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="5588f-119">The following configuration file shows a variety of filters that can be employed to filter out which methods are reported when they are first JIT-compiled.</span></span> <span data-ttu-id="5588f-120">Sie können angeben, dass alle Methoden gemeldet werden, indem Sie den Wert des Name-Attributs auf festlegen \* .</span><span class="sxs-lookup"><span data-stu-id="5588f-120">You can specify that all methods be reported by setting the value of the name attribute to \*.</span></span>  
+## <a name="configuration"></a><span data-ttu-id="37cb9-118">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="37cb9-118">Configuration</span></span>  
+
+ <span data-ttu-id="37cb9-119">Die folgende Konfigurationsdatei zeigt eine Reihe von Filtern, die filtern können, welche Methoden gemeldet werden, wenn sie zuerst JIT-kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="37cb9-119">The following configuration file shows a variety of filters that can be employed to filter out which methods are reported when they are first JIT-compiled.</span></span> <span data-ttu-id="37cb9-120">Sie können angeben, dass alle Methoden gemeldet werden, indem Sie den Wert des Name-Attributs auf festlegen \* .</span><span class="sxs-lookup"><span data-stu-id="37cb9-120">You can specify that all methods be reported by setting the value of the name attribute to \*.</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -59,8 +65,9 @@ method name="Test!ns2.C0::m"
 </mdaConfig>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="5588f-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5588f-121">Example</span></span>  
- <span data-ttu-id="5588f-122">Das folgende Codebeispiel ist dazu vorgesehen, mit der vorangegangenen Konfigurationsdatei verwendet zu werden.</span><span class="sxs-lookup"><span data-stu-id="5588f-122">The following code sample is intended to be used with the preceding configuration file.</span></span>  
+## <a name="example"></a><span data-ttu-id="37cb9-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="37cb9-121">Example</span></span>  
+
+ <span data-ttu-id="37cb9-122">Das folgende Codebeispiel ist dazu vorgesehen, mit der vorangegangenen Konfigurationsdatei verwendet zu werden.</span><span class="sxs-lookup"><span data-stu-id="37cb9-122">The following code sample is intended to be used with the preceding configuration file.</span></span>  
   
 ```csharp
 using System;  
@@ -157,8 +164,8 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5588f-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5588f-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37cb9-123">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="37cb9-123">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="5588f-124">Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen</span><span class="sxs-lookup"><span data-stu-id="5588f-124">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="5588f-125">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="5588f-125">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="37cb9-124">Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen</span><span class="sxs-lookup"><span data-stu-id="37cb9-124">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="37cb9-125">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="37cb9-125">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
