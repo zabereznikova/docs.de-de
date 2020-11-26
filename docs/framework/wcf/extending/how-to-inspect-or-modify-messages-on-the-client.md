@@ -3,25 +3,27 @@ title: 'Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
 description: Erfahren Sie, wie Sie eingehende oder ausgehende Nachrichten über einen WCF-Client oder-Dienst überprüfen oder ändern, indem Sie die entsprechende Schnittstelle implementieren
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6f6a3d20d7f3a9fb79de5cd3e29096e270d0f188
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f8b75001754739b48d10ee577ae26a175e72860
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247506"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249045"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Vorgehensweise: Überprüfen oder Ändern von Nachrichten auf dem Client
+
 Sie können die eingehenden oder ausgehenden Nachrichten über einen WCF-Client überprüfen oder ändern, indem Sie einen implementieren <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> und ihn in die Client Laufzeit einfügen. Weitere Informationen finden Sie unter [Erweitern von Clients](extending-clients.md). Die entsprechende Funktion für den Dienst ist der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Ein umfassendes Codebeispiel finden Sie im Beispiel für [Nachrichten Inspektoren](../samples/message-inspectors.md) .  
   
 ### <a name="to-inspect-or-modify-messages"></a>So überprüfen oder ändern Sie Nachrichten  
   
 1. Implementieren Sie die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>-Schnittstelle.  
   
-2. Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>ermöglicht das Ändern des Verhaltens auf Endpunkt Ebene. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>ermöglicht es Ihnen, das Verhalten auf Vertrags Ebene zu ändern.  
+2. Implementieren Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>, je nach dem Bereich, in dem Sie den Clientnachrichteninspektor einfügen möchten. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> ermöglicht das Ändern des Verhaltens auf Endpunkt Ebene. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> ermöglicht es Ihnen, das Verhalten auf Vertrags Ebene zu ändern.  
   
 3. Fügen Sie das Verhalten ein, bevor Sie die <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für die <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> aufrufen. Weitere Informationen finden Sie unter [Konfigurieren und Erweitern der Laufzeit mit Verhalten](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Die unten aufgeführten Codebeispiele zeigen der Reihe nach Folgendes:  
   
 - Eine Clientinspektorimplementierung.  

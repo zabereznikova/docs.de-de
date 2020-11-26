@@ -2,14 +2,15 @@
 title: Nachrichtensicherheit über Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248928"
 ---
 # <a name="message-security-over-message-queuing"></a>Nachrichtensicherheit über Message Queuing
+
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherheit mit X.509v3-Zertifikatauthentifizierung für den Client verwendet wird, und die eine Serverauthentifizierung mit dem X.509v3-Zertifikat des Servers über MSMQ erfordert. Nachrichtensicherheit wird manchmal vorgezogen, um sicherzustellen, dass die Nachrichten im MSMQ-Speicher verschlüsselt bleiben und die Anwendung ihre eigene Authentifizierung der Nachricht ausführt.
 
  Dieses Beispiel basiert auf dem [transaktiven MSMQ-Bindungs](transacted-msmq-binding.md) Beispiel. Die Nachrichten werden verschlüsselt und signiert.
@@ -83,9 +84,11 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
     > Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie dazu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="requirements"></a>Anforderungen
+
  Für dieses Beispiel ist es erforderlich, dass MSMQ installiert ist und ausgeführt wird.
 
 ## <a name="demonstrates"></a>Zeigt
+
  Der Client verschlüsselt die Nachricht mit dem öffentlichen Schlüssel des Diensts und signiert sie mit seinem eigenen Zertifikat. Der Dienst, der die Nachricht aus der Warteschlange liest, authentifiziert das Clientzertifikat mit dem Zertifikat in seinem Speicher für vertrauenswürdige Personen. Anschließend entschlüsselt er die Nachricht und leitet sie an den Dienstvorgang weiter.
 
  Da die Windows Communication Foundation (WCF)-Nachricht als Nutzlast im Text der MSMQ-Nachricht übertragen wird, bleibt der Text im MSMQ-Speicher verschlüsselt. Dadurch wird sichergestellt, dass die Nachricht von unerwünschter Seite aus eingesehen werden kann. Beachten Sie, dass es für MSMQ selbst keine Rolle spielt, ob die enthaltene Nachricht verschlüsselt ist.
@@ -93,6 +96,7 @@ Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, in der WS-Sicherhe
  Im Beispiel wird veranschaulicht, wie gegenseitige Authentifizierung auf Nachrichtenebene mit MSMQ verwendet werden kann. Die Zertifikate werden "Out-of-Band" ausgetauscht. Dies ist bei Anwendungen in einer Warteschlange stets der Fall, da der Dienst und der Client nicht zum selben Zeitpunkt aktiv sein müssen.
 
 ## <a name="description"></a>BESCHREIBUNG
+
  Der Beispiel Client und der Dienst Code sind identisch mit dem [transaktiven MSMQ-Bindungs](transacted-msmq-binding.md) Beispiel mit einem Unterschied. Der Vorgangsvertrag ist mit einer Schutzebene versehen, die anzeigt, dass die Nachricht signiert und verschlüsselt werden muss.
 
 ```csharp

@@ -1,15 +1,16 @@
 ---
-title: 'Vorgehensweise: Importieren von benutzerdefinierter WSDL'
+title: 'Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185545"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249084"
 ---
-# <a name="how-to-import-custom-wsdl"></a>Vorgehensweise: Importieren von benutzerdefinierter WSDL
+# <a name="how-to-import-custom-wsdl"></a>Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen
+
 In diesem Thema wird beschrieben, wie Sie benutzerdefinierte WSDL importieren. Zum Behandeln der benutzerdefinierten WSDL müssen Sie die <xref:System.ServiceModel.Description.IWsdlImportExtension>-Schnittstelle implementieren.  
   
 ### <a name="to-import-custom-wsdl"></a>So importieren Sie benutzerdefinierte WSDL  

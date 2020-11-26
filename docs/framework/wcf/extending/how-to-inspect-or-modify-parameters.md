@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e8b2674d8efc0ef3ac2f1dd6ab0df559195c274c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795588"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249032"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Vorgehensweise: Überprüfen oder Ändern von Parametern
-Sie können die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang für ein Windows Communication Foundation (WCF)-Client Objekt oder einen WCF-Dienst über <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> prüfen oder ändern, indem Sie die-Schnittstelle implementieren und in den Client oder die Dienst Laufzeit einfügen. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](extending-clients.md) und [erweitern](extending-dispatchers.md)von Verteilern.  
+
+Sie können die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vorgang für ein Windows Communication Foundation (WCF)-Client Objekt oder einen WCF-Dienst überprüfen oder ändern, indem Sie die <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> -Schnittstelle implementieren und in den Client oder die Dienst Laufzeit einfügen. In der Regel wird ein Vorgangsverhalten verwendet, um Parameterinspektoren für einen einzelnen Vorgang hinzufügen; weitere Verhalten können für einen einfachen Zugriff auf die Laufzeit in größerem Umfang verwendet werden. Weitere Informationen finden Sie unter [Erweitern von Clients](extending-clients.md) und [erweitern](extending-dispatchers.md)von Verteilern.  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Überprüfen oder Ändern von Parametern  
   
@@ -24,6 +25,7 @@ Sie können die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vo
 3. Fügen Sie das Verhalten vor dem Aufrufen der <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>- oder <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType>-Methode für  <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> ein. Weitere Informationen finden Sie unter [Konfigurieren und Erweitern der Laufzeit mit Verhalten](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Die unten aufgeführten Codebeispiele zeigen der Reihe nach Folgendes:  
   
 - Eine Parameterinspektorimplementierung  
@@ -40,6 +42,6 @@ Sie können die eingehenden oder ausgehenden Nachrichten für einen einzelnen Vo
   
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren und Erweitern der Laufzeit mit Verhalten](configuring-and-extending-the-runtime-with-behaviors.md)

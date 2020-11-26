@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586493"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248967"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
+
 Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Erstellen verteilter Anwendungen bereit. Wenn Sie bereits komponentenbasierte Anwendungslogik verwenden, die in com+ gehostet wird, können Sie die vorhandene Logik mithilfe von WCF erweitern, anstatt Sie neu schreiben zu müssen. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
   
  Wenn eine Schnittstelle auf einer COM+-Komponente als Webdienst verfügbar gemacht wird, werden die Spezifikation und der Vertrag dieser Dienste von einer automatischen Zuordnung bestimmt, die zur Anwendungsinitialisierungszeit ausgeführt wird. In der folgenden Liste wird das Modell für diese Zuordnung gezeigt:  
@@ -40,11 +41,12 @@ Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Ers
   
 2. Wählen Sie einen entsprechenden Hostingmodus aus.  
   
-3. Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig. exe finden Sie unter Gewusst [wie: Verwenden des Konfigurationstools für das COM+-Dienstmodell](how-to-use-the-com-service-model-configuration-tool.md).  
+3. Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig.exe finden Sie unter Gewusst [wie: Verwenden des Konfigurationstools für das COM+-Dienstmodell](how-to-use-the-com-service-model-configuration-tool.md).  
   
 4. Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponente finden Sie unter Gewusst [wie: Konfigurieren der com+-Dienst Einstellungen](how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Unterstützte Schnittstellen  
+
  Es gibt einige Beschränkungen beim Typ von Schnittstellen, die als Webdienst verfügbar gemacht werden können. Die folgenden Typen von Schnittstellen werden nicht unterstützt:  
   
 - Schnittstellen, die Objektverweise als Parameter übergeben; der folgende beschränkte Objektverweisansatz wird im Abschnitt "Beschränkte Objektverweisunterstützung" beschrieben.  
@@ -62,9 +64,10 @@ Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Ers
 - Schnittstellen aus Enterprise Services-Komponenten, die dem globalen Assemblycache nicht hinzugefügt wurden.  
   
 ### <a name="limited-object-reference-support"></a>Beschränkte Objektverweisunterstützung  
+
  Da einige bereitgestellte COM+-Komponenten Objekte als Verweisparameter verwenden, wie Rückgabe eines ADO-Recordset-Objekts, schließt die COM+-Integration beschränkte Unterstützung für Objektverweisparameter ein. Die Unterstützung ist auf Objekte beschränkt, die die `IPersistStream`-COM-Schnittstelle implementieren. Sie schließt ADO-Recordset-Objekte ein und kann für anwendungsspezifische COM-Objekte implementiert werden.  
   
- Um diese Unterstützung zu aktivieren, stellt das Tool ComSvcConfig. exe den **allowreferences** -Schalter bereit, der den regulären Methoden Signatur Parameter deaktiviert und überprüft, ob das Tool ausgeführt wird, um sicherzustellen, dass Objekt Verweis Parameter nicht verwendet werden. Außerdem müssen die Objekttypen, die Sie als Parameter übergeben, benannt und innerhalb der <`persistableTypes`> Configuration-Elements identifiziert werden, das dem <> Element untergeordnet ist `comContract` .  
+ Um diese Unterstützung zu aktivieren, stellt das ComSvcConfig.exe Tool den **allowreferences** -Schalter bereit, der den regulären Methoden Signatur Parameter deaktiviert und überprüft, ob das Tool ausgeführt wird, um sicherzustellen, dass Objekt Verweis Parameter nicht verwendet werden. Außerdem müssen die Objekttypen, die Sie als Parameter übergeben, benannt und innerhalb der <`persistableTypes`> Configuration-Elements identifiziert werden, das dem <> Element untergeordnet ist `comContract` .  
   
  Wenn diese Funktion verwendet wird, nutzt der COM+-Integrationsdienst die `IPersistStream`-Schnittstelle zum Serialisieren oder Deserialisieren der Objektinstanz. Wenn die Objektinstanz `IPersistStream` nicht unterstützt, wird eine Ausnahme ausgelöst.  
   
@@ -74,6 +77,7 @@ Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Ers
 > Aufgrund der benutzerdefinierten und plattformspezifischen Art des Serialisierungsansatzes eignet sich dies am besten für die Verwendung zwischen WCF-Clients und WCF-Diensten.  
   
 ## <a name="selecting-the-hosting-mode"></a>Auswählen des Hostingmodus  
+
  COM+ macht Webdienste in einem der folgenden Hostingmodi verfügbar:  
   
 - COM+-gehostet  
@@ -88,7 +92,8 @@ Windows Communication Foundation (WCF) stellt eine umfangreiche Umgebung zum Ers
   
      Der Webdienst und die COM+-Anwendungslogik werden im Webserver-Arbeitsprozess gehostet. Dieser bietet die automatische Aktivierung des Modus "Im Internet gehostet", ohne einen Prozesshop für Webdienstanforderungen zu bewirken. Der Nachteil besteht darin, dass der Zugriff auf die Serveranwendung über DCOM nicht möglich ist.  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+### <a name="security-considerations"></a>Sicherheitsüberlegungen  
+
  Wie andere WCF-Dienste werden die Sicherheitseinstellungen für den verfügbar gemachten Dienst über die Konfigurationseinstellungen für den WCF-Kanal verwaltet. Herkömmliche DCOM-Sicherheitseinstellungen wie die computerweiten DCOM-Berechtigungseinstellungen werden nicht erzwungen. Zum Erzwingen von COM+-Anwendungsrollen muss die Autorisierung "Zugriffsüberprüfungen auf der Komponentenebene" für die Komponente aktiviert werden.  
   
  Bei Verwendung einer nicht gesicherten Bindung kann für die Kommunikation die Gefahr von Manipulationen oder der Offenlegung von Informationen bestehen. Verwenden Sie eine gesicherte Bindung, um dies zu verhindern.  

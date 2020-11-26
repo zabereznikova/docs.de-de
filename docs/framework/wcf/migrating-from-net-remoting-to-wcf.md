@@ -3,19 +3,21 @@ title: Migrieren von .NET-Remoting zu WCF
 description: Erfahren Sie, wie Sie eine Anwendung migrieren, die .NET Remoting verwendet, um WCF zu verwenden. Sie können mehrere gängige Remotingszenarios in WCF ausführen.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 385c6075dab064d5812355bebd1620081cf2bbff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542849"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248876"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrieren von .NET-Remoting zu WCF
+
 Dieser Artikel beschreibt die Vorgehensweise zum Migrieren einer Anwendung, die .NET Remoting zur Verwendung von Windows Communication Foundation (WCF) nutzt. Es werden ähnliche Konzepte dieser zwei Produkte verglichen, und es wird beschrieben, wie verschiedene Remoting-Szenarien in WCF realisiert werden können.  
   
  .NET Remoting ist ein Legacy-Produkt, das nur zur Bereitstellung von Abwärtskompatibilität unterstützt wird. Seine Verwendung in Umgebungen mit gemischten Vertrauensstellungen ist nicht sicher, da keine getrennten Vertrauensebenen zwischen Client und Server eingerichtet werden können. Beispielsweise sollten Sie nie einen .NET Remoting-Endpunkt für das Internet oder nicht vertrauenswürdige Clients verfügbar machen. Es wird empfohlen, vorhandene Remoting-Anwendungen auf neuere und sicherere Technologien zu migrieren. Wenn das Anwendungsdesign nur HTTP und RESTful verwendet, wird die ASP.NET-Web-API empfohlen. Weitere Informationen finden Sie unter "ASP.NET-Web-API". Wenn die Anwendung auf SOAP basiert oder Nicht-HTTP-Protokolle wie z. B. TCP erfordert, empfehlen wir WCF.  
 
 ## <a name="comparing-net-remoting-to-wcf"></a>Vergleich von .NET Remoting und WCF  
+
  In diesem Abschnitt werden die grundlegenden Bausteine von .NET Remoting mit ihren Entsprechungen in WCF verglichen. Diese Bausteine werden später verwendet, um einige gängige Client/Server-Szenarien in WCF zu erstellen. Im folgenden Diagramm werden die Haupt Ähnlichkeiten und Unterschiede zwischen .NET-Remoting und WCF zusammengefasst.  
   
 ||.NET-Remotezugriff|WCF|  
@@ -27,11 +29,12 @@ Dieser Artikel beschreibt die Vorgehensweise zum Migrieren einer Anwendung, die 
 |Fehler/Ausnahmen|Jede serialisierbare Ausnahme|FaultContract\<TDetail>|  
 |Clientproxyobjekte|Stark typisierte transparente Proxys werden automatisch über MarshalByRefObjects erstellt|Stark typisierte Proxys werden bei Bedarf mithilfe von ChannelFactory generiert.\<TChannel>|  
 |Plattform erforderlich|Client und Server müssen Microsoft-Betriebssystem und .NET verwenden|Plattformübergreifend|  
-|Nachrichtenformat|Private|Industriestandards (SOAP, WS-* usw.)|  
+|Nachrichtenformat|Privat|Industriestandards (SOAP, WS-* usw.)|  
   
 ### <a name="server-implementation-comparison"></a>Serverimplementierung im Vergleich  
   
 #### <a name="creating-a-server-in-net-remoting"></a>Erstellen eines Servers in .NET Remoting  
+
  .NET Remoting-Servertypen müssen von MarshalByRefObject abgeleitet werden und Methoden definieren, die der Client aufrufen kann. Dies wird nachfolgend gezeigt:  
   
 ```csharp
@@ -59,6 +62,7 @@ Console.ReadLine();
  Es gibt viele Möglichkeiten, den Remoting-Typ als Server verfügbar zu machen, einschließlich der Verwendung von Konfigurationsdateien. Dies ist nur ein Beispiel.  
   
 #### <a name="creating-a-server-in-wcf"></a>Erstellen eines Servers in WCF  
+
  Der entsprechende Schritt in WCF umfasst das Erstellen von zwei Typen – des öffentlichen "Dienstvertrags" und der konkreten Implementierung. Der erste Typ wird als eine mit [ServiceContract] markierte Schnittstelle deklariert. Für Clients verfügbare Methoden sind mit [OperationContract] markiert:  
   
 ```csharp
@@ -111,6 +115,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
 ### <a name="client-implementation-comparison"></a>Clientimplementierung im Vergleich  
   
 #### <a name="creating-a-client-in-net-remoting"></a>Erstellen eines Clients in .NET Remoting  
+
  Sobald ein .NET Remoting-Serverobjekt verfügbar gemacht wurde, kann es von Clients genutzt werden, wie im folgenden Beispiel gezeigt:  
   
 ```csharp
@@ -127,6 +132,7 @@ Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received."
  Die von Activator.GetObject() zurückgegebene RemotingServer-Instanz wird als "transparenter Proxy" bezeichnet. Diese Instanz implementiert die öffentliche API für den RemotingServer-Typ auf dem Client, sämtliche Methoden rufen jedoch das Serverobjekt auf, das in einem anderen Prozess oder auf einem anderen Computer ausgeführt wird.  
   
 #### <a name="creating-a-client-in-wcf"></a>Erstellen eines Clients in WCF  
+
  Der entsprechende Schritt in WCF umfasst die Verwendung einer Kanalfactory zur expliziten Erstellung des Proxys. Wie Remoting kann das Proxyobjekt zum Auslösen von Vorgängen auf dem Server verwendet werden, wie im folgenden Beispiel gezeigt:  
   
 ```csharp
@@ -148,6 +154,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
 - [Vorgehensweise: Hinzufügen, Aktualisieren oder Entfernen eines Dienstverweises](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Verwenden der Serialisierung  
+
  Sowohl .NET Remoting als auch WCF verwenden Serialisierung, um Objekte zwischen Client und Server zu senden. Es gelten jedoch folgende wichtige Unterschiede:  
   
 1. Sie verwenden verschiedene Serialisierer und Konventionen, um anzugeben, was serialisiert werden soll.  
@@ -157,6 +164,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
 3. Die von Remoting eingesetzte Serialisierung erfolgt nach dem Ausschlussverfahren (expliziter Ausschluss der Elemente, die nicht serialisiert werden sollen), WCF verwendet eine Serialisierung nach dem Einschlussverfahren (explizite Markierung der Elemente, die serialisiert werden sollen).  
   
 #### <a name="serialization-in-net-remoting"></a>Serialisierung in .NET Remoting  
+
  .NET Remoting unterstützt zwei Möglichkeiten zum Serialisieren und Deserialisieren von Objekten zwischen Client und Server:  
   
 - *Nach Wert* – die Werte des Objekts werden über Ebenengrenzen hinweg serialisiert, und eine neue Instanz dieses Objekts wird auf der anderen Ebene erstellt. Alle Aufrufe von Methoden oder Eigenschaften der neuen Instanz werden ausschließlich lokal ausgeführt und wirken sich nicht auf das ursprüngliche Objekt oder die ursprüngliche Ebene aus.  
@@ -189,6 +197,7 @@ public class RemotingCustomerReference : MarshalByRefObject
  Es ist äußerst wichtig, die Auswirkung von Verweisobjekten in Remoting zu verstehen. Wenn eine der beiden Ebenen (Client oder Server) ein Verweisobjekt an die andere Ebene sendet, werden alle Methodenaufrufe auf der Ebene ausgeführt, zu der das Objekt gehört. Beispiel: Wenn ein Client Methoden für ein vom Server zurückgegebenes Verweisobjekt aufruft, führt dies zur Ausführung von Code auf dem Server. Auf ähnliche Weise wird beim Aufruf von durch den Client bereitgestellten Verweisobjekten durch den Server Code auf dem Client ausgeführt. Aus diesem Grund empfiehlt sich die Verwendung von .NET Remoting nur in vollständig vertrauenswürdigen Umgebungen. Das Offenlegen eines öffentlichen .NET Remoting-Endpunkts für nicht vertrauenswürdige Clients macht einen Remoting-Server anfällig für Angriffe.  
   
 #### <a name="serialization-in-wcf"></a>Serialisierung in WCF  
+
  WCF unterstützt nur die Serialisierung nach Wert. Die gängigste Methode zum Definieren eines Typs für den Austausch zwischen Client und Server wird im folgenden Beispiel gezeigt:  
   
 ```csharp
@@ -213,9 +222,11 @@ public class WCFCustomer
 ### <a name="exception-handling-capabilities"></a>Funktionen für die Ausnahmebehandlung  
   
 #### <a name="exceptions-in-net-remoting"></a>Ausnahmen in .NET Remoting  
+
  Von einem Remoting-Server ausgelöste Ausnahmen werden serialisiert, an den Client gesendet und lokal auf dem Client wie jede andere Ausnahme ausgelöst. Benutzerdefinierte Ausnahmen können durch das Erstellen einer Unterklasse für den Ausnahmetyp und Markierung mit [Serializable] erstellt werden.   Die meisten Framework-Ausnahmen sind bereits in dieser Weise markiert. Deshalb können die meisten von ihnen durch den Server ausgelöst, serialisiert und erneut auf dem Client ausgelöst werden. Wenngleich dieses Design bei der Entwicklung praktisch ist, werden so möglicherweise unbeabsichtigt Informationen gegenüber dem Client offengelegt. Dies ist einer der vielen Gründe, aus denen Remoting nur in vollständig vertrauenswürdigen Umgebungen eingesetzt werden sollte.  
   
 #### <a name="exceptions-and-faults-in-wcf"></a>Ausnahmen und Fehler in WCF  
+
  WCF lässt keine Rückgabe zufälliger Ausnahmetypen vom Server an den Client zu, da dies zu einer unbeabsichtigten Offenlegung von Informationen führen kann. Wenn ein Dienstvorgang eine unerwartete Ausnahme ausgelöst wird, führt dies dazu, dass auf dem Client eine allgemeine FaultException ausgelöst wird. Diese Ausnahme enthält keinerlei Informationen dazu, warum oder wo das Problem aufgetreten ist, und für einige Anwendungen reicht dies aus. Anwendungen, die ausführlichere Fehlerinformationen an den Client kommunizieren müssen, definieren zu diesem Zweck einen Fehlervertrag.  
   
  Hierzu erstellen Sie zunächst einen [DataContract]-Typ, der die Fehlerinformationen enthält.  
@@ -272,9 +283,11 @@ catch (FaultException<CustomerServiceFault> fault)
 ### <a name="security-considerations"></a>Sicherheitsüberlegungen  
   
 #### <a name="security-in-net-remoting"></a>Sicherheit in .NET Remoting  
+
  Einige .NET Remoting-Kanäle unterstützen Sicherheitsfunktionen wie beispielsweise Authentifizierung und Verschlüsselung auf Kanalebene (IPC und TCP). Der HTTP-Kanal nutzt sowohl für die Authentifizierung als auch für die Verschlüsselung Internetinformationsdienste (IIS). Trotz dieser Unterstützung sollten Sie .NET Remoting als unsicheres Kommunikationsprotokoll betrachten und nur in vollständig vertrauenswürdigen Umgebungen einsetzen. Machen Sie niemals einen öffentlichen Remoting-Endpunkt für das Internet oder nicht vertrauenswürdige Clients verfügbar.  
   
 #### <a name="security-in-wcf"></a>Sicherheit in WCF  
+
  WCF wurde unter dem Gesichtspunkt der Sicherheit entworfen, teilweise auch deshalb, um die Schwachstellen in .NET Remoting zu beheben. WCF bietet Sicherheit auf Transport- und Nachrichtenebene und bietet zahlreiche Optionen für Authentifizierung, Autorisierung, Verschlüsselung usw. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 - [Security](./feature-details/security.md)  
@@ -292,6 +305,7 @@ catch (FaultException<CustomerServiceFault> fault)
 - **WCF bietet integrierte Sicherheit.** WCF wurde unter Berücksichtigung der Sicherheit entwickelt und bietet viele Optionen für Authentifizierung, Sicherheit auf Transport Ebene, Sicherheit auf Nachrichten Ebene usw. Remoting wurde entwickelt, um die Interoperabilität von Anwendungen zu vereinfachen, war aber nicht für die Sicherheit in nicht vertrauenswürdigen Umgebungen konzipiert. WCF wurde entworfen, um sowohl in vertrauenswürdigen als auch in nicht vertrauenswürdigen Umgebungen eingesetzt zu werden.  
   
 ### <a name="migration-recommendations"></a>Empfehlungen für die Migration  
+
  Für die Migration von .NET Remoting nach WCF werden die folgenden Schritte empfohlen:  
   
 - **Erstellen des Dienstvertrags.** Definieren Sie Ihre Dienstschnittstellentypen, und markieren Sie diese mit dem [ServiceContract]-Attribut. Markieren Sie alle Methoden, die der Client mit [OperationContract] aufrufen darf.  
@@ -309,6 +323,7 @@ catch (FaultException<CustomerServiceFault> fault)
 - **Beenden Sie die Verwendung von [Serializable] und ISerializable.** Das [Serializable]-Attribut und die ISerializable-Schnittstelle wurden ursprünglich zum Serialisieren von Typen in vertrauenswürdigen Umgebungen entworfen und werden von Remoting verwendet. Die WCF-Serialisierung beruht auf Typen, die mit [DataContract] und [DataMember] markiert sind. Die von einer Anwendung verwendeten Datentypen sollten geändert werden, um [DataContract] zu verwenden und nicht ISerializable oder [Serializable].  
   
 ### <a name="migration-scenarios"></a>Migrationsszenarios  
+
  Betrachten wir nun, wie die folgenden gängigen Remoting-Szenarien in WCF realisiert werden:  
   
 1. Server gibt ein Objekt als Wert an den Client zurück  
@@ -337,6 +352,7 @@ public class RemotingServer : MarshalByRefObject
 ```  
   
 #### <a name="scenario-1-service-returns-an-object-by-value"></a>Szenario 1: Der Dienst gibt ein Objekt per Wert zurück  
+
  In diesem Szenario wird gezeigt, wie ein Server ein Objekt per Wert an den Client zurückgibt. WCF gibt Objekte immer per Wert an den Server zurück, daher beschreiben die folgenden Schritte lediglich, wie ein normaler WCF-Dienst erstellt wird.  
   
 1. Zuerst definieren Sie eine öffentliche Schnittstelle für den WCF-Dienst und markieren ihn mit dem [ServiceContract]-Attribut. [OperationContract] wird verwendet, um die serverseitigen Methoden zu identifizieren, die der Client aufruft.  
@@ -435,7 +451,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     Weitere Informationen zum Verwenden von **Dienstverweis hinzufügen**finden Sie unter Vorgehens [Weise: Hinzufügen, aktualisieren oder Entfernen eines Dienst Verweises](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
+     Weitere Informationen zum Verwenden von **Dienstverweis hinzufügen** finden Sie unter Vorgehens [Weise: Hinzufügen, aktualisieren oder Entfernen eines Dienst Verweises](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference).  
   
 7. Jetzt können wir den WCF-Dienst vom Client aufrufen. Dazu erstellen wir eine Kanalfactory für diesen Dienst, fordern einen Kanal an und rufen direkt die gewünschte Methode im Kanal auf. Dies ist möglich, da der Kanal die Dienstschnittstelle implementiert und die zugrunde liegende Logik für Anforderungen/Antworten verwaltet. Der Rückgabewert für diesen Methodenaufruf ist die deserialisierte Kopie der Serverantwort.  
   
@@ -450,6 +466,7 @@ public class RemotingServer : MarshalByRefObject
  WCF gibt Objekte vom Server an den Client immer als Wert zurück. Die Objekte sind deserialisierte Kopien der Daten, die vom Server gesendet wurden. Der Client kann Methoden für diese lokalen Kopien aufrufen, ohne Gefahr zu laufen, durch Rückruffunktionen Servercode aufzurufen.  
   
 #### <a name="scenario-2-server-returns-an-object-by-reference"></a>Szenario 2: Server gibt ein Objekt als Verweis zurück  
+
  Dieses Szenario zeigt, wie der Server ein Objekt als Verweis an den Client zurückgibt. In .NET Remoting erfolgt dies für jeden von "MarshalByRefObject" abgeleiteten Typ automatisch, da diese als Verweis serialisiert werden. Ein Beispiel für dieses Szenario besteht darin, mehreren Clients zu gestatten, unabhängige, sitzungsbasierte, serverseitige Objekte zu verwalten. Wie bereits erwähnt, gibt der WCF-Dienst Objekte immer als Wert zurück, es gibt also keine direkte Entsprechung für ein Per-Verweis-Objekt. Es ist aber möglich, durch eine Verweissemantik mit Verwendung eines <xref:System.ServiceModel.EndpointAddress10>-Objekts etwas ähnliches zu erreichen. Es handelt sich um ein serialisierbares Per-Wert-Objekt, das vom Client dazu verwendet werden kann, ein sitzungsbasiertes Per-Verweis-Objekt auf dem Server abzurufen. Dadurch wird das Szenario ermöglicht, über mehrere Clients mit unabhängigen, sitzungsbasierten, serverseitigen Objekten zu verfügen.  
   
 1. Zunächst muss ein WCF-Dienstvertrag definiert werden, der dem sitzungsbasierten Objekt selbst entspricht.  
@@ -633,6 +650,7 @@ public class RemotingServer : MarshalByRefObject
  WCF gibt Objekte immer als Wert zurück. Es ist jedoch möglich, die entsprechende Verweissemantik durch Verwenden von EndpointAddress10 zu unterstützen. Dies ermöglicht dem Client, eine sitzungsbasierte WCF-Dienstinstanz anzufordern, um anschließend mit dieser wie mit jedem anderen WCF-Dienst zu interagieren.  
   
 #### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>Szenario 3: Client sendet eine Per-Wert-Instanz an den Server  
+
  Dieses Szenario zeigt, wie der Client eine nicht primitive Objektinstanz als Wert an den Server sendet. Da WCF Objekte nur als Wert übergibt, veranschaulicht dieses Szenario die normale WCF-Verwendung.  
   
 1. Verwenden Sie den gleichen WCF-Dienst wie in Szenario 1.  
@@ -660,4 +678,5 @@ public class RemotingServer : MarshalByRefObject
  Der normale WCF-Datenaustausch erfolgt per Wert. Auf diese Weise wird sichergestellt, dass Methodenaufrufe für diese Datenobjekte nur lokal erfolgen – es wird kein Code auf der anderen Ebene aufgerufen. Obwohl es möglich ist *, vom Server zurückgegebene* durch Verweis Objekte zu erreichen, ist es nicht möglich, dass ein Client ein per-Verweis-Objekt *an* den Server übergibt. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden. Weitere Informationen finden Sie unter [Duplex Dienste](./feature-details/duplex-services.md).  
   
 ## <a name="summary"></a>Zusammenfassung  
+
  .NET Remoting ist ein Kommunikationsframework, das ausschließlich in vollständig vertrauenswürdigen Umgebungen eingesetzt werden sollte. Es handelt sich um ein Legacy-Produkt, das nur zur Bereitstellung von Abwärtskompatibilität unterstützt wird. Es sollte nicht verwendet werden, um neue Anwendungen zu erstellen. Im Gegensatz dazu wurde WCF unter Berücksichtigung von Sicherheitsaspekten entworfen und wird für neue und vorhandene Anwendungen empfohlen. Microsoft empfiehlt, vorhandene Remoting-Anwendungen zu migrieren, um stattdessen WCF oder die ASP.NET-Web-API zu verwenden.
