@@ -2,14 +2,15 @@
 title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 34d7945b8a7898955794e2ad5813bc66f52b60c7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 713dd05daa5071f253afd70e735475e49a986aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239015"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
+
 Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die grundlegenden Elemente bereit, die zum Erstellen von Web-http-Diensten mit WCF Die WCF-Web-HTTP-Dienste sind so konzipiert, dass Sie von den verschiedensten möglichen Clients, einschließlich Webbrowsern, zugänglich sind und die folgenden besonderen Anforderungen erfüllen:  
   
 - **URIs und URI-Verarbeitung** URIs spielen eine zentrale Rolle beim Entwerfen von Web-http-Diensten. Das WCF-Web-HTTP-Programmiermodell verwendet die <xref:System.UriTemplate> <xref:System.UriTemplateTable> Klassen und, um URI-Verarbeitungsfunktionen bereitzustellen.  
@@ -20,7 +21,7 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
   
  Das WCF-Web-HTTP-Programmiermodell erweitert die Reichweite von WCF auf Szenarien im Webstil, die Web-HTTP-Dienste, AJAX-und JSON-Dienste sowie Syndikation-Feeds (Atom/RSS) enthalten. Weitere Informationen zu AJAX-und JSON-Diensten finden Sie [unter AJAX-Integration und JSON-Unterstützung](ajax-integration-and-json-support.md). Weitere Informationen zur Syndizierung finden Sie unter [Übersicht über die WCF-Syndizierung](wcf-syndication-overview.md).  
   
- Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Weitere Informationen zu den standardmäßig unterstützten Typen finden Sie unten im Abschnitt " **UriTemplate-Abfrage Zeichenfolgen-Parameter und-URLs** ". Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>.  
+ Es gibt keine zusätzlichen Einschränkungen bei den Datentypen, die von einem WEB-HTTP-Dienst zurückgegeben werden können. Jeder serialisierbare Typ kann von einem WEB-HTTP-Dienstvorgang zurückgegeben werden. Da WEB-HTTP-Dienstvorgänge durch einen Webbrowser aufgerufen werden können, gibt es eine Einschränkung in Bezug auf Datentypen, die in einer URL angegeben werden können. Weitere Informationen zu den standardmäßig unterstützten Typen finden Sie unten im Abschnitt " **UriTemplate-Abfrage Zeichenfolgen-Parameter und-URLs** ". Das Standardverhalten kann geändert werden, indem eine eigene T:System.ServiceModel.Dispatcher.QueryStringConverter-Implementierung bereitgestellt wird, die angibt, wie die in einer URL angegebenen Parameter in den tatsächlichen Parametertyp konvertiert werden. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 > Mit dem WCF-Web-HTTP-Programmiermodell geschriebene Dienste verwenden keine SOAP-Nachrichten. Da SOAP nicht verwendet wird, können die von WCF bereitgestellten Sicherheitsfunktionen nicht verwendet werden. Sie können jedoch transportbasierte Sicherheit verwenden, indem Sie den Dienst mit HTTPS hosten. Weitere Informationen zur WCF-Sicherheit finden Sie unter [Sicherheitsübersicht](security-overview.md) .  
@@ -29,6 +30,7 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
 > Die Installation der WebDAV-Erweiterung für IIS kann dazu führen, dass Web-HTTP-Dienste den HTTP-Fehler 405 zurückgeben, da die WebDAV-Erweiterung versucht, alle PUT-Anforderungen zu verarbeiten. Um dieses Problem zu umgehen, können Sie die WebDAV-Erweiterung deinstallieren oder für Ihre Website deaktivieren. Weitere Informationen finden Sie unter [IIS und WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/) .  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>URI-Verarbeitung mit UriTemplate und UriTemplateTable  
+
  URI-Vorlagen stellen eine rationelle Syntax zur Angabe großer Sätze strukturell ähnlicher URIs bereit. Beispielsweise wird mit der folgenden Vorlage der Satz aller aus drei Segmenten bestehenden URIs angegeben, die mit "a" beginnen, mit "c" enden und im mittleren Segment einen beliebigen Wert enthalten können: a/{segment}/c  
   
  Diese Vorlage beschreibt URIs wie die Folgenden:  
@@ -56,6 +58,7 @@ Das Windows Communication Foundation (WCF)-Web-HTTP-Programmiermodell stellt die
  Das WCF-Dienstmodell verwendet <xref:System.UriTemplate> und <xref:System.UriTemplateTable>, um Dienstvorgänge mit einem Satz URIs zu verknüpfen, die durch eine <xref:System.UriTemplate> beschrieben werden. Ein Dienstvorgang wird mithilfe von <xref:System.UriTemplate> oder <xref:System.ServiceModel.Web.WebGetAttribute> mit einer <xref:System.ServiceModel.Web.WebInvokeAttribute> verknüpft. Weitere Informationen zu <xref:System.UriTemplate> und <xref:System.UriTemplateTable> finden Sie unter [UriTemplate und UriTemplateTable](uritemplate-and-uritemplatetable.md) .  
   
 ## <a name="webget-and-webinvoke-attributes"></a>WebGet- und WebInvoke-Attribute  
+
  WCF-Web-HTTP-Dienste nutzen zusätzlich zu verschiedenen Aufruf Verben (z. b. HTTP Post, Put und DELETE) Abruf Verben (z. b. HTTP Get). Mit dem WCF-Web-HTTP-Programmiermodell können Dienst Entwickler sowohl die URI-Vorlage als auch das Verb steuern, die den Dienst Vorgängen mit und zugeordnet sind <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> . Mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> können Sie steuern, wie einzelne Vorgänge an die URIs und die mit diesen URIs verknüpften HTTP–Methoden gebunden werden. Beispielsweise durch Hinzufügen von <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> im folgenden Code.  
   
 ```csharp
@@ -99,9 +102,10 @@ interface ICustomer
  Ein umfassendes Beispiel eines WCF-Diensts, der das WCF-Web-HTTP-Programmiermodell verwendet, finden Sie unter Gewusst [wie: Erstellen eines einfachen WCF-Web-HTTP-Diensts](how-to-create-a-basic-wcf-web-http-service.md) .  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate-Abfragezeichenfolgenparameter und URLs  
+
  Webdienste können aus einem Webbrowser heraus aufgerufen werden, indem eine URL eingegeben wird, die mit einem Dienstvorgang verknüpft ist. Diese Dienstvorgänge verarbeiten möglicherweise Abfragezeichenfolgenparameter, die in Form einer Zeichenfolge innerhalb der URL angegeben werden müssen. In der folgenden Tabelle sind die Typen, die innerhalb einer URL übergeben werden können, und das hierfür verwendete Format aufgeführt.  
   
-|type|Format|  
+|Typ|Format|  
 |----------|------------|  
 |<xref:System.Byte>|0–255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -125,6 +129,7 @@ interface ICustomer
 |Typen, die über ein `TypeConverterAttribute` verfügen, mit dem der Typ in eine Zeichenfolgendarstellung bzw. aus einer Zeichenfolgendarstellung konvertiert werden kann.|Hängt vom Typkonverter ab.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formate und das WCF-WEB-HTTP-Programmiermodell  
+
  Das WCF-Web-HTTP-Programmiermodell verfügt über neue Funktionen, die mit vielen verschiedenen Datenformaten arbeiten. Auf der Bindungsebene kann <xref:System.ServiceModel.WebHttpBinding> die folgenden anderen Arten von Daten lesen und schreiben:  
   
 - XML  
@@ -142,6 +147,7 @@ interface ICustomer
 Da das WCF-Web-HTTP-Programmiermodell die WS-*-Protokolle nicht unterstützt, ist die einzige Möglichkeit zum Sichern eines WCF-Web-HTTP-Diensts das verfügbar machen des Diensts über HTTPS mithilfe von SSL. Weitere Informationen zum Einrichten von SSL mit IIS 7,0 finden Sie unter Gewusst [wie: Implementieren von SSL in IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Fehlerbehebung im WCF-WEB-HTTP-Programmiermodell  
+
  Beim Aufrufen der WCF-WEB-HTTP-Dienste mit einer <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> zur Erstellung eines Kanals verwendet das <xref:System.ServiceModel.Description.WebHttpBehavior> den <xref:System.ServiceModel.EndpointAddress>-Satz in der Konfigurationsdatei, selbst wenn eine andere <xref:System.ServiceModel.EndpointAddress> an die <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> weitergegeben wird.  
   
 ## <a name="see-also"></a>Weitere Informationen

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 2de14a76fd2ce8ad656c2b64f5f9e5b17d81eebc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 06262d5f698f8898e162e92dad272a7188897af0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216865"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240055"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Vorgehensweise: Deklarieren von Fehlern in Dienstvertr채gen
 
@@ -18,7 +18,7 @@ In verwaltetem Code werden Ausnahmen bei Auftreten von Fehlerbedingungen ausgel�
 
 ## <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Erstellen eines Dienstvertrags zum Angeben eines SOAP-Fehlers
 
-1. Erstellen Sie einen Dienstvertrag, der mindestens einen Vorgang enth채lt. Ein Beispiel finden Sie unter [Gewusst wie: Definieren Sie einen Dienst](how-to-define-a-wcf-service-contract.md)Vertrag.
+1. Erstellen Sie einen Dienstvertrag, der mindestens einen Vorgang enth채lt. Ein Beispiel finden Sie unter Gewusst [wie: Definieren eines Dienstvertrags](how-to-define-a-wcf-service-contract.md).
 
 2. W채hlen Sie einen Vorgang aus, der sich zum Angeben einer Fehlerbedingung eignet, aufgrund derer die Clients eine entsprechende Benachrichtigung erhalten. Informationen zur Entscheidung, welche Fehlerbedingungen die R체ckgabe von SOAP-Fehlern an Clients begr체nden, finden Sie unter [angeben und behandeln von Fehlern in Vertr채gen und Diensten](specifying-and-handling-faults-in-contracts-and-services.md).
 
@@ -30,6 +30,7 @@ In verwaltetem Code werden Ausnahmen bei Auftreten von Fehlerbedingungen ausgel�
 4. Wiederholen Sie die Schritte2 und 3 f체r alle Vorg채nge des Vertrags, durch die Fehlerbedingungen an Clients weitergegeben werden.
 
 ## <a name="implementing-an-operation-to-return-a-specified-soap-fault"></a>Implementieren eines Vorgangs f체r das Zur체ckgeben eines angegebenen SOAP-Fehlers
+
  Nachdem f체r einen Vorgang angegeben wurde, dass ein bestimmter SOAP-Fehler zur체ckgegeben werden kann, um eine Fehlerbedingung an eine aufrufende Anwendung weiterzugeben (wie beispielsweise in der vorangehenden Prozedur beschrieben), besteht der n채chste Schritt in der Implementierung dieser Angabe.
 
 ### <a name="throw-the-specified-soap-fault-in-the-operation"></a>Ausl철sen des angegebenen SOAP-Fehlers im Vorgang
@@ -46,7 +47,7 @@ Das folgende Codebeispiel zeigt die Implementierung eines Einzelvorgangs, durch 
 [!code-csharp[FaultContractAttribute#1](~/samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
 [!code-vb[FaultContractAttribute#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

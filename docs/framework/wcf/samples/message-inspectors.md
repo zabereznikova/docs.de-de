@@ -3,14 +3,15 @@ title: Nachrichteninspektoren
 description: Erfahren Sie, wie Sie WCF-Client-und Dienst Nachrichten Inspektoren implementieren und konfigurieren, die einen Nachrichten Validierungs Mechanismus bereitstellen.
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 20abb655a58f9dce4a967ade9b51db90eed2375b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 4b2f7b97d0895e3cb7550217f64a2b0b14545abf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246206"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240705"
 ---
 # <a name="message-inspectors"></a>Nachrichteninspektoren
+
 In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
   
  Ein Nachrichteninspektor ist ein erweiterbares Objekt, das programmgesteuert in der Clientlaufzeit und Dispatchlaufzeit des Dienstmodels oder durch Konfiguration verwendet werden kann. Außerdem kann es Nachrichten nach dem Empfang oder vor dem Versand überprüfen und ändern.  
@@ -18,6 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspek
  In diesem Beispiel wird ein Überprüfungsmechanismus für grundlegende Client- und Dienstnachrichten implementiert, der eingehende Nachrichten anhand eines Satzes von konfigurierbaren XML-Schemadokumenten überprüft. Beachten Sie, dass in diesem Beispiel keine Nachrichten für jeden Vorgang überprüft werden. Diese Vereinfachung ist beabsichtigt.  
   
 ## <a name="message-inspector"></a>Nachrichteninspektor  
+
  Clientnachrichteninspektoren implementieren die <xref:System.ServiceModel.Dispatcher.IClientMessageInspector>-Schnittstelle, und Dienstnachrichteninspektoren implementieren die <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>-Schnittstelle. Die Implementierungen können in einer Klasse zusammengefasst werden, um einen Nachrichteninspektor zu bilden, der für beide Seiten funktioniert. In diesem Beispiel wird so ein kombinierter Nachrichteninspektor implementiert. Der Inspektor wird erstellt und übergibt einen Schemasatz, anhand dessen eingehende und ausgehende Nachrichten überprüft werden. Außerdem kann der Entwickler festlegen, ob eingehende oder ausgehende Nachrichten überprüft werden und ob der Inspektor sich im Dispatch- oder Clientmodus befindet. Diese letzte Einstellung beeinflusst die Fehlerbehandlung, die später in diesem Thema erläutert wird.  
   
 ```csharp
@@ -203,7 +205,8 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Verhalten  
- Nachrichteninspektoren sind Erweiterungen zur Clientlaufzeit oder der Dispatchlaufzeit. Solche Erweiterungen werden mithilfe von *Verhaltensweisen*konfiguriert. Eine Verhaltensweise ist eine Klasse, die das Verhalten der Dienstmodelllaufzeit ändert, indem sie die Standardkonfiguration ändert oder Erweiterungen (wie Nachrichteninspektoren) hinzufügt.  
+
+ Nachrichteninspektoren sind Erweiterungen zur Clientlaufzeit oder der Dispatchlaufzeit. Solche Erweiterungen werden mithilfe von *Verhaltensweisen* konfiguriert. Eine Verhaltensweise ist eine Klasse, die das Verhalten der Dienstmodelllaufzeit ändert, indem sie die Standardkonfiguration ändert oder Erweiterungen (wie Nachrichteninspektoren) hinzufügt.  
   
  Bei der folgenden `SchemaValidationBehavior`-Klasse handelt es sich um die Verhaltensweise, mit der der Nachrichteninspektor dieses Beispiels zur Client- oder Dispatchlaufzeit hinzugefügt wird. Die Implementierung ist in beiden Fällen ganz einfach. In <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> und <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> wird der Nachrichteninspektor erstellt und zur <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>-Auflistung der entsprechenden Laufzeit hinzugefügt.  
   
@@ -260,6 +263,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > Diese bestimmte Verhaltensweise tritt nicht als Attribut auf und kann deshalb nicht deklarativ zu einem Vertragstyp eines Diensttyps hinzugefügt werden. Diese Entscheidung wurde absichtlich getroffen, da die Schemaauflistung nicht in einer Attributdeklaration geladen werden kann und für den Verweis auf einen gesonderten Konfigurationsspeicherort (z. B. auf die Anwendungseinstellungen) in diesem Attribut müsste ein Konfigurationselement erstellt werden, dass nicht mit der restlichen Dienstmodellkonfiguration konsistent ist. Deshalb kann diese Verhaltensweise nur zwingend über Code und eine Erweiterung der Dienstmodellkonfiguration hinzugefügt werden.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Hinzufügen des Nachrichteninspektors durch Konfiguration  
+
  Zum Konfigurieren eines benutzerdefinierten Verhaltens für einen Endpunkt in der Anwendungs Konfigurationsdatei benötigt das Dienstmodell Implementierer, um ein Konfigurations *Erweiterungs Element* zu erstellen, das von einer von abgeleiteten Klasse repräsentiert wird <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> . Diese Erweiterung muss dann zum Konfigurationsabschnitt für Erweiterungen des Dienstmodells hinzugefügt werden, wie für die folgende in diesem Abschnitt erläuterte Erweiterung gezeigt.  
   
 ```xml  
@@ -368,6 +372,7 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>Imperatives Hinzufügen von Nachrichteninspektoren  
+
  Außer über Attribute (was aus dem oben genannten Grund in diesem Beispiel nicht unterstützt wird) und die Konfiguration können Verhaltensweisen relativ einfach mithilfe von imperativem Code zu einem Client oder einer Dienstlaufzeit hinzugefügt werden. In diesem Beispiel wird dies in der Clientanwendung durchgeführt, um den Clientnachrichteninspektor zu testen. Die `GenericClient`-Klasse wird von <xref:System.ServiceModel.ClientBase%601> abgeleitet, der dem Benutzercode die Endpunktkonfiguration verfügbar macht. Bevor der Client implizit geöffnet wird, kann die Endpunktkonfiguration geändert werden, z. B. durch Hinzufügen von Verhaltensweisen, wie im folgenden Code dargestellt. Das Hinzufügen von Verhaltensweisen zum Dienst ist in großen Teilen mit der hier dargestellten Clienttechnik vergleichbar und muss vor dem Öffnen des Diensthosts durchgeführt werden.  
   
 ```csharp  

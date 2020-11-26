@@ -2,14 +2,15 @@
 title: Erstellen von WCF AJAX-Diensten ohne ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: b5f0f730f90227dcccc7e5ebf533d80a28f6e6eb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 37a442f85ddf5c0a1687c05e26f140d052eaa94f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599294"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239093"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Erstellen von WCF AJAX-Diensten ohne ASP.NET
+
 Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScript-aktivierten Webseite zugegriffen werden, ohne dass ASP.NET AJAX erforderlich ist. In diesem Thema wird beschrieben, wie ein solcher WCF-Dienst erstellt wird.  
   
  Anweisungen zur Verwendung von WCF mit ASP.NET AJAX finden Sie unter [Erstellen von WCF-Diensten für ASP.NET AJAX](creating-wcf-services-for-aspnet-ajax.md).  
@@ -23,6 +24,7 @@ Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScrip
 - Zugreifen auf den WCF AJAX-Dienst.  
   
 ## <a name="creating-an-ajax-endpoint"></a>Erstellen eines AJAX-Endpunkts  
+
  Die einfachste Möglichkeit, die AJAX-Unterstützung in einem WCF-Dienst zu aktivieren, ist die Verwendung der <xref:System.ServiceModel.Activation.WebServiceHostFactory> in der SVC-Datei, die dem Dienst zugeordnet ist, wie im folgenden Beispiel gezeigt.  
   
 ```text
@@ -62,6 +64,7 @@ Auf Windows Communication Foundation (WCF) AJAX-Dienste kann von jeder JavaScrip
  Ein funktionierendes Beispiel finden Sie unter [AJAX-Dienst mit JSON und XML](../samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="creating-an-ajax-compatible-service-contract"></a>Erstellen eines AJAX-kompatiblen Dienstvertrags  
+
  Standardmäßig geben die über einem AJAX-Endpunkt verfügbar gemachten Dienstverträge Daten im XML-Format zurück. Ebenso standardmäßig kann auf die Dienstvorgänge über HTTP POST-Anforderungen mit URLs zugegriffen werden, die die Endpunktadresse gefolgt vom Vorgangsnamen enthalten, wie im folgenden Beispiel gezeigt.  
   
 ```csharp
@@ -102,6 +105,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>Zugreifen auf AJAX-Dienste  
+
  WCF AJAX-Endpunkte akzeptieren immer sowohl JSON-als auch XML-Anforderungen.  
   
  HTTP POST-Anforderungen mit dem Inhaltstyp "application/json" werden als JSON behandelt, und diejenigen mit Inhaltstyp, die XML angeben (z. b. "Text/XML") werden als XML behandelt.  

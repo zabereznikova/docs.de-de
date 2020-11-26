@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 825990c6c1690281af65d53c76dcca0f3e2ffb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239041"
 ---
 # <a name="wcf-syndication"></a>WCF Syndication
+
 Windows Communication Foundation (WCF) bietet Unterstützung für das einfache arbeiten mit Syndizierungs Feeds in Atom, RSS oder anderen benutzerdefinierten Formaten, sodass Sie Sie lesen und erstellen und auf einem Dienst Endpunkt verfügbar machen können. In den Themen dieses Abschnitts wird dieses Programmiermodell für Syndication genau beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über WCF Syndication](wcf-syndication-overview.md)  
  Bietet einen Überblick über die von WCF bereitgestellte Syndizierungs Unterstützung.  
   

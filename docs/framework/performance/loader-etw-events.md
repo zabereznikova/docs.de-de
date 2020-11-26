@@ -6,19 +6,21 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240588"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
+
 In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
   
  Alle Ladeprogrammereignisse werden unter dem `LoaderKeyword` (0x8)-Schlüsselwort ausgelöst. Das `DCStart` -Ereignis und das `DCEnd` -Ereignis werden unter `LoaderRundownKeyword` (0x8) ausgelöst, wobei `StartRundown`/`EndRundown` aktiviert ist. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
 
 ## <a name="application-domain-events"></a>Anwendungsdomänenereignisse
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
@@ -47,6 +49,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
 
 ## <a name="clr-loader-assembly-events"></a>CLR-Ladeprogramm-Assemblyereignisse  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
@@ -76,6 +79,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|
 
 ## <a name="module-events"></a>Modulereignisse
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
@@ -121,6 +125,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 - Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
 
 ## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
@@ -151,6 +156,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
 
 ## <a name="module-range-events"></a>Modulbereichereignisse
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ereignis|Ebene|  
@@ -180,6 +186,7 @@ In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungs
 |RangeBegin2|win:UnicodeString||  
   
 ### <a name="remarks"></a>Hinweise  
+
  Wenn ein geladenes NGen-Image in einem .NET Framework-Prozess mit IBC optimiert wurde, wird das `ModuleRange` -Ereignis, das die heißen Bereiche im NGen-Image enthält, zusammen mit dem `moduleID` und `ClrInstanceID`protokolliert.  Wenn das NGen-Image nicht mit IBC optimiert wurde, wird dieses Ereignis nicht protokolliert. Um den Modulnamen zu bestimmen, muss dieses Ereignis mit modulbezogenen ETW-Ereignissen sortiert werden.  
   
  Die Nutzlastgröße für dieses Ereignis ist variabel; das `Count` -Feld gibt die Anzahl von Bereichsoffsets an, die im Ereignis enthalten sind.  Dieses Ereignis muss mit dem Windows `IStart` -Ereignis sortiert werden, um die tatsächlichen Bereiche zu bestimmen. Das Windows-Image-Load-Ereignis wird protokolliert, wenn ein Bild geladen wird, und enthält die virtuelle Adresse des geladenen Bilds.  

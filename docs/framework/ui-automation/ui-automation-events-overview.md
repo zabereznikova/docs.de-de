@@ -10,14 +10,15 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: 4f51a31a433986822a9dba22bf8f17ade00bbb76
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8a97c4bfbe361eafc11cd920b032424f67c3a5fb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240445"
 ---
 # <a name="ui-automation-events-overview"></a>Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -26,10 +27,12 @@ ms.locfileid: "87168101"
  Die Effizienz wird dadurch erhöht, dass Anbieteranwendungen Ereignisse selektiv (abhängig davon, ob Clients für diese Ereignisse abonniert sind) oder gar nicht auslösen dürfen (wenn kein Client auf Ereignisse wartet).  
   
 <a name="Types_of_Events"></a>
+
 ## <a name="types-of-events"></a>Ereignistypen  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse werden in die folgenden Kategorien eingeteilt:  
   
-|Ereignis|Beschreibung|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Eigenschaftenänderung|Wird ausgelöst, wenn sich eine Eigenschaft eines [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elements oder -Steuerelementmusters ändert. Wenn ein Client beispielsweise das Kontrollkästchen-Steuerelement einer Anwendung überwachen muss, kann er sich mithilfe der <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> -Eigenschaft registrieren, um auf ein Eigenschaftenänderungsereignis zu warten. Wenn das Kontrollkästchen-Steuerelement aktiviert oder deaktiviert wird, löst der Anbieter das Ereignis aus, und der Client kann entsprechend reagieren.|  
 |Elementaktion|Wird ausgelöst, wenn eine Änderung in der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] durch einen Endbenutzer oder eine programmgesteuerte Aktivität erfolgt, beispielsweise, wenn auf eine Schaltfläche geklickt oder diese durch <xref:System.Windows.Automation.InvokePattern>aktiviert wird.|  
@@ -49,7 +52,9 @@ ms.locfileid: "87168101"
 - `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>
+
 ## <a name="ui-automation-event-identifiers"></a>Bezeichner für Benutzeroberlächen-Automatisierungsereignisse  
+
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Ereignisse werden mit <xref:System.Windows.Automation.AutomationEvent> -Objekten gekennzeichnet. Die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> -Eigenschaft enthält einen Wert, der die Ereignisart eindeutig bezeichnet.  
   
  Die möglichen Werte für <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> sind in der folgenden Tabelle zusammen mit dem für die Ereignisargumente verwendeten Typ aufgeführt. Beachten Sie, dass es sich bei den von Clients und Anbietern verwendeten Bezeichnern um Felder mit identischen Namen aus verschiedenen Klassen handelt.  
@@ -64,10 +69,12 @@ ms.locfileid: "87168101"
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent?displayProperty=nameWithType>|<xref:System.Windows.Automation.WindowClosedEventArgs>|  
   
 <a name="UI_Automation_Event_Arguments"></a>
+
 ## <a name="ui-automation-event-arguments"></a>Argumente für Benutzeroberlächen-Automatisierungsereignisse  
+
  Die folgenden Klassen kapseln Ereignisargumente.  
   
-|Klasse|Beschreibung|  
+|Klasse|BESCHREIBUNG|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Enthält Informationen zum asynchronen Laden von Inhalt, einschließlich des bereits abgeschlossenen Ladevorgangs in Prozent.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Enthält Informationen über ein einfaches Ereignis, das keine zusätzlichen Daten erfordert.|  
@@ -82,7 +89,7 @@ ms.locfileid: "87168101"
   
  Eine Liste der Ereignisbezeichner finden Sie unter [UI Automation Events for Clients](ui-automation-events-for-clients.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](ui-automation-events-for-clients.md)
 - [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](server-side-ui-automation-provider-implementation.md)

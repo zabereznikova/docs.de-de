@@ -2,17 +2,19 @@
 title: Weitergabe
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578954"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240133"
 ---
 # <a name="propagation"></a>Weitergabe
+
 In diesem Thema wird die Aktivitäts Propagierung im Windows Communication Foundation (WCF)-Ablauf Verfolgungs Modell beschrieben.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Verwenden der Weitergabe zur Korrelation von Aktivitäten über Endpunkte hinaus  
+
  Die Weitergabe stellt dem Benutzer die direkte und anwendungsendpunktübergreifende Korrelation von Fehlerablaufverfolgungen für die gleiche Verarbeitungseinheit bereit. Ein Beispiel für einen solchen Anwendungsendpunkt wäre eine Anforderung. Fehler, die an unterschiedlichen Endpunkten für die gleiche Verarbeitungseinheit (beispielsweise eine Anforderung) ausgegeben werden, werden in der gleichen Aktivität gruppiert (gilt auch über Anwendungsdomänen hinaus). Dies wird durch Weitergabe der Aktivitäts-ID in den Nachrichtenheadern bewerkstelligt. Tritt also aufgrund eines internen Serverfehlers ein Timeout für einen Client auf, erscheinen beide Fehler bei der direkten Korrelation in der gleichen Aktivität.  
   
  Verwenden Sie hierzu die `ActivityTracing`-Einstellung (wie im vorherigen Beispiel veranschaulicht). Legen Sie darüber hinaus an allen Endpunkten das `propagateActivity`-Attribut für die `System.ServiceModel`-Ablaufverfolgungsquelle fest.  
@@ -24,6 +26,7 @@ In diesem Thema wird die Aktivitäts Propagierung im Windows Communication Found
  Die Aktivitäts Weitergabe ist eine konfigurierbare Funktion, die bewirkt, dass WCF einen Header zu ausgehenden Nachrichten hinzufügt, einschließlich der Aktivitäts-ID auf dem TLS. Client- und Dienstaktivitäten können korreliert werden, indem dies bei nachfolgenden Ablaufverfolgungen auf der Serverseite eingeschlossen wird.  
   
 ## <a name="propagation-definition"></a>Weitergabedefinition  
+
  Die gAId von Aktivität M wird an Aktivität N weitergegeben, wenn alle der folgenden Bedingungen erfüllt sind:  
   
 - N wird aufgrund von M erstellt.  
@@ -71,9 +74,11 @@ In diesem Thema wird die Aktivitäts Propagierung im Windows Communication Found
 ```  
   
 ## <a name="propagation-and-activity-boundaries"></a>Weitergabe und Aktivitätsgrenzen  
+
  Wird die Aktivitäts-ID für die Korrelation über Endpunkte hinaus weitergegeben, gibt der Nachrichtenempfänger Start- und Stop-Ablaufverfolgungen mit dieser (weitergegebenen) Aktivitäts-ID aus. Daher ist für jede Ablaufverfolgungsquelle eine Start- und Stop-Ablaufverfolgung mit dieser gAId vorhanden. Befinden sich die Endpunkte im gleichen Prozess und nutzen sie den gleichen Ablaufverfolgungsquellennamen, werden mehrere Start- und Stop-Prozesse mit der gleichen lAId erstellt (gleiche gAId, gleiche Ablaufverfolgungsquelle, gleicher Prozess).  
   
-## <a name="synchronization"></a>Synchronisierung  
+## <a name="synchronization"></a>Synchronization  
+
  Um Ereignisse über Endpunkte hinaus zu synchronisieren, die auf unterschiedlichen Computern laufen, wird eine CorrelationID zum Header der AcitivityId hinzugefügt, der in Nachrichten weitergegeben wird. Tools können diese ID verwenden, um Ereignisse über Computer mit Uhrabweichungen hinaus zu synchronisieren. Insbesondere das Tool Service Trace Viewer nutzt diese ID, um Nachrichtenflüsse zwischen Endpunkten anzuzeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen
