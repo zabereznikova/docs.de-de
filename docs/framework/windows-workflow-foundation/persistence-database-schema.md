@@ -2,17 +2,19 @@
 title: Persistenzdatenbankschema
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558237"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246094"
 ---
 # <a name="persistence-database-schema"></a>Persistenzdatenbankschema
+
 In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffentlichen Ansichten beschrieben.  
   
 ## <a name="instances-view"></a>Ansicht "Instanzen"  
+
  Die **Instanzen** Ansicht enthält allgemeine Informationen zu allen Workflow Instanzen in der Datenbank.  
   
 |Spaltenname|Spaltentyp|BESCHREIBUNG|  
@@ -28,9 +30,9 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |CurrentMachine|Nvarchar(128)|Gibt den Namen des Computers an, auf dem die Workflowinstanz im Arbeitsspeicher geladen ist.|  
 |LastMachine|Nvarchar(450)|Gibt den letzten Computer an, auf dem die Workflowinstanz geladen war.|  
 |ExecutionStatus|Nvarchar(450)|Gibt den aktuellen Ausführungsstatus des Workflows an. Zu den möglichen Zuständen gehören das **Ausführen**, das **Leerlauf**, das **geschlossene**.|  
-|IsInitialized|bit|Gibt an, ob die Workflowinstanz initialisiert wurde. Eine initialisierte Workflowinstanz ist eine Workflowinstanz, die mindestens einmal permanent gespeichert wurde.|  
-|IsSuspended|bit|Gibt an, ob die Workflowinstanz angehalten wurde.|  
-|IsCompleted|bit|Gibt an, ob die Ausführung der Workflowinstanz beendet wurde. **Hinweis:**  IWenn die **InstanceCompletionAction** -Eigenschaft auf **DeleteAll**festgelegt ist, werden die Instanzen nach dem Abschluss aus der Ansicht entfernt.|  
+|IsInitialized|Bit|Gibt an, ob die Workflowinstanz initialisiert wurde. Eine initialisierte Workflowinstanz ist eine Workflowinstanz, die mindestens einmal permanent gespeichert wurde.|  
+|IsSuspended|Bit|Gibt an, ob die Workflowinstanz angehalten wurde.|  
+|IsCompleted|Bit|Gibt an, ob die Ausführung der Workflowinstanz beendet wurde. **Hinweis:**  IWenn die **InstanceCompletionAction** -Eigenschaft auf **DeleteAll** festgelegt ist, werden die Instanzen nach dem Abschluss aus der Ansicht entfernt.|  
 |EncodingOption|TinyInt|Beschreibt die Codierung, die zur Serialisierung der Dateneigenschaften verwendet wurde.<br /><br /> -0 – keine Codierung<br />-1 – GZipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Enthält serialisierte Instanzdateneigenschaften, die beim Laden der Instanz für die Workflowlaufzeit bereitgestellt werden.<br /><br /> Bei den einzelnen primitiven Eigenschaften handelt es sich um systemeigene CLR-Typen, sodass keine speziellen Assemblys zur BLOB-Deserialisierung benötigt werden.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Enthält serialisierte Instanzdateneigenschaften, die beim Laden der Instanz nicht für die Workflowlaufzeit bereitgestellt werden.<br /><br /> Bei den einzelnen primitiven Eigenschaften handelt es sich um systemeigene CLR-Typen, sodass keine speziellen Assemblys zur BLOB-Deserialisierung benötigt werden.|  
@@ -38,7 +40,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 |WriteOnlyComplexDataProperties|Varbinary(max)|Enthält serialisierte Instanzdateneigenschaften, die beim Laden der Instanz nicht für die Workflowlaufzeit bereitgestellt werden.<br /><br /> Für ein Deserialisierungsprogramm müssen alle in diesem BLOB gespeicherten Objekttypen bekannt sein.|  
 |IdentityName|Nvarchar(max)|Der Name der Workflowdefinition.|  
 |IdentityPackage|Nvarchar(max)|Die Paketinformationen, die beim Erstellen des Workflows angegeben wurden (z. B. der Assemblyname).|  
-|Build|BigInt|Die Buildnummer der Workflowversion.|  
+|Entwickeln|BigInt|Die Buildnummer der Workflowversion.|  
 |Hauptversion|BigInt|Die Hauptversionsnummer der Workflowversion.|  
 |Gering|BigInt|Die Nebenversionsnummer der Workflowversion.|  
 |Revision|BigInt|Die Revisionsnummer der Workflowversion.|  
@@ -47,6 +49,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 > Die **Instanzen** Ansicht enthält auch einen DELETE-Vorgang. Benutzer mit den entsprechenden Berechtigungen können in dieser Ansicht Löschanweisungen ausführen, mit denen die Entfernung von Workflowinstanzen aus der Datenbank erzwungen wird. Das Löschen direkt über die Ansicht wird jedoch nur empfohlen, wenn keine andere Möglichkeit besteht, da unter der Workflowlaufzeit initialisierte Löschvorgänge zu unbeabsichtigten Ergebnissen führen können. Verwenden Sie stattdessen den Verwaltungsendpunkt der Workflowinstanz, um die Instanz über die Workflowlaufzeit zu beenden. Wenn Sie eine große Anzahl von Instanzen in der Ansicht löschen möchten, stellen Sie sicher, dass keine aktiven Laufzeiten Vorgänge für diese Instanzen ausführen.  
   
 ## <a name="servicedeployments-view"></a>Ansicht "ServiceDeployments"  
+
  Die Ansicht " **servicedeployments** " enthält Bereitstellungs Informationen für alle von Web (IIS/was) gehosteten Workflow Dienste. Jede Workflow Instanz, die im Internet gehostet wird, enthält eine **servicedeploymentid** , die auf eine Zeile in dieser Sicht verweist.  
   
 |Spaltenname|Spaltentyp|BESCHREIBUNG|  
@@ -65,6 +68,7 @@ In diesem Thema werden die vom SQL-Workflowinstanzspeicher unterstützten öffen
 2. Jeder Versuch, eine Zeile für die Dienst Bereitstellung zu löschen, auf die durch Einträge in der **Instanzen** Ansicht verwiesen wird, führt zu einem No-op-Vorgang. Es können nur ServiceDeployment-Zeilen mit 0 (null) Verweisen gelöscht werden.  
   
 ## <a name="instancepromotedproperties-view"></a>Ansicht "InstancePromotedProperties"  
+
  Die **instancepromotedproperties** -Sicht enthält Informationen für alle höher gestuften Eigenschaften, die vom Benutzer angegeben werden. Eine höher gestufte Eigenschaft fungiert als Eigenschaft erster Klasse, die vom Benutzer in Abfragen zum Abrufen von Instanzen verwendet werden kann.  Ein Benutzer könnte z. b. eine PurchaseOrder-herauf Stufung hinzufügen, die immer die Kosten eines Auftrags in der **value1** -Spalte speichert. Auf diese Weise können Sie eine Abfrage ausführen, die alle Bestellungen zurückgibt, deren Betrag einen bestimmten Wert überschreitet.  
   
 |Spaltentyp|Spaltentyp|BESCHREIBUNG|  

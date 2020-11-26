@@ -2,15 +2,16 @@
 title: Transaktionsprotokolle, Version 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 9e21da0dfdda514e60b6f53090f5225b57aa1b75
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 7b1cfc21a1361cee3027fd5a61ec61a4a0a998b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720373"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246237"
 ---
 # <a name="transaction-protocols-version-10"></a>Transaktionsprotokolle, Version 1.0
-Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der WS-Atomic Transaction-und WS-Coordination-Protokolle. Weitere Informationen zu Version 1,1 finden Sie unter [Transaktionsprotokolle](transaction-protocols.md).  
+
+Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der Protokolle WS-Atomic Transaction und WS-Coordination. Weitere Informationen zu Version 1,1 finden Sie unter [Transaktionsprotokolle](transaction-protocols.md).  
   
 |Spezifikation/Dokument|Link|  
 |-----------------------------|----------|  
@@ -68,14 +69,17 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 |xsd|`http://www.w3.org/2001/XMLSchema`|  
   
 ## <a name="transaction-manager-bindings"></a>Transaktions-Manager-Bindungen  
+
  R1001: Transaktions-Manager müssen SOAP&#160;1.1 und WS-Adressierung&#160;2004/08 für den WS-Atomic-Transaktion- und den WS-Coordination-Nachrichtenaustausch verwenden.  
   
  Anwendungsnachrichten werden nicht auf diese Bindungen eingeschränkt und werden später beschrieben.  
   
 ### <a name="transaction-manager-https-binding"></a>HTTPS-Bindungen des Transaktions-Managers  
+
  Die HTTPS-Bindung des Transaktions-Managers richtet sich lediglich nach der Transportsicherheit, um Sicherheit zu gewährleisten und eine Vertrauenswürdigkeit zwischen den einzelnen Absender-Empfänger-Paaren in der Transaktionsstruktur herzustellen.  
   
 #### <a name="https-transport-configuration"></a>HTTPS-Transportkonfiguration  
+
  X.509-Zertifikate werden verwendet, um eine Transaktions-Manager-Identität herzustellen. Die Client/Server-Authentifizierung ist erforderlich, und die Client/Server-Autorisierung wird als Implementierungsdetail beibehalten:  
   
 - R1111: Über die Verbindung vorgestellte X.509-Zertifikate müssen einen Antragstellernamen aufweisen, der dem vollqualifizierten Domänennamen (FQDN) des sendenden Computers entspricht.  
@@ -83,20 +87,25 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 - B1112: DNS muss zwischen den einzelnen Absender-Empfänger-Paaren im System funktionieren, damit eine Prüfung der X.509-Antragstellernamen erfolgreich ist.  
   
 #### <a name="activation-and-registration-binding-configuration"></a>Bindungskonfiguration von Aktivierung und Registrierung  
+
  WCF erfordert eine Anforderungs-/Antwort-Duplex Bindung mit Korrelation über HTTPS. (Weitere Informationen über Korrelation und Beschreibungen der Anforderungs-/Antwortnachrichten-Austauschmuster finden Sie unter WS-AtomicTransaction, Abschnitt 8.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
+
  WCF unterstützt unidirektionale (Datagramm) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` , wie in WS-Adressierung beschrieben, um eine Korrelation der 2PC-Nachrichten von WCF zu erzielen.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` , wie in WS-Addressing beschrieben, um eine Korrelation der 2PC-Nachrichten von WCF zu erzielen.  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>Gemischte Sicherheitsbindung des Transaktions-Managers  
- Dabei handelt es sich um eine alternative Bindung (gemischter Modus), die Transportsicherheit in Kombination mit dem von der WS-Koordination ausgestellten tokenmodell zur Identitäts Einrichtung verwendet.  Aktivierung und Registrierung sind die einzigen Elemente, die sich zwischen den beiden Bindungen unterscheiden.  
+
+ Dabei handelt es sich um eine alternative Bindung (gemischter Modus), die Transportsicherheit in Kombination mit dem WS-Coordination ausgestellten tokenmodell zum Zweck der Identitäts Einrichtung verwendet.  Aktivierung und Registrierung sind die einzigen Elemente, die sich zwischen den beiden Bindungen unterscheiden.  
   
 #### <a name="https-transport-configuration"></a>HTTPS-Transportkonfiguration  
+
  X.509-Zertifikate werden verwendet, um eine Transaktions-Manager-Identität herzustellen. Die Client/Server-Authentifizierung ist erforderlich, und die Client/Server-Autorisierung wird als Implementierungsdetail beibehalten:  
   
 #### <a name="activation-message-binding-configuration"></a>Bindungskonfiguration von Aktivierungsnachrichten  
+
  Aktivierungsnachrichten nehmen in der Regel nicht an der Interoperabilität teil, da sie normalerweise zwischen einer Anwendung und dem lokalen Transaktions-Manager auftreten.  
   
  B1221: WCF verwendet die Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](messaging-protocols.md)) für Aktivierungs Nachrichten. Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
@@ -110,6 +119,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
  Ein neuer `t:IssuedTokens` Header sollte zum Anfügen an die ausgehende `wscoor:CreateCoordinationContextResponse` Nachricht generiert werden.  
   
 #### <a name="registration-message-binding-configuration"></a>Bindungskonfiguration von Registrierungsnachrichten  
+
  B1231: WCF verwendet Duplex-HTTPS-Bindung (beschrieben in [Messaging Protokollen](messaging-protocols.md)). Anforderungs- und Antwortnachrichten werden mithilfe von WS-Addressing&#160;2004/08 korreliert.  
   
  In der WS-AtomicTransaction-Spezifikation, Abschnitt 8, werden weitere Details zur Korrelation und die Nachrichtenaustauschmuster ausführlich beschrieben.  
@@ -119,11 +129,13 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
  Das- `wsse:Timestamp` Element muss mithilfe der ausgestellten signiert werden `SecurityContextToken STx` . Diese Signatur ist Beweis für den Besitz des einer bestimmten Transaktion zugewiesenen Tokens und wird für die Authentifizierung einer Teilnehmerliste während der Transaktion verwendet. Die RegistrationResponse-Nachricht wird über HTTPS zurückgesendet.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Bindungskonfiguration des 2PC-Protokolls  
+
  WCF unterstützt unidirektionale (Datagramm) Nachrichten über HTTPS. Korrelation unter den Nachrichten wird als Implementierungsdetail beibehalten.  
   
- B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` , wie in WS-Adressierung beschrieben, um eine Korrelation der 2PC-Nachrichten von WCF zu erzielen.  
+ B2131: Implementierungen müssen unterstützen `wsa:ReferenceParameters` , wie in WS-Addressing beschrieben, um eine Korrelation der 2PC-Nachrichten von WCF zu erzielen.  
   
 ## <a name="application-message-exchange"></a>Austausch von Anwendungsnachrichten  
+
  In Anwendungen können beliebige Bindungen für Nachrichten verwendet werden, die von Anwendung zu Anwendung gesendet werden, solange die Bindung die folgenden Sicherheitsanforderungen erfüllt:  
   
 - R2001: Nachrichten von Anwendung zu Anwendung müssen im Nachrichtenheader den `t:IssuedTokens`-Header zusammen mit `CoordinationContext` aufweisen.  
@@ -137,6 +149,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 ## <a name="message-examples"></a>Nachrichtenbeispiele  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext-Anforderungs-/Antwortmeldungen  
+
  Die folgenden Nachrichten folgen einem Anforderungs-/Antwortmuster.  
   
 #### <a name="createcoordinationcontext"></a>CreateCoordinationContext  
@@ -248,6 +261,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 ```  
   
 ### <a name="registration-messages"></a>Registrierungsnachrichten  
+
  Bei den folgenden Nachrichten handelt es sich um Registrierungsnachrichten.  
   
 #### <a name="register"></a>Registrieren  
@@ -348,6 +362,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 ```  
   
 ### <a name="two-phase-commit-protocol-messages"></a>Zweiphasen-Commit-Protokollnachrichten  
+
  Die folgende Nachricht bezieht sich auf das Zweiphasen-Commit-Protokoll (2PC).  
   
 #### <a name="commit"></a>Commit  
@@ -374,6 +389,7 @@ Windows Communication Foundation (WCF) Version 1 implementiert Version 1,0 der W
 ```  
   
 ### <a name="application-messages"></a>Anwendungsnachrichten  
+
  Bei den folgenden Nachrichten handelt es sich um Anwendungsnachrichten.  
   
 #### <a name="application-message-request"></a>Anwendungsnachrichtenanforderung  
