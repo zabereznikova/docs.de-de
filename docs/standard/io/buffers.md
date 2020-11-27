@@ -1,18 +1,17 @@
 ---
 title: System.Buffers – .NET
 ms.date: 12/05/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - buffers [.NET]
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739624"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823523"
 ---
 # <a name="work-with-buffers-in-net"></a>Arbeiten mit Puffern in .NET
 
@@ -188,7 +187,7 @@ Das folgende Beispiel analysiert eine 4 Byte lange Big-Endian-Ganzzahl ab dem S
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet10)]
 
-### <a name="sequencereadert-common-problems"></a>Häufige SequenceReader\<T\>-Probleme
+### <a name="sequencereadert-common-problems"></a>Häufige Probleme mit SequenceReader\<T\>
 
 - Da `SequenceReader<T>` eine änderbare Struktur ist, sollte das Element immer durch [Verweis](../../csharp/language-reference/keywords/ref.md) übergeben werden.
 - `SequenceReader<T>` ist eine [ref-Struktur](../../csharp/language-reference/builtin-types/struct.md#ref-struct) und kann daher nur in synchronen Methoden verwendet und nicht in Feldern gespeichert werden. Weitere Informationen finden Sie unter [Schreiben von sicherem und effizientem C#-Code](../../csharp/write-safe-efficient-code.md).

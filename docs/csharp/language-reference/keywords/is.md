@@ -8,25 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134509"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982393"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
-Der `is`-Operator überprüft, ob das Ergebnis eines Ausdrucks mit einem angegebenen Typ kompatibel ist, oder (ab C# 7.0) testet einen Ausdruck anhand eines Musters. Informationen zum `is`-Operator für Typtests finden Sie im Abschnitt [is-Operator](../operators/type-testing-and-cast.md#is-operator) des Artikels [Typtest- und Umwandlungsoperatoren](../operators/type-testing-and-cast.md).
+Der `is`-Operator überprüft, ob das Ergebnis eines Ausdrucks mit einem angegebenen Typ kompatibel ist, oder (ab C# 7.0) testet einen Ausdruck anhand eines Musters. Informationen zu Typtests des `is`-Operators finden Sie im Abschnitt [is-Operator](../operators/type-testing-and-cast.md#is-operator) des Artikels [Typtestoperatoren und Cast-Ausdrücke](../operators/type-testing-and-cast.md).
 
 ## <a name="pattern-matching-with-is"></a>Musterabgleich mit `is`
 
 Ab C# 7.0 unterstützen die Anweisungen `is` und [switch](switch.md) den Musterabgleich. Das Schlüsselwort `is` unterstützt folgende Muster:
 
-- Das [Typmuster](#type-pattern), das prüft, ob ein Ausdruck in einen angegebenen Typ konvertiert werden kann, und diesen, sofern die Konvertierung möglich ist, in eine Variable dieses Typs umwandelt.
-
+- Das [Typmuster](#type-pattern), das prüft, ob ein Ausdruck in einen angegebenen Typ konvertiert werden kann, und die Variable, sofern die Konvertierung möglich ist, in eine Variable dieses Typs umwandelt.
 - Das [Konstantenmuster](#constant-pattern), das prüft, ob ein Ausdruck einen angegebenen konstanten Wert ergibt.
-
 - Das [Variablenmuster](#var-pattern), eine Übereinstimmung, die immer erfolgreich ausführt wird und den Wert eines Ausdrucks an eine neue lokale Variable bindet.
 
 ### <a name="type-pattern"></a>Typmuster
@@ -39,19 +37,16 @@ Wenn Sie das Typmuster verwenden, um einen Musterabgleich durchzuführen, prüft
 
 Hier ist *expr* ein Ausdruck, der eine Instanz eines beliebigen Typen ergibt, *Typ* ist der Name des Typen, in den das Ergebnis von *expr* konvertiert werden soll, und *varname* ist das Objekt, in das das Ergebnis von *expr* konvertiert wird, wenn der `is`-Test `true` ist.
 
-Der Ausdruck `is` ist `true`, wenn *expr* nicht `null` ist und eine der folgenden Aussagen zutrifft:
+Der Ausdruck `is` ist `true`, wenn *expr* nicht `null` ist und eine der folgenden Bedingungen vorliegt:
 
 - *expr* ist eine Instanz des gleichen Typs wie *Typ*.
-
 - *expr* ist eine Instanz eines Typs, der von *Typ* abgeleitet wird. Das Ergebnis von *expr* kann, in anderen Worten, in eine Instanz von *Typ* umgewandelt werden.
-
 - *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *type* ist, und *expr* hat einen Laufzeittyp,der *type* ist oder von *type* abgeleitet wurde. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variable zugewiesen wird.
-
 - *expr* ist eine Instanz eines Typs, der die Schnittstelle *Typ* implementiert.
 
 Beginnend mit C# 7.1 kann *expr* einen Kompilierzeittyp haben, der durch einen generischen Typparameter und seine Einschränkungen definiert ist.
 
-Wenn *expr*`true` ist und `is` mit der `if`-Anweisung verwendet wird, wird *varname* nur innerhalb der `if`-Anweisung zugewiesen. Der Bereich von *varname* stammt aus dem `is`-Ausdruck am Ende des Block, der die `if`-Anweisung umschließt. Bei Verwendung von *varname* an einem anderen Speicherort wird ein Kompilierzeitfehler für die Verwendung einer nicht zugewiesenen Variablen erzeugt.
+Wenn *expr*`true` ist und `is` mit der `if`-Anweisung verwendet wird, wird *varname* nur innerhalb der `if`-Anweisung zugewiesen. Der Bereich von *varname* stammt aus dem `is`-Ausdruck am Ende des Block, der die `if`-Anweisung umschließt. Bei Verwendung von *varname* an einer anderen Stelle wird ein Kompilierzeitfehler für die Verwendung einer nicht zugewiesenen Variablen erzeugt.
 
 Im folgenden Beispiel wird das `is`-Typmuster verwendet, um die Implementierung der Methode <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> des Typs bereitzustellen.
 
@@ -104,6 +99,8 @@ Die Überprüfung auf `null` kann mithilfe des Konstantenmusters erfolgen. Das S
 Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
+
+Der Ausdruck `x is null` wird für Referenztypen und Nullwerte zulassende Werttypen unterschiedlich berechnet. Für Nullwerte zulassende Werttypen wird <xref:System.Nullable%601.HasValue?displayProperty=nameWithType> verwendet. Für Referenztypen wird `(object)x == null` verwendet.
 
 ### <a name="var-pattern"></a>var-Muster
 

@@ -1,28 +1,42 @@
 ---
-title: dotnet-dump – .NET Core
-description: Installieren und Verwenden des Befehlszeilentools dotnet-dump.
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: Diagnosetool „dotnet-dump“ – .NET-CLI
+description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-dump“ installieren und zum Erfassen und Analysieren von Windows- und Linux-Speicherabbildern ohne nativen Debugger verwenden.
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598109"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822203"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (dotnet-dump)
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
 
 > [!NOTE]
-> `dotnet-dump` wird unter macOS nicht unterstützt.
+> `dotnet-dump` für macOS wird nur mit .NET 5.0 und höheren Versionen unterstützt.
 
-## <a name="install-dotnet-dump"></a>Installieren von dotnet-dump
+## <a name="install"></a>Installieren
 
-Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-dump) `dotnet-dump` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+Es gibt zwei Möglichkeiten, `dotnet-dump` herunterzuladen und zu installieren:
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **Globales dotnet-Tool:**
+
+  Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-dump) `dotnet-dump` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **Direkter Download:**
+
+  Laden Sie die ausführbare Datei für das Tool herunter, die Ihrer Plattform entspricht:
+
+  | OS  | Plattform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -58,7 +72,7 @@ Erfasst ein Speicherabbild von einem Prozess.
 ### <a name="synopsis"></a>Übersicht
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>Optionen
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  Gibt die ID-Nummer des Prozesses an, von dem ein Speicherabbild gesammelt werden soll.
+  Hiermit wird die ID-Nummer des Prozesses angegeben, von dem ein Speicherabbild gesammelt werden soll.
+
+- **`-n|--name <name>`**
+
+  Hiermit wird der Name des Prozesses angegeben, von dem ein Speicherabbild gesammelt werden soll.
 
 - **`--type <Full|Heap|Mini>`**
 

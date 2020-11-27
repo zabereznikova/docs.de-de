@@ -1,26 +1,26 @@
 ---
-title: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code
-description: Erfahren Sie, wie Sie eine .NET Core-Konsolenanwendung mit Visual Studio Code und der .NET Core-CLI erstellen.
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: Erstellen einer .NET-Konsolenanwendung mit Visual Studio Code
+description: Hier erfahren Sie, wie Sie eine .NET-Konsolenanwendung mit Visual Studio Code und der .NET-CLI erstellen.
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811925"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915868"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET-Konsolenanwendung mit Visual Studio Code
 
-In diesem Tutorial wird gezeigt, wie Sie eine .NET Core-Konsolenanwendung erstellen und ausführen, indem Sie Visual Studio Code und die .NET Core-CLI verwenden. Projektaufgaben, wie z. B. das Erstellen, Kompilieren und Ausführen eines Projekts, erfolgen mithilfe der .NET Core CLI. Sie können nach Wunsch dieses Tutorial mit einem anderen Code-Editor nachvollziehen und Befehle in einem Terminal ausführen.
+In diesem Tutorial wird gezeigt, wie Sie eine .NET-Konsolenanwendung erstellen und ausführen, indem Sie Visual Studio Code und die .NET-CLI verwenden. Projektaufgaben wie das Erstellen, Kompilieren und Ausführen eines Projekts erfolgen mithilfe der .NET-CLI. Sie können nach Wunsch dieses Tutorial mit einem anderen Code-Editor nachvollziehen und Befehle in einem Terminal ausführen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 1. [Visual Studio Code](https://code.visualstudio.com/) mit installierter [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). Informationen zum Installieren von Erweiterungen für Visual Studio Code finden Sie unter [Marketplace für VS Code-Erweiterungen](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [.NET Core 3.1 SDK oder höher](https://dotnet.microsoft.com/download)
+2. Das [.NET 5.0 SDK oder höher](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>Erstellen der App
 
-Erstellen Sie ein .NET Core-Konsolen-App-Projekt mit dem Namen HelloWorld.
+Erstellen Sie ein .NET-Konsolen-App-Projekt mit dem Namen „HelloWorld“.
 
 1. Starten Sie Visual Studio Code.
 
@@ -32,7 +32,7 @@ Erstellen Sie ein .NET Core-Konsolen-App-Projekt mit dem Namen HelloWorld.
 
 1. Öffnen Sie das **Terminal** in Visual Studio Code, indem Sie im Hauptmenü **Ansicht** > **Terminal** auswählen.
 
-   Das**Terminal** wird mit der Eingabeaufforderung im Ordner *HelloWorld* geöffnet.
+   Das **Terminal** wird mit der Eingabeaufforderung im Ordner *HelloWorld* geöffnet.
 
 1. Geben Sie im **Terminal** den folgenden Befehl ein:
 
@@ -120,7 +120,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie eine .NET Core-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
+In diesem Tutorial haben Sie eine .NET-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
 
 > [!div class="nextstepaction"]
-> [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio-code.md)
+> [Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio-code.md)

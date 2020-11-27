@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilf
 description: Erfahren Sie, wie Sie Metadaten für einen WCF-Dienst mithilfe einer Konfigurationsdatei veröffentlichen. Durch die Veröffentlichung können Clients diese Metadaten mithilfe einer Get-oder HTTP/GET-Anforderung erhalten.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: eb7aeb4275e367bfc4463a7289d4bc3ff77ff9f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295547"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
+
 Dies ist eines von zwei Vorgehensweisen, in denen das Veröffentlichen von Metadaten für einen Windows Communication Foundation (WCF)-Dienst veranschaulicht wird. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
   
 > [!CAUTION]
@@ -183,6 +184,7 @@ namespace Metadata.Samples
      Da für den Dienst das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> mit `httpGetEnabled` auf `true` festgelegt wurde, ist für den Dienst die Veröffentlichung von Metadaten aktiviert. Und da keine Endpunkte explizit hinzugefügt wurden, fügt die Runtime die Standardendpunkte hinzu. Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](../simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](../samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird die Implementierung eines einfachen WCF-Dienstanbieter und der Konfigurationsdatei veranschaulicht, die Metadaten für den Dienst veröffentlicht.  
   
 ```csharp  

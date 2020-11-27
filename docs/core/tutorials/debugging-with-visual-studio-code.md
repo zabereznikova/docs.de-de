@@ -1,21 +1,21 @@
 ---
-title: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
-description: Erfahren Sie, wie Sie eine .NET Core-Konsolen-App mit Visual Studio Code debuggen.
+title: Debuggen einer .NET-Konsolenanwendung mit Visual Studio Code
+description: Erfahren Sie, wie Sie eine .NET-Konsolen-App mit Visual Studio Code debuggen.
 ms.date: 05/26/2020
-ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118298"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916228"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Tutorial: Debuggen einer .NET-Konsolenanwendung mit Visual Studio Code
 
-In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio Code zum Arbeiten mit .NET Core-Apps verfügbar sind.
+In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio Code zum Arbeiten mit .NET-Apps verfügbar sind.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Tutorial: Erstellen einer .NET-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellen.
 
 ## <a name="use-debug-build-configuration"></a>Verwenden der Debugbuildkonfiguration
 
@@ -27,7 +27,7 @@ Standardmäßig wird in den Visual Studio Code-Starteinstellungen die Debugbuild
 
 1. Starten Sie Visual Studio Code.
 
-1. Öffnen Sie den Ordner des Projekts, das Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellt haben.
+1. Öffnen Sie den Ordner des Projekts, das Sie in [Tutorial: Erstellen einer .NET-Konsolenanwendung mit Visual Studio Code](with-visual-studio-code.md) erstellt haben.
 
 ## <a name="set-a-breakpoint"></a>Haltepunkt festlegen
 
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 In diesem Tutorial haben Sie Debugtools von Visual Studio Code verwendet. Im nächsten Tutorial veröffentlichen Sie eine bereitstellbare Version der App.
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code](publishing-with-visual-studio-code.md)
+> [Veröffentlichen einer .NET-Konsolenanwendung mit Visual Studio Code](publishing-with-visual-studio-code.md)

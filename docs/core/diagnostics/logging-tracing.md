@@ -2,12 +2,12 @@
 title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439923"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820578"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core
 
@@ -55,7 +55,7 @@ Die folgenden APIs sind eher ereignisorientiert. Anstelle von einfachen Zeichenf
   - Ermöglicht nur die Ablaufverfolgung serialisierbarer Objekte.
   - Kann innerhalb des Prozesses über alle [EventListener](xref:System.Diagnostics.Tracing.EventListener)-Instanzen, die für die Verwendung von EventSource konfiguriert sind, genutzt werden
   - Kann außerhalb des Prozesses über Folgendes verwendet werden:
-    - EventPipe von .NET Core auf allen Plattformen
+    - [.NET Core-EventPipe](./eventpipe.md) auf allen Plattformen
     - [Ereignisablaufverfolgung für Windows (ETW)](/windows/win32/etw/event-tracing-portal)
     - [LTTng-Ablaufverfolgungs-Framework für Linux](https://lttng.org/)
       - Exemplarische Vorgehensweise: [Erfassen einer LTTng-Ablaufverfolgung mit PerfCollect](trace-perfcollect-lttng.md)
@@ -93,6 +93,8 @@ Damit Sie beispielsweise die beste Wahl für Ihre Anwendung treffen können, bie
 - [Die .NET-Protokollierung](../extensions/logging.md) bietet eine Übersicht über die unterstützten Protokollierungstechniken.
 
 - Die [C#-Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) kann das Schreiben von Protokollierungscode vereinfachen.
+
+- [Ereignisliste für Runtimeanbieter](../../fundamentals/diagnostics/runtime-events.md)
 
 - Die <xref:System.Exception.Message?displayProperty=nameWithType>-Eigenschaft ist nützlich für das Protokollieren von Ausnahmen.
 

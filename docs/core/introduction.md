@@ -2,14 +2,14 @@
 title: '.NET: Einführung und Übersicht'
 description: Hier erfahren Sie mehr über die kostenlose Open-Source-Entwicklungsplattform .NET zum Entwickeln von vielen verschiedenen Arten von Apps.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506739"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687516"
 ---
 # <a name="introduction-to-net"></a>Einführung in .NET
 
@@ -264,9 +264,9 @@ Weitere Informationen finden Sie unter [Übersicht über die .NET Core-Anwendung
 
 ## <a name="runtime-libraries"></a>Runtimebibliotheken
 
-.NET verfügt über viele verschiedene Standardklassenbibliotheken. Die wichtigsten davon werden als Basisklassenbibliothek (BCL) bezeichnet. Zusammen werden sie als Runtimebibliotheken oder Frameworkbibliotheken bezeichnet. Diese Bibliotheken bieten Implementierungen für viele allgemeine und workloadspezifische Typen und Hilfsprogrammfunktionen.
+.NET verfügt über viele verschiedene Standardklassenbibliotheken, die als [Runtimebibliotheken](../standard/glossary.md#runtime), [Frameworkbibliotheken](../standard/glossary.md#framework-libraries) oder [Basisklassenbibliothek (BCL)](../standard/glossary.md#bcl) bezeichnet werden. Diese Bibliotheken bieten Implementierungen für viele allgemeine und workloadspezifische Typen und Hilfsprogrammfunktionen.
 
-Im Folgenden finden Sie einige Beispiele für Typen, die in den Runtimebibliotheken definiert sind:
+Im Folgenden finden Sie einige Beispiele für Typen, die in den .NET-Runtimebibliotheken definiert sind:
 
 * Primitive Typen wie <xref:System.Boolean?displayProperty=nameWithType> und <xref:System.Int32?displayProperty=nameWithType>.
 * Sammlungen, z.B. <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
@@ -276,9 +276,9 @@ Im Folgenden finden Sie einige Beispiele für Typen, die in den Runtimebibliothe
 * [Serialisierungshilfsprogrammtypen](../standard/serialization/index.md), z. B. <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> und <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
 * Hochleistungstypen, z. B. <xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Numerics.Vector?displayProperty=nameWithType> und [Pipelines](../standard/io/pipelines.md).
 
-Weitere Information finden Sie unter [Frameworkbibliotheken](../standard/framework-libraries.md) und [Quellcode für die Bibliotheken](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Weitere Informationen finden Sie in der [Übersicht über Runtimebibliotheken](../standard/runtime-libraries-overview.md). Der Quellcode für die Bibliotheken befindet sich im [GitHub-Repository „dotnet/runtime“](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
-## <a name="microsoftextensions-libraries"></a>Microsoft.Extensions-Bibliotheken
+### <a name="extensions-to-the-runtime-libraries"></a>Erweiterungen für die Runtimebibliotheken
 
 Die Bibliotheken für einige häufig verwendete Anwendungsfunktionen sind nicht in den Runtimebibliotheken enthalten, werden jedoch in NuGet-Paketen wie den folgenden bereitgestellt:
 
@@ -344,6 +344,7 @@ Einige der Begriffe für .NET können verwirrend sein, da dasselbe Wort in versc
   | Zielframework | Die Sammlung von APIs, auf der eine .NET-App oder -Bibliothek basiert. Beispiele: .NET Core 3.1 und .NET Standard 2.0 |
   | Zielframeworkmoniker (Target Framework Moniker, TFM)  | Ein Zielframeworkmoniker (TFM) ist ein standardisiertes Tokenformat zum Angeben des Zielframeworks einer .NET-App oder -Bibliothek. Beispiel: `net462` für .NET Framework 4.6.2 |
   | Frameworkabhängige App | Dies ist eine App, die nur auf einem Computer ausgeführt werden kann, auf dem Sie die Runtime von der [.NET-Downloadseite](https://dotnet.microsoft.com/download/dotnet-core) installiert haben. „Framework“ ist in dieser Verwendung dasselbe wie „Runtime“, die Sie von der .NET-Downloadseite herunterladen. |
+  | Frameworkbibliotheken | Dies wird manchmal als Synonym für [Runtimebibliotheken](#runtime-libraries) verwendet. |
 
 * **SDK**
 

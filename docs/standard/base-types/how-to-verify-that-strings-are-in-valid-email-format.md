@@ -2,7 +2,6 @@
 title: 'Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen'
 description: In diesem Artikel sehen Sie anhand eines Beispiels, wie ein regulärer Ausdruck in .NET überprüft, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen.
 ms.date: 06/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -19,12 +18,12 @@ helpviewer_keywords:
 - email [.NET], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 07b8e31e4a0203b87492eb01ab686a1c56f5565d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 88ff326e16ede6a422e9403b71905845014c4c25
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889074"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982491"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 
@@ -57,7 +56,7 @@ Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail` -M
 Der Domänenname wird zusammen mit dem @ Zeichen der `DomainMapper` -Methode übergeben, die die <xref:System.Globalization.IdnMapping> -Klasse verwendet, um Unicode-Zeichen in ihre Punycode-Entsprechungen zu übersetzen, die außerhalb des 7-Bit-ASCII-Zeichenbereichs liegen. Darüber hinaus wird die Methode auch das `invalid` -Flag auf `True` fest, wenn die <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> -Methode ein unzulässiges Zeichen im Domänennamen erkennt. Diese Methode gibt den Punycode-Domänennamen, der dem @ Zeichen vorangestellt ist, an die `IsValidEmail` -Methode zurück.
 
 > [!TIP]
-> Es wird empfohlen, dass Sie einen einfachen regulären Ausdruck mit dem Muster `(@)(.+)$` verwenden, um die Domäne zu normalisieren und dann einen Wert zurückzugeben, der angibt, ob die Adresse der Überprüfung standgehalten hat oder nicht. Im Beispiel in diesem Artikel werden jedoch weitere Möglichkeiten beschrieben, wie Sie einen regulären Ausdruck zur Überprüfung der E-Mail-Adresse verwenden können. Unabhängig davon, wie Sie eine E-Mail-Adresse überprüfen, sollten Sie immer eine Test-E-Mail an die Adresse senden, um sicherzustellen, dass diese existiert.
+> Es wird empfohlen, dass Sie einen einfachen regulären Ausdruck mit dem Muster `(@)(.+)$` verwenden, um die Domäne zu normalisieren und dann einen Wert zurückzugeben, der angibt, ob die Adresse die Überprüfung bestanden hat oder nicht. Im Beispiel in diesem Artikel werden jedoch weitere Möglichkeiten beschrieben, wie Sie einen regulären Ausdruck zur Überprüfung der E-Mail-Adresse verwenden können. Unabhängig davon, wie Sie eine E-Mail-Adresse überprüfen, sollten Sie immer eine Test-E-Mail an die Adresse senden, um sicherzustellen, dass diese existiert.
 
 Die `IsValidEmail`-Methode ruft dann die <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode auf, um zu überprüfen, ob die Adresse dem Muster eines regulären Ausdrucks entspricht.
 

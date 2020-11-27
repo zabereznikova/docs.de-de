@@ -2,21 +2,22 @@
 title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557826"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295560"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
+
 In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst auffindbar machen. Es basiert auf dem [selbst](../samples/self-host.md) gehosteter Beispiel.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>So konfigurieren Sie das vorhandene Beispiel unter "Selbst gehostete Dienste" für die Suche  
   
 1. Öffnen Sie die Self-Host-Projekt Mappe in Visual Studio 2012. Das Beispiel befindet sich im Verzeichnis "TechnologySamples\Basic\Service\Hosting\SelfHost".  
   
-2. Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Möglicherweise wird eine Fehlermeldung angezeigt, die besagt, dass "System. ServiceModel.Discovery.dll oder eine der zugehörigen Abhängigkeiten erfordert eine neuere Version des .NET Framework, als im Projekt angegeben... " Wenn diese Meldung angezeigt wird, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften**aus. Stellen Sie im **Projekteigenschaften** Fenster sicher, dass das **Ziel Framework** ist [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
+2. Fügen Sie dem Dienstprojekt einen Verweis auf `System.ServiceModel.Discovery.dll` hinzu. Möglicherweise wird eine Fehlermeldung angezeigt, die besagt, dass "System. ServiceModel.Discovery.dll oder eine der zugehörigen Abhängigkeiten erfordert eine neuere Version des .NET Framework, als im Projekt angegeben... " Wenn diese Meldung angezeigt wird, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus. Stellen Sie im **Projekteigenschaften** Fenster sicher, dass das **Ziel Framework** ist [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
 3. Öffnen Sie die Datei "Service.cs", und fügen Sie die folgende `using`-Anweisung hinzu.  
   
@@ -60,7 +61,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
 2. Fügen Sie einen Verweis auf `System.ServiceModel.dll` und `System.ServiceModel.Discovery.dll` hinzu.  
   
-3. Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Klicken Sie hierzu mit der rechten Maustaste auf die Dateien im **Projektmappen-Explorer**, wählen Sie **Kopieren**aus, und wählen Sie dann das Projekt **Discoveryclientapp** aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Einfügen**aus.  
+3. Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Klicken Sie hierzu mit der rechten Maustaste auf die Dateien im **Projektmappen-Explorer**, wählen Sie **Kopieren** aus, und wählen Sie dann das Projekt **Discoveryclientapp** aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Einfügen** aus.  
   
 4. Öffnen Sie die Datei Program.cs.  
   
@@ -220,7 +221,8 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
     ```  
   
 ## <a name="example"></a>Beispiel  
- Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code auf dem [selbst Host](../samples/self-host.md) Beispiel basiert, werden nur die geänderten Dateien aufgelistet. Weitere Informationen zum Self-Host-Beispiel finden Sie in den [Installationsanweisungen](../samples/set-up-instructions.md).  
+
+ Es folgt eine Auflistung des Codes für dieses Beispiel. Da dieser Code auf dem [selbst Host](../samples/self-host.md) Beispiel basiert, werden nur die geänderten Dateien aufgelistet. Weitere Informationen zum Self-Host Beispiel finden Sie unter [Setup Anweisungen](../samples/set-up-instructions.md).  
   
 ```csharp  
 // Service.cs  
@@ -340,7 +342,7 @@ namespace DiscoveryClientApp
 }  
 ```  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über die WCF-Suche](wcf-discovery-overview.md)
 - [Objektmodell der WCF-Suche](wcf-discovery-object-model.md)

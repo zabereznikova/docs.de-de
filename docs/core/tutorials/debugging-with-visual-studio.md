@@ -1,25 +1,25 @@
 ---
-title: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio
-description: Erfahren Sie, wie Sie eine .NET Core-Konsolen-App mit Visual Studio debuggen.
+title: Debuggen einer .NET-Konsolenanwendung mit Visual Studio
+description: Hier erfahren Sie, wie Sie eine .NET-Konsolen-App mit Visual Studio debuggen.
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957224"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916188"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>Tutorial: Debuggen einer .NET-Konsolenanwendung mit Visual Studio
 
 In diesem Tutorial werden die Debugtools vorgestellt, die in Visual Studio verfügbar sind.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellen.
+- Dieses Tutorial kann mit der Konsolen-App durchgeführt werden, die Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellen.
 
 ## <a name="use-debug-build-configuration"></a>Verwenden der Debugbuildkonfiguration
 
@@ -31,11 +31,11 @@ In der Debugkonfiguration wird ein Programm mit vollständigen symbolischen Debu
 
 1. Starten Sie Visual Studio.
 
-1. Öffnen Sie das Projekt, das Sie in [Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellt haben.
+1. Öffnen Sie das Projekt, das Sie in [Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio](with-visual-studio.md) erstellt haben.
 
    Die aktuelle Buildkonfiguration wird auf der Symbolleiste angezeigt. Das folgende Symbolleistenbild zeigt, dass Visual Studio konfiguriert wurde, um die Debugversion Ihrer Anwendung zu kompilieren:
 
-   ![Visual Studio-Symbolleiste mit hervorgehobenem Debuggen](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="Visual Studio-Symbolleiste mit hervorgehobenem Debuggen":::
 
 ## <a name="set-a-breakpoint"></a>Haltepunkt festlegen
 
@@ -45,7 +45,7 @@ Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, bevor
 
    Wie in der folgenden Abbildung gezeigt, hebt Visual Studio die Zeile hervor, in der der Breakpoint festgelegt ist, und zeigt am linken Rand einen roten Punkt an.
 
-   ![Visual Studio-Programmfenster mit festgelegtem Haltepunkt](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="Visual Studio-Programmfenster mit festgelegtem Haltepunkt":::
 
 1. Drücken Sie <kbd>F5</kbd>, um das Programm im Debugmodus auszuführen. Eine andere Möglichkeit, das Debuggen zu starten, besteht darin, im Menü **Debuggen** > **Debuggen starten** zu wählen.
 
@@ -53,7 +53,7 @@ Ein *Haltepunkt* unterbricht vorübergehend die Ausführung der Anwendung, bevor
 
 1. Die Ausführung des Programms endet, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird. Im Fenster **Lokal** werden die Werte von Variablen angezeigt, die in der gerade ausgeführten Methode definiert sind.
 
-   ![Screenshot eines Breakpoints in Visual Studio](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Screenshot eines Haltepunkts in Visual Studio":::
 
 ## <a name="use-the-immediate-window"></a>Verwenden des Fensters „Direkt“
 
@@ -67,13 +67,13 @@ Das **Direktfenster** dient Ihrer Interaktion mit der Anwendung, die Sie debugge
 
    Im **Direktfenster** werden der Wert der Zeichenfolgenvariablen und die Eigenschaften des <xref:System.DateTime>-Werts angezeigt. Darüber hinaus werden die Werte der Variablen im Fenster **Lokal** aktualisiert.
 
-   ![Fenster „Lokal“ und „Direkt“ in Visual Studio 2019](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Fenster „Lokal“ und „Direkt“ in Visual Studio 2019":::
 
 1. Drücken Sie <kbd>F5</kbd>, um die Ausführung des Programms fortzusetzen. Eine weitere Möglichkeit zum Fortsetzen besteht darin, im Menü **Debuggen** > **Fortsetzen** zu wählen.
 
    Die im Konsolenfenster angezeigten Werte entsprechen auch den Änderungen im **Direktfenster**.
 
-   ![Konsolenfenster mit den eingegebenen Werten](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="Konsolenfenster mit den eingegebenen Werten":::
 
 1. Drücken Sie eine beliebige Taste, um die Anwendung und das Debuggen zu beenden.
 
@@ -83,7 +83,7 @@ Das Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 
 1. Klicken Sie mit der rechten Maustaste auf den roten Punkt, der den Haltepunkt darstellt. Wählen Sie im Kontextmenü **Bedingungen** zum Öffnen des Dialogfelds **Breakpointeinstellungen** aus. Aktivieren Sie das Kontrollkästchen für **Bedingungen**, wenn es nicht bereits aktiviert ist.
 
-   ![Editor mit dem Panel für Haltepunkteinstellungen – C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="Editor mit dem Panel für Haltepunkteinstellungen – C#":::
 
 1. Geben Sie als **Bedingten Ausdruck** den folgenden Code in das Feld ein, der Beispielcode zeigt, der testet, ob `x` den Wert 5 aufweist. Wenn die gewünschte Sprache nicht angezeigt wird, ändern Sie die Sprachauswahl am oberen Rand der Seite.
 
@@ -121,7 +121,7 @@ Das Programm zeigt die Zeichenfolge an, die der Benutzer eingibt. Aber was gesch
 
    Das Fragezeichen weist das Direktfenster an, [einen Ausdruck auszuwerten](/visualstudio/ide/reference/immediate-window#enter-commands).
 
-   ![Das Direktfenster, das einen Wert „true“ zurückgibt, nachdem die Anweisung ausgeführt wurde – C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="Das Direktfenster, das einen Wert „true“ zurückgibt, nachdem die Anweisung ausgeführt wurde – C#":::
 
 1. Drücken Sie <kbd>F5</kbd>, um die Ausführung des Programms fortzusetzen.
 
@@ -139,11 +139,11 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 
    C#
 
-   ![Visual Studio-Einzelschrittausführung in Methode – C#](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Visual Studio-Einzelschrittausführung in Methode – C#":::
 
    Visual Basic
 
-   ![Visual Studio-Einzelschrittausführung in Methode – Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Visual Studio-Einzelschrittausführung in Methode – Visual Basic":::
 
    An diesem Punkt wird im Fenster **Lokal** angezeigt, dass das `args`-Array leer ist und `name` und `date` Standardwerte aufweisen. Darüber hinaus hat Visual Studio ein leeres Konsolenfenster geöffnet.
 
@@ -151,11 +151,11 @@ Mit Visual Studio können Sie ein Programm auch zeilenweise durchlaufen und die 
 
    C#
 
-   ![Visual Studio-Einzelschrittausführung in Methodenquelle – C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Visual Studio-Einzelschrittausführung in Methodenquelle – C#":::
 
    Visual Basic
 
-   ![Visual Studio-Einzelschrittausführung in Methodenquelle – Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Visual Studio-Einzelschrittausführung in Methodenquelle – Visual Basic":::
 
 1. Drücken Sie die Taste <kbd>F11</kbd>. Visual Studio hebt die Anweisung hervor, die die Zuweisung der Variablen `name` enthält. Das Fenster **Lokal** zeigt, dass `name` den Wert `null` aufweist, und das Konsolenfenster zeigt die Zeichenfolge „What is your name?“ an.
 
@@ -179,7 +179,7 @@ Nachdem Sie die Debugversion der Anwendung getestet haben, sollten Sie auch die 
 
 Ändern Sie zum Erstellen und Testen der endgültigen Produktversion der Konsolenanwendung die Buildkonfiguration auf der Symbolleiste von **Debuggen** in **Freigabe**.
 
-![Visual Studio-Standardsymbolleiste mit hervorgehobenem Debuggen](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Visual Studio-Standardsymbolleiste mit hervorgehobenem Release":::
 
 Wenn Sie <kbd>F5</kbd> drücken oder **Projektmappe erstellen** im Menü **Build** auswählen, kompiliert Visual Studio die Releaseversion der Anwendung. Sie können sie dann wie die Debugversion testen.
 
@@ -188,4 +188,4 @@ Wenn Sie <kbd>F5</kbd> drücken oder **Projektmappe erstellen** im Menü **Build
 In diesem Tutorial haben Sie Debugtools von Visual Studio verwendet. Im nächsten Tutorial veröffentlichen Sie eine bereitstellbare Version der App.
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio](publishing-with-visual-studio.md)
+> [Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio](publishing-with-visual-studio.md)

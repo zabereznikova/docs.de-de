@@ -1,21 +1,21 @@
 ---
-title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
-description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
-ms.date: 06/08/2020
-ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Testen einer .NET-Klassenbibliothek mit Visual Studio Code
+description: In diesem Artikel erfahren Sie, wie Sie Visual Studio Code und die .NET-CLI zum Erstellen und Ausführen eines Komponententestprojekts für eine .NET-Klassenbibliothek verwenden.
+ms.date: 11/17/2020
+ms.openlocfilehash: 4528bd203ae03988a1d1d80a7e904e94e68c1d04
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180451"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915855"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code
+# <a name="tutorial-test-a-net-class-library-using-visual-studio-code"></a>Tutorial: Testen einer .NET-Klassenbibliothek mit Visual Studio Code
 
 In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem Sie einer Projektmappe ein Testprojekt hinzufügen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio Code](library-with-visual-studio-code.md) erstellen.
+- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code](library-with-visual-studio-code.md) erstellen.
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
@@ -23,7 +23,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 1. Starten Sie Visual Studio Code.
 
-1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio Code](library-with-visual-studio-code.md) erstellt haben.
+1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code](library-with-visual-studio-code.md) erstellt haben.
 
 1. Erstellen Sie ein Komponententestprojekt namens „StringLibraryTest“.
 
@@ -114,13 +114,9 @@ So erstellen Sie die Testmethoden:
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
 
-   Test Run Successful.
-   Total tests: 3
-        Passed: 3
-    Total time: 5.1116 Seconds
+   Passed!  - Failed:     0, Passed:     3, Skipped:     0, Total:     3, Duration: 3 ms - StringLibraryTest.dll (net5.0)
    ```
 
 ## <a name="handle-test-failures"></a>Behandeln von Testfehlern
@@ -144,20 +140,14 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
 
    ```output
    Starting test execution, please wait...
-
    A total of 1 test files matched the specified pattern.
-     X TestDoesNotStartWithUpper [283ms]
+     Failed TestDoesNotStartWithUpper [28 ms]
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
-   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
-   Test Run Failed.
-   Total tests: 3
-        Passed: 2
-        Failed: 1
-    Total time: 1.7825 Seconds
+   Failed!  - Failed:     1, Passed:     2, Skipped:     0, Total:     3, Duration: 31 ms - StringLibraryTest.dll (net5.0)
    ```
 
 1. Entfernen Sie die Zeichenfolge „Error“, die Sie in Schritt 1 hinzugefügt haben. Führen Sie den Test erneut aus. Nun ist er erfolgreich.
@@ -176,13 +166,13 @@ Nachdem die Tests beim Ausführen des Debugbuilds der Bibliothek nun alle erfolg
 
 ## <a name="debug-tests"></a>Debuggen von Tests
 
-Wenn Sie Visual Studio Code als IDE verwenden, können Sie den gleichen Prozess wie unter [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio-code.md) beschrieben verwenden, um Code mit Ihrem Komponententestprojekt zu debuggen. Anstatt das App-Projekt *ShowCase* zu starten, öffnen Sie *StringLibraryTest/UnitTest1.cs*, und wählen Sie **Alle Tests ausführen** zwischen den Zeilen 7 und 8 aus. Wenn Sie den Test nicht finden können, drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>P</kbd>, um die Befehlspalette zu öffnen, und geben Sie **Fenster erneut Laden** ein.
+Wenn Sie Visual Studio Code als IDE verwenden, können Sie den gleichen Prozess wie unter [Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio-code.md) beschrieben verwenden, um Code mit Ihrem Komponententestprojekt zu debuggen. Anstatt das App-Projekt *ShowCase* zu starten, öffnen Sie *StringLibraryTest/UnitTest1.cs*, und wählen Sie **Alle Tests ausführen** zwischen den Zeilen 7 und 8 aus. Wenn Sie den Test nicht finden können, drücken Sie <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>P</kbd>, um die Befehlspalette zu öffnen, und geben Sie **Fenster erneut Laden** ein.
 
 Visual Studio Code startet das Testprojekt mit angefügtem Debugger. Die Ausführung wird an jedem Haltepunkt angehalten, den Sie dem Testprojekt oder zugrunde liegenden Bibliothekscode hinzugefügt haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* [Komponententests in .NET Core und .NET Standard](../testing/index.md)
+* [Komponententests in .NET](../testing/index.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -199,4 +189,4 @@ Wenn Sie eine Bibliothek als NuGet-Paket veröffentlichen, können andere Benutz
 Eine Bibliothek muss nicht als Paket verteilt werden. Sie kann mit einer Konsolen-App gebündelt werden, die sie verwendet. Informationen zum Veröffentlichen einer Konsolen-App finden Sie in einem früheren Tutorial dieser Reihe:
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code](publishing-with-visual-studio-code.md)
+> [Tutorial: Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio Code](publishing-with-visual-studio-code.md)

@@ -2,14 +2,15 @@
 title: Interne Funktionsweise des Workflowdiensthosts
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23ee0533d5386164dc95cb7fe2c61a626ea3f96e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594880"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295742"
 ---
 # <a name="workflow-service-host-internals"></a>Interne Funktionsweise des Workflowdiensthosts
+
 <xref:System.ServiceModel.WorkflowServiceHost> stellt einen Host für Workflowdienste bereit. Der Host lauscht unter anderem auf eingehende Meldungen, leitet sie an die entsprechende Workflowdienstinstanz weiter und kontrolliert das Entladen und Beibehalten von Workflows. In diesem Thema wird beschrieben, wie eingehende Meldungen vom WorkflowServiceHost verarbeitet werden.  
   
 ## <a name="workflowservicehost-overview"></a>Übersicht über WorkflowServiceHost  
@@ -23,6 +24,7 @@ Mit der <xref:System.ServiceModel.WorkflowServiceHost>-Klasse werden Workflowdie
  <xref:System.ServiceModel.WorkflowServiceHost> macht darüber hinaus Anwendungsendpunkte zum Lauschen auf eingehende Meldungen verfügbar. Eingehende Meldungen werden an die entsprechende Workflowdienstinstanz gesendet (sofern diese aktuell geladen ist). Bei Bedarf wird eine neue Workflowinstanz erstellt. Wenn eine vorhandene Instanz beibehalten wurde, wird diese aus dem Persistenzspeicher geladen.  
   
 ## <a name="workflowservicehost-details"></a>Details zum WorkflowServiceHost  
+
  Das folgende Diagramm zeigt, wie <xref:System.ServiceModel.WorkflowServiceHost> Nachrichten in etwas detaillierteren behandelt werden:  
   
  ![Diagramm, das den Nachrichtenfluss des Workflow Dienst Hosts anzeigt.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  

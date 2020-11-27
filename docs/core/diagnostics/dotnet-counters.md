@@ -1,25 +1,39 @@
 ---
-title: dotnet-counters – .NET Core
-description: Erfahren Sie, wie Sie das Befehlszeilentool dotnet-counter installieren und verwenden.
-ms.date: 02/26/2020
-ms.openlocfilehash: 7ff29ad91ad271afd35e3d38a4d748bc79ad6c03
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: Diagnosetool „dotnet-counters“ – .NET-CLI
+description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-counter“ installieren und für die Ad-hoc-Integritätsüberwachung und allgemeine Leistungsuntersuchung verwenden.
+ms.date: 11/17/2020
+ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507253"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822216"
 ---
-# <a name="dotnet-counters"></a>dotnet-counters
+# <a name="investigate-performance-counters-dotnet-counters"></a>Untersuchen von Leistungsindikatoren (dotnet-counters)
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
 
-## <a name="install-dotnet-counters"></a>Installieren von dotnet-counters
+## <a name="install"></a>Installieren
 
-Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-counters) `dotnet-counters` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+Es gibt zwei Möglichkeiten, `dotnet-counters` herunterzuladen und zu installieren:
 
-```dotnetcli
-dotnet tool install --global dotnet-counters
-```
+- **Globales dotnet-Tool:**
+
+  Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-counters) `dotnet-counters` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-counters
+  ```
+
+- **Direkter Download:**
+
+  Laden Sie die ausführbare Datei für das Tool herunter, die Ihrer Plattform entspricht:
+
+  | OS  | Plattform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-counters/win-x86) \| [x64](https://aka.ms/dotnet-counters/win-x64) \| [arm](https://aka.ms/dotnet-counters/win-arm) \| [arm-x64](https://aka.ms/dotnet-counters/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-counters/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-counters/linux-x64) \| [arm](https://aka.ms/dotnet-counters/linux-arm) \| [arm64](https://aka.ms/dotnet-counters/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-counters/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-counters/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -57,14 +71,18 @@ Mit diesem Befehl werden regelmäßig counter-Werte gesammelt und zur Nachbearbe
 ### <a name="synopsis"></a>Übersicht
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>Optionen
 
 - **`-p|--process-id <PID>`**
 
-  Die ID des zu überwachenden Prozesses.
+  Dies ist die ID des Prozesses, von dem die Leistungsindikatordaten erfasst werden sollen.
+
+- **`-n|--name <name>`**
+
+  Dies ist der Name des Prozesses, von dem die Leistungsindikatordaten erfasst werden sollen.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -86,8 +104,8 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
   Nach den Sammlungskonfigurationsparametern kann der Benutzer `--` gefolgt von einem Befehl anfügen, um eine .NET-Anwendung mit mindestens Common Language Runtime 5.0 zu starten. `dotnet-counters` startet einen Prozess mit dem angegebenen Befehl und erfasst die angeforderten Metriken. Dies ist bei der Sammlung der Metriken für den Startpfad einer Anwendung oft nützlich und kann verwendet werden, um Probleme kurz vor oder nach dem Haupteinstiegspunkt zu diagnostizieren oder zu überwachen.
 
-> [!NOTE]
-> Wenn Sie diese Option verwenden, wird der erste Prozess von .NET 5.0 überwacht, der mit dem Tool kommuniziert, d. h. der Befehl erfasst nur die erste Anwendung, wenn mehrere .NET-Anwendungen gestartet werden. Sie sollten daher diese Option für eigenständige Anwendungen oder die Option `dotnet exec <app.dll>` verwenden.
+  > [!NOTE]
+  > Wenn Sie diese Option verwenden, wird der erste Prozess von .NET 5.0 überwacht, der mit dem Tool kommuniziert, d. h. der Befehl erfasst nur die erste Anwendung, wenn mehrere .NET-Anwendungen gestartet werden. Sie sollten daher diese Option für eigenständige Anwendungen oder die Option `dotnet exec <app.dll>` verwenden.
 
 ### <a name="examples"></a>Beispiele
 
@@ -162,7 +180,7 @@ Zeigt regelmäßig aktualisierte Werte ausgewählter Zähler an.
 ### <a name="synopsis"></a>Übersicht
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>Optionen
@@ -170,6 +188,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 - **`-p|--process-id <PID>`**
 
   Die ID des zu überwachenden Prozesses.
+
+- **`-n|--name <name>`**
+
+  Dies ist der Name des Prozesses, der überwacht werden soll.
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -245,7 +267,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
 
 - Starten Sie `my-aspnet-server.exe`, und überwachen Sie die Anzahl der vom Start geladenen Assemblys (nur .NET 5.0 oder höher):
 
-  HINWEIS: Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
+  > [!IMPORTANT]
+  > Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[assembly-count] -- my-aspnet-server.exe
@@ -259,7 +282,8 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [--cou
   
 - Starten Sie `my-aspnet-server.exe` mit `arg1` und `arg2` als Befehlszeilenargumente, und überwachen Sie den Arbeitssatz und die GC-Heapgröße vom Start an (nur .NET 5.0 oder höher):
 
-  HINWEIS: Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
+  > [!IMPORTANT]
+  > Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
 
   ```console
   > dotnet-counters monitor --counters System.Runtime[working-set,gc-heap-size] -- my-aspnet-server.exe arg1 arg2

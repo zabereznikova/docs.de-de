@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: fe28a4bf4a5432d6e33b7ad3238c1d7c0d4e7a84
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440144"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831363"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen
 
@@ -60,7 +60,7 @@ Der **Release**-Wert REG_DWORD in der Registrierung steht für die installierte 
 | .NET Framework 4.7     | Für Windows 10 Creators Update: 460798<br />Für alle anderen Windows-Betriebssysteme (einschließlich Windows 10-Betriebssysteme): 460805 |
 | .NET Framework 4.7.1   | Für Windows 10 Fall Creators Update und Windows Server Version 1709: 461308<br/>Für alle anderen Windows-Betriebssysteme (einschließlich Windows 10-Betriebssysteme): 461310 |
 | .NET Framework 4.7.2   | Für Windows 10 April 2018 Update und Windows Server Version 1803: 461808<br/>Für alle anderen Betriebssysteme als Windows 10 April 2018 Update und Windows Server Version 1803: 461814 |
-| .NET Framework 4.8     | Unter Windows 10 Update aus Mai 2019 und Windows 10 Update aus November 2019: 528040<br/>Für Windows 10-Update von Mai 2020: 528372<br/>Für alle anderen Windows-Betriebssysteme (einschließlich Windows 10-Betriebssysteme): 528049 |
+| .NET Framework 4.8     | Unter Windows 10 Update aus Mai 2019 und Windows 10 Update aus November 2019: 528040<br/>Unter Windows 10 Update von Mai 2020 und Windows 10 Update von Oktober 2020: 528372<br/>Für alle anderen Windows-Betriebssysteme (einschließlich Windows 10-Betriebssysteme): 528049 |
 
 ### <a name="minimum-version"></a>Mindestversion
 

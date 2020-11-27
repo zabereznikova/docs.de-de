@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 9239e8bd9b85986d41006c4b2a21b6f2304e8275
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1291cb040fdcad17135e2187ade1966f3032fb44
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601230"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295534"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code
+
 Dies ist eines von zwei Themen zur Vorgehensweise, in denen das Veröffentlichen von Metadaten für einen Windows Communication Foundation (WCF)-Dienst erörtert wird. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe von Code dargestellt.  
   
 > [!CAUTION]
@@ -81,6 +82,7 @@ Dies ist eines von zwei Themen zur Vorgehensweise, in denen das Veröffentlichen
 11. Navigieren Sie mit Internet Explorer zur Basisadresse des Dienstanbieter ( `http://localhost:8001/MetadataSample` in diesem Beispiel), und vergewissern Sie sich, dass die Metadatenveröffentlichung aktiviert ist. Es sollte eine Webseite angezeigt werden, die am oberen Rand den Text "Einfacher Dienst" und unmittelbar darunter den Text "Sie haben einen Dienst erstellt" enthält. Wenn nicht, wird oben auf der Ergebnisseite folgende Meldung angezeigt: "Das Veröffentlichen von Metadaten für diesen Dienst ist derzeit deaktiviert."  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel zeigt die Implementierung eines grundlegenden WCF-diensdienstanbieter, der Metadaten für den Dienst im Code veröffentlicht.  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]

@@ -1,25 +1,39 @@
 ---
-title: dotnet-gcdump (.NET Core)
-description: Hier erfahren Sie mehr über das Installieren und Verwenden des Befehlszeilentools „dotnet-gcdump“.
-ms.date: 07/26/2020
-ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+title: Diagnosetool „dotnet-gcdump“ – .NET-CLI
+description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-gcdump“ installieren und zum Erfassen von Garbage Collector-Speicherabbildern (GC) von .NET-Liveprozessen mithilfe von EventPipe im Zusammenhang mit .NET verwenden.
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656650"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826039"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Heapanalysetool (dotnet-gcdump)
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.1 SDK und höher
 
-## <a name="install-dotnet-gcdump"></a>Installieren von dotnet-gcdump
+## <a name="install"></a>Installieren
 
-Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-gcdump) `dotnet-gcdump` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+Es gibt zwei Möglichkeiten, `dotnet-gcdump` herunterzuladen und zu installieren:
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **Globales dotnet-Tool:**
+
+  Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-gcdump) `dotnet-gcdump` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **Direkter Download:**
+
+  Laden Sie die ausführbare Datei für das Tool herunter, die Ihrer Plattform entspricht:
+
+  | OS  | Plattform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -29,7 +43,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Beschreibung
 
-Mit dem globalen Tool `dotnet-gcdump` können Sie GC-Speicherabbilder (Garbage Collector) aus .NET-Liveprozessen erfassen. Dabei wird die EventPipe-Technologie verwendet, bei der es sich um eine plattformübergreifende Alternative zur Ereignisablaufverfolgung für Windows handelt. GC-Speicherabbilder werden durch das Auslösen einer automatischen Speicherbereinigung im Zielprozess, das Aktivieren spezieller Ereignisse und das wiederholte Generieren des Graphs der Objektstämme aus dem Ereignisdatenstrom erstellt. Dieser Prozess ermöglicht das Erfassen von GC-Speicherabbildern während der Prozessausführung mit minimalem Aufwand. Diese Speicherabbilder sind für verschiedene Szenarios nützlich:
+Das globale `dotnet-gcdump`-Tool sammelt Garbage Collector-Speicherabbilder (GC) von .NET-Liveprozessen mithilfe von [EventPipe](./eventpipe.md). GC-Speicherabbilder werden durch das Auslösen einer automatischen Speicherbereinigung im Zielprozess, das Aktivieren spezieller Ereignisse und das wiederholte Generieren des Graphs der Objektstämme aus dem Ereignisdatenstrom erstellt. Dieser Prozess ermöglicht das Erfassen von GC-Speicherabbildern während der Prozessausführung mit minimalem Aufwand. Diese Speicherabbilder sind für verschiedene Szenarios nützlich:
 
 - Vergleichen der Anzahl von Objekten auf dem Heap zu verschiedenen Zeitpunkten
 - Analysieren des Stamms von Objekten (Beantwortung von Fragen wie „Was verweist noch auf diesen Typ?“)

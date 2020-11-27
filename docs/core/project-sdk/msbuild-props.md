@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063227"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687470"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
@@ -123,7 +123,7 @@ Der folgende XML-Code schließt die `System.Security`-Assembly aus der Kürzung 
 
 ### <a name="useapphost"></a>UseAppHost
 
-Die Eigenschaft `UseAppHost` wurde in Version 2.1.400 des .NET SDK eingeführt. Sie steuert, ob eine native ausführbare Datei für eine Bereitstellung erstellt wird. Eine native ausführbare Datei ist für eigenständige Bereitstellungen erforderlich.
+Die `UseAppHost`-Eigenschaft steuert, ob eine native ausführbare Datei für eine Bereitstellung erstellt wird. Eine native ausführbare Datei ist für eigenständige Bereitstellungen erforderlich.
 
 In .NET Core 3.0 und höheren Versionen wird standardmäßig eine frameworkabhängige ausführbare Datei erstellt. Legen Sie die Eigenschaft `UseAppHost` auf `false` fest, um die Erzeugung der ausführbaren Datei zu deaktivieren.
 
@@ -142,12 +142,12 @@ Weitere Informationen zur Bereitstellung finden Sie unter [.NET-Anwendungsbereit
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-Die `EmbeddedResourceUseDependentUponConvention`-Eigenschaft definiert, ob Ressourcenmanifest-Dateinamen aus Typinformationen in Quelldateien generiert werden, die mit Ressourcendateien angeordnet werden. Wenn sich beispielsweise *Form1.resx* im selben Ordner wie *Form1.cs* befindet und `EmbeddedResourceUseDependentUponConvention` auf `true` festgelegt ist, nimmt die generierte *.resources* -Datei den Namen des ersten Typs an, der in *Form1.cs* definiert ist. Wenn z. B. `MyNamespace.Form1` der erste in *Form1.cs* definierte Typ ist, lautet der generierte Dateiname *MyNamespace.Form1.resources*.
+Die `EmbeddedResourceUseDependentUponConvention`-Eigenschaft definiert, ob Ressourcenmanifest-Dateinamen aus Typinformationen in Quelldateien generiert werden, die mit Ressourcendateien angeordnet werden. Wenn sich beispielsweise *Form1.resx* im selben Ordner wie *Form1.cs* befindet und `EmbeddedResourceUseDependentUponConvention` auf `true` festgelegt ist, nimmt die generierte *.resources*-Datei den Namen des ersten Typs an, der in *Form1.cs* definiert ist. Wenn z. B. `MyNamespace.Form1` der erste in *Form1.cs* definierte Typ ist, lautet der generierte Dateiname *MyNamespace.Form1.resources*.
 
 > [!NOTE]
 > Wenn `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für ein `EmbeddedResource`-Element angegeben werden, basiert der generierte Manifestdateiname für diese Ressourcendatei stattdessen auf diesen Metadaten.
 
-Standardmäßig ist diese Eigenschaft in einem neuen .NET-Projekt auf `true` festgelegt. Wenn bei Festlegung auf `false` keine `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für das `EmbeddedResource`-Element in der Projektdatei angegeben werden, basiert der Ressourcenmanifest-Dateiname auf dem Stammnamespace für das Projekt und dem relativen Dateipfad zur *.resx* -Datei. Weitere Informationen finden Sie unter [Benennung von Ressourcenmanifestdateien](../resources/manifest-file-names.md).
+Standardmäßig ist diese Eigenschaft in einem neuen .NET-Projekt auf `true` festgelegt. Wenn bei Festlegung auf `false` keine `LogicalName`-, `ManifestResourceName`- oder `DependentUpon`-Metadaten für das `EmbeddedResource`-Element in der Projektdatei angegeben werden, basiert der Ressourcenmanifest-Dateiname auf dem Stammnamespace für das Projekt und dem relativen Dateipfad zur *.resx*-Datei. Weitere Informationen finden Sie unter [Benennung von Ressourcenmanifestdateien](../resources/manifest-file-names.md).
 
 ```xml
 <PropertyGroup>
@@ -354,7 +354,7 @@ Mit der `TieredCompilationQuickJitForLoops`-Eigenschaft wird konfiguriert, ob de
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [Verweis](#reference)
-- [Wiederherstellen von Eigenschaften](#restore-properties)
+- [Wiederherstellungsbezogene Eigenschaften](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ Das `Include`-Attribut gibt den Namen der Datei an, und die `HintPath`-Metadaten
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>Wiederherstellen von Eigenschaften
+### <a name="restore-related-properties"></a>Wiederherstellungsbezogene Eigenschaften
 
 Durch das Wiederherstellen eines referenzierten Pakets werden alle seine direkten Abhängigkeiten sowie alle Abhängigkeiten dieser Abhängigkeiten installiert. Sie können die Paketwiederherstellung anpassen, indem Sie Eigenschaften wie `RestorePackagesPath` und `RestoreIgnoreFailedSources` angeben. Weitere Informationen zu diesen und anderen Eigenschaften finden Sie unter [Wiederherstellungsziel](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>Hostingeigenschaften und -elemente
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+Die `EnableComHosting`-Eigenschaft gibt an, dass eine Assembly einen COM-Server bereitstellt. Wenn die `EnableComHosting`-Eigenschaft auf `true` festgelegt wird, bedeutet dies auch, dass [EnableDynamicLoading](#enabledynamicloading) `true` ist.
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+Weitere Informationen finden Sie unter [Verfügbarmachen von .NET Core-Komponenten in COM](../native-interop/expose-components-to-com.md).
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+Die `EnableDynamicLoading`-Eigenschaft gibt an, dass eine Assembly eine dynamisch geladene Komponente ist. Die Komponente kann eine [COM-Bibliothek](/windows/win32/com/the-component-object-model) oder eine Nicht-COM-Bibliothek sein, die [von einem nativen Host verwendet werden kann](../tutorials/netcore-hosting.md). Wenn diese Eigenschaft auf `true` festgelegt wird, hat diese die folgenden Auswirkungen:
+
+- Eine *.runtimeconfig.json*-Datei wird generiert.
+- [Rollforward ausführen](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward) wird auf `LatestMinor` festgelegt.
+- NuGet-Verweise werden lokal kopiert.
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

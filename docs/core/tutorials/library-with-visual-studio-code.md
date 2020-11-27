@@ -1,24 +1,26 @@
 ---
-title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio Code
-description: Hier erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio Code erstellen.
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Erstellen einer .NET-Klassenbibliothek in Visual Studio Code
+description: Hier erfahren Sie, wie Sie eine .NET-Klassenbibliothek mit Visual Studio Code erstellen.
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495511"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916090"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio Code
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>Tutorial: Erstellen einer .NET-Klassenbibliothek in Visual Studio Code
 
-In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält. Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der <xref:System.String>-Klasse.
+In diesem Tutorial erstellen Sie eine einfache Hilfsprogrammbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält.
 
-Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die sich auf .NET Standard 2.0 bezieht, ermöglicht das Aufrufen der Bibliothek aus jeder .NET-Implementierung, die diese Version von .NET Standard unterstützt. Wenn Sie Ihre Klassenbibliothek fertig gestellt haben, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.
+Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Wenn die Bibliothek auf .NET Standard 2.0 ausgelegt ist, kann sie von jeder .NET-Implementierung (einschließlich .NET Framework) aufgerufen werden, die .NET Standard 2.0 unterstützt. Wenn die Bibliothek auf .NET 5 ausgelegt ist, kann sie von jeder Anwendung aufgerufen werden, die auf .NET 5 ausgerichtet ist. In diesem Tutorial erfahren Sie, wie Sie .NET 5 als Zielversion verwenden.
+
+Wenn Sie Ihre Klassenbibliothek erstellen, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 1. [Visual Studio Code](https://code.visualstudio.com/) mit installierter [C#-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp). Informationen zum Installieren von Erweiterungen für Visual Studio Code finden Sie unter [Marketplace für VS Code-Erweiterungen](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [.NET Core 3.1 SDK oder höher](https://dotnet.microsoft.com/download)
+2. Das [.NET 5.0 SDK oder höher](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>Erstellen einer Projektmappe
 
@@ -48,7 +50,7 @@ Beginnen Sie, indem Sie eine leere Projektmappe erstellen, um das Klassenbibliot
 
 ## <a name="create-a-class-library-project"></a>Erstellen eines Klassenbibliotheksprojekts
 
-Fügen Sie der Projektmappe ein neues .NET Standard-Klassenbibliotheksprojekt mit dem Namen „StringLibrary“ hinzu.
+Fügen Sie ein neues .NET-Klassenbibliotheksprojekt namens „StringLibrary“ zur Projektmappe hinzu.
 
 1. Führen Sie im Terminal den folgenden Befehl aus, um das Bibliotheksprojekt zu erstellen:
 
@@ -81,15 +83,15 @@ Fügen Sie der Projektmappe ein neues .NET Standard-Klassenbibliotheksprojekt mi
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. Stellen Sie sicher, dass die Bibliothek die richtige Version von .NET Standard als Ziel verwendet. Öffnen Sie im **Explorer** die Datei *StringLibrary/StringLibrary.csproj*.
+1. Stellen Sie sicher, dass die Bibliothek auf .NET 5 ausgelegt ist. Öffnen Sie im **Explorer** die Datei *StringLibrary/StringLibrary.csproj*.
 
-   Das Element `TargetFramework` gibt an, dass das Projekt für .NET Standard 2.0 vorgesehen ist.
+   Das Element `TargetFramework` gibt an, dass das Projekt für .NET 5.0 vorgesehen ist.
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ Fügen Sie der Projektmappe ein neues .NET Standard-Klassenbibliotheksprojekt mi
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassen
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* [Entwickeln von Bibliotheken mit der .NET Core-CLI](libraries.md)
-* [.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).
+* [Entwickeln von Bibliotheken mit der .NET-CLI](libraries.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial haben Sie eine Projektmappe erstellt, ein Bibliotheksprojekt hinzugefügt und ein Konsolen-App-Projekt hinzugefügt, das die Bibliothek verwendet. Im nächsten Tutorial fügen Sie der Projektmappe ein Komponententestprojekt hinzu.
 
 > [!div class="nextstepaction"]
-> [Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio Code](testing-library-with-visual-studio-code.md)
+> [Testen einer .NET-Klassenbibliothek mit .NET mithilfe von Visual Studio Code](testing-library-with-visual-studio-code.md)

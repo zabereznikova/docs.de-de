@@ -1,25 +1,39 @@
 ---
-title: Das Tool „dotnet-trace“ – .NET Core
-description: Installieren und Verwenden des Befehlszeilentools dotnet-trace.
-ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: Diagnosetool „dotnet-trace“ – .NET-CLI
+description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-trace“ installieren und mithilfe der .NET-Komponente „EventPipe“ zum Erfassen von .NET-Ablaufverfolgungen in Bezug auf einen laufenden Prozesses ohne den nativen Profiler verwenden.
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507227"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829309"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace-Hilfsprogramm für Leistungsanalysen
 
 **Dieser Artikel gilt für:** ✔️ .NET Core 3.0 SDK und neuere Versionen
 
-## <a name="install-dotnet-trace"></a>Installieren von dotnet-trace
+## <a name="install"></a>Installieren
 
-Installieren Sie das [NuGet-Paket](https://www.nuget.org/packages/dotnet-trace) `dotnet-trace` mit dem Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+Es gibt zwei Möglichkeiten, `dotnet-trace` herunterzuladen und zu installieren:
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **Globales dotnet-Tool:**
+
+  Verwenden Sie zum Installieren der neuesten Releaseversion des [NuGet-Pakets](https://www.nuget.org/packages/dotnet-trace) `dotnet-trace` den Befehl [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **Direkter Download:**
+
+  Laden Sie die ausführbare Datei für das Tool herunter, die Ihrer Plattform entspricht:
+
+  | OS  | Plattform |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -33,7 +47,7 @@ Das `dotnet-trace`-Tool:
 
 * Bei diesem Tool handelt es sich um ein plattformübergreifendes .NET Core-Tool.
 * Es ermöglicht das Sammeln von .NET Core-Ablaufverfolgungen eines ausgeführten Prozesses ohne nativen Profiler.
-* Es basiert auf der plattformübergreifenden `EventPipe`-Technologie der .NET Core-Runtime.
+* Es basiert auf der Komponente [`EventPipe`](./eventpipe.md) der .NET Core-Runtime.
 * Das Tool bietet unter Windows, Linux und macOS die gleiche Oberfläche.
 
 ## <a name="options"></a>Optionen
@@ -97,7 +111,7 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`-p|--process-id <PID>`**
 
-  Die ID des Prozesses, von dem die Ablaufverfolgung erfasst werden soll.
+  Dies ist die Prozess-ID, von der die Ablaufverfolgung erfasst werden soll.
 
 - **`--profile <profile-name>`**
 
@@ -196,11 +210,12 @@ So sammeln Sie Ablaufverfolgungen mit `dotnet-trace`:
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Starten einer untergeordneten Anwendung und Erfassen einer Ablaufverfolgung vom Start mithilfe von „dotnet-trace“
 
-HINWEIS: Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
+> [!IMPORTANT]
+> Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
 
 Manchmal kann es nützlich sein, eine Ablaufverfolgung eines Prozesses vom Start zu erfassen. Bei Anwendungen mit .NET 5.0 oder höher können Sie dies mithilfe von „dotnet-trace“ ausführen.
 
-Dadurch wird `hello.exe` mit `arg1` und `arg2` als Befehlszeilenargumente gestartet und der Ablauf wird vom Start der Runtime verfolgt:
+Dadurch wird `hello.exe` mit `arg1` und `arg2` als Befehlszeilenargumenten gestartet, und der Ablauf wird vom Start der Runtime verfolgt:
 
 ```console
 dotnet-trace collect -- hello.exe arg1 arg2

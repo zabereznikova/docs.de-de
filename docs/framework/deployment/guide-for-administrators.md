@@ -6,26 +6,26 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: b358f0909147e52293fd802bc98caa31b284d7b1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 12076334d3ede0c8ab9b618ba2018f23c9fc6ae4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558718"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817093"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 
-In diesem Artikel erfahren Sie Schritt für Schritt, wie Systemadministratoren .NET Framework 4.5 und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft Endpoint Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
+In diesem Artikel wird ausführlich beschrieben, wie Systemadministratoren .NET Framework 4.5 und die zugehörigen Systemabhängigkeiten in einem Netzwerk mit Microsoft Endpoint Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für das .NET Framework erfüllen. Eine Liste mit den Software- und Hardwareanforderungen für die Installation von .NET Framework 4.5 finden Sie unter [Systemanforderungen für .NET Framework](../get-started/system-requirements.md).
 
 > [!NOTE]
 > Die Software, auf die in diesem Dokument verwiesen wird (einschließlich .NET Framework 4.5, Configuration Manager und Active Directory), unterliegt ohne Einschränkungen den jeweils geltenden Lizenzbedingungen. In diesen Anweisungen wird vorausgesetzt, dass die Lizenzbestimmungen von den entsprechenden Lizenznehmern der Software gelesen und akzeptiert wurden. Diese Anweisungen bedeuten keinen Verzicht auf die Bestimmungen von Lizenzvereinbarungen.
 >
-> Informationen zur Unterstützung für .NET Framework finden Sie unter [.NET Framework Support-Richtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) auf der Microsoft Support-Website.
+> Informationen zur Unterstützung für das .NET Framework finden Sie unter [Offizielle .NET Framework-Supportrichtlinie](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) auf der Supportwebsite von Microsoft.
 
 Dieses Thema enthält folgende Abschnitte:
 
 - [Bereitstellungsprozess](#the_deployment_process)
-- [Bereitstellen von .NET Framework](#deploying_in_a_test_environment)
+- [Bereitstellen des .NET Framework](#deploying_in_a_test_environment)
 - [Erstellen einer Sammlung](#creating_a_collection)
 - [Erstellen eines Pakets und Programms](#creating_a_package)
 - [Auswählen eines Verteilungspunkts](#select_dist_point)
@@ -39,7 +39,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das verteilbare .NET Framework-Paket mit Configuration Manager auf Computern im Netzwerk bereit. Der Aufbau der Infrastruktur umfasst das Erstellen und Definieren von fünf primären Bereichen: Sammlungen, ein Paket und ein Programm für die Software, Verteilungspunkte und Bereitstellungen.
 
-- Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen, z.B. Benutzer, Benutzergruppen oder Computer, für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in Configuration Manager](/configmgr/core/clients/manage/collections/introduction-to-collections).
+- Bei **Sammlungen** handelt es sich um Gruppen von Configuration Manager-Ressourcen (z. B. Benutzer, Benutzergruppen oder Computer), für die das .NET Framework bereitgestellt wird. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Einführung in Sammlungen in Configuration Manager](/configmgr/core/clients/manage/collections/introduction-to-collections).
 
 - **Pakete und Programme** stellen in der Regel Softwareanwendungen dar, die auf einem Clientcomputer installiert werden, sie können jedoch auch einzelne Dateien, Updates oder sogar einzelne Befehle enthalten. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek unter [Pakete und Programme in Configuration Manager](/configmgr/apps/deploy-use/packages-and-programs).
 
@@ -52,7 +52,7 @@ Wenn Sie die unterstützende Infrastruktur eingerichtet haben, stellen Sie das v
 
 <a name="deploying_in_a_test_environment"></a>
 
-## <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
+## <a name="deploying-net-framework"></a>Bereitstellen des .NET Framework
 
 Sie können mit Configuration Manager eine automatische Installation von .NET Framework 4.5 bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen. Führen Sie folgende Schritte aus:
 
@@ -94,7 +94,7 @@ So erstellen Sie eine Sammlung
 
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Erstellen eines Pakets und Programms für das verteilbare .NET Framework-Paket
 
-Mit den folgenden Schritten erstellen Sie manuell ein Paket für das verteilbare .NET Framework-Paket. Das Paket enthält die angegebenen Parameter zum Installieren von .NET Framework und zu dem Speicherort, von dem das Paket an die Zielcomputer verteilt wird.
+Mit den folgenden Schritten erstellen Sie manuell ein Paket für das verteilbare .NET Framework-Paket. Das Paket enthält die angegebenen Parameter zum Installieren des .NET Framework und zu dem Speicherort, von dem das Paket an die Zielcomputer verteilt wird.
 
 So erstellen Sie ein Paket
 
@@ -136,7 +136,7 @@ In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoption
 |**/norestart**|Verhindert, dass das Setupprogramm automatisch erneut gestartet wird. Bei Verwendung dieser Option muss Configuration Manager den Neustart des Computers behandeln.|
 |**/chainingpackage** *PackageName*|Gibt den Namen des Pakets an, das das Verketten ausführt. Diese Informationen werden zusammen mit anderen Installationssitzungsinformationen für Personen ausgegeben, die sich beim Microsoft-Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP) registriert haben. Wenn der Paketname Leerzeichen enthält, verwenden Sie als Trennzeichen doppelte Anführungszeichen, z.B. **/chainingpackage "Chaining Product"** .|
 
-Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](/previous-versions/cc825975(v=vs.100)).
+Mit diesen Schritten wird ein Paket namens ".NET Framework 4.5" erstellt. Das Programm stellt eine automatische Installation von .NET Framework 4.5 bereit. In einer automatischen Installation greifen Benutzer nicht in den Installationsvorgang ein, und die Verkettungsanwendung muss den Rückgabecode erfassen und den Neustart initiieren. Weitere Informationen finden Sie in der unter [Getting Progress Information from an Installation Package (Abrufen von Statusinformationen aus einem Installationspaket)](/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -162,7 +162,7 @@ Führen Sie die folgenden Schritte aus, um einen Verteilungspunkt für das im vo
 
 8. Durchlaufen Sie den Assistenten.
 
-Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie im Abschnitt „Überwachen des Inhaltsstatus“ unter [Überwachen von mit Configuration Manager verteilten Inhalten](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) in der Configuration Manager-Dokumentationsbibliothek.
+Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie im Abschnitt „Überwachen des Inhaltsstatus“ unter [Überwachen von mit Configuration Manager verteilten Inhalten](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) in der Configuration Manager-Dokumentationsbibliothek.
 
 <a name="deploying_package"></a>
 
@@ -184,12 +184,12 @@ So stellen Sie das .NET Framework 4.5-Paket und -Programm bereit
 
 7. Bestätigen Sie auf der Seite **Bereitstellungseinstellungen** des Assistenten, dass **Aktion** auf **Installieren** festgelegt ist und dass **Zweck** auf **Erforderlich** festgelegt ist. Dadurch wird sichergestellt, dass die Installation des Softwarepakets auf den Zielcomputern erforderlich ist. Wählen Sie **Weiter** aus.
 
-8. Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann .NET Framework installiert werden soll. Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen. Wählen Sie **Weiter** aus.
+8. Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann das .NET Framework installiert werden soll. Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen. Wählen Sie **Weiter** aus.
 
 9. Verwenden Sie auf der Seite **Benutzerfreundlichkeit** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.
 
     > [!WARNING]
-    > Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern. Informationen zu diesen Optionen finden Sie unter [Eigenschaften von „Ankündigungsname“: Registerkarte „Zeitplan“](/previous-versions/system-center/configuration-manager-2007/bb694016(v=technet.10)).
+    > Möglicherweise gelten in Ihrer Produktionsumgebung Richtlinien, die eine andere Auswahl für den Bereitstellungszeitplan erfordern.
 
 10. Verwenden Sie auf der Seite **Verteilungspunkte** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.
 
@@ -221,8 +221,6 @@ Weitere Informationen zur Infrastruktur zum Testen der Bereitstellung des weiter
 
 - [Standortverwaltung für System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg681983(v=technet.10))
 
-- [Planen und Bereitstellen einzelner Standorte mit Configuration Manager](/previous-versions/system-center/configuration-manager-2007/bb680961(v=technet.10))
-
 **System Center 2012 Configuration Manager-Client für Windows-Computer:**
 
 - [Bereitstellen von Clients für System Center 2012 Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg699391(v=technet.10))
@@ -238,7 +236,7 @@ Beim Setup von .NET Framework werden die folgenden Protokolldateien generiert:
 - %temp%\Microsoft .NET Framework *version*\*.txt
 - %temp%\Microsoft .NET Framework *version*\*.html,
 
-wobei *version* der .NET Framework-Version entspricht, die Sie installieren, z.B. 4.5 oder 4.7.2.
+wobei *version* der .NET Framework-Version entspricht, die Sie installieren (z. B. 4.5 oder 4.7.2).
 
 Sie können ebenso das Verzeichnis angeben, in das Protokolldateien geschrieben werden. Verwenden Sie hierzu die Befehlszeilenoption `/log` im Installationsbefehl von .NET Framework. Weitere Informationen finden Sie im [Leitfaden für die Bereitstellung von .NET Framework für Entwickler](deployment-guide-for-developers.md#command-line-options).
 

@@ -3,18 +3,19 @@ title: Analysetool für die Plattformkompatibilität
 description: Ein Roslyn-Analysetool, das helfen kann, in plattformübergreifenden Apps und Bibliotheken Probleme mit der Plattformkompatibilität zu erkennen
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805297"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819486"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analysetool für die Plattformkompatibilität
 
 Sie haben wahrscheinlich bereits von .NET als einer einzigen, einheitlichen Plattform für die Entwicklung beliebiger Anwendungstypen gehört. Das .NET 5.0 SDK enthält ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin und ML.NET, und Unterstützung für weitere Plattformen wird im Laufe der Zeit hinzugefügt. Es ist das Ziel von .NET 5.0, dass Sie sich keine Gedanken um die verschiedenen .NET-Varianten machen müssen, ohne dass das zugrunde liegende Betriebssystem zu diesem Zweck vollständig abstrahiert wird. Sie sind weiterhin in der Lage, plattformspezifische APIs (z. B. P/Invokes, WinRT oder die Xamarin-Bindungen für iOS und Android) aufzurufen.
 
-Durch die Verwendung plattformspezifischer APIs für eine Komponente funktioniert der Code jedoch nicht mehr auf allen Plattformen. Es fehlte eine Methode, die dies zur Entwurfszeit erkennt, damit Entwickler eine Diagnose erhalten, wenn sie versehentlich plattformspezifische APIs verwenden. Aus diesem Grund führt .NET 5.0 das [Analysetool für die Plattformkompatibilität](/visualstudio/code-quality/ca1416) sowie ergänzende APIs ein, damit Entwickler ggf. plattformspezifische APIs erkennen und verwenden können, wenn es sinnvoll ist.
+Durch die Verwendung plattformspezifischer APIs für eine Komponente funktioniert der Code jedoch nicht mehr auf allen Plattformen. Es fehlte eine Methode, die dies zur Entwurfszeit erkennt, damit Entwickler eine Diagnose erhalten, wenn sie versehentlich plattformspezifische APIs verwenden. Aus diesem Grund führt .NET 5.0 das [Analysetool für die Plattformkompatibilität](../../fundamentals/code-analysis/quality-rules/ca1416.md) sowie ergänzende APIs ein, damit Entwickler ggf. plattformspezifische APIs erkennen und verwenden können, wenn es sinnvoll ist.
+
 Zu den neuen APIs zählen:
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> zum Kommentieren von APIs als plattformspezifisch und <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>, um APIs als für ein bestimmtes Betriebssystem nicht unterstützt zu annotieren. Diese Attribute können optional die Versionsnummer enthalten und wurden bereits auf einige plattformspezifische APIs in den .NET-Kernbibliotheken angewendet.
@@ -25,7 +26,7 @@ Zu den neuen APIs zählen:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Bei dem Analysetool für die Plattformkompatibilität handelt es sich um eines der Codequalitätsanalysetools von Roslyn. Ab .NET 5.0 sind diese Analysetools im [.NET SDK](../../fundamentals/code-analysis/overview.md) enthalten. Das Analysetool für die Plattformkompatibilität ist standardmäßig nur für Projekte aktiviert, die für `net5.0` oder höher entwickelt werden. Sie können es jedoch auch für Projekte [aktivieren](/visualstudio/code-quality/ca1416.md#configurability), die auf andere Frameworks abzielen.
+Bei dem Analysetool für die Plattformkompatibilität handelt es sich um eines der Codequalitätsanalysetools von Roslyn. Ab .NET 5.0 sind diese Analysetools im [.NET SDK](../../fundamentals/code-analysis/overview.md) enthalten. Das Analysetool für die Plattformkompatibilität ist standardmäßig nur für Projekte aktiviert, die für `net5.0` oder höher entwickelt werden. Sie können es jedoch auch für Projekte [aktivieren](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability), die auf andere Frameworks abzielen.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Bestimmen der Plattformabhängigkeit mithilfe des Analysetools
 

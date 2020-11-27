@@ -4,16 +4,16 @@ description: Erfahren Sie mehr über das kostenlose, plattformübergreifende und
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955355"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688032"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Was ist .NET für Apache Spark?
 
-[Apache Spark](what-is-spark.md) ist eine verteilte Verarbeitungs-Engine, die universell einsetzbar ist und sich für die Analyse großer Datasets eignet, die üblicherweise mehrere Terabyte oder Petabyte umfassen. Mit .NET für Apache Spark, der kostenlosen, plattformübergreifenden Open-Source-.NET-Unterstützung für das beliebte Open-Source-Big Data-Analyseframework, können Sie nun Ihren Big Data-Anwendungen die Leistungsfähigkeit von Apache Spark mithilfe von Sprachen hinzufügen, die Sie bereits kennen.
+[Apache Spark](what-is-spark.md) ist eine verteilte Verarbeitungs-Engine, die universell einsetzbar ist und sich für die Analyse großer Datasets eignet, die üblicherweise mehrere Terabyte oder Petabyte umfassen. Mit .NET für Apache Spark, der kostenlosen, plattformübergreifenden [Open-Source-.NET-Unterstützung](https://github.com/dotnet/spark) für das beliebte Open-Source-Big Data-Analyseframework, können Sie nun Ihren Big Data-Anwendungen die Leistungsfähigkeit von Apache Spark mithilfe von Sprachen hinzufügen, die Sie bereits kennen.
 
 ## <a name="why-choose-net-for-apache-spark"></a>Gründe für .NET für Apache Spark
 

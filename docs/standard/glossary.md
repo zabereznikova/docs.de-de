@@ -1,14 +1,13 @@
 ---
 title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224400"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687778"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -50,17 +49,24 @@ Siehe [ASP.NET Core-Dokumentation](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>Assembly
 
-Eine *DLL*/*EXE* -Datei, die eine Sammlung von APIs enthalten kann, die von Anwendungen oder anderen Assemblys aufgerufen werden können.
+Eine *DLL*/*EXE*-Datei, die eine Sammlung von APIs enthalten kann, die von Anwendungen oder anderen Assemblys aufgerufen werden können.
 
 Eine Assembly kann Typen wie Schnittstellen, Klassen, Strukturen, Enumerationen und Delegaten enthalten. Assemblys im Ordner *bin* eines Projekts werden manchmal als *Binärdateien* bezeichnet. Siehe auch [Bibliotheken](#library).
 
 ## <a name="bcl"></a>BCL
 
-Basisklassenbibliothek Auch bekannt als *Frameworkbibliotheken* .
+Basisklassenbibliothek
 
 Eine Reihe von Bibliotheken, aus denen die Namespaces System.\* (und in beschränktem Umfang Microsoft.\*) bestehen. Bei der BCL handelt es sich um ein allgemeines Framework auf niedriger Ebene, auf dem Anwendungsframeworks auf höherer Ebene, z.B. ASP.NET Core, basieren.
 
-Der Quellcode der Basisklassenbibliothek für [.NET 5 (und .NET Core) und höheren Versionen](#net-5-and-later-versions) befindet sich im [.NET-Runtimerepository](https://github.com/dotnet/runtime). Der Großteil der APIs der Basisklassenbibliothek für diese neue Implementierung von .NET sind auch in .NET Framework verfügbar. Sie können sich diesen Quellcode also als Fork des Quellcodes für die .NET Framework-Basisklassenbibliothek vorstellen.
+Der Quellcode der Basisklassenbibliothek für [.NET 5 (und .NET Core) und höheren Versionen](#net-5-and-later-versions) befindet sich im [.NET-Runtimerepository](https://github.com/dotnet/runtime). Der Großteil dieser APIs der Basisklassenbibliothek ist auch im .NET Framework verfügbar. Sie können sich diesen Quellcode also als Fork des Quellcodes für die .NET Framework-Basisklassenbibliothek vorstellen.
+
+Die folgenden Begriffe beziehen sich häufig auf dieselbe Sammlung von APIs, auf die sich die BCL bezieht:
+
+- [.NET-Kernbibliotheken](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [Frameworkbibliotheken](#framework-libraries)
+- [Runtimebibliotheken](#runtime)
+- [Freigegebenes Framework](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ Allgemein handelt es sich dabei um eine umfassende Sammlung von APIs, die die En
 
 Das Wort „Framework“ hat in den folgenden Begriffen verschiedene Bedeutungen:
 
+- [Frameworkbibliotheken](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [Freigegebenes Framework](#shared-framework)
 - [Zielframework](#target-framework)
 - [TFM (Zielframeworkmoniker)](#tfm)
 - [Frameworkabhängige App](../core/deploying/index.md#publish-framework-dependent)
 
-In der Legacydokumentation zu .NET bezieht sich „Framework“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). Beispielsweise könnte .NET 5 in einem Artikel als Framework bezeichnet werden.
+Manchmal bezieht sich „Framework“ auf eine [Implementierung von .NET](#implementation-of-net). Beispielsweise könnte .NET 5 in einem Artikel als Framework bezeichnet werden.
+
+## <a name="framework-libraries"></a>Frameworkbibliotheken
+
+Die Bedeutung hängt vom Kontext ab. Dieser Begriff bezieht sich möglicherweise auf die Frameworkbibliotheken für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions). In diesem Fall bezieht er sich auf dieselben Bibliotheken, auf die sich auch die [BCL](#bcl) bezieht. Er kann sich auch auf die ASP.NET Core-Frameworkbibliotheken beziehen, die auf der BCL basieren und zusätzliche APIs für Web-Apps bereitstellen.
 
 ## <a name="gc"></a>GC
 
@@ -213,7 +225,7 @@ Siehe [Intro to .NET Native and CoreRT (Einführung in .NET Native und CoreRT)](
 
 Hierbei handelt es sich um eine Reihe von Bibliotheken und Tools, mit denen Entwickler .NET-Anwendungen und Bibliotheken für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions) erstellen können. Dies wird auch als .NET Core SDK bezeichnet.
 
-Darin enthalten sind die [.NET-CLI](#net-cli) zum Erstellen von Apps, die .NET-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei ( *dotnet.exe* ), durch die CLI-Befehle und Anwendungen ausgeführt werden.
+Darin enthalten sind die [.NET-CLI](#net-cli) zum Erstellen von Apps, die .NET-Bibliotheken und -Runtime zum Erstellen und Ausführen von Apps und die ausführbare dotnet-Datei (*dotnet.exe*), durch die CLI-Befehle und Anwendungen ausgeführt werden.
 
 Weitere Informationen finden Sie in der [Übersicht über .NET SDK](../core/sdk.md).
 
@@ -233,9 +245,9 @@ Sie können sich diese Technologie als einen persistenten [JIT](#jit)-Compiler v
 
 ## <a name="package"></a>package
 
-Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP* -Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
+Ein NuGet-Paket &mdash; oder nur ein Paket &mdash; ist eine *ZIP*-Datei mit mindestens einer Assembly, die denselben Namen trägt und zusätzlichen Metadaten, z.B. der Autorenname.
 
-Die *ZIP* -Datei besitzt eine *NUPKG* -Erweiterung und eventuell Ressourcen, z.B. *DLL* - und *XML* -Dateien, für die Verwendung mit mehreren Zielframeworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref* , und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib* .
+Die *ZIP*-Datei besitzt eine *NUPKG*-Erweiterung und eventuell Ressourcen, z.B. *DLL*- und *XML*-Dateien, für die Verwendung mit mehreren Zielframeworks und Versionen. Bei der Installation in einer App oder Bibliothek werden die entsprechenden Ressourcen basierend auf dem Zielframework ausgeführt, das von der App oder Bibliothek angegeben wurde. Die Ressourcen, die die Schnittstelle definieren, befinden sich im Ordner *ref*, und die Ressourcen, die die Implementierung definieren, befinden sich im Ordner *lib*.
 
 ## <a name="platform"></a>platform
 
@@ -258,21 +270,34 @@ Im Allgemeinen handelt es sich hierbei um die Ausführungsumgebung für ein verw
 - .NET Native (für UWP)
 - Mono Runtime
 
-Das Wort „Runtime“ hat in den folgenden Kontexten verschiedene Bedeutungen:
+Das Wort „Runtime“ hat in einigen Kontexten verschiedene Bedeutungen:
 
-* Die [Downloadseite für .NET](https://dotnet.microsoft.com/download)
+* *.NET-Runtime* auf der [.NET 5.0-Downloadseite](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-  In diesem Fall bezieht sich „Runtime“ auf die [CLR](#clr) zusammen mit der [BCL](#bcl) (Frameworkbibliotheken), die Sie herunterladen und auf einem Computer installieren, damit Sie [frameworkabhängige](../core/deploying/index.md#publish-framework-dependent) Apps auf dem Computer ausführen können.
+  Sie können die *.NET-Runtime* oder andere Runtimes wie die *ASP.NET Core-Runtime* herunterladen. *Runtime* steht in diesem Fall für die Komponenten, die auf einem Computer installiert werden müssen, um eine [frameworkabhängige](../core/deploying/index.md#publish-framework-dependent) App auf dem Computer ausführen zu können. Die .NET-Runtime umfasst die [CLR](#clr) und das [freigegebene .NET Framework](#shared-framework), das die [BCL](#bcl) bereitstellt.
 
-* Die [Runtime-ID (RID)](../core/rid-catalog.md) für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions).
+* *.NET-Runtimebibliotheken*
 
-  „Runtime“ bezieht sich in diesem Fall auf die Betriebssystemplattform und CPU-Architektur, auf der eine .NET-App ausgeführt wird, z. B. `linux-x64`.
+  Dies bezieht sich auf die gleichen Bibliotheken, auf die sich die [BCL](#bcl) bezieht. Andere Runtimes (z. B. ASP.NET Core-Runtime) verfügen jedoch über unterschiedliche [freigegebene Frameworks](#shared-framework) mit zusätzlichen Bibliotheken, die auf der BCL basieren.
 
-In der Legacydokumentation zu .NET bezieht sich „Runtime“ manchmal auf eine [Implementierung von .NET](#implementation-of-net). Dies wird in den folgenden Beispielen veranschaulicht:
+* [Runtimebezeichner (RID)](../core/rid-catalog.md)
 
-- „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard.“
-- „Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel haben.“ (bezogen auf .NET Standard)
-- „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. … Jede Version der .NET-Runtime kündigt die höchste Version von .NET Standard an, die sie unterstützt ...“
+  *Runtime* bezieht sich in diesem Fall auf die Betriebssystemplattform und die CPU-Architektur, auf der eine .NET-App ausgeführt wird (z. B. `linux-x64`).
+
+* Wie in den folgenden Beispielen bezieht sich „Runtime“ manchmal auf die [Implementierung von .NET](#implementation-of-net):
+
+  - „Die verschiedenen .NET-Runtimes implementieren bestimmte Versionen von .NET Standard. … Jede Version der .NET-Runtime kündigt die höchste Version von .NET Standard an, die sie unterstützt ...“
+  - „Bibliotheken, die auf mehreren Runtimes ausgeführt werden sollen, sollten dieses Framework als Ziel haben.“ (bezogen auf .NET Standard)
+
+## <a name="shared-framework"></a>Freigegebenes Framework
+
+Die Bedeutung hängt vom Kontext ab. Das *freigegebene .NET-Framework* bezieht sich auf die Bibliotheken in der [.NET-Runtime](#runtime). In diesem Fall bezieht sich das *freigegebene Framework* für [.NET 5 (und .NET Core) und höhere Versionen](#net-5-and-later-versions) auf dieselben Bibliotheken wie die [BCL](#bcl).
+
+Es gibt noch andere freigegebene Frameworks. Das *freigegebene ASP.NET Core-Framework* bezieht sich auf die Bibliotheken in der [ASP.NET Core-Runtime](#runtime), die die BCL und zusätzliche APIs für die Verwendung durch Web-Apps enthält.
+
+Für [frameworkabhängige Apps](../core/deploying/index.md#publish-framework-dependent) besteht das freigegebene Framework aus Bibliotheken, die in Assemblys enthalten sind, die wiederum in einem Ordner auf dem die App ausführenden Computer installiert sind. Für [eigenständige Apps](../core/deploying/index.md#publish-self-contained) sind die freigegebenen Frameworkassemblys in der App enthalten.
+
+Weitere Informationen finden Sie unter [Fundierte Einblicke in .NET Core-Primitiven, Teil 2: Freigegebenes Framework](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/).
 
 ## <a name="stack"></a>Stapel
 
@@ -306,7 +331,7 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 
 ## <a name="workload"></a>workload
 
-Hierbei handelt es sich um einen App-Typen, der erstellt wird. Eine Workload ist allgemeiner als ein [App-Modell](#app-model). Oben auf jeder Seite der .NET-Dokumentation, einschließlich dieser, finden Sie beispielsweise eine Dropdownliste für **Workloads** , in der Sie die Dokumentation entsprechend der Optionen **Web** , **Mobil** , **Cloud** , **Desktop** und **Machine Learning und Daten** wechseln können.
+Hierbei handelt es sich um einen App-Typen, der erstellt wird. Eine Workload ist allgemeiner als ein [App-Modell](#app-model). Oben auf jeder Seite der .NET-Dokumentation, einschließlich dieser, finden Sie beispielsweise eine Dropdownliste für **Workloads**, in der Sie die Dokumentation entsprechend der Optionen **Web**, **Mobil**, **Cloud**, **Desktop** und **Machine Learning und Daten** wechseln können.
 
 In manchen Kontexten bezieht sich *Workload* auf eine Featuresammlung in Visual Studio, die Sie installieren können, um einen bestimmten App-Typen zu unterstützen. Ein Beispiel hierfür finden Sie unter [Auswählen einer Workload](../core/install/windows.md#select-a-workload).
 

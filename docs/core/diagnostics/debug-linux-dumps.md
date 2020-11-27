@@ -2,12 +2,12 @@
 title: Debuggen von Linux-Sicherungskopien
 description: In diesem Artikel erfahren Sie, wie Sie Speicherabbilder aus Linux-Umgebungen erfassen und analysieren.
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598296"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099145"
 ---
 # <a name="debug-linux-dumps"></a>Debuggen von Linux-Sicherungskopien
 
@@ -19,11 +19,11 @@ Die beiden empfohlenen Methoden für das Erfassen von Speicherabbildern unter Li
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Verwaltete Speicherabbilder mit `dotnet-dump`
 
-Das Tool [`dotnet-dump`](dotnet-dump.md) ist einfach zu verwenden und hängt nicht von nativen Debuggern ab. `dotnet-dump` funktioniert auf einer Vielzahl von Linux-Plattformen (z. B. Alpine oder ARM32/ARM64), für die möglicherweise keine herkömmlichen Debugtools verfügbar sind. `dotnet-dump` erfasst jedoch nur den verwalteten Zustand und kann daher nicht zum Debuggen von Problemen in nativem Code verwendet werden. Die von `dotnet-dump` erfassten Speicherabbilder werden in einer Umgebung analysiert, die über das Betriebssystem und die Architektur verfügt mit dem bzw. der auch das Speicherabbild erstellt wurde. Alternativ kann das Tool [`dotnet-gcdump`](dotnet-gcdump.md) verwendet werden, das nur GC-Heapinformationen erfasst, aber Speicherabbilder erzeugt, die unter Windows analysiert werden können.
+Das Tool [`dotnet-dump`](dotnet-dump.md) ist einfach zu verwenden und hängt nicht von nativen Debuggern ab. `dotnet-dump` funktioniert auf einer Vielzahl von Linux-Plattformen (z. B. Alpine oder ARM32/ARM64), für die möglicherweise keine herkömmlichen Debugtools verfügbar sind. `dotnet-dump` erfasst jedoch nur den verwalteten Zustand und kann daher nicht zum Debuggen von Problemen in nativem Code verwendet werden. Die von `dotnet-dump` erfassten Speicherabbilder werden in einer Umgebung analysiert, die über das Betriebssystem und die Architektur verfügt, mit dem bzw. der auch das Speicherabbild erstellt wurde. Alternativ kann das Tool [`dotnet-gcdump`](dotnet-gcdump.md) verwendet werden, das nur GC-Heapinformationen erfasst, aber Speicherabbilder erzeugt, die unter Windows analysiert werden können.
 
 ### <a name="core-dumps-with-createdump"></a>Kernspeicherabbilder mit `createdump`
 
-Eine Alternative zum Tool `dotnet-dump`, das nur verwaltete Speicherabbilder erstellt, ist das für die Erstellung von Kernspeicherabbildern unter Linux empfohlene Tool [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md), das sowohl native als auch verwaltete Informationen enthält. Andere Tools, z. B. gdb oder gcore, können ebenfalls zum Erstellen von Kernspeicherabbildern verwendet werden. Bei diesen fehlt allerdings möglicherweise der für das verwaltete Debuggen erforderliche Zustand, was bei der Analyse zu „UNKNOWN“ als Typen- oder Funktionsnamen führt.
+Als Alternative zum Tool `dotnet-dump`, das nur verwaltete Speicherabbilder erstellt, können Sie das für die Erstellung von Kernspeicherabbildern unter Linux empfohlene Tool [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) verwenden, das sowohl native als auch verwaltete Informationen enthält. Andere Tools, z. B. gdb oder gcore, können ebenfalls zum Erstellen von Kernspeicherabbildern verwendet werden. Bei diesen fehlt allerdings möglicherweise der für das verwaltete Debuggen erforderliche Zustand, was bei der Analyse zu „UNKNOWN“ als Typen- oder Funktionsnamen führt.
 
 Das Tool `createdump` wird mit der .NET Core-Runtime installiert und befindet sich bei libcoreclr.so (in der Regel unter „/usr/share/dotnet/shared/Microsoft.NETCore.App/[Version]“). Es verwendet als primäres Argument eine Prozess-ID, für die ein Speicherabbild erfasst wird, und kann auch optionale Parameter verwenden, die angeben, welche Art von Speicherabbild erfasst werden soll (die Standardeinstellung ist ein Minidump mit Heap). Beispiele für Optionen:
 
@@ -57,7 +57,7 @@ Das Tool `createdump` wird mit der .NET Core-Runtime installiert und befindet si
 
   Aktivieren von Diagnosemeldungen
 
-Beachten Sie, dass für das Erfassen von Kernspeicherabbildern entweder die Funktion `SYS_PTRACE` erforderlich ist oder dass `createdump` mit sudo oder su ausgeführt wird.
+Das Erfassen von Kernspeicherabbildern erfordert entweder die Funktion `SYS_PTRACE` oder das Ausführen von `createdump` mit sudo oder su.
 
 ## <a name="analyze-dumps-on-linux"></a>Analysieren von Speicherabbildern unter Linux
 

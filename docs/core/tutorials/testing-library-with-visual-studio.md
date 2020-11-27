@@ -1,25 +1,25 @@
 ---
-title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
-description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
-ms.date: 06/08/2020
+title: Testen einer .NET-Klassenbibliothek mit Visual Studio
+description: In diesem Artikel erfahren Sie, wie Sie Visual Studio zum Erstellen und Ausführen eines Komponententestprojekts für eine .NET-Klassenbibliothek verwenden.
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177292"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916125"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Tutorial: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>Tutorial: Testen einer .NET-Klassenbibliothek mit .NET mithilfe von Visual Studio
 
 In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem Sie einer Projektmappe ein Testprojekt hinzufügen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio](library-with-visual-studio.md) erstellen.
+- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Tutorial: Erstellen einer .NET-Klassenbibliothek in Visual Studio Code](library-with-visual-studio.md) erstellen.
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
@@ -27,7 +27,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 1. Starten Sie Visual Studio.
 
-1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio](library-with-visual-studio.md) erstellt haben.
+1. Öffnen Sie die Projektmappe `ClassLibraryProjects`, die Sie in [Tutorial: Erstellen einer .NET-Klassenbibliothek in Visual Studio Code](library-with-visual-studio.md) erstellt haben.
 
 1. Fügen Sie der Projektmappe ein neues Komponententestprojekt mit dem Namen „StringLibraryTest“ hinzu.
 
@@ -35,9 +35,11 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
    1. Geben Sie auf der Seite **Neues Projekt hinzufügen** **mstest** in das Suchfeld ein. Wählen Sie **C#** oder **Visual Basic** in der Liste der Sprachen und dann in der Liste der Plattformen **Alle Plattformen** aus.
 
-   1. Klicken Sie auf die Vorlage **MSTest-Testprojekt (.NET Core)** und dann auf **Weiter**.
+   1. Wählen Sie die Vorlage **Komponententestprojekt** aus, und klicken Sie dann auf **Weiter**.
 
-   1. Geben Sie im auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen **StringLibraryTest** ein. Wählen Sie dann **Erstellen** aus.
+   1. Geben Sie im auf der Seite **Neues Projekt konfigurieren** im Feld **Projektname** den Namen **StringLibraryTest** ein. Wählen Sie anschließend **Weiter** aus.
+
+   1. Wählen Sie auf der Seite **Zusätzliche Informationen** im Feld **Zielframework** die Option **.NET 5.0 (aktuell)** aus. Wählen Sie dann **Erstellen** aus.
 
 1. Visual Studio erstellt das Projekt und öffnet die Klassendatei mit dem folgenden Code im Codefenster. Wenn die gewünschte Sprache nicht angezeigt wird, ändern Sie die Sprachauswahl am oberen Rand der Seite.
 
@@ -122,21 +124,21 @@ So erstellen Sie die Testmethoden:
 1. Wählen Sie in der Menüleiste **Datei** > **UnitTest1.cs speichern unter** oder **Datei** > **UnitTest1.vb speichern unter** aus. Wählen Sie im Dialogfeld **Datei speichern unter** den Pfeil neben der Schaltfläche **Speichern**, und wählen Sie dann **Mit Codierung speichern...** aus.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio-Dialogfeld „Datei speichern unter“](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Visual Studio-Dialogfeld „Datei speichern unter“":::
 
 1. Wählen Sie im Dialogfeld **Speichern unter bestätigen** die Schaltfläche **Ja**, um die Datei zu speichern.
 
 1. Wählen Sie im Dialogfeld **Erweiterte Speicheroptionen** **Unicode (UTF-8 mit Signatur) – Codepage 65001** aus der Dropdownliste **Codierung** aus, und klicken Sie auf **OK**.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio-Dialogfeld „Erweiterte Speicheroptionen“](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Visual Studio-Dialogfeld „Erweiterte Speicheroptionen“":::
 
    Wenn Sie den Quellcode nicht in einer UTF8-codierten Datei speichern, kann Visual Studio ihn als ASCII-Datei speichern. Wenn dies geschieht, decodiert die Laufzeit die UTF8-Zeichen außerhalb des ASCII-Bereichs nicht ordnungsgemäß, und die Testergebnisse sind nicht richtig.
 
 1. Wählen Sie auf der Menüleiste **Testen** > **Alle Tests ausführen** aus. Wenn das Fenster **Test-Explorer** nicht geöffnet ist, öffnen Sie es, indem Sie **Testen** > **Test-Explorer** auswählen. Die drei Tests sind im Abschnitt **Bestandene Tests** aufgelistet, und im Abschnitt **Zusammenfassung** wird das Ergebnis des Testlaufs berichtet.
 
    > [!div class="mx-imgBorder"]
-   > ![Test Explorer-Fenster mit erfolgreichen Tests](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="Test Explorer-Fenster mit erfolgreichen Tests":::
 
 ## <a name="handle-test-failures"></a>Behandeln von Testfehlern
 
@@ -158,14 +160,14 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
 1. Führen Sie den Test aus, indem Sie auf der Menüleiste **Testen** > **Alle Tests ausführen** auswählen. Das Fenster **Test-Explorer** zeigt, dass zwei Tests erfolgreich ausgeführt wurden und einer nicht erfolgreich war.
 
    > [!div class="mx-imgBorder"]
-   > ![Test Explorer-Fenster mit fehlschlagenden Tests](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="Test Explorer-Fenster mit fehlschlagenden Tests":::
 
 1. Wählen Sie den fehlgeschlagenen Test (`TestDoesNotStartWith`) aus.
 
    Im Fenster **Test-Explorer** wird die Assert-Meldung angezeigt: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden keine auf „Error“ folgenden Zeichenfolgen im Array getestet.
 
    > [!div class="mx-imgBorder"]
-   > ![Fenster „Test-Explorer“, das den Assertionsfehler isFalse zeigt](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="Fenster „Test-Explorer“, das den Assertionsfehler isFalse zeigt":::
 
 1. Entfernen Sie die Zeichenfolge „Error“, die Sie in Schritt 1 hinzugefügt haben. Führen Sie den Test erneut aus. Nun ist er erfolgreich.
 
@@ -178,25 +180,25 @@ So testen Sie die endgültige Produktversion:
 1. Ändern Sie in der Symbolleiste von Visual Studio die Buildkonfiguration von **Debuggen** zu **Freigabe**.
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio-Symbolleiste mit hervorgehobenem Releasebuild](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Visual Studio-Symbolleiste mit hervorgehobenem Releasebuild":::
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **StringLibrary**-Projekt, und wählen Sie aus dem Kontextmenü **Erstellen** aus, um die Bibliothek erneut zu kompilieren.
 
    > [!div class="mx-imgBorder"]
-   > ![StringLibrary-Kontextmenü mit Befehl „Erstellen“](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="StringLibrary-Kontextmenü mit Befehl „Erstellen“":::
 
 1. Führen Sie den Komponententest aus, indem Sie auf der Menüleiste **Testen** > **Alle Tests** auswählen. Die Tests sind erfolgreich.
 
 ## <a name="debug-tests"></a>Debuggen von Tests
 
-Wenn Sie Visual Studio als IDE verwenden, können Sie den gleichen Prozess wie im [Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio.md) beschrieben zum Debuggen von Code mithilfe Ihres Komponententestprojekts verwenden. Anstatt das App-Projekt *ShowCase* zu starten, klicken Sie erst mit der rechten Maustaste auf das Projekt **StringLibraryTests** und anschließend mit der linken im Kontextmenü auf **Tests debuggen**.
+Wenn Sie Visual Studio als IDE verwenden, können Sie den gleichen Prozess wie im [Tutorial: Debuggen einer .NET-Konsolenanwendung mit Visual Studio Code](debugging-with-visual-studio.md) beschrieben zum Debuggen von Code mithilfe Ihres Komponententestprojekts verwenden. Anstatt das App-Projekt *ShowCase* zu starten, klicken Sie erst mit der rechten Maustaste auf das Projekt **StringLibraryTests** und anschließend mit der linken im Kontextmenü auf **Tests debuggen**.
 
 Visual Studio startet das Testprojekt mit angefügtem Debugger. Die Ausführung wird an jedem Haltepunkt angehalten, den Sie dem Testprojekt oder zugrunde liegenden Bibliothekscode hinzugefügt haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 * [Grundlagen zu Komponententests: Visual Studio](/visualstudio/test/unit-test-basics)
-* [Komponententests in .NET Core und .NET Standard](../testing/index.md)
+* [Komponententests in .NET](../testing/index.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -213,4 +215,4 @@ Wenn Sie eine Bibliothek als NuGet-Paket veröffentlichen, können andere Benutz
 Eine Bibliothek muss nicht als Paket verteilt werden. Sie kann mit einer Konsolen-App gebündelt werden, die sie verwendet. Informationen zum Veröffentlichen einer Konsolen-App finden Sie in einem früheren Tutorial dieser Reihe:
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung in Visual Studio](publishing-with-visual-studio.md)
+> [Veröffentlichen einer .NET-Konsolenanwendung mit Visual Studio](publishing-with-visual-studio.md)

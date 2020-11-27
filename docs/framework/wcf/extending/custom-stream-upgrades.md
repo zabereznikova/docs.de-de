@@ -2,14 +2,15 @@
 title: Benutzerdefinierte Stream-Upgrades
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: bfb20a38d5d603a7f538235ee88045c92fc8cc85
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ef0f59a5d63c24188b29cb7a38db2d6323d80ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295578"
 ---
 # <a name="custom-stream-upgrades"></a>Benutzerdefinierte Stream-Upgrades
+
 Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt. Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert. Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf. Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.  
   
  Sie können z. B. einen Komprimierungsstream direkt über dem Transportstream erstellen. In diesem Fall wird der ursprüngliche Transport-<xref:System.IO.Stream> durch einen Stream ersetzt, der den ursprünglichen Stream mit dem Komprimierungs-<xref:System.IO.Stream> umschließt.  
@@ -17,20 +18,22 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
  Sie können mehrere Stream-Upgrades implementieren, die das jeweils vorangehende Upgrade umschließen.  
   
 ## <a name="how-stream-upgrades-work"></a>Funktionsweise von Stream-Upgrades  
+
  Der Stream-Upgrade-Prozess besteht aus vier Komponenten.  
   
-1. Ein Upgrade-Stream *Initiator* startet den Prozess: zur Laufzeit können sie eine Anforderung an das andere Ende der Verbindung, die der kanaltransportebene initiieren.  
+1. Ein Upgrade Stream- *Initiator* beginnt den Prozess: zur Laufzeit kann er eine Anforderung an das andere Ende der Verbindung initiieren, um die Kanal Transport Ebene zu aktualisieren.  
   
-2. Ein Upgrade-Stream *annehmenden* führt das Upgrade: zur Laufzeit sie die aktualisierungsanforderung aus dem anderen Computer empfängt und akzeptiert ggf. das Upgrade.  
+2. Ein Upgrade- *Acceptor* streamanforderer führt das Upgrade aus: zur Laufzeit empfängt er die upgradeanforderung vom anderen Computer und akzeptiert, wenn möglich, das Upgrade.  
   
-3. Ein Upgrade *Anbieter* erstellt die *Initiator* auf dem Client und dem *annehmenden* auf dem Server.  
+3. Ein *upgradeanbieter* erstellt den *Initiator* auf dem Client und den *Empfänger* auf dem Server.  
   
-4. Ein streamupgrade *Bindungselement* wird für die Bindungen auf den Dienst und dem Client hinzugefügt werden soll, und den Anbieter zur Laufzeit erstellt.  
+4. Ein Streamupgrade- *Bindungs Element* wird den Bindungen für den Dienst und den Client hinzugefügt und erstellt den Anbieter zur Laufzeit.  
   
  Bei mehreren Upgrades kapseln der Initiator und der Annehmende Zustandsautomaten, um zu erzwingen, welche Upgradeübergänge für jede Initiierung gültig sind.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>So implementieren Sie ein Streamupgrade  
- Windows Communication Foundation (WCF) bietet vier `abstract` Klassen, die Sie implementieren können:  
+
+ Windows Communication Foundation (WCF) stellt vier `abstract` Klassen bereit, die Sie implementieren können:  
   
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -65,9 +68,10 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
 5. Fügen Sie das neue Stream-Upgrade-Bindungselement Bindungen auf den Server- und Clientcomputern hinzu.  
   
 ## <a name="security-upgrades"></a>Sicherheitsupgrades  
+
  Das Hinzufügen eines Sicherheitsupgrades ist eine spezielle Version des allgemeinen Stream-Upgrade-Prozesses.  
   
- WCF stellt bereits zwei Bindungselemente für das Upgrade von Stream Security bereit. Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können. Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die den Client- und Server-Stream-Upgrade-Anbieter erstellt. Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.  
+ WCF stellt bereits zwei Bindungs Elemente zum Aktualisieren der Streamsicherheit bereit. Die Konfiguration der Sicherheit auf Transportebene wird durch das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> und das <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> gekapselt, die konfiguriert und einer benutzerdefinierten Bindung hinzugefügt werden können. Diese Bindungselemente erweitern die <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>-Klasse, die den Client- und Server-Stream-Upgrade-Anbieter erstellt. Diese Bindungselements enthalten Methoden zum Erstellen der speziellen Upgradeanbieterklassen für Sicherheitsstream, die nicht `public` sind, in diesen beiden Fällen müssen Sie lediglich das Bindungselement der Bindung hinzufügen.  
   
  Bei Sicherheitsszenarien, die die beiden oben angeführten Bindungselemente nicht erfüllen, werden drei sicherheitsrelevante `abstract`-Klassen von den oben genannten Basisklassen für Initiator, Annehmender und Anbieter abgeleitet:  
   
@@ -80,6 +84,7 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
  Der Vorgang zum Implementieren eines Security Stream-Upgrades ist der gleiche wie zuvor, mit dem Unterschied, dass Sie von diesen drei Klassen ableiten. Überschreiben Sie die zusätzlichen Eigenschaften in diesen Klassen, um Sicherheitsinformationen zur Laufzeit anzugeben.  
   
 ## <a name="multiple-upgrades"></a>Mehrere Upgrades  
+
  Wiederholen Sie zum Erstellen zusätzlicher Upgradeanforderungen den oben aufgeführten Vorgang: Erstellen Sie zusätzliche Erweiterungen von <xref:System.ServiceModel.Channels.StreamUpgradeProvider> und Bindungselemente. Fügen Sie die Bindungselemente der Bindung hinzu. Die zusätzlichen Bindungselemente werden nacheinander verarbeitet, beginnend mit dem ersten der Bindung hinzugefügten Bindungselement. In <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> und <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> kann jeder Upgradeanbieter die eigene Anordnung auf bereits vorhandene Upgradebindungsparameter festlegen. Anschließend muss der vorhandene Upgradebindungsparameter durch einen neuen zusammengesetzten Upgradebindungsparameter ersetzt werden.  
   
  Alternativ kann ein Upgradeanbieter mehrere Upgrades unterstützen. Sie können z. B. einen benutzerdefinierten Stream-Upgrade-Anbieter implementieren, der Sicherheit und Komprimierung unterstützt. Führen Sie die folgenden Schritte aus:  
@@ -92,7 +97,7 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
   
 4. Der Stream wird nach jedem Aufruf an <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> und <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> aktualisiert.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>

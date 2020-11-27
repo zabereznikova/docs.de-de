@@ -2,12 +2,12 @@
 title: Neuerungen in C# 9.0 – C#-Leitfaden
 description: Überblick über die neuen Features von C# 9.0
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557219"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687359"
 ---
 # <a name="whats-new-in-c-90"></a>Neuerungen in C# 9.0
 
@@ -104,9 +104,13 @@ Datensätze unterstützen auch [`with`-Ausdrücke](../language-reference/operato
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-In der obigen Zeile wird ein neuer `Person`-Datensatz erstellt, bei dem die `LastName`-Eigenschaft eine Kopie von `person` ist und `FirstName` `"Paul"` entspricht. Sie können in `with`-Ausdrücken eine beliebige Anzahl von Eigenschaften festlegen.
+In der vorherigen Zeile wird ein neuer `Person`-Datensatz erstellt, bei dem die `LastName`-Eigenschaft eine Kopie von `person` ist und `FirstName` `"Paul"` entspricht. Sie können in `with`-Ausdrücken eine beliebige Anzahl von Eigenschaften festlegen. Sie können auch `with`-Ausdrücke verwenden, um eine exakte Kopie zu erstellen. Sie geben die leeren Elemente für die zu ändernden Eigenschaften an:
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 Jeder dieser synthetisierten Member, außer der „Klonmethode“, kann von Ihnen selbst geschrieben werden. Wenn ein Datensatztyp über eine Methode verfügt, die mit der Signatur einer beliebigen synthetisierten Methode übereinstimmt, wird diese Methode vom Compiler nicht synthetisiert. Der zuvor verwendete Beispieldatensatz `Dog` enthält eine manuell geschriebene <xref:System.String.ToString>-Methode als Beispiel.
+
+Weitere Informationen zu Datensatztypen finden Sie in diesem [Tutorial zum Durchsuchen von Datensätzen](../tutorials/exploration/records.md).
 
 ## <a name="init-only-setters"></a>init-only-Setter
 

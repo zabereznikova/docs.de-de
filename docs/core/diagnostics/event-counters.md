@@ -2,12 +2,12 @@
 title: EventCounters in .NET Core
 description: In diesem Artikel erfahren Sie, was EventCounters sind, wie Sie diese implementieren und wie Sie sie nutzen können.
 ms.date: 08/07/2020
-ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955316"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687641"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters in .NET Core
 
@@ -17,7 +17,7 @@ EventCounters sind .NET Core-APIs, die für eine schlanke und plattformübergrei
 
 Die .NET Core-Laufzeit und einige .NET-Bibliotheken veröffentlichen grundlegende Diagnoseinformationen mithilfe von EventCounters ab .NET Core 3.0. Abgesehen von den EventCounters, die von der .NET-Laufzeit bereitgestellt werden, können Sie auch Ihre eigenen EventCounters implementieren. EventCounters kann zum Nachverfolgen verschiedener Metriken verwendet werden.
 
-EventCounters sind Teil einer <xref:System.Diagnostics.Tracing.EventSource> und werden in regelmäßigen Abständen automatisch an Listenertools übermittelt. Wie alle anderen Ereignisse für eine <xref:System.Diagnostics.Tracing.EventSource> können Sie sowohl in-process als auch out-of-process über <xref:System.Diagnostics.Tracing.EventListener> und EventPipe genutzt werden. Dieser Artikel konzentriert sich auf die plattformübergreifenden Funktionen von EventCounters und schließt PerfView und ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) bewusst aus, obwohl beides mit EventCounters verwendet werden kann.
+EventCounters sind Teil einer <xref:System.Diagnostics.Tracing.EventSource> und werden in regelmäßigen Abständen automatisch an Listenertools übermittelt. Wie alle anderen Ereignisse für eine <xref:System.Diagnostics.Tracing.EventSource> können sie sowohl prozessintern als auch prozessextern über <xref:System.Diagnostics.Tracing.EventListener> und [EventPipe](./eventpipe.md) genutzt werden. Dieser Artikel konzentriert sich auf die plattformübergreifenden Funktionen von EventCounters und schließt PerfView und ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) bewusst aus, obwohl beides mit EventCounters verwendet werden kann.
 
 ![Abbildung zu EventCounters in-process und out-of-process](media/event-counters.svg)
 
@@ -124,7 +124,7 @@ var monitorContentionCounter = new IncrementingPollingCounter(
 };
 ```
 
-<xref:System.Diagnostics.Tracing.IncrementingPollingCounter> verwendet die <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType>-API, um das Inkrement der Gesamtzahl der Sperrkonflikte zu melden. Die <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>-Eigenschaft ist optional, aber wenn sie verwendet wird, kann Sie einen Hinweis darauf bereitstellen, in welchem Zeitintervall der Indikator am besten angezeigt wird. Beispielsweise wird die Anzahl der Sperrkonflikte am besten als _Anzahl pro Sekunde_angezeigt, sodass deren <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> auf eine Sekunde festgelegt ist. Die Anzeigerate kann für verschiedene Typen von Ratenindikatoren angepasst werden.
+<xref:System.Diagnostics.Tracing.IncrementingPollingCounter> verwendet die <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType>-API, um das Inkrement der Gesamtzahl der Sperrkonflikte zu melden. Die <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale>-Eigenschaft ist optional, aber wenn sie verwendet wird, kann Sie einen Hinweis darauf bereitstellen, in welchem Zeitintervall der Indikator am besten angezeigt wird. Beispielsweise wird die Anzahl der Sperrkonflikte am besten als _Anzahl pro Sekunde_ angezeigt, sodass deren <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> auf eine Sekunde festgelegt ist. Die Anzeigerate kann für verschiedene Typen von Ratenindikatoren angepasst werden.
 
 > [!NOTE]
 > <xref:System.Diagnostics.Tracing.IncrementingPollingCounter.DisplayRateTimeScale> wird _nicht_ von [dotnet-counters](dotnet-counters.md) verwendet, und Ereignislistener müssen den Indikator nicht verwenden.

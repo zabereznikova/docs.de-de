@@ -3,18 +3,18 @@ title: Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktions
 description: Sicherheit in .NET-Microservices und Webanwendungen – Azure Key Vault ist eine hervorragende Möglichkeit, Anwendungsgeheimnisse zu behandeln, die vollständig von Administratoren gesteuert werden. Administratoren können sogar Entwicklungswerte zuweisen und widerrufen, ohne dass Entwickler sie behandeln müssen.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: d2683b215633df719dc1ecf4d1710665865c9df2
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: d2d3690c0c8787ace6bcdfacbdb612f9ef957b98
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679109"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916241"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 
 Geheimnisse, die als Umgebungsvariablen oder vom Secret Manager-Tool gespeichert werden, werden weiterhin lokal und unverschlüsselt auf dem Computer gespeichert. [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) ist eine sicherere Option zum Speichern von Geheimnissen, die einen sicheren und zentralen Speicherort für Schlüssel und Geheimnisse bietet.
 
-Das Paket **Microsoft.Extensions.Configuration.AzureKeyVault** erlaubt einer ASP.NET Core-Anwendung, die Konfigurationsinformationen von Azure Key Vault auszulesen. Führen Sie die folgenden Schritte aus, um mit der Verwendung von Geheimnissen aus Azure Key Vault zu beginnen:
+Das Paket **Azure.Extensions.AspNetCore.Configuration.Secrets** ermöglicht einer ASP.NET Core-Anwendung das Lesen von Konfigurationsinformationen aus Azure Key Vault. Führen Sie die folgenden Schritte aus, um mit der Verwendung von Geheimnissen aus Azure Key Vault zu beginnen:
 
 1. Registrieren Sie Ihre Anwendung als eine Azure AD-Anwendung. (Der Zugriff auf Schlüsseltresore wird von Azure AD verwaltet.) Dies kann über das Azure-Verwaltungsportal erfolgen.
 
@@ -27,9 +27,9 @@ Das Paket **Microsoft.Extensions.Configuration.AzureKeyVault** erlaubt einer ASP
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. Schließen Sie den Schlüsseltresor als Konfigurationsquelle in Ihre Anwendung ein, indem Sie die Erweiterungsmethode <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> aufrufen, wenn Sie eine <xref:Microsoft.Extensions.Configuration.IConfigurationRoot>-Instanz erstellen. Beachten Sie, dass das Aufrufen von `AddAzureKeyVault` die Anwendungs-ID erfordert, die in den vorherigen Schritten registriert wurde und den Zugriff auf den Schlüsseltresor erhalten hat.
+3. Fügen Sie den Schlüsseltresor als Konfigurationsquelle in Ihrer Anwendung hinzu, indem Sie die Erweiterungsmethode „AzureKeyVaultConfigurationExtensions.AddAzureKeyVault“ aufrufen, wenn Sie eine <xref:Microsoft.Extensions.Configuration.IConfigurationRoot>-Instanz erstellen.
 
-   Sie können auch eine Überladung von `AddAzureKeyVault` verwenden, die ein Zertifikat anstelle des Clientgeheimisses akzeptiert, indem einfach ein Verweis auf das [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory)-Paket einbezogen wird.
+Beachten Sie, dass das Aufrufen von `AddAzureKeyVault` die Anwendungs-ID erfordert, die in den vorherigen Schritten registriert wurde und den Zugriff auf den Schlüsseltresor erhalten hat. Alternativ können Sie zuerst den Azure CLI-Befehl `az login` ausführen und dann eine Überladung von `AddAzureKeyVault` verwenden, die eine DefaultAzureCredential-Klasse anstelle des Clients akzeptiert.
 
 > [!IMPORTANT]
 > Sie sollten Azure Key Vault als letzten Konfigurationsanbieter registrieren, damit Konfigurationswerte vorheriger Anbieter überschrieben werden können.
@@ -37,7 +37,7 @@ Das Paket **Microsoft.Extensions.Configuration.AzureKeyVault** erlaubt einer ASP
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Verwenden von Azure Key Vault zum Schutz von Anwendungsgeheimnissen** \
-  [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity-keyvault)
 
 - **Sicheres Speichern von App-Geheimnissen während der Entwicklung** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
