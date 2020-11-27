@@ -2,27 +2,30 @@
 title: 3801 - RoutingServiceChannelFaulted
 ms.date: 03/30/2017
 ms.assetid: 06cd2a1a-ee5f-4f44-900c-15b5bb6e302b
-ms.openlocfilehash: f63a48a609d1c87055d75043c0373e3d70cf009f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc2a53e62a58adb85d940478a6994bd5abe00d92
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999816"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278738"
 ---
-# <a name="3801---routingservicechannelfaulted"></a><span data-ttu-id="2e200-102">3801 - RoutingServiceChannelFaulted</span><span class="sxs-lookup"><span data-stu-id="2e200-102">3801 - RoutingServiceChannelFaulted</span></span>
-## <a name="properties"></a><span data-ttu-id="2e200-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="2e200-103">Properties</span></span>  
+# <a name="3801---routingservicechannelfaulted"></a><span data-ttu-id="c2234-102">3801 - RoutingServiceChannelFaulted</span><span class="sxs-lookup"><span data-stu-id="c2234-102">3801 - RoutingServiceChannelFaulted</span></span>
+
+## <a name="properties"></a><span data-ttu-id="c2234-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="c2234-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="2e200-104">ID</span><span class="sxs-lookup"><span data-stu-id="2e200-104">ID</span></span>|<span data-ttu-id="2e200-105">3801</span><span class="sxs-lookup"><span data-stu-id="2e200-105">3801</span></span>|  
-|<span data-ttu-id="2e200-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="2e200-106">Keywords</span></span>|<span data-ttu-id="2e200-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="2e200-107">RoutingServices</span></span>|  
-|<span data-ttu-id="2e200-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="2e200-108">Level</span></span>|<span data-ttu-id="2e200-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="2e200-109">Warning</span></span>|  
-|<span data-ttu-id="2e200-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="2e200-110">Channel</span></span>|<span data-ttu-id="2e200-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="2e200-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c2234-104">id</span><span class="sxs-lookup"><span data-stu-id="c2234-104">ID</span></span>|<span data-ttu-id="c2234-105">3801</span><span class="sxs-lookup"><span data-stu-id="c2234-105">3801</span></span>|  
+|<span data-ttu-id="c2234-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="c2234-106">Keywords</span></span>|<span data-ttu-id="c2234-107">RoutingServices</span><span class="sxs-lookup"><span data-stu-id="c2234-107">RoutingServices</span></span>|  
+|<span data-ttu-id="c2234-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="c2234-108">Level</span></span>|<span data-ttu-id="c2234-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="c2234-109">Warning</span></span>|  
+|<span data-ttu-id="c2234-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="c2234-110">Channel</span></span>|<span data-ttu-id="c2234-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="c2234-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="2e200-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2e200-112">Description</span></span>  
- <span data-ttu-id="2e200-113">Dieses Ereignis wird ausgegeben, wenn der Routingdienstclient einen Fehler ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="2e200-113">This event is emitted when the Routing Service client has faulted.</span></span>  
+## <a name="description"></a><span data-ttu-id="c2234-112">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="c2234-112">Description</span></span>  
+
+ <span data-ttu-id="c2234-113">Dieses Ereignis wird ausgegeben, wenn der Routingdienstclient einen Fehler ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="c2234-113">This event is emitted when the Routing Service client has faulted.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="2e200-114">Meldung</span><span class="sxs-lookup"><span data-stu-id="2e200-114">Message</span></span>  
- <span data-ttu-id="2e200-115">Der Routingdienstclient '%1' hat einen Fehler ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="2e200-115">Routing Service client '%1' has faulted.</span></span>  
+## <a name="message"></a><span data-ttu-id="c2234-114">`Message`</span><span class="sxs-lookup"><span data-stu-id="c2234-114">Message</span></span>  
+
+ <span data-ttu-id="c2234-115">Der Routingdienstclient '%1' hat einen Fehler ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="c2234-115">Routing Service client '%1' has faulted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="2e200-116">Details</span><span class="sxs-lookup"><span data-stu-id="2e200-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c2234-116">Details</span><span class="sxs-lookup"><span data-stu-id="c2234-116">Details</span></span>
