@@ -3,14 +3,15 @@ title: Generieren eines WCF-Clients aus Dienstmetadaten
 description: Entdecken Sie die verschiedenen Switches in Svcutil.exe, die verwendet werden, um WFC-Clients aus dienstmetadatendokumenten zu generieren, die auf WSDL basieren, oder eine Richtlinien Datei vom Dienst
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e4363ac94a79dedf6d8a80adcaf738df179252b8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290074"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
+
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
   
  Die Metadatendokumente können sich in einem permanenten Speicher befinden oder online abgerufen werden. Der Onlineabruf erfolgt gemäß dem WS-MetadataExchange-Protokoll oder Microsoft Discovery (DISCO)-Protokoll. Svcutil.exe gibt zum Abruf von Metadaten die folgenden Metadatenanforderungen gleichzeitig aus.  

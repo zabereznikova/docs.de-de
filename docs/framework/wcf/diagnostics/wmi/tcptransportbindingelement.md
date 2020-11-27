@@ -2,14 +2,15 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6af85d62fffada95537494692b8694f42d7a2932
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956545"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290087"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
+
 TcpTransportBindingElement  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,12 +26,15 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Von der TcpTransportBindingElement-Klasse werden keine Methoden definiert.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die TcpTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
+
  Datentyp: TcpConnectionPoolSettings  
   
  Zugriffstyp: Schreibgeschützt  
@@ -38,6 +42,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  Die Verbindungspooleinstellungen.  
   
 ### <a name="listenbacklog"></a>ListenBacklog  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -45,6 +50,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  Maximal mögliche Anzahl der ausstehenden Verbindungsanforderungen in der Warteschlange.  
   
 ### <a name="portsharingenabled"></a>PortSharingEnabled  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -52,6 +58,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
  Boolescher Wert, der angibt, ob die TCP-Portfreigabe für diese Verbindung aktiviert ist.  
   
 ### <a name="teredoenabled"></a>TeredoEnabled  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -64,6 +71,6 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

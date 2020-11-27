@@ -2,14 +2,15 @@
 title: Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 17c05139b5977c47e20e888e436a311ba145018a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8764f3c88fc978bc71ff993252b04fe58da4bbc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597461"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290347"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transaktionsfluss in Workflowdienste und aus Workflowdiensten
+
 Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dienstvorgang Teil einer Ambient-Transaktion wird, fügen Sie eine <xref:System.ServiceModel.Activities.Receive>-Aktivität in eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität ein. Alle Aufrufe, die von einer <xref:System.ServiceModel.Activities.Send>-Aktivität oder einer <xref:System.ServiceModel.Activities.SendReply>-Aktivität in <xref:System.ServiceModel.Activities.TransactedReceiveScope> durchgeführt werden, werden auch in der Ambient-Transaktion durchgeführt. Eine Workflowclientanwendung kann mit der <xref:System.Activities.Statements.TransactionScope>-Aktivität eine Ambient-Transaktion erstellen und Dienstvorgänge mithilfe der Ambient-Transaktion aufrufen. In diesem Thema wird die Erstellung eines Workflowdiensts und Workflowclients, die an Transaktionen teilnehmen, erläutert.  
   
 > [!WARNING]
@@ -72,11 +73,11 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
     }  
     ```  
   
-     Diese native Aktivität, in der Informationen zur Ambient-Transaktion angezeigt werden, wird in den in diesem Thema verwendeten Dienst- und Clientworkflows eingesetzt. Erstellen Sie die Projekt Mappe, um diese Aktivität im **allgemeinen** Abschnitt der **Toolbox**verfügbar zu machen.  
+     Diese native Aktivität, in der Informationen zur Ambient-Transaktion angezeigt werden, wird in den in diesem Thema verwendeten Dienst- und Clientworkflows eingesetzt. Erstellen Sie die Projekt Mappe, um diese Aktivität im **allgemeinen** Abschnitt der **Toolbox** verfügbar zu machen.  
   
 ### <a name="implement-the-workflow-service"></a>Implementieren des Workflowdiensts  
   
-1. Fügen Sie dem Projekt einen neuen WCF-Workflow Dienst `WorkflowService` mit dem Namen hinzu `Common` . Klicken Sie dazu mit der rechten Maustaste auf das `Common` Projekt, wählen Sie **Hinzufügen**, **Neues Element...**, wählen Sie unter **installierte Vorlagen** die Option **Workflow** und dann **WCF-Workflow Dienst**aus.  
+1. Fügen Sie dem Projekt einen neuen WCF-Workflow Dienst `WorkflowService` mit dem Namen hinzu `Common` . Klicken Sie dazu mit der rechten Maustaste auf das `Common` Projekt, wählen Sie **Hinzufügen**, **Neues Element...**, wählen Sie unter **installierte Vorlagen** die Option **Workflow** und dann **WCF-Workflow Dienst** aus.  
   
      ![Hinzufügen eines Workflowdiensts](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
@@ -84,7 +85,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 3. Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität in die `Sequential Service`-Aktivität. Legen Sie die Texteigenschaft auf `"Workflow Service starting ..."` fest, wie im folgenden Beispiel gezeigt.  
   
-     ! [Hinzufügen einer "Write teline"-Aktivität zur Aktivität "sequenzieller Dienst" (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/Add-WriteLine-Sequential-Service.jpg)  
+     ! [Hinzufügen einer "Write teline"-Aktivität zur Aktivität "sequenzieller Dienst" (./Media/Flowing-Transactions-into-and-out-of-Workflow-Services/add-writeline-sequential-service.jpg)  
   
 4. Verschieben Sie eine <xref:System.ServiceModel.Activities.TransactedReceiveScope>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.WriteLine>-Aktivität. Die- <xref:System.ServiceModel.Activities.TransactedReceiveScope> Aktivität befindet sich im Abschnitt **Messaging** der **Toolbox**. Die <xref:System.ServiceModel.Activities.TransactedReceiveScope> -Aktivität besteht aus zwei Abschnitten: **Anforderung** und **Text**. Der **Anforderungs** Abschnitt enthält die- <xref:System.ServiceModel.Activities.Receive> Aktivität. Der **Text** Abschnitt enthält die Aktivitäten, die innerhalb einer Transaktion ausgeführt werden sollen, nachdem eine Nachricht empfangen wurde.  
   
@@ -132,7 +133,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
     |Eigenschaft|Wert|  
     |--------------|-----------|  
-    |To|replyMessage|  
+    |Beschreibung|replyMessage|  
     |Wert|"Service: Sending reply."|  
   
 11. Ziehen Sie eine <xref:System.Activities.Statements.WriteLine>-Aktivität per Drag &amp; Drop an die Stelle nach der <xref:System.Activities.Statements.Assign>-Aktivität, und legen Sie die <xref:System.Activities.Statements.WriteLine.Text%2A>-Eigenschaft auf „Service: Begin reply“ fest.  
@@ -155,7 +156,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 ### <a name="implement-the-workflow-client"></a>Implementieren des Workflowclients  
   
-1. Fügen Sie eine neue WCF-Workflowanwendung mit dem Namen `WorkflowClient` zum `Common`-Projekt hinzu. Klicken Sie dazu mit der rechten Maustaste auf das `Common` Projekt, wählen Sie **Hinzufügen**, **Neues Element...**, wählen Sie unter **installierte Vorlagen** die Option **Workflow** und dann **Aktivität**aus.  
+1. Fügen Sie eine neue WCF-Workflowanwendung mit dem Namen `WorkflowClient` zum `Common`-Projekt hinzu. Klicken Sie dazu mit der rechten Maustaste auf das `Common` Projekt, wählen Sie **Hinzufügen**, **Neues Element...**, wählen Sie unter **installierte Vorlagen** die Option **Workflow** und dann **Aktivität** aus.  
   
      ![Aktivitätsprojekt hinzufügen](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
