@@ -4,20 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597175"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257469"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen
-Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im gehosteten com+-Modus wird die Datei "Application. config" im Stammverzeichnis der Anwendung abgelegt (%ProgramFiles%\ComPlus Applications \\ {AppID} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
+
+Wird eine Anwendungsschnittstelle durch Verwendung des COM+-Dienskonfigurationstools hinzugefügt oder entfernt, wird die Webdienstkonfiguration innerhalb der Konfigurationsdatei der Anwendung aktualisiert. Im gehosteten com+-Modus wird die Application.config-Datei im Stammverzeichnis der Anwendung abgelegt (%ProgramFiles%\ComPlus Applications \\ {AppID} ist die Standardeinstellung). In beiden im Internet gehosteten Modi wird die Datei Web.config im angegebenen vroot-Verzeichnis abgelegt.  
   
 > [!NOTE]
 > Nachrichtensignaturen sollten zum Schutz vor Manipulation von Nachrichten zwischen einem Client und einem Server verwendet werden. Außerdem sollte Verschlüsselung auf Nachrichten- oder Transportebene verwendet werden, um Schutz vor der Offenlegung von Informationen in Nachrichten zu bieten, die zwischen einem Client und einem Server übertragen werden. Wie bei den Windows Communication Foundation (WCF)-Diensten sollten Sie die Drosselung verwenden, um die Anzahl gleichzeitiger Aufrufe, Verbindungen, Instanzen und ausstehende Vorgänge einzuschränken. Dies trägt zur Vermeidung einer übermäßigen Ressourcenbeanspruchung bei. Das Drosselungsverhalten wird durch Dienstkonfigurations-Dateieinstellungen angegeben.  
   
 ## <a name="example"></a>Beispiel  
+
  Beispiel: Eine Komponente, mit der die folgende Schnittstelle implementiert wird:  
   
 ```csharp

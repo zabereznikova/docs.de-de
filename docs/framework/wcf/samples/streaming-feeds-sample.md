@@ -2,14 +2,15 @@
 title: Beispiel zum Streaming von Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589785"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257183"
 ---
 # <a name="streaming-feeds-sample"></a>Beispiel zum Streaming von Feeds
+
 In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden, die eine große Anzahl von Elementen enthalten. Auf dem Server zeigt das Beispiel, wie die Erstellung einzelner <xref:System.ServiceModel.Syndication.SyndicationItem>-Objekte innerhalb des Feeds bis unmittelbar vor den Zeitpunkt verzögert werden kann, zu dem das Element in den Netzwerkstream geschrieben wird.  
   
  Auf dem Client zeigt das Beispiel, wie mit einem benutzerdefinierten Syndication-Feed-Formatierungsprogramm einzelne Elemente aus dem Netzwerkstream gelesen werden können, sodass der Feed, aus dem gelesen wird, nie vollständig im Speicher gepuffert wird.  
@@ -19,6 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden,
  Die Demonstration nutzt Visual c#-Iteratoren (mit dem `yield return` Schlüsselwort Konstrukt). Weitere Informationen zu Iteratoren finden Sie im Thema "using Iterators" auf der MSDN-Website.  
   
 ## <a name="service"></a>Dienst  
+
  Der Dienst implementiert einen grundlegenden <xref:System.ServiceModel.Web.WebGetAttribute>-Vertrag, der aus einem Vorgang besteht, wie im folgenden Code gezeigt.  
   
 ```csharp  
@@ -68,6 +70,7 @@ public Atom10FeedFormatter StreamedFeed()
  Infolgedessen wird der Elementstream nie vollständig im Arbeitsspeicher gepuffert. Sie können dieses Verhalten beobachten, indem Sie einen Haltepunkt in der- `yield return` Anweisung innerhalb der-Methode festlegen und feststellen `ItemGenerator.GenerateItems()` , dass dieser Haltepunkt zum ersten Mal erreicht wird, nachdem der Dienst das Ergebnis der-Methode zurückgegeben hat `StreamedFeed()` .  
   
 ## <a name="client"></a>Client  
+
  Der Client in diesem Beispiel verwendet eine benutzerdefinierte <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>-Implementierung, die die Materialisierung einzelner Elemente im Feed verzögert, anstatt sie im Arbeitsspeicher zu puffern. Die benutzerdefinierte `StreamedAtom10FeedFormatter`-Instanz wird wie folgt verwendet:  
   
 ```csharp  

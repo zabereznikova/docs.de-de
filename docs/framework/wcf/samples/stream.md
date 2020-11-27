@@ -1,15 +1,16 @@
 ---
-title: STREAM
+title: Datenstrom
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: a482c27dfd0970b319a605a480b5f54689e42d48
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 04bc5db4172d9052b45f63a2f7ed0fb997dc4c6c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257196"
 ---
 # <a name="stream"></a>STREAM
+
 Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmodus. Der Dienst macht mehrere Vorgänge verfügbar, die Streams senden und empfangen. Dieses Beispiel ist selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenprogramme.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmo
  Windows Communication Foundation (WCF) kann in zwei Übertragungsmodi kommunizieren – gepuffert oder Streaming. Im standardmäßigen gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streaming-Übertragungsmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
 ## <a name="streaming-and-service-contracts"></a>Streaming und Dienstverträge  
+
  Streaming ist es wert, beim Entwerfen eines Dienstvertrags in Betracht gezogen zu werden. Wenn ein Vorgang Daten in großem Umfang empfängt oder zurückgibt, sollte man in Betracht ziehen, diese Daten zu streamen, um eine übermäßige Auslastung des Arbeitsspeichers durch das Puffern ein- oder ausgehender Nachrichten zu vermeiden. Zum Übertragen von Daten im Streamingmodus muss der Parameter, der die Daten enthält, der einzige Parameter in der Nachricht sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben. In beiden Fällen muss der Parameter- oder Rückgabewerttyp `Stream`, `Message` oder `IXmlSerializable` sein. Nachfolgend ist der in diesem Streamingbeispiel verwendete Dienstvertrag aufgeführt.  
   
 ```csharp
@@ -39,6 +41,7 @@ public interface IStreamingSample
  Der `GetStream`-Vorgang empfängt Eingabedaten als Zeichenfolge, die gepuffert wird, und gibt einen `Stream` zurück, der im Streamingmodus übertragen wird. Umgekehrt nimmt `UploadStream` einen (per Streaming übertragenen) `Stream` entgegen und gibt einen (gepufferten) `bool` zurück. `EchoStream` akzeptiert und gibt einen Wert des Typs `Stream` zurück und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten per Streaming übertragen werden. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
   
 ## <a name="enabling-streamed-transfers"></a>Aktivieren von Streamübertragungen  
+
  Wenn Sie Vorgangsverträge wie oben beschrieben definieren, können Sie Streaming auf Programmiermodellebene durchführen. Wenn Sie an dieser Stelle aufhören, wird immer noch der gesamte Nachrichteninhalt vom Transport gepuffert. Zum Aktivieren von Transportstreaming müssen Sie im Bindungselement des Transports einen Übertragungsmodus auswählen. Das Bindungselement weist eine `TransferMode`-Eigenschaft auf, die auf `Buffered`, `Streamed`, `StreamedRequest` oder `StreamedResponse` festgelegt werden kann. Wenn Sie den Übertragungsmodus auf `Streamed` festlegen, wird ein Kommunikationsstream in beide Richtungen ermöglicht. Wenn Sie den Übertragungsmodus auf `StreamedRequest` oder `StreamedResponse` festlegen, wird ein Kommunikationsstream nur in der jeweiligen Richtung (Anforderung bzw. Antwort) ermöglicht.  
   
  Die `basicHttpBinding` macht die `TransferMode`-Eigenschaft für die Bindung verfügbar, wie dies ebenso bei `NetTcpBinding` und `NetNamedPipeBinding` der Fall ist. Für andere Transporte müssen Sie eine benutzerdefinierte Bindung erstellen, um den Übertragungsmodus festzulegen.  
@@ -64,6 +67,7 @@ public interface IStreamingSample
  Zusätzlich zum Festlegen des `transferMode` auf `Streamed` legt der oben aufgeführte Konfigurationscode die `maxReceivedMessageSize` auf 64 MB fest. Als Schutzmechanismus legt `maxReceivedMessageSize` einen Höchstwert für die maximal zulässige Größe von Nachrichten beim Empfang fest. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist.  
   
 ## <a name="processing-data-as-it-is-streamed"></a>Verarbeiten von Daten bei deren Streamingübertragung  
+
  Bei den Vorgängen `GetStream`, `UploadStream` und `EchoStream` werden Daten direkt aus einer Datei gesendet oder empfangene Daten direkt in einer Datei gespeichert. In manchen Fällen ist es jedoch erforderlich, große Mengen von Daten zu senden oder zu empfangen und Teile dieser Daten dabei zu verarbeiten. Eine Möglichkeit in solchen Situationen wäre, einen benutzerdefinierten Stream (eine Klasse, die sich von <xref:System.IO.Stream> ableitet) zu schreiben, der Daten verarbeitet, während diese gelesen oder geschrieben werden. Der `GetReversedStream`-Vorgang und die `ReverseStream`-Klasse sind ein Beispiel für ein solches Vorgehen.  
   
  `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus diesem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Implementierung liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Sie invertiert nicht den gesamten Dateiinhalt, sondern immer nur eine Gruppe von Bytes auf einmal. Dieses Beispiel zeigt, wie Sie das Verarbeiten eines Streams durchführen können, wenn der Inhalt aus dem Stream gelesen oder in den Stream geschrieben wird.  
@@ -113,6 +117,7 @@ class ReverseStream : Stream
 ```  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
+
  Zum Ausführen des Beispiels müssen Sie zuerst den Dienst und den Client nach den am Ende dieses Dokuments aufgeführten Anweisungen erstellen. Starten Sie dann den Dienst und den Client in zwei verschiedenen Konsolenfenstern. Beim Starten wartet der Client, dass Sie die EINGABETASTE drücken, wenn der Dienst bereit ist. Dann ruft der Client die Methoden `GetStream()`, `UploadStream()` und `GetReversedStream()` erst über HTTP und dann über TCP auf. Nachfolgend sehen Sie eine Beispielausgabe aus dem Dienst und dann eine Beispielausgabe aus dem Client:  
   
  Dienstausgabe:  
