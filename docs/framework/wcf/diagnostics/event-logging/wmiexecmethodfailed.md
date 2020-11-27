@@ -2,24 +2,26 @@
 title: WmiExecMethodFailed
 ms.date: 03/30/2017
 ms.assetid: 8cb52fa8-0c36-4761-bf8e-2d7e1b73372e
-ms.openlocfilehash: 3b81ce8305b4cec87b8fcfaeb26da669766ca2b0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c74845aa856e7aed910f8c8a62553dcaa03e79ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797396"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277763"
 ---
 # <a name="wmiexecmethodfailed"></a>WmiExecMethodFailed
+
 ID: 125  
   
- Zunehmen Fehler  
+ Schweregrad: Fehler  
   
- Kategorie ServiceModel  
+ Kategorie: ServiceModel  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis gibt an, dass die WMI-ExecMethod-Anforderung nicht verarbeitet wurde. Das Ereignis führt die Ausnahme, den Prozessnamen und die Prozess-ID auf.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ereignisprotokollierung](index.md)
 - [Allgemeine Referenz zu Ereignissen](events-general-reference.md)

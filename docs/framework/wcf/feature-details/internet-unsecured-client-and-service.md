@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276671"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Internet: Ungesicherter Client und Dienst
+
 Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und-Dienst:  
   
  ![Screenshot, der ein ungesichertes Internet Szenario anzeigt](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
@@ -28,19 +29,22 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 |Vertraulichkeit|Keine|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
 - Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
 ### <a name="code"></a>Code  
+
  Im folgenden Code wird gezeigt, wie ein Endpunkt ohne Sicherheit erstellt wird: Standardmäßig verfügt die <xref:System.ServiceModel.BasicHttpBinding> über den Sicherheitsmodus <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
   
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
 ### <a name="service-configuration"></a>Dienstkonfiguration  
+
  Mit dem folgenden Code wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.  
   
 ```xml  
@@ -68,22 +72,25 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code zeigt einen einfachen WCF-Client, der auf einen ungesicherten Endpunkt zugreift.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
   
 ### <a name="client-configuration"></a>Clientkonfiguration  
+
  Der folgende Code dient zum Konfigurieren des Clients.  
   
 ```xml  
@@ -109,7 +116,7 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Häufige Sicherheitsszenarien](common-security-scenarios.md)
 - [Sicherheitsübersicht](security-overview.md)

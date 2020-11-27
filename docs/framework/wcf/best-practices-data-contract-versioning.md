@@ -1,5 +1,5 @@
 ---
-title: 'Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen'
+title: 'Bewährte Methoden: Datenvertragsversionsverwaltung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,17 +7,19 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 4d500c37efa4a90e24b06cd2e886147e1f159d4e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: d6a1eef949e30a1a6d9a1c5971d33c788cc548b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320777"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277906"
 ---
-# <a name="best-practices-data-contract-versioning"></a>Empfohlene Vorgehensweisen: Versionsverwaltung von Datenverträgen
+# <a name="best-practices-data-contract-versioning"></a>Bewährte Methoden: Datenvertragsversionsverwaltung
+
 In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. Weitere Informationen zu Daten Verträgen finden Sie in den Themen unter [Verwenden von Daten Verträgen](./feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Hinweis zur Schemavalidierung  
+
  Bei der Erörterung der Versionsverwaltung von Daten Verträgen ist es wichtig zu beachten, dass das von Windows Communication Foundation (WCF) exportierte Daten Vertrags Schema keine Unterstützung für die Versionskontrolle hat, außer die Tatsache, dass Elemente standardmäßig als optional gekennzeichnet werden.  
   
  Dies bedeutet, dass sogar ein sehr häufig verwendetes Versionsverwaltungsszenario, beispielsweise das Hinzufügen eines neuen Datenmembers, nicht nahtlos für ein bestimmtes Schema implementiert werden kann. Die neueren Versionen eines Datenvertrags (beispielsweise mit einem neuen Datenmember) können bei Verwendung des alten Schemas nicht überprüft werden.  
@@ -27,6 +29,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
  Es gibt also zwei Sätze von Richtlinien für die Versionsverwaltung von Datenverträgen: Einen Satz für Szenarios, bei denen die genaue Schemagültigkeit wichtig ist, und einen Satz für Szenarios, bei denen dies nicht wichtig ist.  
   
 ## <a name="versioning-when-schema-validation-is-required"></a>Versionsverwaltung, wenn eine Schemavalidierung erforderlich ist  
+
  Wenn die genaue Schemagültigkeit in allen Richtungen erforderlich ist (neu in alt und alt in neu), sollten Datenverträge als unveränderlich angesehen werden. Wenn die Versionsverwaltung erforderlich ist, sollte ein neuer Datenvertrag mit einem anderen Namen oder Namespace erstellt werden, und der Dienstvertrag, der den Datentyp nutzt, muss eine entsprechende Version erhalten.  
   
  Angenommen, Sie verwenden einen Dienstvertrag für die Bestellungsverarbeitung mit dem Namen `PoProcessing` mit einem `PostPurchaseOrder`-Vorgang, der einen Parameter erfordert, der einem `PurchaseOrder`-Datenvertrag entspricht. Wenn der `PurchaseOrder`-Vertrag geändert werden muss, müssen Sie einen neuen Datenvertrag erstellen (also `PurchaseOrder2`), der die Änderungen enthält. Sie müssen die Versionsverwaltung dann auf Dienstvertragsebene behandeln. Beispiele: Sie erstellen einen `PostPurchaseOrder2`-Vorgang, der den `PurchaseOrder2`-Parameter verwendet, oder Sie erstellen einen `PoProcessing2`-Dienstvertrag, bei dem der `PostPurchaseOrder`-Vorgang einen `PurchaseOrder2`-Datenvertrag verwendet.  
@@ -37,7 +40,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
  Weitere Informationen finden Sie unter Bewährte Methoden: [Dienst Versionsverwaltung](service-versioning.md).  
   
- In einigen Fällen müssen Sie die genaue Einhaltung für Nachrichten sicherstellen, die von Ihrer Anwendung gesendet werden, können sich jedoch nicht darauf verlassen, dass die eingehenden Nachrichten die Vorgaben des Schemas genau einhalten. In diesem Fall besteht die Gefahr, dass eine eingehende Nachricht fremde Daten enthält. Die überflüssigen Werte werden von WCF gespeichert und zurückgegeben und führen somit dazu, dass ungültige Nachrichten gesendet werden. Um dieses Problem zu vermeiden, sollten Sie die Roundtripfunktion deaktivieren. Hierfür gibt es zwei Möglichkeiten.  
+ In einigen Fällen müssen Sie die genaue Einhaltung für Nachrichten sicherstellen, die von Ihrer Anwendung gesendet werden, können sich jedoch nicht darauf verlassen, dass die eingehenden Nachrichten die Vorgaben des Schemas genau einhalten. In diesem Fall besteht die Gefahr, dass eine eingehende Nachricht fremde Daten enthält. Die überflüssigen Werte werden von WCF gespeichert und zurückgegeben und führen somit dazu, dass ungültige Nachrichten gesendet werden. Um dieses Problem zu vermeiden, sollten Sie die Roundtripfunktion deaktivieren. Es gibt hierbei zwei Möglichkeiten.  
   
 - Implementieren Sie die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle für keinen der Typen.  
   
@@ -46,6 +49,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
  Weitere Informationen zum Roundtrip finden Sie unter [Forward-kompatible Datenverträge](./feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Versionsverwaltung, wenn eine Schemavalidierung nicht erforderlich ist  
+
  Die genaue Schemakompatibilität ist nur selten erforderlich. Viele Plattformen tolerieren zusätzliche Elemente, die von einem Schema nicht beschrieben werden. Solange dies toleriert wird, kann der vollständige Satz von Funktionen verwendet werden, die unter [Daten Vertrags Versions](./feature-details/data-contract-versioning.md) Verwaltung und [Vorwärts kompatible Datenverträge](./feature-details/forward-compatible-data-contracts.md) beschrieben werden. Die folgenden Richtlinien sind zu empfehlen.  
   
  Einige Richtlinien müssen exakt befolgt werden, um neue Versionen eines Typs zu senden zu können, wenn ein älterer Typ erwartet wird, bzw. um einen älteren Typ senden zu können, wenn ein neuer Typ erwartet wird. Andere Richtlinien sind nicht unbedingt erforderlich, hier jedoch aufgeführt, da sich die zukünftige Versionsverwaltung von Schemas darauf auswirken kann.  
@@ -70,7 +74,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
     2. Wenn der Standardwert `null` bzw. "0" für den Member nicht akzeptabel ist, muss mithilfe von <xref:System.Runtime.Serialization.OnDeserializingAttribute> eine Rückrufmethode bereitgestellt werden, um einen geeigneten Standardwert anzugeben, falls der Member im eingehenden Stream nicht enthalten ist. Weitere Informationen zum Rückruf finden Sie unter [Versions tolerante Serialisierungsrückrufe](./feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3. Die <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>-Eigenschaft sollte verwendet werden, um sicherzustellen, dass alle neu hinzugefügten Datenmember nach den vorhandenen Datenmembern angezeigt werden. Die empfohlene Vorgehensweise lautet wie folgt: Für keinen Datenmember der ersten Version eines Datenvertrags sollte die `Order`-Eigenschaft festgelegt sein. Sie sollten für alle Datenmember, die Sie in Version 2 des Datenvertrags hinzugefügt haben, die `Order`-Eigenschaft auf "2" festlegen. Ebenso sollten Sie die `Order`-Eigenschaft für in Version 3 des Datenvertrags hinzugefügte Datenmember auf "3" festlegen usw. Es ist zulässig, mehrere Datenmember auf die gleiche `Order`-Nummer festzulegen.  
+    3. Die- <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Eigenschaft sollte verwendet werden, um sicherzustellen, dass alle neu hinzugefügten Datenmember nach den vorhandenen Datenmembern angezeigt werden. Die empfohlene Vorgehensweise lautet wie folgt: Für keinen Datenmember der ersten Version eines Datenvertrags sollte die `Order`-Eigenschaft festgelegt sein. Sie sollten für alle Datenmember, die Sie in Version 2 des Datenvertrags hinzugefügt haben, die `Order`-Eigenschaft auf "2" festlegen. Ebenso sollten Sie die `Order`-Eigenschaft für in Version 3 des Datenvertrags hinzugefügte Datenmember auf "3" festlegen usw. Es ist zulässig, mehrere Datenmember auf die gleiche `Order`-Nummer festzulegen.  
   
 9. Entfernen Sie Datenmember in höheren Versionen auch dann nicht, wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>-Eigenschaft in den vorherigen Versionen auf der Standardeinstellung `false` belassen wurde.  
   
@@ -102,7 +106,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - [Verwenden von Datenverträgen](./feature-details/using-data-contracts.md)
-- [Datenvertrags-Versionsverwaltung](./feature-details/data-contract-versioning.md)
+- [Datenvertragsversionsverwaltung](./feature-details/data-contract-versioning.md)
 - [Datenvertragsnamen](./feature-details/data-contract-names.md)
 - [Aufwärtskompatible Datenverträge](./feature-details/forward-compatible-data-contracts.md)
 - [Versionstolerante Serialisierungsrückrufe](./feature-details/version-tolerant-serialization-callbacks.md)

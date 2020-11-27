@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ff3184a285e88d47d4545a38a6c74b2f209827fb
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 88bf2513435a9c00cf11a0681b32871992c8d2b2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276658"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
+
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
   
 ## <a name="enumeration-basics"></a>Grundlagen der Enumeration  
+
  Eine Möglichkeit, Enumerationstypen im Datenvertragmodell zu verwenden, besteht darin, das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut auf den Typ anzuwenden. Anschließend müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut auf jeden Member anwenden, der im Datenvertrag enthalten sein soll.  
   
  Das folgende Beispiel zeigt zwei Klassen. Die erste Klasse verwendet die Enumeration, und die zweite Klasse definiert die Enumeration.  
@@ -31,6 +33,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Sie können die <xref:System.Runtime.Serialization.DataContractAttribute>-Eigenschaften (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) wie gewohnt für Enumerationsdatenverträge verwenden.  
   
 ### <a name="enumeration-member-values"></a>Enumerationsmemberwerte  
+
  Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Wenn jedoch das Daten Vertragsmodell verwendet wird, wenn es sich bei der Empfangsseite um einen WCF-Client handelt, werden die numerischen Werte vom exportierten Schema beibehalten. Beachten Sie, dass dies nicht der Fall ist, wenn mit der [XmlSerializer-Klasse](using-the-xmlserializer-class.md)verwendet wird.  
   
  Wenn im obigen Beispiel `condition` auf `Used` festgelegt ist und die Daten in XML serialisiert werden, lautet das XML-Ergebnis `<condition>Used</condition>``<condition>1</condition>`, und nicht . Deshalb entspricht der folgende Datenvertrag dem Datenvertrag von `CarConditionEnum`.  
@@ -49,6 +52,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
 - Enumerationsdatenmember, für die die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>-Eigenschaft auf `false` festgelegt ist. (In diesem Fall wird die Enumeration mit dem Wert "0" einfach aus den serialisierten Daten weggelassen.)  
   
 ### <a name="customizing-enumeration-member-values"></a>Anpassen von Enumerationsmemberwerten  
+
  Sie können den Enumerationsmemberwert anpassen, der Teil des Datenvertrags ist, indem Sie die <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A>-Eigenschaft des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs verwenden.  
   
  Der folgende Datenvertrag entspricht auch dem Datenvertrag von `CarConditionEnum`.  
@@ -59,6 +63,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Nach der Serialisierung weist der Wert von `PreviouslyOwned` die XML-Darstellung `<condition>Used</condition>` auf.  
   
 ## <a name="simple-enumerations"></a>Einfache Enumerationen  
+
  Sie können auch Enumerationstypen serialisieren, auf die das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht angewendet wurde. Enumerationstypen dieser Art werden exakt wie zuvor beschrieben behandelt. Es gilt jedoch die Ausnahme, dass jeder Member (auf den das <xref:System.NonSerializedAttribute>-Attribut nicht angewendet wurde) so behandelt wird, als ob das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut angewendet wurde. Zum Beispiel verfügt die folgende Enumeration implizit über einen Datenvertrag, der dem Datenvertrag im vorherigen `CarConditionEnum`-Beispiel entspricht.  
   
  [!code-csharp[c_DataContractEnumerations#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#6)]
@@ -67,6 +72,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Sie können einfache Enumerationen verwenden, wenn es nicht erforderlich ist, den Datenvertragsnamen und den Namespace der Enumeration und die Enumerationsmemberwerte anzupassen.  
   
 #### <a name="notes-on-simple-enumerations"></a>Hinweise zu einfachen Enumerationen  
+
  Wenn Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut auf einfache Enumerationen anwenden, hat dies keine Auswirkung.  
   
  Es ist unerheblich, ob Sie das <xref:System.SerializableAttribute>-Attribut auf die Enumeration anwenden.  
@@ -74,6 +80,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Die Tatsache, dass die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse das <xref:System.NonSerializedAttribute>-Attribut berücksichtigt, das auf Enumerationsmember angewendet wird, gilt nicht für das Verhalten von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Beide Serialisierungsprogramme ignorieren das <xref:System.NonSerializedAttribute>-Attribut.  
   
 ## <a name="flag-enumerations"></a>Flagenumerationen  
+
  Sie können das <xref:System.FlagsAttribute>-Attribut auf Enumerationen anwenden. In diesem Fall kann eine Liste von null oder mehr Enumerationswerten gleichzeitig gesendet oder empfangen werden.  
   
  Wenden Sie dazu das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut auf die Flagenumeration an, und markieren Sie dann alle Member, die Potenzen von 2 sind, mit dem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut. Beachten Sie, dass es sich bei der Progression um eine ununterbrochene Folge mit Potenzen des Werts 2 handeln muss (beispielsweise 1, 2, 4, 8, 16, 32, 64).  
@@ -87,6 +94,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
 3. Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
   
 ### <a name="example"></a>Beispiel  
+
  Das folgende Enumerationsbeispiel kann für einen Flagvorgang verwendet werden.  
   
  [!code-csharp[c_DataContractEnumerations#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#4)]

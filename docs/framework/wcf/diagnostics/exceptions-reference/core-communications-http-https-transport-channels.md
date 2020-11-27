@@ -1,16 +1,17 @@
 ---
-title: 'Kernkommunikation: HTTP-HTTPS-Transportkanäle'
+title: 'Kern Kommunikation: HTTP-HTTPS-Transport Kanäle'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d33d153c6c527398b035ad9d027593a0fefd0e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998750"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277412"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Kernkommunikation: HTTP/HTTPS-Transportkanäle
-In diesem Thema werden alle von Windows Communication Foundation (WCF)-HTTP/HTTPS-Transportkanälen generierte Ausnahmen aufgeführt.  
+
+In diesem Thema werden alle Ausnahmen aufgelistet, die von Windows Communication Foundation (WCF)-Transport HTTP/HTTPS-Kanälen generiert werden.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
   
@@ -21,7 +22,7 @@ In diesem Thema werden alle von Windows Communication Foundation (WCF)-HTTP/HTTP
 |Hosting_SslSettingsMisconfigured|Die Secure Sockets Layer-Einstellungen für den angegebenen Dienst stimmen nicht mit den Einstellungen der Internet Information Services überein.|  
 |HttpAuthSchemeAndClientCert|Die Konfiguration der HTTPS-Listenerfactory erfordert ein Clientzertifikat und das angegebene Authentifizierungsschema. Es kann jedoch immer nur jeweils eine Form der Clientauthentifizierung erforderlich sein.|  
 |HttpReceiveFailure|Fehler beim Empfangen der HTTP-Antwort für das angegebene Element. Möglicherweise verwendet die Dienstendpunktbindung kein HTTP-Protokoll. Eine andere mögliche Ursache ist, dass der HTTP-Anforderungskontext vom Server abgebrochen wird (vermutlich auf das Herunterfahren eines Diensts zurückzuführen). Weitere Informationen finden Sie in den Serverprotokollen.|  
-|HttpRegistrationAccessDenied|HTTP kann die angegebene URL nicht registrieren. Der Prozess verfügt nicht über Zugriffsrechte für diesen Namespace (finden Sie unter [Namespace-Reservierungen und Registrierungen Routing](/windows/desktop/http/namespace-reservations-registrations-and-routing) Einzelheiten).|  
+|HttpRegistrationAccessDenied|HTTP kann die angegebene URL nicht registrieren. Der Prozess verfügt nicht über Zugriffsrechte für diesen Namespace (Weitere Informationen finden Sie unter [Namespace Reservierungen, Registrierungen und Routing](/windows/desktop/http/namespace-reservations-registrations-and-routing) ).|  
 |HttpRegistrationAlreadyExists|HTTP kann die angegebene URL nicht registrieren. Diese URL wurde bereits von einer anderen Anwendung mit HTTP.SYS registriert.|  
 |HttpRegistrationPortInUse|HTTP kann die angegebene URL nicht registrieren, da der angegebene TCP-Anschluss von einer anderen Anwendung verwendet wird.|  
 |HttpSendFailure|Fehler beim Erstellen der HTTP-Anforderung für das angegebene Element. Vergewissern Sie sich, dass es sich nicht um eine fehlende Übereinstimmung bei der Sicherheitsbindung handelt. Überprüfen Sie ferner, dass der Dienst nicht für Secure Sockets Layer konfiguriert ist.|  

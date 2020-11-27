@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3de0d8ea8266931c2bcda5c59c1fef97602673d5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309728"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278127"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Vorgehensweise: Verzögerte Initialisierung von Objekten
+
 Die <xref:System.Lazy%601?displayProperty=nameWithType>-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten. Beim verzögerten Initialisieren von Objekten können Sie die Erstellung vermeiden, wenn diese nie gebraucht werden, oder Sie können die Initialisierung verschieben, bis ein erster Zugriff erfolgt. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](lazy-initialization.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie ein Wert mit <xref:System.Lazy%601> initialisiert wird. Gehen wir davon aus, dass die verzögerte Variable abhängig von anderem Code, der die `someCondition`-Variable auf TRUE oder FALSE festlegt, nicht gebraucht wird.  
   
 ```vb  
@@ -70,6 +72,7 @@ End Sub
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse verwenden, um die Initialisierung eines Typs durchzuführen, der nur für die aktuelle Objektinstanz für den aktuellen Thread sichtbar ist.  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]

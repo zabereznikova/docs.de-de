@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: d0df24de4f8a877405dfecb6b0d245ff1caf0418
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e7d32be1532be7d673d8df4fe3f76c3d83fea913
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278062"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87163879"
 > Zusammengesetzte Steuerelemente – Steuerelemente, die mit untergeordneten Steuerelementen erstellt wurden, die die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] für Funktionalität bereitstellen, die vom übergeordneten Steuerelement verfügbar gemacht wird – sollten alle Steuerelementmuster implementieren, die normalerweise den untergeordneten Steuerelementen zugewiesen sind. Dagegen ist es nicht erforderlich, dass diese selben Steuerelementmuster durch die untergeordneten Steuerelemente implementiert werden.  
   
 <a name="uiautomation_control_pattern_includes"></a>
+
 ## <a name="ui-automation-control-pattern-components"></a>Komponenten der Steuerelementmuster für Benutzeroberflächenautomatisierung  
+
  Steuerelementmuster unterstützen die Methoden, Eigenschaften, Ereignisse und Beziehungen, die dazu erforderlich sind, eine bestimmte Funktionalität zu definieren, die in einem Steuerelement verfügbar ist.  
   
 - Die Beziehungen zwischen einem Benutzeroberflächenautomatisierungs-Element und dessen übergeordnetem Element sowie dessen unter- und gleichgeordneten Elementen beschreibt die Struktur des Elements innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur.  
@@ -37,7 +40,9 @@ ms.locfileid: "87163879"
  Steuerelement Muster beziehen sich auf, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Wenn sich Schnittstellen auf Component Object Model (com)-Objekte beziehen. In COM können Sie von einem Objekt abfragen, welche Schnittstellen es unterstützt, und dann mithilfe dieser Schnittstellen auf die Funktionen zugreifen. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kann ein Benutzeroberflächenautomatisierungs-Client ein Steuerelement daraufhin abfragen, welche Steuerelementmuster es unterstützt, und anschließend über die Eigenschaften, Methoden, Ereignisse und Strukturen, die von den unterstützten Steuerelementmustern verfügbar gemacht werden, auf das Steuerelement zugreifen. Beispielsweise implementiert ein Benutzeroberflächenautomatisierungs-Anbieter für ein mehrzeiliges Bearbeitungsfeld eine <xref:System.Windows.Automation.Provider.IScrollProvider>-Schnittstelle. Wenn ein Client weiß, dass ein <xref:System.Windows.Automation.AutomationElement> das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster unterstützt, kann er die Eigenschaften, Methoden und Ereignisse, die von diesem Steuerelementmuster verfügbar gemacht werden, dazu verwenden, auf das Steuerelement oder auf Informationen über das Steuerelement zuzugreifen.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>
+
 ## <a name="ui-automation-providers-and-clients"></a>Benutzeroberflächenautomatisierungs-Anbieter und -Clients  
+
  Benutzeroberflächenautomatisierungs-Anbieter implementieren Steuerelementmuster, um das entsprechende Verhalten für eine bestimmte Funktionalität verfügbar zu machen, die vom Steuerelement unterstützt wird.  
   
  Benutzeroberflächenautomatisierungs-Clients verwenden Methoden und Eigenschaften von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelement-Musterklassen, um Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]abzurufen oder Änderungen an der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]vorzunehmen. Diese Steuerelement-Musterklassen befinden sich im <xref:System.Windows.Automation> -Namespace (z. B. <xref:System.Windows.Automation.InvokePattern> und <xref:System.Windows.Automation.SelectionPattern>).  
@@ -45,11 +50,15 @@ ms.locfileid: "87163879"
  Clients verwenden- <xref:System.Windows.Automation.AutomationElement> Methoden (z. b. <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> ) oder die Common Language Runtime (CLR)-Accessoren, um [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] auf die Eigenschaften eines Musters zuzugreifen. Jede Steuerelement Muster Klasse verfügt über einen Feldmember (z. b. <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> oder <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType> ), der dieses Steuerelement Muster identifiziert und als Parameter an oder übergeben werden kann, um <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> dieses Muster für einen abzurufen <xref:System.Windows.Automation.AutomationElement> .  
   
 <a name="uiautomation_control_patterns_dynamic"></a>
+
 ## <a name="dynamic-control-patterns"></a>Dynamische Steuerelementmuster  
+
  Einige Steuerelemente unterstützen nicht immer denselben Satz von Steuerelementmustern. Steuerelementmuster gelten als unterstützt, wenn sie für einen Benutzeroberflächenautomatisierungs-Client verfügbar sind. Beispielsweise ermöglicht ein mehrzeiliges Bearbeitungsfeld nur dann vertikales Scrollen, wenn es mehr Textzeilen enthält, als in seinem Anzeigebereich angezeigt werden können. Scrollen wird deaktiviert, wenn so viel Text entfernt wurde, dass kein Scrollen mehr erforderlich ist. In diesem Beispiel wird das ScrollPattern-Steuerelementmuster dynamisch je nach aktuellem Zustand des Steuerelements unterstützt (wie viel Text befindet sich im Bearbeitungsfeld).  
   
 <a name="Control_Pattern_Classes_and_Interfaces"></a>
+
 ## <a name="control-pattern-classes-and-interfaces"></a>Steuerelement-Musterklassen und -Schnittstellen  
+
  In der folgenden Tabelle werden die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelementmuster beschrieben. Außerdem werden in dieser Tabelle folgende Elemente aufgeführt: die Klassen, die von Benutzeroberflächenautomatisierungs-Clients für den Zugriff auf die Steuerelementmuster verwendet werden, und die Schnittstellen, die von Benutzeroberflächenautomatisierungs-Anbietern zum Implementieren der Steuerelementmuster verwendet werden.  
   
 |Steuerelementmusterklasse|Anbieterschnittstelle|BESCHREIBUNG|  

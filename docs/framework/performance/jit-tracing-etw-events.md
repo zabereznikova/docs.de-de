@@ -6,19 +6,21 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474461"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277967"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
+
 Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.
 
 ## <a name="jit-inlining-events"></a>JIT-Inliningereignisse
 
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed-Ereignis
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -49,6 +51,7 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 |ClrInstanceID|win:UnicodeString|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded-Ereignis  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -79,6 +82,7 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 ## <a name="jit-tail-call-events"></a>JIT-Endaufrufereignisse  
   
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed-Ereignis  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -109,6 +113,7 @@ Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded-Ereignis  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
