@@ -7,18 +7,19 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: c9e073ef088595d3ee5cd9e1af70140f12022179
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712620"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271472"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in der .NET Framework
 
 Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-System [Monitor](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11))finden können.  
 
 ## <a name="exception-performance-counters"></a>Ausnahmeleistungsindikatoren  
+
  Die Kategorie ".NET CLR-Ausnahmen" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den von einer Anwendung ausgelösten Ausnahmen liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -30,6 +31,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Throw-zu-Catch-Tiefe/s**|Zeigt die Anzahl der traversierten Stackframes (von dem Frame, der die Ausnahme ausgelöst hat, zu dem Frame, der die Ausnahme behandelt hat) pro Sekunde an. Dieser Indikator wird auf null zurückgesetzt, wenn ein Ausnahmehandler gestartet wird, sodass geschachtelte Ausnahmen die Handler-zu-Handler-Stapeltiefe anzeigen.<br /><br /> Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
 
 ## <a name="interop-performance-counters"></a>Interop-Leistungsindikatoren  
+
  Die Kategorie ".NET CLR-Interop" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zur Interaktion einer Anwendung mit COM-Komponenten, COM+-Diensten und externen Typbibliotheken liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -41,6 +43,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Anzahl TLB-Importe/s**|Für zukünftige Verwendung reserviert.|  
 
 ## <a name="jit-performance-counters"></a>JIT-Leistungsindikatoren  
+
  Die Kategorie ".NET CLR-JIT" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu JIT-kompiliertem Code liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -53,6 +56,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Gesamtzahl JIT-kompilierte IL-Bytes**|Zeigt die Gesamtzahl der MSIL-Bytes an, die seit dem Anwendungsstart JIT-kompiliert wurden. Dieser Indikator entspricht dem Indikator **Anzahl JIT-kompilierte IL-Bytes**.|  
 
 ## <a name="loading-performance-counters"></a>Ladeleistungsindikatoren  
+
  Die Kategorie ".NET CLR-Laden" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu Assemblys, Klassen und Anwendungsdomänen liefern, die geladen werden. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -75,6 +79,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Geladene Klassen gesamt**|Zeigt die kumulierte Anzahl der seit dem Anwendungsstart in allen Assemblys geladenen Klassen an.|  
 
 ## <a name="lock-and-thread-performance-counters"></a>Sperren- und Threadleistungsindikatoren  
+
  Die Kategorie ".NET CLR-Sperren und -Threads" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den durch eine Anwendung verwendeten Remoteobjekten liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -91,6 +96,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren, die Sie im Windows-Sy
 |**Gesamtzahl Konflikte**|Zeigt die Gesamtzahl der Fälle an, in denen Threads in der Laufzeit erfolglos versucht haben, eine verwaltete Sperre einzurichten.|  
 
 ## <a name="memory-performance-counters"></a>Speicherleistungsindikatoren  
+
  Die Kategorie ".NET CLR-Speicher" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zum Garbage Collector liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -218,6 +224,7 @@ for (int i = 0; i < Array.Length; i++)
  Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](performance-counters.md).  
 
 ## <a name="security-performance-counters"></a>Sicherheitsleistungsindikatoren  
+
  Die Kategorie ".NET CLR-Sicherheit" der Verwaltungskonsole für die Leistung enthält Indikatoren, die Informationen zu den Sicherheitsüberprüfungen, die die Common Language Runtime für eine Anwendung ausführt, liefern. In der folgenden Tabelle werden diese Leistungsindikatoren beschrieben.  
   
 |Leistungsindikator|BESCHREIBUNG|  
@@ -228,7 +235,7 @@ for (int i = 0; i < Array.Length; i++)
 |**Stackwalktiefe**|Zeigt die Tiefe des Stapels während der letzten Sicherheitsüberprüfung für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden durch das Durchlaufen des Stapels (Stackwalk) durchgeführt. Dieser Indikator ist kein Durchschnittswert. Er zeigt nur den letzten erfassten Wert an.|  
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Leistungsindikatoren](performance-counters.md)
 - [Laufzeit-Profilerstellung](runtime-profiling.md)
