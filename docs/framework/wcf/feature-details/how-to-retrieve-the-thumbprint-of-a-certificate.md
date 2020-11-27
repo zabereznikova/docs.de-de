@@ -5,19 +5,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1ecefdfe88426afa8e2d3d8eea758e7decf19ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249825"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats
+
 Beim Schreiben einer Windows Communication Foundation (WCF)-Anwendung, die ein X. 509-Zertifikat für die Authentifizierung verwendet, ist es häufig erforderlich, im Zertifikat gefundene Ansprüche anzugeben. Sie müssen z. B. einen Fingerabdruckanspruch bereitstellen, wenn Sie die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> -Enumeration in der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> -Methode verwenden. Zum Suchen des Anspruchswerts sind zwei Schritte erforderlich. Öffnen Sie zuerst in der Microsoft Management Console (MMC) das Snap-In für Zertifikate. (Weitere Informationen finden Sie unter Gewusst [wie: Anzeigen von Zertifikaten mit dem MMC-Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md).) Als zweites finden Sie ein entsprechendes Zertifikat und kopieren den Fingerabdruck (oder andere Anspruchs Werte), wie hier beschrieben.  
   
  Wenn Sie ein Zertifikat für die Dienstauthentifizierung verwenden, ist es wichtig, den Wert der Spalte **Ausgestellt für** zu notieren (die erste Spalte in der Konsole). Beim Verwenden von SSL (Secure Sockets Layer) als Transportsicherheit wird als eine der ersten Überprüfungen der URI (Uniform Resource Identifier) der Basisadresse des Dienstes mit dem Wert **Ausgestellt für** verglichen. Die Werte müssen übereinstimmen, sonst wird die Authentifizierungsvorgang angehalten.  
   
- Sie können auch das PowerShell-Cmdlet "New-selfsignedcertificate" verwenden, um temporäre Zertifikate zu erstellen, die nur während der Entwicklung verwendet werden können. Standardmäßig wird ein solches Zertifikat jedoch nicht von einer Zertifizierungsstelle ausgestellt und ist für Produktionszwecke unbrauchbar. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md).  
+ Sie können auch das PowerShell-Cmdlet "New-SelfSignedCertificate" verwenden, um temporäre Zertifikate zu erstellen, die nur während der Entwicklung verwendet werden. Standardmäßig wird ein solches Zertifikat jedoch nicht von einer Zertifizierungsstelle ausgestellt und ist für Produktionszwecke unbrauchbar. Weitere Informationen finden Sie unter Gewusst [wie: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>So rufen Sie den Fingerabdruck eines Zertifikats ab  
   

@@ -2,14 +2,15 @@
 title: Messung der Startverbesserung mit .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540887"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250969"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Messung der Startverbesserung mit .NET Native
+
 Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesserung ist besonders deutlich auf tragbaren Geräten mit geringem Energieverbrauch und bei komplexen Apps. Dieses Thema soll Ihnen den Einstieg in die grundlegende Instrumentierung erleichtern, die Sie benötigen, um diese Startverbesserung zu messen.  
   
  Um Leistungsuntersuchungen zu erleichtern, verwenden .NET Framework und Windows ein Ereignisframework namens Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), mit dem Ihre App Tools benachrichtigen kann, wenn Ereignisse auftreten. Sie können dann ein Tool namens PerfView verwenden, um ETW-Ereignisse anzuzeigen und zu analysieren. In diesem Thema wird Folgendes erläutert:  
@@ -21,6 +22,7 @@ Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesse
 - Verwenden von PerfView zum Anzeigen dieser Ereignisse.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Verwenden von EventSource zum Ausgeben von Ereignissen  
+
  <xref:System.Diagnostics.Tracing.EventSource> stellt eine Basisklasse für das Erstellen eines benutzerdefinierten Ereignisanbieters bereit. Im Allgemeinen erstellen Sie eine Unterklasse von <xref:System.Diagnostics.Tracing.EventSource> und schließen die `Write*`-Methoden in Ihre eigenen Ereignismethoden ein. Im Allgemeinen wird für jede <xref:System.Diagnostics.Tracing.EventSource>-Klasse ein Singleton-Muster verwendet.  
   
  Die Klasse im folgenden Beispiel kann z. B. verwendet werden, um zwei Leistungsmerkmale zu messen:  
@@ -52,6 +54,7 @@ Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesse
  Wenn die App instrumentiert ist, können Sie Ereignisse erfassen.  
   
 ## <a name="gathering-events-with-perfview"></a>Erfassen von Ereignissen mit PerfView  
+
  PerfView verwendet ETW-Ereignisse, um Sie bei allen möglichen Leistungsuntersuchungen für Ihre App zu unterstützen. Darüber hinaus ist eine grafische Benutzeroberfläche für die Konfiguration enthalten, mit der Sie die Protokollierung für unterschiedliche Typen von Ereignissen aktivieren oder deaktivieren können. PerfView ist ein kostenloses Tool, das über das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567) heruntergeladen werden kann. Weitere Informationen erhalten Sie in den [Videotutorials für PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
@@ -85,6 +88,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  Wenn Sie Ihre App ausgeführt haben, sodass PerfView ausgegebene Ereignisse erfassen kann, klicken Sie auf die Schaltfläche **Auflistung beenden**. Im Allgemeinen sollten Sie die Erfassung beenden, bevor Sie die App schließen, um keine irrelevanten Ereignisse zu erfassen. Wenn Sie jedoch die Leistung beim Herunterfahren oder bei einer Unterbrechung messen, sollten Sie die Erfassung fortsetzen.  
   
 ## <a name="displaying-the-events"></a>Anzeigen der Ereignisse  
+
  Um die bereits aufgelisteten Ereignisse anzuzeigen, öffnen Sie mit PerfView die erstellte ETL- oder ETL-ZIP-Datei, und wählen Sie **Ereignisse** aus. ETW sollte Informationen über eine große Anzahl von Ereignissen, einschließlich der Ereignisse von anderen Prozessen, gesammelt haben. Um die Untersuchung zu konzentrieren, füllen Sie in der Ereignisansicht die folgenden Textfelder aus:  
   
 - Geben Sie im Feld **Process Filter** (Prozessfilter) den Namen Ihrer App an (ohne „.exe“).  
@@ -95,6 +99,6 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Durch Wiederholen des Verfahrens für Ihre ursprüngliche APP und die Version, die Sie mit der .net Native-Toolkette erstellt haben, können Sie den Unterschied in der Leistung vergleichen.   .Net Native apps werden im Allgemeinen schneller als Non-.net Native apps gestartet. Wenn Sie an weiteren Details interessiert sind, kann PerfView auch die Teile des Codes identifizieren, die die meiste Zeit verbrauchen. Weitere Informationen erhalten Sie in den [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) oder durch Lesen des [Blogbeitrags von Vance Morrison](/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Diagnostics.Tracing.EventSource>

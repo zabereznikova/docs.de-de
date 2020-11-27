@@ -1,15 +1,16 @@
 ---
-title: <Assembly>-Element (.net Native)
+title: <Assembly> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d1556d8d414386d3f350a96396381bd7b66ffc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181081"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251125"
 ---
-# <a name="assembly-element-net-native"></a>\<Assembly>-Element (.net Native)
+# <a name="assembly-element-net-native"></a>\<Assembly> -Element (.net Native)
+
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Assembly an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,11 +30,12 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Ass
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den einfachen Namen einer Assembly an.|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -74,7 +76,8 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einer angegebenen Ass
 |[\<Application>](application-element-net-native.md)|Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das- [\<Application>](application-element-net-native.md) Element kann über 0 (null), ein oder mehrere- `<Assembly>` Elemente verfügen.|  
 |[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das- [\<Library>](library-element-net-native.md) Element kann kein oder ein- `<Assembly>` Element aufweisen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das `<Assembly>`-Element definiert eine Laufzeitrichtlinie für alle Typen in einer Assembly. Es unterscheidet sich vom- [\<Library>](library-element-net-native.md) Element, das eine Bibliothek angibt, aber von seinen untergeordneten Elementen abhängt, um die laufzeitreflektionsrichtlinie Das `<Assembly>`-Element gilt für alle Typen in einer Assembly, sofern sie nicht von einem untergeordneten Element überschrieben werden.  
   
  Das folgende Beispiel zeigt, wie Sie eine Laufzeitrichtlinie auf alle Typen in Assemblys in Ihrem App-Paket anwenden, indem Sie dem `Name`-Attribut den Wert "*Anwendung\*" zuweisen. Das- `<Assembly>` Element muss ein untergeordnetes Element des- [\<Application>](application-element-net-native.md) Elements sein.  

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47f5a2a3b2c8815e2ccb0cc4d4bf3c408f4992e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545206"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251736"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Transportsicherheit mit Windows-Authentifizierung
+
 Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows Communication Foundation (WCF)-Client und-Dienst. Weitere Informationen zum Programmieren finden Sie unter Vorgehens [Weise: Sichern eines Dienstanbieter mit Windows-Anmelde](../how-to-secure-a-service-with-windows-credentials.md)Informationen.  
   
  Ein Intranetwebdienst zeigt Personalinformationen an. Der Client ist eine Windows Forms-Anwendung. Die Anwendung wird in einer Domäne mit einem Kerberos-Controller bereitgestellt, der die Domäne sichert.  
@@ -31,19 +32,22 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
 - Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
 ### <a name="code"></a>Code  
+
  Im folgenden Code wird gezeigt, wie ein Dienstendpunkt, der Windows-Sicherheit verwendet, erstellt wird.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Dienstendpunkt einzurichten:  
   
 ```xml  
@@ -75,22 +79,25 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 ```  
   
 ## <a name="client"></a>Client  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code erstellt den Client. Die Bindung ist für die Verwendung der Transportmodussicherheit mit dem TCP-Transport konfiguriert, wobei der Clientanmeldeinformationstyp auf Windows festgelegt ist.  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Die folgende Konfiguration kann statt des Codes verwendet werden, um den Client zu erstellen.  
   
 ```xml  
@@ -118,7 +125,7 @@ Das folgende Szenario zeigt einen von der Windows-Sicherheit gesicherten Windows
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../how-to-secure-a-service-with-windows-credentials.md)

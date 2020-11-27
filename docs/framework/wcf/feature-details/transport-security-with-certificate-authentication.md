@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251827"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Transportsicherheit mit Zertifikatauthentifizierung
 
@@ -33,6 +33,7 @@ In diesem Artikel wird die Verwendung von X. 509-Zertifikaten für die Server-un
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Konfigurieren des Diensts  
+
  Da der Dienst in diesem Szenario unter IIS gehostet wird, wird er mit einer Datei "web.config" konfiguriert. Die folgende Datei "web.config" zeigt, wie die <xref:System.ServiceModel.WSHttpBinding> zur Verwendung von Transportsicherheit und X.509-Clientanmeldeinformationen konfiguriert wird.  
   
 ```xml  
@@ -64,6 +65,7 @@ In diesem Artikel wird die Verwendung von X. 509-Zertifikaten für die Server-un
 ```  
   
 ## <a name="configure-the-client"></a>Konfigurieren des Clients  
+
  Der Client kann im Code oder in einer Datei "app.config" konfiguriert werden. Das folgende Beispiel zeigt, wie Sie den Client im Code konfigurieren.  
   
 ```csharp
@@ -139,7 +141,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

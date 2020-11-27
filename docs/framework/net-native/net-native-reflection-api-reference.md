@@ -2,14 +2,15 @@
 title: .NET Native-Reflektions-API-Referenz
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250878"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native-Reflektions-API-Referenz
+
 .Net Native enthält drei neue Ausnahme Typen: [System. Runtime. CompilerServices. missinginteropdataexception](missinginteropdataexception-class-net-native.md), [System. Reflection. MissingMetadataException](missingmetadataexception-class-net-native.md)und [System. Reflection. missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md). Beachten Sie für alle drei Ausnahmetypen die folgenden Punkte:  
   
  Diese Typen sind nur zur internen Verwendung vorgesehen.  
@@ -26,6 +27,7 @@ ms.locfileid: "73128220"
 > In diesem Verweis werden drei Ausnahme Typen dokumentiert, die für .net Native eindeutig sind. Eine Referenz Dokumentation für die .NET Framework-kernreflektionsapi finden Sie unter den <xref:System.Reflection> <xref:System.Reflection.Context> <xref:System.Reflection.Emit> Namespaces, und. Eine Referenzdokumentation für die zentrale .NET Framework-Interop-API finden Sie unter <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection-Namespace  
+
  Der <xref:System.Reflection> -Namespace enthält die grundlegenden Typen, die für die Reflektion im .NET Framework verwendet werden. Für .net Native enthält es auch zwei neue Ausnahme Typen:  
   
 |Klasse|BESCHREIBUNG|  
@@ -36,6 +38,7 @@ ms.locfileid: "73128220"
  Eine Dokumentation zu den anderen Typen in diesem Namespace finden Sie auf der <xref:System.Reflection> -Referenzseiten in der .NET Framework-Dokumentationsgruppe.  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices-Namespace  
+
  Der <xref:System.Runtime.CompilerServices> -Namespace enthält für Benutzer entworfene Typen nach Sprachcompilern. Für .net Native enthält Sie auch einen neuen Ausnahmetyp:  
   
 |Klasse|BESCHREIBUNG|  

@@ -2,14 +2,15 @@
 title: Erneutes Hosten von Designern
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b72e3450799db40988c8b99e4db3707de330d8ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce81f41764aa35b3173cca89cdb219ae9b21436d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182822"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251658"
 ---
 # <a name="designer-rehosting"></a>Erneutes Hosten von Designern
+
 Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht. Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow-Designers in einer Anwendung hilfreich sein kann:  
   
 - Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
@@ -23,6 +24,7 @@ Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das 
 - Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
   
 ## <a name="rehosting-the-designer"></a>Erneutes Hosten des Workflow-Designers  
+
  In diesem Beispiel wird veranschaulicht, wie das WPF-Layout so erstellt wird, dass es den Designer enthält, wie im folgenden Rasterlayout dargestellt (der Toolboxcode wurde aus Platzgründen weggelassen). Beachten Sie die Benennung der Rahmen, die den Designer und das Eigenschaftenraster enthalten.  
   
 ```xaml  
@@ -40,7 +42,7 @@ Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das 
 </Grid>  
 ```  
   
- Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet. Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen. Der <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Aufruf ist erforderlich, um die Standardmäßigen Aktivitätsdesigner für die mit .NET Framework ausgelieferten Aktivitäten zu verknüpfen. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF-Element zu übergeben. Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primärer Zeichnungsbereich) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Eigenschaftenraster) auf der Benutzeroberfläche platziert.  
+ Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet. Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen. Der-Befehl <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> ist erforderlich, um die Standard Aktivitäts Designer für die Aktivitäten zuzuordnen, die mit .NET Framework ausgeliefert werden. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF-Element zu übergeben. Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primärer Zeichnungsbereich) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Eigenschaftenraster) auf der Benutzeroberfläche platziert.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -58,6 +60,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>Verwenden der neu gehosteten Toolbox  
+
  In diesem Beispiel wird das neu gehostete Toolboxsteuerelement deklarativ in XAML verwendet. Beachten Sie, dass in Code ein Typ an den <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>-Konstruktor übergeben werden kann.  
   
 ```xaml  
@@ -114,7 +117,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Verwenden des Beispiels  
   
-1. Öffnen Sie die DesignerRehosting.sln-Lösung in Visual Studio 2010.  
+1. Öffnen Sie die Projekt Mappe designerrehosting. sln in Visual Studio 2010.  
   
 2. Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
   
@@ -125,6 +128,6 @@ protected override void OnInitialized(EventArgs e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

@@ -2,17 +2,19 @@
 title: APIs, die auf Refelktion beruhen
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-ms.openlocfilehash: 1d8daceb6b744b984f86b011ad7952d0da583a79
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c361962f4570200d63037a68ef39b0c982bd5f7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181094"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251138"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs, die auf Refelktion beruhen
+
 In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich, sodass die .net Native-Toolkette keine Metadaten beibehält, die zur Laufzeit benötigt werden. In diesem Thema werden einige gängige APIs oder Programmiermuster behandelt, die nicht als Teil der Reflektions-API betrachtet werden, aber Reflektion benötigen, um erfolgreich ausgeführt zu werden. Wenn Sie diese im Quellcode verwenden, können Sie Informationen darüber in die Laufzeitanweisungsdatei (*.rd.xml) einfügen, sodass Aufrufe dieser APIs zur Laufzeit keine [MissingMetadataException](missingmetadataexception-class-net-native.md)-Ausnahme oder sonstige Ausnahmen auslösen.  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType-Methode  
+
  Sie können einen generischen Typ `AppClass<T>` dynamisch instanziieren, indem Sie die <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode aufrufen. Dazu verwenden Sie Code wie den folgenden:  
   
  [!code-csharp[ProjectN#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/type_makegenerictype1.cs#1)]  
@@ -41,6 +43,7 @@ Dieser Vorgang kann nicht ausgeführt werden, weil Metadaten für den folgenden 
  Jede andere Instanziierung über `AppClass<T>` erfordert eine separate Anweisung, wenn sie mit der <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode erstellt und nicht statisch verwendet wird.  
   
 ## <a name="methodinfomakegenericmethod-method"></a>MethodInfo.MakeGenericMethod-Methode  
+
  In einer Klasse `Class1` mit einer generischen Methode `GetMethod<T>(T t)` kann `GetMethod` durch Reflektion mithilfe von Code wie dem folgenden aufgerufen werden:  
   
  [!code-csharp[ProjectN#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/makegenericmethod1.cs#2)]  
@@ -68,6 +71,7 @@ Dieser Vorgang kann nicht ausgeführt werden, weil Metadaten für den folgenden 
  Für jede unterschiedliche Instanziierung der Methode, die dynamisch aufgerufen wird, ist eine `MethodInstantiation`-Direktive erforderlich, und das `Arguments`-Element wird jedem unterschiedlichen Instanziierungsargument entsprechend aktualisiert.  
   
 ## <a name="arraycreateinstance-and-typemaketypearray-methods"></a>Methoden Array.CreateInstance und Type.MakeTypeArray  
+
  Das folgende Beispiel ruft die Methoden <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> und <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> für einen Typ `Class1` auf.  
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  

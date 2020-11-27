@@ -2,12 +2,12 @@
 title: Serialisierung und Metadaten
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 739d482330103a2a79d0d640781b5516bbc15c01
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389221"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250787"
 ---
 # <a name="serialization-and-metadata"></a>Serialisierung und Metadaten
 
@@ -18,6 +18,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 - Nicht reflektionsbasierte Serialisierungstypen, die in der .NET Framework-Klassenbibliothek gefunden wurden. Diese erfordern möglicherweise Änderungen an der Laufzeitanweisungsdatei und werden im Abschnitt [Microsoft-Serialisierungsprogramme](#Microsoft) erläutert.  
   
 <a name="ThirdParty"></a>
+
 ## <a name="third-party-serializers"></a>Drittanbieter-Serialisierungsprogramme
 
  Drittanbieter-Serialisierungsprogramme, einschließlich Newtonsoft.JSON, sind in der Regel reflektionsbasiert. Bei einem BLOB aus serialisierten Daten werden die Felder in den Daten einem konkreten Typ durch Suchen der Felder des Zieltyps nach dem Namen zugewiesen. Durch das Verwenden dieser Bibliotheken werden mindestens [MissingMetadataException](missingmetadataexception-class-net-native.md)-Ausnahmen für alle <xref:System.Type>-Objekte verursacht, die Sie in einer `List<Type>`-Auflistung serialisieren oder deserialisieren möchten.  
@@ -31,13 +32,14 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
  Informationen zur im Beispiel verwendeten Syntax finden Sie unter [ \<Namespace> Element](namespace-element-net-native.md).  
   
 <a name="Microsoft"></a>
+
 ## <a name="microsoft-serializers"></a>Microsoft-Serialisierungsprogramme
 
  Obwohl die Klassen <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> und <xref:System.Xml.Serialization.XmlSerializer> nicht auf Reflektion angewiesen sind, muss dennoch Code basierend auf dem Objekt, das serialisiert oder deserialisiert werden soll, generiert werden. Die überladenen Konstruktoren für die einzelnen Serialisierungsprogramme enthalten einen <xref:System.Type> -Parameter, der angibt, welcher Typ serialisiert oder deserialisiert werden soll. Wie Sie diesen Typ im Code angeben, definiert die Aktion, die Sie ausführen müssen, wie in den nächsten beiden Abschnitten erläutert wird.  
   
 ### <a name="typeof-used-in-the-constructor"></a>Im Konstruktor verwendetes "typeof"-Schlüsselwort
 
- Wenn Sie einen Konstruktor dieser Serialisierungsklassen aufzurufen und den c#- [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) -Operator in den Methodenaufrufe einschließen, **müssen Sie keine weiteren**Schritte ausführen. In jedem der folgenden Aufrufe eines Serialisierungsklassenkonstruktors wird z. B. das `typeof`-Schlüsselwort als Teil des Ausdrucks verwendet, der an den Konstruktor übergeben wird.  
+ Wenn Sie einen Konstruktor dieser Serialisierungsklassen aufzurufen und den c#- [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) -Operator in den Methodenaufrufe einschließen, **müssen Sie keine weiteren** Schritte ausführen. In jedem der folgenden Aufrufe eines Serialisierungsklassenkonstruktors wird z. B. das `typeof`-Schlüsselwort als Teil des Ausdrucks verwendet, der an den Konstruktor übergeben wird.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -71,5 +73,5 @@ Informationen zur im Beispiel verwendeten Syntax finden Sie unter [ \<Type> Elem
 
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
-- [\<Type>Gewisses](type-element-net-native.md)
-- [\<Namespace>Gewisses](namespace-element-net-native.md)
+- [\<Type>-Element](type-element-net-native.md)
+- [\<Namespace>-Element](namespace-element-net-native.md)

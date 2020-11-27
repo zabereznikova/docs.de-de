@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 2add8c21ca8ade4b530e0e6b1b3c5bba66e100ab
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e821f8ed3996e9119c6f2c06ec6533c575bf75dd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556784"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251840"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Transportsicherheit mit Standardauthentifizierung
+
 Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und-Client. Der Server benötigt ein gültiges X.509-Zertifikat, das für Secure Sockets Layer (SSL) verwendet werden kann, und die Clients müssen das Zertifikat des Servers als vertrauenswürdig ansehen. Außerdem verfügt der Webdienst bereits über eine SSL-Implementierung, die Sie verwenden können. Weitere Informationen zum Aktivieren der Standard Authentifizierung für Internetinformationsdienste (IIS) finden Sie unter <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication> .  
   
  ![Screenshot, der die Transportsicherheit mit Standard Authentifizierung anzeigt.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
@@ -29,19 +30,22 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
 |Bindung|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Dienst  
- Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie eines der folgenden Verfahren aus:  
+
+ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
 - Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
 - Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code zeigt, wie Sie einen Dienstendpunkt erstellen, der zur Sicherstellung der Übertragungssicherheit einen Benutzernamen und ein Kennwort für die Windows-Domäne verwendet. Beachten Sie, dass der Dienst ein X.509-Zertifikat erfordert, um den Client zu authentifizieren. Weitere Informationen finden Sie unter [Arbeiten mit Zertifikaten](working-with-certificates.md) und Gewusst [wie: Konfigurieren eines Ports mit einem SSL-Zertifikat](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
 ## <a name="configuration"></a>Konfiguration  
+
  Der folgende Code konfiguriert einen Dienst, um die Standardauthentifizierung mit der Sicherheit auf Transportebene zu verwenden:  
   
 ```xml  
@@ -73,6 +77,7 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
 ## <a name="client"></a>Client  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code zeigt den Clientcode, der den Benutzernamen und das Kennwort enthält. Beachten Sie, dass der Benutzer einen gültigen Windows-Benutzernamen und ein Kennwort angeben muss. Der Code zum Zurückgeben des Benutzernamens und des Kennworts ist hier nicht gezeigt. Verwenden Sie ein Dialogfeld oder ein anderes Oberflächenelement, um die Informationen vom Benutzer abzufragen.  
   
 > [!NOTE]
@@ -82,6 +87,7 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Der folgende Code zeigt die Clientkonfiguration.  
   
 > [!NOTE]
@@ -111,7 +117,7 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>

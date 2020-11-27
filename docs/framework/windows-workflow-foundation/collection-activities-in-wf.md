@@ -2,15 +2,16 @@
 title: Auflistungsaktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 5935b569bc46a6f38a7158049336f1e57fd8b0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff6bfdff7c05d996be66af508307f2087d8bfc76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143147"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250332"
 ---
 # <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
-Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection`und `RemoveFromCollection` haben <xref:System.Activities.OutArgument%601> einen <xref:System.Boolean>Typ , der das Ergebnis angibt.  
+
+Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection` und `RemoveFromCollection` verfügen über einen <xref:System.Activities.OutArgument%601> vom Typ <xref:System.Boolean> , der das Ergebnis angibt.  
   
 > [!IMPORTANT]
 > Wenn eine Auflistungsaktivität vor dem Festlegen des zugrunde liegenden Auflistungsobjekts ausgeführt wird, wird eine <xref:System.InvalidOperationException> ausgelöst, und die Aktivität ist fehlerhaft.  
@@ -25,6 +26,7 @@ Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem 
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Entfernt ein Element aus einer angegebenen Auflistung und gibt `true` zurück, wenn das Element erfolgreich entfernt wurde.|  
   
 ## <a name="using-collection-activities"></a>Verwenden von Auflistungsaktivitäten  
+
  Im folgenden Codebeispiel wird die Arbeit mit einer Auflistung erläutert, die als Workflowvariable deklariert wurde. Die verwendete Auflistung ist ein <xref:System.Collections.Generic.List%601>-Objekt von <xref:System.String>-Objekten mit dem Namen `fruitList`.  
   
 ```csharp  

@@ -2,20 +2,23 @@
 title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 ms.date: 03/30/2017
 ms.assetid: 8193027e-9db2-4af9-a072-27300cd24330
-ms.openlocfilehash: ad9d82162313e46626e5e2fa6f4ef99bf0139162
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5066501faf4c336e095910e7e2d8ba1186ba3386
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251866"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
+
 Der WS-AT-Protokolldienst empfängt einen Fehler vom Koordinator als Antwort auf eine Register-Nachricht.  
   
 ## <a name="description"></a>BESCHREIBUNG  
+
  Wird verfolgt, wenn der lokale Transaktions-Manager nicht beim übergeordneten Transaktions-Manager registriert wird, da ein Fehler zurückgegeben wurde.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
+
  Untersuchen Sie die Ablaufverfolgungsnachricht auf den zurückgegebenen Fehler.  
   
 ## <a name="see-also"></a>Weitere Informationen

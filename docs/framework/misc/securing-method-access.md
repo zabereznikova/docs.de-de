@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52ae1eb4b6210403ce9c5aa96479809f885b0eba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555717"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251216"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 
@@ -40,7 +40,7 @@ ms.locfileid: "90555717"
   
 - Für abgeleitete Klassen, die bestimmte Methoden außer Kraft setzen, eine bestimmte Identität oder Berechtigung anfordern.  
   
- Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. In diesem Beispiel wird die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> mit einer **Anforderung** für den starken Namen verwendet. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie unter [Erstellen und verwenden](../../standard/assembly/create-use-strong-named.md)von Assemblys mit starkem Namen.  
+ Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. In diesem Beispiel wird die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> mit einer **Anforderung** für den starken Namen verwendet. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie unter [Erstellen und Verwenden von Strong-Named](../../standard/assembly/create-use-strong-named.md)Assemblys.  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,6 +57,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Ausschließen von Klassen und Membern von der Verwendung durch nicht vertrauenswürdigen Code  
+
  Verwenden Sie die in diesem Abschnitt gezeigten Deklarationen, um bestimmte Klassen und Methoden sowie Eigenschaften und Ereignisse daran zu hindern, von teilweise vertrauenswürdigem Code verwendet zu werden. Indem Sie diese Deklarationen auf eine Klasse anwenden, wenden Sie den Schutz auf alle Methoden, Eigenschaften und Ereignisse an. Der Feld Zugriff wird jedoch von der deklarativen Sicherheit nicht beeinträchtigt. Beachten Sie außerdem, dass Verknüpfungsaufrufe möglicherweise nur Schutz vor direkten Aufrufern bieten und möglicherweise immer noch anfällig sind für Lockangriffe.  
   
 > [!NOTE]

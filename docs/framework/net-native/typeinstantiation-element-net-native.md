@@ -1,15 +1,16 @@
 ---
-title: <TypeInstantiation>-Element (.net Native)
+title: <TypeInstantiation> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
-ms.openlocfilehash: 9069856b3d8739724d148b5eea5d4188c8b8b9e1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1db497762b3dc8c135154086d72fb3ac92ff5a4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250748"
 ---
-# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation>-Element (.net Native)
+# <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation> -Element (.net Native)
+
 Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Typ an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -30,11 +31,12 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Typs an|  
 |`Arguments`|Allgemein|Erforderliches Attribut. Gibt die generischen Typargumente an. Wenn mehrere Argumente vorhanden sind, werden sie durch Kommas getrennt.|  
@@ -91,12 +93,14 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 |[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |`<TypeInstantiation>`|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die Reflektions-, Serialisierungs- und Interop-Attribute sind optional. Allerdings muss mindestens eines vorhanden sein.  
   
  Wenn ein-Element ein untergeordnetes Element eines-,- `<TypeInstantiation>` [\<Assembly>](assembly-element-net-native.md) oder-Elements ist [\<Namespace>](namespace-element-net-native.md) [\<Type>](type-element-net-native.md) , überschreibt es die vom übergeordneten Element definierten Richtlinien Einstellungen. Wenn ein- [\<Type>](type-element-net-native.md) Element eine entsprechende generische Typdefinition definiert, überschreibt das- `<TypeInstantiation>` Element die Lauf Zeit reflektionsrichtlinie nur für Instanziierungen des angegebenen konstruierten generischen Typs.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird Reflektion zum Abrufen der generischen Typdefinition von einem konstruierten <xref:System.Collections.Generic.Dictionary%602>-Objekt verwendet. Außerdem wird Reflektion zum Anzeigen von Informationen über <xref:System.Type>-Objekte verwendet, die konstruierte generische Typen und generische Typdefinitionen darstellen. Die Variable `b` im Beispiel ist ein- <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement.  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  

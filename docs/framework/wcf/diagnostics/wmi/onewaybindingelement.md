@@ -2,14 +2,15 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 016ff823eb2c84a9f54c0763edadef1224e31517
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806066a8845068413d2a52c78878f76b5f5fa34f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250371"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
+
 OneWayBindingElement  
   
 ## <a name="syntax"></a>Syntax  
@@ -24,12 +25,15 @@ class OneWayBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die Klasse OneWayBindingElement definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die Klasse OneWayBindingElement verfügt über die folgenden Eigenschaften:  
   
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
+
  Datentyp: ChannelPoolSettings  
   
  Zugriffstyp: Schreibgeschützt  
@@ -37,6 +41,7 @@ class OneWayBindingElement : BindingElement
  Die Kanalpool-Einstellungen.  
   
 ### <a name="maxacceptedchannels"></a>MaxAcceptedChannels  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -44,6 +49,7 @@ class OneWayBindingElement : BindingElement
  Die maximale Anzahl von akzeptierten Kanälen.  
   
 ### <a name="packetroutable"></a>PacketRoutable  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -56,6 +62,6 @@ class OneWayBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.OneWayBindingElement>

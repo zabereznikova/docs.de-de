@@ -1,15 +1,16 @@
 ---
-title: <Property>-Element (.net Native)
+title: <Property> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
-ms.openlocfilehash: b9bc89804a872dddf1a56c2a3dadc9c3df4f5fd1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a0bdf95a1d1cadf7423f8c6595add13eda4d0d9a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128213"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250852"
 ---
-# <a name="property-element-net-native"></a>\<Property>-Element (.net Native)
+# <a name="property-element-net-native"></a>\<Property> -Element (.net Native)
+
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,11 +23,12 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Eigenschaftennamen an.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über die Eigenschaft oder das Auflisten der Eigenschaft, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
@@ -46,6 +48,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp für die Eigenschaft angewendet werden soll. Mögliche Werte sind `Auto`, `Excluded`, `Included` und `Required`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -55,10 +58,12 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
 |[\<Type>](type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Wenn die Richtlinie einer Eigenschaft nicht explizit definiert ist, erbt sie die Laufzeitrichtlinie des übergeordneten Elements.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird Reflektion zum Instanziieren eines `Book`-Objekts und zum Anzeigen seiner Eigenschaftenwerte verwendet. Die ursprüngliche Datei default.rd.xml für das Projekt sieht folgendermaßen aus:  
   
 ```xml  
@@ -81,7 +86,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
 - durch Definieren der `Dynamic` Richtlinie für den- `Book` Typ im- [\<Type>](type-element-net-native.md) Element.  
   
-- Durch Hinzufügen eines [\<Property>](property-element-net-native.md) für jede Eigenschaft, deren Getter wir aufrufen möchten, wie in der folgenden default. rd. XML-Datei.  
+- Durch Hinzufügen eines [\<Property>](property-element-net-native.md) für jede Eigenschaft, deren Getter wir aufrufen möchten, wie in der folgenden default.rd.xml Datei.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
