@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2184a159423a611a8936e900591a480ce7ef6ec8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293805"
 ---
 # <a name="workflow-persistence"></a>Workflowpersistenz
+
 Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workflowinstanz unabhängig von Prozess- oder Computerinformationen. Sie wird durchgeführt, um einen bekannten Wiederherstellungspunkt für die Workflowinstanz im Fall eines Systemfehlers bereitzustellen oder um Arbeitsspeicher beizubehalten, indem Workflowinstanzen entladen werden, die gerade nicht aktiv sind, bzw. um den Zustand der Workflowinstanz von einem Knoten zu einem anderen Knoten in einer Serverfarm zu verschieben.  
   
  Die Persistenz aktiviert die Flexibilität, Skalierbarkeit und Wiederherstellung von Prozessen bei einem Fehler und bietet die Möglichkeit, den Arbeitsspeicher effizienter zu verwalten. Der Persistenzvorgang umfasst die Identifikation eines Persistenzpunkts, das Sammeln der zu speichernden Daten und schließlich die Delegierung des tatsächlichen Speichers der Daten an einen Persistenzanbieter.  
@@ -26,13 +27,14 @@ Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workfl
  Windows Server AppFabric vereinfacht die Konfiguration von Persistenz. Weitere Informationen finden Sie unter [Persistenzkonzepte mit Windows Server-App-Fabric](/previous-versions/appfabric/ee677272(v=azure.10)) .  
   
 ## <a name="implicit-persistence-points"></a>Implizite Persistenzpunkte  
+
  Die folgende Liste enthält Beispiele der Bedingungen, zu denen ein Workflow beibehalten wird, wenn ein Instanzspeicher einem Workflow zugeordnet ist.  
   
 - Wenn eine **transaktionscope** -Aktivität abgeschlossen ist oder eine **transactedreceivescope** -Aktivität abgeschlossen wird.  
   
 - Wenn eine Workflow Instanz in den Leerlauf wechselt und **workflowidlebehavior** auf dem Workflow Host festgelegt ist. Dies tritt z. b. auf, wenn Sie Messaging Aktivitäten oder eine **Verzögerungs** Aktivität verwenden.  
   
-- Wenn eine WorkflowApplication in den Leerlauf wechselt und die **PersistableIdle** -Eigenschaft der Anwendung auf **persistableidleaction. persistent**festgelegt ist.  
+- Wenn eine WorkflowApplication in den Leerlauf wechselt und die **PersistableIdle** -Eigenschaft der Anwendung auf **persistableidleaction. persistent** festgelegt ist.  
   
 - Wenn eine Hostanwendung angewiesen ist, eine Workflowinstanz beizubehalten oder zu entladen.  
   

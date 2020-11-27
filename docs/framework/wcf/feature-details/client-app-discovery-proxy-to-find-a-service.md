@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7316b080809f0298ae5f19eaf4160d9bca2b3ad0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295118"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
+
 Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema Gewusst [wie: Implementieren eines erkennbaren Dienstanbieter, der beim suchproxy registriert](discoverable-service-that-registers-with-the-discovery-proxy.md)ist, haben Sie einen WCF-Dienst implementiert, der sich selbst beim suchproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den suchproxy verwendet, um den WCF-Dienst zu suchen.  
   
 ### <a name="implement-the-client"></a>Implementieren des Clients  
@@ -62,7 +63,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
     }  
     ```  
   
-5. Fügen Sie der `Main` -Methode folgenden Code hinzu.  
+5. Fügen Sie der `Main` -Methode den folgenden Code hinzu.  
   
     ```csharp  
     public static void Main()  
@@ -104,6 +105,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
  Sie haben das Implementieren der Clientanwendung abgeschlossen. Weitere Informationen finden Sie unter Gewusst [wie: Testen des Ermittlungs Proxys](how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Dies ist die vollständige Codeauflistung für dieses Thema.  
   
 ```csharp  

@@ -8,15 +8,16 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b45d7b58d8a1fe79f9d7a8cff6e328b46633985c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293675"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen
-Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben. Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss. Weitere Informationen zum Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Client Anmelde Informations Typs) finden Sie unter [How: Legen Sie den Sicherheitsmodus ](how-to-set-the-security-mode.md) fest.  
+
+Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben. Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss. Weitere Informationen zum Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Client Anmelde Informations Typs) finden Sie unter Gewusst [wie: Festlegen des Sicherheitsmodus](how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>So legen Sie den Clientanmeldeinformationstyp in Code fest  
   
@@ -31,17 +32,17 @@ Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) ha
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>So legen Sie den Clientanmeldeinformationstyp in der Konfiguration fest  
   
-1. Fügen Sie der Konfigurationsdatei ein >-Element [\<system. Service Model](../configure-apps/file-schema/wcf/system-servicemodel.md) hinzu.  
+1. Fügen Sie [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) der Konfigurationsdatei ein-Element hinzu.  
   
-2. Fügen Sie als untergeordnetes Element eine [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) -Element hinzu.  
+2. Fügen Sie ein-Element als untergeordnetes Element hinzu [\<bindings>](../configure-apps/file-schema/wcf/bindings.md) .  
   
-3. Fügen Sie eine entsprechende Bindung hinzu. In diesem Beispiel wird das [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) -Element verwendet.  
+3. Fügen Sie eine entsprechende Bindung hinzu. In diesem Beispiel wird das- [\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md) Element verwendet.  
   
-4. Fügen Sie ein [\<binding >](../configure-apps/file-schema/wcf/bindings.md) -Element hinzu, und legen Sie das `name`-Attribut auf einen geeigneten Wert fest. In diesem Beispiel wird der Name "SecureBinding" verwendet.  
+4. Fügen Sie ein [\<binding>](../configure-apps/file-schema/wcf/bindings.md) -Element hinzu, und legen Sie das- `name` Attribut auf einen geeigneten Wert fest In diesem Beispiel wird der Name "SecureBinding" verwendet.  
   
 5. Fügen Sie eine `<security>`-Bindung hinzu. Legen Sie für das `mode`-Attribut einen geeigneten Wert fest. Im folgenden Beispiel wird das Attribut auf `"Message"` festgelegt.  
   
-6. Fügen Sie entweder ein `<message>`-Element oder ein`<transport>`-Element hinzu, wie vom Sicherheitsmodus bestimmt. Legen Sie für das `clientCredentialType`-Attribut einen geeigneten Wert fest. In diesem Beispiel wird `"Windows"` verwendet.  
+6. Fügen Sie entweder ein `<message>`-Element hinzu, wie vom Sicherheitsmodus bestimmt. Legen Sie für das `clientCredentialType`-Attribut einen geeigneten Wert fest. In diesem Beispiel wird `"Windows"` verwendet.  
   
     ```xml  
     <system.serviceModel>  
@@ -57,7 +58,7 @@ Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) ha
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von Diensten](securing-services.md)
-- [Vorgehensweise: Festlegen des Sicherheitsmodus ](how-to-set-the-security-mode.md)
+- [Vorgehensweise: Festlegen des Sicherheitsmodus](how-to-set-the-security-mode.md)

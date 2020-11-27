@@ -2,14 +2,15 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de00cac851e4c6d0fd6df16f3a01b65bb5f43415
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294676"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
+
 TcpConnectionPoolSettings  
   
 ## <a name="syntax"></a>Syntax  
@@ -25,19 +26,23 @@ class TcpConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Von der TcpConnectionPoolSettings-Klasse werden keine Methoden definiert.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die TcpConnectionPoolSettings-Klasse verfügt über die folgenden Eigenschaften:  
   
 ### <a name="groupname"></a>GroupName  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Gruppenname des vom Bindungselement verwendeten Verbindungspools.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -45,6 +50,7 @@ class TcpConnectionPoolSettings
  Die maximale Zeit, während der sich die Verbindung im Leerlauf befinden darf, bevor sie getrennt wird.  
   
 ### <a name="leasetimeout"></a>LeaseTimeout  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -52,6 +58,7 @@ class TcpConnectionPoolSettings
  Die maximale Zeit für die Ausführung eines Leasevorgangs, bevor ein Timeout auftritt.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -64,6 +71,6 @@ class TcpConnectionPoolSettings
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

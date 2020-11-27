@@ -2,14 +2,15 @@
 title: UriTemplate-Beispiel
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: fb956882ae653f584026fefb20e261c90010ca9b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55999167d99069a4b207f4deda42f48bf02e1bdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294962"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate-Beispiel
+
 Die <xref:System.UriTemplate>-Klasse stellt Methoden zum Arbeiten mit Sätzen von URIs bereit, die eine gemeinsame Struktur verwenden. In diesem Beispiel werden die folgenden Schlüsselkonzepte für die `UriTemplate`-Klasse veranschaulicht:  
   
 - Syntax zum Erstellen von Vorlagen.  

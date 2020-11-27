@@ -2,18 +2,19 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687702"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294858"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 
 Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, eine einzelne Quell Struktur und ein Buildsystem zu verwalten, während mehrere .net-Implementierungen (Desktop, Silverlight, Windows Phone und Xbox) unterstützt werden. Projekte für Portable Teilmengen verweisen nur auf Portable Bibliotheken, die .NET-Assemblys sind, die für jede .NET-Implementierung verwendet werden können.
   
 ## <a name="add-service-reference-details"></a>Details zu "Dienstverweis hinzufügen"  
+
  Wenn Sie einem Projekt für portable Teilmengen einen Dienstverweis hinzufügen, werden die folgenden Einschränkungen erzwungen:  
   
 1. Für <xref:System.Xml.Serialization.XmlSerializer> sind nur literale Codierungen zulässig. SOAP-Codierungen generieren während des Imports einen Fehler.  
@@ -44,7 +45,7 @@ Projekte für Portable Teilmengen ermöglichen es .net-assemblyprogrammierern, e
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> wird in Projekten für portable Teilmengen nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](accessing-services-using-a-wcf-client.md)
 - [Portable Klassenbibliothek](../cross-platform/portable-class-library.md)

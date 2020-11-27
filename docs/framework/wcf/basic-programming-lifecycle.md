@@ -5,17 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f958bd06f617a5648b31332ebe9e7662d45cd241
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294845"
 ---
 # <a name="basic-programming-lifecycle"></a>Grundlegender Programmierlebenszyklus
+
 Mit Windows Communication Foundation (WCF) können Anwendungen kommunizieren, ob Sie sich auf demselben Computer, über das Internet oder auf verschiedenen Anwendungsplattformen befinden. In diesem Thema werden die Aufgaben erläutert, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine funktionierende Beispielanwendung finden Sie unter [Getting Started Tutorial](getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Grundlegende Aufgaben  
+
  Die folgenden grundlegenden Aufgaben müssen in der angegebenen Reihenfolge ausgeführt werden:  
   
 1. Definieren Sie den Dienstvertrag. Ein Dienstvertrag gibt die Signatur eines Diensts, die Daten, die ausgetauscht werden, sowie andere vertraglich erforderliche Daten an. Weitere Informationen finden Sie unter [Entwerfen von Dienstverträgen](designing-service-contracts.md).  

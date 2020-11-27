@@ -3,14 +3,15 @@ title: Aktivitäten zur Ablaufsteuerung in WF
 description: In diesem Artikel werden die .NET Framework 4.6.1-Aktivitäten zum Steuern des Ausführungs Flusses innerhalb eines Workflows zusammengefasst.
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-ms.openlocfilehash: 18ff982d3f215e3fd46108eb2411f3d1a5ab9745
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: fbb36ca181513a687eca7b19535bf2eb4fd4f777
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420070"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294169"
 ---
 # <a name="control-flow-activities-in-wf"></a>Aktivitäten zur Ablaufsteuerung in WF
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] stellt mehrere Aktivitäten zum Steuern des Ausführungsflusses innerhalb eines Workflows bereit. Einige dieser Aktivitäten (z. b. `Switch` und `If` ) implementieren Fluss Steuerungsstrukturen ähnlich denen in Programmierumgebungen wie Visual c#, während andere (z. b. `Pick` ) neue Programmierstrukturen modellieren.  
   
  Beachten Sie, dass Aktivitäten wie die Aktivitäten `Parallel` und `ParallelForEach` mehrere untergeordnete Aktivitäten für eine gleichzeitige Ausführung planen, bei einem Workflow jedoch nur ein einzelner Thread verwendet wird. Jede untergeordnete Aktivität in diesen Aktivitäten wird sequenziell ausgeführt, und nachfolgende Aktivitäten werden erst ausgeführt, wenn vorherige Aktivitäten beendet werden oder sich im Leerlauf befindet. Deshalb sind diese Aktivitäten sehr hilfreich bei Anwendungen, in denen sich die Ausführung mehrerer potenziell blockierender Aktivitäten überschneidet. Wenn keine der untergeordneten Aktivitäten in diesen Aktivitäten in den Leerlauf wechselt, wird eine `Parallel`-Aktivität auf dieselbe Weise wie eine `Sequence`-Aktivität ausgeführt, und eine `ParallelForEach`-Aktivität wird genau wie eine `ForEach`-Aktivität ausgeführt. Wenn jedoch asynchrone Aktivitäten (z. B. Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet werden) oder Messagingaktivitäten verwendet werden, geht die Steuerung auf den nächsten Branch über, während die untergeordnete Aktivität darauf wartet, dass ihre Nachricht empfangen oder ihre asynchrone Arbeit abgeschlossen wird.  

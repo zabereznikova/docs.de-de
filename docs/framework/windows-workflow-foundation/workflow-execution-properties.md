@@ -2,14 +2,15 @@
 title: Eigenschaften der Workflowausführung
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be9ae5924786ea1e23cc649034d927789c64e405
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182661"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293792"
 ---
 # <a name="workflow-execution-properties"></a>Eigenschaften der Workflowausführung
+
 Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz zusätzlich zu benutzerdefinierten Threadeigenschaften, z. B. benannte Slots.  
   
  Im Gegensatz zu Programmen, die direkt mit der CLR verwendet werden, sind Workflowprogramme hierarchisch bewertete Strukturen von Aktivitäten, die in einer threadagnostischen Umgebung ausgeführt werden. Dies bedeutet, dass mit den Standard-TLS-Mechanismen nicht direkt bestimmt werden kann, welcher Kontext im Bereich eines bestimmten Arbeitselements liegt. Zwei parallele Verzweigungen der Ausführung können z. B. unterschiedliche Transaktionen verwenden, der Planer kann sie jedoch zeitgleich für denselben CLR-Thread ausführen.  
@@ -17,6 +18,7 @@ Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen A
  Die Eigenschaften der Workflowausführung stellen eine Möglichkeit bereit, der Umgebung einer Aktivität kontextspezifische Eigenschaften hinzuzufügen. Damit kann von einer Aktivität deklariert werden, welche Eigenschaften im Bereich ihrer Unterstruktur liegen, und es werden Hooks für das Einrichten und Beenden für den TLS bereitgestellt, damit eine ordnungsgemäße Zusammenarbeit mit CLR-Objekten ermöglicht werden kann.  
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>Erstellen und Verwenden von Eigenschaften für die Workflowausführung  
+
  Eigenschaften für die Workflowausführung implementieren normalerweise die <xref:System.Activities.IExecutionProperty>-Schnittstelle, obwohl die Eigenschaften, die für Messaging verwendet werden, stattdessen <xref:System.ServiceModel.Activities.ISendMessageCallback> und <xref:System.ServiceModel.Activities.IReceiveMessageCallback> implementieren können. Erstellen Sie für eine neue Eigenschaft für die Workflowausführung eine Klasse, die die <xref:System.Activities.IExecutionProperty>-Schnittstelle implementiert, und implementieren Sie den <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A>-Member und den <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>-Member. Mithilfe dieser Member kann von der Ausführungseigenschaft für jeden Arbeitsschritt der Aktivität mit dieser Eigenschaft (einschließlich etwaiger untergeordneter Aktivitäten) der lokale Threadspeicher ordnungsgemäß eingerichtet und beendet werden. In diesem Beispiel wird eine `ConsoleColorProperty` erstellt, mit der die `Console.ForegroundColor` festgelegt wird.  
   
 ```csharp  

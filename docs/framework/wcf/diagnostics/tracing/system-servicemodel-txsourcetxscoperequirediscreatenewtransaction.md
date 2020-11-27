@@ -2,17 +2,19 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction
 ms.date: 03/30/2017
 ms.assetid: 3e758e9f-92b5-4b25-bcf4-e5e2a5893bb9
-ms.openlocfilehash: 86b4ed85b9cc0198abffaf4ee6f761b64c9d8e22
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9838cfe30c87c65b135bc32282fb6ebb4ee5bbdb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293727"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequirediscreatenewtransaction"></a>System.ServiceModel.TxSourceTxScopeRequiredIsCreateNewTransaction
+
 Die angegebene Transaktion für den angegebenen Vorgang wurde neu erstellt.  
   
 ## <a name="description"></a>BESCHREIBUNG  
+
  Wird nachverfolgt, wenn die für Benutzercode verfügbar gemachte Transaktion von der Infrastruktur neu erstellt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen

@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 366157b86ed7c420aed9a3a70838b4d6cd1e451f
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 11d2019023c7389d27607c93b920946837b5c365
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245387"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294825"
 ---
 # <a name="designing-service-contracts"></a>Entwerfen von Dienstverträgen
+
 In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert werden, welche Vorgänge verfügbar sind (und die Implikationen des zugrunde liegenden Meldungsaustauschs), welche Datentypen verwendet werden sowie andere Aspekte, die Sie beim Entwerfen von Vorgängen unterstützen, die den Anforderungen Ihres Szenarios gerecht werden.  
   
 ## <a name="creating-a-service-contract"></a>Erstellen eines Dienstvertrags  
+
  Dienste machen eine Reihe von Vorgängen verfügbar. Definieren Sie in Windows Communication Foundation (WCF)-Anwendungen die Vorgänge, indem Sie eine-Methode erstellen und Sie mit dem- <xref:System.ServiceModel.OperationContractAttribute> Attribut markieren. Zum Erstellen eines Dienstvertrags gruppieren Sie dann die Vorgänge, indem Sie sie in einer Schnittstelle deklarieren, die mit dem <xref:System.ServiceModel.ServiceContractAttribute>-Attribut markiert wurde, oder indem Sie sie in einer Klasse definieren, die mit dem gleichen Attribut markiert wurde. (Ein einfaches Beispiel finden Sie unter Gewusst [wie: Definieren eines Dienstvertrags](how-to-define-a-wcf-service-contract.md).)  
   
  Methoden, die kein-Attribut aufweisen, <xref:System.ServiceModel.OperationContractAttribute> sind keine Dienst Vorgänge und werden von WCF-Diensten nicht verfügbar gemacht.  
@@ -36,6 +38,7 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
 - Die Einschränkungen für Vorgangseingaben und -ausgaben  
   
 ## <a name="classes-or-interfaces"></a>Klassen oder Schnittstellen  
+
  Beide Klassen und Schnittstellen stellen eine Gruppierung von Funktionen dar und können daher zum Definieren eines WCF-Dienstvertrags verwendet werden. Es wird allerdings empfohlen, Schnittstellen zu verwenden, da sie Dienstverträge direkt modellieren. Ohne Implementierung definieren Schnittstellen lediglich eine Gruppierung von Methoden mit bestimmten Signaturen. Implementieren Sie eine Dienstvertragschnittstelle, und Sie haben einen WCF-Dienst implementiert.  
   
  Dienstvertragsschnittstellen bieten dieselben Vorteile wie verwaltete Schnittstellen:  
@@ -60,6 +63,7 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
  An diesem Punkt sollten Sie den Unterschied zwischen dem Definieren des Dienstvertrags mithilfe einer Schnittstelle und mithilfe einer Klasse kennen. Der nächste Schritt besteht darin, zu entscheiden, welche Daten zwischen einem Dienst und seinen Clients hin- und herübergeben werden können.  
   
 ## <a name="parameters-and-return-values"></a>Parameter und Rückgabewerte  
+
  Jeder Vorgang verfügt über einen Rückgabewert und einen Parameter, auch wenn diese `void` sind. Im Gegensatz zu einer lokalen Methode, in der Sie Verweise auf Objekte von einem Objekt zu einem anderen übergeben können, werden bei Dienstvorgängen keine Verweise auf Objekte übergeben. Stattdessen werden Kopien der Objekte übergeben.  
   
  Das ist wichtig, da jeder in einem Parameter oder einem Rückgabewert verwendete Typ serialisiert werden muss. Das bedeutet, dass es möglich sein muss, ein Objekt dieses Typs in einen Datenstrom und einen Datenstrom in ein Objekt umzuwandeln.  
@@ -70,6 +74,7 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
 > Der Wert der Parameternamen in der Vorgangssignatur ist Teil des Vertrags, und die Groß- und Kleinschreibung wird beachtet. Wenn Sie denselben Parameternamen lokal verwenden, aber den Namen in den veröffentlichten Metadaten ändern möchten, finden Sie entsprechende Informationen unter <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Datenverträge  
+
  Dienst orientierte Anwendungen wie Windows Communication Foundation (WCF)-Anwendungen sind so konzipiert, dass Sie mit der größtmöglichen Anzahl von Client Anwendungen auf Microsoft-und nicht-Microsoft-Plattformen zusammenarbeiten können. Für die höchstmögliche Interoperabilität sollten Sie Ihre Typen mit dem <xref:System.Runtime.Serialization.DataContractAttribute>- und dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut markieren, um einen Datenvertrag zu erstellen, der dem Teil des Dienstvertrags entspricht, der die Daten beschreibt, die durch die Dienstvorgänge ausgetauscht werden.  
   
  Datenverträge sind Abonnementverträge: Es werden keine Typen- oder Datenmitglieder serialisiert, es sei denn, Sie wenden das Datenvertragsattribut ausdrücklich an. Datenverträge stehen nicht mit dem Zugriffsumfang des verwalteten Codes in Verbindung: Private Datenmitglieder können serialisiert und für den öffentlichen Zugriff an einen beliebigen Ort gesendet werden. (Ein einfaches Beispiel für einen Datenvertrag finden Sie unter Gewusst [wie: Erstellen eines grundlegenden Daten Vertrags für eine Klasse oder Struktur](./feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) WCF verarbeitet die Definition der zugrunde liegenden SOAP-Nachrichten, die die Funktionalität des Vorgangs sowie die Serialisierung der Datentypen in und aus dem Nachrichtentext ermöglichen. Solange Ihre Datentypen serialisierbar sind, müssen Sie sich beim Erstellen von Vorgängen keine Gedanken über die zugrunde liegende Meldungsaustauschinfrastruktur machen.  
@@ -77,9 +82,11 @@ In diesem Thema wird erläutert, was Dienstverträge sind, wie sie definiert wer
  Obwohl die typische WCF-Anwendung das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut und das-Attribut verwendet, <xref:System.Runtime.Serialization.DataMemberAttribute> um Datenverträge für-Vorgänge zu erstellen, können Sie andere Serialisierungsmechanismen verwenden. Die standardmäßigen <xref:System.Runtime.Serialization.ISerializable>, <xref:System.SerializableAttribute> und <xref:System.Xml.Serialization.IXmlSerializable>-Mechanismen können alle zum Serialisieren Ihrer Datentypen in den zugrunde liegenden SOAP-Meldungen verwendet werden, durch die sie von einer Anwendung zu einer anderen transportiert werden. Sie können weitere Serialisierungsstrategien anwenden, wenn die Datentypen spezielle Unterstützung benötigen. Weitere Informationen zu den Optionen für die Serialisierung von Datentypen in WCF-Anwendungen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](./feature-details/specifying-data-transfer-in-service-contracts.md).  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>Zuordnen von Parametern und Rückgabewerten zu Nachrichtenaustauschvorgängen  
+
  Dienstvorgänge werden von einem zugrunde liegenden Austausch von SOAP-Meldungen unterstützt, die Anwendungsdaten hin- und herübertragen, zusätzlich zu den Daten, die die Anwendung benötigt, um bestimmte standardmäßige Sicherheits-, Transaktions- und Sitzungsfunktionen zu unterstützen. Da dies der Fall ist, ist die Signatur eines Dienst Vorgangs ein bestimmtes zugrunde liegendes *Nachrichtenaustausch Muster (Message Exchange Pattern* , MEP), das die Datenübertragung und die für einen Vorgang erforderlichen Funktionen unterstützen kann. Sie können drei Muster im WCF-Programmiermodell angeben: Anforderungs-/Antwort-, unidirektionale und Duplex Nachrichten Muster.  
   
 ##### <a name="requestreply"></a>Anforderung/Antwort  
+
  Anforderung/Antwort ist ein Muster, in dem ein Anforderungssender (eine Clientanwendung) eine Antwort empfängt, mit der die Anfrage kombiniert wird. Dabei handelt es sich um das standardmäßige Meldungsaustauschmuster, da es einen Vorgang unterstützt, in dem mindestens ein Parameter an den Vorgang übergeben und ein Rückgabewert zurück an den Aufrufer übergeben wird. Das folgende C#-Codebeispiel zeigt einen einfachen Dienstvorgang, der eine Zeichenfolge als Parameter akzeptiert und eine Zeichenfolge zurückgibt:  
   
 ```csharp  
@@ -110,9 +117,10 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Das vorherige Beispiel kann die Clientleistung und die Antwortzeit verschlechtern, wenn der Vorgang lange Zeit dauert. Anforderungs-/Antwort-Vorgänge haben aber selbst dann Vorteile, wenn sie `void` zurückgeben. Der offensichtlichste Vorteil besteht darin, dass SOAP-Fehler in der Antwortnachricht zurückgegeben werden können, die anzeigen, dass in der Kommunikation oder Verarbeitung dienstbedingte Fehlerbedingungen eingetreten sind. SOAP-Fehler, die in einem Dienstvertrag angegeben werden, werden der Clientanwendung als <xref:System.ServiceModel.FaultException%601>-Objekte übergeben, wobei der Typparameter dem im Dienstvertrag angegebenen Typ entspricht. Dadurch wird das Benachrichtigen von Clients über Fehlerbedingungen in WCF-Diensten vereinfacht. Weitere Informationen zu Ausnahmen, SOAP-Fehlern und Fehlerbehandlung finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](specifying-and-handling-faults-in-contracts-and-services.md). Ein Beispiel für einen Anforderungs-/Antwortdienst und einen Client finden Sie unter Gewusst [wie: Erstellen eines Anforderung-Antwort-Vertrags](./feature-details/how-to-create-a-request-reply-contract.md). Weitere Informationen zu Problemen mit dem Anforderung-Antwort-Muster finden Sie unter [Anforderung-Antwort-Dienste](./feature-details/request-reply-services.md).  
+ Das vorherige Beispiel kann die Clientleistung und die Antwortzeit verschlechtern, wenn der Vorgang lange Zeit dauert. Anforderungs-/Antwort-Vorgänge haben aber selbst dann Vorteile, wenn sie `void` zurückgeben. Der offensichtlichste Vorteil besteht darin, dass SOAP-Fehler in der Antwortnachricht zurückgegeben werden können, die anzeigen, dass in der Kommunikation oder Verarbeitung dienstbedingte Fehlerbedingungen eingetreten sind. SOAP-Fehler, die in einem Dienstvertrag angegeben werden, werden der Clientanwendung als <xref:System.ServiceModel.FaultException%601>-Objekte übergeben, wobei der Typparameter dem im Dienstvertrag angegebenen Typ entspricht. Dadurch wird das Benachrichtigen von Clients über Fehlerbedingungen in WCF-Diensten vereinfacht. Weitere Informationen zu Ausnahmen, SOAP-Fehlern und Fehlerbehandlung finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](specifying-and-handling-faults-in-contracts-and-services.md). Ein Beispiel für einen Anforderungs-/Antwortdienst und einen Client finden Sie unter Vorgehens [Weise: Erstellen eines Request-Reply Vertrags](./feature-details/how-to-create-a-request-reply-contract.md). Weitere Informationen zu Problemen mit dem Anforderung-Antwort-Muster finden Sie unter [Anforderung-Antwort-Dienste](./feature-details/request-reply-services.md).  
   
 ##### <a name="one-way"></a>Unidirektional  
+
  Wenn der Client einer WCF-Dienst Anwendung nicht auf den Abschluss des Vorgangs warten und keine SOAP-Fehler verarbeitet, kann der Vorgang ein unidirektionales Nachrichten Muster angeben. Ein unidirektionaler Vorgang ist ein Vorgang, bei dem ein Client einen Vorgang aufruft und die Verarbeitung fortsetzt, nachdem WCF die Nachricht in das Netzwerk geschrieben hat. Normalerweise bedeutet dies, dass der Client die Ausführung fast unverzüglich fortsetzt, sofern die in der ausgehenden Nachricht enthaltene Datenmenge nicht übermäßig groß ist (und sofern beim Senden der Daten kein Fehler auftritt). Dieser Typ des Nachrichtenaustauschmusters unterstützt ereignisähnliches Verhalten gegenüber einem Client zu einer Dienstanwendung.  
   
  Ein Meldungsaustausch, in dem eine Meldung gesendet und keine empfangen wird, kann keinen Dienstvorgang unterstützen, der einen anderen Rückgabewert als `void` angibt. In diesem Fall wird eine <xref:System.InvalidOperationException>-Ausnahme ausgelöst.  
@@ -133,9 +141,10 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Diese Methode ist mit dem vorherigen Anforderungs-/Antwortbeispiel identisch, aber das Festlegen der <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft auf `true` bedeutet, dass der Dienstvorgang, obwohl die Methode identisch ist, keine Rückgabemeldung sendet und Clients unverzüglich zurückgegeben werden, sobald die ausgehende Meldung der Kanalebene übergeben wurde. Ein Beispiel finden Sie unter Gewusst [wie: Erstellen eines](./feature-details/how-to-create-a-one-way-contract.md)unidirektionalen Vertrags. Weitere Informationen über das unidirektionale Muster finden Sie unter unidirektionale [Dienste](./feature-details/one-way-services.md).  
+ Diese Methode ist mit dem vorherigen Anforderungs-/Antwortbeispiel identisch, aber das Festlegen der <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Eigenschaft auf `true` bedeutet, dass der Dienstvorgang, obwohl die Methode identisch ist, keine Rückgabemeldung sendet und Clients unverzüglich zurückgegeben werden, sobald die ausgehende Meldung der Kanalebene übergeben wurde. Ein Beispiel finden Sie unter Vorgehens [Weise: Erstellen eines One-Way Vertrags](./feature-details/how-to-create-a-one-way-contract.md). Weitere Informationen über das unidirektionale Muster finden Sie unter unidirektionale [Dienste](./feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Duplex  
+
  Ein Duplexmuster wird durch die Fähigkeit des Diensts und des Clients zum unabhängigen Senden von Nachrichten untereinander charakterisiert, wenn unidirektionale oder Anforderungs-/Antwortmeldungen verwendet werden. Diese Form einer bidirektionalen Kommunikation ist für Dienste nützlich, die direkt mit dem Client kommunizieren müssen, oder zum Bereitstellen einer asynchronen Erfahrung auf beiden Seiten eines Nachrichtenaustauschs, einschließlich ereignisähnlichen Verhaltens.  
   
  Das Duplexmuster ist aufgrund der zusätzlichen Mechanismen für die Kommunikation mit dem Client etwas komplexer als das Anforderungs-/Antwortmuster und das unidirektionale Muster.  
@@ -150,6 +159,7 @@ Sub Hello (ByVal greeting As String)
 > Wenn ein Dienst eine Duplexmeldung empfängt, überprüft er das `ReplyTo`-Element in dieser eingehenden Meldung, um zu bestimmen, wohin die Antwort gesendet werden soll. Wenn der zum Empfangen der Meldung verwendete Kanal nicht gesichert ist, kann ein nicht vertrauenswürdiger Client eine bösartige Meldung mit dem `ReplyTo`-Element eines Zielcomputers senden, was zu einem Denial Of Service (DOS) auf diesem Zielcomputer führt.  
   
 ##### <a name="out-and-ref-parameters"></a>Out-Parameter und Ref-Parameter  
+
  In den meisten Fällen können Sie `in` Parameter ( `ByVal` in Visual Basic) und `out` -und- `ref` Parametern ( `ByRef` in Visual Basic) verwenden. Da die `out`- und `ref`-Parameter anzeigen, dass Daten aus einem Vorgang zurückgegeben werden, gibt eine Vorgangssignatur wie die folgende an, dass ein Anforderungs-/Antwortvorgang erforderlich ist, obwohl die Vorgangssignatur `void` zurückgibt.  
   
 ```csharp  
@@ -176,6 +186,7 @@ End Interface
  Außerdem ist bei der Verwendung der `out`- und `ref`-Parameter erforderlich, dass der Vorgang über eine zugrunde liegende Antwortmeldung verfügt, um das geänderte Objekt zurückzugeben. Wenn es sich bei dem Vorgang um einen unidirektionalen Vorgang handelt, wird zur Laufzeit eine Ausnahme des Typs <xref:System.InvalidOperationException> ausgelöst.  
   
 ### <a name="specify-message-protection-level-on-the-contract"></a>Angeben einer Meldungsschutzebene für den Vertrag  
+
  Wenn Sie den Vertrag entwerfen, müssen Sie sich außerdem für eine Meldungsschutzebene für Dienste entscheiden, die den Vertrag implementieren. Dies ist nur notwendig, wenn Meldungssicherheit auf die Bindung im Endpunkt des Vertrags angewendet wird. Wenn die Sicherheit für die Bindung deaktivert wurde (wenn also die vom System bereitgestellte Bindung den <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> auf den Wert <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType> festlegt), müssen Sie sich nicht für eine Meldungsschutzebene für den Vertrag entscheiden. In den meisten Fällen bieten vom System bereitgestellte Bindungen mit angewendeter Sicherheit auf Nachrichtenebenen eine ausreichende Schutzebene, sodass Sie sich nicht bei jedem Vorgang oder jeder Nachricht Gedanken um die Schutzebene machen müssen.  
   
  Die Schutzebene ist ein Wert, der angibt, ob die Meldungen (oder Meldungsteile), die einen Dienst unterstützen, signiert, signiert und verschlüsselt oder ohne Signaturen und Verschlüsselung gesendet werden. Die Schutzebene kann in unterschiedlichem Umfang festgelegt werden: auf Dienstebene, für einen bestimmten Vorgang, für eine Meldung innerhalb dieses Vorgangs oder für einen Meldungsteil. Auf einen Bereich festgelegte Werte werden zum Standardwert für kleinere Bereiche, außer wenn diese explizit außer Kraft gesetzt werden. Wenn eine Bindungskonfiguration die erforderliche Mindestschutzebene für den Vertrag nicht bereitstellen kann, wird eine Ausnahme ausgegeben. Wenn für den Vertrag keine Schutzebenenwerte explizit festgelegt sind, steuert die Bindungskonfiguration die Schutzebene für alle Meldungen, sofern die Bindung über Meldungssicherheit verfügt. Dies ist das Standardverhalten.  
@@ -261,11 +272,13 @@ End Interface
  Weitere Informationen zu Schutz Ebenen und deren Verwendung finden Sie Untergrund Legendes zur [Schutz Ebene](understanding-protection-level.md). Weitere Informationen zur Sicherheit finden Sie unter [Sichern von Diensten](securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Andere Vorgangssignaturanforderungen  
+
  Einige Anwendungsfunktionen erfordern eine besondere Art von Vorgangssignatur. Die <xref:System.ServiceModel.NetMsmqBinding>-Bindung unterstützt beispielsweise permanente Dienste und Clients, in denen eine Anwendung während der Kommunikation neu gestartet und ohne Meldungsverlust genau dort fortgesetzt werden kann, wo sie angehalten wurde. (Weitere Informationen finden Sie unter [Warteschlangen in WCF](./feature-details/queues-in-wcf.md).) Permanente Vorgänge dürfen jedoch nur einen Parameter annehmen `in` und keinen Rückgabewert haben.  
   
  Ein anderes Beispiel ist die Verwendung von <xref:System.IO.Stream>-Typen in Vorgängen. Da der <xref:System.IO.Stream>-Parameter den gesamten Textinhalt einschließt, muss es sich bei einer Ein- oder Ausgabe mit den Parametern `ref`, `out` oder einem Rückgabewert vom Typ <xref:System.IO.Stream> um die einzigen im Vorgang angegebenen Ein- und Ausgaben handeln. Außerdem muss es sich bei dem Parameter oder dem Rückgabetyp um <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> oder <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> handeln. Weitere Informationen zu Streams finden Sie unter [große Datenmengen und Streaming](./feature-details/large-data-and-streaming.md).  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>Namen, Namespaces und Obfuskation  
+
  Die Namen und Namespaces der .NET-Typen in der Definition von Verträgen und Vorgängen sind wichtig, wenn Verträge in WSDL konvertiert und wenn Vertragsnachrichten erstellt und gesendet werden. Aus diesem Grund sollten Namen und Namespaces von Verträgen unbedingt explizit mithilfe der `Name`- und der `Namespace`-Eigenschaft aller unterstützenden Vertragsattribute (wie <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> und anderer Vertragsattribute) festgelegt werden.  
   
  Sind die Namen und Namespaces nicht explizit festgelegt, verändert die Verwendung der IL-Obfuskation für die Assembly die Namen und Namespaces des Vertragstyps. Dadurch ergeben sich Änderungen beim WSDL- und Übertragungsaustausch, wodurch üblicherweise Fehler auftreten. Wenn Sie die Vertragsnamen und -Namespaces nicht explizit festlegen, aber dennoch die Obfuskation verwenden möchten, unterbinden Sie Änderungen an den Namen und Namespaces des Vertragstyps mithilfe des <xref:System.Reflection.ObfuscationAttribute>-Attributs und des <xref:System.Reflection.ObfuscateAssemblyAttribute>-Attributs.  

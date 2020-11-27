@@ -2,14 +2,15 @@
 title: Optionen zum Hosten von Workflows
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 4eaed147f312f3963aa1ca1d4f5dbe010c4189ad
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8ddb83f068eab8480bacc8b80bc5d44b7755fa59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037826"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293779"
 ---
 # <a name="workflow-hosting-options"></a>Optionen zum Hosten von Workflows
+
 In den meisten Windows Workflow Foundation WF-Beispielen (WF) werden Workflows verwendet, die in einer Konsolenanwendung gehostet werden. Dies ist jedoch kein realistisches Szenario für Workflows in der Praxis. Workflows in tatsächlichen Geschäftsanwendungen werden in persistenten Prozessen gehostet. dabei handelt es sich entweder um einen vom Entwickler erstellten Windows-Dienst oder um eine Serveranwendung wie IIS 7,0 oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.
 
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosten von Workflows in IIS mit Windows AppFabric

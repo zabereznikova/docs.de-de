@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b96a32f5e11ed4808f8f35d02802afd1f48c3072
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2a8c186c839be5008bbc5315c7c9fae638680714
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601321"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293922"
 ---
 # <a name="data-contract-equivalence"></a>Datenvertragsäquivalenz
+
 Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (Manchmal ist strenge Äquivalenz nicht erforderlich, wie unter [Data Contract Versioning](data-contract-versioning.md)erläutert.)  
   
  Die Äquivalenz von Datenverträgen wird durch denselben Namespace und Namen gewährleistet. Darüber hinaus muss jeder Datenmember auf einer Seite über einen entsprechenden Datenmember auf der anderen Seite verfügen.  
@@ -34,6 +35,7 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>Datenmemberreihenfolge und Datenvertragsäquivalenz  
+
  Die Verwendung der <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft der <xref:System.Runtime.Serialization.DataMemberAttribute>-Klasse wirkt sich unter Umständen auf die Äquivalenz des Datenvertrags aus. Die Datenverträge sind nur äquivalent, wenn sie über Member verfügen, die in der gleichen Reihenfolge angezeigt werden. Die Standardreihenfolge ist alphabetisch. Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](data-member-order.md).  
   
  Zum Beispiel führt der folgende Code zu äquivalenten Datenverträgen.  
@@ -47,6 +49,7 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Vererbung, Schnittstellen und Datenvertragsäquivalenz  
+
  Beim Bestimmen der Äquivalenz wird ein Datenvertrag, der von einem anderen Datenvertrag erbt, so behandelt, als ob es sich nur um einen Datenvertrag mit allen Datenmembern vom Basistyp handelt. Die Reihenfolge der Datenmember muss übereinstimmen, und die Basistypmember müssen in der Reihenfolge vor den abgeleiteten Typmembern stehen. Verfügen zwei Datenmember &#8211; wie im folgenden Codesbeispiel &#8211; über denselben Reihenfolgenwert, werden diese Datenmember darüber hinaus alphabetisch sortiert. Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](data-member-order.md).  
   
  Im folgenden Beispiel entspricht der Datenvertrag für den Typ `Employee` dem Datenvertrag für den Typ `Worker`.  

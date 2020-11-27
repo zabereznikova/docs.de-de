@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b6f5cd7217b447256f19891c2624fba857735107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245543"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294871"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
 
@@ -27,9 +27,10 @@ Nachdem Sie einen Dienst erstellt haben, ist der nächste Schritt das Erstellen 
 
 3. Instanziieren Sie den WCF-Clientproxy.
 
-Der WCF-Client Proxy kann mithilfe des Service Model Metadata Utility Tool (SvcUtil.exe) manuell generiert werden. Weitere Informationen finden Sie unter [Service Model Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). Der WCF-Client Proxy kann auch in Visual Studio mithilfe der **Dienstverweis hinzufügen** -Funktion generiert werden. Um den WCF-Clientproxy mithilfe einer dieser Methoden zu generieren, muss der Dienst ausgeführt werden. Wenn es sich um einen selbst gehosteten Dienst handelt, müssen Sie den Host ausführen. Wenn der Dienst in IIS/WAS gehostet wird, ist kein weiterer Schritt erforderlich.
+Der WCF-Client Proxy kann mithilfe des Service Model Metadata Utility Tool (SvcUtil.exe) manuell generiert werden. Weitere Informationen finden Sie unter [Service Model Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). Der WCF-Client Proxy kann auch in Visual Studio mithilfe der **Dienstverweis hinzufügen**  -Funktion generiert werden. Um den WCF-Clientproxy mithilfe einer dieser Methoden zu generieren, muss der Dienst ausgeführt werden. Wenn es sich um einen selbst gehosteten Dienst handelt, müssen Sie den Host ausführen. Wenn der Dienst in IIS/WAS gehostet wird, ist kein weiterer Schritt erforderlich.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata Utility Tool
+
  Das [Service Model Metadata Utility-Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) ist ein Befehlszeilen Tool zum Erstellen von Code aus Metadaten. Die folgende Verwendung ist ein Beispiel für einen grundlegenden Svcutil.exe-Befehl.
 
 ```console
@@ -57,9 +58,10 @@ Svcutil.exe <file1 [,file2]>
 
 ## <a name="add-service-reference-in-visual-studio"></a>"Dienstverweis hinzufügen" in Visual Studio
 
- Wenn der Dienst ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Projekt, das den WCF-Client Proxy enthalten soll, **und wählen Sie**  >  **Dienst Verweis** Geben Sie im **Dialog Feld Dienstverweis hinzufügen**die URL zu dem Dienst ein, den Sie aufrufen möchten, und klicken Sie auf die Schaltfläche **Gehe** zu. Das Dialogfeld zeigt eine Liste der Dienste an, die unter der Adresse verfügbar sind. Doppelklicken Sie auf den Dienst, um die verfügbaren Verträge und Vorgänge anzuzeigen, geben Sie einen Namespace für den generierten Code an, und klicken Sie auf die Schaltfläche **OK** .
+ Wenn der Dienst ausgeführt wird, klicken Sie mit der rechten Maustaste auf das Projekt, das den WCF-Client Proxy enthalten soll, **und wählen Sie**  >  **Dienst Verweis** Geben Sie im **Dialog Feld Dienstverweis hinzufügen** die URL zu dem Dienst ein, den Sie aufrufen möchten, und klicken Sie auf die Schaltfläche **Gehe** zu. Das Dialogfeld zeigt eine Liste der Dienste an, die unter der Adresse verfügbar sind. Doppelklicken Sie auf den Dienst, um die verfügbaren Verträge und Vorgänge anzuzeigen, geben Sie einen Namespace für den generierten Code an, und klicken Sie auf die Schaltfläche **OK** .
 
 ## <a name="example"></a>Beispiel
+
  Im folgenden Codebeispiel wird ein für einen Dienst erstellter Dienstvertrag gezeigt.
 
 ```csharp
@@ -151,6 +153,7 @@ End Class
 ```
 
 ## <a name="using-the-wcf-client"></a>Verwenden des WCF-Clients
+
  Um den WCF-Client zu verwenden, erstellen Sie eine Instanz des WCF-Clients, und rufen Sie dann die zugehörigen Methoden auf, wie im folgenden Code gezeigt.
 
 ```csharp

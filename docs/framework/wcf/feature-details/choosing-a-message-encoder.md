@@ -2,24 +2,25 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559370"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295157"
 ---
 # <a name="choose-a-message-encoder"></a>Auswählen eines Nachrichten Encoders
 
 In diesem Artikel werden die Kriterien für die Auswahl der Nachrichten Encoder erläutert, die in Windows Communication Foundation (WCF) enthalten sind: Binary, Text und Message Transmission Optimization Mechanism (MTOM).  
   
- In WCF geben Sie an, wie Daten über ein Netzwerk zwischen Endpunkten über eine *Bindung*übertragen werden, die aus einer Sequenz von *Bindungs Elementen*besteht. Ein Nachrichtenencoder wird von einem Nachrichtencodierungs-Bindungselement im Bindungsstapel dargestellt. Eine Bindung enthält optionale Protokollbindungselemente, wie ein Sicherheitsbindungselement oder ein zuverlässiges Nachrichtenbindungselement, ein erforderliches Nachrichtencodierungs-Bindungselement und ein erforderliches Transportbindungselement.  
+ In WCF geben Sie an, wie Daten über ein Netzwerk zwischen Endpunkten über eine *Bindung* übertragen werden, die aus einer Sequenz von *Bindungs Elementen* besteht. Ein Nachrichtenencoder wird von einem Nachrichtencodierungs-Bindungselement im Bindungsstapel dargestellt. Eine Bindung enthält optionale Protokollbindungselemente, wie ein Sicherheitsbindungselement oder ein zuverlässiges Nachrichtenbindungselement, ein erforderliches Nachrichtencodierungs-Bindungselement und ein erforderliches Transportbindungselement.  
   
  Das Nachrichtencodierungs-Bindungselement befindet sich unter den optionalen Protokollbindungselementen und über dem erforderlichen Transportbindungselement. Auf der ausgehenden Seite serialisiert ein Nachrichtenencoder die ausgehende <xref:System.ServiceModel.Channels.Message> und übergibt sie an den Transport. Auf der eingehenden Seite ruft ein Nachrichtenencoder die serialisierte Form einer <xref:System.ServiceModel.Channels.Message> aus dem Transport ab und übergibt sie an die höhere Protokollschicht, falls vorhanden, oder andernfalls an die Anwendung.  
   
  Wenn Sie eine Verbindung mit einem zuvor vorhandenen Client oder Server herstellen, haben Sie eventuell keine Wahl, ob Sie eine bestimmte Nachrichtencodierung verwenden möchten, da Sie Ihre Nachrichten auf eine Weise codieren müssen, die von der anderen Seite erwartet wird. Wenn Sie jedoch einen WCF-Dienst schreiben, können Sie den Dienst über mehrere Endpunkte verfügbar machen, von denen jeder eine andere Nachrichten Codierung verwendet. So können Clients die beste Codierung für die Kommunikation mit Ihrem Dienst über den am besten geeigneten Endpunkt auswählen. Außerdem verfügen Sie dann über die Flexibilität, die für die Clients am besten geeignete Codierung auszuwählen. Die Verwendung von mehreren Endpunkten ermöglicht Ihnen, die Vorteile anderer Nachrichtencodierungen mit anderen Bindungselementen zu kombinieren.  
   
 ## <a name="system-provided-encoders"></a>Vom System bereitgestellte Encoder  
+
  WCF enthält drei Nachrichten Encoder, die durch die folgenden drei Klassen dargestellt werden:  
   
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, der Textnachrichtenencoder, unterstützt sowohl reine XML-Codierung als auch SOAP-Codierung. Der reine XML-Codierungsmodus des Textnachrichtenencoders wird als "Plain Old XML" (POX) bezeichnet, um ihn von der textbasierten SOAP-Codierung zu unterscheiden. Um POX zu aktivieren, legen Sie die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.MessageVersion.None%2A> fest. Verwenden Sie den Textnachrichten Encoder, um mit nicht-WCF-Endpunkten zu interagieren.  
@@ -29,6 +30,7 @@ In diesem Artikel werden die Kriterien für die Auswahl der Nachrichten Encoder 
 - Das <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>-Bindungselement gibt die Zeichencodierung und die für MTOM verwendete Nachrichtenversionsverwaltung an. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung. Hinsichtlich der Effizienz ist MTOM zwischen den Encodern, die WCF bereitstellt, zwischen Text (der langsamsten) und Binär (am schnellsten).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>So wählen Sie einen Nachrichtenencoder aus  
+
  In der folgenden Tabelle werden allgemeine Faktoren beschrieben, die bei der Auswahl eines Nachrichtenencoders berücksichtigt werden. Priorisieren Sie die Faktoren, die für Ihre Anwendung wichtig sind, und wählen Sie dann die Nachrichtenencoder aus, die mit diesen Faktoren am besten funktionieren. Berücksichtigen Sie alle weiteren, in dieser Tabelle nicht aufgelisteten Faktoren sowie alle benutzerdefinierten Encoder, die eventuell für Ihre Anwendung erforderlich sind.  
   
 |Faktor|BESCHREIBUNG|Encoder, die diesen Faktor unterstützen|  
@@ -83,6 +85,6 @@ Da diese Eigenschaft nur für das BinaryMessageEncodingBindingElement verfügbar
 
 Sowohl der Client als auch der Dienst müssen dem Senden und empfangen von komprimierten Nachrichten zustimmen. Daher muss die compressionformat-Eigenschaft für das binaryMessageEncoding-Element sowohl auf dem Client als auch auf dem Dienst konfiguriert werden. Eine ProtocolException wird ausgelöst, wenn entweder der Dienst oder der Client nicht für die Komprimierung konfiguriert ist, aber die andere Seite ist. Die Aktivierung der Komprimierung sollte sorgfältig in Erwägung gezogen werden. Die Komprimierung ist vor allem dann nützlich, wenn die Netzwerkbandbreite beschränkt ist. Wenn die CPU der Engpass ist, mindert die Komprimierung den Durchsatz. Es müssen entsprechende Tests in einer simulierten Umgebung ausgeführt werden, um zu ermitteln, ob dies für die Anwendung Vorteile erbringt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Bindungen](bindings.md)

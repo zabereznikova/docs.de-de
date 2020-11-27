@@ -2,17 +2,19 @@
 title: Erstellen von Workflowaktivitäten mit der CodeActivity-Klasse
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656020"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293818"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Erstellen von Workflowaktivitäten mit der CodeActivity-Klasse
+
 Aktivitäten, die durch das Erben von <xref:System.Activities.CodeActivity> erstellt werden, können das grundlegende imperative Verhalten implementieren, indem sie die <xref:System.Activities.CodeActivity.Execute%2A>-Methode überschreiben.
 
 ## <a name="using-codeactivitycontext"></a>Verwenden von CodeActivityContext
+
  Innerhalb der <xref:System.Activities.CodeActivity.Execute%2A>-Methode kann mithilfe von Membern des `context`-Parameters vom Typ <xref:System.Activities.CodeActivityContext> auf Funktionen des Workflows zugegriffen werden. Über <xref:System.Activities.CodeActivityContext> sind unter anderem folgende Funktionen verfügbar:
 
 - Abrufen und Festlegen der Werte von Variablen und Argumenten
@@ -25,11 +27,11 @@ Aktivitäten, die durch das Erben von <xref:System.Activities.CodeActivity> erst
 
 1. Öffnen Sie Visual Studio 2010.
 
-2. Wählen Sie **Datei**, **neue**, und klicken Sie dann **Projekt**. Wählen Sie **Workflow 4.0** unter **Visual C#-** in die **Projekttypen** , und wählen die **v2010** Knoten. Wählen Sie **Aktivitätsbibliothek** in die **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen "HelloActivity".
+2. Wählen Sie **Datei**, **neu** und dann **Projekt** aus. Wählen Sie im Fenster **Projekttypen** unter **Visual c#** die Option **Workflow 4,0** aus, und wählen Sie den Knoten **v2010** aus. Wählen Sie im Fenster **Vorlagen** die Option **Aktivitäts Bibliothek** aus. Geben Sie dem neuen Projekt den Namen "HelloActivity".
 
-3. Mit der rechten Maustaste Activity1.xaml im HelloActivity-Projekt, und wählen Sie **löschen**.
+3. Klicken Sie im HelloActivity-Projekt mit der rechten Maustaste auf Activity1. XAML, und wählen Sie **Löschen** aus.
 
-4. Maustaste auf das HelloActivity-Projekt, und wählen Sie **hinzufügen** , und klicken Sie dann **Klasse**. Nennen Sie die neue Klasse HelloActivity.cs.
+4. Klicken Sie mit der rechten Maustaste auf das Projekt HelloActivity, und wählen Sie **Hinzufügen** und dann **Klasse** aus. Nennen Sie die neue Klasse HelloActivity.cs.
 
 5. Fügen Sie der Datei "HelloActivity.cs" die folgenden `using`-Direktiven hinzu.
 

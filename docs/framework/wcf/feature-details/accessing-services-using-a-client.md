@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 001f30d7a0dde952a7d18bfbc50f2c3622287406
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d136e094e4f1ea5258ff568527d10ac25a38f1a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293961"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
+
 Client Anwendungen müssen WCF-Client-oder-Channel-Objekte erstellen, konfigurieren und verwenden, um mit-Diensten zu kommunizieren. Im Thema [Übersicht über WCF-Clients](../wcf-client-overview.md) finden Sie eine Übersicht über die Objekte und Schritte, die zum Erstellen von grundlegenden Client-und Kanal Objekten und deren Verwendung erforderlich sind.  
   
  Dieses Thema bietet ausführlichere Informationen zu Problemen mit Clientanwendungen sowie Client- und Kanalobjekten, die abhängig von Ihrem Szenario hilfreich sein können.  
   
 ## <a name="overview"></a>Übersicht  
+
  In diesem Thema werden das Verhalten und die Probleme zu Folgendem beschrieben:  
   
 - Kanal- und Sitzungslebensdauer.  
@@ -29,6 +31,7 @@ Client Anwendungen müssen WCF-Client-oder-Channel-Objekte erstellen, konfigurie
 - Interaktives Initialisieren von Kanälen.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal- und Sitzungslebensdauer  
+
  Windows Communication Foundation (WCF)-Anwendungen enthalten zwei Kategorien von Kanälen: Datagramm und Sitzungs basiert.  
   
  Ein *Datagramm* -Kanal ist ein Kanal, in dem alle Nachrichten nicht korreliert werden. Auf einem Datagrammkanal ist normalerweise beim Fehlschlagen eines Eingabe- oder Ausgabevorgangs der nächste Vorgang nicht betroffen, und der gleiche Kanal kann wiederverwendet werden. Daher schlagen Datagrammkanäle in der Regel nicht fehl.  
@@ -43,11 +46,13 @@ Client Anwendungen müssen WCF-Client-oder-Channel-Objekte erstellen, konfigurie
  Die meisten der vom System bereitgestellten Bindungen (die Kanäle für die Anwendungsebene verfügbar machen) verwenden standardmäßig Sitzungen, <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> jedoch nicht. Weitere Informationen finden Sie unter [Verwenden von Sitzungen](../using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>Richtige Verwendung von Sitzungen  
+
  Sitzungen bieten die Möglichkeit festzustellen, ob der gesamte Nachrichtenaustausch vollständig ist und von beiden Seiten als erfolgreich betrachtet wurde. Es wird empfohlen, dass eine aufrufende Anwendung den Kanal innerhalb eines Try-Blocks öffnet, verwendet und schließt. Wenn ein Sitzungskanal geöffnet ist, die <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>-Methode einmal aufgerufen wird und dieser Aufruf erfolgreich beendet wurde, war die Sitzung erfolgreich. Erfolgreich bedeutet in diesem Fall, dass alle von der Bindung angegebenen Zustellungsgarantien erfüllt wurden und die andere Seite auf dem Kanal nicht <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> vor dem Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Close%2A> aufgerufen hat.  
   
  Der folgende Abschnitt enthält ein Beispiel für diesen Clientansatz.  
   
 ### <a name="handling-exceptions"></a>Behandeln von Ausnahmen  
+
  Das Behandeln von Ausnahmen in Clientanwendungen ist einfach. Wird ein Kanal innerhalb eines Try-Blocks geöffnet, verwendet und geschlossen, war die Konversation erfolgreich, wenn keine Ausnahme ausgelöst wird. In der Regel wird die Konversation abgebrochen, wenn eine Ausnahme ausgelöst wird.  
   
 > [!NOTE]
@@ -66,15 +71,17 @@ Client Anwendungen müssen WCF-Client-oder-Channel-Objekte erstellen, konfigurie
  Ausführlichere Informationen zum Arbeiten mit Fehlerinformationen auf Anwendungsebene finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](../specifying-and-handling-faults-in-contracts-and-services.md). [Erwartete Ausnahmen](../samples/expected-exceptions.md) beschreiben erwartete Ausnahmen und zeigen, wie Sie behandelt werden. Weitere Informationen zum Behandeln von Fehlern bei der Entwicklung von Kanälen finden Sie unter [Behandeln von Ausnahmen und Fehlern](../extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>Clientblockierung und Leistung  
+
  Wenn eine Anwendung synchron einen Anforderungs-/Antwortvorgang aufruft, wird der Client blockiert, bis ein Rückgabewert empfangen oder eine Ausnahme (wie <xref:System.TimeoutException?displayProperty=nameWithType>) ausgelöst wird. Dieses Verhalten ähnelt lokalem Verhalten. Wenn eine Anwendung synchron einen Vorgang auf einem WCF-Client Objekt oder-Kanal aufruft, wird der Client erst dann zurückgegeben, wenn die Kanal Schicht die Daten in das Netzwerk schreiben oder eine Ausnahme auslösen kann. Und während das unidirektionale Nachrichtenaustauschmuster (angegeben durch die Markierung eines Vorgangs, wobei <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> auf `true` festgelegt ist) die Reaktionsgeschwindigkeit einiger Clients verbessern kann, können unidirektionale Vorgänge abhängig von der Bindung und den bisher gesendeten Nachrichten auch blockiert werden. Bei unidirektionalen Vorgängen geht es nur um den Nachrichtenaustausch. Weitere Informationen finden Sie unter unidirektionale [Dienste](one-way-services.md).  
   
  Große Datensegmente können die Clientverarbeitung verlangsamen, egal, welches Nachrichtenaustauschmuster verwendet wird. Informationen zum Umgang mit diesen Problemen finden Sie unter [große Datenmengen und Streaming](large-data-and-streaming.md).  
   
- Wenn Ihre Anwendung mehr Arbeit ausführen muss, während ein Vorgang abgeschlossen ist, sollten Sie ein asynchrones Methoden Paar in der Dienstvertragschnittstelle erstellen, das der WCF-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung des `/async` Schalters für das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter Vorgehensweise [: Asynchrones Abrufen von Dienst Vorgängen](how-to-call-wcf-service-operations-asynchronously.md).  
+ Wenn Ihre Anwendung mehr Arbeit ausführen muss, während ein Vorgang abgeschlossen ist, sollten Sie ein asynchrones Methoden Paar in der Dienstvertragschnittstelle erstellen, das der WCF-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung des `/async` Schalters für das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter Vorgehensweise [: Asynchrones Abrufen von Dienst Vorgängen](how-to-call-wcf-service-operations-asynchronously.md).  
   
  Weitere Informationen zum Erhöhen der Client Leistung finden Sie unter [Client Anwendungen der mittleren Ebene](middle-tier-client-applications.md).  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Dynamisches Auswählen von Anmeldeinformationen durch den Benutzer  
+
  Über die <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer>-Schnittstelle können Anwendungen eine Benutzeroberfläche anzeigen, auf der der Benutzer Anmeldeinformationen zum Erstellen eines Kanals auswählen kann, bevor die Timeout-Zeitgeber starten.  
   
  Es gibt zwei Methoden, wie Anwendungsentwickler ein eingefügtes <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> nutzen können. Die Client Anwendung kann entweder <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) vor dem Öffnen des Kanals ( *expliziter* Ansatz) oder den ersten Vorgang (den *impliziten* Ansatz) aufzurufen.  

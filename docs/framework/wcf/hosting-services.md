@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 41a7a3e651d234de4079455a667df670d6c7435d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246381"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294650"
 ---
 # <a name="hosting-services"></a>Hostingdienste
 
@@ -22,7 +22,8 @@ Die Hostingoptionen reichen von einfachen Konsolenanwendungen bis zu Serverumgeb
 
 ## <a name="hosting-options"></a>Hostingoptionen
 
-### <a name="self-host-in-a-managed-application"></a>Selbst Hosting in einer verwalteten Anwendung
+### <a name="self-host-in-a-managed-application"></a>Self-Host in einer verwalteten Anwendung
+
  WCF-Dienste können in jeder verwalteten Anwendung gehostet werden. Dies ist die flexibelste Option, da hier die wenigste Infrastruktur bereitzustellen ist. Sie betten den Code für den Dienst in den verwalteten Anwendungscode ein und erstellen und öffnen dann eine Instanz von <xref:System.ServiceModel.ServiceHost> , um den Dienst zur Verfügung zu stellen. Weitere Informationen finden Sie unter Vorgehens [Weise: Hosten eines WCF-Diensts in einer verwalteten Anwendung](how-to-host-a-wcf-service-in-a-managed-application.md).
 
  Diese Option ermöglicht zwei gängige Szenarien: WCF-Dienste, die in Konsolen Anwendungen und Rich Client-Anwendungen ausgeführt werden, z. b. solche, die auf Windows Presentation Foundation (WPF) oder Windows Forms (WinForms) basieren. Das Hosting eines WCF-Diensts in einer Konsolenanwendung ist in der Regel während der Entwicklungsphase der Anwendung nützlich. Die Anwendung lässt sich dann einfach debuggen. Ablaufverfolgungsinformationen über die Anwendung lassen sich leichter ermitteln, um herauszufinden, was intern in der Anwendung vor sich geht. Zudem lässt sich die Anwendung dann einfacher an andere Speicherorte kopieren. Diese Hostingoption erleichtert auch die Kommunikation von Rich Client-Anwendungen wie WPF-und WinForms-Anwendungen mit der Außenwelt. Beispielsweise ein Peer-to-Peer-Kollaborations Client, der WPF für die Benutzeroberfläche verwendet und außerdem einen WCF-Dienst hostet, der anderen Clients das Herstellen einer Verbindung mit dem Client und das Freigeben von Informationen ermöglicht.
@@ -44,6 +45,7 @@ Der Windows-Prozess Aktivierungs Dienst (Windows Process Activation Service, was
  Diese Hostingoption erfordert, dass WAS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Konfigurieren von was-Hosting finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Auswählen einer Hostingumgebung
+
  In der folgenden Tabelle werden einige wichtige Vorteile und Szenarien im Zusammenhang mit den verschiedenen Hostingoptionen zusammengefasst.
 
 |Hostumgebung|Häufige Szenarios|Hauptvorteile und Einschränkungen|
@@ -58,9 +60,9 @@ Der Windows-Prozess Aktivierungs Dienst (Windows Process Activation Service, was
 
 |Hostumgebung|Plattformverfügbarkeit|Unterstützte Transportprotokolle|Prozess- und AppDomain-Wiederverwendung|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Verwaltete Anwendungen ("Selbsthosting")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
-|Windows-Dienste (früher als NT-Dienste bezeichnet)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein|
-|IIS 5,1|Windows XP|HTTP|Ja|
+|Verwaltete Anwendungen ("Selbsthosting")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein |
+|Windows-Dienste (früher als NT-Dienste bezeichnet)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Nein |
+|IIS 5,1|Windows XP|HTTP|Ja|
 |IIS 6.0|Windows Server 2003|HTTP|Ja|
 |Windows Process Activation Service (WAS)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Ja|
 

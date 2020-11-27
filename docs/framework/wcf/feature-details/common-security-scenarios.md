@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 21c8279890d1d1cf746e98f875efb6b1ff869c73
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558887"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295079"
 ---
 # <a name="common-security-scenarios"></a>Häufige Sicherheitsszenarien
+
 Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und Dienstsicherheitskonfigurationen. Die Konfigurationen ändern sich aufgrund verschiedenster Faktoren. Zum Beispiel ob sich ein Dienst oder Client im Intranet befindet oder ob die Sicherheit von Windows oder vom Transport (wie HTTPS) gewährleistet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Internet: Ungesicherter Client und Dienst](internet-unsecured-client-and-service.md)  
  Ein Beispiel eines öffentlichen, ungesicherten Clients und Diensts.  
   
@@ -58,9 +60,11 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
  Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste greifen auf zusätzliche Ressourcen (z. B. Datenbanken oder andere Webdienste) zu, die gesichert werden müssen.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Autorisierung](authorization-in-wcf.md)  
   
  [Sicherheitsübersicht](security-overview.md)  
@@ -79,7 +83,7 @@ Die Themen in diesem Abschnitt katalogisieren eine Anzahl möglicher Client- und
   
  [Überwachung](auditing-security-events.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

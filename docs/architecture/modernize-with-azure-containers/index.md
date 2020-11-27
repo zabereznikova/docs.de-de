@@ -2,24 +2,20 @@
 title: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 description: Erfahren Sie in diesem E-Book, wie vorhandene Anwendungen in Azure Cloud und Container übertragen, verschoben und modernisiert werden können.
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172257"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705331"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
 
 ![Titelbild des Leitfadens zum Modernisieren von .NET-Anwendungen.](./media/index/web-application-guide-cover-image.png)
 
-VERÖFFENTLICHT VON  
-Microsoft Press und Microsoft DevDiv  
-Geschäftsbereiche der Microsoft Corporation  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+VERÖFFENTLICHT VON DEN Microsoft Press- und Microsoft DevDiv-Geschäftsbereichen der Microsoft Corporation One Microsoft Way Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation  
+Copyright © 2020 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieser Veröffentlichung dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert werden.
 
@@ -37,12 +33,7 @@ Autor:
 > **Cesar de la Torre**, leitender PM, .NET-Produktteam, Microsoft Corp.
 
 Teilnehmer und Prüfer:
-> **Scott Hunter**, Partner Director von PM, .NET-Team, Microsoft  
-> **Paul Yuknewicz**, Principal PM Manager, Visual Studio-Tools-Team, Microsoft  
-> **Lisa Guthrie**, leitende PM, Visual Studio-Tools-Team, Microsoft  
-> **Ankit Asthana**, leitender PM-Manager, .NET-Team, Microsoft  
-> **Unai Zorrilla**, leitender Entwickler, einfache Konzepte  
-> **Javier Valero**, Chief Operating Officer bei Grupo Solutio  
+> **Scott Hunter**, Partner Director PM, .NET-Team, Microsoft **Paul Yuknewicz**, Principal PM Manager, Visual Studio-Tools-Team, Microsoft **Lisa Guthrie**, Sr. PM, Visual Studio-Tools-Team, Microsoft **Ankit Asthana**, Principal PM Manager, .NET-Team, Microsoft **Unai Zorrilla**, Developer Lead, Plain Concepts **Javier Valero**, Chief Operating Officer bei Grupo Solutio
 
 ## <a name="introduction"></a>Einführung
 
@@ -70,7 +61,7 @@ Für moderne Anwendungen mit der besten langfristigen Agilität und dem besten W
 
 Abbildung 1-1 zeigt die möglichen Pfade, die Sie einschlagen können, wenn Sie vorhandene .NET-Anwendungen in inkrementellen Phasen in die Cloud verschieben.
 
- ![Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste](./media/image1-1.png)
+ ![Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste](./media/image1-1.png)
 
 **(Abbildung 1-1)** . Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste
 
@@ -103,7 +94,7 @@ Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der ei
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Schlüsseltechnologien und -architekturen nach Reifegrad
 
-.NET Framework-Anwendungen begannen ursprünglich mit .NET Framework Version 1.0, die Ende 2001 veröffentlicht wurde. Dann haben Unternehmen neuere Versionen (wie 2.0, 3.5 und .NET 4.x) verwendet. Die meisten dieser Anwendungen wurden unter Windows Server und Internet Information Server (IIS) ausgeführt und verwendeten eine relationale Datenbank (z.B. SQL Server, Oracle, MySQL oder andere RDBMS).
+.NET Framework-Anwendungen begannen ursprünglich mit .NET Framework Version 1.0, die Ende 2001 veröffentlicht wurde. Dann haben Unternehmen neuere Versionen (wie 2.0, 3.5 und .NET Framework 4.x) verwendet. Die meisten dieser Anwendungen wurden unter Windows Server und Internet Information Server (IIS) ausgeführt und verwendeten eine relationale Datenbank (z.B. SQL Server, Oracle, MySQL oder andere RDBMS).
 
 Die meisten vorhandenen .NET-Anwendungen basieren heute auf .NET Framework 4.x oder sogar auf .NET Framework 3.5 und verwenden Webframeworks wie ASP.NET MVC, ASP.NET Web Forms, ASP.NET-Web-API, Windows Communication Foundation (WCF), ASP.NET SignalR oder ASP.NET Web Pages. Diese etablierten .NET Framework-Technologien sind von Windows abhängig. Diese Abhängigkeit muss unbedingt berücksichtigt werden, wenn Sie nur Legacy-Apps migrieren und minimale Änderungen an Ihrer Anwendungsinfrastruktur vornehmen möchten.
 

@@ -2,32 +2,35 @@
 title: 1223 - SwitchCaseNotFound
 ms.date: 03/30/2017
 ms.assetid: 332ace82-2d9e-4fd9-a9a8-f077f43b4a08
-ms.openlocfilehash: 6825d0b4f7c95feb4445d42772a32f46c2bd53df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b50f2bb9e6a507a2928a472310fdc2780c35885d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924097"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294637"
 ---
 # <a name="1223---switchcasenotfound"></a>1223 - SwitchCaseNotFound
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|1223|  
-|Schlüsselwörter|WFActivities|  
+|id|1223|  
+|Keywords|WFActivities|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Gibt an, dass in einer Schalteraktivität keine Fallaktivität mit einem übereinstimmenden Ausdrucksergebnis gefunden werden konnte.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  Die Switch-Aktivität '%1' konnte keine Case-Aktivität finden, die dem Ergebnis des Ausdrucks entspricht.  
   
 ## <a name="details"></a>Details  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
+|Datenelementname|Datenelementtyp|BESCHREIBUNG|  
 |--------------------|--------------------|-----------------|  
 |DisplayName|xs:string|Der Anzeigename der Aktivität.|  
 |AppDomain|xs:string|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|

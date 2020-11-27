@@ -2,14 +2,15 @@
 title: SystemWebRouting-Integrationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 58d720f164c4c35f3de4c282e9aa983d11e4040b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04c3093097c5bf11e1d4dd5d3124c9fbae4b3665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555223"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293909"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting-Integrationsbeispiel
+
 In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Die Verwendung von Webrouting ermöglicht es dem Entwickler, virtuelle Adressen für http zu erstellen, die dann wieder den eigentlichen WCF-Diensten zugeordnet werden. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden.
 
 > [!NOTE]
@@ -48,7 +49,7 @@ Dieses Beispiel ist möglicherweise bereits auf dem Computer installiert. Suchen
   
 5. Schließen Sie den Webbrowser, indem Sie ALT+F4 drücken.  
   
-     Wenn der Entwicklungs Server nicht beendet wurde, klicken Sie mit der rechten Maustaste auf das Benachrichtigungs Bereichs Symbol, und wählen Sie **Beenden**aus.  
+     Wenn der Entwicklungs Server nicht beendet wurde, klicken Sie mit der rechten Maustaste auf das Benachrichtigungs Bereichs Symbol, und wählen Sie **Beenden** aus.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>So verwenden Sie dieses Beispiel, wenn es in IIS gehostet wird  
   
@@ -58,15 +59,15 @@ Dieses Beispiel ist möglicherweise bereits auf dem Computer installiert. Suchen
   
 3. Erstellen Sie eine Webanwendung im Internetinformationsdienste-Manager.  
   
-    1. Klicken Sie im IIS-Manager mit der rechten Maustaste auf die **Standard Website** , und wählen Sie **Anwendung hinzufügen**aus.  
+    1. Klicken Sie im IIS-Manager mit der rechten Maustaste auf die **Standard Website** , und wählen Sie **Anwendung hinzufügen** aus.  
   
-    2. Geben Sie für den **Alias**ein `WebRoutingIntegration` .  
+    2. Geben Sie für den **Alias** ein `WebRoutingIntegration` .  
   
-    3. Wählen Sie für den **physischen Pfad**den Dienst Ordner innerhalb des Projekts aus.  
+    3. Wählen Sie für den **physischen Pfad** den Dienst Ordner innerhalb des Projekts aus.  
   
     4. Klicken Sie auf **OK**.  
   
-4. Starten Sie die Anwendung, indem Sie mit der rechten Maustaste auf die Webanwendung klicken und **Anwendung verwalten** und dann **Durchsuchen**auswählen.  
+4. Starten Sie die Anwendung, indem Sie mit der rechten Maustaste auf die Webanwendung klicken und **Anwendung verwalten** und dann **Durchsuchen** auswählen.  
   
 5. Fügen Sie in der Adressleiste `movies` der URL ein, sodass der Lese `http://localhost:[port]/movies` -und drücken der EINGABETASTE ist.  
   
@@ -83,6 +84,6 @@ Dieses Beispiel ist möglicherweise bereits auf dem Computer installiert. Suchen
 > [!NOTE]
 > Sie müssen die standardmäßige Anwendungs Poolversion auf .NET Framework 4 aktualisieren, wenn Sie auf Version 2 festgelegt ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Hosting- und -Persistenzbeispiele](/previous-versions/appfabric/ff383418(v=azure.10))

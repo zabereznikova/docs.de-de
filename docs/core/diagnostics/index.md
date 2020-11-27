@@ -3,12 +3,12 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982308"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031916"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -27,6 +27,10 @@ Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Te
 ## <a name="unit-testing"></a>Komponententest
 
 [Komponententests](../testing/index.md) sind eine wichtige Komponente von Continuous Integration und der Bereitstellung hochwertiger Software. Komponententests sollen Sie früh warnen, wenn Sie etwas unterbrechen.
+
+## <a name="dumps"></a>Dumps
+
+Ein [Speicherabbild](./dumps.md) ist eine Datei, die zum eine Momentaufnahme des Prozesses zum Zeitpunkt der Erstellung enthält. Dieses kann hilfreich sein, wenn Sie den Zustand Ihrer Anwendung zu Debuggingzwecken überprüfen möchten.
 
 ## <a name="collect-diagnostics-in-containers"></a>Sammeln von Diagnosen in Containern
 

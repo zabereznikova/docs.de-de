@@ -2,14 +2,15 @@
 title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544179"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295053"
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
+
 Dieses Szenariobeispiel veranschaulicht, wie die Identitätsinformationen des Aufrufers mithilfe Windows Communication Foundation (WCF)-Sicherheitsinfrastruktur von einem Dienst zu einem anderen weitergeleitet werden.  
   
  Ein allgemeines Entwurfsmuster besteht darin, dem öffentlichen Netzwerk die Funktionalität, die von einem Dienst bereitgestellt wird, mithilfe eines Fassadendiensts verfügbar zu machen. Der Fassadendienst befindet sich üblicherweise im Perimeternetzwerk (auch bekannt als DMZ (Demilitarized Zone; deutsch: entmilitarisierte Zone) und geschirmtes Unternetz) und kommuniziert mit einem Back-End-Dienst, der die Geschäftslogik implementiert und Zugriff auf interne Daten hat. Der Kommunikationskanal zwischen dem Fassadendienst und dem Back-End-Dienst führt durch eine Firewall und wird üblicherweise auf einen Zweck begrenzt.  
@@ -28,9 +29,11 @@ Dieses Szenariobeispiel veranschaulicht, wie die Identitätsinformationen des Au
 > Der Back-End-Dienst vertraut darauf, dass der Fassadendienst den Aufrufer authentifiziert. Daher authentifiziert der Back-End-Dienst den Aufrufer nicht erneut, sondern nutzt die Identitätsinformationen, die vom Fassadendienst in der weitergeleiteten Anforderung bereitgestellt werden. Aufgrund dieser Vertrauensbeziehung muss der Back-End-Dienst den Fassadendienst authentifizieren, um sicherzustellen, dass die weitergeleitete Nachricht von einer vertrauenswürdigen Quelle stammt, in diesem Fall vom Fassadendienst.  
   
 ## <a name="implementation"></a>Implementierung  
+
  Es gibt zwei Kommunikationspfade in diesem Beispiel. Der erste Kommunikationspfad besteht zwischen dem Client und dem Fassadendienst, der zweite zwischen dem Fassadendienst und dem Back-End-Dienst.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>Kommunikationspfad zwischen Client und Fassadendienst  
+
  Der Kommunikationspfad zwischen Client und Fassadendienst nutzt `wsHttpBinding` mit einem `UserName` -Clientanmeldeinformationstyp. Dies bedeutet, dass der Client Benutzername und Kennwort für die Authentifizierung zum Fassadendienst nutzt und der Fassadendienst die X.509-Zertifizierung für die Authentifizierung zum Client verwendet. Die Bindungskonfiguration sieht wie das folgende Beispiel aus.  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>Kommunikationspfad zwischen Fassadendienst und Back-End-Dienst  
+
  Der Kommunikationspfad zwischen Fassadendienst und Back-End-Dienst nutzt die `customBinding` , die aus mehreren Bindungselementen besteht. Diese Bindung erfüllt zwei Zwecke. Sie authentifiziert den Fassadendienst und den Back-End-Dienst, um sicherzustellen, dass die Kommunikation sicher ist und aus einer vertrauenswürdigen Quelle stammt. Darüber hinaus überträgt sie die Identität des ursprünglichen Aufrufers im `Username` -Sicherheitstoken. In diesem Fall wird nur der Benutzername des ursprünglichen Aufrufers zum Back-End-Dienst übertragen. Das Kennwort ist in der Nachricht nicht enthalten. Grund hierfür ist, dass der Back-End-Dienst dem Fassadendienst die Authentifizierung des Aufrufers anvertraut, bevor die Anforderung weitergeleitet wird. Da der Fassadendienst sich selbst gegenüber dem Back-End-Dienst authentifiziert, kann der Back-End-Dienst die in der weitergeleiteten Anforderung enthaltenen Informationen als vertrauenswürdig einstufen.  
   
  Im Folgenden ist die Bindungskonfiguration für diesen Kommunikationspfad dargestellt.  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  Die Informationen über das Fassadendienstkonto werden mithilfe der `ServiceSecurityContext.Current.WindowsIdentity` -Eigenschaft extrahiert. Um auf die Informationen über den ursprünglichen Aufrufer zuzugreifen, verwendet der Back-End-Dienst die `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -Eigenschaft. Hier wird nach einem `Identity` -Anspruch mit dem Typ `Name`gesucht. Dieser Anspruch wird automatisch von der WCF-Sicherheitsinfrastruktur aus den Informationen generiert, die im- `Username` Sicherheits Token enthalten sind.  
   
 ## <a name="running-the-sample"></a>Ausführen des Beispiels  
+
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen. Sie können die EINGABETASTE in den Konsolenfenstern des Fassaden- und Back-End-Diensts drücken, um die Dienste zu schließen.  
   
 ```console  

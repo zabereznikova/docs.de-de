@@ -2,17 +2,19 @@
 title: Übersicht über die Korrelation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3cc0bc49ad464401ccff769fd5873d5b7e19dccc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293714"
 ---
 # <a name="correlation-overview"></a>Übersicht über die Korrelation
+
 Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichten miteinander oder mit dem Anwendungsinstanzzustand. Dies kann z. B. eine Antwort auf eine ursprüngliche Anforderung oder eine bestimmte Bestell-ID mit dem beibehaltenen Zustand eines Workflows zur Bestellverarbeitung sein. Dieses Thema enthält eine Übersicht über die Korrelation: Die anderen Themen in diesem Abschnitt enthalten weitere Informationen zu den einzelnen Korrelationstypen.  
   
 ## <a name="types-of-correlation"></a>Korrelationstypen  
+
  Die Korrelation kann protokollbasiert oder inhaltsbasiert sein. Protokollbasierte Korrelationen verwenden von der Nachrichtenübermittlungsinfrastruktur bereitgestellte Daten für die Zuordnung zwischen Nachrichten. Nachrichten, die mithilfe der protokollbasierten Korrelation korreliert werden, werden unter Verwendung eines Objekts im Arbeitsspeicher, z. B. <xref:System.ServiceModel.Channels.RequestContext>, oder mit einem vom Transportprotokoll bereitgestellten Token miteinander verknüpft. Bei inhaltsbasierten Korrelationen werden Nachrichten miteinander verknüpft, indem von Anwendungen angegebene Daten verwendet werden. Nachrichten, die mithilfe der inhaltsbasierten Korrelation korreliert werden, werden miteinander verknüpft, indem von der Anwendung definierte Daten in der Nachricht verwendet werden, z. B. eine Kundennummer.  
   
  Aktivitäten, die Teil einer Korrelation sind, verwenden <xref:System.ServiceModel.Activities.CorrelationHandle> zum Verknüpfen der Messagingaktivitäten. Das <xref:System.ServiceModel.Activities.Send>-Objekt, das zum Aufrufen eines Diensts verwendet wird, und das darauffolgende <xref:System.ServiceModel.Activities.Receive>-Objekt, mit dem ein Rückruf vom Dienst empfangen wird, verwenden beispielsweise gemeinsam das <xref:System.ServiceModel.Activities.CorrelationHandle>-Objekt. Dieses grundlegende Muster wird unabhängig davon verwendet, ob die Korrelation inhaltsbasiert oder protokollbasiert erfolgt. Das Korrelationshandle kann für jede Aktivität explizit festgelegt werden, oder die Aktivitäten können in einer <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität enthalten sein. Die Korrelationshandles von in <xref:System.ServiceModel.Activities.CorrelationScope> enthaltenen Aktivitäten werden mithilfe von <xref:System.ServiceModel.Activities.CorrelationScope> verwaltet und erfordern keine explizite Festlegung von <xref:System.ServiceModel.Activities.CorrelationHandle>. Ein <xref:System.ServiceModel.Activities.CorrelationScope>-Bereich stellt die <xref:System.ServiceModel.Activities.CorrelationHandle>-Verwaltung für eine Anforderung-Antwort-Korrelation und einen zusätzlichen Korrelationstyp bereit. Mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostete Workflowdienste nutzen die gleiche standardmäßige Korrelationsverwaltung wie die <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität. Diese standardmäßige Korrelationsverwaltung bedeutet im Allgemeinen, dass Messagingaktivitäten in vielen Szenarios in einem <xref:System.ServiceModel.Activities.CorrelationScope> oder einem Workflowdienst es nicht erfordern, dass <xref:System.ServiceModel.Activities.CorrelationHandle> festgelegt ist. Dies ist nur erforderlich, wenn mehrere Messagingaktivitäten parallel ausgeführt werden oder sich überschneiden, z. B. zwei parallele <xref:System.ServiceModel.Activities.Receive>-Aktivitäten oder zwei <xref:System.ServiceModel.Activities.Send>-Aktivitäten gefolgt von zwei <xref:System.ServiceModel.Activities.Receive>-Aktivitäten. Weitere Informationen zur Standardkorrelation finden Sie in den Themen zu den einzelnen Korrelationstypen in diesem Abschnitt. Weitere Informationen zu Messaging Aktivitäten finden Sie unter [Messaging Aktivitäten](messaging-activities.md) und Gewusst [wie: Erstellen eines Workflow Dienstanbieter mit Messaging Aktivitäten](how-to-create-a-workflow-service-with-messaging-activities.md).  
@@ -27,6 +29,6 @@ Weitere Informationen zur Protokoll Korrelation finden Sie unter [Durable Duplex
 
 Bei der inhaltsbasierten Korrelation wird ein bestimmtes Informationselement in der Nachricht verwendet, um diese einer bestimmten Instanz zuzuordnen. Im Gegensatz zur protokollbasierten Korrelation erfordert die inhaltsbasierte Korrelation es, dass der Anwendungsautor explizit angibt, wo sich diese Daten in den einzelnen verknüpften Nachrichten befinden. Aktivitäten, die die inhaltsbasierte Korrelation verwenden, geben diese Nachrichtendaten mit einem <xref:System.ServiceModel.MessageQuerySet>-Objekt an. Die inhaltsbasierte Korrelation ist bei der Kommunikation mit Diensten nützlich, die keine Kontextbindung verwenden, z. B. <xref:System.ServiceModel.BasicHttpContextBinding>.
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Workflow, compilation
 - Workflow, XOML files
 - Workflow, wcf
-ms.openlocfilehash: cf89962014584adf098118044b063b38b29160b7
-ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
+ms.openlocfilehash: 01cbfeb72e19f727a3a470059047a2192228c394
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91844612"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293857"
 ---
 # <a name="wfcexe-workflow-command-line-compiler-tool"></a>wfc.exe (Workflow-Befehlszeilen-Compilertool)
+
 > [!NOTE]
 > In diesem Material werden veraltete Typen und Namespaces erläutert.
 
@@ -94,7 +95,8 @@ In diesem Abschnitt werden die Optionen für den Befehlszeilen Compiler wfc.exe 
     /nowarn                 Ignore compiler warnings. Short form is '/w'.
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
+
 > [!NOTE]
 > In diesem Material werden veraltete Typen und Namespaces erläutert.
 
