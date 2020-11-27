@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: bf878dff59a9a258567ff99098b0b3f8761194e2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1e6b57193d25da7e5c9a865525dd5e9ea21110b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599229"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254258"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist
+
 Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema Gewusst [wie: Implementieren eines Ermittlungs Proxys](how-to-implement-a-discovery-proxy.md)haben Sie einen suchproxy implementiert. In diesem Thema erstellen Sie einen WCF-Dienst, der Ankündigungs Nachrichten ( `Hello` und `Bye` ) an den suchproxy sendet, sodass er sich bei dem suchproxy registriert und seine Registrierung abmeldet.
 
 ### <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag
@@ -159,6 +160,7 @@ Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie e
 Sie haben die Implementierung eines erkennbaren Diensts abgeschlossen. Weitere Informationen finden Sie unter Gewusst [wie: Implementieren einer Client Anwendung, die den suchproxy zum Suchen nach einem Dienst verwendet](client-app-discovery-proxy-to-find-a-service.md).
 
 ## <a name="example"></a>Beispiel
+
  Dies ist die vollständige Codeauflistung für dieses Thema.
 
 ```csharp

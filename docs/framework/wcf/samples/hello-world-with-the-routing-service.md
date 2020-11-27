@@ -2,14 +2,15 @@
 title: Hello World mit dem Routingdienst
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554787"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253855"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World mit dem Routingdienst
+
 In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Dienst veranschaulicht. Der Routing Dienst ist eine WCF-Komponente, mit der Sie ganz einfach einen Inhalts basierten Router in Ihre Anwendung integrieren können. In diesem Beispiel wird das standardmäßige WCF-Rechner Beispiel für die Kommunikation über den Routing Dienst angepasst. In diesem Beispiel ist der Rechnerclient so konfiguriert, dass er Nachrichten an einen vom Router verfügbar gemachten Endpunkt sendet. Der Routingdienst ist so konfiguriert, dass er alle gesendeten Nachrichten akzeptiert und diese an einen Endpunkt weiterleitet, der dem Rechnerdienst entspricht. Somit werden vom Client gesendete Nachrichten vom Router empfangen und zum eigentlichen Rechnerdienst umgeleitet. Nachrichten vom Rechnerdienst werden an den Router zurückgesendet, der sie dann zurück an den Rechnerclient übergibt.
 
 ### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
@@ -27,7 +28,7 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
 
 3. Drücken Sie die EINGABETASTE, um den Client zu starten.
 
-     Die folgende Ausgabe wird angezeigt.
+     Die folgende Ausgabe wird angezeigt:
 
     ```console
      Add(100,15.99) = 115.99
@@ -40,12 +41,15 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
     ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Konfigurierbar über Code oder App.Config
+
  Das Beispiel wird so konfiguriert geliefert, dass die Datei App.config das Verhalten des Routers definiert. Sie können außerdem den Namen der Datei App.config ändern, damit er nicht erkannt wird, und die Auskommentierung des Methodenaufrufs von ConfigureRouterViaCode() aufheben. Beide Methoden führen zum gleichen Routerverhalten.
 
 ### <a name="scenario"></a>Szenario
+
  In diesem Beispiel wird der Router in der Funktion als einfaches Nachrichtensystem veranschaulicht. Der Routingdienst funktioniert als transparenter Proxyknoten, der so konfiguriert wurde, dass er Nachrichten direkt an einen vorkonfigurierten Satz von Zielendpunkten übergibt.
 
 ### <a name="real-world-scenario"></a>Reales Szenario
+
  Contoso möchte mehr Flexibilität bei der Benennung, Adressierung, Konfiguration und Sicherheit der Dienste. Aus diesem Grund wird ein einfaches Nachrichtensystem vor die Dienste gesetzt, das als öffentlicher Endpunkt fungiert. So können zusätzliche Sicherheitsmaßnahmen vor den eigentlichen Diensten eingefügt werden, und skalierte Lösungen sowie die Dienstversionsverwaltung können später einfacher implementiert werden.
 
 > [!IMPORTANT]
@@ -57,6 +61,6 @@ In diesem Beispiel wird der Windows Communication Foundation (WCF)-Routing Diens
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Hosting- und -Persistenzbeispiele](/previous-versions/appfabric/ff383418(v=azure.10))

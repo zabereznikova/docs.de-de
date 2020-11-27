@@ -2,19 +2,21 @@
 title: Serialisierbare Typen
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586103"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253959"
 ---
 # <a name="serializable-types"></a>Serialisierbare Typen
+
 Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen. Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert.  
   
  Sie können das Standardverhalten ändern, indem Sie das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut auf die Typen und Member anwenden. Diese Funktion ist hilfreich in Situationen mit Typen, die nicht von Ihnen gesteuert und nicht mit weiteren Attributen versehen werden können. Der <xref:System.Runtime.Serialization.DataContractSerializer> erkennt solche nicht markierten Typen.  
   
 ## <a name="serialization-defaults"></a>Standardwerte für die Serialisierung  
+
  Sie können das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut und das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut anwenden, um die Serialisierung von Typen und Membern explizit zu steuern oder anzupassen. Darüber hinaus können Sie diese Attribute auf private Felder anwenden. Doch auch Typen, die nicht mit diesen Attributen markiert sind, werden serialisiert und deserialisiert. Folgende Regeln und Ausnahmen gelten:  
   
 - Der <xref:System.Runtime.Serialization.DataContractSerializer> leitet einen Datenvertrag von Typen ohne Attribute unter Verwendung der Eigenschaften der neu erstellten Typen ab.  
@@ -36,6 +38,7 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
 - Sollen öffentliche Member, Eigenschaften oder Felder von der Serialisierung ausgenommen werden, wenden Sie das <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>-Attribut auf den entsprechenden Member an.  
   
 ## <a name="inheritance"></a>Vererbung  
+
  Nicht markierte Typen (Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben. Diese Regel wird primär erzwungen, um die Abwärtskompatibilität mit Code sicherzustellen, der in früheren Versionen von .NET Framework geschrieben wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen

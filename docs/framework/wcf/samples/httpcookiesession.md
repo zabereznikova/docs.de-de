@@ -2,14 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 8dba147ace7ada221b5d274cd233e4b9618835d9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: df29ae84537cdb7cea40abcdb848ffbb8bbd6b9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253816"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
+
 In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals für die Verwendung von HTTP-Cookies für die Sitzungsverwaltung veranschaulicht. Dieser Kanal ermöglicht die Kommunikation zwischen Windows Communication Foundation (WCF)-Diensten und ASMX-Clients oder zwischen WCF-Clients und ASMX-Diensten.  
   
  Wenn ein Client eine Webmethode in einem Sitzungs basierten ASMX-Webdienst aufruft, bewirkt die ASP.net-Engine Folgendes:  
@@ -34,9 +35,11 @@ In diesem Beispiel wird das Erstellen eines benutzerdefinierten Protokollkanals 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
 ## <a name="httpcookiesession-channel-message-exchange-pattern"></a>HttpCookieSession-Nachrichtenaustauschmuster für Kanal  
+
  In diesem Beispiel werden Sitzungen für ASMX-ähnliche Szenarios aktiviert. Unten im Kanalstapel befindet sich der HTTP-Transport, der <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel> unterstützt. Der Kanal stellt Sitzungen für die höheren Ebenen des Kanalstapels bereit. Im Beispiel werden zwei Kanäle implementiert, die Sitzungen unterstützen (<xref:System.ServiceModel.Channels.IRequestSessionChannel> und <xref:System.ServiceModel.Channels.IReplySessionChannel>).  
   
 ## <a name="service-channel"></a>Dienstkanal  
+
  Im Beispiel wird ein Dienstkanal in der `HttpCookieReplySessionChannelListener`-Klasse bereitgestellt. Diese Klasse implementiert die <xref:System.ServiceModel.Channels.IChannelListener>-Schnittstelle und konvertiert den <xref:System.ServiceModel.Channels.IReplyChannel>-Kanal weiter unten im Kanalstapel in <xref:System.ServiceModel.Channels.IReplySessionChannel>. Dieser Prozess kann folgendermaßen unterteilt werden:  
   
 - Wenn der Kanallistener geöffnet wird, akzeptiert er einen inneren Kanal vom inneren Listener. Da es sich bei dem inneren Listener um einen Datagrammlistener handelt und die Lebensdauer eines akzeptierten Kanals unabhängig von der Lebensdauer des Listeners ist, kann der innere Listener geschlossen und nur der innere Kanal beibehalten werden.  
@@ -77,9 +80,11 @@ InputQueue<RequestContext> requestQueue;
  Mit `channelMapping` wird `ReplySessionChannels` nachverfolgt. Außerdem wird der zugrunde liegende `innerChannel` erst geschlossen, wenn alle akzeptierten Kanäle geschlossen wurden. So kann `HttpCookieReplySessionChannel` über die Lebensdauer von `HttpCookieReplySessionChannelListener` hinaus vorhanden sein. Außerdem besteht nicht die Gefahr, dass der Listener durch die Garbage Collection entfernt wird, da die akzeptierten Kanäle über den `OnClosed`-Rückruf einen Verweis auf den Listener beibehalten.  
   
 ## <a name="client-channel"></a>Clientkanal  
+
  Der entsprechende Clientkanal befindet sich in der `HttpCookieSessionChannelFactory`-Klasse. Bei der Kanalerstellung schließt die Kanalfactory den inneren Anforderungskanal mit einem `HttpCookieRequestSessionChannel` ein. Die `HttpCookieRequestSessionChannel`-Klasse leitet die Aufrufe des zugrunde liegenden Anforderungskanals weiter. Wenn der Client den Proxy schließt, sendet `HttpCookieRequestSessionChannel` eine Meldung an den Dienst, mit der angegeben wird, dass der Kanal geschlossen wird. So kann der Dienstkanalstapel den verwendeten Sitzungskanal ordnungsgemäß beenden.  
   
 ## <a name="binding-and-binding-element"></a>Bindung und Bindungselement  
+
  Nachdem Sie den Dienst und die Client Kanäle erstellt haben, besteht der nächste Schritt darin, Sie in die WCF-Laufzeit zu integrieren. Kanäle werden über Bindungen und Bindungs Elemente für WCF verfügbar gemacht. Eine Bindung besteht aus einem oder mehreren Bindungselementen. WCF bietet mehrere System definierte Bindungen. beispielsweise BasicHttpBinding oder WSHttpBinding. Die `HttpCookieSessionBindingElement`-Klasse enthält die Implementierung des Bindungselements. Sie überschreibt die Methoden zur Kanallistener- und Kanalfactoryerstellung, um die erforderlichen Instanziierungen des Kanallisteners und der Kanalfactory auszuführen.  
   
  Im Beispiel werden Richtlinienassertionen für die Dienstbeschreibung verwendet. So können im Beispiel die Kanalanforderungen für andere Clients veröffentlicht werden, die den Dienst verwenden können. Dieses Bindungselement veröffentlicht beispielsweise Richtlinienassertionen, damit potenzielle Clients wissen, dass Sitzungen unterstützt werden. Da im Beispiel die `ExchangeTerminateMessage`-Eigenschaft in der Bindungselementkonfiguration aktiviert wird, werden die erforderlichen Assertionen hinzugefügt, um zu zeigen, dass der Dienst eine zusätzliche Meldungsaustauschaktion zum Beenden der Sitzungskommunikation unterstützt. Clients können diese Aktion dann verwenden. Im folgenden WSDL-Code werden die aus `HttpCookieSessionBindingElement` erstellten Richtlinienassertionen veranschaulicht.  
@@ -98,9 +103,11 @@ InputQueue<RequestContext> requestQueue;
  Die `HttpCookieSessionBinding`-Klasse ist eine vom System bereitgestellte Bindung, die das zuvor beschriebene Bindungselement verwendet.  
   
 ## <a name="adding-the-channel-to-the-configuration-system"></a>Hinzufügen des Kanals zum Konfigurationssystem  
+
  Im Beispiel werden zwei Klassen bereitgestellt, die den Beispielkanal durch Konfiguration verfügbar machen. Die erste ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> für das `HttpCookieSessionBindingElement`. Dem `HttpCookieSessionBindingConfigurationElement`, das sich von <xref:System.ServiceModel.Configuration.StandardBindingElement> herleitet, wird der Großteil der Implementierung übertragen. `HttpCookieSessionBindingConfigurationElement` verfügt über Eigenschaften, die den Eigenschaften von `HttpCookieSessionBindingElement` entsprechen.  
   
 ### <a name="binding-element-extension-section"></a>Abschnitt für Bindungselementerweiterungen  
+
  Der Abschnitt `HttpCookieSessionBindingElementSection` ist ein <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>, das die `HttpCookieSessionBindingElement` für das Konfigurationssystem verfügbar macht. Mit wenigen Überschreibungen werden der Konfigurationsabschnittsname, der Typ des Bindungselements und das Erstellen des Bindungselements definiert. Danach kann der Erweiterungsabschnitt wie folgt in einer Konfigurationsdatei registriert werden:  
   
 ```xml  
@@ -130,6 +137,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Testcode  
+
  Testcode für die Verwendung dieses Beispieltransports ist in den Client- und Dienstverzeichnissen verfügbar. Sie besteht aus zwei Tests – bei einem Test wird eine Bindung verwendet `allowCookies` , bei `true` der auf dem Client auf festgelegt ist. Im zweiten Test wird das explizite Herunterfahren (mit abschließenden Meldungsaustausch) für die Bindung aktiviert.  
   
  Wenn Sie das Beispiel ausführen, sollten Sie folgende Ausgabe erhalten:  

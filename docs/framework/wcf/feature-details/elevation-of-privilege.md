@@ -1,26 +1,29 @@
 ---
-title: Angriffe durch Rechteerweiterung
+title: Rechteerweiterungen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 823b41f86080d4802f76fe69865279a7c3506238
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c62e11eedaa3fa194522695a33bccf210d390df
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597409"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254219"
 ---
-# <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
+# <a name="elevation-of-privilege"></a>Rechteerweiterungen
+
 Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die ursprünglich gewährten Autorisierungs Berechtigungen hinausgehen. Dies ist zum Beispiel der Fall, wenn einem Angreifer mit einem Berechtigungssatz von "Nur-Lesen"-Berechtigungen es irgendwie gelingt, "Lesen-und-Schreiben"-Berechtigungen in seinen Berechtigungssatz aufzunehmen.  
   
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Vertrauenswürdige STS sollten SAML-Tokenansprüche signieren  
+
  Ein SAML (Security Assertions Markup Language)-Token ist ein generisches XML-Token, das den Standardtyp für ausgestellte Token darstellt. SAML-Token können von einem Sicherheitstokendienst (Security Token Service, STS) erstellt werden, der für den empfangenden Webdienst in einem typischen Datenaustausch als vertrauenswürdig gilt. SAML-Token enthalten Ansprüche in Form von Anweisungen. Ein Angreifer kann die Ansprüche aus einem gültigen Token kopieren, ein neues SAML-Token erstellen und mit einem anderen Aussteller signieren. Das Ziel ist hierbei, festzustellen, ob der Server Aussteller validiert, und wenn nicht, diese Schwäche zum Erstellen von SAML-Token auszunutzen, die Berechtigungen über die von einem vertrauenswürdigen STS beabsichtigten hinaus gewähren.  
   
  Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitäts Modell](managing-claims-and-authorization-with-the-identity-model.md) und Verbund [Token und ausgestellte Token](federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Wechseln der Identität ohne Sicherheitskontext  
+
  Folgendes gilt nur für WinFX.  
   
  Wenn eine Verbindung zwischen einem Client und einem Server hergestellt wird, ändert sich die Identität des Clients nicht, es sei denn, es besteht eine Situation: Nachdem der WCF-Client geöffnet wurde, sind alle folgenden Bedingungen erfüllt:  
@@ -38,6 +41,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
  Wenn das Verhalten beim Einsatz der Windows-Authentifizierung in Verbindung mit dem Identitätswechsel deterministisch sein soll, müssen Sie die Windows-Anmeldeinformationen explizit festlegen, oder Sie müssen einen Sicherheitskontext für den Dienst einrichten. Hierzu verwenden Sie eine Nachrichtensicherheitssitzung oder eine Transportsicherheitssitzung. Zum Beispiel kann der net.tcp-Transport eine Transportsicherheitssitzung bereitstellen. Darüber hinaus dürfen Sie in Aufrufen des Diensts nur die synchrone Version von Clientvorgängen verwenden. Wenn Sie einen Nachrichtensicherheitskontext einrichten, sollten Sie die Verbindung mit dem Dienst nicht länger als den für die Sitzung konfigurierten Erneuerungszeitraum geöffnet halten, weil sich die Identität auch während des Sitzungserneuerungsprozesses ändern kann.  
   
 ### <a name="credentials-capture"></a>Aufzeichnung der Anmeldeinformationen  
+
  Folgendes gilt für .NET Framework 3,5 und nachfolgende Versionen.  
   
  Die vom Client oder Dienst verwendeten Anmeldeinformationen basieren auf dem aktuellen Kontextthread. Die Anmeldeinformationen werden durch einen Aufruf der `Open`-Methode (bzw. `BeginOpen` für asynchrone Aufrufe) des Clients oder Diensts bezogen. Sowohl für die <xref:System.ServiceModel.ServiceHost>-Klasse als auch für die <xref:System.ServiceModel.ClientBase%601>-Klasse gilt, dass die `Open`-Methode bzw. die `BeginOpen`-Methode von der <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>-Methode bzw. der <xref:System.ServiceModel.Channels.CommunicationObject.BeginOpen%2A>-Methode der <xref:System.ServiceModel.Channels.CommunicationObject>-Klasse abgeleitet ist.  
@@ -46,6 +50,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
 > Bei Verwendung der `BeginOpen`-Methode kann nicht garantiert werden, dass es sich bei den aufgezeichneten Anmeldeinformationen um die Anmeldeinformationen des Prozesses handelt, von dem die Methode aufgerufen wird.  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>Tokenzwischenspeicher ermöglichen Wiederholungen mit veralteten Daten  
+
  WCF verwendet die Funktion der lokalen Sicherheits Autorität (Local Security Authority, LSA) `LogonUser` zum Authentifizieren von Benutzern anhand von Benutzername und Kennwort. Da die LOGON-Funktion ein kostspieliger Vorgang ist, ermöglicht Ihnen WCF das Zwischenspeichern von Token, die authentifizierte Benutzer darstellen, um die Leistung zu verbessern. Mit dem Zwischenspeichermechanismus werden die Ergebnisse von `LogonUser` für die spätere Verwendung gespeichert. Dieser Mechanismus ist standardmäßig deaktiviert. um es zu aktivieren, legen Sie die- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A> Eigenschaft auf fest `true` , oder verwenden Sie das- `cacheLogonTokens` Attribut von [\<userNameAuthentication>](../../configure-apps/file-schema/wcf/usernameauthentication.md) .  
   
  Sie können eine Gültigkeitsdauer (Time to Live, TTL) für die zwischengespeicherten Token festlegen, indem Sie <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A>-Eigenschaft auf eine <xref:System.TimeSpan>-Zeitspanne festlegen oder das `cachedLogonTokenLifetime`-Attribut des `userNameAuthentication`-Elements verwenden. Der Standardwert beträgt 15 Minuten. Beachten Sie Folgendes: Solange ein Token zwischengespeichert ist, kann jeder Client, der den gleichen Benutzernamen und das gleiche Kennwort angibt, das Token nutzen, auch wenn das betreffende Benutzerkonto in Windows gelöscht oder dessen Kennwort geändert wurde. Bis die Gültigkeitsdauer abläuft und das Token aus dem Cache entfernt wird, ermöglicht WCF dem (möglicherweise böswilligen) Benutzer, sich zu authentifizieren.  
@@ -53,6 +58,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
  So lässt sich dieses Problem abschwächen: Verkleinern Sie die Angriffsfläche, indem Sie den `cachedLogonTokenLifetime`-Wert auf die kürzeste Zeitspanne festlegen, die von den Benutzern benötigt wird.  
   
 ## <a name="issued-token-authorization-expiration-reset-to-large-value"></a>Ausgestellte Tokenautorisierung: Ablaufzeit auf großem Wert zurückgesetzt  
+
  Unter bestimmten Bedingungen kann die <xref:System.IdentityModel.Policy.AuthorizationContext.ExpirationTime%2A>-Eigenschaft des <xref:System.IdentityModel.Policy.AuthorizationContext>-Objekts auf einen unerwartet großen Wert (z.&#160;B. der Wert des <xref:System.DateTime.MaxValue>-Felds minus einem Tag oder der 20. Dezember 9999) festgelegt werden.  
   
  Dieser Fall tritt ein, wenn <xref:System.ServiceModel.WSFederationHttpBinding> und eine der vom System bereitgestellten Bindungen verwendet werden, für die ausgestellte Token als Clientanmeldeinformationen zulässig sind.  
@@ -70,6 +76,7 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
  Um dem entgegenzuwirken, muss die Autorisierungsrichtlinie die Aktion und Gültigkeitsdauer jeder Autorisierungsrichtlinie überprüfen.  
   
 ## <a name="the-service-uses-a-different-certificate-than-the-client-intended"></a>Der Dienst verwendet ein anderes Zertifikat, als das vom Client beabsichtigte  
+
  Unter bestimmten Umständen kann ein Client eine Nachricht mit einem X.509-Zertifikat signieren und den Dienst ein anderes als das vorgesehene Zertifikat abrufen lassen.  
   
  Dieser Fall kann unter den folgenden Umständen eintreten:  
@@ -85,8 +92,8 @@ Die *Erhöhung der* Berechtigungen führt dazu, dass einem Angreifer über die u
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitshinweise](security-considerations-in-wcf.md)
-- [Offenlegung von Informationen](information-disclosure.md)
-- [Denial of Service](denial-of-service.md)
+- [Veröffentlichung von Informationen](information-disclosure.md)
+- [Denial-of-Service](denial-of-service.md)
 - [Wiederholungsangriffe](replay-attacks.md)
 - [Manipulation](tampering.md)
 - [Nicht unterstützte Szenarien](unsupported-scenarios.md)

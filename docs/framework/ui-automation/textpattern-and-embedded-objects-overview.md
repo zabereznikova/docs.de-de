@@ -8,14 +8,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9d348b130ef26dfd27b27ecd93755919615afb68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252464"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -24,7 +25,9 @@ ms.locfileid: "87163563"
  Bei [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einem eingebetteten Objekt handelt es sich um ein beliebiges Element mit nicht-Text Grenzen, z. b. ein Bild, einen Hyperlink, eine Tabelle oder einen Dokumenttyp, z. b. eine Microsoft Excel-Tabelle oder eine Microsoft Windows Media-Datei Dies weicht von der Standarddefinition ab, in der Elemente in einer Anwendung erstellt und einer anderen eingebettet bzw. mit einer anderen verknüpft sind. Ob das Objekt innerhalb der ursprünglichen Anwendung bearbeitet werden kann, ist im Kontext der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]nicht relevant.  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>
+
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Eingebettete Objekte und die Benutzeroberflächenautomatisierungs-Struktur  
+
  Eingebettete Objekte werden als einzelne Elemente innerhalb der Steuerelementansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur behandelt. Sie werden als untergeordnete Elemente des Textcontainers verfügbar gemacht, sodass über dasselbe Model wie bei anderen Steuerelementen in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]auf diese zugegriffen werden kann.  
   
  ![Eingebettete Tabelle mit Bild in einem Textcontainer](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
@@ -34,7 +37,9 @@ Beispiel für einen Textcontainer mit Tabelle, Bild und eingebetteten Linkobjekt
 Beispiel der Inhaltsansicht für einen Teil des vorherigen Textcontainers  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>
+
 ## <a name="expose-embedded-objects-using-textpattern-and-textpatternrange"></a>Verfügbarmachen von eingebetteten Objekten mithilfe von TextPattern und TextPatternRange  
+
  Die <xref:System.Windows.Automation.TextPattern> -Steuerelementmuster-Klasse wird in Verbindung mit der <xref:System.Windows.Automation.Text.TextPatternRange> -Klasse verwendet, um Methoden und Eigenschaften verfügbar zu machen, die das Navigieren und Abfragen von eingebetteten Objekten erleichtern.  
   
  Der Textinhalt (oder innere Text) eines Textcontainers und ein eingebettetes Objekt, z. B. ein Link oder eine Tabellenzelle, werden in der Steuerelementansicht und der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur als einzelner, kontinuierlicher Textstream verfügbar gemacht, Objektgrenzen werden dabei ignoriert. Wenn ein Benutzeroberflächenautomatisierungs-Client den Text abruft, um ihn zu lesen, zu interpretieren oder zu analysieren, sollte der Textbereich auf bestimmte Fälle überprüft werden, z. B. auf Tabellen mit Textinhalt oder andere eingebettete Objekte. Dies geschieht durch Aufrufen von <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> , um ein <xref:System.Windows.Automation.AutomationElement> für alle eingebetteten Elemente abzurufen, und anschließend durch Aufrufen von <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , um einen Textbereich für alle Elemente abzurufen. Dies wird rekursiv ausgeführt, bis der gesamte Textinhalt abgerufen wurde.  
@@ -56,7 +61,9 @@ Beispiel für einen Textstream mit eingebetteten Objekten und deren Bereichsabsc
 Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosingUnit()  
   
 <a name="Common_Scenarios"></a>
+
 ## <a name="common-scenarios"></a>Häufige Szenarios  
+
  In den folgenden Abschnitten sind Beispiele für die häufigsten Szenarien dargestellt, in denen eingebettete Objekte verwendet werden.  
   
  Legende für die dargestellten Beispiele:  
@@ -99,7 +106,9 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> mit den Parametern (TextUnit.Word, 1).|Verschiebt den Textbereichsabschnitt nach „http“, da der Text des Links aus einzelnen Wörtern besteht. In diesem Fall wird der Link nicht als einzelnes Objekt behandelt.<br /><br /> Die URL {[http]} ist in den Text eingebettet.|  
   
 <a name="Image"></a>
+
 ### <a name="image"></a>Image  
+
  **Beispiel 1: Ein Textbereich, der ein eingebettetes Bild enthält**  
   
  {Das ![Beispiel Image Embedded Image](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in Text eingebettet.  
@@ -122,6 +131,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> mit den Parametern (TextUnit.Word, 1).|Verschiebt den Textbereichsabschnitt nach „ist“. Da nur textbasierte eingebettete Objekte als Teil des Textstreams betrachtet werden, hat das Bild in diesem Beispiel keine Auswirkungen auf das Move-Objekt oder dessen Rückgabewert (in diesem Fall 1).|  
   
 <a name="Table"></a>
+
 ### <a name="table"></a>Tabelle  
   
 ### <a name="table-used-for-examples"></a>Für Beispiele verwendete Tabelle  
@@ -129,7 +139,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |Zelle mit Bild|Zelle mit Text|  
 |---------------------|--------------------|  
 |![Beispiel für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Beispiel 2 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|„Y“ zugeordnet ist|  
+|![Beispiel 2 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|J|  
 |![Beispiel 3 für eingebettetes Bild](./media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Bild für Z|Z|  
   
  **Beispiel 1: Abrufen des Textcontainers aus dem Inhalt einer Zelle**  

@@ -6,19 +6,21 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b92f1ad8bb00e9df8daf55da4d7a808420d909cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546314"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253998"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
+
 In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-Sicherheitsfeatures und deren Verwendung zum Sichern von Nachrichten beschrieben.  
   
  Weitere Informationen zu Windows Server AppFabric und Sicherheit finden Sie unter [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Sicherheitsübersicht](security-overview.md)  
  Beschreibt die Sicherheitsfunktionen in WCF.  
   
@@ -56,19 +58,21 @@ In den Themen in diesem Abschnitt werden Windows Communication Foundation (WCF)-
  Richtlinien zum Erstellen von sicheren WCF-Anwendungen.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Details zur WCF-Funktion](index.md)  
   
  [Einfache WCF-Programmierung](../basic-wcf-programming.md)  
   
- [Tutorial zu den ersten Schritten](../getting-started-tutorial.md)  
+ [Lernprogramm 'Erste Schritte'](../getting-started-tutorial.md)  
   
  [Konzeptionelle Übersicht](../conceptual-overview.md)  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren der Anwendung](../diagnostics/configuring-your-application.md)

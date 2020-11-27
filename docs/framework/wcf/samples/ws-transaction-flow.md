@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 1fbde53289c147d8ea273b9c86e65cbb8e262b30
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596409"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252386"
 ---
 # <a name="ws-transaction-flow"></a>WS-Transaktionsfluss
+
 In diesem Beispiel werden die Verwendung einer clientkoordinierten Transaktion und die Client- und Serveroptionen für den Transaktionsfluss unter Verwendung des WS-Atomic-Transaktionsprotokolls oder des OleTransactions-Protokolls erläutert. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md) Schritten, mit denen ein Rechner Dienst implementiert wird. die Vorgänge werden jedoch mit der Verwendung von `TransactionFlowAttribute` mit der **transaktionflowoption** -Enumeration veranschaulicht, um zu bestimmen, welcher Grad Transaktions Fluss aktiviert ist. Innerhalb des Bereichs des Transaktionsflusses wird ein Protokoll der angeforderten Vorgänge in eine Datenbank geschrieben. Dieses bleibt dort erhalten, bis die clientkoordinierte Transaktion fertiggestellt wurde. Wenn die Clienttransaktion nicht fertiggestellt wird, stellt die Webdiensttransaktion sicher, dass die entsprechenden Aktualisierungen der Datenbank nicht ausgeführt werden.  
   
 > [!NOTE]
@@ -230,9 +231,9 @@ Press <ENTER> to terminate the service.
 3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
     > [!NOTE]
-    > Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Weitere Informationen zum Einrichten von wsatConfig. exe finden Sie [unter Konfigurieren der WS-Atomic Transaction-Unterstützung](../feature-details/configuring-ws-atomic-transaction-support.md).  
+    > Aktivieren Sie bei einer computerübergreifenden Konfiguration Distributed Transaction Coordinator entsprechend den nachfolgenden Anweisungen, und aktivieren Sie mit dem Tool WsatConfig.exe aus dem Windows SDK die Netzwerkunterstützung von WCF-Transaktionen. Weitere Informationen zum Einrichten von WsatConfig.exe finden Sie [unter Konfigurieren WS-Atomic Transaktionsunterstützung](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
- Unabhängig davon, ob Sie das Beispiel auf demselben Computer oder auf unterschiedlichen Computern ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das Tool wsatConfig. exe verwenden, um die Netzwerkunterstützung für WCF-Transaktionen zu aktivieren.  
+ Unabhängig davon, ob Sie das Beispiel auf demselben Computer oder auf unterschiedlichen Computern ausführen, müssen Sie das Microsoft Distributed Transaction Coordinator (MSDTC) konfigurieren, um den Netzwerk Transaktions Fluss zu aktivieren, und das WsatConfig.exe Tool verwenden, um die Netzwerkunterstützung für WCF-Transaktionen zu aktivieren.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>So konfigurieren Sie Microsoft Distributed Transaction Coordinator (MSDTC) zum Ausführen des Beispiels  
   
@@ -248,7 +249,7 @@ Press <ENTER> to terminate the service.
   
     5. Überprüfen Sie den **DTC-Netzwerk Zugriff** und **Eingehende zulassen**.  
   
-    6. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
+    6. Klicken Sie auf **OK** und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     7. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
@@ -256,13 +257,13 @@ Press <ENTER> to terminate the service.
   
     1. Navigieren Sie im **Startmenü** zu " **Systemsteuerung**", und klicken Sie dann auf " **Verwaltung**" und dann auf " **Komponenten Dienste**".  
   
-    2. Erweitern Sie **Komponenten Dienste**. Öffnen Sie den Ordner **Computer** . Wählen Sie **Distributed Transaction Coordinator**aus.  
+    2. Erweitern Sie **Komponenten Dienste**. Öffnen Sie den Ordner **Computer** . Wählen Sie **Distributed Transaction Coordinator** aus.  
   
     3. Klicken Sie mit der rechten Maustaste auf **DTC Coordinator** , und wählen Sie **Eigenschaften**  
   
     4. Aktivieren Sie auf der Registerkarte **Sicherheit** die Option **DTC-Netzwerk Zugriff** und **Eingehende zulassen**.  
   
-    5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
+    5. Klicken Sie auf **OK** und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
@@ -274,9 +275,9 @@ Press <ENTER> to terminate the service.
   
     3. Klicken Sie auf der Registerkarte **MSDTC** auf **Sicherheitskonfiguration**.  
   
-    4. Überprüfen Sie den **DTC-Netzwerk Zugriff** , und **lassen Sie Ausgeh**Ende  
+    4. Überprüfen Sie den **DTC-Netzwerk Zugriff** , und **lassen Sie Ausgeh** Ende  
   
-    5. Klicken Sie auf **OK**und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
+    5. Klicken Sie auf **OK** und dann auf **Ja** , um den MSDTC-Dienst neu zu starten.  
   
     6. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   

@@ -3,19 +3,21 @@ title: Sitzungen, Instanziierung und Parallelität
 description: Erfahren Sie mehr über Sitzungen, Instanziierung und Parallelität, ihre Verwendung und die Interaktionen zwischen Ihnen im wfc.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7335d1c4d4ddf5247fc42c70cdc5e8ae33be7292
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254206"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
+
 Eine *Sitzung* ist die Korrelation (d. h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
   
  In diesem Thema werden diese Einstellungen, ihre Verwendung und die Interaktion zwischen den Einstellungen beschrieben.  
   
 ## <a name="sessions"></a>Sitzungen  
+
  Wenn die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft durch einen Dienstvertrag auf <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>festgelegt wird, bedeutet dies, dass alle Aufrufe (das heißt der zugrunde liegende Nachrichtenaustausch, durch den die Aufrufe unterstützt werden) Teil derselben Konversation sein müssen. Falls in einem Vertrag angegeben wird, dass Sitzungen zwar erlaubt, aber nicht erforderlich sind, können Clients eine Verbindung herstellen und eine Sitzung aufbauen oder auch nicht. Wird eine Sitzung beendet und eine Nachricht über diesen sitzungsbasierten Kanal gesendet, wird eine Ausnahme ausgelöst.  
   
  WCF-Sitzungen verfügen über die folgenden Hauptfunktionen:  
@@ -38,7 +40,8 @@ Eine *Sitzung* ist die Korrelation (d. h. die Beziehung) aller zwischen zwei En
   
  Client- und Dienstanwendungen interagieren auf unterschiedliche Weise mit Sitzungen. Clientanwendungen initiieren Sitzungen und empfangen und verarbeiten dann die innerhalb der Sitzung gesendeten Nachrichten. Dienstanwendungen können Sitzungen als Erweiterungspunkt verwenden, um zusätzliches Verhalten hinzuzufügen. Dies geschieht durch direkte Nutzung von <xref:System.ServiceModel.InstanceContext> oder durch Implementierung eines benutzerspezifischen Instanzenkontextanbieters.  
   
-## <a name="instancing"></a>Instancing  
+## <a name="instancing"></a>Instanziierung  
+
  Durch das Instanziierungsverhalten (das über die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft festgelegt wird) lässt sich steuern, wie der <xref:System.ServiceModel.InstanceContext> als Antwort auf eingehende Nachrichten erstellt wird. Standardmäßig ist jeder <xref:System.ServiceModel.InstanceContext> einem benutzerdefinierten Dienstobjekt zugeordnet. Dies bedeutet, dass (im Normalfall) auch die Instanziierung benutzerdefinierter Dienstobjekte über die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> -Eigenschaft gesteuert wird. Die <xref:System.ServiceModel.InstanceContextMode> -Enumeration definiert die Instanziierungsmodi.  
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
@@ -62,6 +65,7 @@ public class CalculatorService : ICalculatorInstance
  Durch die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft wird gesteuert, wie oft der <xref:System.ServiceModel.InstanceContext> freigegeben wird. Die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft und die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> -Eigenschaft bestimmen dagegen, wann das Dienstobjekt freigegeben wird.  
   
 ### <a name="well-known-singleton-services"></a>Bekannte Singleton-Dienste  
+
  Gelegentlich ist eine Variante für einzelne Instanzendienstobjekte nützlich: Sie können selbst ein Dienstobjekt und den Diensthost, der dieses Objekt verwendet, erstellen. Hierfür müssen Sie auch die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft auf <xref:System.ServiceModel.InstanceContextMode.Single> festlegen, damit keine Ausnahme ausgelöst wird, sobald der Diensthost geöffnet wird.  
   
  Verwenden Sie zum Erstellen eines solchen Diensts den <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> -Konstruktor. Dieser stellt eine Alternative zur Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> dar, wenn Sie eine bestimmte Objektinstanz für einen Singleton-Dienst bereitstellen möchten. Sie können diese Überladung verwenden, wenn der Dienst Implementierungstyp schwer zu erstellen ist (wenn er z. b. keinen Parameter losen öffentlichen Konstruktor implementiert).  
@@ -69,9 +73,11 @@ public class CalculatorService : ICalculatorInstance
  Beachten Sie Folgendes: Wenn ein Objekt für diesen Konstruktor bereitgestellt wird, funktionieren einige Funktionen im Zusammenhang mit dem Windows Communication Foundation-Instanziierungsverhalten (WCF) unterschiedlich. So zeigt zum Beispiel der Aufruf von <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> keine Wirkung, wenn eine Singleton-Objektinstanz bereitgestellt wird. Dementsprechend werden auch alle anderen Instanzfreigabemechanismen ignoriert. Der <xref:System.ServiceModel.ServiceHost> verhält sich immer so, als ob die <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> -Eigenschaft für alle Vorgänge auf <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> festgelegt ist.  
   
 ### <a name="sharing-instancecontext-objects"></a>Freigeben von InstanceContext-Objekten  
+
  Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf dem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen.  
   
 ## <a name="concurrency"></a>Parallelität  
+
  Bei der Parallelität handelt es sich um die Steuerung der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> aktiv sind. Sie können diese Anzahl über <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> in Verbindung mit der <xref:System.ServiceModel.ConcurrencyMode> -Enumeration bestimmen.  
   
  Es stehen die folgenden drei Parallelitätsmodi zur Verfügung:  
@@ -98,6 +104,7 @@ public class CalculatorService : ICalculatorConcurrency
 ```  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Interaktion von Sitzungen und InstanceContext-Einstellungen  
+
  Sitzungen und der <xref:System.ServiceModel.InstanceContext> interagieren je nach Kombination des Werts der <xref:System.ServiceModel.SessionMode> -Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft der Dienstimplementierung, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird.  
   
  Die folgende Tabelle enthält eine Übersicht über die Ergebnisse eines eingehenden Kanals, der Sitzungen je nach Kombination der Werte für die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> -Eigenschaft und die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft eines Diensts unterstützt oder nicht unterstützt.  
@@ -113,6 +120,6 @@ public class CalculatorService : ICalculatorConcurrency
 - [Verwenden von Sitzungen](../using-sessions.md)
 - [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](how-to-create-a-service-that-requires-sessions.md)
 - [Vorgehensweise: Steuern der Dienstinstanzierung](how-to-control-service-instancing.md)
-- [Concurrency](../samples/concurrency.md)
-- [Instancing](../samples/instancing.md)
-- [Sitzung](../samples/session.md)
+- [Parallelität](../samples/concurrency.md)
+- [Instanziierung](../samples/instancing.md)
+- [Sitzungskonsistenz](../samples/session.md)

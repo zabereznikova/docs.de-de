@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 0317e7b42f589b31f5c77b89d26cb46815f13054
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 76362684d289ca6aaac852158a05087a0a28f837
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254050"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds
+
 Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu erstellen, der einen Syndizierungs Feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst erstellt wird, der einen Atom-Syndication-Feed verfügbar macht.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
@@ -64,7 +65,7 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
   
 ### <a name="to-call-getblog-with-an-http-get"></a>So rufen Sie GetBlog() mit HTTP GET auf  
   
-1. Öffnen Sie Internet Explorer, geben Sie die folgende URL ein, und drücken Sie die EINGABETASTE:`http://localhost:8000/BlogService/GetBlog`  
+1. Öffnen Sie Internet Explorer, geben Sie die folgende URL ein, und drücken Sie die EINGABETASTE: `http://localhost:8000/BlogService/GetBlog`  
   
      Die URL enthält die Basisadresse des Dienstanbieter ( `http://localhost:8000/BlogService` ), die relative Adresse des Endpunkts und den aufzurufenden Dienst Vorgang.  
   
@@ -88,12 +89,14 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
      [!code-vb[htAtomBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Beispiel  
+
  Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.  
   
  [!code-csharp[htAtomBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatombasic/cs/program.cs#12)]
  [!code-vb[htAtomBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Verweisen Sie beim Kompilieren des obigen Codes auf System.ServiceModel.dll und System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Weitere Informationen

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a5fe0cabb1a6be7f93bf5f4d753e9bb08a39cea3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141587"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253335"
 ---
 # <a name="configuring-wcf-services"></a>Konfigurieren von WCF-Diensten
 
@@ -18,11 +18,12 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  Die Konfiguration enthält bei dieser Verwendungsweise alle Möglichkeiten, die Sie zum Definieren und Anpassen der verschiedenen Aspekte eines Diensts verwenden können, ob imperativ im Code oder mithilfe einer Konfigurationsdatei. Dazu gehört auch das Angeben seiner Endpunktadressen, der verwendeten Transportarten und seiner Sicherheitsschemas. In der Praxis ist das Schreiben von Konfigurationen ein wesentlicher Bestandteil der Programmierung von WCF-Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vereinfachte Konfiguration](simplified-configuration.md)  
  Ab .NET Framework 4 enthält WCF ein neues Standard Konfigurations Modell, das die WCF-Konfigurations Anforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime den Dienst automatisch mit Standard Endpunkten, Bindungen und Verhaltensweisen.  
   
  [Konfigurieren von Diensten mit Konfigurationsdateien](configuring-services-using-configuration-files.md)  
- Ein Windows Communication Foundation (WCF)-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden XML-Elemente der Datei "Web. config" für eine Internetinformationsdienste (IIS)-Website hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
+ Ein Windows Communication Foundation (WCF)-Dienst kann mit der .NET Framework-Konfigurations Technologie konfiguriert werden. In den meisten Fällen werden der Web.config Datei für eine Internetinformationsdienste (IIS)-Website, die einen WCF-Dienst hostet, XML-Elemente hinzugefügt. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
   
  [Bindungen](bindings.md)  
  Außerdem umfasst WCF mehrere vom System bereitgestellte allgemeine Konfigurationen in Form von Bindungen, mit denen Sie schnell die grundlegendsten Features für die Kommunikation zwischen Client und Dienst auswählen können, wie z. b. die verwendeten Transporte, Sicherheit und Nachrichten Codierungen.  
@@ -37,6 +38,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  Die Anforderungen zum Verwenden eines Dienstes, der über die Interoperabilität mit Diensten und Clients auf beliebigen anderen Plattformen oder Betriebssystemen verfügt, sind in der WS-I Basic Profile 1.1-Spezifikation beschrieben.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -44,6 +46,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Grundlegender Programmierlebenszyklus](basic-programming-lifecycle.md)  
   
  [Entwerfen und Implementieren von Diensten](designing-and-implementing-services.md)  

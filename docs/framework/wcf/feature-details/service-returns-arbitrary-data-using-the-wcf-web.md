@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 9753fbc9b333cb7e89ddc8dff030cb1f62ede23b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ed3e5269be5b636b348ff0efe44c49dae5335e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600360"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253894"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
+
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienst Vorgang Daten in einem Format zurückgeben muss, das nicht von WCF unterstützt wird. In diesem Thema wird die Verwendung des WCF-Web-http-Programmiermodells zum Erstellen eines solchen Diensts erläutert. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
@@ -108,6 +109,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
 2. Öffnen Sie Internet Explorer, und geben Sie `http://localhost:8000/Service/GetImage?width=50&height=40` ein. Ein gelbes Rechteck sollte angezeigt werden, durch dessen Mitte eine blauen diagonale Linie verläuft.  
   
 ## <a name="example"></a>Beispiel  
+
  Die folgende vollständige Auflistung enthält den Code für dieses Thema:  
   
 ```csharp  

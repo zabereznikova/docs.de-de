@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f1c1d41f3d2ebc4482fa7e5f28fcbefe88bb9a02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246570"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253907"
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
+
 Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Services Description Language (WSDL) generiert wird. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Dies dient als Schutz vor *Phishing* , indem verhindert wird, dass ein Client an einen von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
   
  Eine Beispielanwendung, die die Identitäts Einstellung veranschaulicht, finden Sie unter [Beispiel für Dienst Identität](../samples/service-identity-sample.md). Weitere Informationen zu Endpunkten und Endpunkt Adressen finden Sie unter [Adressen](endpoint-addresses.md).  
@@ -39,6 +40,7 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
 > Die Metadaten enthalten die erwartete Identität des Diensts. Daher wird empfohlen, die Metadaten des Diensts auf sichere Weise verfügbar zu machen, indem Sie beispielsweise einen HTTPS-Endpunkt für den Dienst erstellen. Weitere Informationen finden Sie unter Gewusst [wie: Sichern von Metadatenendpunkten](how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Identitätstypen  
+
  Ein Dienst kann sechs Typen von Identitäten bereitstellen. Jeder Identitätstyp entspricht einem Element, das im `<identity>`-Element der Konfiguration enthalten sein kann. Der verwendete Typ hängt vom Szenario und den Sicherheitsanforderungen des Diensts ab. In der folgenden Tabelle wird jeder dieser Identitätstypen beschrieben.  
   
 |Identitätstyp|BESCHREIBUNG|Typisches Szenario|  
@@ -51,28 +53,34 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
 |Dienstprinzipalname (Service Principal Name, SPN) Der Standard, wenn `ClientCredentialType` auf Windows festgelegt ist und der Dienstprozess unter einem der Systemkonten &#8211; LocalService, LocalSystem oder NetworkService &#8211; ausgeführt wird.|Dieses Element gibt den dem Konto des Diensts zugeordneten SPN an. Weitere Informationen finden Sie im Abschnitt Kerberos-Protokoll und-Identität unter Überschreiben [der Identität eines Dienstanbieter für die Authentifizierung](../extending/overriding-the-identity-of-a-service-for-authentication.md).|Dies stellt sicher, dass der SPN und das bestimmte, dem SPN zugeordnete Windows-Konto den Dienst identifizieren.<br /><br /> Sie können das Tool Setspn.exe verwenden, um ein Computerkonto dem Benutzerkonto des Diensts zuzuordnen.<br /><br /> Diese Einstellung nutzt die Vorteile der Kerberos-Sicherheit von Windows, wenn der Dienst unter einem der Systemkonten oder unter einem Domänenkonto ausgeführt wird, dem ein SPN-Name zugeordnet ist, und der Computer Mitglied einer Domäne in einer Active Directory-Umgebung ist.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Angeben der Identität für einen Dienst  
+
  In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Weitere Informationen zum Überschreiben oder angeben der Dienst Identität finden Sie unter Überschreiben [der Identität eines Dienstanbieter für die Authentifizierung](../extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
 ## <a name="using-the-identity-element-in-configuration"></a>Verwenden des- \<identity> Elements in der Konfiguration  
+
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung in `Certificate,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
 
  Sie können den Wert der Standard Dienst Identität ändern oder den Typ der Identität ändern, indem Sie das- `<identity>` Element in der Konfiguration verwenden oder die Identität im Code festlegen. Der folgende Konfigurationscode legt eine DNS-Identität (Domain Name System) mit dem Wert `contoso.com` fest.  
 
 ## <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
+
  Ihr Dienst muss eine Identität nicht explizit angeben, da Sie von WCF automatisch bestimmt wird. WCF ermöglicht es Ihnen jedoch, eine Identität für einen Endpunkt anzugeben, falls dies erforderlich ist. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Angeben der Identität für einen Client  
+
  Zur Entwurfszeit verwendet ein Client Entwickler in der Regel das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Client Konfiguration zu generieren. Die generierte Konfigurationsdatei (vorgesehen für die Verwendung durch den Client) enthält die Identität des Servers. Der folgende Code wurde z.&#160;B. von einem Dienst generiert, der eine DNS-Identität angibt, wie im vorangehenden Beispiel gezeigt. Beachten Sie, dass der Endpunktidentitätswert des Clients dem des Diensts entspricht. Wenn in diesem Fall der Client die Windows (Kerberos)-Anmeldeinformationen für den Dienst erhält, erwartet er den Wert `contoso.com`.  
 
  Wenn der Dienst statt Windows ein Zertifikat als Clientanmeldeinformationstyp angibt, wird erwartet, dass die DNS-Eigenschaft des Zertifikats den Wert `contoso.com` hat. (Wenn aber die DNS-Eigenschaft den Wert `null` hat, muss der Antragstellername des Zertifikats `contoso.com` lauten.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Verwenden eines bestimmten Werts für die Identität  
+
  Die folgende Clientkonfigurationsdatei zeigt, wie erwartet wird, dass die Identität des Diensts ein bestimmter Wert ist. Im folgenden Beispiel kann der Client mit zwei Endpunkten kommunizieren. Das erste wird mit einem Zertifikatsfingerabdruck, der zweite mit dem RSA-Schlüssel eines Zertifikats identifiziert. Somit also durch ein Zertifikat, das nur ein privates/öffentliches Schlüsselpaar enthält, jedoch nicht von einer vertrauenswürdige Stelle ausgegeben wurde.  
 
 ## <a name="identity-checking-at-run-time"></a>Identitätsprüfung zur Laufzeit  
+
  Zur Entwurfszeit bestimmt ein Cliententwickler die Identität des Servers durch dessen Metadaten. Zur Laufzeit wird die Identitätsprüfung ausgeführt, bevor irgendwelche Endpunkte auf dem Dienst aufgerufen werden.  
   
  Der Identitätswert ist an den von den Metadaten angegebenen Typ der Authentifizierung gebunden, mit anderen Worten, an den Typ der für den Dienst verwendeten Anmeldeinformationen.  
@@ -98,12 +106,13 @@ Die *Endpunkt Identität* eines dienstangs ist ein Wert, der vom Service Web Ser
  Die programmgesteuerte Angabe der Identität (mithilfe der <xref:System.ServiceModel.EndpointAddress.Identity%2A>-Eigenschaft) ist optional. Wird keine Identität angegeben, und der Clientanmeldeinformationstyp ist Windows, wird als Standard ein SPN verwendet, dessen Wert auf den Hostnamen der Dienstendpunktadresse festgelegt ist, wobei dem Hostnamen das Zeichenfolgenliteral "host/" vorangestellt wird. Wenn keine Identität angegeben wird, und der Clientanmeldeinformationstyp ist ein Zertifikat, ist `Certificate` der Standard. Dies bezieht sich auf die Sicherheit sowohl auf der Nachrichtenebene als auch auf der Transportebene.  
   
 ## <a name="identity-and-custom-bindings"></a>Identität und benutzerdefinierte Bindungen  
+
  Da die Identität eines Diensts von dem verwendeten Bindungstyp abhängt, müssen Sie sicherstellen, dass bei der Erstellung einer benutzerdefinierten Bindung eine entsprechende Identität verfügbar gemacht wird. Im folgenden Codebeispiel ist die verfügbar gemachte Identität z.&#160;B. nicht kompatibel mit dem Sicherheitstyp, weil die Identität für die sichere Konversations-Bootstrapbindung nicht mit der Identität für die Bindung am Endpunkt übereinstimmt. Die sicheren Konversationsbindung legt die DNS-Identität fest, während das <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> die UPN- oder SPN-Identität festlegt.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- Weitere Informationen zum ordnungsgemäßen Stapeln von Bindungs Elementen für eine benutzerdefinierte Bindung finden Sie unter [Erstellen benutzerdefinierter Bindungen](../extending/creating-user-defined-bindings.md). Weitere Informationen zum Erstellen einer benutzerdefinierten Bindung mit <xref:System.ServiceModel.Channels.SecurityBindingElement> finden Sie unter Gewusst [wie: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Weitere Informationen zum ordnungsgemäßen Stapeln von Bindungs Elementen für eine benutzerdefinierte Bindung finden Sie unter [Erstellen von User-Defined Bindungen](../extending/creating-user-defined-bindings.md). Weitere Informationen zum Erstellen einer benutzerdefinierten Bindung mit <xref:System.ServiceModel.Channels.SecurityBindingElement> finden Sie unter Gewusst [wie: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Weitere Informationen
 
