@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265647"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementieren des Transform-Steuerelementmusters der Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168215"
  Das <xref:System.Windows.Automation.TransformPattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die in einem zweidimensionalen Raum verschoben, verkleinert, vergrößert oder gedreht werden können. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
+
  Beachten Sie beim Implementieren des Transform-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
 - Die Unterstützung für dieses Steuerelementmuster ist nicht auf Objekte auf dem Desktop beschränkt. Dieses Steuerelementmuster muss auch von den untergeordneten Elementen eines Containerobjekts unterstützt werden, wenn die untergeordneten Elemente verschoben, vergrößert, verkleinert oder innerhalb der Grenzen des Containers frei gedreht werden können.  
@@ -35,7 +38,9 @@ ms.locfileid: "87168215"
 - Alle Parameter und Eigenschaftswerte sind absolute Angaben und unabhängig vom Gebietsschema.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-itransformprovider"></a>Erforderliche Member für ITransformProvider  
+
  Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.ITransformProvider>erforderlich.  
   
 |Erforderliche Member|Memberart|Hinweise|  
@@ -50,7 +55,9 @@ ms.locfileid: "87168215"
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Ausnahmen  
+
  Anbieter müssen die folgenden Ausnahmen auslösen.  
   
 |Ausnahmetyp|Bedingung|  

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b4fea39088064751ff559bd236554255d43ba2a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265660"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementieren des Value-Steuerelementmusters der Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168203"
  Das <xref:System.Windows.Automation.ValuePattern> -Steuerelementmuster wird verwendet, um Steuerelemente zu unterstützen, die einen systeminternen Wert haben, der keinen Bereich umfasst und als Zeichenfolge dargestellt werden kann. Diese Zeichenfolge kann je nach Steuerelement und dessen Einstellungen bearbeitet werden. Beispiele für Steuerelemente, die dieses Muster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
+
  Beachten Sie beim Implementieren des Value-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
 - Steuerelemente wie <xref:System.Windows.Automation.ControlType.ListItem> und <xref:System.Windows.Automation.ControlType.TreeItem> müssen, unabhängig vom aktuellen Bearbeitungsmodus des Steuerelements, <xref:System.Windows.Automation.ValuePattern> unterstützen, wenn der Wert irgendeines der Elemente bearbeitet werden kann. Das übergeordnete Steuerelement muss außerdem <xref:System.Windows.Automation.ValuePattern> unterstützen, wenn die untergeordneten Elemente bearbeitbar sind.  
@@ -37,7 +40,7 @@ Beispiel eines bearbeitbaren Listenelements
   
 - Mit<xref:System.Windows.Automation.Provider.IValueProvider> ist es nicht möglich, Formatierungsinformationen oder Teilzeichenfolgen abzurufen. Implementieren Sie <xref:System.Windows.Automation.Provider.ITextProvider> in diesen Fällen.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>muss durch Steuerelemente wie das **Farb** Auswahl-Auswahl Steuerelement von Microsoft Word (unten dargestellt) implementiert werden, das Zeichen folgen Zuordnung zwischen einem Farbwert (z. b. "gelb") und einer äquivalenten internen RGB-Struktur unterstützt.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> muss durch Steuerelemente wie das **Farb** Auswahl-Auswahl Steuerelement von Microsoft Word (unten dargestellt) implementiert werden, das Zeichen folgen Zuordnung zwischen einem Farbwert (z. b. "gelb") und einer äquivalenten internen RGB-Struktur unterstützt.  
   
  ![Farbauswahl mit ausgewählter Farbe Gelb.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Beispiel für eine Zuordnung zwischen Farbmustern und Zeichenfolgen  
@@ -45,7 +48,9 @@ Beispiel für eine Zuordnung zwischen Farbmustern und Zeichenfolgen
 - Für ein Steuerelement sollte dessen <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> auf `true` und dessen <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> auf `false` festgelegt sein, bevor ein Aufruf von <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>zugelassen wird.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-ivalueprovider"></a>Erforderliche Member für IValueProvider  
+
  Die folgenden Eigenschaften und Methoden sind für das Implementieren von <xref:System.Windows.Automation.Provider.IValueProvider>erforderlich.  
   
 |Erforderliche Member|Memberart|Hinweise|  
@@ -55,7 +60,9 @@ Beispiel für eine Zuordnung zwischen Farbmustern und Zeichenfolgen
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Methode|Keine|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Ausnahmen  
+
  Anbieter müssen die folgenden Ausnahmen auslösen.  
   
 |Ausnahmetyp|Bedingung|  

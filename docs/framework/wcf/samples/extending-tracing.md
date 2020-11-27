@@ -2,12 +2,12 @@
 title: Erweitern der Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e3329238998f11467511960f32b177953036ab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265335"
 ---
 # <a name="extend-tracing"></a>Ablauf Verfolgung erweitern
 
@@ -28,9 +28,11 @@ In diesem Beispiel wird veranschaulicht, wie die Windows Communication Foundatio
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Ablaufverfolgung und Aktivitätsweitergabe  
+
  Die benutzerdefinierte Aktivitäts Ablauf Verfolgung ermöglicht dem Benutzer, eigene Ablauf Verfolgungs Aktivitäten zu erstellen, um Ablauf Verfolgungen in logische Arbeitseinheiten zu gruppieren, Aktivitäten über Übertragungen und Weitergabe zu korrelieren und die Leistungskosten der WCF-Ablauf Verfolgung zu verringern (z. b. die Speicherplatz Kosten einer Protokolldatei).  
   
 ### <a name="add-custom-sources"></a>Benutzerdefinierte Quellen hinzufügen  
+
  Benutzerdefinierte Ablaufverfolgungen können sowohl zu Client- als auch Dienstcode hinzugefügt werden. Durch das Hinzufügen von Ablauf Verfolgungs Quellen zu den Client-oder Dienst Konfigurationsdateien können diese benutzerdefinierten Ablauf Verfolgungen aufgezeichnet und im [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)angezeigt werden. Der folgende Code zeigt, wie der Konfigurationsdatei eine benutzerdefinierte Ablaufverfolgungsquelle namens `ServerCalculatorTraceSource` hinzugefügt wird.  
   
 ```xml  
@@ -69,6 +71,7 @@ In diesem Beispiel wird veranschaulicht, wie die Windows Communication Foundatio
 ```  
   
 ### <a name="correlate-activities"></a>Korrelieren von Aktivitäten  
+
  Zum Korrelieren von Aktivitäten direkt zwischen Endpunkten muss für das `propagateActivity`-Attribut in der `true`-Ablaufverfolgungsquelle der Wert `System.ServiceModel` festgelegt werden. Außerdem muss die Service Model-Aktivitäts Ablauf Verfolgung deaktiviert werden, damit Ablauf Verfolgungen ohne WCF-Aktivitäten weitergegeben werden können. Dies ist im folgenden Codebeispiel zu erkennen.  
   
 > [!NOTE]
@@ -87,6 +90,7 @@ In diesem Beispiel wird veranschaulicht, wie die Windows Communication Foundatio
 ```  
   
 ### <a name="lessen-performance-cost"></a>Leistungseinbußen mindern  
+
  Wenn `ActivityTracing` in der `System.ServiceModel`-Ablaufverfolgungsquelle ausgeschaltet wird, wird eine Ablaufverfolgungsdatei erstellt, die nur benutzerdefinierte Aktivitätsablaufverfolgungen, jedoch keine der ServiceModel-Aktivitätsablaufverfolgungen enthält. Das Ausschließen von Service Model-Aktivitäts Ablauf Verfolgungen führt zu einer wesentlich geringeren Protokolldatei. Die Möglichkeit zum Korrelieren von WCF-Verarbeitungs Ablauf Verfolgungen geht jedoch verloren.  
   
 ## <a name="set-up-build-and-run-the-sample"></a>Einrichten, erstellen und Ausführen des Beispiels  
@@ -97,6 +101,6 @@ In diesem Beispiel wird veranschaulicht, wie die Windows Communication Foundatio
   
 3. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](running-the-samples.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

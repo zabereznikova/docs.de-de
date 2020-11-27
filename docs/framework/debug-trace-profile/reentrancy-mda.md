@@ -14,27 +14,31 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-ms.openlocfilehash: f666e505b8382b0bec8dcfdb34c775850e46c429
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 0480b1a5aafbc8c4f9645ba83383d3a222d1f1c5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803104"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264581"
 ---
 # <a name="reentrancy-mda"></a>Reentranz-MDA
+
 Der `reentrancy`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn versucht wird, von nativem zu verwaltetem Code überzugehen, und wenn ein vorheriger Wechsel von verwaltetem zu nativem Code nicht über einen ordnungsgemäßen Übergang ausgeführt wurde.  
   
 ## <a name="symptoms"></a>Symptome  
+
  Der Objektheap ist beschädigt oder es treten andere schwerwiegende Fehler beim Übergang von nativem zu verwaltetem Code auf.  
   
  Threads, die zwischen nativem und verwaltetem Code in beide Richtungen wechseln, müssen einen ordnungsgemäßen Übergang durchführen. Allerdings erlauben bestimmte Erweiterbarkeitspunkte auf niedriger Ebene, wie beispielsweise Ausnahmehandler von Vektoren, dass Schalter ohne ordnungsgemäßen Übergang aus verwaltetem zu nativem Code wechseln.  Diese Schalter werden vom Betriebssystem gesteuert und nicht von der Common Language Runtime (CLR).  Jede native Code, der in diesen Erweiterungspunkten ausgeführt wird, muss Rückrufe in verwaltetem Code vermeiden.  
   
 ## <a name="cause"></a>Ursache  
+
  Ein Erweiterungspunkt auf niedriger Ebene, wie z.B. der Ausnahmehandler für Vektoren, wurde während der Ausführung von verwaltetem Code aktiviert.  Der Anwendungscode, der über diesen Erweiterungspunkt aufgerufen wird, versucht einen Rückruf in verwaltetem Code.  
   
  Dieses Problem wird immer durch den Anwendungscode verursacht.  
   
 ## <a name="resolution"></a>Lösung  
+
  Überprüfen Sie die Stapelüberwachung für den Thread, der diesen MDA aktiviert hat.  Der Thread versucht illegal verwalteten Code aufzurufen.  Die Stapelüberwachung sollte den Anwendungscode, der diesen Erweiterungspunkt nutzt, den Code des Betriebssystems, der diesen Erweiterungspunkt bereitstellt, und den verwalteten Code, der durch den Erweiterungspunkt unterbrochen wurde, anzeigen.  
   
  Sie sehen beispielsweise, dass der MDA bei einem Versuch aktiviert wird, bei dem verwalteter Code innerhalb eines Ausnahmehandlers für Vektoren aufgerufen wird.  Auf dem Stapel sehen Sie den Code für die Ausnahmebehandlung des Betriebssystems und verwalteten Code wie z.B. <xref:System.DivideByZeroException> oder <xref:System.AccessViolationException>, der eine Ausnahme auslöst.  
@@ -42,9 +46,11 @@ Der `reentrancy`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn 
  In diesem Beispiel ist die richtige Lösung die vollständige Implementierung des Ausnahmehandlers für Vektoren in nicht verwaltetem Code.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
+
  Der MDA meldet, dass ungültiges Wiedereintreten versucht wird.  Überprüfen Sie die Threadstapel, um zu bestimmen, warum dies geschieht und wie Sie das Problem beheben können. Nachfolgend ist die Ausgabe des Beispiels aufgeführt.  
   
 ```output
@@ -66,6 +72,7 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird eine <xref:System.AccessViolationException> ausgelöst wird.  Bei Windows-Versionen, die Ausnahmebehandlung für Vektoren unterstützen, wird der verwaltete Ausnahmehandler für Vektoren aufgerufen.  Wenn der `reentrancy`-MDA aktiviert ist, wird der MDA beim versuchten Aufruf von `MyHandler` aus dem Unterstützungscode des Ausnahmebehandlers für Vektoren aufgerufen.  
   
 ```csharp

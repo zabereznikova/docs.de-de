@@ -10,14 +10,15 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a4d304a1316fe534e09f02ac1cd2900bf798011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557878"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265530"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
+
 Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Strom als zulässige Meldungen, was zu einer Reihe negativer Konsequenzen führt, wie z. B. redundanten Bestellungen eines Artikels.  
   
  Weitere Informationen zur Erkennung von Nachrichten Replay finden Sie unter [Message Replay-Erkennung](/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
@@ -75,15 +76,18 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mithilfe der <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>-Methode erstellt, und die Replay-Eigenschaften der Bindung werden festgelegt.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
 ## <a name="scope-of-replay-message-security-only"></a>Replay-Bereich: Nur Nachrichtensicherheit  
+
  Beachten Sie, dass die folgenden Prozeduren nur für den Nachrichtensicherheitsmodus gelten. Für den Transportmodus und den Transportmodus mit Nachrichtenanmeldeinformationen erkennen die Transportmechanismen Replays.  
   
 ## <a name="secure-conversation-notes"></a>Hinweise für die sichere Konversation  
+
  Bei Bindungen, die sichere Konversationen ermöglichen, können Sie diese Einstellungen sowohl für den Anwendungskanal als auch für die sichere Konversationsbootstrap-Bindung anpassen. Sie können z. B. Replays für den Anwendungskanal deaktivieren, sie jedoch für den Bootstrapkanal aktivieren, der die sichere Konversation aufbaut.  
   
  Wenn Sie keine Sitzungen für sichere Konversation verwenden, kann die Replay-Erkennung nicht garantieren, dass Replays in Serverfarmszenarien und bei der Wiederverwendung des Prozesses erkannt werden. Dies gilt für die folgenden vom System bereitgestellten Bindungen:  
@@ -102,7 +106,7 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
 - <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

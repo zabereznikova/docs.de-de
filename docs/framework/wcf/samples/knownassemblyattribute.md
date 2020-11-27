@@ -2,17 +2,19 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555405"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264945"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+
 In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können. In diesem Beispiel wird gezeigt, wie bekannte Typen während der Serialisierung und Deserialisierung dynamisch hinzugefügt werden.  
   
 ## <a name="sample-details"></a>Beispieldetails  
+
  Dieses Beispiel besteht aus vier Projekten. Eines davon entspricht dem Dienst, der von IIS gehostet werden soll und im folgenden Dienstvertrag definiert ist.  
   
 ```csharp
@@ -346,9 +348,9 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>So richten Sie das Beispiel ein, führen es aus und erstellen es  
   
-1. Klicken Sie mit der rechten Maustaste auf die Lösung **knownassemblyattribute** , und wählen Sie **Eigenschaften**aus.  
+1. Klicken Sie mit der rechten Maustaste auf die Lösung **knownassemblyattribute** , und wählen Sie **Eigenschaften** aus.  
   
-2. Wählen Sie unter **Allgemeine Eigenschaften**die Option **Startprojekt**aus, und klicken Sie dann auf **mehrere Start Projekte**.  
+2. Wählen Sie unter **Allgemeine Eigenschaften** die Option **Startprojekt** aus, und klicken Sie dann auf **mehrere Start Projekte**.  
   
 3. Fügen Sie dem **Dienst** -und dem **Client** Projekt die **Start** Aktion hinzu.  
   

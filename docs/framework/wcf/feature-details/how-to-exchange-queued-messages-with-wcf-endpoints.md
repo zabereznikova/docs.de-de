@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265426"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten
+
 Warteschlangen stellen sicher, dass zuverlässiges Messaging zwischen einem Client und einem Windows Communication Foundation (WCF)-Dienst erfolgen kann, auch wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. In den folgenden Verfahren wird gezeigt, wie eine permanente Kommunikation zwischen einem Client und einem Dienst mithilfe der standardmäßigen in der Warteschlange befindlichen Bindung bei der Implementierung des WCF-Dienstanbieter sichergestellt  
   
  In diesem Abschnitt wird erläutert, wie <xref:System.ServiceModel.NetMsmqBinding> für die Warteschlangen Kommunikation zwischen einem WCF-Client und einem WCF-Dienst verwendet wird.  
@@ -50,7 +51,7 @@ Warteschlangen stellen sicher, dass zuverlässiges Messaging zwischen einem Clie
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>So erstellen Sie einen Client für einen Dienst in der Warteschlange  
   
-1. Im folgenden Beispiel wird gezeigt, wie Sie die Host Anwendung ausführen und das Tool "Svcutil. exe" verwenden, um den WCF-Client zu erstellen.  
+1. Im folgenden Beispiel wird gezeigt, wie die Host Anwendung ausgeführt wird und wie das Svcutil.exe Tool verwendet wird, um den WCF-Client zu erstellen.  
   
     ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -64,6 +65,7 @@ Warteschlangen stellen sicher, dass zuverlässiges Messaging zwischen einem Clie
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
+
  Die folgenden Beispiele veranschaulichen den Dienstcode, die Hostinganwendung, die App.config-Datei und den Clientcode, die für dieses Beispiel eingeschlossen werden.  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]

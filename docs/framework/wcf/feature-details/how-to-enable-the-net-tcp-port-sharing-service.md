@@ -6,14 +6,15 @@ helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 0292559e3befde7f0b00b36aa10a2d9615daf049
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7200d82e4a45ce9e36b2a4cec3d0c08e1a5f00ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246999"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265465"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts
+
 Windows Communication Foundation (WCF) verwendet einen Windows-Dienst, der als net. TCP-Port Freigabe Dienst bezeichnet wird, um die Freigabe von TCP-Ports über mehrere Prozesse hinweg zu vereinfachen. Dieser Dienst wird als Teil von WCF installiert, aber der Dienst ist nicht standardmäßig als Sicherheitsmaßnahme aktiviert und muss vor der ersten Verwendung manuell aktiviert werden. In diesem Thema wird beschrieben, wie Sie den NET.TCP-Portfreigabedienst mit dem Microsoft Management Console (MMC)-Snap-In konfigurieren können.  
   
  Nachdem Sie den Net. TCP-Port Freigabe Dienst aktiviert und manuell gestartet haben, finden Sie unter Gewusst [wie: Konfigurieren eines WCF-Dienstanbieter](how-to-configure-a-wcf-service-to-use-port-sharing.md) für die Verwendung von Port Freigabe Informationen zum Konfigurieren des Dienstanbieter für die Verwendung dieses Dienstanbieter.  
@@ -26,7 +27,7 @@ Windows Communication Foundation (WCF) verwendet einen Windows-Dienst, der als n
   
 2. Klicken Sie in der Spalte **Name** der Liste der Dienste mit der rechten Maustaste auf den **net. TCP-Port Freigabe Dienst**, und wählen Sie im Menü **Eigenschaften** aus.  
   
-3. Um das manuelle Starten des Dienstanbieter zu aktivieren, wählen Sie im **Eigenschaften** Fenster die Registerkarte **Allgemein** aus, und wählen Sie im Feld **Starttyp** die Option manuell aus, **und klicken Sie dann auf über**nehmen.  
+3. Um das manuelle Starten des Dienstanbieter zu aktivieren, wählen Sie im **Eigenschaften** Fenster die Registerkarte **Allgemein** aus, und wählen Sie im Feld **Starttyp** die Option manuell aus, **und klicken Sie dann auf über** nehmen.  
   
 4. Um den Dienst zu starten, klicken Sie im Bereich Dienststatus auf die Schaltfläche **Start** . Der Dienststatus sollte jetzt "Gestartet" anzeigen.  
   

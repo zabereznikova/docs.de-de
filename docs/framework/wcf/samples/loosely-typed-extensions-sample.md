@@ -2,14 +2,15 @@
 title: Beispiel zu lose typisierten Erweiterungen
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 0a08ca19e5e6bff7223d45726617d2c2163ca3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 94e01970502223febd3ff03e30be7b17d9019d93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591864"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264887"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Beispiel zu lose typisierten Erweiterungen
+
 Das Syndication-Objektmodell bietet umfangreiche Unterstützung zum Arbeiten mit Erweiterungsdaten – Informationen, die in der XML-Darstellung eines Syndication-Feeds vorhanden, jedoch nicht explizit durch Klassen wie <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> verfügbar gemacht werden. Dieses Beispiel veranschaulicht die grundlegenden Techniken zum Arbeiten mit Erweiterungsdaten.  
   
  Für das Beispiel wird die <xref:System.ServiceModel.Syndication.SyndicationFeed>-Klasse verwendet. Die in diesem Beispiel gezeigten Muster können jedoch mit allen Syndication-Klassen verwendet werden, die Erweiterungsdaten unterstützen:  
@@ -25,6 +26,7 @@ Das Syndication-Objektmodell bietet umfangreiche Unterstützung zum Arbeiten mit
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
 ## <a name="sample-xml"></a>Beispiel-XML  
+
  Zu Referenzzwecken wird in diesem Beispiel das folgende XML-Dokument verwendet.  
   
 ```xml  
@@ -65,6 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 - `<xElementExtension>`-Element.  
   
 ## <a name="writing-extension-data"></a>Schreiben von Erweiterungsdaten  
+
  Attributerweiterungen werden erstellt, indem man der <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>-Auflistung Einträge hinzufügt, wie im folgenden Beispielcode gezeigt.  
   
 ```csharp  
@@ -102,6 +105,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>Lesen von Erweiterungsdaten  
+
  Die Werte für Attributerweiterungen können erhalten werden, indem das Attribut in der <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>-Auflistung anhand seines <xref:System.Xml.XmlQualifiedName> nachgeschlagen wird, wie im folgenden Beispielcode gezeigt.  
   
 ```csharp  

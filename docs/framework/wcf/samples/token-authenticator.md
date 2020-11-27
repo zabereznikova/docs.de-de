@@ -2,14 +2,15 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548591"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264633"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
+
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifikator in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet, das mit der Nachricht verwendet wird, um zu überprüfen, ob es selbst konsistent ist, und zum Authentifizieren der Identität, die dem Token zugeordnet ist.
 
  Benutzerdefinierte Tokenauthentifizierer sind in einer Vielzahl von Fällen nützlich, z. B.:
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>Benutzerdefinierter Tokenauthentifizierer
+
  Führen Sie die folgenden Schritte aus, um einen benutzerdefinierten Tokenauthentifizierer zu erstellen:
 
 1. Erstellen Sie einen benutzerdefinierten Tokenauthentifizierer.
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Clientfenster die EINGABETASTE, um den Client zu schließen.
 
 ## <a name="setup-batch-file"></a>Setupbatchdatei
+
  Mit der in diesem Beispiel enthaltenen Batchdatei Setup.bat können Sie den Server mit relevanten Zertifikaten zum Ausführen einer selbst gehosteten Anwendung konfigurieren, die serverzertifikatbasierte Sicherheit erfordert. Diese Batchdatei muss angepasst werden, wenn sie computerübergreifend oder in einem nicht gehosteten Szenario verwendet werden soll.
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.

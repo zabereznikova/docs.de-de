@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b03434e4f9552b714b40d54ba36c8468d0e2ccd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265361"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Vorgehensweise: Verfügbarmachen eines Feeds als Atom und RSS
+
 Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu erstellen, der einen Syndizierungs Feed verfügbar macht. In diesem Thema wird erläutert, wie Sie einen Syndication-Dienst erstellen, der Syndication-Feeds sowohl mit Atom 1.0 als auch mit RSS 2.0 verfügbar macht. Dieser Dienst macht einen Endpunkt verfügbar, der beide Syndication-Formate zurückgeben kann. Der Einfachheit halber wird in diesem Beispiel ein selbst gehosteter Dienst verwendet. In einer Produktionsumgebung würde ein Dienst dieses Typs unter IIS oder WAS gehostet werden. Weitere Informationen zu den verschiedenen WCF-Hostingoptionen finden Sie unter [Hosting](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
@@ -88,11 +89,13 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Beispiel  
+
  Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Verweisen Sie beim Kompilieren des obigen Codes auf System.ServiceModel.dll und System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Weitere Informationen
