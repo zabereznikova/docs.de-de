@@ -3,14 +3,15 @@ title: Vereinfachte Konfiguration für WCF-Dienste
 description: Erfahren Sie, wie Sie einen typischen Dienst und Client mithilfe von WCF implementieren und konfigurieren. Der-Dienst kommuniziert über einen Endpunkt, der in einer Konfigurationsdatei angegeben ist.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554266"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290022"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Vereinfachte Konfiguration für WCF-Dienste
+
 In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und Client mit Windows Communication Foundation (WCF) implementiert und konfiguriert wird. Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  
   
  Dieser Dienst, der einen Endpunkt für die Kommunikation mit dem Dienst verfügbar macht, verwendet die vereinfachte Konfiguration in .NET Framework 4. Vor .NET Framework 4 wird der Endpunkt in der Regel in einer Konfigurationsdatei (Web.config) definiert, wie im folgenden Beispiel Konfigurations Code gezeigt.  
@@ -79,7 +80,7 @@ In diesem Beispiel wird veranschaulicht, wie ein typischer Dienst und Client mit
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [AppFabric-Verwaltungsbeispiele](/previous-versions/appfabric/ff383405(v=azure.10))
 - [Vereinfachte Konfiguration](../simplified-configuration.md)

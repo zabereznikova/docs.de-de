@@ -5,17 +5,19 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 97308d97677ed9f791f54541e8c594873213c13e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 92e0924143b42309b98fb967dfea0502bae29203
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535494"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289905"
 ---
 # <a name="set-up-instructions"></a>Setupanweisungen
+
 In diesen Themen wird beschrieben, wie Sie Dienste einrichten, die zum Ausführen eines Windows Communication Foundation (WCF)-Diensts erforderlich sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele](one-time-setup-procedure-for-the-wcf-samples.md)  
  Hier werden die Schritte zum Einrichten der WCF-Beispiele erläutert.  
   
@@ -41,4 +43,5 @@ In diesen Themen wird beschrieben, wie Sie Dienste einrichten, die zum Ausführe
  Erläutert die Schritte zum Installieren von Message Queuing.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Tipps zur Problembehandlung für WCF-Beispiele](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))
