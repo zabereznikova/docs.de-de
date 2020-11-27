@@ -2,29 +2,30 @@
 title: Übersicht über den Nachrichtenfluss
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cb2924b62fce62620b664efa34208deb12dd34b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795964"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285537"
 ---
 # <a name="message-flow-overview"></a>Übersicht über den Nachrichtenfluss
+
 In einem verteilten System mit untereinander verbundenen Diensten müssen kausale Beziehungen zwischen den Diensten bestimmt werden. Es ist unerlässlich, die verschiedenen Komponenten eines Anforderungsflusses zu verstehen, wenn kritische Szenarien wie Systemüberwachung, Fehlerbehebung und Fehlerursachenanalyse unterstützt werden sollen. Um eine Korrelation der Ablaufverfolgungen verschiedener Dienste zu ermöglichen, wurde in .NET Framework 4 eine entsprechende Unterstützung über folgende Funktionen hinzugefügt:
 
-- Analytische Ablauf Verfolgung: Eine Ablauf Verfolgungs Funktion mit hoher Leistung und geringer Ausführlichkeit unter Verwendung der Ereignis Ablauf Verfolgung für Windows (ETW).
+- Analytische Ablaufverfolgung: Hierbei handelt es sich um eine Ablaufverfolgungsfunktion mit hoher Leistung und geringer Ausführlichkeit, die auf der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) aufbaut.
 
-- End-to-End-Aktivitäts Modell für WCF/WF-Dienste: Diese Funktion unterstützt die Korrelation von Ablauf Verfolgungen <xref:System.ServiceModel> , <xref:System.Workflow.ComponentModel> die von den Namespaces und generiert werden.
+- End-to-End-Aktivitätsmodell für WCF/WF-Dienste: Diese Funktion unterstützt die Korrelation von Ablaufverfolgungen, die vom <xref:System.ServiceModel>-Namespace und vom <xref:System.Workflow.ComponentModel>-Namespace generiert wurden.
 
-- Etw-Nachverfolgung für WF: Diese Funktion verwendet nach Verfolgungs Datensätze, die von WF-Diensten generiert werden, um den aktuellen Status und Fortschritt des Workflows zu überprüfen.
+- ETW-Nachverfolgung für WF: Diese Funktion verwendet Überwachungsdatensätze, die von WF-Diensten generiert wurden, um einen Überblick über den aktuellen Status und Fortschritt eines bestimmten Workflows zu geben.
 
  Anhand der in einem Überwachungs- oder Ablaufverfolgungsdatensatz protokollierten Fehler können Codefehler oder fehlerhaft formatierte Nachrichten aufgefunden werden. Mit der ActivityId-Eigenschaft des Knotens Korrelation im Nachrichtenheader des Ereignisses kann die Aktivität ermittelt werden, die den Fehler verursacht hat. Informationen zum Aktivieren der Ablauf Verfolgung für den Nachrichtenfluss nach der Aktivitäts-ID finden Sie unter [Konfigurieren der Ablauf Verfolgung](./etw/configuring-message-flow-tracing.md) In diesem Thema wird veranschaulicht, wie die Ablaufverfolgung des Nachrichtenflusses im Projekt aktiviert wird, das im Lernprogramm "Erste Schritte" erstellt wurde.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>So aktivieren Sie die Ablaufverfolgung des Nachrichtenflusses im Lernprogramm "Erste Schritte"
 
-1. Öffnen Sie Ereignisanzeige, indem Sie auf **Start**und **Ausführen**klicken und dann eingeben `eventvwr.exe`.
+1. Öffnen Sie Ereignisanzeige, indem Sie auf **Start** und **Ausführen** klicken und dann eingeben `eventvwr.exe` .
 
-2. Wenn Sie die analytische Ablauf Verfolgung nicht aktiviert haben, erweitern Sie **Anwendungs-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Wählen Sie **Ansicht**, **analytische und Debugprotokolle anzeigen**aus. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll aktivieren** Lassen Sie die Ereignisanzeige geöffnet, damit die Ablaufverfolgungen eingesehen werden können.
+2. Wenn Sie die analytische Ablauf Verfolgung nicht aktiviert haben, erweitern Sie **Anwendungs-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Wählen Sie **Ansicht**, **analytische und Debugprotokolle anzeigen** aus. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll aktivieren** Lassen Sie die Ereignisanzeige geöffnet, damit die Ablaufverfolgungen eingesehen werden können.
 
 3. Öffnen Sie das Beispiel, das im [Tutorial "Getting Started](../getting-started-tutorial.md) " in Visual Studio 2012 erstellt wurde. Beachten Sie, dass Sie Visual Studio 2012 als Administrator ausführen müssen, damit der Dienst erstellt werden kann. Wenn Sie die WCF-Beispiele installiert [haben, können Sie die ersten](../samples/getting-started-sample.md)Schritte öffnen, die das abgeschlossene Projekt enthalten, das Sie im Tutorial erstellt haben.
 
@@ -40,7 +41,7 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
     </system.serviceModel>
     ```
 
-6. Führen Sie die Serveranwendung ohne Debuggen aus, indem Sie STRG+F5 drücken. Führen Sie das Client Projekt aus, indem Sie mit der rechten Maustaste auf das **Client** Projekt klicken und **Debuggen**, **neue Instanz starten**auswählen
+6. Führen Sie die Serveranwendung ohne Debuggen aus, indem Sie STRG+F5 drücken. Führen Sie das Client Projekt aus, indem Sie mit der rechten Maustaste auf das **Client** Projekt klicken und **Debuggen**, **neue Instanz starten** auswählen
 
 7. Um die Ereignisse vom Client zum Server zu verfolgen, fügen Sie der Anwendungskonfigurationsdatei im Projekt Client Folgendes hinzu.
 
@@ -63,7 +64,7 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
     Trace.CorrelationManager.ActivityId = guid;
     ```
 
-10. Aktualisieren Sie das **analytische** Protokoll, und untersuchen Sie es.  Suchen Sie nach einem Ereignis mit der Ereignis-ID 220.  Wählen Sie das Ereignis aus, und klicken Sie im Vorschaufenster auf die Registerkarte **Details** . Dieses Ereignis enthält die Korrelations-ID für die aufrufende Aktivität.
+10. Aktualisieren Sie das **analytische**  Protokoll, und untersuchen Sie es.  Suchen Sie nach einem Ereignis mit der Ereignis-ID 220.  Wählen Sie das Ereignis aus, und klicken Sie im Vorschaufenster auf die Registerkarte **Details** . Dieses Ereignis enthält die Korrelations-ID für die aufrufende Aktivität.
 
     ```xml
     <Correlation ActivityID="{A066CCF1-8AB3-459B-B62F-F79F957A5036}" />

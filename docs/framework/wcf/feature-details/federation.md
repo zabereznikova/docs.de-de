@@ -8,22 +8,25 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: c31c2612b595e627b0c4c2d7fbb3a359b19ee704
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5b5e944b96fc5e56fbb4d19a582ba9dd245904b4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286746"
 ---
 # <a name="federation"></a>Verbund
+
 Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit. Außerdem wird Windows Communication Foundation (WCF)-Unterstützung für die Bereitstellung von Verbund Sicherheitsarchitekturen beschrieben. Eine Beispielanwendung, die Verbund veranschaulicht, finden Sie unter [Federation Sample](../samples/federation-sample.md)(Verbund Beispiel).  
   
 ## <a name="definition-of-federated-security"></a>Definition von Verbundsicherheit  
+
  Verbundsicherheit ermöglicht eine saubere Trennung zwischen dem Dienst, auf den ein Client zugreift, und den dazugehörigen Authentifizierungs- und Autorisierungsvorgängen. Darüber hinaus aktiviert Verbundsicherheit die Zusammenarbeit über mehrere Systeme, Netzwerke und Organisationen in anderen Vertrauensbereichen.  
   
  WCF bietet Unterstützung für das entwickeln und Bereitstellen verteilter Systeme, die Verbund Sicherheit verwenden.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Elemente einer Verbundsicherheitsarchitektur  
+
  Die Verbundsicherheitsarchitektur verfügt über drei Hauptelemente (siehe Beschreibung in der folgenden Tabelle).  
   
 |Element|BESCHREIBUNG|  
@@ -33,6 +36,7 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
 |Sicherheitstokendienst (STS; Security Token Service)|Hierbei handelt es sich um einen Webdienst, der Sicherheitstoken herausgibt, d. h. es werden basierend auf Beweisen, die als vertrauenswürdig eingestuft werden, Assertionen erstellt. Dies bildet die Grundlage für die Vertrauensvermittlung zwischen Domänen.|  
   
 ### <a name="example-scenario"></a>Beispielszenario  
+
  Die folgende Abbildung zeigt ein Beispiel für die Verbund Sicherheit:  
   
  ![Das Diagramm zeigt ein typisches Verbund Sicherheitsszenario.](./media/federation/typical-federated-security-scenario.gif)  
@@ -67,6 +71,7 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
  Nachdem die Benutzer einen Sicherheitstoken vom STS A erhalten haben, legen Sie den Token dem STS B vor. Organisation B führt die Autorisierung der Benutzeranfragen durch und gibt an die Benutzer einen Sicherheitstoken aus ihrem eigenen Satz an Sicherheitstoken heraus. Die Benutzer können dann ihren Token bei der Ressource bei Organisation B vorlegen und auf den Dienst zugreifen.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Unterstützung für Verbundsicherheit in WCF  
+
  WCF bietet sofort verwendbare Unterstützung für die Bereitstellung von Verbund Sicherheitsarchitekturen über [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) .  
   
  Das- [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) Element bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von http als zugrunde liegenden Transportmechanismus für das Anforderungs-Antwort-Kommunikationsformat erfordert, wobei Text und XML als Wire-Format für die Codierung verwendet werden.  
@@ -74,7 +79,8 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
  Die Verwendung von [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) in einem Verbund Sicherheitsszenario kann in zwei logisch unabhängige Phasen entkoppelt werden, wie in den folgenden Abschnitten beschrieben.  
   
 ### <a name="phase-1-design-phase"></a>Phase 1: Entwurfsphase  
- Während der Entwurfsphase verwendet der Client das [Service Model Metadata Utility Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Richtlinie zu lesen, die vom Dienst Endpunkt verfügbar gemacht wird, und um die Authentifizierungs-und Autorisierungs Anforderungen des Dienstanbieter zu erfassen. Die entsprechenden Proxys werden erzeugt, um das folgende Verbundsicherheitskommunikationsmuster beim Client zu erstellen:  
+
+ Während der Entwurfsphase verwendet der Client das [Service Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Richtlinie zu lesen, die vom Dienst Endpunkt verfügbar gemacht wird, und um die Authentifizierungs-und Autorisierungs Anforderungen des Dienstanbieter zu erfassen Die entsprechenden Proxys werden erzeugt, um das folgende Verbundsicherheitskommunikationsmuster beim Client zu erstellen:  
   
 - Erhalt eines Sicherheitstoken vom STS im Clientvertrauensbereich.  
   
@@ -85,14 +91,17 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
 - Präsentation des Token vor dem Dienst für den Zugriff auf den Dienst.  
   
 ### <a name="phase-2-run-time-phase"></a>Phase 2: Laufzeitphase  
+
  Während der Lauf Zeit Phase instanziiert der Client ein Objekt der WCF-Client Klasse und führt einen Aufruf mit dem WCF-Client aus. Das zugrunde liegende Framework von WCF verarbeitet die zuvor erwähnten Schritte im Verbund Sicherheits Kommunikationsmuster und ermöglicht dem Client, den Dienst nahtlos zu nutzen.  
   
 ## <a name="sample-implementation-using-wcf"></a>Beispielimplementierung mithilfe von WCF  
+
  Die folgende Abbildung zeigt eine Beispiel Implementierung für eine Verbund Sicherheitsarchitektur mithilfe der nativen Unterstützung von WCF.  
   
  ![Das Diagramm zeigt eine Beispiel Implementierung für die Verbund Sicherheit.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Beispiel MyService  
+
  Der Dienst `MyService` macht durch `MyServiceEndpoint` einen einzelnen Endpunkt verfügbar. Die folgende Abbildung zeigt Adresse, Bindung und Vertrag an, die zum Endpunkt gehören.  
   
  ![Das Diagramm zeigt die MyServiceEndpoint-Details an.](./media/federation/myserviceendpoint-details.gif)  
@@ -158,6 +167,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 [!code-vb[C_Federation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#1)]  
   
 #### <a name="sts-b"></a>STS B  
+
  Die folgende Abbildung zeigt den STS B. Wie zuvor erwähnt, ist ein STS (Security Token Service) auch ein Webdienst und kann über zugehörige Endpunkte, Richtlinien usw. verfügen.  
   
  ![Das Diagramm zeigt den Sicherheitstokendienst B.](./media/federation/myservice-security-token-service-b.gif)  
@@ -220,6 +230,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-vb[C_Federation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#3)]  
   
 #### <a name="sts-a"></a>STS A  
+
  Die folgende Abbildung zeigt den STS A.  
   
  ![Verbund](media/sts-b.gif "STS_B")  
@@ -282,13 +293,15 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  [!code-vb[C_Federation#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federation/vb/source.vb#5)]  
   
 ### <a name="client-at-organization-a"></a>Client bei Organisation A  
+
  Die folgende Abbildung zeigt den Client bei Organisation A sowie die Schritte zur Durchführung eines `MyService`-Dienstaufrufs. Der Vollständigkeit halber sind auch die anderen funktionalen Komponenten aufgeführt.  
   
  ![Das Diagramm zeigt die Schritte in einem Dienst aufrufdienst von MyService.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Zusammenfassung  
+
  Verbundsicherheit liefert eine klare Trennung der Verantwortungsbereiche und unterstützt den Aufbau einer sicheren und skalierbaren Dienstarchitektur. WCF ist eine Plattform zum entwickeln und Bereitstellen verteilter Anwendungen und bietet native Unterstützung für die Implementierung von Verbund Sicherheit.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [Security](security.md)
+- [Sicherheit](security.md)

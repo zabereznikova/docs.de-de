@@ -2,14 +2,15 @@
 title: Dienstframework
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fb39f2106e027cc5d4125cfb0bc89f3e5983cec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780756"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285719"
 ---
 # <a name="service-framework"></a>Dienstframework
+
 In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgeführt.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
@@ -33,11 +34,11 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |BindingDoesnTSupportTwoWayButContractRequires1|Vertrag erfordert TwoWay (entweder Anforderung-Antwort oder Duplex). Die angegebene Bindung bietet hierfür keine Unterstützung oder wurde nicht ordnungsgemäß für eine Unterstützung konfiguriert.|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute lässt QueuedDelivery nicht zu. Die Bindung für den Endpunkt mit dem angegebenen Vertrag bietet entsprechende Unterstützung.|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute erfordert QueuedDelivery. Die Bindung für den Endpunkt mit dem angegebenen Vertrag bietet hierfür keine Unterstützung oder wurde nicht ordnungsgemäß für die Unterstützung konfiguriert.|  
-|channelDoesNotHaveADuplexSession0|Der aktuelle Kanal unterstützt das Schließen der Ausgabesitzung nicht. Dieser Kanal ISessionChannel nicht implementiert\<IDuplexSession >.|  
+|channelDoesNotHaveADuplexSession0|Der aktuelle Kanal unterstützt das Schließen der Ausgabesitzung nicht. ISessionChannel wird von diesem Kanal nicht implementiert \<IDuplexSession> .|  
 |ClientRuntimeRequiresFormatter0|Die angegebene ClientOperation erfordert ein Formatierungsprogramm, da SerializeRequest und DeserializeReply nicht beide False sind.|  
 |CommunicationObjectAborted1|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde.|  
-|CommunicationObjectAbortedStack2|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde: {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|Das angegebene Kommunikationsobjekt wurde überschrieben, die virtuelle Funktion {1} jedoch die in der Basisklasse definierte Version wird nicht aufgerufen.|  
+|CommunicationObjectAbortedStack2|Das angegebene Kommunikations Objekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde: {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|Das angegebene Kommunikations Objekt hat die virtuelle Funktion überschrieben, {1} ruft jedoch nicht die in der Basisklasse definierte Version auf.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Der angegebene Vertrag weist einen oder mehrere IsTerminating- oder Nicht-IsInitiating-Vorgänge auf. Die SessionMode-Eigenschaft wurde nicht auf SessionMode.Required festgelegt. Das IsInitiating-Attribut und das IsTerminating-Attribut können nur im Kontext einer Sitzung verwendet werden.|  
 |CouldnTCreateChannelForChannelType2|Der angegebene Kanaltyp wurde angefordert, die angegebene Bindung bietet hierfür jedoch keine Unterstützung oder wurde nicht ordnungsgemäß für eine Unterstützung konfiguriert.|  
 |DispatchRuntimeRequiresFormatter0|Die angegebene DispatchOperation erfordert ein Formatierungsprogramm, da DeserializeRequest und SerializeReply nicht beide False sind.|  
@@ -100,13 +101,13 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |SFXEndpointBehaviorUsedOnWrongSide|Das angegebene IEndpointBehavior kann nicht für den Server verwendet werden. Dieses Verhalten kann nur für Clients verwendet werden.|  
 |SFxEndpointNoMatchingScheme|Die Basisadresse, die dem angegebenen Schema für den Endpunkt mit der angegebenen Bindung entspricht, kann nicht gefunden werden. Registrierte Basisadressenschemas wurden angegeben.|  
 |SFxErrorCreatingMtomReader|Fehler beim Erstellen eines Readers für die Nachricht bezüglich des Optimierungsmechanismus zur Nachrichtenübertragung.|  
-|SFxErrorDeserializingFault|Der Server hat einen ungültigen SOAP (Simple Object Access Protocol)-Fehler zurückgegeben. Weitere Informationen finden Sie in der InnerException.|  
+|SFxErrorDeserializingFault|Der Server hat einen ungültigen SOAP (Simple Object Access Protocol)-Fehler zurückgegeben. Weitere Details finden Sie unter "InnerException".“|  
 |SFxErrorDeserializingHeader|Fehler beim Deserialisieren eines Headers in der angegebenen Nachricht. Weitere Informationen finden Sie in der InnerException.|  
-|SFxErrorReflectingOnMethod3|Fehler beim Laden des angegebenen Attributs für die angegebene Methode im angegebenen Typ.  Weitere Informationen finden Sie in der InnerException.|  
-|SFxErrorReflectingOnParameter4|Fehler beim Laden des angegebenen Attributs für den angegebenen Parameter der angegebenen Methode im angegebenen Typ. Weitere Informationen finden Sie in der InnerException.|  
-|SFxErrorReflectingOnType2|Fehler beim Laden des angegebenen Attributs für den angegebenen Typ.  Weitere Informationen finden Sie in der InnerException.|  
-|SFxErrorSerializingBody|Fehler beim Serialisieren des Texts der angegebenen Nachricht. Weitere Informationen finden Sie in der InnerException.|  
-|SFxErrorSerializingHeader|Fehler beim Serialisieren eines Headers in der angegebenen Nachricht. Weitere Informationen finden Sie in der InnerException.|  
+|SFxErrorReflectingOnMethod3|Fehler beim Laden des angegebenen Attributs für die angegebene Methode im angegebenen Typ.  Weitere Details finden Sie unter "InnerException".“|  
+|SFxErrorReflectingOnParameter4|Fehler beim Laden des angegebenen Attributs für den angegebenen Parameter der angegebenen Methode im angegebenen Typ. Weitere Details finden Sie unter "InnerException".“|  
+|SFxErrorReflectingOnType2|Fehler beim Laden des angegebenen Attributs für den angegebenen Typ.  Weitere Details finden Sie unter "InnerException".“|  
+|SFxErrorSerializingBody|Fehler beim Serialisieren des Texts der angegebenen Nachricht. Weitere Details finden Sie unter "InnerException".“|  
+|SFxErrorSerializingHeader|Fehler beim Serialisieren eines Headers in der angegebenen Nachricht. Weitere Details finden Sie unter "InnerException".“|  
 |SFxExpectedIMethodCallMessage|Interner Fehler. Die Nachricht muss eine gültige IMethodCallMessage sein.|  
 |SFxExportMustHaveType|Der angegebene Teil im angegebenen Vorgang kann nicht exportiert werden, da kein gültiger CLR-Typ vorhanden ist.|  
 |SFxHeaderNotUnderstood|Die Nachricht wurde nicht verarbeitet. Der angegebene Header des angegebenen Namespace konnte vom Empfänger dieser Nachricht nicht interpretiert werden. Dieser Fehler weist im Allgemeinen darauf hin, dass der Sender dieser Nachricht ein Kommunikationsprotokoll aktiviert hat, das der Empfänger nicht verarbeiten kann. Stellen Sie sicher, dass die Konfiguration der Bindung des Clients mit der Bindung des Diensts übereinstimmt.|  
@@ -117,12 +118,12 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |SFxInvalidMessageBody|Der OperationFormatter hat einen ungültigen Nachrichtentext gefunden. Der "Element"-Knotentyp mit dem angegebenen Namen und dem angegebenen Namespace wurde erwartet. Der angegebene Knotentyp mit dem angegebenen Namen und dem angegebenen Namespace wurde gefunden.|  
 |SFxInvalidMessageBodyEmptyMessage|Der OperationFormatter konnte keine Informationen aus der Nachricht deserialisieren, da die Nachricht leer ist.|  
 |SFxInvalidMessageBodyErrorDeserializingParameter|Fehler beim Versuch, den angegebenen Parameter zu deserialisieren. Weitere Informationen finden Sie in der InnerException.|  
-|SFxInvalidMessageBodyErrorSerializingParameter|Fehler beim Versuch, den angegebenen Parameter zu serialisieren. Die InnerException-Nachricht wurde angegeben.  Weitere Informationen finden Sie in der InnerException.|  
+|SFxInvalidMessageBodyErrorSerializingParameter|Fehler beim Versuch, den angegebenen Parameter zu serialisieren. Die InnerException-Nachricht wurde angegeben.  Weitere Details finden Sie unter "InnerException".“|  
 |SFxInvalidMessageBodyUnexpectedNode|Beim Deserialisieren von Parametern wurde der angegebene unerwartete Knoten des angegebenen Namespaces gefunden.|  
 |SFxInvalidMessageContractSignature|Der angegebene Vorgang weist entweder einen Parameter oder einen Rückgabetyp auf, der mit MessageContractAttribute attributiert ist. Um die Anforderungsnachricht mit einem MessageContract darzustellen, muss der Vorgang über einen einzelnen Parameter verfügen, der mit MessageContractAttribute attributiert ist. Um die Antwortnachricht mit einem MessageContract darzustellen, muss der Rückgabewert des Vorgangs einen Typ aufweisen, der mit MessageContractAttribute markiert ist. Der Vorgang kann über keinen 'out'-Parameter oder 'ref'-Parameter verfügen.|  
 |SFxInvalidReplyAction|Die ausgehende Antwortnachricht für den Vorgang weist die angegebene Aktion auf, der Vertrag für den Vorgang gibt jedoch eine andere ReplyAction an. Die in der Nachricht angegebene Aktion muss mit der ReplyAction im Vertrag übereinstimmen, oder der Vertrag muss ReplyAction='*' angeben.|  
 |SFxInvalidRequestAction|Die ausgehende Anforderungsnachricht für den Vorgang weist die angegebene Aktion auf, der Vertrag für den Vorgang gibt jedoch eine andere RequestAction an. Die in der Nachricht angegebene Aktion muss mit der RequestAction im Vertrag übereinstimmen, oder der Vertrag muss RequestAction='*' angeben.|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Die statische CreateChannel-Methode kann nicht mit dem angegebenen Vertrag verwendet werden, da der Vertrag einen Rückrufvertrag definiert. Verwenden Sie eine der statischen CreateChannel-Überladungen für die DuplexChannelFactory\<TChannel >.|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|Die statische CreateChannel-Methode kann nicht mit dem angegebenen Vertrag verwendet werden, da der Vertrag einen Rückrufvertrag definiert. Verwenden Sie eine der statischen "aliatechannel"-über Ladungen für DuplexChannelFactory \<TChannel> .|  
 |SFxInvalidStreamInRequest|Damit die Anforderung im angegebenen Vorgang einen Stream darstellen kann, muss der Vorgang einen Parameter vom Typ Stream aufweisen.|  
 |SFxInvalidStreamInResponse|Damit die Antwort im angegebenen Vorgang einen Stream darstellen kann, muss der Vorgang einen Out-Parameter oder einen Rückgabewert vom Typ Stream aufweisen.|  
 |SFxInvalidStreamInTypedMessage|Um Streams mit dem Programmiermodell für den Nachrichtenvertrag verwenden zu können, muss der angegebene Typ einen MessageBody-Member vom Typ Stream aufweisen.|  
@@ -145,7 +146,7 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |SFxSchemaDoesNotContainType|Das Schema mit dem angegebenen Zielnamespace enthält keinen Typ mit dem angegebenen Namen.|  
 |SfxServiceContractAttributeNotFound|Der angegebene Vertragstyp ist mit ServiceContractAttribute nicht attributiert. Um einen gültigen Vertrag zu definieren, muss der angegebene Typ mit ServiceContractAttribute attributiert sein. Der Typ kann entweder eine Vertragsschnittstelle oder eine Dienstklasse sein.|  
 |SFxServiceContractGeneratorConfigRequired|Zum Generieren von Konfigurationsinformationen mithilfe der GenerateServiceEndpoint-Methode muss die ServiceContractGenerator-Instanz mit einem gültigen Konfigurationsobjekt initialisiert worden sein.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|Endpunkte können nicht hinzugefügt werden, wenn der ServiceHost einen der folgenden Status aufweist:<br /><br /> -Geöffnet<br />-Fehler<br />-Beendet<br />: Geschlossen von|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|Endpunkte können nicht hinzugefügt werden, wenn der ServiceHost einen der folgenden Status aufweist:<br /><br /> -Geöffnet<br />-Faulted<br />-Beendet<br />-Geschlossen|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Endpunkte können erst hinzugefügt werden, wenn die Description-Eigenschaft initialisiert wurde.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|Die HttpGetEnabled-Eigenschaft von ServiceMetadataBehavior ist auf True festgelegt, und die HttpGetUrl-Eigenschaft ist eine relative Adresse, aber es ist keine HTTP-Basisadresse verfügbar. Stellen Sie entweder eine HTTP-Basisadresse bereit, oder legen Sie die HttpGetUrl auf eine absolute Adresse fest.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|Die HttpsGetEnabled-Eigenschaft von ServiceMetadataBehavior ist auf True festgelegt, und die HttpsGetUrl-Eigenschaft ist eine relative Adresse, aber es ist keine HTTPS-Basisadresse verfügbar. Stellen Sie entweder eine HTTPS-Basisadresse bereit, oder legen Sie die HttpsGetUrl auf eine absolute Adresse fest.|  

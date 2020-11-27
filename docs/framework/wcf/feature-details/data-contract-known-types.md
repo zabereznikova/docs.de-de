@@ -10,14 +10,15 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 52b0caaaac976893dcf5ef5c228ccc4f53bdbe9e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 124083d86c220451c55a9290c2edf996b50d8d28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247480"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286681"
 ---
 # <a name="data-contract-known-types"></a>Bekannte Typen in Datenverträgen
+
 Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht es Ihnen, vorab die Typen anzugeben, die während der Deserialisierung in Betracht gezogen werden sollen. Ein Arbeitsbeispiel finden Sie unter [Known Types](../samples/known-types.md) .  
   
  Beim Übergeben von Parametern und Rückgabewerten zwischen einem Client und einem Dienst verwenden normalerweise beide Endpunkte sämtliche Datenverträge für die zu übertragenden Daten gemeinsam. Unter den folgenden Umständen ist dies allerdings nicht der Fall:  
@@ -31,20 +32,24 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
 - Einige Typen, die .NET Framework Typen enthalten, haben Member, die sich in einer der drei vorangegangenen Kategorien befinden. Zum Beispiel verwendet <xref:System.Collections.Hashtable> den Typ <xref:System.Object> , um die tatsächlichen Objekte in der Hashtabelle zu speichern. Beim Serialisieren dieser Typen kann die Empfängerseite nicht im Voraus den Datenvertrag für diese Member bestimmen.  
   
 ## <a name="the-knowntypeattribute-class"></a>Die KnownTypeAttribute-Klasse  
+
  Wenn Daten an einem empfangenden Endpunkt ankommen, versucht die WCF-Laufzeit, die Daten in eine Instanz eines Common Language Runtime (CLR)-Typs zu deserialisieren. Zur Auswahl des Typs, der für die Deserialisierung instanziiert wird, wird zuerst die eingehende Nachricht überprüft, um den Datenvertrag zu ermitteln, dem der Inhalt der Nachricht entspricht. Die Deserialisierungs-Engine versucht dann, den CLR-Typ zu finden, der einen mit dem Nachrichteninhalt kompatiblen Datenvertrag implementiert. Die Gruppe potenzieller Typen, die die Deserialisierungs-Engine während dieses Prozesses zulässt, wird als die Gruppe "bekannter Typen" des Deserialisierers bezeichnet.  
   
  Eine Methode, die Deserialisierungs-Engine über einen Typ zu informieren, besteht im Einsatz von <xref:System.Runtime.Serialization.KnownTypeAttribute>. Das Attribut kann nicht auf einzelne Datenmember, sondern nur auf gesamte Datenvertragstypen angewendet werden. Das Attribut wird auf einen *äußeren Typ* angewendet, der eine Klasse oder eine Struktur sein kann. Grundsätzlich wird durch die Anwendung des Attributs ein Typ als "bekannter Typ" angegeben. Dadurch wird der bekannte Typ Bestandteil der Gruppe bekannter Typen, wenn ein Objekt des äußeren Typs oder ein Objekt, auf das durch ein Member des äußeren Typs verwiesen wird, deserialisiert wird. Auf einen Typ können mehrere <xref:System.Runtime.Serialization.KnownTypeAttribute> -Attribute angewendet werden.  
   
 ## <a name="known-types-and-primitives"></a>Bekannte Typen und Primitive  
+
  Primitive Typen sowie bestimmte Typen, die als primitiv behandelt werden (z.&#160;B. <xref:System.DateTime> und <xref:System.Xml.XmlElement>) sind immer "bekannt" und müssen nie mithilfe dieses Mechanismus hinzugefügt werden. Arrays von primitiven Typen müssen allerdings explizit hinzugefügt werden. Die meisten Auflistungen werden als äquivalent mit Arrays betrachtet. (Nicht generische Auflistungen werden als äquivalent mit Arrays von <xref:System.Object>betrachtet). Ein Beispiel für die Verwendung von Primitiven, primitiven Arrays und primitiven Auflistungen finden Sie in Beispiel&#160;4.  
   
 > [!NOTE]
 > Im Gegensatz zu anderen primitiven Typen ist die <xref:System.DateTimeOffset> -Struktur standardmäßig kein bekannter Typ. Daher muss sie der Liste bekannter Typen manuell hinzugefügt werden.  
   
 ## <a name="examples"></a>Beispiele  
+
  In den folgenden Beispielen wird die Verwendung der <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse veranschaulicht.  
   
 #### <a name="example-1"></a>Beispiel 1  
+
  Es sind drei Klassen mit einer Vererbungsbeziehung gegeben.  
   
  [!code-csharp[C_KnownTypeAttribute#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#1)]
@@ -63,18 +68,21 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
  Jedes Mal, wenn der äußere Typ `CompanyLogo2` deserialisiert wird, wird die Deserialisierungs-Engine über `CircleType` und `TriangleType` informiert und kann daher die passenden Typen für die Datenverträge namens "Circle" und "Triangle" finden.  
   
 #### <a name="example-2"></a>Beispiel 2  
+
  Im folgenden Beispiel ist sowohl `CustomerTypeA` als auch `CustomerTypeB` der Datenvertrag `Customer` zugeordnet. Trotz dieser Tatsache wird jedes Mal eine Instanz von `CustomerTypeB` erstellt, wenn ein `PurchaseOrder` -Objekt deserialisiert wird, weil die Deserialisierungs-Engine nur `CustomerTypeB` kennt.  
   
  [!code-csharp[C_KnownTypeAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#4)]
  [!code-vb[C_KnownTypeAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#4)]  
   
 #### <a name="example-3"></a>Beispiel 3  
+
  Im folgenden Beispiel speichert ein <xref:System.Collections.Hashtable> seinen Inhalt intern als <xref:System.Object>. Um eine Hashtabelle erfolgreich deserialisieren zu können, muss die Deserialisierungs-Engine die Gruppe möglicher Typen kennen, die hier vorkommen können. In diesem Fall wissen wir im Vorhinein, dass nur `Book` -Objekte und `Magazine` -Objekte im `Catalog`gespeichert werden. Daher werden sie mithilfe des <xref:System.Runtime.Serialization.KnownTypeAttribute> -Attributs hinzugefügt.  
   
  [!code-csharp[C_KnownTypeAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#5)]
  [!code-vb[C_KnownTypeAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#5)]  
   
 #### <a name="example-4"></a>Beispiel 4  
+
  Im folgenden Beispiel wird eine Zahl und ein Vorgang, der mit der Zahl ausgeführt werden soll, in einem Datenvertrag gespeichert. Der `Numbers` -Datenmember kann eine ganze Zahl, ein Array von ganzen Zahlen oder ein Objekt des Typs <xref:System.Collections.Generic.List%601> sein, das ganze Zahlen enthält.  
   
 > [!CAUTION]
@@ -89,6 +97,7 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
  [!code-vb[C_KnownTypeAttribute#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#7)]  
   
 ## <a name="known-types-inheritance-and-interfaces"></a>Bekannte Typen, Vererbung und Schnittstellen  
+
  Wenn ein bekannter Typ mithilfe des `KnownTypeAttribute` -Attributs mit einem bestimmten Typ verknüpft wird, wird der bekannte Typ auch mit allen von diesem Typ abgeleiteten Typen verknüpft. Beachten Sie beispielsweise folgenden Code.  
   
  [!code-csharp[C_KnownTypeAttribute#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#8)]
@@ -99,6 +108,7 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
  Bekannte Typen können nur Klassen und Strukturen, nicht jedoch Schnittstellen, zugeordnet werden.  
   
 ## <a name="known-types-using-open-generic-methods"></a>Bekannte Typen, die offene generische Methoden verwenden  
+
  Es ist möglicherweise notwendig, einen generischen Typ als bekannten Typ hinzuzufügen. Ein offener generischer Typ kann dem `KnownTypeAttribute` -Attribut nicht als Parameter übergeben werden.  
   
  Dieses Problem lässt sich mithilfe eines alternativen Mechanismus lösen: Schreiben Sie eine Methode, die eine Liste derjenigen Typen zurückgibt, welche der Auflistung bekannter Typen hinzugefügt werden können. Wegen einigen Beschränkungen wird der Name der Methode dann als Zeichenfolgenargument für das `KnownTypeAttribute` -Attribut angegeben.  
@@ -132,6 +142,7 @@ Die <xref:System.Runtime.Serialization.KnownTypeAttribute> -Klasse ermöglicht e
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>Weitere Verfahren zum Hinzufügen bekannter Typen  
+
  Darüber hinaus können bekannte Typen durch eine Konfigurationsdatei hinzugefügt werden. Dies ist hilfreich, wenn Sie nicht den Typ steuern, der bekannte Typen für die ordnungsgemäße Deserialisierung erfordert, z. b. bei der Verwendung von Typbibliotheken von Drittanbietern mit Windows Communication Foundation (WCF).  
   
  Die folgende Konfigurationsdatei zeigt, wie in einer Konfigurationsdatei ein bekannter Typ angegeben wird.  

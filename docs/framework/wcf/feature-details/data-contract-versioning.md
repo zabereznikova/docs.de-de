@@ -9,17 +9,19 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 493efab41e2c6763eb95df8662e6254d9e0df2f2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6f8623c9d8e9e7ba1f7c762c929f986b523c2f90
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593502"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285199"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
+
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine umfassende Übersicht und Anleitungen zur Versionskontrolle finden Sie unter [bewährte Methoden: Versionsverwaltung von Daten Verträgen](../best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Breaking Changes gegenüber Non-Breaking Changes  
+
  Änderungen an einem Datenvertrag können "breaking" oder "non-breaking" sein. Wird ein Datenvertrag auf eine "non-breaking"-Art geändert, kann eine Anwendung, die die ältere Version des Vertrags verwendet, mit einer Anwendung kommunizieren, die die neuere Version verwendet; und eine Anwendung, die die neuere Version des Vertrags verwendet, kann mit einer Anwendung kommunizieren, die die ältere Version verwendet. Andererseits verhindert ein "Breaking Change" die Kommunikation in eine oder beide Richtungen.  
   
  Jede Änderung eines Typs, der nicht beeinflusst, wie er gesendet und empfangen wird, ist "non-breaking". Solche Änderungen ändern nicht den Datenvertrag, nur den zugrunde liegenden Typ. Beispielsweise kann der Name eines Felds auf "non-breaking"-Art geändert werden, indem die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> des <xref:System.Runtime.Serialization.DataMemberAttribute> auf den älteren Versionsnamen festgelegt wird. Der folgende Code zeigt Version 1 eines Datenvertrags.  
@@ -45,6 +47,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Ebenfalls möglich sind die folgenden Änderungen.  
   
 ## <a name="adding-and-removing-data-members"></a>Das Hinzufügen und Entfernen von Datenelementen  
+
  In den meisten Fällen ist das Hinzufügen oder Entfernen eines Datenelements kein "Breaking Change", sofern keine strikte Schemavalidierung (neue Instanzen, die gegen das alte Schema validiert werden) erforderlich ist.  
   
  Wenn ein Typ mit einem Extrafeld in einen Typ mit einem fehlenden Feld deserialisiert wird, werden die Extrainformationen ignoriert. (Sie kann auch für Roundtripping-Zwecke gespeichert werden. Weitere Informationen finden Sie unter [Forward-kompatible Datenverträge](forward-compatible-data-contracts.md)).  
@@ -78,6 +81,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Der Version 2-Deserialisierer weiß nicht, auf was er das Feld `HorsePower` festlegen soll, da in der eingehenden XML keine entsprechenden Daten vorliegen. Stattdessen wird das Feld auf den Standardwert 0 (null) festgelegt.  
   
 ## <a name="required-data-members"></a>Erforderliche Datenelemente  
+
  Ein Datenelement kann als "erforderlich" markiert werden, indem die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> der Klasse <xref:System.Runtime.Serialization.DataMemberAttribute> auf `true` festgelegt wird. Wenn erforderliche Daten während der Deserialisierung fehlen, wird eine Ausnahme verwendet, anstatt die Datenelemente auf ihren Standardwert festzulegen.  
   
  Das Hinzufügen von erforderlichen Datenelementen ist ein "Breaking Change". Das bedeutet, dass der neuere Typ noch immer an Endpunkte mit dem älteren Typ gesendet werden kann, aber nicht umgekehrt. Das Löschen eines Datenelements, das in einer vorherigen Version als "erforderlich" markiert war, ist ebenfalls ein "Breaking Change".  
@@ -88,6 +92,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 > Auch wenn die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> auf `true` festgelegt ist, müssen die eingehenden Daten NULL oder 0 (null) sein, und es muss ein Typ vorbereitet sein, um diese Möglichkeit abzudecken. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> sollte nicht als Sicherheitsmechanismus zum Schutz gegen ungültige eingehende Daten verwendet werden.  
   
 ## <a name="omitted-default-values"></a>Ausgelassene Standardwerte  
+
  Es ist möglich (obwohl nicht empfehlenswert), die- `EmitDefaultValue` Eigenschaft für das DataMemberAttribute-Attribut auf festzulegen `false` , wie unter [datmember default values](data-member-default-values.md)beschrieben. Wenn diese Einstellung `false` ist, wird das Datenelement nicht ausgegeben, wenn es auf seinen Standardwert (normalerweise NULL oder 0 (null)) festgelegt ist. Dies ist in anderen Versionen auf zwei Arten nicht kompatibel mit erforderlichen Datenelementen:  
   
 - Ein Datenvertrag mit einem Datenelement, das in einer Version erforderlich ist, kann keine Standarddaten (NULL oder 0(null)) von einer anderen Version erhalten, in der das Datenelement `EmitDefaultValue` auf `false` festgelegt hat.  
@@ -95,6 +100,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 - Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired``true` und `EmitDefaultValue``false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
   
 ## <a name="schema-considerations"></a>Schemaüberlegungen  
+
  Eine Erläuterung, welches Schema für Daten Vertragstypen erstellt wird, finden Sie unter [Daten Vertrags Schema-Referenz](data-contract-schema-reference.md).  
   
  Das Schema, das von WCF für Daten Vertragstypen erzeugt wird, stellt keine Versionskontrolle bereit. Das bedeutet, dass das Schema, das von einer bestimmten Version eines Typs exportiert wurde, nur diejenigen Datenelemente enthält, die in dieser Version vorliegen. Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ändert nicht das Schema eines Typs.  
@@ -106,12 +112,15 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Round-Tripping bringt auch einige zusätzliche Überlegungen mit sich. Weitere Informationen finden Sie im Abschnitt "Schema Überlegungen" in [Vorwärts kompatiblen Daten Verträgen](forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Andere zulässige Änderungen  
+
  Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ist ein "Non-Breaking Change". Es besteht jedoch kein Round-Tripping-Support für Versionen des Typs vor der Version, in der <xref:System.Runtime.Serialization.IExtensibleDataObject> implementiert wurde. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Enumerationen  
+
  Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAttribute` der gleiche wie in der alten Version geblieben ist. Weitere Informationen finden Sie unter [Enumerationstypen in Daten Verträgen](enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Sammlungen  
+
  Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. Weitere Informationen zur Sammlungs Anpassung finden Sie unter [Sammlungs Typen in Daten Verträgen](collection-types-in-data-contracts.md).  
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   

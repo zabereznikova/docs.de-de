@@ -8,20 +8,23 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1cfcca524e5dd2b0c1560eb7600795766e2db1d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfe1da7c66f5c64ac3f5346bc23e9b618db38d20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598956"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286460"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Vorgehensweise: Erstellen eines Sicherheitstokendiensts
+
 Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation definierte Protokoll. Dieses Protokoll definiert Meldungsformate und Meldungsaustauschmuster zum Herausgeben, Erneuern, Abbrechen und Überprüfen von Sicherheitstoken. Ein angegebener Sicherheitstokendienst stellt eine oder mehrere dieser Fähigkeiten zur Verfügung. Dieses Thema behandelt das am häufigsten verwendete Szenario: das Implementieren der Tokenausstellung.  
   
 ## <a name="issuing-tokens"></a>Ausstellen von Token  
- WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Der Aktions-URI, der der `RequestSecurityToken` Nachricht zugeordnet ist, ist `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` . Der Aktions-URI, der der `RequestSecurityTokenResponse` Nachricht zugeordnet ist, ist `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` .  
+
+ WS-Trust definiert Meldungsformate basierend auf dem `RequestSecurityToken`-XSD-Schemaelement (XML Schema Definition Language) und dem `RequestSecurityTokenResponse`-XSD-Schemaelement zum Durchführen der Tokenausstellung. Außerdem definiert WS-Trust die zugeordneten Aktions-URIs (Action Uniform Resource Identifiers). Der Aktions-URI, der der `RequestSecurityToken` Nachricht zugeordnet ist, ist `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue` . Der Aktions-URI, der der `RequestSecurityTokenResponse` Nachricht zugeordnet ist, ist   `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue` .  
   
 ### <a name="request-message-structure"></a>Anforderungsmeldungsstruktur  
+
  Die Anforderungsmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
   
 - Ein Anforderungstyp-URI mit dem Wert `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue` .
@@ -41,6 +44,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  Der Sicherheitstokendienst verwendet die Informationen in der Problemanforderungsmeldung für die Erstellung der Problemantwortmeldung.  
   
 ## <a name="response-message-structure"></a>Antwortmeldungsstruktur  
+
  Die Antwortmeldungsstruktur für Probleme besteht normalerweise aus den folgenden Elementen:  
   
 - dem ausgestellten Sicherheitstoken, z. B. eine SAML 1.1-Assertion  
@@ -58,6 +62,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
 - Lebensdauerinformationen für das ausgestellte Token.  
   
 ## <a name="processing-request-messages"></a>Verarbeiten von Anforderungsmeldungen  
+
  Der Sicherheitstokendienst verarbeitet die Problemanforderung durch Untersuchen der verschiedenen Teile der Anforderungsmeldung und durch Sicherstellen der Ausstellung eines Tokens, das der Anforderung entspricht. Der Sicherheitstokendienst muss Folgendes bestimmen, bevor er das auszustellende Token erstellt:  
   
 - Die Anforderung ist tatsächlich eine Anforderung für ein auszustellendes Token.  
@@ -101,6 +106,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  Weitere Informationen finden Sie unter [Federation Sample](../samples/federation-sample.md)(Verbund Beispiel).  
   
 ## <a name="creating-response-messages"></a>Erstellen von Antwortmeldungen  
+
  Sobald der Sicherheitstokendienst die Problemanforderung verarbeitet und das auszustellende Token zusammen mit dem Prüfschlüssel erstellt, muss die Antwortmeldung erstellt werden, die mindestens das angeforderte Token, das Prüftoken und die ausgestellten Tokenverweise enthalten muss. Das ausgestellte Token ist normalerweise ein aus der <xref:System.IdentityModel.Tokens.SamlSecurityToken> erstelltes <xref:System.IdentityModel.Tokens.SamlAssertion>, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[c_CreateSTS#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#5)]
@@ -121,6 +127,7 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
  Diese verschiedenen Werte werden dann in der Antwortmeldung, die an den Client zurückgegeben wird, serialisiert.  
   
 ## <a name="example"></a>Beispiel  
+
  Vollständigen Code für einen Sicherheitstokendienst finden Sie unter Verbund [Beispiel](../samples/federation-sample.md).  
   
 ## <a name="see-also"></a>Weitere Informationen

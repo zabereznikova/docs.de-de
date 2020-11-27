@@ -2,23 +2,24 @@
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: b4991fc9f8a6c45cae3943f1506247c42ed2b30b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597123"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286317"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten
+
 In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten einen einfachen Workflowdienst erstellen. Der Schwerpunkt des Themas liegt auf der Mechanik zum Erstellen eines Workflowdiensts. Der Dienst besteht ausschließlich aus Messagingaktivitäten. In einem realen Dienst enthält der Workflow noch viele andere Aktivitäten. Der Dienst implementiert einen Vorgang mit dem Namen "Echo", der eine Zeichenfolge verwendet und diese an den Aufrufer zurückgibt. Dieses Thema ist das erste von zwei Themen, die zusammengehören. Im nächsten Thema Gewusst [wie: Zugreifen auf einen Dienst aus einer Workflow Anwendung](how-to-access-a-service-from-a-workflow-application.md) wird erläutert, wie Sie eine Workflow Anwendung erstellen, die den in diesem Thema erstellten Dienst aufrufen kann.  
   
 ### <a name="to-create-a-workflow-service-project"></a>So erstellen Sie ein Workflowdienstprojekt  
   
 1. Starten Sie Visual Studio 2012.  
   
-2. Klicken Sie im Menü **Datei** auf **neu**, und klicken Sie dann auf **Projekt** , um das **Dialog Feld Neues Projekt**anzuzeigen. Wählen Sie aus der Liste der installierten Vorlagen und der **WCF-Workflow Dienst Anwendung** in der Liste der Projekttypen die Option **Workflow** aus. Benennen Sie das Projekt, `MyWFService` und verwenden Sie den Standard Speicherort, wie in der folgenden Abbildung dargestellt.  
+2. Klicken Sie im Menü **Datei** auf **neu**, und klicken Sie dann auf **Projekt** , um das **Dialog Feld Neues Projekt** anzuzeigen. Wählen Sie aus der Liste der installierten Vorlagen und der **WCF-Workflow Dienst Anwendung** in der Liste der Projekttypen die Option **Workflow** aus. Benennen Sie das Projekt, `MyWFService` und verwenden Sie den Standard Speicherort, wie in der folgenden Abbildung dargestellt.  
   
-     Klicken Sie auf **OK** , um das **Dialog Feld Neues Projekt**zu schließen.  
+     Klicken Sie auf **OK** , um das **Dialog Feld Neues Projekt** zu schließen.  
   
 3. Nachdem das Projekt erstellt wurde, wird die Datei "Service1.xamlx" im Designer geöffnet. Dies ist in der folgenden Abbildung dargestellt.  
   
@@ -42,7 +43,7 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
   
      ![Screenshot, der anzeigt, wo der Vorgangs Name angegeben wird.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
-4. Wenn die <xref:System.ServiceModel.Activities.Receive> Aktivität ausgewählt ist, öffnen Sie das Eigenschaften Fenster, sofern dieses nicht bereits geöffnet ist, indem Sie auf das Menü **Ansicht** klicken und **Eigenschaften Fenster**auswählen. Führen Sie im **Eigenschaften Fenster** einen Bildlauf nach unten durch, bis Sie **cankreateinstance** sehen, und klicken Sie wie in der folgenden Abbildung dargestellt auf das Kontrollkästchen Mit dieser Einstellung wird es dem Workflowdiensthost ermöglicht, (bei Bedarf) eine neue Instanz des Diensts zu erstellen, wenn eine Meldung empfangen wird.  
+4. Wenn die <xref:System.ServiceModel.Activities.Receive> Aktivität ausgewählt ist, öffnen Sie das Eigenschaften Fenster, sofern dieses nicht bereits geöffnet ist, indem Sie auf das Menü **Ansicht** klicken und **Eigenschaften Fenster** auswählen. Führen Sie im **Eigenschaften Fenster** einen Bildlauf nach unten durch, bis Sie **cankreateinstance** sehen, und klicken Sie wie in der folgenden Abbildung dargestellt auf das Kontrollkästchen Mit dieser Einstellung wird es dem Workflowdiensthost ermöglicht, (bei Bedarf) eine neue Instanz des Diensts zu erstellen, wenn eine Meldung empfangen wird.  
   
      ![Screenshot mit der cankreateinzustance-Eigenschaft.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
@@ -64,14 +65,15 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
   
      Dadurch wird angegeben, dass die <xref:System.ServiceModel.Activities.SendReply>-Aktivität eine Nachricht oder einen Nachrichtenvertragstyp sendet und dass die Daten an die `msg`-Variable gebunden werden. Da dies eine <xref:System.ServiceModel.Activities.SendReply>-Aktivität ist, werden die Daten von `msg` verwendet, um die von der Aktivität an den Client zurückgesendete Nachricht aufzufüllen. Klicken Sie auf **OK** , um das Dialogfeld **Inhalts Definition** zu schließen.  
   
-8. Speichern und erstellen Sie die Projekt Mappe, indem Sie auf das Menü **Erstellen** klicken und Projekt Mappe **Erstellen**auswählen.  
+8. Speichern und erstellen Sie die Projekt Mappe, indem Sie auf das Menü **Erstellen** klicken und Projekt Mappe **Erstellen** auswählen.  
   
 ## <a name="configure-the-workflow-service-project"></a>Konfigurieren des Workflowdienstprojekts  
+
  Der Workflowdienst wurde abgeschlossen. In diesem Abschnitt wird erklärt, wie Sie die Workflowdienstprojektmappe so konfigurieren, dass sie auf einfache Weise gehostet und ausgeführt werden kann. Diese Projektmappe verwendet den ASP.NET Development Server zum Hosten des Diensts.  
   
 #### <a name="to-set-project-start-up-options"></a>So legen Sie Projektstartoptionen fest  
   
-1. Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **mywfservice** , und wählen Sie **Eigenschaften** aus, um das Dialogfeld **Projekteigenschaften** anzuzeigen.  
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **mywfservice** , und wählen Sie **Eigenschaften** aus, um das Dialogfeld **Projekteigenschaften** anzuzeigen.  
   
 2. Wählen Sie die Registerkarte **Web** aus, und wählen Sie unter **Start Aktion** die Option **bestimmte Seite** aus, `Service1.xamlx` wie in der folgenden Abbildung dargestellt.  
   

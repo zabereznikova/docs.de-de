@@ -6,19 +6,21 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1cd7e54d50e7116c71c040df1965674a4fdaff13
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51bbd1a8a9bfc8963cee429dab41fdf9b4f594c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595595"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286759"
 ---
 # <a name="contracts"></a>Verträge
+
 In diesem Abschnitt wird gezeigt, wie Windows Communication Foundation (WCF)-Verträge definiert und implementiert werden. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
   
  Weitere Informationen zu Verträgen und anderen Kernkonzepten von WCF finden Sie unter [grundlegende Windows Communication Foundation Konzepte](../fundamental-concepts.md). In diesem Thema werden in erster Linie Kenntnisse über Dienstverträge vermittelt. Weitere Informationen zum Erstellen von Clients, die Dienstverträge zum Herstellen einer Verbindung mit Diensten verwenden, finden Sie unter Übersicht über den [WCF-Client](../wcf-client-overview.md). Weitere Informationen zu Client Kanälen, der Client Architektur und anderen Client Problemen finden Sie unter [Clients](clients.md).  
   
 ## <a name="overview"></a>Übersicht  
+
  Dieses Thema bietet eine allgemeine Konzept Orientierung zum Entwerfen und Implementieren von WCF-Diensten. Untergeordneten Themen bieten ausführlichere Informationen zu den Besonderheiten des Entwerfens und Implementierens. Vor dem Entwerfen und Implementieren der WCF-Anwendung empfiehlt es sich, Folgendes zu tun:  
   
 - Kenntnisse darüber, was ein Dienstvertrag ist, wie er funktioniert und erstellt wird.  
@@ -26,6 +28,7 @@ In diesem Abschnitt wird gezeigt, wie Windows Communication Foundation (WCF)-Ver
 - Kenntnisse darüber, dass Verträge Mindestanforderungen angeben, die Laufzeitkonfiguration oder die Hostumgebung möglicherweise nicht unterstützt.  
   
 ## <a name="service-contracts"></a>Dienstverträge  
+
  Ein Dienstvertrag ist eine Anweisung, die Informationen zu folgenden Parametern enthält:  
   
 - Die Gruppierung von Vorgängen in einem Dienst.  
@@ -52,13 +55,14 @@ In diesem Abschnitt wird gezeigt, wie Windows Communication Foundation (WCF)-Ver
   
  Verträge können allerdings auf verschiedene Weise ausgedrückt werden; WSDL und XSD sind zwar ausgezeichnete Sprachen zum Beschreiben von Diensten beim Zugriff, jedoch schwierige Sprachen bei der direkten Verwendung. Sie sind lediglich Beschreibungen eines Dienstes und keine Dienstvertragsimplementierungen. Daher verwenden WCF-Anwendungen verwaltete Attribute, Schnittstellen und Klassen, um die Struktur von und zu definieren, um einen Dienst zu implementieren.  
   
- Der sich ergebende Vertrag, der in verwalteten Typen definiert ist, *exported*kann als Metadaten – WSDL und XSD – konvertiert werden, wenn Sie von Clients oder anderen Dienstimplementierern benötigt werden, insbesondere auf anderen Plattformen. Das Ergebnis ist ein einfaches Programmiermodell, das mit öffentlichen Metadaten für jede Clientanwendung beschrieben werden kann. Die Details der zugrunde liegenden SOAP-Nachrichten, wie z. b. Transport-und sicherheitsbezogene Informationen, können für WCF belassen werden, das automatisch die erforderlichen Konvertierungen zum und vom Dienst Vertragstyp System in das XML-Typsystem ausführt.  
+ Der sich ergebende Vertrag, der in verwalteten Typen definiert ist, *exported* kann als Metadaten – WSDL und XSD – konvertiert werden, wenn Sie von Clients oder anderen Dienstimplementierern benötigt werden, insbesondere auf anderen Plattformen. Das Ergebnis ist ein einfaches Programmiermodell, das mit öffentlichen Metadaten für jede Clientanwendung beschrieben werden kann. Die Details der zugrunde liegenden SOAP-Nachrichten, wie z. b. Transport-und sicherheitsbezogene Informationen, können für WCF belassen werden, das automatisch die erforderlichen Konvertierungen zum und vom Dienst Vertragstyp System in das XML-Typsystem ausführt.  
   
  Weitere Informationen zum Entwerfen von Verträgen finden Sie unter [Entwerfen von Dienstverträgen](../designing-service-contracts.md). Weitere Informationen zum Implementieren von Verträgen finden Sie unter [Implementieren von Dienstverträgen](../implementing-service-contracts.md).  
   
  Außerdem bietet WCF die Möglichkeit, Dienstverträge vollständig auf Nachrichten Ebene zu entwickeln. Weitere Informationen zum Entwickeln von Dienstverträgen auf Nachrichten Ebene finden Sie unter [Verwenden von Nachrichten Verträgen](using-message-contracts.md). Weitere Informationen zum Entwickeln von Diensten in nicht-SOAP-XML finden Sie unter [Interoperabilität mit POX-Anwendungen](interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Grundlagen der Anforderungshierarchie  
+
  Ein Dienstvertrag gruppiert die Vorgänge, gibt das Nachrichtenaustauschmuster, die Nachrichtentypen und Datentypen an, die diese Nachrichten enthalten, und zeigt Kategorien von Laufzeitverhalten an, die eine Implementierung aufweisen muss, um den Vertrag zu unterstützen (z. B. dass Nachrichten verschlüsselt und signiert sein müssen). Der Dienstvertrag selbst gibt nicht genau an, wie diese Anforderungen erfüllt werden, sondern lediglich, dass sie erfüllt werden müssen. Welcher Verschlüsselungstyp verwendet wird oder wie eine Nachricht signiert wird, hängt von der Implementierung und Konfiguration eines kompatiblen Dienstes ab.  
   
  Beachten Sie, dass der Vertrag bestimmte Anforderungen an die Dienstvertragsimplementierung und die Laufzeitkonfiguration stellt, um ein Verhalten hinzuzufügen. Die Anforderungen, um einen Dienst für die Verwendung verfügbar zu machen, bauen auf den vorherigen Anforderungen auf. Wenn ein Vertrag Anforderungen an die Implementierung stellt, kann eine Implementierung noch weitere Anforderungen an die Konfiguration und die Bindungen stellen, die die Ausführung des Dienstes ermöglichen. Außerdem muss die Hostanwendung auch alle Anforderungen unterstützen, die die Dienstkonfiguration und die Bindungen hinzufügen.  
