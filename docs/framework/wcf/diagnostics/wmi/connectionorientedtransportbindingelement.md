@@ -2,14 +2,15 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c69b73cc05a56a7556630de0f83675590442293
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048398"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274152"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
+
 ConnectionOrientedTransportBindingElement  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,12 +30,15 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die ConnectionOrientedTransportBindingElement-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die ConnectionOrientedTransportBindingElement-Klasse verfügt über die folgenden Eigenschaften:  
   
 ### <a name="channelinitializationtimeout"></a>ChannelInitializationTimeout  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -42,6 +46,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Der Zeitraum, der angibt, wie viel Zeit für die Durchführung der Kanalinitialisierung aufgewendet werden kann, bevor eine Zeitüberschreitung vorliegt.  
   
 ### <a name="connectionbuffersize"></a>ConnectionBufferSize  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -49,13 +54,15 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Die Puffergröße, die zum Übertragen eines Teils der serialisierten Meldung vom Client oder Dienst verwendet wird.  
   
 ### <a name="hostnamecomparisonmode"></a>HostNameComparisonMode  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der angibt, ob der Hostname zum Erreichen des Dienstes bei übereinstimmendem URI verwendet wird.  
   
 ### <a name="maxbuffersize"></a>MaxBufferSize  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -63,6 +70,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Die maximale Größe des zu verwendenden Puffers.  
   
 ### <a name="maxoutputdelay"></a>MaxOutputDelay  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -70,6 +78,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Das maximale Zeitintervall, das als Teil einer Nachricht oder vollständigen Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.  
   
 ### <a name="maxpendingaccepts"></a>MaxPendingAccepts  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -77,6 +86,7 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Die maximale Anzahl ausstehender asynchroner Annahmethreads, die für die Verarbeitung eingehender Verbindungen beim Dienst zur Verfügung stehen.  
   
 ### <a name="maxpendingconnections"></a>MaxPendingConnections  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -84,7 +94,8 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
  Die maximale Anzahl ausstehender Verbindungen.  
   
 ### <a name="transfermode"></a>TransferMode  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -96,6 +107,6 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: c7aae8e8070c989c4b36e0581aa5f48f51416f97
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 2290fd91c8eee0ab969eef2827d3c7440ef21e20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274880"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87165875"
  Das <xref:System.Windows.Automation.GridPattern> -Steuerelementmuster wird zur Unterstützung von Steuerelementen verwendet, die als Container für eine Auflistung von untergeordneten Elementen dienen. Die untergeordneten Elemente dieses Elements müssen <xref:System.Windows.Automation.Provider.IGridItemProvider> implementieren und in einem zweidimensionalen logischen Koordinatensystem angeordnet sein, das zeilen- und spaltenweise durchlaufen werden kann. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
+
  Beachten Sie beim Implementieren des Grid-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
 - Grid-Koordinaten sind nullbasiert, wobei die obere linke Zelle (oder die obere rechte Zelle, je nach Gebietsschema) die Koordinaten (0,0) aufweist.  
@@ -44,10 +47,12 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
 - Verwenden Sie einen <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> , um den Durchlauf durch die Elemente oder Zellen eines Rasters zu verfolgen.  
   
 <a name="Required_Members_for_IGridProvider"></a>
+
 ## <a name="required-members-for-igridprovider"></a>Erforderliche Member für IGridProvider  
+
  Zum Implementieren der IGridProvider-Schnittstelle werden die folgenden Eigenschaften und Methoden benötigt.  
   
-|Erforderliche Member|type|Hinweise|  
+|Erforderliche Member|type|Notizen|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|Keine|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|Keine|  
@@ -56,7 +61,9 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Ausnahmen  
+
  Anbieter müssen die folgenden Ausnahmen auslösen.  
   
 |Ausnahmetyp|Bedingung|  

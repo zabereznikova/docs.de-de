@@ -2,14 +2,15 @@
 title: Kanalklasse
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a920636e7df9609b12834366b1488c80122f9fca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964080"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274230"
 ---
 # <a name="channel-class"></a>Kanalklasse
+
 Kanal  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,19 +27,23 @@ class Channel
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die Kanalklasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die Kanalklasse verfügt über die folgenden Eigenschaften.  
   
 ### <a name="localaddress"></a>LocalAddress  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der lokale Endpunkt für den Kanal.  
   
 ### <a name="ref"></a>ref  
+
  Datentyp: Endpunkt  
   
  Zugriffstyp: Schreibgeschützt  
@@ -46,21 +51,24 @@ class Channel
  Ein Verweis auf den Endpunkt, mit dem der Kanal verbunden ist.  
   
 ### <a name="remoteaddress"></a>RemoteAddress  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die dem Kanal zugeordnete Remoteadresse.  
   
-### <a name="sessionid"></a>SessionId  
- Datentyp: string (Zeichenfolge)  
+### <a name="sessionid"></a>SessionID  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die aktuelle Sitzungs-ID (sofern vorhanden).  
   
-### <a name="type"></a>Typ  
- Datentyp: string (Zeichenfolge)  
+### <a name="type"></a>type  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -72,6 +80,6 @@ class Channel
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.ChannelBase>

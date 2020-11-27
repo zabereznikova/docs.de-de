@@ -6,20 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 111d110be9365c4a58f2bd2b033c1ff4e3a6a95d
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: ac6b212a8cb3f2f0cfa0d645aba2f0984ed8eb60
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274646"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  In diesem Thema wird gezeigt, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] verwendet wird, um Textattributdetails aus einem Textbereich abzurufen, der mehrere Attributwerte umfasst. Ein Textbereich kann der aktuellen Position der Einfügemarke (oder der degenerierten Auswahl) in einem Dokument, einer zusammenhängenden Auswahl von Text, einer Reihe nicht zusammenhängender ausgewählter Textstellen oder dem gesamten Text eines Dokuments entsprechen.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird veranschaulicht, wie <xref:System.Windows.Automation.TextPattern.FontNameAttribute> aus einem Textbereich abgerufen wird, wobei <xref:System.Windows.Automation.Text.TextPatternRange.GetAttributeValue%2A> ein <xref:System.Windows.Automation.TextPattern.MixedAttributeValue> -Objekt zurückgibt.  
   
 [!code-csharp[FindText#RetrieveMixedAttributes](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#retrievemixedattributes)]
