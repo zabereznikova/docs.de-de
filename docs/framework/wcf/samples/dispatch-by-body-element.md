@@ -2,14 +2,15 @@
 title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 19913cdaa47d766f62a313e216a653ac69633a99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ddff361179c2ef071ca4df076e78b238de9041a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594698"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292588"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
+
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
   
  Standardmäßig wählt der Dienstmodellverteiler die passende Verarbeitungsmethode für eine eingehende Nachricht auf der Grundlage des WS-Adressierungsaktionsheaders der Nachricht aus bzw. auf der Grundlage der entsprechenden Informationen in der HTTP SOAP-Anforderung.  
@@ -70,6 +71,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Hinzufügen einer Vorgangsauswahl zu einem Dienst  
+
  Diensdispatchselektoren sind Erweiterungen des Windows Communication Foundation (WCF)-Verteilers. Für die Auswahl von Methoden auf dem Rückrufkanal von Duplexverträgen stehen auch Clientvorgangsauswahlen zur Verfügung, die ähnlich funktionieren wie die hier erläuterten Verteilungsvorgangsauswahlen, die jedoch nicht explizit in diesem Beispiel behandelt werden.  
   
  Wie die meisten Dienstmodellerweiterungen werden auch Verteilungsvorgangsauwahlen dem Verteiler mithilfe von Verhaltensweisen hinzugefügt. Ein *Verhalten* ist ein Konfigurationsobjekt, das entweder mindestens eine Erweiterung zur Dispatchlaufzeit (oder zur Client Laufzeit) hinzufügt oder andernfalls seine Einstellungen ändert.  
@@ -118,6 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ```  
   
 ## <a name="implementing-the-service"></a>Implementieren des Diensts  
+
  Das in diesem Beispiel implementierte Verhalten wirkt sich unmittelbar darauf aus, wie übermittelte Nachrichten interpretiert und verteilt werden. Dies ist eine Funktion des Dienstvertrags. Daher sollte das Verhalten auf Dienstvertragsebene in jeder Dienstimplementierung deklariert werden, die das Verhalten verwendet.  
   
  Der Beispiel Projekt Dienst wendet das `DispatchByBodyElementBehaviorAttribute` Vertrags Verhalten auf den `IDispatchedByBody` Dienstvertrag an und beschriftet jeden der beiden Vorgänge `OperationForBodyA()` und `OperationForBodyB()` mit einem `DispatchBodyElementAttribute` Vorgangs Verhalten. Wenn ein Diensthost für einen Dienst, der diesen Vertrag implementiert, geöffnet wird, werden diese Metadaten von dem Verteilungsersteller wie zuvor erläutert ausgewählt.  
@@ -143,6 +146,7 @@ public interface IDispatchedByBody
  Die Beispieldienstimplementierung ist einfach. Jede Methode schließt die empfangene Nachricht in eine Antwortnachricht ein und sendet sie zurück an den Client.  
   
 ## <a name="running-and-building-the-sample"></a>Erstellen und Ausführen des Beispiels  
+
  Wenn Sie das Beispiel ausführen, wird der Textinhalt der Vorgangsantworten im Clientkonsolenfenster angezeigt, ähnlich der folgenden (formatierten) Ausgabe.  
   
  Der Client sendet drei Nachrichten an den Dienst, dessen Textinhaltselemente entsprechend mit `bodyA`, `bodyB` und `bodyX` benannt werden. Wie aus der vorstehenden Beschreibung und dem dargestellten Dienstvertrag hervorgeht, wird die eingehende Nachricht mit dem `bodyA`-Element an die `OperationForBodyA()`-Methode weitergeleitet. Da kein explizites Verteilungsziel für die Nachricht mit dem Textelement `bodyX` vorhanden ist, wird die Nachricht an den `DefaultOperation()` weitergeleitet. Jeder der Dienstvorgänge schließt den empfangenen Nachrichtentext in ein Element ein, das spezifisch für die Methode ist, und sendet ihn zurück. Dies dient dazu, dass sich Eingangs- und Ausgangsnachricht in diesem Beispiel eindeutig entsprechen.  

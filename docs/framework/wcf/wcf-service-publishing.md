@@ -3,12 +3,12 @@ title: WCF-Dienstpublishing
 description: Mithilfe der WCF-Dienst Veröffentlichung können Sie Ihre Anwendung zu Testzwecken in einer Produktionsumgebung bereitstellen.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ac817dac15deaf35fdb8e078094dd4b9dca97d06
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544569"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293484"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -22,7 +22,7 @@ Die WCF-Dienst Veröffentlichung unterstützt das Veröffentlichen von WCF-Diens
 
 - Syndication-Dienstbibliothek
 
-Sie finden diese Dienst Vorlagen, indem Sie auf **Datei**  >  **Neues Projekt** > [**Visual Basic** oder **Visual c#**] **> WCF**klicken. Für andere WCF-Vorlagen an diesem Speicherort (einschließlich der WCF-Workflow Dienst Anwendung und der WCF-Dienst Anwendung) können Sie mithilfe der [One-Click-Veröffentlichung für Webanwendungen](/previous-versions/aspnet/dd465337(v=vs.110))veröffentlichen.
+Sie finden diese Dienst Vorlagen, indem Sie auf **Datei**  >  **Neues Projekt** > [**Visual Basic** oder **Visual c#**] **> WCF** klicken. Für andere WCF-Vorlagen an diesem Speicherort (einschließlich der WCF-Workflow Dienst Anwendung und der WCF-Dienst Anwendung) können Sie mithilfe der [One-Click-Veröffentlichung für Webanwendungen](/previous-versions/aspnet/dd465337(v=vs.110))veröffentlichen.
 
 Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
@@ -38,7 +38,7 @@ Führen Sie zum Bereitstellen einer Dienstimplementierung die folgenden Schritte
 
 1. Öffnen Sie Visual Studio mit erhöhten Rechten (Klicken Sie mit der rechten Maustaste auf die ausführbare Datei, und wählen Sie **als Administrator ausführen** aus).  Wenn Sie IIS 7,0 oder höher verwenden, stellen Sie sicher, dass Sie die Komponente "IIS-Metabasis und IIS6-Konfigurations Kompatibilität" mithilfe der Option "Windows-Funktionen ein-oder ausschalten" in der Systemsteuerung installiert haben.
 
-2. Öffnen Sie ein Dienstprojekt, wählen Sie im Hauptmenü **Build**  >  ** \<Project Name> veröffentlichen** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **veröffentlichen**.
+2. Öffnen Sie ein Dienstprojekt, wählen Sie im Hauptmenü **Build**  >  **\<Project Name> veröffentlichen** aus, oder klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **veröffentlichen**.
 
 3. Das Fenster **veröffentlichen** wird angezeigt. Klicken Sie auf **...**. um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, dass die Anwendung auf der lokalen IIS-, Datei System-oder FTP-Site bereitgestellt werden soll. Wenn Sie die Anwendung für lokale IIS bereitstellen, können Sie Ihre Website auswählen und unter Ihr Ihre Webanwendung erstellen, indem Sie in der oberen rechten Ecke auf das Symbol **neue Webanwendung erstellen** klicken.
 
@@ -51,15 +51,19 @@ Mit **veröffentlichen** können Sie angeben, ob Sie die Assembly, die Konfigura
 Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherweise Fehler in Bezug auf das IIS-Setup auf. Stellen Sie sicher, dass IIS ordnungsgemäß installiert ist. Sie können `http://localhost` in der Adressleiste Ihres Browsers eingeben und überprüfen, ob die IIS-Standardseite angezeigt wird. In einigen Fällen können die Probleme auch durch eine nicht ordnungsgemäße Registrierung von ASP.net oder WCF in IIS verursacht werden. Sie können den Developer-Eingabeaufforderung für Visual Studio öffnen und den Befehl ausführen, `aspnet_regiis.exe -ir` um Probleme mit der ASP.net-Registrierung zu beheben `ServiceModelReg.exe –ia`
 
 ## <a name="files-generated-for-publishing"></a>Generierte Dateien für die Veröffentlichung
+
  Bevor eine WCF-Dienst Bibliothek im Internet gehostet werden kann, werden die folgenden Dateien vom Tool generiert: Assemblydateien, Web.config Datei und SVC-Datei. Alle Dateien werden an den Zielort kopiert. Anschließend wird der Dienst veröffentlicht.
 
 ### <a name="assembly-files"></a>Assemblydateien
+
  Wenn Sie einen WCF-Dienst mit diesem Tool veröffentlichen, wird der Dienst zuerst automatisch erstellt, und die Assemblydateien werden nach dem Erstellen im Dienstprojekt generiert.
 
 ### <a name="svc-file"></a>SVC-Datei
+
  Der Veröffentlichungs Vorgang generiert eine *. svc-Datei für jeden WCF-Dienst, unabhängig davon, ob die Datei vorhanden ist oder nicht, um die Gültigkeit der Version sicherzustellen. Es gibt zwei verschiedene Arten von SVC-Dateien: eine für die WCF-Dienst Bibliothek und die Syndizierungs-Dienst Bibliothek und eine weitere für die sequenzielle und Zustands Automat-Workflow Dienst Bibliothek. Die generierte \* svc-Datei wird in den Stamm Ordner am Zielort kopiert.
 
 ### <a name="webconfig-file"></a>Web.config-Datei
+
  Bei jeder Veröffentlichung eines Dienstprojekts an einem bestimmten Zielort wird eine Web.config-Datei erstellt.
 
  Die generierte Web.config Datei enthält Webabschnitte, die für das Webhosting nützlich sind, sowie den Inhalt von App.config für die WCF-Dienst Bibliothek mit den folgenden Änderungen:
@@ -69,12 +73,14 @@ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherwei
 - Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Veröffentlichen von WCF-Diensten mit Nicht-HTTP-Bindungen in IIS
+
  Wenn Sie IIS 7.0 oder höher verwenden, können Sie WCF-Dienste mit nicht-HTTP-Bindungen in IIS veröffentlichen. Hierfür müssen einige vorbereitende Konfigurationsschritte ausgeführt werden. Weitere Informationen finden Sie in den Themen unter  [Hosting in Windows Process Activation Service](./feature-details/hosting-in-windows-process-activation-service.md).
 
 ## <a name="security"></a>Sicherheit
+
  Für eine lokale Veröffentlichung in IIS sind Administratorberechtigungen erforderlich, da IIS unter einem Administratorkonto ausgeführt werden muss. Wenn ein Benutzer ohne Administrator Berechtigung die WCF-Dienst Veröffentlichung öffnet, ist IIS nicht als Ziel Speicherort verfügbar. Das Veröffentlichen im Datei System oder in einer FTP-Site funktioniert ohne Administratorrechte.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF Visual Studio-Vorlagen](wcf-vs-templates.md)
 - [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

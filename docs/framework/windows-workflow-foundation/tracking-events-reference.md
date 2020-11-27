@@ -2,19 +2,20 @@
 title: Referenz zu Nachverfolgungsereignissen
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-ms.openlocfilehash: af0c4441b89345b67c46c714d9ab3e5ceb9e3d6f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 7a1bbabbbc122429908b0f9c038c145a5d4a1e7e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293350"
 ---
 # <a name="tracking-events-reference"></a>Referenz zu Nachverfolgungsereignissen
+
 Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] während der verschiedenen Stadien des Lebenszyklus Überwachungsereignisse aus. Der Host kann diese Ereignisse abonnieren und den aktuellen Status des Workflows in den verschiedenen Stadien des Lebenszyklus nachverfolgen. Die ausgelösten Überwachungsereignisse werden in diesem Abschnitt erläutert.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
-|Ereignis-ID|Ereignisgrad|Ereignismeldung|Stichwörter|  
+|Ereignis-ID|Ereignisgrad|Ereignismeldung|Keywords|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 - WorkflowInstanceRecord](100-workflowinstancerecord.md)|Information|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  
 |[101 - WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|Fehler|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  
@@ -30,10 +31,10 @@ Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](..
 |[112 - WorkflowInstanceSuspendedRecord](112-workflowinstancesuspendedrecord.md)|Information|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  
 |[113 - WorkflowInstanceTerminatedRecord](113-workflowinstanceterminatedrecord.md)|Fehler|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7|EndToEndMonitoring, Problembehandlung, HealthMonitoring, WFTracking|  
 |[114 - WorkflowInstanceRecordWithId](114-workflowinstancerecordwithid.md)|Information|TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[115 - WorkflowInstanceAbortedRecordWithId](115-workflowinstanceabortedrecordwithid.md)|Warnung|Trackrecord = WorkflowInstanceAbortedRecord, InstanceId =% 1, RecordNumber =% 2, EventTime =% 3, ActivityDefinitionId =% 4, Reason =% 5, Annotations =% 6, Profile Name =% 7, WorkflowDefinitionIdentity =% 8|HealthMonitoring, WFTracking|  
+|[115 - WorkflowInstanceAbortedRecordWithId](115-workflowinstanceabortedrecordwithid.md)|Warnung|TrackRecord = WorkflowInstanceAbortedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
 |[116 - WorkflowInstanceSuspendedRecordWithId](116-workflowinstancesuspendedrecordwithid.md)|Information|TrackRecord = WorkflowInstanceSuspendedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
-|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|Fehler|Trackrecord = WorkflowInstanceTerminatedRecord, InstanceId =% 1, RecordNumber =% 2, EventTime =% 3, ActivityDefinitionId =% 4, Reason =% 5, Annotations =% 6, Profile Name =% 7, WorkflowDefinitionIdentity =% 8|HealthMonitoring, WFTracking|  
-|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|Fehler|Trackrecord = workflowinstanceunlenker dexceptionrecord, InstanceId =% 1, RecordNumber =% 2, EventTime =% 3, ActivityDefinitionId =% 4, SourceName =% 5, SourceID =% 6, sourceinstanceid =% 7, sourcetykname =% 8, Exception =% 9, Annotations =% 10, Profile Name = % 11, WorkflowDefinitionIdentity =% 12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
+|[117 - WorkflowInstanceTerminatedRecordWithId](117-workflowinstanceterminatedrecordwithid.md)|Fehler|TrackRecord = WorkflowInstanceTerminatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, Reason = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8|HealthMonitoring, WFTracking|  
+|[118 - WorkflowInstanceUnhandledExceptionRecordWithId](118-workflowinstanceunhandledexceptionrecordwithid.md)|Fehler|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9, Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12|HealthMonitoring, WFTrackingHealthMonitoring, WFTracking|  
 |[119 - WorkflowInstanceUpdatedRecord](119-workflowinstanceupdatedrecord.md)|Information|TrackRecord= WorkflowInstanceUpdatedRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, OriginalDefinitionIdentity = %6, UpdatedDefinitionIdentity = %7, Annotations = %8, ProfileName = %9|HealthMonitoring, WFTracking|  
 |[225 - TraceCorrelationKeys](225-tracecorrelationkeys.md)|Information|Berechneter Korrelationsschlüssel '%1' mit den Werten '%2' im übergeordneten Bereich '%3'.|Problembehandlung für WFServices|  
 |[440 - StartSignpostEvent1](440-startsignpostevent.md)|Information|Aktivitätsgrenze.|Problembehandlung für WFServices|  
@@ -43,7 +44,7 @@ Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](..
 |[1003 - WorkflowInstanceCanceled](1003-workflowinstancecanceled.md)|Information|WorkflowInstance-ID: '%1 ' wurde mit dem Status 'Canceled' abgeschlossen.|WFRuntime|  
 |[1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md)|Information|WorkflowInstance-ID: '%1' wurde mit einer Ausnahme abgebrochen.|WFRuntime|  
 |[1005 - WorkflowApplicationIdled](1005-workflowapplicationidled.md)|Information|WorkflowApplication-ID: '%1 ' ist im Leerlauf.|WFRuntime|  
-|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|Fehler|WorkflowInstance-ID: '% 1 ' hat eine nicht behandelte Ausnahme gefunden.  Die Ausnahme stammt aus der Aktivität '% 2 ', Display Name: '% 3 '.  Die folgende Aktion wird ausgeführt:% 4.|WFRuntime|  
+|[1006 - WorkflowApplicationUnhandledException](1006-workflowapplicationunhandledexception.md)|Fehler|WorkflowInstance-ID: ' %1 ' hat eine nicht behandelte Ausnahme gefunden.  Die Ausnahme stammt aus der Aktivität ' %2 ', Display Name: ' %3 '.  Die folgende Aktion wird ausgeführt: %4.|WFRuntime|  
 |[1007 - WorkflowApplicationPersisted](1007-workflowapplicationpersisted.md)|Information|WorkflowApplication-ID: '%1' wurde persistent gespeichert.|WFRuntime|  
 |[1008 - WorkflowApplicationUnloaded](1008-workflowapplicationunloaded.md)|Information|WorkflowInstance-ID: '%1 ' wurde entladen.|WFRuntime|  
 |[1009 - ActivityScheduled](1009-activityscheduled.md)|Information|Die übergeordnete Aktivität '%1', DisplayName: '%2', InstanceId: '%3' hat die untergeordnete Aktivität '%4', DisplayName: '%5', InstanceId: '%6' geplant.|WFRuntime|  
@@ -51,34 +52,34 @@ Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](..
 |[1011 - ScheduleExecuteActivityWorkItem](1011-scheduleexecuteactivityworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine ExecuteActivityWorkItem geplant.|WFRuntime|  
 |[1012 - StartExecuteActivityWorkItem](1012-startexecuteactivityworkitem.md)|Ausführlich|Die Ausführung eines ExecuteActivityWorkItem für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.|WFRuntime|  
 |[1013 - CompleteExecuteActivityWorkItem](1013-completeexecuteactivityworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine ExecuteActivityWorkItem abgeschlossen.|WFRuntime|  
-|[1014 - ScheduleCompletionWorkItem](1014-schedulecompletionworkitem.md)|Ausführlich|Für die übergeordnete Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' wurde eine completionworkitem geplant.  Abgeschlossene Aktivität '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
+|[1014 - ScheduleCompletionWorkItem](1014-schedulecompletionworkitem.md)|Ausführlich|Für die übergeordnete Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' wurde eine completionworkitem geplant.  Abgeschlossene Aktivität '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
 |[1015 - StartCompletionWorkItem](1015-startcompletionworkitem.md)|Ausführlich|Die Ausführung einer CompletionWorkItem für die übergeordnete Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet. Abgeschlossene Aktivität '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
 |[1016 - CompleteCompletionWorkItem](1016-completecompletionworkitem.md)|Ausführlich|Für die übergeordnete Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine CompletionWorkItem abgeschlossen. Abgeschlossene Aktivität '%4', DisplayName: '%5', InstanceId: '%6'.|WFRuntime|  
 |[1017 - ScheduleCancelActivityWorkItem](1017-schedulecancelactivityworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine CancelActivityWorkItem geplant.|WFRuntime|  
 |[1018 - StartCancelActivityWorkItem](1018-startcancelactivityworkitem.md)|Ausführlich|Die Ausführung einer CancelActivityWorkItem für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.|WFRuntime|  
 |[1019 - CompleteCancelActivityWorkItem](1019-completecancelactivityworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde eine CancelActivityWorkItem abgeschlossen.|WFRuntime|  
-|[1020 - CreateBookmark](1020-createbookmark.md)|Ausführlich|Für die Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' wurde ein Lesezeichen erstellt.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
-|[1021 - ScheduleBookmarkWorkItem](1021-schedulebookmarkworkitem.md)|Ausführlich|Für die Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' wurde ein bookmarkworkitem geplant.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
-|[1022 - StartBookmarkWorkItem](1022-startbookmarkworkitem.md)|Ausführlich|Die Ausführung eines bookmarkworkitem für die Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' wird gestartet.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1020 - CreateBookmark](1020-createbookmark.md)|Ausführlich|Für die Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' wurde ein Lesezeichen erstellt.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1021 - ScheduleBookmarkWorkItem](1021-schedulebookmarkworkitem.md)|Ausführlich|Für die Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' wurde ein bookmarkworkitem geplant.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
+|[1022 - StartBookmarkWorkItem](1022-startbookmarkworkitem.md)|Ausführlich|Die Ausführung eines bookmarkworkitem für die Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' wird gestartet.  BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
 |[1023 - CompleteBookmarkWorkItem](1023-completebookmarkworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein BookmarkWorkItem abgeschlossen. BookmarkName: %4, BookmarkScope: %5.|WFRuntime|  
 |[1024 - CreateBookmarkScope](1024-createbookmarkscope.md)|Ausführlich|Ein BookmarkScope wurde erstellt: %1.|WFRuntime|  
 |[1025 - BookmarkScopeInitialized](1025-bookmarkscopeinitialized.md)|Ausführlich|BookmarkScope mit der TemporaryId: '%1' wurde mit der ID: '%2' initialisiert.|WFRuntime|  
 |[1026 - ScheduleTransactionContextWorkItem](1026-scheduletransactioncontextworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein TransactionContextWorkItem geplant.|WFRuntime|  
 |[1027 - StartTransactionContextWorkItem](1027-starttransactioncontextworkitem.md)|Ausführlich|Die Ausführung von TransactionContextWorkItem für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.|WFRuntime|  
 |[1028 - CompleteTransactionContextWorkItem](1028-completetransactioncontextworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein TransactionContextWorkItem abgeschlossen.|WFRuntime|  
-|[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|Ausführlich|Für die Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' wurde ein "fehlerworkitem" eingeplant.  Die Ausnahme wurde von der Aktivität '%4', DisplayName: '%5', InstanceId: '%6' propagiert.|WFRuntime|  
-|[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|Ausführlich|Die Ausführung eines "fehlerworkitem" für die Aktivität "% 1", Display Name: "% 2", InstanceId: "% 3" wird gestartet.  Die Ausnahme wurde von der Aktivität '%4', DisplayName: '%5', InstanceId: '%6' propagiert.|WFRuntime|  
+|[1029 - ScheduleFaultWorkItem](1029-schedulefaultworkitem.md)|Ausführlich|Für die Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' wurde ein "fehlerworkitem" eingeplant.  Die Ausnahme wurde von der Aktivität '%4', DisplayName: '%5', InstanceId: '%6' propagiert.|WFRuntime|  
+|[1030 - StartFaultWorkItem](1030-startfaultworkitem.md)|Ausführlich|Die Ausführung eines "fehlerworkitem" für die Aktivität "%1", Display Name: "%2", InstanceId: "%3" wird gestartet.  Die Ausnahme wurde von der Aktivität '%4', DisplayName: '%5', InstanceId: '%6' propagiert.|WFRuntime|  
 |[1031 - CompleteFaultWorkItem](1031-completefaultworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein FaultWorkItem abgeschlossen. Die Ausnahme wurde von der Aktivität '%4', DisplayName: '%5', InstanceId: '%6' propagiert.|WFRuntime|  
 |[1032 - ScheduleRuntimeWorkItem](1032-scheduleruntimeworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein Laufzeitarbeitselement geplant.|WFRuntime|  
 |[1033 - StartRuntimeWorkItem](1033-startruntimeworkitem.md)|Ausführlich|Die Ausführung eines Laufzeitarbeitselements für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wird gestartet.|WFRuntime|  
 |[1034 - CompleteRuntimeWorkItem](1034-completeruntimeworkitem.md)|Ausführlich|Für die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' wurde ein Laufzeitarbeitselement abgeschlossen.|WFRuntime|  
-|[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|Ausführlich|Die Lauf Zeit Transaktion wurde von Aktivität '% 1 ', Display Name: '% 2 ', InstanceId: '% 3 ' festgelegt.  Die Ausführung ist auf Aktivität '% 4 ', Display Name: '% 5 ', InstanceId: '% 6 ' isoliert.|WFRuntime|  
+|[1035 - RuntimeTransactionSet](1035-runtimetransactionset.md)|Ausführlich|Die Lauf Zeit Transaktion wurde von Aktivität ' %1 ', Display Name: ' %2 ', InstanceId: ' %3 ' festgelegt.  Die Ausführung ist auf Aktivität ' %4 ', Display Name: ' %5 ', InstanceId: ' %6 ' isoliert.|WFRuntime|  
 |[1036 - RuntimeTransactionCompletionRequested](1036-runtimetransactioncompletionrequested.md)|Ausführlich|Die Aktivität '%1', DisplayName: '%2', InstanceId: '%3' hat den Abschluss der Laufzeittransaktion geplant.|WFRuntime|  
 |[1037 - RuntimeTransactionComplete](1037-runtimetransactioncomplete.md)|Ausführlich|Die Laufzeittransaktion wurde mit dem Status '%1' abgeschlossen.|WFRuntime|  
 |[1038 - EnterNoPersistBlock](1038-enternopersistblock.md)|Ausführlich|Anfang eines nicht persistenten Blocks.|WFRuntime|  
 |[1039 - ExitNoPersistBlock](1039-exitnopersistblock.md)|Ausführlich|Ende eines nicht persistenten Blocks.|WFRuntime|  
 |[1040 - InArgumentBound](1040-inargumentbound.md)|Ausführlich|Das Argument '%1' der Aktivität '%2', DisplayName: '%3', InstanceId: '%4' wurde mit Wert %5 gebunden.|WFActivities|  
-|[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|Information|WorkflowApplication-ID: '% 1 ' ist im Leerlauf und dauerhaft.  Die folgende Aktion wird ausgeführt:% 2.|WFRuntime|  
+|[1041 - WorkflowApplicationPersistableIdle](1041-workflowapplicationpersistableidle.md)|Information|WorkflowApplication-ID: ' %1 ' ist im Leerlauf und dauerhaft.  Die folgende Aktion wird ausgeführt: %2.|WFRuntime|  
 |[1101 - WorkflowActivityStart](1101-workflowactivitystart.md)|Information|WorkflowInstance-ID: '%1' E2E-Aktivität|WFRuntime|  
 |[1102 - WorkflowActivityStop](1102-workflowactivitystop.md)|Information|WorkflowInstance-ID: '%1' E2E-Aktivität|WFRuntime|  
 |[1103 - WorkflowActivitySuspend](1103-workflowactivitysuspend.md)|Information|WorkflowInstance-ID: '%1' E2E-Aktivität|WFRuntime|  
@@ -117,7 +118,7 @@ Während der Ausführung löst ein Workflow in [!INCLUDE[netfx_current_short](..
 |[3508 - TrackingProfileNotFound](3508-trackingprofilenotfound.md)|Ausführlich|TrackingProfile '%1' für die ActivityDefinitionId '%2' wurde nicht gefunden. Entweder wurde das TrackingProfile nicht in der Konfigurationsdatei gefunden, oder die ActivityDefinitionId stimmt nicht überein.|WFServices|  
 |[3550 - BufferOutOfOrderMessageNoInstance](3550-bufferoutofordermessagenoinstance.md)|Information|Vorgang '%1' kann derzeit nicht ausgeführt werden. Es wird ein weiterer Versuch unternommen, wenn die Dienstinstanz bereit ist, diesen Vorgang zu verarbeiten.|WFServices|  
 |[3551 - BufferOutOfOrderMessageNoBookmark](3551-bufferoutofordermessagenobookmark.md)|Information|Vorgang '%2' der Dienstinstanz '%1' kann derzeit nicht ausgeführt werden. Es wird ein weiterer Versuch unternommen, wenn die Dienstinstanz bereit ist, diesen Vorgang zu verarbeiten.|WFServices|  
-|[3552 - MaxPendingMessagesPerChannelExceeded](3552-maxpendingmessagesperchannelexceeded.md)|Warnung|Der Grenzwert für "maxpdingmessagesperchannel" von "% 1" wurde erreicht. Passen Sie die MaxPendingMessagesPerChannel-Eigenschaft von BufferedReceiveServiceBehavior an, um diese Grenze zu erhöhen.|WFServices-Kontingent|  
+|[3552 - MaxPendingMessagesPerChannelExceeded](3552-maxpendingmessagesperchannelexceeded.md)|Warnung|Die Drosselungsgrenze 'MaxPendingMessagesPerChannel' von '%1' wurde erreicht. Passen Sie die MaxPendingMessagesPerChannel-Eigenschaft von BufferedReceiveServiceBehavior an, um diese Grenze zu erhöhen.|WFServices-Kontingent|  
 |[3557 - TransactedReceiveScopeEndCommitFailed](3557-transactedreceivescopeendcommitfailed.md)|Information|Der Aufruf von EndCommit für die CommittableTransaction mit ID = '%1' hat eine TransactionException mit der folgenden Meldung ausgelöst: '%2'.|WFServices|  
 |[4201 - EndSqlCommandExecute](4201-endsqlcommandexecute.md)|Ausführlich|Ausführung des SQL-Befehls beenden: %1|WFInstanceStore|  
 |[4202 - StartSqlCommandExecute](4202-startsqlcommandexecute.md)|Ausführlich|Ausführung des SQL-Befehls wird gestartet: %1|WFInstanceStore|  

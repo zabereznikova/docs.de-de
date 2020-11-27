@@ -2,17 +2,19 @@
 title: Problembehandlung bei der Korrelation
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: a5942c13bb4026cfeb8f664c60fb658373ffcca5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71e9cedde95791df3929b795312efd5a73fc3e93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596707"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291088"
 ---
 # <a name="troubleshooting-correlation"></a>Problembehandlung bei der Korrelation
+
 Mit Korrelation werden Workflowdienstnachrichten miteinander und mit der richtigen Workflowinstanz verknüpft. Wenn die Konfiguration jedoch nicht richtig durchgeführt wurde, werden Meldungen nicht empfangen, und Anwendungen funktionieren nicht ordnungsgemäß. Dieses Thema bietet eine Übersicht über mehrere Methoden zum Beheben von Korrelationsproblemen. Des Weiteren werden einige häufig auftretende Probleme aufgeführt, die bei der Verwendung der Korrelation auftreten können.
 
 ## <a name="handle-the-unknownmessagereceived-event"></a>Behandeln des UnknownMessageReceived-Ereignisses
+
  Das <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>-Ereignis tritt auf, wenn von einem Dienst eine unbekannte Meldung empfangen wird. Dazu zählen auch Meldungen, die nicht mit einer vorhandenen Instanz korreliert werden können. Bei selbst gehosteten Diensten kann dieses Ereignis in der Hostanwendung behandelt werden.
 
 ```csharp
@@ -68,6 +70,7 @@ class CustomFactory : WorkflowServiceHostFactory
  An den <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>-Handler weitergeleitete Meldungen enthalten möglicherweise Hinweise dazu, warum die Meldung nicht mit einer Instanz des Workflowdiensts korreliert.
 
 ## <a name="use-tracking-to-monitor-the-progress-of-the-workflow"></a>Überwachen des Workflowstatus mit der Nachverfolgung
+
  Eine Möglichkeit für das Überwachen des Status eines Workflows ist die Nachverfolgung. Standardmäßig werden Nachverfolgungsdatensätze für Ereignisse des Workflowlebenszyklus und Aktivitätslebenszyklus sowie zur Fehlerverteilung und Lesezeichenwiederaufnahme ausgegeben. Darüber hinaus können von benutzerdefinierten Aktivitäten benutzerdefinierte Nachverfolgungsdatensätze ausgegeben werden. Bei der Behandlung von Korrelationsproblemen erweisen sich die Datensätze zur Aktivitätsnachverfolgung, Lesezeichenwiederaufnahme und Fehlerverteilung als besonders nützlich. Mit den Datensätzen zur Aktivitätsnachverfolgung kann der aktuelle Status des Workflows festgestellt und bestimmt werden, welche Meldungsaktivität gerade auf Meldungen wartet. Datensätze zur Lesezeichenwiederaufnahme sind hilfreich, da sie angeben, dass eine Meldung vom Workflow empfangen wurde. Datensätze zur Fehlerverteilung enthalten einen Datensatz mit sämtlichen Fehlern im Workflow. Um die Nachverfolgung zu aktivieren, geben Sie den gewünschten <xref:System.Activities.Tracking.TrackingParticipant> in den <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> des <xref:System.ServiceModel.Activities.WorkflowServiceHost> an. Im folgenden Beispiel `ConsoleTrackingParticipant` wird der (aus dem Beispiel für die [benutzerdefinierte Nachverfolgung](../../windows-workflow-foundation/samples/custom-tracking.md) ) mit dem Standard Überwachungs Profil konfiguriert.
 
 ```csharp
@@ -79,6 +82,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
  Weitere Informationen zum Nachverfolgen und Konfigurieren der Nachverfolgung für einen im Internet gehosteten Workflow Dienst finden Sie unter nach [Verfolgung und Ablauf](../../windows-workflow-foundation/workflow-tracking-and-tracing.md)Verfolgung für Workflows, [Konfigurieren der Nachverfolgung für einen Workflow](../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)und [&#91;WF-Beispiele&#93;](../../windows-workflow-foundation/samples/tracking.md) Beispiele für die Nachverfolgung.
 
 ## <a name="use-wcf-tracing"></a>Verwenden der WCF-Ablaufverfolgung
+
  Die WCF-Ablaufverfolgung stellt eine Ablaufverfolgung des Meldungsflusses zu und von einem Workflowdienst bereit. Diese Ablaufverfolgungsinformationen sind nützlich bei der Behebung von Korrelationsproblemen, besonders bei inhaltsbasierter Korrelation. Geben Sie zum Aktivieren der Ablaufverfolgung die gewünschten Ablaufverfolgungslistener im Abschnitt `system.diagnostics` der Datei `web.config` an, wenn es sich um einen im Internet gehosteten Workflowdienst handelt, bzw. in der Datei `app.config`, wenn es sich um einen selbst gehosteten Workflowdienst handelt. Geben Sie im `true`-Element im Abschnitt `logEntireMessage` des `messageLogging` für `diagnostics` den Wert `system.serviceModel` an, um den Inhalt der Meldungen in die Ablaufverfolgungsdatei aufzunehmen. Im folgenden Beispiel werden Ablaufverfolgungsinformationen einschließlich des Inhalts der Meldungen so konfiguriert, dass sie in eine Datei mit dem Namen `service.svclog` geschrieben werden.
 
 ```xml
@@ -114,9 +118,10 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>
 ```
 
- Zum Anzeigen der Ablauf Verfolgungs Informationen, die in enthalten sind `service.svclog` , wird das [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) verwendet. Dies ist besonders beim Beheben von inhaltsbasierten Korrelationsproblemen hilfreich, da Sie die Meldungsinhalte anzeigen und genau sehen können, welche Daten übergeben werden und ob diese mit der <xref:System.ServiceModel.CorrelationQuery> für die inhaltsbasierte Korrelation übereinstimmen. Weitere Informationen zur WCF-Ablauf Verfolgung finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md), Konfigurieren der Ablauf [Verfolgung](../diagnostics/tracing/configuring-tracing.md)und [Verwenden der Ablauf Verfolgung zum Beheben von Problemen mit der Anwendung](../diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+ `service.svclog`Das [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) wird verwendet, um die Ablauf Verfolgungs Informationen anzuzeigen, die in enthalten sind. Dies ist besonders beim Beheben von inhaltsbasierten Korrelationsproblemen hilfreich, da Sie die Meldungsinhalte anzeigen und genau sehen können, welche Daten übergeben werden und ob diese mit der <xref:System.ServiceModel.CorrelationQuery> für die inhaltsbasierte Korrelation übereinstimmen. Weitere Informationen zur WCF-Ablauf Verfolgung finden Sie unter [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md), Konfigurieren der Ablauf [Verfolgung](../diagnostics/tracing/configuring-tracing.md)und [Verwenden der Ablauf Verfolgung zum Beheben von Problemen mit der Anwendung](../diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="common-context-exchange-correlation-issues"></a>Allgemeine Probleme bei der Kontextaustauschkorrelation
+
  Bestimmte Korrelationstypen erfordern einen bestimmten Bindungstyp, damit die Korrelation einwandfrei funktioniert. Beispiele sind die Anforderung-Antwort-Korrelation, die eine bidirektionale Bindung (z. B. <xref:System.ServiceModel.BasicHttpBinding>) erfordert, und die Kontextaustauschkorrelation, die eine kontextbasierte Bindung (z. B. <xref:System.ServiceModel.BasicHttpContextBinding>) erfordert. Die meisten Bindungen unterstützen bidirektionale Vorgänge, sodass dies kein häufig auftretendes Problem bei der Anforderung-Antwort-Korrelation ist. Es gibt jedoch nur wenige kontextbasierte Bindungen, z. B. <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> und <xref:System.ServiceModel.NetTcpContextBinding>. Wenn eine dieser Bindungen nicht verwendet wird, kann der erste Aufruf eines Workflowdiensts erfolgreich ausgeführt werden. Die nachfolgenden Aufrufe geben jedoch die folgende <xref:System.ServiceModel.FaultException> als Fehler zurück.
 
 ```output
@@ -129,6 +134,7 @@ supports the context protocol and has a valid context initialized.
  Die für die Kontextkorrelation verwendeten Kontextinformationen können von der <xref:System.ServiceModel.Activities.SendReply> an die <xref:System.ServiceModel.Activities.Receive>-Aktivität zurückgegeben werden, die die Kontextkorrelation initialisiert, falls ein bidirektionaler Vorgang verwendet wird. Wenn es sich um einen unidirektionalen Vorgang handelt, kann der Aufrufer die Kontextinformationen angeben. Wird der Kontext nicht vom Aufrufer gesendet oder vom Workflowdienst zurückgegeben, wird die bereits zuvor beschriebene <xref:System.ServiceModel.FaultException> zurückgegeben, wenn ein nachfolgender Vorgang aufgerufen wird.
 
 ## <a name="common-request-reply-correlation-issues"></a>Allgemeine Probleme bei der Anforderung-Antwort-Korrelation
+
  Die Anforderung-Antwort-Korrelation wird mit einem Paar verwendet, um einen bidirektionalen <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> Vorgang in einem Workflow Dienst zu implementieren, und mit einem <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> Paar, das einen bidirektionalen Vorgang in einem anderen Webdienst aufruft. Wenn Sie einen bidirektionalen Vorgang in einem WCF-Dienst aufrufen, kann der Dienst entweder ein herkömmlicher imperativer, imperativer Code basierter WCF-Dienst sein, oder es kann sich um einen Workflow Dienst handeln. Für die Anforderung-Antwort-Korrelation muss eine bidirektionale Bindung verwendet werden (z. B. <xref:System.ServiceModel.BasicHttpBinding>). Außerdem müssen die Vorgänge bidirektional ausgelegt sein.
 
  Wenn der Workflow Dienst gleichzeitige bidirektionale Vorgänge oder überlappende- <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> oder- <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> Paare hat, reicht die von bereitgestellte implizite Korrelations Handle <xref:System.ServiceModel.Activities.WorkflowServiceHost> -Verwaltung möglicherweise nicht aus, insbesondere in Szenarien mit hoher Belastung, und Nachrichten werden möglicherweise nicht ordnungsgemäß weitergeleitet. Zur Verhinderung dieses Problems empfiehlt es sich, bei der Verwendung der Anforderung-Antwort-Korrelation immer explizit einen <xref:System.ServiceModel.Activities.CorrelationHandle> anzugeben. Wenn Sie die **sendandreceivereply** -Vorlage und die **receiveandsendreply** -Vorlage im Abschnitt Messaging der **Toolbox** im Workflow-Designer verwenden, <xref:System.ServiceModel.Activities.CorrelationHandle> wird standardmäßig ein explizit konfiguriert. Bei der Erstellung eines Workflows mithilfe von Code wird der <xref:System.ServiceModel.Activities.CorrelationHandle> in den <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> der ersten Aktivität des Paars angegeben. Im folgenden Beispiel wird eine <xref:System.ServiceModel.Activities.Receive>-Aktivität mit einem expliziten <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A>, der im <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer> angegeben wurde, konfiguriert.
@@ -164,15 +170,19 @@ SendReply ReplyToStartOrder = new SendReply
  Weitere Informationen zur Anforderung-Antwort-Korrelation finden Sie unter [Request-Reply](request-reply-correlation.md).
 
 ## <a name="common-content-correlation-issues"></a>Allgemeine Probleme bei der Inhaltskorrelation
+
  Die inhaltsbasierte Korrelation wird verwendet, wenn ein Workflowdienst mehrere Meldungen empfängt und ein Datenelement in den ausgetauschten Nachrichten die gewünschte Instanz angibt. Die inhaltsbasierte Korrelation verwendet diese Daten in der Nachricht, z. B. eine Kundennummer oder Bestell-ID, um Nachrichten an die richtige Workflowinstanz weiterzuleiten. In diesem Abschnitt werden mehrere häufig auftretende Probleme beschrieben, die bei der inhaltsbasierten Korrelation vorkommen können.
 
 ### <a name="ensure-the-identifying-data-is-unique"></a>Sicherstellen, dass die identifizierenden Daten eindeutig sind
+
  Die Daten zur Identifikation der Instanz werden per Hash in einen Korrelationsschlüssel umgewandelt. Dabei müssen Sie sicherstellen, dass die für die Korrelation verwendeten Daten eindeutig sind, da sonst Konflikte im Hashschlüssel auftreten und Nachrichten ggf. falsch weitergeleitet werden können. Wenn eine Korrelation z. B. ausschließlich auf einem Kundennamen basiert, kann es zu einem Konflikt kommen, da es möglicherweise mehrere Kunden mit dem gleichen Namen gibt. Der Doppelpunkt (:) darf nicht als Bestandteil der Daten verwendet werden, mit denen die Meldung korreliert wird, da hiermit bereits Schlüssel und Wert der Meldungsabfrage begrenzt werden, um die Zeichenfolge zu bilden, für die anschließend der Hashwert berechnet wird. Wenn Persistenz verwendet wird, stellen Sie sicher, dass die aktuellen identifizierenden Daten nicht von einer zuvor beibehaltenen Instanz verwendet wurden. Die vorübergehende Deaktivierung der Persistenz kann dabei helfen, das Problem zu identifizieren. Mit der WCF-Ablaufverfolgung kann der berechnete Korrelationsschlüssel angezeigt werden. Sie ist außerdem hilfreich beim Debuggen von Problemen dieser Art.
 
 ### <a name="race-conditions"></a>Racebedingungen
+
  Es gibt eine kleine zeitliche Lücke zwischen dem Zeitpunkt, zu dem der Dienst die Meldung empfängt, und der eigentlichen Initialisierung der Korrelation. In dieser Zeitspanne werden weitere Meldungen ignoriert. Wenn ein Workflowdienst die inhaltsbasierte Korrelation mit Daten initialisiert, die vom Client über einen unidirektionalen Vorgang gesendet werden, und der Client unmittelbar darauf weitere Meldungen sendet, werden diese Meldungen während des beschriebenen Intervalls ignoriert. Dies kann vermieden werden, indem die Korrelation mit einem bidirektionalen Vorgang initialisiert wird oder indem ein <xref:System.ServiceModel.Activities.TransactedReceiveScope> verwendet wird.
 
 ### <a name="correlation-query-issues"></a>Probleme bei Korrelationsabfragen
+
  Mit Korrelationsabfragen wird angegeben, welche Daten in einer Meldung verwendet werden, um die Meldung zu korrelieren. Diese Daten werden mit einer XPath-Abfrage angegeben. Wenn Nachrichten nicht an einen Dienst weitergeleitet werden, obwohl keine Anzeichen eines Problems ersichtlich sind, können Sie einen Literalwert angeben, der mit dem Wert der Meldungsdaten und nicht mit einer XPath-Abfrage übereinstimmt. Verwenden Sie die `string`-Funktion, um einen Literalwert anzugeben. Im folgenden Beispiel wird ein <xref:System.ServiceModel.MessageQuerySet> konfiguriert, um den Literalwert `11445` für die `OrderId` zu verwenden, und die XPath-Abfrage wird auskommentiert.
 
 ```csharp

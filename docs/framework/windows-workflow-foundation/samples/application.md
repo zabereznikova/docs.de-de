@@ -3,17 +3,19 @@ title: Application
 description: Dieser Artikel bezieht sich auf Beispiele mit ausführlichen Verfahren für Workflow Anwendungen in Windows Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421396"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293487"
 ---
 # <a name="application"></a>Application
+
 Dieser Abschnitt enthält Beispiele, die sich auf Workflow Anwendungen in Windows Workflow Foundation (WF) beziehen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Dokumentgenehmigungsprozess](document-approval-process.md)  
  Veranschaulicht die Verwendung eines Workflows in einer Branchenanwendung.  
   

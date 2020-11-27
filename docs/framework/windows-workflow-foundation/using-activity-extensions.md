@@ -2,19 +2,20 @@
 title: Verwenden von Aktivitätserweiterungen
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3a9cabda9fe92b2ea4e708da8f853f3029328775
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293285"
 ---
 # <a name="using-activity-extensions"></a>Verwenden von Aktivitätserweiterungen
+
 Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die es dem Host ermöglichen, weitere Funktionen bereitzustellen, die nicht explizit im Workflow modelliert wurden.  In diesem Thema wird beschrieben, wie eine Erweiterung erstellt und verwendet wird, mit der die Häufigkeit der Ausführung einer Aktivität erfasst werden kann.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>So verwenden Sie die Aktivitätserweiterung zum Erfassen der Häufigkeit der Ausführung
 
-1. Öffnen Sie Visual Studio 2010. Wählen Sie **neu**, **Projekt**aus. Wählen Sie unter dem Knoten **Visual C#**  den Knoten **Workflow**aus.  Wählen Sie in der Liste der Vorlagen die Option **Konsolenanwendung für Workflows** aus. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK**, um das Projekt zu erstellen.
+1. Öffnen Sie Visual Studio 2010. Wählen Sie **neu**, **Projekt** aus. Wählen Sie unter dem Knoten **Visual c#** die Option **Workflow** aus.  Wählen Sie in der Liste der Vorlagen die Option **Konsolenanwendung für Workflows** aus. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK**, um das Projekt zu erstellen.
 
 2. Fügen Sie `using` in der Datei Program.cs eine-Anweisung für den **System. Collections. Generic** -Namespace hinzu.
 
@@ -56,7 +57,7 @@ Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die
     }
     ```
 
-4. Erstellen Sie eine Aktivität, die die **executionzähltextension**verwendet. Der folgende Code definiert eine Aktivität, die das **executionzähltextension** -Objekt von der Laufzeit abruft und seine **Register** -Methode aufruft, wenn die Aktivität ausgeführt wird.
+4. Erstellen Sie eine Aktivität, die die **executionzähltextension** verwendet. Der folgende Code definiert eine Aktivität, die das **executionzähltextension** -Objekt von der Laufzeit abruft und seine **Register** -Methode aufruft, wenn die Aktivität ausgeführt wird.
 
     ```csharp
     // Activity that consumes an extension provided by the host. If the extension is available

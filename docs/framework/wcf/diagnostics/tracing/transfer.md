@@ -2,17 +2,19 @@
 title: Übertragen
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: da31dcb24234e750c88383b9f1bea4f088f4ee3d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587767"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293402"
 ---
 # <a name="transfer"></a>Übertragen
+
 In diesem Thema wird die Übertragung im Windows Communication Foundation (WCF)-Aktivitäts Ablauf Verfolgungs Modell beschrieben.  
   
 ## <a name="transfer-definition"></a>Übertragungsdefinition  
+
  Übertragungen zwischen Aktivitäten stellen einen kausalen Zusammenhang zwischen Ereignissen in den zugehörigen Aktivitäten innerhalb von Endpunkten dar. Zwei Aktivitäten stehen mit Übertragungen in Beziehung, wenn eine Ablaufsteuerung zwischen den Aktivitäten besteht, z. B. ein Methodenaufruf, der Aktivitätsgrenzen überschreitet. Wenn in WCF Bytes für den Dienst eingehenden, wird die Aktivität "lauschen an" an die Aktivität "Bytes empfangen" übertragen, in der das Nachrichten Objekt erstellt wird. Eine Liste von End-to-End-Ablauf Verfolgungs Szenarien und deren zugehörige Aktivitäten und Ablauf Verfolgungs Entwürfe finden [Sie unter End-to-End-Ablauf Verfolgungs Szenarien](end-to-end-tracing-scenarios.md).  
   
  Um Übertragungsablaufverfolgungen auszugeben, verwenden Sie die `ActivityTracing`-Einstellung auf der Ablaufverfolgungsquelle, wie im folgenden Konfigurationscode gezeigt.  
@@ -22,6 +24,7 @@ In diesem Thema wird die Übertragung im Windows Communication Foundation (WCF)-
 ```  
   
 ## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Verwenden der Übertragung zur Korrelation von Aktivitäten innerhalb von Endpunkten  
+
  Aktivitäten und Übertragungen ermöglichen es dem Benutzer, die Ursache eines Fehlers nach Wahrscheinlichkeit zu lokalisieren. Übertragen wir beispielsweise vor und zurück zwischen Aktivität M und N in den Komponenten M und N und tritt nach Rückübertragung zu M auf N ein Absturz auf, können wir zu dem Schluss kommen, dass der Grund hierfür wahrscheinlich an der Datenrückübertragung von N zu M liegt.  
   
  Eine Übertragungsablaufverfolgung wird von Aktivität M an Aktivität N ausgegeben, wenn ein Steuerungsfluss zwischen M und N besteht. Beispielsweise führt N aufgrund eines Methodenaufrufs über die Aktivitätsgrenzen hinweg Arbeit für M aus. N ist möglicherweise bereits vorhanden oder wurde erstellt. N wird von M erzeugt, wenn N eine neue Aktivität ist, die Arbeit für M ausführt.  
@@ -33,6 +36,7 @@ In diesem Thema wird die Übertragung im Windows Communication Foundation (WCF)-
  Zwischen den Aktivitäten M und N besteht nicht zwingend eine Schachtelungsbeziehung. Dies kann aus zwei Gründen der Fall sein. Der erste Grund ist, wenn Aktivität M die in N durchgeführte Verarbeitung nicht überwacht, obwohl M Initiator von N ist. Der zweite Grund kann darin liegen, dass N bereits besteht.  
   
 ## <a name="example-of-transfers"></a>Beispiel für Übertragungen  
+
  Im Folgenden werden zwei Übertragungsbeispiele aufgelistet.  
   
 - Bei der Erstellung eines Diensthosts erhält der Konstruktor Steuerung über den Aufrufcode, oder der Aufrufcode überträgt zum Konstruktor. Wenn der Konstruktor die Ausführung beendet hat, gibt er die Steuerung zum aufrufenden Code zurück oder der Konstruktor überträgt zum aufrufenden Code zurück. Dies ist der Fall bei einer geschachtelten Beziehung.  
@@ -40,6 +44,7 @@ In diesem Thema wird die Übertragung im Windows Communication Foundation (WCF)-
 - Wenn ein Listener mit der Verarbeitung von Transportdaten beginnt, erstellt er einen neuen Thread und übergibt den geeigneten Kontext für die Verarbeitung, d. h. die Steuerung und die Daten, an die Bytes empfangen-Aktivität weiter. Hat dieser Thread die Verarbeitung der Anforderung beendet, gibt die Byteempfang-Aktivität keine Informationen zum Listener zurück. In diesem Fall haben wir eine Übertragung in die neue Threadaktivität, aber keine heraus. Die beiden Aktivitäten sind verknüpft, aber nicht geschachtelt.  
   
 ## <a name="activity-transfer-sequence"></a>Aktivitätsübertragungssequenz  
+
  Eine gut strukturierte Aktivitätsübertragungssequenz schließt die folgenden Schritte ein.  
   
 1. Starten Sie eine neue Aktivität, die aus der Auswahl einer neuen gAId besteht.  

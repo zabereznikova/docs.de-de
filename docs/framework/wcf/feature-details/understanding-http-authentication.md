@@ -3,19 +3,21 @@ title: Grundlagen der HTTP-Authentifizierung
 description: Lesen Sie diese Einführung in die HTTP-Authentifizierung in WCF, einschließlich http-Authentifizierungs Schemas und Auswählen eines Authentifizierungs Schemas.
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65ccde358f4eb8727e59ca32fb9782b87e29c5c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246518"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293519"
 ---
 # <a name="understanding-http-authentication"></a>Grundlagen der HTTP-Authentifizierung
+
 Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen. Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.  
   
  Die anfängliche Anforderung von einem Client ist normalerweise eine anonyme Anforderung, die keine Authentifizierungsinformationen enthält. Die HTTP-Serveranwendungen können die anonyme Anforderung ablehnen, während angegeben wird, dass eine Authentifizierung erforderlich ist. Die Serveranwendung sendet WWW-Authentifizierungsheader, um die unterstützten Authentifizierungsschemen anzugeben. In diesem Dokument werden mehrere Authentifizierungs Schemas für http beschrieben und deren Unterstützung in Windows Communication Foundation (WCF) erläutert.  
   
 ## <a name="http-authentication-schemes"></a>HTTP-Authentifizierungsschemen  
+
  Der Server kann mehrere Authentifizierungsschemen für den Client zur Auswahl angeben. Die folgende Tabelle beschreibt einige der Authentifizierungsschemas, die häufig in Windows-Anwendungen gefunden werden.  
   
 |Authentifizierungsschema|BESCHREIBUNG|  
@@ -28,6 +30,7 @@ Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt i
 |Windows Live ID|Der zugrunde liegende Windows-HTTP-Dienst umfasst die Authentifizierung mit Verbundprotokollen. Die Standard-HTTP-Transporte in WCF unterstützen jedoch nicht die Verwendung von Verbund Authentifizierungs Schemas, z. b. Microsoft Windows Live ID. Support für diese Funktion steht derzeit durch die Verwendung der Nachrichtensicherheit zur Verfügung. Weitere Informationen finden Sie unter Verbund [-und ausgestellte Token](federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Auswählen eines Authentifizierungsschemas  
+
  Bei potenziellen Authentifizierungsschemen für einen HTTP-Server müssen u. a. die folgenden Aspekte beachtet werden:  
   
 - Überprüfen Sie, ob die Ressourcen geschützt werden müssen. Für die HTTP-Authentifizierung müssen mehr Daten übertragen werden, zudem kann die Interoperabilität mit Clients eingeschränkt werden. Lassen Sie den anonymen Zugriff auf Ressourcen zu, die nicht geschützt werden müssen.  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 93770c8f4d92a12dcfe29290c84708949d9a1d4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293389"
 ---
 # <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem
+
 Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind. Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden. Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
   
  ![Vertrauenswürdiges Subsystem](media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
@@ -31,7 +32,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
   
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Sicherheitsmodus|Nachricht|  
+|Sicherheitsmodus|`Message`|  
 |Interoperabilität|Nur Windows Communication Foundation (WCF).|  
 |Authentifizierung (Dienst)|Sicherheitstokendienst authentifiziert und autorisiert Clients.|  
 |Authentifizierung (Client)|Das vertrauenswürdige Subsystem authentifiziert den Client, und die Ressource authentifiziert den vertrauenswürdigen Subsystemdienst.|  
@@ -43,12 +44,14 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 ## <a name="resource-back-end-service"></a>Ressource (Back-End-Dienst)  
   
 ### <a name="code"></a>Code  
+
  Im folgenden Code wird veranschaulicht, wie ein Dienstendpunkt für die Ressource erstellt wird, der Transportsicherheit über das TCP-Transportprotokoll verwendet.  
   
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet.  
   
 ```xml  
@@ -90,6 +93,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 ## <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code veranschaulicht, wie Sie einen Dienstendpunkt für das vertrauenswürdige Subsystem erstellen, der Nachrichtensicherheit über das HTTP-Protokoll und einen Benutzernamen und ein Kennwort für die Authentifizierung nutzt.  
   
  [!code-csharp[TrustedSubSystems#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#1)]
@@ -101,6 +105,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Mit der folgenden Konfiguration wird derselbe Endpunkt mithilfe von Konfiguration eingerichtet. Beachten Sie die beiden Bindungen: Eine sichert den im vertrauenswürdigen Subsystem gehosteten Dienst und die andere kommuniziert zwischen dem vertrauenswürdigen Subsystem und dem Back-End-Dienst.  
   
 ```xml  
@@ -166,12 +171,14 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 ## <a name="client"></a>Client  
   
 ### <a name="code"></a>Code  
+
  Der folgende Code veranschaulicht, wie Sie einen Client, der mit dem vertrauenswürdigen Subsystem kommuniziert, mithilfe von Nachrichtensicherheit über das HTTP-Protokoll und Benutzernamen und Kennwort für die Authentifizierung erstellen.  
   
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
 ### <a name="configuration"></a>Konfiguration  
+
  Der folgende Code konfiguriert den Client so, dass Nachrichtensicherheit über das HTTP-Protokoll und Benutzername und Kennwort für die Authentifizierung verwendet werden. Der Benutzername und das Kennwort können nur mit Code (nicht konfigurierbar) angegeben werden.  
   
 ```xml  
@@ -210,7 +217,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsübersicht](security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,32 +2,35 @@
 title: 440 - StartSignpostEvent1
 ms.date: 03/30/2017
 ms.assetid: 27b551b5-ae76-49f8-bab8-6300009eb4c1
-ms.openlocfilehash: 4b2b6b0fa9df4725edd4929512eb1d7534d933b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e0278d665a961afab21445ab8490e3e5a94987c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774136"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293454"
 ---
 # <a name="440---startsignpostevent1"></a>440 - StartSignpostEvent1
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|440|  
-|Schlüsselwörter|Problembehandlung|  
+|id|440|  
+|Keywords|Problembehandlung|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Gibt in der Aktivitätsablaufverfolgung eine Nachricht an, die das Überschreiten einer Aktivitätsgrenze beim Senden oder Empfangen gestartet hat.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  Aktivitätsgrenze.  
   
 ## <a name="details"></a>Details  
   
-|Datenelementname|Datenelementtyp|Beschreibung|  
+|Datenelementname|Datenelementtyp|BESCHREIBUNG|  
 |--------------------|--------------------|-----------------|  
 |ExtendedData|`xs:string`|Der Name der Aktivität.|  
 |AppDomain|`xs:string`|Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.|
