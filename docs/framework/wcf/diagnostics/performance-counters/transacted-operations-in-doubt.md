@@ -2,15 +2,17 @@
 title: Transacted Operations In Doubt
 ms.date: 03/30/2017
 ms.assetid: 83c7a86d-37de-4c6a-aa09-5d53fc4476b6
-ms.openlocfilehash: be72ce5773f997c0b2fb2981dbbcf74bc3a35b55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61a1b1c7b652ae490473dbdf06e1d8eb89a7e7a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766414"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249955"
 ---
-# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="e1996-102">Transacted Operations In Doubt</span><span class="sxs-lookup"><span data-stu-id="e1996-102">Transacted Operations In Doubt</span></span>
-<span data-ttu-id="e1996-103">Indikatorname: Zweifelhafte abgewickelte Vorgänge.</span><span class="sxs-lookup"><span data-stu-id="e1996-103">Counter Name: Transacted Operations In Doubt.</span></span>  
+# <a name="transacted-operations-in-doubt"></a><span data-ttu-id="33199-102">Transacted Operations In Doubt</span><span class="sxs-lookup"><span data-stu-id="33199-102">Transacted Operations In Doubt</span></span>
+
+<span data-ttu-id="33199-103">Indikatorname: Transacted Operations In Doubt.</span><span class="sxs-lookup"><span data-stu-id="33199-103">Counter Name: Transacted Operations In Doubt.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e1996-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e1996-104">Description</span></span>  
- <span data-ttu-id="e1996-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst.</span><span class="sxs-lookup"><span data-stu-id="e1996-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="33199-104">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="33199-104">Description</span></span>  
+
+ <span data-ttu-id="33199-105">Anzahl von Transaktionsvorgängen mit einem zweifelhaften Ergebnis in diesem Dienst.</span><span class="sxs-lookup"><span data-stu-id="33199-105">Number of transactional operations with an in-doubt outcome in this service.</span></span>
