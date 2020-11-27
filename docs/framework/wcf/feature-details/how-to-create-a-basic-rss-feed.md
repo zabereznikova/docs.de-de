@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d322dd40fd024685d6f3236caed41ae5eec1f375
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599021"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256806"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds
+
 Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu erstellen, der einen Syndizierungs Feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst, der einen RSS Syndication-Feed verfügbar macht, erstellt wird.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>So erstellen Sie einen grundlegenden Syndication-Dienst  
@@ -86,12 +87,14 @@ Windows Communication Foundation (WCF) ermöglicht es Ihnen, einen Dienst zu ers
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Beispiel  
+
  Unten ist die vollständige Codeauflistung für dieses Beispiel angegeben.  
   
  [!code-csharp[htRssBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#12)]
  [!code-vb[htRssBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#12)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Verweisen Sie beim Kompilieren des obigen Codes auf System.ServiceModel.dll und System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Weitere Informationen
