@@ -2,32 +2,35 @@
 title: 3503 - DuplicateCorrelationQuery
 ms.date: 03/30/2017
 ms.assetid: b857f8e6-ce4d-4da4-bc9d-6cd63fa558a4
-ms.openlocfilehash: 37a689b30b0bcab9124472deb98627afbe30dfee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1e64824ee9a95757ed7c00aa17fa80898219401
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755596"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270327"
 ---
-# <a name="3503---duplicatecorrelationquery"></a><span data-ttu-id="26737-102">3503 - DuplicateCorrelationQuery</span><span class="sxs-lookup"><span data-stu-id="26737-102">3503 - DuplicateCorrelationQuery</span></span>
-## <a name="properties"></a><span data-ttu-id="26737-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="26737-103">Properties</span></span>  
+# <a name="3503---duplicatecorrelationquery"></a><span data-ttu-id="ce054-102">3503 - DuplicateCorrelationQuery</span><span class="sxs-lookup"><span data-stu-id="ce054-102">3503 - DuplicateCorrelationQuery</span></span>
+
+## <a name="properties"></a><span data-ttu-id="ce054-103">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="ce054-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="26737-104">ID</span><span class="sxs-lookup"><span data-stu-id="26737-104">ID</span></span>|<span data-ttu-id="26737-105">3503</span><span class="sxs-lookup"><span data-stu-id="26737-105">3503</span></span>|  
-|<span data-ttu-id="26737-106">Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="26737-106">Keywords</span></span>|<span data-ttu-id="26737-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="26737-107">WFServices</span></span>|  
-|<span data-ttu-id="26737-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="26737-108">Level</span></span>|<span data-ttu-id="26737-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="26737-109">Warning</span></span>|  
-|<span data-ttu-id="26737-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="26737-110">Channel</span></span>|<span data-ttu-id="26737-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="26737-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="ce054-104">id</span><span class="sxs-lookup"><span data-stu-id="ce054-104">ID</span></span>|<span data-ttu-id="ce054-105">3503</span><span class="sxs-lookup"><span data-stu-id="ce054-105">3503</span></span>|  
+|<span data-ttu-id="ce054-106">Keywords</span><span class="sxs-lookup"><span data-stu-id="ce054-106">Keywords</span></span>|<span data-ttu-id="ce054-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="ce054-107">WFServices</span></span>|  
+|<span data-ttu-id="ce054-108">Ebene</span><span class="sxs-lookup"><span data-stu-id="ce054-108">Level</span></span>|<span data-ttu-id="ce054-109">Warnung</span><span class="sxs-lookup"><span data-stu-id="ce054-109">Warning</span></span>|  
+|<span data-ttu-id="ce054-110">Kanal</span><span class="sxs-lookup"><span data-stu-id="ce054-110">Channel</span></span>|<span data-ttu-id="ce054-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="ce054-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="26737-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="26737-112">Description</span></span>  
- <span data-ttu-id="26737-113">Gibt an, dass eine doppelte CorrelationQuery gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="26737-113">Indicates a duplicate CorrelationQuery was found.</span></span> <span data-ttu-id="26737-114">Die doppelte Abfrage wird beim Berechnen von Korrelationen nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="26737-114">The duplicate query will not be used when calculating correlation.</span></span>  
+## <a name="description"></a><span data-ttu-id="ce054-112">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ce054-112">Description</span></span>  
+
+ <span data-ttu-id="ce054-113">Gibt an, dass eine doppelte CorrelationQuery gefunden wurde.</span><span class="sxs-lookup"><span data-stu-id="ce054-113">Indicates a duplicate CorrelationQuery was found.</span></span> <span data-ttu-id="ce054-114">Die doppelte Abfrage wird beim Berechnen von Korrelationen nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="ce054-114">The duplicate query will not be used when calculating correlation.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="26737-115">Meldung</span><span class="sxs-lookup"><span data-stu-id="26737-115">Message</span></span>  
- <span data-ttu-id="26737-116">Es wurde eine doppelte CorrelationQuery mit Where='%1' gefunden.</span><span class="sxs-lookup"><span data-stu-id="26737-116">A duplicate CorrelationQuery was found with Where='%1'.</span></span> <span data-ttu-id="26737-117">Diese doppelte Abfrage wird beim Berechnen von Korrelationen nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="26737-117">This duplicate query will not be used when calculating correlation.</span></span>  
+## <a name="message"></a><span data-ttu-id="ce054-115">`Message`</span><span class="sxs-lookup"><span data-stu-id="ce054-115">Message</span></span>  
+
+ <span data-ttu-id="ce054-116">Es wurde eine doppelte CorrelationQuery mit Where='%1' gefunden.</span><span class="sxs-lookup"><span data-stu-id="ce054-116">A duplicate CorrelationQuery was found with Where='%1'.</span></span> <span data-ttu-id="ce054-117">Diese doppelte Abfrage wird beim Berechnen von Korrelationen nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="ce054-117">This duplicate query will not be used when calculating correlation.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="26737-118">Details</span><span class="sxs-lookup"><span data-stu-id="26737-118">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="ce054-118">Details</span><span class="sxs-lookup"><span data-stu-id="ce054-118">Details</span></span>  
   
-|<span data-ttu-id="26737-119">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="26737-119">Data Item Name</span></span>|<span data-ttu-id="26737-120">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="26737-120">Data Item Type</span></span>|<span data-ttu-id="26737-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="26737-121">Description</span></span>|  
+|<span data-ttu-id="ce054-119">Datenelementname</span><span class="sxs-lookup"><span data-stu-id="ce054-119">Data Item Name</span></span>|<span data-ttu-id="ce054-120">Datenelementtyp</span><span class="sxs-lookup"><span data-stu-id="ce054-120">Data Item Type</span></span>|<span data-ttu-id="ce054-121">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="ce054-121">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="26737-122">Where</span><span class="sxs-lookup"><span data-stu-id="26737-122">Where</span></span>|<span data-ttu-id="26737-123">xs:string</span><span class="sxs-lookup"><span data-stu-id="26737-123">xs:string</span></span>|<span data-ttu-id="26737-124">Where-Abschnitt der Korrelationsabfrage.</span><span class="sxs-lookup"><span data-stu-id="26737-124">The Where portion of the correlation query.</span></span>|  
-|<span data-ttu-id="26737-125">AppDomain</span><span class="sxs-lookup"><span data-stu-id="26737-125">AppDomain</span></span>|<span data-ttu-id="26737-126">xs:string</span><span class="sxs-lookup"><span data-stu-id="26737-126">xs:string</span></span>|<span data-ttu-id="26737-127">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="26737-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="ce054-122">Hierbei gilt:</span><span class="sxs-lookup"><span data-stu-id="ce054-122">Where</span></span>|<span data-ttu-id="ce054-123">xs:string</span><span class="sxs-lookup"><span data-stu-id="ce054-123">xs:string</span></span>|<span data-ttu-id="ce054-124">Where-Abschnitt der Korrelationsabfrage.</span><span class="sxs-lookup"><span data-stu-id="ce054-124">The Where portion of the correlation query.</span></span>|  
+|<span data-ttu-id="ce054-125">AppDomain</span><span class="sxs-lookup"><span data-stu-id="ce054-125">AppDomain</span></span>|<span data-ttu-id="ce054-126">xs:string</span><span class="sxs-lookup"><span data-stu-id="ce054-126">xs:string</span></span>|<span data-ttu-id="ce054-127">Die von AppDomain.CurrentDomain.FriendlyName zurückgegebene Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="ce054-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
