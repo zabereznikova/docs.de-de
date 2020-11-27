@@ -12,17 +12,21 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 4e8c076645f19e197ea820c052b20d5dde5e7565
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272253"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
+
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  
   
 <a name="create"></a>
+
 ## <a name="creating-and-initializing-a-trace-switch"></a>Erstellen und Initialisieren eines Ablaufverfolgungsschalters  
+
  Damit Sie Ablaufverfolgungsschalter verwenden können, müssen Sie diese zunächst erstellen und in Ihrem Code platzieren. Es gibt zwei vordefinierte Klassen, aus denen Sie Schalterobjekte erstellen können: die <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType>-Klasse und die <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>-Klasse. Sie verwenden die <xref:System.Diagnostics.BooleanSwitch>-Klasse, wenn Sie nur wissen möchten, ob eine Ablaufverfolgungsmeldung angezeigt oder wird oder nicht. <xref:System.Diagnostics.TraceSwitch> verwenden Sie, wenn Sie zwischen Ebenen für die Ablaufverfolgung unterscheiden möchten. Wenn Sie eine <xref:System.Diagnostics.TraceSwitch>-Instanz verwenden, können Sie eigene Debugmeldungen definieren und diese verschiedenen Ablaufverfolgungsebenen zuordnen. Sie können beide Typen von Schaltern mit Ablaufverfolgung oder Debuggen verwenden. In der Standardeinstellung ist ein <xref:System.Diagnostics.BooleanSwitch> deaktiviert und ein <xref:System.Diagnostics.TraceSwitch> auf die Ebene <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType> festgelegt. Ablaufverfolgungsschalter können in jedem beliebigen Teil Ihres Codes erstellt und platziert werden, in dem sie möglicherweise verwendet werden.  
   
  Obwohl Sie Ablaufverfolgungsebenen und weitere Konfigurationsoptionen in Code festlegen können, empfiehlt es sich, dass Sie die Konfigurationsdatei verwenden, um den Zustand Ihrer Schalter zu verwalten. Grund hierfür ist, dass Sie flexibler sind, wenn Sie die Konfiguration Ihrer Schalter im Konfigurationssystem verwalten, denn Sie können verschiedene Schalter und Änderungsebenen ein-und ausschalten, ohne Ihre Anwendung erneut zu kompilieren.  
@@ -49,7 +53,9 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
     ```  
   
 <a name="configure"></a>
+
 ## <a name="configuring-trace-switches"></a>Konfigurieren von Ablaufverfolgungsschaltern  
+
  Nachdem Ihre Anwendung bereitgestellt wurde, können weiterhin Ablaufverfolgungsausgabe aktivieren oder deaktivieren, indem Sie die Ablaufverfolgungsschalter in der Anwendung konfigurieren. Konfigurieren eines Schalters bedeutet, dass sein Wert aus einer externen Quelle geändert wird, nachdem er initialisiert wurde. Sie können die Werte der Schalterobjekte mithilfe der Konfigurationsdatei ändern. Sie konfigurieren einen Ablaufverfolgungsschalter so, dass er aktiviert oder deaktiviert oder dass seine Ebene festgelegt wird. Dabei bestimmen Sie den Umfang und die Art der Meldungen, die der Schalter an Listener weiterleitet.  
   
  Ihre Schalter werden über die .config-Datei konfiguriert. Für eine Webanwendung ist dies die "Web.config"-Datei, die dem Projekt zugeordnet ist. In einer Windows-Anwendung hat diese Datei den Namen (Anwendungsname) .exe.config. In einer bereitgestellten Anwendung muss sich diese Datei im selben Ordner befinden wie die ausführbare Datei.  
@@ -123,9 +129,9 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](tracing-and-instrumenting-applications.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](trace-switches.md)
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../configure-apps/file-schema/trace-debug/index.md)
+- [Schema der Ablauf Verfolgung und Debugeinstellungen](../configure-apps/file-schema/trace-debug/index.md)

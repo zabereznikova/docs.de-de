@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending service models [WCF]
 ms.assetid: 954c138a-1cd0-45a0-8abe-e4d2b8ff5400
-ms.openlocfilehash: e370316cd121f49953e00e83dfc9d2aec17de1e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 184719f5c3e2e3830d7e1c9c69b73649b66fff34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795736"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273034"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a>Erweitern von ServiceHost und der Dienstmodellebene
+
 Die Dienstmodellebene ist dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe per Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Dienstmodellerweiterungen ändern bzw. implementieren Ausführungs- oder Kommunikationsverhalten und Funktionen wie Verteileroptionen, benutzerdefiniertes Verhalten, Nachrichten- oder Parameterinterceptoren und andere Erweiterbarkeitsfunktionen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Erweitern von Clients](extending-clients.md)  
  Beschreibt die Schnittstellen, die die Client-Runtime abfangen und bearbeiten können, sowie die Klassen, in die Sie Ihre benutzerdefinierten Erweiterungen in Clientanwendungen einfügen können. Sie können beispielsweise eine benutzerdefinierte Clientnachrichtenprotokollierung, benutzerdefinierte Nachrichtenserialisierung usw. durchführen.  
   

@@ -2,14 +2,15 @@
 title: Dienst
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa4eecbcc8a2ef818cd99d777b0e3c2f1f222e46
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273281"
 ---
 # <a name="service"></a>Dienst
+
 Dienst  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,12 +34,15 @@ class Service
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die Dienstklasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die Dienstklasse hat die folgenden Eigenschaften:  
   
 ### <a name="baseaddresses"></a>BaseAddresses  
+
  Datentyp: Zeichenfolgenarray  
   
  Zugriffstyp: Schreibgeschützt  
@@ -46,34 +50,39 @@ class Service
  Die vom Dienst verwendeten Basisadressen.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-array  
+
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die diesem Dienst zugewiesenen Verhalten.  
   
 ### <a name="configurationname"></a>ConfigurationName  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  ServiceElement_BehaviorConfiguration  
   
 ### <a name="counterinstancename"></a>CounterInstanceName  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Name der Instanz der Leistungsindikatoren des Dienstes.  
   
 ### <a name="distinguishedname"></a>DistinguishedName  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Dienstname an der Adresse.  
   
-### <a name="extensions"></a>Erweiterungen  
+### <a name="extensions"></a>-Erweiterungen  
+
  Datentyp: Zeichenfolgenarray  
   
  Zugriffstyp: Schreibgeschützt  
@@ -81,6 +90,7 @@ class Service
  Die Instanzkontexte für die Erweiterungen der Dienstinstanz.  
   
 ### <a name="metadata"></a>Metadaten  
+
  Datentyp: Zeichenfolgenarray  
   
  Zugriffstyp: Schreibgeschützt  
@@ -88,20 +98,23 @@ class Service
  Die Dienstmetadateneinstellungen.  
   
 ### <a name="name"></a>Name  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der eindeutige Name des Diensts.  
   
 ### <a name="namespace"></a>Namespace  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Namespace des Dienstes.  
   
-### <a name="opened"></a>Opened  
+### <a name="opened"></a>Geöffnet  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -109,13 +122,15 @@ class Service
  Die Zeit, zu der der Dienst geöffnet wurde.  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
- Datentyp: Channel-array  
+
+ Data type: Channel array (Kanal-Array)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Kanäle, die von der Dienstinstanz ausgehen.  
   
 ### <a name="processid"></a>ProcessId  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  

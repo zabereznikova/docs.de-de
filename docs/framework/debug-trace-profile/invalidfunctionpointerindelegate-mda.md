@@ -12,29 +12,35 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 8072d35a45cb1e0590aa5533210d0e0f86913164
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272617"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>InvalidFunctionPointerInDelegate-MDA
+
 Der `invalidFunctionPointerInDelegate` Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn ein ungültiger Funktionszeiger übergeben wird, um einen Delegaten über einen systemeigenen Funktionszeiger zu konstruieren.  
   
 ## <a name="symptoms"></a>Symptome  
+
  Zugriffsverletzungen oder unerwartete Speicherschäden beim Verwenden eines Delegaten über einen Funktionszeiger.  
   
 ## <a name="cause"></a>Ursache  
+
  Es wurde ein ungültiger Funktionszeiger angegeben.  
   
 ## <a name="resolution"></a>Lösung  
+
  Geben Sie einen gültigen Funktionszeiger an.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
+
  Der ungültige Funktionszeiger.  
   
 ## <a name="configuration"></a>Konfiguration  

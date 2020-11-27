@@ -6,18 +6,19 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-ms.openlocfilehash: 2fd2d450223cd16a7791b8f6c67afe6bcb954eb3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 4402bf5690a53ce518077268a3e20a95aeb14e8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272513"
 ---
 # <a name="security-etw-events"></a>ETW-Sicherheitsereignisse
 
 Sicherheitsereignisse werden während der Überprüfung mit starkem Namen und bei der Authenticodeüberprüfung ausgelöst.  
 
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1-Ereignis und StrongNameVerificationStop_V1-Ereignis  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an. (Weitere Informationen finden Sie unter [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
@@ -41,6 +42,7 @@ Sicherheitsereignisse werden während der Überprüfung mit starkem Namen und be
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
 
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1-Ereignis und AuthenticodeVerificationStop_V1-Ereignis  
+
  Die folgende Tabelle zeigt das Schlüsselwort und die Ebene an.  
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  

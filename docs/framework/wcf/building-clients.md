@@ -5,17 +5,19 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: 16eaafe6b95b1e5142d055c2c95b52ba27cd2514
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 228981f7d8aef0f2d3be562d01bab8e40975cbcd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320737"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272336"
 ---
 # <a name="building-clients"></a>Erstellen von Clients
+
 In den Themen in diesem Abschnitt wird veranschaulicht, wie ein Windows Communication Foundation (WCF)-Client erstellt und verwendet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über den WCF-Client](wcf-client-overview.md)  
  Bietet einen Überblick über WCF-Clients und ihre Funktionsweise.  
   
@@ -26,6 +28,7 @@ In den Themen in diesem Abschnitt wird veranschaulicht, wie ein Windows Communic
  Hier wird beschrieben, wie die Sicherheit für WCF-Clients konfiguriert wird.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel.ClientBase%601>  
   
  <xref:System.ServiceModel.DuplexClientBase%601>  
@@ -41,6 +44,7 @@ In den Themen in diesem Abschnitt wird veranschaulicht, wie ein Windows Communic
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Hosting-Dienste](hosting-services.md)  
   
  [Entwerfen und Implementieren von Diensten](designing-and-implementing-services.md)

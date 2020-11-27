@@ -6,14 +6,15 @@ helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-ms.openlocfilehash: d1190c51a9cc6b5322ec832e0d35bc01dc855b12
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: dc1c8608b0d16e618b5ad6144d492db3302532dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85416043"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273502"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Aktivieren von JIT-attach Debugging
+
 Mit „JIT-attach Debugging“ wird das Anfügen eines Debuggers an einen Prozess beim Auftreten von Fehlern beschrieben. Es kann auch von bestimmten Methoden oder Funktionen ausgelöst werden.  
   
  JIT-attach Debugging wird bei den folgenden Fehlerzuständen verwendet:  
@@ -32,9 +33,9 @@ Mit „JIT-attach Debugging“ wird das Anfügen eines Debuggers an einen Prozes
   
 - [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak)-Funktion (Win32)  
   
- Vor der .NET Framework 4 haben die .NET Framework separate Registrierungsschlüssel bereitgestellt, um das Verhalten von nativen und verwalteten Debuggern zu steuern. Ab .NET Framework 4 wird die Steuerung unter einem einzelnen Registrierungsschlüssel konsolidiert: HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Mit den Werten, die Sie für diesen Schlüssel festlegen können, bestimmen Sie, ob ein Debugger aufgerufen wird. Außerdem können Sie festlegen, ob in diesem Fall ein Dialogfeld angezeigt werden soll, das eine Benutzereingabe erfordert. Weitere Informationen zum Festlegen dieses Registrierungsschlüssels finden Sie unter [Konfigurieren des automatischen Debuggens](/windows/win32/debug/configuring-automatic-debugging).  
+ Vor der .NET Framework 4 haben die .NET Framework separate Registrierungsschlüssel bereitgestellt, um das Verhalten von nativen und verwalteten Debuggern zu steuern. Beginnend mit dem .NET Framework 4 wird die Steuerung unter einem einzelnen Registrierungsschlüssel konsolidiert: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Mit den Werten, die Sie für diesen Schlüssel festlegen können, bestimmen Sie, ob ein Debugger aufgerufen wird. Außerdem können Sie festlegen, ob in diesem Fall ein Dialogfeld angezeigt werden soll, das eine Benutzereingabe erfordert. Weitere Informationen zum Festlegen dieses Registrierungsschlüssels finden Sie unter [Konfigurieren des automatischen Debuggens](/windows/win32/debug/configuring-automatic-debugging).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Debuggen, Ablaufverfolgung und Profilerstellung](index.md)
 - [Erleichtern des Debuggens für ein Abbild](making-an-image-easier-to-debug.md)

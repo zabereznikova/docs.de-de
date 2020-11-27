@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051826"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272747"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange-MDA
+
 Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird durch eines der folgenden zwei Probleme aktiviert:  
   
 - Es wird versucht, den COM-Apartmentzustand eines Threads zu ändern, der bereits von COM an einen anderen Apartmentzustand initialisiert wurde.  
@@ -38,14 +40,17 @@ Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird
 - Die `CoUninitialize`-Methode (oder die `CoInitializeEx`-Methode) wird mit einem anderen Parallelitätsmodell für den Thread aufgerufen.  
   
 ## <a name="resolution"></a>Lösung  
+
  Legen Sie den Apartmentzustand des Threads fest, bevor die Ausführung beginnt, oder wenden Sie entweder das <xref:System.STAThreadAttribute>- oder das <xref:System.MTAThreadAttribute>-Attribut auf die Hauptmethode der Anwendung an.  
   
  Hinsichtlich der zweiten Ursache sollte der Code, der die `CoUninitialize`-Methode aufruft, idealerweise geändert werden, um den Aufruf zu verzögern, bis der Thread beendet wird und keine RCWs und ihre zugrunde liegenden COM-Komponenten noch vom Thread verwendet werden. Sollte es jedoch nicht möglich sein, den Code zu ändern, der die `CoUninitialize`-Methode aufruft, dann sollten keine RCWs aus Threads verwendet werden, die auf diese Weise nicht initialisiert werden.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
 ## <a name="output"></a>Ausgabe  
+
  Der COM-Apartmentzustand des aktuellen Threads und der Zustand, den der Code versucht hat anzuwenden.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -59,6 +64,7 @@ Der `invalidApartmentStateChange`-MDA (Assistent für verwaltetes Debuggen) wird
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird eine Situation veranschaulicht, die zum Aktivieren dieses MDA führen kann.  
   
 ```csharp
@@ -75,7 +81,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](diagnosing-errors-with-managed-debugging-assistants.md)

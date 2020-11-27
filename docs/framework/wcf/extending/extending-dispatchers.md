@@ -4,21 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fa9d5c40c2ae813493b3643048fa7eaba00c431d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795747"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273229"
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
+
 Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe im Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Verteilererweiterungen versetzen Sie in die Lage, diese Verarbeitung zu ändern.  Sie können Nachrichten- oder Parameterinspektoren implementieren, die den Inhalt von Nachrichten oder Parametern überprüfen bzw. ändern.  Sie können die Weiterleitung von Nachrichten an Vorgänge ändern oder andere Funktionalität bereitstellen.
 
-In diesem Thema wird beschrieben, wie <xref:System.ServiceModel.Dispatcher.DispatchRuntime> die <xref:System.ServiceModel.Dispatcher.DispatchOperation> -Klasse und die-Klasse in einer Windows Communication Foundation (WCF)-Dienst Anwendung verwendet werden, um das Standard Ausführungs Verhalten eines Verteilers zu ändern oder um Nachrichten, Parameter oder Rückgabe abzufangen oder zu ändern. Werte vor oder nach dem Senden oder Abrufen von der Kanal Schicht. Weitere Informationen zur entsprechenden Client Lauf Zeit Nachrichtenverarbeitung finden Sie unter [Erweitern von Clients](extending-clients.md). Informationen über die Rolle <xref:System.ServiceModel.IExtensibleObject%601> , die Typen beim Zugriff auf den gemeinsamen Zustand zwischen verschiedenen Lauf Zeit Anpassungs Objekten spielen, finden Sie unter [erweiterbare Objekte](extensible-objects.md).
+In diesem Thema wird beschrieben, wie <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Sie die-Klasse und die- <xref:System.ServiceModel.Dispatcher.DispatchOperation> Klasse in einer Windows Communication Foundation (WCF)-Dienst Anwendung verwenden, um das Standard Ausführungs Verhalten eines Verteilers zu ändern oder um Nachrichten, Parameter oder Rückgabewerte abzufangen oder zu ändern, bevor Sie von der Kanal Schicht gesendet oder abgerufen werden. Weitere Informationen zur entsprechenden Client Lauf Zeit Nachrichtenverarbeitung finden Sie unter [Erweitern von Clients](extending-clients.md). Informationen über die Rolle, die <xref:System.ServiceModel.IExtensibleObject%601> Typen beim Zugriff auf den gemeinsamen Zustand zwischen verschiedenen Lauf Zeit Anpassungs Objekten spielen, finden Sie unter [erweiterbare Objekte](extensible-objects.md).
 
 ## <a name="dispatchers"></a>Verteiler
 
-Die Dienstmodellebene führt die Konvertierung zwischen dem Programmiermodell des Entwicklers und dem zugrunde liegenden Nachrichtenaustausch, gewöhnlich als Kanalschicht bezeichnet, durch. In WCF sind die Kanal-und Endpunkt Verteiler<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ( <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>bzw.) die Dienst Komponenten, die für das akzeptieren neuer Kanäle, das Empfangen von Nachrichten, die Verteilung und den Aufruf von Vorgängen sowie die Verarbeitung von Antworten zuständig sind. Verteilerobjekte sind empfangende Objekte, aber auch Rückrufvertragsimplementierungen in Duplexdiensten machen ihre Verteilerobjekte für Überprüfung, Änderung oder Erweiterung verfügbar.
+Die Dienstmodellebene führt die Konvertierung zwischen dem Programmiermodell des Entwicklers und dem zugrunde liegenden Nachrichtenaustausch, gewöhnlich als Kanalschicht bezeichnet, durch. In WCF sind die Kanal-und Endpunkt Verteiler <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ( <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> bzw.) die Dienst Komponenten, die für das akzeptieren neuer Kanäle, das Empfangen von Nachrichten, die Verteilung und den Aufruf von Vorgängen sowie die Verarbeitung von Antworten zuständig sind. Verteilerobjekte sind empfangende Objekte, aber auch Rückrufvertragsimplementierungen in Duplexdiensten machen ihre Verteilerobjekte für Überprüfung, Änderung oder Erweiterung verfügbar.
 
 Der Kanalverteiler (und der zugehörige <xref:System.ServiceModel.Channels.IChannelListener>) fangen eingehende Nachrichten aus den zugrunde liegenden Kanälen ab und übergeben diese Nachrichten ihren jeweiligen Endpunktverteilern. Jeder Endpunktverteiler hat eine <xref:System.ServiceModel.Dispatcher.DispatchRuntime>, die die Nachrichten an die entsprechende <xref:System.ServiceModel.Dispatcher.DispatchOperation> weiterleitet, die für den Aufruf der Methode verantwortlich ist, die den Vorgang implementiert. Dabei werden verschiedene optionale und notwendige Erweiterungsklassen aufgerufen. In diesem Thema wird erklärt, wie diese Elemente zusammenpassen, und wie Sie deren Eigenschaften ändern und eigenen Code schreiben, um die Basisfunktionalität zu erweitern.
 
@@ -26,7 +27,7 @@ Verteilereigenschaften und geänderte Anpassungsobjekte werden mithilfe von Dien
 
 Die folgende Grafik bietet einen Überblick über die architektonischen Elemente in einem Dienst.
 
-![Die Dispatch-Lauf Zeit Architektur](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![Die Dispatchlaufzeit-Architektur](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>Kanalverteiler
 
@@ -50,7 +51,7 @@ Es gibt eine Reihe von Gründen, den Verteiler zu erweitern:
 
 - Benutzerdefinierte Nachrichtentransformationen. Benutzer können bestimmte Transformationen (beispielsweise die Versionsverwaltung) auf die Nachricht in der Laufzeit anwenden. Auch dies kann mit den Nachrichteninterceptorschnittstellen erreicht werden.
 
-- Benutzerdefiniertes Datenmodell. Benutzer können ein anderes Datenserialisierungsmodell als die standardmäßig in WCF unterstützten Daten ( <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, und unformatierte Nachrichten) haben. Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Vorgangs Formatierer und Vorgangs Auswahl](../samples/operation-formatter-and-operation-selector.md).
+- Benutzerdefiniertes Datenmodell. Benutzer können ein anderes Datenserialisierungsmodell als die standardmäßig in WCF unterstützten Daten (,, und unformatierte <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> Nachrichten) haben. Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Vorgangs Formatierer und Vorgangs Auswahl](../samples/operation-formatter-and-operation-selector.md).
 
 - Benutzerdefinierte Parametervalidierung. Benutzer können durchsetzen, dass typisierte Parameter gültig sind (im Gegensatz zu XML). Dies kann mit den Parameterinspektorschnittstellen erreicht werden.
 
@@ -67,7 +68,7 @@ Es gibt eine Reihe von Gründen, den Verteiler zu erweitern:
   > [!CAUTION]
   > Da das Ändern von Sicherheitseigenschaften eine Gefährdung der Sicherheit von WCF-Anwendungen hat, wird dringend empfohlen, sicherheitsrelevante Änderungen mit Sorgfalt durchzuführen und vor der Bereitstellung gründlich zu testen.
 
-- Benutzerdefinierte WCF-Laufzeitvalidierungs-Steuerelemente. Sie können benutzerdefinierte Validierungs Steuerelemente installieren, die Dienste, Verträge und Bindungen untersuchen, um Richtlinien auf Unternehmensebene in Bezug auf WCF-Anwendungen zu erzwingen. (Informationen hierzu finden [Sie beispielsweise unter Vorgehensweise: Sperren von Endpunkten im Unternehmen](how-to-lock-down-endpoints-in-the-enterprise.md).)
+- Benutzerdefinierte WCF-Laufzeitvalidierungs-Steuerelemente. Sie können benutzerdefinierte Validierungs Steuerelemente installieren, die Dienste, Verträge und Bindungen untersuchen, um Richtlinien auf Unternehmensebene in Bezug auf WCF-Anwendungen zu erzwingen. (Informationen hierzu finden Sie beispielsweise unter Vorgehens [Weise: Sperren von Endpunkten im Unternehmen](how-to-lock-down-endpoints-in-the-enterprise.md).)
 
 ### <a name="using-the-dispatchruntime-class"></a>Verwenden der DispatchRuntime-Klasse
 
@@ -133,10 +134,10 @@ Die folgenden Eigenschaften kontrollieren die Laufzeitausführung auf Vorgangseb
 
 - Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A>-Eigenschaft ermöglicht es Ihnen, einen benutzerdefinierten Parameterinspektor einzufügen, den Sie verwenden können, um Parameter und Rückgabewerte zu überprüfen oder zu ändern.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Vorgehensweise: Überprüfen und Ändern von Nachrichten für den Dienst](how-to-inspect-and-modify-messages-on-the-service.md)
+- [Vorgehensweise: Überprüfen und Ändern von Nachrichten auf dem Dienst](how-to-inspect-and-modify-messages-on-the-service.md)
 - [Vorgehensweise: Überprüfen oder Ändern von Parametern](how-to-inspect-or-modify-parameters.md)
 - [Vorgehensweise: Sperren von Endpunkten im Unternehmen](how-to-lock-down-endpoints-in-the-enterprise.md)

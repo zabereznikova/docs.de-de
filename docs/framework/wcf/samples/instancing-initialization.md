@@ -2,25 +2,28 @@
 title: Initialisierung der Instanziierung
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 06a8dfe571b652ded236df3097b37861c03a858d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9681c091fe2a69024b000c5b93d003ec4d127a7b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596655"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273359"
 ---
 # <a name="instancing-initialization"></a>Initialisierung der Instanziierung
+
 In diesem Beispiel wird das [Pooling](pooling.md) -Beispiel erweitert, indem eine Schnittstelle definiert wird, mit der `IObjectControl` die Initialisierung eines Objekts durch Aktivieren und deaktivieren angepasst wird. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="extensibility-points"></a>Erweiterungspunkte  
+
  Der erste Schritt beim Erstellen einer Windows Communication Foundation (WCF)-Erweiterung besteht darin, den zu verwendenden Erweiterbarkeits Punkt zu entscheiden. In WCF bezieht sich der Begriff *EndpointDispatcher* auf eine Laufzeitkomponente, die für die Umstellung eingehender Nachrichten in Methodenaufrufe für den Dienst des Benutzers und zum Umstellen von Rückgabe Werten aus dieser Methode in eine ausgehende Nachricht zuständig ist. Ein WCF-Dienst erstellt einen EndpointDispatcher für jeden Endpunkt.  
   
  Der EndpointDispatcher stellt mithilfe der <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>-Klasse die Erweiterung des Endpunktbereichs bereit (für alle vom Dienst empfangenen oder gesendeten Nachrichten). Mit dieser Klasse können Sie verschiedene Eigenschaften anpassen, die das Verhalten von EndpointDispatcher steuern. In diesem Beispiel wird in erster Linie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>-Eigenschaft behandelt, die auf das Objekt zeigt, das die Instanzen der Dienstklasse bereitstellt.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
+
  In WCF erstellt der EndpointDispatcher Instanzen einer Dienstklasse mithilfe eines Instanzanbieters, der die- <xref:System.ServiceModel.Dispatcher.IInstanceProvider> Schnittstelle implementiert. Diese Schnittstelle verfügt über nur zwei Methoden:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: Wenn eine Nachricht eingeht, ruft der Verteiler die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode auf, um eine Instanz der Dienstklasse zum Verarbeiten der Nachricht zu erstellen. Die Häufigkeit der Aufrufe dieser Methode wird von der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft bestimmt. Wenn die <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft beispielsweise auf <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType> festgelegt ist, wird eine neue Instanz der Dienstklasse erstellt, um alle eingehenden Nachrichten zu verarbeiten. Daher wird <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> immer dann aufgerufen, wenn eine Nachricht eingeht.  
@@ -28,6 +31,7 @@ In diesem Beispiel wird das [Pooling](pooling.md) -Beispiel erweitert, indem ein
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: Wenn die Dienstinstanz das Verarbeiten der Nachricht abgeschlossen hat, ruft EndpointDispatcher die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>-Methode auf. Wie bei der <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode wird die Häufigkeit der Aufrufe dieser Methode von der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft bestimmt.  
   
 ## <a name="the-object-pool"></a>Der Objektpool  
+
  Die `ObjectPoolInstanceProvider`-Klasse enthält die Implementierung des Objektpools. Diese Klasse implementiert die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Schnittstelle für die Interaktion mit der Dienstmodellebene. Wenn EndpointDispatcher die <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>-Methode aufruft, erstellt die benutzerdefinierte Implementierung keine neue Instanz, sondern sucht ein vorhandenes Objekt in einem Pool im Speicher. Wenn eines verfügbar ist, wird es zurückgegeben. Andernfalls überprüft `ObjectPoolInstanceProvider`, ob die `ActiveObjectsCount`-Eigenschaft (Anzahl der aus dem Pool zurückgegebenen Objekte) die maximale Poolgröße erreicht hat. Wenn dies nicht der Fall ist, wird eine neue Instanz erstellt und an den Aufrufer zurückgegeben, und anschließend wird `ActiveObjectsCount` inkrementiert. Andernfalls wird eine Objekterstellungsanforderung für einen konfigurierten Zeitraum in die Warteschlange gestellt. Die Implementierung für `GetObjectFromThePool` wird im folgenden Beispielcode dargestellt.  
   
 ```csharp
@@ -201,6 +205,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="hooking-activation-and-deactivation"></a>Aktivieren und Deaktivieren von Verknüpfungen  
+
  Das primäre Ziel des Objektpoolings ist das Optimieren von Objekten mit kurzer Lebensdauer und relativ aufwändiger Erstellung und Initialisierung. Bei der richtigen Verwendung kann daher eine erhebliche Leistungssteigerung erreicht werden. Da das Objekt aus dem Pool zurückgegeben wird, wird der Konstruktor nur einmal aufgerufen. Bei einigen Anwendungen ist jedoch eine gewisse Kontrolle erforderlich, damit sie die in einem einzigen Kontext verwendeten Ressourcen initialisieren und bereinigen können. Ein Objekt, das beispielsweise für eine Gruppe von Berechnungen verwendet wird, kann die privaten Felder zurücksetzen, bevor die nächste Berechnung verarbeitet wird. In Enterprise Services wurde diese Art der kontextspezifischen Initialisierung ermöglicht, indem der Objektentwickler die `Activate`-Methode und die `Deactivate`-Methode in der <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse überschreiben konnte.  
   
  Der Objektpool ruft die `Activate`-Methode unmittelbar vor dem Zurückgeben des Objekts aus dem Pool auf. `Deactivate` wird aufgerufen, wenn das Objekt an den Pool zurückgegeben wird. Die <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse verfügt außerdem über die `boolean`-Eigenschaft mit der Bezeichnung `CanBePooled`, mit der der Pool darüber benachrichtigt werden kann, ob das Objekt weiter gepoolt werden kann.  

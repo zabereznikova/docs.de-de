@@ -2,14 +2,15 @@
 title: Verwenden der WCF-Entwicklungstools
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: adaad28fee5d27976df4bf20bb54f70aec5c2daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 48733d27a72e864760c371e8b90e0af7b74273a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544621"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273645"
 ---
 # <a name="using-the-wcf-development-tools"></a>Verwenden der WCF-Entwicklungstools
+
 In diesem Abschnitt werden die Visual Studio-Entwicklungs Tools beschrieben, die Ihnen bei der Entwicklung von WCFService helfen können.  
   
  Sie können die Visual Studio-Vorlagen als Grundlage verwenden, um schnell einen eigenen Dienst zu erstellen, und dann den automatischen WCF-Dienst Host und den WCF-Test Client zum Debuggen und Testen des Diensts verwenden. Diese Tools ermöglichen Ihnen die Durchführung eines schnellen und problemlosen Test- und Debugzyklus, ohne sich bereits in einem frühen Stadium auf ein Host-Modell festlegen zu müssen.  
@@ -18,6 +19,7 @@ In diesem Abschnitt werden die Visual Studio-Entwicklungs Tools beschrieben, die
  > Ab Visual Studio 2017 werden die WCF-Entwicklungs Tools nicht standardmäßig installiert. Um diese Features zu verwenden, müssen Sie sicherstellen, dass die Windows Communication Foundation Komponente im Visual Studio-Installer ausgewählt ist.
   
 ## <a name="the-wcf-developer-tools"></a>Die WCF-Entwicklungstools  
+
  [WCF Visual Studio-Vorlagen](wcf-vs-templates.md)  
   
  Sie können die vordefinierten Visual Studio-Projekt-und-Element Vorlagen in Visual Studio verwenden, um schnell WCF-Dienste und umgebende Anwendungen zu erstellen.  
@@ -35,6 +37,7 @@ In diesem Abschnitt werden die Visual Studio-Entwicklungs Tools beschrieben, die
  XML-Daten in der Zwischenablage können in eine Codepage eingefügt werden. Die in den Daten definierten Klassen werden in Codetypen konvertiert.  
   
 ## <a name="using-the-tools-without-administrator-privilege"></a>Verwenden der Tools ohne Administratorberechtigung  
+
  Um Benutzern ohne Administratorrechte die Entwicklung von WCF-Diensten zu ermöglichen, wird http://+:8731/Design_Time_Addresses während der Installation von Visual Studio eine ACL (Access Control Liste) für den Namespace "" erstellt. Die ACL wird auf (UI) festgelegt, wodurch alle interaktiven, am Computer angemeldeten Benutzer eingeschlossen werden. Administratoren können dieser ACL Benutzer hinzufügen, Benutzer aus der ACL entfernen oder zusätzliche Ports öffnen. Mit dieser ACL können WCF-Vorlagen oder WF-Vorlagen Daten in ihrer Standardkonfiguration senden und empfangen. Außerdem können Benutzer den automatischen WCF-Dienst-Host (wcfSvcHost.exe) verwenden, ohne Ihnen Administratorrechte zu erteilen.  
   
  Sie können den Zugriff mithilfe des Netsh.exe Tools in Windows Vista unter dem Konto mit erhöhten Rechten ändern. Das folgende Beispiel veranschaulicht die Verwendung des Netsh.exe-Tools:  
@@ -43,9 +46,9 @@ In diesem Abschnitt werden die Visual Studio-Entwicklungs Tools beschrieben, die
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Weitere Informationen zu Netsh.exe finden Sie unter [Verwenden des Netsh.exe Tools und der Befehls Zeilenschalter](/previous-versions/tn-archive/bb490939(v=technet.10)).  
+ Weitere Informationen zu Netsh.exe finden Sie unter [Verwenden des Netsh.exe Tools und Command-Line Switches](/previous-versions/tn-archive/bb490939(v=technet.10)).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [WCF Visual Studio-Vorlagen](wcf-vs-templates.md)
 - [WCF-Diensthost (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

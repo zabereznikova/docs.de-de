@@ -2,17 +2,19 @@
 title: Veraltete Typen in Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272871"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Veraltete Typen in Windows Workflow Foundation
+
 In .NET 4 hat das Workflowteam eine neue Workflow-Engine im <xref:System.Activities>-Namespace eingeführt. Mit der Veröffentlichung von .NET Framework 4,5 Beta werden die meisten Typen in den Namespaces "WF 3" <xref:System.Workflow.Activities> , <xref:System.Workflow.ComponentModel> und  <xref:System.Workflow.Runtime> als veraltet markiert.
 
 ## <a name="obsolete-namespaces-and-tools"></a>Veraltete Namespaces und Tools
+
  Die folgenden Assemblys enthalten mindestens einen öffentlichen Typ, der veraltet sein wird:
 
 - System.Workflow.Activities.dll

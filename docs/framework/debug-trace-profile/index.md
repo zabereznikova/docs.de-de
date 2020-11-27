@@ -14,19 +14,21 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: 33dd840f4c1421bbff54499af56ab3e147cc694b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415978"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272773"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Debuggen, Ablaufverfolgung und Profilerstellung
+
 Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und die Laufzeitumgebung so konfiguriert sein, dass ein Debugger an die Anwendung angefügt werden und der Debugger, wenn möglich, sowohl Symbole als auch Zeilenzuordnungen für die Anwendung und deren entsprechende Microsoft Intermediate Language (MSIL) erstellen kann. Nach dem Debuggen einer verwalteten Anwendung kann ein Profil für sie erstellt werden, um die Leistung zu verbessern. Bei einer Profilerstellung werden die Quellcodezeilen bewertet und beschrieben, die den am häufigsten ausgeführten Code generieren, und wird ermittelt, wie lange es dauert, diese auszuführen.  
   
  .NET Framework-Anwendungen lassen sich problemlos mit Visual Studio debuggen, das viele der Konfigurationsdetails verwaltet. Wenn Visual Studio nicht installiert ist, können Sie die Leistung von .NET Framework-Anwendungen mithilfe der Debuggingklassen im <xref:System.Diagnostics>-Namespace von .NET Framework prüfen und verbessern. Dieser Namespace enthält die Klassen <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug> und <xref:System.Diagnostics.TraceSource> zum Nachverfolgen des Ausführungsablaufs und die Klassen <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog> und <xref:System.Diagnostics.PerformanceCounter> für die Codeprofilierung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Aktivieren von JIT-attach Debugging](enabling-jit-attach-debugging.md)  
  Zeigt, wie die Registrierung zu konfigurieren ist, um eine Debug-Engine an eine .NET Framework-Anwendung anzufügen (JIT-attach Debugging).  
   
@@ -46,6 +48,7 @@ Um eine .NET Framework-Anwendung debuggen zu können, müssen der Compiler und d
  Beschreibt die Leistungsindikatoren, die Sie zum Überwachen der Leistung einer Anwendung verwenden können.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Debuggen von ASP.NET- oder ASP.NET Core-Apps in Visual Studio](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Enthält Voraussetzungen und Anweisungen für das Debuggen einer ASP.NET-Anwendung während der Entwicklung oder nach der Bereitstellung.  
   
