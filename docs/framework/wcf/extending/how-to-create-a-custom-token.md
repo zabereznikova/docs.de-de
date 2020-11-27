@@ -11,14 +11,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247532"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266752"
 ---
 # <a name="how-to-create-a-custom-token"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Tokens
+
 In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tokens.SecurityToken>-Klasse ein benutzerdefiniertes Sicherheitstoken erstellen und in einen benutzerdefinierten Sicherheitstokenanbieter und -authentifizierer integrieren. Ein umfassendes Codebeispiel finden Sie unter Beispiel für [benutzerdefiniertes Token](../samples/custom-token.md) .  
   
  Ein *Sicherheits Token* ist im Grunde ein XML-Element, das vom Windows Communication Foundation (WCF)-Sicherheits Framework verwendet wird, um Ansprüche über einen Absender innerhalb der SOAP-Nachricht darzustellen. WCF-Sicherheit stellt verschiedene Token für die vom System bereitgestellten Authentifizierungs Modi bereit. Dazu gehören u.&#160;a. ein Sicherheitstoken für ein X.509-Zertifikat, dargestellt durch die <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse, oder ein Sicherheitstoken für den Benutzernamen, dargestellt durch die <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Klasse.  
@@ -32,6 +33,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
  Weitere Klassen, die Sicherheitstoken darstellen, finden Sie im <xref:System.IdentityModel.Tokens>-Namespace.  
   
 ## <a name="procedures"></a>Prozeduren  
+
  Clientanwendungen müssen über eine Möglichkeit zur Angabe von Kreditkarteninformationen für die Sicherheitsinfrastruktur verfügen. Diese Informationen werden von einer benutzerdefinierten Klasse für Clientanmeldeinformationen für die Anwendung verfügbar gemacht. Zunächst muss eine Klasse erstellt werden, um die Kreditkarteninformationen für die benutzerdefinierten Clientanmeldeinformationen darzustellen.  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>So erstellen Sie eine Klasse, die Kreditkarteninformationen in Clientanmeldeinformationen darstellt  

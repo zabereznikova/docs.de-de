@@ -2,14 +2,15 @@
 title: Implementieren eines Suchproxys
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 382df95fef2108d338e4ea327da9185c856eca5a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae003c89bb0f14623c5d31a1596533d821380336
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579240"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268299"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementieren eines Suchproxys
+
 In diesem Thema werden die Schritte beschrieben, die zum Implementieren eines Suchproxys erforderlich sind. Ein Suchproxy ist ein eigenständiger Dienst, der ein Repository mit Diensten enthält. Clients können einen Suchproxy abfragen, um nach erkennbaren Diensten, die für den Proxy verfügbar sind. Die Art und Weise, wie ein Proxy mit Diensten aufgefüllt wird, hängt von der Implementierung ab. Ein Suchproxy kann z. B. eine Verbindung zu einem vorhandenen Dienstrepository herstellen und diese Informationen erkennbar machen, ein Administrator kann einem Proxy erkennbare Dienste mithilfe einer Verwaltungs-API hinzufügen, oder ein Suchproxy kann seinen internen Cache mithilfe der Ankündigungsfunktionalität aktualisieren.  
   
  Die WCF-Implementierung stellt Basisklassen bereit, mit denen problemlos ein Proxy erstellt werden kann. Sie können mit diesen APIs einen Suchproxy für das vorhandene Repository erstellen.  
@@ -17,6 +18,7 @@ In diesem Thema werden die Schritte beschrieben, die zum Implementieren eines Su
  Der hier implementierte Suchproxy gleicht allen anderen WCF-Diensten. Sie können den Suchproxy auch erkennbar machen und die Clients nach seinen Endpunkten suchen lassen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Implementieren eines Suchproxys](how-to-implement-a-discovery-proxy.md)  
  Beschreibt, wie Sie einen Suchproxy implementieren.  
   

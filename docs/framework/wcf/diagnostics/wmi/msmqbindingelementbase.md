@@ -2,14 +2,15 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: 1df4b32feda246a536183a42ac11b113bc4bb259
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48d26bfa9074fd605e3545579f0bdc2744dfc7d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963435"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267858"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
+
 MsmqBindingElementBase  
   
 ## <a name="syntax"></a>Syntax  
@@ -32,26 +33,31 @@ class MsmqBindingElementBase : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die Klasse MsmqBindingElementBase definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die Klasse MsmqBindingElementBase verfügt über die folgenden Eigenschaften:  
   
 ### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein URI, der den Speicherort der Warteschlange für unzustellbare Nachrichten für jede Anwendung enthält, in der Nachrichten platziert werden, die abgelaufen sind oder für die die Übertragung oder Zustellung fehlgeschlagen ist.  
   
 ### <a name="deadletterqueue"></a>DeadLetterQueue  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Enumerationswert, der den Typ der zu verwendenden Warteschlange für unzustellbare Meldungen angibt.  
   
 ### <a name="durable"></a>Durable  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -59,6 +65,7 @@ class MsmqBindingElementBase : TransportBindingElement
  Ein Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten permanent oder flüchtig sind.  
   
 ### <a name="exactlyonce"></a>ExactlyOnce  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -66,6 +73,7 @@ class MsmqBindingElementBase : TransportBindingElement
  Ein boolescher Wert, der angibt, ob die von dieser Bindung verarbeiteten Nachrichten genau einmal empfangen werden.  
   
 ### <a name="maxretrycycles"></a>MaxRetryCycles  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -73,13 +81,15 @@ class MsmqBindingElementBase : TransportBindingElement
  Die maximale Anzahl der Neuversuche für die Zustellung von Nachrichten an die empfangende Anwendung.  
   
 ### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Einstellungen für die Warteschlange für potenziell schädliche Nachrichten.  
   
 ### <a name="receiveretrycount"></a>ReceiveRetryCount  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -87,13 +97,15 @@ class MsmqBindingElementBase : TransportBindingElement
  Die maximale Anzahl von unmittelbaren Wiederholungsversuchen auf einer Nachricht, die aus der Anwendungswarteschlange gelesen wird.  
   
 ### <a name="retrycycledelay"></a>RetryCycleDelay  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
   
  Ein Wert, der die Zeitverzögerung zwischen den Wiederholungszyklen beim Versuch, eine Nachricht zuzustellen, die nicht sofort zugestellt werden konnte, angibt.  
   
-### <a name="timetolive"></a>TimeToLive  
+### <a name="timetolive"></a>timeToLive  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -101,6 +113,7 @@ class MsmqBindingElementBase : TransportBindingElement
  Das Zeitintervall, das angibt, wie lange die von dieser Bindung verarbeiteten Nachrichten in der Warteschlange bleiben können, bevor sie ablaufen.  
   
 ### <a name="usemsmqtracing"></a>UseMsmqTracing  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -108,6 +121,7 @@ class MsmqBindingElementBase : TransportBindingElement
  Ein boolescher Wert, der angibt, ob von dieser Bindung verarbeitete Nachrichten nachverfolgt werden sollen.  
   
 ### <a name="usesourcejournal"></a>UseSourceJournal  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -120,7 +134,7 @@ class MsmqBindingElementBase : TransportBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.MsmqBindingBase>

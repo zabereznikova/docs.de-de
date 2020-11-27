@@ -2,14 +2,15 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: fd70f584d269f5ada31b00ebaac9977987d42510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ffd03f9149d13567d84e00a5fa035d462f2ba8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269066"
 ---
 # <a name="peerresolverbindingelement"></a>PeerResolverBindingElement
+
 PeerResolverBindingElement  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,13 +23,16 @@ class PeerResolverBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die PeerResolverBindingElement-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die PeerResolverBindingElement-Klasse weist die folgende Eigenschaft auf:  
   
 ### <a name="referralpolicy"></a>ReferralPolicy  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -40,6 +44,6 @@ class PeerResolverBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

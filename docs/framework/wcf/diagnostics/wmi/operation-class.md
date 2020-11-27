@@ -2,14 +2,15 @@
 title: Operation-Klasse
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b47d933dc84813532398830c92c95210208a709
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963110"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269157"
 ---
 # <a name="operation-class"></a>Operation-Klasse
+
 Vorgang  
   
 ## <a name="syntax"></a>Syntax  
@@ -33,33 +34,39 @@ class Operation
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die Operation-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die Operation-Klasse verfügt über die folgenden Eigenschaften:  
   
-### <a name="action"></a>Aktion  
- Datentyp: string (Zeichenfolge)  
+### <a name="action"></a>Action  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die WS-Adressierungsaktion der Anforderungsnachricht.  
   
 ### <a name="asyncpattern"></a>AsyncPattern  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
   
- Gibt an, dass ein Vorgang asynchron implementiert wird eine `Begin`[spitze Klammern öffnen/schließen] und `End`[Winkelklammern öffnen/schließen]-Methodenpaar in einem Dienstvertrag.  
+ Gibt an, dass ein Vorgang asynchron mithilfe `Begin` der Methoden Paare [öffnende/schließende spitzen Klammern] und `End` [öffnende/schließende spitze Klammern] in einem Dienstvertrag implementiert wird.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-array  
+
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die mit diesem Vorgang verknüpften Verhalten.  
   
 ### <a name="iscallback"></a>IsCallback  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -67,6 +74,7 @@ class Operation
  True, wenn der Vorgang ein Rückrufvorgang ist.  
   
 ### <a name="isinitiating"></a>IsInitiating  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -74,6 +82,7 @@ class Operation
  Gibt an, ob die Methode einen Vorgang implementiert, der eine Sitzung auf dem Server initiieren kann.  
   
 ### <a name="isoneway"></a>IsOneWay  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -81,6 +90,7 @@ class Operation
  Gibt an, ob ein Vorgang eine Antwortnachricht zurückgibt.  
   
 ### <a name="isterminating"></a>IsTerminating  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -88,20 +98,23 @@ class Operation
  Gibt an, ob ein Vorgang eine Antwortnachricht zurückgibt.  
   
 ### <a name="methodsignature"></a>MethodSignature  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Methodensignatur des Vorgangs.  
   
 ### <a name="name"></a>Name  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Name des Vorgangs.  
   
 ### <a name="parametertypes"></a>ParameterTypes  
+
  Datentyp: Zeichenfolgenarray  
   
  Zugriffstyp: Schreibgeschützt  
@@ -109,14 +122,16 @@ class Operation
  Die Parametertypen des Vorgangs.  
   
 ### <a name="replyaction"></a>ReplyAction  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Wert der SOAP-Aktion für die Antwortnachricht des Vorgangs.  
   
 ### <a name="returntype"></a>ReturnType  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -128,6 +143,6 @@ class Operation
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Description.OperationDescription>

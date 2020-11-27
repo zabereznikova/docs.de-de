@@ -2,25 +2,28 @@
 title: SOAP- und HTTP-Endpunkte
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: fee1df86026716941f65dccca15d437ae917770b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9e7ce32a0f5a2f37294db57659e2b30b364bef24
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600944"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268260"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP- und HTTP-Endpunkte
+
 In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert und im SOAP-Format und im POX-Format (Plain Old XML) mithilfe des WCF-webprogrammier Modells verfügbar gemacht wird. Weitere Informationen zur HTTP-Bindung für den Dienst finden Sie im Beispiel für den [grundlegenden HTTP-Dienst](basic-http-service.md) . Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
   
 ## <a name="demonstrates"></a>Zeigt  
+
  Verfügbar machen eines RPC-Dienstanbieter über SOAP und HTTP mithilfe von WCF.  
   
 ## <a name="discussion"></a>Diskussion  
+
  Dieses Beispiel besteht aus zwei Komponenten: einem Webanwendungs Projekt (Dienst), das einen WCF-Dienst und eine Konsolenanwendung (Client) enthält, die Dienst Vorgänge mithilfe von SOAP-und HTTP-Bindungen aufruft.  
   
  Der WCF-Dienst macht zwei Vorgänge verfügbar – `GetData` und `PutData` –, die der als Eingabe eingegebenen Zeichenfolge entsprechen. Die Dienstvorgänge werden mit <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> kommentiert. Diese Attribute steuern die HTTP-Projektion dieser Vorgänge. Außerdem werden sie mit <xref:System.ServiceModel.OperationContractAttribute> kommentiert, sodass sie über SOAP-Bindungen verfügbar gemacht werden können. Die `PutData`-Methode des Diensts löst eine <xref:System.ServiceModel.Web.WebFaultException> aus, die mithilfe des HTTP-Statuscodes über HTTP zurückgesendet und als SOAP-Fehler über SOAP zurückgesendet wird.  
   
- Die Datei Web. config konfiguriert den WCF-Dienst mit 3 Endpunkten:  
+ Die Web.config Datei konfiguriert den WCF-Dienst mit 3 Endpunkten:  
   
 - Der ~/service.svc/mex-Endpunkt, der die Dienstmetadaten für den Zugriff durch SOAP-basierte Clients verfügbar macht.  
   

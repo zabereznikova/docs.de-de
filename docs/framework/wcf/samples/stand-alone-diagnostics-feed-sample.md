@@ -2,14 +2,15 @@
 title: Feed-Beispiel
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 0402805b7eb5b0b224db32eb07780743e5f32fb3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b4c3613656e0aec42c0d3f5cd7cde0af6540a69a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600918"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268247"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Feed-Beispiel
+
 In diesem Beispiel wird veranschaulicht, wie ein RSS/Atom-Feed für die Syndizierung mit Windows Communication Foundation (WCF) erstellt wird. Dabei handelt es sich um ein einfaches "Hallo Welt"-Programm, das die Grundlagen des Objektmodells und die Einrichtung in einem Windows Communication Foundation (WCF)-Dienst anzeigt.  
   
  WCF modelliert Syndizierungs Feeds als Dienst Vorgänge, die einen speziellen Datentyp zurückgeben <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . Instanzen von <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> können einen Feed sowohl in das Format RSS 2.0 als auch in das Format Atom 1.0 serialisieren. Der folgende Beispielcode zeigt den verwendeten Vertrag.  

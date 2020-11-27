@@ -11,20 +11,23 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23a8146bfa5acc08000e689917abb844c5540fec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803481"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267077"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost-MDA
+
 Der `streamWriterBufferedDataLost`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine <xref:System.IO.StreamWriter> geschrieben wird, aber die <xref:System.IO.StreamWriter.Flush%2A>- oder <xref:System.IO.StreamWriter.Close%2A>-Methode wird anschließend nicht aufgerufen, bevor die Instanz der <xref:System.IO.StreamWriter> zerstört wird. Wenn dieser MDA aktiviert ist, überprüft die Common Language Runtime, ob gepufferte Daten immer noch in <xref:System.IO.StreamWriter> vorhanden sind. Wenn die gepufferten Daten vorhanden sind, wird der MDA aktiviert. Ein Aufruf der <xref:System.GC.Collect%2A>- und <xref:System.GC.WaitForPendingFinalizers%2A>-Methoden kann erzwingen, dass Finalizer ausgeführt werden. Finalizer werden andernfalls zu scheinbar willkürlichen Zeiten und beim Beenden des Prozesses möglicherweise gar nicht ausgeführt. Wenn Finalizer explizit mit diesem aktiven MDA ausgeführt werden, wird diese Art von Problemen zuverlässiger reproduziert werden können.  
   
 ## <a name="symptoms"></a>Symptome  
+
  Ein <xref:System.IO.StreamWriter> schreibt die letzten 1 bis 4 KB Daten nicht in eine Datei.  
   
 ## <a name="cause"></a>Ursache  
+
  Die <xref:System.IO.StreamWriter> puffert Daten intern. Dies erfordert, dass die <xref:System.IO.StreamWriter.Close%2A>- oder <xref:System.IO.StreamWriter.Flush%2A>-Methode aufgerufen wird, um die gepufferten Daten in den zugrunde liegenden Datenspeicher zu schreiben. Wenn <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> nicht richtig aufgerufen werden, können gepufferte Daten in der <xref:System.IO.StreamWriter>-Instanz nicht wie erwartet geschrieben werden.  
   
  Das folgende Beispiel zeigt schlecht geschriebenen Code, den dieser MDA abfangen sollte.  
@@ -47,6 +50,7 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>Lösung  
+
  Stellen Sie sicher, dass Sie <xref:System.IO.StreamWriter.Close%2A> oder <xref:System.IO.StreamWriter.Flush%2A> der <xref:System.IO.StreamWriter> oder eines beliebigen Codeblocks abrufen, der eine <xref:System.IO.StreamWriter>-Instanz enthält, bevor Sie eine Anwendung schließen. Eine der besten Mechanismen, um dies zu erreichen, ist das Erstellen der Instanz mithilfe des `using`-C#-Blocks (`Using` in Visual Basic), was sicherstellt, dass die <xref:System.IO.StreamWriter.Dispose%2A>-Methode für den Writer aufgerufen wurde, wodurch die Instanz ordnungsgemäß geschlossen wird.  
   
 ```csharp
@@ -88,9 +92,11 @@ static WriteToFile()
 ```  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
+
  Dieser MDA hat keine Auswirkungen auf die Laufzeit.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
+
  Eine Meldung, die angibt, dass diese Überschreitung aufgetreten ist.  
   
 ## <a name="configuration"></a>Konfiguration  

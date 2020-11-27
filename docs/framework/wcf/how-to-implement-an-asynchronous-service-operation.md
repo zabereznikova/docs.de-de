@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 7b30fa21e32acf2a462db4f9f39b7e1c459a2949
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 157311f29b203e0c26be21a89d2d5b560543094b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267831"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs
+
 In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang asynchron oder synchron implementiert werden, ohne dem Client zu diktieren, wie er aufgerufen werden soll. Asynchrone Dienst Vorgänge können z. b. synchron aufgerufen werden, und synchrone Dienst Vorgänge können asynchron aufgerufen werden. Ein Beispiel, das zeigt, wie ein Vorgang asynchron in einer Client Anwendung aufgerufen wird, finden Sie unter Gewusst [wie: Asynchrones Abrufen von Dienst Vorgängen](./feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [Entwerfen von Dienstverträgen](designing-service-contracts.md) und [synchronen und asynchronen Vorgängen](synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein umfassendes Beispiel sowohl der Dienst-als auch der Clientseite finden Sie unter [Asynchronous](/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Asynchrones Implementieren eines Dienstvorgangs  
@@ -31,6 +32,7 @@ In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang as
      [!code-vb[C_SyncAsyncClient#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#3)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel zeigt:  
   
 1. Eine Dienstvertragschnittstelle mit:  
@@ -46,7 +48,7 @@ In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienst Vorgang as
  [!code-csharp[C_SyncAsyncClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_syncasyncclient/cs/services.cs#1)]
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Entwerfen von Dienstverträgen](designing-service-contracts.md)
 - [Synchrone und asynchrone Vorgänge](synchronous-and-asynchronous-operations.md)

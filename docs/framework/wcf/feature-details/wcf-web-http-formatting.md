@@ -2,17 +2,19 @@
 title: WCF-Web-http-Formatierung
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585557"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266908"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF-Web-http-Formatierung
+
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
   
 ## <a name="automatic-formatting"></a>Automatische Formatierung  
+
  Wenn Sie aktiviert ist, wählt die automatische Formatierung das beste Format aus, in dem die Antwort zurückgegeben wird. Das beste Format wird bestimmt, indem Folgendes in der unten angegebenen Reihenfolge überprüft wird:  
   
 1. Medientypen im Accept-Header der Anforderungsnachricht  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>Explizite Formatierung  
+
  Wie der Name bereits vermuten lässt, bestimmt bei der expliziten Formatierung der Entwickler das beste Format für die Verwendung im Vorgangscode. Falls das beste Format XML oder JSON ist, legt der Entwickler <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> auf <xref:System.ServiceModel.Web.WebMessageFormat.Xml> oder <xref:System.ServiceModel.Web.WebMessageFormat.Json> fest. Falls die <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>-Eigenschaft nicht explizit festgelegt wird, wird das Standardformat des Vorgangs verwendet.  
   
  Im folgenden Beispiel wird der Formatabfrage-Zeichenfolgenparameter für ein zu verwendendes Format überprüft. Wenn er angegeben wurde, wird das Format des Vorgangs mit <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> festgelegt.  

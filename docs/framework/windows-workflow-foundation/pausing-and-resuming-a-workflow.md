@@ -2,17 +2,19 @@
 title: Anhalten und Fortsetzen eines Workflows
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142965"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268537"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Anhalten und Fortsetzen eines Workflows
+
 Workflows werden in Abhängigkeit von Lesezeichen und Blockieraktivitäten wie <xref:System.Activities.Statements.Delay> angehalten und fortgesetzt, können jedoch auch durch Persistenz explizit angehalten, entladen und wieder aufgenommen werden.  
   
 ## <a name="pausing-a-workflow"></a>Anhalten eines Workflows  
+
  Verwenden Sie <xref:System.Activities.WorkflowApplication.Unload%2A>, um einen Workflow anzuhalten.  Mit dieser Methode wird das Beibehalten und Entladen des Workflows angefordert, und eine <xref:System.TimeoutException> wird ausgelöst, wenn der Workflow nicht innerhalb von 30 Sekunden entladen wird.  
   
 ```csharp  
@@ -28,6 +30,7 @@ catch (TimeoutException e)
 ```  
   
 ## <a name="resuming-a-workflow"></a>Wiederaufnehmen von Workflows  
+
  Verwenden Sie <xref:System.Activities.WorkflowApplication.Load%2A>, um einen Workflow wiederaufzunehmen, der angehalten und entladen wurde. Diese Methode lädt einen Workflow aus einem Persistenzspeicher in den Arbeitsspeicher.  
   
 ```csharp  
@@ -37,6 +40,7 @@ application.Load(id);
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird veranschaulicht, wie ein Workflow mithilfe der Persistenz angehalten und fortgesetzt werden kann.  
   
 ```csharp  

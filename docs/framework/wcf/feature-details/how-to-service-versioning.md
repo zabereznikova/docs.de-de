@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Dienstversionsverwaltung'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec0f776f296e5ab24f4f628a204b04aa8d903d39
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586935"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268468"
 ---
 # <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
+
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
   
 > [!WARNING]
@@ -131,6 +132,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Es folgt eine vollständige Auflistung der Konfigurationsdatei.  
   
 ```xml  
@@ -214,6 +216,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Es folgt eine vollständige Auflistung der Clientanwendung.  
   
 ```csharp  

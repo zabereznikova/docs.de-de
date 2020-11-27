@@ -2,19 +2,20 @@
 title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4dca15bfd3798b9282960663bea827f9323a1266
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547726"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267588"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
+
 In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veranschaulicht, die von der <xref:System.Activities.AsyncCodeActivity> abgeleitet wird, um E-Mail-Nachrichten zur Verwendung in einer Workflowanwendung via SMTP zu senden. Die benutzerdefinierte Aktivität verwendet die Funktionen von <xref:System.Net.Mail.SmtpClient> , um e-Mail-Nachrichten asynchron zu senden und e-Mails mit Authentifizierung zu senden. Außerdem werden Endbenutzerfunktionen wie Testmodus, Tokenersetzung, Dateivorlagen und Testablagepfad bereitgestellt.  
   
  In der folgenden Tabelle werden die Argumente für die `SendMail`-Aktivität aufgelistet.  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|BESCHREIBUNG|  
 |-|-|-|  
 |Host|String|Die Adresse des SMTP-Serverhosts.|  
 |Port|String|Der Port des SMTP-Diensts auf dem Host.|  
@@ -22,10 +23,10 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |UserName|String|Der Benutzername zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Kennwort|String|Das Kennwort zum Einrichten der Anmeldeinformationen und Authentifizieren der <xref:System.Net.Mail.SmtpClient.Credentials%2A>-Absendereigenschaft.|  
 |Subject|<xref:System.Activities.InArgument%601>\<string>|Der Betreff der Nachricht.|  
-|Body|<xref:System.Activities.InArgument%601>\<string>|Der Nachrichtentext.|  
+|Text|<xref:System.Activities.InArgument%601>\<string>|Der Nachrichtentext.|  
 |Attachments|<xref:System.Activities.InArgument%601>\<string>|Anlagen Sammlung zum Speichern von Daten, die an diese e-Mail angefügt sind.|  
-|From|<xref:System.Net.Mail.MailAddress>|Von der Adresse für diese e-Mail-Nachricht.|  
-|An|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
+|Von|<xref:System.Net.Mail.MailAddress>|Von der Adresse für diese e-Mail-Nachricht.|  
+|Beschreibung|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die Empfänger dieser e-Mail-Nachricht enthält.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adress Sammlung, die die CC-Empfänger für diese e-Mail-Nachricht enthält.|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Die Adress Sammlung, die die Bcc-Empfänger (Blind Carbon Copy) für diese e-Mail-Nachricht enthält.|  
 |Token|<xref:System.Activities.InArgument%601> IDictionary<\<string, string>>|Diese Token können im Text ersetzt werden. Mithilfe dieser Funktion können Benutzer bestimmte Werte im Text verwenden, die später durch Tokens ersetzt werden können, die mit dieser Eigenschaft angegeben werden.|  
@@ -34,6 +35,7 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |TestDropPath|String|Wenn diese Eigenschaft festgelegt ist, werden alle e-Mails ebenfalls in der angegebenen Datei gespeichert.<br /><br /> Diese Eigenschaft soll beim Testen oder Debuggen von Workflows verwendet werden, um sicherzustellen, dass das Format und der Inhalt der ausgehenden e-Mails angemessen sind.|  
   
 ## <a name="solution-contents"></a>Inhalt der Projektmappe  
+
  Die Projektmappe enthält zwei Projekte.  
   
 |Projekt|Beschreibung|Wichtige Dateien|  
@@ -42,9 +44,11 @@ In diesem Beispiel wird das Erstellen einer benutzerdefinierten Aktivität veran
 |SendMailTestClient|Ein Client zum Testen der SendMail-Aktivität.  In diesem Projekt werden zwei Möglichkeiten zum Aufrufen der SendMail-Aktivität veranschaulicht: deklarativ und programmgesteuert.|1. Sequence1. XAML: Workflow, der die sendmail-Aktivität aufruft.<br />2. Program.cs: Ruft Sequence1 auf und erstellt auch Programm gesteuert einen Workflow, der sendmail verwendet.|  
   
 ## <a name="further-configuration-of-the-sendmail-activity"></a>Weitere Konfiguration der SendMail-Aktivität  
+
  Benutzer können weitere Konfigurationen für die SendMail-Aktivität angeben, die in diesem Beispiel nicht gezeigt werden. Dies wird in den folgenden drei Abschnitten veranschaulicht.  
   
 ### <a name="sending-an-email-using-tokens-specified-in-the-body"></a>Senden einer E-Mail-Nachricht mit Token im Text  
+
  Mit diesem Codeausschnitt wird veranschaulicht, wie Sie eine E-Mail-Nachricht mit Token im Text senden können. Die Token werden in der body-Eigenschaft bereitgestellt. Die Werte für die Token werden in der Tokeneigenschaft bereitgestellt.  
   
 ```csharp  
@@ -67,6 +71,7 @@ new SendMail
 ```  
   
 ### <a name="sending-an-email-using-a-template"></a>Senden einer E-Mail-Nachricht mit einer Vorlage  
+
  Mit diesem Codeausschnitt wird veranschaulicht, wie Sie eine E-Mail-Nachricht mit Vorlagentoken im Text senden können. Beachten Sie, dass beim Festlegen der `BodyTemplateFilePath`-Eigenschaft kein Wert für die body-Eigenschaft angegeben werden muss (der Inhalt der Vorlagendatei wird in den Text kopiert).  
   
 ```csharp  
@@ -84,6 +89,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Senden von E-Mails im Testmodus  
+
  In diesem Code Ausschnitt wird gezeigt, wie die zwei Test Eigenschaften festgelegt werden: durch Festlegen von `TestMailTo` auf alle Nachrichten, die an gesendet werden `john.doe@contoso.con` (ohne Berücksichtigung der Werte von to, CC, BCC). Durch Festlegen von TestDropPath werden alle ausgehenden E-Mail-Nachrichten außerdem unter dem angegebenen Pfad gespeichert. Diese Eigenschaften können unabhängig voneinander festgelegt werden (sie sind nicht verknüpft).  
   
 ```csharp  
@@ -103,6 +109,7 @@ new SendMail
 ```  
   
 ## <a name="set-up-instructions"></a>Setupanweisungen  
+
  Um dieses Beispiel ausführen zu können, ist der Zugriff auf einen SMTP-Server erforderlich.  
   
  Weitere Informationen zum Einrichten eines SMTP-Servers finden Sie unter den folgenden Links.  

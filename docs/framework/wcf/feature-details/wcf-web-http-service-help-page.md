@@ -2,14 +2,15 @@
 title: Hilfeseite zum WCF-Web-HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600165"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266934"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Wenn ein Benutzer einen WCF-Web-HTTP-Dienst durchsucht und "/Help" an das Ende der URL anfügt, wird beispielsweise `http://localhost:8000/Customers/Help` eine Hilfeseite wie die folgende angezeigt.  
   
  ![Ein Browser mit der WCF-Rest-Hilfeseite geöffnet.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
@@ -19,6 +20,7 @@ ms.locfileid: "84600165"
  ![Ein Browser mit den Details der WCF-Rest-Hilfeseite für die GetCustomers-Methode wurde geöffnet.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Verwenden der WCF-Web-HTTP-Hilfeseite  
+
  Die WCF-WEB-HTTP-Hilfeseite zeigt für jeden Vorgang eine kurze Beschreibung an, sofern Sie mithilfe von <xref:System.ComponentModel.DescriptionAttribute> eine Beschreibung angegeben haben. Dieses Attribut verwendet eine Zeichenfolge, die eine kurze Beschreibung des Vorgangs enthält, auf den es angewendet wird. Der folgende Code veranschaulicht z. B., wie Sie <xref:System.ComponentModel.DescriptionAttribute> verwenden, um eine kurze Beschreibung bereitzustellen.  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  Die Hilfeseite verfügt über das Format XHTML mit Markup, das die verschiedenen Teile der Seite identifiziert. Dies ermöglicht Clients den programmgesteuerten Zugriff auf die Seite, indem <xref:System.Xml.Linq.XElement> oder andere XLinq-APIs verwendet werden.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Auf der WCF-Web-HTTP-Hilfeseite für Dienste verwendete Schemas  
+
  Die folgenden Schemas werden auf der WCF-Web-HTTP-Hilfeseite für Dienste verwendet.  
   
 ```xml  

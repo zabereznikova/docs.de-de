@@ -3,17 +3,19 @@ title: Übersicht über Windows-Workflow
 description: In diesem Artikel werden Workflow Foundation-Workflows beschrieben, bei denen es sich um Modelle handelt, die reale Prozesse beschreiben.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558099"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268676"
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
+
 Bei einem Workflow handelt es sich um einen Satz von elementaren Einheiten, die als ein Modell gespeichert *werden, das* einen realen Prozess beschreibt. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
   
 ## <a name="workflow-run-time-engine"></a>Workflowruntime-Engine  
+
  Jede ausgeführte Workflowinstanz wird von einer prozessinternen Runtime-Engine erstellt und verwaltet, mit dem der Hostprozess durch eines der folgenden Objekte interagiert:  
   
 - Ein <xref:System.Activities.WorkflowInvoker>-Objekt, der den Workflow wie eine Methode aufruft.  
@@ -30,6 +32,7 @@ Bei einem Workflow handelt es sich um einen Satz von elementaren Einheiten, die 
 Workflowkomponenten im Hostprozess  
   
 ## <a name="interaction-between-workflow-components"></a>Interaktion zwischen Workflowkomponenten  
+
  Im folgenden Diagramm wird dargestellt, wie Workflowkomponenten miteinander interagieren.  
   
  ![Diagramm, das zeigt, wie Workflow Komponenten interagieren.](./media/overview/workflow-component-interatction.gif)  
@@ -42,6 +45,6 @@ Workflowkomponenten im Hostprozess
   
 - Eine benutzerdefinierte Aktivität, die von der abstrakten <xref:System.Activities.CodeActivity>-Klasse abgeleitet wird. <xref:System.Activities.CodeActivity> kann auf Laufzeitfunktionen (z. B. Nachverfolgung und Eigenschaften) mit dem <xref:System.Activities.CodeActivityContext> zugreifen, der als Parameter über die <xref:System.Activities.CodeActivity.Execute%2A>-Methode verfügbar ist. Weitere Informationen zu diesen Lauf Zeitfunktionen finden Sie unter [Workflow Verfolgung und Ablauf Verfolgung](workflow-tracking-and-tracing.md) und [Workflow Ausführungs Eigenschaften](workflow-execution-properties.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflow Tools für Ihr Projekt](/previous-versions/dotnet/articles/cc303238(v=msdn.10))

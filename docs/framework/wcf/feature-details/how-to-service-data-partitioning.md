@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Dienstdatenpartitionierung'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601191"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268923"
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
+
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise müssen Nachrichten von hochwertigen oder "Gold"-Kunden möglicherweise mit einer höheren Priorität verarbeitet werden als Nachrichten von einem Standardkunden.  
   
  In diesem Beispiel werden Nachrichten zu einem von zwei Instanzen des regularCalc-Diensts geleitet. Beide Instanzen des Diensts sind identisch. Der vom calculator1-Endpunkt vertretene Dienst verarbeitet jedoch Nachrichten von wichtigen Kunden, und der calculator2-Endpunkt verarbeitet Nachrichten von anderen Kunden.  
@@ -99,6 +100,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Es folgt eine vollständige Auflistung der Konfigurationsdatei.  
   
 ```xml  

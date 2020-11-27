@@ -2,17 +2,19 @@
 title: Begriffe der Sicherheit
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: b39db755ad33405e5dfcb22297f311bd3f6dbaae
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fee751a1a309e9afb7b143f274f8a4e403030dd7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268585"
 ---
 # <a name="security-concepts"></a>Begriffe der Sicherheit
+
 In diesem Abschnitt werden die mit Windows Communication Foundation (WCF)-Sicherheit verknüpften Konzepte kurz erläutert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [In WCF verwendete Sicherheitsbegriffe](security-concepts-used-in-wcf.md)  
  Eine grobe Übersicht über Konzepte bei Sicherheitsimplementierungen.  
   
@@ -23,6 +25,7 @@ In diesem Abschnitt werden die mit Windows Communication Foundation (WCF)-Sicher
  Ein Glossar der Begriffe, die beim erörtern der WCF-Sicherheit verwendet werden.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -34,6 +37,7 @@ In diesem Abschnitt werden die mit Windows Communication Foundation (WCF)-Sicher
  <xref:System.Security>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Erweitern der Sicherheit](../extending/extending-security.md)  
   
 ## <a name="see-also"></a>Siehe auch

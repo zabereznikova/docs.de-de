@@ -2,14 +2,15 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: f3b0e57f05ccb77eef25c97e7d5d028183e7b13e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1cb0cd4e7300920afb900af0291b9e3d3dc778b2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268286"
 ---
 # <a name="srmp"></a>SRMP
+
 In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkommunikation mithilfe von Message Queuing (MSMQ) über HTTP durchgeführt wird.  
   
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.  
@@ -34,13 +35,16 @@ In diesem Beispiel wird veranschaulicht, wie eine abgewickelte Warteschlangenkom
   
 8. Führen Sie den Client aus. Ändern Sie die Endpunktadresse so, dass diese auf den Computernamen oder die IP-Adresse anstelle von "localhost" verweist. Der Client sendet eine Nachricht und wird beendet.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
+
  Zum Ausführen dieses Beispiels muss IIS zusätzlich zu MSMQ sowohl auf dem Dienst- als auch auf dem Clientcomputer installiert sein.  
   
 ## <a name="demonstrates"></a>Zeigt  
+
  Das Beispiel veranschaulicht das Senden von WCF-Nachrichten in der Warteschlange mithilfe von MSMQ über http. Dies wird auch als SRMP-Messaging bezeichnet. Wenn eine in der Warteschlange befindliche Nachricht gesendet wird, überträgt MSMQ auf dem sendenden Computer die Nachrichten über TCP- oder HTTP-Transport an den empfangenden Warteschlangen-Manager. Indem er SRMP auswählt, gibt der Benutzer die Auswahl von HTTP als Transport für Warteschlangenübertragung an. SRMP Secure aktiviert die Verwendung von HTTPS.  
   
 ## <a name="example"></a>Beispiel  
+
  Der Beispielcode basiert auf dem durchgeführten Beispiel. Wie über SRMP eine Nachricht zu einer Warteschlange gesendet und wie eine Nachricht aus einer Warteschlange empfangen wird, entspricht dem Senden und Empfangen von Nachrichten mithilfe eines systemeigenen Protokolls.  
   
  Die Konfiguration für den Client wird geändert, um die Auswahl des Warteschlangen-Übertragungsprotokolls anzugeben. Das Warteschlangen-Übertragungsprotokoll kann systemeigen, SRMP oder SrmpSecure sein. Standardmäßig ist das Übertragungsprotokoll systemeigen. Der Client und der Dienst legen in diesem Beispiel in der Konfiguration die Verwendung von SRMP fest.  

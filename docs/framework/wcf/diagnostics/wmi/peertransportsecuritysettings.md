@@ -2,14 +2,15 @@
 title: PeerTransportSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 1df08cbb-68c5-4d36-9f88-a776a8117de8
-ms.openlocfilehash: fd5393a2ebdf5a5fb584edc2c0b1b941fa1481ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b5276eca89d32a45177aa958d4c99d682e30668
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962941"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268949"
 ---
 # <a name="peertransportsecuritysettings"></a>PeerTransportSecuritySettings
+
 PeerTransportSecuritySettings  
   
 ## <a name="syntax"></a>Syntax  
@@ -22,13 +23,16 @@ class PeerTransportSecuritySettings
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die PeerTransportSecuritySettings-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die PeerTransportSecuritySettings-Klasse verfügt über die folgende Eigenschaft:  
   
 ### <a name="credentialtype"></a>CredentialType  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -40,6 +44,6 @@ class PeerTransportSecuritySettings
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>

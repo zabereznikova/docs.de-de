@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8cea05965a0960f8b5f5948e621edb1ea1c032
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773463"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268156"
 ---
 # <a name="hosting-workflows"></a>Hosten von Workflows
+
 In den Themen in diesem Abschnitt wird das Hosten von Workflows behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Optionen zum Hosten von Workflows](workflow-hosting-options.md)  
  Beschreibt, wie Sie den entsprechenden Host für die Workflows auswählen.  
   
@@ -30,7 +32,7 @@ In den Themen in diesem Abschnitt wird das Hosten von Workflows behandelt.
  [Verwenden von WorkflowIdentity und Versionsverwaltung](using-workflowidentity-and-versioning.md)  
  Beschreibt, wie `WorkflowIdentity` zum parallelen Hosten mehrerer Workflowversionen verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Windows Workflow Foundation-Programmierung](programming.md)
 - [Entwerfen von Workflows](designing-workflows.md)

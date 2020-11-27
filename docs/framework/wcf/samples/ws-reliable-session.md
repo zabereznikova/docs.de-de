@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 68123ba9a273bf2c1eaa7b3747930ebca386064b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf3e206724636113646c478407e61dc1c775b620
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589694"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267194"
 ---
 # <a name="ws-reliable-session"></a>Zuverlässige WS-Sitzung
+
 Dieses Beispiel veranschaulicht die Verwendung von zuverlässigen Sitzungen. Zuverlässige Sitzungen bieten Unterstützung für zuverlässiges Messaging. Beim zuverlässigen Messaging wird die Kommunikation bei Fehlern erneut gestartet, und es werden Zustellungszusicherungen vorgenommen, wie Prüfung der Nachrichtenreihenfolge beim Eingang. Die Sitzungen erhalten den Status von Clients im Verlauf der verschiedenen Aufrufe aufrecht. Im Beispiel werden Sitzungen zum Aufrechterhalten des Clientstatus implementiert und eine Zustellungszusicherungen anhand der Nachrichtenreihenfolge festgelegt.  
   
 > [!IMPORTANT]
@@ -39,7 +40,7 @@ Dieses Beispiel veranschaulicht die Verwendung von zuverlässigen Sitzungen. Zuv
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Der Endpunkt enthält ein `bindingConfiguration`-Attribut, das auf die Bindungskonfiguration namens „Binding1“ verweist. Die Bindungs Konfiguration ermöglicht zuverlässige Sitzungen, indem das- `enabled` Attribut des auf festgelegt wird [\<reliableSession>](../../configure-apps/file-schema/wcf/reliablesession.md) `true` . Zustellungszusicherungen für geordnete Sitzungen werden gesteuert, indem das geordnete Attribut auf `true` oder `false` festgelegt wird. Der Standardwert lautet `true`.  
+ Der Endpunkt enthält ein `bindingConfiguration`-Attribut, das auf die Bindungskonfiguration namens „Binding1“ verweist. Die Bindungs Konfiguration ermöglicht zuverlässige Sitzungen, indem das- `enabled` Attribut des auf festgelegt wird [\<reliableSession>](../../configure-apps/file-schema/wcf/reliablesession.md) `true` . Zustellungszusicherungen für geordnete Sitzungen werden gesteuert, indem das geordnete Attribut auf `true` oder `false` festgelegt wird. Der Standardwert ist `true`.  
   
 ```xml  
 <bindings>  
