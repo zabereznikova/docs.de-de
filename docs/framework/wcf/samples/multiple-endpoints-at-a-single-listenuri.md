@@ -2,14 +2,15 @@
 title: Mehrere Endpunkte unter einem ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 91220c6631db2f283b6571fbc32af2211feeaa35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 09696ec8170915f29dae7510f8953565bcc67436
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260187"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
+
 In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf den ersten [Schritten, mit](getting-started-sample.md) denen ein Rechner Dienst implementiert wird.  
   
 > [!NOTE]
@@ -20,6 +21,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
  Die `EndpointAddress` ist die logische Adresse eines Diensts. An diese Adresse werden SOAP-Nachrichten adressiert. Der `ListenUri` ist die physische Adresse des Diensts. Er verfügt über die Informationen zu Port und Adresse, an denen der Dienst auf dem aktuellen Computer tatsächlich Nachrichten überwacht. In den meisten Fällen müssen diese Adressen nicht unterschiedlich sein. Wenn ein `ListenUri` nicht explizit angegeben ist, wird er standardmäßig auf den URI der `EndpointAddress` des Endpunkts festgelegt. In einigen Fällen ist es jedoch nützlich, die Adressen zu unterscheiden, z.&#160;B. wenn Sie einen Router konfigurieren, der Nachrichten akzeptiert, die möglicherweise an eine Reihe verschiedener Dienste adressiert sind.  
   
 ## <a name="service"></a>Dienst  
+
  Der Dienst in diesem Beispiel besitzt zwei Verträge: `ICalculator` und `IEcho`. Zusätzlich zum üblichen `IMetadataExchange`-Endpunkt gibt es drei Anwendungsendpunkte, wie im folgenden Code gezeigt.  
   
 ```xml  
@@ -44,6 +46,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
  Deshalb ermöglicht es die Kombination aus Adressfilter und Vertragsfilter, jede am `ListenUri` dieses Diensts eingehende Nachricht zum richtigen Endpunkt weiterzuleiten. Der dritte Endpunkt wird von den anderen beiden unterschieden, da er Nachrichten akzeptiert, die von den anderen Endpunkten an eine andere Adresse gesendet wurden. Der erste und der zweite Endpunkt werden anhand ihrer Verträge (die Aktion der eingehenden Nachricht) voneinander unterschieden.  
   
 ## <a name="client"></a>Client  
+
  So wie Endpunkte auf dem Server zwei verschiedene Adressen besitzen, weisen Clientendpunkte auch zwei Adressen auf. Sowohl auf dem Server als auch auf dem Client lautet die logische Adresse `EndpointAddress`. Die physische Adresse wird jedoch auf dem Server `ListenUri` und auf dem Client `Via` genannt.  
   
  Wie auf dem Server sind diese beiden Adressen standardmäßig identisch. Um einen `Via` auf dem Client anzugeben, der sich von der Adresse des Endpunkts unterscheidet, wird `ClientViaBehavior` verwendet:  

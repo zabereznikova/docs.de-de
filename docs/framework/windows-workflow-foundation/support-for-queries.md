@@ -2,27 +2,28 @@
 title: Unterstützung für Abfragen
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: e281b5ae7a41bd282f8e7c7eb9db6f99ef5487f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 350644de4a5deb7b8dcb5133c9cc2edb477fd355
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948938"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258438"
 ---
 # <a name="support-for-queries"></a>Unterstützung für Abfragen
+
 Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf. Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen. Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
   
 - **Der Name der Website.** Der Name der Website, die den Dienst enthält.  
   
-- **Relativer Anwendungspfad.** Der Pfad der Anwendung relativ zur Website.  
+- **Relative Application Path.** Der Pfad der Anwendung relativ zur Website.  
   
-- **Relativer Dienst Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
+- **Relative Service Path.** Der Pfad des Diensts relativ zur Anwendung.  
   
-- **Der Dienst Name.** Name des Diensts.  
+- **Der Dienst Name.** Der Name des Diensts.  
   
 - **Dienst Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
   
-- **Aktueller Computer.**  
+- **Current Machine.**  
   
 - **Letzter Computer**. Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
   
@@ -33,15 +34,17 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
   
  Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten. Weitere Informationen zu benutzerdefinierten Aktionen finden Sie unter [Store-Erweiterbarkeit](store-extensibility.md).  
   
-## <a name="views"></a>Ansichten  
+## <a name="views"></a>Sichten  
+
  Der Instanzspeicher enthält die folgenden Ansichten. Weitere Informationen finden Sie unter [persistenzdatenbankschema](persistence-database-schema.md) .  
   
 ### <a name="the-instances-view"></a>Die Ansicht "Instances"  
+
  Die Ansicht "Instances" enthält die folgenden Felder:  
   
 1. **Id**  
   
-2. **"Pdingtimer"**  
+2. **PendingTimer**  
   
 3. **CreationTime**  
   
@@ -53,17 +56,17 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
   
 7. **SuspensionReason**  
   
-8. **Activebookmarks**  
+8. **ActiveBookmarks**  
   
-9. **Currentmachine**  
+9. **CurrentMachine**  
   
-10. **Lastmachine**  
+10. **LastMachine**  
   
 11. **ExecutionStatus**  
   
 12. **IsInitialized**  
   
-13. **Issuout**  
+13. **IsSuspended**  
   
 14. **IsCompleted**  
   
@@ -73,11 +76,12 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
   
 17. **WriteOnlyPrimitiveDataProperties**  
   
-18. **"Read Write Items complexdataproperties"**  
+18. **ReadWriteComplexDataProperties**  
   
-19. **"Schreibonlycomplexdataproperties"**  
+19. **WriteOnlyComplexDataProperties**  
   
 ### <a name="the-servicedeployments-view"></a>Die Ansicht "ServiceDeployments"  
+
  Die Ansicht "ServiceDeployments" enthält die folgenden Felder:  
   
 1. **Sitename**  
@@ -86,11 +90,12 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
   
 3. **RelativeApplicationPath**  
   
-4. **ServiceName**  
+4. **Service Name**  
   
 5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Die Ansicht "InstancePromotedProperties"  
+
  Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder. Ausführliche Informationen zu höher gestuften Eigenschaften finden Sie im Thema [Store-Erweiterbarkeit](store-extensibility.md) .  
   
 1. **InstanceId**  

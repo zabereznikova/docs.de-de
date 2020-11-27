@@ -2,14 +2,15 @@
 title: POCO-Unterstützung
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: a9f8d185c58b22e68f7a8c11954e0e534c4bd48f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d416f37e0add99fbe3d60982fd2298748ff78556
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600463"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259966"
 ---
 # <a name="poco-support"></a>POCO-Unterstützung
+
 In diesem Beispiel wird die Serialisierungsunterstützung für makellose Typen demonstriert, d.&#160;h. Typen, auf die Serialisierungsattribute nicht angewendet wurden (diese werden auch als POCO-Typen (Plain Old CLR Object) bezeichnet). Der leitet <xref:System.Runtime.Serialization.DataContractSerializer> einen Datenvertrag für alle öffentlichen, nicht markierten Typen ab, die über einen Parameter losen Konstruktor verfügen. Datenverträge ermöglichen es Ihnen, strukturierte Daten an Dienste zu übergeben und von ihnen zu empfangen. Weitere Informationen zu nicht markierten Typen finden Sie unter [serialisierbare Typen](../feature-details/serializable-types.md).  
   
  Dieses Beispiel basiert auf den ersten [Schritten, verwendet jedoch komplexe](getting-started-sample.md)Zahlen anstelle von primitiven numerischen Typen. Es ähnelt auch dem Beispiel für den [grundlegenden Datenvertrag](basic-data-contract.md) , mit der Ausnahme, dass das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut und das- <xref:System.Runtime.Serialization.DataMemberAttribute> Attribut nicht verwendet werden.  

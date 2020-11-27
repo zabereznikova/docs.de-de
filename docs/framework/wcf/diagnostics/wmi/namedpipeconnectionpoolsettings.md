@@ -2,14 +2,15 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 8c2d4bfc08a503a8d6eb0e8abf6f1e798b90bc83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8422e1adf9a8914b631431eba5c9c0ed058cd0f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258022"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
+
 NamedPipeConnectionPoolSettings  
   
 ## <a name="syntax"></a>Syntax  
@@ -24,19 +25,23 @@ class NamedPipeConnectionPoolSettings
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die NamedPipeConnectionPoolSettings-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die NamedPipeConnectionPoolSettings-Klasse verfügt über die folgenden Eigenschaften:  
   
 ### <a name="groupname"></a>GroupName  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Der Gruppenname des vom Bindungselement verwendeten Verbindungspools.  
   
 ### <a name="idletimeout"></a>IdleTimeout  
+
  Datentyp: Zeitpunkt (Datum und Uhrzeit)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -44,6 +49,7 @@ class NamedPipeConnectionPoolSettings
  Die maximale Zeit, während der sich die Verbindung im Leerlauf befinden darf, bevor sie getrennt wird.  
   
 ### <a name="maxoutboundconnectionsperendpoint"></a>MaxOutboundConnectionsPerEndpoint  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -56,6 +62,6 @@ class NamedPipeConnectionPoolSettings
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

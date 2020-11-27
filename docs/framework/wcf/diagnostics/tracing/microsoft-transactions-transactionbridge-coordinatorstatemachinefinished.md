@@ -2,17 +2,19 @@
 title: Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 16cb428d-d886-4789-a961-6fded4b0dbba
-ms.openlocfilehash: 3b9a3703e49c3932f62fcfb6994c9028b074bbe8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d874cebe96b9caa99032e2881e19ec9cd34d047
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594412"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259010"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
+
 Der Zustandsautomat für eine Koordinatoreintragung wechselte in den abgeschlossenen Zustand.  
   
 ## <a name="description"></a>BESCHREIBUNG  
+
  Aufgezeichnet, wenn der lokale Transaktions-Manager davon ausgeht, dass eine übergeordnete Koordinatoreintragung die 2PC-Verarbeitung abgeschlossen hat. Das Ergebnis der Eintragung kann "Übermittelt", "Abgebrochen" oder "Vergessen" sein. Eine Aufzeichnung erfolgt auch, wenn der lokale Transaktions-Manager während der Vorbereitungsphase ReadOnly angibt.  
   
 ## <a name="see-also"></a>Weitere Informationen

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 05f35bbb7dbb34cd4067c407578038cbb4eff70f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599142"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257586"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst
+
 In Windows Communication Foundation (WCF) besteht das Erstellen eines Verbund Dienstanbieter aus den folgenden Haupt Prozeduren:  
   
 1. Konfigurieren einer <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung. Weitere Informationen zum Erstellen einer entsprechenden Bindung finden Sie unter Gewusst [wie: Erstellen einer WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md).  
@@ -28,14 +29,14 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Verbund Di
   
 1. Verwenden Sie die <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>-Eigenschaft der <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse, um einen Verweis an eine <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Instanz zurückzugeben. Der Zugriff auf die Eigenschaft erfolgt über die <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft der <xref:System.ServiceModel.ServiceHostBase>-Klasse.  
   
-2. Legen Sie die- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> Eigenschaft auf fest, `true` Wenn selbst ausgestellte Token wie CardSpace-Karten authentifiziert werden sollen. Der Standardwert lautet `false`.  
+2. Legen Sie die- <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> Eigenschaft auf fest, `true` Wenn selbst ausgestellte Token wie CardSpace-Karten authentifiziert werden sollen. Der Standardwert ist `false`.  
   
 3. Füllen Sie die von der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>-Eigenschaft zurückgegebene Sammlung mit Instanzen der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klasse auf. Jede Instanz stellt einen Aussteller dar, von dem der Dienst Token authentifiziert.  
   
     > [!NOTE]
     > Im Gegensatz zur clientseitigen Sammlung, die von der <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>-Eigenschaft zurückgegeben wird, handelt es sich bei der Sammlung bekannter Zertifikate nicht um eine schlüsselgebundene Sammlung. Der Dienst akzeptiert die Token, die die angegebenen Zertifikate unabhängig von der Adresse des Clients, der die Nachricht mit dem ausgestellten Token gesendet hat, ausstellen (mit gewissen Einschränkungen, die später in diesem Thema beschrieben werden).  
   
-4. Legen Sie die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>-Eigenschaft auf einen der <xref:System.ServiceModel.Security.X509CertificateValidationMode>-Enumerationswerte fest. Dies kann nur in Code erfolgen. Der Standardwert lautet <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
+4. Legen Sie die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>-Eigenschaft auf einen der <xref:System.ServiceModel.Security.X509CertificateValidationMode>-Enumerationswerte fest. Dies kann nur in Code erfolgen. Der Standardwert ist <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
   
 5. Wenn die <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> gesetzt ist, weisen Sie eine Instanz der benutzerdefinierten <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse zur <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>-Eigenschaft zu.  
   
@@ -56,6 +57,7 @@ In Windows Communication Foundation (WCF) besteht das Erstellen eines Verbund Di
 5. Legen Sie bei Bedarf das- `samlSerializer` Attribut des <`issuedTokenAuthentication`>-Elements auf den Typnamen der benutzerdefinierten <xref:System.IdentityModel.Tokens.SamlSerializer> Klasse fest.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden die Eigenschaften von <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> in Code festgelegt.  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]

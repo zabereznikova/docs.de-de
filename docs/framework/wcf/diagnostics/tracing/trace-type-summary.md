@@ -2,17 +2,18 @@
 title: Ablaufverfolgungstyp – Zusammenfassung
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259244"
 ---
 # <a name="trace-type-summary"></a>Ablaufverfolgungstyp – Zusammenfassung
-[Quellebenen](xref:System.Diagnostics.SourceLevels) definieren verschiedene Ablaufverfolgungsebenen: Critical, Error, Warning, Information und Verbose, sowie eine Beschreibung des `ActivityTracing` Flags, das die Ausgabe von Ablaufverfolgungsbegrenzungs- und Aktivitätsübertragungsereignissen umschaltet.  
+
+[Quell Ebenen](xref:System.Diagnostics.SourceLevels) definieren verschiedene Ablauf Verfolgungs Ebenen: "kritisch", "Fehler", "Warnung", "Information" und "ausführlich". Außerdem wird eine Beschreibung des Flags bereitstellt `ActivityTracing` , das die Ausgabe von Ablauf Verfolgungs Grenzen und Aktivitäts Übertragungs Ereignissen umschaltet.  
   
- Sie können <xref:System.Diagnostics.TraceEventType> auch die Arten von Ablaufverfolgungen <xref:System.Diagnostics>überprüfen, die von emittiert werden können.  
+ Sie können auch die Ablauf Verfolgungs Typen überprüfen <xref:System.Diagnostics.TraceEventType> , die von ausgegeben werden können <xref:System.Diagnostics> .  
   
  In der folgenden Tabelle werden die Wichtigsten aufgelistet.  
   
@@ -25,9 +26,9 @@ ms.locfileid: "78674837"
 |Ausführlich|Debuggen der Ablaufverfolgung.|  
 |Start|Starten einer logischen Verarbeitungseinheit.|  
 |Angehalten|Anhalten einer logischen Verarbeitungseinheit.|  
-|Fortfahren|Fortsetzen einer logischen Verarbeitungseinheit.|  
+|Fortsetzen|Fortsetzen einer logischen Verarbeitungseinheit.|  
 |Beenden|Beenden einer logischen Verarbeitungseinheit.|  
-|Übertragung|Ändern der Korrelationsidentität.|  
+|Übertragen|Ändern der Korrelationsidentität.|  
   
  Eine Aktivität ist als Kombination der oben genannten Ablaufverfolgungstypen definiert.  
   

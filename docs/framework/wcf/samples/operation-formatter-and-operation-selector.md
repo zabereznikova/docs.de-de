@@ -2,14 +2,15 @@
 title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 344d3122d03e89a7f20e391db49005d0e085dfa6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a49b466a940b63b70509ba76e62a9b9c5a36ad61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575152"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260031"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
+
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF)-Erweiterbarkeits Punkte verwendet werden können, um Nachrichten Daten in einem anderen Format als in WCF zuzulassen. Standardmäßig erwarten WCF-Formatierer, dass Methoden Parameter unter dem- `soap:body` Element enthalten sind. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
   
  Das Beispiel basiert auf den ersten [Schritten, die](getting-started-sample.md)den `ICalculator` Dienstvertrag implementieren. Es zeigt, wie Add-, Subtract-, Multiply- und Divide-Nachrichten so geändert werden können, dass für Client-an-Server-Anforderungen HTTP GET und für Server-zu-Client-Antworten HTTP POST mit POX-Nachrichten verwendet werden.  
@@ -30,7 +31,8 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="key-concepts"></a>Wichtige Konzepte  
- `QueryStringFormatter`-Der Vorgangs Formatierer ist die Komponente in WCF, die für das umrechnen einer Nachricht in ein Array von Parameter Objekten und ein Array von Parameter Objekten in eine Nachricht zuständig ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
+
+ `QueryStringFormatter` -Der Vorgangs Formatierer ist die Komponente in WCF, die für das umrechnen einer Nachricht in ein Array von Parameter Objekten und ein Array von Parameter Objekten in eine Nachricht zuständig ist. Auf dem Client erfolgt dies mithilfe der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>-Schnittstelle, und auf dem Server mit der <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Schnittstelle. Mit diesen Schnittstellen können Benutzer die Anforderungs- und Antwortnachrichten aus der `Serialize`-Methode und der `Deserialize`-Methode abrufen.  
   
  In diesem Beispiel implementiert `QueryStringFormatter` beide Schnittstellen und wird sowohl auf dem Client als auch auf dem Server implementiert.  
   
@@ -47,6 +49,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
 - In diesem Beispiel wird HTTP GET nur für die Anforderung verwendet. Der Formatierer delegiert das Senden der Antwort an den ursprünglichen Formatierer, von dem XML-Nachrichten generiert worden wären. Eines der Ziele dieses Beispiels besteht darin, zu zeigen, wie solch ein delegierender Formatierer implementiert werden kann.  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector-Klasse  
+
  Mit der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle können Benutzer ihre eigene Logik für die Entscheidung implementieren, für welchen Vorgang eine bestimmte Nachricht weitergeleitet werden soll.  
   
  In diesem Beispiel muss `UriPathSuffixOperationSelector` zum Auswählen des entsprechenden Vorgangs auf dem Server implementiert werden, da anstelle eines Aktionsheaders in der Nachricht der Vorgangsname in dem HTTP-GET-URI eingetragen wird. Das Beispiel ist so eingerichtet, dass bei Vorgangsnamen die Groß- und Kleinschreibung nicht beachtet werden muss.  
@@ -54,6 +57,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
  Die `SelectOperation`-Methode nimmt die eingehende Nachricht entgegen und schlägt den `Via`-URI in deren Nachrichteneigenschaften nach. Sie extrahiert das Vorgangsnamenssuffix aus dem URI, schlägt in einer internen Tabelle den Namen des Vorgangs nach, an den die Nachricht weitergeleitet werden soll, und gibt diesen Vorgangsnamen dann zurück.  
   
 ### <a name="enablehttpgetrequestsbehavior-class"></a>EnableHttpGetRequestsBehavior-Klasse  
+
  Die `UriPathSuffixOperationSelector`-Komponente kann programmgesteuert oder über ein Endpunktverhalten eingerichtet werden. Das Beispiel implementiert das `EnableHttpGetRequestsBehavior`-Verhalten, das in der Anwendungskonfigurationsdatei des Diensts angegeben wird.  
   
  Auf dem Server:  
@@ -63,6 +67,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
  Standardmäßig verwendet WCF einen exakten Adress Filter. Der URI in der eingehenden Nachricht enthält ein Vorgangsnamenssuffix, gefolgt von einer Abfragezeichenfolge, die Parameterdaten enthält. Daher ändert das Endpunktverhalten auch den Adressfilter in einen Präfixübereinstimmungsfilter. Hierfür wird WCF verwendet <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> .  
   
 ### <a name="installing-operation-formatters"></a>Installieren von Vorgangsformatierern  
+
  Vorgangsverhaltensweisen, die Formatierer angeben, sind eindeutig. Standardmäßig wird ein solches Verhalten für jeden Vorgang stets zum Erstellen des erforderlichen Vorgangsformatierers implementiert. Auch wenn diese Verhaltensweisen wie noch ein weiteres Vorgangsverhalten aussehen mögen, sind sie nicht durch andere Attribute zu identifizieren. Zum Installieren eines Ersetzungs Verhaltens muss die-Implementierung nach bestimmten Formatiererverhalten suchen, die vom WCF-typlader standardmäßig installiert werden, und entweder ersetzen oder ein kompatibles Verhalten hinzufügen, das nach dem Standardverhalten ausgeführt wird.  
   
  Diese Vorgangsformatiererverhalten können programmgesteuert vor dem Aufruf von <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> eingerichtet werden, oder indem man ein Vorgangsverhalten angibt, das nach dem Standardverhalten ausgeführt wird. Es kann jedoch nicht einfach wie ein Endpunktverhalten (und damit per Konfiguration) eingerichtet werden, da das Verhaltensmodell das Ersetzen eines Verhaltens durch ein anderes oder sonstiges Ändern der Beschreibungsstruktur nicht zulässt.  
@@ -98,7 +103,8 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 - Das muss erfolgen, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. In diesem Beispiel wird gezeigt, wie der Formatierer manuell geändert wird, bevor <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> aufgerufen wird. Dasselbe lässt sich auch erreichen, indem man eine Klasse von <xref:System.ServiceModel.ServiceHost> ableitet, die vor dem Öffnen `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` aufruft (Beispiel dazu finden Sie in der Hostingdokumentation).  
   
-### <a name="user-experience"></a>Benutzerfreundlichkeit  
+### <a name="user-experience"></a>Benutzererfahrung  
+
  Auf dem Server:  
   
 - Die `ICalculator`-Serverimplementierung muss nicht geändert werden.  

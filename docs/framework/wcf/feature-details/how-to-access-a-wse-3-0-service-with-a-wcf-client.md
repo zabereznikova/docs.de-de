@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 847146c2025612689f0d69cc0c23d2be14018c0f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c955244c2e6821abda3a1fc5e25f00a73389ff1d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257768"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client
-Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene kompatibel mit Web Services-Erweiterungen (WSE) 3,0 für Microsoft .NET Services, wenn WCF-Clients für die Verwendung der WS-Adressierungs Spezifikation vom August 2004 konfiguriert sind. WSE 3,0-Dienste unterstützen das Metadatenaustausch-Protokoll (MEX) nicht. Wenn Sie also das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer WCF-Client Klasse verwenden, werden die Sicherheitseinstellungen nicht auf den generierten WCF-Client angewendet. Daher müssen Sie die Sicherheitseinstellungen angeben, die der WSE 3,0-Dienst benötigt, nachdem der WCF-Client generiert wurde.  
+
+Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene kompatibel mit Web Services-Erweiterungen (WSE) 3,0 für Microsoft .NET Services, wenn WCF-Clients für die Verwendung der WS-Addressing Spezifikation vom August 2004 konfiguriert sind. WSE 3,0-Dienste unterstützen das Metadatenaustausch-Protokoll (MEX) nicht. Wenn Sie also das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer WCF-Client Klasse verwenden, werden die Sicherheitseinstellungen nicht auf den generierten WCF-Client angewendet. Daher müssen Sie die Sicherheitseinstellungen angeben, die der WSE 3,0-Dienst benötigt, nachdem der WCF-Client generiert wurde.  
   
  Sie können diese Sicherheitseinstellungen anwenden, indem Sie eine benutzerdefinierte Bindung verwenden, um die Anforderungen des WSE 3,0-Diensts und die interoperablen Anforderungen zwischen einem WSE 3,0-Dienst und einem WCF-Client zu berücksichtigen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der Standard Nachrichten Schutz für WCF ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> . In diesem Thema wird erläutert, wie eine WCF-Bindung erstellt wird, die mit einem WSE 3,0-Dienst interagiert. WCF stellt auch ein Beispiel bereit, das diese Bindung enthält. Weitere Informationen zu diesem Beispiel finden Sie unter Interoperabilität [mit ASMX-Webdiensten](../samples/interoperating-with-asmx-web-services.md).  
   
@@ -58,9 +59,10 @@ Windows Communication Foundation (WCF)-Clients sind auf Wire-Ebene kompatibel mi
      [!code-vb[c_WCFClientToWSEService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#4)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel definiert eine benutzerdefinierte Bindung, die Eigenschaften offenlegt, die mit den Eigenschaften der sofort verwendbaren WSE 3.0-Sicherheitsassertion übereinstimmen. Diese benutzerdefinierte Bindung mit dem Namen `WseHttpBinding` wird dann verwendet, um die Bindungseigenschaften für einen WCF-Client anzugeben, der mit dem WSSecurityAnonymous WSE 3,0-Schnellstart Beispiel kommuniziert.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.Binding>
 - [Interoperieren mit WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

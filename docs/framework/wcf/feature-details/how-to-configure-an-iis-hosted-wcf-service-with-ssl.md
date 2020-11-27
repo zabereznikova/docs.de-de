@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Konfigurieren eines IIS-gehosteten WCF-Diensts mit SSL'
 description: Erfahren Sie, wie Sie einen IIS-gehosteten WCF-Dienst einrichten, um die HTTP-Transportsicherheit zu verwenden. hierfür ist ein Zertifikat erforderlich, das bei IIS registriert ist.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 960005761d3bed917142141976e9f9094094b34c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257651"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Vorgehensweise: Konfigurieren eines IIS-gehosteten WCF-Diensts mit SSL
+
 In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die Verwendung der HTTP-Transportsicherheit eingerichtet wird. Die HTTP-Transportsicherheit erfordert für die Registrierung bei IIS ein SSL-Zertifikat. Wenn Sie über kein SSL-Zertifikat verfügen, können Sie mit IIS ein Testzertifikat generieren. Danach müssen Sie der Website eine SSL-Bindung hinzufügen und die Authentifizierungseigenschaften der Website konfigurieren. Abschließend müssen Sie den WCF-Dienst für die Verwendung von HTTPS konfigurieren.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Erstellen eines selbstsignierten Zertifikats  
@@ -19,7 +20,7 @@ In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die
   
      ![Hauptbildschirm von IIS-Manager](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. Klicken Sie im Fenster Server Zertifikate auf das Feld **selbst signiertes Zertifikat erstellen....** Verknüpfen.  
+2. Klicken Sie im Fenster Server Zertifikate auf das **Self-Signed Zertifikat erstellen....** Verknüpfen.  
   
      ![Erstellen eines selbst&#45;signierten Zertifikats mit IIS](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
@@ -95,6 +96,7 @@ In diesem Thema wird beschrieben, wie ein von IIS gehosteter WCF-Dienst für die
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im Folgenden finden Sie ein vollständiges Beispiel für die Datei web.config eines WCF-Diensts, der HTTP-Transportsicherheit verwendet.  
   
 ```xml  

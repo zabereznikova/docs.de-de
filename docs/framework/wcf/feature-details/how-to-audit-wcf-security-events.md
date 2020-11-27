@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 186dd4a7fc2beae848e5cbd167a204352ee6ed4e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257560"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Vorgehensweise: Überwachen von Windows Communication Foundation-Sicherheitsereignissen
+
 Mit Windows Communication Foundation (WCF) können Sie Sicherheitsereignisse im Windows-Ereignisprotokoll protokollieren, die mit dem Windows Ereignisanzeige angezeigt werden können. In diesem Thema wird erläutert, wie eine Anwendung so eingerichtet werden kann, dass Sicherheitsereignisse protokolliert werden. Weitere Informationen zur WCF- [Überwachung finden Sie](auditing-security-events.md)unter Überwachung.  
   
 ### <a name="to-audit-security-events-in-code"></a>So überwachen Sie Sicherheitsereignisse im Code  
@@ -45,7 +46,7 @@ Mit Windows Communication Foundation (WCF) können Sie Sicherheitsereignisse im 
   
 ### <a name="to-set-up-auditing-in-configuration"></a>So richten Sie die Überwachung in der Konfiguration ein  
   
-1. Fügen Sie [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) dem- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Abschnitt der Datei "Web. config" ein-Element hinzu, um die Überwachung in der Konfiguration einzurichten. Fügen Sie dann ein [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) -Element hinzu, und legen Sie die verschiedenen Attribute fest, wie im folgenden Beispiel gezeigt.  
+1. Fügen Sie [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) dem- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Abschnitt der web.config Datei ein-Element hinzu, um die Überwachung in der Konfiguration einzurichten. Fügen Sie dann ein [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) -Element hinzu, und legen Sie die verschiedenen Attribute fest, wie im folgenden Beispiel gezeigt.  
   
     ```xml  
     <behaviors>  
@@ -73,23 +74,25 @@ Mit Windows Communication Foundation (WCF) können Sie Sicherheitsereignisse im 
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Mithilfe des folgenden Codes wird eine Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse erstellt, und der Verhaltensauflistung wird ein neues <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> hinzugefügt.  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
+
  Durch Festlegen der <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>-Eigenschaft auf `true` werden Fehler beim Generieren von Sicherheitsüberwachungen unterdrückt. (Bei Verwendung von `false` wird eine Ausnahme ausgelöst). Wenn Sie jedoch die folgende Windows-Eigenschaft für die **lokale Sicherheitseinstellung** aktivieren, führt ein Fehler beim Generieren von Überwachungs Ereignissen dazu, dass Windows sofort heruntergefahren wird:  
   
  **Überwachung: System sofort herunterfahren, wenn Sicherheitsüberprüfungen nicht protokolliert werden können**  
   
- Um die-Eigenschaft festzulegen, öffnen Sie das Dialogfeld **Lokale Sicherheitseinstellungen** . Klicken Sie unter **Sicherheitseinstellungen**auf **lokale Richtlinien**. Klicken Sie dann auf **Sicherheitsoptionen**.  
+ Um die-Eigenschaft festzulegen, öffnen Sie das Dialogfeld **Lokale Sicherheitseinstellungen** . Klicken Sie unter **Sicherheitseinstellungen** auf **lokale Richtlinien**. Klicken Sie dann auf **Sicherheitsoptionen**.  
   
- Wenn die <xref:System.ServiceModel.AuditLogLocation> -Eigenschaft auf festgelegt ist <xref:System.ServiceModel.AuditLogLocation.Security> und die Überwachung des **Objekt Zugriffs** in der **lokalen Sicherheitsrichtlinie**nicht festgelegt ist, werden Überwachungs Ereignisse nicht in das Sicherheitsprotokoll geschrieben. Es wird zwar kein Fehler zurückgegeben, doch die Überwachungseinträge werden nicht in das Sicherheitsprotokoll geschrieben.  
+ Wenn die <xref:System.ServiceModel.AuditLogLocation> -Eigenschaft auf festgelegt ist <xref:System.ServiceModel.AuditLogLocation.Security> und die Überwachung des **Objekt Zugriffs** in der **lokalen Sicherheitsrichtlinie** nicht festgelegt ist, werden Überwachungs Ereignisse nicht in das Sicherheitsprotokoll geschrieben. Es wird zwar kein Fehler zurückgegeben, doch die Überwachungseinträge werden nicht in das Sicherheitsprotokoll geschrieben.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [Auditing](auditing-security-events.md)
+- [Überwachung](auditing-security-events.md)
