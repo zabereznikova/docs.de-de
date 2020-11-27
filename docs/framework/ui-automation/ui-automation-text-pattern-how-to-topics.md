@@ -9,23 +9,25 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-ms.openlocfilehash: fa145607c1e3286870c0cc07f2ecb12583900440
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f6a002e531f634d11057e80430745995827e9d7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924811"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281156"
 ---
-# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="c6743-104">Hilfethemen zu Textmustern zur Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-104">UI Automation Text Pattern-How-to Topics</span></span>
+# <a name="ui-automation-text-pattern-how-to-topics"></a><span data-ttu-id="1fd0f-104">Hilfethemen zu Textmustern zur Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-104">UI Automation Text Pattern-How-to Topics</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="c6743-105">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="c6743-105">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="c6743-106">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="c6743-106">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="1fd0f-105">Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind.</span><span class="sxs-lookup"><span data-stu-id="1fd0f-105">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="1fd0f-106">Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="1fd0f-106">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="c6743-107">Dieser Abschnitt enthält Themen, in denen die Verwendung des Text Musters für die Benutzeroberflächen Automatisierung erläutert wird.</span><span class="sxs-lookup"><span data-stu-id="c6743-107">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
+ <span data-ttu-id="1fd0f-107">Dieser Abschnitt enthält Themen, in denen die Verwendung des Text Musters für die Benutzeroberflächen Automatisierung erläutert wird.</span><span class="sxs-lookup"><span data-stu-id="1fd0f-107">This section includes topics that explain how to use UI Automation text pattern.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c6743-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c6743-108">In This Section</span></span>  
- [<span data-ttu-id="c6743-109">Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-109">Add Content to a Text Box Using UI Automation</span></span>](add-content-to-a-text-box-using-ui-automation.md)  
- [<span data-ttu-id="c6743-110">Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-110">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)  
- [<span data-ttu-id="c6743-111">Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-111">Obtain Text Attributes Using UI Automation</span></span>](obtain-text-attributes-using-ui-automation.md)  
- [<span data-ttu-id="c6743-112">Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-112">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [<span data-ttu-id="c6743-113">Durchlaufen von Text mit Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-113">Traverse Text Using UI Automation</span></span>](traverse-text-using-ui-automation.md)  
- [<span data-ttu-id="c6743-114">Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="c6743-114">Access Embedded Objects Using UI Automation</span></span>](access-embedded-objects-using-ui-automation.md)
+## <a name="in-this-section"></a><span data-ttu-id="1fd0f-108">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1fd0f-108">In This Section</span></span>  
+
+ [<span data-ttu-id="1fd0f-109">Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-109">Add Content to a Text Box Using UI Automation</span></span>](add-content-to-a-text-box-using-ui-automation.md)  
+ [<span data-ttu-id="1fd0f-110">Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-110">Find and Highlight Text Using UI Automation</span></span>](find-and-highlight-text-using-ui-automation.md)  
+ [<span data-ttu-id="1fd0f-111">Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-111">Obtain Text Attributes Using UI Automation</span></span>](obtain-text-attributes-using-ui-automation.md)  
+ [<span data-ttu-id="1fd0f-112">Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-112">Obtain Mixed Text Attribute Details Using UI Automation</span></span>](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [<span data-ttu-id="1fd0f-113">Durchlaufen von Text mit Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-113">Traverse Text Using UI Automation</span></span>](traverse-text-using-ui-automation.md)  
+ [<span data-ttu-id="1fd0f-114">Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung</span><span class="sxs-lookup"><span data-stu-id="1fd0f-114">Access Embedded Objects Using UI Automation</span></span>](access-embedded-objects-using-ui-automation.md)
