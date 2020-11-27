@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597526"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284159"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurieren der vom System bereitgestellten Bindungen
+
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Bindungen bestehen aus Elementen, die definieren, wie die Windows Communication Foundation (WCF)-Kanäle angeordnet werden, um die erforderlichen Kommunikations Features bereitzustellen. Eine Bindung enthält drei Arten von Elementen:  
   
 - Bindungselemente für den Protokollkanal, die die Einstellungen bezüglich Sicherheit, Zuverlässigkeit und Kontextablauf oder benutzerdefinierte Protokolle festlegen, die beim Senden von Nachrichten zum Endpunkt verwendet werden sollen.  
@@ -31,6 +32,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 > Verwenden Sie nur dann Duplexverträge mit Bindungen, die keine Sicherheitsfunktionen unterstützen oder bei denen die Sicherheitsfunktionen deaktiviert sind, wenn der Datenaustausch im Netzwerk auf andere Weise geschützt wird.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
+
  Die folgenden Bindungen werden mit WCF ausgeliefert.  
   
 |Bindung|Konfigurationselement|BESCHREIBUNG|  
@@ -49,6 +51,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Eine Bindung, die für die Computer übergreifende Kommunikation zwischen einer WCF-Anwendung und vorhandenen Message Queuing (auch MSMQ)-Anwendungen geeignet ist.|  
   
 ## <a name="binding-features"></a>Binden von Funktionen  
+
  In der nächsten Tabelle sind einige der wichtigsten Funktionen der einzelnen vom System bereitgestellten Bindungen dargestellt. Die Bindungen sind in der ersten Tabellenspalte angegeben, und die Informationen zu den Funktionen werden in der Tabelle beschrieben. In der folgenden Tabelle werden die im Zusammenhang mit Bindungen verwendeten Abkürzungen erklärt. Zur Auswahl einer Bindung ermitteln Sie, welche Spalte in den Zeilen alle Funktionen enthält, die Sie benötigen.  
   
 |Bindung|Interoperabilität|Sicherheitsmodus (Standard)|Sitzung<br /><br /> (Standardwert)|Transaktionen|Duplex|  
@@ -57,11 +60,11 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |<xref:System.ServiceModel.WSHttpBinding>|WS|(Keine), Transport, (Nachricht), Gemischt|(Keine), Transport, zuverlässige Sitzung|(Keine), Ja|–|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|(Keine), Transport, (Nachricht), Gemischt|(Keine), Transport, zuverlässige Sitzung|(Keine), Ja|–|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|Keine, (Nachricht)|(Zuverlässige Sitzung)|(Keine), Ja|Ja|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Keine, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung|(Keine), Ja|Nein|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Keine, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung|(Keine), Ja|Nein|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation-|Keine, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung|(Keine), Ja|Nein |  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation-|Keine, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung|(Keine), Ja|Nein |  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|Keine, (Transport), Nachricht<br /><br /> Mixed|Zuverlässige Sitzung, (Transport)|(Keine), Ja|Ja|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Keine<br /><br /> (Transport)|Keine, (Transport)|(Keine), Ja|Ja|  
-|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Keine, Nachricht, (Transport), Beide|(Keine)|(Keine), Ja|Nein|  
+|<xref:System.ServiceModel.NetMsmqBinding>|.NET|Keine, Nachricht, (Transport), Beide|(Keine)|(Keine), Ja|Nein |  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|Keine, Nachricht, (Transport), Gemischt|(Keine)|(Keine)|Ja|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|Keine, Transport, transportkredentialonly|(Keine)|(Keine)|–|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Keine, (Transport)|(Keine)|(Keine), Ja|–|  

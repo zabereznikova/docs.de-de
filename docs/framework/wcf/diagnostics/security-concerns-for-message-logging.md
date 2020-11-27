@@ -2,19 +2,21 @@
 title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550546"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283769"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
+
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
   
 ## <a name="security-concerns"></a>Sicherheitsaspekte  
   
 ### <a name="logging-sensitive-information"></a>Protokollieren vertraulicher Informationen  
+
  Windows Communication Foundation (WCF) ändert keine Daten in anwendungsspezifischen Headern und Text. WCF verfolgt auch keine persönlichen Informationen in anwendungsspezifischen Headern oder Textdaten nach.  
   
  Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern, wie z. B. eine Abfragezeichenfolge, und Textdaten, wie z. B. eine Kreditkartennummer, u. U. in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Erzwingen einer Zugriffssteuerung für die Konfigurations- und Protokolldateien verantwortlich. Wenn Informationen dieser Art nicht sichtbar sein sollen, sollten Sie die Protokollierung deaktivieren, oder filtern Sie einen Teil der Daten heraus, wenn Sie die Protokolle freigeben möchten.  
@@ -94,9 +96,11 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 > PII wird nicht in falsch formatierten Nachrichten ausgeblendet. Solche Nachrichten werden ohne Änderung protokolliert. Vorher erwähnte Attribute haben keine Auswirkungen darauf.  
   
 ### <a name="custom-trace-listener"></a>Benutzerdefinierter Ablaufverfolgungslistener  
+
  Das Hinzufügen eines benutzerdefinierten Ablaufverfolgungslisteners auf eine Ablaufverfolgungsquelle für Nachrichtenprotokollierung ist ein Recht, das dem Administrator vorbehalten sein sollte. Grund hierfür ist, dass bösartige benutzerdefinierte Listener für das remote Senden von Nachrichten konfiguriert werden können, was zur Offenlegung vertraulicher Informationen führt. Darüber hinaus sollten Sie eine angemessene Zugangskontrolle für die Nachrichtenprotokolle auf einem Remotecomputer erstellen, wenn Sie einen benutzerdefinierten Listener für das Senden von Nachrichten beispielsweise zu einer Remotedatenbank konfigurieren.  
   
 ## <a name="events-triggered-by-message-logging"></a>Von Nachrichtenprotokollierung ausgelöste Ereignisse  
+
  Im Folgenden werden alle Ereignisse aufgelistet, die von der Nachrichtenprotokollierung ausgelöst werden.  
   
 - Nachrichtenprotokollierung ein: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung in der Konfiguration aktiviert wird, oder durch WMI. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
@@ -105,11 +109,11 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
   
 - Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. Dies geschieht, wenn das `enableLoggingKnownPii` -Attribut im- `machineSettings` Element der Machine.config Datei auf festgelegt ist `true` und das- `logKnownPii` Attribut des- `source` Elements entweder in der App.config-oder Web.config-Datei auf festgelegt ist `true` .  
   
-- Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. Dies geschieht, wenn das- `logKnownPii` Attribut des- `source` Elements entweder in der App.config-oder Web.config-Datei auf festgelegt ist `true` , das- `enableLoggingKnownPii` Attribut im- `machineSettings` Element der Machine.config Datei jedoch auf festgelegt ist `false` . Es wird keine Ausnahme ausgelöst.  
+- Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. Dies geschieht, wenn das- `logKnownPii` Attribut des- `source` Elements entweder in der App.config-oder Web.config-Datei auf festgelegt ist `true` , das- `enableLoggingKnownPii` Attribut im- `machineSettings` Element der Machine.config Datei jedoch auf festgelegt ist `false` . Es werden keine Ausnahmen ausgelöst.  
   
  Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](./event-logging/index.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Nachrichtenprotokollierung](message-logging.md)
 - [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](./tracing/security-concerns-and-useful-tips-for-tracing.md)

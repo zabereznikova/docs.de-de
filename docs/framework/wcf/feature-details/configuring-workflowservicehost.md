@@ -2,17 +2,19 @@
 title: Konfigurieren von WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: f8364e7e6bed357f65c66f5b6b13bbb19d55237f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f452bf0a6edce42b8a42dee75faaa6c1ef39ad6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597487"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284003"
 ---
 # <a name="configuring-workflowservicehost"></a>Konfigurieren von WorkflowServiceHost
+
 Dieser Abschnitt enthält eine Reihe kurzer "Gewusst wie"-Themen, in denen kurz beschrieben wird, wie unterschiedliche Funktionen der- <xref:System.ServiceModel.Activities.WorkflowServiceHost> Klasse in der Konfiguration konfiguriert werden. In diesen Themen wird die Konfiguration des Workflow Dienstanbieter behandelt. alle anderen Konfigurationen werden auf die gleiche Weise wie ein regulärer WCF-Dienst durchgeführt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Vorgehensweise: Konfigurieren der Persistenz mit WorkflowServiceHost](how-to-configure-persistence-with-workflowservicehost.md)  
  Beschreibt, wie Sie die Persistenz für einen Workflowdienst mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> konfigurieren.  
   

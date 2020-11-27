@@ -2,14 +2,15 @@
 title: Nicht generisches ForEach-Element
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 08dbac3974915f823a4f6e39f35927453a7c4b3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9678d929375857a76d01f575e637a069b0911ae5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283574"
 ---
 # <a name="non-generic-foreach"></a>Nicht generisches ForEach-Element
+
 Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] gehört ein Satz von Ablaufsteuerungsaktivitäten, einschließlich <xref:System.Activities.Statements.ForEach%601>, die das Durchlaufen von <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen ermöglicht.  
   
  Für <xref:System.Activities.Statements.ForEach%601> muss die <xref:System.Activities.Statements.ForEach%601.Values%2A>-Eigenschaft den Typ <xref:System.Collections.Generic.IEnumerable%601> aufweisen. Dies schließt Benutzer davon aus, Datenstrukturen zu durchlaufen, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementieren (z. B. <xref:System.Collections.ArrayList>). Die nicht generische Version von <xref:System.Activities.Statements.ForEach%601> bewältigt diese Anforderung zulasten einer größeren Laufzeitkomplexität zum Sicherstellen der Kompatibilität der Typen der Werte in der Auflistung.  
@@ -17,11 +18,13 @@ Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current
  In diesem Beispiel wird gezeigt, wie eine nicht generische <xref:System.Activities.Statements.ForEach%601>-Aktivität und der Designer implementiert werden. Diese Aktivität kann zum Durchlaufen von <xref:System.Collections.ArrayList> verwendet werden.  
   
 ## <a name="foreach-activity"></a>ForEach-Aktivität  
- Die C-/Visual `foreach` Basic-Anweisung zählt die Elemente einer Auflistung auf und führt eine eingebettete Anweisung für jedes Element der Auflistung aus. Die entsprechenden [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Aktivitäten für `foreach` sind <xref:System.Activities.Statements.ForEach%601> und <xref:System.Activities.Statements.ParallelForEach%601>. Die <xref:System.Activities.Statements.ForEach%601>-Aktivität enthält eine Liste von Werten und einen Text. Zur Laufzeit wird die Liste durchlaufen, und der Text wird für jeden Wert in der Liste ausgeführt.  
+
+ Die c#/Visual Basic- `foreach` Anweisung zählt die Elemente einer Auflistung auf und führt eine eingebettete Anweisung für jedes Element der Auflistung aus. Die entsprechenden [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Aktivitäten für `foreach` sind <xref:System.Activities.Statements.ForEach%601> und <xref:System.Activities.Statements.ParallelForEach%601>. Die <xref:System.Activities.Statements.ForEach%601>-Aktivität enthält eine Liste von Werten und einen Text. Zur Laufzeit wird die Liste durchlaufen, und der Text wird für jeden Wert in der Liste ausgeführt.  
   
  In den meisten Fällen sollte die generische Version der Aktivität die bevorzugte Lösung sein, da die meisten Szenarien, in denen sie verwendet wird, damit abgedeckt werden und sie zur Kompilierzeit eine Typüberprüfung bietet. Die nicht generische Version kann zum Durchlaufen von Typen, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle implementieren, verwendet werden.  
   
 ## <a name="class-definition"></a>Klassendefinition  
+
  Im folgenden Codebeispiel wird die Definition einer nicht generischen `ForEach`-Aktivität veranschaulicht.  
   
 ```csharp  
@@ -45,6 +48,7 @@ public class ForEach : NativeActivity
  Die Auflistung von Elementen, die durchlaufen werden. Die Sicherstellung, dass alle Elemente der Auflistung kompatible Typen aufweisen, erfolgt zur Laufzeit.  
   
 ## <a name="example-of-using-foreach"></a>Beispiel der Verwendung von ForEach  
+
  Im folgenden Code wird veranschaulicht, wie die ForEach-Aktivität in einer Anwendung verwendet wird.  
   
 ```csharp  
@@ -72,7 +76,8 @@ Activity sampleUsage =
 |Werte sind `null`|Für das erforderliche Aktivitätsargument "Values1" wurde kein Wert angegeben.|Fehler|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach-Designer  
- Der Aktivitätsdesigner für das Beispiel ist dem Designer im Aussehen ähnlich, der für die integrierte <xref:System.Activities.Statements.ForEach%601>-Aktivität dient. Der Designer wird in der Toolbox in der Kategorie **Samples**, **Non-Generic Activities** angezeigt. Der Designer heißt In der Toolbox Den Namen **ForEachWithBodyFactory,** da die Aktivität eine <xref:System.Activities.Presentation.IActivityTemplateFactory> in <xref:System.Activities.ActivityAction>der Toolbox verfügbar macht, die die Aktivität mit einer ordnungsgemäß konfigurierten erstellt.  
+
+ Der Aktivitätsdesigner für das Beispiel ist dem Designer im Aussehen ähnlich, der für die integrierte <xref:System.Activities.Statements.ForEach%601>-Aktivität dient. Der Designer wird in der Toolbox in der Kategorie **Beispiele**, **nicht generische Aktivitäten** angezeigt. Der Designer hat den Namen **ForEachWithBodyFactory** in der Toolbox, da die-Aktivität ein-Objekt <xref:System.Activities.Presentation.IActivityTemplateFactory> in der Toolbox verfügbar macht, das die Aktivität mit einem ordnungsgemäß konfigurierten-Objekt erstellt <xref:System.Activities.ActivityAction> .  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -97,9 +102,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. Legen Sie das Projekt Ihrer Wahl als Startprojekt der Projektmappe fest:  
   
-    1. **CodeTestClient** zeigt, wie die Aktivität mithilfe von Code verwendet wird.  
+    1. **Codetestclient** zeigt, wie die-Aktivität mithilfe von Code verwendet wird.  
   
-    2. **DesignerTestClient** zeigt, wie die Aktivität im Designer verwendet wird.  
+    2. **Designertestclient** zeigt, wie die-Aktivität innerhalb des Designers verwendet wird.  
   
 2. Erstellen Sie das Projekt, und führen Sie es aus.  
   
@@ -108,6 +113,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples for .NET Framework 4,](https://www.microsoft.com/download/details.aspx?id=21459) um alle Windows Communication Foundation (WCF) und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) , um alle Windows Communication Foundation (WCF) und Beispiele herunterzuladen [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

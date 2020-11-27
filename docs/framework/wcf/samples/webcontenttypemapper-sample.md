@@ -2,14 +2,15 @@
 title: Beispiel zu WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594555"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283262"
 ---
 # <a name="webcontenttypemapper-sample"></a>Beispiel zu WebContentTypeMapper
+
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF)-Nachrichtentext Formaten neue Inhaltstypen zugeordnet werden.  
   
  Das- <xref:System.ServiceModel.Description.WebHttpEndpoint> Element wird in den Webnachrichten Encoder eingebunden, sodass WCF JSON-, XML-oder unformatierte binäre Nachrichten am selben Endpunkt empfangen kann. Der Encoder bestimmt das Textformat der Nachricht, indem der HTTP-Inhaltstyp der Anforderung betrachtet wird. In diesem Beispiel wird die <xref:System.ServiceModel.Channels.WebContentTypeMapper>-Klasse eingeführt, mit der der Benutzer die Zuordnung zwischen Inhaltstyp und Textformat steuern kann.  
@@ -58,7 +59,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2. Erstellen Sie die Projekt Mappe "WebContentTypeMapperSample. sln", wie unter [Erstellen der Windows Communication Foundation Beispiele](building-the-samples.md)beschrieben.  
   
-3. Navigieren Sie zu `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (Öffnen Sie "JCTMClientPage. htm" im Browser nicht innerhalb des Projektverzeichnisses).  
+3. Navigieren Sie zu `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (Öffnen Sie JCTMClientPage.htm im Browser nicht innerhalb des Projektverzeichnisses).  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

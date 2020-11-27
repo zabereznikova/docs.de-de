@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 31426ae0589954d4388ba6d40f156c3eea9a8989
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309676"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283886"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
+
 ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#clr-etw-keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#etw-event-levels) werden durch Flags gekennzeichnet.  
   
 ## <a name="clr-etw-keywords"></a>CLR-ETW-Schlüsselwörter  
+
  Schlüsselwörter sind Flags, die kombiniert werden können, um Werte zu generieren. In der Praxis werden Hexadezimalwerte der Schlüsselwörter anstelle der Schlüsselwortnamen verwendet, wenn die Befehlszeilenprogramme aufgerufen werden.  
   
  Schlüsselwörter werden in den folgenden Tabellen beschrieben:  
@@ -32,7 +34,9 @@ ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereigniss
 - [Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter](#rundown_combo)  
   
 <a name="runtime"></a>
+
 ### <a name="clr-etw-runtime-keywords"></a>CLR-ETW-Laufzeitschlüsselwörter  
+
  In der folgenden Tabelle sind die CLR-ETW-Laufzeitschlüsselwörter, ihre Werte und ihr Verwendungszweck aufgeführt.  
   
 |Name des Laufzeitschlüsselworts|Wert|Zweck|  
@@ -55,7 +59,9 @@ ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereigniss
 |`StackKeyword`|0x40000000|Ermöglicht das Sammeln von CLR- [Stapelüberwachungsereignissen](stack-etw-event.md).|  
   
 <a name="rundown"></a>
+
 ### <a name="clr-etw-rundown-keywords"></a>CLR-ETW-Rundownschlüsselwörter  
+
  In der folgenden Tabelle sind die CLR-ETW-Rundownschlüsselwörter, ihre Werte und ihr Verwendungszweck aufgeführt.  
   
 |Name des Rundownschlüsselworts|Wert|Zweck|  
@@ -71,30 +77,33 @@ ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereigniss
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleDCStart`-, `ModuleDCEnd`-, `ModuleRangeDCStart`- und `ModuleRangeDCEnd` -Ereignissen.|
   
 <a name="runtime_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Laufzeitanbieter  
   
 |Schlüsselwörter und Flags|Anwendungsdomäne, Assembly, modulbezogene Lade-/Entladeereignisse|Methodenbezogene Lade-/Entladeereignisse (außer dynamische Ereignisse)|Dynamische methodenbezogene Lade-/Zerstörungsereignisse|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|Lade- und Entaldeereignisse|Keine|Keine|  
+|`LoaderKeyword`|Lade- und Entaldeereignisse|Keine.|Keine.|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` fügt nichts hinzu)|Keine|Ladeereignisse|Lade- und Entaldeereignisse|  
 |`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine|Lade- und Entaldeereignisse|Lade- und Entaldeereignisse|  
-|`NGenKeyword`|Keine|Keine|Nicht zutreffend|  
+|`NGenKeyword`|Keine.|Keine.|Nicht zutreffend|  
 |`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Keine|Ladeereignisse|Nicht zutreffend|  
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine|Entladeereignisse|Nicht zutreffend|  
   
 <a name="rundown_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter  
   
 |Schlüsselwörter und Flags|Anwendungsdomäne, Assembly, modulbezogene DCStart-/DCEnd-Ereignisse|Methodenbezogene DCStart-/DCEnd-Ereignisse (einschließlich dynamischer Methodenereignisse)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
 |`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` -Ereignisse|Keine|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` -Ereignisse|Keine|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` -Ereignisse|Keine.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine.|`DCStart` -Ereignisse|  
 |`JITKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
 |`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
 
 ## <a name="etw-event-levels"></a>ETW-Ereignisebenen  
+
  ETW-Ereignisse können auch nach Ebene gefiltert werden. Wenn die Ebene auf 0x5 festgelegt wird, werden Ereignisse aller Ebenen, einschließlich 0x5 und darunter, ausgelöst (wobei es sich um Ereignisse handelt, die zu durch Schlüsselwörter aktivierten Kategorien gehören). Wenn die Ebene bei 0x2 festgelegt wird, werden nur Ereignisse, die zu Ebene 0x2 und darunter gehören, ausgelöst.  
   
  Die Ebenen haben folgende Bedeutung:  

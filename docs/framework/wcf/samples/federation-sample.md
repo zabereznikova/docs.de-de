@@ -2,17 +2,19 @@
 title: Verbundbeispiel
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 00cb9a13a01687fb41f1d5c09f277d582f706e3b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22d405620a77285ebe7a68fc151a8e8611df9b4d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594685"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283275"
 ---
 # <a name="federation-sample"></a>Verbundbeispiel
+
 Dieses Beispiel veranschaulicht die Verbundsicherheit.  
   
 ## <a name="sample-details"></a>Beispieldetails  
+
  Windows Communication Foundation (WCF) bietet Unterstützung für die Bereitstellung von Verbund Sicherheitsarchitekturen über `wsFederationHttpBinding` . Die `wsFederationHttpBinding` bietet eine sichere, zuverlässige und interoperable Bindung, die die Verwendung von HTTP als den zugrunde liegenden Transportmechanismus für die Anforderungs-Antwort-Kommunikation umfasst, während Text und XML als Übertragungsformate für die Codierung verwendet werden. Weitere Informationen zum Verbund in WCF finden Sie unter [Federation](../feature-details/federation.md).  
   
  Das Szenario besteht aus 4 Einheiten:  
@@ -95,7 +97,7 @@ Dieses Beispiel veranschaulicht die Verbundsicherheit.
   
 3. Doppelklicken Sie auf "BookStoreClient.exe". Das Fenster "BookStoreClient" wird angezeigt.  
   
-4. Sie können die Bücher in der Buchhandlung durchsuchen, indem Sie auf **Bücher durchsuchen**klicken.  
+4. Sie können die Bücher in der Buchhandlung durchsuchen, indem Sie auf **Bücher durchsuchen** klicken.  
   
 5. Wenn Sie ein bestimmtes Buch kaufen möchten, wählen Sie das Buch in der Liste aus, und klicken Sie auf **Buch kaufen**. Die Anwendung startet und wird mit der Windows-Authentifizierung beim HomeRealm-Sicherheitstokendienst authentifiziert.  
   

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283912"
 ---
 # <a name="clr-etw-events"></a>CLR-ETW-Ereignisse
+
 Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Windows-Ereignisse (ETW). Jedes Ereignis verfügt über ein zugeordnetes Schlüsselwort und die Ebene, die im Thema [CLR-ETW-Schlüsselwörter und-Ebenen](clr-etw-keywords-and-levels.md) beschrieben werden. Die CLR verfügt über zwei Anbieter für die Ereignisse:  
   
 - Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Die GUID des CLR-Laufzeitanbieters ist e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
@@ -24,6 +25,7 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
  Weitere Informationen zu den Anbietern finden Sie unter [CLR-ETW-Anbieter](clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Laufzeitinformationsereignisse](runtime-information-etw-events.md)  
  Erfasst Informationen über die Laufzeit, einschließlich der SKU, der Versionsnummer, der Art der Aktivierung der Laufzeit, der Befehlszeilenparameter, mit denen sie gestartet wurde, der GUID (wenn zutreffend) und weiterer wichtiger Informationen.  
   
@@ -60,7 +62,7 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
  [Stapelereignis](stack-etw-event.md)  
  Erfasst Informationen, die mit anderen Ereignissen zur Generierung von Stackablaufverfolgungen verwendet werden, nachdem ein Ereignis eingetreten ist.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verbessertes Debugging und Leistungsoptimierung mit ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [Steuern der Protokollierung in .NET Framework](controlling-logging.md)

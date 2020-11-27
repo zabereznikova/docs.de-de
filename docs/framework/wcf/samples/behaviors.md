@@ -2,18 +2,20 @@
 title: Verhalten
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: 79cc9af5a2050ccee4da3239fa89d704b6378d04
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e963da6d151b82b205f6f52b70aeb69b09eae4f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283613"
 ---
 # <a name="behaviors"></a>Verhalten
+
 Dieser Abschnitt enthält Beispiele, die Windows Communication Foundation (WCF)-Dienst Verhaltensweisen veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Concurrency](concurrency.md)  
+
+ [Parallelität](concurrency.md)  
  Veranschaulicht die Verwendung des <xref:System.ServiceModel.ServiceBehaviorAttribute> mit der <xref:System.ServiceModel.ConcurrencyMode>-Enumeration, die steuert, ob eine Instanz eines Diensts Nachrichten sequenziell oder parallel verarbeitet.  
   
  [Standard-Dienstverhalten](default-service-behavior.md)  

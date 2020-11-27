@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558653"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283990"
 ---
 # <a name="message-security-certificate"></a>Nachrichtensicherheitszertifikat
+
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit mit X.509 v3-Zertifikatauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509 v3-Zertifikat des Servers erfordert. Es werden Standardeinstellungen so verwendet, dass alle Anwendungsnachrichten zwischen dem Client und dem Server signiert und verschlüsselt werden. Dieses Beispiel basiert auf [WSHttpBinding](wshttpbinding.md) und besteht aus einem Client Konsolenprogramm und einer von Internetinformationsdienste (IIS) gehosteten Dienst Bibliothek. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  
   
 > [!NOTE]
@@ -240,7 +241,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die Setup.bat Batchdatei mit einem Dienst Argument (z. b.setup.bat- ** Dienst**) ausgeführt wird, enthält der% SERVER_NAME% den voll qualifizierten Domänen Namen des Computers. Andernfalls wird standardmäßig localhost verwendet.  
+     Die Variable %SERVER_NAME% gibt den Servernamen an. Das Zertifikat wird im LocalMachine-Speicher gespeichert. Wenn die Setup.bat Batchdatei mit einem Dienst Argument (z. b.setup.bat- **Dienst**) ausgeführt wird, enthält der% SERVER_NAME% den voll qualifizierten Domänen Namen des Computers. Andernfalls wird standardmäßig localhost verwendet.  
   
 - Installieren Sie das Serverzertifikat im Speicher für vertrauenswürdige Zertifikate des Clients.  
   
@@ -269,7 +270,7 @@ Press <ENTER> to terminate client.
     > Wenn Sie ein nicht-U. S verwenden. Englische Edition von Windows. Sie müssen die Setup.bat Datei bearbeiten und den Kontonamen "NT-Autorität \ Netzwerkdienst" durch Ihr regionales Äquivalent ersetzen.  
   
 > [!NOTE]
-> In dieser Batchdatei verwendete Tools befinden sich entweder unter C:\Programme\Microsoft Visual Studio 8\Common7\tools oder unter C:\Programme\Microsoft SDKs\Windows\v6.0\bin. Eines dieser Verzeichnisse muss im Systempfad enthalten sein. Wenn Sie Visual Studio installiert haben, ist es am einfachsten, dieses Verzeichnis in Ihrem Pfad zu öffnen, indem Sie die Developer-Eingabeaufforderung für Visual Studio öffnen. Klicken Sie auf **Start**, und wählen Sie dann **Alle Programme**, **Visual Studio 2012**, **Tools**aus. Innerhalb dieser Eingabeaufforderung sind die entsprechenden Pfade bereits konfiguriert. Andernfalls müssen Sie dem Pfad das entsprechende Verzeichnis manuell hinzufügen.  
+> In dieser Batchdatei verwendete Tools befinden sich entweder unter C:\Programme\Microsoft Visual Studio 8\Common7\tools oder unter C:\Programme\Microsoft SDKs\Windows\v6.0\bin. Eines dieser Verzeichnisse muss im Systempfad enthalten sein. Wenn Sie Visual Studio installiert haben, ist es am einfachsten, dieses Verzeichnis in Ihrem Pfad zu öffnen, indem Sie die Developer-Eingabeaufforderung für Visual Studio öffnen. Klicken Sie auf **Start**, und wählen Sie dann **Alle Programme**, **Visual Studio 2012**, **Tools** aus. Innerhalb dieser Eingabeaufforderung sind die entsprechenden Pfade bereits konfiguriert. Andernfalls müssen Sie dem Pfad das entsprechende Verzeichnis manuell hinzufügen.  
   
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren:  

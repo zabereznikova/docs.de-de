@@ -3,14 +3,15 @@ title: Konfigurieren von Timeoutwerten für eine Bindung
 description: Erfahren Sie, wie Sie Timeout Einstellungen für WCF-Bindungen verwalten, um die Leistung, Benutzerfreundlichkeit und Sicherheit Ihres Diensts zu verbessern.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245114"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284042"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurieren von Timeoutwerten für eine Bindung
+
 Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. Wenn diese Timeouteinstellungen ordnungsgemäß festgelegt sind, verbessert sich nicht nur die Leistung des Diensts, sondern auch dessen Anwenderfreundlichkeit und Sicherheit. Die folgenden Timeouts sind für WCF-Bindungen verfügbar:  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. We
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>WCF-Timeouts für Bindungen  
+
  Jede der in diesem Thema erläuterten Einstellungen wird für die Bindung selbst festgelegt, entweder im Code oder in der Konfiguration. Der folgende Code zeigt, wie Sie programmgesteuert Timeouts für eine WCF-Bindung im Kontext eines selbst gehosteten Diensts festlegen.  
   
 ```csharp  
@@ -76,6 +78,7 @@ public static void Main()
  Weitere Informationen zu diesen Einstellungen finden Sie in der Dokumentation zur <xref:System.ServiceModel.Channels.Binding>-Klasse.  
   
 ### <a name="client-side-timeouts"></a>Clientseitige Timeouts  
+
  Auf der Clientseite:  
   
 1. SendTimeout: Wird zur Initialisierung von OperationTimeout verwendet. Die Einstellung steuert den gesamten Sendevorgang einer Nachricht, einschließlich des Empfangs einer Antwortnachricht für einen Vorgang des Anforderung-Antwort-Diensts. Dieses Timeout gilt auch beim Senden von Antwortnachrichten von einer Rückrufvertragsmethode.  
@@ -87,6 +90,7 @@ public static void Main()
 4. ReceiveTimeout – wird nicht verwendet.  
   
 ### <a name="service-side-timeouts"></a>Dienst seitige Timeouts  
+
  Auf der Dienstseite:  
   
 1. SendTimeout, OpenTimeout und CloseTimeout sind identisch mit denen auf dem Client.  

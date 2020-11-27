@@ -2,14 +2,15 @@
 title: Konfigurieren des Windows-Prozessaktivierungsdiensts zur Verwendung mit Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 7dccfea990afff1d2aacd5e9714472e733684c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2f84afba72e5260a44726dcc812401da5475679f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556602"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284094"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Konfigurieren des Windows-Prozessaktivierungsdiensts zur Verwendung mit Windows Communication Foundation
+
 In diesem Thema werden die Schritte beschrieben, die zum Einrichten von Windows Process Activation Service (auch bekannt als was) in Windows Vista erforderlich sind, um Windows Communication Foundation (WCF)-Dienste zu hosten, die nicht über HTTP-Netzwerkprotokolle kommunizieren. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
 - Installieren Sie die erforderlichen WCF-Aktivierungs Komponenten (oder bestätigen Sie die Installation).  
@@ -21,6 +22,7 @@ In diesem Thema werden die Schritte beschrieben, die zum Einrichten von Windows 
 - Erstellen Sie einen WCF-Dienst, der einen nicht-HTTP-Endpunkt verfügbar macht.  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>Konfigurieren einer Site mit Nicht-HTTP-Bindungen  
+
  Damit eine Nicht-HTTP-Bindung in WAS verwendet werden kann, muss die Sitebindung der WAS-Konfiguration hinzugefügt werden. Die WAS-Konfiguration wird in der Datei applicationHost.config im Verzeichnis %windir%\system32\inetsrv\config gespeichert. Diese Konfigurationsdatei wird sowohl für WAS als auch für IIS&#160;7.0 genutzt.  
   
  Bei der Datei applicationHost.config handelt es sich um eine XML-Textdatei, die mit jedem Standardtexteditor (wie Editor) geöffnet werden kann. Das IIS 7,0-Befehlszeilen-Konfigurationstool (appcmd.exe) ist jedoch die bevorzugte Methode, um nicht-HTTP-Site Bindungen hinzuzufügen.  
@@ -46,6 +48,7 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 ```  
   
 ## <a name="enabling-an-application-to-use-non-http-protocols"></a>Aktivieren der Verwendung von Nicht-HTTP-Protokollen auf Anwendungsebene  
+
  Sie können einzelne Netzwerkprotokolle auf Anwendungsebene aktivieren oder deaktivieren. Der folgende Befehl veranschaulicht, wie die Protokolle HTTP und net.tcp für eine Anwendung aktiviert werden, die auf der `Default Web Site` ausgeführt wird.  
   
 ```console  
@@ -92,11 +95,12 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
  Wenn dieser Fehler angezeigt wird, stellen Sie sicher, dass WAS zur Aktivierung von Nicht-HTTP-Protokollen installiert und ordnungsgemäß konfiguriert ist. Weitere Informationen finden Sie unter Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](how-to-install-and-configure-wcf-activation-components.md).  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Erstellen eines WCF-Diensts, der WAS zur Aktivierung von Nicht-HTTP-Protokollen verwendet  
+
  Nachdem Sie die Schritte zum Installieren und Konfigurieren von was (siehe Gewusst [wie: Installieren und Konfigurieren von WCF-Aktivierungs Komponenten](how-to-install-and-configure-wcf-activation-components.md)) ausgeführt haben, ähnelt das Konfigurieren eines Dienstanbieter für die Aktivierung von was dem Konfigurieren eines Dienstanbieter, der in IIS gehostet wird.  
   
  Ausführliche Anweisungen zum Aufbau eines was-aktivierten WCF-Diensts finden Sie unter Gewusst [wie: Hosten eines WCF-Diensts in was](how-to-host-a-wcf-service-in-was.md).  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten in WAS (Windows Process Activation Service)](hosting-in-windows-process-activation-service.md)
 - [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

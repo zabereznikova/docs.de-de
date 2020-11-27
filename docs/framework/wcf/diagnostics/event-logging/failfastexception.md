@@ -2,24 +2,26 @@
 title: FailFastException
 ms.date: 03/30/2017
 ms.assetid: f30de0d9-3a91-4800-9d09-3504d7e5a10f
-ms.openlocfilehash: 9fb288abcce78bb754e2b276e8778107be9e6061
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 01c666e816ee39e471b4f6a9728ebdb84941b0d9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284302"
 ---
 # <a name="failfastexception"></a>FailFastException
+
 ID: 103  
   
- Zunehmen Fehler  
+ Schweregrad: Fehler  
   
- Kategorie Ablaufverfolgung  
+ Kategorie: Ablaufverfolgung  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Während FailFast wurde eine Ausnahme ausgelöst. Das Ereignis führt die Ausnahme, den Prozessnamen und die Prozess-ID auf.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ereignisprotokollierung](index.md)
 - [Allgemeine Referenz zu Ereignissen](events-general-reference.md)

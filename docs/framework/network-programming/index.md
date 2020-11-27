@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502404"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241680"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Netzwerkprogrammierung in .NET Framework
+
 Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Anwendungen integriert werden. Ihre Netzwerkanwendungen können austauschbare Protokolle einsetzten, um neue Internetprotokolle automatisch zu verwenden, oder eine verwaltete Implementierung der Windows Socket-Schnittstelle benutzen, um auf Socketebene mit dem Netzwerk zu arbeiten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -87,6 +88,7 @@ Das Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwal
  Links zu herunterladbaren Beispielen für Netzwerkprogrammierung, in denen Klassen aus den Namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> verwendet werden.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Net?displayProperty=nameWithType>  
  Stellt für viele der Protokolle, die gegenwärtig in Netzwerken verwendet werden, eine einfache Programmierschnittstelle bereit. Die Klassen <xref:System.Net.WebRequest?displayProperty=nameWithType> und <xref:System.Net.WebResponse?displayProperty=nameWithType> in diesem Namespace sind die Grundlage für austauschbare Protokolle.  
   

@@ -2,24 +2,26 @@
 title: FailedToTraceEvent
 ms.date: 03/30/2017
 ms.assetid: a13f19e3-a6e0-4e58-bb45-73bed6cf4421
-ms.openlocfilehash: 7a7359c7205a216830e6557d78340bc8a1de480b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4280c6790275c2e0635372ad6ad96af20f1557f9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284406"
 ---
 # <a name="failedtotraceevent"></a>FailedToTraceEvent
+
 ID: 104  
   
- Zunehmen Fehler  
+ Schweregrad: Fehler  
   
- Kategorie Ablaufverfolgung  
+ Kategorie: Ablaufverfolgung  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Für ein Ereignis bzw. mehrere Ereignisse wurde keine Ablaufverfolgung durchgeführt. Das Ereignis listet die ursprüngliche Ereigniszeichenfolge, den Protokollnamen, den Prozessname und die Prozess-ID auf.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ereignisprotokollierung](index.md)
 - [Allgemeine Referenz zu Ereignissen](events-general-reference.md)
