@@ -2,17 +2,18 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: 572e458f08c4717207667db9940296c4a957199a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3bcf205964a22cdb418d0158e5ee6439169538ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273983"
 ---
-# <a name="servicethrottlingbehavior"></a><span data-ttu-id="722ec-102">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="722ec-102">ServiceThrottlingBehavior</span></span>
-<span data-ttu-id="722ec-103">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="722ec-103">ServiceThrottlingBehavior</span></span>  
+# <a name="servicethrottlingbehavior"></a><span data-ttu-id="1cdcb-102">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="1cdcb-102">ServiceThrottlingBehavior</span></span>
+
+<span data-ttu-id="1cdcb-103">ServiceThrottlingBehavior</span><span class="sxs-lookup"><span data-stu-id="1cdcb-103">ServiceThrottlingBehavior</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="722ec-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="722ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1cdcb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1cdcb-104">Syntax</span></span>  
   
 ```csharp  
 class ServiceThrottlingBehavior : Behavior  
@@ -23,39 +24,44 @@ class ServiceThrottlingBehavior : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="722ec-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="722ec-105">Methods</span></span>  
- <span data-ttu-id="722ec-106">Die ServiceThrottlingBehavior-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="722ec-106">The ServiceThrottlingBehavior class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="1cdcb-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="1cdcb-105">Methods</span></span>  
+
+ <span data-ttu-id="1cdcb-106">Die ServiceThrottlingBehavior-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="1cdcb-106">The ServiceThrottlingBehavior class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="722ec-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="722ec-107">Properties</span></span>  
- <span data-ttu-id="722ec-108">Die ServiceThrottlingBehavior-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="722ec-108">The ServiceThrottlingBehavior class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="1cdcb-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="1cdcb-107">Properties</span></span>  
+
+ <span data-ttu-id="1cdcb-108">Die ServiceThrottlingBehavior-Klasse verfügt über die folgenden Eigenschaften:</span><span class="sxs-lookup"><span data-stu-id="1cdcb-108">The ServiceThrottlingBehavior class has the following properties:</span></span>  
   
-### <a name="maxconcurrentcalls"></a><span data-ttu-id="722ec-109">MaxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="722ec-109">MaxConcurrentCalls</span></span>  
- <span data-ttu-id="722ec-110">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="722ec-110">Data type: sint32</span></span>  
+### <a name="maxconcurrentcalls"></a><span data-ttu-id="1cdcb-109">MaxConcurrentCalls</span><span class="sxs-lookup"><span data-stu-id="1cdcb-109">MaxConcurrentCalls</span></span>  
+
+ <span data-ttu-id="1cdcb-110">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="1cdcb-110">Data type: sint32</span></span>  
   
- <span data-ttu-id="722ec-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="722ec-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="1cdcb-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="1cdcb-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="722ec-112">Die maximale Anzahl an Nachrichten, die die Verteilerobjekte in einem ServiceHost aktiv verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="722ec-112">The maximum number of messages actively processing across all dispatcher objects in a ServiceHost.</span></span>  
+ <span data-ttu-id="1cdcb-112">Die maximale Anzahl an Nachrichten, die die Verteilerobjekte in einem ServiceHost aktiv verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="1cdcb-112">The maximum number of messages actively processing across all dispatcher objects in a ServiceHost.</span></span>  
   
-### <a name="maxconcurrentinstances"></a><span data-ttu-id="722ec-113">MaxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="722ec-113">MaxConcurrentInstances</span></span>  
- <span data-ttu-id="722ec-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="722ec-114">Data type: sint32</span></span>  
+### <a name="maxconcurrentinstances"></a><span data-ttu-id="1cdcb-113">MaxConcurrentInstances</span><span class="sxs-lookup"><span data-stu-id="1cdcb-113">MaxConcurrentInstances</span></span>  
+
+ <span data-ttu-id="1cdcb-114">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="1cdcb-114">Data type: sint32</span></span>  
   
- <span data-ttu-id="722ec-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="722ec-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="1cdcb-115">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="1cdcb-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="722ec-116">Die maximale Anzahl der Dienstobjekte, die gleichzeitig ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="722ec-116">The maximum number of service objects that can execute at one time.</span></span>  
+ <span data-ttu-id="1cdcb-116">Die maximale Anzahl der Dienstobjekte, die gleichzeitig ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="1cdcb-116">The maximum number of service objects that can execute at one time.</span></span>  
   
-### <a name="maxconcurrentsessions"></a><span data-ttu-id="722ec-117">MaxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="722ec-117">MaxConcurrentSessions</span></span>  
- <span data-ttu-id="722ec-118">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="722ec-118">Data type: sint32</span></span>  
+### <a name="maxconcurrentsessions"></a><span data-ttu-id="1cdcb-117">MaxConcurrentSessions</span><span class="sxs-lookup"><span data-stu-id="1cdcb-117">MaxConcurrentSessions</span></span>  
+
+ <span data-ttu-id="1cdcb-118">Datentyp: sint32</span><span class="sxs-lookup"><span data-stu-id="1cdcb-118">Data type: sint32</span></span>  
   
- <span data-ttu-id="722ec-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="722ec-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="1cdcb-119">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="1cdcb-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="722ec-120">Die maximale Anzahl an Sitzungen, die ein Host gleichzeitig annehmen kann.</span><span class="sxs-lookup"><span data-stu-id="722ec-120">The maximum number of sessions a host can accept at one time.</span></span>  
+ <span data-ttu-id="1cdcb-120">Die maximale Anzahl an Sitzungen, die ein Host gleichzeitig annehmen kann.</span><span class="sxs-lookup"><span data-stu-id="1cdcb-120">The maximum number of sessions a host can accept at one time.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="722ec-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="722ec-121">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1cdcb-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1cdcb-121">Requirements</span></span>  
   
-|<span data-ttu-id="722ec-122">MOF</span><span class="sxs-lookup"><span data-stu-id="722ec-122">MOF</span></span>|<span data-ttu-id="722ec-123">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="722ec-123">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="1cdcb-122">MOF</span><span class="sxs-lookup"><span data-stu-id="1cdcb-122">MOF</span></span>|<span data-ttu-id="1cdcb-123">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="1cdcb-123">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="722ec-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="722ec-124">Namespace</span></span>|<span data-ttu-id="722ec-125">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="722ec-125">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="1cdcb-124">Namespace</span><span class="sxs-lookup"><span data-stu-id="1cdcb-124">Namespace</span></span>|<span data-ttu-id="1cdcb-125">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1cdcb-125">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="722ec-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="722ec-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cdcb-126">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="1cdcb-126">See also</span></span>
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
