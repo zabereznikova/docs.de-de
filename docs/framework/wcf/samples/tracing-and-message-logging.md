@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9c3d83f0055a1700c675017216a7419fdba674fd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec29ac03e8930bd30ccd7e90dce3993ca9e7443a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547459"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255415"
 ---
 # <a name="tracing-and-message-logging"></a>Ablaufverfolgung und Nachrichtenprotokollierung
+
 In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenprotokollierung veranschaulicht. Die resultierenden Ablauf Verfolgungen und Nachrichten Protokolle werden mit dem [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)angezeigt. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md)Schritten.  
   
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
+
  Windows Communication Foundation (WCF) verwendet den im-Namespace definierten Ablauf Verfolgungs Mechanismus <xref:System.Diagnostics> . In diesem Ablaufverfolgungsmodell werden Ablaufverfolgungsdaten von Ablaufverfolgungsquellen erzeugt, die von Anwendungen implementiert werden. Jede Quelle wird durch einen Namen identifiziert. Ablaufverfolgungsconsumer erstellen Ablaufverfolgungslistener für die Ablaufverfolgungsquellen, für die sie Informationen abrufen möchten. Sie müssen einen Listener für die Ablaufverfolgungsquelle erstellen, um Ablaufverfolgungsdaten zum empfangen. In WCF kann dies erreicht werden, indem der folgende Code entweder der Konfigurationsdatei des dienstanders oder des Clients hinzugefügt wird, indem die Ablauf Verfolgungs Quelle für das Dienstmodell festgelegt wird `switchValue` :  
   
 ```xml  
@@ -47,6 +49,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
  Weitere Informationen zu Ablauf Verfolgungs Quellen finden Sie im Abschnitt "Ablauf Verfolgungs Quelle" im Thema Konfigurieren der Ablauf [Verfolgung](../diagnostics/tracing/configuring-tracing.md) .  
   
 ## <a name="activity-tracing-and-propagation"></a>Aktivitätsablaufverfolgung und Weitergabe  
+
  Wenn `ActivityTracing` `propagateActivity` `true` in den Ablauf `system.ServiceModel` Verfolgungs Quellen für den Client und den Dienst aktiviert ist und auf festgelegt ist, stellen Sie die Korrelation von Ablauf Verfolgungen innerhalb logischer Verarbeitungseinheiten (Aktivitäten), über Aktivitäten innerhalb von Endpunkten (durch Aktivitäts Übertragungen) und über Aktivitäten hinweg bereit, die mehrere Endpunkte umfassen (über die Aktivitäts-ID-Propagierung)  
   
  Mithilfe dieser drei Mechanismen (Aktivitäten, Übertragungen und Weitergabe) können Sie die Grundursache eines Fehlers schneller mit dem Tool Service Trace Viewer ermitteln. Weitere Informationen finden Sie unter [Verwenden von Service Trace Viewer zum Anzeigen korrelierter Ablauf Verfolgungen und Problem](../diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)Behandlung.  
@@ -62,6 +65,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
  Weitere Informationen zur benutzerdefinierten Aktivitäts Ablauf Verfolgung finden Sie im Beispiel zum [erweitern](extending-tracing.md) der Ablauf Verfolgung.  
   
 ## <a name="message-logging"></a>Nachrichtenprotokollierung  
+
  Die Nachrichten Protokollierung kann sowohl auf dem Client als auch auf dem Dienst einer beliebigen WCF-Anwendung aktiviert werden. Zum Aktivieren der Nachrichtenprotokollierung müssen Sie dem Client oder dem Dienst den folgenden Code hinzufügen:  
   
 ```xml  
@@ -133,7 +137,7 @@ In diesem Beispiel wird das Aktivieren der Ablaufverfolgung und Nachrichtenproto
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ablaufverfolgung](../diagnostics/tracing/index.md)
 - [AppFabric-Überwachungsbeispiele](/previous-versions/appfabric/ff383407(v=azure.10))

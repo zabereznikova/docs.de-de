@@ -2,14 +2,15 @@
 title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255545"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
+
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
   
  Betrachten wir ein Szenario mit drei Teilnehmern: einem Client, einem Server und einem Angreifer. Der Server weist die URL `https://server` auf, wohingegen der Angreifer die URL `https://attacker` verwendet. Der Angreifer gibt sich gegenüber dem Client als Server aus. Anschließend sendet der Angreifer eine Anfrage an den Server. Versucht der Angreifer auf eine sichere Ressource zuzugreifen, antwortet der Server dem Angreifer mit einem WWW-Authentifizierungsheader. Der Angreifer verfügt jedoch nicht über die Authentifizierungsinformationen. Daher sendet er den WWW-Authentifizierungsheader an den Client. Der Client sendet den Authentifizierungsheader an den Angreifer, und der Angreifer sendet den Header an den Server, wodurch er mit den Anmeldeinformationen des Clients Zugriff auf sichere Ressourcen erhält.  
@@ -24,7 +25,7 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Der Server kann folgende Sicherheitsstufen aufweisen:  
   
-- Keine. Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
+- Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
   
 - Teilweise. Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
   
@@ -32,6 +33,6 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Weitere Informationen finden Sie im Beispiel zu Win7 CBT/Erweiterter Schutz.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitsmodell für Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))

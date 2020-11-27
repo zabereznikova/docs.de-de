@@ -2,19 +2,21 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 0a502093ff40f1a702f5d4d9046d4627eae39e01
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a83cc0d12b1099bc77d62f108741de1dbf387686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255987"
 ---
 # <a name="hosting"></a>Hosting
-In den Themen dieses Abschnitts wird das Diensthosting beschrieben. Ein Dienst kann von Internetinformationsdienste (IIS), dem Windows-Prozess Aktivierungs Dienst (was), Windows Server AppFabric, einem Windows-Dienst oder einer verwalteten Anwendung gehostet werden – diese Option wird häufig als *Self-Hosting*bezeichnet.  
+
+In den Themen dieses Abschnitts wird das Diensthosting beschrieben. Ein Dienst kann von Internetinformationsdienste (IIS), dem Windows-Prozess Aktivierungs Dienst (was), Windows Server AppFabric, einem Windows-Dienst oder einer verwalteten Anwendung gehostet werden – diese Option wird häufig als *Self-Hosting* bezeichnet.  
   
  Sie müssen unbedingt beachten, dass die Sicherheit gefährdet wird, wenn ein Dienst oder eine Erweiterung auf einem nicht vertrauenswürdigen Host ausgeführt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Hosten in Internetinformationsdiensten](hosting-in-internet-information-services.md)  
  Beschreibt, wie ein Windows Communication Foundation (WCF)-Dienst in Internetinformationsdienste oder [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10))gehostet wird.  
   

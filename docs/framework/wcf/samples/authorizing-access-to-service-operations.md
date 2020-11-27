@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: 3097c86f50a75dec8a649ca4e1edd2511a046ca8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 68e6d53b656cb6327487598f65fa4f04c2495292
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585531"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255454"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Zugriffsautorisierung für Dienstvorgänge
+
 In diesem Beispiel wird veranschaulicht, wie verwendet wird, um [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) die Verwendung des- <xref:System.Security.Permissions.PrincipalPermissionAttribute> Attributs zum Autorisieren des Zugriffs auf Dienst Vorgänge zu aktivieren. Dieses Beispiel basiert auf dem Beispiel " [Getting Started](getting-started-sample.md) ". Der Dienst und der Client werden mithilfe von konfiguriert [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . Das `mode` -Attribut von wurde [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) auf festgelegt, `Message` und wurde `clientCredentialType` auf festgelegt `Windows` . <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird auf jede Dienstmethode angewandt und für die Beschränkung des Zugriffs auf jeden Vorgang verwendet. Der Aufrufer muss Windows-Administrator sein, um auf jeden Vorgang zugreifen zu können.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  

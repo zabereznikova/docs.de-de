@@ -2,14 +2,15 @@
 title: Metadaten abrufen
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 4763686485dfe97844fad78cf0bb279113c0ce08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a7a30fee36b14d0414f2f5bed513c21a694f3484
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594607"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255402"
 ---
 # <a name="retrieve-metadata"></a>Metadaten abrufen
+
 Dieses Beispiel veranschaulicht, wie ein Client implementiert werden kann, der Metadaten dynamisch von einem Dienst abruft, um einen Endpunkt für die Kommunikation auszuwählen. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md)Schritten. Der Dienst wurde so geändert, dass zwei Endpunkte verfügbar gemacht werden – ein Endpunkt an der Basisadresse mit der `basicHttpBinding` -Bindung und ein sicherer Endpunkt unter {*BaseAddress*}/Secure, der die- `wsHttpBinding` Bindung verwendet. Anstatt den Client mit den Endpunktadressen und -bindungen zu konfigurieren, ruft der Client mithilfe der Klasse  <xref:System.ServiceModel.Description.MetadataExchangeClient> dynamisch die Metadaten für den Dienst ab und importiert sie danach als <xref:System.ServiceModel.Description.ServiceEndpointCollection> mithilfe der <xref:System.ServiceModel.Description.WsdlImporter>-Klasse.  
   
 > [!NOTE]

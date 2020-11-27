@@ -2,14 +2,15 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-ms.openlocfilehash: 0f86fc1b410753b5ec100f0a7d43de9badd1401b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00485ff80a0064e700d99203de3aa581d3761f30
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255727"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
+
 AsymmetricSecurityBindingElement  
   
 ## <a name="syntax"></a>Syntax  
@@ -23,19 +24,23 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die AsymmetricSecurityBindingElement-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die AsymmetricSecurityBindingElement-Klasse verfügt über die folgenden Eigenschaften:  
   
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
- Datentyp: string (Zeichenfolge)  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Die Reihenfolge der Nachrichtenverschlüsselung und -signatur für diese Bindung.  
   
 ### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
+
  Datentyp: Boolesch  
   
  Zugriffstyp: Schreibgeschützt  
@@ -48,6 +53,6 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559251"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255519"
 ---
 # <a name="federation-and-issued-tokens"></a>Verbund und ausgestellte Token
-Mit Windows Communication Foundation (WCF) können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die die WS-Verbund-und WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
+
+Mit Windows Communication Foundation (WCF) können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die die WS-Federation-und WS-Trust Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Verbund](federation.md)  
  Bietet einen Überblick über den Verbund.  
   
@@ -45,6 +47,7 @@ Mit Windows Communication Foundation (WCF) können Sie Clients erstellen, die si
  Beschreibt, wie Sicherheitssitzungen auf `WSFederationHttpBinding` deaktiviert werden. Sichere Sitzungen müssen deaktiviert werden, wenn eine Webfarm erstellt wird, die eine Sitzung für jeden Client erfordert.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

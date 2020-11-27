@@ -1,15 +1,16 @@
 ---
-title: 'Vorgehensweise: Schreiben einer Erweiterung für den ServiceContractGenerator'
+title: 'Vorgehensweise: Schreiben einer Erweiterung für die ServiceContractGenerator-Klasse'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 68b380a40448f21ba770aa47c7188b818fa8f9e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3a81204ca470b9b94d9e8f048ecccbade74b2e10
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254635"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Vorgehensweise: Schreiben einer Erweiterung für den ServiceContractGenerator
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Vorgehensweise: Schreiben einer Erweiterung für die ServiceContractGenerator-Klasse
+
 In diesem Thema wird beschrieben, wie Sie eine Erweiterung für den <xref:System.ServiceModel.Description.ServiceContractGenerator> schreiben können. Dies kann durch Implementieren der <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>-Schnittstelle für ein Vorgangsverhalten oder Implementieren der <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle für ein Vertragsverhalten geschehen. In diesem Thema wird gezeigt, wie die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle in einem Vertragsverhalten implementiert wird.  
   
  Der <xref:System.ServiceModel.Description.ServiceContractGenerator> erstellt aus <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen, <xref:System.ServiceModel.Description.ContractDescription>-Instanzen und <xref:System.ServiceModel.Channels.Binding>-Instanzen Dienstverträge, Clienttypen und Clientkonfigurationen. Normalerweise importieren Sie <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen, <xref:System.ServiceModel.Description.ContractDescription>-Instanzen und <xref:System.ServiceModel.Channels.Binding>-Instanzen aus Dienstmetadaten und verwenden dann diese Instanzen, um den Code zum Aufrufen des Dienstes zu schreiben. In diesem Beispiel wird eine <xref:System.ServiceModel.Description.IWsdlImportExtension>-Implementierung zur Verarbeitung von WSDL-Anmerkungen verwendet. Dann werden Codegenerierungserweiterungen in die importierten Verträge eingefügt, um Kommentare zu dem generierten Code zu erstellen.  
@@ -99,7 +100,7 @@ In diesem Thema wird beschrieben, wie Sie eine Erweiterung für den <xref:System
   
 7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> wird automatisch für jedes Vertragsverhalten für einen bestimmten Vertrag, der <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> implementiert, aufgerufen. Diese Methode kann dann den übergebenen <xref:System.ServiceModel.Description.ServiceContractGenerationContext> ändern. In diesem Beispiel werden Kommentare hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Metadaten](../feature-details/metadata.md)
-- [Vorgehensweise: Importieren von benutzerdefinierter WSDL](how-to-import-custom-wsdl.md)
+- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](how-to-import-custom-wsdl.md)

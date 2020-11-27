@@ -4,19 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 4aa8e7a7d22edde02272dc4c3850b5695347b2bb
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 28ae252d562b57df0553f0fd4370845e836ef537
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609511"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254843"
 ---
 # <a name="analytic-trace-event-reference"></a>Ereignisverweis der analytischen Ablaufverfolgung
+
 In der folgenden Tabelle werden die Ereignis Ebenen, Bezeichner und Nachrichten definiert, die der WCF-Analyse Ablauf Verfolgung zugeordnet sind.  
   
 ## <a name="event-reference"></a>Ereignisverweis  
   
-|Ereignis-ID|Ereignisgrad|Ereignismeldung|Schlüsselwörter|  
+|Ereignis-ID|Ereignisgrad|Ereignismeldung|Keywords|  
 |--------------|-----------------|-------------------|--------------|  
 |[131 - BufferPoolAllocation](131-bufferpoolallocation.md)|Ausführlich|Poolreservierung %1 Bytes.|Infrastruktur|  
 |[132 - BufferPoolChangeQuota](132-bufferpoolchangequota.md)|Ausführlich|BufferPool der Größe %1, Kontingent wird um %2 geändert.|Infrastruktur|  

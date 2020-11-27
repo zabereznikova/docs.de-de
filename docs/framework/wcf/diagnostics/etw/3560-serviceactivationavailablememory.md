@@ -2,27 +2,30 @@
 title: 3560 - ServiceActivationAvailableMemory
 ms.date: 03/30/2017
 ms.assetid: b9360acf-53e6-422f-bacf-12918088c824
-ms.openlocfilehash: 22963c030fcf5169c51d3b4314ff29a3351cf8f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed65d6247295ad922dcdff0400f85d761d0c062b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999855"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254869"
 ---
 # <a name="3560---serviceactivationavailablememory"></a>3560 - ServiceActivationAvailableMemory
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|3560|  
-|Schlüsselwörter|Kontingent|  
+|id|3560|  
+|Keywords|Kontingent|  
 |Ebene|Ausführlich|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis wird ausgegeben, um den verfügbaren Speicherplatz für die Dienstaktivierung abzurufen.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  Verfügbarer Speicher (Bytes): %1  
   
 ## <a name="details"></a>Details

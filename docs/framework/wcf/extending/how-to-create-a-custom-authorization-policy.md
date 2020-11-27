@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 5d5268cd2171bdccc3885cd599fdc8c277e61aa4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fef7aa531c946ecacef30bb79f2362bad4d375ed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795710"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256026"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie
+
 Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) unterstützt ein Anspruchs basiertes Autorisierungs Modell. Ansprüche werden aus Token extrahiert, wahlweise von der benutzerdefinierten Autorisierungsrichtlinie verarbeitet und in einen <xref:System.IdentityModel.Policy.AuthorizationContext> platziert, der dann untersucht werden kann, um Autorisierungsentscheidungen zu treffen. Eine benutzerdefinierte Richtlinie kann zum Transformieren von Ansprüchen von eingehenden Token in von der Anwendung erwartete Ansprüche verwendet werden. Auf diese Weise kann die Anwendungsschicht von den Details zu den unterschiedlichen Ansprüchen isoliert werden, die von den verschiedenen Tokentypen bereitgestellt werden, die von WCF unterstützt werden. In diesem Thema wird gezeigt, wie eine benutzerdefinierte Autorisierungsrichtlinie implementiert und wie diese Richtlinie einer Sammlung von Richtlinien, die von einem Dienst verwendet werden, hinzugefügt wird.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>So implementieren Sie eine benutzerdefinierte Autorisierungsrichtlinie  
@@ -29,7 +30,7 @@ Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) u
   
 1. Zwei Parameter werden an diese Methode übergeben: eine Instanz der <xref:System.IdentityModel.Policy.EvaluationContext>-Klasse und ein Objektverweis.  
   
-2. Wenn die benutzerdefinierte Autorisierungs <xref:System.IdentityModel.Claims.ClaimSet> Richtlinie-Instanzen ohne Berücksichtigung des aktuellen Inhalts <xref:System.IdentityModel.Policy.EvaluationContext>von hinzufügt, fügen Sie `ClaimSet` jedes hinzu, <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> indem Sie die `true` -Methode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> aufrufen und von der-Methode zurückgeben. Die Rückgabe von `true` zeigt der Autorisierungsinfrastruktur an, dass die Autorisierungsrichtlinie ihre Funktion erfüllt hat und nicht erneut aufgerufen werden muss.  
+2. Wenn die benutzerdefinierte Autorisierungs Richtlinie- <xref:System.IdentityModel.Claims.ClaimSet> Instanzen ohne Berücksichtigung des aktuellen Inhalts von hinzufügt <xref:System.IdentityModel.Policy.EvaluationContext> , fügen Sie jedes hinzu, `ClaimSet` indem Sie die <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> -Methode aufrufen und `true` von der-Methode zurückgeben <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> . Die Rückgabe von `true` zeigt der Autorisierungsinfrastruktur an, dass die Autorisierungsrichtlinie ihre Funktion erfüllt hat und nicht erneut aufgerufen werden muss.  
   
 3. Wenn die benutzerdefinierte Autorisierungsrichtlinie Sätze von Ansprüchen nur hinzufügt, wenn bestimmte Ansprüche bereits im `EvaluationContext` vorhanden sind, suchen Sie diese Ansprüche, indem Sie die `ClaimSet`-Instanzen, die von der <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>-Eigenschaft zurückgegeben werden, analysieren. Wenn die Ansprüche vorhanden sind, fügen Sie den neuen Satz von Ansprüchen hinzu, indem Sie die <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>-Methode aufrufen, und geben Sie `true` zurück, wenn keine weiteren Sätze von Ansprüchen hinzugefügt werden müssen. Dies zeigt der Autorisierungsinfrastruktur an, dass die Autorisierungsrichtlinie ihre Funktion erfüllt hat. Wenn die Ansprüche nicht vorhanden sind, geben Sie `false` zurück. Dies gibt an, dass die Autorisierungsrichtlinie erneut aufgerufen werden muss, wenn andere Autorisierungsrichtlinien dem `EvaluationContext` weitere Sätze von Ansprüchen hinzufügen.  
   
@@ -70,14 +71,15 @@ Die Identitäts Modell Infrastruktur in Windows Communication Foundation (WCF) u
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird eine vollständige Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> veranschaulicht.  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Vorgehensweise: Ansprüche vergleichen](how-to-compare-claims.md)
+- [Vorgehensweise: Vergleichen von Ansprüchen](how-to-compare-claims.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Autorisierungsrichtlinie](../samples/authorization-policy.md)

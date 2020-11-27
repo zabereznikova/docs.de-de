@@ -2,17 +2,19 @@
 title: Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f06dd0b7e66ae783b2f268551f15c5e6e8369b7f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255064"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
+
 In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der Windows Communication Foundation (WCF)-Architektur beschrieben, die zum Steuern des Ressourcenverbrauchs und beeinflussen der Leistungsmetriken verwendet werden.
 
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Eigenschaften, die den Ressourcenverbrauch in WCF einschränken
+
  Windows Communication Foundation (WCF) wendet Einschränkungen für bestimmte Arten von Prozessen entweder zu Sicherheits-oder Leistungs Zwecken an. Diese Einschränkungen treten in zwei Hauptformen auf, jeweils als Kontingente und Drosselungen. *Kontingente* sind Grenzwerte, die zu einem bestimmten Zeitpunkt im System eine unmittelbare Ausnahme ausgelöst haben, wenn erreicht oder überschritten wird. *Drosselungen* sind Limits, die nicht sofort bewirken, dass eine Ausnahme ausgelöst wird. Stattdessen wird beim Erreichen einer Drosselungsbeschränkung der Prozess fortgesetzt, jedoch innerhalb der durch den Drosselungswert festgelegten Grenzen. Diese eingeschränkte Verarbeitung löst möglicherweise an anderer Stelle eine Ausnahme aus, dies hängt jedoch von der jeweiligen Anwendung ab.
 
  Zusätzlich zu der Unterscheidung zwischen Kontingenten und Drosselungen befinden sich einige einschränkende Eigenschaften auf der Serialisierungsebene, auf der Transportebene und auf der Anwendungsebene. Beispielsweise wird das Kontingent <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, das von allen vom System bereitgestellten Transportbindungselementen implementiert wird, standardmäßig auf 65.536 Byte festgelegt, um böswillige Clients daran zu hindern, Denial-of-Service-Angriffe gegen einen bestimmten Dienst zu starten und dadurch einen überhöhten Speicherbedarf zu verursachen. (I. d. R. können Sie die Leistung erhöhen, indem Sie diesen Wert herabsetzen.)
@@ -27,6 +29,7 @@ In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der
  Eigenschaften, die Serialisierungsprozesse einschränken, werden unter [Sicherheitsüberlegungen für Daten](./feature-details/security-considerations-for-data.md)aufgeführt. Eigenschaften, die den Verbrauch von Ressourcen einschränken, die sich auf Transporte beziehen, werden unter [Transport Kontingente](./feature-details/transport-quotas.md)aufgeführt. Eigenschaften, die den Verbrauch von Ressourcen auf der Anwendungsschicht einschränken, gehören zur <xref:System.ServiceModel.Dispatcher.ServiceThrottle>-Klasse.
 
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>Erkennen von Anwendungs- und Leistungsproblemen in Zusammenhang mit den Kontingenteinstellungen
+
  Die Standardeinstellungen für die vorangehenden Werte wurden ausgewählt, um eine grundlegende Funktionalität für viele verschiedene Anwendungstypen zu ermöglichen und gleichzeitig einen Schutz vor häufig auftretenden Sicherheitsproblemen zu bieten. Jedoch überschreiten die verschiedenen Anwendungs-Designs möglicherweise eine oder mehrere Drosselungseinstellungen, obwohl die Anwendung ansonsten sicher ist und wie gewünscht funktionieren würde. In einem solchen Fall müssen Sie feststellen, welche Drosselungswerte auf welcher Ebene überschritten werden. Legen Sie anschließend angemessene Maßnahmen zur Erhöhung des Anwendungsdurchsatzes fest.
 
  In der Regel wird beim Schreiben und Debuggen der Anwendung die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft in der Konfigurationsdatei oder programmgesteuert auf `true` festgelegt. Dies weist WCF an, Dienst Ausnahme Stapel-Ablauf Verfolgungen zur Anzeige an die Client Anwendung zurückzugeben. Diese Funktion meldet die meisten Ausnahmen auf Anwendungsebene so, dass angezeigt wird, welche Kontingenteinstellungen möglicherweise beteiligt sind, falls das Problem hierdurch verursacht wurde.
@@ -36,6 +39,7 @@ In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der
  Unabhängig von den Funktionen der Entwicklungsumgebung können Sie die Funktionen der WCF-Ablauf Verfolgung und der Nachrichten Protokollierung verwenden, um alle Ausnahmen zu Debuggen und die Leistung Ihrer Anwendungen zu optimieren. Weitere Informationen finden Sie unter [Verwenden der Ablauf Verfolgung zum Beheben von Problemen mit Ihrer Anwendung](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="performance-issues-and-xmlserializer"></a>Leistungsprobleme und XmlSerializer
+
  Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können, generieren und kompilieren für diese Datentypen während der Laufzeit Code, was zu einem verlangsamten Start führen kann.
 
 > [!NOTE]
@@ -47,7 +51,7 @@ In diesem Thema werden verschiedene Eigenschaften in verschiedenen Bereichen der
 
 Wird ein WCF-Dienst unter IIS und ASP.NET gehostet, können sich die Konfigurationseinstellungen von IIS und ASP.NET auf den Durchsatz und die Speicherbeanspruchung des WCF-Diensts auswirken.  Weitere Informationen zur ASP.net-Leistung finden Sie unter [verbessern der Leistung von ASP.net](/previous-versions/msp-n-p/ff647787(v=pandp.10)). Eine Einstellung, durch die sich unbeabsichtigte Folgen ergeben können, ist <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>. Hierbei handelt es sich um eine Eigenschaft der <xref:System.Web.Configuration.ProcessModelSection>. Verfügt die Anwendung über eine feste oder über eine geringe Anzahl von Clients, lässt sich durch Festlegen von <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> auf "2" bei einem Computer mit mehreren Prozessoren, dessen CPU-Auslastung sich nahe bei 100 Prozent bewegt, möglicherweise ein Leistungsschub beim Durchsatz erzielen. Dieser Leistungszuwachs bringt jedoch auch einen Nachteil mit sich, da sich dadurch auch eine erhöhte Speicherauslastung ergibt, was zu einer geringeren Skalierbarkeit führt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwaltung und Diagnose](./diagnostics/index.md)
 - [Umfangreiche Daten und Streaming](./feature-details/large-data-and-streaming.md)

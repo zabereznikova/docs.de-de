@@ -2,18 +2,19 @@
 title: Behandeln von Setup-Problemen
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720451"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255116"
 ---
 # <a name="troubleshoot-setup-issues"></a>Beheben von Setup-Problemen
 
 In diesem Artikel wird beschrieben, wie Sie Probleme bei der Windows Communication Foundation (WCF) beheben.  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Einige Windows Communication Foundation-Registrierungsschlüssel werden nicht durch Ausführen eines MSI-Reparaturvorgangs in .NET Framework 3.0 repariert  
+
  Wenn Sie einen der folgenden Registrierungsschlüssel löschen:  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
@@ -26,7 +27,7 @@ In diesem Artikel wird beschrieben, wie Sie Probleme bei der Windows Communicati
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- Die Schlüssel werden nicht neu erstellt, wenn Sie die Reparatur mithilfe des Installationsprogramms .NET Framework 3,0 ausführen, das über das Applet **Programme hinzufügen/entfernen** in der **Systemsteuerung**gestartet wurde. Um diese Schlüssel ordnungsgemäß neu zu erstellen, muss der Benutzer .NET Framework 3.0 deinstallieren und anschließend neu installieren.  
+ Die Schlüssel werden nicht neu erstellt, wenn Sie die Reparatur mithilfe des Installationsprogramms .NET Framework 3,0 ausführen, das über das Applet **Programme hinzufügen/entfernen** in der **Systemsteuerung** gestartet wurde. Um diese Schlüssel ordnungsgemäß neu zu erstellen, muss der Benutzer .NET Framework 3.0 deinstallieren und anschließend neu installieren.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-wmi-provider"></a>WMI-Dienst Beschädigung blockiert die Installation des WMI-Anbieters
 
@@ -65,6 +66,7 @@ In diesem Artikel wird beschrieben, wie Sie Probleme bei der Windows Communicati
  Das Tool für die [Workflow Dienst Registrierung (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) finden Sie unter%windir%\Microsoft.NET\Framework\v3.5\ oder%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Korrektes Konfigurieren von IIS für WCF-/WF-Webhost nach der Installation von .NET Framework&#160;3.5  
+
  Wenn bei .NET Framework 3,5-Installation keine zusätzlichen WCF-bezogenen IIS-Konfigurationseinstellungen konfiguriert werden können, wird im Installationsprotokoll ein Fehler protokolliert und der Vorgang fortgesetzt. Jeder Versuch, WorkflowServices-Anwendungen auszuführen, schlägt fehl, da die erforderlichen Konfigurationseinstellungen fehlen. Zum Beispiel kann das Laden eines XOML- oder RULES-Diensts fehlschlagen.  
   
  Um dieses Problem zu umgehen, verwenden Sie das [Workflow Service Registration-Tool (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) mit dem- `/c` Schalter, um IIS-Skript Zuordnungen auf dem Computer ordnungsgemäß zu konfigurieren. Das Tool für die [Workflow Dienst Registrierung (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) finden Sie unter%windir%\Microsoft.NET\Framework\v3.5\ oder%windir%\Microsoft.NET\framework64\v3.5\  
