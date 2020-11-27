@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 9acefdec63a6f518ead6cdbcb19ebc8c75609dd6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f60d0c9ad3f6fc4e9596d466b5eabdaab0f4822f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595361"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280610"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode
+
 "Svcutil.exe" kann Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys wie folgt exportieren:  
   
 - Zum Exportieren von Metadaten für alle kompilierten Dienstverträge für eine Assemblygruppe mithilfe von "Svcutil.exe" geben Sie die Assemblys als Eingabeparameter an. Dies ist das Standardverhalten.  
@@ -76,6 +77,7 @@ ms.locfileid: "84595361"
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie Metadaten für eine einfache Dienstimplementierung und -konfiguration generiert werden.  
   
  So exportieren Sie Metadaten für den Dienstvertrag  

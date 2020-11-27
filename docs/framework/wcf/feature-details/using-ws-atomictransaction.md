@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-ms.openlocfilehash: 71090efbb096bc3b7b3d6bcf40ff496b78ac6252
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 22b84dc49ab723953ce36402ac14221f410dda11
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600684"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281598"
 ---
 # <a name="using-ws-atomictransaction"></a>Verwenden von WS-AtomicTransaction
+
 WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll. Mit diesem Protokoll können Sie verteilte Transaktionen unter Verwendung von Webdienstnachrichten übergeben und interoperativ zwischen heterogenen Transaktionsinfrastrukturen koordinieren. WS-AT verwendet das Zwei-Phasen-Commitprotokoll, um eine unteilbare Ausgabe zwischen verteilten Anwendungen, Transaktions-Managern und Ressourcen-Managern zu erzielen.  
   
  Der WS-AT-Implementierungs Windows Communication Foundation (WCF) umfasst einen Protokolldienst, der in den Transaktions-Manager von Microsoft Distributed Transaction Coordinator (MSDTC) integriert ist. Mithilfe von WS-AT können WCF-Anwendungen Transaktionen an andere Anwendungen übertragen, einschließlich interoperablen Webdiensten, die mithilfe von Drittanbieter Technologie erstellt wurden.  

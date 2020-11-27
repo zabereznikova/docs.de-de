@@ -2,17 +2,19 @@
 title: WAS-Aktivierungsarchitektur
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545981"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281637"
 ---
 # <a name="was-activation-architecture"></a>WAS-Aktivierungsarchitektur
+
 In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungsdiensts (auch WAS genannt) aufgeführt und erläutert.  
   
 ## <a name="activation-components"></a>Aktivierungskomponenten  
+
  WAS umfasst mehrere Architekturkomponenten:  
   
 - Listeneradapter. Windows-Dienste, die Nachrichten über bestimmte Netzwerkprotokolle empfangen und mit WAS kommunizieren, leiten eingehende Nachrichten an den richtigen Arbeitsprozess weiter.  
@@ -30,9 +32,10 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
  ![Screenshot, der die was-Architektur anzeigt.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Listeneradapter  
+
  Listeneradapter sind einzelne Windows-Dienste, welche für die Netzwerkprotokolle, bei denen sie lauschen, die Netzwerkprotokolllogik zum Empfang von Nachrichten implementieren. In der folgenden Tabelle sind die Listeneradapter für Windows Communication Foundation (WCF)-Protokolle aufgeführt.  
   
-|Dienstname des Listeneradapters|Protokoll|Hinweise|  
+|Dienstname des Listeneradapters|Protocol|Notizen|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|Allgemeine Komponente, die die HTTP-Aktivierung für IIS 7,0 und WCF bereitstellt.|  
 |NetTcpActivator|net.tcp|Hängt vom NetTcpPortSharing-Dienst ab.|  
@@ -59,6 +62,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 ```  
   
 ### <a name="protocol-handlers"></a>Protokollhandler  
+
  Prozess- und AppDomain-Protokollhandler für bestimmte Protokolle werden in der Datei Web.config auf Computerebene registriert.  
   
 ```xml  
@@ -85,7 +89,7 @@ In diesem Thema werden die einzelnen Komponenten des Windows-Prozessaktivierungs
 </system.web>  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Konfigurieren von WAS für die Verwendung mit WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Windows Server AppFabric-Hostingfunktionen](/previous-versions/appfabric/ee677189(v=azure.10))

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc4ff2d4b53b679266978ae5ffdea97e4606a351
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594633"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281897"
 ---
 # <a name="impersonating-the-client"></a>Durchführen eines Identitätswechsels für den Client
+
 Das Beispiel für einen Identitätswechsel veranschaulicht, wie die Identität der Aufruferanwendung vom Dienst angenommen wird, sodass der Dienst im Namen des Aufrufers auf Systemressourcen zugreifen kann.  
   
  Dieses Beispiel basiert auf dem [Self-Host-](self-host.md) Beispiel. Die Dienst-und Client Konfigurationsdateien sind identisch mit denen des [Self-Host-](self-host.md) Beispiels.  
@@ -102,10 +103,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Dienst- und Clientkonsolenfenster angezeigt. Drücken Sie die EINGABETASTE in den einzelnen Konsolenfenstern, um den Dienst und den Client zu schließen.  
   
 > [!NOTE]
-> Der Dienst muss entweder unter einem Administrator Konto ausgeführt werden, oder das Konto, unter dem er ausgeführt wird, muss über Rechte zum Registrieren des `http://localhost:8000/ServiceModelSamples` URIs bei der HTTP-Ebene verfügen. Solche Rechte können durch das Einrichten einer [Namespace Reservierung](/windows/win32/http/namespace-reservations-registrations-and-routing) mit dem [Tool Httpcfg. exe](/windows/win32/http/httpcfg-exe)erteilt werden.  
+> Der Dienst muss entweder unter einem Administrator Konto ausgeführt werden, oder das Konto, unter dem er ausgeführt wird, muss über Rechte zum Registrieren des `http://localhost:8000/ServiceModelSamples` URIs bei der HTTP-Ebene verfügen. Solche Rechte können durch das Einrichten einer [Namespace Reservierung](/windows/win32/http/namespace-reservations-registrations-and-routing) mithilfe des [Httpcfg.exe Tools](/windows/win32/http/httpcfg-exe)erteilt werden.  
   
 > [!NOTE]
-> Auf Computern, auf denen Windows Server 2003 ausgeführt wird, wird der Identitätswechsel nur unterstützt, wenn die Host. exe-Anwendung über das Identitätswechsel Privileg verfügt. (Standardmäßig verfügen nur Administratoren über diese Berechtigung.) Um dieses Privileg einem Konto hinzuzufügen, unter dem der-Dienst ausgeführt wird, wechseln Sie zu **Verwaltung**, öffnen Sie **lokale Sicherheitsrichtlinie**, öffnen Sie **lokale Richtlinien**, klicken Sie auf Zuweisen von **Benutzerrechten**, und wählen Sie dann Identität **eines Clients nach Authentifizierung** annehmen aus, und doppelklicken Sie auf **Eigenschaften** , um einen Benutzer oder eine Gruppe  
+> Auf Computern, auf denen Windows Server 2003 ausgeführt wird, wird der Identitätswechsel nur unterstützt, wenn die Host.exe Anwendung über das Identitätswechsel Privileg verfügt. (Standardmäßig verfügen nur Administratoren über diese Berechtigung.) Um dieses Privileg einem Konto hinzuzufügen, unter dem der-Dienst ausgeführt wird, wechseln Sie zu **Verwaltung**, öffnen Sie **lokale Sicherheitsrichtlinie**, öffnen Sie **lokale Richtlinien**, klicken Sie auf Zuweisen von **Benutzerrechten**, und wählen Sie dann Identität **eines Clients nach Authentifizierung** annehmen aus, und doppelklicken Sie auf **Eigenschaften** , um einen Benutzer oder eine Gruppe  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   

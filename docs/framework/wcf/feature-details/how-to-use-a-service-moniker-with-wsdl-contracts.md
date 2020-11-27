@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 70d7e9ff45616f832597ebc48db00198967935c6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b1a6c905008b0232a098f253b9007e5147d71a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601139"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280883"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen
+
 Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop-Client wünschen. Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX-Endpunkt bereit, oder die WCF-Client-DLL ist nicht für COM-Interop registriert. In diesen Fällen können Sie eine WSDL-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF-Dienstmoniker übergeben. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL-Monikers in WCF aufgerufen wird.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Verwenden des WSDL-Dienstmonikers  

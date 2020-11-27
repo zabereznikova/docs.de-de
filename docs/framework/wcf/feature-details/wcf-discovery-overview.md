@@ -2,17 +2,19 @@
 title: Übersicht über die WCF-Suche
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8b4dda410b9ca7d7d3ff76795753811a80a617ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5876605f5096bfb75c18680faaef4ba0cd15c082
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281416"
 ---
 # <a name="wcf-discovery-overview"></a>Übersicht über die WCF-Suche
+
 Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröffentlichung von und zum Suchen nach Webdiensten bereit, wobei das WS-Suchprotokoll verwendet wird. Diese APIs ermöglichen es Diensten, sich selbst zu veröffentlichen, und Client das Suchen nach veröffentlichten Diensten. Nachdem ein Dienst erkennbar gemacht wurde, kann der Dienst Ankündigungsmeldungen senden sowie eine Überwachung auf Suchanforderungen durchführen und darauf antworten. Erkennbare Dienste können Hello-Nachrichten senden, um ihre Ankunft in einem Netzwerk anzukündigen, und Bye-Nachrichten, um das Verlassen eines Netzwerks anzukündigen. Um nach einem Dienst zu suchen, senden Clients eine `Probe`-Anforderung, die bestimmte Kriterien wie den Dienstvertragstyp, Schlüsselwörter und den Bereich des Netzwerks enthält. Dienste empfangen die `Probe`-Anforderung und bestimmen, ob diese den Kriterien entspricht. Wenn sich für einen Dienst eine Übereinstimmung ergibt, antwortet dieser mit dem Rücksenden einer `ProbeMatch`-Nachricht an den Client, in der die Informationen für die Kontaktaufnahme mit dem Dienst enthalten sind. Clients können auch `Resolve`-Anforderungen senden, mit deren Hilfe sie nach Diensten suchen können, die ggf. ihre Endpunktadresse geändert haben. Dienste, die Übereinstimmungen ergeben, antworten auf `Resolve`-Anforderungen, indem sie eine `ResolveMatch`-Nachricht zurück an den Client senden.  
   
 ## <a name="ad-hoc-and-managed-modes"></a>Ad-hoc-Modus und verwalteter Modus  
+
  Die Such-API unterstützt zwei verschiedene Modi: Verwaltet und Ad-hoc. Im Modus "Verwaltet" wird ein zentralisierter Server verwendet, der als Suchproxy bezeichnet wird und Informationen zu verfügbaren Diensten verwaltet. Der Suchproxy auf verschiedene Arten mit Informationen zu Diensten aufgefüllt werden. Dienste können z. B. während des Starts Ankündigungsmeldungen an den Suchproxy senden, oder der Proxy kann Daten aus einer Datenbank oder einer Konfigurationsdatei lesen, um zu ermitteln, welche Dienste verfügbar sind. Die Art und Weise, wie der Suchproxy aufgefüllt wird, hängt vollständig vom Entwickler ab. Clients verwenden den Suchproxy zum Abrufen von Informationen zu verfügbaren Diensten. Wenn ein Client nach einem Dienst sucht, sendet er eine `Probe`-Nachricht an den Suchproxy, und der Proxy ermittelt dann, ob einer der bekannten Dienste mit dem Dienst übereinstimmt, nach dem der Client sucht. Wenn Übereinstimmungen vorhanden sind, sendet der Suchproxy eine `ProbeMatch`-Antwort zurück an den Client. Der Client kann sich dann direkt an den Dienst wenden, indem er die vom Proxy zurückgegebenen Dienstinformationen verwendet. Das Hauptprinzip hinter dem Modus "Verwaltet" beruht darauf, dass die Suchanforderungen im Unicast-Format an eine Autorität, den Suchproxy, gesendet werden. .NET Framework enthält Hauptkomponenten, mit denen Sie einen eigenen Proxy erstellen können. Es gibt für Clients und Dienste mehrere Methoden, nach dem Proxy zu suchen:  
   
 - Der Proxy kann auf Ad-hoc-Nachrichten reagieren.  
@@ -24,9 +26,11 @@ Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröf
  Im Ad-hoc-Modus gibt es keinen zentralisierten Server. Alle Suchnachrichten, z. B. Dienstankündigungen und Clientanforderungen, werden im Multicast-Format gesendet. Standardmäßig enthält .NET Framework Unterstützung für die Ad-hoc-Suche über das UDP-Protokoll. Wenn ein Dienst z. B. konfiguriert wird, um während des Startvorgangs eine Hello-Ankündigung zu senden, erfolgt das Senden über eine bekannte Multicastadresse und das UDP-Protokoll. Clients müssen über eine aktive Überwachung auf diese Ankündigungen verfügen und diese entsprechend verarbeiten. Wenn ein Client eine `Probe`-Nachricht für einen Dienst sendet, wird diese mit einem Multicastprotokoll über das Netzwerk übertragen. Jeder Dienst, der die Anforderung empfängt, ermittelt, ob diese mit den Kriterien der `Probe`-Nachricht übereinstimmt. Anschließend antwortet der jeweilige Dienst dem Client direkt mit einer `ProbeMatch`-Nachricht, falls sich für den Dienst eine Übereinstimmung mit den Kriterien ergibt, die in der `Probe`-Nachricht angegeben sind.  
   
 ## <a name="benefits-of-using-wcf-discovery"></a>Vorteile der WCF-Suche  
+
  Da die WCF-Suche mit dem WS-Discovery-Protokoll implementiert wird, besteht Interoperabilität mit anderen Clients, Diensten und Proxys, die WS-Discovery ebenfalls implementieren. Die WCF-Suche basiert auf den vorhandenen WCF-APIs, sodass Sie den vorhandenen Diensten und den Clients auf einfache Weise Suchfunktionalität hinzufügen können. Sie können die Auffindbarkeit von Diensten einfach über die Anwendungskonfigurationseinstellungen hinzufügen. Außerdem unterstützt die WCF-Suche die Verwendung des Suchprotokolls über andere Transporte wie Peernetzwerk, Namens-Overlay und HTTP. Die WCF-Suche unterstützt den Modus "Verwaltet", in dem ein Suchproxy verwendet wird. So kann der Netzwerkverkehr reduziert werden, weil Nachrichten direkt an den Suchproxy gesendet werden, und es werden keine Multicastnachrichten an das gesamte Netzwerk gesendet. Beim Arbeiten mit Webdiensten ermöglicht die WCF-Suche zudem mehr Flexibilität. Sie können z. B. die Adresse eines Diensts ändern, ohne den Client oder den Dienst neu konfigurieren zu müssen. Wenn ein Client auf den Dienst zugreifen muss, kann er über eine `Probe`-Anforderung eine `Find`-Nachricht ausgeben. Er erwartet dann, dass der Dienst mit seiner aktuellen Adresse antwortet. Mit der WCF-Suche kann ein Client anhand unterschiedlicher Kriterien, wie Vertragstypen, Bindungselemente, Namespace, Bereich und Schlüsselwörter oder Versionsnummern, nach einem Dienst suchen. Die WCF-Suche ermöglicht die Suche zur Laufzeit und zur Entwurfszeit. Das Hinzufügen der Suchfunktion zu einer Anwendung ermöglicht weitere Szenarien, z. B. Fehlertoleranz und automatische Konfiguration.  
   
 ## <a name="service-publication"></a>Dienstveröffentlichung  
+
  Um einen Dienst erkennbar zu machen, müssen Sie dem Diensthost ein <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hinzufügen. Außerdem müssen Sie einen Suchendpunkt hinzufügen, um anzugeben, welche Komponenten auf Suchnachrichten überwacht werden sollen. Im folgenden Codebeispiel wird gezeigt, wie Sie einen selbst gehosteten Dienst ändern können, um diesen erkennbar zu machen.  
   
 ```csharp  
@@ -58,6 +62,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
  Einer Dienstbeschreibung muss eine <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>-Instanz hinzugefügt werden, damit der Dienst erkennbar ist. Dem Diensthost muss eine <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>-Instanz hinzugefügt werden, um dem Dienst mitzuteilen, welche Komponenten auf Suchanforderungen überwacht werden sollen. In diesem Beispiel wird ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> (von <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> abgeleitet) hinzugefügt, um anzugeben, dass der Dienst die Überwachung über den UDP-Multicasttransport durchführen soll. Der <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> wird für die Ad-hoc-Suche verwendet, weil alle Nachrichten im Multicast-Format gesendet werden.  
   
 ## <a name="announcement"></a>Ankündigung  
+
  Bei der Dienstveröffentlichung werden standardmäßig keine Ankündigungsnachrichten gesendet. Der Dienst muss so konfiguriert werden, dass er Ankündigungsnachrichten sendet. Dadurch können Dienstwriter flexibler arbeiten, weil sie den Dienst getrennt von der Überwachung auf Suchnachrichten ankündigen können. Die Dienstankündigung kann auch als Mechanismus zum Registrieren von Diensten bei einem Suchproxy oder anderen Dienstregistrierungen verwendet werden. Im folgenden Code wird gezeigt, wie Sie einen Dienst zum Senden von Ankündigungsnachrichten über eine UDP-Bindung konfigurieren.  
   
 ```csharp  
@@ -92,6 +97,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ```  
   
 ## <a name="service-discovery"></a>Dienstsuche  
+
  Eine Clientanwendung kann die <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse verwenden, um nach Diensten zu suchen. Der Entwickler erstellt eine Instanz der <xref:System.ServiceModel.Discovery.DiscoveryClient>-Klasse, die einen Suchendpunkt übergibt. Der Suchendpunkt gibt an, wohin `Probe`- oder `Resolve`-Nachrichten gesendet werden sollen. Der Client ruft dann die <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>-Methode auf, die die Suchkriterien innerhalb einer <xref:System.ServiceModel.Discovery.FindCriteria>-Instanz angibt. Wenn übereinstimmende Dienste gefunden werden, gibt <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> eine Auflistung von <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> zurück. Der folgende Code zeigt, wie sie die `Find`-Methode aufrufen und dann eine Verbindung zu einem ermittelten Dienst herstellen.  
   
 ```csharp  
@@ -144,9 +150,11 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Sicherheit der Such- und Nachrichtenebene  
+
  Beim Verwenden der Nachrichtenebenensicherheit müssen Sie auf dem Dienstsuchendpunkt ein <xref:System.ServiceModel.EndpointIdentity>-Objekt und auf dem Clientsuchendpunkt ein passendes <xref:System.ServiceModel.EndpointIdentity>-Objekt angeben. Weitere Informationen zur Sicherheit auf Nachrichten Ebene finden Sie unter [Nachrichten Sicherheit](message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Suche und im Internet gehostete Dienste  
+
  Damit WCF-Dienste erkennbar sind, müssen sie derzeit ausgeführt werden. Unter IIS oder WAS gehostete WCF-Dienste werden erst ausgeführt, wenn IIS/WAS eine Meldung für den Dienst empfängt. Daher sind sie nicht standardmäßig erkennbar.  Es gibt zwei Möglichkeiten, im Internet gehostete Dienste als erkennbar festzulegen:  
   
 1. Verwenden der Autostart-Funktion von Windows Server AppFabric  

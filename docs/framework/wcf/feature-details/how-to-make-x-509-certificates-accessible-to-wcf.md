@@ -10,14 +10,15 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 5cc1118640bcf1262d88cb8cdb39939ae315cae3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 06a6167f0ad352955eb6b764ef8bfdb1394f4ed9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246869"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279739"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
+
 Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich zu machen, muss der Anwendungscode den Namen und Speicherort des Zertifikat Speicher angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels, der einem X. 509-Zertifikat in einem Zertifikat Speicher zugeordnet ist, muss WCF über die entsprechende Berechtigung verfügen. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>So machen Sie X.509-Zertifikate für WCF zugänglich  
@@ -31,8 +32,8 @@ Um ein X. 509-Zertifikat für Windows Communication Foundation (WCF) zugänglich
         |Verwendung des X.509-Zertifikats|Privater Schlüssel|  
         |---------------------------|-----------------|  
         |Digitales Signieren einer ausgehenden SOAP-Nachricht.|Ja|  
-        |Überprüfen der Signatur einer eingehenden SOAP-Nachricht.|Nein|  
-        |Verschlüsseln einer ausgehenden SOAP-Nachricht.|Nein|  
+        |Überprüfen der Signatur einer eingehenden SOAP-Nachricht.|Nein |  
+        |Verschlüsseln einer ausgehenden SOAP-Nachricht.|Nein |  
         |Verschlüsseln einer eingehenden SOAP-Nachricht.|Ja|  
   
     2. Ermitteln Sie den Ort und Namen des Zertifikatspeicherspeichers, in dem sich das Zertifikat befindet.  

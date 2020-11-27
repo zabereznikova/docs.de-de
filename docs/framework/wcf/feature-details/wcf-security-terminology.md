@@ -6,14 +6,15 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8941350e46680c4ecaeb9b89fe9e6910c5830bcb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70dde7ab30d542ecc9f85d027a86b466eb13e4f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281312"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
+
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
  Weitere Informationen zu den in der Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegende Windows Communication Foundation Konzepte](../fundamental-concepts.md).  
@@ -28,10 +29,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Kontrolle des Zugriffs auf und der Rechte für eine Ressource, Beispielsweise können die Mitglieder einer Gruppe eine Datei lesen, während die Mitglieder einer anderen Gruppe diese auch bearbeiten dürfen.  
   
  Zertifizierungsstellenzertifikat  
- Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da Sie einen öffentlichen Schlüssel enthält, der in digitalen Signaturen verwendet wird, wird Sie auch als *Signaturzertifikat*bezeichnet. Wenn die Zertifizierungsstelle eine Stamm Zertifizierungsstelle ist, wird das Zertifizierungsstellen Zertifikat möglicherweise als Stamm *Zertifikat*bezeichnet. Wird manchmal auch als *Site Zertifikat*bezeichnet.  
+ Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da Sie einen öffentlichen Schlüssel enthält, der in digitalen Signaturen verwendet wird, wird Sie auch als *Signaturzertifikat* bezeichnet. Wenn die Zertifizierungsstelle eine Stamm Zertifizierungsstelle ist, wird das Zertifizierungsstellen Zertifikat möglicherweise als Stamm *Zertifikat* bezeichnet. Wird manchmal auch als *Site Zertifikat* bezeichnet.  
   
  Zertifizierungsstellenhierarchie  
- Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so organisiert, dass jede Zertifizierungsstelle von einer anderen Zertifizierungsstelle auf einer höheren Ebene der Hierarchie zertifiziert wird, bis der obere Teil der Hierarchie, auch bekannt als Stamm Zertifizierungs *Stelle, erreicht*wird.  
+ Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so organisiert, dass jede Zertifizierungsstelle von einer anderen Zertifizierungsstelle auf einer höheren Ebene der Hierarchie zertifiziert wird, bis der obere Teil der Hierarchie, auch bekannt als Stamm Zertifizierungs *Stelle, erreicht* wird.  
   
  Zertifikat  
  Eine digital signierte Anweisung mit Informationen über eine Entität und ihren öffentlichen Schlüssel, die zwei Informationen verbindet. Zertifikate werden von vertrauenswürdigen Organisationen (oder Entitäten) ausgestellt, die auch als Zertifizierungsstellen bezeichnet werden, nachdem die Zertifizierungsstelle die vorgegebene Identität überprüft hat.  
@@ -63,7 +64,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Ein Paar aus einem öffentlichen und einem privaten Schlüssel für die Verschlüsselung von Sitzungsschlüsseln zum sicheren Speichern und Austauschen mit anderen Benutzern.  
   
  hash  
- Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten in der Regel zufällige Daten, die als *Nonce*bezeichnet werden. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis wird auch als *Nachrichten Digest*bezeichnet. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
+ Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten in der Regel zufällige Daten, die als *Nonce* bezeichnet werden. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis wird auch als *Nachrichten Digest* bezeichnet. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
   
  Hashalgorithmus  
  Ein Algorithmus zur Erzeugung eines Hashwerts aus Daten, beispielsweise aus einer Nachricht oder aus einem Sitzungsschlüssel. Typische Hashalgorithmen sind MD2, MD4, MD5 und SHA-1.  
@@ -173,7 +174,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Software, die entscheidet, ob eine Datei als vertrauenswürdig eingestuft wird. Diese Entscheidung basiert auf dem Zertifikat, das der Datei zugeordnet ist.  
   
  Benutzerprinzipalname (UPN)  
- Einen Benutzerkonto Namen (manchmal auch als *Benutzer Anmelde Name*bezeichnet) und einen Domänen Namen, der die Domäne identifiziert, in der sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format ist: someone@example.com (wie bei einer e-Mail-Adresse).  
+ Einen Benutzerkonto Namen (manchmal auch als *Benutzer Anmelde Name* bezeichnet) und einen Domänen Namen, der die Domäne identifiziert, in der sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format ist: someone@example.com (wie bei einer e-Mail-Adresse).  
   
 > [!NOTE]
 > Zusätzlich zum Standard-UPN-Formular akzeptiert WCF UPNs in Form von UPN, z. b. cohowinery. com\someone.  
@@ -181,7 +182,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  X.509  
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Wesentliche Windows Communication Foundation-Begriffe](../fundamental-concepts.md)
 - [Sicherheitskonzepte](security-concepts.md)

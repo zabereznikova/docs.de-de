@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 86062dd5147e6e354833928fd98bd1f6b5de9114
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421500"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279986"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
+
 Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: Erste Schritte“. Hierin wird beschrieben, wie Sie einen Workflowhost erstellen und den im vorherigen Thema [How to: Create a Workflow](how-to-create-a-workflow.md) definierten Workflow ausführen.
 
 > [!NOTE]
@@ -26,7 +27,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
   
 1. Öffnen Sie die Projekt Mappe aus dem vorherigen Thema Gewusst [wie: Erstellen einer Aktivität](how-to-create-an-activity.md) mithilfe von Visual Studio 2012.  
   
-2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **WF45GettingStartedTutorial** , zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt**aus.  
+2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **WF45GettingStartedTutorial** , zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt** aus.  
   
     > [!TIP]
     > Wird das Fenster **Projektmappen-Explorer** nicht angezeigt, wählen Sie **Projektmappen-Explorer** im Menü **Ansicht** aus.
@@ -38,9 +39,9 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
 
      Stellen Sie sicher, dass **.NET Framework 4.5** in der Dropdownliste für die .NET Framework-Version ausgewählt ist. Wählen Sie in der Liste **Workflow** die Option **Konsolenanwendung für Workflows** aus. Geben Sie im Feld `NumberGuessWorkflowHost` Name **die Bezeichnung** ein, und klicken Sie auf **OK**. Auf diese Weise wird eine Start-Workflowanwendung mit grundlegender Unterstützung von Workflowhosting erstellt. Dieser grundlegende Hostingcode wird geändert und zum Ausführen der Workflowanwendung verwendet.
 
-4. Klicken Sie im Projektmappen-Explorer **** mit der rechten Maustaste auf das neu hinzugefügte Projekt **NumberGuessWorkflowHost** , und wählen Sie **Verweis hinzufügen**aus. Wählen Sie in der Liste **Verweis hinzufügen** den Eintrag **Projektmappe** aus, aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowActivities**, und klicken Sie auf **OK**.
+4. Klicken Sie im Projektmappen-Explorer  mit der rechten Maustaste auf das neu hinzugefügte Projekt **NumberGuessWorkflowHost** , und wählen Sie **Verweis hinzufügen** aus. Wählen Sie in der Liste **Verweis hinzufügen** den Eintrag **Projektmappe** aus, aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowActivities**, und klicken Sie auf **OK**.
 
-5. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Workflow1.xaml** , und wählen Sie **Löschen**aus. Klicken Sie zum Bestätigen auf **OK**.
+5. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Workflow1.xaml** , und wählen Sie **Löschen** aus. Klicken Sie auf **OK** , um zu bestätigen.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>So ändern Sie den Code zum Hosten von Workflows
 
@@ -138,9 +139,9 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      [!code-csharp[CFX_WF_GettingStarted#11](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a>So erstellen Sie die Anwendung und führen Sie aus
+## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a> So erstellen Sie die Anwendung und führen Sie aus
 
-1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowHost** , und wählen Sie **Als Startprojekt festlegen**aus.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowHost** , und wählen Sie **Als Startprojekt festlegen** aus.
 
 2. Drücken Sie STRG+F5, um die Anwendung zu erstellen und auszuführen. Versuchen Sie, die Zahl in möglichst wenigen Durchgängen zu erraten.
 
@@ -152,6 +153,7 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
      Eine Anleitung dazu, wie Sie einer Workflowanwendung Persistenz hinzufügen, finden Sie im nächsten Thema: [How to: Create and Run a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Beispiel
+
  Das folgende Beispiel ist die vollständige Codeauflistung für die `Main` -Methode.
 
 > [!NOTE]
@@ -160,12 +162,12 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
  [!code-csharp[CFX_WF_GettingStarted#12](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation-Programmierung](programming.md)
-- [Tutorial zu den ersten Schritten](getting-started-tutorial.md)
+- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
 - [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md)
 - [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](how-to-create-and-run-a-long-running-workflow.md)
 - [Warten auf Eingabe in einem Workflow](waiting-for-input-in-a-workflow.md)

@@ -2,27 +2,30 @@
 title: 3354 - ServiceSecurityNegotiationCompleted
 ms.date: 03/30/2017
 ms.assetid: 093aeefe-1609-4409-b6d2-00f71772bcf7
-ms.openlocfilehash: 89f13240eff26d64fdfa568170051f9872dadada
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b5e43b765434d88f9a2579800d313b1fba1096
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282560"
 ---
 # <a name="3354---servicesecuritynegotiationcompleted"></a>3354 - ServiceSecurityNegotiationCompleted
+
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|ID|3354|  
-|Schlüsselwörter|Sicherheit|  
+|id|3354|  
+|Keywords|Sicherheit|  
 |Ebene|Ausführlich|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis wird ausgegeben, wenn die Dienstsicherheitsaushandlung abgeschlossen ist.  
   
-## <a name="message"></a>Meldung  
+## <a name="message"></a>`Message`  
+
  Die Dienstsicherheitsaushandlung wurde abgeschlossen.  
   
 ## <a name="details"></a>Details

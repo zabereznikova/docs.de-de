@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 39838ac219f095b727ad953158d54da2682a09fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282014"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
+
 Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten Entwickler in der Regel auf die Datenstrukturen und Serialisierungsprobleme und müssen sich nicht mit der Struktur der Nachrichten befassen, in denen die Daten übertragen werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](specifying-data-transfer-in-service-contracts.md).)  
   
  Allerdings ist zuweilen die vollständige Kontrolle über die Struktur einer SOAP-Nachricht wichtiger als die Kontrolle über dessen Inhalte. Dies gilt insbesondere, wenn Interoperabilität wichtig ist oder um Sicherheitsprobleme speziell auf der Ebene der Nachricht oder des Nachrichtenteils zu kontrollieren. In diesen Fällen können Sie einen *Nachrichten Vertrag* erstellen, der es Ihnen ermöglicht, die Struktur der exakten SOAP-Nachricht anzugeben.  
@@ -23,7 +24,8 @@ Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten En
  Dieses Thema beschreibt, wie die unterschiedlichen Attribute für Nachrichtenverträge zur Erstellung eines spezifischen Nachrichtenvertrags für Ihren Vorgang verwendet werden.  
   
 ## <a name="using-message-contracts-in-operations"></a>Verwenden von Nachrichtenverträgen in Vorgängen  
- WCF unterstützt Vorgänge, die entweder für den *Remote Prozedur Aufruf (RPC)* oder den *Messaging Stil*modelliert wurden. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Form der Serialisierung die Struktur der Daten in den zugrunde liegenden Nachrichten, und die WCF-Laufzeit erstellt die Nachrichten, um den Vorgang zu unterstützen. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
+
+ WCF unterstützt Vorgänge, die entweder für den *Remote Prozedur Aufruf (RPC)* oder den *Messaging Stil* modelliert wurden. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Form der Serialisierung die Struktur der Daten in den zugrunde liegenden Nachrichten, und die WCF-Laufzeit erstellt die Nachrichten, um den Vorgang zu unterstützen. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
   
  Das folgende Codebeispiel zeigt einen im RPC-Stil erstellten Dienstvorgang.  
   
@@ -65,6 +67,7 @@ void Reconcile(BankingTransaction bt1, BankingTransaction bt2);
  Verfügt ein Typ sowohl über einen Nachrichtenvertrag als auch über einen Datenvertrag, wird nur der Nachrichtenvertrag berücksichtigt, wenn der Typ in einem Vorgang zum Einsatz kommt.  
   
 ## <a name="defining-message-contracts"></a>Definition von Nachrichtenverträgen  
+
  Zur Definition eines Nachrichtenvertrags für einen Typ (d. h. zur Definition der Zuordnung zwischen Typ und SOAP-Umschlag) wenden Sie <xref:System.ServiceModel.MessageContractAttribute> auf den Typ an. Wenden Sie dann das <xref:System.ServiceModel.MessageHeaderAttribute> auf die Member an, die Sie SOAP-Headern machen möchten, und wenden Sie dann das <xref:System.ServiceModel.MessageBodyMemberAttribute> auf die Member an,die Sie zu Teilen des SOAP-Texts der Nachricht machen möchten.  
   
  Der folgende Code stellt ein Beispiel für die Verwendung eines Nachrichtenvertrags dar.  
@@ -109,6 +112,7 @@ public class BankingTransaction
 > <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrollieren von Header- und Textteilnamen und Namespaces  
+
  In der SOAP-Darstellung eines Nachrichtenvertrags wird jeder Header und jeder Textteil einem XML-Element zugeordnet, das über einen Namen und einen Namespace verfügt.  
   
  Standardmäßig entspricht der Namespace dem Namespace des Dienstvertrags, an dem die Nachricht teilnimmt, und der Name wird durch den Membernamen festgelegt, auf den die Attribute <xref:System.ServiceModel.MessageHeaderAttribute> oder <xref:System.ServiceModel.MessageBodyMemberAttribute> angewandt wurden.  
@@ -144,6 +148,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Kontrolle, ob die SOAP-Textteile umbrochen werden  
+
  Standardmäßig sind die SOAP-Textteile in einem umbrochenen Element serialisiert. Beispielsweise zeigt der folgende Code das `HelloGreetingMessage`-Wrapperelement, das aus dem Namen des <xref:System.ServiceModel.MessageContractAttribute>-Typs im Nachrichtenvertrag für die `HelloGreetingMessage`-Nachricht generiert wird.  
   
 [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
@@ -155,6 +160,7 @@ public class BankingTransaction
 > Das Vorhandensein von mehr als einem Nachrichtentextteil in nicht umbrochenen Nachrichten ist nicht mit dem WS-I Basic Profile 1.1 kompatibel und wird bei der Gestaltung neuer Nachrichtenverträge nicht empfohlen. Allerdings kann es bei spezifischen Interoperabilitätsszenarien notwendig sein, mehr als einen nicht umbrochenen Nachrichtentextteil zu haben. Wenn Sie mehrere Daten in einem Nachrichtentext übertragen möchten, wird die Verwendung des Standardumbruchmodus empfohlen. Mehr als einen Nachrichtenheader in nicht umbrochenen Nachrichten zu haben, ist vollkommen akzeptabel.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Verwendung von benutzerdefinierten Typen innerhalb von Nachrichtenverträgen  
+
  Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe der ausgewählten Serialisierungs-Engine für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Die Standardserialisierungs-Engine, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](using-data-contracts.md).  
   
  Im vorangehenden Beispiel müssen die Typen `Operation` und `BankingTransactionData` über einen Datenvertrag verfügen, und `transactionDate` ist serialisierbar, da <xref:System.DateTime> primitiv ist (und über einen impliziten Datenvertrag verfügt).  
@@ -162,6 +168,7 @@ public class BankingTransaction
  Es ist jedoch möglich, zu einer anderen Serialisierungs-Engine, dem `XmlSerializer`, umzuschalten. Wenn Sie umschalten, sollten Sie sicherstellen, dass alle für die Nachrichtenheader und Textteile verwendeten Typen mithilfe des `XmlSerializer` serialisierbar sind.  
   
 ## <a name="using-arrays-inside-message-contracts"></a>Verwendung von Arrays innerhalb von Nachrichtenverträgen  
+
  Sie können Arrays von sich wiederholenden Elementen in Nachrichtenverträgen auf zwei Arten verwenden.  
   
  Auf der einen Seite können Sie ein <xref:System.ServiceModel.MessageHeaderAttribute> oder ein <xref:System.ServiceModel.MessageBodyMemberAttribute> direkt auf dem Array anwenden. In diesem Fall wird das gesamte Array als ein Element (d. h. ein Header und ein Textteil) mit mehreren Unterelementen serialisiert. Betrachten Sie die Klasse im folgenden Beispiel.  
@@ -207,11 +214,13 @@ public class BankingDepositLog
  Sie können <xref:System.ServiceModel.MessageHeaderArrayAttribute> nur auf Arrays anwenden, nicht auf Sammlungen.  
   
 ## <a name="using-byte-arrays-in-message-contracts"></a>Verwendung von Bytearrays in Nachrichtenverträgen  
+
  Bytearrays werden bei der Verwendung mit Nicht-Arrayattributen (<xref:System.ServiceModel.MessageBodyMemberAttribute> und <xref:System.ServiceModel.MessageHeaderAttribute>) nicht als Arrays behandelt, sondern als spezielle primitive Typen, die als Base64-codierte Daten in der resultierenden XML dargestellt werden.  
   
  Wenn Sie Bytearrays mit dem Arrayattribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> verwenden, hängen die Ergebnisse vom verwendeten Serialisierungsprogramm ab. Mit dem Standardserialisierungsprogramm wird das Array als einzelner Eintrag für jedes Byte dargestellt. Ist allerdings `XmlSerializer` ausgewählt (mithilfe von <xref:System.ServiceModel.XmlSerializerFormatAttribute> auf dem Dienstvertrag), werden Bytearrays als Base64-Daten behandelt, unabhängig davon, ob Array- oder Nicht-Arrayattribute verwendet werden.  
   
 ## <a name="signing-and-encrypting-parts-of-the-message"></a>Signieren und Verschlüsseln von Teilen der Nachricht  
+
  Ein Nachrichtenvertrag kann angeben, ob die Header und/oder der Text der Nachricht digital signiert und verschlüsselt werden soll.  
   
  Dies wird erreicht, indem die <xref:System.ServiceModel.MessageContractMemberAttribute.ProtectionLevel%2A?displayProperty=nameWithType>-Eigenschaften in den Attributen <xref:System.ServiceModel.MessageHeaderAttribute> und <xref:System.ServiceModel.MessageBodyMemberAttribute> festgelegt wird. Die Eigenschaft ist eine Enumeration des <xref:System.Net.Security.ProtectionLevel?displayProperty=nameWithType>-Typs und kann auf <xref:System.Net.Security.ProtectionLevel.None> (keine Verschlüsselung oder Signatur), <xref:System.Net.Security.ProtectionLevel.Sign> (nur digitale Signatur) oder <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> (sowohl Verschlüsselung als auch digitale Signatur) festgelegt werden. Der Standardwert ist <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
@@ -240,9 +249,11 @@ public class PatientRecord
  In diesem Beispiel ist der `recordID`-Header nicht geschützt, `patientName` ist `signed` und `SSN` ist verschlüsselt und signiert. Auf mindestens einen Textteil, `medicalHistory`, wurde <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> angewandt. Daher ist der gesamte Nachrichtentext verschlüsselt und signiert, auch wenn die Kommentare und Diagnosetextteile niedrigere Schutzebenen festlegen.  
   
 ## <a name="soap-action"></a>SOAP-Aktion  
+
  SOAP- und verwandte Webdienststandards definieren eine Eigenschaft mit dem Namen `Action`, die für jede gesendete SOAP-Nachricht vorhanden sein kann. Die Eigenschaften <xref:System.ServiceModel.OperationContractAttribute.Action%2A?displayProperty=nameWithType> und <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A?displayProperty=nameWithType> des Vorgangs kontrollieren den Wert dieser Eigenschaft.  
   
 ## <a name="soap-header-attributes"></a>SOAP-Header-Attribute  
+
  Der SOAP-Standard definiert die folgenden Attribute, die in einem Header verwendet werden können:  
   
 - `Actor/Role` (`Actor` in SOAP 1.1, `Role` in SOAP 1.2)  
@@ -304,6 +315,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Wenn eine Nachricht empfangen und dann zurückgesendet wird, werden die SOAP-Attributeinstellungen nur für Header des <xref:System.ServiceModel.MessageHeader%601>-Typs wiederhergestellt.  
   
 ## <a name="order-of-soap-body-parts"></a>Reihenfolge von SOAP-Textteilen  
+
  In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](data-member-order.md).  
   
  Im folgenden Beispiel käme `amount` normalerweise zuerst, da es alphabetisch an erster Stelle steht. Die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A>-Eigenschaft setzt es jedoch an die dritte Position.  
@@ -320,6 +332,7 @@ public class BankingTransaction
 ```  
   
 ## <a name="message-contract-versioning"></a>Versionsverwaltung für Nachrichtenverträge  
+
  Sie müssen möglicherweise gelegentlich Nachrichtenverträge ändern. Beispielsweise kann eine neue Version Ihrer Anwendung einen zusätzlichen Header zu einer Nachricht hinzufügen. Erfolgt dann ein Versand von der neuen Version zur alten, muss das System den zusätzlichen Header und einen fehlenden Header (in der anderen Richtung) verarbeiten.  
   
  Für Versionsheader gelten die folgenden Regeln:  
@@ -331,6 +344,7 @@ public class BankingTransaction
  Nachrichtentexte haben ähnliche Versionsregeln – sowohl fehlende als auch zusätzliche Nachrichtentextteile werden ignoriert.  
   
 ## <a name="inheritance-considerations"></a>Überlegungen zur Vererbung  
+
  Ein Nachrichtenvertragstyp kann von einem anderen Typ erben, solange der Basistyp ebenfalls über einen Nachrichtenvertrag verfügt.  
   
  Bei der Erstellung einer Nachricht oder beim Zugriff darauf mithilfe eines Nachrichtenvertragstyps, der von anderen Nachrichtenvertragstypen erbt, gelten die folgenden Regeln.  
@@ -360,6 +374,7 @@ public class PatientRecord : PersonRecord
  Die `PatientRecord`-Klasse beschreibt eine Nachricht mit einem Header mit dem Namen `ID`. Der Header entspricht der `personID` und nicht dem `patientID`-Member, da der Basismember ausgewählt wird. Somit ist das `patientID`-Feld in diesem Fall unbrauchbar. Der Text der Nachricht enthält das `diagnosis`-Element, gefolgt vom `patientName`-Element, da dies die alphabetische Reihenfolge ist. Beachten Sie, dass das Beispiel ein Muster zeigt, von dem strengstens abgeraten wird: sowohl der Basisklassenvertrag als auch der abgeleitete Klassenvertrag verfügen über Nachrichtentextteile.  
   
 ## <a name="wsdl-considerations"></a>Überlegungen zu WSDL  
+
  Bei der Erstellung eines WSDL (Web Services Description Language)-Vertrags aus einem Dienst, der Nachrichtenverträge nutzt, ist es wichtig, daran zu denken, dass nicht alle Nachrichtenvertragsfunktionen in der resultierenden WSDL widergespiegelt werden. Beachten Sie die folgenden Punkte:  
   
 - WSDL kann den Begriff eines Arrays aus Headern nicht ausdrücken. Bei der Erstellung von Nachrichten mit einem Array aus Headern mithilfe des <xref:System.ServiceModel.MessageHeaderArrayAttribute> spiegelt die resultierende WSDL nur einen Header wider anstelle eines Array.  
@@ -371,6 +386,7 @@ public class PatientRecord : PersonRecord
 - Bei Verwendung desselben Nachrichtenvertrags in mehreren Vorgängen werden mehrere Nachrichtentypen im WSDL-Dokument generiert. Die Namen werden durch Hinzufügen der Zahlen "2", "3" usw. für eine aufeinanderfolgende Verwendung eindeutig gekennzeichnet. Beim Rückimport der WSDL werden mehrere Nachrichtenvertragstypen erstellt, die abgesehen von ihren Namen identisch sind.  
   
 ## <a name="soap-encoding-considerations"></a>Überlegungen zur SOAP-Codierung  
+
  WCF ermöglicht es Ihnen, die Legacy-SOAP-Codierungsstil von XML zu verwenden. es wird jedoch nicht empfohlen, die Verwendung zu verwenden. Bei der Verwendung dieses Formats (durch Festlegen der `Use`-Eigenschaft auf `Encoded` auf dem <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>, das auf den Dienstvertrag angewandt wird), gelten die folgenden zusätzlichen Überlegungen:  
   
 - Die Nachrichtenheader werden nicht unterstützt. Dies bedeutet, dass das Attribut <xref:System.ServiceModel.MessageHeaderAttribute> und das Arrayattribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> nicht mit der SOAP-Codierung kompatibel sind.  
@@ -411,6 +427,7 @@ public class PatientRecord : PersonRecord
  Nach der Serialisierung der Nachricht mithilfe von SOAP-Codierung enthalten `changedFrom` und `changedTo` nicht ihre eigenen Kopien von `p`, sondern verweisen auf die Kopie innerhalb des `changedBy`-Elements.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
+
  Jeder Nachrichtenheader und jeder Nachrichtentextteil wird unabhängig von den anderen serialisiert. Deshalb können die gleichen Namespaces wieder für jeden Header und jeden Textteil deklariert werden. Zur Verbesserung der Leistung, insbesondere in Bezug auf die Größe der zu übertragenden Nachricht, fassen Sie mehrere Header und Textteile in einem einzelnen Header oder einzelnen Textteil zusammen. Beispielsweise anstelle des folgenden Codes:  
   
 ```csharp  
@@ -444,6 +461,7 @@ public class OperationDetails
 ```  
   
 ### <a name="event-based-asynchronous-and-message-contracts"></a>Ereignisbasiertes asynchrones Modell und Nachrichtenverträge  
+
  Die Entwurfsrichtlinien für das ereignisbasierte asynchrone Modell besagen, dass in den Fällen, in denen mehr als ein Wert zurückgegeben wird, ein Wert in der `Result`-Eigenschaft und die übrigen Werte in Eigenschaften des <xref:System.EventArgs>-Objekts zurückgegeben werden sollen. Wenn ein Client Metadaten mithilfe der ereignisbasierten asynchronen Befehlsoptionen importiert, und der Vorgang mehr als einen Wert zurückgibt, dann gibt das <xref:System.EventArgs>-Standardobjekt infolgedessen einen Wert in der `Result`-Eigenschaft zurück, während die übrigen Werte in Eigenschaften des <xref:System.EventArgs>-Objekts zurückgegeben werden.  
   
  Wenn das Nachrichtenobjekt in der `Result`-Eigenschaft und die Rückgabewerte als Eigenschaften dieses Objekts übermittelt werden sollen, verwenden Sie die Befehlsoption `/messageContract`. Damit wird eine Signatur generiert, bei der die Antwortnachricht in der `Result`-Eigenschaft des <xref:System.EventArgs>-Objekts zurückgegeben wird. Alle internen Rückgabewerte sind dann Eigenschaften des Antwortnachrichtenobjekts.  

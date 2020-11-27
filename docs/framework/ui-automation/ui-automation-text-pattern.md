@@ -9,25 +9,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 8d0328f22222d2eefad4f663736c2fb675792b3f
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 3a666388b2a62c9e5582eec50196d9bda75ac0f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924694"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281182"
 ---
 # <a name="ui-automation-text-pattern"></a>Textmuster zur Benutzeroberflächenautomatisierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
  Dieses Thema enthält Übersichten und Vorgehensweisen für den Einstieg in die Programmierung für Textelemente in [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über TextPattern für die Benutzeroberflächenautomatisierung](ui-automation-textpattern-overview.md)  
  [Übersicht über TextPattern und eingebettete Objekte](textpattern-and-embedded-objects-overview.md)  
  [Artikel zu Vorgehensweisen](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Siehe auch

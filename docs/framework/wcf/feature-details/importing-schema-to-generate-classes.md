@@ -8,17 +8,19 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 01f5162727a213fa5dcdf8a70e4e8e4c3627f086
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f7c13cda2dcaeec16ad1ee49ff3dddf369906e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596902"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280521"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
+
 Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows Communication Foundation (WCF) verwendet werden können <xref:System.Runtime.Serialization.XsdDataContractImporter> . In diesem Thema werden der Prozess und die Variationen beschrieben.  
   
 ## <a name="the-import-process"></a>Der Importprozess
+
  Der Schemaimportprozess beginnt mit <xref:System.Xml.Schema.XmlSchemaSet> und erzeugt ein <xref:System.CodeDom.CodeCompileUnit>-Element.  
   
  Der `XmlSchemaSet` ist ein Teil des Schema Objektmodells (SOM) des .NET Framework, das einen Satz von XSD-Schema Dokumenten (XML Schema Definition Language) darstellt. Um ein `XmlSchemaSet`-Objekt aus einer Gruppe von XSD-Dokumenten zu erstellen, deserialisieren Sie die einzelnen Dokumente in ein <xref:System.Xml.Schema.XmlSchema>-Objekt (mithilfe von <xref:System.Xml.Serialization.XmlSerializer>) und fügen diese Objekte einem neuen `XmlSchemaSet`-Element hinzu.  
@@ -29,9 +31,9 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
   
 1. Erstellen Sie eine Instanz der <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2. Optional. Übergeben Sie im Konstruktor eine `CodeCompileUnit`. Die während des Schemaimports generierten Typen werden dieser `CodeCompileUnit`-Instanz hinzugefügt. Es wird keine leere `CodeCompileUnit` verwendet.  
+2. (Optional) Übergeben Sie im Konstruktor eine `CodeCompileUnit`. Die während des Schemaimports generierten Typen werden dieser `CodeCompileUnit`-Instanz hinzugefügt. Es wird keine leere `CodeCompileUnit` verwendet.  
   
-3. Optional. Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> -Methoden auf. Die Methode bestimmt, ob es sich beim jeweiligen Schema um ein gültiges Datenvertragsschema handelt und ob es importiert werden kann. Die `CanImport`-Methode verfügt über die gleichen Überladungen wie `Import` (der nächste Schritt).  
+3. (Optional) Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>-Methoden auf. Die Methode bestimmt, ob es sich beim jeweiligen Schema um ein gültiges Datenvertragsschema handelt und ob es importiert werden kann. Die `CanImport`-Methode verfügt über die gleichen Überladungen wie `Import` (der nächste Schritt).  
   
 4. Rufen Sie eine der überladenen `Import`-Methoden auf, zum Beispiel die <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>-Methode.  
   
@@ -45,10 +47,12 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
 5. Greifen Sie auf die `CodeCompileUnit` mithilfe der <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> -Eigenschaft zu.  
   
 ### <a name="import-options-customizing-the-generated-types"></a>Importoptionen: Anpassen der generierten Typen  
+
  Sie können die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>-Eigenschaft von <xref:System.Runtime.Serialization.XsdDataContractImporter> auf eine Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse festlegen, um verschiedene Aspekte des Importprozesses zu steuern. Verschiedene Optionen wirken sich direkt auf die generierten Typen aus.  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>Steuern der Zugriffsebene (GenerateInternal oder der Schalter "/internal")  
- Dies entspricht dem Schalter **Schalter/Internal** für das [Service Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+
+ Dies entspricht dem Schalter **Schalter/Internal** für das [Service Model Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  Normalerweise werden öffentliche Typen aus Schemas generiert, indem private Felder und passende Eigenschaften öffentlicher Datenmember verwendet werden. Wenn Sie stattdessen interne Typen generieren möchten, legen Sie die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>-Eigenschaft auf `true` fest.  
   
@@ -58,6 +62,7 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Steuern von Namespaces (Namespaces oder der Schalter "/namespace")  
+
  Dies entspricht dem Schalter **/Namespace** für das `Svcutil.exe` Tool.  
   
  Normalerweise werden Typen, die aus dem Schema generiert werden, in .NET Framework Namespaces generiert, wobei jeder XSD-Namespace einem bestimmten .NET Framework Namespace entsprechend einer in der [Daten Vertrags Schema Referenz](data-contract-schema-reference.md)beschriebenen Zuordnung entspricht. Sie können diese Zuordnung mithilfe der <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A>-Eigenschaft eines <xref:System.Collections.Generic.Dictionary%602> anpassen. Wenn ein bestimmter XSD-Namespace im Wörterbuch gefunden wird, wird auch der übereinstimmende .NET Framework Namespace aus Ihrem Wörterbuch entnommen.  
@@ -72,6 +77,7 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Hinzufügen von SerializableAttribute (GenerateSerializable oder der Schalter "/serializable")  
+
  Dies entspricht dem Schalter **/Serializable** für das `Svcutil.exe` Tool.  
   
  Manchmal ist es wichtig, dass die aus dem Schema generierten Typen mit .NET Framework Laufzeitserialisierungsmodulen verwendet werden können (z <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> . b. die-Klasse und die- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Klasse). Dies ist nützlich, wenn Sie Typen für .NET Framework Remoting verwenden. Um dies zu aktivieren, müssen Sie das <xref:System.SerializableAttribute>-Attribut zusätzlich zum normalen <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut auf die generierten Typen anwenden. Das Attribut wird automatisch generiert, wenn die Importoption `GenerateSerializable` auf `true` festgelegt ist.  
@@ -82,7 +88,8 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Hinzufügen von Datenbindungsunterstützung (EnableDataBinding oder der Schalter „/enableDataBinding“)  
- Dies entspricht dem Schalter **Schalter/enableDataBinding im** für das Tool Svcutil. exe.  
+
+ Dies entspricht dem Schalter **Schalter/enableDataBinding im** im Svcutil.exe Tool.  
   
  In einigen Fällen kann es ratsam sein, die aus dem Schema generierten Typen an Komponenten der grafischen Benutzeroberfläche zu binden, damit die Aktualisierungen der Instanzen dieser Typen automatisch auf der Benutzeroberfläche widergespiegelt werden. Der `XsdDataContractImporter` kann Typen generieren, die die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle so implementieren, dass alle Änderungen von Eigenschaften ein Ereignis auslösen. Wenn Sie Typen für die Verwendung mit einer Client-UI-Programmierumgebung erstellen, die diese Schnittstelle unterstützt (z. b. Windows Presentation Foundation (WPF)), legen Sie die- <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> Eigenschaft auf fest, `true` um diese Funktion zu aktivieren  
   
@@ -92,6 +99,7 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
  [!code-vb[C_SchemaImportExport#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#5)]  
   
 ### <a name="import-options-choosing-collection-types"></a>Importoptionen: Wählen von Auflistungstypen  
+
  Zwei spezielle XML-Muster stellen Auflistungen von Elementen dar: Listen mit Elementen und Zuordnungen zwischen einem Element und einem anderen. Unten ist ein Beispiel für eine Liste mit Zeichenfolgen angegeben.  
   
  [!code-xml[C_SchemaImportExport#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
@@ -127,9 +135,10 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
   
  Der Mechanismus mit den referenzierten Auflistungstypen funktioniert ebenso gut für Auflistungen mit komplexen Typen (einschließlich Auflistungen anderer Auflistungen), nicht nur für Auflistungen von primitiven Typen.  
   
- Die- `ReferencedCollectionTypes` Eigenschaft entspricht dem Schalter **/CollectionType** im Tool Svcutil. exe. Beachten Sie, dass für den Verweis auf mehrere Sammlungs Typen der **/CollectionType** -Schalter mehrmals angegeben werden muss. Wenn sich der Typ nicht in der Datei "mscorlib. dll" befindet, muss auf die Assembly auch mit dem **/Reference** -Schalter verwiesen werden.  
+ Die- `ReferencedCollectionTypes` Eigenschaft entspricht dem Schalter **/CollectionType** im SvcUtil.exe Tool. Beachten Sie, dass für den Verweis auf mehrere Sammlungs Typen der **/CollectionType** -Schalter mehrmals angegeben werden muss. Wenn sich der Typ nicht im MsCorLib.dll befindet, muss auf seine Assembly auch mithilfe des **/Reference** -Schalters verwiesen werden.  
   
 #### <a name="import-options-referencing-existing-types"></a>Importoptionen: Verweisen auf vorhandene Typen  
+
  Gelegentlich entsprechen Typen im Schema vorhandenen .NET Framework Typen, und es ist nicht erforderlich, diese Typen von Grund auf neu zu generieren. (Dieser Abschnitt gilt nur für Typen, bei denen es sich nicht um Auflistungstypen handelt. Auflistungstypen finden Sie im vorherigen Abschnitt.)  
   
  Es kann zum Beispiel sein, dass Sie über einen standardmäßigen unternehmensweiten Datenvertragstyp "Person" verfügen, der beim Darstellen einer Person immer verwendet werden soll. Jedes Mal, wenn ein Dienst diesen Typ verwendet und das dazugehörige Schema in den Dienstmetadaten erscheint, sollten Sie den vorhandenen `Person`-Typ beim Importieren des Schemas wiederverwenden, anstatt für jeden Dienst ein neues Schema zu erstellen.  
@@ -138,12 +147,13 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
   
  Es ist zulässig, der Auflistung der referenzierten Typen mehrere Typen mit demselben Datenvertragsnamen und Namespace hinzuzufügen, solange keine Schematypen mit diesem Namen und Namespace importiert werden. So können Sie der Auflistung alle in einer Assembly enthaltenen Typen auf einfache Weise hinzufügen, ohne sich um Duplikate von Typen kümmern zu müssen, die im Schema eigentlich nicht vorkommen.  
   
- Die- `ReferencedTypes` Eigenschaft entspricht dem Schalter **/Reference** in bestimmten Betriebsmodi des Tools Svcutil. exe.  
+ Die- `ReferencedTypes` Eigenschaft entspricht dem **/Reference** -Schalter in bestimmten Betriebsmodi des Svcutil.exe Tools.  
   
 > [!NOTE]
-> Wenn Sie die **Dienstverweis hinzufügen** Tools Svcutil. exe oder (in Visual Studio) verwenden, wird auf alle Typen in "mscorlib. dll" automatisch verwiesen.  
+> Wenn Sie die Svcutil.exe oder (in Visual Studio) die **Dienstverweis hinzufügen** Tools verwenden, wird auf alle Typen in MsCorLib.dll automatisch verwiesen.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Importoptionen: Importieren von Nicht-DataContract-Schemas als IXmlSerializable-Typen  
+
  Der <xref:System.Runtime.Serialization.XsdDataContractImporter> unterstützt eine beschränkte Teilmenge des Schemas. Wenn nicht unterstützte Schemakonstrukte vorhanden sind (zum Beispiel XML-Attribute), schlägt der Importversuch mit einer Ausnahme fehl. Das Festlegen der <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` erweitert jedoch den unterstützten Schemabereich. Wenn `true` festgelegt ist, generiert der <xref:System.Runtime.Serialization.XsdDataContractImporter> Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren. Auf diese Weise wird der Direktzugriff auf die XML-Darstellung dieser Typen aktiviert.  
   
 ##### <a name="design-considerations"></a>Entwurfsaspekte  
@@ -158,9 +168,10 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
   
  Es ist möglich, die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Option mit der oben beschriebenen <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>-Option zu kombinieren. Für Typen, die als <xref:System.Xml.Serialization.IXmlSerializable>-Implementierungen generiert werden müssen, wird beim Verwenden der <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A>-Funktion die Strukturprüfung übersprungen.  
   
- Die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> Option entspricht dem Schalter **Schalter/importXmlTypes im** im Tool Svcutil. exe.  
+ Die <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> Option entspricht dem Schalter **Schalter/importXmlTypes im** im Svcutil.exe Tool.  
   
 ##### <a name="working-with-generated-ixmlserializable-types"></a>Arbeiten mit generierten IXmlSerializable-Typen  
+
  Die generierten `IXmlSerializable`-Typen enthalten ein privates Feld mit der Bezeichnung "nodesField", das ein Array mit <xref:System.Xml.XmlNode>-Objekten zurückgibt. Beim Deserialisieren der Instanz eines Typs dieser Art können Sie auf die XML-Daten direkt über dieses Feld zugreifen, indem Sie das XML-Dokumentobjektmodell verwenden. Beim Serialisieren einer Instanz dieses Typs können Sie dieses Feld auf die gewünschten XML-Daten festlegen. Es wird dann serialisiert.  
   
  Dies wird mithilfe der `IXmlSerializable`-Implementierung erreicht. Im generierten `IXmlSerializable`-Typ ruft die <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>-Implementierung die <xref:System.Runtime.Serialization.XmlSerializableServices.ReadNodes%2A>-Methode der <xref:System.Runtime.Serialization.XmlSerializableServices>-Klasse auf. Bei der Methode handelt es sich um eine Hilfsmethode, die XML-Daten konvertiert, die über einen <xref:System.Xml.XmlReader> für ein Array mit <xref:System.Xml.XmlNode>-Objekten bereitgestellt werden. Die <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>-Implementierung bewirkt das Gegenteil und konvertiert das Array mit den `XmlNode`-Objekten in eine Folge von <xref:System.Xml.XmlWriter>-Aufrufen. Dies wird durch die Verwendung der <xref:System.Runtime.Serialization.XmlSerializableServices.WriteNodes%2A>-Methode erreicht.  
@@ -173,6 +184,7 @@ Verwenden Sie die-Klasse, um Klassen aus Schemas zu generieren, die mit Windows 
 > Der <xref:System.Runtime.Serialization.XmlSerializableServices>-Typ ist nur vorhanden, um diese Funktion zu unterstützen. Es ist nicht ratsam, den Typ zu einem anderen Zweck zu verwenden.  
   
 #### <a name="import-options-advanced-options"></a>Importoptionen: Erweiterte Optionen  
+
  Bei den folgenden Optionen handelt es sich um erweiterte Importoptionen:  
   
 - <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt ist, wird der vollständige Satz .NET Framework Features ohne Einschränkungen verwendet.  

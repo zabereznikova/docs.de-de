@@ -3,20 +3,22 @@ title: Entwerfen und Implementieren von benutzerdefinierten Aktivitäten
 description: Dieser Artikel enthält Ressourcen zum Erstellen benutzerdefinierter Aktivitäten in Workflow Foundation, indem Sie zusammengesetzte Aktivitäten erstellen oder neue Aktivitätstypen erstellen.
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 9c184bff9518bb5581f3bf4cd408db224736192b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cb6e189cf5f59630ce8d89610eb0c2fc2acc92a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419992"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280389"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Entwerfen und Implementieren von benutzerdefinierten Aktivitäten
+
 Benutzerdefinierte Aktivitäten in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] werden erstellt, indem entweder vom System bereitgestellte Aktivitäten zu zusammengesetzten Aktivitäten zusammengefasst oder indem neue Typen erstellt werden, die von <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> oder <xref:System.Activities.NativeActivity> abgeleitet werden. In diesem Abschnitt wird beschrieben, wie benutzerdefinierte Aktivitäten mit diesen beiden Methoden erstellt werden.  
   
 > [!IMPORTANT]
 > Benutzerdefinierte Aktivitäten werden im Workflow-Designer standardmäßig als einfaches Rechteck mit dem Namen der Aktivität angezeigt. Um eine benutzerdefinierte grafische Darstellung der Aktivität im Workflow-Designer bereitzustellen, müssen Sie auch einen benutzerdefinierten Designer erstellen. Weitere Informationen finden Sie unter [Verwenden von benutzerdefinierten Aktivitäts Designern und Vorlagen](using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Aktivitätserstellungsoptionen](activity-authoring-options-in-wf.md)  
  Erläutert die in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügbaren Erstellungsformate.  
   

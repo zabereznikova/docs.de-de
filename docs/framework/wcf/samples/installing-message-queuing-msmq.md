@@ -3,14 +3,15 @@ title: Installieren von Message Queuing (MSMQ)
 description: Erfahren Sie, wie Sie Message Queuing 4,0 und Message Queuing 3,0 als Teil eines einmaligen Einrichtungs Verfahrens für die Verwendung mit WFC-Beispielen installieren.
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 0d0cb87b40b1cb11eb7692c2fa1e890ec815b13d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: bf33a5cd899bf2d7ef4947c51ac1723c8eb80c29
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244464"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281871"
 ---
 # <a name="installing-message-queuing-msmq"></a>Installieren von Message Queuing (MSMQ)
+
 Im Folgenden wird beschrieben, wie Sie Message Queuing 4.0 und Message Queuing 3.0 installieren.  
   
 > [!NOTE]
@@ -20,7 +21,7 @@ Im Folgenden wird beschrieben, wie Sie Message Queuing 4.0 und Message Queuing�
   
 1. Klicken Sie in Server-Manager auf **Features**.  
   
-2. Klicken Sie im rechten Bereich unter **featurezusammenfassung**auf **Features hinzufügen**.  
+2. Klicken Sie im rechten Bereich unter **featurezusammenfassung** auf **Features hinzufügen**.  
   
 3. Erweitern Sie im resultierenden Fenster **Message Queuing**.  
   

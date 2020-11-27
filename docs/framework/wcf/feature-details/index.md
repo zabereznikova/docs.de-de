@@ -7,17 +7,19 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246635"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280428"
 ---
 # <a name="wcf-feature-details"></a>Details zur WCF-Funktion
+
 Windows Communication Foundation (WCF) ermöglicht umfassende Kontrolle über die Messaging Funktionen einer Anwendung. Die Themen in diesem Abschnitt erläutern die verfügbaren Funktionen im Detail. Weitere Informationen zur grundlegenden Programmierung finden Sie unter [grundlegende WCF-Programmierung](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Workflowdienste](workflow-services.md)  
  Beschreibt, wie Sie Workflowdienste erstellen und konfigurieren.  
   
@@ -73,6 +75,7 @@ Windows Communication Foundation (WCF) ermöglicht umfassende Kontrolle über di
  Beschreibt den Routingdienst.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ Windows Communication Foundation (WCF) ermöglicht umfassende Kontrolle über di
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Einfache WCF-Programmierung](../basic-wcf-programming.md)

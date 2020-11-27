@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Deserialisieren von Instanzdateneigenschaften'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f941e2d2b10e825adcdc13e2a9aed231125fe09
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280090"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Vorgehensweise: Deserialisieren von Instanzdateneigenschaften
+
 Es gibt möglicherweise Situationen, in denen ein Benutzer oder Workflowadministrator den Zustand einer beibehaltenen Workflowinstanz manuell überprüfen möchte. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> bietet eine Ansicht der Instanzentabelle, die die folgenden vier Spalten verfügbar macht:  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +21,11 @@ Es gibt möglicherweise Situationen, in denen ein Benutzer oder Workflowadminist
   
 - WriteOnlyComplexDataProperties  
   
- Primitive Dateneigenschaften beziehen sich auf Eigenschaften, deren .NET Framework-Typen als "häufig" betrachtet werden (z. B. Int32 und String), während komplexe Dateneigenschaften auf alle anderen Typen verweisen. Eine genaue Enumeration von primitiven Typen finden Sie später in diesem Codebeispiel.  
+ Primitive Daten Eigenschaften verweisen auf Eigenschaften, deren .NET Framework Typen als "Common" (z. b. "Int32" und "String") betrachtet werden, während komplexe Daten Eigenschaften auf alle anderen Typen verweisen. Eine genaue Enumeration von primitiven Typen finden Sie später in diesem Codebeispiel.  
   
  Read/Write-Eigenschaften verweisen auf Eigenschaften, die an die Workflowlaufzeit zurückgegeben werden, wenn eine Instanz geladen wird. WriteOnly-Eigenschaften werden in die Datenbank geschrieben und dann nie wieder gelesen.  
   
- Diesem Beispiel stellt Code bereit, mit dem ein Benutzer primitive Dateneigenschaften deserialisieren kann. Bei einem Bytearray, das entweder aus der Spalte ReadWritePrimitiveDataProperties oder WriteOnlyPrimitiveDataProperties gelesen wird, konvertiert dieser Code das binary large object (BLOB) in ein <xref:System.Collections.Generic.Dictionary%602> Byte-Array vom Typ \<XName, Objekt> wobei jedes Schlüsselwertpaar einen Eigenschaftsnamen und den entsprechenden Wert darstellt.  
+ Diesem Beispiel stellt Code bereit, mit dem ein Benutzer primitive Dateneigenschaften deserialisieren kann. Bei einem Bytearray, das aus der Spalte "leseschreiteprimitivedataproperties" oder "Write-onlyprimitivedataproperties" gelesen wird, konvertiert dieser Code die Binary Large Object (BLOB) in eine <xref:System.Collections.Generic.Dictionary%602> vom Typ, \<XName, object> wobei jedes Schlüssel-Wert-Paar einen Eigenschaftsnamen und den entsprechenden Wert darstellt.  
   
  In diesem Beispiel wird nicht veranschaulicht, wie komplexe Dateneigenschaften deserialisiert werden, da dies derzeit kein unterstützter Vorgang ist.  
   

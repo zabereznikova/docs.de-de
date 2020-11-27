@@ -3,15 +3,16 @@ title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Me
 description: Erfahren Sie, wie Sie mit Svcutil.exe Metadaten aus laufenden Diensten herunterladen und die Metadaten in lokalen Dateien speichern.
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 6877d860a4465947268d6535b9edeb9856d4d689
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 449dd3023b5d688ed0de22e3651cccf16bee0c52
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554305"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280675"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten
-Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei http-und HTTPS-URL-Schemas versucht Svcutil.exe, Metadaten mithilfe von WS-MetadataExchange und der [XML-Webdienst](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))Ermittlung abzurufen. Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
+
+Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei http-und HTTPS-URL-Schemas versucht Svcutil.exe, Metadaten mithilfe WS-MetadataExchange und der [XML-Webdienst](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))Ermittlung abzurufen. Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
   
  Standardmäßig verwendet Svcutil.exe die in der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse definierten Bindungen. Wenn Sie die für WS-MetadataExchange verwendete Bindung konfigurieren möchten, müssen Sie einen Clientendpunkt in der Konfigurationsdatei für „Svcutil.exe“ (svcutil.exe.config) definieren, der den `IMetadataExchange`-Vertrag verwendet und über dasselbe URI-Schema der Metadaten-Endpunktadresse verfügt.  
   
@@ -36,17 +37,18 @@ Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herun
   
      Um Metadaten herunterzuladen, müssen Sie die `/t:metadata`-Option angeben. Andernfalls werden Clientcode und -konfiguration generiert.  
   
-3. Das <`url`>-Argument gibt die URL zu einem Dienst Endpunkt an, der Metadaten bereitstellt, oder ein Metadatendokument, das online gehostet wird. Das <`epr`>-Argument gibt den Pfad zu einer XML-Datei an, die eine WS-Adressierung `EndpointAddress` für einen Dienst Endpunkt enthält, der WS-MetadataExchange unterstützt.  
+3. Das <`url`>-Argument gibt die URL zu einem Dienst Endpunkt an, der Metadaten bereitstellt, oder ein Metadatendokument, das online gehostet wird. Das <`epr`>-Argument gibt den Pfad zu einer XML-Datei an, die eine WS-Addressing `EndpointAddress` für einen Dienst Endpunkt enthält, der WS-MetadataExchange unterstützt.  
   
  Weitere Optionen zur Verwendung dieses Tools für das Herunterladen von Metadaten finden Sie unter [Service Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Befehl lädt Metadatendokumente aus einem ausführenden Dienst herunter.  
   
 ```console
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
