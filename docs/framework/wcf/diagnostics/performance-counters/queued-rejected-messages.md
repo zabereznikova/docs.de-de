@@ -2,17 +2,19 @@
 title: In die Warteschlange gestellte abgelehnte Meldungen
 ms.date: 03/30/2017
 ms.assetid: 8eb75a76-4fb3-4d33-bd9f-6d91e09c5843
-ms.openlocfilehash: 1e8c8c1838aaed07c06542794e3908108ffea985
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: 31a91cf10e342ab84dbb9732df461ec9508d5b40
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674912"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276190"
 ---
 # <a name="queued-rejected-messages"></a>In die Warteschlange gestellte abgelehnte Meldungen
+
 Zählername: In der Warteschlange stehende abgelehnte Meldungen.  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Anzahl von Meldungen, die vom Warteschlangentransport in diesem Dienst abgelehnt werden.  
   
- Weitere Informationen zum Zeitpunkt der Ablehnung von Nachrichten finden Sie unter [Gift-Nachrichten-Handhabung](../../feature-details/poison-message-handling.md).
+ Weitere Informationen darüber, wann Nachrichten zurückgewiesen werden, finden Sie unter [Behandlung](../../feature-details/poison-message-handling.md)nicht verarbeitbarer Nachrichten.

@@ -2,17 +2,19 @@
 title: Auswählen eines Nachrichtenaustauschmusters
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 22c720beaa8dc70d2916a5b1d38819ad3d333a0f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275657"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
+
 Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht darin, zu entscheiden, welche *Nachrichtenaustausch Muster* (oder die einzelnen Kollegen) für den von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste für die Kanalentwicklung, die unter [entwickeln von Kanälen](developing-channels.md)beschrieben wird.  
   
 ## <a name="six-message-exchange-patterns"></a>Sechs Nachrichtenaustauschmuster  
+
  Es stehen drei Nachrichtenaustauschmuster zur Auswahl:  
   
 - Datagramm (<xref:System.ServiceModel.Channels.IInputChannel> und <xref:System.ServiceModel.Channels.IOutputChannel>)  
@@ -30,7 +32,7 @@ Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht da
  ![Auswählen eines Nachrichtenaustausch Musters](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm, Anforderung-Antwort und Duplex.  
   
- Alle diese Abgeordneten können auch *Sitzungen*unterstützen. Eine Sitzung (und Implementierung von <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> des Typs <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) korreliert alle in einem Kanal gesendeten und empfangenen Nachrichten. Das Anforderung-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderung-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderung/Antwort-Paare in diesem Kanal miteinander korreliert werden. Daher stehen insgesamt sechs Nachrichtenaustauschmuster zur Auswahl:  
+ Alle diese Abgeordneten können auch *Sitzungen* unterstützen. Eine Sitzung (und Implementierung von <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> des Typs <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) korreliert alle in einem Kanal gesendeten und empfangenen Nachrichten. Das Anforderung-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderung-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderung/Antwort-Paare in diesem Kanal miteinander korreliert werden. Daher stehen insgesamt sechs Nachrichtenaustauschmuster zur Auswahl:  
   
 - Datagramm  
   
@@ -48,6 +50,7 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
 > Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sitzungen und sitzungsbasierte Kanäle  
+
  Im Bereich der Netzwerke gibt es verbindungsorientierte Protokolle (z. B. TCP) und verbindungslose Protokolle (z. B. UDP). WCF verwendet den Begriff Sitzung, um eine Verbindungs ähnliche logische Abstraktion zu bedeuten. Sitzungsbasierte WCF-Protokolle sind mit verbindungsorientierten Netzwerkprotokollen vergleichbar, und nicht sitzungsbasierte Protokolle entsprechen verbindungslosen Netzwerkprotokollen.  
   
  Im Kanalobjektmodell manifestiert sich jede logische Sitzung als Instanz eines sitzungsbasierten Kanals. Daher entspricht jede neue vom Client erstellte und vom Dienst akzeptierte Sitzung einem neuen sitzungsbasierten Kanal auf jeder Seite. Das folgende Diagramm zeigt oben die Struktur nicht sitzungsbasierter Kanäle und unten die Struktur sitzungsbasierter Kanäle.  
@@ -61,6 +64,7 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
  Ohne Sitzungen gibt es keine Korrelation zwischen Kanälen und Sitzungen. Daher erstellt ein Kanallistener nur einen Kanal, über den alle empfangenen Nachrichten der Anwendung zugestellt werden. Es gibt auch keine Nachrichtenreihenfolge, da es keine Sitzung gibt, in der die Nachrichtenreihenfolge beibehalten werden muss. Der oberste Teil der vorangehenden Grafik illustriert einen nicht sitzungsbasierten Nachrichtenaustausch.  
   
 ## <a name="starting-and-terminating-sessions"></a>Beginnen und Beenden von Sitzungen  
+
  Sitzungen werden auf dem Client begonnen, indem einfach ein neuer sitzungsbasierter Kanal erstellt wird. Sie werden im Dienst gestartet, wenn der Dienst eine Nachricht empfängt, die in einer neuen Sitzung gesendet wurde. Ebenso werden Sitzungen durch Schließen oder Abbrechen eines sitzungsbasierten Kanals beendet.  
   
  Eine Ausnahme hierzu bildet <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, der sowohl zum Senden als auch zum Empfangen von Nachrichten in einem sitzungsbasierten Duplexkommunikationsmuster verwendet wird. Es ist möglich, dass eine Seite das Senden von Nachrichten stoppen, jedoch weiterhin Nachrichten empfangen möchte. Daher gibt es beim Verwenden von <xref:System.ServiceModel.Channels.IDuplexSessionChannel> einen Mechanismus, mit dem Sie die Ausgabesitzung schließen können, was darauf hinweist, dass Sie keine weiteren Nachrichten senden, jedoch die Eingabesitzung geöffnet lassen, sodass Sie weiterhin Nachrichten empfangen können.  
@@ -70,6 +74,7 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
  Sitzungsbasierte Eingabekanäle sollten jedoch nur geschlossen werden, wenn <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> auf dem <xref:System.ServiceModel.Channels.IDuplexSessionChannel> NULL zurückgibt, was darauf hinweist, dass die Sitzung bereits geschlossen wurde. Wenn <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> auf dem <xref:System.ServiceModel.Channels.IDuplexSessionChannel> nicht NULL zurückgegeben hat, kann das Schließen eines sitzungsbasierten Eingabekanals eine Ausnahme auslösen, da während des Schließens unerwartete Nachrichten empfangen werden können. Wenn ein Empfänger eine Sitzung beenden möchte, bevor der Absender dies tut, sollte er <xref:System.ServiceModel.ICommunicationObject.Abort%2A> im Eingabekanal aufrufen, wodurch die Sitzung sofort beendet wird.  
   
 ## <a name="writing-sessionful-channels"></a>Schreiben von sitzungsbasierten Kanälen  
+
  Als sitzungsbasierter Kanalautor muss Ihr Kanal einige Voraussetzungen erfüllen, um Sitzungen bereitzustellen. Auf der Senderseite muss Ihr Kanal Folgendes erfüllen:  
   
 - Erstellen Sie für jeden neuen Kanal eine neue Sitzung, und verknüpfen Sie sie mit einer neuen Sitzungs-ID, die einer eindeutigen Zeichenfolge entspricht. Oder rufen Sie unterhalb im Stapel eine neue Sitzung aus dem sitzungsbasierten Kanal ab.  
@@ -92,6 +97,6 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
   
 - Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Übersicht über das Kanalmodell](channel-model-overview.md)

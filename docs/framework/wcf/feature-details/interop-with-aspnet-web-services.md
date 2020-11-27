@@ -2,14 +2,15 @@
 title: Interoperabilität mit ASP.NET-Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cca4e1b3da26d8026d41d0a7107432cdd2960545
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598865"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276632"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilität mit ASP.NET-Webdiensten
+
 Die Interoperabilität zwischen ASP.NET-Webdiensten und-Windows Communication Foundation (WCF)-Webdiensten kann erreicht werden, indem sichergestellt wird, dass die mithilfe beider Technologien implementierten Dienste der Spezifikation WS-I Basic Profile 1,1 entsprechen. ASP.NET-Webdienste, die WS-I Basic Profile 1,1 entsprechen, sind mithilfe der vom System bereitgestellten WCF-Bindung mit WCF-Clients interoperabel <xref:System.ServiceModel.BasicHttpBinding> .  
   
  Verwenden Sie die Option ASP.NET 2,0, <xref:System.Web.Services.WebService> um das-Attribut und das- <xref:System.Web.Services.WebMethodAttribute> Attribut zu einer Schnittstelle anstatt zu einer Klasse hinzuzufügen, und schreiben Sie eine Klasse, um die Schnittstelle zu implementieren, wie im folgenden Beispielcode gezeigt.  
@@ -47,6 +48,7 @@ public class Service : IEcho
  Vermeiden Sie die Verwendung der von den Internetinformationsdiensten (IIS) bereitgestellten Authentifizierungsoptionen. WCF-Clients unterstützen diese nicht. Wenn ein Dienst geschützt werden muss, verwenden Sie die von WCF bereitgestellten Optionen, da diese Optionen robust sind und auf Standardprotokollen basieren.  
   
 ## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>Durch das Laden von ServiceModel HttpModule verursachte Leistungsbeeinträchtigungen  
+
  In .NET Framework&#160;3.0 wurde das WCF-`HttpModule`-Element in der Stammdatei Web.config installiert, sodass jede ASP.NET-Anwendung WCF unterstützte. Dies kann die Leistung beeinträchtigen. Sie können daher `ServiceModel` für die Datei Web.config entfernen, wie im folgenden Bespiel gezeigt.  
   
 ```xml  

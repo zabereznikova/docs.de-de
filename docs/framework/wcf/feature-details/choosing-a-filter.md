@@ -2,21 +2,22 @@
 title: Auswählen eines Filters
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f783b6416f2330d272c4c756a3ca0cd332f3c6e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559388"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276099"
 ---
 # <a name="choosing-a-filter"></a>Auswählen eines Filters
+
 Beim Konfigurieren des Routingdiensts ist es wichtig, richtige Nachrichtenfilter auszuwählen und so zu konfigurieren, dass Sie genaue Übereinstimmungen mit den Nachrichten erzielen können, die Sie empfangen. Falls die ausgewählten Filter in Bezug auf die Übereinstimmungen zu ungenau oder falsch konfiguriert sind, werden die Nachrichten nicht korrekt weitergeleitet. Wenn die Filter zu restriktiv sind, kann es sein, dass für einige Nachrichten keine gültigen Weiterleitungsrouten verfügbar sind.
 
 ## <a name="filter-types"></a>Filtertypen
 
 Beim Auswählen der vom Routingdienst verwendeten Filter ist es wichtig, dass Sie verstehen, wie die einzelnen Filter funktionieren. Außerdem sollten Sie wissen, welche Informationen in Verbindung mit den eingehenden Nachrichten verfügbar sind. Falls beispielsweise alle Nachrichten über den gleichen Endpunkt empfangen werden, sind die Adress- und EndpointName-Filter nicht hilfreich, weil alle Nachrichten Übereinstimmungen mit diesen Filtern aufweisen.
 
-### <a name="action"></a>Aktion
+### <a name="action"></a>Action
 
 Der Action-Filter überprüft die <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>-Eigenschaft. Falls der Inhalt des Action-Headers in der Nachricht mit dem Filterdatenwert übereinstimmt, der in der Filterkonfiguration angegeben ist, gibt dieser Filter `true` zurück. Im folgenden Beispiel wird ein definiert `FilterElement` , das den Aktionsfilter verwendet, um Nachrichten mit einem Aktions Header abzugleichen, der den Wert enthält `http://namespace/contract/operation/` .
 
@@ -66,7 +67,7 @@ PrefixEndpointAddressMessageFilter prefix1 = new PrefixEndpointAddressMessageFil
 
 Dieser Filter sollte verwendet werden, wenn eingehende Nachrichten weitergeleitet werden, die über ein gemeinsames Adresspräfix verfügen.
 
-### <a name="and"></a>UND
+### <a name="and"></a>AND
 
 Der AND-Filter filtert nicht direkt nach einem Wert innerhalb einer Nachricht, sondern ermöglicht Ihnen die Kombination von zwei anderen Filtern, um eine `AND`-Bedingung zu erstellen. Dabei müssen beide Filter eine Übereinstimmung mit der Nachricht ergeben, bevor für den AND-Filter `true` ausgewertet wird. Auf diese Weise können Sie komplexe Filter erstellen, die nur dann Übereinstimmungen ergeben, wenn alle Unterfilter zu Übereinstimmungen führen. Im folgenden Beispiel werden ein Adressfilter und ein Aktionsfilter definiert. Anschließend wird ein AND-Filter definiert, der eine Nachricht sowohl für den Adressfilter als auch für den Aktionsfilter auswertet. Falls der Adressfilter und der Aktionsfilter zu Übereinstimmungen führen, gibt der AND-Filter `true` zurück.
 
@@ -144,7 +145,7 @@ Da XPath-Abfragen häufig eindeutige Namespaces enthalten, bei denen es sich oft
 
 Weitere Informationen zum Entwerfen von XPath-Abfragen finden Sie unter [XPath-Syntax](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Nachrichtenfilter](message-filters.md)
 - [Vorgehensweise: Verwenden von Filtern](how-to-use-filters.md)

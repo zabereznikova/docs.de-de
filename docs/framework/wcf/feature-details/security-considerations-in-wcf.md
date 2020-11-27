@@ -6,24 +6,26 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 796098258601ec5fa208fd8a8060b28c3eeeb4d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601035"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276021"
 ---
 # <a name="security-considerations-in-wcf"></a>Überlegungen zur Sicherheit in WCF
+
 In den Themen in diesem Abschnitt werden verschiedene sicherheitsrelevante Aspekte aufgeführt, die beim Entwerfen einer Windows Communication Foundation (WCF)-Anwendung zu beachten sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Offenlegung von Informationen](information-disclosure.md)  
+
+ [Veröffentlichung von Informationen](information-disclosure.md)  
  Erläutert, wie Informationen offengelegt und attackiert werden können und wie man diesen Gefahren begegnen kann.  
   
- [Rechte Erweiterungen](elevation-of-privilege.md)  
+ [Erhöhung von Rechten](elevation-of-privilege.md)  
  Erläutert die Konsequenzen, mit denen zu rechnen ist, wenn einem Angreifer Autorisierungsberechtigungen erteilt werden, die über die ursprünglichen Berechtigungen hinausgehen, und stellt mögliche Gegenmaßnahmen vor.  
   
- [Denial of Service](denial-of-service.md)  
+ [Denial-of-Service](denial-of-service.md)  
  Erläutert, was geschieht, wenn ein System Nachrichten nicht angemessen verarbeiten kann, und stellt mögliche Gegenmaßnahmen vor.  
   
  [Manipulation](tampering.md)  
@@ -39,6 +41,7 @@ In den Themen in diesem Abschnitt werden verschiedene sicherheitsrelevante Aspek
  Führt verschiedene Szenarien auf, die einen bestimmten Sicherheitsaspekt nicht unterstützen und vermieden bzw. mit bestimmten Überlegungen angegangen werden sollten.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.IdentityModel.Tokens>  
   
  <xref:System.IdentityModel.Claims>  
@@ -48,8 +51,9 @@ In den Themen in diesem Abschnitt werden verschiedene sicherheitsrelevante Aspek
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Sicherheitsleitfaden und empfohlene Vorgehensweisen](security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Security](security.md)

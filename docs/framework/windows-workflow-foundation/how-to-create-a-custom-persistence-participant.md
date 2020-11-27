@@ -2,14 +2,15 @@
 title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: d1d59f139b666790920eaabe032878dca1617b62
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 633961ac12eed593613eba75862cbc81f2fa68c6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275813"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers
+
 Die folgende Prozedur enthält die Schritte zur Erstellung eines Persistenzteilnehmers. Beispiele für Implementierungen von persistenzteilnehmern finden Sie im Thema zum [teilnehmen an](/previous-versions/dotnet/netframework-4.0/dd699769(v=vs.100)) Dauerhaftigkeits Beispielen und zum [Speichern der Erweiterbarkeit](store-extensibility.md) .  
   
 1. Erstellen Sie eine von der <xref:System.Activities.Persistence.PersistenceParticipant>-Klasse oder von der <xref:System.Activities.Persistence.PersistenceIOParticipant>-Klasse abgeleitete Klasse. Die persistenceioparticipant-Klasse bietet die gleichen Erweiterbarkeits Punkte wie die PersistenceParticipants-Klasse und kann an e/a-Vorgängen teilnehmen. Führen Sie mindestens einen der folgenden Schritte aus.  

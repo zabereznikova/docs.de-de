@@ -2,18 +2,19 @@
 title: NativeActivity-Basisklasse
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989553"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274958"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity-Basisklasse
 
 <xref:System.Activities.NativeActivity> ist eine abstrakte Klasse mit einem geschützten Konstruktor. Wie <xref:System.Activities.CodeActivity> wird auch <xref:System.Activities.NativeActivity> zum Schreiben von imperativem Verhalten durch die Implementierung einer <xref:System.Activities.NativeActivity.Execute%2A>-Methode verwendet. Im Gegensatz zu <xref:System.Activities.CodeActivity> verfügt <xref:System.Activities.NativeActivity> jedoch über Zugriff auf alle verfügbar gemachten Funktionen der Workflowlaufzeit durch das <xref:System.Activities.NativeActivityContext>-Objekt, das an die <xref:System.Activities.NativeActivity.Execute%2A>-Methode übergeben wurde.
 
 ## <a name="using-nativeactivitycontext"></a>Verwenden von NativeActivityContext
+
  Innerhalb der <xref:System.Activities.NativeActivity.Execute%2A>-Methode kann mithilfe von Membern des `context`-Parameters vom Typ <xref:System.Activities.NativeActivityContext> auf Funktionen des Workflows zugegriffen werden. Über <xref:System.Activities.NativeActivityContext> sind unter anderem folgende Funktionen verfügbar:
 
 - Abrufen und Festlegen von Argumenten und Variablen
@@ -36,11 +37,11 @@ ms.locfileid: "70989553"
 
 1. Openvisual Studio 2010.
 
-2. Wählen Sie **Datei**, **neu**und dann **Projekt**aus. Wählen Sie im Fenster **Projekttypen** unter **Visual C#**  den **Workflow 4,0** aus, und wählen Sie den Knoten **v2010** aus. Wählen Sie im Fenster **Vorlagen** die Option **Aktivitäts Bibliothek** aus. Geben Sie dem neuen Projekt den Namen "HelloActivity".
+2. Wählen Sie **Datei**, **neu** und dann **Projekt** aus. Wählen Sie im Fenster **Projekttypen** unter **Visual c#** die Option **Workflow 4,0** aus, und wählen Sie den Knoten **v2010** aus. Wählen Sie im Fenster **Vorlagen** die Option **Aktivitäts Bibliothek** aus. Geben Sie dem neuen Projekt den Namen "HelloActivity".
 
-3. Klicken Sie im HelloActivity-Projekt mit der rechten Maustaste auf Activity1. XAML, und wählen Sie **Löschen**aus.
+3. Klicken Sie im HelloActivity-Projekt mit der rechten Maustaste auf Activity1. XAML, und wählen Sie **Löschen** aus.
 
-4. Klicken Sie mit der rechten Maustaste auf das Projekt HelloActivity, und wählen Sie **Hinzufügen**und dann **Klasse**aus. Nennen Sie die neue Klasse HelloActivity.cs.
+4. Klicken Sie mit der rechten Maustaste auf das Projekt HelloActivity, und wählen Sie **Hinzufügen** und dann **Klasse** aus. Nennen Sie die neue Klasse HelloActivity.cs.
 
 5. Fügen Sie der Datei "HelloActivity.cs" die folgenden `using`-Direktiven hinzu.
 
