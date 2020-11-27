@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 883c20483c4d315a45e1f4dab959d42cbb6e3c4b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288202"
 ---
 # <a name="security-and-remoting-considerations"></a>Überlegungen zu Sicherheit und Remoting
 
@@ -26,6 +26,7 @@ Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendu
  Im Allgemeinen sollten Sie nie Methoden, Eigenschaften oder Ereignisse verfügbar machen, die durch deklarative [LinkDemand](link-demands.md) -und <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> Sicherheitsüberprüfungen geschützt werden. Mit Remoting werden diese Überprüfungen nicht erzwungen. Andere Sicherheitsüberprüfungen, z. b. <xref:System.Security.Permissions.SecurityAction.Demand> , [Assert](using-the-assert-method.md)usw., funktionieren zwischen Anwendungs Domänen innerhalb eines Prozesses, funktionieren jedoch nicht in prozessübergreifenden oder Computer übergreifenden Szenarien.  
   
 ## <a name="protected-objects"></a>Geschützte Objekte  
+
  Einige Objekte enthalten Ihren Sicherheitszustand in sich. Diese Objekte sollten nicht an nicht vertrauenswürdigen Code übergeben werden, der dann eine über seine eigenen Berechtigungen hinausgehende Sicherheitsautorisierung erhalten würde.  
   
  Ein Beispiel ist das Erstellen eines <xref:System.IO.FileStream>-Objekts. Die <xref:System.Security.Permissions.FileIOPermission> wird zum Zeitpunkt der Erstellung angefordert, und bei Erfolg wird das Dateiobjekt zurückgegeben. Wenn dieser Objektverweis jedoch an Code ohne Dateiberechtigungen übergeben wird, ist das Objekt in der Lage, diese Datei zu lesen und in sie zu schreiben.  
@@ -33,6 +34,7 @@ Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendu
  Die einfachste Verteidigung für ein solches Objekt besteht darin, **die gleiche "** " "" "" "" "".  
   
 ## <a name="application-domain-crossing-issues"></a>Probleme beim anwendungsdomänenübergreifenden Zugriff  
+
  Zum Isolieren von Code in verwalteten Hostingumgebungen ist es üblich, mehrere untergeordnete Anwendungsdomänen mit einer expliziten Richtlinie zu generieren, um die Berechtigungsstufen verschiedener Assemblys zu verringern. In der Standardanwendungsdomäne bleibt die Richtlinie für diese Assemblys jedoch unverändert. Wenn eine der untergeordneten Anwendungsdomänen die Standardanwendungsdomäne zum Laden einer Assembly zwingen kann, gehen die Auswirkungen der Codeisolierung verloren, und Typen in der erzwungen geladenen Assembly können Code auf einer höheren Vertrauensebene ausführen.  
   
  Eine Anwendungsdomäne kann eine andere Anwendungsdomäne zum Laden einer Assembly und Ausführen von darin enthaltenem Code durch Aufrufen eines Proxys für ein Objekt zwingen, das in der anderen Anwendungsdomäne gehostet wird. Zum Abrufen eines anwendungsübergreifenden Domänenproxys muss die Anwendungsdomäne, die das Objekt hostet, diesen über einen Methodenaufrufparameter oder Rückgabewert verteilen. Wenn die Anwendungsdomäne soeben erstellt wurde, verfügt der Ersteller für das <xref:System.AppDomain>-Objekt standardmäßig über einen Proxy. Damit vermieden wird, dass die Codeisolierung verletzt wird, sollte eine Anwendungsdomäne mit einer höheren Vertrauensebene daher keine Verweise auf durch Verweis gemarshallte Objekte (Instanzen von Klassen, die von <xref:System.MarshalByRefObject> abgeleitet sind) in der eigenen Domäne an Anwendungsdomänen mit niedrigeren Vertrauensebenen verteilen.  

@@ -2,20 +2,22 @@
 title: Laufzeitausnahmen in .NET Native-Apps
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
-ms.openlocfilehash: 12df2ef7bf6e86a60dfa4c130f35969e72ac5211
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5c521eed94590e583a761cc2003460875e690fa9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180948"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287851"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Laufzeitausnahmen in .NET Native-Apps
+
 Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattform auf den Zielplattformen zu testen, da die Debug- und Releasekonfigurationen völlig unterschiedlich sind. Die Debugkonfiguration verwendet standardmäßig die .NET Core-Laufzeit zum Kompilieren der App, während die Releasekonfiguration .NET Native verwendet, um die App in systemeigenen Code zu kompilieren.  
   
 > [!IMPORTANT]
-> Informationen zum Umgang mit den Ausnahmen [MissingMetadataException](missingmetadataexception-class-net-native.md), [missinginteropdataexception](missinginteropdataexception-class-net-native.md)und [missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md) , die beim Testen der Releaseversionen ihrer app auftreten können, finden Sie unter "Schritt 4: Manuelles auflösen fehlender Metadaten:" im Thema " [Getting Started](getting-started-with-net-native.md) " sowie unter [Refle.net Native ktionsdirektiven](reflection-and-net-native.md) [(RD. Xml)-Konfigurationsdatei Referenz](runtime-directives-rd-xml-configuration-file-reference.md).  
+> Informationen zum Umgang mit den Ausnahmen [MissingMetadataException](missingmetadataexception-class-net-native.md), [missinginteropdataexception](missinginteropdataexception-class-net-native.md)und [missingruntimeartifaktexception](missingruntimeartifactexception-class-net-native.md) , die beim Testen der Releaseversionen ihrer app auftreten können, finden Sie unter "Schritt 4: Manuelles auflösen fehlender Metadaten:" im Thema " [Getting Started](getting-started-with-net-native.md) " sowie unter [Refle.net Native ktionsdirektiven](reflection-and-net-native.md) [(rd.xml)-Konfigurationsdatei Referenz](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Debugbuilds und Releasebuilds  
+
  Wenn der Debugbuild unter Verwendung der .NET Core-Laufzeit ausgeführt wird, wurde er nicht in systemeigenen Code kompiliert. Dadurch werden alle Dienste, die normalerweise von der Laufzeit bereitgestellt werden, für Ihre App verfügbar.  
   
  Andererseits werden der Releasebuild für die Zielplattformen in systemeigenen Code kompiliert, die meisten Abhängigkeiten von externen Laufzeiten und Bibliotheken entfernt und Code für maximale Leistung optimiert.  
@@ -32,7 +34,9 @@ Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattfo
 > Sie können steuern, ob die Debug- und Releasebuilds mit der .NET Native-Toolkette kompiliert werden, indem Sie das Kontrollkästchen **Mit .NET Native-Toolkette kompilieren** aktivieren oder deaktivieren.   Beachten Sie jedoch, dass die Produktionsversion Ihrer App vom Windows Store immer mit der .NET Native-Toolkette kompiliert wird.  
   
 <a name="Messages"></a>
+
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
+
  Um die Größe ausführbarer Anwendungsdateien zu minimieren, schließt .NET Native nicht den vollständigen Text von Ausnahmemeldungen ein. Daher wird bei Laufzeitausnahmen, die in Releasebuilds ausgelöst werden, u. U. nicht der vollständige Text der Ausnahmemeldungen angezeigt. Stattdessen kann der Text eine Teilzeichenfolge und einen Link umfassen, über den weitere Informationen abgerufen werden können. Beispielsweise können Ausnahmeinformationen wie folgt angezeigt werden:  
   
 ```output
@@ -52,7 +56,9 @@ Additional information: Value does not fall within the expected range.
 ```  
   
 <a name="CallStack"></a>
+
 ## <a name="runtime-call-stack"></a>Runtime call stack  
+
  Durch das Inlining und andere Optimierungen kann es schwierig sein, den Pfad zu einer Laufzeitausnahme anhand der Aufrufliste, die von einer App angezeigt wird, die von der .NET Native-Toolkette kompiliert wurde, eindeutig zu identifizieren.  
   
  Um die vollständige Aufrufliste zu erhalten, führen Sie stattdessen den Debugbuild aus.  

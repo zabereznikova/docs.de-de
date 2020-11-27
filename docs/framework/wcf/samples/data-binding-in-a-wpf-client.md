@@ -2,14 +2,15 @@
 title: Datenbindung in einem Windows Presentation Foundation-Client
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: fe7b1934fa2abfa8d2f812caca2363c1cc603d1a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 926b60bd489d65dd2ec051baae399f2688e52cd7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602608"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289216"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Datenbindung in einem Windows Presentation Foundation-Client
+
 In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Das Beispiel verwendet einen Windows Communication Foundation (WCF)-Dienst, der nach dem Zufallsprinzip ein Array von Alben generiert, das an den Client zurückgegeben wird. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die vom Dienst zurückgegebenen Informationen werden automatisch an die Benutzeroberfläche (UI) gebunden, die vom WPF-Client (Windows Presentation Foundation) bereitgestellt wird.  
   
 > [!NOTE]

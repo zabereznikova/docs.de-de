@@ -2,24 +2,26 @@
 title: ImpersonationSuccess
 ms.date: 03/30/2017
 ms.assetid: 20b2ab9c-7ced-45d6-8bb0-d480e186102e
-ms.openlocfilehash: 4ca66d8cfc5f262fcc7ce17d8c80338c17947419
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b5893e99047b817062e6bf2b9b14a7550a485303
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288904"
 ---
 # <a name="impersonationsuccess"></a>ImpersonationSuccess
+
 ID: 175  
   
- Zunehmen Information  
+ Schweregrad: Information  
   
- Kategorie SecurityAudit  
+ Kategorie: SecurityAudit  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis gibt an, dass der Identitätswechsel erfolgreich war und den Methodennamen, die Clientidentität und die Aktivitäts-ID aufgelistet hat.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ereignisprotokollierung](index.md)
 - [Allgemeine Referenz zu Ereignissen](events-general-reference.md)

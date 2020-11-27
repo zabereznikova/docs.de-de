@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 713737b129771967958fddf44e9ef28583d49422
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24e7cc3fd9b349aaba733a809a03be2454bd371d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554077"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288397"
 ---
 # <a name="securing-services-and-clients"></a>Sichern von Diensten und Clients
+
 Die Informationen in diesem Abschnitt konzentrieren sich auf die Programmier Sicherheit in Windows Communication Foundation (WCF). Hierzu zählt im Allgemeinen das Auswählen einer geeigneten vom System bereitgestellten Bindung, das Festlegen der Eigenschaften des Sicherheitselements sowie das anschließende Festlegen von Eigenschaften für das Dienstverhalten, mit denen gesteuert wird, wie Anmeldeinformationen für die Verwendung durch den Dienst oder den Client abgerufen werden. Diese Verfahren decken die Sicherheitsanforderungen der meisten Benutzer für die meisten Szenarien ab, wie in [allgemeinen Sicherheits Szenarios](common-security-scenarios.md)dargestellt. Wenn Ihr Szenario mehr Funktionen erfordert, sehen Sie sich zuerst die [Sicherheitsfunktionen mit benutzerdefinierten Bindungen an](security-capabilities-with-custom-bindings.md). Wenn eine Lösung nicht ersichtlich ist, finden Sie weitere Informationen unter [Erweitern der Sicherheit](../extending/extending-security.md). Wenn Sie ein System erstellen (oder mit diesem zusammenarbeiten), das umfangreiche Ansprüche verwendet, lesen Sie die Themen unter [Autorisierung](authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Programmieren der WCF-Sicherheit](programming-wcf-security.md)  
  Eine Übersicht über das Programmiermodell, das zum Sichern von Nachrichten verwendet wird.  
   
@@ -31,6 +33,7 @@ Die Informationen in diesem Abschnitt konzentrieren sich auf die Programmier Sic
  Eine Erläuterung einiger der allgemeinen Aufgaben, die bei Verwendung von X.509-Zertifikaten erforderlich sind.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -38,6 +41,7 @@ Die Informationen in diesem Abschnitt konzentrieren sich auf die Programmier Sic
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Sicherheitskonzepte](security-concepts.md)  
   
  [Erweitern der Sicherheit](../extending/extending-security.md)  

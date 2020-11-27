@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289645"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 
@@ -16,6 +16,7 @@ Aus verschiedenen Gründen unterstützt Windows Communication Foundation (WCF) e
 ## <a name="impersonation-scenarios"></a>Identitätswechsel Szenarien
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>Identität mit Identitätswechsel wird bei asynchronen Aufrufen von Clients möglicherweise nicht durchgeführt
+
  Wenn ein WCF-Client unter Verwendung der Windows-Authentifizierung mit einem Identitätswechsel asynchrone Aufrufe eines WCF-Dienstes ausführt, kann die Authentifizierung mit der Identität des Clientprozesses anstelle der gewechselten Identität erfolgen.
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP und sicheres Kontext Token-Cookie aktiviert
@@ -122,7 +123,7 @@ WCF kann die Attribute eines `<wst:Claims>`-Vorlage beim Ausführen eines WSDL-I
 
  Ändern Sie nach Abschluss des Importvorgangs die Bindung direkt auf dem Client, um dieses Problem zu korrigieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sicherheitshinweise](security-considerations-in-wcf.md)
 - [Veröffentlichung von Informationen](information-disclosure.md)

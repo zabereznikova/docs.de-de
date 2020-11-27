@@ -1,15 +1,16 @@
 ---
-title: <Parameter>-Element (.net Native)
+title: <Parameter> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: c6dfc347d44a794ee8496c45ca879f9daab12b22
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128195"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287864"
 ---
-# <a name="parameter-element-net-native"></a>\<Parameter>-Element (.net Native)
+# <a name="parameter-element-net-native"></a>\<Parameter> -Element (.net Native)
+
 Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,11 +30,12 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Der Name des Parameters. Für die Methodensignatur `String.CompareTo(Object value)` ist der Wert des `Name`-Attributs beispielsweise "value".|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -60,6 +62,7 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
 |*policy_setting*|Die Einstellung, die auf diesen Richtlinientyp angewendet werden soll. Mögliche Werte sind `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` und `Required All`. Weitere Informationen finden Sie unter [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -68,12 +71,13 @@ Wendet die Reflektionsrichtlinie auf den Typ des Arguments an, das an eine Metho
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das `<Parameter>` -Element ist ein untergeordnetes [\<Method>](method-element-net-native.md) Element des-Elements und wird verwendet, um die Richtlinie auf einen bestimmten Methoden Parameter anzuwenden. Der entsprechende Methodenparameter wird durch den Namen und nicht durch den Typ angegeben. Mindestens ein Attribut, das einen Richtlinientyp wie `Activate` oder `Dynamic` darstellt, muss vorhanden sein.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [\<Method>Gewisses](method-element-net-native.md)
+- [\<Method>-Element](method-element-net-native.md)
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](runtime-directive-policy-settings.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)

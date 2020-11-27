@@ -1,19 +1,20 @@
 ---
-title: <Application>-Element (.net Native)
+title: <Application> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288137"
 ---
-# <a name="application-element-net-native"></a>\<Application>-Element (.net Native)
+# <a name="application-element-net-native"></a>\<Application> -Element (.net Native)
+
 Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind, und wendet Laufzeitreflektionsrichtlinien auf alle Programmelemente in einer App an.  
   
  \<Directives>-Element  
-\<Application>-Element (RD. Xml)  
+\<Application> -Element (rd.xml)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,11 +32,12 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben. In der Tabelle der untergeordneten Elemente bezieht sich die Richtlinie auf die Art von Metadaten, die für bestimmte Programmelemente zur Laufzeit verfügbar gemacht werden.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
 |`Browse`|Spiegelung|Optionales Attribut. Steuert das Abfragen nach Informationen über die Typen oder das Auflisten der Typen, aber ermöglicht keinen dynamischen Zugriff zur Laufzeit.|  
@@ -74,7 +76,8 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
 |-------------|-----------------|  
 |[\<Directives>](directives-element-net-native.md)|Das Stammelement einer Laufzeitanweisungsdatei.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Das- [\<Directives>](directives-element-net-native.md) Element kann kein oder ein- `<Application>` Element enthalten. Mehrere `<Application>`-Elemente in einer einzigen Reflektionsrichtliniendatei werden nicht unterstützt.  
   
  Ein `<Application>`-Element kann auf zwei Arten verwendet werden:  
@@ -83,9 +86,9 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
   
 - Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute des- `<Application>` Elements definieren Anwendungs weite Richtlinien, die möglicherweise von den untergeordneten Elementen überschrieben werden, die durch das-Element oder das-Element definiert werden `<Application>` [\<Library>](library-element-net-native.md) .  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-- [\<Library>Gewisses](library-element-net-native.md)
-- [\<Directives>Gewisses](directives-element-net-native.md)
+- [\<Library>-Element](library-element-net-native.md)
+- [\<Directives>-Element](directives-element-net-native.md)
 - [Elemente der Laufzeitanweisung](runtime-directive-elements.md)
 - [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](runtime-directives-rd-xml-configuration-file-reference.md)

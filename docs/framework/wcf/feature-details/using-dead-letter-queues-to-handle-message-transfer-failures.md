@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: f07397b4c10ffec4902dbde37b622978d00f5b63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d3087021c717d6ee055a4a1f5332d9d259f06381
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289593"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
+
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
   
  In der Warteschlange stehende Nachrichten können über lange Zeit hinweg in der Warteschlange verbleiben, wenn die empfangende Anwendung sie nicht umgehend aus der Warteschlange liest. Dieses Verhalten ist möglicherweise nicht für zeitempfindliche Nachrichten geeignet. Zeitempfindliche Nachrichten verfügen über eine Eigenschaft für die Gültigkeitsdauer (Time to Live, TTL), die in der Bindung der Warteschlange festgelegt ist und angibt, wie lange die Nachrichten in der Warteschlange verbleiben können, bevor sie ablaufen. Abgelaufene Nachrichten werden an eine spezielle Warteschlange gesendet und zwar an die Warteschlange für unzustellbare Nachrichten. Nachrichten können auch aus anderen Gründen in einer Warteschlange für unzustellbare Nachrichten platziert werden, z. B. aufgrund des Überschreitens eines Warteschlangenkontingents oder aufgrund eines Authentifizierungsfehlers.  
@@ -26,6 +27,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
  Unter Windows Server 2003 und Windows XP bietet Windows Communication Foundation (WCF) eine systemweite Warteschlange für unzustellbare Nachrichten für alle Client Anwendungen in der Warteschlange. Unter Windows Vista stellt WCF eine Warteschlange für unzustellbare Nachrichten für jede Client Anwendung in der Warteschlange bereit.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Angeben der Verwendung der Warteschlange für unzustellbare Nachrichten  
+
  Eine Warteschlange für unzustellbare Nachrichten befindet sich im Warteschlangen-Manager der sendenden Anwendung. Sie speichert Nachrichten, die abgelaufen sind oder nicht zugestellt werden konnten.  
   
  Die Bindung weist die folgenden Eigenschaften für eine Warteschlange für unzustellbare Nachrichten auf:  
@@ -35,6 +37,7 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
+
  Eine Anwendung, die Nachrichten aus einer Warteschlange für unzustellbare Nachrichten liest, ähnelt einem WCF-Dienst, der aus einer Anwendungs Warteschlange liest, mit Ausnahme der folgenden geringfügigen Unterschiede:  
   
 - Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
@@ -48,11 +51,13 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
  Der WCF-Stapel auf dem Empfänger stimmt mit den Adressen überein, die der Dienst mit der Adresse der Nachricht überwacht. Wenn die Adressen übereinstimmen, wird die Nachricht weitergeleitet; stimmen sie nicht überein, wird die Nachricht nicht weitergeleitet. Dies kann Probleme beim Lesen aus der Warteschlange für unzustellbare Nachrichten verursachen, da die Nachrichten in der Warteschlange in der Regel an den Dienst und nicht an den Dienst der Warteschlange für unzustellbare Nachrichten adressiert sind. Daher muss der Dienst, der aus der Warteschlange für unzustellbare Nachrichten liest, einen Adressfilter `ServiceBehavior` installieren, der den Stapel auffordert, alle Nachrichten in der Warteschlange unabhängig vom Adressaten abzugleichen. Genau genommen müssen Sie dem Dienst, der die Nachrichten aus der Warteschlange für unzustellbare Nachrichten liest, ein `ServiceBehavior` mit dem Parameter <xref:System.ServiceModel.AddressFilterMode.Any> hinzufügen.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Die Handhabung von beschädigten Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
+
  Die Handhabung beschädigter Nachrichten ist für Warteschlangen für unzustellbare Nachrichten verfügbar. Dabei gelten bestimmte Voraussetzungen. Da beim Lesen aus der Systemwarteschlange für unzustellbare Nachrichten keine untergeordneten Warteschlangen erstellt werden können, kann `ReceiveErrorHandling` nicht auf `Move` festgelegt werden. Beachten Sie, dass Sie beim Lesen aus einer benutzerdefinierten Warteschlange für unzustellbare Nachrichten untergeordnete Warteschlangen nutzen können und dass `Move` daher eine gültige Disposition für die beschädigte Nachricht ist.  
   
  Wenn `ReceiveErrorHandling` beim Lesen aus der benutzerdefinierten Warteschlange für unzustellbare Nachrichten auf `Reject` eingestellt ist, wird die beschädigte Nachricht in der Systemwarteschlange für unzustellbare Nachrichten platziert. Beim Lesen aus der Systemwarteschlange für unzustellbare Nachrichten wird die Nachricht abgelegt (gelöscht). Ein Ausschluss aus einer Systemwarteschlange für unzustellbare Nachrichten in MSMQ legt die Nachricht ab (löscht sie).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird gezeigt, wie eine Warteschlange für unzustellbare Nachrichten erstellt und für die Verarbeitung abgelaufener Nachrichten verwendet wird. Das Beispiel basiert auf dem Beispiel in Vorgehens [Weise: Austauschen von Nachrichten in der Warteschlange mit WCF-Endpunkten](how-to-exchange-queued-messages-with-wcf-endpoints.md). Im folgenden Beispiel wird dargestellt, wie der Clientcode auf den Dienst für die Auftragsverarbeitung geschrieben wird, der für jede Anwendung eine Warteschlange für unzustellbare Nachrichten verwendet. Im Beispiel wird auch gezeigt, wie Nachrichten aus der Warteschlange für unzustellbare Nachrichten verarbeitet werden.  
   
  Der folgende Code ist für einen Client, der eine Warteschlange für unzustellbare Nachrichten für jede Anwendung angibt.  

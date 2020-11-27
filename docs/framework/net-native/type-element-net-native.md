@@ -1,15 +1,15 @@
 ---
-title: <Type>-Element (.net Native)
+title: <Type> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091855"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287708"
 ---
-# <a name="type-element-net-native"></a>\<Type>-Element (.net Native)
+# <a name="type-element-net-native"></a>\<Type> -Element (.net Native)
 
 Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse oder Struktur.
 
@@ -35,7 +35,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-|attribute|Attributtyp|BESCHREIBUNG|
+|Attribut|Attributtyp|BESCHREIBUNG|
 |---------------|--------------------|-----------------|
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Typs an|
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|
@@ -88,7 +88,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |`<Type>`|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Reflektions-, Serialisierungs- und Interop-Attribute sind optional. Wenn keine vorhanden sind, dient das `<Type>`-Element als Container, dessen untergeordneten Typen Richtlinie für einzelne Member definieren.
 
@@ -118,6 +118,7 @@ Im folgenden Beispiel wird Reflektion zum Anzeigen von Informationen zu den Feld
 ```
 
 ## <a name="example"></a>Beispiel
+
  Im folgenden Beispiel wird Reflektion zum Abrufen eines <xref:System.Reflection.PropertyInfo>-Objekts verwendet, das die <xref:System.String.Chars%2A?displayProperty=nameWithType>-Eigenschaft darstellt. Anschließend wird mithilfe der <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode der Wert des siebten Zeichens in einer Zeichenfolge abgerufen, und alle Zeichen in der Zeichenfolge werden angezeigt. Die Variable `b` im Beispiel ist ein- <xref:Windows.UI.Xaml.Controls.TextBlock> Steuerelement.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]

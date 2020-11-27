@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], concepts
 - WF [WF], concepts
 ms.assetid: 2a5c0ac2-813f-4a7b-83ac-9e5cb85e0640
-ms.openlocfilehash: 2559d0e39c581e2fcaccd0d913147842e078637e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 0dd40d33eabf7de8724637537e9e5a2f42e998db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420031"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289099"
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Konzeptionelle Übersicht über Windows-Workflow
+
 Dieser Abschnitt enthält eine Reihe von Themen, in denen die größeren Konzepte hinter Windows Workflow Foundation (WF) erörtert werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über Windows-Workflow](overview.md)  
  Beschreibt die Grundlage, mit der Benutzersystem-oder Benutzer Workflows in Ihren Anwendungen erstellen können, die für die Betriebssysteme Windows Vista, Windows XP, Windows Server 2003 und Windows Server 2008 geschrieben wurden.  
   

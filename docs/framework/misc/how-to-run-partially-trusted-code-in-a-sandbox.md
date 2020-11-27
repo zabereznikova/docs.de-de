@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855802"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288280"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Gewusst wie: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 
@@ -178,6 +178,7 @@ AppDomain.CreateDomain( string friendlyName,
      Der Assert "Volle Vertrauenswürdigkeit" wird verwendet, um erweiterte Informationen zu der <xref:System.Security.SecurityException> zu erhalten. Ohne den <xref:System.Security.PermissionSet.Assert%2A> erkennt die <xref:System.Security.SecurityException.ToString%2A>-Methode der <xref:System.Security.SecurityException>, dass sich teilweise vertrauenswürdiger Code im Stack befindet und schränkt die zurückgegebenen Informationen ein. Dies kann zu Sicherheitsproblemen führen, wenn der teilweise vertrauenswürdige Code auf die Informationen zugreifen kann, das Risiko wird jedoch reduziert, indem keine <xref:System.Security.Permissions.UIPermission> gewährt wird. Der Assert "Volle Vertrauenswürdigkeit" sollte sparsam und nur dann verwendet werden, wenn Sie sicher sind, dass Sie teilweise vertrauenswürdigem Code nicht gestatten, auf volle Vertrauenswürdigkeit zu erhöhen. Als Regel gilt: Rufen Sie keinen Code, dem Sie nicht vertrauen, in derselben Funktion auf und nachdem einen Assert für volle Vertrauenswürdigkeit aufgerufen haben. Es hat sich bewährt, den Assert immer zurückzusetzen, wenn Sie ihn nicht mehr benötigen.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die Prozedur aus dem vorherigen Abschnitt implementiert. Im Beispiel enthält ein Projekt mit Namen `Sandboxer` in einer Visual Studio-Lösung auch ein Projekt namens `UntrustedCode`, das die Klasse `UntrustedClass` implementiert. Bei diesem Szenario wird davon ausgegangen, dass Sie eine Bibliotheksassembly heruntergeladen haben, die eine Methode enthält, von der erwartet wird, dass sie `true` oder `false` zurückgibt, um anzugeben, ob es sich bei der von Ihnen eingegebenen Zahl um eine Fibonacci-Zahl handelt. Stattdessen versucht die Methode, eine Datei auf Ihrem Computer zu lesen. Das folgende Beispiel zeigt den nicht vertrauenswürdigen Code.  
   
 ```csharp

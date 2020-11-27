@@ -2,14 +2,15 @@
 title: 'Beispiel: Problembehandlung bei dynamischer Programmierung'
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-ms.openlocfilehash: ff179854066d024a89cb5a84a19d0b9bb054d6e5
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0cff232668b9eb65b09a22b14e4ae58673ccd6d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128438"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288072"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Beispiel: Problembehandlung bei dynamischer Programmierung
+
 > [!NOTE]
 > Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
   
@@ -33,7 +34,8 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
   
  Wir versuchen, diese Ausnahme mithilfe der dreistufigen Vorgehensweise zu behandeln, die im Abschnitt „Fehlende Metadaten manuell auflösen“ von [Erste Schritte](getting-started-with-net-native.md) erläutert wird.  
   
-## <a name="what-was-the-app-doing"></a>Was hat die App gerade getan?  
+## <a name="what-was-the-app-doing"></a>Was hat die App getan?  
+
  Zunächst muss die `async`-Schlüsselwortmaschinerie an der Basis des Stapels beachtet werden.  Zu bestimmen, welche Aktion die App in einer `async`-Methode wirklich ausgeführt hat, kann problematisch sein, da der Stapel den Kontext des ursprünglichen Aufrufs verloren und den `async`-Code in einem anderen Thread ausgeführt hat. Allerdings können wir ableiten, dass die App versucht, die erste Seite zu laden.  In der Implementierung für `NavigationArgs.Setup` hat der folgende Code die Zugriffsverletzung verursacht:  
   
 `AppViewModel.Current.LayoutVM.PageMap`  
@@ -51,9 +53,11 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
  Bei der dynamischen Programmierung empfiehlt es sich, bei der Verwendung von Reflection-APIs unter .net Native die <xref:System.Type.GetType%2A?displayProperty=nameWithType> über Ladungen zu verwenden, die bei einem Fehler eine Ausnahme auslösen.  
   
 ## <a name="is-this-an-isolated-case"></a>Handelt es sich um einen Einzelfall?  
+
  Andere Probleme können mit `App.Core.ViewModels` ebenfalls auftreten.  Sie müssen entscheiden, ob es sich lohnt, jede Ausnahme aufgrund von fehlenden Metadaten zu identifizieren und zu lösen, oder ob Sie Zeit sparen und Anweisungen für eine größere Typenklasse hinzufügen möchten.  Hier ist das Hinzufügen von `dynamic`-Metadaten für `App.Core.ViewModels` möglicherweise der beste Ansatz, wenn die daraus resultierende Größenzunahme der Ausgabebinärdatei kein Problem ist.  
   
 ## <a name="could-the-code-be-rewritten"></a>Könnte der Code neu geschrieben werden?  
+
  Hätte die App `typeof(LayoutApplicationVM)` anstelle von `Type.GetType("LayoutApplicationVM")` verwendet, hätte die Toolkette `browse`-Metadaten beibehalten können.  Jedoch wären immer noch keine `invoke`-Metadaten erstellt worden, was zu einer [MissingMetadataException](missingmetadataexception-class-net-native.md)-Ausnahme beim Instanziieren des Typs geführt hätte. Um die Ausnahme zu verhindern, müssten Sie eine Laufzeitanweisung für den Namespace oder den Typ hinzufügen, der die `dynamic`-Richtlinie angibt. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Weitere Informationen

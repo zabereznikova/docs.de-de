@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 942ade69d92d8a213f65a3a2e463b6924e2f986e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52a9e1bf4c9442bd42beb55b133a185c4a42148d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590214"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288564"
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
+
 Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, das <xref:System.Runtime.Serialization.DataContractSerializer> . Der `DataContractSerializer` übersetzt zwischen .NET Framework-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm selbst enthält WCF zugehörige Schema Import-und Schema Export Mechanismen. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der XML-Form, die vom Serialisierungsprogramm erzeugt wird oder auf die der Deserialisierer zugreifen kann. WCF verwendet die XML-Schema Definitions Sprache (XML Schema Definition Language, XSD) von World Wide Web Consortium (XML Schema Definition Language) als Schema Darstellung, die mit vielen Plattformen von Drittanbietern weitgehend interoperabel ist.  
   
  Die Schema Import Komponente <xref:System.Runtime.Serialization.XsdDataContractImporter> übernimmt ein XSD-Schema Dokument und generiert .NET Framework Klassen (normalerweise Daten Vertrags Klassen), sodass die serialisierten Formulare dem angegebenen Schema entsprechen.  
@@ -42,9 +43,11 @@ Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, d
  Mit <xref:System.Runtime.Serialization.XsdDataContractExporter> können Sie umgekehrt verfahren und anhand von Typen, die mit `DataContractSerializer` serialisierbar sind, ein XSD-Schemadokument generieren.  
   
 ## <a name="fidelity-is-not-guaranteed"></a>Keine Garantie für die Originaltreue  
+
  Bei einem Roundtrip wird keine Garantie für die Originaltreue von Schemas oder Typen übernommen. (Ein *Roundtrip* bedeutet, dass Sie ein Schema importieren, um einen Satz von Klassen zu erstellen, und das Ergebnis exportieren, um erneut ein Schema zu erstellen.) Das gleiche Schema kann nicht zurückgegeben werden. Auch bei der Umkehrung des Prozesses ist eine Beibehaltung der Originaltreue nicht garantiert. (Exportieren Sie einen Typ, um sein Schema zu generieren, und importieren Sie den Typ dann wieder zurück. Es ist unwahrscheinlich, dass der gleiche Typ zurückgegeben wird.)  
   
 ## <a name="supported-types"></a>Unterstützte Typen  
+
  Das Datenvertragsmodell unterstützt nur eine beschränkte Teilmenge des WC3-Schemas. Jedes Schema, das dieser Teilmenge nicht entspricht, verursacht während des Importprozesses eine Ausnahme. Es gibt beispielsweise keine Möglichkeit festzulegen, dass ein Datenmember eines Datenvertrags als XML-Attribut serialisiert werden soll. Schemas, die XML-Attribute erfordern, werden daher nicht unterstützt und verursachen beim Import Ausnahmen, da es nicht möglich ist, einen Datenvertrag mit der richtigen XML-Projektion zu generieren.  
   
  Das folgende Schemafragment kann z. B. nicht mit den Standardimporteinstellungen importiert werden.  

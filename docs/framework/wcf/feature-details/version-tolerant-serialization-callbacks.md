@@ -11,17 +11,19 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ad162f24042f30eabee7a1fad2025072b26d9af5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289372"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Versionstolerante Serialisierungsrückrufe
+
 Die von den Klassen <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> unterstützten Methoden für versionstolerante Serialisierungsrückrufe werden vom Datenvertrags-Programmiermodell vollständig unterstützt.  
   
 ## <a name="version-tolerant-attributes"></a>Versionstolerante Attribute  
+
  Es gibt vier Rückrufattribute. Jedes Attribut kann für eine Methode angewendet werden, die die Serialisierungs-/Deserialisierung-Engine zu verschiedenen Zeiten aufruft. In der folgenden Tabelle wird erläutert, wann die einzelnen Attribute verwendet werden.  
   
 |Attribut|Beim Aufruf der entsprechenden Methode|  
@@ -38,14 +40,15 @@ Die von den Klassen <xref:System.Runtime.Serialization.Formatters.Binary.BinaryF
  Mit jedem der oben aufgeführten Rückrufattribute kann nur eine Methode pro Typ gekennzeichnet werden.  
   
 ### <a name="example"></a>Beispiel  
+
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Runtime.Serialization.OnSerializingAttribute>
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [Versionstolerante Serialisierung](../../../standard/serialization/version-tolerant-serialization.md)
+- [Versions tolerante Serialisierung](../../../standard/serialization/version-tolerant-serialization.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224336"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288319"
 ---
 # <a name="code-access-security"></a>Codezugriffssicherheit
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224336"
  Die Vorteile der Codezugriffssicherheit gelten für den gesamten verwalteten Code, der für die Common Language Runtime geschrieben wird, auch wenn dieser Code die Codezugriffssicherheit nicht aufruft. Weitere Informationen finden Sie unter [Code Access Security Basics](code-access-security-basics.md).  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>Hauptfunktionen der Codezugriffssicherheit  
+
  Mithilfe der Codezugriffssicherheit wird der Zugriff von Code auf geschützte Ressourcen und Vorgänge eingeschränkt. In .NET Framework erfüllt die Codezugriffssicherheit die folgenden Funktionen:  
   
 - Definieren von Berechtigungen und Berechtigungssätzen, die den Zugriff auf die verschiedenen Systemressourcen regeln  
@@ -56,7 +58,9 @@ ms.locfileid: "92224336"
 - Durchsetzen von Einschränkungen für Code zur Laufzeit, indem die erteilten Berechtigungen der einzelnen Aufrufer in der Aufrufliste mit den Berechtigungen verglichen werden, die sie besitzen müssen  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>Durchlaufen der Aufrufliste  
+
  Zur Bestimmung, ob Code auf eine Ressource zugreifen oder einen Vorgang ausführen darf, durchläuft das Laufzeit-Sicherheitssystem die Aufrufliste und vergleicht dabei die erteilten Berechtigungen der einzelnen Aufrufer mit den angeforderten Berechtigungen. Wenn einer der Aufrufer in der Aufrufliste nicht über die angeforderte Berechtigung verfügt, wird eine Sicherheitsausnahme ausgelöst, und der Zugriff wird verweigert. Mit dem Stackwalk sollen Lockangriffe verhindert werden, bei denen weniger vertrauenswürdiger Code äußerst vertrauenswürdigen Code aufruft und verwendet, um nicht autorisierte Aktionen auszuführen. Das Anfordern von Berechtigungen für alle Aufrufer zur Laufzeit beeinträchtigt die Leistung, aber es ist wichtig, den Code vor Lockangriffen durch weniger vertrauenswürdigen Code zu schützen. Um die Leistung zu optimieren, können Sie in Ihrem Code weniger Stapel Spaziergänge ausführen. Stellen Sie jedoch sicher, dass Sie keine Sicherheits Schwächen verfügbar machen, wenn Sie dies tun.  
   
  In der folgenden Abbildung ist der Stackwalk dargestellt, der entsteht, wenn eine Methode in Assembly A4 fordert, dass ihre Aufrufer über Berechtigung P verfügen.  
@@ -64,6 +68,7 @@ ms.locfileid: "92224336"
  ![Stapel Durchlauf für die Code Zugriffssicherheit](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>Verwandte Artikel
   
 |Titel|BESCHREIBUNG|  

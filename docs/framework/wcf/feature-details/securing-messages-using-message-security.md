@@ -2,14 +2,15 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6aae16b766889f402f774451338ae2cd30162437
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558302"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288598"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
+
 In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erörtert <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
@@ -28,6 +29,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
  WCF Message Security fügt der WCF-Nachricht Sicherheits Header hinzu, die in vorhandene Sicherheitsinfrastrukturen integriert sind, z. b. ein Zertifikat oder das Kerberos-Protokoll.  
   
 ## <a name="message-credential-type"></a>Anmeldeinformationstypen für Nachrichten  
+
  Bei der Verwendung der Nachrichtensicherheit können der Dienst und der Client Anmeldeinformationen bereitstellen, um sich gegenseitig zu authentifizieren. Sie können die Nachrichtensicherheit auswählen, indem Sie den <xref:System.ServiceModel.NetMsmqBinding.Security%2A>-Modus auf `Message` oder `Both` (d. h. Transport- und Nachrichtensicherheit werden verwendet) festlegen.  
   
  Der Dienst kann anhand der <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>-Eigenschaft die Anmeldeinformationen überprüfen, mit denen der Client authentifiziert wird. Damit können weitere Autorisierungsüberprüfungen vorgenommen werden, die der Dienst zur Implementierung auswählen kann.  
@@ -35,6 +37,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
  Dieser Abschnitt erklärt die verschiedenen Anmeldeinformationstypen und ihre Verwendung mit Warteschlangen.  
   
 ### <a name="certificate"></a>Zertifikat  
+
  Der Zertifikat-Anmeldeinformationstyp identifiziert mit einem X.509-Zertifikat den Dienst und den Client.  
   
  In einem typischen Szenario stellt eine vertrauenswürdige Zertifizierungsstelle dem Client und dem Dienst ein gültiges Zertifikat aus. Dann wird die Verbindung hergestellt, und der Client authentifiziert die Gültigkeit des Dienstes, indem er anhand des Zertifikat des Dienstes entscheidet, ob der Dienst vertrauenswürdig ist. Entsprechend verwendet der Dienst das Zertifikat des Clients, um dessen Vertrauenswürdigkeit zu überprüfen.  
@@ -44,6 +47,7 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
  Auf einem Computer unter Windows befinden sich die Zertifikate in verschiedenen Arten von Speichern. Weitere Informationen zu den unterschiedlichen speichern finden Sie unter [Zertifikat Speicher](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
+
  Der Windows-Anmeldeinformationstyp für Nachrichten verwendet das Kerberos-Protokoll.  
   
  Das Kerberos-Protokoll ist ein Sicherheitsmechanismus, der Benutzer in einer Domäne authentifiziert und den authentifizierten Benutzern das Erstellen sicherer Kontexte mit anderen Entitäten einer Domäne ermöglicht.  
@@ -55,15 +59,18 @@ In diesem Abschnitt wird die WCF-Nachrichten Sicherheit bei Verwendung von erör
  Das Kerberos-Protokoll wird standardmäßig bei der Auswahl von Nachrichtenanmeldeinformationen verwendet.
   
 ### <a name="username-password"></a>Benutzernamenkennwort (Username Password)  
+
  Mit dieser Eigenschaft kann sich der Client beim Server durch Angabe eines Benutzernamenkennworts im Sicherheitsheader der Nachricht authentifizieren.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
+
  Der Client kann den Sicherheitstokendienst zum Ausstellen eines Tokens verwenden. Dieses Token kann dann der Nachricht angefügt werden, um den Client für den Dienst zu identifizieren.  
   
 ## <a name="using-transport-and-message-security"></a>Verwenden der Transport- und der Nachrichtensicherheit  
+
  Wenn die Transportsicherheit und die Nachrichtensicherheit verwendet werden, muss das auf der Transportebene zum Sichern der Nachricht verwendete Zertifikat mit dem auf der SOAP-Nachrichtenebene verwendeten Zertifikat identisch sein.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Sichern von Nachrichten mit Transportsicherheit](securing-messages-using-transport-security.md)
 - [Nachrichtensicherheit über Message Queuing](../samples/message-security-over-message-queuing.md)

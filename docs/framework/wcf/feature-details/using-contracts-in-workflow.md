@@ -2,17 +2,19 @@
 title: Verwenden von Verträgen im Workflow
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-ms.openlocfilehash: def100f9483ea9ac8bf1aa3285d76edccffb030a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e32130395e05a56de081620f82e0e6f72ae0db38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595010"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289619"
 ---
 # <a name="using-contracts-in-workflow"></a>Verwenden von Verträgen im Workflow
+
 Beim Implementieren eines Diensts definieren Sie eine Reihe von Verträgen, in denen der Dienst und die von ihm gesendeten und empfangenen Daten beschrieben werden. Die Daten werden als Datenverträge und Nachrichten Verträge dargestellt. sowohl WCF-als auch Workflow Dienste verwenden Daten Vertrags-und Nachrichten Vertrags Definitionen als Teil der Dienst Beschreibungen. Der Dienst selbst macht Metadaten (im WSDL-Format) verfügbar, um die Vorgänge des Diensts zu beschreiben. Bei WCF definieren Dienst- und Vorgangsverträge den Dienst und seine unterstützten Vorgänge. In einem Workflowdienst sind diese Verträge jedoch Teil des eigentlichen Geschäftsprozesses. Sie werden in den Metadaten von einem Prozess verfügbar gemacht, der als Vertragsrückschluss bezeichnet wird.  
   
 ## <a name="contract-inference"></a>Vertragsrückschluss  
+
  Wenn ein Workflowdienst mit <xref:System.ServiceModel.Activities.WorkflowServiceHost> gehostet wird, wird die Workflowdefinition untersucht, und basierend auf den im Workflow gefundenen Messagingaktivitäten wird ein Vertrag generiert. Zum Generieren des Vertrags werden insbesondere die folgenden Aktivitäten und Eigenschaften verwendet:  
   
  <xref:System.ServiceModel.Activities.Receive> -Aktivität  

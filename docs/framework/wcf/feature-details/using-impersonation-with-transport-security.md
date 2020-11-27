@@ -2,17 +2,19 @@
 title: Identitätswechsel und Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 1d33bfbbb74266aefa538166b4e1aca7d7e315ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289502"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Identitätswechsel und Transportsicherheit
+
 Identitäts *Wechsel ist die* Fähigkeit einer Serveranwendung, die Identität des Clients zu übernehmen. Dienste greifen bei der Validierung des Zugriffs auf Ressourcen häufig auf den Identitätswechsel zurück. Die Serveranwendung wird unter einem Dienstkonto ausgeführt. Wenn der Server eine Clientverbindung akzeptiert, nimmt er die Identität des Clients an, das heißt, Zugriffsvalidierungen werden mit den Anmeldeinformationen des Clients durchgeführt. Bei der Transportsicherheit handelt es sich um einen Mechanismus, mit dem Anmeldeinformationen übergeben und die Kommunikation mit diesen Anmeldeinformationen gesichert werden können. In diesem Thema wird die Verwendung der Transportsicherheit in Windows Communication Foundation (WCF) mit dem Identitätswechsel Feature beschrieben. Weitere Informationen zum Identitätswechsel mithilfe der Nachrichten Sicherheit finden Sie unter [Delegierung und](delegation-and-impersonation-with-wcf.md)Identitätswechsel.  
   
 ## <a name="five-impersonation-levels"></a>Die fünf Ebenen des Identitätswechsels  
+
  Die Transportsicherheit nutzt fünf Ebenen des Identitätswechsels, die in der folgenden Tabelle beschrieben werden.  
   
 |Ebene des Identitätswechsels|BESCHREIBUNG|  
@@ -28,9 +30,11 @@ Identitäts *Wechsel ist die* Fähigkeit einer Serveranwendung, die Identität d
  Damit der Identitätswechsel mit den Ebenen `Impersonate` oder `Delegate` verwendet werden kann, muss die Serveranwendung die `SeImpersonatePrivilege`-Berechtigung aufweisen. Eine Anwendung verfügt standardmäßig über diese Berechtigung, wenn sie unter einem Konto in der Gruppe der Administratoren oder unter einem Konto mit einer Dienst-SID (Netzwerkdienst, lokaler Dienst oder lokales System) ausgeführt wird. Der Identitätswechsel erfordert keine gegenseitige Authentifizierung von Client und Server. Einige Authentifizierungsschemas, die einen Identitätswechsel unterstützen, wie NTLM, können nicht mit einer gegenseitigen Authentifizierung verwendet werden.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>Transportspezifische Aspekte beim Identitätswechsel  
+
  Die Auswahl eines Transports in WCF wirkt sich auf die möglichen Identitätswechsel Optionen aus. In diesem Abschnitt werden Probleme beschrieben, die die HTTP-und Named Pipe Transporte in WCF betreffen. Benutzerspezifische Transporte haben ihre eigenen Einschränkungen in Bezug auf die Unterstützung eines Identitätswechsels.  
   
 ### <a name="named-pipe-transport"></a>Named Pipe-Transport  
+
  Die folgenden Elemente werden mit dem Named Pipe-Transport verwendet:  
   
 - Der Named Pipe-Transport ist nur für die Verwendung auf dem lokalen Computer bestimmt. Der Named Pipe-Transport in WCF lässt explizit keine Computer übergreifenden Verbindungen zu.  
@@ -40,6 +44,7 @@ Identitäts *Wechsel ist die* Fähigkeit einer Serveranwendung, die Identität d
  Weitere Informationen zu Named Pipes finden Sie unter [Auswählen eines Transports](choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>HTTP-Transport  
+
  Die Bindungen, die den HTTP-Transport ( <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.BasicHttpBinding> ) verwenden, unterstützen mehrere Authentifizierungs Schemas, wie Untergrund Legendes zur [http-Authentifizierung](understanding-http-authentication.md)erläutert. Die unterstützte Ebene des Identitätswechsels ist abhängig vom Authentifizierungsschema. Die folgenden Elemente werden mit dem HTTP-Transport verwendet:  
   
 - Das `Anonymous`-Authentifizierungsschema ignoriert den Identitätswechsel.  

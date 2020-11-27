@@ -11,15 +11,16 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: c054e594af69def96879852a5145675b3123614a
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a1de58ae28041b8e89822120c9369612217eb3b7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244945"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288514"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
-SAML- *Token* (Security Assertionen Markup Language) sind XML-Darstellungen von Ansprüchen. Standardmäßig werden von SAML-Token Windows Communication Foundation (WCF) in Verbund Sicherheitsszenarien *ausgestellte Token*verwendet.  
+
+SAML- *Token* (Security Assertionen Markup Language) sind XML-Darstellungen von Ansprüchen. Standardmäßig werden von SAML-Token Windows Communication Foundation (WCF) in Verbund Sicherheitsszenarien *ausgestellte Token* verwendet.  
   
  SAML-Token enthalten Anweisungen, die Sets mit Ansprüchen sind, die von einer Entität über eine andere Entität gemacht wurden. In Verbundsicherheitsszenarien werden Anweisungen beispielsweise von einem Sicherheitstokendienst über einen Benutzer im System getroffen. Der Sicherheitstokendienst signiert das SAML-Token, um die Richtigkeit der Anweisungen im Token zu bestätigen. Darüber hinaus ist das SAML-Token kryptografischen Schlüsselmaterialien zugewiesen, wobei der Benutzer des SAML-Tokens beweisen muss, dass er um diese Materialien weiß. Dieser Beleg reicht aus, um die vertrauende Seite zu überzeugen, dass das SAML-Token tatsächlich für diesen Benutzer ausgestellt wurde. Ein typisches Szenario sieht folgendermaßen aus:  
   
@@ -32,6 +33,7 @@ SAML- *Token* (Security Assertionen Markup Language) sind XML-Darstellungen von 
 4. Die Signatur über dem SAML-Token zeigt der vertrauenden Seite, dass der Sicherheitstokendienst das Token ausgestellt hat. Die mit dem Prüfschlüssel erstellte Nachrichtensignatur zeigt der vertrauenden Seite, dass das Token für den Client ausgestellt wurde.  
   
 ## <a name="from-claims-to-samlattributes"></a>Von Ansprüchen zu SamlAttributes  
+
  In WCF werden Anweisungen in SAML-Token als- <xref:System.IdentityModel.Tokens.SamlAttribute> Objekte modelliert, die direkt aus-Objekten aufgefüllt werden können <xref:System.IdentityModel.Claims.Claim> , vorausgesetzt, das <xref:System.IdentityModel.Claims.Claim> -Objekt verfügt über eine <xref:System.IdentityModel.Claims.Claim.Right%2A> -Eigenschaft von, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> und die- <xref:System.IdentityModel.Claims.Claim.Resource%2A> Eigenschaft ist vom Typ <xref:System.String> . Beispiel:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
@@ -41,6 +43,7 @@ SAML- *Token* (Security Assertionen Markup Language) sind XML-Darstellungen von 
 > Wenn SAML-Token in Nachrichten serialisiert werden, z. B. wenn sie von einem Sicherheitstokendienst ausgestellt werden oder von Clients im Rahmen der Authentifizierung an Dienste gegeben werden, muss das Kontingent für die maximale Nachrichtengröße groß genug sein, um das SAML-Token und die anderen Teile der Nachricht aufnehmen zu können. Normalerweise ist das Kontingent für Nachrichten in Standardgröße ausreichend. Wenn jedoch ein SAML-Token sehr groß ist, da es mehrere Hundert Ansprüche enthält, müssen Sie u. U. das Kontingent vergrößern, um das serialisierte Token aufnehmen zu können. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für Daten](security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>Von SamlAttributes zu Ansprüchen  
+
  Wenn SAML-Token in Nachrichten empfangen werden, werden die unterschiedlichen Anweisungen im SAML-Token in <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Objekte umgewandelt, die in den <xref:System.IdentityModel.Policy.AuthorizationContext> gesetzt werden. Die Ansprüche aus jeder SAML-Anweisung werden von der <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>-Eigenschaft des <xref:System.IdentityModel.Policy.AuthorizationContext> zurückgegeben und können überprüft werden, um zu bestimmen, ob der Benutzer authentifiziert und autorisiert werden soll  
   
 ## <a name="see-also"></a>Weitere Informationen

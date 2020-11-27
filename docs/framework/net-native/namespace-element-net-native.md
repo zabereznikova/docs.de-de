@@ -1,15 +1,16 @@
 ---
-title: <Namespace>-Element (.net Native)
+title: <Namespace> -Element (.net Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05de04685f8ba746f55bf040c74fd3831c5b63ca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287890"
 ---
-# <a name="namespace-element-net-native"></a>\<Namespace>-Element (.net Native)
+# <a name="namespace-element-net-native"></a>\<Namespace> -Element (.net Native)
+
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Namespace an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -29,11 +30,12 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
   
-|attribute|Attributtyp|BESCHREIBUNG|  
+|Attribut|Attributtyp|BESCHREIBUNG|  
 |---------------|--------------------|-----------------|  
 |`Name`|Allgemein|Erforderliches Attribut. Gibt den Namen des Namespace an.|  
 |`Activate`|Spiegelung|Optionales Attribut. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.|  
@@ -76,10 +78,11 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 |[\<Library>](library-element-net-native.md)|Definiert die Assembly, die Typen und Typmember enthält, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind. Das- [\<Library>](library-element-net-native.md) Element kann kein oder ein- [\<Assembly>](assembly-element-net-native.md) Element aufweisen.|  
 |`<Namespace>`|Wendet die Reflektionsrichtlinie auf alle Typen in einem übergeordneten Namespace an.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
+
  Die Attribute `Activate`, `Browse`, `Dynamic` und `Serialize` sind optional. Wenn keine vorhanden sind, dient das `<Namespace>`-Element nur als Container für untergeordnete Elemente. Wenn sie vorhanden sind, wendet das `<Namespace>`-Element eine Laufzeitreflektionsrichtlinie auf alle Typen im angegebenen Namespace an.  
   
- Wenn es sich um ein untergeordnetes [\<Assembly>](assembly-element-net-native.md) Element des-Elements handelt, überschreibt das- `<Namespace>` Element die Lauf Zeit reflektionsrichtlinie, die vom- [\<Assembly>](assembly-element-net-native.md) Element  
+ Wenn es sich um ein untergeordnetes [\<Assembly>](assembly-element-net-native.md) Element des-Elements handelt, überschreibt das- `<Namespace>` Element die Lauf Zeit reflektionsrichtlinie, die vom-  [\<Assembly>](assembly-element-net-native.md) Element  
   
 ## <a name="see-also"></a>Weitere Informationen
 
