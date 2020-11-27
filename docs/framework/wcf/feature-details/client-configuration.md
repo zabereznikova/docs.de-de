@@ -3,19 +3,21 @@ title: Clientkonfiguration
 description: Erfahren Sie, wie Sie die WCF-Client Konfiguration verwenden, um die Adresse, die Bindung, das Verhalten und den Vertrag für einen Endpunkt anzugeben, der zum Herstellen einer Verbindung mit einem Dienst verwendet wird.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: af9101be0067311fb1a3c0e6e575f186e8ccf161
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245374"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265972"
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
+
 Sie können die Windows Communication Foundation (WCF)-Client Konfiguration verwenden, um die Adresse, die Bindung, das Verhalten und den Vertrag, die "ABC"-Eigenschaften des Client Endpunkts anzugeben, die von Clients zum Herstellen einer Verbindung mit Dienst Endpunkten verwendet werden. Das- [\<client>](../../configure-apps/file-schema/wcf/client.md) Element verfügt über ein- [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element, dessen Attribute zum Konfigurieren der Endpunkt ABCs verwendet werden. Diese Attribute werden im Abschnitt [Konfigurieren von Endpunkten](#configuring-endpoints) erläutert.  
   
  Das [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) -Element enthält außerdem ein [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) -Element, das verwendet wird, um Einstellungen für das Importieren und Exportieren von Metadaten anzugeben, ein [\<headers>](../../configure-apps/file-schema/wcf/headers.md) -Element, das eine Auflistung von benutzerdefinierten Adress Headern enthält, und ein-Element, [\<identity>](../../configure-apps/file-schema/wcf/identity.md) das die Authentifizierung eines Endpunkts durch andere Endpunkte ermöglicht, die Nachrichten austauschen. Das [\<headers>](../../configure-apps/file-schema/wcf/headers.md) -Element und das- [\<identity>](../../configure-apps/file-schema/wcf/identity.md) Element sind Teil der <xref:System.ServiceModel.EndpointAddress> und werden im [Adress](endpoint-addresses.md) Artikel erläutert. Links zu Themen, in denen die Verwendung von Metadatenerweiterungen erläutert wird, finden Sie im Abschnitt [Konfigurieren von Metadaten](#configuring-metadata) .  
   
 ## <a name="configuring-endpoints"></a>Konfigurieren von Endpunkten  
+
  Die Client Konfiguration ermöglicht es dem Client, einen oder mehrere Endpunkte anzugeben, die jeweils über einen eigenen Namen, eine eigene Adresse und einen eigenen Vertrag verfügen, wobei jeweils auf das [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) -Element und das- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Element in der Client Konfiguration verweisen, um diesen Endpunkt zu konfigurieren. Die Client Konfigurationsdatei sollte mit dem Namen "App.config" benannt werden, da dies der Name ist, den die WCF-Laufzeit erwartet. Das folgende Beispiel zeigt eine Clientkonfigurationsdatei.  
   
 ```xml  
@@ -92,6 +94,7 @@ Sie können die Windows Communication Foundation (WCF)-Client Konfiguration verw
  Das `contract`-Attribut gibt den Vertrag an, den dieser Endpunkt verfügbar macht. Dieser Wert wird dem <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> des <xref:System.ServiceModel.ServiceContractAttribute> zugeordnet. Der Standardwert ist der vollständige Typname der Klasse, die den Dienst implementiert.  
   
 ### <a name="configuring-metadata"></a>Konfigurieren von Metadaten  
+
  Das- [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) Element wird verwendet, um Einstellungen anzugeben, mit denen Metadaten-Import Erweiterungen registriert werden. Weitere Informationen zum Erweitern des Metadatensystems finden Sie unter [Erweitern des Metadatensystems](../extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Weitere Informationen

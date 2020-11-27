@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a5b00980cb8c2b06b224630e766e49bafe343c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541212"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266102"
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
+
 Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsindikatoren, die Ihnen helfen, die Leistung Ihrer Anwendung zu messen.  
   
 ## <a name="enabling-performance-counters"></a>Aktivieren von Leistungsindikatoren  
+
  Sie können Leistungsindikatoren für einen WCF-Dienst über die app.config Konfigurationsdatei des WCF-Dienstanbieter wie folgt aktivieren:  
   
 ```xml  
@@ -51,12 +53,14 @@ config.Save();
 ```  
   
 ## <a name="viewing-performance-data"></a>Anzeigen von Leistungsdaten  
- Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie zu **Start**wechseln und dann auf **Ausführen** klicken und `perfmon.exe` im Dialogfeld eingeben.  
+
+ Wenn Sie von den Leistungsindikatoren erfasste Daten anzeigen möchten, verwenden Sie den in Windows integrierten Leistungsmonitor (Perfmon.exe). Sie können dieses Tool starten, indem Sie zu **Start** wechseln und dann auf **Ausführen** klicken und `perfmon.exe` im Dialogfeld eingeben.  
   
 > [!NOTE]
 > Leistungsindikatorinstanzen werden möglicherweise freigegeben, bevor die letzten Nachrichten vom Endpunktverteiler verarbeitet wurden. Dies kann dazu führen, dass Leistungsdaten für einige Nachrichten nicht erfasst werden.  
   
 ## <a name="increasing-memory-size-for-performance-counters"></a>Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren  
+
  WCF verwendet separaten freigegebenen Speicher für die Leistungs Indikatorenkategorien.  
   
  Standardmäßig wird separater freigegebener Arbeitsspeicher auf ein Viertel der Größe des globalen Leistungsindikator-Arbeitsspeichers festgelegt. Der standardmäßige globale Leistungsindikator-Arbeitsspeicher besitzt eine Größe von 524.288 Byte. Daher haben die drei WCF-Leistungs Indikatorenkategorien eine Standardgröße von jeweils ungefähr 128 KB. Abhängig von den Lauf Zeit Merkmalen der WCF-Anwendungen auf einem Computer ist der Leistungsdaten Speicher möglicherweise erschöpft. In diesem Fall schreibt WCF einen Fehler in das Anwendungs Ereignisprotokoll. Der Inhaltsfehler gibt an, dass ein Leistungsindikator nicht geladen wurde, und der Eintrag beinhaltet die Ausnahme "System.InvalidOperationException: Nicht genügend Arbeitsspeicher zum Anzeigen der benutzerdefinierten Indikatordatei." Wird die Ablaufverfolgung auf Fehlerebene aktiviert, wird dieser Fehler ebenfalls nachverfolgt. Wenn der Leistungsindikator Speicher erschöpft ist, kann die Ausführung Ihrer WCF-Anwendungen mit aktivierten Leistungsindikatoren zu Leistungseinbußen führen. Der zuständige Administrator sollte den Computer für das Zuordnen von ausreichendem Arbeitsspeicher konfigurieren, damit die maximale Anzahl der Leistungsindikatoren, die jederzeit vorhanden sein können, unterstützt wird.  
@@ -72,6 +76,7 @@ config.Save();
  Wenn eine große Anzahl von Objekten (z. B. ServiceHost) verworfen wird, die automatische Speicherbereinigung jedoch noch aussteht, registriert der `PrivateBytes`-Leistungsindikator eine ungewöhnlich hohe Anzahl. Zum Beheben dieses Problems können Sie entweder eigene anwendungsspezifische Indikatoren hinzufügen oder mithilfe des `performanceCounters`-Attributs nur Indikatoren auf Dienstebene aktivieren.  
   
 ## <a name="types-of-performance-counters"></a>Leistungsindikatortypen  
+
  Leistungsindikatoren werden für drei verschiedene Ebenen festgelegt: Dienst, Endpunkt und Vorgang.  
   
  Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Beispiel:  
@@ -85,6 +90,7 @@ config.Save();
  Weitere Informationen zu WMI finden Sie unter [Verwenden von Windows-Verwaltungsinstrumentation für die Diagnose](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Dienstleistungsindikatoren  
+
  Mit Dienst-Leistungsindikatoren wird das Dienstverhalten insgesamt gemessen und die Leistung des gesamten Diensts geprüft. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelService 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden nach dem folgenden Schema benannt:  
   
 `ServiceName@ServiceBaseAddress`
@@ -94,6 +100,7 @@ config.Save();
  Leistungsindikatoren zur Dienstinstanzerstellung werden inkrementiert, wenn ein neuer InstanceContext erstellt wird. Beachten Sie, dass auch dann ein neuer InstanceContext erstellt wird, wenn eine nicht aktivierende Nachricht empfangen wird (mit einem vorhandenen Dienst), oder wenn Sie von einer Sitzung aus eine Verbindung zu einer Instanz herstellen, die Sitzung beenden und dann von einer anderen Sitzung aus die Verbindung wieder herstellen.  
   
 ### <a name="endpoint-performance-counters"></a>Endpunktleistungsindikatoren  
+
  Endpunktleistungsindikatoren ermöglichen das Anzeigen von Daten, die das Akzeptieren von Nachrichten durch einen Endpunkt widerspiegeln. Sie sind beim Anzeigen mit dem Leistungsmonitor unter dem `ServiceModelEndpoint 4.0.0.0`-Leistungsobjekt zu finden. Die Instanzen werden nach dem folgenden Schema benannt:  
   
 `(ServiceName).(ContractName)@(endpoint listener address)`
@@ -106,6 +113,7 @@ config.Save();
 > Wenn zwei Endpunkte identische Vertragsnamen und Adressen besitzen, werden sie derselben Indikatorinstanz zugeordnet.  
   
 ### <a name="operation-performance-counters"></a>Vorgangsleistungsindikatoren  
+
  Vorgangsleistungsindikatoren befinden sich unter dem `ServiceModelOperation 4.0.0.0`-Leistungsobjekt, wenn sie mit dem Leistungsmonitor angezeigt werden. Jeder Vorgang hat eine einzelne Instanz. Das heißt, wenn ein bestimmter Vertrag 10 Vorgänge enthält, werden mit diesem Vertrag 10 Vorgangsleistungsindikatoren verbunden. Die Objektinstanzen werden nach dem folgenden Muster benannt:  
   
 `(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
@@ -129,6 +137,6 @@ Im SDK-Installationsordner werden mehrere Dateien installiert, sodass Sie Progra
   
 Weitere Informationen zum programmgesteuerten Zugreifen auf die Leistungsindikatoren finden Sie unter [Architektur der Leistungsindikator Programmierung](/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Verwaltung und Diagnose](../index.md)
