@@ -2,22 +2,23 @@
 title: Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5f423f5054a3a80bc0c730444ca9e90c203e288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262748"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
+
 In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe) generierten Fehlercodes und die empfohlenen Maßnahmen aufgelistet.  
   
 ## <a name="list-of-error-codes"></a>Liste der Fehlercodes  
   
-|Fehlercode|Beschreibung|Empfohlene Aktion|  
+|Fehlercode|BESCHREIBUNG|Empfohlene Aktion|  
 |----------------|-----------------|------------------------------------|  
-|0|Der Vorgang war erfolgreich.|Keiner|  
-|1|Unerwarteter Fehler|Wenden Sie sich an Microsoft|  
+|0|Vorgang erfolgreich|Keine|  
+|1|Unerwarteter Fehler|Microsoft kontaktieren|  
 |2|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, Sicherheitseinstellungen von MSDTC abzurufen.|Stellen Sie sicher, dass der MSDTC-Dienst nicht deaktiviert ist, und beheben Sie alle Probleme, die in der zurückgegebenen Ausnahmemeldung aufgelistet sind.|  
 |3|Das Konto, unter dem WsatConfig.exe ausgeführt wurde, hat keine ausreichenden Berechtigungen zum Lesen der Netzwerksicherheitseinstellungen.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
 |4|Aktivieren Sie den "DTC-Netzwerkzugriff" für MSDTC, bevor Sie versuchen, die WS-AT-Unterstützung zu aktivieren.|Aktivieren Sie den "DTC-Netzwerkzugriff" für MSDTC, und führen Sie das Hilfsprogramm erneut aus.|  
@@ -44,7 +45,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |28|Die `-network`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-network`-Befehlszeilenoption, um "enable" oder "disable" ordnungsgemäß anzugeben.|  
 |29|Die `-maxTimeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-maxTimeout`-Befehlszeilenoption wie angegeben.|  
 |30|Die `-timeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-timeout`-Befehlszeilenoption wie angegeben.|  
-|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Aus<br />-Fehler<br />- Kritisch<br />-Warnung<br />-Informationen<br />-Verbose<br />-Alle|  
+|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Aus<br />– Fehler<br />- Kritisch<br />– Warnung<br />-Informationen<br />-Verbose<br />-Alle|  
 |32|Die `-traceActivity`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceActivity`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |33|Die `-traceProp`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceProp`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |34|Die `-tracePII`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-tracePII`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
@@ -52,7 +53,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |38|Der Prozess oder der Benutzer hat keine ausreichenden Berechtigungen, die Firewallkonfiguration zu ändern.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
 |39|In WsatConfig.exe ist ein Fehler während der Aktualisierung der Firewallkonfiguration aufgetreten.|Überprüfen Sie die Fehlermeldung auf Elemente, die Aktionen erfordern.|  
 |40|WsatConfig.exe kann MSDTC keinen Lesezugriff auf die Privatschlüsseldatei des Zertifikats bieten.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
-|41|Entweder konnte keine WinFX-Installation gefunden werden, oder die gefundene Version entspricht nicht den Anforderungen, die das Tool konfigurieren kann.|Stellen Sie sicher, dass WinFX ordnungsgemäß installiert ist, und verwenden Sie nur das Tool wsatConfig. exe, das in dieser Version von WinFX zur Konfiguration von WS-AT geliefert wurde.|  
+|41|Entweder konnte keine WinFX-Installation gefunden werden, oder die gefundene Version entspricht nicht den Anforderungen, die das Tool konfigurieren kann.|Stellen Sie sicher, dass WinFX ordnungsgemäß installiert ist, und verwenden Sie nur das WsatConfig.exe Tool, das in dieser Version von WinFX zur Konfiguration von WS-AT kam.|  
 |42|Ein Argument wurde mehr als einmal in der Befehlszeile angegeben.|Geben Sie jedes Argument nur einmal an, wenn Sie WsatConfig.exe ausführen.|  
 |43|WsatConfig.exe kann keine WS-AT-Einstellungen aktualisieren, wenn WS-AT nicht aktiviert ist.|Geben Sie `-network:enable` als zusätzliches Befehlszeilenargument an.|  
 |44|Ein erforderlicher Hotfix fehlt, und WS-AT kann erst konfiguriert werden, wenn der Hotfix installiert ist.|Anweisungen zum Installieren des erforderlichen Hotfixes finden Sie in den Anmerkungen zu dieser Version von WinFX.|  
@@ -67,6 +68,6 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |55|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Wenden Sie sich an Microsoft.|  
 |56|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Wenden Sie sich an Microsoft.|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

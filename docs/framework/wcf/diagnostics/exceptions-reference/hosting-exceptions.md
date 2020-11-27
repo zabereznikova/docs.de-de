@@ -2,14 +2,15 @@
 title: Hosting-Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: ad9e14f8-fa17-4d59-b365-fe0e7ec17c98
-ms.openlocfilehash: f2bc7d0ca09faa2598990437295d1abf0cff3c45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 342420f10ed53e4f4786ed9506cfde5fbfcfc957
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934731"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263333"
 ---
 # <a name="hosting-exceptions"></a>Hosting-Ausnahmen
+
 In diesem Thema werden alle Ausnahmen aufgelistet, die durch Hosting generiert werden.  
   
 ## <a name="exception-list"></a>Ausnahmeliste  
@@ -17,4 +18,4 @@ In diesem Thema werden alle Ausnahmen aufgelistet, die durch Hosting generiert w
 |Ressourcencode|Ressourcenzeichenfolge|  
 |-------------------|---------------------|  
 |Hosting_AddressIsAbsoluteUri|Die vollständige URI ist nicht zulässig. Vollständige URIs sind für die ServiceHostingEnvironment.EnsureServiceAvailable API nicht zulässig. Verwenden Sie für den entsprechenden Dienst einen virtuellen Pfad.|  
-|Hosting_BuildProviderCouldNotCreateType|Der angegebene CLR-Typ kann während der Kompilierung des Dienstes nicht geladen werden. Stellen Sie sicher, dass dieser Typ entweder in einer Quelldatei befindet sich in der Anwendung definiert ist \\Verzeichnis \App_Code, in einer kompilierten Assembly befindet sich in der Anwendung enthaltenen \\\bin Verzeichnis oder in einer Assembly im installierten vorhanden der Globaler Assemblycache. Bei dem Typnamen wird die Groß- und Kleinschreibung berücksichtigt. Die Verzeichnisse wie z. B. \\\App_Code und \\\bin muss sich im Stammverzeichnis der Anwendung befinden. Die \\\App_Code und \\\bin Verzeichnisse können nicht in Unterverzeichnissen geschachtelt werden.|
+|Hosting_BuildProviderCouldNotCreateType|Der angegebene CLR-Typ kann während der Kompilierung des Dienstes nicht geladen werden. Vergewissern Sie sich, dass dieser Typ entweder in einer Quelldatei definiert ist, die sich im Verzeichnis "\ App_Code der Anwendung" befindet \\ , das in einer kompilierten Assembly im Verzeichnis "\bin" der Anwendung enthalten ist \\ oder in einer im globalen Assemblycache installierten Assembly vorhanden ist. Bei dem Typnamen wird die Groß- und Kleinschreibung berücksichtigt. Die Verzeichnisse (z \\ . b. \ App_Code und \\ \bin) müssen sich im Stammverzeichnis der Anwendung befinden. Die \\ Verzeichnisse \ App_Code und \\ \bin können nicht in Unterverzeichnissen eingefügt werden.|

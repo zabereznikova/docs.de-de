@@ -2,17 +2,19 @@
 title: Workflowdienste
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: c7a5c6245702497fcd75341b3ff7ba08dc190fa5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff73055d41531ef8188681d0b95748f62fde8011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600126"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263242"
 ---
 # <a name="workflow-services"></a>Workflowdienste
+
 Mit [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] können Sie einen workflowbasierten Dienst vollständig deklarativ in XAML beschreiben. Sie können einen Workflow definieren, der den Dienst implementiert, und Endpunkte beschreiben, die der Dienst verfügbar macht – alles in XAML. In den Themen in diesem Abschnitt wird ausführlich das Programmiermodell beschrieben, das das deklarative Schreiben von Diensten unterstützt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über Workflowdienste](workflow-services-overview.md)  
  Beschreibt die Komponenten, die am Erstellen und Hosten eines Workflowdiensts beteiligt sind.  
   
@@ -25,7 +27,7 @@ Mit [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)
  [Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung](how-to-access-a-service-from-a-workflow-application.md)  
  Erläutert, wie Sie einen Dienst aus einer Workflowanwendung aufrufen.  
   
- [Ungs](correlation.md)  
+ [Korrelation](correlation.md)  
  Erläutert, wie Nachrichten bei der Korrelation einander und Instanzen zugeordnet werden.  
   
  [Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge](out-of-order-message-processing.md)  

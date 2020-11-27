@@ -2,24 +2,26 @@
 title: MessageQueueDuplicatedPipeLeak
 ms.date: 03/30/2017
 ms.assetid: 743db7f1-32cc-4a3b-8d1a-5d1cf25e439c
-ms.openlocfilehash: f657a54d5e18077e6174a0c3bd785b2adf81d226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8cd72c9b8e20e65fcc1e795ed0f06af0b49e21a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797709"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262449"
 ---
 # <a name="messagequeueduplicatedpipeleak"></a>MessageQueueDuplicatedPipeLeak
+
 ID: 166  
   
- Zunehmen Fehler  
+ Schweregrad: Fehler  
   
- Kategorie SMSvcHost  
+ Kategorie: SMSvcHost  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
+
  Dieses Ereignis gibt an, dass beim Senden einer duplizierten Named Pipe ein Fehler aufgetreten ist. Dieser Handle geht im Verlauf verloren. Das Ereignis listet die Quelle, die Ausnahme, den Prozessnamen und die Prozess-ID auf.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ereignisprotokollierung](index.md)
 - [Allgemeine Referenz zu Ereignissen](events-general-reference.md)

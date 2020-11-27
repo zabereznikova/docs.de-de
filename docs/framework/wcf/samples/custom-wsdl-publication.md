@@ -2,14 +2,15 @@
 title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596694"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262865"
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
+
 In diesem Beispiel wird Folgendes veranschaulicht:  
   
 - Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
@@ -24,6 +25,7 @@ In diesem Beispiel wird Folgendes veranschaulicht:
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="service"></a>Dienst  
+
  Der Dienst in diesem Beispiel ist mit zwei benutzerdefinierten Attributen versehen. Das erste Attribut (`WsdlDocumentationAttribute`) nimmt eine Zeichenfolge im Konstruktor entgegen und kann angewendet werden, um eine Vertragsschnittstelle oder einen -vorgang mit einer Zeichenfolge zur Verfügung zu stellen, die dessen Verwendung beschreibt. Das zweite Attribut (`WsdlParamOrReturnDocumentationAttribute`) kann zum Zurückgeben von Werten oder Parametern verwendet werden, um diese Werte im Vorgang zu beschreiben. Das folgende Beispiel zeigt einen Dienstvertrag (`ICalculator`), der mit diesen Attributen beschrieben wird.  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil-Client  
+
  In diesem Beispiel wird Svcutil.exe nicht verwendet. Der Vertrag wird in der Datei generatedClient.cs angegeben, so dass nach der Demonstration von benutzerdefiniertem WSDL-Import und Codegenerierung der Dienst aufgerufen werden kann. Wenn Sie den folgenden benutzerdefinierten WSDL-Importer für dieses Beispiel verwenden möchten, können Sie Svcutil.exe ausführen und mit der Option `/svcutilConfig` den Pfad zu der in diesem Beispiel verwendeten Clientkonfigurationsdatei angeben, die auf die Bibliothek `WsdlDocumentation.dll` verweist. Zum Laden des `WsdlDocumentationImporter` muss Svuctil.exe jedoch die Bibliothek `WsdlDocumentation.dll` finden und laden können, was bedeutet, dass sie entweder im globalen Assemblycache oder im Pfad registriert ist oder sich im selben Verzeichnis wie Svcutil.exe befindet. Bei einem so grundlegenden Beispiel wie diesem ist es am einfachsten, wenn man Svcutil.exe und die Clientkonfigurationsdatei in dasselbe Verzeichnis wie `WsdlDocumentation.dll` kopiert und es von dort aus ausführt.  
   
 ## <a name="the-custom-wsdl-importer"></a>Der benutzerdefinierte WSDL-Importer  
+
  Das benutzerdefinierte <xref:System.ServiceModel.Description.IWsdlImportExtension>-Objekt `WsdlDocumentationImporter` implementiert auch, dass <xref:System.ServiceModel.Description.IContractBehavior> und <xref:System.ServiceModel.Description.IOperationBehavior> den importierten Dienstendpunkten hinzugefügt und <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> zum Ändern der Codegenerierung aufgerufen werden, wenn der Vertrags- oder Vorgangscode erstellt wird.  
   
  Zuerst bestimmt das Beispiel in der <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>-Methode, ob sich die WSDL-Anmerkung auf der Vertrags- oder der Vorgangsebene befindet und fügt sich selbst dem entsprechenden Bereich als Verhalten hinzu, wobei der importierte Anmerkungstext an ihren Konstruktor übergeben wird.  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>Die Clientanwendung  
+
  Die Clientanwendung lädt den benutzerdefinierten WSDL-Importer, indem sie ihn in der Anwendungskonfigurationsdatei angibt.  
   
 ```xml  

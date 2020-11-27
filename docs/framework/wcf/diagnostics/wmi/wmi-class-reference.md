@@ -2,20 +2,23 @@
 title: WMI-Klassenreferenz
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795873"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262254"
 ---
 # <a name="wmi-class-reference"></a>WMI-Klassenreferenz
+
 In diesem Abschnitt werden alle WMI-Klassen aufgelistet, die vom WMI-Anbieter für Windows Communication Foundation (WCF) verfügbar gemacht werden.  
   
 ## <a name="accessing-wmi-instances"></a>Zugreifen auf WMI-Instanzen  
+
  Alle in der WMI-Objektreferenz aufgeführten Klassen können nicht direkt instanziiert werden, mit Ausnahme von Service, AppDomain, Contract, ServiceAppDomain, ServiceToEndpointAssociation und Endpoint. Um auf die anderen Instanzen zuzugreifen, können Sie auf die Eigenschaften der vorher erwähnten Klassen der obersten Ebene zugreifen. Beispielsweise können Sie von der Endpunkt Instanz > Bindungs > BindingElements auf die TransportBindingElement-Instanz zugreifen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [ActivityTransfer](activitytransfer.md)  
   
  [AppDomainInfo](appdomaininfo.md)  
@@ -28,13 +31,13 @@ In diesem Abschnitt werden alle WMI-Klassen aufgelistet, die vom WMI-Anbieter f�
   
  [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [Bindung](binding.md)  
+ [Binding](binding.md)  
   
  [BindingElement](bindingelement.md)  
   
  [CallbackBehavior](callbackbehavior.md)  
   
- [Channel-Klasse](channel-class.md)  
+ [Kanalklasse](channel-class.md)  
   
  [ChannelPoolSettings](channelpoolsettings.md)  
   
@@ -46,7 +49,7 @@ In diesem Abschnitt werden alle WMI-Klassen aufgelistet, die vom WMI-Anbieter f�
   
  [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [Vertrag](contract.md)  
+ [Bedingungen](contract.md)  
   
  [CustomBindingElement](custombindingelement.md)  
   
@@ -102,7 +105,7 @@ In diesem Abschnitt werden alle WMI-Klassen aufgelistet, die vom WMI-Anbieter f�
   
  [SecurityBindingElement](securitybindingelement.md)  
   
- [Dienst](service.md)  
+ [Service](service.md)  
   
  [ServiceAppDomain](serviceappdomain.md)  
   

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: b07937b0a94c24a934b17d6cf21b726ee0d4362e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 490c89f5cfbecd4b2cc0c0e639aa97849132a809
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593486"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261981"
 ---
 # <a name="data-transfer-and-serialization"></a>Datenübertragung und Serialisierung
+
 In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Aufgaben auszuführen. Als Entwickler eines Diensts oder Clients müssen Sie auch verstehen, wie Windows Communication Foundation (WCF) die Daten-und Datenserialisierung behandelt, um Anwendungen zu erstellen, die effizient und einfach zu verwalten sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Angeben von Datenübertragung in Dienstverträgen](specifying-data-transfer-in-service-contracts.md)  
  Beschreibt die grundlegenden Aspekte der Datenübertragung in Diensten.  
   
@@ -47,6 +49,7 @@ In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Au
  Beschreibt eine Ansicht des Gesamt Entwurfs der Datenübertragung in WCF.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization.DataContractSerializer>  
@@ -58,9 +61,10 @@ In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Au
  <xref:System.Xml.Serialization>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Erweitern von Encodern und Serialisierungsprogrammen](../extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Bewährte Methoden: Datenvertragsversionsverwaltung](../best-practices-data-contract-versioning.md)
-- [Dienst Versionsverwaltung](../service-versioning.md)
+- [Dienstversionsverwaltung](../service-versioning.md)

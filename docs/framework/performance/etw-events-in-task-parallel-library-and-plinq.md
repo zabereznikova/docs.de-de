@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: a1a068b7ba94d5e5be4fd90d6adb48b0d25a8b9e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4cb4967ea704064ae08d09311ff33720e3871e19
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263645"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>ETW-Ereignisse in der Task Parallel Library und PLINQ
 
@@ -40,6 +40,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ExclusiveTo|<xref:System.Int64?displayProperty=nameWithType>|Der Endwert des Schleifenzählers|
 
 ### <a name="parallel-loop-end"></a>Ende der parallelen Schleife
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2
@@ -54,6 +55,7 @@ EVENT_DESCRIPTOR.Id = 1
 |totalIterations|<xref:System.Int64?displayProperty=nameWithType>|Gesamtanzahl von Iterationen|
 
 ### <a name="parallel-invoke-begin"></a>Beginn des parallelen Aufrufs
+
  EVENT_DESCRIPTOR.Task = 3
 
  EVENT_DESCRIPTOR.Id = 3
@@ -70,6 +72,7 @@ EVENT_DESCRIPTOR.Id = 1
 |ActionCount|<xref:System.Int32?displayProperty=nameWithType>|Die Anzahl der Aktionen, die im parallelen Aufruf ausgeführt wird.|
 
 ### <a name="parallel-invoke-end"></a>Ende des parallelen Aufrufs
+
  EVENT_DESCRIPTOR.Task = 4
 
  EVENT_DESCRIPTOR.Id = 4
@@ -83,11 +86,13 @@ EVENT_DESCRIPTOR.Id = 1
 |ForkJoinContextID|<xref:System.Int32?displayProperty=nameWithType>|Ein eindeutiger Bezeichner, der verwendet wird, um Schachteln und Paare für Ereignisse mit einer Semantik für Abzweigungen und Zusammenführungen anzugeben.|
 
 ## <a name="plinq-etw-events"></a>PLINQ-ETW-Ereignisse
+
  Die EVENT_HEADER.ProviderId-GUID für PLINQ ist:
 
 `0x159eeeec, 0x4a14, 0x4418, 0xa8, 0xfe, 0xfa, 0xab, 0xcd, 0x98, 0x78, 0x87`
 
 ### <a name="parallel-query-begin"></a>Beginn der parallelen Abfrage
+
  EVENT_DESCRIPTOR.Task = 1
 
  EVENT_DESCRIPTOR.Id = 1
@@ -101,6 +106,7 @@ EVENT_DESCRIPTOR.Id = 1
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Ein eindeutiger Bezeichner der Abfrage.|
 
 ### <a name="parallel-query-end"></a>Ende der parallelen Abfrage
+
  EVENT_DESCRIPTOR.Task = 2
 
  EVENT_DESCRIPTOR.Id = 2

@@ -11,21 +11,24 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 99239d7bac2e556d4da0d74f36c68916da7c688a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cf8069f26b85318994aeeb47d42ad28a3a33834a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164016"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262527"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
+
 > [!NOTE]
 > Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](/windows/win32/winauto/entry-uiauto-win32).  
   
 Ab Windows Vista ermöglicht Windows Benutzern das Ändern der dpi-Einstellung (dots per inch), sodass die meisten Elemente der Benutzeroberfläche (UI) auf dem Bildschirm größer erscheinen. Obwohl dieses Feature seit langem in Windows verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. Ab Windows Vista führt die Desktopfenster-Manager eine Standard Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht verarbeiten. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
   
 <a name="Scaling_in_Windows_Vista"></a>
+
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista  
+
  Die dpi-Standardeinstellung ist 96. Dies bedeutet, dass 96 Pixel eine Breite oder Höhe von einem einzelnen Zoll belegen. Das genaue Maß für ein „Zoll“ ist abhängig von der Größe und der physischen Auflösung des Monitors. Auf einem Monitor mit einer Breite von 12 Zoll bei einer horizontalen Auflösung von 1280 Pixel erstreckt sich eine horizontale Linie von 96 Pixeln beispielsweise über etwas 9/10 eines Zolls.  
   
  Das Ändern der dpi-Einstellung ist nicht dasselbe wie das Ändern der Bildschirmauflösung. Bei der DPI-Skalierung bleibt die Anzahl der physischen Pixel auf dem Bildschirm unverändert. Die Skalierung wird jedoch auf die Größe und Position der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente angewendet. Diese Skalierung kann vom Desktopfenster-Manager (DWM) für den Desktop und für Anwendungen automatisch durchgeführt werden , die nicht ausdrücklich danach verlangen, nicht skaliert zu werden.  
@@ -42,7 +45,9 @@ Ab Windows Vista ermöglicht Windows Benutzern das Ändern der dpi-Einstellung (
  Logische Koordinaten sind wichtig, da Sie das Verhalten des Betriebssystems und der Anwendungen unabhängig von der dpi-Einstellung konsistent machen. <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> gibt z. B. normalerweise die logischen Koordinaten zurück. Wenn Sie den Cursor über ein Element in einem Dialogfeld bewegen, werden unabhängig von der dpi-Einstellung dieselben Koordinaten zurückgegeben. Wenn Sie ein Steuerelement bei (100, 100) zeichnen, wird es auf diese logischen Koordinaten gezeichnet und nimmt dieselbe relative Position bei jeder dpi-Einstellung an.  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>
+
 ## <a name="scaling-in-ui-automation-clients"></a>Skalierung in Benutzeroberflächenautomatisierungs-Clients  
+
  Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API verwendet keine logischen Koordinaten. Die folgenden Methoden und Eigenschaften geben entweder physische Koordinaten zurück oder verwenden sie als Parameter.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  

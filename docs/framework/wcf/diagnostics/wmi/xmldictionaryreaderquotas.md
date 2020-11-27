@@ -2,14 +2,15 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: f1c12a0a60397a84d4e9ff0241c4182b4511af5c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5bb7813a680c89eb90f4ccf4ed6f09a831c8095
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858428"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262202"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
+
 XmlDictionaryReaderQuotas  
   
 ## <a name="syntax"></a>Syntax  
@@ -26,12 +27,15 @@ class XmlDictionaryReaderQuotas
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Von der XmlDictionaryReaderQuotas-Klasse werden keine Methoden definiert.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die XmlDictionaryReaderQuotas-Klasse weist die folgenden Eigenschaften auf:  
   
 ### <a name="maxarraylength"></a>MaxArrayLength  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -39,6 +43,7 @@ class XmlDictionaryReaderQuotas
  Die maximal zulässige Arraylänge.  
   
 ### <a name="maxbytesperread"></a>MaxBytesPerRead  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -46,6 +51,7 @@ class XmlDictionaryReaderQuotas
  Die maximal zulässigen Bytes, die bei jedem Lesevorgang zurückgegeben werden.  
   
 ### <a name="maxdepth"></a>MaxDepth  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -53,6 +59,7 @@ class XmlDictionaryReaderQuotas
  Die maximale geschachtelte Knotentiefe für jeden Lesevorgang.  
   
 ### <a name="maxnametablecharcount"></a>MaxNameTableCharCount  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -60,6 +67,7 @@ class XmlDictionaryReaderQuotas
  Die maximal zulässigen Zeichen in einem Tabellennamen.  
   
 ### <a name="maxstringcontentlength"></a>MaxStringContentLength  
+
  Datentyp: sint32  
   
  Zugriffstyp: Schreibgeschützt  
@@ -72,7 +80,7 @@ class XmlDictionaryReaderQuotas
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.Xml.XmlDictionaryReaderQuotas>
 - <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>

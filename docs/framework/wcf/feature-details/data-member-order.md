@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262163"
 ---
 # <a name="data-member-order"></a>Datenmember-Reihenfolge
+
 Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
   
 ## <a name="basic-rules"></a>Grundregeln  
+
  Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&#160;a.:  
   
 - Wenn ein Datenvertragstyp Teil einer Vererbungshierarchie ist, stehen die Datenmember der Basistypen immer am Anfang der Reihenfolge.  
@@ -30,6 +32,7 @@ Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die 
  Die alphabetische Reihenfolge wird erstellt, indem die <xref:System.String.CompareOrdinal%2A>-Methode aufgerufen wird.  
   
 ## <a name="examples"></a>Beispiele  
+
  Betrachten Sie folgenden Code.  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]

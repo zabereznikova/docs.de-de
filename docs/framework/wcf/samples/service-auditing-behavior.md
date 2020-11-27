@@ -2,14 +2,15 @@
 title: Dienstüberwachungsverhalten
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: bfe13146a7f7cdec648a82a34c34077ec5466809
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae7ed2059b491a71de9c806e78f1fb784da197fa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599931"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262566"
 ---
 # <a name="service-auditing-behavior"></a>Dienstüberwachungsverhalten
+
 Dieses Beispiel zeigt, wie das <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> verwendet werden kann, um die Überwachung von Sicherheitsereignissen während Dienstvorgängen zu aktivieren. Dieses Beispiel basiert [auf den ersten](getting-started-sample.md)Schritten. Der Dienst und der Client wurden mithilfe von konfiguriert [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . Das `mode` -Attribut von wurde [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) auf festgelegt, `Message` und wurde `clientCredentialType` auf festgelegt `Windows` . In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
   
 > [!NOTE]
@@ -52,5 +53,5 @@ Dieses Beispiel zeigt, wie das <xref:System.ServiceModel.Description.ServiceSecu
   
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Auditing](../feature-details/auditing-security-events.md)
+- [Überwachung](../feature-details/auditing-security-events.md)
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../feature-details/how-to-audit-wcf-security-events.md)

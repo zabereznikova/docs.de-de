@@ -2,14 +2,15 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: 38282577c2f759bff9927a8369349c689e26808a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2e935172af959ead57502f02d3820d51d66196
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997029"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262189"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
+
 XmlSerializerOperationBehavior  
   
 ## <a name="syntax"></a>Syntax  
@@ -23,20 +24,24 @@ class XmlSerializerOperationBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Methoden  
+
  Die XmlSerializerOperationBehavior-Klasse definiert keine Methoden.  
   
 ## <a name="properties"></a>Eigenschaften  
+
  Die XmlSerializerOperationBehavior-Klasse hat die folgenden Eigenschaften:  
   
-### <a name="style"></a>Stil  
- Datentyp: string (Zeichenfolge)  
+### <a name="style"></a>Style  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
  Definiert das Format einer SOAP-Nachricht.  
   
-### <a name="use"></a>Mit  
- Datentyp: string (Zeichenfolge)  
+### <a name="use"></a>Zweck  
+
+ Datentyp: String  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -48,6 +53,6 @@ class XmlSerializerOperationBehavior : Behavior
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

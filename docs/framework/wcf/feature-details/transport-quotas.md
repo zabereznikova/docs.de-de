@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: fca5fbeffb560f848edda6421301785f02547d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcc63e6645580c1021667b278b80c09baf5700c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261461"
 ---
 # <a name="transport-quotas"></a>Transportkontingente
+
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
   
  Windows Communication Foundation (WCF)-Transporte verfügen über Standard Kontingent Werte, die auf einer konservativen Zuweisung von Ressourcen basieren. Diese Standardwerte sind für eine Entwicklungsumgebung und für kleine Installationsszenarien geeignet. Dienstadministratoren sollten Transportkontingente prüfen und individuelle Kontingentwerte anpassen, wenn einer Installation die Ressourcen ausgehen oder wenn Verbindungen eingeschränkt werden, obwohl zusätzliche Ressourcen zur Verfügung stehen.  
   
 ## <a name="types-of-transport-quotas"></a>Typen von Transportkontingenten  
+
  WCF-Transporte verfügen über drei Arten von Kontingenten:  
   
 - *Timeouts* mindern Denial-of-Service-Angriffe, die darauf basieren, dass Ressourcen für einen längeren Zeitraum gebunden werden.  
@@ -26,6 +28,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 - Die *Größe der Sammlungs Größe beschränkt* den Verbrauch von Ressourcen, die indirekt Arbeitsspeicher belegen oder sich in begrenzter Menge befinden.  
   
 ## <a name="transport-quota-descriptions"></a>Transportkontingentbeschreibungen  
+
  In diesem Abschnitt werden die für die WCF-Standard Transporte verfügbaren Transport Kontingente beschrieben: http (S), TCP/IP und Named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
   
  Jede Kontingenteinstellung verfügt über einen Typ, einen minimalen Wert und einen Standardwert. Der Maximalwert eines Kontingents wird von seinem Typ beschränkt. Aufgrund von Computereinschränkungen ist es nicht immer möglich, ein Kontingent auf seinen Maximalwert festzulegen.  
@@ -52,11 +55,13 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
  Die Transportkontingente `MaxPendingConnections` und `MaxOutboundConnectionsPerEndpoint` werden zu einem einzelnen Transportkontingent namens `MaxConnections` kombiniert, wenn dies durch die Bindung oder die Konfiguration eingerichtet ist. Nur das Bindungselement ermöglicht die einzelne Einrichtung dieser Kontingentwerte. Das `MaxConnections`-Transportkontingent verfügt über die gleichen Mindest- und Standardwerte.  
   
 ## <a name="setting-transport-quotas"></a>Festlegen von Transportkontingenten  
- Transportkontingente werden durch das Transportbindungselement, die Transportbindung, die Anwendungskonfiguration oder die Hostrichtlinie festgelegt. Dieses Dokument deckt nicht die Einrichtung von Transporten über die Hostrichtlinie ab. Informationen über die Einrichtung von Hostrichtlinienkontingenten finden Sie in der Dokumentation des zugrunde liegenden Transports. Im Thema [Konfigurieren von http und HTTPS](configuring-http-and-https.md) werden die Kontingent Einstellungen für den http. sys-Treiber beschrieben. Durchsuchen Sie die Microsoft Knowledge Base, um weitere Informationen über die Konfiguration von Windows-Beschränkungen auf HTTP-, TCP/IP- und Named Pipe-Verbindungen zu erhalten.  
+
+ Transportkontingente werden durch das Transportbindungselement, die Transportbindung, die Anwendungskonfiguration oder die Hostrichtlinie festgelegt. Dieses Dokument deckt nicht die Einrichtung von Transporten über die Hostrichtlinie ab. Informationen über die Einrichtung von Hostrichtlinienkontingenten finden Sie in der Dokumentation des zugrunde liegenden Transports. Im Thema [Konfigurieren von http und HTTPS](configuring-http-and-https.md) werden die Kontingent Einstellungen für den Http.sys Treiber beschrieben. Durchsuchen Sie die Microsoft Knowledge Base, um weitere Informationen über die Konfiguration von Windows-Beschränkungen auf HTTP-, TCP/IP- und Named Pipe-Verbindungen zu erhalten.  
   
  Andere Typen von Kontingenten gelten indirekt für Transporte. Der Nachrichtenencoder, den der Transport nutzt, um eine Nachricht in Bytes zu transformieren, kann über eigene Kontingenteinstellungen verfügen. Allerdings sind diese Kontingente vom verwendeten Transporttyp unabhängig.  
   
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Kontrolle von Transportkontingenten vom Bindungselement  
+
  Das Festlegen von Transportkontingenten durch das Bindungselement bietet die größte Flexibilität in der Kontrolle des Transportverhaltens. Die Standardtimeouts für Schließen-, Öffnen-, Empfangs- und Sendevorgänge werden von der Bindung übernommen, wenn ein Kanal erstellt wird.  
   
 |Name|HTTP|TCP/IP|Named Pipe|  
@@ -79,6 +84,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 |`SendTimeout`||||  
   
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Kontrolle von Transportkontingenten von der Bindung  
+
  Die Einrichtung von Transportkontingenten durch die Bindung bietet einen vereinfachten Satz an Kontingenten, aus dem ausgesucht werden kann, während gleichzeitig der Zugriff auf die üblichsten Kontingentwerte aufrechterhalten bleibt.  
   
 |Name|HTTP|TCP/IP|Named Pipe|  
@@ -105,6 +111,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 2. Die Transportkontingente, `MaxPendingConnections` und `MaxOutboundConnectionsPerEndpoint` werden zu einem einzelnen Transportkontingent namens `MaxConnections` kombiniert.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Kontrolle von Transportkontingenten von der Konfiguration  
+
  Die Anwendungskonfiguration kann die gleichen Transportkontingente festlegen, wie der direkte Zugriff auf Eigenschaften auf der Bindung . In Konfigurationsdateien beginnt der Name eines Transportkontingents immer mit einem Kleinbuchstaben. Beispielsweise entspricht die `CloseTimeout`-Eigenschaft auf einer Bindung der `closeTimeout`-Einstellung in der Konfiguration, und die `MaxConnections`-Eigenschaft auf einer Bindung entspricht der `maxConnections`-Einstellung in der Konfiguration.  
   
 ## <a name="see-also"></a>Weitere Informationen

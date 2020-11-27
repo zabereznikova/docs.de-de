@@ -2,14 +2,15 @@
 title: Objektverweise
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: ba4ee3fd0cc16130f66570891ecc295b2d2c50aa
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55cadc908a3479ee3d104354bcbfd3ea49b15d07
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262371"
 ---
 # <a name="object-references"></a>Objektverweise
+
 In diesem Beispiel wird veranschaulicht, wie Objekte als Verweis zwischen Server und Client übergeben werden. Das Beispiel verwendet simulierte *soziale Netzwerke*. Ein gesellschaftliches Netzwerk besteht aus einer `Person`-Klasse, die eine Liste von Freunden enthält, wobei jeder Freund eine Instanz der `Person`-Klasse mit eigener Liste von Freunden ist. Damit wird ein Objektdiagramm erstellt. Der Dienst macht Operationen in diesen gesellschaftlichen Netzwerken verfügbar.  
   
  In diesem Beispiel wird der Dienst von Internetinformationsdiensten (IIS) gehostet, und der Client ist eine Konsolenanwendung (.exe).  
@@ -18,6 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie Objekte als Verweis zwischen Server
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 ## <a name="service"></a>Dienst  
+
  Auf die `Person`-Klasse wurde das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut angewendet, wobei das <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>-Feld zur Deklaration als Verweistyp auf `true` festgelegt wurde. Auf alle Eigenschaften wurde das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet.  
   
 ```csharp
@@ -92,6 +94,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>Client  
+
  Der-Client Proxy wird mithilfe des **Dienstverweis hinzufügen** Features von Visual Studio erstellt.  
   
  Ein gesellschaftliches Netzwerk wird erstellt, das aus fünf `Person`-Objekten besteht. Der Client ruft jede der drei Methoden im Dienst auf.  

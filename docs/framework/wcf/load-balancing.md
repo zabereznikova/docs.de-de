@@ -4,20 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: a444df2b05803ec54c5bd9030ce12209cfe9bd07
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183993"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262709"
 ---
 # <a name="load-balancing"></a>Lastenausgleich
-Eine Möglichkeit, die Kapazität von Windows Communication Foundation (WCF)-Anwendungen zu erhöhen, besteht darin, sie durch Bereitstellen in einer Serverfarm mit Lastenausgleich zu skalieren. WCF-Anwendungen können mithilfe von Standard-Lastausgleichstechniken, einschließlich Software-Lastenausgleichswietoren wie Windows Network Load Balancing sowie hardwarebasierten Lastenausgleichsgeräten, lastenausgeglichen werden.  
+
+Eine Möglichkeit, um die Kapazität von Windows Communication Foundation (WCF)-Anwendungen zu erhöhen, besteht darin, Sie horizontal zu skalieren, indem Sie Sie in einer Serverfarm mit Lastenausgleich bereitstellen. Für WCF-Anwendungen kann ein Lastenausgleich mithilfe von Standardverfahren für den Lastenausgleich ausgeführt werden, einschließlich Software Lastenausgleich wie Windows-Netzwerk Lastenausgleich und hardwarebasierte Lasten Ausgleichs Geräte.  
   
- In den folgenden Abschnitten werden Überlegungen zum Lastenausgleich von WCF-Anwendungen erläutert, die mit verschiedenen vom System bereitgestellten Bindungen erstellt wurden.  
+ In den folgenden Abschnitten werden Überlegungen für den Lastenausgleich von WCF-Anwendungen erläutert, die mit verschiedenen vom System bereitgestellten Bindungen  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Lastenausgleich mit der Basic-HTTP-Bindung  
- Aus der Perspektive des Lastenausgleichs unterscheiden <xref:System.ServiceModel.BasicHttpBinding> sich WCF-Anwendungen, die über die kommunizieren, nicht von anderen gängigen Typen von HTTP-Netzwerkverkehr (statischer HTML-Inhalt, ASP.NET Seiten oder ASMX-Webdienste). WCF-Kanäle, die diese Bindung verwenden, sind von Natur aus zustandslos und beenden ihre Verbindungen, wenn der Kanal geschlossen wird. Daher funktioniert die <xref:System.ServiceModel.BasicHttpBinding> gut mit vorhandenen HTTP-Lastenausgleichstechniken.  
+
+ Aus Sicht des Lasten Ausgleichs unterscheiden sich WCF-Anwendungen, die mit kommunizieren, <xref:System.ServiceModel.BasicHttpBinding> nicht von anderen gängigen Arten des http-Netzwerk Datenverkehrs (statischer HTML-Inhalt, ASP.NET-Seiten oder ASMX-Webdienste). WCF-Kanäle, die diese Bindung verwenden, sind grundsätzlich zustandslos und beenden ihre Verbindungen, wenn der Kanal geschlossen wird. Daher funktioniert die <xref:System.ServiceModel.BasicHttpBinding> gut mit vorhandenen HTTP-Lastenausgleichstechniken.  
   
  Standardmäßig sendet die <xref:System.ServiceModel.BasicHttpBinding> einen HTTP-Verbindungsheader in Nachrichten mit einem `Keep-Alive`-Wert, der Clients ermöglicht, permanente Verbindungen zu den Diensten herzustellen, die sie unterstützen. Diese Konfiguration bietet einen höheren Durchsatz, da zuvor hergestellte Verbindungen erneut verwendet werden können, um nachfolgende Nachrichten an denselben Server zu senden. Die Wiederverwendung der Verbindung kann jedoch dazu führen, dass Clients eng mit einem bestimmten Server innerhalb der Serverfarm mit Lastenausgleich verbunden werden, was die Effektivität des Roundrobin-Lastenausgleichs reduziert. Wenn dieses Verhalten unerwünscht ist, kann HTTP `Keep-Alive` auf dem Server deaktiviert werden, indem die <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A>-Eigenschaft mit einer <xref:System.ServiceModel.Channels.CustomBinding> oder einer benutzerdefinierten <xref:System.ServiceModel.Channels.Binding> verwendet wird. Im folgenden Beispiel wird gezeigt, wie dieser Vorgang unter Verwendung der Konfiguration ausgeführt wird.  
   
@@ -56,7 +58,7 @@ Eine Möglichkeit, die Kapazität von Windows Communication Foundation (WCF)-Anw
 </configuration>  
 ```  
   
- Mit der vereinfachten Konfiguration, die in .NET Framework 4 eingeführt wurde, kann das gleiche Verhalten mit der folgenden vereinfachten Konfiguration erreicht werden.  
+ Mithilfe der vereinfachten Konfiguration, die in .NET Framework 4 eingeführt wurde, kann das gleiche Verhalten mithilfe der folgenden vereinfachten Konfiguration erreicht werden.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -80,14 +82,16 @@ Eine Möglichkeit, die Kapazität von Windows Communication Foundation (WCF)-Anw
  Weitere Informationen über Standardendpunkte, Bindungen und Verhalten finden Sie unter [Simplified Configuration (Vereinfachte Konfiguration)](simplified-configuration.md) und [Simplified Configuration for WCF Services (Vereinfachte Konfiguration für WCF-Dienste)](./samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Lastenausgleich mit der WSHttp-Bindung und der WSDualHttp-Bindung  
+
  Sowohl die <xref:System.ServiceModel.WSHttpBinding> als auch die <xref:System.ServiceModel.WSDualHttpBinding> können mit HTTP-Lastenausgleichstechniken ausgeglichen werden, vorausgesetzt, an der Standardbindungskonfiguration werden einige Änderungen vorgenommen.  
   
-- Sicherheitskontexterstellung deaktivieren: Dies kann durch Festlegen der <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>-Eigenschaft der <xref:System.ServiceModel.WSHttpBinding> auf `false` erreicht werden. Wenn Sicherheitssitzungen erforderlich sind, ist es auch möglich, zustandsbehaftete Sicherheitssitzungen zu verwenden, wie im Thema ["Sichere Sitzungen"](./feature-details/secure-sessions.md) beschrieben. Zustandsbehaftete Sicherheitssitzungen ermöglichen dem Dienst, zustandslos zu bleiben, da der gesamte Zustand für die Sicherheitssitzung mit jeder Anforderung als Teil des Schutzsicherheitstokens übertragen wird. Zum Aktivieren einer zustandsbehafteten Sicherheitssitzung muss eine <xref:System.ServiceModel.Channels.CustomBinding> oder eine benutzerdefinierte <xref:System.ServiceModel.Channels.Binding> verwendet werden, da die erforderlichen Konfigurationseinstellungen nicht für die vom System bereitgestellte <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.WSDualHttpBinding> verfügbar gemacht werden.  
+- Sicherheitskontexterstellung deaktivieren: Dies kann durch Festlegen der <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>-Eigenschaft der <xref:System.ServiceModel.WSHttpBinding> auf `false` erreicht werden. Wenn Sicherheits Sitzungen erforderlich sind, ist es auch möglich, Zustands behaftete Sicherheits Sitzungen zu verwenden, wie im Thema [sichere Sitzungen](./feature-details/secure-sessions.md) beschrieben. Zustandsbehaftete Sicherheitssitzungen ermöglichen dem Dienst, zustandslos zu bleiben, da der gesamte Zustand für die Sicherheitssitzung mit jeder Anforderung als Teil des Schutzsicherheitstokens übertragen wird. Zum Aktivieren einer zustandsbehafteten Sicherheitssitzung muss eine <xref:System.ServiceModel.Channels.CustomBinding> oder eine benutzerdefinierte <xref:System.ServiceModel.Channels.Binding> verwendet werden, da die erforderlichen Konfigurationseinstellungen nicht für die vom System bereitgestellte <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.WSDualHttpBinding> verfügbar gemacht werden.  
   
-- Verwenden Sie keine zuverlässigen Sitzungen. Diese Funktion ist standardmäßig deaktiviert.  
+- Verwenden Sie keine zuverlässigen Sitzungen. Dieses Feature ist standardmäßig deaktiviert.  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Lastenausgleich der Net.TCP-Bindung  
- Für die <xref:System.ServiceModel.NetTcpBinding> kann mit Lastenausgleichstechniken der IP-Ebene ein Lastausgleich vorgenommen werden. Die <xref:System.ServiceModel.NetTcpBinding> legt jedoch TCP-Verbindungen standardmäßig zusammen, um die Verbindungswartezeit zu reduzieren. Dies ist eine Optimierung, die den grundlegenden Mechanismus des Lastenausgleichs behindert. Der primäre Konfigurationswert zur Optimierung der <xref:System.ServiceModel.NetTcpBinding> ist der Leasetimeout, der zu den Verbindungspooleinstellungen gehört. Verbindungspooling bewirkt, dass Clientverbindungen bestimmten Servern innerhalb der Farm zugeordnet werden. Mit steigender Lebensdauer dieser Verbindung (ein Faktor, der von der Leasetimeout-Einstellung gesteuert wird) wird die Lastenverteilung über die verschiedenen Server auf der Farm zunehmend unausgeglichen. Demzufolge steigt die durchschnittliche Aufrufzeit. Erwägen Sie daher bei der Verwendung der <xref:System.ServiceModel.NetTcpBinding> in Lastenausgleichsszenarien, den von der Bindung verwendeten Leasetimeout-Standardwert zu reduzieren. Ein 30 Sekunden dauernder Leasetimeout ist ein angemessener Ausgangspunkt für Lastenausgleichsszenarien. Der optimale Wert richtet sich jedoch nach der jeweiligen Anwendung. Weitere Informationen zum Channelleasetimeout und anderen Transportkontingenten finden Sie unter [Transportkontingente](./feature-details/transport-quotas.md).  
+
+ Für die <xref:System.ServiceModel.NetTcpBinding> kann mit Lastenausgleichstechniken der IP-Ebene ein Lastausgleich vorgenommen werden. Die <xref:System.ServiceModel.NetTcpBinding> legt jedoch TCP-Verbindungen standardmäßig zusammen, um die Verbindungswartezeit zu reduzieren. Dies ist eine Optimierung, die den grundlegenden Mechanismus des Lastenausgleichs behindert. Der primäre Konfigurationswert zur Optimierung der <xref:System.ServiceModel.NetTcpBinding> ist der Leasetimeout, der zu den Verbindungspooleinstellungen gehört. Verbindungspooling bewirkt, dass Clientverbindungen bestimmten Servern innerhalb der Farm zugeordnet werden. Mit steigender Lebensdauer dieser Verbindung (ein Faktor, der von der Leasetimeout-Einstellung gesteuert wird) wird die Lastenverteilung über die verschiedenen Server auf der Farm zunehmend unausgeglichen. Demzufolge steigt die durchschnittliche Aufrufzeit. Erwägen Sie daher bei der Verwendung der <xref:System.ServiceModel.NetTcpBinding> in Lastenausgleichsszenarien, den von der Bindung verwendeten Leasetimeout-Standardwert zu reduzieren. Ein 30 Sekunden dauernder Leasetimeout ist ein angemessener Ausgangspunkt für Lastenausgleichsszenarien. Der optimale Wert richtet sich jedoch nach der jeweiligen Anwendung. Weitere Informationen zum kanalleasedgetimeout und anderen Transport Kontingenten finden Sie unter [Transport Kontingente](./feature-details/transport-quotas.md).  
   
  Erwägen Sie, für die optimale Leistung in Lastenausgleichsszenarien <xref:System.ServiceModel.NetTcpSecurity> ( <xref:System.ServiceModel.SecurityMode.Transport> oder <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>) zu verwenden.  
   

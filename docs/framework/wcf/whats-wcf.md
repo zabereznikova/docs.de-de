@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556062"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261890"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Was ist die Windows Communication Foundation?
+
 Windows Communication Foundation (WCF) ist ein Framework zum Aufbauen von Dienst orientierten Anwendungen. Mithilfe von WCF können Sie Daten als asynchrone Nachrichten von einem Dienst Endpunkt an einen anderen senden. Ein Dienstendpunkt kann Teil eines fortwährend verfügbaren von IIS gehosteten Diensts oder ein in einer Anwendung gehosteter Dienst sein. Ein Endpunkt kann ein Client eines Diensts sein, der Daten von einem Dienstendpunkt anfordert. Die Nachrichten können einfach aus einem als XML gesendeten einzelnen Zeichen oder Wort oder aus einem komplexen Strom binärer Daten bestehen. Einige Beispielszenarios enthalten Folgendes:
 
 - Ein sicherer Dienst zur Verarbeitung von Geschäftstransaktionen.
@@ -65,7 +66,7 @@ WCF umfasst die folgenden Features. Weitere Informationen finden Sie unter [Deta
 
 - **Zuverlässige Nachrichtensendung und Nachrichten in Warteschlangen**
 
-     WCF unterstützt den zuverlässigen Nachrichtenaustausch mit zuverlässigen Sitzungen, die über zuverlässige WS-Messaging-und MSMQ-Funktionen implementiert werden. Weitere Informationen zur Unterstützung von zuverlässigen und in der Warteschlange befindlichen Messaging in WCF finden Sie unter [Warteschlangen und zuverlässige Sitzungen](./feature-details/queues-and-reliable-sessions.md).
+     WCF unterstützt den zuverlässigen Nachrichtenaustausch mit zuverlässigen Sitzungen, die über WS-Reliable Messaging und mithilfe von MSMQ implementiert werden. Weitere Informationen zur Unterstützung von zuverlässigen und in der Warteschlange befindlichen Messaging in WCF finden Sie unter [Warteschlangen und zuverlässige Sitzungen](./feature-details/queues-and-reliable-sessions.md).
 
 - **Permanente Nachrichten**
 
@@ -101,7 +102,7 @@ Die Hostingfeatures des Windows Server AppFabric-Anwendungs Servers sind speziel
 - [Wesentliche Windows Communication Foundation-Begriffe](fundamental-concepts.md)
 - [Windows Communication Foundation-Architektur](architecture.md)
 - [Richtlinien und empfohlene Vorgehensweisen](guidelines-and-best-practices.md)
-- [Tutorial zu den ersten Schritten](getting-started-tutorial.md)
+- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
 - [Anleitung zur Dokumentation](guide-to-the-documentation.md)
 - [Einfache WCF-Programmierung](basic-wcf-programming.md)
 - [Windows Communication Foundation-Beispiele](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

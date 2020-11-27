@@ -2,14 +2,15 @@
 title: Routen nach Text
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: 146baf806f4922f5e3ddd92a762772786e61d443
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: af88d9938098c9aaa6b4b116c196e3b7f563a1e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262696"
 ---
 # <a name="route-by-body"></a>Routen nach Text
+
 In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Nachrichtenobjekte mit einer beliebigen SOAP-Aktion annimmt. Dieses Beispiel basiert auf den ersten [Schritten, mit](getting-started-sample.md) denen ein Rechner Dienst implementiert wird. Der Dienst implementiert einen einzelnen `Calculate`-Vorgang, der einen <xref:System.ServiceModel.Channels.Message>-Anforderungsparameter annimmt und eine <xref:System.ServiceModel.Channels.Message>-Antwort zurückgibt.  
   
  In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird in IIS gehostet.  
@@ -37,7 +38,7 @@ In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Na
   
  Wenn ein Vertrag vorliegt, erfordert ein Dienst das benutzerdefinierte Sendeverhalten `DispatchByBodyBehavior`, damit die Nachrichten zwischen Vorgängen gesendet werden können. Dieses Dispatchverhalten initialisiert die `DispatchByBodyElementOperationSelector` benutzerdefinierte Vorgangs Auswahl mit einer Tabelle der Vorgangs Namen, die von QName der jeweiligen Wrapper Elemente als Schlüssel formatiert wurden. `DispatchByBodyElementOperationSelector` prüft das Starttag des ersten untergeordneten Elements von Body und wählt den Vorgang anhand der zuvor erwähnten Tabelle aus.  
   
- Der Client verwendet einen automatisch generierten Proxy aus der vom Dienst exportierten WSDL-Datei mit dem Service [Model Metadata Utility-Tool (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Der Client verwendet einen automatisch generierten Proxy aus der WSDL, die vom Dienst mit dem Service [Model Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)exportiert wird.  
   
 ```console  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
