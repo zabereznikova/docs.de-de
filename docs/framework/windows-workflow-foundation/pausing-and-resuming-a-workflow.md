@@ -2,18 +2,20 @@
 title: Anhalten und Fortsetzen eines Workflows
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142965"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268537"
 ---
-# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="17c4c-102">Anhalten und Fortsetzen eines Workflows</span><span class="sxs-lookup"><span data-stu-id="17c4c-102">Pausing and Resuming a Workflow</span></span>
-<span data-ttu-id="17c4c-103">Workflows werden in Abhängigkeit von Lesezeichen und Blockieraktivitäten wie <xref:System.Activities.Statements.Delay> angehalten und fortgesetzt, können jedoch auch durch Persistenz explizit angehalten, entladen und wieder aufgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="17c4c-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
+# <a name="pausing-and-resuming-a-workflow"></a><span data-ttu-id="6f42e-102">Anhalten und Fortsetzen eines Workflows</span><span class="sxs-lookup"><span data-stu-id="6f42e-102">Pausing and Resuming a Workflow</span></span>
+
+<span data-ttu-id="6f42e-103">Workflows werden in Abhängigkeit von Lesezeichen und Blockieraktivitäten wie <xref:System.Activities.Statements.Delay> angehalten und fortgesetzt, können jedoch auch durch Persistenz explizit angehalten, entladen und wieder aufgenommen werden.</span><span class="sxs-lookup"><span data-stu-id="6f42e-103">Workflows will pause and resume in response to bookmarks and blocking activities such as <xref:System.Activities.Statements.Delay>, but a workflow can also be explicitly paused, unloaded, and resumed by using persistence.</span></span>  
   
-## <a name="pausing-a-workflow"></a><span data-ttu-id="17c4c-104">Anhalten eines Workflows</span><span class="sxs-lookup"><span data-stu-id="17c4c-104">Pausing a Workflow</span></span>  
- <span data-ttu-id="17c4c-105">Verwenden Sie <xref:System.Activities.WorkflowApplication.Unload%2A>, um einen Workflow anzuhalten.</span><span class="sxs-lookup"><span data-stu-id="17c4c-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="17c4c-106">Mit dieser Methode wird das Beibehalten und Entladen des Workflows angefordert, und eine <xref:System.TimeoutException> wird ausgelöst, wenn der Workflow nicht innerhalb von 30 Sekunden entladen wird.</span><span class="sxs-lookup"><span data-stu-id="17c4c-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
+## <a name="pausing-a-workflow"></a><span data-ttu-id="6f42e-104">Anhalten eines Workflows</span><span class="sxs-lookup"><span data-stu-id="6f42e-104">Pausing a Workflow</span></span>  
+
+ <span data-ttu-id="6f42e-105">Verwenden Sie <xref:System.Activities.WorkflowApplication.Unload%2A>, um einen Workflow anzuhalten.</span><span class="sxs-lookup"><span data-stu-id="6f42e-105">To pause a workflow, use <xref:System.Activities.WorkflowApplication.Unload%2A>.</span></span>  <span data-ttu-id="6f42e-106">Mit dieser Methode wird das Beibehalten und Entladen des Workflows angefordert, und eine <xref:System.TimeoutException> wird ausgelöst, wenn der Workflow nicht innerhalb von 30 Sekunden entladen wird.</span><span class="sxs-lookup"><span data-stu-id="6f42e-106">This method requests that the workflow persist and unload, and will throw a <xref:System.TimeoutException> if the workflow does not unload in 30 seconds.</span></span>  
   
 ```csharp  
 try  
@@ -27,8 +29,9 @@ catch (TimeoutException e)
 }  
 ```  
   
-## <a name="resuming-a-workflow"></a><span data-ttu-id="17c4c-107">Wiederaufnehmen von Workflows</span><span class="sxs-lookup"><span data-stu-id="17c4c-107">Resuming a Workflow</span></span>  
- <span data-ttu-id="17c4c-108">Verwenden Sie <xref:System.Activities.WorkflowApplication.Load%2A>, um einen Workflow wiederaufzunehmen, der angehalten und entladen wurde.</span><span class="sxs-lookup"><span data-stu-id="17c4c-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="17c4c-109">Diese Methode lädt einen Workflow aus einem Persistenzspeicher in den Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="17c4c-109">This method loads a workflow from a persistence store into memory.</span></span>  
+## <a name="resuming-a-workflow"></a><span data-ttu-id="6f42e-107">Wiederaufnehmen von Workflows</span><span class="sxs-lookup"><span data-stu-id="6f42e-107">Resuming a Workflow</span></span>  
+
+ <span data-ttu-id="6f42e-108">Verwenden Sie <xref:System.Activities.WorkflowApplication.Load%2A>, um einen Workflow wiederaufzunehmen, der angehalten und entladen wurde.</span><span class="sxs-lookup"><span data-stu-id="6f42e-108">To resume a previously paused and unloaded workflow, use <xref:System.Activities.WorkflowApplication.Load%2A>.</span></span> <span data-ttu-id="6f42e-109">Diese Methode lädt einen Workflow aus einem Persistenzspeicher in den Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="6f42e-109">This method loads a workflow from a persistence store into memory.</span></span>  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
@@ -36,8 +39,9 @@ application.InstanceStore = instanceStore;
 application.Load(id);  
 ```  
   
-## <a name="example"></a><span data-ttu-id="17c4c-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="17c4c-110">Example</span></span>  
- <span data-ttu-id="17c4c-111">Im folgenden Codebeispiel wird veranschaulicht, wie ein Workflow mithilfe der Persistenz angehalten und fortgesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="17c4c-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
+## <a name="example"></a><span data-ttu-id="6f42e-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6f42e-110">Example</span></span>  
+
+ <span data-ttu-id="6f42e-111">Im folgenden Codebeispiel wird veranschaulicht, wie ein Workflow mithilfe der Persistenz angehalten und fortgesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="6f42e-111">The following code sample demonstrates how to pause and resume a workflow by using persistence.</span></span>  
   
 ```csharp  
 static string bkName = "bkName";  

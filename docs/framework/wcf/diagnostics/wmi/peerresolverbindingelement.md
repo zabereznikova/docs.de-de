@@ -2,17 +2,18 @@
 title: PeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 36882183-13a3-443f-8aae-62a7825d5633
-ms.openlocfilehash: fd70f584d269f5ada31b00ebaac9977987d42510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ffd03f9149d13567d84e00a5fa035d462f2ba8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963032"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269066"
 ---
-# <a name="peerresolverbindingelement"></a><span data-ttu-id="72a47-102">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="72a47-102">PeerResolverBindingElement</span></span>
-<span data-ttu-id="72a47-103">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="72a47-103">PeerResolverBindingElement</span></span>  
+# <a name="peerresolverbindingelement"></a><span data-ttu-id="d00dd-102">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="d00dd-102">PeerResolverBindingElement</span></span>
+
+<span data-ttu-id="d00dd-103">PeerResolverBindingElement</span><span class="sxs-lookup"><span data-stu-id="d00dd-103">PeerResolverBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72a47-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="72a47-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d00dd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d00dd-104">Syntax</span></span>  
   
 ```csharp
 class PeerResolverBindingElement : BindingElement  
@@ -21,25 +22,28 @@ class PeerResolverBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="72a47-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="72a47-105">Methods</span></span>  
- <span data-ttu-id="72a47-106">Die PeerResolverBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="72a47-106">The PeerResolverBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="d00dd-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="d00dd-105">Methods</span></span>  
+
+ <span data-ttu-id="d00dd-106">Die PeerResolverBindingElement-Klasse definiert keine Methoden.</span><span class="sxs-lookup"><span data-stu-id="d00dd-106">The PeerResolverBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="72a47-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="72a47-107">Properties</span></span>  
- <span data-ttu-id="72a47-108">Die PeerResolverBindingElement-Klasse weist die folgende Eigenschaft auf:</span><span class="sxs-lookup"><span data-stu-id="72a47-108">The PeerResolverBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="d00dd-107">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d00dd-107">Properties</span></span>  
+
+ <span data-ttu-id="d00dd-108">Die PeerResolverBindingElement-Klasse weist die folgende Eigenschaft auf:</span><span class="sxs-lookup"><span data-stu-id="d00dd-108">The PeerResolverBindingElement class has the following property:</span></span>  
   
-### <a name="referralpolicy"></a><span data-ttu-id="72a47-109">ReferralPolicy</span><span class="sxs-lookup"><span data-stu-id="72a47-109">ReferralPolicy</span></span>  
- <span data-ttu-id="72a47-110">Datentyp: string (Zeichenfolge)</span><span class="sxs-lookup"><span data-stu-id="72a47-110">Data type: string</span></span>  
+### <a name="referralpolicy"></a><span data-ttu-id="d00dd-109">ReferralPolicy</span><span class="sxs-lookup"><span data-stu-id="d00dd-109">ReferralPolicy</span></span>  
+
+ <span data-ttu-id="d00dd-110">Datentyp: String</span><span class="sxs-lookup"><span data-stu-id="d00dd-110">Data type: string</span></span>  
   
- <span data-ttu-id="72a47-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="72a47-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="d00dd-111">Zugriffstyp: Schreibgeschützt</span><span class="sxs-lookup"><span data-stu-id="d00dd-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="72a47-112">Legt fest, wie Verweise zwischen Peers freigegeben werden.</span><span class="sxs-lookup"><span data-stu-id="72a47-112">Determines how referrals are shared among peers.</span></span>  
+ <span data-ttu-id="d00dd-112">Legt fest, wie Verweise zwischen Peers freigegeben werden.</span><span class="sxs-lookup"><span data-stu-id="d00dd-112">Determines how referrals are shared among peers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="72a47-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="72a47-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d00dd-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d00dd-113">Requirements</span></span>  
   
-|<span data-ttu-id="72a47-114">MOF</span><span class="sxs-lookup"><span data-stu-id="72a47-114">MOF</span></span>|<span data-ttu-id="72a47-115">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="72a47-115">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="d00dd-114">MOF</span><span class="sxs-lookup"><span data-stu-id="d00dd-114">MOF</span></span>|<span data-ttu-id="d00dd-115">Deklariert in Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="d00dd-115">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="72a47-116">Namespace</span><span class="sxs-lookup"><span data-stu-id="72a47-116">Namespace</span></span>|<span data-ttu-id="72a47-117">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="72a47-117">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="d00dd-116">Namespace</span><span class="sxs-lookup"><span data-stu-id="d00dd-116">Namespace</span></span>|<span data-ttu-id="d00dd-117">Definiert in root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d00dd-117">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="72a47-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72a47-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d00dd-118">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="d00dd-118">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
