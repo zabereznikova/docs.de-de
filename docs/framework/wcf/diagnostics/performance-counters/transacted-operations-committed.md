@@ -2,15 +2,17 @@
 title: Übermittelte abgewickelte Vorgänge
 ms.date: 03/30/2017
 ms.assetid: 6a1768cd-d103-4cd3-a26c-b014465f9236
-ms.openlocfilehash: 0e91502ea94d9cd202d4d3fde25ab035754b7a2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 385dfaf07218d3c34332783ad1e82084fe5dfaa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766323"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263996"
 ---
-# <a name="transacted-operations-committed"></a><span data-ttu-id="14958-102">Übermittelte abgewickelte Vorgänge</span><span class="sxs-lookup"><span data-stu-id="14958-102">Transacted Operations Committed</span></span>
-<span data-ttu-id="14958-103">Indikatorname: Übermittelte abgewickelte Vorgänge.</span><span class="sxs-lookup"><span data-stu-id="14958-103">Counter Name: Transacted Operations Committed.</span></span>  
+# <a name="transacted-operations-committed"></a><span data-ttu-id="310db-102">Übermittelte abgewickelte Vorgänge</span><span class="sxs-lookup"><span data-stu-id="310db-102">Transacted Operations Committed</span></span>
+
+<span data-ttu-id="310db-103">Indikatorname: Transacted Operations Commited.</span><span class="sxs-lookup"><span data-stu-id="310db-103">Counter Name: Transacted Operations Committed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="14958-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14958-104">Description</span></span>  
- <span data-ttu-id="14958-105">Die Anzahl der in diesem Dienst übermittelten Transaktionsvorgänge.</span><span class="sxs-lookup"><span data-stu-id="14958-105">Number of transactional operations that have been committed in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="310db-104">BESCHREIBUNG</span><span class="sxs-lookup"><span data-stu-id="310db-104">Description</span></span>  
+
+ <span data-ttu-id="310db-105">Die Anzahl der in diesem Dienst übermittelten Transaktionsvorgänge.</span><span class="sxs-lookup"><span data-stu-id="310db-105">Number of transactional operations that have been committed in this service.</span></span>
