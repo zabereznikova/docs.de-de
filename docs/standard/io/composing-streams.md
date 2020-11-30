@@ -12,14 +12,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: c50a372ee3434fcd7f72ad707ca82c5c9ad8a5c8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d848a989378ed40df794554f3a0a9a7f135fbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732189"
 ---
 # <a name="compose-streams"></a>Erstellen von Streams
+
 Ein *Sicherungsspeicher* ist ein Speichermedium, wie etwa ein Datenträger oder Arbeitsspeicher. Jeder einzelne Sicherungsspeicher implementiert seinen eigenen Datenstrom als Implementierung der <xref:System.IO.Stream>-Klasse.
 
 Jeder Datenstromtyp liest und schreibt Bytes in einen bzw. aus einem angegebenen Sicherungsspeicher. Datenströme, die eine Verbindung mit Sicherungsspeichern herstellen, werden als *Basisdatenströme* bezeichnet. Basisdatenströme umfassen Konstruktoren mit den erforderlichen Parametern, um eine Verbindung zwischen dem Datenstrom und dem Sicherungsspeicher herzustellen. Beispielsweise weist <xref:System.IO.FileStream> Konstruktoren auf, die einen Pfadparameter angeben, der wiederum die Freigabe der Datei für Prozesse angibt.  
@@ -32,12 +33,14 @@ In den folgenden Codebeispielen wird ein **FileStream** um die vorhandene Datei 
 >In den Beispielen wird angenommen, dass eine Datei mit dem Namen *MyFile.txt* bereits in demselben Ordner vorhanden ist, in dem sich auch die App befindet.  
 
 ## <a name="example-use-streamreader"></a>Beispiel: Verwenden von StreamReader
+
 In dem folgenden Beispiel wird ein <xref:System.IO.StreamReader> zum Lesen von Zeichen aus dem **FileStream** erstellt, der als Konstruktorargument an den **StreamReader** übergeben wird. Anschließend liest <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>, bis <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> keine Zeichen mehr findet.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
 ## <a name="example-use-binaryreader"></a>Beispiel: Verwenden von BinaryReader
+
 In dem folgenden Beispiel wird ein <xref:System.IO.BinaryReader> zum Lesen von Bytes aus dem **FileStream** erstellt, der als Konstruktorargument an den **BinaryReader** übergeben wird. Anschließend liest <xref:System.IO.BinaryReader.ReadByte%2A>, bis <xref:System.IO.BinaryReader.PeekChar%2A> keine Bytes mehr findet.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

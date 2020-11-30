@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732215"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen
 
@@ -24,6 +24,7 @@ Die meisten .NET-Methoden, die standardmäßig kulturabhängige Zeichenfolgenope
  Dieser Abschnitt enthält die folgenden Artikel, in denen erläutert wird, wie kulturunabhängige Zeichenfolgenoperationen mit .NET-Methoden durchgeführt werden, die standardmäßig kulturabhängig sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Durchführen kulturunabhängiger Zeichenfolgenvergleiche](performing-culture-insensitive-string-comparisons.md)  
  Beschreibt die Verwendung der <xref:System.String.Compare%2A?displayProperty=nameWithType>- und <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode für kulturunabhängige Zeichenfolgenvergleiche.  
   
@@ -37,6 +38,7 @@ Die meisten .NET-Methoden, die standardmäßig kulturabhängige Zeichenfolgenope
  Beschreibt die Verwendung von <xref:System.Array.Sort%2A?displayProperty=nameWithType>- und <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>-Methode für kulturunabhängige Operationen in Arrays.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Kulturunabhängige Zeichenfolgenoperationen](culture-insensitive-string-operations.md)  
  Beschreibt, warum Sie die Kultur berücksichtigen sollten, wenn Sie Operationen mit Zeichenfolgen ausführen, und enthält Richtlinien dazu, wann kulturabhängige Operationen und wann kulturunabhängige Operationen ausgeführt werden sollten.
 

@@ -3,14 +3,15 @@ title: XML-Verarbeitungsoptionen
 description: Hier erfahren Sie mehr über die Optionen für die XML-Verarbeitung, z. B. LINQ to XML, XmlReader, XmlWriter, XmlDocument, XPathNavigator, XslCompiledTransform, XmlLite und MSXML.
 ms.date: 03/30/2017
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-ms.openlocfilehash: a0b3c6295874e891c1271b373fb012b5f191bcfb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4388b815625a7ca4b26c35518fa4a58a97bc67d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733034"
 ---
 # <a name="xml-processing-options"></a>XML-Verarbeitungsoptionen
+
 Eine Liste der Microsoft-Technologien zur Verarbeitung von XML-Daten finden Sie in den folgenden Tabellen.  
   
 ## <a name="net-framework-options"></a>.NET Framework-Optionen  

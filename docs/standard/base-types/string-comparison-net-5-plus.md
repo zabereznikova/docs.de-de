@@ -2,20 +2,20 @@
 title: Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5
 description: Erfahren Sie mehr über Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5 unter Windows.
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734230"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5
 
-In NET 5.0 wird eine Änderung des Runtimeverhaltens eingeführt, aufgrund derer Globalisierungs-APIs auf allen unterstützten Plattformen [jetzt standardmäßig ICU verwenden](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows). Dies ist eine Abkehr von früheren Versionen von .NET Core und .NET Framework, die bei Ausführung unter Windows die NLS-Funktionalität (National Language Support) des Betriebssystems nutzen. Weitere Informationen zu diesen Änderungen, einschließlich Kompatibilitätsschalter, mit denen die Verhaltensänderung rückgängig gemacht werden kann, finden Sie unter [.NET-Globalisierung und ICU](../globalization-localization/globalization-icu.md).
+In NET 5.0 wird eine Änderung des Runtimeverhaltens eingeführt, aufgrund derer Globalisierungs-APIs auf allen unterstützten Plattformen [jetzt standardmäßig ICU verwenden](../../core/compatibility/globalization/5.0/icu-globalization-api.md). Dies ist eine Abkehr von früheren Versionen von .NET Core und .NET Framework, die bei Ausführung unter Windows die NLS-Funktionalität (National Language Support) des Betriebssystems nutzen. Weitere Informationen zu diesen Änderungen, einschließlich Kompatibilitätsschalter, mit denen die Verhaltensänderung rückgängig gemacht werden kann, finden Sie unter [.NET-Globalisierung und ICU](../globalization-localization/globalization-icu.md).
 
 ## <a name="reason-for-change"></a>Grund für die Änderung
 
-Diese Änderung wurde eingeführt, um das Globalisierungsverhalten von .NET in allen unterstützten Betriebssystemen zu vereinheitlichen. Darüber hinaus können Anwendungen ihre eigenen Globalisierungsbibliotheken bündeln, anstatt von den in das Betriebssystem integrierten Bibliotheken abhängig zu sein. Weitere Informationen finden Sie in der [ Breaking Change-Benachrichtigung](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+Diese Änderung wurde eingeführt, um das Globalisierungsverhalten von .NET in allen unterstützten Betriebssystemen zu vereinheitlichen. Darüber hinaus können Anwendungen ihre eigenen Globalisierungsbibliotheken bündeln, anstatt von den in das Betriebssystem integrierten Bibliotheken abhängig zu sein. Weitere Informationen finden Sie in der [ Breaking Change-Benachrichtigung](../../core/compatibility/globalization/5.0/icu-globalization-api.md).
 
 ## <a name="behavioral-differences"></a>Verhaltensunterschiede
 

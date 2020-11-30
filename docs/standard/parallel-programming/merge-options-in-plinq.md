@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824843"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730616"
 ---
 # <a name="merge-options-in-plinq"></a>Mergeoptionen in PLINQ
+
 Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellsequenz, sodass mehrere Threads gleichzeitig an verschiedenen Teilen arbeiten können, in der Regel an separaten Threads. Wenn die Ergebnisse in einem einzelnen Thread verarbeitet werden sollen, z.B. in einer `foreach`-Schleife (`For Each` in Visual Basic), müssen die Ergebnisse der einzelnen Threads wieder zu einer einzigen Sequenz zusammengeführt werden. Welche Art der Zusammenführung PLINQ ausführt, hängt von den Operatoren ab, die in der Abfrage vorhanden sind. Beispielsweise müssen Operatoren, die die Ergebnisse in eine neue Reihenfolge stellen, alle Elemente aus allen Threads puffern. Aus der Perspektive des nutzenden Threads (die mit der des Anwendungsbenutzers identisch ist) könnte eine vollständig gepufferte Abfrage für einen beachtlichen Zeitraum ausgeführt werden, bevor sie das erste Ergebnis liefert. Andere Operatoren sind standardmäßig teilweise gepuffert. Sie stellen ihre Ergebnisse batchweise bereit. Ein Operator, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, wird nicht standardmäßig gepuffert. Er stellt alle Elemente aus allen Threads sofort bereit.  
   
  Wie im folgenden Beispiel gezeigt, können Sie mithilfe der <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>-Methode einen Hinweis für PLINQ bereitstellen, der die Art der Zusammenführung angibt.  
@@ -27,6 +28,7 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
  Wenn die betreffende Abfrage die angeforderte Option nicht unterstützen kann, wird die Option einfach ignoriert. In den meisten Fällen müssen Sie keine Mergeoption für eine PLINQ-Abfrage angeben. In einigen Fällen stellen Sie jedoch möglicherweise durch Testen und Messen fest, dass eine Abfrage am besten in einem nicht standardmäßigen Modus ausgeführt wird. Eine übliche Verwendung dieser Option ist, zu erzwingen, dass ein Blockzusammenführungs-Operator seine Ergebnisse streamt, um eine reaktionsfreudigere Benutzeroberfläche bereitzustellen.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  Die <xref:System.Linq.ParallelMergeOptions>-Enumeration enthält die folgenden Optionen, die für unterstützte Abfrageformen angeben, wie die endgültige Ausgabe der Abfrage bereitgestellt wird, wenn die Ergebnisse in einem einzelnen Thread verarbeitet werden:  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
      Die <xref:System.Linq.ParallelMergeOptions.FullyBuffered>-Option bewirkt, dass die Ausgabe der gesamten Abfrage gepuffert wird, bevor eines der Elemente bereitgestellt wird. Wenn Sie diese Option verwenden, kann es länger dauern, bis das erste Element für den verarbeitenden Thread verfügbar ist, aber die vollständigen Ergebnisse könnten dennoch schneller erzeugt werden als mit den anderen Optionen.  
   
 ## <a name="query-operators-that-support-merge-options"></a>Abfrageoperatoren, die Mergeoptionen unterstützen  
+
  Die folgende Tabelle enthält die Operatoren, die alle Mergeoptionen unterstützen, und etwaige Einschränkungen.  
   
 |Operator|Beschränkungen|  

@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 59d32f8801a1429718f39ab912f55cfcc5788a0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 997bb80b6e30d4769613c4a1df647e6cd475a8ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730603"
 ---
 # <a name="order-preservation-in-plinq"></a>Beibehaltung der Reihenfolge in PLINQ
+
 Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte Ausführung sicherzustellen. Eine Abfrage sollte so schnell wie möglich ausgeführt werden, dabei jedoch stets die korrekten Ergebnissen erzeugen. In einigen Fällen muss für eine korrekte Ausführung die Reihenfolge der Quellsequenz beibehalten werden, eine Sortierung kann jedoch sehr rechenintensiv sein. PLINQ behält die Reihenfolge der Quellsequenz daher standardmäßig nicht bei. In dieser Hinsicht ähnelt PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], unterscheidet sich jedoch von LINQ to Objects, wo die Reihenfolge beibehalten wird.  
   
  Um das Standardverhalten zu überschreiben, können Sie mithilfe des <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Operators in der Quellsequenz die Beibehaltung der Reihenfolge aktivieren. Sie können die Beibehaltung der Reihenfolge später in der Abfrage mit der <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>-Methode deaktivieren. Bei beiden Methoden wird die Abfrage auf Grundlage der Heuristik verarbeitet, die bestimmt, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Understanding Speedup in PLINQ (Grundlagen zur Beschleunigung in PLINQ)](understanding-speedup-in-plinq.md).  
@@ -39,6 +40,7 @@ Das Ziel in PLINQ ist, die Leistung zu maximieren und gleichzeitig die korrekte 
  Beachten Sie, dass PLINQ die Reihenfolge einer Sequenz beibehält, die von Operatoren mit erzwungener Reihenfolge für den Rest der Abfrage erzeugt wurde. Anders ausgedrückt werden Operatoren wie <xref:System.Linq.ParallelEnumerable.OrderBy%2A> und <xref:System.Linq.ParallelEnumerable.ThenBy%2A> so behandelt, als ob ihnen ein Aufruf von <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> folgt.  
   
 ## <a name="query-operators-and-ordering"></a>Abfrageoperatoren und Reihenfolge  
+
  Die folgenden Abfrageoperatoren aktivieren die Beibehaltung der Reihenfolge für alle nachfolgenden Vorgänge in einer Abfrage bzw. solange, bis <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> aufgerufen wird:  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  

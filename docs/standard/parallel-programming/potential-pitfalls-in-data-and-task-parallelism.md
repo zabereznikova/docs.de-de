@@ -8,23 +8,27 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 61c0ea2360ae347e9d5b5eed6fc490171e028408
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3b01da23c45ca460d10ac63a7c86cd050bee3630
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822255"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730538"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
+
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  
   
 ## <a name="do-not-assume-that-parallel-is-always-faster"></a>Gehen Sie nicht davon aus, dass eine parallele Ausführung immer schneller ist.  
+
  In bestimmten Fällen kann eine parallele Schleife langsamer als deren sequenzielle Entsprechung ausgeführt werden. Eine Faustregel besagt, dass die Geschwindigkeit von parallelen Schleifen mit wenigen Iterationen und schnellen Benutzerdelegaten wahrscheinlich kaum zunimmt. Da jedoch viele Faktoren Einfluss auf die Leistung haben, wird empfohlen, immer die tatsächlichen Ergebnisse zu messen.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Vermeiden Sie es, in gemeinsam genutzte Speicherpositionen zu schreiben.  
+
  Bei sequenziellem Code wird regelmäßig aus statischen Variablen oder Klassenfeldern gelesen bzw. in diese geschrieben. Wenn jedoch mehrere Threads gleichzeitig auf diese Variablen zugreifen, besteht eine hohe Wahrscheinlichkeit für Racebedingungen. Sie können den Zugriff auf die Variable mithilfe von Sperren zwar synchronisieren, die Synchronisierung geht jedoch zu Lasten der Leistung. Es empfiehlt sich daher, den Zugriff auf den Freigabezustand in einer parallelen Schleife zu vermeiden oder so weit wie möglich einzuschränken. Dies geschieht am besten durch Verwendung der Überladungen von <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, die eine <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Variable zum Speichern des threadlokalen Zustands während der Schleifenausführung verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen](how-to-write-a-parallel-for-loop-with-thread-local-variables.md) und [Vorgehensweise: Schreiben einer Parallel.ForEach-Schleife mit partitionslokalen Variablen](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Vermeiden Sie eine zu starke Parallelisierung.  
+
  Mithilfe von parallelen Schleifen übernehmen Sie die Mehrkosten für das Partitionieren der Quellauflistung und das Synchronisieren der Arbeitsthreads. Die Vorteile der Parallelisierung werden zudem durch die Anzahl der Prozessoren auf dem Computer beschränkt. Die Ausführung von mehreren rechnergebundenen Threads auf nur einem Prozessor ermöglicht keine Geschwindigkeitssteigerung. Achten Sie daher darauf, dass Sie eine Schleife nicht zu stark parallelisieren.  
   
  Eine zu starke Parallelisierung tritt vor allem in geschachtelten Schleifen auf, wie im folgenden Ausschnitt gezeigt wird. In den meisten Fällen sollte idealerweise nur die äußere Schleife parallelisiert werden, sofern nicht eine oder mehrere der folgenden Bedingungen erfüllt sind:  
@@ -38,24 +42,29 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
  In allen diesen Fällen empfiehlt es sich, die optimale Abfrageform mithilfe von Tests und Messungen zu ermitteln.  
   
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>Vermeiden Sie den Aufruf nicht threadsicherer Methoden.  
+
  Das Schreiben in nicht threadsichere Instanzmethoden von einer parallelen Schleife aus kann zu Datenbeschädigungen führen, die im Programm möglicherweise unerkannt bleiben. Dies kann auch zu Ausnahmen führen. Im folgenden Beispiel würden mehrere Threads gleichzeitig versuchen, die <xref:System.IO.FileStream.WriteByte%2A?displayProperty=nameWithType>-Methode aufzurufen, was von der Klasse nicht unterstützt wird.  
   
  [!code-csharp[TPL_Pitfalls#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#04)]
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>Beschränken Sie Aufrufe auf threadsichere Methoden.  
+
  Die meisten statischen Methoden in .NET sind threadsicher und können von mehreren Threads gleichzeitig aufgerufen werden. Die damit verbundene Synchronisierung kann jedoch auch in diesen Fällen zu einer erheblichen Verlangsamung der Abfrage führen.  
   
 > [!NOTE]
 > Sie können dies testen, indem Sie in Ihre Abfragen Aufrufe von <xref:System.Console.WriteLine%2A> einfügen. Diese Methode wird jedoch nur in den Dokumentationsbeispielen zu Demonstrationszwecken verwendet. Nutzen Sie sie nur in parallelen Schleifen, wenn dies erforderlich ist.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Beachten Sie Threadaffinitätsprobleme.  
+
  Einige Technologien, z. B. COM-Interoperabilität für STA-Komponenten (Singlethread-Apartment), Windows Forms und Windows Presentation Foundation (WPF), erzeugen Threadaffinitätseinschränkungen, aufgrund derer Code in einem bestimmten Thread ausgeführt werden muss. Beispielsweise kann sowohl in Windows Forms als auch in WPF nur in einem Thread auf ein Steuerelement zugegriffen werden, in dem es erstellt wurde. Dies bedeutet beispielsweise, dass Sie kein Listensteuerelement von einer parallelen Schleife aktualisieren können, außer wenn Sie den Threadplaner konfigurieren, um die Arbeit nur im UI-Thread zu planen. Weitere Informationen finden Sie unter [Angeben eines Synchronisierungskontexts](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Seien Sie vorsichtig, wenn Sie in Delegaten warten, die von Parallel.Invoke aufgerufen werden.  
+
  Unter bestimmten Umständen wird ein Task von der Task Parallel Library inline ausgeführt, d.h. die Ausführung erfolgt im derzeit ausgeführten Thread. (Weitere Informationen finden Sie unter [TaskScheduler-Klasse](xref:System.Threading.Tasks.TaskScheduler).) Diese Leistungsoptimierung kann in bestimmten Fällen einen Deadlock zur Folge haben. Beispiel: Bei zwei Tasks wird möglicherweise der gleiche Delegatcode ausgeführt, der signalisiert, wenn ein Ereignis auftritt und anschließend auf die Signalisierung des anderen Tasks wartet. Wenn der zweite Task im gleichen Thread wie der erste Task inline ausgeführt wird und der erste Task in einen Wartezustand versetzt wird, kann der zweite Task das Ereignis niemals signalisieren. Um dies zu vermeiden, können Sie für den Wartevorgang ein Timeout angeben oder explizite Threadkonstruktoren verwenden, um sicherzustellen, dass ein Task nicht den anderen blockieren kann.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Gehen Sie nicht davon aus, dass Iterationen von „ForEach“, „For“ und „ForAll“ immer parallel ausgeführt werden.  
+
  Beachten Sie unbedingt, dass einzelne Iterationen in einer <xref:System.Threading.Tasks.Parallel.For%2A>-, <xref:System.Threading.Tasks.Parallel.ForEach%2A>- oder <xref:System.Linq.ParallelEnumerable.ForAll%2A>-Schleife parallel ausgeführt werden können, jedoch nicht parallel ausgeführt werden müssen. Schreiben Sie daher nach Möglichkeit keinen Code, dessen Korrektheit von der parallelen Ausführung von Iterationen oder der Ausführung von Iterationen in einer bestimmten Reihenfolge abhängig ist. Beim folgenden Code ist z. B. ein Deadlock wahrscheinlich:  
   
  [!code-csharp[TPL_Pitfalls#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#01)]
@@ -66,6 +75,7 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
  Insbesondere sollte eine Iteration einer parallelen Schleife nie auf den Fortschritt einer anderen Iteration der Schleife warten. Wenn von der parallelen Schleife entschieden wird, die Iterationen sequenziell zu planen, jedoch in der entgegengesetzten Reihenfolge, tritt ein Deadlock auf.  
   
 ## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>Vermeiden Sie die Ausführung paralleler Schleifen im UI-Thread.  
+
  Es ist wichtig, die Reaktionsfähigkeit der Benutzeroberfläche der Anwendung zu erhalten. Wenn ein Vorgang genug Arbeit enthält, um Parallelisierung zu garantieren, darf der Vorgang wahrscheinlich nicht im UI-Thread ausgeführt werden.  Stattdessen sollte der Vorgang abgeladen werden, um eine Ausführung als Hintergrundthread zu ermöglichen. Wenn Sie z.B. eine parallele Schleife verwenden möchten, um einige Daten zu berechnen, die dann in ein UI-Steuerelement gerendert werden sollen, führen Sie die Schleife ggf. innerhalb einer Aufgabeninstanz und nicht direkt in einem UI-Ereignishandler aus.  Erst nach der Kernberechnung können Sie die Aktualisierung der Benutzeroberfläche zurück zum UI-Thread marshallen.  
   
  Wenn Sie parallele Schleifen im UI-Thread ausführen, aktualisieren Sie innerhalb der Schleife keine Benutzeroberflächenelemente. Der Versuch, UI-Steuerelemente innerhalb einer parallelen Schleife zu aktualisieren, die im UI-Thread ausgeführt wird, kann zu Zustandsbeschädigung, Ausnahmen, verzögerten Updates und sogar Deadlocks führen, und zwar abhängig davon, wie das Update der Benutzeroberfläche aufgerufen wird. Im folgenden Beispiel blockiert die parallele Schleife den UI-Thread, in dem sie ausgeführt wird, bis alle Iterationen abgeschlossen wurden. Wenn eine Iteration der Schleife jedoch in einem Hintergrundthread ausgeführt wird (möglicherweise wie bei <xref:System.Threading.Tasks.Parallel.For%2A>), verursacht der Aufruf von „Invoke“ die Übermittlung einer Meldung an den UI-Thread, und er blockiert das Warten auf die Verarbeitung der Nachricht. Da der UI-Thread, in dem <xref:System.Threading.Tasks.Parallel.For%2A> ausgeführt wird, blockiert ist, kann die Nachricht nie verarbeitet werden, und im UI-Thread kommt es zu einem Deadlock.  

@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75097485c78e9ded67f41d9632f5399c081b3a16
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825701"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734464"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Gewusst wie: Iterieren von Dateiverzeichnissen der Parallel-Klasse
+
 In vielen Fällen lässt sich die Dateiiteration problemlos parallelisieren. Das Thema [Gewusst wie: Iterieren von Dateiverzeichnissen mit PLINQ](how-to-iterate-file-directories-with-plinq.md) zeigt die einfachste Möglichkeit zum Ausführen dieser Aufgabe für viele Szenarien. Wenn der Code die vielen Arten von Ausnahmen behandeln muss, die auftreten können, wenn der Zugriff über das Dateisystem erfolgt, können jedoch Komplikationen auftreten. Im folgenden Beispiel wird ein Verfahren zum Lösen des Problems gezeigt. Alle Dateien und Ordner in einem angegebenen Verzeichnis werden mit stapelbasierte Iteration durchlaufen, und der Code kann verschiedene Ausnahmen abfangen und behandeln. Wie die Ausnahmen behandelt werden, müssen natürlich Sie bestimmen.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden die Verzeichnissen sequenziell durchlaufen, aber die Dateien werden parallel verarbeitet. Dies ist wahrscheinlich die optimale Vorgehensweise, wenn die Anzahl der Dateien im Verhältnis zur Anzahl der Verzeichnisse sehr hoch ist. Es ist auch möglich, die Verzeichnisiteration zu parallelisieren und auf die einzelnen Dateien sequenziell zuzugreifen. Wahrscheinlich ist es nicht effizient, beide Schleifen zu parallelisieren, es sei denn, dies soll auf einem Computer mit einer großen Anzahl von Prozessoren erfolgen. In allen Fällen sollten Sie jedoch die Anwendung gründlich testen, um die beste Vorgehensweise zu bestimmen.  
   
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]

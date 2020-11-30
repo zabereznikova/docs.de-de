@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823861"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733541"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Auflistungen
 
@@ -26,6 +26,7 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
 Auflistungen verwenden in der Regel einen Gleichheitsvergleich und/oder einen Reihenfolgenvergleich. Für Vergleiche werden zwei Konstrukte verwendet.
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>Durchführen von Gleichheitsüberprüfungen
 
 Methoden wie `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>und `Remove` verwenden einen Gleichheitsvergleich für die Elemente der Auflistung. Wenn die Sammlung generisch ist, werden die Elemente anhand der folgenden Richtlinien auf Gleichheit verglichen:
@@ -37,6 +38,7 @@ Methoden wie `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:Syste
 Darüber hinaus akzeptieren einige Konstruktorüberladungen für Wörterbuchauflistungen eine <xref:System.Collections.Generic.IEqualityComparer%601> -Implementierung, die zum Vergleichen von Schlüsseln auf Gleichheit verwendet wird. Ein Beispiel dafür finden Sie unter <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> -Konstruktor.
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>Festlegen der Sortierreihenfolge
 
 Methoden, wie `BinarySearch` und `Sort` , verwenden einen Reihenfolgenvergleich für Elemente der Auflistung. Die Vergleiche können zwischen Elementen in der Auflistung oder zwischen einem Element und einem angegebenen Wert durchgeführt werden. Für den Vergleich von Objekten gibt es die Konzepte `default comparer` und `explicit comparer`.
@@ -54,6 +56,7 @@ Um explizite Vergleiche zu ermöglichen, akzeptieren einige Methoden eine **ICom
 Die aktuelle Kultureinstellung des Systems kann sich auf die Vergleichs- und Sortiervorgänge innerhalb einer Auflistung auswirken. Standardmäßig sind die Vergleichs- und Sortiervorgänge in den **Auflistungen** -Klassen kulturabhängig. Um die Kultureinstellung zu ignorieren und daher konsistente Vergleichs- und Sortierergebnisse zu erhalten, verwenden Sie <xref:System.Globalization.CultureInfo.InvariantCulture%2A> mit Memberüberladungen, die <xref:System.Globalization.CultureInfo>akzeptieren. Weitere Informationen finden Sie unter [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) und [Durchführen kulturunabhängiger Zeichenfolgenoperationen in Arrays](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>Beispiel für Gleichheit und Sortierung
 
 Der folgende Code zeigt eine Implementierung von <xref:System.IEquatable%601> und <xref:System.IComparable%601> für ein einfaches Geschäftsobjekt. Wenn das Objekt in einer Liste gespeichert und sortiert wird, sehen Sie darüber hinaus, dass durch den Aufruf der <xref:System.Collections.Generic.List%601.Sort>-Methode der Standardvergleich für den `Part`-Typ verwendet wird und die <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29>-Methode mit einer anonymen Methode implementiert wird.

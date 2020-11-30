@@ -6,14 +6,15 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734269"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys
+
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>Erstellen einer signierte Assembly und einer Friend-Assembly  
@@ -125,6 +126,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
    Das Programm gibt die Zeichenfolge **Class1.Test** aus.  
   
 ## <a name="net-security"></a>.NET-Sicherheit  
+
  Es gibt Ähnlichkeiten zwischen dem Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> und der Klasse <xref:System.Security.Permissions.StrongNameIdentityPermission>. Der Hauptunterschied besteht darin, dass <xref:System.Security.Permissions.StrongNameIdentityPermission> Sicherheitsberechtigungen verlangen kann, um einen bestimmten Codeabschnitt auszuführen, während das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> die Sichtbarkeit der `internal` (C#)- oder `Friend` (Visual Basic)-Typen und -Member steuert.  
   
 ## <a name="see-also"></a>Siehe auch

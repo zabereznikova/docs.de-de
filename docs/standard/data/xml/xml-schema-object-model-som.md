@@ -2,19 +2,21 @@
 title: XML-Schemaobjektmodell (SOM)
 ms.date: 03/30/2017
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-ms.openlocfilehash: b64e5bb88d5754447d8f75577f3c51f2aa467bb5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2af024f9821401b1380347580cc0dc5aeb21c3c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733021"
 ---
 # <a name="xml-schema-object-model-som"></a>XML-Schemaobjektmodell (SOM)
+
 Ein XML-Schema ist ein leistungsstarkes und komplexes Tool zum Erstellen und Validieren von Strukturen in XML-kompatiblen Dokumenten. Wie bei der Datenmodellierung in einer relationalen Datenbank kann mithilfe eines Schemas die Struktur von XML-Dokumenten definiert werden. Dies erfolgt durch Festlegen der Elemente, die in Dokumenten verwendet werden dürfen, einschließlich der Struktur und der Typen, denen diese Elemente entsprechen müssen, um für dieses spezielle Schema gültig zu sein.  
   
  Das SOM (Schema Object Model) stellt im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace eine Reihe von Klassen zur Verfügung, mit denen Sie ein Schema aus einer Datei auslesen oder programmgesteuert und speicherintern ein Schema erstellen können. Das Schema kann durchlaufen, bearbeitet, kompiliert, validiert oder in eine Datei geschrieben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übersicht über das XML-Schemaobjektmodell (SOM)](xml-schema-object-model-overview.md)  
  In diesem Abschnitt werden das SOM (Schema Object Model) und die von diesem bereitgestellten Funktionen und Klassen beschrieben.  
   

@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Laden und Entladen von Assemblys'
 description: Die CLR lädt automatisch .NET-Assemblys, auf die ein Programm verweist. Sie können bestimmte Assemblys auch dynamisch in die aktuelle Anwendungsdomäne laden.
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: e6f1ede055dd3f68bced4eba527b2fc65f7d5715
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fe1a5fe63361620f8ab99ec8469169ed2213c0ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731487"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>Vorgehensweise: Laden und Entladen von Assemblys
+
 Die Assemblys, auf die Ihr Programm verweist, werden automatisch von der CLR (Common Language Runtime) geladen, jedoch ist es auch möglich, spezifische Assemblys dynamisch in die aktuelle Anwendungsdomäne zu laden. Weitere Informationen finden Sie unter [Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).
 
 Im .NET Framework gibt es keine Möglichkeit, eine einzelne Assembly zu entladen, ohne alle Anwendungsdomänen zu entladen, die diese Assembly enthalten. Selbst wenn sich die Assembly außerhalb des gültigen Bereichs befindet, bleibt die entsprechende Assemblydatei geladen, bis alle Anwendungsdomänen entladen sind, in denen sie enthalten ist. In .NET Core verarbeitet die <xref:System.Runtime.Loader.AssemblyLoadContext?displayProperty=nameWithType>-Klasse das Entladen von Assemblys. Weitere Informationen finden Sie unter [Verwenden und Debuggen der Entladbarkeit von Assemblys in .NET Core](unloadability.md).

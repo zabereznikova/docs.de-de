@@ -6,12 +6,12 @@ ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb1bcfa50ec380f10ab67cc47331f91dc3e4b32d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: b78acaad31996f8fc2b965f51f541e99aeceb111
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380148"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731500"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist
 
@@ -32,6 +32,7 @@ Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assembl
 2. Wenn eine <xref:System.BadImageFormatException>-Ausnahme ausgelöst wird, ist die Datei keine Assembly.  
   
 ## <a name="example"></a>Beispiel  
+
 In diesem Beispiel wird eine DLL getestet, um festzustellen, ob es sich um eine Assembly handelt.  
 
 ```csharp

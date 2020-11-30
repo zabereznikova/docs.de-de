@@ -9,14 +9,15 @@ helpviewer_keywords:
 - providers [.NET], in observer design pattern
 - observables [.NET], in observer design pattern
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
-ms.openlocfilehash: c58d4b79c9f722889352587c2cb1313fc1595319
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b63666a581959f7a6c6a30ca8763f9c22067f32a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734334"
 ---
 # <a name="how-to-implement-a-provider"></a>Gewusst wie: Implementieren eines Anbieters
+
 Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbieter, der Daten überwacht und Benachrichtigungen sendet, und mindestens einem Beobachter, der Benachrichtigungen (Rückrufe) vom Anbieter empfängt. In diesem Thema wird das Erstellen eines Anbieters behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Observers](how-to-implement-an-observer.md) wird erläutert, wie ein Observer erstellt wird.  
   
 ### <a name="to-create-a-provider"></a>So erstellen Sie einen Anbieter  
@@ -52,6 +53,7 @@ Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbiete
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel enthält den vollständigen Quellcode, um eine <xref:System.IObservable%601>-Implementierung für eine Anwendung zur Temperaturüberwachung zu definieren. Er enthält die `Temperature`-Struktur, die die an Observer gesendeten Daten umfasst, und die `TemperatureMonitor`-Klasse, die die <xref:System.IObservable%601>-Implementierung darstellt.  
   
  [!code-csharp[Conceptual.ObserverDesign.HowTo#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#7)]

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823263"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734386"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
+
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
   
 - Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt. `\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.  
@@ -32,6 +33,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 > Escapezeichen werden in Mustern von regulären Ausdrücken, jedoch nicht in Ersetzungsmustern erkannt.  
   
 ## <a name="character-escapes-in-net"></a>Escapezeichen in .NET  
+
  In der folgenden Tabelle sind die Escapezeichen aufgeführt, die von regulären Ausdrücken in .NET unterstützt werden.  
   
 |Zeichen oder Sequenz|Beschreibung|  
@@ -52,6 +54,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 |`\`|Folgt diesem Zeichen ein Zeichen, das nicht als Escapezeichen erkannt wird, entspricht es diesem Zeichen. `\*` entspricht beispielsweise einem Sternchen (*) und ist gleich `\x2A`.|  
   
 ## <a name="an-example"></a>Beispiel  
+
  Das folgende Beispiel veranschaulicht die Verwendung von Escapezeichen in einem regulären Ausdruck. Es analysiert eine Zeichenfolge, die die Namen der größten Städte der Welt und deren Einwohnerzahlen im Jahr 2009 enthält. Jeder Ortsname wird durch ein Tabstoppzeichen (`\t`) oder einen senkrechten Strich (&#124; oder `\u007c`) von seiner Einwohnerzahl getrennt. Einzelne Orte und ihre Einwohnerzahlen werden durch einen Wagenrücklauf und einen Zeilenvorschub von einander getrennt.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

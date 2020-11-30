@@ -35,14 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: ecaa0016c37abf33c793fb8a362a697672f3275a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 996a8cca8222e3de6517ee6fa7cef3c4f44fc5a9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831285"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734183"
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
+
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
   
 - [The Regular Expression Engine (Die Engine für reguläre Ausdrücke)](#Engine)  
@@ -58,7 +59,9 @@ ms.locfileid: "94831285"
 - [The Individual Capture (Die einzelne Erfassung)](#the_individual_capture)  
   
 <a name="Engine"></a>
+
 ## <a name="the-regular-expression-engine"></a>Die Engine für reguläre Ausdrücke  
+
  Die Engine für reguläre Ausdrücke in .NET wird durch die <xref:System.Text.RegularExpressions.Regex>-Klasse dargestellt. Die Engine für reguläre Ausdrücke ist für das Analysieren und Kompilieren eines regulären Ausdrucks sowie für das Ausführen von Vorgängen zuständig, die dem Muster eines regulären Ausdrucks mit einer Eingabezeichenfolge entsprechen. Die Engine ist die zentrale Komponente im .NET-Objektmodell für reguläre Ausdrücke.  
   
  Die Engine für reguläre Ausdrücke kann auf zwei verschiedene Arten verwendet werden:  
@@ -82,6 +85,7 @@ ms.locfileid: "94831285"
  Diese Vorgänge werden in den folgenden Abschnitten beschrieben.  
   
 ### <a name="matching-a-regular-expression-pattern"></a>Vergleich eines Muster eines regulären Ausdrucks  
+
  Von der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode wird `true` zurückgegeben, falls die Zeichenfolge mit dem Muster übereinstimmt, bzw. `false`, wenn dies nicht der Fall ist. Die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>-Methode wird häufig dazu verwendet, um Zeichenfolgeneingaben zu überprüfen. Durch den folgende Code wird z. B. sichergestellt, dass eine Zeichenfolge mit einer gültigen Sozialunterstützungsnummer in den USA übereinstimmt.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/validate1.cs#1)]
@@ -100,6 +104,7 @@ ms.locfileid: "94831285"
 |`$`|Entsprechung für das Ende der Eingabezeichenfolge finden.|  
   
 ### <a name="extracting-a-single-match-or-the-first-match"></a>Extrahieren einer einzelnen Übereinstimmung oder der ersten Übereinstimmung  
+
  Von der <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>-Methode wird ein <xref:System.Text.RegularExpressions.Match>-Objekt zurückgegeben, das Informationen zur ersten Teilzeichenfolge enthält, die mit einem Muster eines regulären Ausdrucks übereinstimmt. Wenn die `Match.Success`-Eigenschaft `true` zurückgibt und angibt, dass eine Übereinstimmung gefunden wurde, können Sie Informationen zu nachfolgenden Übereinstimmungen abrufen, indem Sie die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode aufrufen. Diese Methodenaufrufe können fortgesetzt werden, bis die `Match.Success`-Eigenschaft `false` zurückgibt. Im folgenden Code wird zum Beispiel mithilfe der <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode das erste Vorkommen eines doppelt vorhandenen Worts in einer Zeichenfolge gesucht. Anschließend wird die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode aufgerufen, um zusätzliche Vorkommen zu suchen. Im Beispiel wird die `Match.Success`-Eigenschaft nach jedem Methodenaufruf überprüft, um zu bestimmen, ob die aktuelle Übereinstimmung erfolgreich war, und ob ein Aufruf der <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode folgen soll.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match1.cs#2)]
@@ -116,12 +121,14 @@ ms.locfileid: "94831285"
 |`\b`|Beendet den Vergleich an einer Wortgrenze.|  
   
 ### <a name="extracting-all-matches"></a>Extrahieren aller Übereinstimmungen  
+
  Von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode wird ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurückgegeben, das Informationen zu allen Übereinstimmungen enthält, die von der Engine für reguläre Ausdrücke in der Eingabezeichenfolge gefunden wurden. Zum Beispiel kann das vorherige Beispiel neu geschrieben werden, um die <xref:System.Text.RegularExpressions.Regex.Matches%2A>-Methode anstelle der <xref:System.Text.RegularExpressions.Regex.Match%2A>-Methode und der <xref:System.Text.RegularExpressions.Match.NextMatch%2A>-Methode aufzurufen.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matches1.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matches1.vb#3)]  
   
 ### <a name="replacing-a-matched-substring"></a>Ersetzen einer übereinstimmenden Teilzeichenfolge  
+
  Die <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>-Methode ersetzt jede Teilzeichenfolge, die mit dem Muster eines regulären Ausdrucks mit einer angegebenen Zeichenfolge oder einem Muster eines regulären Ausdrucks übereinstimmt, und gibt die gesamte Eingabezeichenfolge mit Ersetzungen zurück. Beispielsweise fügt der folgende Code ein US-Währungssymbol vor einer Dezimalzahl in einer Zeichenfolge hinzu.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/replace1.cs#4)]
@@ -145,6 +152,7 @@ ms.locfileid: "94831285"
 |`$&`|Die gesamte abgeglichene Teilzeichenfolge.|  
   
 ### <a name="splitting-a-single-string-into-an-array-of-strings"></a>Aufteilen einer einzelnen Zeichenfolge in ein Zeichenfolgenarray  
+
  Mit der <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType>-Methode wird die Eingabezeichenfolge an den Stellen aufgeteilt, die durch eine Übereinstimmung bei einem regulären Ausdruck definiert wurde. Im folgenden Code werden z. B. die Elemente in ein Zeichenfolgenarray in einer nummerierten Liste eingefügt.  
   
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/split1.cs#5)]
@@ -160,11 +168,15 @@ ms.locfileid: "94831285"
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
   
 <a name="Match_and_MCollection"></a>
+
 ## <a name="the-matchcollection-and-match-objects"></a>Die MatchCollection- und Match-Objekte  
+
  Regex-Methoden geben zwei Objekte zurück, die Teil des Objektmodells für einen regulären Ausdruck sind: das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt und das <xref:System.Text.RegularExpressions.Match>-Objekt.  
   
 <a name="the_match_collection"></a>
+
 ### <a name="the-match-collection"></a>Die Match-Auflistung  
+
  Die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode gibt ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt zurück, das <xref:System.Text.RegularExpressions.Match>-Objekte enthält, die alle Übereinstimmungen darstellen, die die Engine für reguläre Ausdrücke gefunden hat, und zwar in der Reihenfolge, in der sie in der Eingabezeichenfolge auftreten. Wenn keine Übereinstimmungen vorhanden sind, gibt die Methode ein <xref:System.Text.RegularExpressions.MatchCollection>-Objekt ohne Member zurück. Die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ermöglicht den Zugriff auf einzelne Member der Auflistung nach Index, von null bis eins weniger als es dem Wert der <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft entspricht. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> ist der Indexer (in C#) und die Standardeigenschaft der Auflistung (in Visual Basic).  
   
  Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode füllt standardmäßig das <xref:System.Text.RegularExpressions.MatchCollection>-Objekt mithilfe verzögerter Auswertung auf. Zugriff auf Eigenschaften, die eine vollständig aufgefüllte Auflistung erfordern, z. B. die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft und die <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, führt möglicherweise zu Leistungseinbußen. Daher wird empfohlen, dass Sie auf die Auflistung mit dem <xref:System.Collections.IEnumerator>-Objekt zugreifen, das von der <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Einzelne Sprachen stellen Konstrukte bereit, z.B. `For Each` in Visual Basic und `foreach` in C#, die die <xref:System.Collections.IEnumerator>-Schnittstelle der Auflistung umschließen.  
@@ -175,7 +187,9 @@ ms.locfileid: "94831285"
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
 <a name="the_match"></a>
+
 ### <a name="the-match"></a>Die Übereinstimmung  
+
  Die <xref:System.Text.RegularExpressions.Match>-Klasse stellt das Ergebnis einer einzelnen regulären Ausdrucksübereinstimmung dar. Es gibt zwei Möglichkeiten für den Zugriff auf <xref:System.Text.RegularExpressions.Match>-Objekte:  
   
 - Sie können von dem <xref:System.Text.RegularExpressions.MatchCollection>-Objekt abgerufen werden, das von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Um einzelne <xref:System.Text.RegularExpressions.Match>-Objekte abzurufen, durchlaufen Sie die Auflistung mit einem `foreach`-Konstrukt (in C#) oder einem `For Each`...`Next`-Konstrukt (in Visual Basic), oder rufen Sie mithilfe der <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ein bestimmtes <xref:System.Text.RegularExpressions.Match>-Objekt Objekt nach Index oder Name ab. Sie können auch einzelne <xref:System.Text.RegularExpressions.Match>-Objekte aus der Auflistung abrufen, indem Sie die Auflistung nach dem Index durchlaufen, von 0 (null) bis eins weniger, als es der Anzahl der Objekte in der Auflistung entspricht. Bei dieser Methode wird jedoch keine verzögerte Auswertung genutzt, da dabei auf die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft zugegriffen wird.  
@@ -229,7 +243,9 @@ ms.locfileid: "94831285"
  [Zurück nach oben](#introduction)  
   
 <a name="GroupCollection"></a>
+
 ## <a name="the-group-collection"></a>Die Gruppenauflistung  
+
  Die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft gibt ein <xref:System.Text.RegularExpressions.GroupCollection>-Objekt zurück, das <xref:System.Text.RegularExpressions.Group>-Objekte enthält, die erfasste Gruppen in einer einzelnen Übereinstimmung darstellen. Das erste <xref:System.Text.RegularExpressions.Group>-Objekt in der Auflistung (an Index 0) stellt die gesamte Übereinstimmung dar. Jedes Objekt, das folgt, stellt die Ergebnisse einer einzelnen Erfassungsgruppe dar.  
   
  Sie können einzelne <xref:System.Text.RegularExpressions.Group>-Objekte in der Auflistung mit der <xref:System.Text.RegularExpressions.GroupCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft abrufen. Sie können unbenannte Gruppen durch ihre Ordnungsposition in der Auflistung abrufen und benannte Gruppen entweder nach dem Namen oder nach der Ordnungsposition abrufen. Unbenannte Erfassungen werden zuerst in der Auflistung angezeigt und werden von links nach rechts in der Reihenfolge indiziert, in der sie im Muster eines regulären Ausdrucks angezeigt werden. Benannte Erfassungen werden nach unbenannten Erfassungen von links nach rechts in der Reihenfolge indiziert, in der sie im Muster eines regulären Ausdrucks angezeigt werden. Um festzustellen, welche nummerierten Gruppen in der Auflistung verfügbar sind, die für eine bestimmte Methode für Übereinstimmungen mit regulären Ausdrücken zurückgegeben wird, können Sie die Instanzenmethode <xref:System.Text.RegularExpressions.Regex.GetGroupNumbers%2A?displayProperty=nameWithType> aufrufen. Um festzustellen, welche benannten Gruppen in der Auflistung verfügbar sind, können Sie die Instanzenmethode <xref:System.Text.RegularExpressions.Regex.GetGroupNames%2A?displayProperty=nameWithType> aufrufen. Beide Methoden sind besonders nützlich in Allzweckroutinen, die die von beliebigen regulären Ausdrücken gefundenen Übereinstimmungen analysieren.  
@@ -260,7 +276,9 @@ ms.locfileid: "94831285"
  [Zurück nach oben](#introduction)  
   
 <a name="the_captured_group"></a>
+
 ## <a name="the-captured-group"></a>Die erfasste Gruppe  
+
  Die <xref:System.Text.RegularExpressions.Group>-Klasse stellt das von einer einzelnen Erfassungsgruppe erfassten Ergebnis dar. Gruppenobjekte, die die Erfassungsgruppen darstellen, die in einem regulären Ausdruck definiert werden, werden von der <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft des <xref:System.Text.RegularExpressions.GroupCollection>-Objekts zurückgegeben, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wurde. Die <xref:System.Text.RegularExpressions.GroupCollection.Item%2A>-Eigenschaft ist der Indexer (in C#) und die Standardeigenschaft (in Visual Basic) <xref:System.Text.RegularExpressions.Group>-Klasse. Sie können auch einzelne Member abrufen, indem Sie die Auflistung mit dem `foreach`- oder dem `For Each`-Konstrukt durchlaufen. Ein Beispiel finden Sie im vorherigen Abschnitt.  
   
  Im folgenden Beispiel werden verschachtelte Gruppierungskonstrukte verwendet, um Teilzeichenfolgen in Gruppen aufzuzeichnen. Das Muster eines regulären Ausdrucks `(a(b))c` stimmt mit der Zeichenfolge "abc" überein. Es weist die Teilzeichenfolgen "ab" der ersten Erfassungsgruppe und die Teilzeichenfolge "b" der zweiten Erfassungsgruppe zu.  
@@ -307,7 +325,9 @@ ms.locfileid: "94831285"
  [Zurück nach oben](#introduction)  
   
 <a name="CaptureCollection"></a>
+
 ## <a name="the-capture-collection"></a>Die Erfassungsauflistung  
+
  Das <xref:System.Text.RegularExpressions.Group>-Objekt enthält nur Informationen zur letzten Erfassung. Allerdings sind alle Erfassungen, die von einer Erfassungsgruppe gemacht wurden, nach wie vor über das <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt verfügbar, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Jeder Member der Auflistung ist ein <xref:System.Text.RegularExpressions.Capture>-Objekt, das eine von dieser Erfassungsgruppe gemachte Erfassung darstellt, und zwar in der Reihenfolge, in der sie erfasst wurden (und daher in der Reihenfolge, in der die erfassten Zeichenfolgen von links nach rechts in der Eingabezeichenfolge abgeglichen wurden). Einzelne <xref:System.Text.RegularExpressions.Capture>-Objekte können auf zwei unterschiedliche Arten aus der Auflistung abgerufen werden:  
   
 - Durch das Durchlaufen der Sammlung mit einem Konstrukt wie `foreach` (in C#) oder `For Each` (in Visual Basic).  
@@ -329,7 +349,9 @@ ms.locfileid: "94831285"
  [Zurück nach oben](#introduction)  
   
 <a name="the_individual_capture"></a>
+
 ## <a name="the-individual-capture"></a>Die einzelne Erfassung  
+
  Die <xref:System.Text.RegularExpressions.Capture>-Klasse enthält die Ergebnisse einer einzelnen Teilausdrucksuche. Die <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>-Eigenschaft enthält den übereinstimmenden Text, und die <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>-Eigenschaft gibt die nullbasierte Position in der Eingabezeichenfolge an, bei der die übereinstimmende Teilzeichenfolge beginnt.  
   
  Im folgenden Beispiel wird eine Eingabezeichenfolge hinsichtlich der Temperatur ausgewählter Orte analysiert. Ein Komma (",") wird verwendet, um einen Ort und seine Temperatur zu trennen. Ein Semikolon ("";) dient zum Trennen der Daten zu einzelnen Orten. Die gesamte Eingabezeichenfolge stellt eine einzelne Übereinstimmung dar. Im Muster `((\w+(\s\w+)*),(\d+);)+` eines regulären Ausdrucks, mit dem die Zeichenfolge analysiert wird, wird der Ortsname der zweiten Erfassungsgruppe und die Temperatur der vierten Erfassungsgruppe zugewiesen.  

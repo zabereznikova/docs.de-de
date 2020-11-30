@@ -9,16 +9,16 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687589"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731513"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 
-Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine *EXE* - oder *DLL* -Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
+Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine *EXE*- oder *DLL*-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
   
  Die folgende Abbildung stellt verschiedene Möglichkeiten zum Speichern des Manifests dar.  
   
@@ -39,6 +39,7 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
 - Wiedergabe der Selbstbeschreibung der Assembly.  
   
 ## <a name="assembly-manifest-contents"></a>Inhalt des Assemblymanifests  
+
  Die folgende Tabelle enthält die im Assemblymanifest enthaltenen Informationen. Die Identität einer Assembly setzt sich aus den ersten vier Elementen zusammen. Dabei handelt es sich um den Assemblynamen, die Versionsnummer, die Kultur und den starken Namen.  
   
 |Information|Beschreibung|  

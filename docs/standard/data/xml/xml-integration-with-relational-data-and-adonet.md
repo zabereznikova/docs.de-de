@@ -2,14 +2,15 @@
 title: XML-Integration mit relationalen Daten und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 1f2ad78df3bb1a8c8b02a771c69152e785bec88f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 34dbd0723c1167ef699589d1750144cb26eb60b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824316"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733047"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML-Integration mit relationalen Daten und ADO.NET
+
 Die **XmlDataDocument**-Klasse ist eine von der **XmlDocument**-Klasse abgeleitete Klasse und enthält XML-Daten. Der Vorteil der **XmlDataDocument**-Klasse liegt im Herstellen einer Brücke zwischen relationalen und hierarchischen Daten. Ein **XmlDocument** kann an ein **DataSet** gebunden werden, und Änderungen, die an den Dateien in den beiden Klassen vorgenommen wurden, können in beiden Klassen synchronisiert werden. Ein an ein **DataSet** gebundenes **XmlDocument** ermöglicht die Integration von XML in relationale Daten, und die Daten müssen nicht als XML oder in einem relationalen Format dargestellt werden. Sie können beide Möglichkeiten nutzen und sind somit nicht auf eine einzige Darstellung der Daten festgelegt.  
   
  Wenn die Daten in zwei Ansichten zur Verfügung stehen, ergeben sich folgende Vorteile:  

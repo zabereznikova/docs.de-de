@@ -13,19 +13,21 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830284"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733645"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für regulären Ausdruck: Suchen nach HREFs
+
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="the-regex-object"></a>Das Regex-Objekt
+
  Da die `DumpHRefs`-Methode vom Benutzercode aus mehrmals aufgerufen werden kann, verwendet sie die `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode. Dies ermöglicht der Engine für reguläre Ausdrücke, den regulären Ausdruck zwischenzuspeichern, und vermeidet den Mehraufwand, bei jedem Aufruf der Methode ein neues <xref:System.Text.RegularExpressions.Regex>-Objekt zu instanziieren. Ein <xref:System.Text.RegularExpressions.Match>-Objekt wird anschließend verwendet, um alle Übereinstimmungen in der Zeichenfolge zu durchlaufen.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -49,9 +51,11 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
 |`(?<1>\S+)`|Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.|  
   
 ## <a name="match-result-class"></a>Abgleichsergebnisklasse  
+
  Die Ergebnisse einer Suche werden in der <xref:System.Text.RegularExpressions.Match>-Klasse gespeichert, die Zugriff auf alle von der Suche extrahierten Teilzeichenfolgen bietet. Die durchsuchte Zeichenfolge und der verwendete reguläre Ausdruck werden ebenfalls gespeichert, sodass die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode aufgerufen werden kann, um einen weiteren Suchvorgang ab der Stelle auszuführen, an der der letzte Suchvorgang beendet wurde.  
   
 ## <a name="explicitly-named-captures"></a>Explizit benannte Erfassungen  
+
  In herkömmlichen regulären Ausdrücken werden Klammern für die Erfassung automatisch nach der Reihenfolge durchnummeriert. Daraus ergeben sich zwei Probleme. Zum einen muss nach dem Einfügen oder Entfernen von Klammern jeglicher Code, der auf die nummerierten Klammern verweist, der neuen Nummerierung entsprechend umgeschrieben werden. Zweitens werden häufig unterschiedliche Klammerpaare verwendet, um zwei Alternativausdrücke für eine Übereinstimmung zu erhalten. Dadurch wird es schwierig festzustellen, durch welchen der beiden Ausdrücke das Ergebnis zurückgegeben wurde.  
   
  Um diesen Schwierigkeiten zu begegnen, unterstützt die <xref:System.Text.RegularExpressions.Regex>-Klasse die `(?<name>…)`-Syntax zur Erfassung einer Übereinstimmung in einem festgelegten Slot. (Der Slot kann mit einer Zeichenfolge oder einer ganzen Zahl benannt werden; ganze Zahlen können schneller aufgerufen werden.) Damit können alle Suchergebnisse für dieselbe Zeichenfolge an denselben Ort geleitet werden. Im Fall eines Konflikts ist das zuletzt im Slot gespeicherte Suchergebnis gültig. (Eine vollständige Liste mehrerer Übereinstimmungen für einen einzelnen Slot steht jedoch zur Verfügung. Weitere Informationen finden Sie in der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Auflistung.)  

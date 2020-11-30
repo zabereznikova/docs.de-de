@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 251f90e85d037d8cf4f3fd58bc27659c98d04b5e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831311"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734243"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardmäßige TimeSpan-Formatzeichenfolgen
 
@@ -47,6 +47,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
 |"G"|Allgemeines Langformat|Dieser Bezeichner gibt immer Tage und sieben Dezimalstellen aus. Es ist kulturabhängig und besitzt das Format `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Weitere Informationen finden Sie unter: [Der allgemeine Langformatbezeichner "G"](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
 
 ## <a name="the-constant-c-format-specifier"></a>Der Konstantenformatbezeichner "c"  
+
  Der Formatbezeichner "c" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in der folgenden Form an:  
   
  [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
@@ -73,6 +74,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>Der allgemeine Kurzformatbezeichner "g"  
+
  Der <xref:System.TimeSpan>-Formatbezeichner "g" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem kompakten Format an, indem nur die erforderlichen Elemente eingeschlossen werden. Er hat das folgende Format:  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
@@ -97,6 +99,7 @@ Die folgende Tabelle enthält die Standardzeitintervall-Formatbezeichner.
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
 
 ## <a name="the-general-long-g-format-specifier"></a>Der allgemeine Langformatbezeichner "G"  
+
  Der <xref:System.TimeSpan>-Formatbezeichner "G" gibt die Zeichenfolgendarstellung eines <xref:System.TimeSpan>-Werts in einem Langformat zurück, das immer Tage und Sekundenbruchteile enthält. Die Zeichenfolge, die sich aus dem Standardformatbezeichner "G" ergibt, hat folgendes Format:  
   
  [-]*d*:*hh*:*mm*:*ss*.*fffffff*  

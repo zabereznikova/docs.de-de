@@ -5,20 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-ms.openlocfilehash: 06427097e1e242171abe84ea557cdbb108d98a9d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: af529f1c6ccfe3abe761c7707772d6f9697c179d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733424"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Eingaben für die XslCompiledTransform-Klasse
+
 Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert drei Eingabetypen für das Quelldokument: ein Objekt, das die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle implementiert, ein <xref:System.Xml.XmlReader>-Objekt, das das Quelldokument liest, oder einen Zeichenfolgen-URI.  
   
 > [!NOTE]
 > Mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wird Leerraum standardmäßig beibehalten. Dies entspricht [Abschnitt 3.4 der W3C-Empfehlung zu XSLT, Version 1.0](https://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>"IXPathNavigable"-Schnittstelle  
+
  Die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle ist in der <xref:System.Xml.XmlNode>-Klasse und der <xref:System.Xml.XPath.XPathDocument>-Klasse implementiert. Diese Klassen stellen einen speicherinternen Cache der XML-Daten dar.  
   
 - Die <xref:System.Xml.XmlNode>-Klasse basiert auf dem W3C-DOM (Document Object Model) und umfasst Bearbeitungsfunktionen.  
@@ -34,6 +36,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert d
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
   
 ## <a name="xmlreader-object"></a>"XmlReader"-Objekt  
+
  Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode wird aus dem aktuellen Knoten vom <xref:System.Xml.XmlReader> über alle untergeordneten Elemente geladen. Dadurch können Sie einen Teil eines Dokuments als Kontextdokument verwenden. Nach der Rückgabe der <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode wird der <xref:System.Xml.XmlReader> auf dem nächsten Knoten nach dem Ende des Kontextdokuments platziert. Wenn das Ende des Dokuments erreicht wird, wird der <xref:System.Xml.XmlReader> am Ende der Datei (EOF) platziert.  
   
  Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet. Die Dateien „books.xml“ und „transform.xsl“ befinden sich in diesem Thema: [How to: Ausführen einer XSLT-Transformation mittels einer Assembly](how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  
@@ -42,6 +45,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode akzeptiert d
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
   
 ## <a name="string-uri"></a>Zeichenfolgen-URI  
+
  Sie können auch den URI des Quelldokuments als XSLT-Eingabe angeben. Mit einem <xref:System.Xml.XmlResolver> wird der URI aufgelöst. Sie können angeben, welcher <xref:System.Xml.XmlResolver> verwendet werden soll, indem Sie ihn an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben. Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, verwendet die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode einen Standard-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen.  
   
  Im folgenden Beispiel wird die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType>-Methode zum Transformieren der Datei books.xml in die Datei books.html mit dem Stylesheet transform.xsl verwendet. Die Dateien „books.xml“ und „transform.xsl“ befinden sich in diesem Thema: [How to: Ausführen einer XSLT-Transformation mittels einer Assembly](how-to-perform-an-xslt-transformation-by-using-an-assembly.md).  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 97cc7558f51b7bcbdb5201ef0f0c463da8f2c070
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9c4fbba63428e04b7b29a803061f288ca6ee5031
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822606"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734139"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Zuordnen der Objekthierarchie zu XML-Daten
+
 Wenn sich ein XML-Dokument im Speicher befindet, ist seine konzeptionelle Darstellung eine Struktur. Für das Programmieren verwenden Sie eine Objekthierarchie, um auf die Knoten der Struktur zuzugreifen. Im folgenden Beispiel wird veranschaulicht, wie aus dem XML-Inhalt Knoten werden.  
   
  Wenn der XML-Code in das Dokumentobjektmodell (DOM) eingelesen wird, werden die einzelnen Teile in Knoten umgesetzt, und diese enthalten zusätzliche Metadaten über sich selbst, z. B. ihren Knotentyp und ihre Werte. Der Knotentyp besteht aus seinem Objekt und bestimmt, welche Aktionen ausgeführt und welche Eigenschaften festgelegt oder abgerufen werden.  

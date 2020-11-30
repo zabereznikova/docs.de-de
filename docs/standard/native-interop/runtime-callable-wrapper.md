@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730226"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
+
 Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
   
  Die Common Language Runtime erstellt genau einen RCW für jedes COM-Objekt, unabhängig von der Anzahl der vorhandenen Verweise auf das Objekt. Die Common Language Runtime verwaltet für jedes Objekt einen einzelnen RCW pro Prozess.  Wenn Sie einen RCW in einer Anwendungsdomäne oder einem Apartment erstellen und anschließend einen Verweis an eine andere Anwendungsdomäne oder ein anderes Apartment übergeben, wird ein Proxy für das erste Objekt verwendet.  Wie die folgende Abbildung zeigt, kann eine beliebige Anzahl verwalteter Clients auf die COM-Objekte verweisen, welche die Schnittstellen "INew" und "INewer" verfügbar machen.  
@@ -32,6 +33,7 @@ Die folgende Abbildung veranschaulicht, wie über den RCW auf COM-Objekte zugegr
  Der Standardwrapper erzwingt integrierte Marshallregeln. Wenn beispielsweise ein .NET-Client einen Zeichenfolgetyp als Teil eines Arguments an ein nicht verwaltetes Objekt übergibt, konvertiert der Wrapper die Zeichenfolge in einen BSTR-Typ. Gibt das COM-Objekt seinem verwalteten Aufrufer einen BSTR zurück, erhält der Aufrufer eine Zeichenfolge. Sowohl der Client als auch der Server senden und empfangen auf diese Weise Daten, die ihnen jeweils vertraut sind. Andere Typen erfordern keine Konvertierung. Ein Standardwrapper überträgt z. B. eine ganze Zahl von 4 Byte zwischen verwaltetem und nicht verwaltetem Code immer ohne Typkonvertierung.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshallen von ausgewählten Schnittstellen  
+
  Die Hauptaufgabe des RCW ([Runtime Callable Wrapper](runtime-callable-wrapper.md)) besteht darin, die Unterschiede zwischen den verwalteten und nicht verwalteten Programmiermodellen unsichtbar zu machen. Um einen nahtlosen Übergang zu gewährleisten, beansprucht der RCW ausgewählte COM-Schnittstellen, ohne diese für den .NET-Client verfügbar zu machen. Dies ist in der folgenden Abbildung dargestellt.
 
  Die folgende Abbildung zeigt COM-Schnittstellen und den RCW:

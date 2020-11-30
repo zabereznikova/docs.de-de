@@ -14,14 +14,15 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75d37527507b596d6017171279e84b8348489831
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831038"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733580"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantifizierer in regulären Ausdrücken
+
 Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder einer Zeichenklasse in der Eingabe vorhanden sein müssen, damit eine Übereinstimmung gefunden wird.  In der folgenden Tabelle werden die von .NET unterstützten Quantifizierer aufgeführt.  
   
 |Gieriger Quantifizierer|Träger Quantifizierer|Beschreibung|  
@@ -39,12 +40,14 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 > Das Schachteln von Quantifizierern (z.B. wie durch das Muster für reguläre Ausdrücke `(a*)*`) kann die Anzahl von Vergleichen, die die Engine für reguläre Ausdrücke ausführen muss, als Exponentialfunktion der Anzahl von Zeichen in der Eingabezeichenfolge erhöhen. Weitere Informationen zu diesem Verhalten und zu Problemumgehungen finden Sie unter [Rückverfolgung](backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Quantifizierer in regulären Ausdrücken  
+
  In den folgenden Abschnitten werden die Quantifizierer aufgeführt, die in regulären .NET-Ausdrücken unterstützt werden.  
   
 > [!NOTE]
 > Wenn die Zeichen *, +, ?, { und } im Muster für reguläre Ausdrücke enthalten sind, interpretiert die Engine für reguläre Ausdrücke sie als Quantifizierer oder als Teil von Quantifiziererkonstrukten, sofern sie nicht in einer [Zeichenklasse](character-classes-in-regular-expressions.md) enthalten sind. Um sie als Literalzeichen außerhalb einer Zeichenklasse zu interpretieren, müssen Sie sie mit Escapezeichen versehen, indem Sie ihnen einen umgekehrten Schrägstrich voranstellen. Die Zeichenfolge `\*` in einem Muster für reguläre Ausdrücke wird z.B. als literales Sternchen („\*“) interpretiert.  
   
 ### <a name="match-zero-or-more-times-"></a>Übereinstimmung mit null oder mehr Vorkommen: *  
+
  Der `*`-Quantifizierer gleicht das vorangehende Element nullmal oder häufiger ab. Dies entspricht dem `{0,}`-Quantifizierer. `*` ist ein gieriger Quantifizierer, dessen träges Äquivalent `*?` lautet.  
   
  Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Von den neun Zifferngruppen in der Eingabezeichenfolge entsprechen fünf dem Muster, bei vier Gruppen (`95`, `929`, `9219` und `9919`) ist dies nicht der Fall.  
@@ -62,6 +65,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-one-or-more-times-"></a>Übereinstimmung mit einem oder mehr Vorkommen: +  
+
  Der `+`-Quantifizierer gleicht das vorangehende Element einmal oder häufiger ab. Er entspricht `{1,}`. `+` ist ein gieriger Quantifizierer, dessen träges Äquivalent `+?` lautet.  
   
  Beispielsweise versucht der reguläre Ausdruck `\ban+\w*?\b` ganze Wörter abzugleichen, die mit dem Buchstaben `a` beginnen, gefolgt von mindestens einer Instanz des Buchstabens `n`. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Der reguläre Ausdruck gleicht die Wörter `an`, `annual`, `announcement` und `antique` ab und findet richtigerweise keine Übereinstimmung mit `autumn` und `all`.  
@@ -79,6 +83,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-zero-or-one-time-"></a>Übereinstimmung mit null oder einem Vorkommen: ?  
+
  Der Quantifizierer `?` gleicht das vorangehende Element null- oder einmal ab. Er entspricht `{0,1}`. `?` ist ein gieriger Quantifizierer, dessen träges Äquivalent `??` lautet.  
   
  Beispielsweise versucht der reguläre Ausdruck `\ban?\b` ganze Wörter abzugleichen, die mit dem Buchstaben `a` beginnen, gefolgt von null oder einer Instanz des Buchstabens `n`. Das heißt, er versucht, die Wörter `a` und `an` abzugleichen. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht.  
@@ -95,6 +100,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-exactly-n-times-n"></a>Übereinstimmung mit genau n Vorkommen: {n}  
+
  Der `{`*n*`}`-Quantifizierer gleicht das vorangehende Element genau *n* Mal ab, wobei *n* für einen beliebigen Integer steht. `{`*n*`}` ist ein gieriger Quantifizierer, dessen träges Äquivalent `{`*n*`}?` lautet.  
   
  Beispielsweise versucht der reguläre Ausdruck `\b\d+\,\d{3}\b`, eine Wortgrenze, gefolgt von einer oder mehreren Dezimalziffern, gefolgt von drei Dezimalziffern, gefolgt von einer Wortgrenze abzugleichen. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht.  
@@ -113,6 +119,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-at-least-n-times-n"></a>Übereinstimmung mit mindestens n Vorkommen: {n,}  
+
  Der `{`*n*`,}`-Quantifizierer gleicht das vorangehende Element mindestens *n*-mal ab, wobei *n* für einen beliebigen Integer steht. `{`*n*`,}` ist ein gieriger Quantifizierer, dessen träges Äquivalent `{`*n*`,}?` lautet.  
   
  Beispielsweise versucht der reguläre Ausdruck `\b\d{2,}\b\D+`, eine Wortgrenze, gefolgt von mindestens zwei Ziffern, gefolgt von einer Wortgrenze und einer Nicht-Dezimalziffer abzugleichen. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht. Der reguläre Ausdruck kann den Ausdruck `"7 days"` nicht abgleichen, da er nur eine Dezimalziffer enthält, findet aber erfolgreich Übereinstimmungen mit den Phrasen `"10 weeks and 300 years"`.  
@@ -130,6 +137,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\D+`|Übereinstimmung mit mindestens einer Nicht-Dezimalziffer.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>Übereinstimmung mit n bis m Vorkommen: {n,m}  
+
  Der `{`*n*`,`*m*`}`-Quantifizierer gleicht das vorangehende Element mindestens *n* Mal, aber nicht mehr als *m* Mal ab, wobei *n* und *m* Integerwerte sind. `{`*n*`,`*m*`}` ist ein gieriger Quantifizierer, dessen träges Äquivalent `{`*n*`,`*m*`}?` lautet.  
   
  Im folgenden Beispiel versucht der reguläre Ausdruck `(00\s){2,4}`, zwei bis vier Vorkommen zweier 0-Ziffern, gefolgt von einem Leerzeichen, abzugleichen. Beachten Sie, dass der letzte Teil der Eingabezeichenfolge dieses Muster fünfmal enthält und damit das Maximum von vier überschreitet. Allerdings stimmt nur der erste Teil dieser Teilzeichenfolge (bis zum Leerzeichen und fünften Nullpaar) mit dem Muster für reguläre Ausdrücke überein.  
@@ -138,6 +146,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
 ### <a name="match-zero-or-more-times-lazy-match-"></a>Übereinstimmung mit null oder mehr Vorkommen (träger Abgleich): *?  
+
  Der `*?`-Quantifizierer gleicht das vorangehende Element nullmal oder häufiger ab, jedoch so wenige Male wie möglich. Dies ist das träge Gegenstück zum gierigen Quantifizierer `*`.  
   
  Im folgenden Beispiel gleicht der reguläre Ausdruck `\b\w*?oo\w*?\b` alle Wörter ab, die die Zeichenfolge `oo` enthalten.  
@@ -156,6 +165,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|An einer Wortgrenze beenden.|  
   
 ### <a name="match-one-or-more-times-lazy-match-"></a>Übereinstimmung mit einem oder mehr Vorkommen (träger Abgleich): +?  
+
  Der `+?`-Quantifizierer gleicht das vorangehende Element einmal oder häufiger ab, jedoch so wenige Male wie möglich. Dies ist das träge Gegenstück zum gierigen Quantifizierer `+`.  
   
  Beispielsweise gleicht der reguläre Ausdruck `\b\w+?\b` ein oder mehr Zeichen ab, die durch Wortgrenzen getrennt sind. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht.  
@@ -164,6 +174,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
 ### <a name="match-zero-or-one-time-lazy-match-"></a>Übereinstimmung mit null oder einem Vorkommen (träger Abgleich): ??  
+
  Der `??`-Quantifizierer gleicht das vorangehende Element null- oder einmal ab, jedoch so wenige Male wie möglich. Dies ist das träge Gegenstück zum gierigen Quantifizierer `?`.  
   
  Beispielsweise versucht der reguläre Ausdruck `^\s*(System.)??Console.Write(Line)??\(??`, die Zeichenfolgen „Console.Write“ oder „Console.WriteLine“ abzugleichen. Die Zeichenfolge kann auch „System.“ vor „Console“ enthalten und von einer öffnenden Klammer gefolgt sein. Die Zeichenfolge muss sich am Anfang einer Zeile befinden, ihr kann jedoch ein Leerzeichen vorangestellt sein. Im folgenden Beispiel wird dieser reguläre Ausdruck veranschaulicht.  
@@ -183,6 +194,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\(??`|Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Übereinstimmung mit genau n Vorkommen (träger Abgleich): {n}?  
+
  Der `{`*n*`}?`-Quantifizierer gleicht das vorangehende Element genau `n` Mal ab, wobei *n* für eine beliebige ganze Zahl steht. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`}`.  
   
  Im folgenden Beispiel wird der reguläre Ausdruck `\b(\w{3,}?\.){2}?\w{3,}?\b` verwendet, um die Adresse einer Website zu identifizieren. Beachten Sie, dass „www.microsoft.com“ und „msdn.microsoft.com“ abgeglichen werden, aber nicht „mywebsite“ oder „mycompany.com“.  
@@ -200,11 +212,13 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`\b`|Beendet den Vergleich an einer Wortgrenze.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>Übereinstimmung mit mindestens n Vorkommen (träger Abgleich): {n,}?  
+
  Der `{`*n*`,}?`-Qualifizierer gleicht das vorangehende Element mindestens `n` Mal ab, jedoch so wenige Male wie möglich, wobei *n* für einen beliebigen Integer steht. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`,}`.  
   
  Eine Veranschaulichung finden Sie im vorherigen Abschnitt im Beispiel für den `{`*n*`}?`-Quantifizierer. Der reguläre Ausdruck in diesem Beispiel verwendet den `{`*n*`,}`-Quantifizierer, um eine Zeichenfolge abzugleichen, die mindestens drei Zeichen umfasst, gefolgt von einem Punkt.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Übereinstimmung mit n bis m Vorkommen (träger Abgleich): {n,m}?  
+
  Der `{`*n*`,`*m*`}?`-Quantifizierer gleicht das vorangehende Element `n` bis `m` Mal ab, jedoch so wenige Male wie möglich, wobei *n* und *m* Integerwerte sind. Dies ist das träge Gegenstück zum gierigen Quantifizierer `{`*n*`,`*m*`}`.  
   
  Im folgenden Beispiel gleicht der reguläre Ausdruck `\b[A-Z](\w*?\s*?){1,10}[.!?]` Sätze ab, die zwischen ein und zehn Wörter enthalten. Er gleicht alle Sätze in der Eingabezeichenfolge ab mit Ausnahme eines Satzes, der 18 Wörter enthält.  
@@ -223,7 +237,9 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
 |`[.!?]`|Übereinstimmung mit einem der Interpunktionszeichen „.“, „!“ oder „?“.|  
   
 <a name="Greedy"></a>
+
 ## <a name="greedy-and-lazy-quantifiers"></a>Gierige und träge Quantifizierer  
+
  Eine Reihe von Quantifizierern gibt es in zwei Versionen:  
   
 - Eine gierige Version.  
@@ -249,6 +265,7 @@ Quantifizierer geben an, wie viele Instanzen eines Zeichens, einer Gruppe oder e
  In den meisten Fällen werden von regulären Ausdrücken mit gierigen und trägen Quantifizierern die gleichen Übereinstimmungen zurückgegeben. Im Allgemeinen geben sie unterschiedliche Ergebnisse zurück, wenn sie mit dem Platzhaltermetazeichen (`.`) verwendet werden, das jedes beliebige Zeichen abgleicht.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Quantifizierer und leere Übereinstimmungen  
+
  Die Quantifizierer `*`, `+` und `{`*n*`,`*m*`}` sowie ihre trägen Gegenstücke werden nach einer leeren Übereinstimmung nie wiederholt, wenn die Mindestanzahl von Erfassungen gefunden wurde. Diese Regel verhindert, dass Quantifizierer bei leeren Teilausdruckübereinstimmungen in Endlosschleifen geraten, wenn die maximale Anzahl möglicher Gruppenerfassungen unendlich oder nahezu unendlich ist.  
   
  Der folgende Code zeigt z.B. das Ergebnis eines Aufrufs der <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>-Methode mit dem Muster für reguläre Ausdrücke `(a?)*`, bei dem null oder ein Zeichen „a“ nullmal oder häufiger abgeglichen wird. Beachten Sie, dass die einzelne Erfassungsgruppe jedes „a“ sowie <xref:System.String.Empty?displayProperty=nameWithType> abgleicht, dass es aber keine zweite leere Übereinstimmung gibt, weil der Quantifizierer nach der ersten leeren Übereinstimmung nicht mehr wiederholt wird.  

@@ -6,19 +6,21 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-ms.openlocfilehash: f0160f033760582c914a0d64c21415e5e921d907
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: b9c690c77dafc247f7282c3f56384481efe53399
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811079"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731526"
 ---
 # <a name="enhanced-strong-naming"></a>Verbesserte starke Namen
+
 Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum Identifizieren von Assemblys. In der Regel wird eine digitale Signatur mit öffentlichem Schlüssel verwendet, um die Integrität von Daten sicherzustellen, die von einem Absender (Signaturgeber) an einen Empfänger (Überprüfer) übergeben werden. Diese Signatur wird als eindeutige Identität für eine Assembly verwendet und gewährleistet, dass Verweise auf die Assembly nicht mehrdeutig sind. Die Assembly wird als Teil des Buildprozesses signiert und anschließend überprüft, wenn sie geladen wird.  
   
  Starke Namenssignaturen helfen, bösartige Parteien daran zu hindern, eine Assembly zu manipulieren und sie anschließend mit dem Schlüssel des ursprünglichen Signaturgebers neu zu signieren. Allerdings enthalten Schlüssel mit starkem Namen weder zuverlässige Informationen zum Herausgeber, noch enthalten sie eine Zertifikatshierarchie. Eine starke Namenssignatur garantiert nicht die Vertrauenswürdigkeit der Person, die die Assembly signiert hat, und gibt auch nicht an, ob diese Person ein legitimer Besitzer des Schlüssels war. Sie gibt nur an, dass der Besitzer des Schlüssels die Assembly signiert hat. Daher empfiehlt es sich nicht, eine starke Namenssignatur als Sicherheitsbestätigung für Code von Drittanbietern zu verwenden. Zur Authentifizierung von Code wird Microsoft Authenticode empfohlen.  
   
 ## <a name="limitations-of-conventional-strong-names"></a>Beschränkungen der konventionellen starken Namen  
+
  Die starke Benennungstechnologie aus den Vorgängerversionen von .NET Framework 4.5 hat folgende Nachteile:  
   
 - Die Schlüssel werden ständig attackiert, und durch verbesserte Techniken und Hardware ist es einfacher, einen privaten Schlüssel von einem öffentlichen abzuleiten. Zum Schutz gegen Angriffe sind größere Schlüssel erforderlich. In .NET Framework-Versionen vor .NET Framework 4.5 können Signaturen mit einer beliebigen Schlüsselgröße (Standardgröße: 1.024 Bits) verwendet werden. Beim Signieren einer Assembly mit einem neuen Schlüssel werden jedoch alle Binärdateien beschädigt, die auf die ältere Identität der Assembly verweisen. Daher ist es extrem schwierig, die Größe eines Signaturschlüssels zu aktualisieren, wenn Sie Kompatibilität beibehalten möchten.  
@@ -26,6 +28,7 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
 - Signierung mit starken Namen unterstützt nur den SHA-1-Algorithmus. Es wurde kürzlich festgestellt, dass SHA-1 für die Sicherung von Hashing-Anwendungen unzureichend ist. Daher ist ein stärkerer Algorithmus (SHA-256 oder höher) erforderlich. Es ist möglich, dass SHA-1 die FIPS-kompatible Position verliert, was zu Problemen für diejenigen führen würde, die sich entscheiden, nur FIPS-kompatible Software und Algorithmen zu verwenden.  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>Vorteile von verbesserten starken Namen  
+
  Die Hauptvorteile von erweiterten starken Namen sind Kompatibilität mit bereits vorhandenen starken Namen und die Möglichkeit, zu beanspruchen, dass eine Identität einer anderen entspricht:  
   
 - Entwickler mit bereits vorhandenen signierten Assemblys können ihre Identitäten zu SHA-2-Algorithmen migrieren, wobei die Kompatibilität mit Assemblys, die auf alte Identitäten verweisen, beibehalten wird.  
@@ -33,11 +36,13 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
 - Entwickler, die neue Assemblys erstellen und sich nicht mit vorhandenen starken Namenssignaturen befassen müssen, können die sichereren SHA-2-Algorithmen und die Assemblys wie gewohnt signieren.  
   
 ## <a name="use-enhanced-strong-names"></a>Verwenden von verbesserten starken Namen  
+
  Schlüssel mit starkem Namen bestehen aus einem Signaturschlüssel und einem Identitätsschlüssel. Die Assembly wird mit dem Signaturschlüssel signiert und durch den Identitätsschlüssel identifiziert. Vor .NET Framework 4.5 waren diese beiden Schlüssel identisch. Ab .NET Framework 4.5 wird der gleiche Identitätsschlüssel wie in früheren .NET Framework-Versionen verwendet, der Signaturschlüssel wird jedoch durch einen stärkeren Hashalgorithmus verbessert. Außerdem wird der Signaturschlüssel mit dem Identitätsschlüssels signiert, um eine Gegensignatur zu erstellen.  
   
  Mithilfe des <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attributs können die Assemblymetadaten den bereits vorhandenen öffentlichen Schlüssel für die Assemblyidentität verwenden, wodurch alte Assemblyverweise weiterhin funktionieren.  Das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut verwendet die Gegensignatur, um sicherzustellen, dass der Besitzer des neuen Signaturschlüssels auch der Besitzer des alten Identitätsschlüssels ist.  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>Signieren einer Assembly mit SHA-2 ohne Schlüsselmigration  
+
  Führen Sie die folgenden Befehle über eine Eingabeaufforderung aus, um eine Assembly zu signieren, ohne die Signatur eines starken Namens zu migrieren:  
   
 1. Generieren Sie den neuen Identitätsschlüssels (falls erforderlich).  
@@ -65,6 +70,7 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
     ```  
   
 ### <a name="sign-with-sha-2-with-key-migration"></a>Signieren einer Assembly mit SHA-2 und Schlüsselmigration  
+
  Führen Sie die folgenden Befehle über eine Eingabeaufforderung aus, um eine Assembly zu signieren und dabei eine migrierte Signatur eines starken Namens zu verwenden.  
   
 1. Generieren Sie ein Identitäts- und Signaturschlüsselpaar (falls erforderlich).  

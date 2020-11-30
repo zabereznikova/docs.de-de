@@ -11,17 +11,19 @@ helpviewer_keywords:
 - tables [.NET], type conversions
 - data types [.NET], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: c84b1eae8a36a8d4e844cb7b1eb110c32c35993f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc98a326155273805e3157d99755de2e97f83a46
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730213"
 ---
 # <a name="type-conversion-tables-in-net"></a>Typkonvertierungstabellen in .NET
+
 Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der gleich groß oder größer ist. Eine einschränkende Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in einen anderen Typ konvertiert wird, der kleiner ist. Die Tabellen in diesem Thema veranschaulichen die Verhaltensweisen dieser beiden Konvertierungsarten.  
   
 ## <a name="widening-conversions"></a>Erweiternde Konvertierungen  
+
  Die folgende Tabelle beschreibt die erweiternden Konvertierungen, die ohne Informationsverlust ausgeführt werden können.  
   
 |Geben Sie Folgendes ein:|Kann ohne Datenverlust konvertiert werden in|  
@@ -48,6 +50,7 @@ Eine erweiternde Konvertierung tritt auf, wenn ein Wert eines bestimmten Typs in
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>Einschränkende Konvertierungen  
+
  Eine einschränkende Konvertierung in <xref:System.Single> oder <xref:System.Double> kann zu einem Informationsverlust führen. Wenn der Zieltyp die Quelle nicht mit der gleichen Detailgenauigkeit und im gleichen Umfang wiedergeben kann, wird der resultierende Typ auf die Konstante `PositiveInfinity` oder `NegativeInfinity` festgelegt. `PositiveInfinity` resultiert aus der Division einer positiven Zahl durch null und wird auch zurückgegeben, wenn der Wert eines <xref:System.Single>- oder <xref:System.Double>-Typs den Wert des Felds `MaxValue` überschreitet. `NegativeInfinity` resultiert aus der Division einer negativen Zahl durch null und wird auch zurückgegeben, wenn der Wert eines <xref:System.Single>- oder <xref:System.Double>-Typs den Wert des Felds `MinValue` unterschreitet. Eine Konvertierung aus einem <xref:System.Double>- in einen <xref:System.Single>-Typ kann zu `PositiveInfinity` oder `NegativeInfinity` führen.  
   
  Eine einschränkende Konvertierung kann auch zum Verlust von Informationen für andere Datentypen führen. Es wird jedoch eine <xref:System.OverflowException> ausgelöst, wenn der Wert eines zu konvertierenden Typs außerhalb des von den Feldern `MaxValue` und `MinValue` des Zieltyps angegebenen Bereichs liegt und die Konvertierung von der Runtime geprüft wird, um sicherzustellen, dass der Wert des Zieltyps den `MaxValue` oder `MinValue` nicht überschreitet. Konvertierungen, die mit der <xref:System.Convert?displayProperty=nameWithType>-Klasse ausgeführt werden, werden immer auf diese Weise überprüft.  

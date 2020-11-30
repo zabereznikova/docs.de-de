@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831246"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733554"
 ---
 # <a name="commonly-used-collection-types"></a>Häufig verwendete Auflistungstypen
+
 Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. Hashtabellen, Warteschlangen, Stapel, Sammlungen, Wörterbücher und Listen.  
   
  Auflistungen basieren auf der <xref:System.Collections.ICollection>-Schnittstelle, der <xref:System.Collections.IList>-Schnittstelle, der <xref:System.Collections.IDictionary>-Schnittstelle oder auf ihren generischen Entsprechungen. Die <xref:System.Collections.IList>-Schnittstelle und die <xref:System.Collections.IDictionary>-Schnittstelle leiten sich beide aus der <xref:System.Collections.ICollection>-Schnittstelle ab. Daher basieren alle Auflistungen direkt oder indirekt auf der <xref:System.Collections.ICollection>-Schnittstelle. In Sammlungen, die auf der <xref:System.Collections.IList>-Schnittstelle (zum Beispiel <xref:System.Array>, <xref:System.Collections.ArrayList> oder <xref:System.Collections.Generic.List%601>) oder direkt auf der <xref:System.Collections.ICollection>-Schnittstelle (zum Beispiel <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> oder <xref:System.Collections.Generic.LinkedList%601>) basieren, enthält jedes Element nur einen Wert. In Auflistungen, die auf der <xref:System.Collections.IDictionary>-Schnittstelle basieren (zum Beispiel die Klassen <xref:System.Collections.Hashtable> und <xref:System.Collections.SortedList>, die generischen Klassen <xref:System.Collections.Generic.Dictionary%602> und <xref:System.Collections.Generic.SortedList%602>), oder die auf den <xref:System.Collections.Concurrent.ConcurrentDictionary%602>-Klassen basieren, enthält jedes Element einen Schlüssel und einen Wert.  Die <xref:System.Collections.ObjectModel.KeyedCollection%602>-Klasse ist eindeutig, da sie eine Liste von Werten mit Schlüsseln darstellt, die in den Werten eingebettet sind. Deshalb verhält sie sich wie eine Liste und wie ein Wörterbuch.  
@@ -40,6 +41,7 @@ Auflistungstypen sind die allgemeinen Variationen von Datenauflistungen, z. B. H
 |[Generics](../generics/index.md)|In diesem Artikel wird das Generics-Feature beschrieben, einschließlich der generischen Auflistungen, Delegaten und Schnittstellen, die von .NET bereitgestellt werden. Enthält Links zur Featuredokumentation für C#, Visual Basic und Visual C++ sowie zu unterstützenden Technologien wie der Reflektion.|  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET]
 - local computer communication [.NET], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ba2604680b8f69a9ad5909db51d04ddef81c8c13
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 389451d1c6c313ac4a10652c7aa614a5e4e7bf1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829751"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734555"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
 
@@ -27,6 +27,7 @@ Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Comp
  Um anonyme Pipes zu implementieren, verwenden Sie die <xref:System.IO.Pipes.AnonymousPipeServerStream>- und <xref:System.IO.Pipes.AnonymousPipeClientStream>-Klassen.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel zeigt, wie eine Zeichenfolge mithilfe von anonymen Pipes von einem übergeordneten Prozess an einen untergeordneten Prozess gesendet werden kann. In diesem Beispiel wird ein <xref:System.IO.Pipes.AnonymousPipeServerStream>-Objekt in einem übergeordneten Prozess mit dem <xref:System.IO.Pipes.PipeDirection>-Wert <xref:System.IO.Pipes.PipeDirection.Out> erstellt. Anschließend wird vom übergeordneten Prozess ein untergeordneter Prozess erstellt, indem ein Clienthandle zur Erstellung eines <xref:System.IO.Pipes.AnonymousPipeClientStream>-Objekts verwendet wird. Der untergeordnete Prozess hat den <xref:System.IO.Pipes.PipeDirection>-Wert <xref:System.IO.Pipes.PipeDirection.In>.  
   
  Der übergeordnete Prozess sendet daraufhin eine vom Benutzer bereitgestellte Zeichenfolge an den untergeordneten Prozess. Die Zeichenfolge wird im untergeordneten Prozess auf der Konsole angezeigt.  
@@ -40,6 +41,7 @@ Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Comp
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel zeigt den Clientprozess: Der Serverprozess startet den Clientprozess und übergibt ein Clienthandle an diesen Prozess. Die resultierende ausführbare Datei aus dem Clientcode sollte `pipeClient.exe` genannt und in dasselbe Verzeichnis kopiert werden wie die ausführbare Datei des Servers, bevor der Serverprozess ausgeführt wird.  
   
  [!code-cpp[System.IO.Pipes.AnonymousPipeClientStream_Sample#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.AnonymousPipeClientStream_Sample/cpp/program.cpp#01)]

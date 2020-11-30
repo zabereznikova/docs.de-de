@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687570"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731448"
 ---
 # <a name="assembly-names"></a>Assemblynamen
 
@@ -48,6 +48,7 @@ Die Version entspricht den Versionsnummern aller Assemblys des .NET Framework, d
 > Die Runtime beachtet bei Assemblynamen keine Groß- und Kleinschreibung, wenn sie diese an Assemblys bindet. Die im Assemblynamen verwendete Schreibweise wird aber beibehalten. Mehrere Funktionen im Windows SDK unterscheiden bei Assemblynamen zwischen Groß- und Kleinschreibung. Die besten Ergebnisse erhalten Sie, wenn Sie bei Assemblynamen Groß- und Kleinschreibung beachten.
 
 ## <a name="name-application-components"></a>Benennen von Anwendungskomponenten
+
  Die Runtime achtet nicht auf den Dateinamen, wenn sie die Identität einer Assembly bestimmt. Die Assemblyidentität, die aus dem Assemblynamen, deren Version, Kultur und starkem Namen besteht, muss für die Runtime eindeutig sein.
 
  Wenn Sie z. B. über eine Assembly mit dem Namen *myAssembly.exe* verfügen, die auf eine Assembly mit dem Namen *myAssembly.dll* verweist, wird die Bindung korrekt durchgeführt, wenn Sie *myAssembly.exe* ausführen. Wenn allerdings eine andere Anwendung *myAssembly.exe* mit der <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>-Methode ausführt, erkennt die Runtime, dass `myAssembly` bereits geladen wurde, wenn *myAssembly.exe* eine Bindung zu `myAssembly` anfordert. In diesem Fall wird *myAssembly.dll* nicht geladen. Da *myAssembly.exe* den angeforderten Typ nicht enthält, wird eine <xref:System.TypeLoadException> ausgelöst.

@@ -2,14 +2,15 @@
 title: Übersicht über das XML-Schemaobjektmodell (SOM)
 ms.date: 03/30/2017
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: c54f92ede64e59478a0e9bfd919666caa9481137
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62560b641c43f2210b052e9880f2d945dbae0c6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819213"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733099"
 ---
 # <a name="xml-schema-object-model-overview"></a>Übersicht über das XML-Schemaobjektmodell (SOM)
+
 Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche API, mit der Sie Schemata programmgesteuert erstellen, bearbeiten und validieren können. Das SOM arbeitet mit XML-Schemadokumenten auf ähnliche Weise, wie das DOM (Document Object Model) mit XML-Dokumenten arbeitet. XML-Schemadokumente sind gültige XML-Dateien, die sobald sie in das SOM geladen werden, eine Bedeutung zur Struktur und Gültigkeit von anderen XML-Dokumenten tragen, die dem Schema entsprechen.  
   
  Ein Schema ist ein XML-Dokument, dass eine Klasse von XML-Dokumenten definiert, indem die Struktur oder das Modell von XML-Dokumenten für ein bestimmtes Schema angegeben wird. Ein Schema gibt die Einschränkungen des Inhalts der XML-Dokumente an und beschreibt das Vokabular (Regeln oder Grammatik), dem kompatible XML-Dokumente folgen müssen, um für dieses bestimmte Schema gültig zu sein. Die Validierung eines XML-Dokuments ist der Vorgang, durch den sichergestellt wird, dass das Dokument der vom Schema angegebenen Grammatik entspricht.  
@@ -29,6 +30,7 @@ Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche A
 - Dynamisches Bearbeiten eines Schemas, das zur Verwendung beim Validieren eines XML-Instanzdokuments kompiliert und gespeichert werden kann.  
   
 ## <a name="the-schema-object-model"></a>Das Schemaobjektmodell (SOM)  
+
  Das SOM besteht aus zahlreichen Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace, die den Elementen in einem XML-Schema entsprechen. Das `<xsd:schema>...</xsd:schema>`-Element wird beispielsweise der <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>-Klasse zugeordnet, und alle Informationen, die in einem `<xsd:schema/>`-Element enthalten sein können, können mit der <xref:System.Xml.Schema.XmlSchema>-Klasse dargestellt werden. Auf ähnliche Weise werden das `<xsd:element>...</xsd:element>`-Element und `<xsd:attribute>...</xsd:attribute>`-Element der <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType>-Klasse bzw. der <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType>-Klasse zugeordnet. Diese Zuordnung wird für alle Elemente eines XML-Schemas vorgenommen, wodurch ein XML-Schemaobjektmodell im <xref:System.Xml.Schema>-Namespace erstellt wird. Dies wird im folgenden Diagramm veranschaulicht.  
   
  ![System.Xml.Schema-Objektmodell](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
