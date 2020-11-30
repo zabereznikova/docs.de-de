@@ -2,14 +2,15 @@
 title: Auflösen von externen XSLT-Stylesheets und Dokumenten
 ms.date: 03/30/2017
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-ms.openlocfilehash: 370d1df296666e5b5c162db34bd7fb35ae8a2e0e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f1fbf950f7d67d46937652987516e5faf9857b85
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823588"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686565"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Auflösen von externen XSLT-Stylesheets und Dokumenten
+
 Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auf
 - Während <xref:System.Xml.Xsl.XslTransform.Transform%2A> ausgeführt wird, um eine beliebige `document()`-Funktion aufzulösen.  
   
 ## <a name="using-the-xmlresolver-class"></a>Verwenden der XmlResolver-Klasse  
+
  Wenn für den Zugriff auf eine Netzwerkressource eine Authentifizierung erforderlich ist, verwenden Sie die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden, die über einen <xref:System.Xml.XmlResolver>-Parameter verfügen, um das <xref:System.Xml.XmlResolver>-Objekt zu übergeben, bei dem die notwendigen Anmeldeeigenschaften festgelegt sind.  
   
  Wenn Sie einen benutzerdefinierten <xref:System.Xml.XmlResolver> verwenden möchten, oder wenn Sie abweichende Anmeldeinformationen angeben müssen, finden Sie in der nachfolgenden Tabelle die erforderliche Vorgehensweise, je nach dem für das Auflösen der externen Ressource erforderlichen Zeitpunkt.  

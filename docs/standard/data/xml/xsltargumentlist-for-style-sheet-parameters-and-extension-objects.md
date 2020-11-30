@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818205"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685044"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte
+
 Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible S
 - Bei Verwendung von <xref:System.Xml.XPath.XPathNodeIterator> wird die Übergabe von Ergebnisstrukturfragmenten an das Stylesheet unterstützt.  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT-Stylesheetparameter  
+
  XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
   
  Das Parameterobjekt muss einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typ) aufgelistet, und es ist angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ (XML Path Language) oder einen XSLT-Typ handelt.  
@@ -54,6 +56,7 @@ Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible S
 3. Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode ein Parameter erstellt, der das berechnete Skontodatum enthält. Das Skontodatum ist 20 Tage nach dem Auftragsdatum.  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Eingabe  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT-Erweiterungsobjekte  
+
  XSLT-Erweiterungsobjekte werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt. Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
   
  Wenn ein Objekt hinzugefügt wird, muss der Aufrufer von <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> in den Sicherheitsrichtlinien mit vollständiger Vertrauenswürdigkeit eingestuft sein. Wenn der Aufrufer nur teilweise vertrauenswürdig ist, schlägt das Hinzufügen fehl.  
@@ -195,6 +200,7 @@ public class Sample
 3. Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
   
 ### <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der Umfang eines Kreises bei gegebenem Radius berechnet.  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Eingabe  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Output  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

@@ -2,14 +2,15 @@
 title: Unterstützung der msxsl:node-set()-Funktion
 ms.date: 03/30/2017
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 26ae3014af93377dc106b5638ba194bd38e3dc9e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6c84e3789916e8d842e51e8417cb27505cb5cba6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673396"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Unterstützung der msxsl:node-set()-Funktion
+
 Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
   
 > [!NOTE]
@@ -18,6 +19,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
  Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel handelt es sich bei `$books` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die for-each`node-set`-Anweisung in Verbindung mit der -Funktion ermöglicht dem Benutzer, diese Knotenstruktur wie eine Knotengruppe zu durchlaufen.  
   
 ## <a name="nodesetxsl"></a>nodeset.xsl  
@@ -43,6 +45,7 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
 ```  
   
 ## <a name="output"></a>Output  
+
  Die Ausgabe der Transformation lautet:  
   
 ```xml  

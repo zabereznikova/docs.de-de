@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823094"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683952"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -43,6 +43,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 - Die <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode, die eine Informationsmethode in Ablaufverfolgungslistener schreibt.  
   
 ## <a name="composite-format-string"></a>Kombinierte Formatzeichenfolge  
+
  Eine kombinierte Formatzeichenfolge und eine Objektliste dienen als Argumente von Methoden, die das Feature für die kombinierte Formatierung unterstützen. Die Quellzeichenfolge besteht aus 0 (null) oder mehreren Einheiten festgelegten Texts mit mindestens einem Formatelement. Der festgelegte Text ist eine von Ihnen ausgewählte beliebige Zeichenfolge. Jedes Formatelement entspricht einem Objekt oder einer geschachtelten Struktur in der Liste. Die Funktion für die kombinierte Formatierung gibt eine neue Ergebniszeichenfolge zurück, in der jedes Formatelement durch die Zeichenfolgendarstellung des entsprechenden Objekts in der Liste ersetzt wird.  
   
  Betrachten Sie das folgende <xref:System.String.Format%2A>-Codefragment:  
@@ -53,6 +54,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  Der feste Text ist „`Name =`“ und „`, hours =`“. Die Formatelemente sind „`{0}`“ mit dem Index 0, was dem Objekt `name` entspricht, und „`{1:hh}`“ mit dem Index 1, was dem Objekt `DateTime.Now` entspricht.  
   
 ## <a name="format-item-syntax"></a>Formatelementsyntax  
+
  Alle Formatelemente weisen die folgende Form auf und bestehen aus folgenden Komponenten:  
   
  `{` *Index*[`,`*Ausrichtung*][`:`*formatString*]`}`  
@@ -60,6 +62,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  Die übereinstimmenden geschweiften Klammern ("{" and "}") sind erforderlich.  
   
 ### <a name="index-component"></a>Indexkomponente  
+
  Bei der obligatorischen Komponente *Index*, dem so genannten Parameterbezeichner, handelt es sich um eine bei 0 (null) beginnende Zahl, mit der ein entsprechendes Element in der Objektliste angegeben wird. Das bedeutet, dass das Formatelement mit dem Parameterbezeichner 0 (null) das erste Objekt in der Liste formatiert, und das Formatelement mit dem Parameterbezeichner 1 formatiert das zweite Objekt in der Liste usw. Das folgende Beispiel enthält vier von null bis drei nummerierte Parameterbezeichner zur Darstellung von Primzahlen, die kleiner als zehn sind:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  Jedes Formatelement kann auf ein beliebiges Objekt in der Liste verweisen. Wenn beispielsweise drei Objekte vorliegen, können Sie das zweite, erste und dritte Objekt formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die folgende angeben: „{1} {0} {2}“. Ein Objekt, auf das kein Formatelement verweist, wird ignoriert. Eine <xref:System.FormatException> wird zur Laufzeit ausgelöst, wenn ein Parameterbezeichner auf ein Element außerhalb der Grenzen der Objektliste verweist.  
   
 ### <a name="alignment-component"></a>Ausrichtungskomponente  
+
  Bei der optionalen Komponente *Ausrichtung* handelt es sich um eine ganze Zahl mit Vorzeichen, die die gewünschte formatierte Feldbreite angibt. Wenn der Wert für *Ausrichtung* kleiner als die Länge der formatierten Zeichenfolge ist, wird *Ausrichtung* ignoriert, und die Länge der formatierten Zeichenfolge wird als Feldbreite verwendet. Die formatierten Daten im Feld werden bei einem positiven Wert für *Ausrichtung* rechtsbündig und bei einem negativen Wert für *Ausrichtung* linksbündig ausgerichtet. Wenn Füllzeichen erforderlich sind, werden Leerräume verwendet. Das Komma ist erforderlich, wenn *Ausrichtung* angegeben wird.  
   
  Im folgenden Beispiel werden zwei Arrays definiert, ein Array mit den Namen der Mitarbeiter und ein Array mit den Arbeitsstunden der Mitarbeiter über einen Zeitraum von zwei Wochen. Die kombinierte Formatzeichenfolge richtet die Namen in einem Feld mit 20 Zeichen linksbündig aus, und die Stunden werden in einem Feld mit 5 Zeichen rechtsbündig ausgerichtet. Beachten Sie, dass auch die Standardformatzeichenfolge "N1" verwendet wird, um die Stunden mit einer Dezimalstelle zu formatieren.  
@@ -81,6 +85,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Formatzeichenfolgen-Komponente  
+
  Die optionale Komponente *Formatzeichenfolge* ist eine Formatzeichenfolge, die für den formatierten Objekttyp geeignet ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte numerische Formatzeichenfolge an, wenn das entsprechende Objekt ein numerischer Wert ist. Geben Sie eine standardmäßige oder eine benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit an, wenn das entsprechende Objekt ein <xref:System.DateTime>-Objekt ist. Geben Sie eine [Enumerationsformatzeichenfolge](enumeration-format-strings.md) an, wenn das entsprechende Objekt ein Enumerationswert ist. Wenn *Formatzeichenfolge* nicht festgelegt ist, wird der allgemeine Formatbezeichner („G“) für einen numerischen, Datums- und Uhrzeit- oder Enumerationstyp verwendet. Der Doppelpunkt ist erforderlich, wenn *Formatzeichenfolge* angegeben wird.  
   
  Die folgende Tabelle listet Typen oder Kategorien von Typen in der .NET-Klassenbibliothek auf, die mehrere vordefinierte Formatzeichenfolgen unterstützen, und stellt Links zu Themen bereit, die diese unterstützten Formatzeichenfolgen auflisten. Beachten Sie, dass die Zeichenfolgenformatierung ein erweiterbarer Mechanismus ist, der es ermöglicht, neue Formatzeichenfolgen für alle vorhandenen Typen zu definieren und einen Satz von Formatzeichenfolgen zu definieren, der von einem anwendungsdefinierten Typ unterstützt wird. Weitere Informationen finden Sie unter den Themen zur <xref:System.IFormattable>-Schnittstelle und <xref:System.ICustomFormatter>-Schnittstelle.  
@@ -94,6 +99,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
 |<xref:System.TimeSpan>|[TimeSpan-Standardformatzeichenfolgen](standard-timespan-format-strings.md)<br /><br /> [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Versehen von geschweiften Klammern mit Escapezeichen  
+
  Öffnende und schließende geschweifte Klammern werden als Beginn und Ende eines Formatelements interpretiert. Deshalb müssen Sie eine Escapesequenz verwenden, um eine literale öffnende bzw. schließende geschweifte Klammer anzuzeigen. Geben Sie zwei öffnende geschweifte Klammern ("{{") im festgelegten Text an, um eine öffnende geschweifte Klammer ("{") anzuzeigen, und geben Sie entsprechend zwei schließende geschweifte Klammern ("}}") an, um eine schließende geschweifte Klammer ("}") anzuzeigen. Geschweifte Klammern in einem Formatelement werden sequenziell in der Reihenfolge interpretiert, in der sie angetroffen werden. Die Interpretation geschachtelter geschweifter Klammern wird nicht unterstützt.  
   
  Die Art und Weise, wie geschweifte Klammern mit Escapezeichen interpretiert werden, kann zu unerwarteten Ergebnissen führen. Betrachten Sie beispielsweise das Formatelement „{{{0:D}}}“, das eine öffnende geschweifte Klammer anzeigen soll, einen numerischen Wert, der als Dezimalzahl formatiert ist, und eine schließende geschweifte Klammer. Das Formatelement wird aber tatsächlich wie folgt interpretiert:  
@@ -114,6 +120,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Verarbeitungsreihenfolge  
+
  Wenn der Aufruf der Methode für die kombinierte Formatierung ein <xref:System.IFormatProvider>-Argument enthält, dessen Wert nicht `null` ist, ruft die Laufzeit die <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode auf, um eine <xref:System.ICustomFormatter>-Implementierung anzufordern. Wenn die Methode eine <xref:System.ICustomFormatter>-Implementierung zurückgeben kann, wird diese während des gesamten Aufrufs der Methode zur kombinierten Formatierung zwischengespeichert.
   
  Jeder Wert in der Parameterliste, der einem Formatelement entspricht, wird wie folgt in eine Zeichenfolge konvertiert:  
@@ -135,6 +142,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  Die Ausrichtung wird angewendet, nachdem die vorhergehenden Schritte durchgeführt wurden.  
   
 ## <a name="code-examples"></a>Codebeispiele  
+
  Das folgende Beispiel stellt eine Zeichenfolge dar, die mit der kombinierten Formatierung erstellt wurde, und eine weitere, die mit der `ToString`-Methode eines Objekts erstellt wurde. Beide Formatierungen führen zum gleichen Ergebnis.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]

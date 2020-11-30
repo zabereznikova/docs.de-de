@@ -3,12 +3,12 @@ title: Warnung „SYSLIB0011“
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung „SYSLIB0011“ generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 1b4f4c24c64148319f659b78573a4d80fd5b98a7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 99cdd9f5335f71eb9325039891db17972fb48532
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685005"
 ---
 # <a name="syslib0011-binaryformatter-serialization-is-obsolete"></a>SYSLIB0011: BinaryFormatter-Serialisierung ist veraltet
 
@@ -32,4 +32,4 @@ Weitere Informationen zu empfohlenen Aktionen finden Sie unter [Resolving Binary
 ## <a name="see-also"></a>Siehe auch
 
 - [Beheben von Fehlern aufgrund der Veraltung und Deaktivierung von BinaryFormatter](https://aka.ms/binaryformatter)
-- [BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten](corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
+- [BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten](core-libraries/5.0/binaryformatter-serialization-obsolete.md)

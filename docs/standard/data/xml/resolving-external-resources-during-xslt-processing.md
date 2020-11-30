@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-ms.openlocfilehash: 67c25015f1127a62c480a8fc09c5945682097124
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5d50711eda266cecdb817c778f04aa845fa4c342
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823679"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686643"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Auflösen von externen Ressourcen während der XSLT-Verarbeitung
+
 Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
   
 ## <a name="using-the-xmlresolver-class"></a>Verwenden der XmlResolver-Klasse  
+
  Die <xref:System.Xml.XmlResolver>-Klasse wird zum Auflösen externer Ressourcen verwendet. In der folgenden Tabelle wird dargestellt, wann der <xref:System.Xml.XmlResolver> während der XSLT-Verarbeitung aktiv wird.  
   
 |XSLT-Aufgabe|Verwendung von "XmlResolver"|  
@@ -36,6 +38,7 @@ Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressource
 - Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird ein Stylesheet kompiliert, das in einer Netzwerkressource gespeichert ist. Ein <xref:System.Xml.XmlUrlResolver>-Objekt gibt die Anmeldeinformationen an, die für den Zugriff auf das Stylesheet erforderlich sind.  
   
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]

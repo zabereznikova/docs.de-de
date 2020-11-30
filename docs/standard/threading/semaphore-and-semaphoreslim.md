@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: bda88012fde60481d8870f701e98924acdeeb5a2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 34ffe11f7211d2d8b282bfd27f8c48328a5cb6d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94817144"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681898"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore und SemaphoreSlim
 
@@ -24,16 +24,19 @@ Die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse stellt
  Die <xref:System.Threading.SemaphoreSlim>-Klasse stellt ein einfaches, schnelles Semaphor dar, das zum Warten innerhalb eines einzelnen Prozesses verwendet werden kann, wenn die Wartezeiten voraussichtlich sehr kurz sind. <xref:System.Threading.SemaphoreSlim> basiert im möglichst hohen Maße auf Synchronisierungsprimitiven, die von Common Language Runtime (CLR) bereitgestellt werden. Es stellt jedoch auch verzögert initialisierte, Kernel-basierte Wait-Handles zur Unterstützung des Wartens auf mehrere Semaphoren bereit. <xref:System.Threading.SemaphoreSlim> unterstützt auch die Verwendung von Abbruchtoken, unterstützt aber keine benannten Semaphoren oder die Verwendung eines Wait-Handles für die Synchronisierung.  
   
 ## <a name="managing-a-limited-resource"></a>Verwalten einer beschränkten Ressource  
+
  Threads wechseln in den Semaphor durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode, die von der <xref:System.Threading.WaitHandle>-Klasse geerbt wird, wenn es sich um ein <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Objekt handelt, bzw. von der <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType>-Methode, wenn es sich um ein <xref:System.Threading.SemaphoreSlim>-Objekt handelt. Wenn der Aufruf zurückgegeben wird, wird der Zähler des Semaphors dekrementiert. Wenn ein Thread den Zugang anfordert und die Anzahl null ist, wird der Thread blockiert. Da Threads das Semaphor durch Aufrufen von Freigeben der <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>-Methode freigeben, erhalten blockierte Threads Zugang. Für die Aufnahme von blockierten Threads in das Semaphor gibt es keine festgelegte Reihenfolge, z. B. First in, First Out (FIFO) oder Last in, First Out (LIFO).  
   
  Ein Thread kann in das Semaphor mehrfach durch wiederholtes Aufrufen der <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Methode des <xref:System.Threading.WaitHandle.WaitOne%2A>-Objekts oder der <xref:System.Threading.SemaphoreSlim>-Methode des <xref:System.Threading.SemaphoreSlim.Wait%2A>-Objekts wechseln. Um das Semaphor freizugeben, kann der Thread entweder die <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType>-Methodenüberladung aufrufen oder die <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType>- oder <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType>-Methodenüberladung aufrufen und die Anzahl der freizugebenden Einträge angeben.  
   
 ### <a name="semaphores-and-thread-identity"></a>Semaphoren und Threadidentität  
+
  Die zwei Semaphoren erzwingen keine Threadidentität für Aufrufe der Methoden <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> und <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Ein häufiges Verwendungsszenario für Semaphoren umfasst beispielsweise einen Producerthread und einem Consumerthread, wobei ein Thread den Zähler des Semaphors immer erhöht und der andere ihn immer verringert.  
   
  Der Programmierer ist dafür verantwortlich, sicherzustellen, dass ein Thread das Semaphor nicht zu oft freigibt. Angenommen, ein Semaphor hat einen maximalen Zähler von zwei und Thread A sowie Thread B wechseln beide in das Semaphor. Wenn ein Programmierfehler in Thread B dazu führt, dass `Release` zweimal aufgerufen wird, sind beide Aufrufe erfolgreich. Der Zähler des Semaphors ist voll, und wenn Thread A schließlich `Release` aufruft, wird eine <xref:System.Threading.SemaphoreFullException> ausgelöst.  
   
 ## <a name="named-semaphores"></a>Benannte Semaphoren  
+
  Das Windows-Betriebssystem ermöglicht es, Semaphoren zu benennen. Ein benanntes Semaphor ist systemweit sichtbar. Das heißt, sobald das benannte Semaphor erstellt wurde, ist es für alle Threads in allen Prozessen sichtbar. Folglich kann ein benanntes Semaphore zum Synchronisieren der Aktivitäten von Prozessen und Threads verwendet werden.  
   
  Sie können ein <xref:System.Threading.Semaphore>-Objekt erstellen, das ein benanntes Systemsemaphor darstellt, indem Sie einen der Konstruktoren verwenden, die einen Namen angeben.  

@@ -3,10 +3,10 @@ title: ML.NET-Metriken
 description: Verstehen Sie die Metriken, die verwendet werden, um die Leistung eines ML.NET-Modells auszuwerten.
 ms.date: 12/17/2019
 ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91804821"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Auswerten des ML.NET-Modells mit Metriken

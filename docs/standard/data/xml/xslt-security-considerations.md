@@ -2,17 +2,19 @@
 title: XSLT-Sicherheitsaspekte
 ms.date: 03/30/2017
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-ms.openlocfilehash: ad96ebb6048e8a397e0761a2217fec89e0d206b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a8d077cf35da56795cc0b0c22e9bab26ce99f3a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685200"
 ---
 # <a name="xslt-security-considerations"></a>XSLT-Sicherheitsaspekte
+
 Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität. Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können. Um die XSLT-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  
   
 ## <a name="xslt-extensions"></a>XSLT-Erweiterungen  
+
  Zwei häufig verwendete XSLT-Erweiterungen sind Stylesheet-Skriptobjekte und Erweiterungsobjekte. Diese Erweiterungen ermöglichen dem XSLT-Prozessor das Ausführen von Code.  
   
 - Mit Erweiterungsobjekten werden XSL-Transformationen Programmierfunktionen hinzugefügt.  
@@ -20,15 +22,19 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
 - Skripts können mithilfe des `msxsl:script`-Erweiterungselements in das Stylesheet eingebettet werden.  
   
 ### <a name="extension-objects"></a>Erweiterungsobjekte  
+
  Erweiterungsobjekte werden mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt. Für die Unterstützung von Erweiterungsobjekten muss der FullTrust-Berechtigungssatz festgelegt sein. Dadurch wird sichergestellt, dass beim Ausführen von Erweiterungsobjektcode keine Erhöhung der Berechtigungen auftritt. Ohne FullTrust-Berechtigung wird durch den Versuch, die <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode aufzurufen, eine Sicherheitsausnahme ausgelöst.  
   
 ### <a name="style-sheet-scripts"></a>Stylesheetskripts  
+
  Skripts können mithilfe des `msxsl:script`-Erweiterungselements in ein Stylesheet eingebettet werden. Die Skriptunterstützung ist eine optionale Funktion der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse, die in der Standardeinstellung deaktiviert ist. Die Skriptunterstützung kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben wird.  
   
 #### <a name="guidelines"></a>Richtlinien  
+
  Aktivieren Sie die Skriptunterstützung nur, wenn das Stylesheet aus einer vertrauenswürdigen Quelle stammt. Wenn Sie die Quelle des Stylesheets nicht überprüfen können oder das Stylesheet nicht aus einer vertrauenswürdigen Quelle stammt, übergeben Sie `null` für das Argument der XSLT-Einstellungen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
+
  Die Sprache XSLT verfügt über Funktionen wie `xsl:import`, `xsl:include` oder die `document()`-Funktion, in denen der Prozessor URI-Verweise auflösen muss. Die <xref:System.Xml.XmlResolver>-Klasse wird zum Auflösen externer Ressourcen verwendet. Externe Ressourcen müssen u. U. in den folgenden zwei Fällen aufgelöst werden:  
   
 - Beim Kompilieren eines Stylesheets wird der <xref:System.Xml.XmlResolver> für die Auflösung von `xsl:import` und `xsl:include` verwendet.  
@@ -41,6 +47,7 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
  Die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode und die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode enthalten Überladungen, die einen <xref:System.Xml.XmlResolver> als eines ihrer Argumente akzeptieren. Wenn kein <xref:System.Xml.XmlResolver> angegeben ist, wird ein Standard-<xref:System.Xml.XmlUrlResolver> ohne Anmeldeinformationen verwendet.  
   
 #### <a name="guidelines"></a>Richtlinien  
+
  Aktivieren Sie die `document()`-Funktion nur, wenn das Stylesheet aus einer vertrauenswürdigen Quelle stammt.  
   
  In der folgenden Liste wird erläutert, wann ein <xref:System.Xml.XmlResolver>-Objekt angegeben werden kann.  

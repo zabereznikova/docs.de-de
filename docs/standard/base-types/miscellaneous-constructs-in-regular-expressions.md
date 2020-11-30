@@ -9,17 +9,19 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821943"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683796"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Verschiedene Konstrukte in regulären Ausdrücken
+
 Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer ermöglicht Ihnen das Aktivieren oder Deaktivieren bestimmter Vergleichsoptionen mitten in einem Muster für reguläre Ausdrücke. Mithilfe der beiden anderen können Sie Kommentare in einen regulären Ausdruck aufnehmen.  
   
 ## <a name="inline-options"></a>Inlineoptionen  
+
  Sie können bestimmte Mustervergleichsoptionen für einen Teil eines regulären Ausdrucks festlegen oder deaktivieren. Verwenden Sie dazu folgende Syntax:  
   
 `(?imnsx-imnsx)`  
@@ -56,6 +58,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
   
 ## <a name="inline-comment"></a>Inlinekommentar  
+
  Das Konstrukt `(?#` *Kommentar*`)` ermöglicht das Einfügen eines Inlinekommentars in einen regulären Ausdruck. Die Engine für reguläre Ausdrücke verwendet keinen Teil des Kommentars beim Musterabgleich, obwohl der Kommentar in der von der Methode <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType> zurückgegebenen Zeichenfolge enthalten ist. Der Kommentar endet bei der ersten schließenden Klammer.  
   
  Im folgenden Beispiel wird das erste Muster für reguläre Ausdrücke aus dem Beispiel im vorherigen Abschnitt wiederholt. Dem regulären Ausdruck werden zwei Inlinekommentare hinzugefügt, um anzugeben, ob beim Vergleich die Groß-/Kleinschreibung berücksichtigt wird. Das Muster für reguläre Ausdrücke, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, ist wie folgt definiert.  
@@ -75,6 +78,7 @@ Reguläre Ausdrücke in .NET umfassen drei verschiedene Sprachkonstrukte. Einer 
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Zeilenendekommentar  
+
  Ein Nummernzeichen (`#`) markiert einen x-Modus-Kommentar, der bei dem nicht durch Escapezeichen formatierten #-Zeichen am Ende des Musters für reguläre Ausdrücke beginnt und bis zum Zeilenende fortgesetzt wird. Um dieses Konstrukt zu verwenden, müssen Sie entweder die `x`-Option (durch Inlineoptionen) aktivieren oder beim Instanziieren des <xref:System.Text.RegularExpressions.Regex>-Objekts bzw. beim Aufrufen einer statischen <xref:System.Text.RegularExpressions.Regex>-Methode den Wert <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> an den `option`-Parameter übergeben.  
   
  Das folgende Beispiel veranschaulicht das Konstrukt für Zeilenendekommentare. Dabei wird bestimmt, ob es sich bei einer Zeichenfolge um eine zusammengesetzte Formatzeichenfolge handelt, die mindestens ein Formatelement einschließt. Die folgende Tabelle beschreibt die Konstrukte im Muster für reguläre Ausdrücke:  

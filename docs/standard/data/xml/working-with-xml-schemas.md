@@ -2,19 +2,21 @@
 title: Arbeiten mit XML-Schemata
 ms.date: 03/30/2017
 ms.assetid: bbbcc70c-bf9a-4f6a-af72-1bab5384a187
-ms.openlocfilehash: adad77eaefd85abf111a25180b7289af997a7222
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0290cd31d9477d2c5a30a6efa907263fed137258
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818413"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675489"
 ---
 # <a name="working-with-xml-schemas"></a>Arbeiten mit XML-Schemata
+
 Um die Struktur eines XML-Dokuments sowie dessen Elementbeziehungen, Datentypen und Inhaltseinschränkungen anzugeben, verwenden Sie eine DTD (Document Type Definition) oder ein XSD-Schema (XML Schema Definition Language). Obwohl ein XML-Dokument als wohlgeformt angesehen wird, wenn es alle syntaktischen Anforderungen erfüllt, die in der W3C-Empfehlung (World Wide Web Consortium) "Extensible Markup Language (XML) 1.0" definiert sind, ist es nur dann gültig, wenn es sowohl wohlgeformt ist als auch den Einschränkungen der DTD oder des Schemas entspricht. Das heißt, dass alle gültigen XML-Dokumente wohlgeformt sind, jedoch nicht alle wohlgeformten XML-Dokumente gültig sein müssen.  
   
  Weitere Informationen zu XML finden Sie unter [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/). Weitere Informationen zum XML-Schema finden Sie in den Empfehlungen [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) und [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](xml-schema-object-model-som.md)  
  In diesem Abschnitt wird das Schema Object Model (SOM) im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace beschrieben, das eine Reihe von Klassen zur Verfügung stellt, mit denen Sie ein XSD-Schema aus einer Datei lesen oder programmgesteuert im Speicher ein Schema erstellen können.  
   
@@ -28,9 +30,11 @@ Um die Struktur eines XML-Dokuments sowie dessen Elementbeziehungen, Datentypen 
  In diesem Abschnitt wird das Verwenden der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse zum Herleiten eines XSD-Schemas aus der Struktur eines XML-Dokuments beschrieben.  
   
 ## <a name="reference"></a>Referenz  
+
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Validieren eines XML-Dokuments im DOM](validating-an-xml-document-in-the-dom.md)  
  In diesem Abschnitt wird das Validieren von XML im DOM (Document Object Model) beschrieben. Sie können das XML beim Laden in das DOM validieren, oder Sie validieren ein zuvor nicht validiertes XML-Dokument im DOM.  
   

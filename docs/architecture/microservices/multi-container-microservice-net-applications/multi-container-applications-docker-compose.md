@@ -2,12 +2,12 @@
 title: Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 description: Festlegen der Zusammensetzung von Microservices für eine Anwendung mit mehreren Containern mit „docker-compose.yml“
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682665"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml
 
@@ -115,7 +115,7 @@ Der Containermicroservice „catalog.api“ hat mit Fokus auf einen einzelnen Co
 
 Dieser Containerdienst verfügt über die folgende grundlegende Konfiguration:
 
-- Er basiert auf dem benutzerdefinierten Image **eshop/catalog-api**. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen worden sein muss (mit dem Befehl „docker pull“).
+- Er basiert auf dem benutzerdefinierten Image **eshop/catalog-api**. Der Einfachheit halber gibt es keine „build: key“-Einstellung in der Datei. Das bedeutet, dass das Image zuvor erstellt worden (mit „docker build“) oder aus einer beliebigen Docker-Registrierung heruntergeladen sein muss (mit dem docker pull-Befehl).
 
 - Er definiert die Umgebungsvariable mit der Bezeichnung „ConnectionString“ mit der Verbindungszeichenfolge, die von Entity Framework für den Zugriff auf die SQL Server-Instanz, die das Katalogdatenmodell enthält, verwendet werden soll. In diesem Fall enthält der gleicher SQL Server-Container mehrere Datenbanken. Aus diesem Grund benötigen Sie weniger Arbeitsspeicher in Ihrem Entwicklungscomputer für Docker. Allerdings können Sie auch einen SQL Server-Container für jede Microservicedatenbank bereitstellen.
 
@@ -143,7 +143,7 @@ Aus diesem Grund können Sie durch die Verwendung des „docker-compose“-Befeh
 
 Wenn Sie Anwendungen entwickeln, ist es wichtig, dass Sie eine Anwendung in einer isolierten Entwicklungsumgebung ausführen können. Sie können diese Umgebung mithilfe des CLI-Befehls „docker-compose“ oder in Visual Studio erstellen. Visual Studio verwendet „docker-compose“ im Hintergrund.
 
-Die Datei „docker-compose.yml“ ermöglicht Ihnen, alle Dienstabhängigkeiten Ihrer Anwendung (andere Dienste, Caches, Datenbanken, Warteschlangen usw.) zu konfigurieren und zu dokumentieren. Mithilfe des CLI-Befehls „docker-compose“ können Sie mindestens einen Container für jede Abhängigkeit mit einem einzelnen Befehl („docker-compose up“) erstellen oder starten.
+Die Datei „docker-compose.yml“ ermöglicht Ihnen, alle Dienstabhängigkeiten Ihrer Anwendung (andere Dienste, Caches, Datenbanken, Warteschlangen usw.) zu konfigurieren und zu dokumentieren. Mithilfe des CLI-Befehls „docker-compose“ können Sie einen oder mehrere Container für jede Abhängigkeit mit einem einzelnen Befehl (docker-compose up) erstellen und starten.
 
 Die docker-compose.yml-Dateien sind Konfigurationsdateien, die von der Docker-Engine interpretiert werden, sie dienen aber auch als praktische Dokumentationsdateien über den Aufbau Ihrer Anwendung mit mehreren Container.
 
@@ -187,7 +187,7 @@ Standardmäßig liest Compose zwei Dateien: eine docker-compose.yml- und eine op
 - *docker-compose.yml*: wird zum Verfassen von Microservices verwendet.
 - *docker-compose.override.yml*: wird zum Konfigurieren der Microservices-Umgebung verwendet.
 
-Sie können die docker-compose-Dateien mit jedem beliebigen Editor bearbeiten, z.B. mit Visual Studio Code oder Sublime, und die Anwendung mit dem Befehl „docker-compose up“ ausführen.
+Sie können die docker-compose-Dateien mit jedem beliebigen Editor bearbeiten, z.B. Visual Studio Code oder Sublime, und die Anwendung mit dem Befehl „docker-compose up“ ausführen.
 
 Gemäß der Konvention enthält die docker-compose.yml-Datei Ihre Basiskonfiguration sowie andere statische Einstellungen. Das bedeutet, dass die Dienstkonfiguration nicht in Abhängigkeit von der Entwicklungsumgebung geändert werden muss.
 
@@ -388,7 +388,7 @@ services:
 
 In diesem Beispiel macht die Konfiguration zur Entwicklungsaußerkraftsetzung dem Host einige Ports verfügbar, definiert Umgebungsvariablen mit Umleitungs-URLs und gibt Verbindungszeichenfolgen für die Entwicklungsumgebung an. Diese Einstellungen sind alle nur für die Entwicklungsumgebung gedacht.
 
-Wenn Sie `docker-compose up` ausführen (oder von Visual Studio aus starten), liest der Befehl die Außerkraftsetzungen automatisch so, als ob er beide Dateien zusammenführen würde.
+Wenn Sie `docker-compose up` ausführen (oder von Visual Studio aus starten), liest der Befehl die Außerkraftsetzungen automatisch so, als ob er beide Dateien zusammenführen würde.
 
 Angenommen, Sie möchten eine andere Compose-Datei mit anderen Konfigurationswerten, Ports oder Verbindungszeichenfolgen für die Produktionsumgebung verwenden. Sie können eine weitere Außerkraftsetzungsdatei (z.B. eine Datei namens `docker-compose.prod.yml`) mit verschiedenen Einstellungen und Umgebungsvariablen erstellen. Diese Datei kann in einem anderen Git-Repository oder von einem anderen Team verwaltet und gesichert werden.
 
@@ -437,7 +437,7 @@ Die in der Laufzeitumgebung festgelegten Werte setzen immer die in der ENV-Datei
 Wenn Sie Docker und .NET Core in Internetquellen untersuchen, finden Sie Docker-Dateien, die die Einfachheit der Erstellung eines Docker-Images darstellen, indem die Quelle ganz einfach in einen Container kopiert wird. In diesen Beispielen wird empfohlen, dass Sie mithilfe einer einfachen Konfiguration ein Docker-Image besitzen, das die Umgebung zusammen mit Ihrer Anwendung enthält. Zu diesem Zweck wird im folgenden Beispiel eine einfache Docker-Datei gezeigt.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,7 +458,7 @@ Das .NET-Team hat sich große Mühe gegeben, damit .NET Core und ASP.NET Core ei
 
 3. **Produktion:** Das schnelle Bereitstellen und Starten von Containern hat Vorrang. Die Images sind deshalb auf Binärdateien und Inhalte beschränkt, die zum Ausführen der Anwendung erforderlich sind.
 
-Das .NET-Team stellt vier grundlegende Varianten unter [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (in Docker Hub) bereit:
+Das .NET-Team stellt vier grundlegende Varianten unter [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (in Docker Hub) bereit:
 
 1. **sdk:** für Entwicklungs- und Buildszenarien
 1. **aspnet**: für ASP.NET-Produktionsszenarien

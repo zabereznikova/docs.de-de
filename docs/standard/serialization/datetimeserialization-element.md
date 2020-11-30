@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1623517e66955c14b7e738c860ec16086fe30429
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281769"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678973"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization>-Element
+
 Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.  
   
  \<configuration>  
@@ -29,6 +30,7 @@ Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.
 ```  
   
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
+
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
@@ -38,6 +40,7 @@ Bestimmt den Serialisierungsmodus von <xref:System.DateTime>-Objekten.
 |`mode`|Dies ist optional. Gibt den Serialisierungsmodus an. Legen Sie hierfür einen der <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>-Werte fest. Der Standardwert ist **RoundTrip**.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
+
  Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  

@@ -3,12 +3,12 @@ title: XML Schema Definition-Tool (Xsd.exe)
 description: Das XML Serializer Generator-Tool erstellt eine XML-Serialisierungsassembly zur Verbesserung der Startleistung von XmlSerializer für Typen in einer angegebenen Assembly.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676607"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p\[arameters\]:** _Datei.xml_|Liest Optionen für verschiedene Operationsmodi aus der angegebenen XML-Datei. Die Kurzform ist `/p:`. Weitere Informationen finden Sie im Abschnitt [Hinweise](#remarks).|
 
 ## <a name="xsd-file-options"></a>XSD-Dateioptionen
+
  Die beiden folgenden Optionen für XSD-Dateien schließen sich gegenseitig aus.
 
 |Option|Beschreibung|
@@ -205,6 +206,7 @@ In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem
 |help|Zeigt Befehlssyntax und Optionen für das Tool an. Wird auf `true` oder `false` festgelegt.|
 
 ## <a name="examples"></a>Beispiele
+
  Der folgende Befehl generiert ein XML-Schema aus `myFile.xdr` und speichert dieses im aktuellen Verzeichnis.
 
 ```console

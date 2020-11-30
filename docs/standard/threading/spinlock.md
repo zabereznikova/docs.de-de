@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: 071bde6e8b32d5712256e24c83d713cd63f2bffb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: adb80ffb1917ea725c458dbe3c37f3d364276fb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819005"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674293"
 ---
 # <a name="spinlock"></a>SpinLock
+
 Die <xref:System.Threading.SpinLock>-Struktur ist eine Synchronisierungsprimitive auf niedriger Ebene mit gegenseitigem Ausschluss, die die Schleife durchläuft, während sie darauf wartet, eine Sperre abzurufen. Wenn Wartezeiten auf Mehrkerncomputern kurz und Konflikte minimal sein sollen, bietet <xref:System.Threading.SpinLock> einen Leistungsvorteil gegenüber anderen Arten von Sperren. Sie sollten <xref:System.Threading.SpinLock> jedoch nur verwenden, wenn Sie durch Profilerstellung bestimmen, dass die <xref:System.Threading.Monitor?displayProperty=nameWithType>- oder <xref:System.Threading.Interlocked>-Methode die Leistung des Programms erheblich beeinträchtigen.  
   
  <xref:System.Threading.SpinLock> könnte das Zeitsegment des Threads selbst dann erzeugen, wenn die Sperre noch nicht abgerufen wurde. Dies soll eine Umkehrung der Threadpriorität vermeiden und den Fortschritt des Garbage Collectors aktivieren. Stellen Sie bei Verwendung von <xref:System.Threading.SpinLock> sicher, dass kein Thread die Sperre für mehr als einen sehr kurzen Zeitraum aufrechterhalten kann, und dass kein Thread blockieren kann, während er die Sperre aufrechterhält.  

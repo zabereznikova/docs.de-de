@@ -2,14 +2,15 @@
 title: Verarbeiten von XML-Daten im Arbeitsspeicher
 ms.date: 03/30/2017
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-ms.openlocfilehash: 1b74e029bcda4476d166b83ddecb06e5d607fc3d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 878e008f5c7c3a018389e8666263269162989812
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686916"
 ---
 # <a name="processing-xml-data-in-memory"></a>Verarbeiten von XML-Daten im Arbeitsspeicher
+
 Das Microsoft .NET Framework enthält drei Modelle für die Verarbeitung von XML-Daten: die <xref:System.Xml.XmlDocument>-Klasse, die <xref:System.Xml.XPath.XPathDocument>-Klasse sowie [LINQ to XML (C#)](../../linq/linq-xml-overview.md) und [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md).  
   
  Die <xref:System.Xml.XmlDocument>-Klasse implementiert die W3C-Empfehlungen "Document Object Model Level 1" und "Document Object Model (DOM) Level 2 Core Specification". DOM ist eine Strukturdarstellung eines XML-Dokuments im Arbeitsspeicher (Cache). Mit dem <xref:System.Xml.XmlDocument> und seinen verwandten Klassen können Sie XML-Dokumente erstellen, Daten laden und auf diese zugreifen, Daten ändern und Änderungen speichern.  
@@ -19,6 +20,7 @@ Das Microsoft .NET Framework enthält drei Modelle für die Verarbeitung von XML
  [LINQ to XML](../../linq/linq-xml-overview.md) ist ein mit .NET Framework 3.5 eingeführtes Modell zum Verarbeiten von XML-Daten. Hierbei handelt es sich um ein im Arbeitsspeicher gespeichertes Modell, das auf [Language Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md) basiert. LINQ erweitert die Sprachsyntax von C# und Visual Basic um neue Abfragefunktionen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Verarbeiten von XML-Daten mithilfe des DOM](process-xml-data-using-the-dom-model.md)  
  Erläutert die Verwendung des <xref:System.Xml.XmlDocument> und seiner verwandten Klassen zur Verarbeitung von XML-Daten.  
   
@@ -29,4 +31,5 @@ Das Microsoft .NET Framework enthält drei Modelle für die Verarbeitung von XML
  Enthält eine kurze Übersicht über LINQ to XML sowie Links zur LINQ to XML-Dokumentation.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [XML-Dokumente und -Daten](index.md)

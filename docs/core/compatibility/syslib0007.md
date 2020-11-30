@@ -3,12 +3,12 @@ title: Warnung SYSLIB0007
 description: In diesem Artikel erfahren Sie mehr über die veralteten Elemente, die zur Kompilierzeit die Warnung SYSLIB0007 generieren.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: db7150fa3e3c566adf110034734e068fac079c6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439941"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685018"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: Standardimplementierungen von Kryptografiealgorithmen werden nicht unterstützt
 
@@ -38,4 +38,4 @@ Das im .NET Framework vorhandene kryptografische Konfigurationssystem bietet kei
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Breaking Changes bei der Kryptografie](cryptography.md#instantiating-default-implementations-of-cryptographic-abstractions-is-not-supported)
+- [Das Instanziieren von Standardimplementierungen kryptografischer Abstraktionen wird nicht unterstützt](cryptography/5.0/instantiating-default-implementations-of-cryptographic-abstractions-not-supported.md)

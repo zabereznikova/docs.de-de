@@ -2,19 +2,21 @@
 title: Regeln zum Herleiten einfacher Typen
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823549"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686539"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
+
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
   
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet den Datentyp für Attribute und Elemente als einfache Typen her. In diesem Abschnitt werden die möglichen hergeleiteten Typen, das Zusammenführen mehrerer unterschiedlicher Werte zu einem einzelnen Typ und die Behandlung von schemadefinierten `xsi`-Attributen beschrieben.  
   
 ## <a name="inferred-types"></a>Hergeleitete Typen  
+
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse leitet Elemente und Attribute als einfache Typen her und fügt im resultierenden Schema einen Attributtyp ein. Bei allen hergeleiteten Typen handelt es sich um einfache Typen. Basistypen oder Facets sind keine Bestandteile des resultierenden Schemas.  
   
  Die Werte werden einzeln, in der Reihenfolge ihres Vorhandenseins im XML-Dokument überprüft. Der Typ für einen Wert wird zum Zeitpunkt der Überprüfung des Werts hergeleitet. Wenn ein Typ für ein Attribut oder ein Element hergeleitet wurde und für das Attribut oder das Element ein Wert festgestellt wird, der nicht mit dem aktuell hergeleiteten Typ übereinstimmt, stuft die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse den Typ für jede Regelgruppe hoch. Diese Regeln werden weiter unten im Abschnitt "Heraufstufen von Typen" erläutert.  
@@ -44,6 +46,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 |string|Ein oder mehrere Unicode-Zeichen.|  
   
 ## <a name="type-promotion"></a>Typerweiterung  
+
  Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse überprüft Attribut- und Elementwerte der Reihenfolge nach. Wenn Werte festgestellt werden, wird der am weitesten eingeschränkte Typ ohne Vorzeichen hergeleitet. Wenn für ein Attribut oder ein Element ein Typ hergeleitet wurde und einer neuer Wert festgestellt wird, der nicht mit dem aktuell hergeleiteten Typ übereinstimmt, wird der hergeleitete Typ auf einen neuen Typ heraufgestuft. Dieser Typ entspricht sowohl dem aktuell hergeleiteten Typ als auch dem neuen Wert. Die <xref:System.Xml.Schema.XmlSchemaInference>-Klasse berücksichtigt beim Heraufstufen hergeleiteter Typen vorherige Werte.  
   
  Betrachten Sie beispielsweise die folgenden XML-Ausschnitte aus zwei XML-Dokumenten:  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stores, creating files and directories
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
-ms.openlocfilehash: 75afb19a551174b9386259ebff871d4a54b68f01
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1f6e8e1a048fcf7f8fd278eaac4988fa0e35791d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684992"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher
 
@@ -33,6 +33,7 @@ Nachdem Sie isolierten Speicher erhalten haben, können Sie Verzeichnisse und Da
  Beim Erstellen isolierter Speicherdateien wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException> ausgelöst, wenn der Pfad ein Verzeichnis enthält, das nicht vorhanden ist.
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel zeigt das Erstellen von Dateien und Verzeichnissen in einem isolierten Speicher.  
   
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]

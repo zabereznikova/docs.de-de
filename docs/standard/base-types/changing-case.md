@@ -13,12 +13,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 77b879bcc36886a8f457610e6c406bcd121dcfe7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 157ad1e2cc626c508afbcd1b7822e7c64fdf30c2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686032"
 ---
 # <a name="change-case-in-net"></a>Ändern der Groß-/Kleinschreibung in .NET
 
@@ -34,6 +34,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
 > Beachten Sie, dass die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>- und die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode nicht dazu verwendet werden sollten, Zeichenfolgen zu konvertieren, um diese zu vergleichen oder auf Gleichheit zu testen. Weitere Informationen finden Sie im Abschnitt [Vergleichen von Zeichenfolgen in gemischter Schreibung](#Comparing).  
   
 <a name="Comparing"></a>
+
 ## <a name="compare-strings-of-mixed-case"></a>Vergleichen von Zeichenfolgen in gemischter Groß-/Kleinschreibung  
 
  Wenn Sie Zeichenfolgen in gemischter Schreibung vergleichen möchten, um deren Reihenfolge zu ermitteln, rufen Sie eine der Überladungen der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `comparisonType`-Parameter auf, und geben Sie entweder <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> oder <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> als Wert für das `comparisonType`-Argument an. Soll für einen Vergleich eine bestimmte Kultur verwendet werden, die nicht die aktuelle Kultur ist, rufen Sie eine Überladung der <xref:System.String.CompareTo%2A?displayProperty=nameWithType>-Methode mit einem `culture`- und einem `options`-Parameter auf, und geben Sie <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> als Wert für das `options`-Argument an.  
@@ -43,6 +44,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
  Weitere Informationen finden Sie unter [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET Framework](best-practices-strings.md).  
   
 ## <a name="toupper"></a>ToUpper  
+
  Die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>-Methode ändert alle Zeichen in einer Zeichenfolge in Großbuchstaben. Im folgenden Beispiel wird die Zeichenfolge „Hello World!“ von gemischter Schreibung in Großbuchstaben konvertiert.  
   
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
@@ -51,6 +53,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
  Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Wenn Sie eine kulturunabhängige Änderung der Groß-/Kleinschreibung ausführen oder die Schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>-Objekt, das der angegebenen Kultur entspricht, für den *culture*-Parameter an. Ein Beispiel, in dem gezeigt wird, wie die <xref:System.String.ToUpper%2A>-Methode verwendet wird, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen, finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
+
  Die <xref:System.String.ToLower%2A?displayProperty=nameWithType>-Methode entspricht der vorherigen Methode mit dem Unterschied, dass sie alle Zeichen in einer Zeichenfolge in Kleinbuchstaben konvertiert. Im folgenden Beispiel wird die Zeichenfolge „Hello World!“ in Kleinbuchstaben konvertiert.  
   
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
@@ -59,6 +62,7 @@ Wenn Sie eine Anwendung schreiben, die Benutzereingaben akzeptiert, können Sie 
  Das vorhergehende Beispiel ist standardmäßig kulturabhängig, d. h., in ihm werden hinsichtlich Groß- und Kleinschreibung die Konventionen der aktuellen Kultur verwendet. Wenn Sie eine kulturunabhängige Änderung der Groß-/Kleinschreibung ausführen oder die Schreibungskonventionen einer bestimmten Kultur anwenden möchten, verwenden Sie die <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methodenüberladung, und geben Sie den Wert <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> oder ein <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>-Objekt, das der angegebenen Kultur entspricht, für den *culture*-Parameter an. Ein Beispiel, in dem gezeigt wird, wie die <xref:System.String.ToLower%28System.Globalization.CultureInfo%29>-Methode verwendet wird, um eine kulturunabhängige Änderung der Groß-/Kleinschreibung auszuführen, finden Sie unter [Durchführen kulturunabhängiger Schreibungsänderungen](../globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
+
  Die <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>-Methode konvertiert das erste Zeichen jedes Worts in einen Großbuchstaben und die übrigen Zeichen in Kleinbuchstaben. Wörter, die vollständig in Großbuchstaben vorliegen, werden als Akronyme angesehen und nicht konvertiert.  
   
  Die <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>-Methode ist kulturabhängig, d. h., sie verwendet die Schreibungskonventionen einer bestimmten Kultur. Um die Methode aufzurufen, rufen Sie zuerst das <xref:System.Globalization.TextInfo>-Objekt, das die Schreibungskonventionen der bestimmten Kultur angibt, aus der <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType>-Eigenschaft dieser Kultur ab.  

@@ -11,17 +11,19 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1339301786ed0f7ddd41565ca3fc64c2a859b3f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821926"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683757"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analysieren numerischer Zeichenfolgen in .NET
+
 Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `TryParse`, mit denen Sie die Zeichenfolgendarstellung einer Zahl in einen numerischen Typ konvertieren können. Mit diesen Methoden können Sie Zeichenfolgen analysieren, die mithilfe der Formatzeichenfolgen erstellt wurden, die unter [Standardformatzeichenfolgen für Zahlen](standard-numeric-format-strings.md) und [Benutzerdefinierte Zahlenformatzeichenfolgen](custom-numeric-format-strings.md) dokumentiert sind. In der Standardeinstellung können die Methoden `Parse` und `TryParse` Zeichenfolgen, die nur Vorkommastellen enthalten, erfolgreich in ganzzahlige Werte konvertieren. Sie können Zeichenfolgen, die Vor- und Nachkommastellen, Gruppentrennzeichen und ein Dezimaltrennzeichen enthalten, erfolgreich in Gleitkommawerte konvertieren. Die `Parse`-Methode löst eine Ausnahme aus, wenn der Vorgang einen Fehler verursacht, wohingegen die `TryParse`-Methode `false` zurückgibt.  
   
 ## <a name="parsing-and-format-providers"></a>Analyse und Formatanbieter  
+
  In der Regel unterscheiden sich die Zeichenfolgendarstellungen numerischer Werte je nach Kultur. Elemente numerischer Zeichenfolgen wie Währungssymbole, Gruppentrennzeichen (oder Tausendertrennzeichen) und Dezimaltrennzeichen variieren alle je nach Kultur. Analysemethoden verwenden entweder implizit oder explizit einen Formatanbieter, der diese kulturspezifischen Variationen erkennt. Wird in einem Aufruf der `Parse`- oder der `TryParse`-Methode kein Formatanbieter angegeben, so wird der der aktuellen Threadkultur zugeordnete Formatanbieter verwendet (das von der <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene <xref:System.Globalization.NumberFormatInfo>-Objekt).  
   
  Ein Formatanbieter wird durch eine <xref:System.IFormatProvider>-Implementierung dargestellt. Diese Schnittstelle verfügt über einen einzelnen Member, die <xref:System.IFormatProvider.GetFormat%2A>-Methode, deren einziger Parameter ein <xref:System.Type>-Objekt für den zu formatierenden Typ ist. Diese Methode gibt das Objekt mit den Formatierungsinformationen zurück. .NET unterstützt die folgenden beiden <xref:System.IFormatProvider>-Implementierungen zur Analyse numerischer Zeichenfolgen:  
@@ -36,6 +38,7 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>Analyse und NumberStyles-Werte  
+
  Die Stilelemente (z.B. Leerzeichen, Gruppentrennzeichen und Dezimaltrennzeichen), die der Analysevorgang verarbeiten kann, werden durch einen <xref:System.Globalization.NumberStyles>-Enumerationswert definiert. Standardmäßig werden Zeichenfolgen, die ganzzahlige Werte darstellen, über den <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType>-Wert analysiert, der nur Ziffern, vorangestellte und nachfolgende Leerzeichen sowie ein Vorzeichen zulässt. Zeichenfolgen, die Gleitkommawerte darstellen, werden mithilfe einer Kombination der Werte <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> und <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType> analysiert. Dieser zusammengesetzte Stil lässt Dezimalstellen sowie vorangestellte und nachfolgende Leerzeichen, ein Vorzeichen, ein Dezimaltrennzeichen, ein Gruppentrennzeichen und einen Exponenten zu. Durch den Aufruf einer Überladung der `Parse`- oder der `TryParse`-Methode mit einem Parameter vom Typ <xref:System.Globalization.NumberStyles> und durch Festlegen von <xref:System.Globalization.NumberStyles>-Flags können Sie die Stilelemente steuern, die in der Zeichenfolge vorhanden sein dürfen, damit der Analysevorgang erfolgreich durchgeführt werden kann.  
   
  Beispielsweise kann eine Zeichenfolge, die ein Gruppentrennzeichen enthält, nicht mithilfe der <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType>-Methode in einen <xref:System.Int32>-Wert konvertiert werden. Die Konvertierung ist jedoch erfolgreich, wenn Sie das <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>-Flag verwenden, wie im folgenden Beispiel veranschaulicht.  
@@ -74,6 +77,7 @@ Alle numerischen Typen weisen zwei statische Analysemethoden auf, `Parse` und `T
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|Enthält die Stile <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> und <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>.|  
   
 ## <a name="parsing-and-unicode-digits"></a>Analyse und Unicode-Ziffern  
+
  Der Unicode-Standard definiert Codepunkte für Ziffern in verschiedenen Schreibsystemen. Beispielsweise stehen Codepunkte von U+0030 bis U+0039 für die grundlegenden lateinischen Ziffern 0 bis 9, Codepunkte von U+09E6 bis U+09EF für die Bangla-Ziffern 0 bis 9 und Codepunkte von U+FF10 bis U+FF19 für Ziffern voller Breite von 0 bis 9. Allerdings werden von den Analysemethoden nur die grundlegenden lateinischen Ziffern von 0 bis 9 mit den Codepunkten von U+0030 bis U+0039 erkannt. Wenn einer numerischen Analysemethode eine Zeichenfolge übergeben wird, die andere Ziffern enthält, löst die Methode eine <xref:System.FormatException> aus.  
   
  Im folgenden Beispiel wird die <xref:System.Int32.Parse%2A?displayProperty=nameWithType>-Methode zum Analysieren von Zeichenfolgen verwendet, die aus Ziffern unterschiedlicher Schreibsysteme bestehen. Wie die Ausgabe des Beispiels zeigt, verläuft die Analyse der grundlegenden lateinischen Ziffern erfolgreich, aber der Versuch zum Analysieren der vollbreiten, der arabisch-indischen und der Bangla-Ziffern verursacht einen Fehler.  

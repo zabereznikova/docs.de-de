@@ -2,14 +2,15 @@
 title: Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
 ms.date: 03/30/2017
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
-ms.openlocfilehash: cc35b570c592557658cd3dda0c844847c8b23763
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 840fb40cc650d8f65af533d4102f18132bce3f53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686955"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells
+
 Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der <xref:System.Xml.XmlDocument>-Klasse oder der <xref:System.Xml.XPath.XPathDocument>-Klasse eine programmgesteuerte Darstellung von XML-Dokumenten, XML-Fragmenten, XML-Knoten oder XML-Knotengruppen im Speicher.  
   
  Die <xref:System.Xml.XPath.XPathDocument>-Klasse bietet eine schnelle, schreibgeschützte Darstellung eines XML-Dokuments im Speicher mithilfe des XPath-Datenmodells. Die <xref:System.Xml.XmlDocument>-Klasse stellt eine editierbare speicherresidente Darstellung eines XML-Dokuments bereit, die das DOM Level 1 Core und das DOM Level 2 Core des W3C implementiert. Beide Klassen implementieren die <xref:System.Xml.XPath.IXPathNavigable>-Schnittstelle und geben ein <xref:System.Xml.XPath.XPathNavigator>-Objekt zurück, das verwendet wird, um die zugrunde liegenden XML-Daten auszuwählen, auszuwerten, darin zu navigieren und in einigen Fällen zu bearbeiten.  
@@ -17,6 +18,7 @@ Der <xref:System.Xml?displayProperty=nameWithType>-Namespace bietet mithilfe der
  In den folgenden Abschnitten werden die Funktionen der <xref:System.Xml.XPath.XPathNavigator>-Klasse beschrieben, die auf der Klasse basiert, von der sie zurückgegeben wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Lesen von XML-Daten mithilfe von XPathDocument und XmlDocument](reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  Beschreibt die Erstellung eines schreibgeschützten Objekts der <xref:System.Xml.XPath.XPathDocument>-Klasse zum Lesen eines XML-Dokuments sowie die Erstellung eines editierbaren Objekts der <xref:System.Xml.XmlDocument>-Klasse zum Lesen und Bearbeiten eines XML-Dokuments. In diesem Thema wird auch beschrieben, wie ein <xref:System.Xml.XPath.XPathNavigator>-Objekt aus jeder Klasse zum Navigieren und Bearbeiten eines XML-Dokuments zurückgegeben wird.  
   

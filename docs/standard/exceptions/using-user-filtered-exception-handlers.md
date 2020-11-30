@@ -5,12 +5,12 @@ helpviewer_keywords:
 - user-filtered exceptions
 - exceptions, user-filtered
 ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
-ms.openlocfilehash: d98412ed651886afc54e15b346a63dc0c549abd0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4b85c2be0ed61af38eac1b65fb70f0ef1ea4405e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827983"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669041"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Verwenden benutzergefilterter Ausnahmehandler
 
@@ -31,6 +31,7 @@ End Try
  Der Ausdruck der benutzergefilterten Klausel ist in keiner Weise eingeschränkt. Tritt während der Ausführung des benutzergefilterten Ausdrucks eine Ausnahme auf, wird diese Ausnahme verworfen, und der Filterausdruck wird so bewertet, als habe er das Ergebnis „false“ gehabt. In diesem Fall setzt die Common Language Runtime die Suche nach einem Handler für die aktuelle Ausnahme fort.  
   
 ## <a name="combining-the-specific-exception-and-the-user-filtered-clauses"></a>Kombinieren der speziellen Ausnahme und der benutzergefilterten Klauseln  
+
  Eine Catch-Anweisung kann sowohl die spezielle Ausnahme als auch die benutzergefilterten Klauseln enthalten. Die Runtime prüft zuerst die spezielle Ausnahme. Wird die spezielle Ausnahme erfolgreich abgefangen, führt die Runtime den Benutzerfilter aus. Der allgemeine Filter kann einen Verweis auf die Variable enthalten, die im Klassenfilter deklariert ist. Die Reihenfolge der beiden Filterklauseln nicht umgekehrt werden.  
   
  Im folgenden Visual Basic-Beispiel werden die spezielle Ausnahme `ClassLoadException` in der **Catch**-Anweisung sowie die benutzergefilterte Klausel mit dem Schlüsselwort **When** veranschaulicht.  

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819954"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676503"
 ---
 # <a name="cancellation-in-managed-threads"></a>Abbruch in verwalteten Threads
 
@@ -51,6 +51,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
 - Listener können durch Abruf, Rückrufregistrierung oder Warten auf Wait-Handles über Abbruchanforderungen benachrichtigt werden.  
   
 ## <a name="cancellation-types"></a>Abbruchtypen  
+
  Das Abbruchframework ist als Gruppe von verwandten Typen implementiert, die in der folgenden Tabelle aufgeführt sind.  
   
 |Typname|Beschreibung|  
@@ -62,6 +63,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  Das Abbruchmodell ist in .NET in mehreren Typen integriert. Die wichtigsten sind <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> und <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Es wird empfohlen, dieses kooperative Abbruchmodell für sämtlichen neuen Bibliotheks- und Anwendungscode zu verwenden.  
   
 ## <a name="code-example"></a>Codebeispiel  
+
  Im folgenden Beispiel erstellt das anfordernde Objekt ein <xref:System.Threading.CancellationTokenSource>-Objekt und übergibt dann seine <xref:System.Threading.CancellationTokenSource.Token%2A>-Eigenschaft an den abbrechbaren Vorgang. Der Vorgang, der die Anforderung empfängt, überwacht den Wert von der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft des Token durch Abruf. Wenn der Wert zu `true` wechselt, kann der Listener auf geeignete Weise beendet werden. In diesem Beispiel wird die Methode einfach beendet und das ist auch häufig alles, was erforderlich ist.  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>Vorgangsabbruch im Vergleich zum Objektabbruch  
+
  Im kooperativen Abbruchframework bezieht sich der Abbruch auf Vorgänge und nicht auf Objekte. Die Abbruchanforderung bedeutet, dass der Vorgang so schnell wie möglich beendet werden soll, nachdem alle erforderlichen Bereinigungen ausgeführt wurden. Ein Abbruchtoken sollte auf einen "abbrechbaren Vorgang" verweisen, aber dieser Vorgang kann in Ihrem Programm implementiert werden. Nachdem die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft des Tokens auf `true` festgelegt wurde, kann sie nicht wieder auf `false` zurückgesetzt werden. Daher können Abbruchtoken nicht wiederverwendet werden, nachdem sie abgebrochen wurden.  
   
  Wenn Sie einen Objektabbruchmechanismus benötigen, können Sie ihn durch Aufrufen der <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType>-Methode auf dem Vorgangsabbruchmechanismus basieren lassen, wie im folgenden Beispiel gezeigt.  
@@ -81,6 +84,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  Wenn ein Objekt mehrere gleichzeitig abbrechbare Vorgänge unterstützt, übergeben Sie ein separates Token als Eingabe für die einzelnen abbrechbaren Vorgänge. Auf diese Weise kann ein Vorgang ohne Auswirkung auf die anderen abgebrochen werden.  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>Lauschen und Reagieren auf Abbruchanforderungen  
+
  Im Benutzerdelegaten bestimmt der Implementierer eines abbrechbaren Vorgangs, wie der Vorgang als Reaktion auf eine Abbruchanforderung beendet wird. In vielen Fällen kann der Benutzerdelegat einfach die erforderliche Bereinigung ausführen und dann sofort zurückkehren.  
   
  In komplexeren Fällen ist es für den Benutzerdelegaten möglicherweise erforderlich, den Bibliothekscode darüber zu benachrichtigen, dass der Abbruch aufgetreten ist. In solchen Fällen besteht für den Delegaten die richtige Methode zum Beenden des Vorgangs darin, die <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>-Methode aufzurufen, die zum Auslösen einer <xref:System.OperationCanceledException> führt. Bibliothekscode kann diese Ausnahme im Benutzerdelegatthread abfangen und das Token der Ausnahme untersuchen, um zu ermitteln, ob die Ausnahme auf einen kooperativen Abbruch oder eine andere Ausnahmesituation hinweist.  
@@ -88,6 +92,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  Die <xref:System.Threading.Tasks.Task>-Klasse behandelt <xref:System.OperationCanceledException> auf diese Weise. Weitere Informationen finden Sie unter [Aufgabenabbruch](../parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Lauschen durch Abruf  
+
  Bei langandauernden Berechnungen mit Schleifen oder Rekursionen können Sie auf eine Abbruchanforderung lauschen, indem Sie den Wert der <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>-Eigenschaft in regelmäßigen Abständen abfragen. Wenn der Wert `true` lautet, sollte die Methode die Bereinigung vornehmen und so schnell wie möglich beendet werden. Die optimale Häufigkeit für das Abrufen hängt vom Typ der Anwendung ab. Es ist Aufgabe des Entwicklers, die beste Abrufhäufigkeit für ein Programm zu ermitteln. Der Abruf selbst hat keinen signifikanten Einfluss auf die Leistung. Im folgenden Beispiel wird eine Möglichkeit für den Abruf veranschaulicht.  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf](how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Lauschen durch Registrieren eines Rückrufs  
+
  Einige Vorgänge können so blockiert werden, dass sie den Wert des Abbruchtokens nicht rechtzeitig überprüfen können. In diesen Fällen können Sie eine Rückrufmethode registrieren, die die Blockierung der Methode aufhebt, wenn eine Abbruchanforderung empfangen wird.  
   
  Die <xref:System.Threading.CancellationToken.Register%2A>-Methode gibt ein <xref:System.Threading.CancellationTokenRegistration>-Objekt zurück, das speziell für diesen Zweck verwendet wird. Das folgende Beispiel zeigt, wie Sie die <xref:System.Threading.CancellationToken.Register%2A>-Methode zum Abbrechen einer asynchronen Webanforderung verwenden.  
@@ -116,6 +122,7 @@ Das allgemeine Muster für die Implementierung des kooperativen Abbruchmodells l
  Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Registrieren von Rückrufen für Abbruchanforderungen](how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Lauschen mithilfe eines Wait-Handles  
+
  Wenn ein abbrechbarer Vorgang blockiert werden kann, während er auf einen primitiven Synchronisierungstyp wie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> oder <xref:System.Threading.Semaphore?displayProperty=nameWithType> wartet, können Sie die <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType>-Eigenschaft verwenden, um es dem Vorgang zu ermöglichen, auf das Ereignis und die Abbruchanforderung zu warten. Das Wait-Handle des Abbruchtokens wird als Reaktion auf eine Abbruchanforderung signalisiert, und die Methode kann anhand des Rückgabewerts der <xref:System.Threading.WaitHandle.WaitAny%2A>-Methode bestimmen, ob das Abbruchtoken signalisiert hat. Der Vorgang kann dann einfach beenden oder ggf. eine <xref:System.OperationCanceledException> auslösen.  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ Sowohl <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>
  Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf Abbruchanforderungen mit Wait-Handles](how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Gleichzeitiges Lauschen auf mehrere Token  
+
  In einigen Fällen muss ein Listener möglicherweise auf mehrere Abbruchtoken gleichzeitig lauschen. Ein abbrechbarer Vorgang muss z. B. möglicherweise zusätzlich zu einem extern als Argument an einen Methodenparameter übergebenen Token ein internes Abbruchtoken überwachen. Zu diesem Zweck erstellen Sie eine verknüpfte Tokenquelle, die zwei oder mehr Token zu einem Token verbinden kann, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ Sowohl <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>
  Beachten Sie, dass Sie `Dispose` für die verknüpfte Tokenquelle aufrufen müssen, wenn Sie damit fertig sind. Ein ausführlicheres Beispiel finden Sie unter [Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen](how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Kooperation zwischen Bibliothekscode und Benutzercode  
+
  Das einheitliche Abbruchframework ermöglicht es dem Bibliothekscode, den Benutzercode abzubrechen. Ebenso ermöglicht es dem Benutzercode, den Bibliothekscode auf kooperative Weise abzubrechen. Die problemlose Zusammenarbeit hängt davon ab, ob die beiden Seiten die folgenden Richtlinien beachten:  
   
 - Wenn der Bibliothekscode abbrechbare Vorgänge bereitstellt, sollten auch öffentliche Methoden bereitgestellt werden, die ein externes Abbruchtoken akzeptieren, damit der Benutzercode den Abbruch anfordern kann.  

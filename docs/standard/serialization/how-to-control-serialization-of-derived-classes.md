@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 08900f9e5b735065f97ef705dccd899eebe3bfe0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 72568f897db80f2beb7ed980e850a7b2e13f5ae1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289615"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678947"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen
+
 Neben der Verwendung des **XmlElementAttribute**-Attributs zum Ändern eines XML-Elementnamens lässt sich die Objektserialisierung auch auf andere Weise anpassen. Sie können den XML-Stream ebenfalls anpassen, indem Sie von einer vorhandenen Klasse ableiten und die <xref:System.Xml.Serialization.XmlSerializer>-Instanz anweisen, wie die neue Klasse serialisiert werden soll.  
   
  Beispielsweise können Sie im Fall einer `Book`-Klasse von dieser Klasse ableiten und eine `ExpandedBook`-Klasse erstellen, die über zusätzliche Eigenschaften verfügt. Sie müssen **XmlSerializer** jedoch anweisen, den abgeleiteten Typ beim Serialisieren oder Deserialisieren zu akzeptieren. Erstellen Sie hierzu eine <xref:System.Xml.Serialization.XmlElementAttribute>-Instanz, und legen Sie deren **Typ**-Eigenschaft auf den Typ der abgeleiteten Klasse fest. Fügen Sie **XmlElementAttribute** zu einer <xref:System.Xml.Serialization.XmlAttributes>-Instanz hinzu. Fügen Sie dann **XmlAttributes** zu einer <xref:System.Xml.Serialization.XmlAttributeOverrides>-Instanz hinzu, und geben Sie dabei sowohl den Typ des zu überschreibenden Objekts als auch den Namen des Members an, der die abgeleitete Klasse akzeptiert. Dies wird im folgenden Beispiel gezeigt.  

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818504"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675619"
 ---
 # <a name="user-defined-functions-and-variables"></a>Benutzerdefinierte Funktionen und Variablen
+
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zur Interaktion mit <xref:System.Xml.XPath.XPathDocument>-Daten verwendet werden. Sie können die standardmäßigen XPath-Funktionen durch Implementieren von Erweiterungsfunktionen und -variablen für XPath-Abfrageausdrücke ersetzen. Die <xref:System.Xml.XPath.XPathExpression.SetContext%2A>-Methode akzeptiert einen von <xref:System.Xml.Xsl.XsltContext> abgeleiteten benutzerdefinierten Kontext. Benutzerdefinierte Funktionen werden von dem benutzerdefinierten Kontext aufgelöst.  
   
  Erweiterungsfunktionen und -variablen können nützlich zum Vermeiden von XML-Injection-Angriffen sein. In diesen Szenarios werden Benutzereingaben benutzerdefinierten Variablen zugewiesen und mittels Erweiterungsfunktionen verarbeitet und nicht einfach mit Verarbeitungsanweisungen verkettet. Erweiterungsfunktionen und -variablen enthalten Benutzereingaben, sodass nur die vom Designer vorgesehenen Aktionen für XML-Daten ausgeführt werden.  

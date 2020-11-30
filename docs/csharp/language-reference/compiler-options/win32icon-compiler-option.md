@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 ms.openlocfilehash: 5b62bbfe28bb5aa82605a88a83cf82eff9278807
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91168867"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C#-Compileroptionen)
@@ -39,7 +39,7 @@ Die Option **-win32icon** fügt der Ausgabedatei eine ICO-Datei hinzu, die der A
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1. Öffnen Sie die **Eigenschaftenseite**des Projekts.  
+1. Öffnen Sie die **Eigenschaftenseite** des Projekts.  
   
 2. Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   

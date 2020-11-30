@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-ms.openlocfilehash: 247ebb868a9256deaf59c1369e6143e15af4d6b0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64eb346ba57e9af9f5be0cc1b42398c4f539d4d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689900"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Grundlagen zur Beschleunigung in PLINQ
+
 Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to Objects-Abfragen durch paralleles Ausführen der Abfragedelegaten auf Computern mit mehreren Kernen. PLINQ zeigt die beste Leistung, wenn die Verarbeitung der einzelnen Elemente in einer Quellsammlung unabhängig erfolgt, ohne gemeinsamen Zustand der einzelnen Delegaten. Solche Vorgänge sind häufig in LINQ to Objects und PLINQ und werden oft als „*optimal parallel*“ bezeichnet, da sie gut auf mehrere Threads verteilt werden können. Nicht alle Abfragen bestehen jedoch vollständig aus optimal parallel verarbeitbaren Vorgängen; in den meisten Fällen umfasst eine Abfrage einige Operatoren, die entweder nicht parallelisiert werden können oder die parallele Ausführung verlangsamen. Und auch bei optimal parallel verarbeitbaren Abfragen muss PLINQ noch die Datenquelle partitionieren, die Arbeit auf die Threads aufteilen und in der Regel die Ergebnisse zusammenführen, wenn die Abfrage abgeschlossen ist. Alle diese Vorgänge tragen zum Rechenaufwand für die Parallelisierung bei; dieser Aufwand zum Hinzufügen der Parallelisierung wird als *Mehraufwand* bezeichnet. Um optimale Leistung in einer PLINQ-Abfrage zu erzielen, besteht das Ziel darin, optimal parallel verarbeitbare Teile zu maximieren und Teile, die Mehraufwand erfordern, zu minimieren. Dieser Artikel enthält Informationen, mit deren Hilfe Sie PLINQ-Abfragen schreiben können, die so effizient wie möglich sind und nichtsdestoweniger richtige Ergebnisse liefern.  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>Faktoren, die sich auf die PLINQ-Abfrageleistung auswirken  
+
  In den folgenden Abschnitten werden einige der wichtigsten Faktoren aufgeführt, die sich auf die Leistung der parallelen Abfrage auswirken. Hierbei handelt es sich um allgemeine Aussagen, die für sich allein nicht ausreichen, um die Abfrageleistung in allen Fällen vorherzusagen. Wie immer ist es wichtig, die tatsächliche Leistung bei bestimmten Abfragen auf Computern mit einer Reihe von repräsentativen Konfigurationen und Lasten zu messen.  
   
 1. Rechenaufwand für die gesamte Arbeit.  
@@ -65,6 +67,7 @@ Der primäre Zweck von PLINQ ist die Beschleunigung der Ausführung von LINQ to 
      In einigen Fällen kann eine PLINQ-Abfrage einer indizierbaren Quellsammlung zu einer unausgeglichenen Arbeitslast führen. In diesem Fall können Sie die Abfrageleistung vielleicht erhöhen, indem Sie einen benutzerdefinierten Partitionierer erstellen. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="when-plinq-chooses-sequential-mode"></a>Wenn PLINQ den sequenziellen Modus auswählt  
+
  PLINQ versucht immer, eine Abfrage mindestens so schnell auszuführen, als würde die Abfrage sequenziell ausgeführt. PLINQ beachtet zwar weder den Rechenaufwand der Benutzerdelegaten noch die Größe der Eingabequelle, sucht jedoch nach bestimmten „Abfrageformen“. Insbesondere wird nach Abfrageoperatoren oder Kombinationen aus Operatoren gesucht, die in der Regel die Ausführung einer Abfrage im parallelen Modus verlangsamen. Wenn solche Formen gefunden werden, fällt PLINQ standardmäßig auf den sequenziellen Modus zurück.  
   
  Vielleicht stellen Sie jedoch nach dem Messen der Leistung für eine bestimmte Abfrage fest, dass sie im parallelen Modus tatsächlich schneller ausgeführt wird. In solchen Fällen können Sie das <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>-Flag mithilfe der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode verwenden, um PLINQ anzuweisen, die Abfrage zu parallelisieren. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Ausführungsmodus in PLINQ](how-to-specify-the-execution-mode-in-plinq.md).  

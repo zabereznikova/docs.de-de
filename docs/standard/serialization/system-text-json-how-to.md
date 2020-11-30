@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: aba45a99562b67df17e1ff33ecc3c8bbad63ec30
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 1e8c46e11d3a82ca0bce29f9cb7bbc749c219198
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440815"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676724"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>Serialisieren und Deserialisieren (Marshallen und Marshallen rückgängig machen) von JSON-Daten in .NET
 
@@ -116,6 +116,7 @@ Eine <xref:System.Text.Json.JsonSerializer.Serialize%2A>-Überladung, die einen 
 Das Serialisieren in UTF-8 ist ungefähr 5–10 % schneller als die Verwendung von zeichenfolgenbasierten Methoden. Der Unterschied liegt darin, dass die Bytes (als UTF-8) nicht in Zeichenfolgen (UTF-16) konvertiert werden müssen.
 
 ## <a name="serialization-behavior"></a>Serialisierungsverhalten
+
 ::: zone pivot="dotnet-5-0"
 
 * Standardmäßig werden alle öffentlichen Eigenschaften serialisiert. Sie können [zu ignorierende Eigenschaften angeben](#ignore-properties).

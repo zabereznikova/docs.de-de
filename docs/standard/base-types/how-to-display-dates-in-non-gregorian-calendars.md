@@ -10,14 +10,15 @@ helpviewer_keywords:
 - calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 6263ac2b6ce18399fa4fa56c9e2ab662a1a367b9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e8d628f3e15b080b4a5509726ece9da26523269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820565"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681391"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern
+
 Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den gregorianischen Kalender als Standardkalender. Das bedeutet, dass ein Aufruf der `ToString`-Methode eines Datums- und Uhrzeitwerts die Zeichenfolgendarstellung dieses Datums und dieser Uhrzeit im gregorianischen Kalender anzeigt, selbst wenn dieses Datum und diese Uhrzeit in einem anderen Kalender erstellt wurden. Dies wird im folgenden Beispiel veranschaulicht. Hierbei werden zwei verschiedene Möglichkeiten verwendet, um einen Datums- und Uhrzeitwert mit dem persischen Kalender zu erstellen. Beim Aufruf der <xref:System.DateTime.ToString%2A>-Methode werden diese Datums- und Uhrzeitwerte aber weiterhin im gregorianischen Kalender angezeigt. Dieses Beispiel zeigt zwei häufig verwendete, aber falsche Verfahren zum Anzeigen des Datums in einem bestimmten Kalender.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -63,6 +64,7 @@ Die Typen <xref:System.DateTime> und <xref:System.DateTimeOffset> verwenden den 
     - <xref:System.Globalization.Calendar.GetMilliseconds%2A> zum Anzeigen der Millisekunden in der Sekunde im entsprechenden Kalender  
   
 ## <a name="example"></a>Beispiel  
+
  Das Beispiel zeigt ein Datum mithilfe von zwei verschiedenen Kalendern an. Es zeigt das Datum an, nachdem der Hijri-Kalender als Standardkalender für die Kultur „ar-JO“ definiert wurde, und es zeigt das Datum unter Verwendung des persischen Kalenders an, der nicht als optionaler Kalender von der fa-IR-Kultur unterstützt wird.  
   
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]

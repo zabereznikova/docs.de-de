@@ -2,17 +2,19 @@
 title: Wiederherstellbare XSLT-Fehler
 ms.date: 03/30/2017
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2123ead435fe389693f3b141a26873700ba5647f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827580"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686773"
 ---
 # <a name="recoverable-xslt-errors"></a>Wiederherstellbare XSLT-Fehler
+
 Im W3C-Dokument „XSL Transformations (XSLT) Version 1.0“ gibt es bestimmte Bereiche, bei denen es dem Anbieter der Implementierung freigestellt ist, wie er mit der jeweiligen Situation umgeht. Diese Bereiche werden als "freigegebene Verhaltensweisen" bezeichnet. Laut XSLT 1.0-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen gibt die Empfehlung zu XSLT 1.0 auch Maßnahmen für den Fall an, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.  
   
 ## <a name="discretionary-behaviors"></a>Freigegebene Verhaltensweisen  
+
  Die folgenden Tabelle enthält alle freigegebenen Verhaltensweisen, die gemäß der Empfehlung zu XSLT 1.0 zugelassen sind, und beschreibt, wie diese Verhaltensweisen von der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse behandelt werden.  
   
 - Mit "Wiederherstellen" wird angegeben, dass die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse von diesem Fehler wiederherstellt. Das <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType>-Objekt kann verwendet werden, um alle Ereignisse aus dem XSLT-Prozessor zu melden.  

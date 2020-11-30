@@ -2,14 +2,15 @@
 title: Typenunterstützung in den System.Xml-Klassen
 ms.date: 03/30/2017
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 8e4ef15980f488c473129f4f7c02be1778bcafea
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6fe55c64bc9bd17d5416eebf77060f2be27b81bb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824622"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675658"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Typenunterstützung in den System.Xml-Klassen
+
 In .NET Framework, Version 2.0, wurden die Kern-XML-Klassen erweitert und enthalten nun Funktionen zur Typunterstützung. Die Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> und <xref:System.Xml.XPath.XPathNavigator> enthalten Funktionen zur Typunterstützung. Dazu gehört auch die Funktion zum Konvertieren zwischen XML-Schematypen und CLR-Typen (Common Language Runtime).  
   
  In .NET Framework, Version 2.0, wurden die Klassen <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> und <xref:System.Xml.XPath.XPathNavigator> erweitert und enthalten nun Funktionen zur Typunterstützung.  
@@ -26,6 +27,7 @@ In .NET Framework, Version 2.0, wurden die Kern-XML-Klassen erweitert und enth
 > In .NET Framework, Version 1.0, war zum Konvertieren zwischen XML-Schematypen und CLR-Typen die <xref:System.Xml.XmlConvert>-Klasse erforderlich.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Zuordnen von XML-Datentypen zu CLR-Typen](mapping-xml-data-types-to-clr-types.md)  
  Beschreibt die Standardzuordnungen von XML-Datentypen zu CLR-Typen.  
   
@@ -36,4 +38,5 @@ In .NET Framework, Version 2.0, wurden die Kern-XML-Klassen erweitert und enth
  Beschreibt die Verwendung der <xref:System.Xml.XmlConvert>-Klasse zum Konvertieren zwischen XML-Schematypen und CLR-Typen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Zugreifen auf streng typisierte XML-Daten mit XPathNavigator](accessing-strongly-typed-xml-data-using-xpathnavigator.md)

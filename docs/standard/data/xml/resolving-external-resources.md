@@ -2,17 +2,19 @@
 title: Auflösen von externen Ressourcen
 ms.date: 03/30/2017
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
-ms.openlocfilehash: 460fee3464c7de9a6ad0ca97bf5341fe5078fb47
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dffaef1b27d5814591c935c0ca795ba4ea3eba84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686604"
 ---
 # <a name="resolving-external-resources"></a>Auflösen von externen Ressourcen
+
 Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument**-Klasse nach Ressourcen, die sich nicht inline in den XML-Daten befinden, z.B. externe Document Type Definitions (DTDs – Dokumenttypdefinitionen), Entitäten und Schemata. Diese Elemente können in einem Netzwerk oder auf einem lokalen Laufwerk gesucht werden und sind durch einen URI (Uniform Resource Identifier) gekennzeichnet. Somit kann **XmlDocument** im Dokument vorhandene **EntityReference**-Knoten auflösen und das Dokument entsprechend der externen DTD oder dem externen Schema validieren.  
   
 ## <a name="fully-trusted-xmldocument"></a>Vollständig vertrauenswürdiges XmlDocument  
+
  Die **XmlResolver**-Eigenschaft beeinflusst die Funktionalität der **XmlDocument.Load**-Methode. In der unten stehenden Tabelle ist die Funktionsweise der **XmlDocument.XmlResolver**-Eigenschaft bei einem vollständig vertrauenswürdigen **XmlDocument**-Objekt veranschaulicht. In der folgenden Tabelle werden die **XmlDocument.Load**-Methoden veranschaulicht, wenn die Eingabe für die Load-Methode aus einem **TextReader**, einem **String**, einem **Stream** oder einem **URI** besteht. Diese Tabelle gilt nicht für die **Load**-Methode, wenn das **XmlDocument** aus einem **XmlReader** geladen wird.  
   
 |XmlResolver-Eigenschaft|Funktion|Hinweise|  
@@ -28,6 +30,7 @@ Mit der **XmlResolver**-Eigenschaft von **XmlDocument** sucht die **XmlDocument*
 |Die **XmlResolver**-Klasse, die vom **XmlDocument** verwendet wird, ist die gleiche Klasse, die vom **XmlReader** verwendet wird.|Das **XmlDocument** verwendet den **XmlResolver**, der dem **XmlReader** zugeordnet wurde.<br /><br /> Die **XmlDocument.Resolver**-Eigenschaft kann nicht unabhängig von der Vertrauensebene des **XmlDocument** festgelegt werden, da sie einen **XmlResolver** aus dem **XmlReader** abruft. Die Einstellungen des **XmlResolver** des **XmlReader** können nicht durch Festlegen der **XmlResolver**-Eigenschaft des **XmlDocument** überschrieben werden.|Der **XmlReader** kann der **XmlTextReader**, der **XmlValidatingReader** oder ein benutzerdefinierter Reader sein. Wenn der verwendete Reader die Entitätsauflösung unterstützt, werden externe Entitäten aufgelöst. Wenn der übergebene Reader keine Entitätsverweise unterstützt, werden Entitätsverweise nicht aufgelöst.|  
   
 ## <a name="semi-trusted-xmldocument"></a>Teilweise vertrauenswürdiges XmlDocument  
+
  In der folgenden Tabelle ist die Funktionsweise der **XmlDocument.XmlResolver**-Eigenschaft bei einem teilweise vertrauenswürdigen Objekt veranschaulicht. Diese Tabelle betrifft die **XmlDocument.Load**-Methoden, wenn die Eingabe für die Load-Methode aus einem **TextReader**, einem **String**, einem **Stream** oder einem **URI** besteht. Diese Tabelle gilt nicht für die **Load**-Methode, wenn das **XmlDocument** aus einem **XmlReader** geladen wird.  
   
 |XmlResolver-Eigenschaft|Funktion|Hinweise|  
