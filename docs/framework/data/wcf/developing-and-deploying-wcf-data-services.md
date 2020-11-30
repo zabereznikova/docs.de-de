@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 484505406701b52a2b80b95b718a23a2156aa22c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90556088"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
@@ -98,7 +98,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
 
     - [Gewusst wie: Erstellen eines Webbereitstellungspakets in Visual Studio](/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Gewusst wie: Bereitstellen eines Webprojekts mithilfe der One-Click-Veröffentlichung in Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Vorgehensweise: Bereitstellen eines Webprojekts mithilfe One-Click veröffentlichen in Visual Studio](/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Bereitstellungstechnologien für ASP.NET-Websites**
 
@@ -125,7 +125,7 @@ Beachten Sie Folgendes, wenn Sie einen Datendienst bereitstellen:
 
 - Da WCF Data Services eine einfache WCF-Implementierung enthält, können Sie Windows Server AppFabric verwenden, um einen Datendienst zu überwachen, der unter IIS unter Windows Server bereitgestellt wird. Weitere Informationen zur Verwendung von Windows Server AppFabric zum Überwachen eines Daten dienstanzdienstanbieter finden Sie im Beitrag nach [Verfolgung WCF Data Services mit Windows Server AppFabric](/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten des Datendiensts](hosting-the-data-service-wcf-data-services.md)
 - [Sichern von WCF Data Services](securing-wcf-data-services.md)

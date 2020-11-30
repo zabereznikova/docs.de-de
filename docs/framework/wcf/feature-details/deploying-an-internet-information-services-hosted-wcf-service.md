@@ -4,10 +4,10 @@ description: Informieren Sie sich über die erforderlichen Aufgaben zum entwicke
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557566"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
@@ -110,7 +110,7 @@ IIS-gehostete WCF-Dienste können die HTTP-Transportsicherheit nutzen (z. b. HTT
 
 Beispielsweise muss ein WCF-Endpunkt, der für die HTTP Digest-Authentifizierung konfiguriert ist, sich in einem virtuellen IIS-Verzeichnis befinden, das auch für die HTTP-Digestauthentifizierung konfiguriert ist. Nicht übereinstimmende Kombinationen von IIS-Einstellungen und WCF-Endpunkt Einstellungen führen bei der Dienst Aktivierung zu einem Fehler.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Hosten in Internetinformationsdiensten](hosting-in-internet-information-services.md)
 - [Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten](internet-information-services-hosting-best-practices.md)
