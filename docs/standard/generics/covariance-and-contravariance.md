@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827411"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722660"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kovarianz und Kontravarianz in Generics
 
@@ -71,6 +71,7 @@ Wenn Sie auf ein Typsystem verweisen, haben Kovarianz, Kontravarianz und Invaria
 - Ab C# 9 werden kovariante Rückgabetypen unterstützt. Eine überschreibende Methode kann einen stärker abgeleiteten Rückgabetyp deklarieren als die Methode, die überschrieben wird, und eine überschreibende schreibgeschützte Eigenschaft kann einen stärker abgeleiteten Typ deklarieren.
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Generische Schnittstellen mit kovarianten Typparametern
 
 Mehrere generische Schnittstellen verfügen über kovariante Typparameter, z. B. <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> und <xref:System.Linq.IGrouping%602>. Alle Typparameter dieser Schnittstellen sind kovariant, sodass sie nur für die Rückgabetypen der Member verwendet werden.  

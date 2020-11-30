@@ -7,12 +7,12 @@ helpviewer_keywords:
 - generics [.NET], interfaces
 - ordering comparisons [.NET]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 429aa3c4d48fa6805b498206bcb699b56f522409
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8cdd7ea71e68f73871a606c6f9b754d675ca7eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722634"
 ---
 # <a name="generic-interfaces"></a>Generische Schnittstellen
 
@@ -24,6 +24,7 @@ Generische Schnittstellen bieten typsichere Entsprechungen zu nicht generischen 
 > Die Typparameter mehrerer generischer Schnittstellen sind als kovariant oder kontravariant gekennzeichnet. Dies bietet mehr Flexibilität beim Zuweisen und Verwenden von Typen, die diese Schnittstellen implementieren. Siehe [Kovarianz und Kontravarianz](covariance-and-contravariance.md).  
   
 ## <a name="equality-and-ordering-comparisons"></a>Übereinstimmungs- und Reihenfolgenvergleiche  
+
  Im <xref:System>-Namespace definieren die generische <xref:System.IComparable%601?displayProperty=nameWithType>-Schnittstelle und die generische <xref:System.IEquatable%601?displayProperty=nameWithType>-Schnittstelle (wie ihre nicht generischen Entsprechungen) Methoden für Reihenfolgen- bzw. Übereinstimmungsvergleiche. Typen implementieren diese Schnittstellen, um die Durchführungsfähigkeit für solche Vergleiche zu bieten.  
   
  Im <xref:System.Collections.Generic>-Namespace bieten die generische <xref:System.Collections.Generic.IComparer%601>-Schnittstelle und die generische <xref:System.Collections.Generic.IEqualityComparer%601>-Schnittstelle eine Möglichkeit zum Definieren von Reihenfolgen- oder Übereinstimmungsvergleichen für Typen, die die generische <xref:System.IComparable%601?displayProperty=nameWithType>- oder <xref:System.IEquatable%601?displayProperty=nameWithType>-Schnittstelle nicht implementieren, und sie bieten auch eine Möglichkeit, diese Beziehungen für Typen erneut zu definieren, die diese Schnittstellen implementieren. Diese Schnittstellen werden von Methoden und Konstruktoren vieler generischer Auflistungsklassen verwendet. Sie können beispielsweise ein generisches <xref:System.Collections.Generic.IComparer%601>-Objekt an den Konstruktor der <xref:System.Collections.Generic.SortedDictionary%602>-Klasse übergeben, um eine Sortierreihenfolge für einen Typ anzugeben, der keine generischen <xref:System.IComparable%601?displayProperty=nameWithType>-Schnittstellen implementiert. Für die generische statische <xref:System.Array.Sort%2A?displayProperty=nameWithType>-Methode und für die <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>-Instanzmethode sind Überladungen zum Sortieren von Arrays und Listen mithilfe der generischen <xref:System.Collections.Generic.IComparer%601>-Implementierungen vorhanden.  
@@ -31,6 +32,7 @@ Generische Schnittstellen bieten typsichere Entsprechungen zu nicht generischen 
  Die generischen Klassen <xref:System.Collections.Generic.Comparer%601> und <xref:System.Collections.Generic.EqualityComparer%601> stellen Basisklassen für Implementierungen der generischen Schnittstellen <xref:System.Collections.Generic.IComparer%601> und <xref:System.Collections.Generic.IEqualityComparer%601> sowie standardmäßige Reihenfolgen- und Übereinstimmungsvergleiche mithilfe der <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType>-Eigenschaft bzw. der <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType>-Eigenschaft bereit.  
   
 ## <a name="collection-functionality"></a>Auflistungsfunktionen  
+
  Die generische <xref:System.Collections.Generic.ICollection%601>-Schnittstelle ist die Basisschnittstelle für generische Auflistungstypen. Sie stellt grundlegende Funktionen zum Hinzufügen, Entfernen, Kopieren und Auflisten von Elementen bereit. <xref:System.Collections.Generic.ICollection%601> erbt sowohl von der generischen <xref:System.Collections.Generic.IEnumerable%601> als auch von der nicht generischen <xref:System.Collections.IEnumerable>.  
   
  Die generische <xref:System.Collections.Generic.IList%601>-Schnittstelle erweitert die generische <xref:System.Collections.Generic.ICollection%601>-Schnittstelle um Methoden für den indizierten Abruf.  

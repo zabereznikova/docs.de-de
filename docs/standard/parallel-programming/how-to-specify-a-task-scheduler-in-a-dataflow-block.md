@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-ms.openlocfilehash: 716892940bf8387cbe3d39fd36258c5ede02ee8b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8c27c1ca61356b36183bb74b8360e41f5324d25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826904"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722439"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Gewusst wie: Einen Taskplaner in einem Datenflussblock angeben
+
 Dieses Dokument veranschaulicht, wie Sie einen bestimmten Taskplaner zuweisen, wenn Sie Datenfluss in Ihrer Anwendung verwenden. Das Beispiel verwendet die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType>-Klasse in einer Windows Forms-Anwendung, um anzuzeigen, wann die Readeraufgaben aktiv sind und wann eine Writeraufgabe aktiv ist. Darüber hinaus verwendet das Beispiel die <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>-Methode, um zu ermögliche, dass ein Datenflussblock im Benutzeroberflächenthread ausgeführt wird.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -30,6 +31,7 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Taskplaner zuweisen, w
 3. Fügen Sie dem Formular ein <xref:System.Windows.Forms.Timer>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft auf `2500` fest.  
   
 ## <a name="adding-dataflow-functionality"></a>Hinzufügen der Datenflussfunktionalität  
+
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflussblöcke erstellen, die Teil der Anwendung sind, und wie Sie die einzelnen Blöcke einem Aufgabenplaner zuordnen.  
   
 ### <a name="to-add-dataflow-functionality-to-the-application"></a>Hinzufügen von Datenflussfunktionalität zur Anwendung  
@@ -73,6 +75,7 @@ Dieses Dokument veranschaulicht, wie Sie einen bestimmten Taskplaner zuweisen, w
  Dieses Beispiel verwendet außerdem die <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>-Klasse, um die gleichzeitige Ausführung einiger Datenflussblöcke zu aktivieren. Außerdem ermöglicht sie, dass ein anderer Datenflussblock exklusiv für alle anderen Datenflussblöcke ausgeführt wird, die auf dem gleichen <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>-Objekt ausgeführt werden. Dieses Verfahren ist nützlich, wenn mehrere Datenflussblöcke eine Ressource gemeinsam nutzen und einige davon exklusiven Zugriff auf die Ressource benötigen, da es aufgrund dieses Verfahrens nicht mehr notwendig ist, den Zugriff auf diese Ressource manuell zu synchronisieren. Dadurch, dass die manuelle Synchronisierung entfällt, kann Code effizienter gestaltet werden.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der vollständige Code für „Form1.cs“ („Form1.vb“ in Visual Basic) gezeigt.  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]

@@ -2,17 +2,19 @@
 title: Das Navigieren durch Attribut- und Namespaceknoten mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d561afdc477119a6d9d04eacfcd6a6bdb9d0e2d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819408"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725390"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Das Navigieren durch Attribut- und Namespaceknoten mit "XPathNavigator"
+
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Navigationsmethoden bereit: Die erste Gruppe, die unter dem Thema [Navigieren in Knotengruppen mit XPathNavigator](node-set-navigation-using-xpathnavigator.md) beschrieben wird, wird zum Navigieren durch *Knotengruppen* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet. Die zweite Gruppe, die in diesem Thema beschrieben wird, wird zum Navigieren durch *Attribut- und Namespaceknoten* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet.  
   
 ## <a name="attribute-node-navigation"></a>Navigieren durch Attributknoten  
+
  Attribute sind Eigenschaften eines Elements und keine untergeordneten Elemente des entsprechenden Elements. Diese Unterscheidung ist wegen der zum Navigieren durch nebengeordnete, übergeordnete und untergeordnete Knoten verwendeten Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse wichtig.  
   
  Die <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>-Methode und die <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>-Methode werden z. B. nicht zum Navigieren von einem Element zu einem Attribut oder zwischen Attributen verwendet. Für Attribute gibt es andere Navigationsmethoden.  
@@ -31,6 +33,7 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
 > Wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt auf einem Attribut- oder Namespaceknoten positioniert ist, geben die Methoden  <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> immer `false` zurück und haben keine Auswirkungen auf die Position des <xref:System.Xml.XPath.XPathNavigator>. Die einzigen Ausnahmen sind die Methoden <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
   
 ## <a name="namespace-node-navigation"></a>Navigation durch Namespaceknoten  
+
  Jedes Element verfügt über zugeordnete Namespaceknoten, einen für jedes eindeutige Namespacepräfix, das an einen Namespace-URI im Gültigkeitsbereich des Elements gebunden ist (einschließlich des an den `http://www.w3.org/XML/1998/namespace`-Namespace gebundenen XML-Präfixes, das in jedem XML-Dokument implizit deklariert wird), und einen für den Standardnamespace, wenn sich ein solcher im Gültigkeitsbereich des Elements befindet. Das Element ist der übergeordnete Knoten jedes dieser Namespaceknoten. Ein Namespaceknoten ist jedoch kein untergeordneter Knoten seines übergeordneten Elements.  
   
  Wie bei Attributen werden die <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>-Methode und die <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>-Methode nicht zum Navigieren von einem Element zu einem Namespaceknoten oder zwischen Namespaceknoten verwendet. Für Namespaceknoten gibt es andere Navigationsmethoden.  
@@ -49,6 +52,7 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
 > Wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt auf einem Attribut- oder Namespaceknoten positioniert ist, geben die Methoden  <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> immer `false` zurück und haben keine Auswirkungen auf die Position des <xref:System.Xml.XPath.XPathNavigator>. Die einzigen Ausnahmen sind die Methoden <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>Die XPathNamespaceScope-Enumeration  
+
  Beim Navigieren durch Namespaceknoten können die <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode und die <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode mit dem <xref:System.Xml.XPath.XPathNamespaceScope>-Parameter aufgerufen werden. Das Verhalten dieser Methoden unterscheidet sich von dem ihrer Gegenstücke, die ohne Parameter aufgerufen werden. Die <xref:System.Xml.XPath.XPathNamespaceScope>-Enumeration enthält die Werte von <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> oder <xref:System.Xml.XPath.XPathNamespaceScope.Local>.  
   
  In den folgenden Beispielen wird veranschaulicht, welche Namespaces von der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode und der <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode in den verschiedenen Gültigkeitsbereichen eines XML-Dokuments zurückgegeben werden.  

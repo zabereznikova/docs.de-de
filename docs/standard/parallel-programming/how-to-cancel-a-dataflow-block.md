@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825857"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713352"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Gewusst wie: Abbrechen eines Datenflussblocks
+
 Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivieren. In diesem Beispiel wird Windows Forms verwendet, um anzuzeigen, wo in einer Datenflusspipeline Arbeitselemente aktiv sind, und um die Auswirkungen eines Abbruchs zu verdeutlichen.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
 5. Fügen Sie vier <xref:System.Windows.Forms.ToolStripProgressBar> -Objekte zum <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
 ## <a name="creating-the-dataflow-pipeline"></a>Erstellen der Datenflusspipeline  
+
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflusspipeline erstellen, die Arbeitselemente verarbeitet und Statusanzeigen aktualisiert.  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>So erstellen Sie die Datenflusspipeline  
@@ -65,6 +67,7 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
  In diesem Beispiel wird die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft festgelegt, wenn sie die Elemente der Pipeline erstellt. Da die <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>-Eigenschaft die Ausführung des Datenflussblocks dauerhaft abbricht, muss die gesamte Pipeline neu erstellt werden, wenn der Benutzer den Vorgang abbricht und anschließend weitere Arbeitselemente zur Pipeline hinzufügen möchte. Ein Beispiel für eine alternative Möglichkeit zum Abbrechen eines Datenflussblocks, die erlaubt, dass nach dem Abbrechen eines Vorgangs andere Arbeit ausgeführt wird, finden Sie unter [Exemplarische Vorgehensweise: Verwenden eines Datenflusses in einer Windows Forms-Anwendung](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Verbinden der Datenflusspipeline mit der Benutzeroberfläche  
+
  In diesem Abschnitt wird beschrieben, wie Sie die Datenflusspipeline mit der Benutzeroberfläche verbinden. Sowohl das Erstellen der Pipeline als auch das Hinzufügen von Arbeitselementen zur Pipeline werden vom Ereignishandler für die Schaltfläche **Arbeitselemente hinzufügen** gesteuert. Der Abbruch wird durch die Schaltfläche **Abbrechen** initiiert. Wenn der Benutzer auf eine dieser Schaltflächen klickt, wird die entsprechende Aktion auf asynchrone Weise initiiert.  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>So verbinden Sie die Datenflusspipeline mit der Benutzeroberfläche  
@@ -84,6 +87,7 @@ Dieses Dokument veranschaulicht, wie Sie das Abbrüche in der Anwendung aktivier
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der vollständige Code für „Form1.cs“ („Form1.vb“ in Visual Basic) gezeigt.  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

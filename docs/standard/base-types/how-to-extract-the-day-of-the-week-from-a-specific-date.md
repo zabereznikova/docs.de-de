@@ -22,12 +22,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 329a099411651310cf77fa94e9a66b6ac113fdc2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9db11146ee9428ce22b08accacf7660137d539c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822073"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726989"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Vorgehensweise: Extrahieren des Wochentags aus einem bestimmten Datum
 
@@ -79,6 +79,7 @@ Mit .NET ist es einfach, den Wochentag für ein bestimmtes Datum zu ermitteln un
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das Beispiel veranschaulicht Aufrufe der <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType>- und <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType>-Eigenschaften sowie der <xref:System.DateTime.ToString%2A?displayProperty=nameWithType>- und der <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType>-Methode zum Abrufen der Nummer, die den Wochentag, den abgekürzten Wochentagsnamen und den vollen Wochentagsnamen für ein bestimmtes Datum darstellt.  
   
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]

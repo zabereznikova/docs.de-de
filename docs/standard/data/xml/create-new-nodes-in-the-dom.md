@@ -2,14 +2,15 @@
 title: Erstellen von neuen Knoten im Dokumentobjektmodell
 ms.date: 03/30/2017
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dea7add100fbdbb9e761fe39d0d824d27975757f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822749"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704746"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Erstellen von neuen Knoten im Dokumentobjektmodell
+
 Das <xref:System.Xml.XmlDocument> verfügt über eine create-Methode für alle Knotentypen. Stellen Sie der Methode, falls erforderlich, einen Namen und Inhalt oder andere Parameter für die Knoten bereit, die Inhalt aufweisen (z. B. ein Textknoten), und der Knoten wird erstellt. Für die folgenden Methoden muss ein Name angegeben sein und es müssen einige andere Parameter ausgefüllt sein, damit ein entsprechender Knoten erstellt wird.  
   
 - <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  

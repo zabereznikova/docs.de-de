@@ -7,12 +7,12 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 6b644ed1112b748be4dd301d6fa6f2a6416dc67e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722140"
 ---
 # <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions>-Element
 
@@ -39,6 +39,7 @@ Enthält Typen, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>-Kl
 |[\<system.xml.serialization>-Element](system-xml-serialization-element.md)|Das Element der obersten Ebene zur Steuerung der XML-Serialisierung.|  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel veranschaulicht, wie Typen hinzugefügt werden, die von <xref:System.Xml.Serialization.XmlSchemaImporter> beim Zuordnen von XSD-Typen zu .NET-Typen verwendet werden.  
   
 ```xml  

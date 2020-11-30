@@ -2,14 +2,15 @@
 title: XSLT-Compiler (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818322"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720827"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
+
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
   
  Das Tool „xsltc.exe“ ist Bestandteil von Visual Studio. Weitere Informationen finden Sie bei den [Visual Studio-Downloads](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  XSLT-Lösungen können aus mehreren Stylesheetmodulen bestehen. Das Tool &lt;legacyBold&gt;xsltc.exe&lt;/legacyBold&gt; generiert Assemblys auf der Grundlage von Stylesheets. Die Assemblys können dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Auf diese Weise lassen sich in einigen XSLT-Bereitstellungsszenarios die zu verzeichnenden Leistungseinbußen verringern.  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  Das Tool „xsltc.exe“ überprüft weder den Namen der Klasse (`/class:`*name*) noch den der Assembly (`/out:`*assemblyName*). Wenn die Namen nicht gültig sind, gibt die CLR entsprechende Fehlermeldungen aus.  
   
 ## <a name="examples"></a>Beispiele  
+
  Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen booksort.dll.  
   
 ```console  

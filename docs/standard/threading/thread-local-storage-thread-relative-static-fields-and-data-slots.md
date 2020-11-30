@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819629"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727522"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Lokaler Threadspeicher: Threadbezogene statische Felder und Datenslots
 
@@ -27,6 +27,7 @@ Sie können verwalteten threadlokalen Speicher (TLS, Thread Local Storage) zum S
 Sie können mit der <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>-Klasse threadlokale Objekte erstellen, die verzögert initialisiert werden, wenn das Objekt zum ersten Mal verwendet wird. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Eindeutigkeit der Daten im verwalteten TLS  
+
  Ob Sie threadbezogene statische Felder oder Datenslots verwenden, Daten in verwaltetem TLS sind für die Kombination von Thread und Anwendungsdomäne eindeutig.  
   
 - Innerhalb einer Anwendungsdomäne kann ein Thread Daten aus einem anderen Thread auch dann nicht ändern, wenn beide Threads dasselbe Feld oder denselben Slot verwenden.  
@@ -38,6 +39,7 @@ Sie können mit der <xref:System.Threading.ThreadLocal%601?displayProperty=nameW
  Auch wenn ein Thread denselben benannten Datenslot in zwei unterschiedlichen Anwendungsdomänen abruft, bleiben die Daten in der ersten Anwendungsdomäne unabhängig von den Daten in der zweiten Anwendungsdomäne.  
   
 ## <a name="thread-relative-static-fields"></a>Threadbezogene statische Felder  
+
  Wenn Sie wissen, dass ein Datenstück für eine Kombination aus Thread und Anwendungsdomäne immer eindeutig ist, wenden Sie das <xref:System.ThreadStaticAttribute>-Attribut auf das statische Feld an. Verwenden Sie das Feld wie jedes andere statische Feld. Die Daten im Feld sind für jeden Thread eindeutig, der sie verwendet.  
   
  Threadbezogene statische Felder bieten bessere Leistung als Datenslots und haben den Vorteil der Typüberprüfung zur Kompilierzeit.  

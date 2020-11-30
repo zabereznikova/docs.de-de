@@ -15,14 +15,15 @@ helpviewer_keywords:
 - .NET regular expressions, anchors
 - .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: 5f40270baa70c2b72d768cf0f5c4f8305f8bae7a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 37b6426581dc705264cd1403c979e95b1f4cfa5d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714483"
 ---
 # <a name="anchors-in-regular-expressions"></a>Anchor in regulären Ausdrücken
+
 Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position in der Zeichenfolge an, an der eine Übereinstimmung auftreten muss. Wenn Sie im Suchausdruck einen Anchor verwenden, durchsucht die Engine für reguläre Ausdrücke nicht die Zeichenfolge oder durchläuft Zeichen, sondern sucht nur an der angegebenen Position nach einer Übereinstimmung. Beispielsweise gibt `^` an, dass die Übereinstimmung am Anfang einer Zeile oder Zeichenfolge beginnen muss. Daher stimmt der reguläre Ausdruck `^http:` nur mit "http:" überein, wenn dies am Anfang einer Zeile steht. In der folgenden Tabelle werden die von den regulären .NET-Ausdrücken unterstützten Anchor aufgeführt.  
   
 |Anchor|Beschreibung|  
@@ -37,6 +38,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |`\B`|Die Übereinstimmung darf nicht an einer Wortgrenze vorliegen. Weitere Informationen finden Sie unter [Nicht-Wortgrenze](#non-word-boundary-b).|  
 
 ## <a name="start-of-string-or-line-"></a>Anfang der Zeichenfolge oder Zeile: ^  
+
  Der `^`-Anchor gibt standardmäßig an, dass das folgende Muster an der ersten Zeichenposition der Zeichenfolge beginnen muss. Wenn Sie `^` mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option (siehe [Optionen für reguläre Ausdrücke](regular-expression-options.md)) verwenden, muss die Übereinstimmung am Anfang jeder Zeile vorliegen.  
   
  Im folgenden Beispiel wird der `^` -Anchor in einem regulären Ausdruck verwendet, der Informationen zu den Jahren extrahiert, in denen es bestimmte professionelle Baseballteams gab. Im Beispiel werden zwei Überladungen der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> -Methode aufgerufen:  
@@ -63,6 +65,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Suchen Sie nach einer Übereinstimmung mit mindestens einem Vorkommen der folgenden Elemente: ein Leerzeichen, vier Dezimalzahlen, 0 (Null) oder ein Bindestrich gefolgt von vier Dezimalzahlen oder der Zeichenfolge "present" sowie 0 (Null) oder ein Komma. Dies ist die fünfte Erfassungsgruppe.|
 
 ## <a name="end-of-string-or-line-"></a>Ende der Zeichenfolge oder Zeile: $  
+
  Der `$` -Anchor gibt an, dass das vorangehende Muster am Ende der Eingabezeichenfolge oder vor `\n` am Ende der Eingabezeichenfolge vorliegen muss.  
   
  Wenn Sie `$` mit der <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> -Option verwenden, kann die Übereinstimmung auch am Ende einer Zeile vorliegen. Beachten Sie, dass `$` mit `\n` übereinstimmt, nicht jedoch mit `\r\n` (der Kombination aus Wagenrücklauf- und Zeilenumbruchzeichen oder CR/LF). Zum Suchen einer Übereinstimmung mit der CR/LF-Zeichenkombination schließen Sie `\r?$` in das Muster des regulären Ausdrucks ein.  
@@ -73,6 +76,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]
 
 ## <a name="start-of-string-only-a"></a>Nur Anfang der Zeichenfolge: \A  
+
  Der `\A` -Anchor gibt an, dass eine Übereinstimmung am Anfang der Eingabezeichenfolge vorliegen muss. Dies ist mit dem `^` -Anchor identisch, jedoch wird die `\A` -Option von <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ignoriert. Daher kann hiermit in einer mehrzeiligen Eingabezeichenfolge nur eine Übereinstimmung nur am Anfang der ersten Zeile gesucht werden.  
   
  Das folgende Beispiel ähnelt den Beispielen für den `^` -Anchor und den `$` -Anchor. Der `\A` -Anchor wird in einem regulären Ausdruck verwendet, der Informationen zu den Jahren extrahiert, in denen es bestimmte professionelle Baseballteams gab. Die Eingabezeichenfolge weist fünf Zeilen auf. Der Aufruf der <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> -Methode sucht nur die erste Teilzeichenfolge in der Eingabezeichenfolge, die mit dem Muster des regulären Ausdrucks übereinstimmt. Wie im Beispiel dargestellt, hat die <xref:System.Text.RegularExpressions.RegexOptions.Multiline> -Option keine Auswirkungen.  
@@ -81,6 +85,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
  [!code-vb[Conceptual.RegEx.Language.Assertions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring2.vb#3)]
 
 ## <a name="end-of-string-or-before-ending-newline-z"></a>Ende der Zeichenfolge oder vor dem abschließenden Zeilenumbruch: \Z  
+
  Der `\Z` -Anchor gibt an, dass eine Übereinstimmung am Ende der Eingabezeichenfolge oder vor `\n` am Ende der Eingabezeichenfolge vorliegen muss. Dies ist mit dem `$` -Anchor identisch, jedoch wird die `\Z` -Option von <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ignoriert. Daher kann hiermit in einer mehrzeiligen Zeichenfolge nur nach einer Übereinstimmung mit dem Ende der letzten Zeile oder der letzten Zeile vor `\n`gesucht werden.  
   
  Beachten Sie, dass `\Z` mit `\n` , aber nicht mit `\r\n` übereinstimmt (der CR/LF-Zeichenkombination). Zum Suchen einer Übereinstimmung mit CR/LF schließen Sie `\r?\Z` in das Muster des regulären Ausdrucks ein.  
@@ -91,6 +96,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
  [!code-vb[Conceptual.RegEx.Language.Assertions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring2.vb#4)]
 
 ## <a name="end-of-string-only-z"></a>Nur Ende der Zeichenfolge: \z  
+
  Der `\z` -Anchor gibt an, dass eine Übereinstimmung am Ende der Eingabezeichenfolge vorliegen muss. Wie das `$` -Sprachelement ignoriert `\z` die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> -Option. Im Gegensatz zum `\Z` -Sprachelement stimmt `\z` nicht mit einem `\n` -Zeichen am Ende einer Zeichenfolge überein. Daher kann hiermit nur eine Übereinstimmung mit der letzten Zeile der Eingabezeichenfolge gesucht werden.  
   
  Im folgenden Beispiel wird der `\z` -Anchor in einem regulären Ausdruck verwendet, der ansonsten mit dem Beispiel aus dem vorherigen Abschnitt übereinstimmt und Informationen zu den Jahren extrahiert, in denen es bestimmte professionelle Baseballteams gab. Im Beispiel wird versucht, eine Übereinstimmung mit dem Muster eines regulären Ausdrucks `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`für jedes der fünf Elemente in einem Zeichenfolgenarray zu finden. Zwei der Zeichenfolgen enden mit Wagenrücklauf- und Zeilenvorschubzeichen, eine endet mit einem Zeilenvorschubzeichen, und zwei enden weder mit einem Wagenrücklauf- noch mit einem Zeilenvorschubzeichen. Wie die Ausgabe ergibt, stimmen nur die Zeichenfolgen ohne Wagenrücklauf oder Zeilenvorschub mit dem Muster überein.  
@@ -99,6 +105,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
  [!code-vb[Conceptual.RegEx.Language.Assertions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring3.vb#5)]
 
 ## <a name="contiguous-matches-g"></a>Aufeinander folgende Übereinstimmungen: \G  
+
  Der `\G` -Anchor gibt an, dass eine Übereinstimmung an dem Punkt vorliegen muss, an dem die vorherige Übereinstimmung endet. Wenn Sie diesen Anchor mit der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> -Methode oder <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> -Methode verwenden, wird damit sichergestellt, dass alle Übereinstimmungen zusammenhängend sind.  
   
  Im folgenden Beispiel werden mithilfe eines regulären Ausdrucks die Namen von Nagetierspezies aus einer durch Trennzeichen getrennten Zeichenfolge extrahiert.  
@@ -118,6 +125,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |`,?`|Übereinstimmung mit 0 (Null) oder einem Literal-Kommazeichen.|
 
 ## <a name="word-boundary-b"></a>Wortgrenze: \b  
+
  Der `\b` -Anchor gibt an, dass die Übereinstimmung an einer Grenze zwischen einem Wortzeichen (dem `\w` -Sprachelement) und einem Nicht-Wortzeichen (dem `\W` -Sprachelement) vorliegen muss. Wortzeichen bestehen aus alphanumerischen Zeichen und Unterstrichen. Bei Nicht-Wortzeichen handelt es sich um alle Zeichen, die weder alphanumerisch noch Unterstriche sind. (Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](character-classes-in-regular-expressions.md).) Die Übereinstimmung kann auch an einer Wortgrenze am Anfang oder Ende der Zeichenfolge vorliegen.  
   
  Der `\b` -Anchor wird häufig verwendet, um sicherzustellen, dass ein Teilausdruck statt nur mit Anfang oder Ende mit einem ganzen Wort übereinstimmt. Im folgenden Beispiel wird die Verwendung des regulären Ausdrucks `\bare\w*\b` veranschaulicht. Der Ausdruck stimmt mit jedem Wort überein, das mit der Teilzeichenfolge "are" beginnt. Die Ausgabe des Beispiels veranschaulicht auch, dass `\b` sowohl mit dem Anfang als auch dem Ende der Eingabezeichenfolge übereinstimmt.  
@@ -135,6 +143,7 @@ Anker, auch als atomische Nullbreitenassertionen bezeichnet, geben eine Position
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
 
 ## <a name="non-word-boundary-b"></a>Nicht-Wortgrenze: \B  
+
  Der `\B` -Anchor gibt an, dass die Übereinstimmung nicht an einer Wortgrenze vorliegen darf. Dies ist das Gegenteil des `\b` -Anchor.  
   
  Im folgenden Beispiel wird der `\B` -Anchor verwendet, um nach Vorkommen der Teilzeichenfolge "qu" in einem Wort zu suchen. Das Muster des regulären Ausdrucks `\Bqu\w+` stimmt mit einer Teilzeichenfolge überein, die mit "qu" beginnt, nicht der Wortbeginn ist und bis zum Ende des Worts reicht.  

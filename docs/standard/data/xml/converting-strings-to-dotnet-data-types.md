@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830960"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701470"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Konvertieren von Zeichenfolgen in .NET-Datentypen
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  Wenn Sie jedoch eine Zeichenfolge in einen der Typen **Boolean**, **Single** oder **Double** konvertieren, stimmt der zurückgegebene .NET-Typ nicht mit dem bei Verwendung der **System.Convert**-Klasse zurückgegebenen Typ überein.  
   
 ## <a name="string-to-boolean"></a>Zeichenfolge in Boolean  
+
  Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToBoolean**-Methode in **Boolean** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET-Ausgabetyp|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>String in Single  
+
  Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToSingle**-Methode in **Single** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET-Ausgabetyp|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>String in Double  
+
  Die folgende Tabelle zeigt, welcher Typ für die angegebenen Eingabezeichenfolgen generiert wird, wenn eine Zeichenfolge mithilfe der **ToDouble**-Methode in **Single** konvertiert wird.  
   
 |Gültiger Eingabeparameter für die Zeichenfolge|.NET-Ausgabetyp|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-ms.openlocfilehash: 7c772ec1de41d0ba2b4ef0d924a252326ee6909e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48b862ff77bf4ace48a5481fe9bedcf354b5654b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725338"
 ---
 # <a name="how-to-read-text-from-a-file"></a>Vorgehensweise: Lesen von Text aus einer Datei
 
@@ -27,6 +27,7 @@ In den folgenden Beispielen wird das synchrone und asynchrone Lesen aus einer Te
 > Diese Codebeispiele gelten nicht für Apps für die Universelle Windows-Plattform (UWP), da die Windows-Runtime verschiedene Streamtypen für Lese- und Schreibvorgänge für Dateien bereitstellt. Ein Beispiel für das Lesen von Text aus einer Datei in einer UWP-App finden Sie unter [Schnellstart: Lesen und Schreiben von Dateien](/previous-versions/windows/apps/hh758325(v=win.10)). Beispiele für die Konvertierung von .NET Framework-Streams in Windows-Runtime-Streams und umgekehrt finden Sie unter [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md).  
   
 ## <a name="example-synchronous-read-in-a-console-app"></a>Beispiel: Synchrones Lesen in einer Konsolen-App  
+
 Im folgenden Beispiel wird ein synchroner Lesevorgang in einer Konsolen-App veranschaulicht. In diesem Beispiel wird die Textdatei mit einem StreamReader geöffnet, ihr Inhalt wird in eine Zeichenfolge kopiert, und die Zeichenfolge wird an die Konsole ausgegeben.  
   
 > [!IMPORTANT]
@@ -36,6 +37,7 @@ Im folgenden Beispiel wird ein synchroner Lesevorgang in einer Konsolen-App vera
 :::code language="vb" source="snippets/how-to-read-text-from-a-file/vb/sync-console/Program.vb":::
   
 ## <a name="example-asynchronous-read-in-a-wpf-app"></a>Beispiel: Asynchrones Lesen in einer WPF-App
+
  Im folgenden Beispiel wird ein asynchroner Lesevorgang in einer WPF-App veranschaulicht.  
   
 > [!IMPORTANT]

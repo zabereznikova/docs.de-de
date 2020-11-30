@@ -6,14 +6,15 @@ helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
-ms.openlocfilehash: 1914997b322591d8deda13d00192bc5f60d81ca2
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2846efbbd76cf677a42a7031e53661d302c6c964
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378483"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687462"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren des Features zur Umgehung von starken Namen
+
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
   
  Die Bypass-Funktion gilt für alle vollständig vertrauenswürdigen Assemblys, die nicht verzögert signiert wurden, und die in eine vollständig vertrauenswürdige <xref:System.AppDomain> aus einem von der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft angegebenen Verzeichnis geladen wurden.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823185"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723219"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 
@@ -170,11 +170,13 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 - Definitionen für jeden Member des Typs.  
   
 ### <a name="attributes"></a>Attribute  
+
  Durch Attribute werden zusätzliche benutzerdefinierte Metadaten bereitgestellt. Sie werden in dem meisten Fällen verwendet, um zusätzliche Informationen zu einem Typ in seiner Assembly zu speichern oder um das Verhalten eines Typmembers zur Entwurfszeit oder in der Laufzeitumgebung zu ändern.  
   
  Attribute sind selbst Klassen, die von <xref:System.Attribute?displayProperty=nameWithType> erben. Sprachen, die die Verwendung von Attributen unterstützen, verfügen über eine eigene Syntax zum Anwenden von Attributen auf ein Sprachelement. Attribute können auf fast alle Sprachelemente angewendet werden. Die einzelnen Elemente, auf die ein Attribut angewendet werden kann, werden vom auf die Attributklasse angewendeten <xref:System.AttributeUsageAttribute> definiert.  
   
 ### <a name="type-accessibility"></a>Typzugriff  
+
  Alle Typen verfügen über einen Modifizierer, der regelt, welche anderen Typen auf diesen Typ zugreifen können. In der folgenden Tabelle werden die von der Laufzeit unterstützten Zugriffsarten auf Typen beschrieben.  
   
 |Zugriff|Beschreibung|  
@@ -197,6 +199,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 - Wenn die deklarierte Zugriffsart von `M` den Wert `private` hat, entspricht die Zugriffsdomäne von `M` dem Programmtext von `T`.  
   
 ### <a name="type-names"></a>Typnamen  
+
  Das allgemeine Typsystem sieht lediglich zwei Namenseinschränkungen vor:  
   
 - Alle Namen werden als Unicode-Zeichenfolgen (16-Bit-Zeichen) codiert.  
@@ -208,6 +211,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Obwohl ein Typ auf Typen aus anderen Modulen und Assemblys verweisen kann, muss er vollständig innerhalb eines .NET-Moduls definiert werden. (Abhängig von der Compilerunterstützung kann er jedoch auf mehrere Quellcodedateien aufgeteilt werden.) Typnamen müssen nur innerhalb eines Namespace eindeutig sein. Um einen Typ vollständig zu identifizieren, muss der Typname durch den Namespace gekennzeichnet werden, die die Typimplementierung enthält.  
   
 ### <a name="base-types-and-interfaces"></a>Basistypen und Schnittstellen  
+
  Ein Typ kann Werte und Verhaltensdefinitionen von anderen Typen erben. Gemäß dem allgemeinen Typsystem können Typen nicht von mehr als einem Basistyp erben.  
   
  Ein Typ kann eine beliebige Anzahl von Schnittstellen implementieren. Zur Implementierung einer Schnittstelle muss ein Typ alle virtuellen Member der betreffenden Schnittstelle implementieren. Eine virtuelle Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden.  
@@ -291,12 +295,14 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 |virtual|Methoden, Eigenschaften und Ereignisse|Die Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden. Beim dynamischen Aufruf bestimmt der Typ der Instanz, durch die der Aufruf zur Laufzeit ausgeführt wird (und nicht der zur Kompilierungszeit bekannte Typ), welche Implementierung der Methode aufgerufen wird. Um eine Methode vom Typ virtual statisch aufzurufen, muss die Variable u. U. in einen Typ umgewandelt werden, der die gewünschte Methodenversion verwendet.|  
   
 ### <a name="overloading"></a>Überladen  
+
  Jeder Typmember verfügt über eine eindeutige Signatur. Methodensignaturen bestehen aus dem Methodennamen und einer Parameterliste (die Reihenfolge und Typen der Argumente der Methode). Solange die Signaturen unterschiedlich sind, können innerhalb eines Typs mehrere Methoden mit demselben Namen definiert werden. Wenn zwei oder mehrere Methoden mit demselben Namen definiert sind, wird von einer "überladenen" Methode gesprochen. In <xref:System.Char?displayProperty=nameWithType> wird z. B. die <xref:System.Char.IsDigit%2A>-Methode überladen. Eine Methode nimmt einen <xref:System.Char> an. Die andere Methode nimmt einen <xref:System.String> und einen <xref:System.Int32> an.  
   
 > [!NOTE]
 > Der Rückgabetyp wird nicht als Teil der Signatur einer Methode betrachtet. Dies bedeutet, dass Methoden nicht überladen werden können, wenn sich nur ihr Rückgabetyp unterscheidet.  
   
 ### <a name="inherit-override-and-hide-members"></a>Erben, Überschreiben und Ausblenden von Membern  
+
  Ein abgeleiteter Typ erbt alle Member seines Basistyps. Dies bedeutet, dass diese Member für den abgeleiteten Typ definiert und verfügbar sind. Das Verhalten oder die Merkmale geerbter Member können auf zwei Weisen geändert werden:  
   
 - Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.  

@@ -9,19 +9,21 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-ms.openlocfilehash: a3565bb8f0d00773fc59853d68ca7c54de03ba2b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e981d1b9b3adc638a84de1c119ad849ec533d16e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826801"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722385"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Gewusst wie: Verknüpfungen für Datenflussblöcke aufheben
+
 In diesem Dokument erfahren Sie, wie Sie eine Verknüpfung zwischen einen Zieldatenflussblock und der zugehörigen Quelle auflösen.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel werden drei <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>-Objekte erstellt, die jeweils die `TrySolution`-Methode aufrufen, um einen Wert zu berechnen. In diesem Beispiel wird nur das Ergebnis vom ersten Aufruf von `TrySolution` zum Beenden benötigt.  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]

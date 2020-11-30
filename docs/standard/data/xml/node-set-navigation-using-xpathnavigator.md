@@ -2,17 +2,19 @@
 title: Navigieren in Knotengruppen mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-ms.openlocfilehash: cf0058f553488e453d0227291110d9edc96638f6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 592acfb5e4065d707f4dda09f349e8b783656148
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830128"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714300"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>Navigieren in Knotengruppen mit "XPathNavigator"
+
 Sie können mit den Navigationsmethoden für Knotengruppen der <xref:System.Xml.XPath.XPathDocument>-Klasse durch Knoten in einem <xref:System.Xml.XmlDocument> oder <xref:System.Xml.XPath.XPathNavigator> navigieren. Sie können durch alle Knoten oder durch eine von den Auswahlmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegebene Gruppe von Knoten navigieren.  
   
 ## <a name="element-node-set-navigation"></a>Navigation durch Gruppen von Elementknoten  
+
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt mehrere Methoden zum Navigieren durch Elementknoten bereit. In der folgenden Tabelle sind die verfügbaren Navigationsmethoden mit einer Beschreibung ihrer Wirkungsweise aufgeführt. Methoden zur Navigation durch Attribut- und Namespaceknoten sind nicht aufgeführt.  
   
  Weitere Informationen zum Auswählen von Knoten in einem <xref:System.Xml.XPath.XPathNavigator>-Objekt finden Sie unter [Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator](selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md). Weitere Informationen zum Navigieren durch Attribut-und Namespaceknoten finden Sie unter [Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator](attribute-and-namespace-node-navigation-using-xpathnavigator.md).  
@@ -31,6 +33,7 @@ Sie können mit den Navigationsmethoden für Knotengruppen der <xref:System.Xml.
 |<xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>|Positioniert den <xref:System.Xml.XPath.XPathNavigator> auf den Stammknoten des XML-Dokuments.|  
   
 ## <a name="comments-and-processing-instruction-node-navigation"></a>Navigation durch Kommentare und Knoten mit Verarbeitungsanweisungen  
+
  Die folgenden Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse sind zum Positionieren auf Kommentare und Verarbeitungsanweisungen in einem XML-Dokument bestimmt.  
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727457"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 
@@ -38,12 +38,15 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
 |Manuelle Synchronisierung|Manuell|Manuell|Manuell|Manuell|Manuell|Manuell|  
   
 ## <a name="no-synchronization"></a>Keine Synchronisierung  
+
  Dies ist die Standardeinstellung für Objekte. Jeder Thread kann jederzeit auf alle Methoden oder Felder zugreifen. Es sollte jedoch nur ein Thread nach dem anderen auf diese Objekte zugreifen.  
   
 ## <a name="manual-synchronization"></a>Manuelle Synchronisierung  
+
  Die .NET-Klassenbibliothek stellt eine Reihe von Klassen zum Synchronisieren von Threads bereit. Weitere Informationen finden Sie unter [Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md).  
   
 ## <a name="synchronized-code-regions"></a>Synchronisierte Codebereiche  
+
  Sie können die <xref:System.Threading.Monitor>-Klasse oder ein Compilerschlüsselwort zur Synchronisierung von Codeblöcken, Instanzmethoden und statischen Methoden verwenden. Es gibt keine Unterstützung für synchronisierte statische Felder.  
   
  Visual Basic und C# unterstützen das Markieren von Codeblöcken mit einem bestimmten Sprachschlüsselwort, der `lock`-Anweisung in C# oder der `SyncLock`-Anweisung in Visual Basic. Wenn der Code von einem Thread ausgeführt wird, wird versucht, die Sperre abzurufen. Wenn die Sperre bereits von einem anderen Thread abgerufen wurde, wird der Thread blockiert, bis die Sperre verfügbar ist. Wenn der Thread den synchronisierten Codeblock beendet, wird die Sperre aufgehoben, unabhängig davon, wie der Thread den Block beendet.  
@@ -59,6 +62,7 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
 > Sperren Sie nicht den Typ – d.h. `typeof(MyType)` in C#, `GetType(MyType)` in Visual Basic oder `MyType::typeid` in C++ – um die `static`-Methoden zu schützen (`Shared`-Methoden in Visual Basic). Verwenden Sie stattdessen ein privates statisches Objekt. Verwenden Sie auch nicht `this` in C# (`Me` in Visual Basic), um Instanzmethoden zu sperren. Verwenden Sie stattdessen ein privates Objekt. Eine Klasse oder Instanz kann von einem anderen Code als Ihrem eigenen gesperrt werden, was potenziell zu Deadlocks oder Leistungsproblemen führt.  
   
 ### <a name="compiler-support"></a>Compilerunterstützung  
+
  Visual Basic und C# unterstützen ein Sprachschlüsselwort, das <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> und <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> zum Sperren des Objekts verwendet. Visual Basic unterstützt die [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md)-Anweisung und C# unterstützt die [lock](../../csharp/language-reference/keywords/lock-statement.md)-Anweisung.  
   
  Wenn eine Ausnahme im Codeblock ausgelöst wird, wird in beiden Fällen die Sperre, die durch **lock** oder **SyncLock** erstellt wurde, automatisch aufgehoben. Die C#- und Visual Basic-Compiler geben einen **try**/**finally**-Block mit **Monitor.Enter** zu Beginn des Versuchs und **Monitor.Exit** im **finally**-Block aus. Wenn eine Ausnahme innerhalb eines **lock**- oder **SyncLock**-Blocks ausgelöst wird, wird der **finally**-Handler ausgeführt, damit Sie notwendige Bereinigungen ausführen können.  

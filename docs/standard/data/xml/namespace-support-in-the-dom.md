@@ -2,14 +2,15 @@
 title: Namespaceunterstützung im Dokumentobjektmodell
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b71817bf8a1b2eb585ccb3b21fb361c651c2bfe9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714405"
 ---
 # <a name="namespace-support-in-the-dom"></a>Namespaceunterstützung im Dokumentobjektmodell
+
 Das XML-DOM (Dokumentobjektmodell) unterstützt Namespaces vollständig. Es werden nur XML-Dokumente unterstützt, die mit Namespaces arbeiten können. Gemäß einer Spezifikation des W3C (World Wide Web Consortium) können DOM-Anwendungen, bei denen Level 1 implementiert ist, Namespaces nicht unterstützen, und DOM-Funktionen mit Level 2 unterstützen Namespaces. Alle Funktionen des XML-DOMs sind jedoch namespacefähig, ungeachtet dessen, ob die Methode aus der Level 1- oder der Level 2-Empfehlung stammt.  
   
  Beispielsweise führt das Aufrufen von `setAttribute("A:b", "123")`, wie in der Level 1-DOM-Empfehlung spezifiziert, in einer Umgebung, die Namespaces nicht unterstützt, nicht zu einem Attribut mit dem Präfix `A` und dem lokalen Namen `b`. Vielmehr ergibt der Aufruf ein Attribut mit dem Wert `A:b`.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: ee36845f19ef4a7c3923b1032ab6eb45d2f60733
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c2ab384b6d84a14d5e8f4cfe66281a26b14421f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830817"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726963"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 
@@ -19,6 +19,7 @@ ms.locfileid: "94830817"
 Die <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Klasse enthält Methoden, die diese Konvertierungen vereinfachen. Es gibt jedoch grundlegende Unterschiede zwischen Streams in .NET Framework und der Windows-Runtime, die sich auf die Ergebnisse der Verwendung dieser Methoden auswirken. Dies wird in den folgenden Abschnitten erläutert:
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>Konvertieren eines Windows-Runtime-Streams in einen .NET Framework-Stream
+
 Konvertieren Sie einen Windows-Runtime-Stream mit einer der folgenden <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Methoden in einen .NET Framework-Stream:
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> konvertiert einen Random-Access-Stream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps.
@@ -32,6 +33,7 @@ Für die Windows-Runtime gibt es Streamtypen, die nur das Lesen, nur das Schreib
 Es wird empfohlen, die Konvertierungsmethode zu verwenden, die zu den Funktionen des Windows-Runtime-Streams passt, den Sie konvertieren möchten. Da jedoch <xref:Windows.Storage.Streams.IRandomAccessStream> lesbar und schreibbar ist (es werden sowohl <xref:Windows.Storage.Streams.IOutputStream> als auch <xref:Windows.Storage.Streams.IInputStream> implementiert), ist es egal, welche Konvertierungsmethode Sie verwenden. Die Funktionen des ursprünglichen Streams bleiben stets erhalten. Wenn Sie beispielsweise <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> zum Konvertieren von <xref:Windows.Storage.Streams.IRandomAccessStream> verwenden, wird der konvertierte .NET Framework-Stream nicht auf den Schreibschutz eingeschränkt. Er ist dann auch schreibbar.
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Beispiel: Konvertieren eines Windows-Runtime-Streams mit wahlfreiem Zugriff in einen .NET Framework-Stream
+
 Verwenden Sie die <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType>-Methode, um einen Windows-Runtime-Random-Access-Stream in einen .NET Framework-Stream zu konvertieren.
 
 Im folgenden Codebeispiel werden Sie dazu aufgefordert, eine Datei auszuwählen, die anschließend mithilfe von Windows-Runtime-APIs geöffnet und in einen .NET Framework-Stream konvertiert wird. Dabei wird der Stream gelesen und als Textblock ausgegeben. Üblicherweise sollten Sie den Stream mit .NET Framework-APIs bearbeiten, bevor die Ergebnisse ausgegeben werden.
@@ -42,6 +44,7 @@ Damit dieses Beispiel ausgeführt werden kann, müssen Sie eine XAML-App für di
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>Konvertieren eines .NET Framework-Streams in einen Windows-Runtime-Stream
+
 Konvertieren Sie einen .NET Framework-Stream mit einer der folgenden <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Methoden in einen Windows-Runtime-Stream:
 
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> konvertiert einen verwalteten Stream in .NET für UWP-Apps in einen Eingabestream in der Windows-Runtime.

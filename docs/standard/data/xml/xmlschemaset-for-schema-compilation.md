@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4501f3dde8d402bd318332dfe9b2209b3febea71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825922"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723362"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
+
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
   
 ## <a name="the-xmlschemaset-class"></a>Die XmlSchemaSet-Klasse  
+
  Beim <xref:System.Xml.Schema.XmlSchemaSet> handelt es sich um einen Cache, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
   
  In <xref:System.Xml?displayProperty=nameWithType>, Version 1.0, wurden XML-Schemata als Schemabibliothek in eine <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse geladen. In <xref:System.Xml?displayProperty=nameWithType>, Version 2.0, sind die <xref:System.Xml.XmlValidatingReader>-Klasse und die <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse veraltet und wurden durch die <xref:System.Xml.XmlReader.Create%2A>-Methoden bzw. die <xref:System.Xml.Schema.XmlSchemaSet>-Klasse ersetzt.  
@@ -32,6 +34,7 @@ Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen C
 |Es kann nur ein Schema für einen bestimmten Zielnamespace in der Auflistung vorhanden sein.|Es können mehrere Schemata für denselben Zielnamespace hinzugefügt werden, wenn keine Typenkonflikte auftreten.|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>Migrieren zum "XmlSchemaSet"  
+
  Im folgenden Codebeispiel ist eine Anleitung zum Migrieren von der veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse zur neuen <xref:System.Xml.Schema.XmlSchemaSet>-Klasse enthalten. Im Codebeispiel werden die folgenden Hauptunterschiede zwischen den beiden Klassen veranschaulicht.  
   
 - Im Gegensatz zur <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> nicht kompiliert. Die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> wird im Beispielcode explizit aufgerufen.  
@@ -95,6 +98,7 @@ foreach(XmlSchema schema in schemaSet.Schemas())
 ```  
   
 ## <a name="adding-and-retrieving-schemas"></a>Hinzufügen und Abrufen von Schemata  
+
  Schemata werden einem <xref:System.Xml.Schema.XmlSchemaSet> mithilfe der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt. Wenn ein Schema einem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt wird, wird es einem Namespace-URI zugeordnet. Der Zielnamespace-URI kann als Parameter für die <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode angegeben werden. Wenn kein Namespace angegeben wurde, verwendet das <xref:System.Xml.Schema.XmlSchemaSet> den im Schema angegebenen Zielnamespace.  
   
  Schemata werden mithilfe der <xref:System.Xml.Schema.XmlSchemaSet>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> aus dem <xref:System.Xml.Schema.XmlSchemaSet> abgerufen. Mit der <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet> können Sie die im <xref:System.Xml.Schema.XmlSchema> enthaltenen <xref:System.Xml.Schema.XmlSchemaSet>-Objekte durchlaufen. Die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft gibt entweder alle im<xref:System.Xml.Schema.XmlSchema> enthaltenen <xref:System.Xml.Schema.XmlSchemaSet>-Objekte zurück. Ansonsten, wenn ein Parameter für den Zielnamespace angegeben wurde, werden alle zu diesem Zielnamespace gehörenden <xref:System.Xml.Schema.XmlSchema>-Objekte zurückgegeben. Wenn `null` als Parameter für den Zielnamespace angegeben wurde, gibt die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft alle Schemata ohne Namespace zurück.  
@@ -127,6 +131,7 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  Weitere Informationen über das Hinzufügen und Abrufen von Schemata aus einem <xref:System.Xml.Schema.XmlSchemaSet>-Objekt finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode und zur <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft.  
   
 ## <a name="compiling-schemas"></a>Kompilieren von Schemata  
+
  In einem <xref:System.Xml.Schema.XmlSchemaSet> befindliche Schemata werden von der <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode des <xref:System.Xml.Schema.XmlSchemaSet> in ein logisches Schema kompiliert.  
   
 > [!NOTE]
@@ -154,6 +159,7 @@ schemaSet.Compile();
  Weitere Informationen über das Kompilieren von Schemata in einem <xref:System.Xml.Schema.XmlSchemaSet> finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode.  
   
 ## <a name="reprocessing-schemas"></a>Wiederverarbeiten von Schemata  
+
  Beim Wiederverarbeiten eines Schemas in einem <xref:System.Xml.Schema.XmlSchemaSet> werden alle Wiederverarbeitungsschritte durchgeführt, die beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode des <xref:System.Xml.Schema.XmlSchemaSet> für ein Schema durchgeführt werden. Wenn die <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>-Methode erfolgreich aufgerufen wurde, wird die <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet> auf `false` festgelegt.  
   
  Die <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>-Methode sollte verwendet werden, wenn ein Schema im <xref:System.Xml.Schema.XmlSchemaSet> geändert wurde, nachdem von <xref:System.Xml.Schema.XmlSchemaSet> die Kompilierung durchgeführt wurde.  
@@ -189,11 +195,13 @@ schemaSet.Reprocess(schema);
  Weitere Informationen über das Wiederverarbeiten eines Schemas in einem <xref:System.Xml.Schema.XmlSchemaSet> finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>-Methode.  
   
 ## <a name="checking-for-a-schema"></a>Suche nach einem Schema  
+
  Sie können die <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>-Methode des <xref:System.Xml.Schema.XmlSchemaSet> verwenden, um festzustellen ob in einem <xref:System.Xml.Schema.XmlSchemaSet> ein Schema enthalten ist. Die <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>-Methode sucht entweder nach einem Zielnamespace oder einem <xref:System.Xml.Schema.XmlSchema>-Objekt. In beiden Fällen gibt die <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>-Methode `true` zurück, wenn im <xref:System.Xml.Schema.XmlSchemaSet> ein Schema enthalten ist. Andernfalls gibt sie `false` zurück.  
   
  Weitere Informationen über das Suchen nach einem Schema finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>-Methode.  
   
 ## <a name="removing-schemas"></a>Entfernen von Schemata  
+
  Schemata werden mithilfe der <xref:System.Xml.Schema.XmlSchemaSet>-Methode und der <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>-Methode des <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> aus einem <xref:System.Xml.Schema.XmlSchemaSet> entfernt. Die <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>-Methode entfernt das angegebene Schema aus dem <xref:System.Xml.Schema.XmlSchemaSet>, wohingegen die <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>-Methode das angegebene Schema und alle aus dem <xref:System.Xml.Schema.XmlSchemaSet> importierten Schemata entfernt.  
   
  Im folgenden Beispiel wird das Hinzufügen mehrerer Schemata zu einem <xref:System.Xml.Schema.XmlSchemaSet> und die anschließende Verwendung der <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>-Methode zum Entfernen eines der Schemata und aller von ihr importierten Schemata veranschaulicht.  
@@ -233,6 +241,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  Weitere Informationen über das Entfernen von Schemata aus einem <xref:System.Xml.Schema.XmlSchemaSet> finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>-Methode und zur <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>-Methode.  
   
 ## <a name="schema-resolution-and-xsimport"></a>Schemaauflösung und „xs:import“  
+
  In den folgenden Beispielen wird die Verhaltensweise des <xref:System.Xml.Schema.XmlSchemaSet> beim Importieren von Schemata beschrieben, wenn in einem <xref:System.Xml.Schema.XmlSchemaSet> mehrere Schemata für einen angegebenen Namespace vorhanden sind.  
   
  Betrachten Sie beispielsweise ein <xref:System.Xml.Schema.XmlSchemaSet>, das mehrere Schemata für den `http://www.contoso.com`-Namespace enthält. Ein Schema mit der folgenden `xs:import`-Anweisung wird dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt.  
@@ -244,6 +253,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  Das <xref:System.Xml.Schema.XmlSchemaSet> versucht, ein Schema für den `http://www.contoso.com`-Namespace durch Laden aus der URL `http://www.contoso.com/schema.xsd` zu importieren. Im Importschema sind nur die Schemadeklaration und die im Schemadokument deklarierten Typen verfügbar, obwohl im `http://www.contoso.com` andere Schemadokumente für den <xref:System.Xml.Schema.XmlSchemaSet>-Namespace vorhanden sind. Wenn die `schema.xsd`-Datei nicht unter der URL `http://www.contoso.com/schema.xsd` gefunden werden kann, wird kein Schema für den `http://www.contoso.com`-Namespace in das Importschema importiert.  
   
 ## <a name="validating-xml-documents"></a>Validierung von XML-Dokumenten  
+
  XML-Dokumente können anhand von Schemata in einem <xref:System.Xml.Schema.XmlSchemaSet> validiert werden. Sie validieren ein XML-Dokument, indem Sie der <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts ein Schema hinzufügen oder indem Sie der <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft eines <xref:System.Xml.XmlReaderSettings>-Objekts eine <xref:System.Xml.Schema.XmlSchemaSet>-Klasse hinzufügen. Das <xref:System.Xml.XmlReaderSettings>-Objekt wird anschließend von der <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse verwendet, um ein <xref:System.Xml.XmlReader>-Objekt zu erstellen und um das XML-Dokument zu validieren.  
   
  Weitere Informationen zum Validieren von XML-Dokumenten mithilfe einer <xref:System.Xml.Schema.XmlSchemaSet>-Klasse finden Sie unter [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](xml-schema-xsd-validation-with-xmlschemaset.md).  

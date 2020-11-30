@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722153"
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 
@@ -39,19 +39,21 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
   Die Serialisierung spielt eine wichtige Rolle beim Entwurf von Typen, da Programme ggf. Instanzen eines Typs beibehalten oder übertragen müssen.
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Auswählen einer geeigneten Serialisierungstechnologie, die unterstützt werden soll
+
  Jeder Typ kann keine, eine oder mehrere Serialisierungstechnologien unterstützen.
 
-- ERWÄGEN Sie eine Unterstützung der *Datenvertragsserialisierung* , falls Instanzen des Typs in Webdiensten verwendet oder beibehalten werden.
+- ERWÄGEN Sie eine Unterstützung der *Datenvertragsserialisierung*, falls Instanzen des Typs in Webdiensten verwendet oder beibehalten werden.
 
 - ERWÄGEN Sie eine Unterstützung der *XML-Serialisierung* anstelle oder zusätzlich zur Datenvertragsserialisierung, wenn Sie eine größere Kontrolle über das bei der Serialisierung des Typs erstellte XML-Format benötigen.
 
      Dies kann in einigen Interoperabilitätsszenarien von Bedeutung sein, wenn ein XML-Konstrukt verwendet werden muss, das von der Datenvertragsserialisierung nicht unterstützt wird, beispielsweise um XML-Attribute zu erzeugen.
 
-- ERWÄGEN Sie eine Unterstützung der *Laufzeitserialisierung* , wenn Instanzen des Typs über .NET-Remotegrenzen übertragen werden müssen.
+- ERWÄGEN Sie eine Unterstützung der *Laufzeitserialisierung*, wenn Instanzen des Typs über .NET-Remotegrenzen übertragen werden müssen.
 
 - Vermeiden Sie eine Unterstützung der Laufzeitserialisierung oder der XML-Serialisierung, wenn diese Unterstützung lediglich aus allgemeinen Persistenzgründen implementiert wird. In solchen Fällen sollten Sie die Datenvertragsserialisierung bevorzugen.
 
 #### <a name="data-contract-serialization"></a>Datenvertragsserialisierung
+
  Um die Datenvertragsserialisierung für einen Typ zu unterstützen, wenden Sie <xref:System.Runtime.Serialization.DataContractAttribute> auf den Typ und <xref:System.Runtime.Serialization.DataMemberAttribute> auf die Member (Felder und Eigenschaften) des Typs an.
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -75,12 +77,12 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
 
 4. Erwägen Sie die Verwendung des <xref:System.Runtime.Serialization.KnownTypeAttribute>, um konkrete Typen anzugeben, die beim Deserialisieren eines komplexen Objektdiagramms verwendet werden sollen.
 
-     Wenn ein Typ eines deserialisierten Datenmembers z.B. durch eine abstrakte Klasse dargestellt wird, benötigt das Serialisierungsprogramm die Informationen zum *bekannten Typ* , um zu entscheiden, welcher konkrete Typ instanziiert und dem Member zugewiesen werden soll. Wenn der bekannte Typ nicht mithilfe des Attributs angegeben wird, muss er explizit an das Serialisierungsprogramm übergeben werden (durch Übergabe der bekannten Typen an den Konstruktor des Serialisierungsprogramms) oder in der Konfigurationsdatei angegeben sein.
+     Wenn ein Typ eines deserialisierten Datenmembers z.B. durch eine abstrakte Klasse dargestellt wird, benötigt das Serialisierungsprogramm die Informationen zum *bekannten Typ*, um zu entscheiden, welcher konkrete Typ instanziiert und dem Member zugewiesen werden soll. Wenn der bekannte Typ nicht mithilfe des Attributs angegeben wird, muss er explizit an das Serialisierungsprogramm übergeben werden (durch Übergabe der bekannten Typen an den Konstruktor des Serialisierungsprogramms) oder in der Konfigurationsdatei angegeben sein.
 
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]
 
-     In Fällen, in denen die Liste der bekannten Typen nicht statisch ist (wenn die **Person** -Klasse kompiliert wird), kann **KnownTypeAttribute** auch auf eine Methode zeigen, die zur Laufzeit eine Liste bekannter Typen zurückgibt.
+     In Fällen, in denen die Liste der bekannten Typen nicht statisch ist (wenn die **Person**-Klasse kompiliert wird), kann **KnownTypeAttribute** auch auf eine Methode zeigen, die zur Laufzeit eine Liste bekannter Typen zurückgibt.
 
 5. Berücksichtigen Sie die Abwärts- und Aufwärtskompatibilität, wenn Sie serialisierbare Typen erstellen oder ändern.
 
@@ -88,7 +90,7 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
 
 6. Erwägen Sie die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle, um wiederholte Umwandlungen zwischen verschiedenen Versionen des Typs zu gestatten.
 
-     Über die Schnittstelle kann das Serialisierungsprogramm sicherstellen, dass bei der wiederholten Umwandlung keine Daten verloren gehen. In der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft werden alle Daten aus der zukünftigen Version des Typs gespeichert, die in der aktuellen Version unbekannt sind. Wenn die aktuelle Version anschließend serialisiert und in eine zukünftige Version deserialisiert wird, sind die zusätzlichen Daten im serialisierten Stream über den Wert der **ExtensionData** -Eigenschaft verfügbar.
+     Über die Schnittstelle kann das Serialisierungsprogramm sicherstellen, dass bei der wiederholten Umwandlung keine Daten verloren gehen. In der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft werden alle Daten aus der zukünftigen Version des Typs gespeichert, die in der aktuellen Version unbekannt sind. Wenn die aktuelle Version anschließend serialisiert und in eine zukünftige Version deserialisiert wird, sind die zusätzlichen Daten im serialisierten Stream über den Wert der **ExtensionData**-Eigenschaft verfügbar.
 
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]
@@ -96,6 +98,7 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
      Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../framework/wcf/feature-details/forward-compatible-data-contracts.md).
 
 #### <a name="xml-serialization"></a>XML-Serialisierung
+
  Die Datenvertragsserialisierung ist die primäre (standardmäßige) Serialisierungstechnologie in .NET Framework. Es gibt jedoch einige Serialisierungsszenarien, die von der Datenvertragsserialisierung nicht unterstützt werden. Beispielsweise kann die Form des vom Serialisierungsprogramm erzeugten bzw. verarbeiteten XML nicht vollständig kontrolliert werden. Wenn eine präzise Kontrolle erforderlich ist, muss die *XML-Serialisierung* verwendet werden, und der Entwurf der Typen muss eine Unterstützung dieser Serialisierungstechnologie enthalten.
 
 1. Vermeiden Sie es, Typen speziell für die XML-Serialisierung zu entwerfen, sofern es keinen eindeutigen Grund gibt, die Form des erzeugten XML zu kontrollieren. Diese Serialisierungstechnologie wurde durch die im vorherigen Abschnitt behandelte Datenvertragsserialisierung abgelöst.
@@ -108,16 +111,17 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
 2. Erwägen Sie eine Implementierung der <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle, wenn Sie eine noch präzisere Kontrolle über die Form des serialisierten XML erreichen möchten, als mit den XML-Serialisierungsattributen möglich ist. Die beiden Methoden <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> und <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> der Schnittstelle erlauben eine vollständige Kontrolle des serialisierten XML-Streams. Sie können auch das XML-Schema kontrollieren, das für den Typ generiert wird, indem Sie das <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attribut anwenden.
 
 #### <a name="runtime-serialization"></a>Laufzeitserialisierung
+
  Die *Laufzeitserialisierung* ist eine von .NET-Remoting verwendete Technologie. Wenn eine Übertragung der Typen mit .NET-Remoting vorgesehen ist, müssen Sie gewährleisten, dass die Typen die Laufzeitserialisierung unterstützen.
 
  Eine grundlegende Unterstützung der *Laufzeitserialisierung* kann durch Anwenden des <xref:System.SerializableAttribute>-Attributs bereitgestellt werden. Komplexere Szenarios umfassen die Implementierung eines einfachen *Laufzeitserialisierungsmusters* (durch Implementieren von <xref:System.Runtime.Serialization.ISerializable> und Bereitstellen eines Serialisierungskonstruktors).
 
-1. Erwägen Sie eine Unterstützung der Laufzeitserialisierung, wenn die Typen zusammen mit .NET-Remotezugriff verwendet werden sollen. Der <xref:System.AddIn>-Namespace verwendet z.B. .NET-Remotezugriff, sodass alle zwischen **System.AddIn** -Add-Ins ausgetauschten Typen die Laufzeitserialisierung unterstützen müssen.
+1. Erwägen Sie eine Unterstützung der Laufzeitserialisierung, wenn die Typen zusammen mit .NET-Remotezugriff verwendet werden sollen. Der <xref:System.AddIn>-Namespace verwendet z.B. .NET-Remotezugriff, sodass alle zwischen **System.AddIn**-Add-Ins ausgetauschten Typen die Laufzeitserialisierung unterstützen müssen.
 
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]
 
-2. ERWÄGEN Sie die Implementierung des *Laufzeitserialisierungsmusters* , wenn Sie den Serialisierungsprozess vollständig kontrollieren möchten. Dies wäre z. B. der Fall, wenn Daten bei der Serialisierung oder Deserialisierung umgewandelt werden sollen.
+2. ERWÄGEN Sie die Implementierung des *Laufzeitserialisierungsmusters*, wenn Sie den Serialisierungsprozess vollständig kontrollieren möchten. Dies wäre z. B. der Fall, wenn Daten bei der Serialisierung oder Deserialisierung umgewandelt werden sollen.
 
      Das Muster ist sehr einfach. Sie müssen lediglich die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementieren und einen speziellen Konstruktor bereitstellen, der beim Deserialisieren des Objekts verwendet wird.
 
@@ -134,7 +138,7 @@ In diesem Artikel werden die Richtlinien beschrieben, die beim Entwurf einer API
      [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]
      [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]
 
-5. WENDEN Sie einen Linkaufruf auf die **ISerializable.GetObjectData** -Implementierung an. Dadurch wird gewährleistet, dass ausschließlich vollständig vertrauenswürdige Kernkomponenten und das Laufzeitserialisierungsprogramm Zugriff auf den Member haben.
+5. WENDEN Sie einen Linkaufruf auf die **ISerializable.GetObjectData**-Implementierung an. Dadurch wird gewährleistet, dass ausschließlich vollständig vertrauenswürdige Kernkomponenten und das Laufzeitserialisierungsprogramm Zugriff auf den Member haben.
 
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]

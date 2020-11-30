@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Biblioth
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8a0b1c5645f41a256bfb9d0e5dac74f8706d84e6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223704"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725078"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
 
@@ -185,7 +185,7 @@ namespace MultitargetLib
             return $"Dotnet Foundation mentions .NET {dotNetCount} times!";
         }
 #else
-        // .NET 4.5+ can use async/await!
+        // .NET Framework 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
             string url = "https://www.dotnetfoundation.org/";

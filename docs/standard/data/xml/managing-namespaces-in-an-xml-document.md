@@ -3,18 +3,21 @@ title: Verwalten von Namespaces in einem XML-Dokument
 description: Erfahren Sie, wie Sie Namespaces in einem XML-Dokument verwalten. XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu.
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822619"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720151"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Verwalten von Namespaces in einem XML-Dokument
+
 XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-Dokument Element- und Attributnamen zu. Um diese Zuordnungen zu erstellen, definieren Sie Präfixe für Namespace-URIs und verwenden diese zur Kennzeichnung von Element- und Attributnamen in XML-Daten. Namespaces verhindern Konflikte zwischen Element- und Attributnamen. Sie ermöglichen eine unterschiedliche Verarbeitung und Validierung von gleichnamigen Elementen und Attributen.  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>Deklarieren von Namespaces  
+
  Um einen Namespace für ein Element zu deklarieren, verwenden Sie das `xmlns:`-Attribut:  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
  Sie können angeben, dass ein Element Teil eines bestimmten Namespaces ist, indem Sie das Namespacepräfix hinzufügen. Wenn das `Author`-Element beispielsweise ein Teil des `mybook`-Namespaces ist, wird es als `<mybook:Author>` deklariert.  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>Gültigkeitsbereich der Deklaration  
+
  Ein Namespace gilt ab dem Punkt der Deklaration bis zum Ende desjenigen Elements, in dem er deklariert wurde. In diesem Beispiel wird der im `BOOK`-Element definierte Namespace nicht auf Elemente außerhalb des `BOOK`-Elements, z. B. das `Publisher`-Element, angewendet:  
   
 ```xml  
@@ -59,6 +64,7 @@ XML-Namespaces ordnen benutzerdefinierten und vordefinierten URIs in einem XML-D
 ```  
   
 ## <a name="managing-namespaces"></a>Verwalten von Namespaces  
+
  In der <xref:System.Xml.XmlNamespaceManager>-Klasse wird eine Sammlung von Namespace-URIs und ihrer Präfixe gespeichert. Sie können Namespaces in der Sammlung suchen, hinzufügen und entfernen. In bestimmten Kontexten ist die Klasse erforderlich, um die XML-Verarbeitungsleistung zu verbessern. So wird <xref:System.Xml.Xsl.XsltContext> von der <xref:System.Xml.XmlNamespaceManager>-Klasse verwendet, um XPath-Unterstützung bereitzustellen.  
   
  Der Namespace-Manager führt keine Validierung der Namespaces durch, sondern setzt voraus, dass Präfixe und Namespaces bereits überprüft wurden und der [W3C](https://www.w3.org/TR/REC-xml-names/)-Spezifikation für Namespaces entsprechen.  

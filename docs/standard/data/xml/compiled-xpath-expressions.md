@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-ms.openlocfilehash: 310d5eb01fff02d82ec3762d55ff14e5a6bcd621
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 99f06db3c6f1e634e9c4a677c01d1b0849afe43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831012"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701509"
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
+
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
   
 ## <a name="the-xpathexpression-class"></a>Die XPathExpression-Klasse  
+
  Eine durch ein <xref:System.Xml.XPath.XPathExpression>-Objekt dargestellte kompilierte XPath-Abfrage ist nützlich, wenn dieselbe XPath-Abfrage mehrmals verwendet wird.  
   
  Wenn z. B. die <xref:System.Xml.XPath.XPathNavigator.Select%2A>-Methode mehrmals ausgerufen wird, verwenden Sie die <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder die <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse, um die XPath-Abfrage zu kompilieren und in einem <xref:System.Xml.XPath.XPathExpression>-Objekt zur Wiederverwendung und Leistungssteigerung zwischenzuspeichern, anstatt jedes Mal eine Zeichenfolge zu verwenden, die die XPath-Abfrage darstellt.  
@@ -45,6 +47,7 @@ Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath
 > Die <xref:System.Xml.XPath.XPathNavigator.Matches%2A>-Methode akzeptiert einen XPath-Ausdruck als Parameter. Die <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>-Methode gibt ein <xref:System.Xml.XPath.XPathNavigator>-Objekt zurück, nicht einen der XPath-Rückgabetypen des W3C.  
   
 ### <a name="the-returntype-property"></a>Die ReturnType-Eigenschaft  
+
  Nachdem eine XPath-Abfrage in ein <xref:System.Xml.XPath.XPathExpression>-Objekt kompiliert wurde, können Sie mithilfe der <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>-Eigenschaft des <xref:System.Xml.XPath.XPathExpression>-Objekts bestimmen, was die XPath-Abfrage zurückgibt.  
   
  Die <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>-Eigenschaft gibt einen der folgenden <xref:System.Xml.XPath.XPathResultType>-Enumerationswerte zurück, die die XPath-Rückgabetypen des W3C darstellen:  
@@ -110,6 +113,7 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>Leistungsfähigere XPath-Ausdrücke  
+
  Wenn Sie eine bessere Leistung erreichen möchten, verwenden Sie in Ihren Abfragen einen möglichst spezifischen XPath-Ausdruck. Wenn z. B. der `book`-Knoten ein untergeordneter Knoten des `bookstore`-Knotens ist, und der `bookstore`-Knoten ist das oberste Element in einem XML-Dokument, ist die Verwendung des XPath-Ausdrucks `/bookstore/book` schneller als die Verwendung von `//book`. Der XPath-Ausdruck `//book` durchsucht alle Knoten in der XML-Struktur nach übereinstimmenden Knoten.  
   
  Darüber hinaus kann die Verwendung der von der <xref:System.Xml.XPath.XPathNavigator>-Klasse bereitgestellten Methoden zur Knotensatznavigation zur Leistungssteigerung der Auswahlmethoden führen, die von der <xref:System.Xml.XPath.XPathNavigator>-Klasse für Fälle mit einfachen Auswahlkriterien bereitgestellt werden. Wenn Sie z. B. den ersten untergeordneten Knoten des aktuellen Knotens auswählen müssen, ist es schneller, die <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>-Methode zu verwenden, als den XPath-Ausdruck `child::*[1]` und die <xref:System.Xml.XPath.XPathNavigator.Select%2A>-Methode zu verwenden.  

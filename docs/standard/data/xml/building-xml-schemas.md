@@ -6,20 +6,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 177c52ea7217821735250b297974ac0ebaa1eb2e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725377"
 ---
 # <a name="building-xml-schemas"></a>Erstellen von XML-Schemata
+
 Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace werden den Strukturen zugeordnet, die in der XML-Schemaempfehlung des W3C (World Wide Web Consortium) definiert sind, und können zum speicherinternen Erstellen von XML-Schemata verwendet werden.  
   
 ## <a name="building-an-xml-schema"></a>Erstellen eines XML-Schemas  
+
  Im folgenden Codebeispiel wird mithilfe der SOM-API speicherintern ein Kunden-XML-Schema erstellt.  
   
 ### <a name="creating-element-and-attributes"></a>Erstellen von Elementen und Attributen  
+
  In den Codebeispielen werden die Kundenschemata von unten nach oben erstellt, wobei zuerst die untergeordneten Elemente und Attribute und die entsprechenden Typen erstellt werden, und dann die Elemente der obersten Ebene.  
   
  Im folgenden Codebeispiel werden das `FirstName`-Element und das `LastName`-Element sowie das `CustomerId`-Attribut des Kundenschemas mithilfe der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse und der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse des SOMs erstellt. Außer der <xref:System.Xml.Schema.XmlSchemaElement.Name%2A>-Eigenschaften der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse und der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse, die dem "name"-Attribut des `<xs:element />`-Elements und des `<xs:attribute />`-Elements in einem XML-Schema entsprechen, verfügen alle anderen im Schema zulässigen Attribute (`defaultValue`, `fixedValue`, `form` usw.) über entsprechende Eigenschaften in der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse und der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse.  
@@ -29,6 +32,7 @@ Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace w
  [!code-vb[XmlSchemaCreateExample#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#2)]  
   
 ### <a name="creating-schema-types"></a>Erstellen von Schematypen  
+
  Der Inhalt von Elementen und Attributen wird von den jeweiligen Typen definiert. Zum Erstellen von Elementen und Attributen, deren Typen einem der integrierten Schematypen entsprechen, wird die <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A>-Eigenschaft der <xref:System.Xml.Schema.XmlSchemaElement>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaAttribute>-Klasse mithilfe der <xref:System.Xml.XmlQualifiedName>-Klasse mit dem entsprechenden qualifizierten Namen des integrierten Typs festgelegt. Zum Erstellen eines benutzerdefinierten Typs für Elemente und Attribute wird mithilfe der <xref:System.Xml.Schema.XmlSchemaSimpleType>-Klasse oder der <xref:System.Xml.Schema.XmlSchemaComplexType>-Klasse ein neuer einfacher oder komplexer Typ erstellt.  
   
 > [!NOTE]
@@ -46,6 +50,7 @@ Die Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace w
  [!code-vb[XmlSchemaCreateExample#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaCreateExample/VB/XmlSchemaCreateExample.vb#3)]  
   
 ### <a name="creating-and-compiling-schemas"></a>Erstellen und Kompilieren von Schemata  
+
  Bisher wurden die untergeordneten Elemente und Attribute, deren jeweilige Typen und das `Customer`-Element der obersten Ebene speicherintern mithilfe der SOM-API erstellt. Im folgenden Codebeispiel wird das Schemaelement mithilfe der <xref:System.Xml.Schema.XmlSchema>-Klasse erstellt, diesem werden die Elemente und Typen der obersten Ebene mithilfe der <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>-Eigenschaft hinzugefügt, und das gesamte Schema wird mithilfe der <xref:System.Xml.Schema.XmlSchemaSet>-Klasse kompiliert und auf der Konsole ausgegeben.  
   
  [!code-cpp[XmlSchemaCreateExample#4](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#4)]

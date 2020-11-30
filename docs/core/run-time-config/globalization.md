@@ -3,12 +3,12 @@ title: Globalisierungskonfigurationseinstellungen
 description: Erfahren Sie mehr über Laufzeiteinstellungen, die Globalisierungsaspekte einer .NET Core-App konfigurieren, z. B. wie japanische Datumsangaben analysiert werden.
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721911"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Laufzeitkonfigurationsoptionen für die Globalisierung
 
@@ -87,7 +87,7 @@ Projektdatei:
 
 - Bestimmt, ob .NET für Windows-Apps die NLS-Globalisierungs-APIs (National Language Support, Unterstützung der nationalen Sprache) oder ICU-Globalisierungs-APIs (International Components for Unicode, internationale Komponenten für Unicode) verwendet. .NET 5.0 und höhere Versionen verwenden ICU-Globalisierungs-APIs standardmäßig unter dem Windows 10-Update vom Mai 2019 und höheren Versionen.
 - Wenn Sie diese Einstellung weglassen, verwendet .NET standardmäßig ICU-Globalisierungs-APIs. Dies entspricht der Einstellung des Werts auf `false`.
-- Weitere Informationen finden Sie unter [Globalisierungs-APIs verwenden ICU-Bibliotheken unter Windows](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+- Weitere Informationen finden Sie unter [Globalisierungs-APIs verwenden ICU-Bibliotheken unter Windows](../compatibility/globalization/5.0/icu-globalization-api.md).
 
 | | Einstellungsname | Werte | Eingeführt |
 | - | - | - | - |

@@ -9,17 +9,19 @@ helpviewer_keywords:
 - lists [.NET], generic delegates
 - generics [.NET], delegates
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
-ms.openlocfilehash: b3b18a2efc4dba432ee241d764c1a81101796baf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5356671b4f1c48c125e49c35a2f8ddc5ea1ca26b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827281"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728510"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen
+
 Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierungen, Suchprädikate und Aktionen, die für Elemente eines Arrays oder einer Auflistung ausgeführt werden.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Generische Delegaten zum Bearbeiten von Arrays und Listen  
+
  Der generische <xref:System.Action%601>-Delegat stellt eine Methode dar, die eine Aktion für ein Element des angegebenen Typs ausführt. Sie können eine Methode erstellen, die die gewünschte Aktion für das Element ausführt, eine Instanz des <xref:System.Action%601>-Delegaten erstellen, die diese Methode darstellt, und dann das Array und den Delegaten an die statische generische <xref:System.Array.ForEach%2A?displayProperty=nameWithType>-Methode übergeben. Die Methode wird für jedes Element des Arrays aufgerufen.  
   
  Die generische <xref:System.Collections.Generic.List%601>-Klasse stellt auch eine <xref:System.Collections.Generic.List%601.ForEach%2A>-Methode bereit, die den <xref:System.Action%601>-Delegaten verwendet. Diese Methode ist nicht generisch.  
@@ -36,6 +38,7 @@ Dieses Thema bietet eine Übersicht über generische Delegate für Konvertierung
  Der generische <xref:System.Converter%602>-Delegat ermöglicht es Ihnen, eine Konvertierung zwischen zwei Typen zu definieren und ein Array aus einem Typ in ein Array eines anderen Typs zu konvertieren oder eine Liste eines Typs in eine Liste eines anderen Typs zu konvertieren. Erstellen Sie eine Methode, die die Elemente der vorhandenen Liste in einen neuen Typ konvertiert, erstellen Sie eine Delegatinstanz, die die Methode darstellt, und verwenden Sie die generische statische <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType>-Methode, um ein Array des neuen Typs aus dem ursprünglichen Array zu erstellen, oder die generische <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType>-Instanzmethode, um eine Liste des neuen Typs aus der ursprünglichen Liste zu erstellen.  
   
 ### <a name="chaining-delegates"></a>Verketten von Delegaten  
+
  Viele der Methoden, die diese Delegaten verwenden, geben ein Array oder eine Liste zurück, das oder die an eine andere Methode übergeben werden kann. Wenn Sie beispielsweise bestimmte Elemente eines Arrays auswählen, diese Elemente in einen neuen Typ konvertieren und sie in einem neuen Array speichern möchten, können Sie das Array, das von der generischen <xref:System.Array.FindAll%2A>-Methode zurückgegeben wird, an die generische <xref:System.Array.ConvertAll%2A>-Methode übergeben. Wenn der neue Elementtyp keine natürliche Sortierreihenfolge hat, können Sie das von der generischen der <xref:System.Array.ConvertAll%2A>-Methode zurückgegebene Array an die generische <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>-Methode übergeben.  
   
 ## <a name="see-also"></a>Weitere Informationen

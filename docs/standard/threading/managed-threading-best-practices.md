@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 88cbf266d15a10ff7c56e07a30161e0a800989d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708048"
 ---
 # <a name="managed-threading-best-practices"></a>Best Practices für verwaltetes Threading
 
@@ -25,9 +25,11 @@ Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforde
 > Ab .NET Framework 4 stellen die Task Parallel Library und PLINQ APIs bereit, die die Komplexität und Risiken der Multithreadprogrammierung etwas reduzieren. Weitere Informationen finden Sie unter [Parallele Programmierung in .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Deadlocks und Racebedingungen  
+
  Das Multithreading löst Probleme mit dem Durchsatz und der Ansprechempfindlichkeit, verursacht dabei jedoch neue Probleme: Deadlocks und Racebedingungen.  
   
 ### <a name="deadlocks"></a>Deadlocks  
+
  Ein Deadlock liegt vor, wenn zwei Threads gleichzeitig versuchen, eine Ressource zu sperren, die der jeweils andere Thread bereits gesperrt hat. Keiner der beiden Threads kann weiter fortgesetzt werden.  
   
  Viele Methoden der Klassen des verwalteten Threadings stellen Timeouts bereit, mit deren Hilfe Sie Deadlocks entdecken können. Im folgenden Code wird beispielsweise versucht, ein Objekt namens `lockObject` zu sperren. Wenn die Sperrung nicht innerhalb von 300 Millisekunden erfolgt, gibt <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> den Wert `false` zurück.  
@@ -59,6 +61,7 @@ else {
 ```  
   
 ### <a name="race-conditions"></a>Racebedingungen  
+
  Bei einer Racebedingung handelt es sich um einen Fehler, der auftritt, wenn das Ergebnis eines Programms davon abhängt, welcher von zwei oder mehr Threads einen bestimmten Codeblock zuerst erreicht. Wenn Sie das Programm mehrmals ausführen, werden verschiedene Ergebnisse erzeugt, und das Ergebnis einer bestimmten Ausführung lässt sich nicht vorhersagen.  
   
  Ein einfaches Beispiel einer Racebedingung ist die Erhöhung eines Feldes. Angenommen, eine Klasse besitzt ein privates **static**-Feld (**Shared** in Visual Basic), das jedes Mal, wenn eine Instanz der Klasse erstellt wird, mit Code wie `objCt++;` (C#) oder `objCt += 1` (Visual Basic) erhöht wird. Für diesen Vorgang muss der Wert von `objCt` in ein Register geladen, der Wert erhöht und in `objCt` gespeichert werden.  
@@ -70,6 +73,7 @@ else {
  Racebedingungen können auch auftreten, wenn Sie die Aktivitäten von mehreren Threads synchronisieren. Bei jeder Codezeile, die Sie schreiben, müssen Sie sich überlegen, was passieren kann, wenn ein Thread vor der Ausführung der Zeile (oder jeder einzelnen Anweisung, aus denen die Zeile besteht) präemptiv unterbrochen und die Ausführung von einem anderen Thread fortgesetzt wird.  
   
 ## <a name="static-members-and-static-constructors"></a>Statische Member und statische Konstruktoren  
+
  Eine Klasse wird erst dann initialisiert, wenn ihr Klassenkonstruktor (`static`-Konstruktor in C#, `Shared Sub New` in Visual Basic) nicht mehr ausgeführt wird. Um die Codeausführung für einen nicht initialisierten Typ zu verhindern, blockiert die Common Language Runtime alle Aufrufe von anderen Threads an `static`-Member der Klasse (`Shared`-Member in Visual Basic), bis der Klassenkonstruktor nicht mehr ausgeführt wird.  
   
  Wenn ein Klassenkonstruktor zum Beispiel einen neuen Thread startet und die Threadprozedur einen `static`-Member der Klasse aufruft, wird der neue Thread blockiert, bis der Klassenkonstruktor beendet wird.  
@@ -83,6 +87,7 @@ Die Multithreadarchitektur kann davon beeinflusst werden, ob das System mehrere 
 Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayProperty=nameWithType>, um die zur Laufzeit verfügbare Anzahl von Prozessoren zu bestimmen.
   
 ## <a name="general-recommendations"></a>Allgemeine Empfehlungen  
+
  Beachten Sie bei Verwendung von mehreren Threads die folgenden Richtlinien:  
   
 - Verwenden Sie <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> nicht, um andere Threads zu beenden. Wenn Sie **Abort** für einen anderen Thread aufrufen, wird für diesen Thread mit hoher Wahrscheinlichkeit eine Ausnahme ausgelöst, ohne dass Sie wissen, an welchem Punkt die Verarbeitung unterbrochen wurde.  
@@ -163,6 +168,7 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
     > Die Überladung der <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29>-Methode stellt eine typsichere Alternative für Verweistypen dar.
   
 ## <a name="recommendations-for-class-libraries"></a>Empfehlungen für Klassenbibliotheken  
+
  Beachten Sie die folgenden Richtlinien, wenn Sie Klassenbibliotheken für Multithreading entwerfen:  
   
 - Vermeiden Sie nach Möglichkeit die Notwendigkeit einer Synchronisierung. Dies gilt besonders für häufig verwendeten Code. Beispielsweise kann ein Algorithmus angepasst werden, um eine Racebedingung zu tolerieren und nicht zu unterbinden. Durch unnötige Synchronisierung wird die Leistung verringert, und es entsteht die Gefahr von Deadlocks und Racebedingungen.  

@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-ms.openlocfilehash: 1e2dd0d554cdece23ac6d0e6b255ad70533236dc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f3adcfa98f4004f283b24bcd31dc243c18c2644c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826657"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729368"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Vorgehensweise: Schreiben einer Parallel.For-Schleife mit threadlokalen Variablen
+
 Dieses Beispiel zeigt, wie Sie threadlokale Variablen verwenden, um den Status in jeder separaten Aufgabe zu speichern und abzurufen, die von einer <xref:System.Threading.Tasks.Parallel.For%2A>-Schleife erstellt wird. Durch die Verwendung von threadlokalen Daten können Sie den mit der Synchronisierung einer großen Anzahl von Zugriffen auf einen Freigabezustand verbundenen Mehraufwand vermeiden. Statt an eine freigegebene Ressourcen in jeder Iteration zu schreiben, berechnen und speichern Sie den Wert, bis alle Iterationen für die Aufgabe abgeschlossen sind. Sie können dann das endgültige Ergebnis einmal an die freigegebene Ressource schreiben oder sie an eine andere Methoden übergeben.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird die <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>-Methode aufgerufen, um die Summe der Werte in einem Array zu berechnen, das eine Million Elemente enthält. Der Wert für jedes Element entspricht dem Index.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]

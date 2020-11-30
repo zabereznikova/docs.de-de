@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723752"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 
@@ -35,6 +35,7 @@ Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zu
 > Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann. Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Aufdecken von Threadingproblemen bei der Entwicklung  
+
  Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Dadurch kann sich die Anwendungsleistung verschlechtern, und es kann passieren, dass die Anwendung nicht mehr reagiert.  
   
  Wenn Sie die normale Fortsetzung von unbehandelten Ausnahmen in Threads zulassen, bis das Programm vom Betriebssystem beendet wird, werden derartige Probleme bei der Entwicklung und beim Testen entdeckt. Fehlerberichte über Beendigungen des Programms unterstützen das Debuggen.  

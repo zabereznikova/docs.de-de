@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e0214afe4dba7f838f420907374f1472d6d3911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829530"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699013"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 
 .NET stellt mehrere Typen bereit, die für die parallele Programmierung nützlich sind. Darunter befinden sich eine Reihe von parallelen Auflistungsklassen, einfache Synchronisierungsprimitive und Typen für die verzögerte Initialisierung. Sie können diese Typen mit jedem Multithreadanwendungscode verwenden, einschließlich der Task Parallel Library und PLINQ.  
   
 ## <a name="concurrent-collection-classes"></a>Parallele Auflistungsklassen  
+
  Die Auflistungsklassen im Namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType> bieten threadsichere Vorgänge für das Hinzufügen und Entfernen. Diese vermeiden Sperren, wo immer dies möglich ist, und setzen differenzierte Sperren ein, wenn Sperren erforderlich sind. Eine parallele Auflistungsklasse benötigt beim Zugriff auf Elemente keinen Benutzercode für Sperren. Die parallelen Auflistungsklassen können die Leistung gegenüber Typen wie <xref:System.Collections.ArrayList?displayProperty=nameWithType> und <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> (mit benutzerimplementierter Sperre) in Szenarien, in denen mehrere Threads Elemente aus einer Auflistung hinzufügen und entfernen, erheblich verbessern.  
   
  In der folgenden Tabelle sind die parallelen Auflistungsklassen aufgeführt:  
@@ -31,6 +32,7 @@ ms.locfileid: "94829530"
  Weitere Informationen finden Sie unter [Threadsichere Auflistungen](../collections/thread-safe/index.md).  
   
 ## <a name="synchronization-primitives"></a>Synchronisierungsprimitiven  
+
  Die Synchronisierungsprimitiven im <xref:System.Threading?displayProperty=nameWithType>-Namespace ermöglichen eine differenzierte Parallelität und schnellere Leistung durch das Vermeiden ressourcenintensiver Sperrmechanismen in Legacy-Multithreadingcode.
   
  Die folgende Tabelle enthält die Synchronisierungstypen:  
@@ -51,6 +53,7 @@ ms.locfileid: "94829530"
 - [Vorgehensweise: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere](../threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Klassen mit verzögerter Initialisierung  
+
  Bei einer verzögerten Initialisierung wird der Speicher für ein Objekt nicht zugewiesen, bis dieser benötigt wird. Eine verzögerte Initialisierung kann zur Verbesserung der Leistung beitragen, indem Objektzuweisungen über die Lebensdauer eines Programms hinweg verteilt werden. Sie können die verzögerte Initialisierung für jeden benutzerdefinierten Typ verwenden, indem Sie damit den Typ <xref:System.Lazy%601> umschließen.  
   
  Die folgende Tabelle enthält eine Auflistung der Typen für eine verzögerte Initialisierung:  
@@ -64,6 +67,7 @@ ms.locfileid: "94829530"
  Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Aggregieren von Ausnahmen  
+
  Die <xref:System.AggregateException?displayProperty=nameWithType>-Typ kann verwendet werden, um mehrere Ausnahmen zu erfassen, die in separaten Threads parallel ausgelöst und an den Verbindungsthread als eine einzelne Ausnahme zurückgegeben werden. Die Typen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> sowie PLINQ verwenden hierzu sehr häufig <xref:System.AggregateException>. Weitere Informationen finden Sie unter [Ausnahmebehandlung](exception-handling-task-parallel-library.md) und unter [Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage](how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Siehe auch

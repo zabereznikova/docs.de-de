@@ -16,14 +16,15 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e3c97f28a05f2e5396872fe808cae0d48d5a4824
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727002"
 ---
 # <a name="writing-custom-attributes"></a>Verfassen von benutzerdefinierten Attributen
+
 Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType>ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
   
  Die wichtigsten Schritte beim ordnungsgemäßen Entwerfen von benutzerdefinierten Attributklassen sind die folgenden:  
@@ -39,6 +40,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  In diesem Abschnitt wird jeder dieser Schritte beschrieben, den Schluss bildet ein [Beispiel für ein benutzerdefiniertes Attribut](#custom-attribute-example).  
   
 ## <a name="applying-the-attributeusageattribute"></a>Anwenden des AttributeUsage-Attributs  
+
  Die Deklaration eines benutzerdefinierten Attributs beginnt mit dem <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>, das einige der Hauptmerkmale Ihrer Attributklasse definiert. Sie können beispielsweise angeben, ob das Attribut von anderen Klassen geerbt werden kann, oder festlegen, auf welche Elemente das Attribut angewendet werden kann. Das folgende Codefragment zeigt die Verwendung des <xref:System.AttributeUsageAttribute>.  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
@@ -48,6 +50,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  Die Klasse <xref:System.AttributeUsageAttribute> weist drei Member auf, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property) und [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets-Member  
+
  Im vorherigen Beispiel wird <xref:System.AttributeTargets.All?displayProperty=nameWithType> angegeben, was darauf hinweist, dass dieses Attribut auf alle Programmelemente angewendet werden kann. Alternativ können Sie <xref:System.AttributeTargets.Class?displayProperty=nameWithType> angeben und damit festlegen, dass Ihr Attribut nur auf eine Klasse angewendet werden kann, oder Sie können <xref:System.AttributeTargets.Method?displayProperty=nameWithType> angeben, wodurch Sie festlegen, dass Ihr Attribut nur auf eine Methode angewendet werden kann. Alle Programmelemente können in dieser Weise für die Beschreibung durch ein benutzerdefiniertes Attribut gekennzeichnet werden.  
   
  Sie können auch mehrere <xref:System.AttributeTargets>-Werte übergeben. Das folgende Codefragment gibt an, dass ein benutzerdefiniertes Attribut auf beliebige Klassen oder Methoden angewendet werden kann.  
@@ -57,6 +60,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 ### <a name="inherited-property"></a>Inherited Property  
+
  Die <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob das Attribut von Klassen geerbt werden kann, die von den Klassen abgeleitet werden, auf die das Attribut angewendet wird. Diese Eigenschaft akzeptiert entweder das Flag `true` (den Standardwert) oder das Flag `false`. Im folgenden Beispiel weist `MyAttribute` für <xref:System.AttributeUsageAttribute.Inherited%2A> den Standardwert `true` auf, während `YourAttribute` einen <xref:System.AttributeUsageAttribute.Inherited%2A>-Wert von `false` hat.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
@@ -76,6 +80,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
 ### <a name="allowmultiple-property"></a>AllowMultiple-Eigenschaft  
+
  Die <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType>-Eigenschaft gibt an, ob mehrere Instanzen eines Attributs für ein Element vorhanden sein können. Wenn sie auf `true` festgelegt ist, sind mehrere Instanzen zulässig; bei `false` (dem Standardwert) ist nur eine Instanz erlaubt.  
   
  Im folgenden Beispiel weist `MyAttribute` für <xref:System.AttributeUsageAttribute.AllowMultiple%2A> den Standardwert `false` auf, während `YourAttribute` den Wert `true` hat.  
@@ -93,6 +98,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  Wenn sowohl die <xref:System.AttributeUsageAttribute.AllowMultiple%2A>-Eigenschaft als auch die <xref:System.AttributeUsageAttribute.Inherited%2A>-Eigenschaft auf `true` festgelegt sind, kann eine Klasse, die von einer anderen Klasse geerbt wurde, ein Attribut erben, und zugleich kann in der gleichen untergeordneten Klasse eine weitere Instanz des gleichen Attributs angewendet werden. Wenn <xref:System.AttributeUsageAttribute.AllowMultiple%2A> auf `false` festgelegt ist, werden die Werte aller Attribute in der übergeordneten Klasse durch neue Instanzen der gleichen Attribute in der untergeordneten Klasse überschrieben.  
   
 ## <a name="declaring-the-attribute-class"></a>Deklarieren der Attributklasse  
+
  Nach dem Anwenden von <xref:System.AttributeUsageAttribute>können Sie beginnen, die Einzelheiten Ihres Attributs zu definieren. Die Deklaration einer Attributklasse ähnelt der Deklaration einer traditionellen Klasse, wie im folgenden Code zu sehen.  
   
  [!code-cpp[Conceptual.Attributes.Usage#14](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#14)]
@@ -110,6 +116,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
 - In Microsoft Visual Basic müssen alle benutzerdefinierten Attributklassen über das Attribut <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> verfügen.  
   
 ## <a name="declaring-constructors"></a>Deklarieren von Konstruktoren  
+
  Attribute werden in der gleichen Weise wie traditionelle Klassen mit Konstruktoren initialisiert. Das folgende Codefragment stellt ein Beispiel für einen typischen Attributkonstruktor dar. Dieser öffentliche Konstruktor akzeptiert einen Parameter und legt eine Membervariable auf seinen Wert fest.  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
@@ -125,6 +132,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Deklarieren von Eigenschaften  
+
  Wenn Sie einen benannten Parameter definieren oder eine einfache Möglichkeit zum Zurückgeben der von Ihrem Attribut gespeicherten Werte bereitstellen möchten, deklarieren Sie eine [Eigenschaft](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Attributeigenschaften müssen als öffentliche Entitäten mit einer Beschreibung des zurückgegebenen Datentyps deklariert werden. Definieren Sie die Variable, die den Wert der Eigenschaft enthalten soll, und ordnen Sie sie den Methoden **get** und **set** zu. Das folgende Codebeispiel veranschaulicht, wie eine einfache Eigenschaft in Ihrem Attribut implementiert wird.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
@@ -132,6 +140,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
 ## <a name="custom-attribute-example"></a>Beispiel für ein benutzerdefiniertes Attribut  
+
  Dieser Abschnitt beinhaltet die Informationen aus den vorhergehenden Abschnitten und zeigt das Entwerfen eines einfachen Attributs, das Informationen über den Autor eines Codeabschnitts dokumentiert. Das Attribut in diesem Beispiel speichert den Namen und die Qualifikation des Programmierers und gibt an, ob der Code überprüft wurde. Es verwendet drei private Variablen zum Speichern der eigentlichen, zu speichernden Werte. Jede Variable wird durch eine öffentliche Eigenschaft dargestellt, die zum Abrufen und Festlegen der Werte verwendet wird. Schließlich wird der Konstruktor mit zwei erforderlichen Parametern definiert.  
   
  [!code-cpp[Conceptual.Attributes.Usage#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#4)]

@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706293"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
+
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
   
  Wenn Sie mit dem Anwenden von Attributen auf verwalteten Code nicht vertraut sind, finden Sie weitere Informationen unter [Erweitern von Metadaten mithilfe von Attributen](../attributes/index.md). Wie andere benutzerdefinierte Attribute können Sie die Interop-spezifischen Attribute auf Typen, Methoden, Eigenschaften, Parameter, Felder und andere Elemente anwenden.  
   
 ## <a name="design-time-attributes"></a>Entwurfszeitattribute  
+
  Sie können das Ergebnis des Konvertierungsvorgangs von COM-Interop-Tools und -APIs mithilfe von Entwurfszeitattributen anpassen. Die folgende Tabelle beschreibt die Attribute, die Sie auf dem verwalteten Quellcode anwenden können. COM-Interop-Tools wenden möglicherweise auch die in dieser Tabelle beschriebenen Attribute an.  
   
 |Attribut|Beschreibung|  
@@ -43,7 +45,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Gibt die Standardschnittstelle für eine in .NET implementierte COM-Klasse an.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Gibt die physische Position jedes Felds innerhalb einer Klasse an, wenn **StructLayoutAttribute** verwendet und **LayoutKind** auf explizit festgelegt ist.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Gibt den Globally Unique Identifier (GUID) einer Klasse, Schnittstelle oder einer ganzen Typbibliothek an. Das Format der Zeichenfolge, die an das Attribut übergeben wird, muss ein zulässiges Konstruktorargument für den Typ **System.Guid** darstellen.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
-|<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch** -Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  
+|<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Gibt an, welche **IDispatch**-Schnittstellenimplementierung die Common Language Runtime verwendet, wenn sie duale Schnittstellen und Disp-Schnittstellen für COM verfügbar macht.|  
 |<xref:System.Runtime.InteropServices.InAttribute>|Gibt an, dass Daten zum Aufrufer gemarshallt werden sollen. Kann zum Zuordnen von Parametern verwendet werden.|  
 |<xref:System.Runtime.InteropServices.InterfaceTypeAttribute>|Steuert, wie eine verwaltete Schnittstelle für COM-Clients (Dual, IUnknown-abgeleitet oder nur IDispatch) verfügbar gemacht wird.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
 |<xref:System.Runtime.InteropServices.LCIDConversionAttribute>|Gibt an, dass eine nicht verwaltete Methodensignatur einen LCID-Parameter erwartet.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
@@ -55,6 +57,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|Steuert das physische Layout der Felder einer Klasse.<br /><br /> Dieses Attribut wird von COM-Interop-Tools angewendet.|  
   
 ## <a name="conversion-tool-attributes"></a>Attribute des Konvertierungstools  
+
  Die folgende Tabelle beschreibt die Attribute, die COM-Interop-Tools während des Konvertierungsvorgangs anwenden. Diese Attribute werden nicht zur Entwurfszeit angewendet.  
   
 |Attribut|Beschreibung|  
@@ -63,9 +66,9 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Gibt den Informationsverlust zu einer Klasse oder Schnittstelle an, als diese aus einer Typbibliothek in eine Assembly importiert wurden.|  
 |<xref:System.Runtime.InteropServices.ComEventInterfaceAttribute>|Identifiziert die Quellschnittstelle und die Klasse, die die Methoden der Ereignisschnittstelle implementieren.|  
 |<xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>|Gibt an, dass die Assembly ursprünglich aus einer COM-Typbibliothek importiert wurde. Dieses Attribut enthält die Typdefinition für die Bibliothek von der ursprünglichen Typbibliothek.|  
-|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diese Funktion aus der COM-Typbibliothek importiert wurden.|  
-|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diesen Typ aus der COM-Typbibliothek importiert wurden.|  
-|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS** , die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibFuncAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Funktion aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diesen Typ aus der COM-Typbibliothek importiert wurden.|  
+|<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
   
 ## <a name="see-also"></a>Siehe auch
 

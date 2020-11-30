@@ -7,17 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
-ms.openlocfilehash: 97a95250ff73b43d4404fb891078aed1b04f105e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dc0955ba6194dd936da19c634ada797d6cbd3720
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716472"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Gewusst wie: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere
+
 Das folgende Beispiel zeigt das Synchronisieren gleichzeitiger Aufgaben mit einer <xref:System.Threading.Barrier>.  
   
 ## <a name="example"></a>Beispiel  
+
  Zweck des folgenden Programms ist, zu zählen, wie viele Iterationen (oder Phasen) erforderlich sind, damit zwei Threads ihre jeweilige Hälfte der Lösung mithilfe eines Zufallsalgorithmus zum erneuten Mischen der Wörter in der gleichen Phase finden. Nachdem jeder Thread seine Wörter gemischt hat, vergleicht der Barrierennachphasen-Vorgang die beiden Ergebnisse, um festzustellen, ob der vollständige Satz in der richtigen Reihenfolge gerendert wurde.  
   
  [!code-csharp[CDS_Barrier#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_barrier/cs/barrier.cs#01)]

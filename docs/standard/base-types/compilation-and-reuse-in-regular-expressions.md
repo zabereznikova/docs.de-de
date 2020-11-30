@@ -11,17 +11,19 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: f0da4a226feb6bafc7e17c7333cbc507701311af
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b0d3ac619e8d9548fffcb41b23d2ebd6663915e9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823107"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723206"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Kompilierung und Wiederverwendung in regulären Ausdrücken
+
 Sie können die Leistung von Anwendungen optimieren, die umfangreichen Gebrauch von regulären Ausdrücken machen, wenn Sie verstehen, wie die Engine für reguläre Ausdrücke kompiliert, und wie reguläre Ausdrücke zwischengespeichert werden. Dieses Thema behandelt das Kompilieren und das Zwischenspeichern.  
   
 ## <a name="compiled-regular-expressions"></a>Kompilierte reguläre Ausdrücke  
+
  Standardmäßig kompiliert die Engine für reguläre Ausdrücke einen regulären Ausdruck in eine Sequenz von internen Anweisungen (hierbei handelt es sich um Codes auf höherer Ebene, die sich von Microsoft Intermediate Language – MSIL – unterscheiden). Wenn die Engine einen regulären Ausdruck ausführt, interpretiert sie die internen Codes.  
   
  Wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt mit der <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>-Option erstellt wird, kompiliert es den regulären Ausdruck in expliziten MSIL-Code und nicht in interne Anweisungen in regulären Ausdrücken auf hoher Ebene. So kann der Just-in-Time-Compiler (JIT) von .NET den Ausdruck zur Leistungssteigerung in nativen Maschinencode konvertieren.  Die Kosten für das Erstellen eines <xref:System.Text.RegularExpressions.Regex>-Objekts sind möglicherweise höher, aber die Kosten für die Durchführung eines Abgleichs sind wahrscheinlich deutlich geringer.
@@ -29,6 +31,7 @@ Sie können die Leistung von Anwendungen optimieren, die umfangreichen Gebrauch 
  Eine Alternative ist die Verwendung von vorkompilierten regulären Ausdrücken. Mit der <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>-Methode können Sie all Ihre Ausdrücke in eine wiederverwendbare DLL kompilieren. Hierdurch entfällt die Notwendigkeit für eine Kompilierung zur Laufzeit, und Sie profitieren gleichzeitig von der Schnelligkeit kompilierter regulärer Ausdrücke.  
   
 ## <a name="the-regular-expressions-cache"></a>Der Cache für reguläre Ausdrücke  
+
  Zur Verbesserung der Leistung verwaltet die Engine für reguläre Ausdrücke einen anwendungsweiten Cache kompilierter regulärer Ausdrücke. Der Cache speichert Muster für reguläre Ausdrücke, die nur in statischen Methodenaufrufen verwendet werden. (An Instanzmethoden übergebene Muster für reguläre Ausdrücke werden nicht zwischengespeichert.) Dadurch wird vermieden, dass Ausdrücke bei jeder Verwendung erneut analysiert und in Bytecode höherer Ebene kompiliert werden müssen.  
   
  Die maximale Anzahl der zwischengespeicherten regulären Ausdrücke wird durch den Wert der `static` (`Shared` in Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType>-Eigenschaft festgelegt. Standardmäßig speichert die Engine für reguläre Ausdrücke bis zu 15 kompilierte reguläre Ausdrücke zwischen. Wenn die Anzahl der kompilierten regulären Ausdrücke die Cachegröße überschreitet, wird der am längsten nicht verwendete reguläre Ausdruck verworfen und der neue reguläre Ausdruck zwischengespeichert.  

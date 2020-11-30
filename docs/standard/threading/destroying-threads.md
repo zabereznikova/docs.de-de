@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: be31b0232889227fa5d4990c9481305eea343f11
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bdba09f5709cf99bc0d076e3875a914cc7c5a11e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826481"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723765"
 ---
 # <a name="destroying-threads"></a>Zerstören von Threads
 
@@ -30,6 +30,7 @@ Um die Ausführung eines Threads zu beenden, verwenden Sie im Normalfall die [ko
  Threads, die auf einen Aufruf der <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>-Methode warten, können von anderen Threads unterbrochen werden, die <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> aufrufen.  
   
 ## <a name="handling-threadabortexception"></a>Behandeln von ThreadAbortException  
+
  Wenn Sie davon ausgehen, dass Ihr Thread entweder als Folge eines Aufrufs von <xref:System.Threading.Thread.Abort%2A> aus Ihrem eigenen Code oder als Ergebnis des Entladens einer Anwendungsdomäne, in der der Thread ausgeführt wird (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> verwendet <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, um Threads zu beenden), abgebrochen wird, muss Ihr Thread die <xref:System.Threading.ThreadAbortException> behandeln und jegliche endgültige Verarbeitung in einer `finally`-Klausel ausführen, wie im folgenden Code gezeigt.  
   
 ```vb  

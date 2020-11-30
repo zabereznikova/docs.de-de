@@ -12,14 +12,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-ms.openlocfilehash: 15750575aaa4f937104bd36db5f9dedd4cd12f0a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1e7fc71ef5a4a44b2bb4c039305e06c157c65f75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716160"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blockieren der Anwendungsausführung mithilfe von AsyncWaitHandle
+
 Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorgangs nicht weiterarbeiten können, werden blockiert, bis der Vorgang abgeschlossen ist. Verwenden Sie eine der folgenden Optionen, um den Hauptthread Ihrer Anwendung zu blockieren, während Sie darauf warten, dass ein asynchroner Vorgang abgeschlossen wird:  
   
 - Verwenden Sie die Eigenschaft <xref:System.IAsyncResult.AsyncWaitHandle%2A> des Ergebnisses <xref:System.IAsyncResult>, das durch die Methode **Begin**_OperationName_ für asynchrone Vorgänge zurückgegeben wird. Dieser Ansatz wird in diesem Thema veranschaulicht.  
@@ -29,6 +30,7 @@ Anwendungen, die während des Wartens auf die Ergebnisse eines asynchronen Vorga
  Anwendungen, die mindestens ein <xref:System.Threading.WaitHandle>-Objekt zum Blockieren verwenden, bis ein asynchroner Vorgang abgeschlossen ist, rufen in der Regel die Methode **Begin**_OperationName_ auf, arbeiten alle Tasks ab, die ohne die Ergebnisse des Vorgangs ausgeführt werden können, und blockieren dann bis alle asynchronen Vorgänge abgeschlossen sind. Eine Anwendung kann für einen einzelnen Vorgang durch Aufrufen einer der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methoden mithilfe von <xref:System.IAsyncResult.AsyncWaitHandle%2A> blockiert werden. Damit die Anwendungsausführung blockiert wird, solange eine Reihe von asynchronen Vorgängen noch nicht abgeschlossen ist, speichern Sie die zugehörigen <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Objekte in einem Array und rufen Sie eine der <xref:System.Threading.WaitHandle.WaitAll%2A>-Methoden auf. Wenn die Anwendungsausführung blockiert werden soll, solange eine beliebige Reihe von asynchronen Vorgängen noch nicht abgeschlossen ist, speichern Sie die zugehörigen <xref:System.IAsyncResult.AsyncWaitHandle%2A>-Objekte in einem Array und rufen Sie eine der <xref:System.Threading.WaitHandle.WaitAny%2A>-Methoden auf.  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel demonstriert die Verwendung von asynchronen Methoden in der DNS-Klasse, um Informationen aus dem Domain Name System für einen benutzerdefinierten Computer abzurufen. Im Beispiel wird veranschaulicht, wie Sie zum Blockieren das mit dem asynchronen Vorgang verknüpfte <xref:System.Threading.WaitHandle> verwenden. Beachten Sie, dass `null` (`Nothing` in Visual Basic) für die Parameter <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` und `stateObject` übergeben wird, da sie bei diesem Ansatz nicht benötigt werden.  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]

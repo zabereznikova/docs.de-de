@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823497"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697557"
 ---
 # <a name="saving-and-writing-a-document"></a>Speichern und Ausgeben eines Dokuments
+
 Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den folgenden Punkten vom Original abweichen:  
   
 - Wenn die <xref:System.Xml.XmlDocument.PreserveWhitespace%2A>-Eigenschaft vor dem Aufruf der `true`-Methode auf <xref:System.Xml.XmlDocument.Save%2A> festgelegt wurde, bleibt im Dokument enthaltener Leerraum in der Ausgabe erhalten. Wenn diese Eigenschaft `false` ist, wird die Ausgabe automatisch von <xref:System.Xml.XmlDocument> eingerückt.  
@@ -30,6 +31,7 @@ Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den f
 - Wenn das <xref:System.Xml.XmlDocument> als Datei oder als Stream ausgegeben wird, entspricht die Ausgabe dem Inhalt des Dokuments. Eine <xref:System.Xml.XmlDeclaration> wird also nur dann ausgegeben, wenn eine solche im Dokument vorhanden ist, und die für die Ausgabe verwendete Codierung entspricht der im Deklarationsknoten angegebenen Codierung.  
   
 ## <a name="writing-an-xmldeclaration"></a>Schreiben einer "XmlDeclaration"  
+
  Außer der <xref:System.Xml.XmlDocument>-Methode und der <xref:System.Xml.XmlDeclaration>-Methode von <xref:System.Xml.XmlNode.OuterXml%2A> erstellen die Methoden <xref:System.Xml.XmlNode.InnerXml%2A>, <xref:System.Xml.XmlNode.WriteTo%2A> und <xref:System.Xml.XmlDocument> von <xref:System.Xml.XmlDocument.Save%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> eine XML-Deklaration.  
   
  Bei der <xref:System.Xml.XmlDocument>-Eigenschaft und der <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft von <xref:System.Xml.XmlDocument.InnerXml%2A> und den Methoden <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> wird die in der XML-Deklaration ausgegebene Codierung dem <xref:System.Xml.XmlDeclaration>-Knoten entnommen. Wenn kein <xref:System.Xml.XmlDeclaration>-Knoten vorhanden ist, wird keine <xref:System.Xml.XmlDeclaration> ausgegeben. Wenn der <xref:System.Xml.XmlDeclaration>-Knoten keine Codierung enthält, wird in der XML-Deklaration keine Codierung ausgegeben.  
@@ -55,6 +57,7 @@ doc.Save(tw);
  Bei den Membern <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlNode.OuterXml%2A> und <xref:System.Xml.XmlDeclaration.WriteTo%2A> von <xref:System.Xml.XmlNode.InnerXml%2A> wird keine Codierung geschrieben, wenn die <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft nicht festgelegt ist. Andernfalls entspricht die in der XML-Deklaration ausgegebenen Codierung der in der <xref:System.Xml.XmlDeclaration.Encoding%2A>-Eigenschaft angegebenen Codierung.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Schreiben des Dokumentinhalts mit der "OuterXml"-Eigenschaft  
+
  Die <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft ist eine Erweiterung von Microsoft des XML-DOM-Standards (Document Object Model) des W3C (Word Wide Web Consortium). Die <xref:System.Xml.XmlNode.OuterXml%2A>-Eigenschaft wird zum Abrufen des Markups des ganzen XML-Dokuments oder eines Knotens und seiner untergeordneten Knoten verwendet. <xref:System.Xml.XmlNode.OuterXml%2A> gibt das Markup zurück, das diesen Knoten und alle ihm untergeordneten Knoten darstellt.  
   
  Im folgenden Codebeispiel wird ein Dokument vollständig als Zeichenfolge gespeichert.  

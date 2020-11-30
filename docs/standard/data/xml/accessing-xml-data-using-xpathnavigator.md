@@ -2,17 +2,19 @@
 title: Zugreifen auf XML-Daten mit XPathNavigator
 ms.date: 03/30/2017
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: a3911230598a282d66fa50bf1d82c4b4083a30e4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f87e2e12b7ebc740809dc8db902f2ece92e8f127
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821891"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725403"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Zugreifen auf XML-Daten mit XPathNavigator
+
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden für das Durchsuchen von Knoten, das Extrahieren von XML-Daten und das Zugreifen auf stark typisierte XML-Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Navigieren in Knotengruppen mit XPathNavigator](node-set-navigation-using-xpathnavigator.md)  
  Beschreibt die Knotensatz-Navigationsmethoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt durchsucht werden.  
   

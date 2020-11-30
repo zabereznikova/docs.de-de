@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6303c16e914c86f3a431a9e5367e6feb8ff88c9e
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95724741"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -34,9 +34,9 @@ Ein Container ist eine ausgeführte Instanz eines Images. Wenn Sie Ihr Image ers
 
 Containerregistrierungen sind eine Sammlung von Imagerepositorys. Sie können Ihre Images auf einem Registrierungsimage basieren. Sie können Container direkt aus einem Image in einer Registrierung erstellen. Die [Beziehung zwischen Docker-Containern, -Images und -Registrys](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) ist ein wichtiges Konzept beim [Entwurf und Aufbau von Containeranwendungen oder Microservices](../../architecture/microservices/architect-microservice-container-applications/index.md). Durch diese Vorgehensweise wird die Zeit zwischen Entwicklung und Bereitstellung deutlich verkürzt.
 
-Docker verfügt über eine öffentliche Registrierung, die auf dem [Docker-Hub](https://hub.docker.com/) gehostet wird, die Sie verwenden können. Images, die sich auf [.NET Core beziehen](https://hub.docker.com/_/microsoft-dotnet-core/), werden auf dem Docker-Hub aufgeführt.
+Docker verfügt über eine öffentliche Registrierung, die auf dem [Docker-Hub](https://hub.docker.com/) gehostet wird, die Sie verwenden können. Images, die sich auf [.NET Core beziehen](https://hub.docker.com/_/microsoft-dotnet/), werden auf dem Docker-Hub aufgeführt.
 
-Der [Microsoft Container Registry-Dienst (MCR)](/azure/container-registry) ist die offizielle Quelle für von Microsoft bereitgestellte Containerimages. MCR basiert auf Azure CDN, um global replizierte Images bereitzustellen. MCR verfügt jedoch nicht über eine öffentlich zugängliche Website, und der primäre Weg, um mehr über von Microsoft bereitgestellte Containerimages zu erfahren, führt über die [Microsoft Docker-Hubseiten](https://hub.docker.com/_/microsoft-dotnet-core/).
+Der [Microsoft Container Registry-Dienst (MCR)](/azure/container-registry) ist die offizielle Quelle für von Microsoft bereitgestellte Containerimages. MCR basiert auf Azure CDN, um global replizierte Images bereitzustellen. MCR verfügt jedoch nicht über eine öffentlich zugängliche Website, und der primäre Weg, um mehr über von Microsoft bereitgestellte Containerimages zu erfahren, führt über die [Microsoft Docker-Hubseiten](https://hub.docker.com/_/microsoft-dotnet/).
 
 ### <a name="dockerfile"></a>Dockerfile
 
@@ -44,9 +44,9 @@ Eine **Dockerfile-Datei** ist eine Datei, die einen Satz von Anweisungen definie
 
 ## <a name="net-core-images"></a>.NET Core-Images
 
-Offizielle.NET Core Docker-Images werden in Microsoft Container Registry (MCR) veröffentlicht und sind im [Microsoft.NET Core Docker-Hub-Repository](https://hub.docker.com/_/microsoft-dotnet-core/) verfügbar. Jedes Repository enthält Images für verschiedene Kombinationen von .NET (SDK oder Runtime) und dem Betriebssystem, die Sie verwenden können.
+Offizielle.NET Core Docker-Images werden in Microsoft Container Registry (MCR) veröffentlicht und sind im [Microsoft.NET Core Docker-Hub-Repository](https://hub.docker.com/_/microsoft-dotnet/) verfügbar. Jedes Repository enthält Images für verschiedene Kombinationen von .NET (SDK oder Runtime) und dem Betriebssystem, die Sie verwenden können.
 
-Microsoft stellt Images bereit, die auf bestimmte Szenarien zugeschnitten sind. So stellt beispielsweise das [ASP.NET Core-Repository](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Images bereit, die für die Ausführung von ASP.NET Core-Apps in der Produktion erstellt wurden.
+Microsoft stellt Images bereit, die auf bestimmte Szenarien zugeschnitten sind. So stellt beispielsweise das [ASP.NET Core-Repository](https://hub.docker.com/_/microsoft-dotnet-aspnet/) Images bereit, die für die Ausführung von ASP.NET Core-Apps in der Produktion erstellt wurden.
 
 ## <a name="azure-services"></a>Azure-Dienste
 

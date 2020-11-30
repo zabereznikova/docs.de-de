@@ -12,14 +12,15 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 478f786995cfc4b57f0b18b2159775db104e9cfb
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 919e4f4cf467e8fc28c3d007963393dad134ab57
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687693"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724051"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
+
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
   
 Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen, dass die Assembly, die kompiliert werden soll, explizit auf eine andere Assembly verweist. Beim Verweisen zur Kompilierzeit ruft der Compiler automatisch den öffentlichen Schlüssel der Zielassembly mit starkem Namen ab und platziert ihn in der Assemblyreferenz der Assembly, die aktuell kompiliert wird.

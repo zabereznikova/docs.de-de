@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce034260fd3e6746bb7d516483b5e6872dfdc172
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829374"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699026"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Datenparallelität (Task Parallel Library)
+
 *Datenparallelismus* verweist auf Szenarios, in denen der gleiche Vorgang gleichzeitig (d.h. parallel) für Elemente in einer Quellauflistung oder einem Array ausgeführt wird. In parallelen Datenvorgängen wird die Quellauflistung partitioniert, sodass mehrere Threads gleichzeitig auf verschiedene Segmente angewendet werden können.  
   
  Die Task Parallel Library (TPL) unterstützt Datenparallelität durch die <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>-Klasse. Diese Klasse stellt methodenbasierte parallele Implementierungen von [for](../../csharp/language-reference/keywords/for.md)-Schleifen und [foreach](../../csharp/language-reference/keywords/foreach-in.md)-Schleifen bereit (`For` und `For Each` in Visual Basic). Sie schreiben die Schleifenlogik für eine <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>-Schleife oder <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Schleife weitgehend auf die gleiche Weise wie eine sequenzielle Schleife. Sie müssen keine Threads erstellen oder Arbeitselemente in die Warteschlange einreihen. In grundlegenden Schleifen sind keine Sperren erforderlich. Die TPL übernimmt alle Arbeiten auf niedriger Ebene für Sie. Um ausführliche Informationen über die Verwendung von <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> zu erhalten, laden Sie das Dokument zum Thema [Muster für parallele Programmierung: Verstehen und Anwenden paralleler Muster mit .NET Framework 4 herunter.](https://www.microsoft.com/download/details.aspx?id=19222) Im folgenden Codebeispiel werden eine einfache `foreach`-Schleife und deren parallele Entsprechung dargestellt.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
-ms.openlocfilehash: da468d3b16ee504317c7de2e216a9be2073d1cf3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 01cdf5acf8f64472c218f35a0b8095aebf8f4571
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830505"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716264"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Asynchrone Programmierung mithilfe von Delegaten
 
@@ -26,10 +26,12 @@ Delegaten bieten die Möglichkeit, synchrone Methoden in asynchroner Weise aufzu
 > Compiler sollten Delegatklassen mit den Methoden `Invoke`, `BeginInvoke` und `EndInvoke` ausgeben und dabei die vom Benutzer angegebene Delegatsignatur verwenden. Die Methoden `BeginInvoke` und `EndInvoke` sollten als systemeigen dekoriert werden. Da diese Methoden als systemeigene Methoden gekennzeichnet sind, stellt die CLR die Implementierung automatisch zur Klassenladezeit bereit. Das Ladeprogramm stellt sicher, dass die Methoden nicht überschrieben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Asynchrones Aufrufen von synchronen Methoden](calling-synchronous-methods-asynchronously.md)  
  Erläutert die Verwendung von Delegaten zum asynchronen Aufrufen normaler Methoden und bietet einfache Codebeispiele, in denen die vier Möglichkeiten zum Warten auf die Rückgabe asynchroner Aufrufe gezeigt werden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](event-based-asynchronous-pattern-eap.md)  
  Beschreibt die asynchrone Programmierung in .NET  
   

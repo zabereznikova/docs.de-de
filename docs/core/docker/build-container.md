@@ -4,12 +4,12 @@ description: In diesem Tutorial erfahren Sie, wie Sie eine .NET Core-Anwendung m
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b6775c760ef3f5bf1c9519430b038f149c9cf30f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7605f847a76907f4f9d0a451ba69332d6d174615
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724727"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerisieren einer .NET Core-App
 
@@ -182,13 +182,13 @@ Die *Dockerfile*-Datei wird vom Befehl `docker build` zum Erstellen des Containe
 Erstellen Sie eine Datei namens *Dockerfile* in dem Verzeichnis mit der *CSPROJ*-Datei, und öffnen Sie sie in einem Text-Editor. In diesem Tutorial wird das ASP.NET Core-Runtimeimage (das das .NET Core-Runtimeimage enthält) verwendet, das der .NET Core-Konsolenanwendung entspricht.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 ```
 
 > [!NOTE]
-> Das ASP.NET Core-Runtimeimage wird hier absichtlich verwendet, obwohl auch das `mcr.microsoft.com/dotnet/core/runtime:3.1`-Image verwendet werden könnte.
+> Das ASP.NET Core-Runtimeimage wird hier absichtlich verwendet, obwohl auch das `mcr.microsoft.com/dotnet/runtime:3.1`-Image verwendet werden könnte.
 
-Für das `FROM`-Schlüsselwort ist der vollqualifizierte Name des Docker-Containerimages erforderlich. Die Microsoft Container Registry (MCR, mcr.microsoft.com) ist ein Konsortium von Docker Hub, das öffentlich zugängliche Container hostet. Das `dotnet/core`-Segment ist das Containerrepository, wobei das `aspnet`-Segment der Name des Containerimages ist. Das Image wird für die Versionsverwaltung mit `3.1` gekennzeichnet. Daher entspricht `mcr.microsoft.com/dotnet/core/aspnet:3.1` der .NET Core 3.1-Runtime. Stellen Sie sicher, dass Sie die .NET Core-Runtimeversion pullen, die der Runtime entspricht, die das Ziel Ihres SDK ist. Beispielsweise verwendet die im vorherigen Abschnitt erstellte App das .NET Core 3.1 SDK, und das Basisimage, auf das in der *Dockerfile*-Datei verwiesen wird, ist mit **3.1** gekennzeichnet.
+Für das `FROM`-Schlüsselwort ist der vollqualifizierte Name des Docker-Containerimages erforderlich. Die Microsoft Container Registry (MCR, mcr.microsoft.com) ist ein Konsortium von Docker Hub, das öffentlich zugängliche Container hostet. Das `dotnet/core`-Segment ist das Containerrepository, wobei das `aspnet`-Segment der Name des Containerimages ist. Das Image wird für die Versionsverwaltung mit `3.1` gekennzeichnet. Daher entspricht `mcr.microsoft.com/dotnet/aspnet:3.1` der .NET Core 3.1-Runtime. Stellen Sie sicher, dass Sie die .NET Core-Runtimeversion pullen, die der Runtime entspricht, die das Ziel Ihres SDK ist. Beispielsweise verwendet die im vorherigen Abschnitt erstellte App das .NET Core 3.1 SDK, und das Basisimage, auf das in der *Dockerfile*-Datei verwiesen wird, ist mit **3.1** gekennzeichnet.
 
 Speichern Sie das *Dockerfile*. Die Verzeichnisstruktur des Arbeitsordners sollte wie folgt aussehen. Einige Dateien und Ordner, die sich auf tieferen Ebenen befinden, sind in diesem Beispiel nicht enthalten, um Platz zu sparen:
 
@@ -223,7 +223,7 @@ Docker verarbeitet die einzelnen Zeilen aus dem *Dockerfile*. Durch den Punkt `.
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
 ```
 
 Beachten Sie, dass die beiden Images den gleichen **IMAGE ID**-Wert haben. Der Wert ist zwischen beiden Images gleich, da der einzige Befehl in der *Dockerfile* war, das neue Image auf Basis eines vorhandenen Images zu erstellen. Fügen Sie drei Befehle zum *Dockerfile* hinzu. Jeder Befehl erstellt eine neue Imageebene, wobei der letzte Befehl das Image darstellt, auf das der Repositoryeintrag **counter-image** verweist.
@@ -245,7 +245,7 @@ Führen Sie von Ihrem Terminal aus `docker build -t counter-image -f Dockerfile 
 ```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
-Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+Step 1/4 : FROM mcr.microsoft.com/dotnet/aspnet:3.1
  ---> e6780479db63
 Step 2/4 : COPY bin/Release/netcoreapp3.1/publish/ App/
  ---> d1732740eed2
@@ -263,7 +263,7 @@ Successfully tagged counter-image:latest
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              cd11c3df9b19        41 seconds ago      190MB
-mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        4 days ago          190MB
+mcr.microsoft.com/dotnet/aspnet         3.1                 e6780479db63        4 days ago          190MB
 ```
 
 Jeder Befehl in der *Dockerfile* generierte eine Ebene und erstellte eine **IMAGE ID**. Der endgültige **IMAGE ID**-Wert (Ihrer wird anders sein) ist **cd11c3df9b19**. Als Nächstes erstellen Sie einen Container auf Grundlage dieses Images.
@@ -470,7 +470,7 @@ Löschen Sie anschließend alle Images, die Sie nicht mehr auf Ihrem Computer be
 
 ```console
 docker rmi counter-image:latest
-docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
+docker rmi mcr.microsoft.com/dotnet/aspnet:3.1
 ```
 
 Verwenden Sie den Befehl `docker images`, um eine Liste der installierten Images anzuzeigen.

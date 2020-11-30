@@ -7,12 +7,12 @@ helpviewer_keywords:
 - event wait handles [.NET]
 - threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 5e448397e4aabe0acb4144abe1469af6a631aeaa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 078bda2354a6f0aec2215b0c5da2a021f53ff922
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723783"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 
@@ -24,6 +24,7 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
  Sowohl lokale als auch benannte Ereignis-Wait-Handles verwenden Synchronisierungsobjekte des Systems, die durch <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>-Wrapper geschützt sind, um sicherzustellen, dass die Ressourcen freigegeben werden. Sie können die <xref:System.Threading.WaitHandle.Dispose%2A>-Methode verwenden, um die Ressourcen sofort freizugeben, nachdem die Verwendung des Objekts beendet wurde.  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>Ereignis-Wait-Handles mit automatischer Rücksetzung  
+
  Sie können ein Ereignis mit automatischer Rücksetzung erstellen, indem Sie <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> angeben, wenn Sie das <xref:System.Threading.EventWaitHandle>-Objekt erstellen. Wie der Name schon sagt, wird dieses Synchronisierungsereignis nach der Verwendung als Signal automatisch zurückgesetzt, nachdem ein einzelner wartender Thread freigegeben wurde. Verwenden Sie das Ereignis als Signal, indem Sie seine <xref:System.Threading.EventWaitHandle.Set%2A>-Methode aufrufen.  
   
  Um den exklusiven Zugriff auf eine Ressource für einen einzelnen Thread zu einem bestimmten Zeitpunkt sicherzustellen, werden Ereignisse mit automatischer Rücksetzung verwendet. Ein Thread fordert die Ressource durch Aufrufen der <xref:System.Threading.WaitHandle.WaitOne%2A>-Methode an. Wenn kein anderer Thread das Wait-Handle enthält, gibt die Methode `true` zurück, und der aufrufende Thread erhält die Steuerung über die Ressource.  
@@ -34,6 +35,7 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
  Wenn ein Ereignis mit automatischer Rücksetzung als Signal verwendet wird und zu diesem Zeitpunkt keine Threads warten, bleibt es ein Signal, bis ein Thread versucht, darauf zu warten. Das Ereignis gibt den Thread frei und wird sofort zurückgesetzt, sodass nachfolgende Threads blockiert werden.  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>Ereignis-Wait-Handles mit manueller Rücksetzung  
+
  Sie können ein Ereignis mit manueller Rücksetzung erstellen, indem Sie <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> angeben, wenn Sie das <xref:System.Threading.EventWaitHandle>-Objekt erstellen. Wie der Name schon sagt, muss dieses Synchronisierungsereignis nach der Verwendung als Signal manuell zurückgesetzt werden. Bis das Ereignis durch Aufrufen der <xref:System.Threading.EventWaitHandle.Reset%2A>-Methode zurückgesetzt wird, können Threads, die auf das Ereignishandle warten, sofort fortgesetzt werden, ohne blockiert zu werden.  
   
  Ein Ereignis mit manueller Rücksetzung funktioniert wie das Gatter einer Pferdekoppel. Wenn das Ereignis nicht als Signal verwendet wird, sind Threads, die darauf warten, blockiert, also sozusagen wie Pferde auf einer Koppel eingesperrt. Wenn das Ereignis durch Aufrufen der <xref:System.Threading.EventWaitHandle.Set%2A>-Methode als Signal verwendet wird, werden alle Threads befreit und können fortgesetzt werden. Das Ereignis bleibt so lange ein Signal, bis seine <xref:System.Threading.EventWaitHandle.Reset%2A>-Methode aufgerufen wird. Daher ist das Ereignis mit manueller Rücksetzung eine ideale Möglichkeit, Threads zu verzögern, die warten müssen, bis ein bestimmter Thread einen Task abgeschlossen hat.  
@@ -41,11 +43,13 @@ Die <xref:System.Threading.EventWaitHandle>-Klasse ermöglicht Threads, durch Si
  Wie bei Pferden auf einer Koppel dauert es eine Zeitlang, bis die freigegebenen Threads vom Betriebssystem geplant werden und die Ausführung fortgesetzt wird. Wenn die <xref:System.Threading.EventWaitHandle.Reset%2A>-Methode aufgerufen wird, bevor die Ausführung aller Threads fortgesetzt wird, werden die verbleibenden Threads erneut blockiert. Welche Threads fortgesetzt und welche blockiert werden, hängt von zufälligen Faktoren ab, wie z.B. der Auslastung des Systems, der Anzahl von Threads, die auf den Planer warten, usw. Dies ist kein Problem, wenn der Thread, der ein Ereignis als Signal verwendet, danach beendet wird. Dies ist das häufigste Verwendungsmuster. Wenn Sie möchten, dass der Thread, der das Ereignis als Signal verwendet hat, nach dem Fortsetzen aller wartenden Threads einen neuen Task beginnt, müssen Sie den Thread blockieren, bis alle wartenden Threads fortgesetzt wurden. Andernfalls liegt eine Racebedingung vor, und das Verhalten des Codes ist unvorhersehbar.  
   
 ## <a name="features-common-to-automatic-and-manual-events"></a>Gemeinsame Features für automatische und manuelle Ereignisse  
+
  In der Regel ist mindestens ein Thread in einem <xref:System.Threading.EventWaitHandle> blockiert, bis ein nicht blockierter Thread die <xref:System.Threading.EventWaitHandle.Set%2A>-Methode aufruft, die (bei Ereignissen mit automatischer Rücksetzung) einen wartenden Thread oder (bei Ereignissen mit manueller Rücksetzung) alle wartenden Threads freigibt. Ein Thread kann ein <xref:System.Threading.EventWaitHandle> als Signal verwenden und dann durch Aufrufen der statischen <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>-Methode als atomischer Vorgang blockiert werden.  
   
  <xref:System.Threading.EventWaitHandle>-Objekte können mit den statischen Methoden <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> und <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> verwendet werden. Da die Klassen <xref:System.Threading.EventWaitHandle> und <xref:System.Threading.Mutex> von <xref:System.Threading.WaitHandle> abgeleitet werden, können Sie beide Klassen mit diesen Methoden verwenden.  
   
 ### <a name="named-events"></a>Benannte Ereignisse  
+
  Das Windows-Betriebssystem ermöglicht es, Event-Wait-Handles zu benennen. Ein benanntes Ereignis ist systemweit sichtbar. Das heißt, sobald das benannte Ereignis erstellt wurde, ist es für alle Threads in allen Prozessen sichtbar. Folglich können benannte Ereignisse zum Synchronisieren der Aktivitäten von Prozessen und Threads verwendet werden.  
   
  Sie können ein <xref:System.Threading.EventWaitHandle>-Objekt erstellen, das ein benanntes Systemereignis darstellt, indem Sie einen der Konstruktoren verwenden, die einen Ereignisnamen angeben.  

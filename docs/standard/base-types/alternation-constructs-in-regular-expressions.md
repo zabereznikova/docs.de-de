@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825298"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714691"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Alternierungskonstrukte in regulären Ausdrücken
 
@@ -30,6 +30,7 @@ Alternierungskonstrukte ändern einen regulären Ausdruck, um Entweder-Oder-Verg
 - [Bedingte Übereinstimmung auf Grundlage einer gültigen erfassten Gruppe](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>Musterabgleich mit &#124;
 
 Sie können das vertikale Balkenzeichen (`|`) für Vergleiche mit einem oder mehreren aus einer Reihe von Mustern verwenden, wobei das `|`-Zeichen als Trennzeichen für die einzelnen Muster dient.
@@ -62,6 +63,7 @@ Der reguläre Ausdruck `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wird entsprechend d
 |`\b`|Der Vergleich endet an einer Wortgrenze.|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>Bedingte Übereinstimmung mit einem Ausdruck
 
 Dieses Sprachelement versucht, mit einem der zwei Muster übereinzustimmen, abhängig davon, ob es ein ursprüngliches Muster zuordnen kann. Die Syntax lautet:  
@@ -93,6 +95,7 @@ Das Muster für reguläre Ausdrücke `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})
 |`\b`|Übereinstimmung mit einer Wortgrenze.|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Bedingte Übereinstimmung auf Grundlage einer gültigen erfassten Gruppe
 
 Dieses Sprachelement versucht, mit einem der zwei Muster übereinzustimmen, abhängig davon, ob es mit einer angegebenen Erfassungsgruppe übereingestimmt hat. Die Syntax lautet:

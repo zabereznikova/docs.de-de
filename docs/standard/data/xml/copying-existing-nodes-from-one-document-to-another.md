@@ -2,14 +2,15 @@
 title: Kopieren bestehender Knoten aus einem Dokument in ein anderes
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829608"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722205"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopieren bestehender Knoten aus einem Dokument in ein anderes
+
 Die **ImportNode**-Methode ist das Verfahren, mit dem Sie einen Knoten oder eine ganze Knotenunterstruktur von einem **XmlDocument** in ein anderes kopieren können. Der Knoten, der von dem Aufruf zurückgegeben wird, ist eine Kopie des Knotens aus dem Quelldokument, einschließlich Attributwerten, Knotennamen, Knotentyp und allen namespacebezogenen Attributen wie Präfix, lokaler Name und Namespace-URI (Uniform Resource Identifier). Das Quelldokument bleibt dabei unverändert. Nachdem Sie den Knoten importiert haben, müssen Sie ihn noch der Struktur hinzufügen, indem Sie eine der Methoden zum Einfügen von Knoten verwenden.  
   
  Sobald der Knoten an das neue Dokument angehängt worden ist, ist das neue Dokument Eigentümer des Knotens. Grund hierfür ist, dass jeder Knoten, wenn er erstellt wird, zu einem Dokument gehört, das sein Eigentümer ist. Dies ist auch der Fall, wenn die Knoten in unterschiedlichen Dokumentfragmenten erstellt werden. Dies ist eine XML-DOM-spezifische (Dokumentobjektmodell) Anforderung, die durch den Factoryerstellungsentwurf für die **XmlDocument**-Klasse durchgesetzt wird. So stellt z.B. **CreateElement** die einzige Möglichkeit zum Erstellen neuer Knoten dar.  

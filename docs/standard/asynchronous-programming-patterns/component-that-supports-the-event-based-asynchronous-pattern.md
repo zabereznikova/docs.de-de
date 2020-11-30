@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 1779bb51267af3c2f50ec03112f3c45199390333
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830427"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697739"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt
 
@@ -51,6 +51,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
  Informationen zum Kopieren des Codes in diesem Thema als einzelne Auflistung finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Erstellen der Komponente  
+
  Der erste Schritt besteht darin, die Komponente zu erstellen, die das ereignisbasierte asynchrone Muster implementiert.  
   
 ### <a name="to-create-the-component"></a>So erstellen Sie die Komponente  
@@ -58,6 +59,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
 - Erstellen Sie eine Klasse namens `PrimeNumberCalculator`, die von <xref:System.ComponentModel.Component> erbt.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definieren von öffentlichen asynchrone Ereignisse und Delegaten  
+
  Die Komponente kommuniziert mit Clients mithilfe von Ereignissen. Das Ereignis _MethodName_**Completed** warnt Clients bei Abschluss eines asynchronen Tasks, und das Ereignis _MethodName_**ProgressChanged** informiert Clients über den Fortschritt eines asynchronen Tasks.  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>So definieren Sie asynchrone Ereignisse für Clients der Komponente  
@@ -83,6 +85,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  An diesem Punkt können Sie die Komponente erstellen.  
   
 ### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
@@ -99,6 +102,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      Diese Warnungen werden im nächsten Abschnitt gelöscht.  
   
 ## <a name="defining-private-delegates"></a>Definieren von privaten Delegaten  
+
  Die asynchronen Aspekte der Komponente `PrimeNumberCalculator` werden intern mit einem speziellen Delegaten, dem sogenannten <xref:System.Threading.SendOrPostCallback>, implementiert. Ein <xref:System.Threading.SendOrPostCallback> stellt eine Rückrufmethode dar, die für einen <xref:System.Threading.ThreadPool>-Thread ausgeführt wird. Die Rückrufmethode muss über eine Signatur verfügen, die einen einzelnen Parameter vom Typ <xref:System.Object> enthält, was bedeutet, dass Sie den Status zwischen Delegaten in einer Wrapperklasse übergeben müssen. Weitere Informationen finden Sie unter <xref:System.Threading.SendOrPostCallback>.  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>So implementieren Sie internes asynchrones Verhalten der Komponente  
@@ -130,6 +134,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>Implementieren von öffentlichen Ereignissen  
+
  Komponenten, die das ereignisbasierte asynchrone Muster implementieren, kommunizieren mit Clients mithilfe von Ereignissen. Diese Ereignisse werden auf dem richtigen Thread mithilfe der Klasse <xref:System.ComponentModel.AsyncOperation> aufgerufen.  
   
 ### <a name="to-raise-events-to-your-components-clients"></a>So lösen Sie Ereignisse für die Komponente Ihres Clients aus  
@@ -140,6 +145,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>Implementieren der Abschlussmethode  
+
  Der Abschlussdelegat ist die Methode, die das zugrundeliegende asynchrone Verhalten mit dem Threadingmodell „Free“ aufruft, sobald der asynchrone Vorgang durch erfolgreichen Abschluss, Fehler oder Abbruch beendet wird. Dieser Aufruf erfolgt auf einen beliebigen Thread.  
   
  Bei dieser Methode wird die Task-ID des Clients aus der internen Auflistung eindeutiger Clienttoken entfernt. Diese Methode beendet auch die Lebensdauer eines bestimmten asynchronen Vorgangs, indem die Methode <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> für den entsprechenden <xref:System.ComponentModel.AsyncOperation> aufgerufen wird. Dieser Aufruf löst das Abschlussereignis für den Thread aus, der für das Anwendungsmodell geeignet ist. Nach dem Aufruf der Methode <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> kann diese Instanz von <xref:System.ComponentModel.AsyncOperation> nicht mehr verwendet werden, und alle nachfolgenden Verwendungsversuche werden eine Ausnahme auslösen.  
@@ -154,6 +160,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  An diesem Punkt können Sie die Komponente erstellen.  
   
 ### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
@@ -169,6 +176,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      Diese Warnung wird im nächsten Abschnitt aufgelöst.  
   
 ## <a name="implementing-the-worker-methods"></a>Implementieren der Workermethoden  
+
  Bisher haben Sie den unterstützenden asynchronen Code für die Komponente `PrimeNumberCalculator` implementiert. Jetzt können Sie den Code implementieren, der die eigentliche Arbeit übernimmt. Sie implementieren drei Methoden: `CalculateWorker`, `BuildPrimeNumberList` und `IsPrime`. Zusammen umfassen `BuildPrimeNumberList` und `IsPrime` einen bekannten Algorithmus namens „Sieb des Eratosthenes“, der bestimmt, ob eine Zahl eine Primzahl ist, indem er alle Primzahlen bis zur Quadratwurzel der Testzahl findet. Wenn keine Divisoren bis dahin gefunden werden, ist die zu testende Zahl eine Primzahl.  
   
  Wenn diese Komponente für maximale Effizienz geschrieben würde, würde sie alle Primzahlen speichern, die durch verschiedene Aufrufe für verschiedene Testzahlen entdeckt wurden. Zudem würde sie auch triviale Divisoren wie 2, 3 und 5 überprüfen. In diesem Beispiel soll demonstriert werden, wie zeitaufwendige Vorgänge asynchron ausgeführt werden können, sodass diese Optimierungen als Übung für Sie belassen werden.  
@@ -208,6 +216,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  An diesem Punkt können Sie die Komponente erstellen.  
   
 ### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
@@ -217,6 +226,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      Was nun noch geschrieben werden muss, sind die Methoden zum Starten und Abbrechen der asynchronen Vorgänge `CalculatePrimeAsync` und `CancelAsync`.  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>Implementieren von Methoden zum Starten und Abbrechen  
+
  Sie starten die Workermethode auf ihrem eigenen Thread, indem Sie `BeginInvoke` über den Delegaten aufrufen, der sie umschließt. Um die Lebensdauer eines bestimmten asynchronen Vorgangs zu verwalten, rufen Sie die <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>-Methode für die Hilfsprogrammklasse <xref:System.ComponentModel.AsyncOperationManager> auf. Dadurch wird eine <xref:System.ComponentModel.AsyncOperation>-Klasse zurückgegeben, die Aufrufe für den Ereignishandler des Clients zum richtigen Thread oder Kontext marshallt.  
   
  Sie brechen einen bestimmten ausstehenden Vorgang ab, indem Sie <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> für die entsprechende <xref:System.ComponentModel.AsyncOperation>-Klasse aufrufen. Dadurch wird dieser Vorgang beendet, und alle nachfolgenden Aufrufe für <xref:System.ComponentModel.AsyncOperation> werden eine Ausnahme auslösen.  
@@ -234,6 +244,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
+
  An diesem Punkt können Sie die Komponente erstellen.  
   
 ### <a name="to-test-your-component"></a>So testen Sie Ihre Komponente  
@@ -245,6 +256,7 @@ Wenn Sie eine Klasse mit Vorgängen schreiben, die nennenswerte Verzögerungen v
  Ein Beispiel für einen Client, der die `PrimeNumberCalculator`-Komponente verwendet, finden Sie unter [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Nächste Schritte  
+
  Sie können dieses Beispiel ausfüllen, indem Sie `CalculatePrime` schreiben. Dies ist das synchrone Äquivalent der `CalculatePrimeAsync`-Methode. So wird die `PrimeNumberCalculator`-Komponente vollständig kompatibel mit dem ereignisbasierten asynchronen Muster.  
   
  Sie können dieses Beispiel verbessern, indem Sie die Liste aller Primzahlen beibehalten, die durch verschiedene Aufrufe für verschiedene Testzahlen entdeckt wurden. Mit diesem Ansatz profitiert jeder Task von der Arbeit früherer Tasks. Achten Sie darauf, diese Liste mit `lock`-Regionen zu schützen, damit der Zugriff auf die Liste durch verschiedene Threads serialisiert wird.  

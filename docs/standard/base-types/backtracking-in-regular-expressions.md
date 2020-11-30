@@ -16,20 +16,22 @@ helpviewer_keywords:
 - strings [.NET], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: a15ef27f71eac9ed12889054283f8ac41d85922f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5c6d9d2e048c2dd89cf18ff7148050ddb6813f40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825246"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699702"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
+
 Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](alternation-constructs-in-regular-expressions.md) enthält und die Engine für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
   
 > [!NOTE]
 > Bei einer NFA-Engine (Nondeterministic Finite Automaton) wie der .NET-Engine für reguläre Ausdrücke liegt die Verantwortung für die Erstellung effizienter und schneller regulärer Ausdrücke im Allgemeinen beim Entwickler.  
 
 ## <a name="linear-comparison-without-backtracking"></a>Linearer Vergleich ohne Rückverfolgung  
+
  Wenn das Muster eines regulären Ausdrucks nicht über optionale Quantifizierer oder Alternierungskonstrukte verfügt, wird die Engine für reguläre Ausdrücke zeitlich linear ausgeführt. Das heißt, nachdem die Engine für reguläre Ausdrücke dem ersten Sprachelement im Muster Text in der Eingabezeichenfolge zugeordnet hat, wird versucht, das nächste Sprachelement im Muster dem nächsten Zeichen oder der nächsten Zeichengruppe in der Eingabezeichenfolge zuzuordnen. Dies wird fortgesetzt, bis die Übereinstimmung erfolgreich ausgeführt wurde oder fehlschlägt. In beiden Fällen wechselt die Engine für reguläre Ausdrücke immer je ein Zeichen in der Eingabezeichenfolge weiter.  
   
  Dies wird im folgenden Beispiel veranschaulicht. Der reguläre Ausdruck `e{2}\w\b` sucht nach zwei Vorkommen des Buchstabens "e", gefolgt von einem beliebigen Wortzeichen, wiederum gefolgt von einer Wortgrenze.  
@@ -64,6 +66,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  Wenn das Muster eines regulären Ausdrucks keine optionalen Quantifizierer oder Alternierungskonstrukte enthält, entspricht die maximale Anzahl von Vergleichen, die für die Übereinstimmung des regulären Ausdrucksmusters mit der Eingabezeichenfolge erforderlich sind, ungefähr der Anzahl der Zeichen in der Eingabezeichenfolge. In diesem Fall verwendet die Engine für reguläre Ausdrücke 19 Vergleiche, um mögliche Übereinstimmungen in dieser Zeichenfolge mit 13 Zeichen zu identifizieren.  Mit anderen Worten, die Engine für reguläre Ausdrücke wird zeitlich annähernd linear ausgeführt, wenn sie keine optionalen Quantifizierer oder Alternierungskonstrukte enthält.
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Rückverfolgung mit optionalen Quantifizierern oder Alternierungskonstrukten  
+
  Wenn ein regulärer Ausdruck optionale Quantifizierer oder Alternierungskonstrukte enthält, erfolgt die Auswertung der Eingabezeichenfolge nicht mehr linear. Mustervergleiche mit einer NFA-Engine werden durch die Sprachelemente im regulären Ausdruck und nicht durch die Zeichen gesteuert, für die in der Eingabezeichenfolge Übereinstimmungen gefunden werden sollen. Daher versucht die Engine für reguläre Ausdrücke, vollständige Übereinstimmungen für die optionalen oder alternativen Teilausdrücke zu finden. Wenn zum nächsten Sprachelement im Teilausdruck gewechselt und keine Übereinstimmung gefunden wird, kann die Engine für reguläre Ausdrücke einen Teil der erfolgreichen Übereinstimmung aufgeben und zu einem zuvor gespeicherten Zustand zurückkehren, um eine Übereinstimmung des gesamten regulären Ausdrucks mit der Eingabezeichenfolge zu erzielen. Dieses Zurückkehren zu einem zuvor gespeicherten Zustand, um eine Übereinstimmung zu finden, wird als Rückverfolgung bezeichnet.  
   
  Als Beispiel dient das reguläre Ausdrucksmuster `.*(es)`, das mit den Zeichen "es" und allen vorangestellten Zeichen übereinstimmt. Wenn die Eingabezeichenfolge "Essential services are provided by regular expressions." lautet, wird die gesamte Zeichenfolge bis einschließlich der Zeichen "es" im Wort "expressions" nach einer Übereinstimmung mit dem Muster durchsucht.  
@@ -86,6 +89,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  Bei einer Rückverfolgung erfordert das Abgleichen des regulären Ausdrucksmusters mit der Eingabezeichenfolge, die 55 Zeichen lang ist, 67 Vergleichsoperationen. Wenn das Muster eines regulären Ausdrucks ein einzelnes Alternierungskonstrukt oder einen einzelnen optionalen Quantifizierer enthält, ist die Anzahl der zum Abgleichen eines Musters erforderlichen Vergleichsoperationen im Allgemeinen mehr als doppelt so hoch wie die Anzahl der Zeichen in der Eingabezeichenfolge.
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Rückverfolgung mit geschachtelten optionalen Quantifizierern  
+
  Die Anzahl der für den Abgleich mit einem regulären Ausdrucksmuster erforderlichen Vergleichsoperationen kann sich exponentiell erhöhen, wenn das Muster viele Alternierungskonstrukte bzw. geschachtelte Alternierungskonstrukte oder, wie es am häufigsten vorkommt, geschachtelte optionale Quantifizierer enthält. Beispielsweise ist das reguläre Ausdrucksmuster `^(a+)+$` darauf ausgelegt, eine Übereinstimmung mit einer vollständigen Zeichenfolge zu finden, die mindestens ein "a" enthält. Das Beispiel stellt zwei Eingabezeichenfolgen mit identischer Länge bereit. Aber nur die erste Zeichenfolge stimmt mit dem Muster überein. Die <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> -Klasse wird verwendet, um zu bestimmen, wie lange die Vergleichsoperation dauert.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
@@ -102,9 +106,11 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  Der Vergleich der Eingabezeichenfolge mit dem regulären Ausdruck wird auf diese Weise fortgesetzt, bis die Engine für reguläre Ausdrücke alle möglichen Übereinstimmungskombinationen durchlaufen hat und dann feststellt, dass keine Übereinstimmung vorhanden ist. Aufgrund der geschachtelten Quantifizierer handelt es sich bei diesem Vergleich um O(2 <sup>n</sup>) oder einen exponentiellen Vorgang, wobei *n* für die Anzahl von Zeichen in der Eingabezeichenfolge steht. Dies bedeutet, dass im ungünstigsten Fall für eine Eingabezeichenfolge von 30 Zeichen etwa 1.073.741.824 Vergleiche und für eine Eingabezeichenfolge von 40 Zeichen ungefähr 1.099.511.627.776 Vergleiche erforderlich sind. Wenn Sie Zeichenfolgen mit dieser oder sogar einer größeren Länge verwenden, kann die Ausführung von Methoden mit regulären Ausdrücken erhebliche Zeit in Anspruch nehmen, wenn diese Eingaben verarbeiten, die nicht mit dem regulären Ausdrucksmuster übereinstimmen.
 
 ## <a name="controlling-backtracking"></a>Steuern der Rückverfolgung  
+
  Mithilfe der Rückverfolgung können Sie leistungsstarke, flexible reguläre Ausdrücke erstellen. Wie allerdings im vorangegangenen Abschnitt erläutert, sind diese Vorteile u. U. mit einer inakzeptabel schlechten Leistung verknüpft. Um eine übermäßige Rückverfolgung zu verhindern, sollten Sie ein Timeoutintervall definieren, wenn Sie ein <xref:System.Text.RegularExpressions.Regex> -Objekt instanziieren oder eine statische Methode für Übereinstimmungen mit regulären Ausdrücken aufrufen. Dies wird im nächsten Abschnitt erläutert. Darüber hinaus unterstützt .NET drei Sprachelemente für reguläre Ausdrücke, die das Zurückverfolgen einschränken oder unterdrücken und komplexe reguläre Ausdrücke bei nur wenigen oder gar keinen Leistungseinbußen unterstützen: [atomische Gruppen](#atomic-groups), [Lookbehindassertionen](#lookbehind-assertions) und [Lookaheadassertionen](#lookahead-assertions). Weitere Informationen zu den einzelnen Sprachelementen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definieren eines Timeoutintervalls  
+
  Ab .NET Framework 4.5 können Sie einen Timeoutwert für das längste Intervall festlegen, innerhalb dessen die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht, bevor der Versuch abgebrochen und eine Ausnahme vom Typ <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ausgelöst wird. Sie geben das Timeoutintervall an, indem Sie einen <xref:System.TimeSpan> -Wert für den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> -Konstruktor für reguläre Ausdrucksinstanzen bereitstellen. Außerdem weist jede statische Methode für Musterübereinstimmungen eine Überladung mit einem <xref:System.TimeSpan> -Parameter auf, der es Ihnen ermöglicht, einen Timeoutwert anzugeben. Standardmäßig wird das Timeoutintervall auf <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> festgelegt, und die Engine für reguläre Ausdrücke gibt kein Timeout zurück.  
   
 > [!IMPORTANT]
@@ -118,6 +124,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>Atomische Gruppen
+
  Das Sprachelement `(?>` *Teilausdruck* `)` unterdrückt die Rückverfolgung in einem Teilausdruck. Sobald eine Übereinstimmung gefunden wurde, wird kein Teil der Übereinstimmung für die nachfolgende Rückverfolgung aufgegeben. Beispielsweise gibt `\d*` im Muster `(?>\w*\d*)1`, wenn für `1` keine Übereinstimmung gefunden wird, keine Übereinstimmung auf, selbst wenn dies bedeutet, dass für `1` eine erfolgreiche Übereinstimmung möglich ist. Atomische Gruppen sind nützlich, um die mit fehlgeschlagenen Übereinstimmungen zusammenhängenden Leistungsprobleme zu vermeiden.
   
  Das folgende Beispiel zeigt, wie das Unterdrücken der Rückverfolgung bei Verwendung von geschachtelten Quantifizierern die Leistung verbessert. Es wird gemessen, wie viel Zeit die Engine für reguläre Ausdrücke benötigt, um zu ermitteln, dass eine Eingabezeichenfolge nicht mit zwei regulären Ausdrücken übereinstimmt. Der erste reguläre Ausdruck verwendet die Rückverfolgung, um eine Übereinstimmung mit einer Zeichenfolge zu finden, in der Folgendes ein Mal oder mehrmals vorkommt: eine oder mehrere hexadezimale Ziffern, gefolgt von einem Doppelpunkt, gefolgt von einer oder mehreren hexadezimalen Ziffern, gefolgt von zwei Doppelpunkten. Der zweite reguläre Ausdruck ist mit dem ersten identisch, mit der Ausnahme, dass dieser die Rückverfolgung deaktiviert. Wie die Ausgabe im Beispiel zeigt, ist die Leistungsverbesserung durch das Deaktivieren der Rückverfolgung signifikant.  
@@ -126,6 +133,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>Lookbehindassertionen  
+
  .NET enthält zwei Sprachelemente, `(?<=`*Teilausdruck*`)` und `(?<!`*Teilausdruck*`)`, die mit dem bzw. den vorherigen Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar vor dem aktuellen Zeichen mit *Teilausdruck* vorliegt.  
   
  `(?<=` *Teilausdruck* `)` ist eine positive Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen mit *Teilausdruck* übereinstimmen. `(?<!`*Teilausdruck*`)` ist eine negative Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck* übereinstimmen. Positive und negative Lookbehindassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des vorherigen Teilausdrucks ist.  
@@ -157,6 +165,7 @@ Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optio
 |`@`|Übereinstimmung mit einem \@-Zeichen.|  
 
 ### <a name="lookahead-assertions"></a>Lookaheadassertionen  
+
  .NET enthält zwei Sprachelemente, `(?=`*Teilausdruck*`)` und `(?!`*Teilausdruck*`)`, die mit dem bzw. den nächsten Zeichen in der Eingabezeichenfolge übereinstimmen. Beide Sprachelemente sind Assertionen mit einer Breite von 0. Das heißt, sie bestimmen ohne Vorlaufen oder Rückverfolgung, ob eine Übereinstimmung des oder der Zeichen unmittelbar nach dem aktuellen Zeichen mit *Teilausdruck* vorliegt.  
   
  `(?=` *Teilausdruck* `)` ist eine positive Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen mit *Teilausdruck* übereinstimmen. `(?!`*Teilausdruck*`)` ist eine negative Lookaheadassertion. Das heißt, das oder die Zeichen nach der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck* übereinstimmen. Positive und negative Lookaheadassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des nächsten Teilausdrucks ist.  

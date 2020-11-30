@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687275"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720905"
 ---
 # <a name="resolve-assembly-loads"></a>Auflösen von Assemblyladevorgängen
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687275"
 > Zum Auflösen vom Laden einer Assembly in einem reflektionsbezogenen Kontext können Sie stattdessen das Ereignis <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> verwenden.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Auslösung des Ereignisses „AssemblyResolve“  
+
  Wenn Sie einen Handler für das Ereignis <xref:System.AppDomain.AssemblyResolve> registrieren, wird der Handler immer dann aufgerufen, wenn die Runtime eine Assembly nicht anhand deren Namen binden kann. Wenn Sie z.B. die folgende Methode aus Benutzercode aufrufen, kann das Ereignis <xref:System.AppDomain.AssemblyResolve> ausgelöst werden:  
   
 - Die Methodenüberladung <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, deren erstes Argument eine Zeichenfolge ist, die den Anzeigenamen der zu ladenden Assembly darstellt (d.h. die von der Eigenschaft <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> zurückgegebene Zeichenfolge).  
@@ -39,6 +40,7 @@ ms.locfileid: "92687275"
 - Die Methodenüberladung <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType>, das ein Objekt in einer anderen Anwendungsdomäne instantiiert.  
   
 ### <a name="what-the-event-handler-does"></a>Welche Aktionen der Ereignishandler ausführt  
+
  Der Handler für das Ereignis <xref:System.AppDomain.AssemblyResolve> erhält den Anzeigenamen der zu ladenden Assembly in der Eigenschaft <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Wenn der Handler den Assemblynamen nicht erkennt, gibt er `null` (C#), `Nothing` (Visual Basic) oder `nullptr` (Visual C++) zurück.  
   
  Wenn der Handler den Assemblynamen erkennt, kann er eine Assembly laden und zurückgeben, die der Anforderung entspricht. In der folgenden Liste werden einige Beispielszenarios beschrieben.  
@@ -69,6 +71,7 @@ ms.locfileid: "92687275"
  Mehrere Versionen derselben Assembly können in die gleiche Anwendungsdomäne geladen werden. Diese Vorgehensweise wird jedoch nicht empfohlen, da sie zu Problemen bei der Typzuweisung führen kann. Weitere Informationen finden Sie unter [Best Practices für das Laden von Assemblys](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
 ### <a name="what-the-event-handler-should-not-do"></a>Welche Aktionen der Ereignishandler nicht ausführen sollte  
+
 Die erste Regeln beim Behandeln des Ereignis <xref:System.AppDomain.AssemblyResolve> ist, dass Sie nie versuchen sollten, eine Assembly zurückzugeben, die Sie nicht erkennen. Wenn Sie den Handler schreiben, sollten Sie wissen, welche Assemblys das Ereignis auslösen können. Ihr Handler sollte für andere Assemblys NULL zurückgeben.  
 
 > [!IMPORTANT]

@@ -2,14 +2,15 @@
 title: XmlDataDocument-Eingaben in "XslTransform"
 ms.date: 03/30/2017
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
-ms.openlocfilehash: 46abc88f413ae5e0c5f78deba25e939b957a5beb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 96ce5176b83a6dfcb9af29b55f4e5052915dba93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721945"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XmlDataDocument-Eingaben in "XslTransform"
+
 > [!NOTE]
 > Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).  
   
