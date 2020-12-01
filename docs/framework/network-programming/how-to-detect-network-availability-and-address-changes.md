@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f5eef7b6ba41f1ac4050fbc9168fafea31b103f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70894961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287311"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Gewusst wie: Erkennen von Netzwerkverfügbarkeit und Adressänderungen
+
 In diesem Beispiel wird gezeigt, wie Änderungen in der Netzwerkadresse einer Schnittstelle erkannt werden können.  
   
 ## <a name="example"></a>Beispiel  
@@ -46,6 +47,7 @@ namespace Examples.Net.AddressChanges
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf den Namespace **System.Net**.

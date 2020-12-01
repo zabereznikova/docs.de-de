@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543386"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283756"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
+
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
@@ -56,6 +57,7 @@ tlbexp assemblyName [options]
 > Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Beispiel: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Hinweise  
+
  "Tlbexp.exe" generiert eine Typbibliothek, die Definitionen der in der Assembly definierten Typen enthält. Anwendungen wie Visual Basic 6.0 können mithilfe der generierten Typbibliothek Bindungen zu den in der Assembly definierten .NET-Typen erstellen.  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  Das Type Library Exporter-Tool wird unter Microsoft Windows 2000 und höher unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
+
  Der folgende Befehl generiert eine Typbibliothek mit dem Namen der in `myTest.dll` gefundenen Assembly.  
   
 ```console  
