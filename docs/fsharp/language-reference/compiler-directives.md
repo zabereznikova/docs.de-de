@@ -4,12 +4,12 @@ description: 'Erfahren Sie mehr über F #-sprach Präprozessordirektiven, beding
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557319"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438169"
 ---
 # <a name="compiler-directives"></a>Compileranweisungen
 
@@ -27,7 +27,7 @@ In der folgenden Tabelle werden die Präprozessoranweisungen aufgelistet, die in
 |`#else`|Unterstützt die bedingte Kompilierung. Markiert einen einzubeziehenden Codeabschnitt, wenn das mit dem vorherigen verwendeten `#if` nicht definiert ist.|
 |`#endif`|Unterstützt die bedingte Kompilierung. Markiert das Ende eines bedingten Codeabschnitts.|
 |`#`Stimmen *int*,<br/>`#`Stimmen *int* - *Zeichenfolge*<br/>`#`Stimmen *int* *-wörtliche Zeichenfolge*|Gibt die ursprüngliche Quellcodezeile und den Dateinamen für das Debuggen an. Diese Funktion wird für Tools bereitgestellt, die F#-Quellcode generieren.|
-|`#nowarn`*warningCode*|Deaktiviert eine Compilerwarnung oder Warnungen. Suchen Sie zum Deaktivieren einer Warnung nach ihrer Nummer in der Compilerausgabe, und setzen Sie sie in Anführungszeichen. Lassen Sie das Präfix „FS“ weg. Zum Deaktivieren von mehreren Warnnummern in derselben Zeile müssen Sie jede Nummer in Anführungszeichen setzen und jede Zeichenfolge durch ein Leerzeichen abtrennen. Zum Beispiel:
+|`#nowarn`*warningCode*|Deaktiviert eine Compilerwarnung oder Warnungen. Suchen Sie zum Deaktivieren einer Warnung nach ihrer Nummer in der Compilerausgabe, und setzen Sie sie in Anführungszeichen. Lassen Sie das Präfix „FS“ weg. Zum Deaktivieren von mehreren Warnnummern in derselben Zeile müssen Sie jede Nummer in Anführungszeichen setzen und jede Zeichenfolge durch ein Leerzeichen abtrennen. Beispiel:
 
 `#nowarn "9" "40"`
 
@@ -78,7 +78,7 @@ Die folgende Tabelle enthält die Compilerdirektive, die in F# verfügbar ist.
 |---------|-----------|
 |`#light` ["on" &#124; "Off"]|Aktiviert oder deaktiviert die einfache Syntax für die Kompatibilität mit anderen MK-Versionen. Standardmäßig ist die einfache Syntax aktiviert. Die ausführliche Syntax ist immer aktiviert. Daher können Sie die einfache und ausführliche Syntax verwenden. Die Anweisung `#light` an sich entspricht `#light "on"`. Beim Angeben von `#light "off"` müssen Sie die ausführliche Syntax für alle Sprachkonstrukte verwenden. Bei der in der Dokumentation für F# gezeigten Syntax wird davon ausgegangen, dass Sie die einfache Syntax verwenden. Weitere Informationen finden Sie unter ausführliche [Syntax](verbose-syntax.md).|
 
-Informationen zu interpreterdirektiven (fsi.exe) finden Sie unter [interaktive Programmierung mit F #](../tutorials/fsharp-interactive/index.md).
+Informationen zu interpreterdirektiven (fsi.exe) finden Sie unter [interaktive Programmierung mit F #](../tools/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -2,12 +2,12 @@
 title: 'Neues in f # 5,0-f #-Handbuch'
 description: 'Verschaffen Sie sich einen Überblick über die neuen Features, die in F # 5,0 verfügbar sind.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098696"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438005"
 ---
 # <a name="whats-new-in-f-50"></a>Neues in F# 5.0
 
@@ -56,7 +56,7 @@ let test p str =
 test pfloat "1.234"
 ```
 
-Diese Funktion implementiert [F #-Tools RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md). Weitere Informationen zu Paket verweisen finden Sie im [F# Interactive](../tutorials/fsharp-interactive/index.md) Tutorial.
+Diese Funktion implementiert [F #-Tools RFC FST-1027](https://github.com/fsharp/fslang-design/blob/master/tooling/FST-1027-fsi-references.md). Weitere Informationen zu Paket verweisen finden Sie im [F# Interactive](../tools/fsharp-interactive/index.md) Tutorial.
 
 ## <a name="string-interpolation"></a>Zeichenfolgeninterpolierung
 
@@ -272,7 +272,7 @@ Diese Funktion implementiert [F # RFC FS-1077b](https://github.com/fsharp/fslang
 
 ## <a name="f-quotations-improvements"></a>Verbesserungen in F #
 
-F #- [Code Zitate](../language-reference/code-quotations.md) haben jetzt die Möglichkeit, Informationen zur Typeinschränkung beizubehalten. Betrachten Sie das folgenden Beispiel:
+F #- [Code Zitate](../language-reference/code-quotations.md) haben jetzt die Möglichkeit, Informationen zur Typeinschränkung beizubehalten. Betrachten Sie das folgende Beispiel:
 
 ```fsharp
 open FSharp.Linq.RuntimeHelpers
@@ -427,7 +427,7 @@ Diese Funktion implementiert [F # RFC FS-1075](https://github.com/fsharp/fslang-
 
 ## <a name="preview-reverse-indexes"></a>Vorschau: Reverse-Indizes
 
-F # 5 führt außerdem eine Vorschau für das Zulassen von umgekehrten Indizes ein. Die Syntax lautet `^idx`. So können Sie einen Wert von Element 1 vom Ende einer Liste aus:
+F # 5 führt außerdem eine Vorschau für das Zulassen von umgekehrten Indizes ein. Die Syntax ist `^idx`. So können Sie einen Wert von Element 1 vom Ende einer Liste aus:
 
 ```fsharp
 let xs = [1..10]
