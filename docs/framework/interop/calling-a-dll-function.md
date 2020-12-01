@@ -10,19 +10,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
-ms.openlocfilehash: 90f8f47148e652a9942a35be1564bed94c155216
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 09dd9d30c29660231feee6c624a025ade1fda1d3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620897"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282950"
 ---
 # <a name="calling-a-dll-function"></a>Aufrufen einer DLL-Funktion
+
 Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Aufrufen von verwaltetem Code sind, bestehen Unterschiede, die DLL-Funktionen zuerst verwirrend erscheinen lassen. Dieser Abschnitt enthält Themen, in denen einige ungewöhnliche aufrufbezogene Probleme beschrieben werden.  
   
  Strukturen, die von Plattforminvokeaufrufen zurückgegeben werden, müssen Datentypen sein, die die gleiche Darstellung in verwaltetem und nicht verwaltetem Code haben. Solche Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist (siehe [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)). Um eine Funktion aufzurufen, die über eine nicht blitfähige Struktur als Rückgabetyp verfügt, können Sie einen blitfähigen Hilfstyp mit derselben Größe wie der nicht blitfähige Typ definieren, und nach der Rückgabe der Funktion Daten konvertieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Übergeben von Strukturen](passing-structures.md)  
  Identifiziert die Probleme der Übergabe von Datenstrukturen mit einem vordefinierten Layout.  
   
@@ -33,6 +35,7 @@ Obwohl Aufrufe nicht verwalteter DLL-Funktionen nahezu identisch mit anderen Auf
  Beschreibt das Implementieren von Rückruffunktionen in verwaltetem Code.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
+
  [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
  Beschreibt das Aufrufen von nicht verwalteten DLL-Funktionen mithilfe von Plattformaufruf  
   

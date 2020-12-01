@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ea15149ea72c3c422251abefb5a1008cc496f2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559186"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263450"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Vorgehensweise: Definieren und Ausführen von dynamischen Methoden
+
 Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>So definieren und Sie eine dynamische Methode und führen diese aus  
@@ -101,6 +102,7 @@ Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine 
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel zeigt eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist.  
   
  Die einfache dynamische Methode nimmt ein Argument, einen 32-Bit-Integer und gibt das 64-Bit-Quadrat dieses Integers zurück. Ein generischer Delegat wird zum Aufrufen der Methode verwendet.  

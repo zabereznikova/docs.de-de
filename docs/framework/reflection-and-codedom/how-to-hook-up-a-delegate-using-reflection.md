@@ -11,14 +11,15 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: b5d93efd278a53a4e6382f2321918e58ead55899
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9a92afd1c2aeadeb0cf7bc1e626b5bd1fb3cecea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865085"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263424"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion
+
 Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ereignisse nicht mit Sprachfunktionen wie dem Operator `+=` von C# oder der [AddHandler-Anweisung](../../visual-basic/language-reference/statements/addhandler-statement.md) von Visual Basic verknüpfen. In den folgenden Verfahrensweisen wird veranschaulicht, wie eine vorhandene Methode mit einem Ereignis verknüpft wird, indem alle erforderlichen Typen über Reflektion abgerufen werden, und wie eine dynamische Methode mithilfe von Reflektionsausgabe erstellt und mit einem Ereignis verknüpft wird.  
   
 > [!NOTE]
@@ -69,6 +70,7 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>
+
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>So generieren Sie anhand einer dynamischen Methode zur Laufzeit einen Ereignishandler  
   
 1. Ereignishandlermethoden können mithilfe einfacher dynamischer Methoden und Reflektionsausgabe zur Laufzeit generiert werden. Zum Erstellen eines Ereignishandlers benötigen Sie den Rückgabetyp und die Parametertypen des Delegaten. Diese können über die `Invoke`-Methode des Delegaten abgerufen werden. Im folgenden Code werden diese Informationen über die `GetDelegateReturnType`-Methode und die `GetDelegateParameterTypes`-Methode ermittelt. Den Code für diese Methoden können Sie später in diesem Thema im Abschnitt Beispiel finden.  
@@ -98,6 +100,7 @@ Wenn Sie Assemblys mithilfe von Reflektion laden und ausführen, können Sie Ere
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>Beispiel  
+
  In den folgenden Codebeispielen wird veranschaulicht, wie eine vorhandene Methode anhand von Reflektion mit einem Ereignis verknüpft wird, und wie eine Methode mithilfe der <xref:System.Reflection.Emit.DynamicMethod>-Klasse zur Laufzeit ausgegeben und mit einem Ereignis verknüpft wird.  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]

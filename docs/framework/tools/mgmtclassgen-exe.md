@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 1dea4b0b94053919169abb639ff48ecd3abbd66c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517294"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279154"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
+
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,6 +46,7 @@ WMIClass [options]
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  "Mgmtclassgen.exe" verwendet die <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>-Methode. Sie können daher mit einem beliebigen benutzerdefinierten Codeanbieter Code in anderen verwalteten Sprachen als C#, Visual Basic und JScript generieren.  
   
  Beachten Sie, dass die generierten Klassen an das Schema gebunden sind, für das sie generiert werden. Änderungen am zugrunde liegenden Schema wirken sich auf die Klasse erst nach einer Neugenerierung aus.  
@@ -93,6 +95,7 @@ WMIClass [options]
  Weitere Informationen zu WMI finden Sie im Thema **Windows-Verwaltungsinstrumentation** in der Platform SDK-Dokumentation.  
   
 ## <a name="examples"></a>Beispiele  
+
  Der folgende Befehl generiert eine verwaltete Klasse in C#-Code für die **Win32_LogicalDisk**-WMI-Klasse im **Root\cimv2**-Namespace. Das Tool schreibt die verwaltete Klasse in die Quelldatei, die sich unter „c:\disk.cs“ im **ROOT.CIMV2.Win32**-Namespace befindet.  
   
 ```console  

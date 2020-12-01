@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 525e3724aec82a74f5b0339296808b41f30d0ddc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266375"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
+
 Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
   
  Eine verwaltete Komponente muss in der Windows-Registrierung registriert sein, damit sie von einem COM-Client aktiviert werden kann. Die folgende Tabelle zeigt die Schlüssel, die Regasm.exe der Windows-Registrierung in der Regel hinzufügt. (000000 steht hier für den tatsächlichen GUID-WERT.)  
@@ -38,6 +39,7 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
  Regasm.exe erstellt auch unter dem Schlüssel HKCR\CLSID\\{0000…0000} den Schlüssel InProcServer32. Als Standardwert für den Schlüssel ist der Name der DLL festgelegt, die die Common Language Runtime initialisiert (Mscoree.dll).  
   
 ## <a name="examining-registry-entries"></a>Untersuchen von Registrierungseinträgen  
+
  Das COM-Interop stellt eine standardmäßige Klassenfactoryimplementierung zum Erstellen einer Instanz einer beliebigen .NET Framework-Klasse bereit. Clients können für die verwaltete DLL **DllGetClassObject** aufrufen, um eine Klassenfactory zu erhalten und Objekte zu erstellen. Dies funktioniert genau wie bei jeder anderen COM-Komponente auch.  
   
  Für den Unterschlüssel `InprocServer32` wird statt einer traditionellen Bibliothek der COM-Typen ein Verweis auf die Datei „Mscoree.dll“ angezeigt. So wird angegeben, dass die Common Language Runtime das verwaltete Objekt erstellt.  

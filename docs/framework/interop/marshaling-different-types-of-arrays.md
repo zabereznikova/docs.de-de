@@ -9,14 +9,15 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b7777e99daf9d294bf26033f470a6e562b7b727f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621495"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269092"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
+
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  
   
  Die folgende Tabelle enthält eine Liste der Marshallingoptionen für Arrays und beschreibt deren Verwendung.  
@@ -31,6 +32,7 @@ Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente 
 |Aus Strukturen mit Zeichenfolgen|Übergibt ein aus Strukturen bestehendes Array, das nur Zeichenfolgen enthält, als In-/Out-Parameter. Member des Arrays können geändert werden.|  
   
 ## <a name="example"></a>Beispiel  
+
  Dieses Beispiel zeigt, wie die folgenden Arraytypen übergeben werden:  
   
 - Array aus ganzen Zahlen nach Wert  
@@ -106,10 +108,12 @@ typedef struct _MYPERSON
  Die `NativeMethods` -Klasse enthält eine Reihe von Methoden, die von der `App` -Klasse aufgerufen werden. Spezifische Details zum Übergeben von Array finden Sie in den Kommentaren im folgenden Beispiel. Ein Array vom Typ "Verweis" wird standardmäßig als In-Parameter übergeben. Damit das aufrufende Programm die Ergebnisse erhält, müssen **InAttribute** und **OutAttribute** explizit dem Argument hinzugefügt werden, das das Array enthält.  
   
 ### <a name="declaring-prototypes"></a>Deklarieren von Prototypen  
+
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
 ### <a name="calling-functions"></a>Aufrufen von Funktionen  
+
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   

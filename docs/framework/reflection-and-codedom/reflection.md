@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258412"
 ---
 # <a name="reflection-in-net"></a>Reflektion in .NET
 
@@ -62,6 +62,7 @@ Reflektionen können auch zum Erstellen von Anwendungen verwendet werden, die al
 Dies ist eine weitere Verwendungsmöglichkeit von Reflektionen. Compiler für Sprachen wie JScript verwenden Reflektionen, um Symboltabellen zu erstellen. Die Klassen im <xref:System.Runtime.Serialization>-Namespace verwenden Reflektionen, um auf Daten zuzugreifen und um festzustellen, welche Felder beibehalten werden. Die Klassen im <xref:System.Runtime.Remoting>-Namespace verwenden Reflektionen indirekt über die Serialisierung.  
   
 ## <a name="runtime-types-in-reflection"></a>Laufzeittypen in Reflektion  
+
 Reflektion stellt Klassen wie <xref:System.Type> und <xref:System.Reflection.MethodInfo> bereit, um Typen, Member, Parameter und andere Codeentitäten darzustellen. Wenn Sie jedoch Reflektion verwenden, arbeiten Sie nicht direkt mit diesen Klassen, von denen die meisten abstrakt sind (`MustInherit` in Visual Basic). Stattdessen arbeiten Sie mit Typen, die von der CLR (Common Language Runtime) bereitgestellt werden.  
   
 Wenn Sie beispielsweise den C#-Operator `typeof` (`GetType` in Visual Basic) verwenden, um ein <xref:System.Type>-Objekt abzurufen, handelt es sich in Wirklichkeit um ein `RuntimeType`-Objekt. `RuntimeType` ist von <xref:System.Type> abgeleitet und stellt Implementierungen aller abstrakten Methoden bereit.  

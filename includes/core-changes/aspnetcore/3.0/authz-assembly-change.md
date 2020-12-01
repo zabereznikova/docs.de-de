@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2819fb3857fa6d40a2b2e42eeaec2d9c6e50eef0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74100997"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96299352"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorisierung: AddAuthorization-Überladung in andere Assembly verschoben
 
@@ -15,6 +15,7 @@ Die wichtigsten `AddAuthorization`-Methoden, die bisher in `Microsoft.AspNetCore
 3.0
 
 #### <a name="old-behavior"></a>Altes Verhalten
+
 Die `AddAuthorization`-Methoden waren in `Microsoft.AspNetCore.Authorization` enthalten.
 
 #### <a name="new-behavior"></a>Neues Verhalten

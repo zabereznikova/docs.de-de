@@ -11,12 +11,12 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 8cc4198d6c13d4705ffc5ce5229cce7a205aec8a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96278179"
 ---
 # <a name="specify-a-character-set"></a>Angeben eines Zeichensatzes
 
@@ -33,6 +33,7 @@ Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayPrope
      Stellt einen 2-Byte-Zeichensatz im Unicode-Format zur Verfügung, der durch ein zum Namen des Einstiegspunkts hinzugefügten „W“ unterschieden wird. Aufrufe von **MessageBoxW** marshallen Zeichenfolgen immer im Unicode-Format.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Marshallen von Zeichenfolgen und Namensübereinstimmung  
+
  Das Feld `CharSet` akzeptiert die folgenden Werte:  
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi> (Standardwert)  

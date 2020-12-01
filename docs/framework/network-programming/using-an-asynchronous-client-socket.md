@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af5379533e51e7488d673359dc24268c6329c082
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502040"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265218"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Verwenden von asynchronen Clientsockets
+
 Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewartet wird, dass Netzwerkvorgänge abgeschlossen werden. Stattdessen wird das standardmäßige asynchrone Programmiermodell von .NET Framework verwendet, um die Netzwerkverbindung in einem Thread zu verarbeiten, während die Anwendung weiterhin auf dem ursprünglichen Thread ausgeführt wird. Asynchrone Sockets eignen sich für Anwendungen, die das Netzwerk stark nutzen, oder die nicht warten können, bis Netzwerkvorgänge vor dem Fortsetzen abgeschlossen werden.  
   
  Die <xref:System.Net.Sockets.Socket>-Klasse folgt dem Benennungsmuster von .NET Framework für asynchrone Methoden, z.B. entspricht die synchrone <xref:System.Net.Sockets.Socket.Receive%2A>-Methode den asynchronen <xref:System.Net.Sockets.Socket.BeginReceive%2A>- und <xref:System.Net.Sockets.Socket.EndReceive%2A>-Methoden.  

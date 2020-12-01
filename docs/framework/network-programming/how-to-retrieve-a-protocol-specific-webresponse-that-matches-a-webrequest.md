@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-ms.openlocfilehash: 15b1912a7bd951df7f3c14eb96251c2bdf237b4f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd163c115dcd19c05f93f4c202b043440834ba9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502456"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266739"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>Vorgehensweise: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht
+
 In diesem Beispiel erfahren Sie, wie Sie ein protokollspezifisches WebResponse abrufen, das einem WebRequest entspricht.  
   
 ## <a name="example"></a>Beispiel  
@@ -29,6 +30,7 @@ Dim resp As WebResponse = req.GetResponse()
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf den Namespace **System.Net**  

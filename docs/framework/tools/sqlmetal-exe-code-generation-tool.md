@@ -10,14 +10,15 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 84cad85a7a9fc4b420b57543b7f258607be4ab52
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 4edf11315892ed8267bee17d69a70033348eca5c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272565"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
+
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]-Komponente von .NET Framework. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
   
 - Generieren von Quellcode und Zuordnungsattributen oder einer Zuordnungsdatei von einer Datenbank aus  
@@ -40,6 +41,7 @@ sqlmetal [options] [<input file>]
 ```  
   
 ## <a name="options"></a>Tastatur  
+
  Geben Sie zum Anzeigen der aktuellsten Optionsliste `sqlmetal /?` in einer Eingabeaufforderung am installierten Speicherort ein.  
   
  **Verbindungsoptionen**  
@@ -50,7 +52,7 @@ sqlmetal [options] [<input file>]
 |**/database:** *\<name>*|Gibt den Datenbankkatalog auf dem Server an.|  
 |**/user:** *\<name>*|Gibt die Benutzer-ID für die Anmeldung an. Standardwert: Verwenden der Windows-Authentifizierung.|  
 |**/password:** *\<password>*|Gibt das Anmeldekennwort an. Standardwert: Verwenden der Windows-Authentifizierung.|  
-|**/conn:** *\<connection string>*|Gibt die Verbindungszeichenfolge für Datenbanken an. Kann nicht mit den Optionen **/server**, **/database**, **/user**oder **/password** verwendet werden.<br /><br /> Die Verbindungszeichenfolge darf den Dateinamen nicht enthalten. Fügen Sie stattdessen den Dateinamen in der Befehlszeile als Eingabedatei hinzu. In der folgenden Zeile ist beispielsweise „c:\northwnd.mdf“ als Eingabedatei angegeben: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
+|**/conn:** *\<connection string>*|Gibt die Verbindungszeichenfolge für Datenbanken an. Kann nicht mit den Optionen **/server**, **/database**, **/user** oder **/password** verwendet werden.<br /><br /> Die Verbindungszeichenfolge darf den Dateinamen nicht enthalten. Fügen Sie stattdessen den Dateinamen in der Befehlszeile als Eingabedatei hinzu. In der folgenden Zeile ist beispielsweise „c:\northwnd.mdf“ als Eingabedatei angegeben: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
 |**/timeout:** *\<seconds>*|Gibt den Timeoutwert an, wenn SqlMetal auf die Datenbank zugreift. Standardwert: 0 (d. h. kein Zeitlimit).|  
   
  **Extraktionsoptionen**  
@@ -87,6 +89,7 @@ sqlmetal [options] [<input file>]
 |**\<input file>**|Gibt eine SQL Server Express-Datei (.mdf), eine SQL Server Compact 3.5-Datei (.sdf) oder eine Zwischendatei (.dbml) an.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die SqlMetal-Funktionalität umfasst eigentlich zwei Schritte:  
   
 - Extrahieren der Datenbank-Metadaten in eine DBML-Datei  
@@ -110,6 +113,7 @@ sqlmetal [options] [<input file>]
  Um einen Namen für eine Eingabedatei anzugeben, fügen Sie den Namen der Befehlszeile als Eingabedatei hinzu. Die Angabe des Dateinamens in der Verbindungszeichenfolge (mithilfe der Option **/conn** ) wird nicht unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
+
  Generiert eine DBML-Datei, die extrahierte SQL-Metadaten umfasst:  
   
  **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  

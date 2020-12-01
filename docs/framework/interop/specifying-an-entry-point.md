@@ -7,12 +7,12 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: 5628c54103410d127c2f9c4f56e1c6f897ada754
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: d5c6b651b3b5f19eea8e61bc17da92158be87957
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282020"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266362"
 ---
 # <a name="specifying-an-entry-point"></a>Angeben eines Einstiegspunktes
 
@@ -58,6 +58,7 @@ End Class
 ```
   
 ## <a name="renaming-a-function-in-c-and-c"></a>Umbenennen einer Funktion in C# und C++  
+
  Sie können das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>-Feld verwenden, um eine DLL-Funktion nach Name oder Ordinalzahl anzugeben. Wenn der Name der Funktion in der Methodendefinition mit dem Einstiegspunkt in der DLL übereinstimmt, müssen Sie die Funktion nicht explizit mit dem **EntryPoint**-Feld identifizieren. Andernfalls verwenden Sie eine der folgenden Attributformen zur Angabe eines Namens oder einer Ordinalzahl:  
   
 ```csharp

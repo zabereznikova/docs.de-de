@@ -3,14 +3,15 @@ title: 'Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF'
 description: Migrieren Sie Aufrufe von verwaltetem DCOM-Code (Distributed Component Object Model) zwischen Servern und Clients zu WCF (Windows Communication Foundation).
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: eb84b8071d8dec5d3e70a2f1903f84ee64c31b08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274841"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
+
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
   
 - Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
@@ -24,6 +25,7 @@ Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwi
  Weitere Informationen zum Erstellen von WCF-Diensten und Clients für diese Dienste finden Sie unter [Basis-WCF-Programmierung](../wcf/basic-wcf-programming.md), [Entwerfen und Implementieren von Diensten](../wcf/designing-and-implementing-services.md) und [Erstellen von Clients](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>DCOM-Beispielcode  
+
  Für diese Szenarien haben die DCOM-Schnittstellen, die für die Verwendung mit WCF veranschaulicht werden, die folgende Struktur:  
   
 ```csharp  
@@ -48,6 +50,7 @@ public class Customer
 ```  
   
 ## <a name="the-service-returns-an-object-by-value"></a>Der Dienst gibt ein Objekt per Wert zurück  
+
  In diesem Szenario rufen Sie einen Dienst auf, und dessen Methode gibt ein Objekt zurück, das per Wert vom Server an den Client übergeben wird. Dieses Szenario entspricht dem folgenden COM-Aufruf:  
   
 ```csharp  
@@ -60,6 +63,7 @@ public interface IRemoteService
  In diesem Szenario empfängt der Client eine deserialisierte Kopie eines Objekts vom Remotedienst. Der Client kann mit dieser lokalen Kopie arbeiten, ohne den Dienst erneut aufzurufen.  Anders ausgedrückt, für den Client ist garantiert, dass der Dienst in keiner Weise beteiligt wird, wenn Methoden der lokalen Kopie aufgerufen werden. WCF gibt Objekte aus dem Dienst immer per Wert zurück, sodass die folgenden Schritte das Erstellen eines ordnungsgemäßen WCF-Diensts beschreiben.  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>Schritt 1: Definieren der Schnittstelle des WCF-Diensts  
+
  Definieren Sie eine öffentliche Schnittstelle für den WCF-Dienst, und kennzeichnen Sie sie mit dem [<xref:System.ServiceModel.ServiceContractAttribute>]-Attribut.  Kennzeichnen Sie die Methoden, die Sie für Clients verfügbar machen möchten, mit dem [<xref:System.ServiceModel.OperationContractAttribute>]-Attribut. Im folgenden Beispiel wird gezeigt, wie diese Attribute verwendet werden, um die serverseitige Schnittstelle und die Schnittstellenmethoden zu bestimmen, die ein Client aufrufen kann. Die für dieses Szenario verwendete Methode ist fett dargestellt.  
   
 ```csharp  
@@ -79,6 +83,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>Schritt 2: Definieren des Datenvertrags  
+
  Als Nächstes sollten Sie einen Datenvertrag für den Dienst erstellen. In diesem Vertrag wird beschrieben, wie die Daten zwischen dem Dienst und seinen Clients ausgetauscht werden.  Klassen, die in dem Datenvertrag beschrieben sind, müssen mit dem [<xref:System.Runtime.Serialization.DataContractAttribute>]-Attribut gekennzeichnet werden. Die einzelnen Eigenschaften oder Felder, die für Client und Server sichtbar sein sollen, müssen mit dem [<xref:System.Runtime.Serialization.DataMemberAttribute>]-Attribut markiert werden. Möchten Sie im Datenvertrag Typen zulassen, die aus einer Klasse abgeleitet wurden, müssen Sie diese mit dem [<xref:System.Runtime.Serialization.KnownTypeAttribute>]-Attribut kennzeichnen. WCF serialisiert oder deserialisiert nur Typen in der Dienstschnittstelle sowie Typen, die als bekannte Typen gekennzeichnet sind. Wenn Sie versuchen, einen Typ zu verwenden, der kein bekannter Typ ist, wird eine Ausnahme ausgelöst.  
   
  Weitere Informationen zu Datenverträgen finden Sie unter [Datenverträge](../wcf/samples/data-contracts.md).  
@@ -121,6 +126,7 @@ public class Address
 ```  
   
 ### <a name="step-3-implement-the-wcf-service"></a>Schritt 3: Implementieren des WCF-Diensts  
+
  Als Nächstes müssen Sie die WCF-Dienstklasse implementieren, in der die Schnittstelle implementiert ist, die Sie im vorherigen Schritt definiert haben.  
   
 ```csharp  
@@ -138,6 +144,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>Schritt 4: Konfigurieren des Diensts und des Clients  
+
  Um einen WCF-Dienst auszuführen, müssen Sie einen Endpunkt deklarieren, der diese Dienstschnittstelle unter einer bestimmten URL über eine bestimmte WCF-Bindung verfügbar macht. Eine Bindung gibt die Transport-, Codierungs- und Protokolldetails an, die für die Kommunikation zwischen Clients und Server erforderlich sind. Bindungen fügen Sie üblicherweise in der Konfigurationsdatei (web.config) des Dienstprojekts hinzu. Nachstehend ist ein Bindungseintrag für den Beispieldienst gezeigt:  
   
 ```xml  
@@ -170,6 +177,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>Schritt 5: Ausführen des Diensts  
+
  Schließlich können Sie den Dienst über Selfhosting in einer Konsolenanwendung bereitstellen, indem Sie der Dienstanwendung die folgenden Zeilen hinzufügen und die Anwendung starten. Weitere Informationen zu anderen Möglichkeiten zum Hosten einer WCF-Dienstanwendung finden Sie unter [Hosting-Dienste](../wcf/hosting-services.md).  
   
 ```csharp  
@@ -178,6 +186,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>Schritt 6: Aufrufen des Diensts aus dem Client  
+
  Um den Dienst aus dem Client aufzurufen, müssen Sie eine Kanalfactory für den Dienst erstellen und einen Kanal anfordern, wodurch es Ihnen ermöglicht wird, die `GetCustomer`-Methode direkt aus dem Client aufzurufen. Der Kanal implementiert die Schnittstelle des Diensts und verarbeitet die zugrunde liegende Anforderung/Antwort-Logik für Sie.  Der Rückgabewert von diesem Methodenaufruf ist die deserialisierte Kopie der Antwort des Diensts.  
   
 ```csharp  
@@ -188,6 +197,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
 ```  
   
 ## <a name="the-client-sends-a-by-value-object-to-the-server"></a>Der Client sendet ein Per-Wert-Objekt an den Server  
+
  In diesem Szenario sendet der Client ein Objekt per Wert an den Server. Dies bedeutet, dass der Server eine deserialisierte Kopie des Objekts empfängt.  Der Server kann Methoden aus dieser Kopie aufrufen und kann sicher sein, dass es keinen Rückruf in den Clientcode gibt. Wie bereits erwähnt, erfolgen die normalen WCF-Austauschvorgänge von Daten per Wert.  Dadurch ist sichergestellt, dass Methoden, die für eines dieser Objekte aufgerufen werden, nur lokal ausgeführt werden –  es wird kein Code auf dem Client aufgerufen.  
   
  Dieses Szenario entspricht dem folgenden COM-Methodenaufruf:  
@@ -213,6 +223,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>Hinzufügen von Code zum Client, der ein Per-Wert-Objekt sendet  
+
  Der folgende Code zeigt, wie der Client ein neues benutzerdefiniertes Per-Wert-Objekt erstellt, einen Kanal erstellt, um mit dem `ICustomerManager`-Dienst kommunizieren zu können, und das benutzerdefinierte Objekt an den Dienst sendet.  
   
  Das benutzerdefinierte Objekt wird serialisiert und an den Dienst gesendet, der das Objekt in eine neue Objektkopie deserialisiert.  Alle Methoden, die der Dienst für dieses Objekt aufruft, werden nur lokal auf dem Server ausgeführt. Es ist wichtig zu beachten, dass dieser Code das Senden eines abgeleiteten Typs (`PremiumCustomer`) veranschaulicht.  Der Dienstvertrag erwartet ein `Customer`-Objekt, aber der Dienstdatenvertrag verwendet das [<xref:System.Runtime.Serialization.KnownTypeAttribute>]-Attribut, um anzugeben, dass `PremiumCustomer` ebenfalls zulässig ist.  WCF verursacht einen Fehler, wenn versucht wird, irgendeinen anderen Typ über diese Dienstschnittstelle zu serialisieren oder zu deserialisieren.  
@@ -233,6 +244,7 @@ customerManager.StoreCustomer(customer);
 ```  
   
 ## <a name="the-service-returns-an-object-by-reference"></a>Der Dienst gibt ein Objekt per Verweis zurück  
+
  In diesem Szenario ruft die Clientanwendung den Remotedienst auf, und die Methode gibt ein Objekt zurück, das per Verweis vom Dienst an den Client übergeben wird.  
   
  Wie bereits erwähnt, geben WCF-Dienste Objekte immer per Wert zurück.  Sie können allerdings ein ähnliches Ergebnis erzielen, indem Sie die <xref:System.ServiceModel.EndpointAddress10>-Klasse verwenden.  Die <xref:System.ServiceModel.EndpointAddress10>-Klasse ist ein serialisierbares Per-Wert-Objekt, das vom Client dazu verwendet werden kann, ein sitzungsbasiertes Per-Verweis-Objekt auf dem Server abzurufen.  
@@ -251,6 +263,7 @@ public interface IRemoteService
 ```  
   
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Schritt 1: Definieren der sitzungsbasierten WCF-Dienstschnittstelle und -Implementierung  
+
  Als erstes definieren Sie eine WCF-Dienstschnittstelle, die ein sitzungsbasiertes Objekt enthält.  
   
  In diesem Code wird das sitzungsbasierte Objekt mit dem `ServiceContract`-Attribut gekennzeichnet, wodurch das Objekt als ordnungsgemäße WCF-Dienstschnittstelle bestimmt ist.  Außerdem wird die <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>-Eigenschaft festgelegt, um anzugeben, dass das Objekt ein sitzungsbasierter Dienst ist.  
@@ -291,6 +304,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Schritt 2: Definieren des WCF-Factorydiensts für das sitzungsbasierte Objekt  
+
  Der Dienst, der das sitzungsbasierte-Objekt erstellt, muss definiert und implementiert werden. Dies wird im folgenden Code veranschaulicht. Dieser Code erstellt einen weiteren WCF-Dienst, der ein <xref:System.ServiceModel.EndpointAddress10>-Objekt zurückgibt.  Dies ist eine serialisierbare Form eines Endpunkts, die vom Server dazu verwendet werden kann, ein sitzungsbasiertes Objekt zu erstellen.  
   
 ```csharp  
@@ -323,6 +337,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ```  
   
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Schritt 3: Konfigurieren und Starten der WCF-Dienste  
+
  Damit diese Dienste gehostet werden können, müssen Sie die folgenden Erweiterungen in die Konfigurationsdatei (web.config) des Servers einfügen.  
   
 1. Fügen Sie einen `<client>`-Abschnitt hinzu, in dem der Endpunkt für das sitzungsbasierte Objekts beschrieben wird.  In diesem Szenario fungiert der Server auch als Client und muss konfiguriert werden, um dies zu ermöglichen.  
@@ -369,6 +384,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>Schritt 4: Konfigurieren des Clients und Aufrufen des Diensts  
+
  Konfigurieren Sie den Client so, dass er mit den WCF-Dienste kommunizieren kann. Schreiben Sie dazu die folgenden Einträge in die Anwendungskonfigurationsdatei (app.config) des Projekts.  
   
 ```xml  

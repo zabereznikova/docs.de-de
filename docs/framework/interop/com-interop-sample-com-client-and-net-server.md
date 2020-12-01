@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
-ms.openlocfilehash: 1a9c17cda6a6d129327b296e5d7d851902f78d35
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 91c908153592eb8ae55ecd341b32b82a232ee473
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282924"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interopbeispiel: COM-Client und .NET-Server
+
 Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt. In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>
+
 ## <a name="com-client"></a>COM-Client  
   
 ```cpp  
@@ -87,6 +89,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>
+
 ## <a name="net-server"></a>.NET-Server  
   
 ```vb  

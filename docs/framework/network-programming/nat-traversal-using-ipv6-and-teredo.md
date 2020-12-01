@@ -2,14 +2,15 @@
 title: NAT-Durchlauf mit IPv6 und Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642170"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258620"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT-Durchlauf mit IPv6 und Teredo
+
 Es wurden Verbesserungen vorgenommen, sodass nun der NAT-Durchlauf (Netzwerkadressenübersetzung) unterstützt wird. Diese Änderungen wurden für den Gebrauch mit IPv6 und Teredo entwickelt, sie können aber auch auf andere Technologien zum IP-Tunneln angewendet werden. Diese Verbesserungen betreffen Klassen im <xref:System.Net> und verknüpften Namespaces.  
   
  Diese Änderungen können sich auf Client- und Serveranwendungen auswirken, die Technologien zum IP-Tunneln verwenden möchten.  
@@ -17,6 +18,7 @@ Es wurden Verbesserungen vorgenommen, sodass nun der NAT-Durchlauf (Netzwerkadre
  Die Änderungen, die für die Unterstützung des NAT-Durchlaufs vorgenommen wurden, sind nur für Anwendungen mit .NET Framework Version 4 verfügbar. Diese Features stehen in früheren Versionen des .NET Frameworks nicht zur Verfügung.  
   
 ## <a name="overview"></a>Übersicht  
+
  Internetprotokoll Version 4 (IPv4) hat die Länge einer IPv4-Adresse als 32-Bit angegeben. Deshalb unterstützt IPv4 etwa 4 Milliarden eindeutige IP-Adressen (2 hoch 32). Als die Zahl der Computer und Netzwerkgeräte mit Internetzugriff in den 1990ern anwuchs, wurden die Grenzen des IPv4-Adressraums aufgezeigt.  
   
  Eine von mehreren eingesetzten Methoden zur Verlängerung der Lebensdauer von IPv4 wurde in NAT bereitgestellt. Damit kann eine einzelne, eindeutige öffentliche IP-Adresse eine große Zahl privater IP-Adressen darstellen (privates Netzwerk). Die privaten Adressen des NAT-Geräts haben die einzelne öffentliche IPv4-Adresse gemein. Das NAT-Gerät ist möglicherweise ein dediziertes Hardwaregerät (z.B. ein kostengünstiger Funkzugriffspunkt und Router) oder ein Computer, der einen Dienst zur Bereitstellung von NAT ausführt. Ein Gerät oder Dienst für diese öffentliche IP-Adresse übersetzt IP-Netzwerkpakete zwischen dem Internet und dem privaten Netzwerk.  
@@ -30,6 +32,7 @@ Es wurden Verbesserungen vorgenommen, sodass nun der NAT-Durchlauf (Netzwerkadre
  Teredo ist eine der IPv6-Übergangstechnologien, durch die IPv6-Konnektivität in IPv4-Netzwerken möglich ist. Teredo wird in der RFC 4380 dokumentiert, die von der Internet Engineering Task Force (IETF) veröffentlicht wird. Windows XP SP2 und höher bietet Unterstützung für einen virtuellen Teredo-Adapter, der eine öffentliche IPv6-IP-Adresse im Bereich 2001:0::/32 bereitstellt. Diese IPv6-Adresse kann verwendet werden, um auf eingehende Verbindungen aus dem Internet zu lauschen und kann IPv6-fähigen Clients bereitgestellt werden, die eine Verbindung mit dem lauschenden Dienst herstellen möchten. So muss sich eine Anwendung nicht mehr darum kümmern, wie es auf einen Computer hinter einem NAT-Gerät eingeht, da die Anwendung einfach eine Verbindung mit ihrer IPv6-Teredo-Adresse herstellen kann.  
   
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Verbesserungen zur Unterstützung des NAT-Durchlaufs und Teredo  
+
  Den Namespaces <xref:System.Net>, <xref:System.Net.NetworkInformation>und <xref:System.Net.Sockets> wurden Verbesserungen hinzugefügt, um den NAT-Durchlauf mit IPv6 und Teredo zu unterstützen.  
   
  Mehrere Methoden werden zu der <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType>-Klasse hinzugefügt, um die Liste von Unicast-IP-Adressen auf dem Host abzurufen. Die <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A>-Methode beginnt eine asynchrone Anforderung zum Abrufen der Tabelle der stabilen Unicast-IP-Adresse auf dem lokalen Computer. Die <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A>-Methode beendet eine ausstehende asynchrone Anforderung zum Abrufen der Tabelle der stabilen Unicast-IP-Adresse auf dem lokalen Computer. Die <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A>-Methode ist eine synchrone Anforderung zum Abrufen der Tabelle der stabilen Unicast-IP-Adresse auf dem lokalen Computer, wobei falls nötig gewartet wird, bis sich die Adressentabelle stabilisiert.  

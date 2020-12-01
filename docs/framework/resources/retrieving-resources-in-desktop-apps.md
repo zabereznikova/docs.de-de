@@ -19,19 +19,21 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: cefdfef32928783b23ac0d51be596e48c27bde9a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26e4367d28193ce731198ee0ba3d3b35d83cf19c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535507"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254544"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in Windows 8.x-Store-Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
+
 ## <a name="retrieving-resources-from-assemblies"></a>Abrufen von Ressourcen aus Assemblys  
+
  Die <xref:System.Resources.ResourceManager> Klasse ermöglicht den Zugriff auf Ressourcen zur Laufzeit. Verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> -Methode, um Zeichenfolgenressourcen abzurufen und die <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> - oder <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> - Methode, um Nicht-Zeichenfolgenressourcen abzurufen. Jede Methode enthält zwei Überladungen:  
   
 - Eine Überladung, deren einzelner Parameter eine Zeichenfolge ist, der den Namen der Ressource enthält. Die Methode versucht, die Ressource für die aktuelle Threadkultur abzurufen. Weitere Informationen finden Sie in den Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
@@ -41,6 +43,7 @@ Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollt
  Der Ressourcen-Manager verwendet den Ressourcenfallback-Prozess um zu steuern, wie die Anwendung kulturabhängige Ressourcen abruft. Weitere Informationen finden Sie im Abschnitt „Ressourcenfallback-Prozess“ in [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md). Informationen zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts finden Sie im Abschnitt „Instanziieren eines ResourceManager-Objekts“ in der <xref:System.Resources.ResourceManager> -Themenklasse.  
   
 ### <a name="retrieving-string-data-an-example"></a>Abrufen von Zeichenfolgedaten: Beispiel  
+
  Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetString%28System.String%29> -Methode aufgerufen, um die Zeichenfolgenressourcen für die aktuelle UI-Kultur abzurufen. Es umfasst eine neutrale Zeichenfolgenressource für die Kultur Englisch (USA) und lokalisierte Ressourcen für die Kulturen Französisch (Frankreich) und Russisch (Russische Föderation). Die folgende Ressource für Englisch (USA) ist in einer Strings.txt-Datei enthalten:  
   
 ```text
@@ -82,6 +85,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  Wenn die aktuelle UI-Kultur Spanisch (Spanien) ist, beachten Sie, dass im Beispiel englische Ressourcen angezeigt werden, da Spanisch-Ressourcen nicht verfügbar sind und Englisch die Standardkultur des Beispiels ist.  
   
 ### <a name="retrieving-object-data-two-examples"></a>Abrufen von Objektdaten: Zwei Beispiele  
+
  Sie können die <xref:System.Resources.ResourceManager.GetObject%2A> - und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden zum Abrufen von Objektdaten verwenden. Dies schließt primitive Datentypen, serialisierbare Objekte und Objekte ein, die im Binärformat (z.B. Bilder) gespeichert sind.  
   
  Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetStream%28System.String%29> -Methode verwendet, um eine Bitmap abzurufen, die im Begrüßungsbildschirm-Fenster einer App erscheint. Der folgende Quellcode in einer Datei mit dem Namen CreateResources.cs (für C#) oder CreateResources.vb (für Visual Basic) generiert eine .resx-Datei, die das serialisierte Bild enthält. In diesem Fall wird das Bild aus einer Datei namens SplashScreen.jpg geladen. Sie können den Dateinamen ändern und damit Ihr eigenes Bild laden.  
@@ -134,6 +138,7 @@ GetObject.exe
 ```  
   
 ## <a name="versioning-support-for-satellite-assemblies"></a>Unterstützung der Versionskontrolle bei Satellitenassemblys  
+
  Wenn das <xref:System.Resources.ResourceManager> -Objekt die angeforderten Ressourcen abruft, sucht es standardmäßig nach Satellitenassemblys, die Versionsnummern haben, die mit der Versionsnummer der Hauptassembly übereinstimmen. Nachdem Sie eine App bereitgestellt haben, möchten Sie vielleicht die Hauptassembly oder bestimmte Ressourcen-Satellitenassemblys aktualisieren. .NET Framework bietet Unterstützung für die Versionskontrolle der Hauptassembly und Satellitenassemblys.  
   
  Das <xref:System.Resources.SatelliteContractVersionAttribute> -Attribut bietet Unterstützung für die Versionskontrolle einer Hauptassembly. Wenn Sie dieses Attribut für die Hauptassembly einer Anwendung angeben, können Sie eine Hauptassembly aktualisieren und erneut bereitstellen, ohne die Satellitenassemblys aktualisieren zu müssen. Nach der Aktualisierung der Hauptassembly erhöhen Sie die Haupt-Assembly-Versionsnummer, lassen aber die Nummer der Satellitenvertragsversion unverändert. Wenn der Ressourcen-Manager angeforderte Ressourcen abruft, wird die Version der Satelliten-Assembly, die durch dieses Attribut angegeben wird, geladen.  
@@ -145,10 +150,13 @@ GetObject.exe
  Weitere Informationen über die Assemblyversionen finden Sie unter [Assemblyversionen](../../standard/assembly/versioning.md) und [So sucht die Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>
+
 ## <a name="retrieving-resources-from-resources-files"></a>Abrufen von Ressourcen aus Ressourcendateien  
+
  Wenn Sie keine Ressourcen in Satellitenassemblys bereitstellen wollen, können Sie weiterhin ein <xref:System.Resources.ResourceManager> -Objekt für den direkten Zugriff auf Ressourcen in Ressourcendateien verwenden. Zu diesem Zweck müssen Sie die Ressourcendateien korrekt bereitstellen. Verwenden Sie dann die <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> -Methode zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts und geben Sie das Verzeichnis an, das die eigenständigen Ressourcendateien enthält.  
   
 ### <a name="deploying-resources-files"></a>Bereitstellen von Ressourcendateien  
+
  Beim Einbetten von Ressourcendateien in eine Anwendungsassembly und Satellitenassemblys hat jede Satellitenassembly den gleichen Dateinamen, befindet sich jedoch in einem Unterverzeichnis, das die Kultur der Satellitenassembly wiedergibt. Wenn Sie direkt aus Ressourcendateien auf Ressourcen zugreifen, können Sie hingegen alle Ressourcendateien in einem Verzeichnis platzieren, in der Regel in einem Unterverzeichnis des Anwendungsverzeichnisses. Der Name des Standard-Ressourcendateien der App besteht nur aus einem Stammnamen ohne Angabe seiner Kultur (z.B. strings.resources). Die Ressourcen für jede lokalisierte Kultur werden in einer Datei gespeichert, deren Name aus dem Stammnamen gefolgt von der Kultur besteht (z.B. strings.ja.resources oder strings.de-DE.resources).
 
  Die folgende Abbildung zeigt, wo Ressourcendateien in der Verzeichnisstruktur platziert werden sollen. Sie verdeutlicht auch die Benennungskonventionen für RESOURCES-Dateien.  
@@ -156,6 +164,7 @@ GetObject.exe
  ![Abbildung des Hauptverzeichnisses der Anwendung](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Verwenden des Ressourcen-Managers  
+
  Nachdem Sie Ihre Ressourcen erstellt und im richtigen Verzeichnis gespeichert haben, erstellen Sie ein <xref:System.Resources.ResourceManager> -Objekt, um die Ressourcen durch Aufrufen der <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> -Methode zu verwenden. Der erste Parameter gibt den Stammnamen der Standard-Ressourcendatei der App an (dies wäre „strings“ für das Beispiel im vorherigen Abschnitt). Der zweite Parameter gibt den Speicherort der Ressourcen an („Resources“ im vorherigen Beispiel). Der dritte Parameter gibt die zu verwendende <xref:System.Resources.ResourceSet> -Implementierung an. Wenn der dritte Parameter `null`ist, wird das Standard-Laufzeit <xref:System.Resources.ResourceSet> verwendet.  
   
 > [!NOTE]
@@ -164,6 +173,7 @@ GetObject.exe
  Nach dem Instanziieren des <xref:System.Resources.ResourceManager> -Objekts verwenden Sie die <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>und <xref:System.Resources.ResourceManager.GetStream%2A> -Methoden wie bereits erwähnt, um die Ressourcen abzurufen. Das direkte Abrufen von Ressourcen aus Ressourcendateien unterscheidet sich jedoch von dem Abruf von eingebetteten Ressourcen aus Assemblys. Beim Abrufen von Ressourcen aus Ressourcendateien rufen die Methoden <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>und <xref:System.Resources.ResourceManager.GetStream%28System.String%29> immer die Standardkultur-Ressourcen ab, unabhängig von der aktuellen Kultur. Um die Ressourcen entweder der aktuellen Kultur der Anwendung oder einer bestimmten Kultur abrufen zu können, müssen Sie, die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>oder <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> -Methode aufrufen und die Kultur angeben, deren Ressourcen abgerufen werden sollen. Um die Ressourcen der aktuellen Kultur abzurufen, geben Sie den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft als `culture` Argument an. Wenn der Ressourcen-Manager die Ressourcen von `culture`nicht abrufen kann, verwendet er die Standard-Ressourcen-Fallback-Regeln, um die entsprechenden Ressourcen abzurufen.  
   
 ### <a name="an-example"></a>Beispiel  
+
  Im folgenden Beispiel wird veranschaulicht, wie der Ressourcen-Manager Ressourcen direkt aus einer Ressourcendatei abruft. Das Beispiel besteht aus drei textbasierten Ressourcendateien für die Kulturen Englisch (USA), Französisch (Frankreich) und Russisch (Russische Föderation). Englisch (USA) ist die Standardkultur in dem Beispiel. Die Ressourcen werden in der folgenden Datei mit dem Namen Strings.txt gespeichert:  
   
 ```text

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 28a84814d1df96935f7533fa00f0bb50cf84def8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557436"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279180"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -19,12 +19,13 @@ ms.locfileid: "90557436"
 
  Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).
 
- Zwei Versionen von Mage.exe und MageUI.exe sind als Komponenten von Visual Studio inbegriffen. Die Versionsinformationen können Sie anzeigen, indem Sie "MageUI.exe" ausführen, zunächst **Hilfe**und anschließend **Info**auswählen. In dieser Dokumentation wird Version 4.0.x.x von "Mage.exe" und "MageUI.exe" beschrieben.
+ Zwei Versionen von Mage.exe und MageUI.exe sind als Komponenten von Visual Studio inbegriffen. Die Versionsinformationen können Sie anzeigen, indem Sie "MageUI.exe" ausführen, zunächst **Hilfe** und anschließend **Info** auswählen. In dieser Dokumentation wird Version 4.0.x.x von "Mage.exe" und "MageUI.exe" beschrieben.
 
 > [!NOTE]
 > „MageUI.exe“ unterstützt nicht das Element [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment), wenn es ein Anwendungsmanifest speichert, das bereits mithilfe von „MageUI.exe“ mit einem Zertifikat signiert wurde. Stattdessen müssen Sie [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md) verwenden.  
   
 ## <a name="uielement-list"></a>UIElement-Liste  
+
  Die folgende Tabelle gibt einen Überblick über die verfügbaren Menü- und Symbolleistenelemente.  
   
 |Befehl|Menü|Verknüpfung|Beschreibung|  
@@ -46,6 +47,7 @@ ms.locfileid: "90557436"
 |**Info**|**Hilfe**||Zeigt Versions- und Copyrightinformationen zu "MageUI.exe" an.|  
   
 ## <a name="preferences-dialog-box"></a>Dialogfeld "Einstellungen2  
+
  Das Dialogfeld **Einstellungen** enthält die folgenden Elemente.  
   
 |Benutzeroberflächenelement|Beschreibung|  
@@ -55,6 +57,7 @@ ms.locfileid: "90557436"
 |Hashwertalgorithmus|Gibt den Algorithmus an, mit dem Abhängigkeitsdigests generiert werden sollen. Der Wert muss "sha256RSA" oder "sha1RSA" sein. Als Standard wird SHA1 verwendet. Wird sowohl im Anwendungs- als auch im Bereitstellungsmanifest verwendet. Wenn der Benutzer beim Speichern des Manifests ein Zertifikat angibt, werden die Algorithmen im Zertifikat verwendet, um damit Abhängigkeitsdigests zu generieren.|  
   
 ## <a name="signing-options-dialog-box"></a>Dialogfeld "Signaturoptionen"  
+
  Das Dialogfeld **Signaturoptionen** wird angezeigt, wenn Sie ein Manifest oder eine Vertrauenslizenz zum ersten Mal speichern, oder wenn Sie Änderungen daran vornehmen. Das Dialogfeld wird nur dann angezeigt, wenn die Option **Beim Speichern signieren** im Dialogfeld **Einstellungen** aktiviert ist. Beim Signieren eines Manifests, das einen Wert im Textfeld **Zeitstempel-URI** angibt, müssen Sie mit dem Internet verbunden sein.  
   
  Dieses Dialogfeld enthält die folgenden Elemente:  
@@ -71,9 +74,11 @@ ms.locfileid: "90557436"
 |**Nicht signieren**|Ermöglicht das Speichern des Manifests, ohne eine Signatur aus einem digitalen Zertifikat hinzuzufügen.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Beschreibungen von Registerkarten und Bereichen  
+
  Wenn Sie ein Dokument mit "MageUI.exe" öffnen, wird es in einer eigenen Registerkarte geöffnet. Jede Registerkarte enthält mehrere Eigenschaftenbereiche. Die Bereiche enthalten gruppierte Teilmengen der Dokumentdaten.  
   
 ### <a name="application-manifest-tab"></a>Registerkarte "Anwendungsmanifest"  
+
  Auf der Registerkarte **Anwendungsmanifest** werden die Inhalte eines Anwendungsmanifests angezeigt. Das Anwendungsmanifest beschreibt alle in einer Bereitstellung enthaltenen Dateien sowie die für die Anwendung zum Ausführen des Clients erforderlichen Berechtigungen.  
   
  Die Registerkarte **Anwendungsmanifest** enthält die folgenden Registerkarten.  
@@ -87,6 +92,7 @@ ms.locfileid: "90557436"
 |**Erforderliche Berechtigungen**|Gibt den minimalen Berechtigungssatz an, der von der Anwendung für die Ausführung auf einem Client erforderlich ist.|  
   
 ### <a name="name-tab"></a>Registerkarte "Name"  
+
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Anwendungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
 |Benutzeroberflächenelement|BESCHREIBUNG|  
@@ -98,6 +104,7 @@ ms.locfileid: "90557436"
 |**Öffentliches Schlüsseltoken**|Optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
+
  Diese Informationen werden normalerweise im Bereitstellungsmanifest bereitgestellt. Diese Felder können nur geändert werden, wenn das Kontrollkästchen **Anwendungsmanifest für Vertrauensinformationen verwenden** auf der Registerkarte **Anwendungsoptionen** aktiviert ist.  
   
 |Benutzeroberflächenelement|Beschreibung|  
@@ -125,6 +132,7 @@ ms.locfileid: "90557436"
 |**Gruppieren**|Eine Bezeichnung für einen Satz optionaler Dateien. Sie können einem Satz von Dateien die Bezeichnung "Gruppieren" zuweisen und einen Batch von Dateien mithilfe der bedarfsabhängigen API in einem einzigen API-Aufruf herunterladen.|  
   
 ### <a name="permissions-required-tab"></a>Registerkarte "Erforderliche Berechtigungen"  
+
  Verwenden Sie die Registerkarte **Erforderliche Berechtigungen**, wenn Sie der Anwendung umfassenderen Zugriff auf den lokalen Computer gewähren müssen, als ihr standardmäßig erteilt wird. Weitere Informationen finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications).  
   
 |Benutzeroberflächenelement|Beschreibung|  
@@ -133,6 +141,7 @@ ms.locfileid: "90557436"
 |**Details**|Die für das Anwendungsmanifest erstellte XML-Datei zum Darstellen des Berechtigungssatzes. Sie sollten diesen XML-Code nicht manuell bearbeiten, sofern Sie nicht mit dem XML-Format des Anwendungsmanifests vertraut sind. Weitere Informationen finden Sie unter [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  
+
  Die Registerkarte **Bereitstellungsmanifest** enthält die folgenden Registerkarten.  
   
 |Benutzeroberflächenelement|BESCHREIBUNG|  
@@ -144,6 +153,7 @@ ms.locfileid: "90557436"
 |**Anwendungsverweis**|Gibt das Anwendungsmanifest für diese Bereitstellung an.|  
   
 ### <a name="name-tab"></a>Registerkarte "Name"  
+
  Die Registerkarte **Name** wird angezeigt, wenn Sie ein Bereitstellungsmanifest erstmalig erstellen oder öffnen. Sie identifiziert die Bereitstellung eindeutig und gibt optional eine gültige Zielplattform an.  
   
 |Benutzeroberflächenelement|BESCHREIBUNG|  
@@ -174,6 +184,7 @@ ms.locfileid: "90557436"
 |**Dateierweiterung „.deploy“ verwenden**|Erforderlich. Bei Auswahl dieser Option müssen alle Dateien im Anwendungsmanifest die Erweiterung ".deploy" aufweisen. Das Kontrollkästchen ist standardmäßig deaktiviert.|  
   
 ### <a name="update-options-tab"></a>Registerkarte "Aktualisierungsoptionen"  
+
  Die Registerkarte **Aktualisierungsoptionen** enthält die hier genannten Optionen nur, wenn für das Auswahlfeld **Anwendungstyp** auf der Registerkarte **Name** die Option **Lokal installieren** festgelegt ist.  
   
 |Benutzeroberflächenelement|Beschreibung|  
@@ -185,6 +196,7 @@ ms.locfileid: "90557436"
 |**Version**|Diese ist erforderlich, wenn das Kontrollkästchen **Mindestens erforderliche Version für diese Anwendung angeben** aktiviert ist. Die Versionsnummer muss im Format *N.N.N.N* bereitgestellt werden. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
   
 ### <a name="application-reference-tab"></a>Registerkarte "Anwendungsverweis"  
+
  Die Registerkarte **Anwendungsverweis** enthält die gleichen Felder wie die weiter oben in diesem Thema beschriebene Registerkarte **Name**. Die einzige Ausnahme ist das folgende Feld.  
   
 |Benutzeroberflächenelement|Beschreibung|  

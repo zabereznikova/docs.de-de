@@ -9,14 +9,15 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: 6bfe95576a6460efac75fd392e24acf42e36f2de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b6a675bbbfb974d78539d02b31b500b03a2ac8f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555262"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256660"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
+
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
   
  Bei der [pinning optimization](copying-and-pinning.md) (Fixierungsoptimierung),kann ein blitfähiges Array den Anschein erwecken, dass es als In/Out-Parameter fungiert, wenn es mit Objekten in demselben Apartment interagiert. Wenn Sie allerdings den Code später in eine Typbibliothek exportieren, mit der der computerübergreifende Proxy generiert wird, und diese Bibliothek dazu verwendet wird, Ihre Aufrufe über Apartments hinweg zu marshallen, können sich die Aufrufe wieder wie TRUE-Parameter verhalten.  
@@ -24,6 +25,7 @@ In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die
  Arrays sind naturgemäß komplex, und die Unterschiede zwischen verwalteten und nicht verwalteten Arrays bieten mehr Informationen als andere nicht blitfähige Typen.  
   
 ## <a name="managed-arrays"></a>Verwaltete Arrays  
+
  Verwaltete Arraytypen können variieren. Allerdings ist die <xref:System.Array?displayProperty=nameWithType>-Klasse die Basisklasse für alle Arraytypen. Die **System.Array**-Klasse enthält Eigenschaften, um den Rang, die Länge und die Unter- und Obergrenze eines Arrays zu bestimmen, als auch Methoden zum Zugreifen, Sortieren, Durchsuchen, Kopieren und Erstellen von Arrays.  
   
  Diese Arraytypen sind dynamisch und verfügen über keinen entsprechenden statischen, in der Basisklassenbibliothek definierten Typen. Es ist sinnvoll, jede Kombination aus Elementtyp und Rang als gesonderten Arraytypen zu betrachten. Deshalb unterscheidet sich ein eindimensionales Array von ganzen Zahlen von einem eindimensionalen Array von Double-Typen. In ähnlicher Weise unterscheidet sich ein zweidimensionales Array von ganzen Zahlen von einem eindimensionalen Array von ganzen Zahlen. Die Grenzen des Arrays werden beim Vergleichen von Typen nicht berücksichtigt.  
@@ -37,9 +39,11 @@ In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die
 |**ELEMENT_TYPE_SZARRAY**|Durch den Typ angegeben.|1|0|*Typ* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Nicht verwaltete Arrays  
+
  Nicht verwaltete Arrays sind entweder sichere Arrays im COM-Stil oder Arrays im C-Stil mit fester oder variabler Länge. Sichere Arrays sind selbstbeschreibende Arrays, die den Typ, den Rang und die Grenzen der verknüpften Arraydaten enthalten. Arrays im C-Stil sind eindimensionale typisierte Arrays mit einer festen Untergrenze von 0. Der Marshallingdienst bietet nur eingeschränkt Unterstützung für beide Typen von Arrays.  
   
 ## <a name="passing-array-parameters-to-net-code"></a>Übergeben von Arrayparametern an .NET-Code  
+
  Arrays im C-Stil und sichere Arrays, können aus nicht verwaltetem Code an .NET-Code, als ein sicheres Array oder ein Array im C-Stil übergeben werden. Die folgende Tabelle zeigt den nicht verwalteten Typwert und den importierten Typ.  
   
 |Nicht verwalteter Typ|Importierter Typ|  
@@ -48,6 +52,7 @@ In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die
 |*Typ* **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> Rang = 1, Untergrenze = 0. Die Größe ist nur bekannt, wenn sie in der verwalteten Signatur bereitgestellt wird.|  
   
 ### <a name="safe-arrays"></a>Sichere Arrays  
+
  Wenn ein sicheres Array aus einer Typbibliothek in eine .NET-Assembly importiert wird, wird das Array in ein eindimensionales Array eines bekannten Typs konvertiert (z.B. **int**). Dieselben Typkonvertierungsregeln, die für Parameter gelten, gelten auch für Arrayelemente. So wird beispielsweise ein sicheres Array von **BSTR**-Typen zu einem verwalteten Array von Zeichenfolgen, und ein sicheres Array von Varianten zu einem verwalteten Array von Objekten. Der **SAFEARRAY**-Elementtyp wird aus der Typbibliothek abgerufen, und im **SAFEARRAY**-Wert der <xref:System.Runtime.InteropServices.UnmanagedType>-Enumeration gespeichert.  
   
  Da Rang und Grenzen eines sicheren Arrays über die Typbibliothek nicht bestimmt werden können, wird für den Rang ein Wert von 1 und für die Untergrenze ein Wert von 0 angenommen. Rang und Grenzen müssen in der vom [Type Library Importer (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) (Typbibliothek Importer) erzeugten verwalteten Signatur definiert werden. Wenn der zur Laufzeit an die Methode übergebene Rang unterschiedlich ist, wird eine <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException> ausgelöst. Wenn der zur Laufzeit übergebene Arraytyp unterschiedlich ist, wird eine <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException> ausgelöst. Das folgende Beispiel zeigt sichere Arrays in verwaltetem und nicht verwaltetem Code.  
@@ -82,6 +87,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
  Mehrdimensionale oder gebundene sichere Arrays mit einem Wert ungleich null, können in verwalteten Code gemarshallt werden, wenn die von Tlbimp.exe erzeugte Methodensignatur so geändert wird, dass sie einen Elementtyp von **ELEMENT_TYPE_ARRAY** anstelle von **ELEMENT_TYPE_SZARRAY** angibt. Alternativ können Sie den **/sysarray** -Schalter mit Tlbimp.exe verwenden, um alle Arrays als <xref:System.Array?displayProperty=nameWithType>-Objekte zu importieren. Wenn bekannt ist, dass das übergebene Array mehrdimensional ist, können Sie den durch Tlbimp.exeMicrosoft erzeugten Intermediate Language-Code (MSIL) bearbeiten, und diesen anschließend neu kompilieren. Ausführliche Informationen zum Ändern des MSIL-Codes finden Sie unter [Customizing Runtime Callable Wrappers (Anpassen von durch die Laufzeit aufrufbaren Wrappern)](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>Arrays im C-Stil  
+
  Wenn ein Array im C-Stil aus einer Typbibliothek in eine .NET Framework-Assembly importiert wird, wird das Array in **ELEMENT_TYPE_SZARRAY** konvertiert.  
   
  Der Elementtyp des Arrays wird durch die Typbibliothek bestimmt und während des Imports beibehalten. Dieselben Konvertierungsregeln, die für Parameter gelten, gelten auch für Arrayelemente. Ein Array von **LPStr**-Typen wird z.B. zu einem Array von **Zeichenfolge**-Typen. Tlbimp.exe erfasst den Elementtyp des Arrays und wendet das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut auf den Parameter an.  
@@ -179,6 +185,7 @@ void New3(ref String ar);
  Der Interop-Marshaller verwendet die **CoTaskMemAlloc**- und **CoTaskMemFree**-Methoden, um Speicherplatz zu belegen und abzurufen. Diese Methoden müssen auch bei der Speicherbelegung durch nicht verwalteten Code verwendet werden.  
   
 ## <a name="passing-arrays-to-com"></a>Übergeben von Arrays an COM  
+
  Alle verwalteten Arraytypen können von verwaltetem Code an nicht verwalteten Code übergeben werden. Abhängig vom verwalteten Typ und den auf diesen Typ angewendeten Attributen, kann, wie in der folgenden Tabelle gezeigt, das Array als sicheres Array oder als Array im C-Stil abgerufen werden.  
   
 |Verwalteter Arraytyp|Exportiert als|  
@@ -190,6 +197,7 @@ void New3(ref String ar);
  In der OLE-Automatisierung, gibt es im Zusammenhang mit Arrays von Strukturen, die LPSTR oder LPWSTR enthalten eine Einschränkung.  Aus diesem Grund müssen **Zeichenfolge**-Felder als **UnmanagedType.BSTR** gemarshallt werden. Andernfalls wird eine Ausnahme ausgelöst.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
+
  Wenn eine Methode mit einem **ELEMENT_TYPE_SZARRAY**-Parameter (eindimensionales Array) aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Dieselben Konvertierungsregeln gelten für die Arrayelementtypen. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Zum Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
@@ -248,6 +256,7 @@ HRESULT New(LPStr ar[]);
  Obwohl der Marshaller die erforderlichen Längeninformationen zum Marshallen von Arrays hat, wird die Länge des Arrays in der Regel als separates Argument übergeben, um dem Aufgerufenen die Länge mitzuteilen.  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
+
  Wenn eine Methode mit einem **ELEMENT_TYPE_ARRAY**-Parameter aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Zum Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
@@ -311,6 +320,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+
  Wenn eine Methode, die einen <xref:System.Array?displayProperty=nameWithType>-Parameter enthält aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in eine **_Array**-Schnittstelle konvertiert. Auf den Inhalt des verwalteten Arrays kann nur über die Methoden und Eigenschaften der **_Array**-Schnittstelle zugegriffen werden. **System.Array** kann auch als **SAFEARRAY**, mithilfe von <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributen gemarshallt werden. Wenn die Arrayelemente als sicheres Array gemarshallt werden, werden sie als Varianten gemarshallt. Zum Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
@@ -333,6 +343,7 @@ HRESULT New([in] SAFEARRAY(VARIANT) ar);
 ```  
   
 ### <a name="arrays-within-structures"></a>Arrays in Strukturen  
+
  Nicht verwaltete Strukturen können eingebettete Arrays enthalten. Standardmäßig werden diese eingebetteten Arrayfelder als SAFEARRAY gemarshallt. Im folgenden Beispiel ist `s1` ein eingebettetes Array, das direkt innerhalb der Struktur selbst zugeordnet ist.  
   
 #### <a name="unmanaged-representation"></a>Nicht verwalteten Darstellung  

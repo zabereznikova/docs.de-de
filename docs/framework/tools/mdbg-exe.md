@@ -6,14 +6,15 @@ helpviewer_keywords:
 - command-line debugger [.NET Framework]
 - MDbg.exe
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
-ms.openlocfilehash: 1c663474e5084afa1824f0f6b0740ae03a344e92
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8953db973e231014284ec6585012edc7f3ea11f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279167"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
+
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
   
 Dieses Tool ist über NuGet verfügbar. Informationen zur Installation finden Sie unter [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Verwenden Sie die Paket-Manager-Konsole, um das Tool auszuführen. Weitere Informationen zum Verwenden der Paket-Manager-Konsole finden Sie im Artikel [Paket-Manager-Konsole](/nuget/tools/package-manager-console).
@@ -27,6 +28,7 @@ MDbg [ProgramName[arguments]] [options]
 ```  
   
 ## <a name="commands"></a>Befehle  
+
  Geben Sie im Debugger (entsprechend der Angabe in der **mdbg>** -Eingabeaufforderung) einen der im folgenden Abschnitt beschriebenen Befehle ein:  
   
  **Befehl** [*Argumente*]  
@@ -85,6 +87,7 @@ MDbg [ProgramName[arguments]] [options]
 |**x** [`-c`*nrsymbole*] [*modul*[`!`*muster*]]|Zeigt Funktionen an, die dem `pattern` für ein Modul entsprechen.<br /><br /> Wenn *nrsymbole* angegeben wird, wird die Ausgabe auf die festgelegte Anzahl beschränkt. Wenn `!` (das einen regulären Ausdruck angibt) für *muster* nicht angegeben wird, werden alle Funktionen angezeigt. Wenn *modul* nicht angegeben wird, werden alle geladenen Module angezeigt. Symbole ( *~#* ) können verwendet werden, um Haltepunkte mit dem **break**-Befehl festzulegen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Kompilieren Sie die zu debuggende Anwendung mit compilerspezifischen Flags, die den Compiler dazu veranlassen, Debugsymbole zu generieren. Weitere Informationen über diese Flags finden Sie in der Compilerdokumentation. Sie können optimierte Anwendungen debuggen; ein Teil der Debuginformationen wird jedoch fehlen. Viele lokale Variablen sind beispielsweise nicht sichtbar, und die Quellzeilen sind ungenau.  
   
  Geben Sie nach dem Kompilieren der Anwendung in der Befehlszeile **mdbg** ein, um eine Debugsitzung zu beginnen, wie das folgende Beispiel veranschaulicht.  

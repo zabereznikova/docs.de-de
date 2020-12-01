@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: 0d696adbe1ee224e78f79a049ed2e41d50be1faa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0321e98e6237e54397db7e583546fd69803ab7e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275956"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Vorgehensweise: Manuelles Erstellen von Wrappern
+
 Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollten Sie mit einer vorhandenen IDL-Datei oder -Typbibliothek (IDL, Interface Definition Language – Sprache für die Schnittstellendefinition) beginnen. Wenn Sie nicht über eine IDL-Datei verfügen oder keine Typbibliotheksdatei generieren können, können Sie die COM-Typen simulieren, indem Sie verwaltete Deklarationen erstellen und die sich daraus ergebende Assembly in eine Typbibliothek exportieren.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>So simulieren Sie COM-Typen aus verwaltetem Quellcode  
@@ -34,6 +35,7 @@ Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollte
 4. Analog zu den mit Tlbimp.exe importierten Typen benötigen einige Typen zusätzliche Informationen, die Sie dem Code direkt hinzufügen können. Weitere Informationen finden Sie unter [Vorgehensweise: Bearbeiten von Interopassemblys](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Code sind ein Beispiel der `ISATest`-Schnittstelle und der `SATest`-Klasse in IDL sowie die entsprechenden Typen im C#-Quellcode dargestellt.  
   
  **IDL-Datei oder -Typbibliotheksdatei**  

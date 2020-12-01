@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555275"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256651"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
+
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
   
  Dieser Abschnitt befasst sich mit den standardmäßigen Verhaltensmerkmalen des Interop-Marshalling-Diensts. Er enthält detaillierte Informationen zum Marshallen von Arrays, booleschen Typen, Zeichentypen, Delegaten, Klassen, Objekten, Zeichenfolgen und Strukturen.  
@@ -26,6 +27,7 @@ Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Me
 > Das Marshalling von generischen Typen wird nicht unterstützt. Weitere Informationen finden Sie unter [Interoperating Using Generic Types (Interoperation mit generischen Typen)](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Speicherverwaltung mit dem Interop-Marshaller  
+
  Der Interop-Marshaller versucht immer, den von nicht verwaltetem Code belegten Speicher freizugeben. Dieses Verhalten entspricht den COM-Speicherverwaltungsregeln, unterscheidet sich jedoch von den Regeln, die für systemeigenes C++ gelten.  
   
  Es kann zu Missverständnissen kommen, wenn Sie das Verhalten von systemeigenem C++ (keine Speicherfreigabe) beim Plattformaufruf erwarten, bei dem automatisch Speicher für Zeiger freigegeben wird. Wenn Sie beispielsweise die folgende nicht verwaltete Methode aus einer C++-DLL aufrufen, wird kein Speicher automatisch freigegeben.  
@@ -38,17 +40,20 @@ BSTR MethodOne (BSTR b) {
 }  
 ```  
   
- Wenn Sie die Methode jedoch als einen Prototyp zum Plattformaufruf definieren, jeden **BSTR**-Typ durch einen <xref:System.String>-Typ ersetzen und `MethodOne` aufrufen, versucht die Common Language Runtime `b` zweimal freizugeben. Sie können das Marshalling-Verhalten ändern, indem Sie <xref:System.IntPtr>-Typen anstelle von **Zeichenfolgen**typen verwenden.  
+ Wenn Sie die Methode jedoch als einen Prototyp zum Plattformaufruf definieren, jeden **BSTR**-Typ durch einen <xref:System.String>-Typ ersetzen und `MethodOne` aufrufen, versucht die Common Language Runtime `b` zweimal freizugeben. Sie können das Marshalling-Verhalten ändern, indem Sie <xref:System.IntPtr>-Typen anstelle von **Zeichenfolgen** typen verwenden.  
   
  Zur Laufzeit wird immer die **CoTaskMemFree**-Methode zum Freigeben von Speicher verwendet. Wenn der Speicher, mit dem Sie arbeiten, nicht der **CoTaskMemAlloc**-Methode zugeordnet wurde, müssen Sie **IntPtr** verwenden und den Speicher manuell mit der geeigneten Methode freigeben. Ebenso können Sie in Situationen, in denen der Speicher niemals freigegeben werden soll, wie bei Verwendung der **GetCommandLine**-Funktion von Kernel32.dll, die einen Zeiger auf den Kernelspeicher zurückgibt, verhindern, dass Speicher automatisch freigegeben wird. Details zum manuellen Freigeben von Speicher finden Sie unter [Beispiel für Puffer](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Standardmäßiges Marshalling für Klassen  
+
  Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Übergeben von Klassen an COM  
+
  Wenn eine verwaltete Klasse an COM übergeben wird, umschließt der Interop-Marshaller die Klasse automatisch mit einem COM-Proxy und übergibt die vom Proxy erstellte Klassenschnittstelle an den COM-Methodenaufruf. Der Proxy delegiert dann alle Aufrufe der Klassenschnittstelle zurück an das verwaltete Objekt. Der Proxy macht zudem auch weitere Schnittstellen verfügbar, die von der Klasse nicht explizit implementiert werden. Der Proxy implementiert automatisch Schnittstellen wie **IUnknown** und **IDispatch** für die Klasse.  
   
 ### <a name="passing-classes-to-net-code"></a>Übergeben von Klassen an .NET-Code  
+
  Co-Klassen werden in der Regel nicht als Methodenargumente in COM verwendet. Stattdessen wird normalerweise eine Standardschnittstelle anstelle der Co-Klasse übergeben.  
   
  Wenn eine Schnittstelle an verwalteten Code übergeben wird, ist der Interop-Marshaller für das Umschließen der Schnittstelle mit dem geeigneten Wrapper und das Übergeben des Wrappers an die verwaltete Methode zuständig. Herauszufinden, welcher Wrapper verwendet werden sollte, kann schwierig sein. Jede Instanz eines COM-Objekts verfügt über einen einzelnen, eindeutigen Wrapper, ganz gleich, wie viele Schnittstellen das Objekt implementiert. So hat ein einzelnes COM-Objekt, das fünf unterschiedliche Schnittstellen implementiert, nur einen einzigen Wrapper. Der gleiche Wrapper macht alle fünf Schnittstellen verfügbar. Wenn zwei Instanzen des COM-Objekts erstellt werden, werden auch zwei Instanzen des Wrappers erstellt.  
@@ -70,6 +75,7 @@ BSTR MethodOne (BSTR b) {
 3. Wenn der Marshaller die Klasse immer noch nicht identifizieren kann, umschließt er die Schnittstelle mit einer generischen Wrapperklasse mit Namen **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Standardmäßiges Marshalling für Delegaten  
+
  Ein verwalteter Delegat wird als COM-Schnittstelle oder als Funktionszeiger gemarshallt, und zwar basierend auf dem Aufrufmechanismus:  
   
 - Für Plattformaufrufe wird ein Delegat standardmäßig als unverwalteter Funktionszeiger gemarshallt.  
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Standardmäßiges Marshalling für Werttypen  
+
  Die meisten Werttypen, wie ganze Zahlen und Gleitkommazahlen, sind [blitfähig](blittable-and-non-blittable-types.md) und müssen nicht gemarshallt werden. Andere, [nicht blitfähige](blittable-and-non-blittable-types.md) Typen werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt und müssen gemarshallt werden. Wieder andere Typen erfordern eine explizite, über die Grenzen der Interoperation hinausgehende Formatierung.  
   
  Dieser Abschnitt enthält Informationen zu den folgenden formatierten Werttypen:  
@@ -186,6 +193,7 @@ internal class DelegateTest {
      Gibt an, dass die Member entsprechend dem <xref:System.Runtime.InteropServices.FieldOffsetAttribute> angeordnet werden, das mit jedem Feld angegeben wird.  
   
 ### <a name="value-types-used-in-platform-invoke"></a>Im Plattformaufruf verwendete Werttypen  
+
  Im folgenden Beispiel stellen die Typen `Point` und `Rect` Memberlayoutinformationen mithilfe von **StructLayoutAttribute** bereit.  
   
 ```vb  
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>In COM-Interop verwendete Werttypen  
+
  Formatierte Typen können auch an COM-Interop-Methodenaufrufe übergeben werden. Tatsache ist, dass Werttypen automatisch in Strukturen konvertiert werden, wenn sie in eine Typbibliothek exportiert werden. Wie im folgenden Beispiel gezeigt, wird der `Point`-Werttyp zu einer Typdefinition (typedef) mit Namen `Point`. Alle Verweise auf den `Point`-Werttyp an anderer Stelle in der Typbibliothek werden durch die `Point`-Typdefinition ersetzt.  
   
  **Darstellung der Typbibliothek**  
@@ -353,6 +362,7 @@ interface _Graphics {
 > Strukturen, bei denen der <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswert auf **Explicit** (Explizit) festgelegt ist, können in COM-Interop nicht verwendet werden, da die exportierte Typbibliothek kein explizites Layout darstellen kann.  
   
 ### <a name="system-value-types"></a>Systemwerttypen  
+
  Der <xref:System>-Namespace enthält mehrere Werttypen, die für die geschaltete Form von primitiven Datentypen der Laufzeit stehen. Beispielsweise steht die Werttypstruktur <xref:System.Int32?displayProperty=nameWithType> für die geschachtelte Form von **ELEMENT_TYPE_I4**. Anstatt diese Typen als Strukturen zu marshallen, wie dies bei anderen formatierten Typen der Fall ist, marshallen Sie sie in der gleichen Weise wie die primitiven Datentypen, die sie schachteln. **System.Int32** wird daher als **ELEMENT_TYPE_I4** anstatt als eine Struktur gemarshallt, die ein einziges Mitglied vom Typ **long** enthält. Die folgende Tabelle enthält eine Liste der Werttypen im Namespace **System**, bei denen es sich um geschachtelte Darstellungen von primitiven Datentypen handelt.  
   
 |Systemwerttyp|Elementtyp|  

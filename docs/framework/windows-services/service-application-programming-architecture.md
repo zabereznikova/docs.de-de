@@ -15,14 +15,15 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: c2344dd0a7d35781aea52b24694f2cfee70a6d41
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270457"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
+
 Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
   
  Folgende Klassen sind wesentlich in die Diensterstellung eingebunden:  
@@ -34,6 +35,7 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
  Darüber hinaus kann die Klasse <xref:System.ServiceProcess.ServiceController> für die Bearbeitung des Diensts selbst verwendet werden. Diese Klasse ist nicht in die Erstellung eines Diensts eingebunden, kann jedoch für das Starten und Beenden des Diensts, für die Übergabe von Befehlen und für die Rückgabe einer Reihe von Enumerationen verwendet werden.  
   
 ## <a name="defining-your-services-behavior"></a>Definieren des Verhaltens Ihres Diensts  
+
  In Ihrer Dienstklasse setzen Sie die Funktionen der Basisklasse außer Kraft, die bestimmen, was geschieht, wenn der Status Ihres Diensts im Dienststeuerungs-Manager geändert wird. Die Klasse <xref:System.ServiceProcess.ServiceBase> macht folgende Methoden verfügbar, die Sie außer Kraft setzen können, um benutzerdefiniertes Verhalten hinzuzufügen.  
   
 |Methode|Grund für die Außerkraftsetzung|  

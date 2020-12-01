@@ -12,14 +12,15 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3baacbeca7f5cc50fbb720849aec273f996f86e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259140"
 ---
 # <a name="viewing-type-information"></a>Anzeigen von Typinformationen
+
 Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflektion wesentlich. Die Common Language Runtime (CLR) erstellt **Type** für einen geladenen Typ, wenn die Reflektion diesen anfordert. Sie können die Methoden, Felder, Eigenschaften und geschachtelten Klassen eines **Type**-Objekts dazu verwenden, alle Informationen zu diesem Typ zu erhalten.  
   
  Verwenden Sie <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>, um **Type**-Objekte von Assemblys abzurufen, die nicht geladen wurden, und übergeben Sie den Namen des Typs oder der Typen, die Sie möchten. Verwenden Sie <xref:System.Type.GetType%2A?displayProperty=nameWithType>, um **Type**-Objekte von Assemblys abzurufen, die bereits geladen wurden. Verwenden Sie <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>, um **Type**-Modulobjekte zu erhalten.  
@@ -46,6 +47,7 @@ Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflekti
  Wenn Sie ein **Type**-Objekt haben, können Sie die <xref:System.Type.Module%2A?displayProperty=nameWithType>-Eigenschaft verwenden, um ein Objekt zu erhalten, das das Modul kapselt, das den Typ enthält. Verwenden Sie die <xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType>-Eigenschaft, um ein Objekt zu finden, das die Assembly kapselt, die das Modul enthält. Sie können die Assembly, die den Typ kapselt, direkt mithilfe der <xref:System.Type.Assembly%2A?displayProperty=nameWithType>-Eigenschaft erhalten.  
   
 ## <a name="systemtype-and-constructorinfo"></a>System.Type und ConstructorInfo  
+
  In folgendem Beispiel wird veranschaulicht, wie Sie die Konstruktoren für eine Klasse auflisten können, in diesem Fall die Klasse <xref:System.String>.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)]
@@ -53,6 +55,7 @@ Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflekti
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo, MethodInfo, FieldInfo und PropertyInfo  
+
  Rufen Informationen zu den Methoden, Eigenschaften, Ereignissen und Feldern eines Typs mithilfe der Objekte <xref:System.Reflection.MemberInfo>, <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.FieldInfo> und <xref:System.Reflection.PropertyInfo> ab.  
   
  In folgendem Beispiel wird das **MemberInfo**-Objekt verwendet, um die Anzahl von Membern in der **Klasse** aufzulisten. Zudem wird die <xref:System.Type.IsPublic%2A>-Eigenschaft verwendet, um die Sichtbarkeit der Klasse zu bestimmen.  

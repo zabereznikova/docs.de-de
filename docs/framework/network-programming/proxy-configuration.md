@@ -12,17 +12,19 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: 4d62f5736e9aa469be49d101e85851bc01b7c159
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 5094a066fe6689a1c0cda227b284accaac49ad54
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141604"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263164"
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
+
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
   
 ## <a name="adaptive-proxies"></a>Adaptive Proxys  
+
  Im .NET Framework gibt es zwei Grundtypen von Proxys: adaptive und statische. Adaptive Proxys ändern Sie ihre Einstellungen, wenn sich die Konfiguration ändert. Wenn z. B. ein Laptop-Benutzer eine DFÜ-Netzwerkverbindung gestartet hat, würde ein adaptiver Proxy diese Änderung erkennen, das neue Konfigurationsskript entdecken und ausführen und die Einstellungen entsprechend anpassen.  
   
  Adaptive Proxys werden durch ein Konfigurationsskript konfiguriert (siehe [Automatische Proxyerkennung](automatic-proxy-detection.md)). Das Skript generiert eine Reihe von Anwendungsprotokollen und ein Proxy für jedes Protokoll.  
@@ -42,6 +44,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 ```  
   
 ## <a name="static-proxies"></a>Statische Proxys  
+
  Statische Proxys werden in der Regel explizit von einer Anwendung konfiguriert, oder wenn eine Konfigurationsdatei von einer Anwendung oder vom System aufgerufen wird. Statische Proxys sind in Netzwerken nützlich, in denen die Topologie sich nur selten verändert, wie z. B. bei einem Desktop-Computer, der mit einem Unternehmensnetzwerk verbunden ist.  
   
  Mehrere Optionen steuern, wie ein statischer Proxy arbeitet. Sie können Folgendes angeben:  

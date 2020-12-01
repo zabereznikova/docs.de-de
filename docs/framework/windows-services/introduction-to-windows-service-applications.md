@@ -22,14 +22,15 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-ms.openlocfilehash: b177673d8904a3c40e41cd0f92b1ea7408641186
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: fd69ca11d42a229b861bafd642383e89f0119815
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609316"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270470"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Einführung in Windows-Dienstanwendungen
+
 Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstellen von ausführbaren Anwendungen mit langer Laufzeit ermöglicht, die in eigenen Windows-Sitzungen ausgeführt werden. Die Dienste können automatisch gestartet werden, sobald der Computer gestartet wird. Sie können angehalten und neu gestartet werden. Es wird jedoch keine Benutzeroberfläche angezeigt. Dienste eignen sich mit diesen Funktionen ideal zur Verwendung auf einem Server. Sie sind darüber hinaus für alle Fälle geeignet, in denen Funktionen mit langer Laufzeit benötigt werden und Benutzer, die am gleichen Computer arbeiten, nicht gestört werden sollen. Dienste können auch im Sicherheitskontext eines bestimmten Benutzerkontos ausgeführt werden, bei dem es sich nicht um einen angemeldeten Benutzer oder das Standardcomputerkonto handelt. Weitere Informationen zu Diensten und Windows-Sitzungen finden Sie in der Windows SDK-Dokumentation.  
   
  Dienste können problemlos erstellt werden, indem eine Anwendung erstellt und als Dienst installiert wird. Nehmen wir z. B. an, dass Leistungsindikatordaten überwacht werden sollen. Sobald die Werte bestimmte Schwellenwerte erreichen, soll reagiert werden. So könnte eine Windows-Dienstanwendung zum Überwachen der Leistungsindikatordaten geschrieben werden, die Anwendung bereitgestellt und anschließend mit dem Sammeln und Analysieren von Daten begonnen werden.  
@@ -39,6 +40,7 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
  Nachdem die Anwendung erstellt wurde, kann sie installiert werden. Dazu wird das Befehlszeilen-Hilfsprogramm InstallUtil.exe ausgeführt und der Pfad zur ausführbaren Datei des Diensts übergeben. Dann kann der Dienst mit dem **Dienststeuerungs-Manager** gestartet, beendet, angehalten, fortgesetzt und konfiguriert werden. Viele dieser Aufgaben können auch im **Server-Explorer** im Knoten **Dienste** oder durch Verwenden der <xref:System.ServiceProcess.ServiceController>-Klasse ausgeführt werden.  
   
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Dienstanwendungen im Vergleich zu anderen Visual Studio-Anwendungen  
+
  Die Funktionsweise von Dienstanwendungen unterscheidet sich von vielen anderen Projekttypen in mehrfacher Hinsicht:  
   
 - Die kompilierte ausführbare Datei, die von einem Dienstanwendungsprojekt erstellt wird, muss auf dem Server installiert werden. Erst dann kann das Projekt sinnvoll funktionieren. Das Debuggen oder Ausführen einer Dienstanwendung kann nicht durch Drücken von F5 oder F11 gestartet werden. Ein Dienst kann nicht direkt ausgeführt werden, und es besteht keine Möglichkeit, in den Code zu springen. Stattdessen muss der Dienst installiert und gestartet werden. Ein Debugger muss an den Prozess des Diensts angehängt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](how-to-debug-windows-service-applications.md).  
@@ -56,6 +58,7 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
 - Windows-Dienstanwendungen werden in einem eigenen Sicherheitskontext ausgeführt. Sie werden gestartet, bevor sich der Benutzer an dem Windows-Computer anmeldet, auf dem sie installiert sind. Es sollte genau geplant werden, in welchem Benutzerkonto ein Dienst ausgeführt wird. Ein Dienst, der unter dem Systemkonto ausgeführt wird, verfügt über mehr Berechtigungen als ein Benutzerkonto.  
   
 ## <a name="service-lifetime"></a>Lebensdauer von Diensten  
+
  Während seiner Lebensdauer durchläuft ein Dienst mehrere interne Statuswerte. Zuerst wird der Dienst auf dem System installiert, auf dem er ausgeführt werden soll. Bei diesem Vorgang werden die Installationsprogramme für das Dienstprojekt ausgeführt. Der Dienst wird auf dem Computer in den **Dienststeuerungs-Manager** geladen. Der **Dienststeuerungs-Manager** stellt das zentrale Dienstprogramm dar, das von Windows für die Verwaltung von Diensten bereitgestellt wird.  
   
  Nachdem der Dienst geladen worden ist, muss er gestartet werden, damit die Funktion des Diensts bereitgestellt wird. Sie können einen Dienst aus dem **Dienststeuerungs-Manager**, aus dem **Server-Explorer** oder aus dem Code starten, indem Sie die <xref:System.ServiceProcess.ServiceController.Start%2A>-Methode aufrufen. Die <xref:System.ServiceProcess.ServiceController.Start%2A>-Methode übergibt die Verarbeitung an die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode der Anwendung und verarbeitet den dort definierten Code.  
@@ -65,11 +68,13 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
  Ein Dienst kann angehalten, beendet oder fortgesetzt werden, indem der **Dienststeuerungs-Manager** oder der **Server-Explorer** verwendet wird, oder indem Methoden aus dem Code aufgerufen werden. Von jeder dieser Aktionen kann im Dienst eine zugeordnete Prozedur aufgerufen werden (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>, <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, oder <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>), in der Sie eine zusätzliche Verarbeitung definieren können, die ausgeführt werden soll, sobald sich der Zustand eines Diensts ändert.  
   
 ## <a name="types-of-services"></a>Diensttypen  
+
  In Visual Studio mit .NET Framework können zwei Diensttypen erstellt werden. Diensten, die den einzigen Dienst in einem Prozess darstellen, wird der Typ <xref:System.ServiceProcess.ServiceType.Win32OwnProcess> zugewiesen. Diensten, die einen Prozess mit einem anderen Dienst gemeinsam verwenden, wird der Typ <xref:System.ServiceProcess.ServiceType.Win32ShareProcess> zugewiesen. Zum Abrufen des Diensttyps fragen Sie die <xref:System.ServiceProcess.ServiceController.ServiceType%2A>-Eigenschaft ab.  
   
  Möglicherweise werden andere Diensttypen angezeigt, wenn Sie vorhandene Dienste abfragen, die nicht in Visual Studio erstellt wurden. Weitere Informationen dazu finden Sie unter <xref:System.ServiceProcess.ServiceType>.  
   
 ## <a name="services-and-the-servicecontroller-component"></a>Dienste und die ServiceController-Komponente  
+
  Die <xref:System.ServiceProcess.ServiceController>-Komponente wird verwendet, um die Verbindung zu einem Dienst herzustellen und seinen Zustand zu ändern. Mit einer <xref:System.ServiceProcess.ServiceController>-Komponente besteht die Möglichkeit, einen Dienst zu starten, zu beenden, anzuhalten und fortzusetzen. Außerdem können benutzerdefinierte Befehle an einen Dienst gesendet werden. Die <xref:System.ServiceProcess.ServiceController>-Komponente muss jedoch nicht notwendigerweise verwendet werden, sobald eine Dienstanwendung erstellt wird. Tatsächlich sollte die <xref:System.ServiceProcess.ServiceController>-Komponente in den meisten Fällen in einer separaten Anwendung vorhanden sein, nicht in der Windows-Dienstanwendung, in der der Dienst definiert wird.  
   
  Weitere Informationen finden Sie unter <xref:System.ServiceProcess.ServiceController>.  

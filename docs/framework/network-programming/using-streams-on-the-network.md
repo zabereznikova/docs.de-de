@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: f8d35b43c9b46a77bfd0c78f7d0118093b6fe824
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c59e4aa2edad7b28203cfce5f568f8ccb8558dbb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263112"
 ---
 # <a name="using-streams-on-the-network"></a>Verwenden von Streams im Netzwerk
+
 Netzwerkressourcen werden in .NET Framework als Streams dargestellt. Durch die generische Verarbeitung von Streams verfügt .NET Framework über folgende Funktionen:  
   
 - Eine allgemeine Möglichkeit zum Senden und Empfangen von Webdaten. Unabhängig vom tatsächlichen Inhalt der Datei — HTML, XML oder Sonstiges — wird Ihre Anwendung <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> und <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> zum Senden und Empfangen von Daten verwenden.  

@@ -16,14 +16,15 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 67330962382e768849cbf67d5f412ea80f65569d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1309e9dc594869cec7bce81ef666d9f5e06f13b9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501988"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265179"
 ---
 # <a name="using-secure-sockets-layer"></a>Verwenden von Secure Sockets Layer
+
 Die <xref:System.Net>-Klassen verwenden Secure Sockets Layer (SSL) zum Verschlüsseln der Verbindung für mehrere Netzwerkprotokolle.  
   
  Für HTTP-Verbindungen verwenden die <xref:System.Net.WebRequest>- und <xref:System.Net.WebResponse>-Klassen SSL zur Kommunikation mit Webhosts, die SSL unterstützen. Die Entscheidung zur Verwendung von SSL erfolgt durch die <xref:System.Net.WebRequest>-Klasse, in Abhängigkeit vom erhaltenen URI. Wenn der URI mit „Https:“ beginnt, dann wird SSL verwendet. Beginnt der URI mit „Http:“, dann wird eine nicht verschlüsselte Verbindung verwendet.  
@@ -59,6 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - Verweise auf den Namespace **System.Net**  

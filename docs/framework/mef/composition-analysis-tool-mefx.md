@@ -7,22 +7,27 @@ helpviewer_keywords:
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: abb1459afc5aeb2d39ee553c62fe382bb7af58d5
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: d3f3a282cfa9274a1939d312987dd58b24eab2af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281276"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255792"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Kompositionsanalysetool (Mefx)
+
 Das Kompositionsanalysetool MEFX ist eine Befehlszeilenanwendung, die Bibliotheks- (.dll) und Anwendungsdateien (.exe) mit Teilen des Managed Extensibility Framework (MEF) analysiert. MEFX dient in erster Linie dazu, Entwicklern eine Möglichkeit zur Diagnose von Kompositionsfehlern in MEF-Anwendungen zu bieten, ohne dass der Anwendung selbst unübersichtlicher Ablaufverfolgungscode hinzugefügt werden muss. Darüber hinaus kann das Tool nützlich sein, um Teile einer Bibliothek zu verstehen, die von einem Drittanbieter bereitgestellt wird. In diesem Thema wird beschrieben, wie MEFX verwendet wird, und ein Verweis auf die Syntax wird bereitgestellt.  
   
 <a name="getting_mefx"></a>
+
 ## <a name="getting-mefx"></a>Abrufen von MEFX  
+
  MEFX steht auf GitHub unter [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0) zur Verfügung. Nach dem Herunterladen müssen Sie das Tool nur noch entpacken.  
   
 <a name="basic_syntax"></a>
+
 ## <a name="basic-syntax"></a>Allgemeine Syntax  
+
  MEFX kann wie folgt über die Befehlszeile aufgerufen werden:  
   
 ```console
@@ -41,7 +46,9 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
  Nach der Liste der Dateien und Verzeichnisse müssen Sie einen Befehl sowie alle Optionen für den Befehl angeben.  
   
 <a name="listing_available_parts"></a>
+
 ## <a name="listing-available-parts"></a>Auflisten verfügbarer Teile  
+
  Mit der Aktion `/parts` können Sie alle deklarierten Teile in den geladenen Dateien auflisten. Das Ergebnis ist eine einfache Liste mit den Namen der Teile.  
   
 ```console
@@ -59,7 +66,9 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
 ```  
   
 <a name="listing_imports_and_exports"></a>
+
 ## <a name="listing-imports-and-exports"></a>Auflisten von Importen und Exporten  
+
  Mit der Aktion `/imports` und der Aktion `/exports` werden alle importierten Teile und alle exportierten Teile aufgeführt. Sie können auch die Teile auflisten, mit denen ein bestimmter Typ importiert oder exportiert wird, indem Sie die `/importers` - oder die `/exporters` -Aktionen verwenden.  
   
 ```console  
@@ -70,8 +79,10 @@ MyAddin.AddIn
  Sie können auch die `/verbose` -Option für diese Aktionen verwenden.  
   
 <a name="finding_rejected_parts"></a>
+
 ## <a name="finding-rejected-parts"></a>Suchen abgelehnter Teile  
- Sobald die verfügbaren Teile geladen wurden, werden diese von MEFX mit der MEF-Kompositions-Engine erstellt. Die Teile, die nicht erfolgreich erstellt werden können, werden als *abgelehnt*bezeichnet. Mit der `/rejected` -Aktion können Sie alle abgelehnten Teile auflisten.  
+
+ Sobald die verfügbaren Teile geladen wurden, werden diese von MEFX mit der MEF-Kompositions-Engine erstellt. Die Teile, die nicht erfolgreich erstellt werden können, werden als *abgelehnt* bezeichnet. Mit der `/rejected` -Aktion können Sie alle abgelehnten Teile auflisten.  
   
  Mit der `/verbose` -Option und der `/rejected` -Aktion können Sie detaillierte Informationen über abgelehnte Teile ausgeben. Die DLL-Datei `ClassLibrary1` im folgenden Beispiel enthält das Teil `AddIn` , mit dem das Teil `MemberPart` und das Teil `ChainOne` importiert werden. `ChainOne` importiert `ChainTwo`, `ChainTwo` ist jedoch nicht vorhanden. Dies bedeutet, dass `ChainOne` abgelehnt wird, wodurch `AddIn` abgelehnt wird.  
   
@@ -107,7 +118,9 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
  Die interessanten Ergebnisse sind in `[Exception]` und `[Unsuitable]` enthalten. Das Ergebnis `[Exception]` enthält Informationen dazu, warum ein Teil abgelehnt wurde. Das `[Unsuitable]` -Ergebnis gibt an, warum ein Teil, das andernfalls geeignet gewesen wäre, nicht zum Ausfüllen eines Imports verwendet werden konnte. Im vorliegenden Fall wurde das Teil selbst aufgrund fehlender Importe abgelehnt.  
   
 <a name="analyzing_primary_causes"></a>
+
 ## <a name="analyzing-primary-causes"></a>Analysieren primärer Ursachen  
+
  Bei mehreren verknüpften Teilen in einer langen Abhängigkeitskette kann ein Problem mit einem Teil im unteren Bereich zu einer Ablehnung der gesamten Kette führen. Diese Probleme können sich als schwerwiegend erweisen, da die Ursache des Fehlers nicht immer offensichtlich ist. Um eine Lösung für das Problem zu finden, können Sie die `/causes` -Aktion verwenden. Diese Aktion zielt darauf ab, die Ursache einer kaskadierenden Ablehnung zu finden.  
   
  Wenn Sie die `/causes` -Aktion im vorangehenden Beispiel verwenden, werden nur Informationen für `ChainOne`aufgeführt. Der nicht ausgefüllte Import ist in diesem Fall die Ursache für die Ablehnung von `AddIn`. Die `/causes` -Aktion kann bei normalen und `/verbose` -Optionen verwendet werden.  
@@ -116,7 +129,9 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
 > In den meisten Fällen können Sie mithilfe von MEFX die Ursache eines kaskadierenden Fehlers aufspüren. Wenn die Teile einem Container jedoch programmgesteuert hinzugefügt werden, wenn hierarchische Container verwendet werden oder wenn benutzerdefinierte `ExportProvider` -Implementierungen enthalten sind, kann die Ursache nicht mit MEFX ermittelt werden. Die vorstehend beschriebenen Fälle sollten nach Möglichkeit vermieden werden, da hier eine Fehlerdiagnose nur sehr schwer möglich ist.  
   
 <a name="white_lists"></a>
+
 ## <a name="white-lists"></a>Whitelisten  
+
  Mit der `/whitelist` -Option können Sie eine Textdatei mit den Teilen angeben, die wahrscheinlich abgelehnt werden. Unerwartete Ablehnungen werden dann gekennzeichnet. Dies kann hilfreich sein, wenn Sie eine unvollständige oder eine untergeordnete Bibliothek analysieren, bei der einige Abhängigkeiten fehlen. Die `/whitelist` -Option kann mit der `/rejected` -Aktion oder der `/causes` -Aktion verwendet werden.  
   
  Angenommen, die Datei test.txt enthält den Text "ClassLibrary1.ChainOne". Wenn Sie die `/rejected` -Aktion mit der `/whitelist` -Option im vorherigen Beispiel ausführen, wird folgende Ausgabe erzeugt:  

@@ -3,17 +3,19 @@ title: 'Minderung: Deserialisierung von Objekten über App-Domänen'
 description: Hier erfahren Sie, wie Sie ein Problem diagnostizieren und behandeln, bei dem beim Versuch, Objekte im logischen Aufrufkontext anwendungsdomänenübergreifend zu deserialisieren, eine Ausnahme ausgelöst wird.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1b8060870962ddd26d90c4152a270a65936c2af3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475241"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256637"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Entschärfung: Deserialisierung von Objekten über App-Domänen
+
 In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen verwendet, löst der Versuch, Objekte im logischen Aufrufkontext über App-Domänen hinweg zu deserialisieren, eine Ausnahme aus.  
   
 ## <a name="diagnosing-the-issue"></a>Diagnose des Problems  
+
  Das Problem tritt bei der folgenden Abfolge von Bedingungen auf:  
   
 1. Eine Anwendung verwendet zwei oder mehr App-Domänen mit unterschiedlichen Anwendungsbasen.  
@@ -37,6 +39,7 @@ In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen 
 6. Da die Typen im logischen Aufrufkontext nicht in der Standard-App-Domäne aufgelöst werden können, wird eine Ausnahme ausgelöst.  
   
 ## <a name="mitigation"></a>Minderung  
+
  Gehen Sie wie folgt vor, um dieses Problem zu umgehen:  
   
 1. Suchen Sie bei Auftreten der Ausnahme nach dem Aufruf von `get_Evidence` in der Aufrufliste. Bei der Ausnahme kann es sich um verschiedene Ausnahmen handeln, einschließlich <xref:System.IO.FileNotFoundException> und <xref:System.Runtime.Serialization.SerializationException>.  

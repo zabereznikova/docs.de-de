@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 91f64775e2f401be9b740fe9e4c41e1087eb9617
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8931cdc471b957447277c333ba482a0cec0e6aa5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265738"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Vorgehensweise: Überschreiben einer globalen Proxyauswahl
+
 In diesem Beispiel wird an `www.contoso.com` eine **WebRequest** gesendet, die die globale Proxyauswahl mit einem Proxyserver namens `alternateproxy` auf Port 80 überschreibt.  
   
 ## <a name="example"></a>Beispiel  
@@ -29,6 +30,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 - [`using`-Anweisung](../../csharp/language-reference/keywords/using-directive.md) für den **System.Net**-Namespace  

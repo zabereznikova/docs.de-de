@@ -13,14 +13,15 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: be9991a4df866f65aabe063be3cc2b374f4d124d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475085"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266791"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamisches Laden und Verwenden von Typen
+
 Reflektion stellt Infrastruktur bereit, die von Sprachcompilern für die Implementierung impliziter später Bindungen verwendet wird. Unter Binden versteht man das Auffinden der Deklaration (d.h. der Implementierung), die einem eindeutig festgelegten Typ entspricht. Wenn dieser Prozess zur Runtime und nicht zum Zeitpunkt der Kompilierung stattfindet, wird von einer späten Bindung gesprochen. Visual Basic ermöglicht Ihnen, die implizite späte Bindung in Ihrem Code zu verwenden. Der Visual Basic-Compiler ruft eine Hilfsmethode auf, die mithilfe von Reflektion den Objekttyp abruft. Aufgrund der an die Hilfsmethode übergebenen Argumente wird die entsprechende Methode zur Runtime aufgerufen. Diese Argumente sind die Instanz (ein Objekt), auf der die Methode aufgerufen werden muss, der Namen der aufgerufenen Methode (eine Zeichenfolge) und die Argumente, die an die aufgerufene Methode übergeben werden (ein Array von Objekten).  
   
  Im folgenden Beispiel verwendet der Visual Basic-Compiler Reflektion implizit, um eine Methode für ein Objekt aufzurufen, dessen Typ zur Kompilierzeit nicht bekannt ist. Ein **HelloWorld**-Klasse verfügt über eine **PrintHello**-Methode, die „Hello World“ zusammen mit anderem Text ausgibt, der an die **PrintHello**-Methode übergeben wurde. Die in diesem Beispiel aufgerufene **PrintHello**-Methode ist eigentlich eine <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>-Methode. Im Visual Basic-Code kann die **PrintHello**-Methode aufgerufen werden, als ob der Typ des Objekts (helloObj) schon zur Kompilierzeit bekannt wäre (frühe Bindung) statt erst zur Runtime (späte Bindung).  
@@ -40,6 +41,7 @@ End Module
 ```  
   
 ## <a name="custom-binding"></a>Benutzerdefinierte Bindung  
+
  Abgesehen davon, dass Reflektion implizit von Compilern für das späte Binden verwendet wird, kann sie auch explizit im Code für das späte Binden angewandt werden.  
   
  Die [Common Language Runtime](../../standard/clr.md) unterstützt verschiedene Programmiersprachen, wobei sich die Bindungsregeln dieser Sprachen unterscheiden. Beim frühen Binden können Codegeneratoren den Bindungsvorgang vollständig steuern. Beim späten Binden durch Reflektion muss der Vorgang durch eine benutzerdefinierte Bindung gesteuert werden. Die <xref:System.Reflection.Binder>-Klasse stellt die benutzerdefinierte Steuerung der Auswahl und des Aufrufs von Membern bereit.  
@@ -53,6 +55,7 @@ End Module
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember und CreateInstance  
+
  Verwenden Sie <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>, um einen Member eines Typs aufzurufen. Die **CreateInstance**-Methoden verschiedener Klassen wie <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType> sind spezielle Formen von **InvokeMember**, die neue Instanzen des angegebenen Typs erstellen. Die **Binder**-Klasse wird in diesen Methoden für die Auflösung von Überladungen und die Koersion von Argumenten verwendet.  
   
  Im folgenden Beispiel werden drei mögliche Kombinationen der Argumentkoersion (Typkonvertierung) und Memberauswahl dargestellt. Im 1. Fall ist keine Argumentkoersion oder Memberauswahl erforderlich. Im 2. Fall ist nur die Memberauswahl notwendig. Im 3. Fall muss nur die Argumentkoersion vorgenommen werden.  

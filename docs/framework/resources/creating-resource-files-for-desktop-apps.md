@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957436"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259075"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
@@ -33,6 +33,7 @@ Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressou
 - Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), um eine Ressourcendatei zu erstellen und in das Projekt einzuschließen. Visual Studio stellt einen Ressourcen-Editor bereit, mit dem Sie Ressourcen hinzufügen, löschen und ändern können. Zur Kompilierzeit wird die Ressourcendatei automatisch in eine binäre RESOURCES-Datei konvertiert und in eine Anwendungsassembly oder eine Satellitenassembly eingebettet. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>Ressourcen in Textdateien
 
 Sie können Textdateien (TXT oder RESTEXT) verwenden, um nur Zeichenfolgenressourcen zu speichern. Verwenden Sie für Nicht-Zeichenfolgenressourcen RESX-Dateien, oder erstellen Sie sie programmgesteuert. Textdateien, die Zeichenfolgenressourcen enthalten, haben das folgende Format:
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>Ressourcen in RESX-Dateien
+
  Im Gegensatz zu Textdateien, in denen nur Zeichenfolgenressourcen gespeichert werden können, können in XML-Ressourcendateien (.resx) Zeichenfolgen, Binärdaten wie Bilder, Symbole und Audioclips sowie programmgesteuerte Objekte gespeichert werden. Eine RESX-Datei enthält einen Standardheader, der das Format der Ressourceneinträge beschreibt und die XML-Versioninginformationen zum Interpretieren der Daten angibt. Die Ressourcendateidaten folgen auf den XML-Header. Jedes Datenelement besteht aus einem Name-Wert-Paar, das in einem `data`-Tag enthalten ist. Sein `name`-Attribut definiert den Ressourcennamen, und das geschachtelte `value`-Tag enthält den Ressourcenwert. Bei Zeichenfolgendaten enthält das `value`-Tag die Zeichenfolge.
 
  Das folgende `data`-Tag definiert z. B. eine Zeichenfolgenressource mit dem Namen von `prompt`, deren Wert "Enter your name:" lautet.
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > Da RESX-Dateien aus wohlgeformtem XML in einem vordefinierten Format bestehen müssen, empfiehlt es sich nicht, mit RESX-Dateien manuell zu arbeiten, insbesondere, wenn die RESX-Dateien andere Ressourcen als Zeichenfolgen enthalten. Stattdessen bietet [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine transparente Schnittstelle zum Erstellen und Bearbeiten von RESX-Dateien. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles). Sie können RESX-Dateien auch programmgesteuert erstellen und bearbeiten. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>Ressourcen in RESOURCES-Dateien
 
 Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klasse können Sie eine binäre Ressourcendatei (.resources) direkt aus Code programmgesteuert erstellen. Sie können auch mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) eine RESOURCES-Datei aus einer Textdatei oder einer RESX-Datei erstellen. Die RESOURCES-Datei kann neben Zeichenfolgendaten Binärdaten (Bytearrays) und Objektdaten enthalten. Das programmgesteuerte Erstellen einer RESOURCES-Datei erfordert die folgenden Schritte:
@@ -195,6 +199,7 @@ Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klas
  Nachdem Sie die RESOURCES-Datei erstellt haben, können Sie die RESOURCES-Datei in eine ausführbare Datei oder Runtimebibliothek einbetten, indem Sie den `/resource`-Schalter des Sprachcompilers einschließen, oder Sie betten sie mit dem [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) in eine Satellitenassembly ein.
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Ressourcendateien in Visual Studio
 
 Wenn Sie dem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, wird von Visual Studio im Projektverzeichnis eine RESX-Datei erstellt. Visual Studio stellt Ressourcen-Editoren bereit, die es Ihnen ermöglichen, Zeichenfolgen, Bilder und binäre Objekte hinzuzufügen. Da die Editoren nur dazu dienen, statische Daten zu behandeln, können sie nicht zum Speichern programmgesteuerter Objekte verwendet werden. Sie müssen Objektdaten programmgesteuert in eine RESX-Datei oder in eine RESOURCES-Datei schreiben. Weitere Informationen finden Sie in den Abschnitten [Programmgesteuertes Arbeiten mit RESX-Dateien](working-with-resx-files-programmatically.md) und [Ressourcen in RESOURCES-Dateien](creating-resource-files-for-desktop-apps.md#ResourcesFiles).

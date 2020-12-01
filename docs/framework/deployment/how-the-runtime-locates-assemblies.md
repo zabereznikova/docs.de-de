@@ -10,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272526"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 
@@ -135,11 +135,13 @@ Die Konfigurationsdatei für Herausgeberrichtlinien überschreibt Versionsinform
 Eine Herausgeberrichtliniendatei wird verwendet, wenn eine freigegebene Komponente aktualisiert wird und die neue Version der freigegebenen Komponente von allen Anwendungen übernommen werden soll, die diese Komponente verwenden. Die Einstellungen in der Herausgeberrichtliniendatei überschreiben diejenigen der Anwendungskonfigurationsdatei, es sei denn, diese erzwingt den abgesicherten Modus.
 
 #### <a name="safe-mode"></a>Abgesicherter Modus
+
 Herausgeberrichtliniendateien werden in der Regel explizit als Teil eines Service Packs oder eines Programmupdates installiert. Wenn Probleme mit der aktualisierten freigegebenen Komponente auftreten sollten, können Sie die Überschreibungen in der Herausgeberrichtliniendatei ignorieren und den abgesicherten Modus verwenden. Der abgesicherte Modus wird vom **\<publisherPolicy apply="yes**&#124;**no"/>** -Element bestimmt, das sich nur in der Anwendungskonfigurationsdatei befindet. Es legt fest, ob die Informationen zur Herausgeberrichtlinienkonfiguration aus dem Bindungsprozess entfernt werden sollten.
 
 Der abgesicherte Modus kann auf die gesamte Anwendung oder ausgewählte Assemblys angewendet werden. Das heißt, Sie können die Richtlinie für alle Assemblys aufheben, aus denen die Anwendung zusammengesetzt ist, oder für einige ausgewählte Assemblys aktivieren. Um die Herausgeberrichtlinie selektiv auf Assemblys anzuwenden, aus denen sich eine Anwendung zusammensetzt, legen Sie **\<publisherPolicy apply\=no/>** fest und bestimmen mit dem \<**dependentAssembly**>-Element die Assemblys, die davon betroffen sein sollen. Um die Herausgeberrichtlinie auf alle Assemblys anzuwenden, legen Sie **\<publisherPolicy apply\=no/>** ohne abhängige Assemblyelemente fest. Weitere Informationen zur Konfiguration finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../configure-apps/index.md).
 
 ### <a name="machine-configuration-file"></a>Computerkonfigurationsdatei
+
 Im dritten Schritt überprüft die Common Language Runtime die Computerkonfigurationsdatei. Diese Datei mit dem Namen "Machine.config" befindet sich auf dem lokalen Computer im Unterverzeichnis "Config" des Stammverzeichnisses, in dem die Common Language Runtime installiert ist. Diese Datei kann von Administratoren verwendet werden, um lokale Assemblybindungsbeschränkungen für diesen Computer festzulegen. Die Einstellungen in der Computerkonfigurationsdatei haben Vorrang vor allen anderen Konfigurationseinstellungen. Dies bedeutet allerdings nicht, dass sich alle Konfigurationseinstellungen in dieser Datei befinden sollten. Die Version, die in der Administratorrichtliniendatei festgelegt ist, ist endgültig und kann nicht überschrieben werden. Überschreibungen, die in der Datei "Machine.config" festgelegt sind, haben Auswirkungen auf alle Anwendungen. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../configure-apps/index.md).
 
 <a name="step2"></a>

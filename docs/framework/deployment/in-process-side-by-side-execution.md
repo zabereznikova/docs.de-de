@@ -6,17 +6,19 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 85d0ec90a8877384517e9de3b56258d294e0c612
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283483"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
+
 Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzigen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
   
 ## <a name="background"></a>Hintergrund  
+
  .NET Framework bot schon immer paralleles Hosting für verwaltete Codeanwendungen. Vor .NET Framework 4 stand diese Funktion jedoch nicht für verwaltete COM-Komponenten zur Verfügung. In der Vergangenheit wurden verwaltete COM-Komponenten, die in einen Prozess geladen wurden, entweder mit der Version der bereits geladenen Runtime oder mit der neuesten installierten Version von .NET Framework ausgeführt. Wenn diese Version nicht mit der COM-Komponente kompatibel war, ist die Komponente fehlgeschlagen.  
   
  .NET Framework 4 bietet eine neue Herangehensweise des parallelen Hostings, wodurch Folgendes sichergestellt werden kann:  
@@ -47,6 +49,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
 > .NET Framework-Versionen 3.0 und 3.5 werden inkrementell auf Version 2.0 erstellt und müssen nicht parallel ausgeführt werden. Sie sind an und für sich dieselbe Version.  
   
 <a name="scenarios"></a>
+
 ## <a name="common-side-by-side-hosting-scenarios"></a>Häufige Szenarios des parallelen Hostings  
   
 - **Szenario 1:** Eine Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden.  
@@ -85,6 +88,7 @@ Ab .NET Framework 4 können Sie mit prozessinternem parallelem Hosting mehrere V
     ```  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Beispiel stellt einen nicht verwalteten COM-Host dar, der eine verwaltete COM-Komponente mithilfe der Version von .NET Framework ausführt, für deren Verwendung die Komponente kompiliert wurde.  
   
  Um das folgende Beispiel auszuführen, kompilieren und registrieren Sie die folgende verwaltete COM-Komponente mithilfe von .NET Framework 3.5. Um die Komponente zu registrieren, klicken Sie im **Projekt**-Menü auf **Eigenschaften**, auf die Registerkarte **Erstellen**, und aktivieren Sie dann das Kontrollkästchen **Für COM-Interop registrieren**.  

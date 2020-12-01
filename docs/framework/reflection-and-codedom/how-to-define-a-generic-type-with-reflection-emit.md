@@ -11,14 +11,15 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75076eb9ce1b9bfc6b3c8b5a48e200ca5e63cdff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559212"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263463"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
+
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
   
 > [!IMPORTANT]
@@ -110,6 +111,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
      [!code-vb[EmitGenericType#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#10)]  
   
 ## <a name="example"></a>Beispiel  
+
  Das folgende Codebeispiel definiert eine Klasse namens `Sample`, zusammen mit einer Basisklasse und zwei Schnittstellen. Das Programm definiert zwei generische Typparameter für `Sample` und wandelt sie in einen generischen Typ um. Typparameter sind das Einzige, das einen Typ generisch macht. Das Programm stellt dies dar, indem eine Testnachricht vor und nach der Definition der Typparameter angezeigt wird.  
   
  Der Typparameter `TSecond` wird auch zur Darstellung von Klassen- und Schnittstelleneinschränkungen verwendet. Hierzu wird die Basisklasse und die Schnittstellen verwendet, und der Typparameter `TFirst` wird zur Darstellung besonderer Einschränkungen verwendet.  

@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-ms.openlocfilehash: bb5aab3361663d7b5401d7e68688265fbc65b36f
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 492315d43043c83d17eab330e8d589d1cffe7ad2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273866"
 ---
 # <a name="mitigation-tls-protocols"></a>Entschärfung: TLS-Protokolle
+
 Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?displayProperty=nameWithType> und <xref:System.Net.Security.SslStream?displayProperty=nameWithType> eines der drei folgenden Protokolle verwenden: Tls1.0, Tls1.1 oder Tls 1.2. Weder das SSL3.0-Protokoll noch das RC4-Verschlüsselungsverfahren werden unterstützt.  
   
 ## <a name="impact"></a>Auswirkungen  
+
  Von dieser Änderung sind folgende Punkte betroffen:  
   
 - Jede App, die SSL für die Kommunikation zu einem HTTPS- oder Socketserver mithilfe eines der folgenden Typen verwendet: <xref:System.Net.Http.HttpClient>, <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.Mail.SmtpClient> und <xref:System.Net.Security.SslStream>.  
@@ -24,6 +26,7 @@ Ab .NET Framework 4.6 dürfen die Klassen <xref:System.Net.ServicePointManager?d
 - Alle serverseitigen Apps, die nicht für die Unterstützung von Tls1.0, Tls1.1 oder Tls 1.2 aktualisiert werden können.  
   
 ## <a name="mitigation"></a>Minderung  
+
  Die empfohlene Minderung besteht darin, die serverseitige App auf Tls1.0, Tls1.1 oder Tls 1.2 zu aktualisieren. Wenn dies nicht möglich ist oder die Client-Apps fehlerhaft sind, kann die Klasse <xref:System.AppContext> verwendet werden, um das Feature auf zwei verschiedene Art und Weisen abzuwählen:  
   
 - Programmgesteuert, durch die Verwendung eines Codeausschnitts wie dem Folgenden:  

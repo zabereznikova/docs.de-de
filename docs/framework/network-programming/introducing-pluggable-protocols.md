@@ -23,17 +23,19 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 0bc2d0d005e50b04aff360866a146f6fe6b0ea02
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5b61497963e785ffe8e4c04db5b54dfb2500eed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502352"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279635"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
+
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
   
 ## <a name="internet-applications"></a>Internetanwendungen  
+
  Internetanwendungen können grob in zwei Kategorien eingeteilt werden: Clientanwendungen, die Informationen anfordern, und Serveranwendungen, die auf Informationsanforderungen von Clients reagieren. Die klassische Client-Server-Internetanwendung ist das World Wide Web. Hier greifen Personen mithilfe eines Browsers auf Dokumente und andere Daten zu, die auf Webservern in der ganzen Welt gespeichert sind.  
   
  Anwendungen sind nicht auf eine dieser Rollen beschränkt. So antwortet der bekannte Middle-Tier-Anwendungsserver beispielsweise auf Clientanfragen, indem er Daten von einem anderen Server anfordert. Dadurch agiert er gleichzeitig als Server und Client.  
@@ -41,11 +43,13 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
  Die Clientanwendung sendet eine Anforderung durch Identifizieren der angeforderten Internetressource und des Kommunikationsprotokolls, die dann für die Anforderung und die Antwort verwendet werden. Der Client stellt bei Bedarf auch alle zusätzlichen Daten bereit, die zum Abschließen der Anforderung erforderlich sind, wie z.B. Informationen zum Proxystandort oder der Authentifizierung (Benutzername, Kennwort usw.). Sobald die Anforderung formuliert ist, kann sie an den Server gesendet werden.  
   
 ## <a name="identifying-resources"></a>Identifizieren von Ressourcen  
+
  .NET Framework verwendet zum Identifizieren der angeforderten Internetressource und des Kommunikationsprotokolls einen Uniform Resource Identifier (URI). Der URI besteht aus mindestens drei, eventuell vier Fragmenten: dem Schemabezeichner, der das Kommunikationsprotokoll für Anforderung und Antwort identifiziert; dem Serverbezeichner, der entweder aus einem DNS-Hostnamen (Domain Name System) oder einer TCP-Adresse zur eindeutigen Identifizierung des Servers im Internet besteht; dem Pfadbezeichner, der die angeforderte Information auf dem Server sucht; sowie der optionalen Abfragezeichenfolge, die Informationen vom Client an den Server übergibt. Der URI `http://www.contoso.com/whatsnew.aspx?date=today` besteht beispielsweise aus dem Schemabezeichner `http`, dem Serverbezeichner `www.contoso.com`, dem Pfad `/whatsnew.aspx` und der Abfragezeichenfolge `?date=today`.  
   
  Nachdem der Server die Anforderung empfangen und die Antwort verarbeitet hat, gibt er die Antwort an die Clientanwendung zurück. Die Antwort enthält zusätzliche Informationen, wie etwa den Inhaltstyp (z.B. unformatierter Text oder XML-Daten).  
   
 ## <a name="requests-and-responses-in-the-net-framework"></a>Anforderungen und Antworten in .NET Framework  
+
  .NET Framework verwendet spezifische Klassen zum Bereitstellen der drei Informationen, die für den Zugriff auf Internetressourcen über das Anforderungs-/Antwortmodell erforderlich sind: die Klasse <xref:System.Uri>, die den URI der von Ihnen gesuchten Internetressource enthält; die Klasse <xref:System.Net.WebRequest>, die eine Anforderung für die Ressource enthält; sowie die Klasse <xref:System.Net.WebResponse>, die einen Container für die eingehende Antwort bereitstellt.  
   
  Clientanwendungen erstellen `WebRequest`-Instanzen durch Übergeben des URI der Netzwerkressource an die Methode <xref:System.Net.WebRequest.Create%2A>. Diese statische Methode erstellt für ein bestimmtes Protokoll, wie z.B. HTTP, eine `WebRequest`. Die zurückgegebene `WebRequest` ermöglicht den Zugriff auf Eigenschaften, mit denen sowohl die Anforderung an den Server als auch der Zugriff auf den beim Stellen der Anforderung gesendeten Datenstrom gesteuert wird. Die Methode <xref:System.Net.WebRequest.GetResponse%2A> auf der `WebRequest` sendet die Anforderung von der Clientanwendung an den im URI identifizierten Server. Bei verzögerter Antwort kann die Anforderung durch Anwenden der Methode <xref:System.Net.WebRequest.BeginGetResponse%2A> auf die **WebRequest** asynchron erstellt werden. Die Antwort kann zu einem späteren Zeitpunkt mithilfe der Methode <xref:System.Net.WebRequest.EndGetResponse%2A> zurückgegeben werden.  
@@ -61,6 +65,7 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
  Ist für Internetanforderungen eine Clientautorisierung erforderlich, werden die benötigten Anmeldeinformationen durch die Eigenschaft <xref:System.Net.WebRequest.Credentials%2A> der **WebRequest** bereitgestellt. Diese Anmeldeinformationen können ein einfaches Benutzername-Kennwort-Paar für eine Standard-HTTP- oder Digestauthentifizierung sein oder ein Satz bestehend aus Name/Kennwort/Domäne für eine NTLM- oder Kerberos-Authentifizierung. Ein Satz Anmeldeinformationen kann in einer <xref:System.Net.NetworkCredential>-Instanz gespeichert werden, mehrere Sätze können gleichzeitig in einer <xref:System.Net.CredentialCache>-Instanz gespeichert werden. Der URI der Anforderung und das vom Server unterstütze Authentifizierungsschema werden vom **CredentialCache** zur Bestimmung der Anmeldeinformationen verwendet, die an den Server gesendet werden sollen.  
   
 ## <a name="simple-requests-with-webclient"></a>Einfache Anforderungen mit WebClient  
+
  Für Anwendungen, die einfache Anforderungen für Internetressourcen erstellen müssen, stellt die Klasse <xref:System.Net.WebClient> allgemeine Methoden für das Hochladen oder Herunterladen von Daten zu oder von einem Internetserver bereit. **WebClient** verwendet für den Zugriff auf Internetressourcen die **WebRequest**-Klasse. Aus diesem Grund kann die **WebClient**-Klasse jedes registrierte austauschbare Protokoll verwenden.  
   
  Für Anwendungen, die das Anforderungs-/Antwortmodell nicht verwenden können oder die das Netzwerk überwachen und Anforderungen senden müssen, stellt der **System.Net.Sockets**-Namespace die Klassen <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> und <xref:System.Net.Sockets.UdpClient> bereit. Diese Klassen behandeln die Details für die Verbindungsherstellung mithilfe verschiedener Transportprotokolle und machen der Anwendung die Netzwerkverbindung als Stream verfügbar.  

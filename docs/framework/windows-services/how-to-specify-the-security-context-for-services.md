@@ -11,14 +11,15 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-ms.openlocfilehash: 06053ee069777f69eea15a7ec3125b510bb34602
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: dcf0680f1bcb0f0e927bdb37ea56f7b3025be09b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608425"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270536"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Vorgehensweise: Angeben des Sicherheitskontexts für Dienste
+
 Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt als dem des angemeldeten Benutzers. Dienste werden im Kontext des Standardsystemkontos, `LocalSystem`, ausgeführt, das ihnen andere Zugriffsberechtigungen für Systemressourcen erteilt als dem Benutzer. Sie können dieses Verhalten ändern und ein anderes Benutzerkonto angeben, unter dem Ihr Dienst ausgeführt werden sollte.  
   
  Der Sicherheitskontext lässt sich festlegen, indem Sie die Eigenschaft <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> für den Prozess bearbeiten, in dem der Dienst ausgeführt wird. Mit dieser Eigenschaft können Sie den Dienst auf einen von vier Kontotypen festlegen:  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection, generic types
 - generics [.NET Framework], reflection
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
-ms.openlocfilehash: b57a0ed0c809da442dc9fcf202ad364060971f80
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 34efca4a26b0ab3739d19b793237532ec9f4f15e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865098"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263437"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion
+
 Informationen zu generischen Typen können Sie genauso abrufen wie Informationen zu anderen Typen: indem Sie sich ein <xref:System.Type>-Objekt anschauen, das den generischen Typ darstellt. Der größte Unterschied besteht dabei darin, dass eine generischer Type eine Liste von <xref:System.Type>-Objekten hat, die dessen generischen Typparameter darstellen. Die erste Prozedur in diesem Abschnitt beschäftigt sich mit generischen Typen.  
   
  Sie können ein <xref:System.Type>-Objekt erstellen, dass einen konstruierten Typ darstellt, indem Sie Typargumente an die Typparameter einer generischen Typdefinition binden. Dies wird in der zweiten Prozedur veranschaulicht.  
@@ -73,6 +74,7 @@ Informationen zu generischen Typen können Sie genauso abrufen wie Informationen
      [!code-vb[HowToGeneric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#9)]  
   
 ## <a name="constructing-an-instance-of-a-generic-type"></a>Konstruieren einer Instanz eines generischen Typs  
+
  Ein generischer Typ ähnelt einer Vorlage. Sie können nur dann Instanzen des Typs erstellen, wenn Sie die echten Typen seiner generischen Typparameter angeben. Wenn Sie dies zur Runtime mit Reflektion machen möchten, ist die <xref:System.Type.MakeGenericType%2A>-Methode erforderlich.  
   
 #### <a name="to-construct-an-instance-of-a-generic-type"></a>So konstruieren Sie eine Instanz eines generischen Typs  
@@ -102,6 +104,7 @@ Informationen zu generischen Typen können Sie genauso abrufen wie Informationen
      [!code-vb[HowToGeneric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#13)]  
   
 ## <a name="example"></a>Beispiel  
+
  In folgendem Codebeispiel wird eine `DisplayGenericType`-Methode definiert, um die im Code verwendeten generischen Typdefinitionen und konstruierten Typen zu untersuchen und deren Informationen anzuzeigen. Die `DisplayGenericType`-Methode zeigt, wie Sie die Eigenschaften <xref:System.Type.IsGenericType%2A>, <xref:System.Type.IsGenericParameter%2A> und <xref:System.Type.GenericParameterPosition%2A> und die <xref:System.Type.GetGenericArguments%2A>-Methode verwenden können.  
   
  Im Beispiel wird auch eine `DisplayGenericParameter`-Methode definiert, um einen generischen Typparameter zu untersuchen und dessen Einschränkungen anzuzeigen.  

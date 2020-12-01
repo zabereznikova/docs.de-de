@@ -10,19 +10,21 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: bc95197813f5e4b0f4c7db6a8f0c24e8b27e4c3e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ed8568116d189573a1903678726cb348fa062376
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282885"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM-Interop-Beispiel: .NET-Client und COM-Server
+
 In diesem Beispiel wird veranschaulicht, wie ein [.NET Client](#cpconcominteropsamplenetclientcomserveranchor1), der für den Zugriff auf einen [COM-Server](#cpconcominteropsamplenetclientcomserveranchor2) erstellt wurde, eine Instanz einer COM-Co-Klasse erstellt und Klassenmember aufruft, um Hypothekenberechnungen durchzuführen.  
   
  In diesem Beispiel erstellt der Client eine Instanz der **Loan**-Co-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codefragmente aus diesem Beispiel angezeigt.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
+
 ## <a name="net-client"></a>.NET-Client  
   
 ```vb  
@@ -153,6 +155,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
+
 ## <a name="com-server"></a>COM-Server  
   
 ```cpp  

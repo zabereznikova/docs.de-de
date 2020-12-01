@@ -3,17 +3,19 @@ title: Erweiterungen der Socketleistung in Version 3.5
 description: Informieren Sie sich über Leistungsverbesserungen der System.Net.Sockets.Socket-Klasse in Version 3.5 im .NET Framework.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bd7c97d6a6edd5f914d6fe3118b6d81b64544e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263138"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Erweiterungen der Socketleistung in Version 3.5
+
 Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
   
 ## <a name="class-enhancements"></a>Klassenverbesserungen  
+
  Die Hauptfunktion dieser Erweiterungen ist die Vermeidung der wiederholten Zuordnung und Synchronisierung von Objekten während asynchroner Socket-E/A mit hohem Volumen. Das derzeit von der <xref:System.Net.Sockets.Socket>-Klasse für asynchrone Socket-E/A implementierte Begin/End-Entwurfsmuster erfordert, dass jedem asynchronen Socketvorgang ein <xref:System.IAsyncResult?displayProperty=nameWithType>-Objekt zugewiesen wird.  
   
  In den neuen <xref:System.Net.Sockets.Socket>-Klassenerweiterungen werden asynchrone Vorgänge von wiederverwendbaren <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>-Klassenobjekten beschrieben, die von der Anwendung zugewiesen und verwaltet werden. Socketanwendungen mit hoher Leistung kennen die Menge an überlappenden Socketvorgängen, die aufrechterhalten werden müssen, am besten. Die Anwendung kann so viele <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte erstellen wie nötig. Wenn beispielsweise eine Serveranwendung zu jeder Zeit 15 Socketannahmevorgänge zur Verfügung haben muss, um eingehende Clientverbindungsraten zu unterstützen, kann sie diesem Zweck im Voraus 15 wiederverwendbare <xref:System.Net.Sockets.SocketAsyncEventArgs>-Objekte zuweisen.  

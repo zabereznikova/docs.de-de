@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502001"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265192"
 ---
 # <a name="using-client-sockets"></a>Verwenden von Clientsockets
+
 Bevor Sie eine Konversation über <xref:System.Net.Sockets.Socket> initiieren können, müssen Sie eine Datenpipeline zwischen Ihrer Anwendung und dem Remotegerät erstellen. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie eine TCP/IP-Verbindung mit einem Remotedienst erstellt wird.  
   
  TCP/IP verwendet eine Netzwerkadresse und eine Dienstportnummer zur eindeutigen Identifizierung eines Diensts. Die Netzwerkadresse identifiziert ein bestimmtes Gerät im Netzwerk. Die Portnummer identifiziert den bestimmten Dienst auf diesem Gerät für die Verbindung. Die Kombination von Netzwerkadresse und Dienstport wird Endpunkt genannt. Dieser wird in .NET Framework durch die <xref:System.Net.EndPoint>-Klasse dargestellt. Ein Nachfolger des **EndPoint** wird für jede unterstützte Adressfamilie definiert. Die Klasse für die IP-Adressfamilie ist <xref:System.Net.IPEndPoint>.  

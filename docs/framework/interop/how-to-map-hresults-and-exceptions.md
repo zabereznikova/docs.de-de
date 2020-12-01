@@ -12,14 +12,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea5d920ccfa8a91c9fdc9d95c6165c8dfb52c6ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554142"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267038"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
+
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
   
  Benutzerdefinierte Ausnahmeklassen können jedes angemessene HRESULT angeben. Diese Ausnahmeklassen können durch eine dynamische Änderung einstellen, dass das HRESULT zurückgegeben wird, wenn die Ausnahme durch Festlegen des **HResult**-Felds für das Ausnahmeobjekt generiert wird. Weitere Informationen zur Ausnahme wird dem Client über die **IErrorInfo**-Schnittstelle zur Verfügung gestellt, die auf das .NET-Objekt im nicht verwalteten Prozess implementiert wird.  

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 859c564e107fd3a9b219d71dc6ac5ccdf6e9d690
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558796"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259277"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
+
 .NET Framework bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), die jeweils mit eigenen Sicherheitsproblemen verbunden sind:  
   
 - [Dynamische Assemblys](#Dynamic_Assemblies)  
@@ -34,7 +35,9 @@ ms.locfileid: "90558796"
 > Die Berechtigungen, die für das Reflektieren und Ausgeben von Code erforderlich sind, haben sich mit den Nachfolgeversionen von .NET Framework geändert. Siehe weiter unten in diesem Thema unter [Versionsinformationen](#Version_Information).  
   
 <a name="Dynamic_Assemblies"></a>
+
 ## <a name="dynamic-assemblies"></a>Dynamische Assemblys  
+
  Dynamische Assemblys werden unter Verwendung von Überladungen der <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>-Methode erstellt. Die meisten Überladungen dieser Methode werden in .NET Framework 4 nicht mehr unterstützt, weil computerweite Sicherheitsrichtlinien beseitigt wurden. (Weitere Informationen finden Sie unter [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes).) Die verbleibenden Überladungen können von jedem Code, unabhängig von der Vertrauensebene, ausgeführt werden. Diese Überladungen fallen in zwei Gruppen: solche, die eine Liste mit Attributen angeben, die auf die dynamische Assembly angewendet werden sollen, wenn sie erstellt wird, und solche, die dies unterlassen. Wenn Sie das Transparenzmodell für die Assembly beim Erstellen nicht durch Anwendung des <xref:System.Security.SecurityRulesAttribute>-Attributs angeben, wird das Transparenzmodell von der ausgebenden Assembly geerbt.  
   
 > [!NOTE]
@@ -48,6 +51,7 @@ ms.locfileid: "90558796"
  Flüchtige dynamische Assemblys werden im Arbeitsspeicher erstellt und nie auf dem Datenträger gespeichert, weshalb sie keine Berechtigungen für den Dateizugriff benötigen. Für das Speichern einer dynamischen Assembly auf dem Datenträger ist <xref:System.Security.Permissions.FileIOPermission> mit den geeigneten Flags erforderlich.  
   
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Generieren von dynamischen Assemblys aus teilweise vertrauenswürdigem Code  
+
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine flüchtige dynamische Assembly generieren und deren Code ausführen kann:  
   
 - Die dynamische Assembly verwendet nur öffentliche Typen und Member aus anderen Assemblys.  
@@ -59,7 +63,9 @@ ms.locfileid: "90558796"
 - Es werden keine Debugsymbole generiert. (`Internet`- und `LocalIntranet`-Berechtigungssätze enthalten nicht die notwendigen Berechtigungen.)  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>
+
 ## <a name="anonymously-hosted-dynamic-methods"></a>Anonym gehostete dynamische Methoden  
+
  Anonym gehostete dynamische Methoden werden mithilfe der zwei <xref:System.Reflection.Emit.DynamicMethod>-Konstruktoren erstellt, die kein zugeordnetes Modul und keinen zugeordneten Typ angeben, <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> und <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>. Diese Konstruktoren fügen die dynamischen Methoden in eine vom System bereitgestellte, vollständig vertrauenswürdige, sicherheitstransparente Assembly ein. Es sind keine Berechtigungen erforderlich, um diese Konstruktoren zu verwenden oder Code für die dynamischen Methoden auszugeben.  
   
  Stattdessen wird, wenn eine anonym gehostete dynamische Methode erstellt wird, wird die Aufrufliste erfasst. Wenn die Methode erstellt wird, werden anhand der erfassten Aufrufliste Sicherheitsanforderungen aufgestellt.  
@@ -82,6 +88,7 @@ ms.locfileid: "90558796"
  Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Reflection.Emit.DynamicMethod>-Klasse.  
   
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generieren von anonym gehosteten dynamischen Methoden aus teilweise vertrauenswürdigem Code  
+
  Beachten Sie die Bedingungen, unter denen eine Assembly mit Internetberechtigungen eine anonym gehostete dynamische Methode generieren und ausführen kann:  
   
 - Die dynamische Methode verwendet nur öffentliche Typen und Member. Wenn ihr Berechtigungssatz <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> enthält, kann sie nicht öffentliche Typen und Member jeder Assembly verwenden, deren Berechtigungssatz mit dem Berechtigungssatz der ausgebenden Assembly übereinstimmt oder eine Teilmenge davon darstellt.  
@@ -92,7 +99,9 @@ ms.locfileid: "90558796"
 > Dynamische Methoden unterstützen keine Debugsymbole.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
+
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Vorhandenen Assemblys zugeordnete dynamische Methoden  
+
  Um eine dynamische Methode einem Typ oder Modul in einer vorhandenen Assembly zuzuordnen, verwenden Sie einen der <xref:System.Reflection.Emit.DynamicMethod>-Konstruktoren, die den zugeordneten Typ bzw. das zugeordnete Modul angeben. Die Berechtigungen, die erforderlich sind, um diese Konstruktoren aufzurufen, variieren, da das Zuordnen einer dynamischen Methode zu einem vorhandenen Typ oder Modul der dynamischen Methode den Zugriff auf nicht öffentliche Typen und Member gewährt:  
   
 - Eine dynamische Methode, die einem Typ zugeordnet ist, hat Zugriff auf alle Member dieses Typs, einschließlich privater Member, sowie auf alle internen Typen und Member in der Assembly, die den zugeordneten Typ enthält.  
@@ -137,7 +146,9 @@ ms.locfileid: "90558796"
 > Dynamische Methoden unterstützen keine Debugsymbole.  
   
 <a name="Version_Information"></a>
+
 ## <a name="version-information"></a>Versionsinformationen  
+
  Ab .NET Framework 4 wurde die computerweite Sicherheitsrichtlinie beseitigt, und Sicherheitstransparenz wird zum standardmäßigen Erzwingungsmechanismus. Weitere Informationen finden Sie unter [Sicherheitsänderungen](/previous-versions/dotnet/framework/security/security-changes).  
   
  Ab .NET Framework 2.0 Service Pack 1 ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>-Flag beim Ausgeben von dynamischen Assemblys und dynamischen Methoden nicht mehr erforderlich. In allen früheren Versionen von .NET Framework ist dieses Flag erforderlich.  
@@ -150,6 +161,7 @@ ms.locfileid: "90558796"
  Schließlich wurden in .NET Framework 2.0 SP1 anonym gehostete Methoden eingeführt.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Abrufen von Informationen zu Typen und Member  
+
  Ab .NET Framework 2.0 sind keine Berechtigungen erforderlich, um Informationen über nicht öffentliche Typen und Member abzurufen. Reflektion wird verwendet, um Informationen abzurufen, die zum Ausgeben dynamischer Methoden erforderlich sind. Beispielsweise werden <xref:System.Reflection.MethodInfo>-Objekte verwendet, um Methodenaufrufe auszugeben. Frühere Versionen von .NET Framework erfordern <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Siehe auch

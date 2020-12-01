@@ -13,14 +13,15 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e5f1fd8ebbbb218e8d6eba9b2d30d05e7c0e62c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608555"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270575"
 ---
 # <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
+
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  
   
  Das Installationsprogramm für Ihren Dienst registriert jeden Dienst in Ihrem Projekt automatisch als gültige Quelle von Ereignissen für das Anwendungsprotokoll auf dem Computer, auf dem der Dienst installiert ist, wenn die Protokollierung aktiviert ist. Der Dienst protokolliert jedes Mal Informationen, wenn er gestartet, beendet, angehalten, fortgesetzt, installiert oder deinstalliert wird. Der Dienst protokolliert auch alle auftretenden Fehler. Wird das Standardverhalten verwendet, müssen Sie keinen Code schreiben, damit Einträge in das Protokoll geschrieben werden. Dies wird vom Dienst automatisch erledigt.  

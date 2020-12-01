@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 45a80ba7c3e24c0f419758315b2d2daafd3890f4
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d1644ff4d69c857e36e87f7e83f668908b7ba021
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164244"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275761"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
+
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
   
  Eine LICX-Textdatei wird vom Windows Forms-Designer automatisch generiert oder aktualisiert, sobald dem Formular ein lizenziertes Steuerelement hinzugefügt wird. Bei der Kompilierung wandelt das Projektsystem die LICX-Textdatei in eine binäre LICENSES-Ressource um, die die Lizenzierung des .NET-Steuerelements unterstützt. Die binäre Ressource wird anschließend in die Projektausgabe eingebettet.  
@@ -43,7 +44,7 @@ targetPE /complist:filename [-outdir:path]
 |------------|-----------------|  
 |**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/i:** *module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere **/i**-Flags, um mehrere Module anzugeben.|  
+|**/i:** *module*|Gibt die Module an, die die in der Datei **/complist** aufgelisteten Komponenten enthalten. Verwenden Sie mehrere **/i**-Flags, um mehrere Module anzugeben.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/outdir:** *path*|Gibt das Verzeichnis an, in dem die LICENSES-Ausgabedatei gespeichert werden soll.|  
 |**/target:** *targetPE*|Gibt die ausführbare Datei an, für die die LICENSES-Datei generiert wird.|  
@@ -78,6 +79,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 ```  
   
 ## <a name="response-file-example"></a>Beispiel für eine Antwortdatei  
+
  Die folgende Auflistung enthält ein Beispiel für eine Antwortdatei namens `response.rsp`. Weitere Informationen zu Antwortdateien finden Sie unter [Antwortdateien](/visualstudio/msbuild/msbuild-response-files).  
   
 ```text  

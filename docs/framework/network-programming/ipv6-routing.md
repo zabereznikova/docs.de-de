@@ -2,17 +2,19 @@
 title: IPv6-Routing
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047788"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258334"
 ---
 # <a name="ipv6-routing"></a>IPv6-Routing
+
 Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf die IPv4-Netzwerk-IDs zugeordnet werden, müssen große Routingtabellen von den Routern verwaltet werden, die sich in den Internetbackbones befinden. Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet weitergeleitet werden. IPv6 ermöglicht flexiblere Adressen durch seine Fähigkeit zum Aggregieren von Adressen und reduziert die Größe von Routingtabellen drastisch. In dieser neuen Adressarchitektur müssen zwischengeschaltete Router nur den lokalen Teil ihres Netzwerks verfolgen, um eine Nachricht korrekt weiterzuleiten.  
   
 ## <a name="neighbor-discovery"></a>Nachbarsuche  
+
  Im Folgenden finden Sie einige der Funktionen, die von der Nachbarsuche bereitgestellt werden:  
   
 - Routersuche. Dadurch können Hosts lokale Router identifizieren.  
