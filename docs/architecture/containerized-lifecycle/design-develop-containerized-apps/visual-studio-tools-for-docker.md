@@ -4,11 +4,11 @@ description: Lernen Sie die in Visual Studio 2017, Version 15.7 und höher, verf
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
 ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678926"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032189"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Verwenden von Docker-Tools in Visual Studio unter Windows
 
@@ -25,7 +25,7 @@ Mit den neuesten Versionen von Docker für Windows ist es einfacher denn je, Doc
 
 Es gibt zwei Ebenen von Docker-Unterstützung, die Sie einem Projekt hinzufügen können. In ASP.NET Core-Projekten können Sie dem Projekt einfach eine `Dockerfile`-Datei hinzufügen, indem Sie Docker-Unterstützung aktivieren. Die nächste Ebene ist die Orchestrierungsunterstützung für Container, die dem Projekt ein `Dockerfile` (wenn dort noch keins vorhanden ist) und eine `docker-compose.yml`-Datei auf Projektmappenebene hinzufügt. Orchstrierungsunterstützung für Container mithilfe von Docker Compose wird in Visual Studio 2017, Versionen 15.0 bis 15.7, standardmäßig hinzugefügt. Orchestrierungsunterstützung für Container ist eine optionale Funktion in Visual Studio 2017, Version 15.8 oder höher. Visual Studio 2019 oder höher unterstützt auch **Kubernetes-/Helm-** -Bereitstellungen.
 
-Die Befehle **Hinzufügen > Docker-Unterstützung** und **Hinzufügen > Unterstützung für Containerorchestrator** befinden sich im ** Projektmappen-Explorer** im Kontextmenü des Projektknotens für ein ASP.NET Core-Projekt wie in Abbildung 4–31 gezeigt:
+Die Befehle **Hinzufügen > Docker-Unterstützung** und **Hinzufügen > Unterstützung für Containerorchestrator** befinden sich im **Projektmappen-Explorer** im Kontextmenü des Projektknotens für ein ASP.NET Core-Projekt wie in Abbildung 4–31 gezeigt:
 
 ![Menüoption „Hinzufügen > Docker-Unterstützung“ in Visual Studio](media/add-docker-support-menu.png)
 

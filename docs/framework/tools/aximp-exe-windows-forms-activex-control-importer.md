@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167345"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247342"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
+
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
   
  Windows Forms können nur Windows Forms-Steuerelemente hosten, d. h. Klassen, die von <xref:System.Windows.Forms.Control> abgeleitet werden. "Aximp.exe" generiert eine Wrapperklasse für ein ActiveX-Steuerelement, für das ein Windows Form als Host fungieren kann. Daher stehen Ihnen dieselbe Unterstützung zur Entwurfszeit und dieselbe Programmierungsmethodik zur Verfügung, die auch für andere Windows Forms-Steuerelemente gelten.  
@@ -58,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  Common Language Runtime-Proxy für COM-Typen: „*progid*.dll“  
   
- Windows Forms-Proxy für ActiveX-Steuerelemente, wobei Ax für ActiveX steht: Ax*progid*.dll  
+ Windows Forms-Proxy für ActiveX-Steuerelemente, wobei Ax für ActiveX steht: Ax *progid*.dll  
   
 > [!NOTE]
 > Wenn der Name eines Members des ActiveX-Steuerelements mit einem in .NET Framework definierten Namen übereinstimmt, stellt "Aximp.exe" beim Erstellen der abgeleiteten AxHost-Klasse dem Membernamen das Präfix "Ctl" voran. Wenn das ActiveX-Steuerelement beispielsweise einen Member mit dem Namen "Layout" besitzt, wird dieser in der abgeleiteten AxHost-Klasse in "CtlLayout" umbenannt, da das Layout-Ereignis in .NET Framework definiert ist.  
@@ -72,6 +73,7 @@ aximp [options]{file.dll | file.ocx}
  Wenn Sie mit "Aximp.exe" und "shdocvw.dll" eine .NET-Assembly für die Verwendung in der Anwendungsentwicklung erstellen, kann dies ebenfalls zu Problemen führen. In diesem Fall lädt die Anwendung sowohl die Systemversion als auch die erzeugte Version von "shdocvw.dll" und weist der Systemversion möglicherweise die Priorität zu. Wenn Sie in diesem Fall versuchen, im ActiveX-Steuerelement WebBrowser eine Webseite zu laden, wird möglicherweise ein Dialogfeld zum Öffnen oder Speichern angezeigt. Wenn der Benutzer auf **Öffnen** klickt, wird die Website in Internet Explorer geöffnet. Dies geschieht nur bei Computern, auf denen Internet Explorer Version 6 oder früher ausgeführt wird. Um dieses Problem zu verhindern, verwenden Sie das verwaltete <xref:System.Windows.Forms.WebBrowser>-Steuerelement oder Visual Studio, um die verwaltete Datei „shdocvw.dll“ wie in [How to: Add References to Type Libraries (Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken)](../interop/how-to-add-references-to-type-libraries.md) beschrieben zu erstellen.  
   
 ## <a name="example"></a>Beispiel  
+
  Durch den folgenden Befehl werden "MediaPlayer.dll" und "AxMediaPlayer.dll" für das Media Player-Steuerelement `msdxm.ocx` erstellt.  
   
 ```console

@@ -3,17 +3,19 @@ title: Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 description: WebRequest und abgeleitete Klassen lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. Verwenden Sie diese Ansätze, um diese Zustände im .NET Framework zu beheben.
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: aa9ab989bad7940e82cc4fd8fd22ca3915f7b800
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 27fde2a3cf3e6a3469a47bdd9efe70d31620777d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502079"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236324"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Grundlegendes zu WebRequest-Problemen und -Ausnahmen
+
 <xref:System.Net.WebRequest> und die abgeleiteten Klassen (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FileWebRequest>) lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. In einigen Fällen ist die Lösung dieser Probleme nicht offensichtlich.  
   
 ## <a name="solutions"></a>Projektmappen  
+
  Überprüfen Sie die <xref:System.Net.WebException.Status%2A>-Eigenschaft der <xref:System.Net.WebException>, um das Problem zu ermitteln. In der folgenden Tabelle werden mehrere Statuswerte und einige mögliche Lösungen angezeigt.  
   
 |Status|Details|Lösung|  

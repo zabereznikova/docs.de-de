@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144994"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032653"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Freigegebenes Framework: Assemblys aus Microsoft.AspNetCore.App entfernt
 

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: 1f749b9102182e78bc3fda436cf386a9f5759d5a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: a22155f3e4cbf665e962ff79f92a6313eca7c223
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734789"
 ---
 # <a name="steps-in-the-serialization-process"></a>Schritte im Serialisierungsprozess
+
 Wenn die <xref:System.Runtime.Serialization.Formatter.Serialize%2A>-Methode für ein [Formatierungsprogramm](xref:System.Runtime.Serialization.Formatter) aufgerufen wird, erfolgt die Objektserialisierung nach den folgenden Regeln:
 
 - Es wird überprüft, ob das Formatierungsprogramm über einen Ersatzselektor verfügt. Ist dies beim vorliegenden Formatierungsprogramm der Fall, wird geprüft, ob der Ersatzselektor Objekte des gegebenen Typs handhaben kann. Wenn der Selektor den Objekttyp handhaben kann, wird <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> im Ersatzselektor aufgerufen.

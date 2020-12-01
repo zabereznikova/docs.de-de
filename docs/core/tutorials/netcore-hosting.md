@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die.NET Core-Runtime vom nativen Code aus hos
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160983"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242915"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Schreiben Sie einen benutzerdefinierten .NET Core-Host, um die .NET-Runtime über den systemeigenen Code zu steuern.
 
@@ -163,6 +163,7 @@ Wenn der Host den verwalteten Code ausgeführt hat, wird die .NET Core-Runtime s
 CoreCLR unterstützt keine erneute Initialisierung oder das Entladen. Rufen Sie `coreclr_initialize` nicht erneut auf oder entladen Sie die CoreCLR-Bibliothek.
 
 ## <a name="conclusion"></a>Zusammenfassung
+
 Sobald Ihr Host erstellt wurde, können Sie ihn testen, indem Sie ihn über die Befehlszeile ausführen und Argumente übergeben, die der Host erwartet. Beim Angeben der .NET Core-Anwendung, die den Host ausführt, müssen Sie die DLL-Datei verwenden, die von `dotnet build` erzeugt wurde. Ausführbare Dateien (EXE-Dateien), die für eigenständige Anwendungen von `dotnet publish` erstellt wurden, stellen die Standardeinstellung des .NET Core-Hosts dar, sodass die Anwendung in Hauptszenarios direkt über die Befehlszeile gestartet werden kann. Der Benutzercode wird in eine DLL-Datei mit dem gleichen Namen kompiliert.
 
 Wenn anfangs Funktionsstörungen auftreten, überprüfen Sie, ob *coreclr.dll* an dem Speicherort zur Verfügung steht, den der Host erwartet, ob sich alle erforderlichen Frameworkbibliotheken in der TPA-Liste befinden und ob die CoreCLR-Bitanzahl (32-Bit oder 64-Bit) der Erstellungsart des Host entspricht.

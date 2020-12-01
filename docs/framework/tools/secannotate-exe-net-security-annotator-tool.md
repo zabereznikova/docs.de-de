@@ -6,14 +6,15 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 408a3064b67cae2d75c80881f918c774e05866e6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cfa7ec7cb0ff174a820afcdcbdb1eb461510fc05
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238534"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator-Tool)
+
 Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.  
   
  [Security Annotator,](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator) eine Visual Studio-Erweiterung, stellt eine grafische Benutzeroberfläche für „secAnnotate.exe“ bereit und ermöglicht die Ausführung des Tools in Visual Studio.  
@@ -49,6 +50,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/y:` *verzeichnis*<br /><br /> oder<br /><br /> `/symbolpath:` *verzeichnis*|Schließt das angegebene Verzeichnis beim Suchen nach Symboldateien während der Anmerkung ein.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Parameter und Assemblys werden möglicherweise auch in einer Antwortdatei bereitgestellt, die in der Befehlszeile angegeben und der ein @-Zeichen vorangestellt wird. Jede Zeile in der Antwortdatei sollte einen einzelnen Parameter- oder Assemblynamen enthalten.  
   
  Weitere Informationen zu .NET Security Annotator finden Sie im Eintrag [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations (Analysieren Ihrer Assemblys auf Transparenzverstöße mit SecAnnotate)](/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) im .NET Security Blog.  

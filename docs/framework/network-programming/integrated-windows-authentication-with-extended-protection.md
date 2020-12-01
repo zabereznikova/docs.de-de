@@ -2,14 +2,15 @@
 title: Integrierte Windows-Authentifizierung mit erweitertem Schutz
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144850"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241622"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Integrierte Windows-Authentifizierung mit erweitertem Schutz
+
 Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> und verknüpfte Klassen in <xref:System.Net> sowie verknüpfte Namespaces behandelt wird. Unterstützung für erweiterten Schutz wurde zur Verbesserung der Sicherheit hinzugefügt.  
   
  Diese Änderungen können sich auf Anwendungen auswirken, die diese Klassen für Webanforderungen und den Empfang der Antworten verwenden, in denen die integrierte Windows-Authentifizierung verwendet wird. Die Änderung kann sich auch auf Webserver und Clientanwendungen auswirken, die für die Verwendung der integrierten Windows-Authentifizierung konfiguriert sind.  
@@ -19,6 +20,7 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
  Die Änderungen zur Unterstützung des erweiterten Schutzes sind nur für Anwendungen verfügbar, die Windows 7 und Windows Server 2008 R2 ausführen. Die erweiterten Schutzfunktionen sind nicht für frühere Windows-Versionen verfügbar.  
   
 ## <a name="overview"></a>Übersicht  
+
  Durch die Gestaltung der integrierten Windows-Authentifizierung sind einige Abfragerückmeldungen zu Anmeldeinformationen universell, d.h. sie können wiederverwendet oder weitergeleitet werden. Die Abfragerückmeldungen sollten so konstruiert sein, dass sie mindestens über zielspezifische Informationen verfügen, vorzugsweise auch über einige kanalspezifische Informationen. Der erweiterte Schutz kann dann von Diensten bereitgestellt werden, damit Abfragerückmeldungen zu Anmeldeinformationen auch sicher dienstspezifische Informationen, wie z.B. einen Dienstprinzipalnamen (Service Principal Name, SPN), enthalten. Enthält der Austausch von Anmeldedaten diese Informationen, können die Dienste besser vor einer böswilligen Verwendung von Abfragerückmeldungen zu Anmeldeinformationen schützen, die möglicherweise nicht ordnungsgemäß verwendet wurden.  
   
  Die Gestaltung des erweiterten Schutzes stellt eine Verbesserung der Authentifizierungsprotokolle dar, um Relay-Angriffe auf die Authentifizierung zu verringern. Sie basiert auf Kanalbindungs- und Dienstbindungsinformationen.  
@@ -64,6 +66,7 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
  Der erweiterte Schutz wird derzeit für Windows 7 unterstützt. Über einen bereitgestellten Mechanismus ermittelt eine Anwendung, ob das Betriebssystem den erweiterten Schutz unterstützt.  
   
 ## <a name="changes-to-support-extended-protection"></a>Erforderliche Änderungen für den erweiterten Schutz  
+
  Der bei der integrierten Windows-Authentifizierung verwendete Authentifizierungsvorgang enthält je nach Authentifizierungsprotokoll häufig eine Abfrage, die vom Zielcomputer ausgegeben und an den Clientcomputer zurückgesendet wird. Der erweiterte Schutz fügt diesem Authentifizierungsvorgang neue Funktionen hinzu.  
   
  Der Namespace <xref:System.Security.Authentication.ExtendedProtection> stellt Unterstützung für die Authentifizierung mit erweitertem Schutz für Anwendungen bereit. In diesem Namespace stellt die Klasse <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> die Kanalbindung dar. Die Klasse <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> stellt in diesem Namespace die erweiterte Schutzrichtlinie dar, die vom Server zur Validierung eingehender Clientverbindungen verwendet wird. Andere Klassenmember werden mit erweitertem Schutz verwendet.  
@@ -107,6 +110,7 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
  Eine <xref:System.Net.Configuration.SmtpNetworkElement>-Eigenschaft wurde hinzugefügt, um die Konfiguration des erweiterten Schutzes für SMTP-Clients im Namespace <xref:System.Net.Security> zu unterstützen.  
   
 ## <a name="extended-protection-for-client-applications"></a>Erweiterter Schutz für Clientanwendungen  
+
  Der erweiterte Schutz wird bei den meisten Clientanwendungen automatisch unterstützt. Die Klassen <xref:System.Net.HttpWebRequest> und <xref:System.Net.Mail.SmtpClient> unterstützen den erweiterten Schutz, wenn die zugrunde liegende Windows-Version den erweiterten Schutz unterstützt. Eine <xref:System.Net.HttpWebRequest>-Instanz sendet einen SPN, der aus dem <xref:System.Uri> erstellt wird. Eine <xref:System.Net.Mail.SmtpClient>-Instanz sendet standardmäßig einen SPN, der aus dem Hostnamen des SMTP-Mailservers erstellt wird.  
   
  Clientanwendungen können zur benutzerdefinierten Authentifizierung die Methoden <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> oder <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> in der Klasse <xref:System.Net.HttpWebRequest> verwenden, die den <xref:System.Net.TransportContext> und das CBT mithilfe der Methode <xref:System.Net.TransportContext.GetChannelBinding%2A> abrufen.  
@@ -116,6 +120,7 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
  Mit der Eigenschaft <xref:System.Net.Mail.SmtpClient.TargetName%2A> kann ein benutzerdefinierter SPN zur integrierten Windows-Authentifizierung für die SMTP-Verbindung festgelegt werden.  
   
 ## <a name="extended-protection-for-server-applications"></a>Erweiterter Schutz für Serveranwendungen  
+
  <xref:System.Net.HttpListener> stellt automatisch Mechanismen zur Validierung von Dienstbindungen bereit, wenn die HTTP-Authentifizierung ausgeführt wird.  
   
  Das sicherste Szenario ist die Aktivierung des erweiterten Schutzes für die Präfixe `HTTPS://`. Legen Sie in diesem Fall <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> auf <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> fest, für das <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> auf <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> oder <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> festgelegt ist, sowie <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> auf <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Ein Wert von <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> versetzt <xref:System.Net.HttpListener> in den teilweise gehärteten Modus, während <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> dem vollständig gehärteten Modus entspricht.  

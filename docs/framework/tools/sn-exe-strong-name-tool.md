@@ -11,14 +11,15 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517190"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238443"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
+
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../standard/assembly/strong-named.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
   
 > [!WARNING]
@@ -79,6 +80,7 @@ sn [-quiet][option [parameter(s)]]
 > Bei allen Optionen für SN.EXE wird zwischen der Groß- und Kleinschreibung unterschieden. Sie müssen die Optionen daher exakt wie gezeigt angeben, damit sie vom Tool richtig interpretiert werden.  
   
 ## <a name="remarks"></a>Hinweise  
+
  Die Optionen **-R** und **-Rc** sind bei Assemblys nützlich, die verzögert signiert wurden. In diesem Szenario wurde während der Kompilierung nur der öffentliche Schlüssel festgelegt. Die Signierung wird auf einen späteren Zeitpunkt verschoben, wenn der private Schlüssel bekannt ist.  
   
 > [!NOTE]
@@ -87,6 +89,7 @@ sn [-quiet][option [parameter(s)]]
 Das Strong Name-Tool geht davon aus, dass die Paaren aus öffentlichen und privaten Schlüsseln mit dem `AT_SIGNATURE`-Algorithmusbezeichner generiert werden. Mit dem `AT_KEYEXCHANGE`-Algorithmus erstellte Paare aus öffentlichen und privaten Schlüsseln verursachen einen Fehler.
 
 ## <a name="examples"></a>Beispiele  
+
  Mit dem folgenden Befehl wird ein neues, nach dem Zufallsprinzip erzeugtes Schlüsselpaar erstellt und in `keyPair.snk` gespeichert.  
   
 ```console  

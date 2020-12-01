@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: eb3fa768a491f6c0ff4b15479beabd71b0670338
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937295"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032513"
 ---
 ### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>Hosting: HTTPS-Umleitung für IIS-Out-of-Process-Apps aktiviert
 

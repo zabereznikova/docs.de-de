@@ -2,17 +2,19 @@
 title: International Resource Identifier-Unterstützung in System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3670c40a7a78e2ac8b521a4cb95477381848f36
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "64647339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253361"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>International Resource Identifier-Unterstützung in System.Uri
+
 Die Klasse <xref:System.Uri?displayProperty=nameWithType> wurde um die Unterstützung von International Resource Identifier (IRI) und von internationalen Domänennamen (IDN) erweitert. Diese Erweiterungen sind in .NET Framework 3.5, 3.0 SP1 und 2.0 SP1 verfügbar.  
   
 ## <a name="iri-and-idn-support"></a>IRI- und IDN-Unterstützung  
+
  Webadressen werden in der Regel mithilfe von Uniform Resource Identifiers (URI) ausgedrückt, die aus einem sehr eingeschränkten Satz von Zeichen bestehen:  
   
 - ASCII-Großbuchstaben und -Kleinbuchstaben des englischen Alphabets  

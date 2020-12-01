@@ -7,14 +7,15 @@ helpviewer_keywords:
 - CorFlags.exe
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
-ms.openlocfilehash: da5efadd63cc03f6f6e4eecf3115865ca3643b39
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3f9f2a71a7a33de13264ce60fa7ff6ea5832aace
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167226"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247186"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Konvertierungstool CorFlags)
+
 Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags-Abschnitts eines Headers eines portierbaren ausführbaren Images.  
   
  Dieses Tool wird automatisch mit Visual Studio installiert. Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
@@ -49,6 +50,7 @@ CorFlags.exe assembly [options]
 |`-UpgradeCLRHeader`|Aktualisiert die CLR-Headerversion auf 2.5. **Hinweis**:  Assemblys können nur als systemeigener Code ausgeführt werden, wenn sie mindestens über die CLR-Headerversion 2.5 verfügen.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Wenn keine Optionen angegeben sind, zeigt das Konvertierungstool CorFlags die Flags für die angegebene Assembly an.  
   
 ## <a name="see-also"></a>Siehe auch

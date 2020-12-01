@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 68ad6b2c55cd5cc467e53441caa778ea10b994fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea709bba17d4e2f00b760c8713f9e8100496f0bf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250514"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Gewusst wie: Zugreifen auf HTTP-spezifische Eigenschaften
+
 In diesem Beispiel wird gezeigt, wie das HTTP-Verhalten **Keep-Alive** deaktiviert und die Protokollversionsnummer vom Webserver erhalten werden kann.  
   
 ## <a name="example"></a>Beispiel  
@@ -45,6 +46,7 @@ HttpWResp.Close();
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
+
  Dieses Beispiel erfordert Folgendes:  
   
 - Verweise auf den Namespace **System.Net**.  

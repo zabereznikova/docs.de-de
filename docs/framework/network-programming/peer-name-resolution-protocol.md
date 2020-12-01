@@ -3,14 +3,15 @@ title: Peer Name Resolution-Protokoll (PNRP)
 description: Erfahren Sie mehr über das Peer Name Resolution-Protokoll (PNRP), ein sicheres, skalierbares und dynamisches Protokoll für die Namensregistrierung und -auflösung.
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 72eb63c2c90f398c515d77cd2b2d693237e533a5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d50514569d066d04391ce65522df789ed421dbed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239392"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution-Protokoll (PNRP)
+
 In Peer-zu-Peer-Umgebungen verwenden Peers bestimmte Namensauflösungssysteme, um Namen oder andere Arten von Bezeichner in die Netzwerkadressen des jeweils anderen Peers (Adressen, Protokolle und Ports) aufzulösen. In der Vergangenheit ist die Peernamensauflösung durch die grundsätzlich flüchtige Konnektivität sowie andere Mängel im Domänennamenserver (DNS) erschwert worden.  
   
  Die Microsoft® Windows® Peer-zu-Peer Netwerkplattform löst dieses Problem mit dem Peer Name Resolution-Protokoll (PNRP), ein sicheres, skalierbares und dynamisches Namensregistrierungs- und Namensauflösungsprotokoll, das erstmals für Windows XP entwickelt und dann in Windows Vista™ aktualisiert wurde. Die Funktionsweise des PNRP unterscheidet sich sehr von traditionellen Auflösungssystemen und eröffnet interessante neue Möglichkeiten für Anwendungsentwickler.  

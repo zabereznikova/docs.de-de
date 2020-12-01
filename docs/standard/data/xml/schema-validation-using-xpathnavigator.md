@@ -5,22 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: 304177ed4cb600aa27142e3b1c3690a3d7053c5d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c91dfa63723cc087662630232376e74394c7b13
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734698"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Schema-Validierung mithilfe von XPathNavigator
+
 Mithilfe der <xref:System.Xml.XmlDocument>-Klasse haben Sie zwei Möglichkeiten, den XML-Inhalt eines <xref:System.Xml.XmlDocument>-Objekts zu validieren. Die erste Möglichkeit zum Validieren von XML-Inhalt besteht darin, ein validierendes <xref:System.Xml.XmlReader>-Objekt zu verwenden, und die zweite Möglichkeit besteht in der Verwendung der <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse. Mithilfe der <xref:System.Xml.XPath.XPathDocument>-Klasse können Sie eine schreibgeschützte Validierung von XML-Inhalt durchführen.  
   
 ## <a name="validating-xml-data"></a>Validieren von XML-Daten  
+
  In der Standardeinstellung validiert die <xref:System.Xml.XmlDocument>-Klasse ein XML-Dokument nicht mithilfe der DTD- oder XSD-Schemavalidierung (XML Schema Definition Language). Es wird nur überprüft, ob das XML-Dokument wohlgeformt ist.  
   
  Die erste Möglichkeit zum Validieren eines XML-Dokuments ist das Validieren des Dokuments mithilfe eines validierenden <xref:System.Xml.XmlDocument>-Objekts beim Laden in ein <xref:System.Xml.XmlReader>-Objekt. Die zweite Möglichkeit ist das Validieren eines zuvor nicht typisierten XML-Dokuments mithilfe der <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse. In beiden Fällen können Änderungen des validierten XML-Dokuments mithilfe der <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse erneut validiert werden.  
   
 ### <a name="validating-a-document-as-it-is-loaded"></a>Validieren eines Dokuments während des Ladevorgangs  
+
  Ein validierendes <xref:System.Xml.XmlReader>-Objekt wird durch das Übergeben eines <xref:System.Xml.XmlReaderSettings>-Objekts an die <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse erstellt, die ein <xref:System.Xml.XmlReaderSettings>-Objekt als Parameter annimmt. Das als Parameter übergebene <xref:System.Xml.XmlReaderSettings>-Objekt verfügt über eine <xref:System.Xml.XmlReaderSettings.ValidationType%2A>-Eigenschaft, die auf `Schema` festgelegt ist, und über ein XML-Schema für das XML-Dokument, das in dem dessen <xref:System.Xml.XmlDocument>-Eigenschaft hinzugefügten <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Objekt enthalten ist. Das validierende <xref:System.Xml.XmlReader>-Objekt wird dann zum Erstellen des <xref:System.Xml.XmlDocument>-Objekts verwendet.  
   
  Im folgenden Beispiel wird die `contosoBooks.xml`-Datei beim Laden in das <xref:System.Xml.XmlDocument>-Objekt validiert, indem das <xref:System.Xml.XmlDocument>-Objekt mithilfe eines validierenden <xref:System.Xml.XmlReader>-Objekts erstellt wird. Da das XML-Dokument entsprechend seines Schemas gültig ist, werden keine Schemavalidierungsfehler oder -warnungen generiert.  
@@ -129,6 +132,7 @@ class ValidatingReaderExample
 > Wenn ein XML-Dokument in ein <xref:System.Xml.XmlDocument>-Objekt mit einem zugeordneten Schema geladen wird, das Standardwerte definiert, behandelt das <xref:System.Xml.XmlDocument>-Objekt diese Standardwerte, als wären diese im XML-Dokument enthalten. Das bedeutet, dass die <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A>-Eigenschaft immer `false` für ein Element zurückgibt, das vom Schema als Standard verwendet wird, auch wenn es im XML-Dokument als leeres Element geschrieben wurde.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validieren eines Dokuments mithilfe der Validate-Methode  
+
  Die <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse validiert das in einem <xref:System.Xml.XmlDocument>-Objekt enthaltene XML-Dokument anhand des in der <xref:System.Xml.XmlDocument>-Eigenschaft des <xref:System.Xml.XmlDocument.Schemas%2A>-Objekts angegebenen Schemas und führt den Zuwachs des Infosets durch. Dadurch wird ein zuvor nicht typisiertes XML-Dokument im <xref:System.Xml.XmlDocument>-Objekt durch ein typisiertes Dokument ersetzt.  
   
  Das <xref:System.Xml.XmlDocument>-Objekt meldet Schemavalidierungsfehler und -warnungen mithilfe des <xref:System.Xml.Schema.ValidationEventHandler>-Delegaten, der als Parameter an die <xref:System.Xml.XmlDocument.Validate%2A>-Methode übergeben wird.  
@@ -216,6 +220,7 @@ class ValidateExample
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 ### <a name="validating-modifications"></a>Validierungsänderungen  
+
  Nachdem an einem XML-Dokument Änderungen vorgenommen wurden, können Sie die Änderungen anhand des Schemas des XML-Dokuments mithilfe der <xref:System.Xml.XmlDocument.Validate%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse validieren.  
   
  Im folgenden Beispiel wird die `contosoBooks.xml`-Datei beim Laden in das <xref:System.Xml.XmlDocument>-Objekt validiert, indem das <xref:System.Xml.XmlDocument>-Objekt mithilfe eines validierenden <xref:System.Xml.XmlReader>-Objekts erstellt wird. Das XML-Dokument ist erfolgreich validiert, wenn es ohne Eintreten von Schemavalidierungsfehlern oder -warnungen geladen werden kann. Im Beispiel werden dann zwei Änderungen am XML-Dokument vorgenommen, die gemäß des `contosoBooks.xsd`-Schemas ungültig sind. Bei der ersten Änderung wird ein ungültiges untergeordnetes Element eingefügt, wodurch ein Schemavalidierungsfehler eintritt. Bei der zweiten Änderung wird der Wert einer typisierten Knotens auf einen Wert festgelegt, der gemäß des Typs des Knotens ungültig ist, wodurch eine Ausnahme ausgelöst wird.  
@@ -350,6 +355,7 @@ class ValidatingReaderExample
  Weitere Informationen zum Ändern von Werten mithilfe der <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A>-Methode finden Sie unter dem Thema [Ändern von XML-Daten mit XPathNavigator](modify-xml-data-using-xpathnavigator.md).  
   
 ### <a name="read-only-validation"></a>Schreibgeschützte Validierung  
+
  Die <xref:System.Xml.XPath.XPathDocument>-Klasse ist eine schreibgeschützte Darstellung eines XML-Dokuments im Speicher. Sowohl die <xref:System.Xml.XPath.XPathDocument>-Klasse als auch die <xref:System.Xml.XmlDocument>-Klasse erstellen <xref:System.Xml.XPath.XPathNavigator>-Objekte zum Navigieren und zum Bearbeiten von XML-Dokumenten. Da die <xref:System.Xml.XPath.XPathDocument>-Klasse schreibgeschützt ist, können von <xref:System.Xml.XPath.XPathNavigator>-Objekten zurückgegebene <xref:System.Xml.XPath.XPathDocument>-Objekte das im <xref:System.Xml.XPath.XPathDocument>-Objekt enthaltene XML-Dokument nicht bearbeiten.  
   
  Bei der Validierung können Sie ein <xref:System.Xml.XPath.XPathDocument>-Objekt auf die gleiche Weise erstellen, wie ein <xref:System.Xml.XmlDocument>-Objekt mithilfe eines validierenden <xref:System.Xml.XmlReader>-Objekts erstellt wird, wie bereits in diesem Thema erläutert. Das <xref:System.Xml.XPath.XPathDocument>-Objekt validiert das XML-Dokument beim Ladevorgang. Da die XML-Daten jedoch im <xref:System.Xml.XPath.XPathDocument>-Objekt nicht bearbeitet werden können, können Sie das XML-Dokument nicht erneut validieren.  

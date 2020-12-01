@@ -16,14 +16,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 085ca27dd0cfedc90211b21c10cc8bc5cf1ecd21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502378"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241589"
 ---
 # <a name="internet-authentication"></a>Internetauthentifizierung
+
 Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifizierungsmechanismen, einschließlich folgender Standardmethoden zur Internetauthentifizierung: Basic, Digest, Negotiate, NTLM, die Kerberos-Authentifizierung und benutzerdefinierte Methoden, die Sie erstellen können.  
   
  Anmeldeinformationen werden in den <xref:System.Net.NetworkCredential>- und <xref:System.Net.CredentialCache>-Klassen gespeichert, die die <xref:System.Net.ICredentials>-Schnittstelle implementieren. Wenn eine dieser Klassen nach Anmeldeinformationen abgefragt wird, gibt sie eine Instanz der Klasse **NetworkCredential** zurück. Der Authentifizierungsvorgang wird durch die <xref:System.Net.AuthenticationManager>-Klasse verwaltet, und der tatsächliche Authentifizierungsprozess wird von einer Authentifizierungsmodulklasse ausgeführt, die die <xref:System.Net.IAuthenticationModule>-Schnittstelle implementiert. Sie müssen ein benutzerdefiniertes Authentifizierungsmodul mit dem **AuthenticationManager** registrieren, bevor dieses verwendet werden kann. Module für Basic-, Digest-, Negotiate-, NTLM- und Kerberos-Authentifizierungsmethoden werden standardmäßig registriert.  

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 05aec429e28ef74515ef6988d5b064e6d16b7c1b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90680025"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032674"
 ---
 ### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol.SuccessHandshakeData wurde ersetzt.
 

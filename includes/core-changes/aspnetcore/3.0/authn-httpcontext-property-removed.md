@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75902041"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032486"
 ---
 ### <a name="authentication-httpcontextauthentication-property-removed"></a>Authentifizierung: HttpContext.Authentication-Eigenschaft wurde entfernt.
 

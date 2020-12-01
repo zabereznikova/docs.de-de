@@ -2,17 +2,19 @@
 title: Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator
 ms.date: 03/30/2017
 ms.assetid: 46e059f8-4dc8-4185-9236-784be95228ed
-ms.openlocfilehash: 249b99a627f3bbcc1723f104a80cb61552404877
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3096582055dc17d5724cebd79e74d2aa24154bcb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822463"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734672"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator
+
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Methoden bereit, die dazu dienen, Knoten in einem <xref:System.Xml.XPath.XPathDocument>- oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe einer XPath-Abfrage auszuwählen, die Ergebnisse eines XPath-Ausdrucks auszuwerten und zu überprüfen sowie dazu zu bestimmen, ob ein Knoten in einem <xref:System.Xml.XPath.XPathDocument>- oder einem <xref:System.Xml.XmlDocument>-Objekt mit einem angegebenen XPath-Ausdruck übereinstimmt. Diese und andere Konzepte, die mit dem Auswählen, Auswerten und Zuordnen von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt verbunden sind, werden in den folgenden Themen beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Auswählen von XML-Daten mit XPathNavigator](select-xml-data-using-xpathnavigator.md)  
  Beschreibt eine Gruppe von Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden kann.  
   

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558744"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238651"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
+
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version von .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
 
 Sie können die weitervertreibbaren Pakete und Language Packs für .NET Framework von den Downloadseiten herunterladen:
@@ -110,7 +111,7 @@ So wählen Sie in Visual Studio die ClickOnce-Bereitstellung aus und fügen eine
 
 1. Öffnen Sie das App-Projekt, das Sie veröffentlichen möchten.
 
-2. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.
+2. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften** aus.
 
 3. Wählen Sie den Bereich **Veröffentlichen** aus.
 

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167262"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247251"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Certificate Manager-Tool)
+
 Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifikatvertrauenslisten (Certificate Trust Lists, CTLs) und Zertifikatsperrlisten (Certificate Revocation Lists, CRLs) verwalten.  
   
  Das Certificate Manager-Tool wird automatisch mit Visual Studio installiert. Verwenden Sie zum Starten des Tools die [Eingabeaufforderungen](developer-command-prompt-for-vs.md).  
@@ -72,6 +73,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
 ## <a name="remarks"></a>Hinweise  
+
  Von "Certmgr.exe" werden die folgenden Basisfunktionen ausgeführt:  
   
 - Zeigt Zertifikate, CTLs und CRLs in der Konsole an.  
@@ -94,6 +96,7 @@ Mit dem Certificate Manager-Tool (Certmgr.exe) können Sie Zertifikate, Zertifik
  Weitere Informationen zu Zertifikaten finden Sie unter [Arbeiten mit Zertifikaten](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Beispiele  
+
  Mit dem folgenden Befehl wird der Standardsystemspeicher `my` mit ausführlicher Ausgabe angezeigt.  
   
 ```console  

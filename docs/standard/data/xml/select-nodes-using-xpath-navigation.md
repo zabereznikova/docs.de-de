@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b6b68d9351431acc6d9ef20276f51ac4d667d325
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829244"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734685"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Auswählen von Knoten mithilfe der XPath-Navigation
+
 Das XML-DOM (Document Object Model) enthält Methoden, die Ihnen ermöglichen, mithilfe der XPath-Navigation (XML Path Language) Informationen im DOM abzufragen. Mit XPath können Sie einen bestimmten einzelnen Knoten oder alle Knoten suchen, die bestimmte Kriterien erfüllen.  
   
 ## <a name="xpath-select-methods"></a>XPath-Auswahlmethoden  
+
  Die DOM-Klassen stellen zwei Methoden für die XPath-Auswahl bereit: die <xref:System.Xml.XmlNode.SelectSingleNode%2A>-Methode und die <xref:System.Xml.XmlNode.SelectNodes%2A>-Methode. Die <xref:System.Xml.XmlNode.SelectSingleNode%2A>-Methode gibt den ersten Knoten zurück, der die Auswahlkriterien erfüllt. Die <xref:System.Xml.XmlNode.SelectNodes%2A>-Methode gibt eine <xref:System.Xml.XmlNodeList> zurück, die die übereinstimmenden Knoten enthält.  
   
  Im folgenden Beispiel wird mit der <xref:System.Xml.XmlNode.SelectSingleNode%2A>-Methode der erste `book`-Knoten ausgewählt, bei dem der Nachname des Autors den angegebenen Kriterien entspricht. Die Datei bookstore.xml (die am Ende dieses Themas zur Verfügung gestellt wird) wird als Eingabedatei verwendet.  
@@ -122,12 +124,14 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > Wenn das zugrunde liegenden Dokument verändert wird, ist es empfehlenswert, die Auswahl erneut auszuführen. Wenn die Änderung des Knoten dazu führen kann, dass der Knoten der Knotenliste hinzugefügt wird, wenn dies vorher nicht der Fall war, oder dass der Knoten aus der Knotenliste entfernt wird, kann nicht garantiert werden, dass die Knotenliste korrekt ist.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>Namespaces in XPath-Ausdrücken  
+
  XPath-Ausdrücke können Namespaces enthalten. Namespace-Auflösung wird mithilfe von <xref:System.Xml.XmlNamespaceManager> unterstützt. Wenn der XPath-Ausdruck ein Präfix umfasst, muss das Paar aus Präfix- und Namespace-URI <xref:System.Xml.XmlNamespaceManager> hinzugefügt werden, und <xref:System.Xml.XmlNamespaceManager> wird an die <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29>-Methode oder die <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>-Methode übergeben. Beachten Sie, dass die oben aufgeführten Codebeispiele <xref:System.Xml.XmlNamespaceManager> verwenden, um den Namespace des Dokuments bookstore.xml aufzulösen.  
   
 > [!NOTE]
 > Wenn der XPath-Ausdruck kein Präfix umfasst, wird davon ausgegangen, dass der Namespace-URI (Uniform Resource Identifier) der leere Namespace ist. Wenn die XML einen Standardnamespace umfasst, muss <xref:System.Xml.XmlNamespaceManager> trotzdem ein Präfix und Namespace-URI hinzugefügt werden. Andernfalls werden keine Knoten ausgewählt.  
   
 #### <a name="input-file"></a>Eingabedatei  
+
  Nachfolgend ist die Datei bookstore.xml aufgeführt, die für die Beispiele in diesem Thema als Eingabedatei verwendet wird:  
   
 ```xml  

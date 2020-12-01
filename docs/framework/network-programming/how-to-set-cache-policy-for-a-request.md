@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 248cbdd0921564898c5d3459cffa304793e85584
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cbb8f2eaf618cb9faaca1375d829478a645962a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502430"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253413"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung
+
 Das folgende Beispiel veranschaulicht das Festlegen einer Cacherichtlinie für eine Anforderung. Die Beispieleingabe ist eine URI wie `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Codebeispiel wird eine Cacherichtlinie erstellt, die es ermöglicht, dass die angeforderte Ressource aus dem Cache verwendet wird, sofern diese sich nicht seit mehr als einem Tag im Cache befindet. Das Beispiel zeigt eine Meldung an, die angibt, ob die Ressource aus dem Cache verwendet wurde (z.B. `"The response was retrieved from the cache : False."`). Anschließend wird die Ressource angezeigt. Eine Anforderung kann von einem beliebigen Cache zwischen Client und Server erfüllt werden.  
   
 ```csharp  

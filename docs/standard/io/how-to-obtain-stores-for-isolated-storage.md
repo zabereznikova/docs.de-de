@@ -12,14 +12,15 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-ms.openlocfilehash: a3803f50c99b8c31030c6afe756e209c9350137f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ac53432374b546a46417e9d3b9de342a7ea2ef81
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830739"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734620"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Gewusst wie: Erhalten von Speichern für isolierten Speicher
+
 Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot verfügbar. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse bietet eine Reihe von Methoden für die Interaktion mit einem isolierten Speicher. Zum Erstellen und Abrufen von Speichern stellt <xref:System.IO.IsolatedStorage.IsolatedStorageFile> drei statische Methoden bereit:  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> gibt Speicher zurück, der nach Benutzer und Assembly isoliert ist.  
@@ -45,6 +46,7 @@ Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot ver
  Es gibt keinen Mechanismus, der verhindert, dass Code ein <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Objekt an Code übergibt, der nicht über ausreichende Zugriffsrechte verfügt, um den Speicher selbst abzurufen. Domänen- und Assemblyidentitäten und Berechtigungen für isolierten Speicher werden nur überprüft, wenn ein Verweis auf ein <xref:System.IO.IsolatedStorage.IsolatedStorage>-Objekt abgerufen wird, in der Regel in der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>-, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>- oder <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>-Methode. Der Schutz von Verweisen auf <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Objekte liegt daher in der Verantwortung des Codes, der diese Verweise verwendet.  
   
 ## <a name="example"></a>Beispiel  
+
  Der folgende Code bietet ein einfaches Beispiel einer Klasse, die einen Speicher abruft, der nach Benutzer und Assembly isoliert ist. Der Code kann durch Hinzufügen von <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> zu den Argumenten, die die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>-Methode übergibt, geändert werden, um einen Speicher abzurufen, der nach Benutzer, Domäne und Assembly isoliert ist.  
   
  Nachdem Sie den Code ausgeführt haben, können Sie sicherstellen, dass ein Speicher erstellt wurde, indem Sie **StoreAdm /LIST** in der Befehlszeile eingeben. Dadurch wird das [Tool „Isolierter Speicher“ (Storeadm.exe)](../../framework/tools/storeadm-exe-isolated-storage-tool.md) ausgeführt, und alle aktuellen isolierten Speicher des Benutzers werden aufgelistet.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 519ca099b65710b6eb4251e1a9419e965ee69f93
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: c6b1ef6c7dd8be3dbc98b2298ab0e649ff74008e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166160"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254505"
 ---
 # <a name="work-with-resx-files-programmatically"></a>Programmgesteuertes Arbeiten mit RESX-Dateien
 
@@ -51,6 +51,7 @@ Im folgenden Beispiel wird eine RESX-Datei mit dem Namen "CarResources.resx" ers
 Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei eingebettet oder in eine Satellitenassembly kompiliert werden. Sie müssen die RESX-Datei mithilfe des [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)in eine binäre Ressourcendatei (RESOURCES) konvertieren. Die resultierende RESOURCES-Datei kann dann in eine Anwendungsassembly oder eine Satellitenassembly eingebettet werden. Weitere Informationen finden Sie unter [Creating Resource Files](creating-resource-files-for-desktop-apps.md).
 
 ## <a name="enumerate-resources"></a>Aufzählen der Ressourcen
+
  In bestimmten Fällen müssen anstelle einer bestimmten alle Ressourcen aus einer RESX-Datei abgerufen werden. Zu diesem Zweck können Sie die Klasse <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> verwenden, die einen Enumerator für alle in der RESX-Datei enthaltenen Ressourcen enthält. Die <xref:System.Resources.ResXResourceReader?displayProperty=nameWithType> -Klasse implementiert <xref:System.Collections.IDictionaryEnumerator>, der ein <xref:System.Collections.DictionaryEntry> -Objekt zurückgibt, das für jede Iteration der Schleife eine bestimmte Ressource darstellt. Seine <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=nameWithType> -Eigenschaft gibt den Schlüssel der Ressource und seine <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=nameWithType> -Eigenschaft den Wert der Ressource zurück.
 
  Im folgenden Beispiel wird ein <xref:System.Resources.ResXResourceReader> -Objekt für die im vorhergehenden Beispiel erstellte Datei „CarResources.resx“ erstellt, das durch die Ressourcendatei iteriert. Es fügt die zwei in der Ressourcendatei definierten `Automobile` -Objekte einem <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> und fünf der sechs Zeichenfolgen einem <xref:System.Collections.SortedList> -Objekt hinzu. Die Werte in dem <xref:System.Collections.SortedList> -Objekt werden in ein Parameterarray konvertiert, das zum Anzeigen von Spaltenüberschriften in der Konsole verwendet wird. Die Werte der Eigenschaft `Automobile` werden ebenfalls in der Konsole angezeigt.
@@ -59,6 +60,7 @@ Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei e
  [!code-vb[Conceptual.Resources.ResX#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/enumerate1.vb#2)]
 
 ## <a name="retrieve-a-specific-resource"></a>Abrufen einer bestimmten Ressource
+
  Über das Aufzählen der Elemente in einer RESX-Datei hinaus können Sie mithilfe der <xref:System.Resources.ResXResourceSet?displayProperty=nameWithType> -Klasse eine bestimmte Ressource anhand des Namens abrufen. Die <xref:System.Resources.ResourceSet.GetString%28System.String%29?displayProperty=nameWithType> -Methode ruft den Wert einer benannten Zeichenfolgenressource ab. Die <xref:System.Resources.ResourceSet.GetObject%28System.String%29?displayProperty=nameWithType> -Methode ruft den Wert eines benannten Objekts oder Binärdaten ab. Die Methode gibt ein Objekt zurück, für das anschließend eine Umwandlung (in C#) oder Konvertierung (in Visual Basic) in ein Objekt des geeigneten Typs erfolgen muss.
 
  Im folgenden Beispiel wird die Überschriftenzeichenfolge eines Formulars und dessen Symbol anhand des Ressourcennamens abgerufen. Außerdem werden die von der Anwendung definierten `Automobile`-Objekte abgerufen, die im vorherigen Beispiel verwendet wurden, und in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement angezeigt.
@@ -67,6 +69,7 @@ Eine RESX-Datei kann nicht in eine von der Laufzeitumgebung ausführbare Datei e
  [!code-vb[Conceptual.Resources.ResX#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/retrieve1.vb#3)]
 
 ## <a name="convert-resx-files-to-binary-resources-files"></a>Konvertieren von RESX-Dateien in binäre RESOURCES-Dateien
+
  Das Konvertieren von RESX-Dateien in eingebettete binäre Ressourcendateien (RESOURCES) bietet erhebliche Vorteile. Obwohl RESX-Dateien in der Entwicklungsphase einer Anwendung leicht zu lesen und zu verwalten sind, sind sie nur selten in den fertigen Anwendungen enthalten. Wenn sie als Teil einer Anwendung verteilt werden, liegen sie als separate Dateien vor, getrennt von der ausführbaren Programmdatei und ihren begleitenden Bibliotheken. Im Unterschied dazu sind RESOURCES-Dateien in die ausführbare Programmdatei oder ihre begleitenden Assemblys eingebettet. Außerdem wird beim Einsatz von RESX-Dateien zur Laufzeit bei lokalisierten Anwendungen der Entwickler für die Behandlung des Ressourcenfallbacks in die Pflicht genommen. Wenn demgegenüber eine Sammlung von Satellitenassemblys erstellt wurde, die eingebettete RESOURCES-Dateien enthalten, übernimmt die Common Language Runtime die Zuständigkeit für den Ressourcenfallbackvorgang.
 
  Zum Konvertieren einer RESX-Datei in eine RESOURCES-Datei wird der [Resource File Generator (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)verwendet, der die folgende grundlegende Syntax aufweist:

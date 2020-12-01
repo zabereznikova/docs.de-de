@@ -9,14 +9,15 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: 0aaa26f67ef1ef191060e682690fa14de328b812
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9398beee7051d88867600b79c615356c2d4cc28
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241693"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Gewusst wie: Festlegen der standardmäßigen zeitbasierten Cacherichtlinie für eine Anwendung
+
 Mit der standardmäßigen zeitbasierten Cacherichtlinie kann das Cacheverhalten einer Anwendung von den Headern definiert werden, die mit der zwischengespeicherten Ressource gesendet werden. Außerdem wird das Cacheverhalten ermöglicht, das in Abschnitt 13 und 14 des RFC 2616 definiert wird, verfügbar auf der Website der [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Dies ist das angemessene Cacheverhalten für die meisten Anwendungen.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Festlegen der automatischen Standardrichtlinie für eine Anwendung  
@@ -26,6 +27,7 @@ Mit der standardmäßigen zeitbasierten Cacherichtlinie kann das Cacheverhalten 
 2. Legen Sie das Richtlinienobjekt als Standard für die Anwendungsdomäne fest.  
   
 ## <a name="example"></a>Beispiel  
+
  Die beiden Beispiele in diesem Abschnitt erzeugen identische Richtlinien.  
   
  Im folgenden Beispiel wird eine zeitbasierte Standardrichtlinie erstellt und als Standard für die Anwendungsdomäne festgelegt.  

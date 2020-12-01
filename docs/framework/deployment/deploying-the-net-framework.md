@@ -6,17 +6,19 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b42646b60fab91fe761a8fdef59d67be6ffa884b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622769"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242044"
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
+
 In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für Entwickler bereitgestellt, die .NET Framework mit ihren Anwendungen installieren, und Administratoren, die .NET Framework in einem Netzwerk bereitstellen möchten. Außerdem werden Probleme bei der Aktivierung und dem Neustart im Zusammenhang mit der Bereitstellung besprochen sowie erläutert, wie der Status der .NET Framework-Installation überwacht wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
+
  [Bereitstellungshandbuch für Entwickler](deployment-guide-for-developers.md)  
  Es wird erklärt, wie Entwickler .NET Framework auf den Computern der Benutzer mit ihren Anwendungen installieren können.  
   

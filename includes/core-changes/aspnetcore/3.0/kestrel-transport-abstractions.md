@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: fb23418816abcae125106c93b339a546aa9bc2ee
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721233"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032583"
 ---
 ### <a name="kestrel-transport-abstractions-removed-and-made-public"></a>Kestrel: Datentransportabstraktionen wurden entfernt und öffentlich gemacht.
 

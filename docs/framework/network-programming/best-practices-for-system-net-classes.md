@@ -11,14 +11,15 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 583fa5e57c7c4d60252dddfd425596e7acad7c0d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 170e8cfe0a7d7c911122dafe18b8a5081ceb3d2d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502677"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250774"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Bewährte Methoden für System.Net-Klassen
+
 Mit den folgenden Empfehlungen können Sie die in <xref:System.Net> enthaltenen Klassen bestmöglich verwenden:  
   
 - Bewährte Methoden für Transport Layer Security (TLS) finden Sie unter [Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework](tls.md).

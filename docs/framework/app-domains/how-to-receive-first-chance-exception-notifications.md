@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104742"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242564"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Vorgehensweise: Empfangen von Ausnahmebenachrichtigungen (erste Chance)
+
 Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.AppDomain>-Klasse erhalten Sie eine Benachrichtigung bezüglich einer ausgelösten Ausnahme, bevor die CLR mit der Suche nach Ausnahmehandlern beginnt.
 
  Das Ereignis wird auf Ebene der Anwendungsdomäne ausgelöst. Ein Ausführungsthread kann verschiedene Anwendungsdomänen durchlaufen. Es ist also möglich, dass ein Ausnahmefehler aus einer Anwendungsdomäne in einer anderen behandelt wird. Die Benachrichtigung findet in jeder Anwendungsdomäne statt, die einen Handler für das Ereignis hinzugefügt hat, bis eine Anwendungsdomäne die Ausnahme behandelt.
@@ -26,6 +27,7 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
  Ein umfangreicheres Beispiel, das mehrere Anwendungsdomänen umfasst, finden Sie im Beispiel zum <xref:System.AppDomain.FirstChanceException>-Ereignis.
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>Empfangen von Benachrichtigungen über Ausnahmefehler der ersten Chance in Standardanwendungsdomänen
+
  In der folgenden Prozedur, dem Einstiegspunkt der Anwendung (`Main()`-Methode), wird in der Standardanwendungsdomäne ausgeführt.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>So demonstrieren Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in der Standardanwendungsdomäne
@@ -51,6 +53,7 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>Empfangen von Benachrichtigungen über Ausnahmefehler der ersten Chance in einer anderen Anwendungsdomäne
+
  Wenn Ihr Programm mehr als eine Anwendungsdomäne enthält, können Sie auswählen, welche Anwendungsdomänen Benachrichtigungen erhalten.
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>So empfangen Sie Benachrichtigungen über Ausnahmefehler der ersten Chance in einer selbst erstellten Anwendungsdomäne
@@ -85,6 +88,7 @@ Mit dem <xref:System.AppDomain.FirstChanceException>-Ereignis der <xref:System.A
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>Beispiel
+
  Im folgenden Beispiel wird eine Anwendungsdomäne namens `AD1` erstellt und der Anwendungsdomäne des <xref:System.AppDomain.FirstChanceException>-Ereignisses ein Ereignishandler hinzugefügt. Außerdem wird eine Instanz der `Worker`-Klasse in der Anwendungsdomäne erstellt und eine Methode namens `Thrower` aufgerufen, die <xref:System.ArgumentException> auslöst. Je nach dem Wert des Arguments fängt die Methode die Ausnahme entweder ab, oder es tritt ein Fehler bei der Behandlung auf.
 
  Jedes Mal, wenn die `Thrower`-Methode eine Ausnahme in `AD1` auslöst, wird das <xref:System.AppDomain.FirstChanceException>-Ereignis in `AD1` ausgelöst, und der Ereignishandler zeigt eine Meldung an. Die Runtime sucht nach einem Ausnahmehandler. Im ersten Fall befindet sich der Ausnahmehandler in `AD1`. Im zweiten Fall wird die Ausnahme in `AD1` nicht behandelt und stattdessen in der Standardanwendungsdomäne abgefangen.
