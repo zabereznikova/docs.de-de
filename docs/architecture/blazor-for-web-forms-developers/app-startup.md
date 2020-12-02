@@ -3,13 +3,13 @@ title: App-Start
 description: Erfahren Sie, wie Sie die Start Logik für Ihre APP definieren.
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158187"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509701"
 ---
 # <a name="app-startup"></a>App-Start
 
@@ -28,7 +28,7 @@ Mit ASP.net Core und blazor werden diese Methoden entweder vereinfacht und in de
 
 ## <a name="blazor-server-startup-structure"></a>Start Struktur des blazor-Servers
 
-Blazor-Server Anwendungen befinden sich auf einem ASP.net Core 3,0 oder einer höheren Anwendung.  ASP.net Core Webanwendungen werden über ein paar von Methoden in der-Klasse im Stamm `Startup.cs` Ordner der Anwendung konfiguriert.  Der Standard Inhalt der Startklasse ist unten aufgeführt.
+Blazor-Server Anwendungen befinden sich auf einem ASP.net Core 3,0 oder einer höheren Version.  ASP.net Core Webanwendungen werden über ein paar von Methoden in der-Klasse im Stamm `Startup.cs` Ordner der Anwendung konfiguriert.  Der Standard Inhalt der Startklasse ist unten aufgeführt.
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ Als nächstes wird eine unerwartete Konfigurations Methode in aufgelistet `UseSt
 
 Die nächste Zeile ist die erste Zeile, in der eine der Konfigurationsoptionen von Web Forms repliziert wird: `UseRouting` .  Diese Methode fügt der Pipeline den ASP.net Core Router hinzu, und er kann entweder hier oder in den einzelnen Dateien konfiguriert werden, an die er weiterleiten kann.  Weitere Informationen zur Routing Konfiguration finden Sie im [Abschnitt Routing](pages-routing-layouts.md).
 
-Die letzte Anweisung in dieser Methode definiert die Endpunkte, die ASP.net Core überwachen.  Dabei handelt es sich um Websites, auf die über den Webserver zugegriffen werden kann, auf die Sie auf dem Webserver zugreifen und Inhalte erhalten, die von .NET verarbeitet und an Sie  Der erste Eintrag `MapBlazorHub` konfiguriert einen signalr-Hub für die Verwendung bei der Bereitstellung der Echtzeitverbindung und der permanenten Verbindung mit dem Server, auf dem der Status und das Rendering von blazor-Komponenten behandelt werden.  Der `MapFallbackToPage` Methodenaufruf gibt den Speicherort der Website an, auf die der Zugriff auf die Seite der Seite erfolgt, von der die blazor-Anwendung gestartet wird. Außerdem wird die Anwendung für die Verarbeitung von Deep-Linking-Anforderungen von Client  Diese Funktion wird bei der Arbeit angezeigt, wenn Sie einen Browser öffnen und direkt zur von blazor verarbeiteten Route in Ihrer Anwendung navigieren, z `/counter` . b. in der Standard Projektvorlage. Die Anforderung wird von der Fall Back-Seite *_Host. cshtml* verarbeitet, von der dann der blazor-Router ausgeführt und die Gegenseite gerendert wird.
+Die letzte Anweisung in dieser Methode definiert die Endpunkte, die ASP.net Core überwachen.  Diese Routen sind die für den Internet zugänglichen Speicherorte, auf die Sie auf dem Webserver zugreifen und Inhalte empfangen können, die von .NET verarbeitet und an Sie zurückgegeben werden.  Der erste Eintrag `MapBlazorHub` konfiguriert einen signalr-Hub für die Verwendung bei der Bereitstellung der Echtzeitverbindung und der permanenten Verbindung mit dem Server, auf dem der Status und das Rendering von blazor-Komponenten behandelt werden.  Der `MapFallbackToPage` Methodenaufruf gibt den Speicherort der Website an, auf die der Zugriff auf die Seite der Seite erfolgt, von der die blazor-Anwendung gestartet wird. Außerdem wird die Anwendung für die Verarbeitung von Deep-Linking-Anforderungen von Client  Diese Funktion wird bei der Arbeit angezeigt, wenn Sie einen Browser öffnen und direkt zur von blazor verarbeiteten Route in Ihrer Anwendung navigieren, z `/counter` . b. in der Standard Projektvorlage. Die Anforderung wird von der Fall Back-Seite *_Host. cshtml* verarbeitet, von der dann der blazor-Router ausgeführt und die Gegenseite gerendert wird.
 
 ## <a name="upgrading-the-bundleconfig-process"></a>Aktualisieren des bundleconfig-Prozesses
 

@@ -5,17 +5,17 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267502"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509792"
 ---
 # <a name="app-configuration"></a>App-Konfiguration
 
-Die primäre Methode zum Laden der APP-Konfiguration in Web Forms ist die Verwendung von Einträgen in der *web.config* Datei &mdash; auf dem Server oder einer zugehörigen Konfigurationsdatei, auf die von *web.config*verwiesen wird. Sie können das statische `ConfigurationManager` Objekt für die Interaktion mit App-Einstellungen, Datenrepository-Verbindungs Zeichenfolgen und anderen erweiterten Konfigurations Anbietern verwenden, die der app hinzugefügt werden. Es ist üblich, Interaktionen mit der APP-Konfiguration wie im folgenden Code zu sehen:
+Die primäre Methode zum Laden der APP-Konfiguration in Web Forms ist die Verwendung von Einträgen in der *web.config* Datei &mdash; auf dem Server oder einer zugehörigen Konfigurationsdatei, auf die von *web.config* verwiesen wird. Sie können das statische `ConfigurationManager` Objekt für die Interaktion mit App-Einstellungen, Datenrepository-Verbindungs Zeichenfolgen und anderen erweiterten Konfigurations Anbietern verwenden, die der app hinzugefügt werden. Es ist üblich, Interaktionen mit der APP-Konfiguration wie im folgenden Code zu sehen:
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
@@ -28,7 +28,7 @@ BlazorWenn *web.config* die APP auf einem Windows IIS-Server gehostet wird, kann
 
 ASP.net Core erkennt, dass es viele Konfigurations Quellen gibt, die Sie möglicherweise für Ihre APP verwenden möchten. Das Framework versucht, Ihnen standardmäßig das beste dieser Features anzubieten. Die Konfiguration wird aus diesen verschiedenen Quellen durch ASP.net Core gelesen und aggregiert. Später geladene Werte für denselben Konfigurationsschlüssel haben Vorrang vor früheren Werten.
 
-ASP.net Core wurde in der Cloud unterstützt und erleichtert die Konfiguration von Apps für Operatoren und Entwickler. ASP.net Core ist für die Umgebung von der Umgebung abhängig und weiß, ob Sie in ihrer-oder-Umgebung ausgeführt wird `Production` `Development` . Der Umgebungs Indikator wird in der `ASPNETCORE_ENVIRONMENT` System Umgebungsvariablen festgelegt. Wenn kein Wert konfiguriert ist, wird die App standardmäßig in der `Production` Umgebung ausgeführt.
+ASP.net Core wurde in der Cloud unterstützt, um die Konfiguration von Apps für Operatoren und Entwickler zu vereinfachen. ASP.net Core ist für die Umgebung von der Umgebung abhängig und weiß, ob Sie in ihrer-oder-Umgebung ausgeführt wird `Production` `Development` . Der Umgebungs Indikator wird in der `ASPNETCORE_ENVIRONMENT` System Umgebungsvariablen festgelegt. Wenn kein Wert konfiguriert ist, wird die App standardmäßig in der `Production` Umgebung ausgeführt.
 
 Ihre APP kann basierend auf dem Namen der Umgebung eine Konfiguration aus mehreren Quellen initiieren und hinzufügen. Standardmäßig wird die Konfiguration aus den folgenden Ressourcen in der aufgeführten Reihenfolge geladen:
 
@@ -57,14 +57,14 @@ Die *appsettings.jsfür* die Datei kann hierarchisch sein, wobei die Werte wie i
 
 Wenn das Konfigurationssystem mit dem vorangehenden JSON-Code dargestellt wird, werden untergeordnete Werte vereinfacht und auf die voll qualifizierten hierarchischen Pfade verwiesen. Ein Doppelpunkt ( `:` ) trennt jede Eigenschaft in der Hierarchie. Beispielsweise greift der Konfigurationsschlüssel auf `section1:key0` den `section1` Wert des Objektliterals zu `key0` .
 
-## <a name="user-secrets"></a>Benutzer Geheimnisse
+## <a name="user-secrets"></a>Benutzergeheimnisse
 
 Benutzer Geheimnisse:
 
 * Konfigurationswerte, die in einer JSON-Datei auf der Arbeitsstation des Entwicklers außerhalb des App-Entwicklungs Ordners gespeichert sind.
 * Wird nur geladen, wenn in der Umgebung ausgeführt wird `Development` .
 * Einer bestimmten app zugeordnet.
-* Wird mit dem-Befehl des .net Core-CLI verwaltet `user-secrets` .
+* Wird mit dem .net CLI- `user-secrets` Befehl verwaltet.
 
 Konfigurieren Sie Ihre APP für die Speicherung von geheimen Schlüsseln durch Ausführen des folgenden `user-secrets` Befehls:
 

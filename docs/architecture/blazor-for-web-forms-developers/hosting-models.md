@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 2ebb021d2fce46a91a006227ccf9ba0cbcc5eea5
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 5d80b28642ee1e975d334f89504a1748d13dea8f
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267606"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509779"
 ---
 # <a name="no-locblazor-app-hosting-models"></a>Blazor App-Hostingmodelle
 
@@ -66,8 +66,8 @@ Die Nachteile des Blazor WebAssembly Hostingmodells lauten:
 Umgekehrt bietet das Blazor serverhostingmodell die folgenden Vorteile:
 
 - Die Download Größe ist wesentlich kleiner als eine Client seitige APP, und die APP lädt viel schneller.
-- Die App nutzt vollständige Vorteile der Serverfunktionen, einschließlich der Verwendung von .net Core-kompatiblen APIs.
-- Da auf dem Server .NET Core zum Ausführen der App verwendet wird, funktionieren vorhandene .NET-Tools, wie das Debuggen, erwartungsgemäß.
+- Die App nutzt vollständige Vorteile der Serverfunktionen, einschließlich der Verwendung beliebiger .net-kompatibler APIs.
+- .Net auf dem Server wird verwendet, um die APP auszuführen, sodass vorhandene .NET-Tools, wie z. b. das Debuggen, erwartungsgemäß funktionieren.
 - Thin Clients werden unterstützt. Serverseitige apps funktionieren z. b. mit Browsern, die WebAssembly und auf Geräten mit eingeschränkter Ressourcen nicht unterstützen.
 - Die .NET-/C#-Codebasis der App, einschließlich des Komponentencodes, werden nicht für Clients bereitgestellt.
 

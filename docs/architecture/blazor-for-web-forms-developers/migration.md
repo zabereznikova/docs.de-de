@@ -6,13 +6,13 @@ ms.author: tasou
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/19/2019
-ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: 893b6f851681ec540629fe160749b2622b6d5440
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161203"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509831"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migrieren von ASP.net Web Forms zu Blazor
 
@@ -33,19 +33,19 @@ Wenn diese oder andere neue Features aussagekräftig genug sind, kann es beim Mi
 
 Wie im Kapitel [Hostingmodelle](hosting-models.md) beschrieben, kann eine- Blazor App auf zwei verschiedene Arten gehostet werden: Server-und Client seitig. Das serverseitige Modell verwendet ASP.net Core signalr-Verbindungen, um die DOM-Aktualisierungen bei der Ausführung von tatsächlichem Code auf dem Server zu verwalten. Das Client seitige Modell wird wie WebAssembly in einem Browser ausgeführt und erfordert keine Serververbindungen. Es gibt eine Reihe von unterschieden, die sich darauf auswirken können, was für eine bestimmte App am besten geeignet ist:
 
-- Das Ausführen WebAssembly von als ist noch in der Entwicklung und unterstützt möglicherweise nicht alle Features (z. b. Threading) zum aktuellen Zeitpunkt.
+- Das Ausführen WebAssembly von unterstützt nicht alle Features (z. b. Threading) zum aktuellen Zeitpunkt.
 - Die Kommunikation zwischen dem Client und dem Server kann zu Latenzproblemen im serverseitigen Modus führen.
 - Der Zugriff auf Datenbanken und interne oder geschützte Dienste erfordert einen separaten Dienst mit Client seitigem Hosting.
 
 Zum Zeitpunkt des Schreibens ähnelt das serverseitige Modell Web Forms. In diesem Kapitel liegt der Schwerpunkt auf dem serverseitigen Hostingmodell, da es in der Produktion bereit ist.
 
-## <a name="create-a-new-project"></a>Erstellt ein neues Projekt
+## <a name="create-a-new-project"></a>Erstellen eines neuen Projekts
 
-Dieser erste Migrationsschritt besteht darin, ein neues Projekt zu erstellen. Dieser Projekttyp basiert auf den SDK-Stil Projekten von .net Core und vereinfacht einen Großteil der Bausteine, die in früheren Projekt Formaten verwendet wurden. Weitere Details finden Sie im Kapitel zur [Projektstruktur](project-structure.md).
+Dieser erste Migrationsschritt besteht darin, ein neues Projekt zu erstellen. Dieser Projekttyp basiert auf den SDK-Stil Projekten von .net und vereinfacht einen Großteil der Bausteine, die in früheren Projekt Formaten verwendet wurden. Weitere Details finden Sie im Kapitel zur [Projektstruktur](project-structure.md).
 
 Nachdem das Projekt erstellt wurde, installieren Sie die Bibliotheken, die im vorherigen Projekt verwendet wurden. In älteren Web Forms Projekten haben Sie möglicherweise die Datei *packages.config* verwendet, um die benötigten nuget-Pakete aufzulisten. Im neuen Projekt im SDK-Stil wurde *packages.config* durch `<PackageReference>` Elemente in der Projektdatei ersetzt. Ein Vorteil dieses Ansatzes besteht darin, dass alle Abhängigkeiten transitiv installiert werden. Sie Listen nur die Abhängigkeiten auf oberster Ebene auf, für die Sie sich interessieren.
 
-Viele der von Ihnen verwendeten Abhängigkeiten sind für .net Core verfügbar, einschließlich Entity Framework 6 und log4net. Wenn keine .net Core-oder .NET Standard Version verfügbar ist, kann die .NET Framework Version häufig verwendet werden. Ihre Erfahrungen können hiervon abweichen. Jede verwendete API, die in .net Core nicht verfügbar ist, verursacht einen Laufzeitfehler. Visual Studio benachrichtigt Sie über solche Pakete. Ein gelbes Symbol wird im Knoten **Verweise** des Projekts in **Projektmappen-Explorer**angezeigt.
+Viele der von Ihnen verwendeten Abhängigkeiten sind für .net verfügbar, einschließlich Entity Framework 6 und log4net. Wenn keine .net-oder .NET Standard Version verfügbar ist, kann die .NET Framework Version häufig verwendet werden. Ihre Erfahrungen können hiervon abweichen. Jede verwendete API, die in .net nicht verfügbar ist, verursacht einen Laufzeitfehler. Visual Studio benachrichtigt Sie über solche Pakete. Ein gelbes Symbol wird im Knoten **Verweise** des Projekts in **Projektmappen-Explorer** angezeigt.
 
 Im Blazor -basierten eShop-Projekt können Sie die installierten Pakete sehen. Zuvor hat die *packages.config* -Datei alle im Projekt verwendeten Pakete aufgelistet, was zu einer Datei mit einer Länge von fast 50 Zeilen führte. Ein Ausschnitt von *packages.config* ist:
 
@@ -80,12 +80,13 @@ Im Blazor Projekt werden die Abhängigkeiten aufgelistet, die innerhalb eines `<
 ```xml
 <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.3" />
-    <PackageReference Include="EntityFramework" Version="6.3.0-preview9-19423-04" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.12" />
 </ItemGroup>
 ```
 
-Ein nuget-Paket, das die Lebensdauer von Web Forms Entwicklern vereinfacht, ist das [Windows-Kompatibilitätspaket](../../core/porting/windows-compat-pack.md). Obwohl .net Core plattformübergreifend ist, stehen einige Funktionen nur unter Windows zur Verfügung. Windows-spezifische Funktionen werden durch die Installation des Kompatibilitätspakets zur Verfügung gestellt. Beispiele für solche Features sind die Registrierungs-, WMI-und Verzeichnisdienste. Das Paket fügt ungefähr 20.000 APIs hinzu und aktiviert viele Dienste, mit denen Sie möglicherweise bereits vertraut sind. Das Projekt "eShop" erfordert nicht das Kompatibilitätspaket. Wenn in Ihren Projekten jedoch Windows-spezifische Features verwendet werden, vereinfacht das Paket den Migrations Aufwand.
+Ein nuget-Paket, das die Lebensdauer von Web Forms Entwicklern vereinfacht, ist das [Windows-Kompatibilitätspaket](../../core/porting/windows-compat-pack.md). Obwohl .net plattformübergreifend ist, stehen einige Funktionen nur unter Windows zur Verfügung. Windows-spezifische Funktionen werden durch die Installation des Kompatibilitätspakets zur Verfügung gestellt. Beispiele für solche Features sind die Registrierungs-, WMI-und Verzeichnisdienste. Das Paket fügt ungefähr 20.000 APIs hinzu und aktiviert viele Dienste, mit denen Sie möglicherweise bereits vertraut sind. Das Projekt "eShop" erfordert nicht das Kompatibilitätspaket. Wenn in Ihren Projekten jedoch Windows-spezifische Features verwendet werden, vereinfacht das Paket den Migrations Aufwand.
 
 ## <a name="enable-startup-process"></a>Startprozess aktivieren
 
@@ -245,15 +246,15 @@ public class Startup
 }
 ```
 
-Eine bedeutende Änderung, die Sie von Web Forms bemerken, ist die Bedeutung von di. DI ist ein Leitfaden für das ASP.net Core Design. Es unterstützt die Anpassung fast aller Aspekte des ASP.net Core Frameworks. Es gibt sogar einen integrierten Dienstanbieter, der in vielen Szenarios verwendet werden kann. Wenn eine größere Anpassung erforderlich ist, kann Sie von den vielen Community-Projekten unterstützt werden. Beispielsweise können Sie die Investition ihrer Drittanbieter-di-Bibliothek weiterleiten.
+Eine bedeutende Änderung, die Sie von Web Forms bemerken, ist die Bedeutung von di. DI ist ein Leitfaden für das ASP.net Core Design. Es unterstützt die Anpassung fast aller Aspekte des ASP.net Core Frameworks. Es gibt sogar einen integrierten Dienstanbieter, der in vielen Szenarios verwendet werden kann. Wenn eine größere Anpassung erforderlich ist, kann Sie von vielen Community-Projekten unterstützt werden. Beispielsweise können Sie die Investition ihrer Drittanbieter-di-Bibliothek weiterleiten.
 
-In der ursprünglichen eShop-App gibt es eine Konfiguration für die Sitzungsverwaltung. Da der serverseitige Blazor ASP.net Core signalr für die Kommunikation verwendet, wird der Sitzungszustand nicht unterstützt, weil die Verbindungen unabhängig von einem HTTP-Kontext auftreten können. Eine APP, die den Sitzungszustand verwendet, erfordert eine Neuentwicklung, bevor Sie als-app ausgeführt wird Blazor .
+In der ursprünglichen eShop-App gibt es eine Konfiguration für die Sitzungsverwaltung. Da serverseitig Blazor ASP.net Core signalr für die Kommunikation verwendet, wird der Sitzungszustand nicht unterstützt, da die Verbindungen unabhängig von einem HTTP-Kontext auftreten können. Eine APP, die den Sitzungszustand verwendet, erfordert eine Neuentwicklung, bevor Sie als-app ausgeführt wird Blazor .
 
 Weitere Informationen zum Starten der App finden Sie unter [App Startup](app-startup.md).
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrieren von HTTP-Modulen und-Handlern zu Middleware
 
-HTTP-Module und-Handler sind gängige Muster in Web Forms, um die HTTP-Anforderungs Pipeline zu steuern. Klassen, die `IHttpModule` oder implementieren `IHttpHandler` und eingehende Anforderungen verarbeiten können. Web Forms konfiguriert Module und Handler in der *web.config* Datei. Web Forms basiert ebenfalls stark auf der Ereignis Behandlung für den App-Lebenszyklus. ASP.net Core verwendet stattdessen Middleware. Die Middleware ist in der- `Configure` Methode der- `Startup` Klasse registriert. Die Ausführungsreihenfolge der Middleware wird durch die Registrierung bestimmt.
+HTTP-Module und-Handler sind gängige Muster in Web Forms, um die HTTP-Anforderungs Pipeline zu steuern. Klassen, die `IHttpModule` oder implementieren `IHttpHandler` und eingehende Anforderungen verarbeiten können. Web Forms Konfigurieren von Modulen und Handlern in der *web.config* Datei. Web Forms basiert ebenfalls stark auf der Ereignis Behandlung für den App-Lebenszyklus. ASP.net Core verwendet stattdessen Middleware. Die Middleware ist in der- `Configure` Methode der- `Startup` Klasse registriert. Die Ausführungsreihenfolge der Middleware wird durch die Registrierung bestimmt.
 
 Im Abschnitt [enable Startup Process](#enable-startup-process) wurde ein Lifecycle-Ereignis durch Web Forms als-Methode ausgelöst `Application_BeginRequest` . Dieses Ereignis ist in ASP.net Core nicht verfügbar. Eine Möglichkeit, dieses Verhalten zu erreichen, besteht in der Implementierung von Middleware, wie im Beispiel für die *Startup.cs* -Datei gezeigt. Diese Middleware übernimmt dieselbe Logik und überträgt dann die Steuerung an den nächsten Handler in der middlewarepipeline.
 
@@ -286,7 +287,7 @@ Weitere Informationen zur Bündelung und Minimierung finden Sie unter [Bundle an
 
 Eine Seite in einer Web Forms-APP ist eine Datei mit der Erweiterung " *. aspx* ". Eine Web Forms Seite kann häufig einer Komponente in zugeordnet werden Blazor . Eine Blazor Komponente wird in einer Datei mit der *Razor* -Erweiterung erstellt. Für das Projekt "eShop" werden fünf Seiten in eine Razor Page konvertiert.
 
-Die Detailansicht umfasst z. b. drei Dateien im Web Forms Projekt: *Details. aspx*, *Details.aspx.cs*und *Details.aspx.Designer.cs*. Beim umstellen in Blazor werden Code-Behind und Markup in *Details. Razor*kombiniert. Die Razor-Kompilierung (entspricht der *Designer.cs* -Dateien) wird im *obj* -Verzeichnis gespeichert und ist nicht standardmäßig in **Projektmappen-Explorer**sichtbar. Die Web Forms Seite besteht aus folgendem Markup:
+Die Detailansicht umfasst z. b. drei Dateien im Web Forms Projekt: *Details. aspx*, *Details.aspx.cs* und *Details.aspx.Designer.cs*. Beim umstellen in Blazor werden Code-Behind und Markup in *Details. Razor* kombiniert. Die Razor-Kompilierung (entspricht der *Designer.cs* -Dateien) wird im *obj* -Verzeichnis gespeichert und ist nicht standardmäßig in **Projektmappen-Explorer** sichtbar. Die Web Forms Seite besteht aus folgendem Markup:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -558,11 +559,11 @@ In Blazor wird das entsprechende Markup in einer *Create. Razor* -Datei bereitge
 </EditForm>
 ```
 
-Der `EditForm` Kontext umfasst Validierungs Unterstützung und kann um Eingaben umschlossen werden. Daten Anmerkungen sind eine gängige Methode zum Hinzufügen der Validierung. Diese Validierungs Unterstützung kann über die Komponente hinzugefügt werden `DataAnnotationsValidator` . Weitere Informationen zu diesem Mechanismus finden Sie unter [ASP.net Core Blazor Forms und Validierung](/aspnet/core/blazor/forms-validation).
+Der `EditForm` Kontext umfasst Validierungs Unterstützung und kann um eine Eingabe umschlossen werden. Daten Anmerkungen sind eine gängige Methode zum Hinzufügen der Validierung. Diese Validierungs Unterstützung kann über die Komponente hinzugefügt werden `DataAnnotationsValidator` . Weitere Informationen zu diesem Mechanismus finden Sie unter [ASP.net Core Blazor Forms und Validierung](/aspnet/core/blazor/forms-validation).
 
 ## <a name="migrate-configuration"></a>Migrating Configuration (Migrieren der Konfiguration)
 
-In einem Web Forms Projekt werden Konfigurationsdaten am häufigsten in der *web.config* -Datei gespeichert. Der Zugriff auf die Konfigurationsdaten erfolgt mit `ConfigurationManager` . Dienste waren häufig erforderlich, um Objekte zu analysieren. Mit .NET Framework 4.7.2 wurde die Zusammensetz barkeit der Konfiguration über hinzugefügt `ConfigurationBuilders` . Diese Generatoren ermöglichten Entwicklern, verschiedene Quellen für die Konfiguration hinzuzufügen, die dann zur Laufzeit zum Abrufen der erforderlichen Werte erstellt wurden.
+In einem Web Forms Projekt werden Konfigurationsdaten am häufigsten in der *web.config* -Datei gespeichert. Der Zugriff auf die Konfigurationsdaten erfolgt mit `ConfigurationManager` . Dienste waren häufig erforderlich, um Objekte zu analysieren. Mit .NET Framework 4.7.2 wurde die Zusammensetz barkeit der Konfiguration über hinzugefügt `ConfigurationBuilders` . Diese Generatoren ermöglichten Entwicklern, verschiedene Quellen für die Konfiguration hinzuzufügen, die dann zur Laufzeit zum Abrufen der erforderlichen Werte erstellt wurde.
 
 ASP.net Core wurde ein flexibles Konfigurationssystem eingeführt, mit dem Sie die von Ihrer APP und Bereitstellung verwendete Konfigurations Quelle oder die Quell Quellen definieren können. Die `ConfigurationBuilder` Infrastruktur, die Sie möglicherweise in Ihrer Web Forms-App verwenden, wurde nach den im ASP.net Core Konfigurationssystem verwendeten Konzepten modelliert.
 
@@ -583,7 +584,7 @@ Der folgende Code Ausschnitt veranschaulicht, wie das Web Forms eShop-Projekt *w
 </configuration>
 ```
 
-Es ist üblich, dass geheime Schlüssel, wie z. b. Daten bankverbindungs Zeichenfolgen, in der *web.config*gespeichert werden. Die Geheimnisse werden unweigerlich an unsicheren Speicherorten wie der Quell Code Verwaltung persistent gespeichert. Bei Blazor ASP.net Core wird die vorherige XML-basierte Konfiguration durch den folgenden JSON-Code ersetzt:
+Es ist üblich, dass geheime Schlüssel, wie z. b. Daten bankverbindungs Zeichenfolgen, in der *web.config* gespeichert werden. Die Geheimnisse werden unweigerlich an unsicheren Speicherorten wie der Quell Code Verwaltung persistent gespeichert. Bei Blazor ASP.net Core wird die vorherige XML-basierte Konfiguration durch den folgenden JSON-Code ersetzt:
 
 ```json
 {
@@ -616,7 +617,7 @@ Standardmäßig werden Umgebungsvariablen, JSON-Dateien (*appsettings.jsauf* und
 
 ## <a name="migrate-data-access"></a>Migrieren des Datenzugriffs
 
-Der Datenzugriff ist ein wichtiger Aspekt jeder app. Das Projekt "eShop" speichert Katalog Informationen in einer Datenbank und ruft die Daten mit Entity Framework (EF) 6 ab. Da EF 6 in .net Core 3,0 unterstützt wird, kann es vom Projekt weiterhin verwendet werden.
+Der Datenzugriff ist ein wichtiger Aspekt jeder app. Das Projekt "eShop" speichert Katalog Informationen in einer Datenbank und ruft die Daten mit Entity Framework (EF) 6 ab. Da EF 6 in .net 5,0 unterstützt wird, kann es vom Projekt weiterhin verwendet werden.
 
 Für den eShop waren die folgenden EF-bezogenen Änderungen erforderlich:
 
@@ -651,4 +652,4 @@ Viele Vorgänge in ASP.net Core sind asynchron, wodurch das Laden von e/a-gebund
 An diesem Punkt haben Sie viele Beispiele dafür gesehen, wie ein Web Forms Projekt in verschoben wird Blazor . Ein vollständiges Beispiel finden Sie im [eshopon Blazor ](https://github.com/dotnet-architecture/eShopOnBlazor) -Projekt.
 
 >[!div class="step-by-step"]
->[Vorherige](security-authentication-authorization.md)
+>[Zurück](security-authentication-authorization.md)

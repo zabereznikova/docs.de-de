@@ -6,13 +6,13 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 225ebbdd5e23516ae7d5465371e95c73c440c82b
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267775"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509805"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>Projektstruktur für Blazor apps
 
@@ -22,13 +22,13 @@ Um Ihre erste APP zu erstellen Blazor , befolgen Sie die Anweisungen in den [ Bl
 
 ## <a name="project-file"></a>Projektdatei
 
-Blazor Server-apps sind .net Core-Projekte. Die Projektdatei für die Blazor Server-APP ist ungefähr so einfach wie möglich:
+Blazor Server-apps sind .net-Projekte. Die Projektdatei für die Blazor Server-APP ist ungefähr so einfach wie möglich:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -37,32 +37,26 @@ Blazor Server-apps sind .net Core-Projekte. Die Projektdatei für die Blazor Ser
 Die Projektdatei für eine Blazor WebAssembly App ist etwas komplizierter (genaue Versionsnummern können variieren):
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <RazorLangVersion>3.0</RazorLangVersion>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="3.1.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.HttpClient" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.DevServer" Version="3.1.0" PrivateAssets="all" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Shared\BlazorWebAssemblyApp1.Shared.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
 ```
 
-BlazorWebAssemblyprojiziert Ziel .NET Standard anstelle von .net Core, da Sie im Browser auf einer WebAssembly -basierten .NET-Laufzeit ausgeführt werden. Sie können .net nicht in einem Webbrowser installieren, wie auf einem Server oder einem Entwickler Computer. Folglich verweist das Projekt auf das Blazor Framework mit einzelnen Paket verweisen.
+BlazorWebAssemblyProjektziele `Microsoft.NET.Sdk.BlazorWebAssembly` anstelle von `Microsoft.NET.Sdk.Web` SDK, da Sie im Browser auf einer WebAssembly -basierten .NET-Laufzeit ausgeführt werden. Sie können .net nicht in einem Webbrowser installieren, wie auf einem Server oder einem Entwickler Computer. Folglich verweist das Projekt auf das Blazor Framework mit einzelnen Paket verweisen.
 
-Im Vergleich dazu enthält ein Standardmäßiges ASP.net-Web Forms Projekt fast 300 XML-Zeilen in der *csproj* -Datei, von denen die meisten Code-und Inhalts Dateien im Projekt explizit aufgelistet werden. Viele der Vereinfachungen in den .net Core-und .NET Standard basierten Projekten stammen aus den Standardzielen und-Eigenschaften, die durch den Verweis `Microsoft.NET.Sdk.Web` auf das SDK importiert werden. Dies wird häufig auch als einfaches WebSDK bezeichnet. Das Web-SDK umfasst Platzhalter und andere Bequemlichkeiten, die die Einbindung von Code und Inhalts Dateien im Projekt vereinfachen. Sie müssen die Dateien nicht explizit auflisten. Wenn .net Core als Zielversion verwendet wird, fügt das Web-SDK auch frameworkverweise sowohl auf die .net Core-als auch auf die ASP.net Core frei Die Frameworks sind über den Knoten **Abhängigkeiten**-  >  **Frameworks** im Fenster **Projektmappen-Explorer** sichtbar. Die freigegebenen Frameworks sind Assemblys, die bei der Installation von .net Core auf dem Computer installiert wurden.
+Im Vergleich dazu enthält ein Standardmäßiges ASP.net-Web Forms Projekt fast 300 XML-Zeilen in der *csproj* -Datei, von denen die meisten Code-und Inhalts Dateien im Projekt explizit aufgelistet werden. Mit der-Version `.NET 5` von `Blazor Server` und `Blazor WebAssembly` kann eine einheitliche Laufzeit auf einfache Weise gemeinsam genutzt werden.
 
-Obwohl Sie unterstützt werden, sind einzelne Assemblyverweise in .net Core-Projekten weniger häufig. Die meisten Projekt Abhängigkeiten werden als nuget-Paket Verweise behandelt. In .net Core-Projekten müssen Sie nur auf Paketabhängigkeiten der obersten Ebene verweisen. Transitive Abhängigkeiten werden automatisch eingeschlossen. Anstatt die *packages.config* Datei zu verwenden, die häufig in ASP.net-Web Forms Projekten für Verweise auf Pakete zu finden ist, werden Paket Verweise der Projektdatei mithilfe des-Elements hinzugefügt `<PackageReference>` .
+Obwohl Sie unterstützt werden, sind einzelne Assemblyverweise in .NET-Projekten weniger häufig. Die meisten Projekt Abhängigkeiten werden als nuget-Paket Verweise behandelt. Sie müssen nur auf Paketabhängigkeiten auf oberster Ebene in .NET-Projekten verweisen. Transitive Abhängigkeiten werden automatisch eingeschlossen. Anstatt die *packages.config* Datei zu verwenden, die häufig in ASP.net-Web Forms Projekten für Verweise auf Pakete zu finden ist, werden Paket Verweise der Projektdatei mithilfe des-Elements hinzugefügt `<PackageReference>` .
 
 ```xml
 <ItemGroup>
@@ -101,7 +95,7 @@ Im Gegensatz zu ASP.net-Web Forms Projekten können nicht alle Dateien in einem 
 
 ## <a name="configuration"></a>Konfiguration
 
-Die Konfiguration in ASP.net Web Forms-apps wird in der Regel mit einer oder mehreren *web.config* Dateien gehandhabt. Blazor Apps verfügen in der Regel nicht über *web.config* Dateien. Wenn dies der Fall ist, wird die Datei nur zum Konfigurieren von IIS-spezifischen Einstellungen verwendet, wenn Sie auf IIS gehostet wird. Stattdessen Blazor verwenden Server-Apps die ASP.net Core Konfigurations Abstraktionen ( Blazor WebAssembly apps unterstützen derzeit nicht dieselben Konfigurations Abstraktionen, aber dies kann ein in der Zukunft hinzugefügtes Feature sein). Beispielsweise werden in der Standard Blazor Server-App einige Einstellungen in *appsettings.js*gespeichert.
+Die Konfiguration in ASP.net Web Forms-apps wird in der Regel mit einer oder mehreren *web.config* Dateien gehandhabt. Blazor Apps verfügen in der Regel nicht über *web.config* Dateien. Wenn dies der Fall ist, wird die Datei nur zum Konfigurieren von IIS-spezifischen Einstellungen verwendet, wenn Sie auf IIS gehostet wird. Stattdessen Blazor verwenden Server-Apps die ASP.net Core Konfigurations Abstraktionen ( Blazor WebAssembly apps unterstützen derzeit nicht dieselben Konfigurations Abstraktionen, aber dies kann ein in der Zukunft hinzugefügtes Feature sein). Beispielsweise werden in der Standard Blazor Server-App einige Einstellungen in *appsettings.js* gespeichert.
 
 ```json
 {
@@ -154,7 +148,7 @@ Weitere Details finden Sie im Blazor Abschnitt " [Seiten, Routing und Layouts](.
 
 ## <a name="layout"></a>Layout
 
-In ASP.net Web Forms-apps wird das allgemeine Seitenlayout mithilfe von Masterseiten (*Site. Master*) behandelt. In- Blazor apps wird das Seitenlayout mithilfe von Layoutkomponenten (*Shared/MainLayout. Razor*) behandelt. Layoutkomponenten werden im Abschnitt "Seite" [, "Routing" und "Layouts](./pages-routing-layouts.md) " ausführlicher erläutert.
+In ASP.net Web Forms-apps wird ein gängiges Seitenlayout mithilfe von Masterseiten (*Site. Master*) behandelt. In- Blazor apps wird das Seitenlayout mithilfe von Layoutkomponenten (*Shared/MainLayout. Razor*) behandelt. Layoutkomponenten werden im Abschnitt "Seite" [, "Routing" und "Layouts](./pages-routing-layouts.md) " ausführlicher erläutert.
 
 ## <a name="bootstrap-no-locblazor"></a>Bootstrap Blazor
 
@@ -165,7 +159,7 @@ Zum Bootstrapping Blazor muss die app folgende Aktionen ausführen:
 
 In der Blazor Server-APP wird die Hostseite der Stamm Komponente in der Datei *_Host. cshtml* definiert. Diese Datei definiert eine Razor-Seite und keine Komponente. Razor Pages verwenden Sie Razor-Syntax, um eine Server adressierbare Seite zu definieren, ähnlich wie eine *aspx* -Seite. Die- `Html.RenderComponentAsync<TComponent>(RenderMode)` Methode wird verwendet, um zu definieren, wo eine Komponente auf Stamm Ebene gerendert werden soll. Die- `RenderMode` Option gibt die Art an, in der die Komponente gerendert werden soll. In der folgenden Tabelle werden die unterstützten `RenderMode` Optionen beschrieben.
 
-|Option                        |BESCHREIBUNG       |
+|Option                        |Beschreibung       |
 |------------------------------|------------------|
 |`RenderMode.Server`           |Wird interaktiv gerendert, sobald eine Verbindung mit dem Browser hergestellt wurde|
 |`RenderMode.ServerPrerendered`|Zuerst vorab und dann interaktiv gerendert|
@@ -198,39 +192,49 @@ Der Skript Verweis auf *_framework/blazor.server.js* stellt die Echtzeitverbindu
 </html>
 ```
 
-In der Blazor WebAssembly App ist die Hostseite eine einfache statische HTML-Datei unter *wwwroot/index.html*. Das- `<app>` Element wird verwendet, um anzugeben, wo die Stamm Komponente gerendert werden soll.
+In der Blazor WebAssembly App ist die Hostseite eine einfache statische HTML-Datei unter *wwwroot/index.html*. Das- `<div>` Element mit der ID "" `app` wird verwendet, um anzugeben, wo die Stamm Komponente gerendert werden soll.
 
 ```html
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>BlazorApp2</title>
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="blazor-web.styles.css" rel="stylesheet" />
 </head>
-<body>
-    <app>Loading...</app>
 
+<body>
+    <div id="app">Loading...</div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
+
 </html>
+
 ```
 
-Die zu rendernde bestimmte Komponente wird in der- `Startup.Configure` Methode der APP mit einer entsprechenden CSS-Auswahl konfiguriert, die angibt, wo die Komponente gerendert werden soll.
+Die Stamm Komponente zum Rendering wird in der-Methode der App konfiguriert `Program.Main` und bietet die Flexibilität, verschiedene Dienste durch Abhängigkeitsinjektion zu registrieren. Weitere Informationen finden Sie unter Hinzufügen von Diensten [ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) zu einer APP in
 
 ```csharp
-public class Startup
+public class Program
 {
-    public void ConfigureServices(IServiceCollection services)
+    public static async Task Main(string[] args)
     {
-    }
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
+        builder.RootComponents.Add<App>("#app");
 
-    public void Configure(IComponentsApplicationBuilder app)
-    {
-        app.AddComponent<App>("app");
+        ....
+        ....
     }
 }
 ```
@@ -248,7 +252,7 @@ Blazor WebAssembly Wählen Sie einen der folgenden Ansätze aus, um die APP ausz
 - Führen Sie das Client Projekt direkt mit dem Development Server aus.
 - Führen Sie das Server Projekt aus, wenn die APP mit ASP.net Core gehostet wird.
 
-BlazorWebAssemblyapps unterstützen das Debuggen mit Visual Studio nicht. Verwenden Sie anstelle von, um die APP auszuführen `Ctrl+F5` `F5` . Stattdessen können Sie Blazor WebAssembly apps direkt im Browser Debuggen. Weitere Informationen finden Sie unter [Debug ASP.net Core Blazor ](/aspnet/core/blazor/debug) .
+BlazorWebAssemblyApps können sowohl in Browser als auch in Visual Studio debuggt werden. Weitere Informationen finden Sie in der [Debug-ASP.net Core Blazor WebAssembly ](/aspnet/core/blazor/debug) .
 
 >[!div class="step-by-step"]
 >[Zurück](hosting-models.md)

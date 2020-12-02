@@ -1,19 +1,19 @@
 ---
 title: Azure-Sicherheit für Native Cloud-apps
 description: Architektur von Cloud Native .net-apps für Azure | Azure-Sicherheit für Native Cloud-apps
-ms.date: 05/13/2020
-ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160995"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509818"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Azure-Sicherheit für Native Cloud-apps
 
 Native Cloud-Anwendungen können einfacher und schwieriger zu schützen als herkömmliche Anwendungen. Der Nachteil ist, dass Sie kleinere Anwendungen sichern und mehr Energie aufwenden müssen, um die Sicherheitsinfrastruktur zu erstellen. Die heterogene Natur der Programmiersprachen und Stile in den meisten Dienst Bereitstellungen bedeutet auch, dass Sie die Sicherheits Bulletins von vielen unterschiedlichen Anbietern berücksichtigen müssen.
 
-Auf der Flip-Seite beschränken kleinere Dienste, die jeweils über einen eigenen Datenspeicher verfügen, den Umfang eines Angriffs. Wenn ein Angreifer ein System kompromittiert, ist es für den Angreifer wahrscheinlich schwieriger, den Sprung zu einem anderen System als in einer monolithischen Anwendung zu machen. Prozess Grenzen sind starke Grenzen. Außerdem ist die Beschädigung, wenn eine Datenbanksicherung nicht vorhanden ist, stärker eingeschränkt, da diese Datenbank nur eine Teilmenge der Daten enthält und wahrscheinlich keine personenbezogenen Daten enthält.
+Auf der Flip-Seite beschränken kleinere Dienste, die jeweils über einen eigenen Datenspeicher verfügen, den Umfang eines Angriffs. Wenn ein Angreifer ein System kompromittiert, ist es für den Angreifer wahrscheinlich schwieriger, den Sprung zu einem anderen System als in einer monolithischen Anwendung zu machen. Prozess Grenzen sind starke Grenzen. Wenn eine Datenbanksicherung offengelegt wird, ist der Schaden außerdem eingeschränkt, da diese Datenbank nur eine Teilmenge der Daten enthält und wahrscheinlich keine personenbezogenen Daten enthält.
 
 ## <a name="threat-modeling"></a>Bedrohungsmodellierung
 
@@ -26,7 +26,7 @@ Unabhängig davon, ob die Vorteile die Nachteile von cloudbasierten Anwendungen 
 
 Alle diese Fragen sind Teil eines Prozesses namens [Bedrohungsmodellierung](/azure/security/azure-security-threat-modeling-tool). Bei diesem Prozess wird versucht, die Frage zu beantworten, welche Bedrohungen für das System bestehen, wie wahrscheinlich die Bedrohungen sind und welche potenzielle Schäden daraus bestehen.
 
-Nachdem die Liste der Bedrohungen festgelegt wurde, müssen Sie entscheiden, ob Sie eine Minderung durchführen möchten. Manchmal ist eine Bedrohung so unwahrscheinlich und teuer, dass es nicht sinnvoll ist, Energie zu investieren. Beispielsweise könnte ein Actor auf Zustands Ebene Änderungen in den Entwurf eines Prozesses einfügen, der von Millionen von Geräten verwendet wird. Anstatt ein bestimmtes Code Element in [Ring 3](https://en.wikipedia.org/wiki/Protection_ring)auszuführen, wird dieser Code in Ring 0 ausgeführt. Dies ermöglicht eine Ausnutzung, mit der der Hypervisor umgangen und der Angriffs Code auf den Bare-Metal-Computern ausgeführt werden kann. Dies ermöglicht Angriffe auf alle virtuellen Maschinen, die auf der Hardware ausgeführt werden.
+Nachdem die Liste der Bedrohungen festgelegt wurde, müssen Sie entscheiden, ob Sie eine Minderung durchführen möchten. Manchmal ist eine Bedrohung so unwahrscheinlich und teuer, dass es nicht sinnvoll ist, Energie zu investieren. Beispielsweise könnte ein Actor auf Zustands Ebene Änderungen in den Entwurf eines Prozesses einfügen, der von Millionen von Geräten verwendet wird. Anstatt ein bestimmtes Code Element in [Ring 3](https://en.wikipedia.org/wiki/Protection_ring)auszuführen, wird dieser Code in Ring 0 ausgeführt. Dieser Prozess ermöglicht einen Exploit, der den Hypervisor umgehen und den Angriffs Code auf den Bare-Metal-Computern ausführen kann, sodass Angriffe auf alle virtuellen Maschinen, die auf der Hardware ausgeführt werden, möglich sind.
 
 Die geänderten Prozessoren sind schwer zu erkennen, ohne dass ein Mikroskop und erweiterte Kenntnisse des auf dem Silicon Design dieses Prozessors vorliegen. Dieses Szenario ist unwahrscheinlich und kostenaufwendig zu beheben. wahrscheinlich empfiehlt es sich nicht, ein Bedrohungs Modell dafür zu entwickeln.
 
@@ -58,9 +58,9 @@ Wenn ein Angreifer versucht, eine Anwendung zu durchdringen, sollte eine Warnung
 
 Ein Ort, an dem Sicherheit oft übersehen wird, ist um den Buildprozess herum. Der Build sollte nicht nur Sicherheitsüberprüfungen ausführen, wie z. b. das Überprüfen auf unsicheren Code oder eingecheckte Anmelde Informationen, sondern der Build selbst muss sicher sein. Wenn der Buildserver kompromittiert ist, bietet er einen fantastischen Vektor für die Einführung von beliebigem Code in das Produkt.
 
-Stellen Sie sich vor, dass ein Angreifer die Kenn Wörter von Personen stehlen möchte, die sich bei einer Webanwendung anmelden. Sie könnten einen Buildschritt einführen, der den ausgecheckten Code so ändert, dass er beliebige Anmelde Anforderungen an einen anderen Server widerspiegelt. Der nächste Zeitpunkt, zu dem der Code den Build durchläuft, wird automatisch aktualisiert. Die Überprüfung der Quell Code Anfälligkeit fängt diese nicht ab, wenn Sie vor dem Build ausgeführt wird. Ebenso fängt niemand Sie in einem Code Review ab, da die Buildschritte auf dem Buildserver ausgeführt werden. Der ausgebeutete Code wird in die Produktion geleitet, wo er Kenn Wörter ernten kann. Es ist wahrscheinlich kein Überwachungs Protokoll des buildprozessprozesses vorhanden oder zumindest niemand, der die Überwachung überwacht.
+Stellen Sie sich vor, dass ein Angreifer die Kenn Wörter von Personen stehlen möchte, die sich bei einer Webanwendung anmelden. Sie könnten einen Buildschritt einführen, der den ausgecheckten Code so ändert, dass er beliebige Anmelde Anforderungen an einen anderen Server widerspiegelt. Der nächste Zeitpunkt, zu dem der Code den Build durchläuft, wird automatisch aktualisiert. Durch die Überprüfung der Quell Code Anfälligkeit wird dieses Sicherheitsrisiko nicht abgefangen, da es vor dem Build ausgeführt wird. Ebenso fängt niemand Sie in einem Code Review ab, da die Buildschritte auf dem Buildserver ausgeführt werden. Der ausgebeutete Code wird in die Produktion geleitet, wo er Kenn Wörter ernten kann. Es ist wahrscheinlich kein Überwachungs Protokoll des buildprozessprozesses vorhanden oder zumindest niemand, der die Überwachung überwacht.
 
-Dies ist ein perfektes Beispiel für ein scheinbar niedriges Ziel, das zum Unterbrechen des Systems verwendet werden kann. Nachdem ein Angreifer den Umkreis des Systems verletzt hat, kann er mit der Suche nach Möglichkeiten zum herauf Stufen der Berechtigungen auf den Punkt beginnen, an dem Sie jederzeit echte Schäden verursachen können.
+Dieses Szenario ist ein perfektes Beispiel für ein scheinbar Ziel mit geringem Wert, das verwendet werden kann, um das System zu unterbrechen. Nachdem ein Angreifer den Umkreis des Systems verletzt hat, kann er mit der Suche nach Möglichkeiten zum herauf Stufen der Berechtigungen auf den Punkt beginnen, an dem Sie jederzeit echte Schäden verursachen können.
 
 ## <a name="building-secure-code"></a>Aufbauen von sicherem Code
 
@@ -82,7 +82,7 @@ In einer lokalen Bereitstellungs Umgebung ist eine große Menge an Energie für 
 
 Standardmäßig verfügen die meisten Azure-Ressourcen in Azure nur über die grundlegende und leistungsbezogene Netzwerk Einrichtung. Beispielsweise kann jeder im Internet auf einen app Service zugreifen. Neue SQL Server Instanzen sind in der Regel eingeschränkt, sodass externe Parteien nicht darauf zugreifen können, aber die von Azure selbst verwendeten IP-Adressbereiche sind über zulässig. Obwohl der SQL-Server vor externen Bedrohungen geschützt ist, muss ein Angreifer nur einen Azure-Bridgeheadserver einrichten, von dem aus Angriffe auf alle SQL-Instanzen in Azure gestartet werden können.
 
-Glücklicherweise können die meisten Azure-Ressourcen in einer Azure-Virtual Network platziert werden, die eine präzisere Zugriffs Steuerung ermöglicht. Ähnlich der Art und Weise, wie lokale Netzwerke private Netzwerke einrichten, die vor der umfassenderen Welt geschützt sind, sind virtuelle Netzwerke Inseln mit privaten IP-Adressen, die sich innerhalb des Azure-Netzwerks befinden.
+Glücklicherweise können die meisten Azure-Ressourcen in einer Azure-Virtual Network platziert werden, die eine differenzierte Zugriffs Steuerung ermöglicht. Ähnlich der Art und Weise, wie lokale Netzwerke private Netzwerke einrichten, die vor der umfassenderen Welt geschützt sind, sind virtuelle Netzwerke Inseln mit privaten IP-Adressen, die sich innerhalb des Azure-Netzwerks befinden.
 
 ![Abbildung 9-1 ein virtuelles Netzwerk in Azure](./media/virtual-network.png)
 
@@ -90,15 +90,15 @@ Glücklicherweise können die meisten Azure-Ressourcen in einer Azure-Virtual Ne
 
 Auf die gleiche Weise, wie lokale Netzwerke über eine Firewall verfügen, die den Zugriff auf das Netzwerk regelt, können Sie eine ähnliche Firewall an der Grenze des virtuellen Netzwerks einrichten. Standardmäßig können alle Ressourcen in einem virtuellen Netzwerk weiterhin mit dem Internet kommunizieren. Es handelt sich nur um eingehende Verbindungen, für die eine explizite Firewallausnahme erforderlich ist.
 
-Wenn das Netzwerk eingerichtet ist, können interne Ressourcen wie z. b. Speicher Konten so eingerichtet werden, dass nur der Zugriff durch Ressourcen ermöglicht wird, die sich auch auf dem Virtual Network befinden. Diese Firewall bietet ein zusätzliches Maß an Sicherheit, wenn die Schlüssel für dieses Speicherkonto kompromittiert werden könnten und Angreifer nicht in der Lage sind, die kompromittierten Schlüssel auszunutzen. Dies ist ein weiteres Beispiel für das Prinzip der geringsten Berechtigung.
+Wenn das Netzwerk eingerichtet ist, können interne Ressourcen wie z. b. Speicher Konten so eingerichtet werden, dass nur der Zugriff durch Ressourcen ermöglicht wird, die sich auch auf dem Virtual Network befinden. Diese Firewall bietet ein zusätzliches Maß an Sicherheit, wenn die Schlüssel für dieses Speicherkonto kompromittiert werden könnten und Angreifer nicht in der Lage sind, die kompromittierten Schlüssel auszunutzen. Dieses Szenario ist ein weiteres Beispiel für das Prinzip der geringsten Berechtigung.
 
 Die Knoten in einem Azure Kubernetes-Cluster können genauso wie andere Ressourcen, die in Azure einheitlicher sind, an einem virtuellen Netzwerk teilnehmen. Diese Funktion wird als [Azure Container Networking-Schnittstelle](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md)bezeichnet. Tatsächlich weist Sie ein Subnetz innerhalb des virtuellen Netzwerks zu, dem virtuelle Computer und Container Images zugeordnet sind.
 
 Wenn Sie den Weg zur Veranschaulichung des Prinzips der geringsten Rechte fortsetzen, muss nicht jede Ressource innerhalb einer Virtual Network mit allen anderen Ressourcen kommunizieren. Beispielsweise ist es in einer Anwendung, die eine Web-API über ein Speicherkonto und eine SQL-Datenbank bereitstellt, unwahrscheinlich, dass die Datenbank und das Speicherkonto miteinander kommunizieren müssen. Alle Daten, die zwischen Ihnen gemeinsam genutzt werden, durchlaufen die Webanwendung. Daher kann eine [Netzwerk Sicherheitsgruppe (NSG)](/azure/virtual-network/security-overview) verwendet werden, um den Datenverkehr zwischen den beiden Diensten abzulehnen.
 
-Eine Richtlinie, mit der die Kommunikation zwischen Ressourcen verweigert wird, kann sich als lästig erweisen. Dies gilt insbesondere für den Hintergrund der Verwendung von Azure ohne Datenverkehrs Einschränkungen. In einigen anderen Clouds ist das Konzept der Netzwerk Sicherheitsgruppen weitaus häufiger. Beispielsweise ist die Standard Richtlinie für AWS, dass Ressourcen nicht untereinander kommunizieren können, bis Sie durch Regeln in einer NSG aktiviert ist. Eine restriktivere Umgebung bietet zwar eine langsamere Entwicklung, bietet jedoch einen sichereren Standard. Die Verwendung geeigneter devops-Verfahren, insbesondere die Verwendung von [Azure Resource Manager oder TERRAFORM](infrastructure-as-code.md) zum Verwalten von Berechtigungen, kann die Steuerung der Regeln vereinfachen.
+Eine Richtlinie, mit der die Kommunikation zwischen Ressourcen verweigert wird, kann sich als lästig erweisen. Dies gilt insbesondere für den Hintergrund der Verwendung von Azure ohne Datenverkehrs Einschränkungen. In einigen anderen Clouds ist das Konzept der Netzwerk Sicherheitsgruppen weitaus häufiger. Beispielsweise ist die Standard Richtlinie für AWS, dass Ressourcen nicht untereinander kommunizieren können, bis Sie durch Regeln in einer NSG aktiviert ist. Eine restriktivere Umgebung bietet zwar eine langsamere Entwicklung, aber eine restriktivere Umgebung bietet einen sichereren Standard. Die Verwendung geeigneter devops-Verfahren, insbesondere die Verwendung von [Azure Resource Manager oder TERRAFORM](infrastructure-as-code.md) zum Verwalten von Berechtigungen, kann die Steuerung der Regeln vereinfachen.
 
-Virtuelle Netzwerke können auch beim Einrichten der Kommunikation zwischen lokalen Ressourcen und cloudressourcen nützlich sein. Ein virtuelles privates Netzwerk kann verwendet werden, um die beiden Netzwerke nahtlos zu verbinden. Dies ermöglicht die Ausführung eines virtuellen Netzwerks ohne irgendeine Art von Gateway für Szenarien, in denen alle Benutzer auf dem Standort vorhanden sind. Es gibt eine Reihe von Technologien, die verwendet werden können, um dieses Netzwerk einzurichten. Die einfachste Möglichkeit ist die Verwendung eines [Site-to-Site-VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) , das zwischen vielen Routern und Azure hergestellt werden kann. Der Datenverkehr wird über das Internet mit den gleichen Kosten pro Byte wie bei jedem anderen Datenverkehr verschlüsselt und getunniert. Für Szenarien, in denen mehr Bandbreite oder mehr Sicherheit wünschenswert ist, bietet Azure einen Dienst mit dem Namen [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) , der eine private Verbindung zwischen einem lokalen Netzwerk und Azure verwendet. Es ist kostspieliger und schwerer zu erstellen, aber auch sicherer.
+Virtuelle Netzwerke können auch beim Einrichten der Kommunikation zwischen lokalen Ressourcen und cloudressourcen nützlich sein. Ein virtuelles privates Netzwerk kann verwendet werden, um die beiden Netzwerke nahtlos zu verbinden. Dieser Ansatz ermöglicht die Ausführung eines virtuellen Netzwerks ohne gatewayart für Szenarien, in denen alle Benutzer auf dem Standort sind. Es gibt eine Reihe von Technologien, die verwendet werden können, um dieses Netzwerk einzurichten. Die einfachste Möglichkeit ist die Verwendung eines [Site-to-Site-VPN](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) , das zwischen vielen Routern und Azure hergestellt werden kann. Der Datenverkehr wird über das Internet mit den gleichen Kosten pro Byte wie bei jedem anderen Datenverkehr verschlüsselt und getunniert. Für Szenarien, in denen mehr Bandbreite oder mehr Sicherheit wünschenswert ist, bietet Azure einen Dienst mit dem Namen [Express Route](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) , der eine private Verbindung zwischen einem lokalen Netzwerk und Azure verwendet. Es ist kostspieliger und schwerer zu erstellen, aber auch sicherer.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Rollenbasierte Zugriffs Steuerung zum Einschränken des Zugriffs auf Azure-Ressourcen
 
@@ -121,7 +121,7 @@ Der Sicherheits Prinzipal kann auf die meisten Ressourcen angewendet werden. Die
 
 ## <a name="roles"></a>Rollen
 
-Ein Sicherheits Prinzipal kann zahlreiche Rollen übernehmen oder bei Verwendung einer eher in der Analogie verwendeten Analogie viele Hüte belegen. Jede Rolle definiert eine Reihe von Berechtigungen, z. b. "Lesen von Nachrichten von Azure Service Bus Endpunkts". Der effektive Berechtigungs Satz eines Sicherheits Prinzipals ist die Kombination aller Berechtigungen, die allen Rollen zugewiesen sind, die der Sicherheits Prinzipal besitzt. Azure verfügt über eine große Anzahl integrierter Rollen, und Benutzer können Ihre eigenen Rollen definieren.
+Ein Sicherheits Prinzipal kann zahlreiche Rollen übernehmen oder bei Verwendung einer eher in der Analogie verwendeten Analogie viele Hüte belegen. Jede Rolle definiert eine Reihe von Berechtigungen, z. b. "Lesen von Nachrichten von Azure Service Bus Endpunkts". Der effektive Berechtigungs Satz eines Sicherheits Prinzipals ist die Kombination aller Berechtigungen, die allen von einem Sicherheits Prinzipal zugewiesenen Rollen zugewiesen sind. Azure verfügt über eine große Anzahl integrierter Rollen, und Benutzer können Ihre eigenen Rollen definieren.
 
 ![Abbildung 9-3 RBAC-Rollen Definitionen](./media/rbac-role-definition.png)
 
@@ -137,7 +137,7 @@ Rollen können auf einen eingeschränkten Satz von Ressourcen in Azure angewende
 
 Der Bereich kann so schmal wie eine einzelne Ressource sein oder auf eine gesamte Ressourcengruppe, ein Abonnement oder sogar auf eine Verwaltungsgruppe angewendet werden.
 
-Beim Testen, ob ein Sicherheits Prinzipal über eine bestimmte Berechtigung verfügt, wird die Kombination von Rolle und Bereich berücksichtigt. Diese Kombination bietet einen leistungsfähigen Autorisierungs Mechanismus.
+Beim Testen, ob ein Sicherheits Prinzipal über bestimmte Berechtigungen verfügt, wird die Kombination von Rolle und Bereich berücksichtigt. Diese Kombination bietet einen leistungsfähigen Autorisierungs Mechanismus.
 
 ## <a name="deny"></a>Verweigern
 
@@ -147,7 +147,7 @@ Ablehnungs Regeln haben Vorrang vor Zulassungsregeln. Die Darstellung des gleich
 
 ## <a name="checking-access"></a>Überprüfen des Zugriffs
 
-Wie Sie sich vorstellen können, kann es schwierig sein, die effektive Berechtigung eines Dienst Prinzipals zu ermitteln, wenn eine große Anzahl von Rollen und Bereichen vorhanden ist. Das Anheften von Ablehnungs Regeln wird nur zur Erhöhung der Komplexität dienen. Glücklicherweise gibt es einen [Berechtigungs Rechner](/azure/role-based-access-control/check-access) , der die effektiven Berechtigungen für jeden Dienst Prinzipal anzeigen kann. Sie befindet sich in der Regel auf der Registerkarte IAM im Portal, wie in Abbildung 10-3 dargestellt.
+Wie Sie sich vorstellen können, kann es schwierig sein, die effektive Berechtigung eines Dienst Prinzipals zu ermitteln, wenn eine große Anzahl von Rollen und Bereichen vorhanden ist. Das Anheften von Ablehnungs Regeln wird nur zur Erhöhung der Komplexität dienen. Glücklicherweise gibt es einen [Berechtigungs Rechner](/azure/role-based-access-control/check-access) , der die effektiven Berechtigungen für jeden Dienst Prinzipal anzeigen kann. Sie befindet sich in der Regel auf der Registerkarte IAM im Portal, wie in Abbildung 9-3 dargestellt.
 
 ![Abbildung 9-4 Berechtigungs Rechner für App Service](./media/check-rbac.png)
 
@@ -159,7 +159,7 @@ Kenn Wörter und Zertifikate sind ein gängiger Angriffsvektor für Angreifer. D
 
 Viele Sicherheits [Experten empfehlen](https://www.troyhunt.com/password-managers-dont-have-to-be-perfect-they-just-have-to-be-better-than-not-having-one/) , dass die Verwendung eines Kennwort-Managers zum Aufbewahren Ihrer eigenen Kenn Wörter die beste Vorgehensweise ist. Obwohl Sie Ihre Kenn Wörter an einem Ort zentralisiert, können Sie auch sehr komplexe Kenn Wörter verwenden und sicherstellen, dass Sie für jedes Konto eindeutig sind. Das gleiche System ist in Azure vorhanden: ein zentraler Speicher für Geheimnisse.
 
-## <a name="azure-key-vault"></a>Azure-Schlüsseltresor
+## <a name="azure-key-vault"></a>Azure Key Vault
 
 Azure Key Vault bietet einen zentralisierten Speicherort zum Speichern von Kenn Wörtern für Dinge wie Datenbanken, API-Schlüssel und Zertifikate. Sobald ein geheimer Schlüssel in den Tresor eingegeben wurde, wird er nie erneut angezeigt, und die Befehle zum Extrahieren und Anzeigen sind absichtlich kompliziert. Die Informationen in der Safe werden entweder mithilfe der Software Verschlüsselung oder mithilfe der von TPS 140-2 Level 2 validierten Hardware Sicherheitsmodule geschützt.
 
@@ -225,17 +225,17 @@ Diese Verschlüsselungs Stufe ist nicht für die gesamte Zeit ausreichend, Sie s
 
 ### <a name="at-rest"></a>Im Ruhezustand
 
-In jeder Anwendung gibt es eine Reihe von stellen, an denen sich Daten auf dem Datenträger befinden. Der Anwendungscode selbst wird aus einem Speichermechanismus geladen. Die meisten Anwendungen verwenden auch eine Art von Datenbank, z. b. SQL Server, Cosmos DB oder sogar die erstaunlich Preis effiziente Table Storage. Diese Datenbanken verwenden alle stark verschlüsselten Speicher, um sicherzustellen, dass keine anderen Anwendungen als die Anwendungen mit den richtigen Berechtigungen Ihre Daten lesen können. Auch die System Operatoren können keine verschlüsselten Daten lesen. Daher können Kunden sicher sein, dass Ihre geheimen Informationen geheim bleiben.
+In jeder Anwendung gibt es eine Reihe von stellen, an denen sich Daten auf dem Datenträger befinden. Der Anwendungscode selbst wird aus einem Speichermechanismus geladen. Die meisten Anwendungen verwenden auch eine solche Datenbank, z. b. SQL Server, Cosmos DB oder sogar die erstaunlich Preis effiziente Table Storage. Diese Datenbanken verwenden alle stark verschlüsselten Speicher, um sicherzustellen, dass keine anderen Anwendungen als die Anwendungen mit den richtigen Berechtigungen Ihre Daten lesen können. Auch die System Operatoren können keine verschlüsselten Daten lesen. Daher können Kunden sicher sein, dass Ihre geheimen Informationen geheim bleiben.
 
-### <a name="storage"></a>Storage
+### <a name="storage"></a>Speicher
 
-Die Grundlage für einen Großteil von Azure ist die Azure Storage-Engine. Die Datenträger virtueller Computer werden auf Azure Storage bereitgestellt. Azure Kubernetes-Dienste werden auf virtuellen Computern ausgeführt, die auf Azure Storage gehostet werden. Sogar Server lose Technologien, wie Azure Functions-apps und Azure Container Instances, sind nicht auf dem Datenträger verfügbar, der Teil von Azure Storage ist.
+Die Grundlage für einen Großteil von Azure ist die Azure Storage-Engine. Die Datenträger virtueller Computer werden auf Azure Storage bereitgestellt. Der Azure Kubernetes-Dienst wird auf virtuellen Computern ausgeführt, die auf Azure Storage gehostet werden. Sogar Server lose Technologien, wie Azure Functions-apps und Azure Container Instances, sind nicht auf dem Datenträger verfügbar, der Teil von Azure Storage ist.
 
 Wenn Azure Storage gut verschlüsselt ist, wird eine Grundlage für die meisten anderen anderen Elemente für die Verschlüsselung bereit stehen. Azure Storage [ist](/azure/storage/common/storage-service-encryption) mit der mit dem [fps 140-2](https://en.wikipedia.org/wiki/FIPS_140) kompatiblen [256-Bit-AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)verschlüsselt. Dies ist eine bekannte Verschlüsselungstechnologie, die in den letzten 20 oder so vielen Jahren eine umfassende akademische Überprüfung durchgeführt hat. Zurzeit gibt es keinen bekannten praktischen Angriff, der es einem Benutzer ohne Kenntnis des Schlüssels gestattet, Daten zu lesen, die von AES verschlüsselt wurden.
 
 Standardmäßig werden die Schlüssel, die zum Verschlüsseln von Azure Storage verwendet werden, von Microsoft verwaltet. Es sind umfassende Schutzmaßnahmen vorhanden, um sicherzustellen, dass böswillige Zugriffe auf diese Schlüssel verhindert werden. Benutzer mit bestimmten Verschlüsselungs Anforderungen können jedoch auch [eigene Speicher Schlüssel bereitstellen](/azure/storage/common/storage-encryption-keys-powershell) , die in Azure Key Vault verwaltet werden. Diese Schlüssel können jederzeit widerrufen werden, wodurch der Inhalt des Speicher Kontos auf diese Weise nicht mehr zugänglich ist.
 
-Bei virtuellen Computern wird verschlüsselter Speicher verwendet, aber es ist möglich, eine andere Verschlüsselungs Ebene mithilfe von Technologien wie BitLocker unter Windows oder dm-crypt unter Linux bereitzustellen. Diese Technologien bedeuten, dass auch dann, wenn das Datenträger Abbild aus dem Speicher entfernt wurde, fast unmöglich wäre, es zu lesen.
+Bei virtuellen Computern wird verschlüsselter Speicher verwendet, aber es ist möglich, eine andere Verschlüsselungs Schicht mithilfe von Technologien wie BitLocker unter Windows oder DM-Crypt unter Linux bereitzustellen. Diese Technologien bedeuten, dass auch dann, wenn das Datenträger Abbild aus dem Speicher entfernt wurde, fast unmöglich wäre, es zu lesen.
 
 ### <a name="azure-sql"></a>Azure SQL
 
