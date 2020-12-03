@@ -4,12 +4,12 @@ description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulich
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 9e96773e30fb8ee395e37dca7a4794cd42359bb2
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f7422941af7e39d69d286a0f79920b025c1bf9c0
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594619"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031903"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>Installieren des .NET SDK oder der .NET-Runtime unter Fedora
 
@@ -42,6 +42,10 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>Entfernen von Vorschauversionen
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
 

@@ -5,23 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-ms.openlocfilehash: 3cb65142243d1f910ffd0fb85750ba62786d79f0
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1a2d1f0972bc610cb4943dacc74c1bae8c54012b
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824696"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032215"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Skriptblöcke, die "msxsl:script" verwenden
+
+> [!NOTE]
+> Skriptblöcke werden nur im .NET Framework unterstützt. In .NET Core oder .NET 5.0 oder höher werden sie _nicht_ unterstützt.
+
 Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete Skripts unter Verwendung des `msxsl:script`-Elements. Beim Laden des Stylesheets werden alle definierten Funktionen von CodeDOM (Code Document Object Model) in die Microsoft Intermediate Language (MSIL) kompiliert und zur Laufzeit ausgeführt. Die aus dem eingebetteten Skriptblock generierte Assembly und die für das Stylesheet generierte Assembly sind voneinander verschieden.  
   
 ## <a name="enable-xslt-script"></a>Aktivieren von XSLT-Skript  
+
  Die Unterstützung für eingebettete Skripts ist eine optionale XSLT-Einstellung für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse. Die Skriptunterstützung ist in der Standardeinstellung deaktiviert. Sie können die Skriptunterstützung aktivieren, indem Sie ein <xref:System.Xml.Xsl.XsltSettings>-Objekt erstellen, bei dem die <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A>-Eigenschaft auf `true` festgelegt wurde, und das Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben.  
   
 > [!NOTE]
 > XSLT-Skripts sollten nur aktiviert werden, wenn eine Skriptunterstützung erforderlich ist und Sie mit einer vollständig vertrauenswürdigen Umgebung arbeiten.  
   
 ## <a name="msxslscript-element-definition"></a>Elementdefinition von "msxsl:script"  
+
  Das `msxsl:script`-Element ist eine Microsoft-Erweiterung der XSLT 1.0-Empfehlung und weist folgende Definition auf:  
   
 ```xml  
@@ -46,6 +52,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 ```  
   
 ## <a name="script-functions"></a>Skriptfunktionen  
+
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. Wenn eine Funktion deklariert wurde, ist sie in einem Skriptblock enthalten. Stylesheets können mehrere voneinander unabhängige Skriptblöcke enthalten. Sie können daher bei der Ausführung innerhalb eines Skriptblocks nur dann eine Funktion aufrufen, die Sie in einem anderen Skriptblock definiert haben, wenn diese Funktion so deklariert wurde, dass sie den gleichen Namespace und die gleiche Skriptsprache verwendet. Da jeder Skriptblock in einer eigenen Sprache vorliegen kann und der Block gemäß der Grammatikregeln für den betreffenden Sprachparser analysiert wird, wird empfohlen, die korrekte Syntax für die verwendete Sprache einzuhalten. Verwenden Sie z. B. in einem Microsoft C#-Skriptblock die Kommentarsyntax von C#.  
   
  Die bereitgestellten Argumente und Rückgabewerte für die Funktion können einen beliebigen Typ aufweisen. Da die XPath-Typen des W3C eine Teilmenge der CLR-Typen (Common Language Runtime) sind, findet die Typkonvertierung für Typen statt, die nicht als XPath-Typen betrachtet werden. In der folgenden Tabelle werden die entsprechenden W3C-Typen und die äquivalenten CLR-Typen aufgelistet.  
@@ -63,9 +70,11 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
  Alle anderen Typen lösen einen Fehler aus.  
   
 ### <a name="importing-namespaces-and-assemblies"></a>Importieren von Namespaces und Assemblys  
+
  Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse definiert eine Gruppe von Assemblys und Namespaces vor, die in der Standardeinstellung vom `msxsl:script`-Element unterstützt werden. Sie können jedoch Klassen und Member verwenden, die zu einem Namespace gehören, der nicht in der vordefinierten Liste aufgeführt ist, indem Sie die Assembly und den Namespace in den `msxsl:script`-Block importieren.  
   
 #### <a name="assemblies"></a>Assemblys  
+
  In der Standardeinstellung wird auf die folgenden zwei Assemblys verwiesen:  
   
 - System.dll  
@@ -89,6 +98,7 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
  Das `name`-Attribut enthält den Namen der Assembly, und das `href`-Attribut enthält den Pfad der Assembly. Der Assemblyname kann ein vollständiger Name sein, z. B. "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", oder ein Kurzname wie "System.Web".  
   
 #### <a name="namespaces"></a>Namespaces  
+
  In der Standardeinstellung sind die folgenden Namespaces enthalten:  
   
 - System  
@@ -119,15 +129,18 @@ Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse unterstützt eingebettete 
 ```  
   
 ## <a name="example"></a>Beispiel  
+
  Im folgenden Beispiel wird der Umfang eines Kreises bei angegebenem Radius unter Verwendung eines eingebetteten Skripts berechnet.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
 #### <a name="numberxml"></a>number.xml  
+
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
 #### <a name="calcxsl"></a>calc.xsl  
+
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>Output  

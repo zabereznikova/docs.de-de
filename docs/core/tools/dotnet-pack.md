@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der Befehl „dotnet pack“ erstellt NuGet-Pakete für ein .NET-Projekt.
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634232"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674800"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 - **`-s|--serviceable`**
 
-  Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries (.NET Blog: .NET 4.5.1 unterstützt Microsoft Sicherheitsupdates für .NET NuGet-Bibliotheken)](https://aka.ms/nupkgservicing).
+  Legt das zu verarbeitende Flag im Paket fest. Weitere Informationen finden Sie unter [.NET Blog: .NET Framework 4.5.1 unterstützt Microsoft-Sicherheitsupdates für .NET-NuGet-Bibliotheken](https://aka.ms/nupkgservicing).
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
   ```
 
   Informationen zur Verwendung von `NuspecFile`, `NuspecBasePath` und `NuspecProperties` finden Sie in den folgenden Ressourcen:
-  
+
   - [Packen mithilfe einer NUSPEC-Datei](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Verbesserte Erweiterungspunkte zum Erstellen benutzerdefinierter Pakete](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [Globale Eigenschaften](/visualstudio/msbuild/msbuild-properties#global-properties)

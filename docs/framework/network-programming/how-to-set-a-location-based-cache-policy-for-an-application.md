@@ -11,15 +11,16 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7331845c391265d72d3025fd9bf7856d83c783e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180782"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253491"
 ---
 # <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Gewusst wie: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung
-Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [\<requestCaching>-Element (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+
+Speicherortbasierte Cacherichtlinien ermöglichen einer Anwendung, das Cacheverhalten basierend auf dem Speicherort der angeforderten Ressource explizit zu definieren. In diesem Thema wird veranschaulicht, wie Sie eine Cacherichtlinie programmgesteuert festlegen können. Weitere Informationen zum Festlegen der Richtlinie für eine Anwendung mithilfe der Konfigurationsdateien finden Sie unter [Element \<requestCaching> (Netzwerkeinstellungen)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung  
   

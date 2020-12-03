@@ -1,18 +1,18 @@
 ---
 title: 'Veraltete Member: .NET Framework'
-description: Sehen Sie sich die Liste der Typmember an, die in .NET 4.5 und höheren Versionen veraltet sind. Typmember werden nach Assembly gruppiert. Member veralteter Typen werden hier ausgeschlossen.
+description: Sehen Sie sich die Liste der Typmember an, die in .NET Framework 4.5 und höheren Versionen veraltet sind. Typmember werden nach Assembly gruppiert. Member veralteter Typen werden hier ausgeschlossen.
 ms.date: 10/17/2017
 helpviewer_keywords:
 - .NET Framework, obsolete members
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35dc67e80a47ba3e61db3d27f44f6c6ee45464ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726456"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Veraltete Member in .NET Framework
 
@@ -134,7 +134,7 @@ In diesem Artikel werden die Member veralteter Typen nicht aufgeführt. Eine Lis
 > |<xref:System.Security.HostSecurityManagerOptions?displayProperty=nameWithType>|<xref:System.Security.HostSecurityManagerOptions.HostPolicyLevel>|Richtlinien auf Anwendungsdomänenebene wurden als veraltet eingestuft und werden in einem der nächsten Releases von .NET Framework entfernt.|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.ConvertPermissionSet%2A>|Diese Methode ist veraltet und sollte nicht mehr verwendet werden.|
 > |<xref:System.Security.PermissionSet?displayProperty=nameWithType>|<xref:System.Security.PermissionSet.Deny%2A>|<xref:System.Security.PermissionSet.Deny%2A> wurde als veraltet eingestuft und wird in einer der nächsten Versionen von .NET Framework entfernt.|
-> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> wird nur für .NET 2.0-Transparenzkompatibilität verwendet.|
+> |<xref:System.Security.SecurityCriticalAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalAttribute.Scope%2A>|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType> wird nur für .NET Framework 2.0-Transparenzkompatibilität verwendet.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.CheckExecutionRights%2A>|Da die Überprüfung der Ausführungsberechtigung nicht mehr deaktiviert werden kann, hat die <xref:System.Security.SecurityManager.CheckExecutionRights%2A>-Eigenschaft keinerlei Auswirkungen mehr.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.IsGranted%2A>|<xref:System.Security.SecurityManager.IsGranted%2A> wurde als veraltet eingestuft und wird in einer der nächsten Versionen von .NET Framework entfernt. Verwenden Sie stattdessen entweder die <xref:System.AppDomain.PermissionSet%2A?displayProperty=nameWithType>- oder die <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>-Eigenschaft.|
 > |<xref:System.Security.SecurityManager?displayProperty=nameWithType>|<xref:System.Security.SecurityManager.LoadPolicyLevelFromFile%2A>|Diese Methode wurde als veraltet eingestuft und wird in einem der nächsten Releases von .NET Framework entfernt.|

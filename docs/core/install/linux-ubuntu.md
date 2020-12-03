@@ -4,12 +4,12 @@ description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulich
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507026"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031844"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Installieren des .NET SDK oder der .NET-Runtime unter Ubuntu
 
@@ -46,15 +46,27 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 - 2.2
 - 2.0
 
+## <a name="remove-preview-versions"></a>Entfernen von Vorschauversionen
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="2010-"></a>20.10 ✔️
 
-Die .NET 5- und .NET Core 3.1-Paketfeeds für Ubuntu 20.10 haben derzeit ein Problem. Weitere Informationen zu diesem Problem finden Sie unter dem [GitHub-Issue dotnet/core#5549](https://github.com/dotnet/core/issues/5549). Dieser Artikel wird aktualisiert, sobald das Problem gelöst ist.
+> [!IMPORTANT]
+> .Net Core 2.1 ist noch nicht im Paketfeed verfügbar.
 
-Befolgen Sie zur Installation von .NET 5 oder .NET Core 3.1 unter Ubuntu 20.10 die Anleitung für [20.04](#2004-).
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20.04 ✔️
 

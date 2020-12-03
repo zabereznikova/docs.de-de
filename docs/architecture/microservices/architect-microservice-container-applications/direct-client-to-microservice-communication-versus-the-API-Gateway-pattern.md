@@ -2,12 +2,12 @@
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 ms.date: 01/07/2019
-ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240601"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -113,7 +113,7 @@ Weitere Informationen finden Sie unter [Muster „Gatewayaggregation“](/azure/
 - Lastenausgleich
 - Protokollierung, Ablaufverfolgung, Korrelation
 - Header, Abfragezeichenfolgen und Anspruchstransformation
-- IP-Whitelists
+- Setzen von IP-Adressen auf die Positivliste
 
 Weitere Informationen finden Sie unter [Muster „Gatewayabladung“](/azure/architecture/patterns/gateway-offloading).
 

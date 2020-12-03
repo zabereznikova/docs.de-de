@@ -2,12 +2,12 @@
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
 ms.date: 01/30/2020
-ms.openlocfilehash: 16aaaa2df0f68434b766d4d1cc96974e83449953
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199897"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707763"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -35,7 +35,7 @@ docker build
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein Basisimage **FROM mcr.microsoft.com/dotnet/core/sdk:3.1** aus der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, mit dem bzw. der Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein **FROM mcr.microsoft.com/dotnet/sdk:3.1**-Basisimage von der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, unter der Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 

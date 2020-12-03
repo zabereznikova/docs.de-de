@@ -4,12 +4,12 @@ description: Übersicht über Methoden, Methodenparameter und Methodenrückgabew
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223658"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031675"
 ---
 # <a name="methods-in-c"></a>Methoden in C#
 
@@ -49,7 +49,7 @@ Methoden können entweder *instance* oder *static* sein. Das Aufrufen einer Inst
 
 Das Aufrufen einer Methode ähnelt dem Zugreifen auf ein Feld. Fügen Sie nach dem Objektnamen (wenn Sie eine Instanzmethode aufrufen) oder dem Typnamen (beim Aufrufen einer `static`-Methode) einen Punkt, den Methodennamen und Klammern hinzu. Argumente werden innerhalb der Klammern aufgelistet und durch Kommas getrennt.
 
-Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn ein Aufrufer die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der Name des Arguments (sofern im aufzurufenden Code einer verwendet wird) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Im folgenden Beispiel enthält die `Square`-Methode einen einzelnen Parameter vom Typ `int` mit dem Namen *i* . Der erste Methodenaufruf übergibt der `Square`-Methode eine Variable vom Typ `int` mit dem Namen *num* . Der zweite übergibt eine numerische Konstante und der dritte einen Ausdruck.
+Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn ein Aufrufer die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der Name des Arguments (sofern im aufzurufenden Code einer verwendet wird) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Im folgenden Beispiel enthält die `Square`-Methode einen einzelnen Parameter vom Typ `int` mit dem Namen *i*. Der erste Methodenaufruf übergibt der `Square`-Methode eine Variable vom Typ `int` mit dem Namen *num*. Der zweite übergibt eine numerische Konstante und der dritte einen Ausdruck.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -57,7 +57,7 @@ Die häufigste Form des Methodenaufrufs verwendete Positionsargumente. Die Argum
 
 [!code-csharp[csSnippets.Methods#41](../../samples/snippets/csharp/concepts/methods/methods40.cs#41)]
 
-Sie können auch *benannte Argumente* anstatt Positionsargumente verwenden, wenn Sie eine Methode aufrufen. Wenn Sie benannte Argumente verwenden, geben Sie den Parameternamen, gefolgt von einem Doppelpunkt („:“), und das Argument an. Argumente können für diese Methode in beliebiger Reihenfolge erscheinen, solange alle benötigen Argumente vorhanden sind. Im folgenden Beispiel werden die benannten Argumente zum Aufrufen der `TestMotorcycle.Drive`-Methode verwendet. In diesem Beispiel werden die benannten Argumente in umgekehrter Reihenfolge aus der Parameterliste der Methode übergeben.
+Sie können auch *benannte Argumente* anstelle von positionellen Argumenten verwenden, wenn Sie eine Methode aufrufen. Wenn Sie benannte Argumente verwenden, geben Sie den Parameternamen, gefolgt von einem Doppelpunkt („:“), und das Argument an. Argumente können für diese Methode in beliebiger Reihenfolge erscheinen, solange alle benötigen Argumente vorhanden sind. Im folgenden Beispiel werden die benannten Argumente zum Aufrufen der `TestMotorcycle.Drive`-Methode verwendet. In diesem Beispiel werden die benannten Argumente in umgekehrter Reihenfolge aus der Parameterliste der Methode übergeben.
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
@@ -81,7 +81,7 @@ Typen können geerbte Member überschreiben, indem das Schlüsselwort `override`
 
 ## <a name="passing-parameters"></a>Übergeben von Parametern
 
-Typen in C# sind entweder *Werttypen* oder *Verweistypen* . Eine Liste der integrierten Werttypen finden Sie unter [Typen](./tour-of-csharp/types.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
+Typen in C# sind entweder *Werttypen* oder *Verweistypen*. Eine Liste der integrierten Werttypen finden Sie unter [Typen](./tour-of-csharp/types.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
 
 <a name="byval"></a>
 
@@ -154,7 +154,7 @@ Wenn eine Methode mit mehreren optionalen Argumenten mithilfe von Positionsargum
 
 Wenn eine Methode durch ein benanntes Argument oder einer Mischung aus benannten und Positionsargumenten aufgerufen wird, kann der Aufrufer Argumente auslassen, die dem letzten Positionsargument im Methodenaufruf folgen.
 
-Im folgenden Beispiel wird die `ExampleMethod`-Methode dreimal aufgerufen.  Die ersten zwei Methodenaufrufe verwenden Positionsargumente. Der erste Methodenaufruf lässt beide optionale Argumente aus, während der Zweite das letzte Argument auslässt. Der dritte Methodenaufruf stellt für die benötigten Parameter ein Positionsargument bereit, verwendet aber ein benanntes Argument, um einen Wert für den `description`-Parameter bereitzustellen, während das `optionalInt`-Argument ausgelassen wird.
+Im folgenden Beispiel wird die `ExampleMethod`-Methode dreimal aufgerufen.  Die ersten zwei Methodenaufrufe verwenden Positionsargumente. Der erste Methodenaufruf lässt beide optionale Argumente aus, während der Zweite das letzte Argument auslässt. Der dritte Methodenaufruf stellt für die benötigten Parameter ein positionelles Argument bereit, verwendet aber ein benanntes Argument, um einen Wert für den `description`-Parameter bereitzustellen, während das `optionalInt`-Argument ausgelassen wird.
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 

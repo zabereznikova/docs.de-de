@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 14603ba98f00d46d0f167652500979f94de0ec9a
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687470"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031688"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
@@ -81,10 +81,24 @@ Sie können Eigenschaften wie `PackageId`, `PackageVersion`, `PackageIcon`, `Tit
 
 ## <a name="publish-properties-and-items"></a>Veröffentlichen von Eigenschaften und Elementen
 
+- [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
+
+Die Eigenschaft `CopyLocalLockFileAssemblies` ist nützlich für Plug-In-Projekte, die von anderen Bibliotheken abhängig sind. Wenn Sie diese Eigenschaft auf `true` festlegen, werden alle Abhängigkeiten von NuGet-Paketen in das Ausgabeverzeichnis kopiert. Das bedeutet, dass Sie die Ausgabe von `dotnet build` verwenden können, um das Plug-In auf einem beliebigen Computer auszuführen.
+
+```xml
+<PropertyGroup>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+</PropertyGroup>
+```
+
+> [!TIP]
+> Alternativ können Sie auch `dotnet publish` verwenden, um die Klassenbibliothek zu veröffentlichen. Weitere Informationen finden Sie unter [dotnet publish](../tools/dotnet-publish.md).
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 

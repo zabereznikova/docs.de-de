@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 42d60f919cb6ae0dab262ef9056a7c33c312a911
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726664"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -403,7 +403,7 @@ Das folgende Beispiel für C# 8.0 veranschaulicht das Herstellen der Verbindung 
 
 ### <a name="cryptography-ciphers"></a>Kryptografieverschlüsselungen
 
-.NET 3.0 fügt Unterstützung für **AES-GCM**- und **AES-CCM-** -Verschlüsselungen hinzu, implementiert mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType>. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
+.NET 3.0 fügt Unterstützung für die Verschlüsselungsmodi **AES-GCM** und **AES-CCM** hinzu, die jeweils mit <xref:System.Security.Cryptography.AesGcm?displayProperty=nameWithType> bzw. <xref:System.Security.Cryptography.AesCcm?displayProperty=nameWithType> implementiert werden. Beide Algorithmen sind [AEAD-Algorithmen (Authenticated Encryption with Association Data)](https://en.wikipedia.org/wiki/Authenticated_encryption).
 
 Der folgende Code veranschaulicht die Verwendung der `AesGcm`-Verschlüsselung zum Verschlüsseln und Entschlüsseln von Zufallsdaten.
 

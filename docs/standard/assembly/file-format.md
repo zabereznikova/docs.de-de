@@ -4,12 +4,12 @@ description: Erfahren Sie mehr zum .NET-Assemblydateiformat, das zum Beschreiben
 author: richlander
 ms.date: 08/20/2019
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b1de3f46f04f24dd4bbb2f695de8741feb29f226
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822190"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731539"
 ---
 # <a name="net-assembly-file-format"></a>.NET-Assemblydateiformat
 
@@ -17,7 +17,7 @@ ms.locfileid: "94822190"
 
 > Jede CLI-Komponente enthält die Metadaten für Deklarationen, Implementierungen und Verweisen, die für diese Komponente spezifisch sind. Darum werden die komponentenspezifischen Metadaten als Komponentenmetadaten und die resultierende Komponente als selbstbeschreibend bezeichnet – laut ECMA 335 I.9.1, „Components and assemblies“ (Komponenten und Assemblys).
 
-Das Format ist als [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) vollständig spezifiziert und standardisiert. Alle .NET-Compiler und -Runtimes verwenden dieses Format. Das Vorhandensein eines dokumentierten und unregelmäßig aktualisierten Binärformats ist ein großer Vorteil (wenn nicht gar eine Voraussetzung) für die Interoperabilität gewesen. Das Format wurde zuletzt wesentlich 2005 (.NET 2.0) zur Aufnahme von Generics und Prozessorarchitektur aktualisiert.
+Das Format ist als [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) vollständig spezifiziert und standardisiert. Alle .NET-Compiler und -Runtimes verwenden dieses Format. Das Vorhandensein eines dokumentierten und unregelmäßig aktualisierten Binärformats ist ein großer Vorteil (wenn nicht gar eine Voraussetzung) für die Interoperabilität gewesen. Die letzte wesentliche Aktualisierung des Formats fand 2005 (.NET Framework 2.0) statt, um Generics und die Prozessorarchitektur darin aufzunehmen.
 
 Das Format ist agnostisch gegenüber CPU und Betriebssystem. Es wurde als Teil von .NET-Implementierungen verwendet, die auf viele Chips und CPUs abzielen. Trotz seines Windows-Erbes ist das Format unter jedem Betriebssystem implementierbar. Das wohl wichtigste Argument für die Betriebssysteminteroperabilität ist, dass die meisten Werte im Little-Endian-Format gespeichert werden. Es besteht keine bestimmte Affinität zur Zeigergröße des Computers (z.B. 32-Bit, 64-Bit).
 

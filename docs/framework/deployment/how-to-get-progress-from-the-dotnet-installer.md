@@ -1,6 +1,6 @@
 ---
 title: 'Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5'
-description: Hier erfahren Sie, wie Sie den Status des Installationsprogramms für .NET 4.5 abrufen. Wenn Sie Apps für diese .NET-Version entwickeln, können Sie das .NET 4.5-Setup in das Setup Ihrer App einschließen (damit verketten).
+description: Hier erfahren Sie, wie Sie den Fortschritt des Installationsprogramms für .NET Framework 4.5 abrufen. Wenn Sie Apps für diese .NET-Version entwickeln, können Sie das Setup für .NET Framework 4.5 in das Setup Ihrer App einbinden (damit verketten).
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904259"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729121"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 

@@ -3,16 +3,16 @@ title: 'Ausschüsse: Leitfaden für C#'
 description: Beschreibt die Unterstützung von C# für Ausschüsse, bei denen es sich um nicht zugewiesene, verwerfbare Variablen handelt, und die Möglichkeiten, wie Ausschüsse verwendet werden können.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95698805"
 ---
 # <a name="discards---c-guide"></a>Ausschüsse: Leitfaden für C#
 
-Ab C# 7.0 werden Ausschüsse von C# unterstützt. Dabei handelt es sich um temporäre Platzhaltervariablen, die bewusst ungenutzt im Anwendungscode verwendet werden. Ausschüsse entsprechen nicht zugewiesenen Variablen und besitzen keinen Wert. Da es nur eine einzige Ausschussvariable gibt und dieser Variable möglicherweise nicht einmal Speicher zugewiesen ist, kann durch Ausschüsse die Speicherbelegung reduziert werden. Da sie den Zweck Ihres Codes deutlich machen, verbessern Sie dessen Lesbarkeit und Verwaltbarkeit.
+Ab C# 7.0 werden Ausschüsse von C# unterstützt. Dabei handelt es sich um Platzhaltervariablen, die bewusst ungenutzt im Anwendungscode verwendet werden. Ausschüsse entsprechen nicht zugewiesenen Variablen und besitzen keinen Wert. Da es nur eine einzige Ausschussvariable gibt und dieser Variable möglicherweise nicht einmal Speicher zugewiesen ist, kann durch Ausschüsse die Speicherbelegung reduziert werden. Da sie den Zweck Ihres Codes deutlich machen, verbessern Sie dessen Lesbarkeit und Verwaltbarkeit.
 
 Sie geben an, dass es sich bei einer Variable um Ausschuss handelt, indem Sie ihr einen Unterstrich (`_`) als Namen zuweisen. Der folgende Methodenaufruf gibt beispielsweise ein 3-Tupel zurück, in dem der erste und zweite Wert Ausschussvariablen sind und *area* eine zuvor deklarierte Variable ist, die auf die entsprechende dritte Komponente festgelegt wird, die von *GetCityInformation* zurückgegeben wird:
 

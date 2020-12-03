@@ -2,12 +2,12 @@
 title: Entwicklungsworkflow für Docker-Apps
 description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf Docker basierenden Anwendungen. Beginnen Sie mit den Grundlagen. Gehen Sie dann ausführlicher auf das Optimieren von Dockerfiles ein. Arbeiten Sie zum Schluss mit dem vereinfachten Workflow, der bei der Verwendung mit Visual Studio verfügbar ist.
 ms.date: 01/30/2020
-ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: 4019eed6b814f4c7e8bc4f32758e8cfd7f4c7ec9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594592"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711176"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -97,14 +97,14 @@ Visual Studio kann auf ganz ähnliche Weise eine `docker-compose.yml`-Datei für
 
 Sie erstellen ein benutzerdefiniertes Image für den Container in der Regel auf einem Basisimage, das Sie von einem offiziellen Repository in der [Docker-Hub](https://hub.docker.com/)-Registrierung erhalten. Das ist genau das, was im Hintergrund geschieht, wenn Sie die Docker-Unterstützung in Visual Studio aktivieren. Die Dockerfile verwendet ein vorhandenes `dotnet/core/aspnet`-Image.
 
-Es wurde bereits erläutert, welche Docker-Images und Repositorys Sie abhängig vom Framework und Betriebssystem, das Sie ausgewählt haben, verwenden können. Wenn Sie beispielsweise ASP.NET Core (Linux oder Windows) verwenden möchten, muss das Image `mcr.microsoft.com/dotnet/core/aspnet:3.1` verwendet werden. Aus diesem Grund müssen Sie nur angeben, welche Docker-Basisimages Sie für den Container verwenden werden. Fügen Sie hierzu `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1` Ihrer Dockerfile hinzu. Dies wird automatisch von Visual Studio ausgeführt, aber wenn Sie die Version aktualisieren müssen, aktualisieren Sie diesen Wert.
+Es wurde bereits erläutert, welche Docker-Images und Repositorys Sie abhängig vom Framework und Betriebssystem, das Sie ausgewählt haben, verwenden können. Wenn Sie beispielsweise ASP.NET Core (Linux oder Windows) verwenden möchten, muss das Image `mcr.microsoft.com/dotnet/aspnet:3.1` verwendet werden. Aus diesem Grund müssen Sie nur angeben, welche Docker-Basisimages Sie für den Container verwenden werden. Fügen Sie hierzu `FROM mcr.microsoft.com/dotnet/aspnet:3.1` Ihrer Dockerfile hinzu. Dies wird automatisch von Visual Studio ausgeführt, aber wenn Sie die Version aktualisieren müssen, aktualisieren Sie diesen Wert.
 
 Durch Verwendung eines offiziellen .NET Image-Repositorys von Docker-Hub mit einer Versionsnummer wird sichergestellt, dass die gleichen Sprachfunktionen auf allen Computern (Entwicklung, Test und Produktion) verfügbar sind.
 
 Das folgende Beispiel veranschaulicht eine Dockerfile-Beispieldatei für einen ASP.NET Core-Container.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-In diesem Fall basiert das Image auf Version 3.1 des offiziellen ASP.NET Core-Docker-Images (mehrere Architekturen für Linux und Windows). Dies ist die Einstellung `FROM mcr.microsoft.com/dotnet/core/aspnet:3.1`. (Weitere Informationen zu diesem Basisimage finden Sie unter [.NET Core Docker Image (.NET Core-Docker-Image)](https://hub.docker.com/_/microsoft-dotnet-core/).) In der Dockerfile-Datei müssen Sie auch angeben, dass Docker an dem TCP-Port lauscht, den Sie zur Runtime verwenden (in diesem Fall Port 80 gemäß Konfiguration mit der EXPOSE-Einstellung).
+In diesem Fall basiert das Image auf Version 3.1 des offiziellen ASP.NET Core-Docker-Images (mehrere Architekturen für Linux und Windows). Dies ist die Einstellung `FROM mcr.microsoft.com/dotnet/aspnet:3.1`. (Weitere Informationen zu diesem Basisimage finden Sie unter [ASP.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-aspnet/).) In der Dockerfile-Datei müssen Sie auch angeben, dass Docker an dem TCP-Port lauscht, den Sie zur Runtime verwenden (in diesem Fall Port 80 gemäß Konfiguration mit der EXPOSE-Einstellung).
 
 Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfigurationseinstellungen in der Dockerfile angeben. Beispielsweise weist die ENTRYPOINT-Zeile mit `["dotnet", "MySingleContainerWebApp.dll"]` Docker an, eine .NET Core-Anwendung auszuführen. Wenn Sie das SDK und die .NET Core-CLI (Dotnet-CLI) verwenden, um die .NET-Anwendung zu entwickeln und auszuführen, wird eine andere Einstellung verwendet. Entscheidend ist, dass die ENTRYPOINT-Zeile und andere Einstellungen je nach Sprache und Plattform variieren können, die Sie für Ihre Anwendung auswählen.
 
@@ -132,19 +132,19 @@ Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfi
 
 ### <a name="using-multi-arch-image-repositories"></a>Verwenden von Repositorys für Images für mehrere Architekturen
 
-Ein Repository kann Plattformvarianten enthalten, wie z.B. ein Linux-Image und ein Windows-Image. Dieses Feature ermöglicht Anbietern wie Microsoft (Basisimageentwickler), ein Repository für mehrere Plattformen (Linux und Windows) zu entwickeln. Das in der Docker-Hub-Registrierung verfügbare [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)-Repository bietet beispielsweise Unterstützung für Linux und Windows Nano Server dadurch, dass der gleiche Repositoryname verwendet wird.
+Ein Repository kann Plattformvarianten enthalten, wie z.B. ein Linux-Image und ein Windows-Image. Dieses Feature ermöglicht Anbietern wie Microsoft (Basisimageentwickler), ein Repository für mehrere Plattformen (Linux und Windows) zu entwickeln. Das in der Docker-Hub-Registrierung verfügbare [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/)-Repository bietet beispielsweise Unterstützung für Linux und Windows Nano Server dadurch, dass der gleiche Repositoryname verwendet wird.
 
 Wenn Sie ein explizites Tag für eine bestimmte Plattform angeben, wie in den folgenden Fällen:
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim` \
   Ziele: Nur .NET Core 3.1-Runtime unter Linux
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1909` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1909` \
   Ziele: Nur .NET Core 3.1-Runtime unter Windows Nano Server
 
 Die Images für mehrere Architekturen (z. B. das `aspnet`-Image) verwenden bei Angabe des gleichen Imagenamens, auch mit dem gleichen Tag, je nach dem von Ihnen bereitgestellten Docker-Host-Betriebssystem die Linux- oder die Windows-Version, was im folgenden Beispiel dargestellt wird:
 
-- `mcr.microsoft.com/dotnet/core/aspnet:3.1` \
+- `mcr.microsoft.com/dotnet/aspnet:3.1` \
   Mehrfacharchitektur: Nur .NET Core 3.1-Runtime unter Linux und Windows Nano Server abhängig vom Betriebssystem des Docker-Hosts
 
 Wenn Sie also ein Image von einem Windows-Host pullen, wird die Windows-Variante gepullt. Wenn der gleiche Imagename von einem Linux-Host gepullt wird, wird die Linux-Variante gepullt.
@@ -174,11 +174,11 @@ Sie können den mehrstufigen Prozess am besten verstehen, wenn Sie eine Dockerfi
 Die ursprüngliche Dockerfile kann wie folgt aussehen:
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+ 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
@@ -277,11 +277,11 @@ Für die letzte Optimierung kann es der Fall sein, dass Zeile 20 redundant wird,
 Die Datei, die sich daraus ergibt, sieht wie folgt aus:
 
 ```dockerfile
- 1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+ 1  FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS publish
+ 5  FROM mcr.microsoft.com/dotnet/sdk:3.1 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -566,7 +566,7 @@ RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
 ```
 
-In diesem Fall wird ein Windows Server Core-Basisimage (FROM-Einstellung) verwendet und IIS wird mit einem PowerShell-Befehl ausgeführt (RUN-Einstellung). Auf ähnliche Weise können Sie auch PowerShell-Befehle verwenden, um zusätzliche Komponenten wie ASP.NET 4.x, .NET 4.6 oder andere Windows-Software einzurichten. Der folgende Befehl in einer Dockerfile-Datei richtet z.B. ASP.NET 4.5 ein:
+In diesem Fall wird ein Windows Server Core-Basisimage (FROM-Einstellung) verwendet und IIS wird mit einem PowerShell-Befehl ausgeführt (RUN-Einstellung). Auf ähnliche Weise können Sie auch mithilfe von PowerShell-Befehlen zusätzliche Komponenten wie ASP.NET 4.x, .NET Framework 4.6 oder eine beliebige andere Windows-Software einrichten. Der folgende Befehl in einer Dockerfile-Datei richtet z.B. ASP.NET 4.5 ein:
 
 ```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
