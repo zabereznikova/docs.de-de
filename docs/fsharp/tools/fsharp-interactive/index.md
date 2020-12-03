@@ -1,15 +1,15 @@
 ---
 title: Referenz zu F# Interactive (dotnet)
 description: Hier erfahren Sie, wie F# Interactive (dotnet fsi) zum interaktiven Ausführen von F#-Code in der Konsole oder zum Ausführen von F#-Skripts verwendet wird.
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099435"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438048"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
@@ -117,6 +117,17 @@ let f (x: Tensor) = sin (sqrt x)
 
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
+
+### <a name="specifying-a-package-source"></a>Angeben einer Paketquelle
+
+Sie können eine Paketquelle auch mit dem `#i`-Befehl angeben. Im folgenden Beispiel wird eine Remotequelle und eine lokale Quelle angegeben:
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+Dadurch wird die Auflösungs-Engine unter der Haube ebenfalls dazu angeleitet, die Remotequellen und/oder lokalen Quellen miteinzubeziehen, die einem Skript hinzugefügt wurden.
 
 Sie können beliebig viele Paketverweise in einem Skript angeben.
 
