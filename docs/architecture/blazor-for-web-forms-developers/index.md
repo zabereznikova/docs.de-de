@@ -6,19 +6,23 @@ ms.author: daroth
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/11/2019
-ms.openlocfilehash: 3ac9a02a2f5c93cbfd9377a9f6fff4b6c5f45e93
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 47f684e1b48ca95b8d999e6f1429840eb5f541de
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158174"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509766"
 ---
 # <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor für ASP.NET Web Forms-Entwickler
 
 ![Screenshot: Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
 > DOWNLOAD verfügbar unter: <https://aka.ms/blazor-ebook>
+
+**Edition v1.0**
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/blazor-ebook-changelog).
 
 VERÖFFENTLICHT VON
 
@@ -60,7 +64,7 @@ Autoren:
 
 .NET unterstützt schon seit langem die Entwicklung von Web-Apps mithilfe von ASP.NET, einen umfassenden Satz von Frameworks und Tools zum Erstellen von Web-Apps jeder Art. ASP.NET kann auf eine eigene Erbfolge von Web-Frameworks und Technologien zurückblicken, an deren Anfang die klassischen Active Server Pages (ASP) stehen. Frameworks wie ASP.NET Web Forms, ASP.NET MVC, ASP.NET Web Pages und in jüngerer Zeit ASP.NET Core bieten einen produktiven und leistungsstarken Weg zum Erstellen von *auf dem Server gerenderten* Web-Apps, bei denen die Inhalte der Benutzeroberfläche als Reaktion auf HTTP-Anforderungen dynamisch auf dem Server generiert werden. Jedes ASP.NET-Framework richtet sich an eine andere Zielgruppe und steht für eine andere Philosophie bei der Web-App-Erstellung. ASP.NET Web Forms wurde mit der ursprünglichen Version von .NET Framework geliefert und ermöglichte die Webentwicklung auf der Grundlage vieler Muster, die Desktopentwicklern vertraut sind, wie etwa wiederverwendbare Steuerelemente der Benutzeroberfläche mit einfachem Ereignishandling. Allerdings bot keins der ASP.NET-Angebote eine Möglichkeit zum Ausführen von Code im Browser des Benutzers. Dazu sind das Schreiben von JavaScript-Code und die Verwendung eines der vielen JavaScript-Frameworks und -Tools erforderlich, die sich im Lauf der Jahre wechselnder Beliebtheit erfreut haben: jQuery, Knockout, Angular, React usw.
 
-[Blazor](https://blazor.net) ist ein neues Framework, mit dem sich die Grenzen des Möglichen beim Erstellen von Web-Apps mit .NET verschieben. Blazor ist ein clientseitiges Framework für Webbenutzeroberflächen, das auf C# anstelle von JavaScript basiert. Mit Blazor können Sie Ihre clientseitige Logik und die Komponenten der Benutzeroberfläche in C# schreiben, sie in normale .NET-Assemblys kompilieren und sie dann mithilfe eines neuen offenen Webstandards namens WebAssembly direkt im Browser ausführen. Alternativ kann Blazor Ihre .NET-Benutzeroberflächenkomponenten auf dem Server ausführen und alle Interaktionen mit der Benutzeroberfläche flüssig über eine Echtzeitverbindung mit dem Browser verarbeiten. In Kombination mit auf dem Server ausgeführtem .NET ermöglicht Blazor die vollständige Webentwicklung mit .NET. Zwar hat Blazor viele Gemeinsamkeiten mit ASP.NET Web Forms, etwa ein wiederverwendbares Komponentenmodell und ein einfaches Verfahren zum Verarbeiten von Benutzerereignissen, es baut aber außerdem auf den Grundlagen von .NET Core auf, um eine moderne und leistungsstarke Benutzeroberfläche zur Webentwicklung zur Verfügung zu stellen.
+[Blazor](https://blazor.net) ist ein neues Framework, mit dem sich die Grenzen des Möglichen beim Erstellen von Web-Apps mit .NET verschieben. Blazor ist ein clientseitiges Framework für Webbenutzeroberflächen, das auf C# anstelle von JavaScript basiert. Mit Blazor können Sie Ihre clientseitige Logik und die Komponenten der Benutzeroberfläche in C# schreiben, sie in normale .NET-Assemblys kompilieren und sie dann mithilfe eines neuen offenen Webstandards namens WebAssembly direkt im Browser ausführen. Alternativ kann Blazor Ihre .NET-Benutzeroberflächenkomponenten auf dem Server ausführen und alle Interaktionen mit der Benutzeroberfläche flüssig über eine Echtzeitverbindung mit dem Browser verarbeiten. In Kombination mit auf dem Server ausgeführtem .NET ermöglicht Blazor die vollständige Webentwicklung mit .NET. Blazor besitzt zwar viele Gemeinsamkeiten mit ASP.NET Web Forms – etwa ein wiederverwendbares Komponentenmodell und ein einfaches Verfahren zum Verarbeiten von Benutzerereignissen –, baut aber außerdem auf den Grundlagen von .NET auf, um eine moderne und leistungsstarke Benutzeroberfläche für die Webentwicklung zur Verfügung zu stellen.
 
 Dieses Buch macht ASP.NET Web Forms-Entwickler auf vertraute und komfortable Weise mit Blazor bekannt. Es stellt Blazor-Konzepte parallel mit analogen Konzepten in ASP.NET Web Forms vor und erläutert zugleich neue Konzepte, die möglicherweise weniger vertraut sind. Es behandelt eine große Bandbreite von Themen und Anliegen, einschließlich Komponentenerstellung, Routing, Layout, Konfiguration und Sicherheit. Und obwohl die Inhalte dieses Buchs sich hauptsächlich auf die Förderung von Neuentwicklung beziehen, werden auch Richtlinien und Strategien für das Migrieren vorhandener ASP.NET Web Forms zu Blazor behandelt, für den Fall, dass Sie eine vorhandene App modernisieren möchten.
 
