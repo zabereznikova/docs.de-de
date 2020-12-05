@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96592013"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739973"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Übersicht über die Analyse von .NET-Quellcode
 
-Die Analysetools für die .NET-Compilerplattform (Roslyn) untersuchen Ihren C#- oder Visual Basic-Code auf Probleme hinsichtlich Codequalität und Codeformat. Ab .NET 5.0 sind diese Analysetools im .NET SDK enthalten. (Bisher haben Sie Code Qualitätsanalysen als [nuget-Paket](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)installiert, und Codestil-Analysen wurden mit Visual Studio installiert.)
+Die Analysetools für die .NET-Compilerplattform (Roslyn) untersuchen Ihren C#- oder Visual Basic-Code auf Probleme hinsichtlich Codequalität und Codeformat. Ab .NET 5.0 sind diese Analysetools im .NET SDK enthalten. Wenn Sie nicht zum .net 5 + SDK wechseln möchten oder wenn Sie ein auf einem nuget-Paket basierendes Modell bevorzugen, sind die Analysetools auch im `Microsoft.CodeAnalysis.NetAnalyzers` [nuget-Paket](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers)verfügbar. Möglicherweise bevorzugen Sie ein Paket basiertes Modell für Bedarfs gesteuerte Versions Aktualisierungen.
+
+> [!NOTE]
+> .Net-Analysen sind Zielplattform-agnostisch. Das heißt, das Projekt muss keine bestimmte .NET-Plattform als Ziel haben. Die Analyzer funktionieren für Projekte, die auf `net5.0` und frühere Versionen von .net abzielen, z `netcoreapp` . b `netstandard` ., und `net472` .
 
 - [Code Qualitätsanalyse ("CAXXXX"-Regeln)](#code-quality-analysis)
 - [Code Format Analyse ("idexxxx"-Regeln)](#code-style-analysis)
@@ -48,8 +51,8 @@ Die folgenden Regeln sind standardmäßig in .net 5,0 Preview 8 aktiviert.
 | [CA2013](/visualstudio/code-quality/ca2013) | Zuverlässigkeit | Warnung | Nicht `ReferenceEquals` mit Werttypen verwenden |
 | [CA2014](/visualstudio/code-quality/ca2014) | Zuverlässigkeit | Warnung | Nicht `stackalloc` in Schleifen verwenden |
 | [CA2015](/visualstudio/code-quality/ca2015) | Zuverlässigkeit | Warnung | Finalizer nicht für Typen definieren, die von abgeleitet sind <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | Verbrauch | Warnung | Erneut ausführen, um Stapeldetails beizubehalten.
-| [CA2247](/visualstudio/code-quality/ca2247) | Verbrauch | Warnung | Argument, das an den TaskCompletionSource-Konstruktor übergeben wurde, sollte <xref:System.Threading.Tasks.TaskCreationOptions> Enumeration anstelle von <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | Verwendung | Warnung | Erneut ausführen, um Stapeldetails beizubehalten.
+| [CA2247](/visualstudio/code-quality/ca2247) | Verwendung | Warnung | Argument, das an den TaskCompletionSource-Konstruktor übergeben wurde, sollte <xref:System.Threading.Tasks.TaskCreationOptions> Enumeration anstelle von <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 Sie können den Schweregrad dieser Regeln ändern, um Sie zu deaktivieren oder auf Fehler zu erhöhen.
 
@@ -149,7 +152,7 @@ Visual Studio bietet zusätzliche Möglichkeiten, Warnungen von Code Analyse Reg
 
 Weitere Informationen zu Schweregraden von Regeln finden Sie unter [Konfigurieren des Regel schwere](configuration-options.md#severity-level)Grads.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Referenz zur Code Qualitätsanalyse Regel](quality-rules/index.md)
 - [Regel Referenz für Code Format Analyse](style-rules/index.md)

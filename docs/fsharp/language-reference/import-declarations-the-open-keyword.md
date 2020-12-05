@@ -2,12 +2,12 @@
 title: 'Importdeklarationen: Das open-Schlüsselwort'
 description: 'Erfahren Sie mehr über F #-Import Deklarationen und wie Sie ein Modul oder einen Namespace angeben, auf dessen Elemente verwiesen werden kann, ohne einen voll qualifizierten Namen zu verwenden.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 4d3fd159aa4b334e9db0d7f756047470ad9c0829
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557180"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739684"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Import Deklarationen: das- `open` Schlüsselwort
 
@@ -39,7 +39,7 @@ Der F #-Compiler gibt keinen Fehler oder eine Warnung aus, wenn Mehrdeutigkeiten
 ```fsharp
 open List
 open Seq
-printfn "%A" empty
+printfn %"{empty}"
 ```
 
 Daher sollten Sie beim Öffnen von Modulen oder Namespaces wie oder, die Member `List` `Seq` mit identischen Namen enthalten, vorsichtig sein. verwenden Sie stattdessen die qualifizierten Namen. Vermeiden Sie jede Situation, in der der Code von der Reihenfolge der Import Deklarationen abhängig ist.

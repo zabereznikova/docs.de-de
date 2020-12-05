@@ -6,12 +6,12 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: tutorial
 ms.prod: dotnet
-ms.openlocfilehash: eda6d8980d256c8063f2bfe1e051b0cb90b587ad
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 7cf25f181997ed66639842727be57e7824ef5466
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96592114"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739986"
 ---
 <!--markdownlint-disable DOCSMD011 -->
 # <a name="read-values-from-an-analog-to-digital-converter"></a>Lesen von Werten aus einem Analog-zu-Digital-Konverter
@@ -76,7 +76,7 @@ Führen Sie die folgenden Schritte in Ihrer bevorzugten Entwicklungsumgebung aus
 
     :::code language="csharp" source="~/iot-samples/tutorials/AdcTutorial/Program.cs" :::
 
-    Im obigen Code:
+    Für den Code oben gilt:
 
     - `hardwareSpiSettings` wird auf eine neue Instanz von festgelegt `SpiConnectionSettings` . Der-Konstruktor legt den `busId` -Parameter auf 0 und den- `chipSelectLine` Parameter auf 0 fest.
     - Eine [using-Deklaration](../../csharp/whats-new/csharp-8.md#using-declarations) erstellt eine Instanz von, `SpiDevice` indem aufgerufen `SpiDevice.Create` und übergeben wird `hardwareSpiSettings` . Dies `SpiDevice` stellt den SPI-Bus dar. Die `using` -Deklaration stellt sicher, dass das Objekt verworfen und Hardware Ressourcen ordnungsgemäß freigegeben werden.
@@ -100,11 +100,11 @@ Führen Sie die folgenden Schritte in Ihrer bevorzugten Entwicklungsumgebung aus
 
 1. Beenden Sie das Programm, indem Sie <kbd>STRG + C</kbd>drücken.
 
-Herzlichen Glückwunsch! Sie haben SPI zum Lesen von Werten aus einem analog-zu-Digital-Konverter verwendet.
+Glückwunsch! Sie haben SPI zum Lesen von Werten aus einem analog-zu-Digital-Konverter verwendet.
 
 ## <a name="get-the-source-code"></a>Herunterladen des Quellcodes
 
-Die Quelle für dieses Tutorial ist [auf GitHub verfügbar](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial). <span class="docon docon-navigate-external x-hidden-focus"></span>
+Die Quelle für dieses Tutorial ist [auf GitHub verfügbar](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/tutorials/AdcTutorial) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>Nächste Schritte
 

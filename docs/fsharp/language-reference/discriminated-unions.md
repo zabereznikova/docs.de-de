@@ -2,12 +2,12 @@
 title: Unterscheidungs-Unions
 description: 'Erfahren Sie mehr über die Verwendung von F #-diskriminierten Unions.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 3f8ac656bd00b1022b2b13ee1be7ca5c98f68db5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f90ac2c2ea21182cf5fd3657d2ada00a763139fe
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812132"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740236"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -24,7 +24,7 @@ type [accessibility-modifier] type-name =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Unterscheidungs-Unions ähneln Union-Typen in anderen Sprachen, aber es gibt Unterschiede. Wie bei einem Union-Typ in C++ oder einem Variantentyp in Visual Basic werden die im Wert gespeicherten Daten nicht korrigiert. Der Typ kann einer von mehreren unterschiedlichen Optionen sein. Im Gegensatz zu Unions in diesen anderen Sprachen erhält jede der möglichen Optionen einen *Fall Bezeichner*. Die Fallbezeichner sind Namen für die verschiedenen möglichen Typen von Werten, die Objekte dieses Typs aufweisen können. Die Werte sind optional. Wenn keine Werte vorhanden sind, entspricht der Fall einem Enumerationsfall. Wenn Werte vorhanden sind, kann jeder Wert entweder ein einzelner Wert eines angegebenen Typs oder ein Tupel sein, das mehrere Felder gleicher oder unterschiedlicher Typen aggregiert. Sie können einem einzelnen Feld einen Namen einräumen, aber der Name ist optional, auch wenn andere Felder im gleichen Fall benannt werden.
 
@@ -190,10 +190,10 @@ type Shape =
     interface IPrintable with
         member this.Print () =
             match this with
-            | Circle r -> printfn "Circle with radius %f" r
-            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
-            | Square s -> printfn "Square with side %f" s
-            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+            | Circle r -> printfn $"Circle with radius %f{r}"
+            | EquilateralTriangle s -> printfn $"Equilateral Triangle of side %f{s}"
+            | Square s -> printfn $"Square with side %f{s}"
+            | Rectangle(l, w) -> printfn $"Rectangle with length %f{l} and width %f{w}"
 ```
 
 ## <a name="common-attributes"></a>Allgemeine Attribute

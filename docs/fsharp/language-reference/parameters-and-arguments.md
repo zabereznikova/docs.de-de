@@ -2,12 +2,12 @@
 title: Parameter und Argumente
 description: 'Erfahren Sie mehr über die F #-Sprachunterstützung zum Definieren von Parametern und zum Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 6564fd31105427683af8fc6280672e638737e9b5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3c391ca37a1cf3bd150316943e5b06efa532b317
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811521"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740288"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
@@ -137,7 +137,7 @@ open System
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
-        printfn "%s" message
+        printfn $"{message}"
 ```
 
 Sie können auch ein neues-Objekt als Standardparameter Wert angeben. Der `Foo` Member könnte beispielsweise optional `CancellationToken` als Eingabe enthalten:
@@ -147,7 +147,7 @@ open System.Threading
 open System.Runtime.InteropServices
 type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
-        printfn "%A" ct
+        printfn $"{ct}"
 ```
 
 Der als Argument angegebene Wert `DefaultParameterValue` muss mit dem Typ des Parameters identisch sein. Beispielsweise ist Folgendes nicht zulässig:
@@ -168,12 +168,12 @@ Das Übergeben eines F #-Werts als Verweis umfasst [ByRefs](byrefs.md), bei dene
 - Verwenden `byref<'T>` Sie, wenn Sie sowohl Lese-als auch Schreibzugriff auf den Zeiger benötigen.
 
 ```fsharp
-let example1 (x: inref<int>) = printfn "It's %d" x
+let example1 (x: inref<int>) = printfn $"It's %d{x}"
 
 let example2 (x: outref<int>) = x <- x + 1
 
 let example3 (x: byref<int>) =
-    printfn "It'd %d" x
+    printfn $"It's %d{x}"
     x <- x + 1
 
 let test () =

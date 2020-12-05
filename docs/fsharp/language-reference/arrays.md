@@ -2,12 +2,12 @@
 title: Arrays
 description: 'Erfahren Sie, wie Sie Arrays in der Programmiersprache F # erstellen und verwenden.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 37f781ccd2c7bc2ca2c7b93bda53bbb3ea93b504
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 96b0d7eaf10d5afcd9a647681d5c2ef2d2fba335
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608496"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739750"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -287,12 +287,12 @@ module test =
 
     let test1 = generateTestMatrix 2.3 1.1
     let submatrix = test1.[0..1, 0..1]
-    printfn "%A" submatrix
+    printfn $"{submatrix}"
 
     let firstRow = test1.[0,*]
     let secondRow = test1.[1,*]
     let firstCol = test1.[*,0]
-    printfn "%A" firstCol
+    printfn $"{firstCol}"
 ```
 
 ### <a name="boolean-functions-on-arrays"></a>Boolesche Funktionen für Arrays
@@ -405,7 +405,7 @@ Sie können verwenden [`Array.blit`](https://fsharp.github.io/fsharp-core-docs/r
 
 ### <a name="sort-arrays"></a>Arrays sortieren
 
-Verwenden [`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort) Sie, um ein Array mithilfe der generischen Vergleichsfunktion zu sortieren. Verwenden [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) Sie, um eine Funktion anzugeben, die einen Wert generiert, der als *Schlüssel*bezeichnet wird, um mithilfe der generischen Vergleichsfunktion für den Schlüssel zu sortieren. Verwenden [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith) Sie, wenn Sie eine benutzerdefinierte Vergleichsfunktion bereitstellen möchten. `Array.sort`, `Array.sortBy` und `Array.sortWith` geben das sortierte Array als neues Array zurück. Die Variationen [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) , [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) und [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) ändern das vorhandene Array, anstatt ein neues Array zurückzugeben.
+Verwenden [`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort) Sie, um ein Array mithilfe der generischen Vergleichsfunktion zu sortieren. Verwenden [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) Sie, um eine Funktion anzugeben, die einen Wert generiert, der als *Schlüssel* bezeichnet wird, um mithilfe der generischen Vergleichsfunktion für den Schlüssel zu sortieren. Verwenden [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith) Sie, wenn Sie eine benutzerdefinierte Vergleichsfunktion bereitstellen möchten. `Array.sort`, `Array.sortBy` und `Array.sortWith` geben das sortierte Array als neues Array zurück. Die Variationen [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) , [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) und [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) ändern das vorhandene Array, anstatt ein neues Array zurückzugeben.
 
 ### <a name="arrays-and-tuples"></a>Arrays und Tupel
 

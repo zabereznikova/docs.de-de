@@ -2,18 +2,18 @@
 title: Musterabgleich
 description: 'Erfahren Sie, wie Muster in F # verwendet werden, um Daten mit logischen Strukturen zu vergleichen, Daten in Bestandteile zu zerlegen oder Informationen aus Daten zu extrahieren.'
 ms.date: 11/12/2020
-ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 932f50b7947f6df728149437dd3ceb19c42e5c6a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687804"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740275"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
 Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets verwendet, um Daten mit logischen Strukturen zu vergleichen, Daten in einzelne Bestandteile zu zerlegen oder auf unterschiedliche Weise Informationen aus Daten zu extrahieren.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [let-Bindungen](./functions/let-bindings.md), [Lambda-Ausdrücke: das `fun` Schlüsselwort](./functions/lambda-expressions-the-fun-keyword.md)und [Ausnahmen: der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
@@ -88,8 +88,8 @@ Sie können die benannten Felder in einem Musterabgleichsausdruck wie folgt verw
 ```fsharp
 let matchShape shape =
     match shape with
-    | Rectangle(height = h) -> printfn "Rectangle with length %f" h
-    | Circle(r) -> printfn "Circle with radius %f" r
+    | Rectangle(height = h) -> printfn $"Rectangle with length %f{h}"
+    | Circle(r) -> printfn $"Circle with radius %f{r}"
 ```
 
 Die Verwendung des benannten Felds ist optional. Im vorherigen Beispiel haben `Circle(r)` und `Circle(radius = r)` die gleiche Auswirkung.
@@ -98,7 +98,7 @@ Wenn Sie mehrere Felder angeben, verwenden Sie das Semikolon (;) als Trennzeiche
 
 ```fsharp
 match shape with
-| Rectangle(height = h; width = w) -> printfn "Rectangle with height %f and width %f" h w
+| Rectangle(height = h; width = w) -> printfn $"Rectangle with height %f{h} and width %f{w}"
 | _ -> ()
 ```
 
@@ -232,7 +232,7 @@ f "asdf" // does not match
 
 [`nameof`](nameof.md)Informationen dazu, wie Sie einen Namen verwenden können, finden Sie unter dem-Operator.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Vergleichsausdrücke](match-expressions.md)
 - [Aktive Muster](active-patterns.md)

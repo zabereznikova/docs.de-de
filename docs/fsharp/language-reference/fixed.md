@@ -2,12 +2,12 @@
 title: Das fixed-Schlüsselwort
 description: 'Erfahren Sie, wie Sie eine lokale auf dem Stapel anheften können, um die Auflistung mit dem F #-Schlüsselwort "Fixed" zu verhindern.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 786ffd706c243fc83f8fb3afc2201d2a34536372
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b4b0d1ae101d5f7b65bff80fa070c9fd54de8d66
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559179"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740353"
 ---
 # <a name="the-fixed-keyword"></a>Das fixed-Schlüsselwort
 
@@ -47,7 +47,7 @@ let squareWithPointer (p: nativeptr<int>) =
     NativePtr.set p 0 value
 
 let pnt = { X = 1; Y = 2 }
-printfn "pnt before - X: %d Y: %d" pnt.X pnt.Y // prints 1 and 2
+printfn $"pnt before - X: %d{pnt.X} Y: %d{pnt.Y}" // prints 1 and 2
 
 // Note that the use of 'fixed' is inside a function.
 // You cannot fix a pointer at a script-level or module-level scope.
@@ -56,7 +56,7 @@ let doPointerWork() =
 
     // Square the Y value
     squareWithPointer ptr
-    printfn "pnt after - X: %d Y: %d" pnt.X pnt.Y // prints 1 and 4
+    printfn $"pnt after - X: %d{pnt.X} Y: %d{pnt.Y}" // prints 1 and 4
 
 doPointerWork()
 ```

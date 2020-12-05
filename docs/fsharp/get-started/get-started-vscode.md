@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio Code
 description: 'Erfahren Sie, wie Sie F # mit Visual Studio Code und der ionide-Plug-in-Suite verwenden.'
 ms.date: 12/23/2018
-ms.openlocfilehash: 3317d0037d3c14a6b55079385d7b27e499c0c392
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 11fb0d443fb7c2b3f270d45bfeaa91102ba28efd
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050545"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739801"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit F# in Visual Studio Code
 
@@ -36,7 +36,7 @@ Nachdem das Projekt Visual Studio Code geladen wurde, sollte der Bereich F # Pro
 
 Stellen Sie zunächst sicher, dass die .net Core-Skripterstellung Ihre standardmäßige Skript Umgebung ist:
 
-1. Öffnen Sie die Visual Studio Code Einstellungen (Einstellungen für die**Code**  >  **Einstellungen**  >  **Settings**).
+1. Öffnen Sie die Visual Studio Code Einstellungen (Einstellungen für die **Code**  >  **Einstellungen**  >  **Settings**).
 1. Suchen Sie nach dem Begriff **F #-Skript**.
 1. Klicken Sie auf das Kontrollkästchen **FSharp: SDK-Skripts verwenden**.
 
@@ -52,7 +52,7 @@ Fügen Sie nun den folgenden Code hinzu:
 
 Diese Funktion konvertiert ein Wort in eine Form von [Pig Latin](https://en.wikipedia.org/wiki/Pig_Latin). Der nächste Schritt besteht darin, ihn mit F# Interactive (FSI) zu evaluieren.
 
-Markieren Sie die gesamte Funktion (es sollte 11 Zeilen lang sein). Halten Sie die **alt** -Taste gedrückt, und drücken Sie die **Eingabe**Taste. Unten auf dem Bildschirm wird ein Terminalfenster angezeigt, das in etwa wie folgt aussehen sollte:
+Markieren Sie die gesamte Funktion (es sollte 11 Zeilen lang sein). Halten Sie die **alt** -Taste gedrückt, und drücken Sie die **Eingabe** Taste. Unten auf dem Bildschirm wird ein Terminalfenster angezeigt, das in etwa wie folgt aussehen sollte:
 
 ![Beispiel für F# Interactive Ausgabe mit ionide](./media/getting-started-vscode/vscode-fsi.png)
 
@@ -144,7 +144,7 @@ Nennen Sie nun in der- `main` Funktion die Pig Latin Generator-Funktion für die
 let main argv =
     for name in argv do
         let newName = PigLatin.toPigLatin name
-        printfn "%s in Pig Latin is: %s" name newName
+        printfn %"{name} in Pig Latin is: {newName}"
 
     0
 ```

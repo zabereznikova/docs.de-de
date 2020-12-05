@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96592075"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739529"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>Schnellstart: Verwenden von .net zum Steuern eines Raspberry Pi-Sense
 
-Der Raspberry Pi [Sense hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> ein Add-on-Board für Raspberry Pi. Der Sense verfügt über eine 8 × 8-RGB-LED-Matrix, eine Schaltfläche mit fünf Schaltflächen und umfasst die folgenden Sensoren:
+Der Raspberry Pi [Sense hat](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** Hardware **A** ttached on **T** OP) ist ein Add-on-Board für Raspberry Pi. Der Sense verfügt über eine 8 × 8-RGB-LED-Matrix, eine Schaltfläche mit fünf Schaltflächen und umfasst die folgenden Sensoren:
 
 - Gyroskop
 - Beschleunigungsmesser
@@ -52,7 +52,7 @@ Beachten Sie die Konsolenausgabe, wenn Sensordaten angezeigt werden. Die LED-Mat
 
 ## <a name="get-the-source-code"></a>Herunterladen des Quellcodes
 
-Die Quelle für diesen Schnellstart ist [auf GitHub verfügbar](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart). <span class="docon docon-navigate-external x-hidden-focus"></span>
+Die Quelle für diesen Schnellstart ist [auf GitHub verfügbar](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>Nächste Schritte
 

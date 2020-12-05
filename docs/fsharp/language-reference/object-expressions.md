@@ -1,17 +1,17 @@
 ---
 title: Objektausdrücke
-description: Erfahren Sie, wie Sie mit F# Objektausdrücke, wenn Sie die zusätzlichen Code und den Aufwand vermeiden möchten, erforderlich zum Erstellen einer neuen benannten Typ.
+description: 'Erfahren Sie, wie Sie F #-Objekt Ausdrücke verwenden, um den zusätzlichen Code und Aufwand zu vermeiden, der zum Erstellen eines neuen benannten Typs erforderlich ist.'
 ms.date: 02/08/2019
-ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a3e40b7833b551eefb95ec62b935acd1ba7b1f9
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666287"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740301"
 ---
 # <a name="object-expressions"></a>Objektausdrücke
 
-Ein *Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz von einem dynamisch erstellten anonymen Objekttyps erstellt basiert auf einem vorhandenen Basistyp, Schnittstelle oder Satz von Schnittstellen.
+Ein *Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz eines dynamisch erstellten, anonymen Objekt Typs erstellt, der auf einem vorhandenen Basistyp, einer Schnittstelle oder einem Satz von Schnittstellen basiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,17 +28,17 @@ Ein *Objekt Ausdruck* ist ein Ausdruck, der eine neue Instanz von einem dynamisc
 }
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-In der vorherigen Syntax wird die *Typename* darstellt, einen vorhandenen Klassen- oder Schnittstellentyp. *Typ-Params* wird beschrieben, die optional generischen Typparameter. Die *Argumente* werden verwendet, nur für Klassentypen, die Konstruktorparameter erforderlich ist. Die *Memberdefinitionen* sind überschreibungen von Basisklassenmethoden oder Implementierungen von abstrakten Methoden von einer Basisklasse oder Schnittstelle.
+In der vorherigen Syntax stellt der *Typname* einen vorhandenen Klassentyp oder Schnittstellentyp dar. *Type-para* meters beschreibt die optionalen generischen Typparameter. Die *Argumente* werden nur für Klassentypen verwendet, die Konstruktorparameter erfordern. Die *Member-Definitionen* sind über schreibungen von Basisklassen Methoden oder Implementierungen von abstrakten Methoden aus einer Basisklasse oder einer Schnittstelle.
 
-Das folgende Beispiel veranschaulicht verschiedene Arten von Object-Ausdrücke.
+Im folgenden Beispiel werden verschiedene Typen von Objekt Ausdrücken veranschaulicht.
 
 ```fsharp
 // This object expression specifies a System.Object but overrides the
 // ToString method.
 let obj1 = { new System.Object() with member x.ToString() = "F#" }
-printfn "%A" obj1
+printfn $"{obj1}"
 
 // This object expression implements the IFormattable interface.
 let delimiter(delim1: string, delim2: string, value: string) =
@@ -73,10 +73,10 @@ let implementer() =
         member this.G() = () }
 ```
 
-## <a name="using-object-expressions"></a>Verwenden von Object-Ausdrücke
+## <a name="using-object-expressions"></a>Verwenden von Objekt Ausdrücken
 
-Sie verwenden die Object-Ausdrücke, wenn Sie möchten, um zu vermeiden, die zusätzlichen Code und den Aufwand, die zum Erstellen einer neuen benannten Typ erforderlich ist. Wenn Sie Object-Ausdrücke verwenden, um die Anzahl der in einem Programm erstellten Typen zu minimieren, können Sie reduzieren Sie die Anzahl von Codezeilen und zu verhindern, dass die unnötige die Verbreitung von Typen. Anstatt zu erstellen, viele Typen nur, um bestimmte Situationen zu behandeln, können Sie einen Object-Ausdruck, der einen vorhandenen Typ anpasst, oder eine geeignete Implementierung der Schnittstelle für den speziellen Fall zur Verfügung stellt.
+Sie verwenden Objekt Ausdrücke, wenn Sie zusätzlichen Code und mehr Aufwand für die Erstellung eines neuen benannten Typs vermeiden möchten. Wenn Sie Objekt Ausdrücke verwenden, um die Anzahl der in einem Programm erstellten Typen zu minimieren, können Sie die Anzahl der Codezeilen reduzieren und die unnötige Verbreitung von Typen vermeiden. Anstatt viele Typen zu erstellen, die nur für bestimmte Situationen geeignet sind, können Sie einen Objekt Ausdruck verwenden, der einen vorhandenen Typ anpasst oder eine entsprechende Implementierung einer Schnittstelle für den jeweiligen Fall bereitstellt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [F#-Sprachreferenz](index.md)

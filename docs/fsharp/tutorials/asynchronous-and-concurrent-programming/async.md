@@ -2,12 +2,12 @@
 title: Async-Programmierung
 description: 'Erfahren Sie, wie F # eine saubere Unterstützung für Asynchronie basierend auf einem Programmiermodell auf Sprachebene bereitstellt, das aus den Konzepten der Kern funktionalen Programmierung abgeleitet ist.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811768"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739326"
 ---
 # <a name="async-programming-in-f"></a>Async-Programmierung in F\#
 
@@ -39,7 +39,7 @@ In der Praxis sind asynchrone Berechnungen in F # so geplant, dass Sie unabhäng
 
 Das wichtigste, was Sie tun sollten, ist, dass asynchrone Berechnungen unabhängig vom Hauptprogramm Fluss sind. Obwohl es nur wenige Garantien gibt, wann oder wie eine asynchrone Berechnung ausgeführt wird, gibt es einige Ansätze zum orchestrieren und planen. Im restlichen Teil dieses Artikels werden die Kernkonzepte für die Asynchronität von f # und die Verwendung der in F # integrierten Typen, Funktionen und Ausdrücke erläutert.
 
-## <a name="core-concepts"></a>Kernkonzepte
+## <a name="core-concepts"></a>Wichtige Konzepte
 
 In F # wird die asynchrone Programmierung um drei Kernkonzepte zentriert:
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -73,7 +73,7 @@ Im Beispiel ist die- `printTotalFileBytes` Funktion vom Typ `string -> Async<uni
 
 Eine weitere wichtige Zeile ist der-Rückruf `Async.RunSynchronously` . Dies ist eines der asynchronen Modul Startfunktionen, die Sie aufrufen müssen, wenn Sie eine asynchrone F #-Berechnung tatsächlich ausführen möchten.
 
-Dies ist ein grundlegender Unterschied zum Programmierstil c#/Visual Basic `async` . In F # können sich asynchrone Berechnungen als **kalte Aufgaben**vorstellen. Sie müssen explizit gestartet werden, damit Sie tatsächlich ausgeführt werden. Dies hat einige Vorteile, da es Ihnen ermöglicht, asynchrone Aufgaben wesentlich einfacher zu kombinieren und zu sequenzieren als in c# oder Visual Basic.
+Dies ist ein grundlegender Unterschied zum Programmierstil c#/Visual Basic `async` . In F # können sich asynchrone Berechnungen als **kalte Aufgaben** vorstellen. Sie müssen explizit gestartet werden, damit Sie tatsächlich ausgeführt werden. Dies hat einige Vorteile, da es Ihnen ermöglicht, asynchrone Aufgaben wesentlich einfacher zu kombinieren und zu sequenzieren als in c# oder Visual Basic.
 
 ## <a name="combine-asynchronous-computations"></a>Kombinieren von asynchronen Berechnungen
 
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]

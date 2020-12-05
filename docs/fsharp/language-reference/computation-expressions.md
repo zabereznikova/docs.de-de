@@ -4,12 +4,12 @@ description: 'Erfahren Sie, wie Sie eine bequeme Syntax zum Schreiben von Berech
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a0a71533ea1bc87b75f028ad0d416326f627672a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705305"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739301"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -111,7 +111,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 In den meisten Fällen kann Sie von Aufrufern ausgelassen werden. Die gängigste Methode zum weglassen `yield` ist mit dem- `->` Operator:
@@ -123,7 +123,7 @@ let squares =
     }
 
 for sq in squares do
-    printfn "%d" sq
+    printfn $"%d{sq}"
 ```
 
 Für komplexere Ausdrücke, die möglicherweise viele verschiedene Werte ergeben, und möglicherweise bedingt, kann das-Schlüsselwort einfach weggelassen werden:
@@ -167,7 +167,7 @@ let squaresAndCubes =
         yield! cubes
     }
 
-printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
+printfn $"{squaresAndCubes}"  // Prints - 1; 4; 9; 1; 8; 27
 ```
 
 Bei der Auswertung werden die Elemente des von aufgerufenen Berechnungs Ausdrucks `yield!` nacheinander zurückgegeben und das Ergebnis vereinfacht.
@@ -390,7 +390,7 @@ let eventually = new EventuallyBuilder()
 
 let comp = eventually {
     for x in 1..2 do
-        printfn " x = %d" x
+        printfn $" x = %d{x}"
     return 3 + 4 }
 
 // Try the remaining lines in F# interactive to see how this

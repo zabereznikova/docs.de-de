@@ -2,18 +2,18 @@
 title: 'Tutorial: Erstellen eines Typanbieters'
 description: 'Erfahren Sie, wie Sie eigene f #-Typanbieter in f # 3,0 erstellen, indem Sie mehrere einfache Typanbieter untersuchen, um die Grundkonzepte zu veranschaulichen.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810871"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739697"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Erstellen eines Typanbieters
 
 Der Typanbieter Mechanismus in F # ist ein wesentlicher Bestandteil der Unterstützung für die Informationsreiche Programmierung. In diesem Lernprogramm wird erläutert, wie Sie eigene Typanbieter erstellen können, indem Schritt für Schritt mehrere einfache Typanbieter entwickelt und an diesen die grundlegenden Konzepte veranschaulicht werden. Weitere Informationen zum Typanbieter Mechanismus in F # finden Sie unter [Typanbieter](index.md).
 
-Das F #-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet-und Enterprise-Datendienste. Beispiel:
+Das F #-Ökosystem enthält einen Bereich von typanbietern für häufig verwendete Internet-und Enterprise-Datendienste. Zum Beispiel:
 
 - [FSharp. Data](https://fsharp.github.io/FSharp.Data/) umfasst Typanbieter für JSON-, XML-, CSV-und HTML-Dokumentformate.
 
@@ -243,7 +243,7 @@ Beachten Sie die folgenden Punkte:
 Als Nächstes fügen Sie dem Typ eine XML-Dokumentation hinzu. Diese Dokumentation wird verzögert, d. h., sie wird erst bei Bedarf berechnet, wenn der Hostcompiler sie benötigt.
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 Als Nächstes fügen Sie dem Typ eine statische bereitgestellte Eigenschaft hinzu:
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -461,7 +461,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-Beachten Sie dabei folgende Punkte:
+Beachten Sie folgende Punkte:
 
 - Der Regex-Standardtyp stellt den parametrisierten `RegexTyped`-Typ dar.
 
@@ -527,7 +527,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-Beachten Sie dabei folgende Punkte:
+Beachten Sie folgende Punkte:
 
 - Der Typanbieter erwartet zwei statische Parameter: `pattern`, ein erforderlicher Parameter, und den optionalen Parameter `options` (für den ein Standardwert bereitgestellt wird).
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ Auch hier sollte im ersten Schritt überlegt werden, wie die fertige API aussehe
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 In diesem Fall sollte der Compiler diese Aufrufe ähnlich wie im folgenden Beispiel konvertieren:
@@ -773,7 +773,7 @@ In diesem Fall sollte der Compiler diese Aufrufe ähnlich wie im folgenden Beisp
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 Für eine optimale Übersetzung muss der Typanbieter einen echten `CsvFile`-Typ in der Assembly des Typanbieters definieren. Typanbieter basieren häufig auf einer Reihe von Hilfstypen und -methoden, um wichtige Logikabschnitte zu umschließen. Da die Maßeinheiten zur Laufzeit gelöscht werden, können Sie `float[]` als gelöschten Typ für eine Zeile verwenden. Der Compiler behandelt jede Spalte als eigenen Typ mit eigener Maßeinheit. Zum Beispiel hat die erste Spalte im Beispiel den Typ `float<meter>`, die zweite den Typ `float<second>` usw. Dennoch kann die gelöschte Darstellung vergleichsweise einfach ausfallen.
@@ -1052,7 +1052,7 @@ Die ProvidedTypes-API stellt Hilfsprogramme zur Angabe von Maßeinheiten für We
 
 Jede Instanz eines Typanbieters kann während der Erstellung als `TypeProviderConfig`-Wert angegeben werden. Dieser Wert enthält den „Auflösungsordner“ für den Anbieter (dass heißt, den Projektordner für die Kompilierung oder das Verzeichnis, das ein Skript enthält), die Liste der Assemblys, auf die verwiesen wird, und einige andere Informationen.
 
-### <a name="invalidation"></a>Invalidierung
+### <a name="invalidation"></a>Aufheben einer Validierung
 
 Anbieter können Signale zum Aufheben einer Validierung auslösen, um den F#-Sprachdienst zu benachrichtigen, dass sich die Schemaannahmen möglicherweise geändert haben. Bei einer Invalidierung wird die Typüberprüfung wiederholt, sofern der Anbieter in Visual Studio gehostet wird. Dieses Signal wird ignoriert, wenn der Anbieter in F# Interactive oder vom F#-Compiler (fsc.exe) gehostet wird.
 
@@ -1136,7 +1136,7 @@ devenv /debugexe fsc.exe script.fsx
 
   Zur Protokollierung können Sie die normale Ausgabe auf die Standardausgabe verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Typanbieter](index.md)
 - [Das Typanbieter-SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK)

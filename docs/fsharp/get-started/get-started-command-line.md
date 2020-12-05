@@ -2,12 +2,12 @@
 title: 'Einstieg in F # mit Befehlszeilen Tools'
 description: 'Erfahren Sie, wie Sie eine einfache Lösung mit mehreren Projekten in F # erstellen, indem Sie die .net Core-CLI unter jedem Betriebssystem (Windows, macOS oder Linux) verwenden.'
 ms.date: 08/15/2020
-ms.openlocfilehash: e652b66337a3122de8e6bd4d62d86fb6082b759d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f890e31fe8c665874dc3034aebfae32e38b9031a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811989"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739914"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Beginnen Sie mit F # mit der .net Core-CLI
 
@@ -64,7 +64,7 @@ open Newtonsoft.Json
 
 let getJsonNetJson value =
     let json = JsonConvert.SerializeObject(value)
-    sprintf "I used to be %s but now I'm %s thanks to JSON.NET!" value json
+    $"I used to be {value} but now I'm {json} thanks to JSON.NET!"
 ```
 
 Fügen Sie dem Bibliotheksprojekt die Newtonsoft.Jsfür das nuget-Paket hinzu.
@@ -115,7 +115,7 @@ let main argv =
 
     for arg in argv do
         let value = getJsonNetJson arg
-        printfn "%s" value
+        printfn $"{value}"
 
     0 // return an integer exit code
 ```

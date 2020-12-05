@@ -2,12 +2,12 @@
 title: Codekonventionen für F#
 description: 'Informieren Sie sich über allgemeine Richtlinien und Idiome beim Schreiben von F #-Code.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554025"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739901"
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen für F#
 
@@ -190,13 +190,13 @@ In diesem Fall gibt es drei bekannte Möglichkeiten, dass das Zurückziehen von 
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
-Wenn Sie die verschiedenen Methoden modellieren können, mit denen in Ihrer Domäne ein Fehler **auftreten kann,** wird der Fehler Behandlungs Code nicht mehr als etwas behandelt, mit dem Sie zusätzlich zum regulären Programmablauf arbeiten müssen. Es ist einfach ein Teil des normalen Programmflusses und wird nicht als **außergewöhnlich**angesehen. Dies hat zwei wesentliche Vorteile:
+Wenn Sie die verschiedenen Methoden modellieren können, mit denen in Ihrer Domäne ein Fehler **auftreten kann,** wird der Fehler Behandlungs Code nicht mehr als etwas behandelt, mit dem Sie zusätzlich zum regulären Programmablauf arbeiten müssen. Es ist einfach ein Teil des normalen Programmflusses und wird nicht als **außergewöhnlich** angesehen. Dies hat zwei wesentliche Vorteile:
 
 1. Sie ist einfacher zu verwalten, wenn sich Ihre Domäne im Laufe der Zeit ändert.
 2. Fehlerfälle sind einfacher für Komponententests.
@@ -301,7 +301,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 Anstatt als Catch-all zu funktionieren, verarbeitet diese Funktion nun ordnungsgemäß den Fall, dass eine Datei nicht gefunden wurde, und weist diese Bedeutung einer Rückgabe zu. Dieser Rückgabewert kann diesem Fehlerfall zugeordnet werden, während keine Kontextinformationen verworfen werden oder Aufrufer gezwungen werden, einen Fall zu behandeln, der an diesem Punkt im Code möglicherweise nicht relevant ist.
 
-Typen wie `Result<'Success, 'Error>` sind für grundlegende Vorgänge geeignet, bei denen Sie nicht eingebettet sind, und optionale F #-Typen eignen sich perfekt für die Darstellung, wenn etwas entweder *etwas* oder *nichts*zurückgeben könnte. Sie sind jedoch kein Ersatz für Ausnahmen und sollten nicht in einem Versuch verwendet werden, Ausnahmen zu ersetzen. Vielmehr sollten Sie umsichtig angewendet werden, um bestimmte Aspekte der Ausnahme-und Fehler Verwaltungs Richtlinie in gezielter Weise zu behandeln.
+Typen wie `Result<'Success, 'Error>` sind für grundlegende Vorgänge geeignet, bei denen Sie nicht eingebettet sind, und optionale F #-Typen eignen sich perfekt für die Darstellung, wenn etwas entweder *etwas* oder *nichts* zurückgeben könnte. Sie sind jedoch kein Ersatz für Ausnahmen und sollten nicht in einem Versuch verwendet werden, Ausnahmen zu ersetzen. Vielmehr sollten Sie umsichtig angewendet werden, um bestimmte Aspekte der Ausnahme-und Fehler Verwaltungs Richtlinie in gezielter Weise zu behandeln.
 
 ## <a name="partial-application-and-point-free-programming"></a>Partielle Anwendungs-und punktfreie Programmierung
 
@@ -317,7 +317,7 @@ Geschweiften Funktionen bezeichnen ihre Argumente nicht. Dies hat Auswirkungen a
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
