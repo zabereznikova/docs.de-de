@@ -142,6 +142,8 @@
       href: language-reference/classes.md
     - name: Strukturen
       href: language-reference/structures.md
+    - name: Auf NULL festlegbare Werttypen
+      href: language-reference/nullable-value-types.md
     - name: Vererbung
       href: language-reference/inheritance.md
     - name: Schnittstellen
