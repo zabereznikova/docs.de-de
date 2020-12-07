@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie F# Interactive (dotnet fsi) zum interaktiven
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 71ec5d1b050b02ecbdb98adce814fce011cdbca0
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549396"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739309"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
@@ -118,7 +118,7 @@ let t2 = dsharp.tensor [ [ 0; 1 ]; [ 2; 2 ] ]
 // Define a scalar-to-scalar function
 let f (x: Tensor) = sin (sqrt x)
 
-printfn "%A" (f (dsharp.tensor 1.2))
+printfn $"{f (dsharp.tensor 1.2)}"
 ```
 
 ### <a name="specifying-a-package-source"></a>Angeben einer Paketquelle
@@ -137,7 +137,7 @@ Sie können beliebig viele Paketverweise in einem Skript angeben.
 > [!NOTE]
 > Es gibt zurzeit eine Einschränkung für Skripts, die Frameworkverweise verwenden (z. B. `Microsoft.NET.Sdk.Web` oder `Microsoft.NET.Sdk.WindowsDesktop`). Pakete wie Saturn, Giraffe und WinForms sind nicht verfügbar. Dies wird in Issue [#9417](https://github.com/dotnet/fsharp/issues/9417) nachverfolgt.
 
-Erfahren Sie mehr über die [Paketverwaltungserweiterbarkeit und andere Erweiterungen](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
+Weitere Informationen finden Sie unter [Paketverwaltungserweiterbarkeit und andere Erweiterungen](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
 
 ## <a name="referencing-assemblies-on-disk-with-f-interactive"></a>Verweisen auf Assemblys auf einem Datenträger mit F# Interactive
 
@@ -154,7 +154,7 @@ Nach der Kompilierung können Sie in einer Datei `Script.fsx` wie folgt darauf v
 ```fsharp
 #r "path/to/MyAssembly.dll"
 
-printfn "%A" (MyAssembly.myFunction 10 40)
+printfn $"{MyAssembly.myFunction 10 40}"
 ```
 
 Die Ausgabe lautet wie folgt:
@@ -182,7 +182,7 @@ Außerdem über die verbrauchende Datei `Script2.fsx`:
 #load "Script1.fsx"
 open Script1
 
-printfn "%d" (square 12)
+printfn $"%d{square 12}"
 ```
 
 Beachten Sie, dass die Deklaration `open Script1` erforderlich ist. Der Grund dafür ist, dass Konstrukte in einem F#-Skript in einem Modul der obersten Ebene kompiliert werden, das dem Namen der Skriptdatei entspricht, in dem es sich befindet.
@@ -206,7 +206,7 @@ Im folgenden Beispiel wird gezeigt, wie Befehlszeilenargumente abgerufen und ver
 let args = fsi.CommandLineArgs
 
 for arg in args do
-    printfn "%s" arg
+    printfn $"{arg}"
 ```
 
 Bei der Auswertung werden alle Argumente ausgegeben. Das erste Argument ist immer der Name des Skripts, das ausgewertet wird:
