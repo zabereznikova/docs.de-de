@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8c7d46b9271e33ab7ce3f989fae95bd57394ccd
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96591770"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851528"
 ---
 # <a name="design-rules"></a>Entwurfsregeln
 
@@ -75,3 +75,4 @@ Entwurfs Regeln unterstützen die Einhaltung der [.NET Framework Entwurfs Richtl
 | [CA1068: CancellationToken-Parameter müssen zuletzt aufgeführt werden.](ca1068.md) | Eine Methode verfügt über einen CancellationToken-Parameter, der nicht der letzte Parameter ist. |
 | [CA1069: Enumerationen dürfen keine doppelten Werte aufweisen.](ca1069.md) | Eine Enumeration verfügt über mehrere Member, denen explizit derselbe Konstante Wert zugewiesen wird. |
 | [CA1070: Ereignisfelder dürfen nicht als virtuell deklariert werden.](ca1070.md) | Ein [Feld ähnliches Ereignis](../../../csharp/event-pattern.md#defining-and-raising-field-like-events) wurde als virtuell deklariert. |
+| [CA1071: Basis überschreiben. Ist beim Implementieren von IEquatable.](ca1071.md) | Ein abgeleiteter Typ implementiert <xref:System.IEquatable%601> , aber überschreibt die Basisklassen <xref:System.IEquatable%601.Equals%2A> Methode nicht. |

@@ -4,12 +4,12 @@ description: Eine Übersicht über zusätzliche Tools, die Sie zum Unterstützen
 author: mlacouture
 ms.date: 02/13/2020
 ms.custom: mvc
-ms.openlocfilehash: f563dff312442cbf068d52d08992621e3d6f1460
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6aa8b62f02c4325664ffeccc0c0d4a0635a96f2d
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699000"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599218"
 ---
 # <a name="net-core-additional-tools-overview"></a>Zusätzliche .NET Core-Tools – Übersicht
 
@@ -28,6 +28,10 @@ Mit dem Tool [dotnet-dump](../diagnostics/dotnet-dump.md) können Sie Windows- u
 Mit [dotnet-gcdump](../diagnostics/dotnet-gcdump.md) können Sie GC-Speicherabbilder (Garbage Collector) aus .NET-Liveprozessen erfassen.
 
 [dotnet-trace](../diagnostics/dotnet-trace.md) erfasst Profilerstellungsdaten von Ihrer App, die Sie in Szenarien unterstützen können, in denen Sie die Ursachen für eine langsame App-Ausführung herausfinden müssen.
+
+## <a name="net-install-tool-for-extension-authors"></a>.NET-Installationstool für Erweiterungsautoren
+
+Das [.NET-Installationstool für Erweiterungsautoren](https://github.com/dotnet/vscode-dotnet-runtime) ist eine Visual Studio Code-Erweiterung, die speziell VS Code-Erweiterungsautoren den Erwerb der .NET Core-Laufzeit ermöglicht. Dieses Tool soll in Erweiterungen verwendet werden, die in .NET geschrieben sind und .NET zum Starten von Komponenten der Erweiterung (z. B. eines Sprachservers) erfordern. Die Erweiterung soll nicht direkt von Benutzern verwendet werden, um .NET für die Entwicklung zu installieren.
 
 ## <a name="wcf-web-service-reference-tool"></a>WCF Web Service Reference-Tool
 

@@ -6,12 +6,12 @@ metadata:
   description: 'Vermittlung von C#-Programmierkenntnissen: für angehende Entwickler, Entwickler, die neu in C# sind, und erfahrene C#-/.NET-Entwickler'
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: f31d24add06b958f6c5bc00baf4c09601616604e
-  ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
+  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 11/12/2020
-  ms.locfileid: "94556815"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96599446"
 landingContent:
 - title: Erlernen des Programmierens in C#
   linkLists:
@@ -25,6 +25,8 @@ landingContent:
       url: tutorials/intro-to-csharp/index.md
     - text: Erstellen von C#-Apps mit Visual Studio
       url: /visualstudio/get-started/csharp/tutorial-console
+    - text: C# unter Q&A
+      url: /answers/topics/dotnet-csharp.html
   - linkListType: video
     links:
     - text: Was ist C#?

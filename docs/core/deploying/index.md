@@ -2,12 +2,12 @@
 title: Anwendungsveröffentlichung
 description: Erfahren Sie mehr über die Möglichkeiten zum Veröffentlichen einer .NET Core-Anwendung. Mit .NET Core können plattformspezifische oder plattformübergreifende Apps veröffentlicht werden. Sie können eine App als eigenständige oder frameworkabhängige App veröffentlichen. Der Modus wirkt sich darauf aus, wie ein Benutzer Ihre App ausführt.
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654671"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599576"
 ---
 # <a name="net-core-application-publishing-overview"></a>Übersicht über die .NET Core-Anwendungsveröffentlichung
 
@@ -67,7 +67,7 @@ Beim Veröffentlichen einer frameworkabhängigen App werden eine [ plattformübe
 
 Die plattformübergreifende Binärdatei Ihrer App kann mit dem Befehl `dotnet <filename.dll>` auf einer beliebigen Plattform ausgeführt werden. Wenn die App ein NuGet-Paket mit plattformspezifischen Implementierungen verwendet, werden alle Plattformabhängigkeiten gemeinsam mit der App in den Veröffentlichungsordner kopiert.
 
-Sie können eine ausführbare Datei für eine bestimmte Plattform erstellen, indem Sie die `-r <RID> --self-contained false`-Parameter an den Befehl [`dotnet publish`](../tools/dotnet-publish.md) übergeben. Bei Auslassen des `-r`-Parameters wird eine ausführbare Datei für Ihre aktuelle Plattform erstellt. Alle NuGet-Pakete, die plattformspezifische Abhängigkeiten für die Zielplattform umfassen, werden in den Veröffentlichungsordner kopiert.
+Sie können eine ausführbare Datei für eine bestimmte Plattform erstellen, indem Sie die `-r <RID> --self-contained false`-Parameter an den Befehl [`dotnet publish`](../tools/dotnet-publish.md) übergeben. Bei Auslassen des `-r`-Parameters wird eine ausführbare Datei für Ihre aktuelle Plattform erstellt. Alle NuGet-Pakete, die plattformspezifische Abhängigkeiten für die Zielplattform umfassen, werden in den Veröffentlichungsordner kopiert. Wenn Sie keine plattformspezifische ausführbare Datei benötigen, können Sie `<UseAppHost>False</UseAppHost>` in der Projektdatei angeben. Weitere Informationen finden Sie unter [MSBuild-Referenz für .NET SDK-Projekte – UseAppHost](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="advantages"></a>Vorteile
 

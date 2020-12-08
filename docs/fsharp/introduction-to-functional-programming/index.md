@@ -1,83 +1,83 @@
 ---
 title: Einführung in die funktionale Programmierung mit F#
-description: Lernen Sie die Grundlagen der funktionalen F#Programmierung in kennen.
+description: Lernen Sie die Grundlagen der funktionalen Programmierung mit F# kennen.
 ms.date: 10/29/2018
-ms.openlocfilehash: e1a0edc61dbe13012c48e166d490e22ebc70d6a0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424709"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740327"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>Einführung in die funktionale Programmierung in F\#
+# <a name="introduction-to-functional-programming-in-f"></a>Einführung in die funktionale Programmierung mit F\#
 
-Die funktionale Programmierung ist ein Programmierstil, der die Verwendung von Funktionen und unveränderlichen Daten betont. Die typisierte funktionale Programmierung ist, wenn die funktionale Programmierung mit statischen Typen kombiniert wird F#, z. b. mit. Im Allgemeinen werden die folgenden Konzepte bei der funktionalen Programmierung hervorgehoben:
+Die funktionale Programmierung ist ein Programmierstil, der die Verwendung von Funktionen und unveränderlichen Daten betont. Das Merkmal typisierter funktionaler Programmierung ist, dass die funktionale Programmierung mit statischen Typen kombiniert wird, z. B. F#. Im Allgemeinen werden die folgenden Konzepte bei der funktionalen Programmierung betont:
 
 * Funktionen als primäre Konstrukte, die Sie verwenden
 * Ausdrücke anstelle von Anweisungen
-* Unveränderliche Werte für Variablen
-* Deklarative Programmierung über imperative Programmierung
+* Unveränderliche Werte vor Variablen
+* Deklarative Programmierung vor imperativer Programmierung
 
-In dieser Reihe werden Konzepte und Muster der funktionalen Programmierung mithilfe F#von untersucht. Dabei lernen Sie auch etwas F# kennen.
+In dieser Reihe lernen Sie Konzepte und Muster der funktionalen Programmierung mit F# kennen. Dabei erfahren Sie auch Einiges über F#.
 
-## <a name="terminology"></a>Terminologie
+## <a name="terminology"></a>Begriff
 
-Die funktionale Programmierung, wie andere Programmierparadigmen, enthält ein Vokabular, das Sie schließlich erlernen müssen. Im folgenden finden Sie einige gängige Begriffe, die Sie in der gesamten Zeit sehen werden:
+Wie andere Programmierparadigmen hat die funktionale Programmierung ein Vokabular, das Sie lernen müssen. Im Folgenden finden Sie einige gängige Begriffe, die Ihnen ständig begegnen werden:
 
-* **Function** : eine Funktion ist ein Konstrukt, das eine Ausgabe erzeugt, wenn eine Eingabe angegeben wird. Formal wird ein Element aus einem _Satz einem anderen_ Satz zugeordnet. Diese Formalität wird in vielerlei Hinsicht auf den konkreten angehoben, insbesondere bei der Verwendung von Funktionen, die auf Daten Auflistungen angewendet werden. Es ist das grundlegendste (und wichtigste) Konzept bei der funktionalen Programmierung.
-* **Ausdruck** : ein Ausdruck ist ein Konstrukt in Code, der einen Wert erzeugt. In F#muss dieser Wert gebunden oder explizit ignoriert werden. Ein Ausdruck kann trivial durch einen Funktions aufzurufen ersetzt werden.
-* **Purity** -Purity ist eine Eigenschaft einer Funktion, sodass Ihr Rückgabewert für dieselben Argumente immer identisch ist und die Auswertung keine Nebeneffekte hat. Eine reine Funktion hängt vollständig von ihren Argumenten ab.
-* **Referenzielle Transparenz** : referentielle Transparenz ist eine Eigenschaft von Ausdrücken, die Sie durch ihre Ausgabe ersetzen können, ohne das Verhalten eines Programms zu beeinträchtigen.
-* **Unveränderlichkeit** : Unveränderlichkeit bedeutet, dass ein Wert nicht direkt geändert werden kann. Dies steht im Gegensatz zu Variablen, die sich direkt ändern können.
+* **Funktion**: Eine Funktion ist ein Konstrukt, das eine Ausgabe erzeugt, wenn es eine Eingabe erhält. Formeller gesagt, _weist_ sie ein Element aus einem Satz einem anderen Satz zu. Dieser Formalismus wird in vielerlei Hinsicht konkret, insbesondere bei der Verwendung von Funktionen, die Datensammlungen verarbeiten. Dies ist das grundlegendste (und wichtigste) Konzept der funktionalen Programmierung.
+* **Ausdruck**: Ein Ausdruck ist ein Konstrukt im Code, das einen Wert erzeugt. In F# muss dieser Wert gebunden oder explizit ignoriert werden. Ein Ausdruck kann einfach durch einen Funktionsaufruf ersetzt werden.
+* **Reinheit**: Reinheit als Eigenschaft einer Funktion bedeutet, dass ihr Rückgabewert für dieselben Argumente immer identisch ist und seine Auswertung keine Nebeneffekte hat. Eine reine Funktion hängt vollständig von ihren Argumenten ab.
+* **Referenzielle Transparenz**: Referenzielle Transparenz als Eigenschaft einer Funktion bedeutet, dass sie durch ihre Ausgabe ersetzt werden kann, ohne dass das Verhalten eines Programms beeinträchtigt wird.
+* **Unveränderlichkeit**: Unveränderlichkeit bedeutet, dass ein Wert nicht direkt geändert werden kann. Dies steht im Gegensatz zu Variablen, die sich direkt ändern können.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Beispiele veranschaulichen diese grundlegenden Konzepte.
+In den folgenden Beispielen werden diese Kernkonzepte veranschaulicht.
 
-### <a name="functions"></a>Funktionen
+### <a name="functions"></a>Functions
 
-Das gängigste und grundlegendste Konstrukt bei der funktionalen Programmierung ist die-Funktion. Im folgenden finden Sie eine einfache Funktion, die einer Ganzzahl 1 hinzufügt:
+Das gängigste und grundlegendste Konstrukt der funktionalen Programmierung ist die Funktion. Im Folgenden finden Sie eine einfache Funktion, die einer Ganzzahl den Wert 1 hinzufügt:
 
 ```fsharp
 let addOne x = x + 1
 ```
 
-Die Typsignatur lautet wie folgt:
+Ihre Typsignatur lautet wie folgt:
 
 ```fsharp
 val addOne: x:int -> int
 ```
 
-Die Signatur kann mit dem Namen "`addOne` akzeptiert eine `int` mit dem Namen `x` und erzeugt eine `int`". Formal wird _`addOne` einen Wert_ aus dem Satz von ganzen Zahlen dem Satz von ganzen Zahlen zuordnet. Das `->` Token bezeichnet diese Zuordnung. In F#können Sie in der Regel die Funktions Signatur überprüfen, um einen Eindruck davon zu erhalten, was Sie tut.
+Die Signatur kann als „`addOne` nimmt einen `int`-Wert mit dem Namen `x` entgegen und erzeugt einen `int`-Wert“ gelesen werden. Formeller betrachtet, ist `addOne` die _Zuordnung_ eines Wert aus dem Satz ganzer Zahlen zum Satz ganzer Zahlen. Das `->`-Token bezeichnet diese Zuordnung. In F# können Sie in der Regel anhand der Funktionssignatur erkennen, was sie tut.
 
-Warum ist die Signatur also wichtig? Bei der typisierten funktionalen Programmierung ist die Implementierung einer Funktion oft weniger wichtig als die tatsächliche Typsignatur. Die Tatsache, dass `addOne` den Wert 1 zu einer Ganzzahl addiert, ist zur Laufzeit interessant, aber wenn Sie ein Programm erstellen, ist die Tatsache, dass es eine `int` akzeptiert und zurückgibt, so informiert, wie Sie diese Funktion tatsächlich verwenden werden. Wenn Sie diese Funktion außerdem ordnungsgemäß (in Bezug auf Ihre Typsignatur) verwenden, kann die Diagnose von Problemen nur innerhalb des Texts der `addOne` Funktion erfolgen. Dies ist der Impuls hinter der typisierten funktionalen Programmierung.
+Warum ist die Signatur denn so wichtig? In der typisierten funktionalen Programmierung ist die Implementierung einer Funktion oft weniger wichtig als die eigentliche Typsignatur! Die Tatsache, dass `addOne` den Wert 1 zu einer Ganzzahl addiert, ist zur Laufzeit interessant, aber wenn Sie ein Programm erstellen, informiert Sie die Tatsache, dass es einen `int`-Wert annimmt und zurückgibt, darüber, wie Sie diese Funktion tatsächlich verwenden werden. Wenn Sie diese Funktion außerdem ordnungsgemäß (in Bezug auf ihre Typsignatur) verwenden, kann die Diagnose von Problemen nur innerhalb des Texts der `addOne`-Funktion erfolgen. Dies ist der Impuls hinter der typisierten funktionalen Programmierung.
 
 ### <a name="expressions"></a>Ausdrücke
 
-Ausdrücke sind Konstrukte, die zu einem Wert ausgewertet werden. Im Gegensatz zu-Anweisungen, die eine Aktion ausführen, können Ausdrücke eine Aktion durchführen, die einen Wert zurückgibt. Ausdrücke werden fast immer anstelle von-Anweisungen in der funktionalen Programmierung verwendet.
+Ausdrücke sind Konstrukte, die zu einem Wert ausgewertet werden. Im Gegensatz zu Anweisungen, die einfach eine Aktion ausführen, führen Ausdrücke eine Aktion aus, die einen Wert zurückgibt. Ausdrücke werden in der funktionalen Programmierung fast immer Anweisungen vorgezogen.
 
-Sehen Sie sich die vorherige Funktion an, `addOne`. Der Text des `addOne` ist ein Ausdruck:
+Betrachten Sie die obige Funktion `addOne`. Der Text von `addOne` ist ein Ausdruck:
 
 ```fsharp
 // 'x + 1' is an expression!
 let addOne x = x + 1
 ```
 
-Dies ist das Ergebnis dieses Ausdrucks, der den Ergebnistyp der `addOne` Funktion definiert. Beispielsweise könnte der Ausdruck, der diese Funktion bildet, in einen anderen Typ geändert werden, z. b. ein `string`:
+Das Ergebnis dieses Ausdrucks definiert den Ergebnistyp der `addOne`-Funktion. Beispielsweise könnte der Ausdruck, der diese Funktion bildet, in einen anderen Typ geändert werden, z. B. einen `string`:
 
 ```fsharp
 let addOne x = x.ToString() + "1"
 ```
 
-Die Signatur der Funktion ist jetzt:
+Die Signatur der Funktion lautet nun:
 
 ```fsharp
 val addOne: x:'a -> string
 ```
 
-Da für jeden Typ F# in `ToString()` aufgerufen werden kann, wurde der Typ des `x` generisch (sogenannte [Automatische Generalisierung](../language-reference/generics/automatic-generalization.md)), und der resultierende Typ ist eine `string`.
+Da für jeden Typ in F# `ToString()` aufgerufen werden kann, wurde der Typ von `x` verallgemeinert ([automatische Verallgemeinerung](../language-reference/generics/automatic-generalization.md) genannt), und der resultierende Typ ist ein `string`.
 
-Ausdrücke sind nicht nur die Funktions Texte. Sie können Ausdrücke verwenden, die einen Wert verursachen, den Sie an anderer Stelle verwenden. Eine gängige `if`ist:
+Ausdrücke sind nicht nur die Texte von Funktionen. Sie können Ausdrücke verwenden, die einen Wert produzieren, den Sie an anderer Stelle verwenden. `if` ist gängig:
 
 ```fsharp
 // Checks if 'x' is odd by using the mod operator
@@ -93,13 +93,13 @@ let addOneIfOdd input =
     result
 ```
 
-Der `if` Ausdruck erzeugt einen Wert mit dem Namen `result`. Beachten Sie, dass Sie `result` vollständig weglassen können, indem Sie den `if` Ausdruck zum Text der `addOneIfOdd`-Funktion führen. Der wichtigste Punkt, den Sie sich an Ausdrücken merken müssen, ist, dass Sie einen Wert ergeben.
+Der `if`-Ausdruck erzeugt einen Wert namens `result`. Beachten Sie, dass Sie `result` vollständig weglassen könnten, indem Sie den `if`-Ausdruck zum Text der `addOneIfOdd`-Funktion machen. Das Wichtigste, was Sie sich über Ausdrücke merken sollten, ist, dass sie einen Wert produzieren.
 
-Es gibt einen besonderen Typ, `unit`, der verwendet wird, wenn nichts zurückgegeben werden muss. Sehen Sie sich beispielsweise diese einfache Funktion an:
+Ein besonderer Typ, `unit`, wird verwendet, wenn nichts zurückgegeben werden muss. Betrachten Sie als Beispiel diese einfache Funktion:
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" str
+    printfn $"String is: {str}"
 ```
 
 Die Signatur sieht wie folgt aus:
@@ -108,9 +108,9 @@ Die Signatur sieht wie folgt aus:
 val printString: str:string -> unit
 ```
 
-Der `unit`-Typ gibt an, dass kein tatsächlicher Wert zurückgegeben wird. Dies ist nützlich, wenn Sie über eine Routine verfügen, die "arbeiten" muss, obwohl kein Wert vorhanden ist, der als Ergebnis der Arbeit zurückgegeben werden muss.
+Der `unit`-Typ gibt an, dass kein tatsächlicher Wert zurückgegeben wird. Dies ist nützlich, wenn Sie über eine Routine verfügen, die „arbeiten“ muss, obwohl kein Wert vorhanden ist, der als Ergebnis der Arbeit zurückgegeben werden könnte.
 
-Dies ist ein starker Kontrast zur imperativen Programmierung, bei der das entsprechende `if` Konstrukt eine-Anweisung ist, und das Erstellen von Werten wird häufig mit veränderenden Variablen erreicht. In C#könnte der Code z. b. wie folgt geschrieben werden:
+Dies ist ein scharfer Kontrast zur imperativen Programmierung, bei der das entsprechende `if`-Konstrukt eine-Anweisung ist und das Erstellen von Werten häufig mit der Veränderung von Variablen erfolgt. In C# könnte der Code z. B. wie folgt geschrieben werden:
 
 ```csharp
 bool IsOdd(int x) => x % 2 != 0;
@@ -128,22 +128,22 @@ int AddOneIfOdd(int input)
 }
 ```
 
-Beachten Sie, dass C# und andere Sprachen im C-Stil den [ternären Ausdruck](../../csharp/language-reference/operators/conditional-operator.md)unterstützen, der die Ausdrucks basierte bedingte Programmierung ermöglicht.
+Beachten Sie, dass C# und andere Sprachen im C-Stil den [ternären Ausdruck](../../csharp/language-reference/operators/conditional-operator.md) unterstützen, der die ausdrucksbasierte bedingte Programmierung ermöglicht.
 
-Bei der funktionalen Programmierung ist es selten, Werte mit-Anweisungen zu mutieren. Obwohl einige funktionale Sprachen Anweisungen und mutations unterstützen, ist es nicht üblich, diese Konzepte bei der funktionalen Programmierung zu verwenden.
+In der funktionalen Programmierung werden Werte selten mit Anweisungen verändert. Einige funktionale Sprachen unterstützen Anweisungen und Veränderungen, aber es ist nicht üblich, diese Konzepte in der funktionalen Programmierung zu verwenden.
 
 ### <a name="pure-functions"></a>Reine Funktionen
 
-Wie bereits erwähnt, sind reine Funktionen Funktionen, die:
+Wie bereits erwähnt, weisen reine Funktionen folgende Merkmale auf:
 
-* Wertet immer denselben Wert für dieselbe Eingabe aus.
-* Hat keine Nebenwirkungen.
+* Für dieselbe Eingabe wird immer derselbe Wert ausgewertet.
+* Sie haben keine Nebeneffekte.
 
-Es ist hilfreich, mathematische Funktionen in diesem Kontext zu betrachten. In der Mathematik sind Funktionen nur von ihren Argumenten abhängig und haben keine Nebeneffekte. In der mathematischen Funktions `f(x) = x + 1`hängt der Wert von `f(x)` nur vom Wert von `x`ab. Reine Funktionen bei der funktionalen Programmierung sind auf dieselbe Weise.
+Es ist hilfreich, in diesem Kontext mathematische Funktionen zu betrachten. In der Mathematik sind Funktionen nur von ihren Argumenten abhängig und haben keine Nebeneffekte. In der mathematischen Funktion `f(x) = x + 1` hängt der Wert von `f(x)` nur vom Wert von `x` ab. Bei reinen Funktionen in der funktionalen Programmierung verhält es sich genauso.
 
-Beim Schreiben einer reinen Funktion muss die Funktion nur von ihren Argumenten abhängen und keine Aktionen ausführen, die zu einem Nebeneffekt führen.
+Beachten Sie beim Schreiben einer reinen Funktion, dass die Funktion nur von ihren Argumenten abhängig sein und keine Aktionen ausführen darf, die zu einem Nebeneffekt führen.
 
-Im folgenden finden Sie ein Beispiel für eine nicht reine Funktion, da Sie vom globalen, veränderbaren Zustand abhängt:
+Im Folgenden finden Sie ein Beispiel für eine Funktion, die nicht rein ist, da sie vom globalen, veränderbaren Zustand abhängt:
 
 ```fsharp
 let mutable value = 1
@@ -151,58 +151,58 @@ let mutable value = 1
 let addOneToValue x = x + value
 ```
 
-Die `addOneToValue` Funktion ist eindeutig, da `value` jederzeit geändert werden kann, um einen anderen Wert als 1 zu haben. Dieses Muster von, abhängig von einem globalen Wert, muss bei der funktionalen Programmierung vermieden werden.
+Die `addOneToValue`-Funktion ist eindeutig nicht rein, da `value` jederzeit in einen anderen Wert als 1 geändert werden könnte. Dieses Muster der Abhängigkeit von einem globalen Wert muss in der funktionalen Programmierung vermieden werden.
 
-Im folgenden finden Sie ein weiteres Beispiel für eine nicht reine Funktion, da Sie einen Nebeneffekt durchführt:
+Hier sehen Sie ein weiteres Beispiel für eine Funktion, die nicht rein ist, da sie einen Nebeneffekt hat:
 
 ```fsharp
 let addOneToValue x =
-    printfn "x is %d" x
+    printfn $"x is %d{x}"
     x + 1
 ```
 
-Obwohl diese Funktion nicht von einem globalen Wert abhängt, schreibt Sie den Wert `x` in die Ausgabe des Programms. Obwohl es in der Tat nichts falsches gibt, bedeutet dies, dass die Funktion nicht rein ist. Wenn ein anderer Teil des Programms von einem externen Programm, z. b. dem Ausgabepuffer, abhängt, kann sich das Aufrufen dieser Funktion auf diesen anderen Teil des Programms auswirken.
+Obwohl diese Funktion nicht von einem globalen Wert abhängt, schreibt sie den Wert `x` in die Ausgabe des Programms. Dies ist zwar grundsätzlich nicht falsch, bedeutet aber, dass die Funktion nicht rein ist. Wenn ein anderer Teil des Programms von programmexternen Elementen wie z. B. dem Ausgabepuffer abhängt, kann der Aufruf dieser Funktion sich auf diesen anderen Teil des Programms auswirken.
 
-Wenn Sie die `printfn`-Anweisung entfernen, wird die-Funktion rein:
+Durch Entfernen der `printfn`-Anweisung wird die Funktion rein:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Obwohl diese Funktion nicht grundsätzlich _besser_ als die vorherige Version mit der `printfn`-Anweisung ist, gewährleistet Sie, dass all diese Funktion einen Wert zurückgibt. Wenn diese Funktion beliebig oft aufgerufen wird, wird das gleiche Ergebnis erzielt: Sie erzeugt lediglich einen Wert. Die von der Reinheit gegebene Vorhersagbarkeit ist etwas, das viele funktionale Programmierer anstreben.
+Diese Funktion ist zwar nicht grundsätzlich _besser_ als die vorherige Version mit der `printfn`-Anweisung, aber es ist gewährleistet, dass sie nichts anderes tut als einen Wert zurückzugeben. Wenn diese Funktion beliebig oft aufgerufen wird, wird immer das gleiche Ergebnis erzielt: Sie erzeugt lediglich einen Wert. Die durch Reinheit garantierte Vorhersagbarkeit ist etwas, das viele funktionale Programmierer anstreben.
 
-### <a name="immutability"></a>Unveränderlichkeit
+### <a name="immutability"></a>Unveränderlichkeit.
 
-Und schließlich ist eines der grundlegendsten Konzepte der typisierten funktionalen Programmierung Unveränderlichkeit. In F#sind alle Werte standardmäßig unveränderlich. Dies bedeutet, dass Sie nicht direkt bearbeitet werden können, es sei denn, Sie markieren Sie explizit als änderbar.
+Schließlich ist Unveränderlichkeit eines der grundlegendsten Konzepte der typisierten funktionalen Programmierung. In F# sind alle Werte standardmäßig unveränderbar. Dies bedeutet, dass sie nicht direkt bearbeitet werden können, sofern Sie sie nicht explizit als veränderbar markieren.
 
-In der Praxis bedeutet das Arbeiten mit unveränderlichen Werten, dass Sie Ihren Ansatz für die Programmierung von "Ich muss etwas ändern", in "Ich muss einen neuen Wert entwickeln" ändern.
+In der Praxis bedeutet das Arbeiten mit unveränderlichen Werten, dass Sie Ihren Programmierungsansatz von „Ich muss etwas ändern“ in „Ich muss einen neuen Wert erzeugen“ ändern.
 
-Wenn Sie z. b. 1 zu einem Wert hinzufügen, wird ein neuer Wert erzeugt, der die vorhandene nicht muziiert:
+Wenn Sie z. B. 1 einem Wert hinzufügen, wird ein neuer Wert erzeugt, nicht der vorhandene Wert geändert:
 
 ```fsharp
 let value = 1
 let secondValue = value + 1
 ```
 
-In F#mutiert der folgende Code die `value`-Funktion **nicht** . Stattdessen wird eine Gleichheits Überprüfung durchführt:
+In F# ändert der folgende Code **nicht** die `value`-Funktion; stattdessen wird eine Gleichheitsüberprüfung durchgeführt:
 
 ```fsharp
 let value = 1
 value = value + 1 // Produces a 'bool' value!
 ```
 
-Einige funktionale Programmiersprachen unterstützen überhaupt keine Mutation. In F#wird es unterstützt, aber es ist nicht das Standardverhalten für-Werte.
+Einige funktionale Programmiersprachen unterstützen die Änderung überhaupt nicht. In F# wird sie unterstützt, ist aber nicht das Standardverhalten für Werte.
 
-Dieses Konzept erstreckt sich noch weiter auf Datenstrukturen. Bei der funktionalen Programmierung weisen unveränderliche Datenstrukturen, wie z. b. Mengen (und viele weitere), eine andere Implementierung auf als Sie anfänglich erwarten. Konzeptionell bedeutet das Hinzufügen eines Elements zu einem Satz nicht, dass der Satz geändert wird, sondern es wird eine _neue_ Menge mit dem hinzugefügten Wert erstellt. Im Unterschied wird dies häufig durch eine andere Datenstruktur erreicht, die eine effiziente Nachverfolgung eines Werts ermöglicht, damit die entsprechende Darstellung der Daten als Ergebnis angegeben werden kann.
+Dieses Konzept erstreckt sich sogar noch weiter auf Datenstrukturen. In der funktionalen Programmierung weisen unveränderliche Datenstrukturen wie z. B. Sätze (und viele weitere) eine andere Implementierung auf, als Sie vielleicht anfänglich erwarten. Konzeptionell ändert etwas wie das Hinzufügen eines Elements zu einem Satz den Satz nicht, sondern produziert einen _neuen_ Satz mit dem hinzugefügten Wert. Im Hintergrund wird dies häufig durch eine andere Datenstruktur erreicht, die eine effiziente Nachverfolgung eines Werts ermöglicht, damit die entsprechende Darstellung der Daten als Ergebnis angegeben werden kann.
 
-Diese Art der Arbeit mit Werten und Datenstrukturen ist äußerst wichtig, da Sie zwingt, jeden Vorgang zu behandeln, der etwas so ändert, als ob eine neue Version der Aufgabe erstellt wird. Dies ermöglicht es, dass Dinge wie Gleichheit und Vergleichbarkeit in ihren Programmen einheitlich sind.
+Dieser Stil des Arbeitens mit Werten und Datenstrukturen ist äußerst wichtig, da er Sie zwingt, jeden Vorgang, der etwas ändert, so zu behandeln, als schaffe er eine neue Version dieses Elements. Dies ermöglicht die Konsistenz von Aspekten wie Gleichheit und Vergleichbarkeit in Ihren Programmen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im nächsten Abschnitt werden Funktionen ausführlich behandelt und verschiedene Möglichkeiten erläutert, wie Sie Sie bei der funktionalen Programmierung verwenden können.
+Im nächsten Abschnitt werden Funktionen ausführlich behandelt und verschiedene Möglichkeiten untersucht, wie Sie sie in der funktionalen Programmierung verwenden können.
 
-[Erstklassige Funktionen](first-class-functions.md) untersucht Funktionen tief und zeigt, wie Sie Sie in verschiedenen Kontexten verwenden können.
+[Funktionen erster Klasse](first-class-functions.md) untersucht Funktionen gründlich und zeigt Ihnen, wie Sie sie in verschiedenen Kontexten verwenden können.
 
-## <a name="further-reading"></a>Weiterführende Themen
+## <a name="further-reading"></a>Weitere nützliche Informationen
 
-Die [denkende funktionale](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) Reihe ist eine weitere großartige Ressource, um mehr F#über die funktionale Programmierung mit zu erfahren. Sie behandelt die Grundlagen der funktionalen Programmierung auf eine pragmatische und leicht lesbare Weise, indem F# Sie Funktionen zum Veranschaulichen der Konzepte verwendet.
+Die Reihe [Thinking Functionally](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) (Funktional denken) ist eine weitere großartige Ressource, um mehr über die funktionale Programmierung mit F# zu erfahren. Sie behandelt die Grundlagen der funktionalen Programmierung auf pragmatische und leicht lesbare Weise, wobei die Konzepte mit F#-Funktionen veranschaulicht verwendet.
