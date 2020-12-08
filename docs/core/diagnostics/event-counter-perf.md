@@ -3,12 +3,12 @@ title: Messen der Leistung mithilfe von EventCounters in .NET Core
 description: In diesem Tutorial erfahren Sie, wie Sie die Leistung mithilfe von EventCounters messen.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538565"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437451"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Messen der Leistung mithilfe von EventCounters in .NET Core
 
@@ -97,7 +97,7 @@ dotnet-counters ps
 Mit dem Prozessbezeichner aus der Ausgabe des Befehls `dotnet-counters ps` können Sie die Überwachung des Ereignisleistungsindikators mit dem folgenden `dotnet-counters monitor`-Befehl starten:
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Während der `dotnet-counters monitor`-Befehl ausgeführt wird, halten Sie <kbd>F5</kbd> im Browser gedrückt, um mit der Ausgabe fortlaufender Anforderungen an den `https://localhost:5001/api/values`-Endpunkt zu beginnen. Beenden Sie den Vorgang nach einigen Sekunden durch Drücken von <kbd>q</kbd>.
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 Der `dotnet-counters monitor`-Befehl eignet sich hervorragend für aktive Überwachung. Möglicherweise möchten Sie diese Diagnosemetriken jedoch für die Nachverarbeitung und Analyse erfassen. Verwenden Sie dazu den Befehl `dotnet-counters collect`. Der `collect`-Schalterbefehl ähnelt dem `monitor`-Befehl, akzeptiert jedoch einige zusätzliche Parameter. Sie können den gewünschten Namen und das Format der Ausgabedatei angeben. Verwenden Sie für eine JSON-Datei namens *diagnostics.json* den folgenden Befehl:
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Während der Befehl ausgeführt wird, halten Sie erneut <kbd>F5</kbd> im Browser gedrückt, um mit der Ausgabe fortlaufender Anforderungen an den `https://localhost:5001/api/values`-Endpunkt zu beginnen. Beenden Sie den Vorgang nach einigen Sekunden durch Drücken von <kbd>q</kbd>. Die Datei *diagnostics.json* wird geschrieben. Die JSON-Datei, die geschrieben wird, verwendet keine Einzüge. Zur besseren Lesbarkeit werden die Informationen hier jedoch mit Einzug dargestellt.

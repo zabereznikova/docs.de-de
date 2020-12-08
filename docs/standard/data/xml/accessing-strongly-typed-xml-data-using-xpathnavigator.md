@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822827"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725416"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Zugreifen auf streng typisierte XML-Daten mit 'XPathNavigator'
+
 Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavigator>-Klasse stark typisierte Daten enthalten, die den CLR-Typen (Common Language Runtime) zugeordnet werden. Gemäß des XPath 2.0-Datenmodells können nur Elemente und Attribute stark typisierte Daten enthalten. Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Mechanismen zum Zugreifen auf Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt als stark typisierte Daten sowie Mechanismen zum Konvertieren von einem Datentyp in einen anderen bereit.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Von XPathNavigator verfügbar gemachte Typinformationen  
+
  XML 1.0-Daten weisen im Allgemeinen keinen Typ auf, es sei denn, sie wurden mit einer DTD, einem XSD-Schema (XML Schema Definition Language) oder anderen Mechanismen verarbeitet. Es gibt verschiedene Kategorien von Typinformationen, die einem XML-Element oder XML-Attribut zugeordnet werden können.  
   
 - Einfache CLR-Typen: Keine der XML-Schemasprachen unterstützt CLR-Typen (Common Language Runtime) direkt. Da das Anzeigen des Inhalts von einfachen Elementen und Attributen im am besten geeigneten CLR-Typ hilfreich ist, können alle einfachen Inhalte als <xref:System.String> mit allen hinzugefügten Schemainformationen typisiert werden, die den Inhalt möglicherweise einem besser geeigneten Typ anpassen, ohne dass Schemainformationen vorhanden sind. Mithilfe der <xref:System.Xml.XPath.XPathNavigator.ValueType%2A>-Eigenschaft können Sie den am besten geeigneten CLR-Typ des Inhalts von einfachen Elementen und Attributen ermitteln. Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
@@ -29,6 +31,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
 - Schemasprachenspezifische Typreflektion: In anderen Fällen sollten Sie nähere Informationen zum schemaspezifischen Typ abrufen, der auf ein XML-Dokument angewendet wird. Zum Beispiel möchten Sie eventuell beim Lesen einer XML-Datei die `maxOccurs`-Attribute aller gültigen Knoten im XML-Dokument extrahieren, um eine benutzerdefinierte Berechnung durchzuführen. Da diese Informationen nur durch Schemavalidierung festgelegt wird, wird darauf über die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>Mit "XPathNavigator" typisierte Accessoren  
+
  Die folgenden Tabelle enthält die verschiedenen Eigenschaften und Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen auf die Typinformationen eines Knotens zugegriffen werden kann.  
   
 |Eigenschaft|Beschreibung|  
@@ -47,6 +50,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
  Weitere Informationen zum Zuordnen von integrierten Schematypen zu CLR-Typen finden Sie unter [Typenunterstützung in den System.Xml-Klassen](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Das Post-Schema-Validation-Infoset (PSVI)  
+
  Ein XML-Schemaprozessor akzeptiert ein XML-Infoset als Eingabe und konvertiert es in ein Post-Schema-Validation-Infoset (PSVI). Ein PSVI stellt das ursprüngliche Eingabe-XML-Infoset dar, dem neue Informationselemente hinzugefügt wurden. Vorhandenen Informationselementen wurden neue Eigenschaften hinzugefügt. Es gibt drei komplexe Klassen von Informationen, die dem XML-Infoset im PSVI hinzugefügt wurden und vom <xref:System.Xml.XPath.XPathNavigator> verfügbar gemacht werden.  
   
 1. Validierungsergebnisse: Informationen dazu, ob ein Element oder ein Attribut erfolgreich validiert wurde. Diese werden von der <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar gemacht.  
@@ -137,6 +141,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>Abrufen von typisierten Werten mithilfe von ValueAs-Eigenschaften  
+
  Der typisierte Wert eines Knotens kann durch Zugreifen auf die <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A>-Eigenschaft von <xref:System.Xml.XPath.XPathNavigator> abgerufen werden. In bestimmten Fällen soll der typisierte Wert eines Knotens möglicherweise in einen anderen Typ konvertiert werden. Ein häufig verwendetes Beispiel ist das Abrufen eines numerischen Werts aus einem XML-Knoten. Betrachten Sie z. B. das folgende nicht validierte und nicht typisierte XML-Dokument.  
   
 ```xml  

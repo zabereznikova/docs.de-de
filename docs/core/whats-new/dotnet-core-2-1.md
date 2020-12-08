@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 5c15b663cf69de334771e83c1a14db8d66d30458
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91087361"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437921"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -248,7 +248,7 @@ Auf Linux und macOS können Sie <xref:System.Net.Http.HttpClient> nur pro Prozes
 
 ### <a name="breaking-changes"></a>Breaking Changes
 
-Informationen zu Breaking Changes finden Sie unter [Breaking Changes für die Migration von Version 2.0 zu 2.1](../compatibility/2.0-2.1.md).
+Informationen zu Breaking Changes finden Sie unter [Breaking Changes für die Migration von Version 2.0 zu 2.1](../compatibility/2.1.md).
 
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,12 +3,12 @@ title: Fehler SYSLIB0002
 description: In diesem Artikel erfahren Sie mehr über das veraltete Element, das zur Kompilierzeit den Fehler SYSLIB0002 generiert.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 36ecde3c52845a6594c4d04e167df48142038654
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440776"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437499"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002: PrincipalPermissionAttribute ist veraltet
 
@@ -64,4 +64,4 @@ Anders als bei anderen veralteten Warnungen können Sie den Fehler nicht unterdr
 
 ## <a name="see-also"></a>Siehe auch
 
-- [PrincipalPermissionAttribute ist als Fehler veraltet](3.1-5.0.md#principalpermissionattribute-is-obsolete-as-error)
+- [PrincipalPermissionAttribute ist als Fehler veraltet](core-libraries/5.0/principalpermissionattribute-obsolete.md)

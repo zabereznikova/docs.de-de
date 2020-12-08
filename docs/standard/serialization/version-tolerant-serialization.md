@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282414"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438159"
 ---
 # <a name="version-tolerant-serialization"></a>Versionstolerante Serialisierung
 
@@ -28,7 +28,7 @@ In den ersten Versionen von .NET Framework war das Erstellen serialisierbarer T
 - Ältere Versionen einer Anwendung lösten bei dem Versuch, neue Versionen des alten Typs zu deserialisieren, Ausnahmen aus.
 - Neuere Versionen einer Anwendung lösten bei dem Versuch, ältere Versionen eines Typs mit fehlenden Daten zu deserialisieren, Ausnahmen aus.
 
-Bei VTS (Version Tolerant Serialization, versionstolerante Serialisierung) handelt es sich um eine Gruppe von Funktionen, die das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen. Informationen zu einer funktionierenden Beispielanwendung finden Sie unter [Technologiebeispiel für versionstolerante Serialisierung](basic-serialization-technology-sample.md).
+Bei VTS (Version Tolerant Serialization, versionstolerante Serialisierung) handelt es sich um eine Gruppe von Funktionen, die das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen.
 
 Die VTS-Funktionen werden bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> aktiviert. Zudem sind alle Funktionen mit Ausnahme der Toleranz für externe Daten auch bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> aktiviert. Weitere Informationen zur Verwendung dieser Klassen für die Serialisierung finden Sie unter [Binäre Serialisierung](binary-serialization.md).
 
@@ -150,7 +150,7 @@ Private Sub SetCountryRegionDefault(sc As StreamingContext)
 End Sub
 ```
 
-Diese Methoden sind für die Versionsverwaltung vorgesehen. Während der Deserialisierung wird ein optionales Feld möglicherweise nicht korrekt initialisiert, wenn die Daten für das Feld fehlen. Dies kann korrigiert werden, indem zunächst die Methode erstellt wird, die den richtigen Wert zuordnet, und dann entweder das **OnDeserializingAttribute** - oder **OnDeserializedAttribute** -Attribut auf die Methode angewendet wird.
+Diese Methoden sind für die Versionsverwaltung vorgesehen. Während der Deserialisierung wird ein optionales Feld möglicherweise nicht korrekt initialisiert, wenn die Daten für das Feld fehlen. Dies kann korrigiert werden, indem zunächst die Methode erstellt wird, die den richtigen Wert zuordnet, und dann entweder das **OnDeserializingAttribute**- oder **OnDeserializedAttribute**-Attribut auf die Methode angewendet wird.
 
 Im folgenden Beispiel wird die Methode im Kontext eines Typs veranschaulicht. Wenn eine frühere Version einer Anwendung eine Instanz der`Address`-Klasse an eine höhere Version der Anwendung sendet, fehlen Daten im `CountryField`-Feld. Nach der Deserialisierung wird das Feld jedoch auf den Standardwert „Japan“ festgelegt.
 
@@ -188,7 +188,7 @@ End Class
 
 ## <a name="the-versionadded-property"></a>Die VersionAdded-Eigenschaft
 
-Das **OptionalFieldAttribute** verfügt über die **VersionAdded** -Eigenschaft. Die Eigenschaft gibt an, welche Version eines Typs einem bestimmten Feld hinzugefügt wurde. Sie sollte bei jeder Änderung des Typs um genau 1 erhöht werden (ausgehend von 2). Dies veranschaulicht das folgende Beispiel:
+Das **OptionalFieldAttribute** verfügt über die **VersionAdded**-Eigenschaft. Die Eigenschaft gibt an, welche Version eines Typs einem bestimmten Feld hinzugefügt wurde. Sie sollte bei jeder Änderung des Typs um genau 1 erhöht werden (ausgehend von 2). Dies veranschaulicht das folgende Beispiel:
 
 ```csharp
 // Version 1.0
@@ -270,13 +270,13 @@ Um das richtige Versionsverhalten sicherzustellen, beachten Sie beim Ändern ein
 - Entfernen Sie nie ein serialisiertes Feld.
 - Wenden Sie das <xref:System.NonSerializedAttribute>-Attribut nie auf ein Feld an, wenn das Attribut in der vorherigen Version nicht auf das Feld angewendet wurde.
 - Ändern Sie nie den Namen oder den Typ eines serialisierten Felds.
-- Wenden Sie beim Hinzufügen eines neuen serialisierten Felds das **OptionalFieldAttribute** -Attribut an.
-- Wenden Sie beim Entfernen eines **NonSerializedAttribute** -Attributs von einem Feld, das in einer vorherigen Version nicht serialisierbar war, das **OptionalFieldAttribute** -Attribut an.
+- Wenden Sie beim Hinzufügen eines neuen serialisierten Felds das **OptionalFieldAttribute**-Attribut an.
+- Wenden Sie beim Entfernen eines **NonSerializedAttribute**-Attributs von einem Feld, das in einer vorherigen Version nicht serialisierbar war, das **OptionalFieldAttribute**-Attribut an.
 - Legen Sie für alle optionalen Felder sinnvolle Standardwerte fest, indem Sie die Serialisierungsrückrufe verwenden, sofern 0 oder **NULL** nicht als Standardwerte zulässig sind.
 
 Um sicherzustellen, dass ein Typ mit zukünftigen Serialisierungs-Engines kompatibel ist, beachten Sie die folgenden Richtlinien:
 
-- Legen Sie die **VersionAdded** -Eigenschaft im **OptionalFieldAttribute** -Attribut ordnungsgemäß fest.
+- Legen Sie die **VersionAdded**-Eigenschaft im **OptionalFieldAttribute**-Attribut ordnungsgemäß fest.
 - Vermeiden Sie verzweigte Versionen.
 
 ## <a name="see-also"></a>Siehe auch

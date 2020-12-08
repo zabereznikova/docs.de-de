@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 42d60f919cb6ae0dab262ef9056a7c33c312a911
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e48f2f83b65ef934c7c460d42f05e2f8de04cbd
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726664"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437899"
 ---
 # <a name="whats-new-in-net-core-30"></a>Neuerungen in .NET Core 3.0
 
@@ -573,5 +573,5 @@ Oftmals möchten Sie bei der Entwicklung einer Anwendung eine unverschlüsselte 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Informationen zu den wichtigsten Unterschieden zwischen .NET Core 2.2 und 3.0](../compatibility/2.2-3.0.md)
+- [Informationen zu den wichtigsten Unterschieden zwischen .NET Core 2.2 und 3.0](../compatibility/3.0.md)
 - [Überprüfen von Breaking Changes in .NET Core 3.0 für Windows Forms-Apps](../compatibility/winforms.md#net-core-30)

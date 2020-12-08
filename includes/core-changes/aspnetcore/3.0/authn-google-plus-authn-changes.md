@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c634c43e72d345721f2d8f2e9f45760e927a86ab
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 14d80f25c34465caa6dec10e5704fe0a3cbccc71
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032455"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96477590"
 ---
 ### <a name="authentication-google-deprecated-and-replaced"></a>Authentifizierung: Google+ wurde als veraltet markiert und ersetzt.
 
@@ -63,7 +63,7 @@ Die für ASP.NET Core 2.x angegebene Entschärfung kann auch für ASP.NET Core�
     o.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
     o.Authority = "https://accounts.google.com";
     o.ResponseType = OpenIdConnectResponseType.Code;
-    o.CallbackPath = "/signin-google"; // Or register the default "/sigin-oidc"
+    o.CallbackPath = "/signin-google"; // Or register the default "/signin-oidc"
     o.Scope.Add("email");
 });
 JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();

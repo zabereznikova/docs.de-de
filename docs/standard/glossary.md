@@ -2,12 +2,12 @@
 title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 ms.date: 11/16/2020
-ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 77ed506fb1c5bd4018b5fe0c14cc0bf37cb08113
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687778"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438184"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -63,7 +63,7 @@ Der Quellcode der Basisklassenbibliothek für [.NET 5 (und .NET Core) und höhe
 
 Die folgenden Begriffe beziehen sich häufig auf dieselbe Sammlung von APIs, auf die sich die BCL bezieht:
 
-- [.NET-Kernbibliotheken](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [.NET-Kernbibliotheken](../core/compatibility/corefx.md)
 - [Frameworkbibliotheken](#framework-libraries)
 - [Runtimebibliotheken](#runtime)
 - [Freigegebenes Framework](#shared-framework)

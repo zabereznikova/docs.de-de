@@ -3,12 +3,12 @@ title: Debuggen einer hohen CPU-Auslastung – .NET Core
 description: In diesem Tutorial lernen Sie, wie Sie eine hohe CPU-Auslastung in .NET Core debuggen.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538708"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437828"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Debuggen einer hohen CPU-Auslastung in .NET Core
 
@@ -90,7 +90,7 @@ Wenn die Web-App ausgeführt wird, werden unmittelbar nach dem Start keine CPU-R
 Führen Sie nun noch einmal den Befehl [dotnet-counters](dotnet-counters.md) aus. Wenn Sie nur `cpu-usage` überwachen möchten, müssen Sie `System.Runtime[cpu-usage]` im Befehl angeben.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 Ihnen sollte ein Anstieg der CPU-Auslastung entsprechend der folgenden Darstellung angezeigt werden:
