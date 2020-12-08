@@ -5,18 +5,20 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: af2ebb74786f0ae884ffee4636765cae43fcb23f
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 4f7b392a2b066023fec75c5295bd94651654d645
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "96591670"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851789"
 ---
 # <a name="configuration-options-for-code-analysis"></a>Konfigurationsoptionen für die Code Analyse
 
 Code Analyse Regeln verfügen über verschiedene Konfigurationsoptionen. Diese Optionen werden als Schlüssel-Wert-Paare in einer [Analyse Konfigurationsdatei](configuration-files.md) mithilfe der-Syntax angegeben `<option key> = <option value>` .
 
-Die am häufigsten konfigurierten Optionen sind der Schweregrad einer Regel. Sie können den Schweregrad für alle Analyse Regeln konfigurieren, einschließlich [Code Qualitätsregeln](quality-rules/index.md) und Regeln für den [Code Stil](style-rules/index.md).
+Die am häufigsten konfigurierten Optionen sind der [Schweregrad einer Regel](#severity-level). Sie können den Schweregrad für alle Analyse Regeln konfigurieren, einschließlich [Code Qualitätsregeln](quality-rules/index.md) und Regeln für den [Code Stil](style-rules/index.md). Wenn Sie z. b. eine Regel als Warnung aktivieren möchten, können Sie das folgende Schlüssel-Wert-Paar zu einer Datei hinzufügen EditorConfig .
+
+`dotnet_diagnostic.<rule ID>.severity = warning`
 
 Sie können auch zusätzliche Optionen zum Anpassen des Regel Verhaltens konfigurieren:
 
@@ -70,7 +72,7 @@ In der folgenden Tabelle werden die verschiedenen Regel Schweregrade angezeigt, 
 > [!TIP]
 > Informationen zur Oberfläche für Regel Schweregrade in Visual Studio finden Sie unter [Schweregrade](/visualstudio/ide/editorconfig-language-conventions#severity-levels).
 
-#### <a name="scope"></a>`Scope`
+#### <a name="scope"></a>Bereich
 
 Verwenden Sie die folgende Syntax, um den Schweregrad der Regel für eine einzelne Regel festzulegen.
 
