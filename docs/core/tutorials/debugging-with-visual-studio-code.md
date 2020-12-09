@@ -2,12 +2,12 @@
 title: Debuggen einer .NET-Konsolenanwendung mit Visual Studio Code
 description: Erfahren Sie, wie Sie eine .NET-Konsolen-App mit Visual Studio Code debuggen.
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916228"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556108"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Tutorial: Debuggen einer .NET-Konsolenanwendung mit Visual Studio Code
 
@@ -47,15 +47,7 @@ Der Breakpoint befindet sich hinter einem `Console.ReadLine`-Methodenaufruf. Die
 
 1. Öffnen Sie *.vscode/launch.json*.
 
-1. Ändern Sie die `console`-Einstellung in `integratedTerminal`.
-
-   Von:
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   Nach:
+1. Ändern Sie die `console`-Einstellung von `internalConsole` in `integratedTerminal`:
 
    ```json
    "console": "integratedTerminal",

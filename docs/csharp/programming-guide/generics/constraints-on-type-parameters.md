@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224316"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599114"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -20,7 +20,7 @@ Einschränkungen informieren den Compiler über die Funktionen, über die ein Ty
 
 |Constraint|Beschreibung|
 |----------------|-----------------|
-|`where T : struct`|Das Typargument muss ein Nicht-Nullable-Werttyp sein. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../../language-reference/builtin-types/nullable-value-types.md). Da alle Werttypen einen parameterlosen Konstruktor aufweisen, auf den zugegriffen werden kann, impliziert die `struct`-Einschränkung die `new()`-Einschränkung und kann nicht mit der `new()`-Einschränkung kombiniert werden. Ferner kann der `struct`-Constraint nicht mit dem `unmanaged`-Constraint kombiniert werden.|
+|`where T : struct`|Das Typargument muss ein Non-Nullable-[Werttyp](../../language-reference/builtin-types/value-types.md) sein. Weitere Informationen zu Nullable-Werttypen finden Sie unter [Nullable-Werttypen](../../language-reference/builtin-types/nullable-value-types.md). Da alle Werttypen einen parameterlosen Konstruktor aufweisen, auf den zugegriffen werden kann, impliziert die `struct`-Einschränkung die `new()`-Einschränkung und kann nicht mit der `new()`-Einschränkung kombiniert werden. Ferner kann der `struct`-Constraint nicht mit dem `unmanaged`-Constraint kombiniert werden.|
 |`where T : class`|Das Typargument muss ein Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp. In einem Nullable-Kontext in C# 8.0 oder höher muss `T` ein Non-Nullable-Verweistyp sein. |
 |`where T : class?`|Das Typargument muss ein Nullable- oder ein Non-Nullable-Verweistyp sein. Diese Einschränkung gilt auch für jede Klasse, Schnittstelle, jeden Delegaten oder Arraytyp.|
 |`where T : notnull`|Das Typargument muss ein Nicht-Nullable-Typ sein. Das Argument kann ein Non-Nullable-Verweistyp in C# 8.0 oder höher oder ein Non-Nullable-Werttyp sein. |

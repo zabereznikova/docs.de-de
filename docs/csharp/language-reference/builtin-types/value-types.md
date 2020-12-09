@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471650"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599394"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -31,7 +31,7 @@ Wenn ein Werttyp einen Datenmember eines Verweistyps enthält, wird beim Kopiere
 > [!NOTE]
 > Definieren und verwenden Sie unveränderliche Werttypen, um Ihren Code weniger fehleranfällig und stabiler zu machen. In diesem Artikel werden veränderbare Werttypen nur zur Veranschaulichung verwendet.
 
-## <a name="kinds-of-value-types"></a>Varianten von Werttypen
+## <a name="kinds-of-value-types-and-type-constraints"></a>Arten von Werttypen und Typeinschränkungen
 
 Ein Werttyp kann einer der zwei folgenden Varianten sein:
 
@@ -39,6 +39,8 @@ Ein Werttyp kann einer der zwei folgenden Varianten sein:
 - ein [Enumerationstyp](enum.md), der durch mehrere benannte Konstanten definiert wird und eine Auswahl oder Auswahlmöglichkeiten darstellt
 
 Ein [Werttyp, der NULL zulässt](nullable-value-types.md) wie `T?`, stellt alle Werte des zugrunde liegenden Werttyps `T` und einen zusätzlichen [NULL](../keywords/null.md)-Wert dar. Sie können einer Variablen eines Werttyps nicht `null` zuweisen, es sei denn, es handelt sich um einen Werttyp,der NULL zulässt.
+
+Sie können die [`struct`-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md) verwenden, um anzugeben, dass ein Typparameter ein Non-Nullable-Werttyp ist. Sowohl Struktur- als auch Enumerationstypen erfüllen die `struct`-Einschränkung. Ab C# 7.3 können Sie `System.Enum` in einer Basisklasseneinschränkung (die als [enum-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) bezeichnet wird) verwenden, um anzugeben, dass ein Typparameter ein Enumerationstyp ist.
 
 ## <a name="built-in-value-types"></a>Integrierte Werttypen
 

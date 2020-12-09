@@ -2,12 +2,12 @@
 title: 'Breaking Change: OSPlatform-Attribute umbenannt oder entfernt'
 description: Hier erfahren Sie mehr über den Breaking Change an den .NET-Kernbibliotheken in .NET 5.0, durch den die in einer Vorschauversion eingeführten Betriebssystem-Plattformattribute entfernt oder umbenannt wurden.
 ms.date: 11/01/2020
-ms.openlocfilehash: 7e709b84005a7b807e390e12d9f36d8b4f73a9df
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: be2ddd4909bef70f531ca48246f091923d6435ec
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759417"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739489"
 ---
 # <a name="osplatform-attributes-renamed-or-removed"></a>OSPlatform-Attribute umbenannt oder entfernt
 
@@ -34,7 +34,7 @@ Wenn ab .NET 5.0 RC1 ein Projekt auf eine betriebssystemspezifische Variante vo
 
 ## <a name="reason-for-change"></a>Grund für die Änderung
 
-In NET 5.0 Preview 8 wurden Attribute in <xref:System.Runtime.Versioning> eingeführt, um unterstützte Plattformen für APIs anzugeben. Die Attribute werden vom [Analysetool für die Plattformkompatibilität](../../../../core/compatibility/code-analysis.md#ca1416-platform-compatibility) genutzt, um Buildwarnungen zu erzeugen, wenn plattformspezifische APIs auf Plattformen eingesetzt werden, die diese APIs nicht unterstützen.
+In NET 5.0 Preview 8 wurden Attribute in <xref:System.Runtime.Versioning> eingeführt, um unterstützte Plattformen für APIs anzugeben. Die Attribute werden vom [Analysetool für die Plattformkompatibilität](../../code-analysis/5.0/ca1416-platform-compatibility-analyzer.md) genutzt, um Buildwarnungen zu erzeugen, wenn plattformspezifische APIs auf Plattformen eingesetzt werden, die diese APIs nicht unterstützen.
 
 In .NET 5.0 RC1 wurde dem Analysetool für die Plattformkompatibilität ein zusätzliches Feature für den Ausschluss von Plattformen hinzugefügt. Diese Feature ermöglicht, dass APIs auf Betriebssystemplattformen als gänzlich nicht unterstützt markiert werden. Dieses Feature hat Änderungen an den Attributen veranlasst, einschließlich der Verwendung geeigneterer Namen. `ObsoletedInOSPlatformAttribute` wurde entfernt, da es nicht mehr benötigt wird.
 

@@ -1,17 +1,17 @@
 ---
-title: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
-description: Erfahren Sie, wie Sie eine .NET Core-Konsolenanwendung mit Visual Studio für Mac erstellen.
-ms.date: 06/02/2020
-ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Erstellen einer .NET-Konsolenanwendung mit Visual Studio für Mac
+description: Erfahren Sie, wie Sie eine .NET-Konsolenanwendung mit Visual Studio für Mac erstellen.
+ms.date: 11/30/2020
+ms.openlocfilehash: 1351b06eec32cd8d3d9d44926655405fe2246f58
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400525"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599485"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET-Konsolenanwendung mit Visual Studio für Mac
 
-In diesem Tutorial wird gezeigt, wie Sie eine .NET Core-Konsolenanwendung in Visual Studio für Mac erstellen und ausführen.
+In diesem Tutorial wird gezeigt, wie Sie eine .NET-Konsolenanwendung in Visual Studio für Mac erstellen und ausführen.
 
 > [!NOTE]
 > Ihr Feedback ist uns sehr wichtig. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:
@@ -21,15 +21,13 @@ In diesem Tutorial wird gezeigt, wie Sie eine .NET Core-Konsolenanwendung in Vis
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* [Visual Studio für Mac, Version 8.6 oder höher](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wählen Sie die Option zum Installieren von .NET Core aus. Die Installation von Xamarin ist für die Entwicklung mit .NET Core optional. Weitere Informationen finden Sie in den folgenden Ressourcen:
+* [Visual Studio für Mac ab Version 8.8](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wählen Sie die Option zum Installieren von .NET Core aus. Die Installation von Xamarin ist für die Entwicklung mit .NET optional. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
   * [Tutorial: Installieren von Visual Studio für Mac](/visualstudio/mac/installation).
   * [Unterstützte macOS-Versionen](../install/windows.md)
-  * [Von Visual Studio für Mac unterstützte .NET Core-Versionen](/visualstudio/mac/net-core-support).
+  * [Von Visual Studio für Mac unterstützte .NET-Versionen](/visualstudio/mac/net-core-support).
 
 ## <a name="create-the-app"></a>Erstellen der App
-
-Erstellen Sie ein .NET Core-Konsolen-App-Projekt mit dem Namen HelloWorld.
 
 1. Starten Sie Visual Studio für Mac.
 
@@ -41,9 +39,7 @@ Erstellen Sie ein .NET Core-Konsolen-App-Projekt mit dem Namen HelloWorld.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="Liste neuer Projektvorlagen":::
 
-1. Wählen Sie in der Dropdownliste **Zielframework** des Dialogfelds **Neue Konsolenanwendung konfigurieren** die Option **.NET Core 3.1** und dann **Weiter** aus.
-
-   :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="Wählen des Zielframeworks":::
+1. Wählen Sie in der Dropdownliste **Zielframework** des Dialogfelds **Neue Konsolenanwendung konfigurieren** die Option **.NET 5.0** und dann **Weiter** aus.
 
 1. Geben Sie in **Projektname** HelloWorld ein, und wählen Sie **Erstellen** aus.
 
@@ -102,7 +98,7 @@ Erweitern Sie die Anwendung, um den Benutzer aufzufordern, seinen Namen einzugeb
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie eine .NET Core-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
+In diesem Tutorial haben Sie eine .NET-Konsolenanwendung erstellt. Im nächsten Tutorial debuggen Sie die App.
 
 > [!div class="nextstepaction"]
-> [Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](debugging-with-visual-studio-mac.md)
+> [Debuggen einer .NET-Konsolenanwendung mit Visual Studio für Mac](debugging-with-visual-studio-mac.md)

@@ -1,19 +1,19 @@
 ---
-title: Erstellen einer .NET Standard-Klassenbibliothek in Visual Studio für Mac
-description: Erfahren Sie, wie Sie eine .NET Standard-Klassenbibliothek mit Visual Studio für Mac erstellen.
-ms.date: 06/08/2020
-ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+title: Erstellen einer .NET-Klassenbibliothek in Visual Studio für Mac
+description: Hier erfahren Sie, wie Sie eine .NET-Klassenbibliothek mit Visual Studio für Mac erstellen.
+ms.date: 11/30/2020
+ms.openlocfilehash: 1b6b26de06d18d505fa6dde3ff9779a3dab3f1e6
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400564"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599300"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio für Mac
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-for-mac"></a>Tutorial: Erstellen einer .NET-Klassenbibliothek in Visual Studio für Mac
 
-In diesem Tutorial erstellen Sie eine einfache Klassenbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält. Sie implementieren sie als [Erweiterungsmethode](../../csharp/programming-guide/classes-and-structs/extension-methods.md), damit sie aufgerufen werden kann, als wäre sie ein Mitglied der <xref:System.String>-Klasse.
+In diesem Tutorial erstellen Sie eine einfache Klassenbibliothek, die eine einzelne Methode zur Behandlung von Zeichenfolgen enthält.
 
-Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Eine Klassenbibliothek, die auf .NET Standard 2.1 abzielt, kann von einer Anwendung genutzt werden, die auf jede .NET-Implementierung abzielt, die Version 2.1 von .NET Standard unterstützt. Wenn Sie Ihre Klassenbibliothek fertig gestellt haben, können Sie sie als Komponente eines Drittanbieters oder als gebündelte Komponente mit einer oder mehreren Anwendungen verteilen.
+Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendung aufgerufen werden können. Wenn die Bibliothek auf .NET Standard 2.0 ausgelegt ist, kann sie von jeder .NET-Implementierung (einschließlich .NET Framework) aufgerufen werden, die .NET Standard 2.0 unterstützt. Wenn die Bibliothek auf .NET 5 ausgelegt ist, kann sie von jeder Anwendung aufgerufen werden, die auf .NET 5 ausgerichtet ist. In diesem Tutorial erfahren Sie, wie Sie .NET 5 als Zielversion verwenden.
 
 > [!NOTE]
 > Ihr Feedback ist uns sehr wichtig. Es gibt zwei Möglichkeiten, wie Sie Feedback für das Entwicklungsteam von Visual Studio für Mac bereitstellen können:
@@ -23,11 +23,11 @@ Eine *Klassenbibliothek* definiert die Typen und Methoden, die von einer Anwendu
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* [Installieren von Visual Studio für Mac Version 8.6 oder höher](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wählen Sie die Option zum Installieren von .NET Core aus. Die Installation von Xamarin ist für die Entwicklung mit .NET Core optional. Weitere Informationen finden Sie in den folgenden Ressourcen:
+* [Installieren von Visual Studio für Mac Version 8.8 oder höher](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Wählen Sie die Option zum Installieren von .NET Core aus. Die Installation von Xamarin ist für die Entwicklung mit .NET optional. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
   * [Tutorial: Installieren von Visual Studio für Mac](/visualstudio/mac/installation).
   * [Unterstützte macOS-Versionen](../install/macos.md)
-  * [Von Visual Studio für Mac unterstützte .NET Core-Versionen](/visualstudio/mac/net-core-support).
+  * [Von Visual Studio für Mac unterstützte .NET-Versionen](/visualstudio/mac/net-core-support).
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>Erstellen einer Projektmappe mit einem Klassenbibliotheksprojekt
 
@@ -37,19 +37,17 @@ Eine Visual Studio-Projektmappe dient als ein Container für mindestens ein Proj
 
 1. Wählen Sie im Startfenster **Neues Projekt** aus.
 
-1. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Multi-Plattform** erst **Bibliothek** und dann die Vorlage **.NET Standard-Bibliothek** aus. Wählen Sie dann **Weiter** aus.
+1. Wählen Sie im Dialogfeld **Vorlage für neues Projekt auswählen** die Option **Web und Konsole** > **Bibliothek** > **Klassenbibliothek** aus, und wählen Sie dann **Weiter** aus.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Dialogfeld Neues Projekt":::
 
-1. Wählen Sie im Dialogfeld **Neue .NET Standard-Bibliothek konfigurieren** die Option „.NET Standard 2.1“ und dann **Weiter** aus.
-
-   :::image type="content" source="media/library-with-visual-studio-mac/choose-net-std-21.png" alt-text="Wählen Sie .NET Standard 2.1":::
+1. Wählen Sie im Dialogfeld **Neue Klassenbibliothek konfigurieren** die Option **NET 5.0** und dann **Weiter** aus.
 
 1. Nennen Sie die Projektmappe „StringLibrary“ und die Projektmappe „ClassLibraryProjects“. Lassen Sie **Projektverzeichnis im Projektmappenverzeichnis erstellen** aktiviert. Wählen Sie **Erstellen** aus.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project-options.png" alt-text="Visual Studio für Mac, Optionen im Dialogfeld „Neues Projekt“":::
 
-1. Wählen Sie im Hauptmenü **Ansicht** > **Pads** > **Projektmappe** und dann das Andocksymbol aus, um das Pad geöffnet zu halten.
+1. Wählen Sie im Hauptmenü **Ansicht** > **Projektmappe** und dann das Andocksymbol aus, um das Pad geöffnet zu halten.
 
    :::image type="content" source="media/library-with-visual-studio-mac/solution-dock-icon.png" alt-text="Andocksymbol für Pad „Projektmappe“":::
 
@@ -75,7 +73,7 @@ Im Folgenden fügen Sie eine Konsolenanwendung hinzu, die die Klassenbibliothek 
 
 1. Klicken Sie im Pad **Projektmappe** bei gedrückter <kbd>CTRL-TASTE</kbd> auf die Projektmappe `ClassLibraryProjects`. Fügen Sie ein neues **Konsolenanwendungsprojekt** hinzu, indem Sie die Vorlage aus den Vorlagen unter **Web und Konsole** > **App** und dann **Weiter** auswählen.
 
-1. Wählen Sie **.NET Core 3.1** als **Zielframework** und anschließend **Weiter** aus.
+1. Wählen Sie **.NET 5.0** als **Zielframework** und anschließend **Weiter** aus.
 
 1. Geben Sie dem Projekt den Namen **ShowCase**. Wählen Sie **Erstellen** aus, um das Projekt in der Projektmappe zu erstellen.
 
@@ -99,7 +97,7 @@ Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassen
 
 ## <a name="run-the-app"></a>Ausführen der App
 
-1. Klicken Sie bei gedrückter <kbd>CTRL-TASTE</kbd> auf das Projekt ShowCase, und wählen Sie im Kontextmenü **Projekt ausführen** aus.
+1. Klicken Sie bei gedrückter <kbd>STRG-TASTE</kbd> auf das Projekt **ShowCase**, und wählen Sie im Kontextmenü **Projekt ausführen** aus.
 
 1. Testen Sie das Programm, indem Sie Zeichenfolgen eingeben und die <kbd>EINGABETASTE</kbd> drücken. Drücken Sie dann die <kbd>EINGABETASTE</kbd>, um das Programm zu beenden.
 
@@ -107,13 +105,13 @@ Anfänglich besitzt das neue Konsolen-App-Projekt keinen Zugriff auf die Klassen
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* [Entwickeln von Bibliotheken mit der .NET Core-CLI](libraries.md)
-* [.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).
+* [Entwickeln von Bibliotheken mit der .NET-CLI](libraries.md)
 * [Versionsanmerkungen für Visual Studio 2019 für Mac](/visualstudio/releasenotes/vs2019-mac-relnotes)
+* [.NET Standard-Versionen und die von ihnen unterstützten Plattformen](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 In diesem Tutorial haben Sie eine Projektmappe und ein Bibliotheksprojekt erstellt sowie ein Konsolen-App-Projekt hinzugefügt, das die Bibliothek verwendet. Im nächsten Tutorial fügen Sie der Projektmappe ein Komponententestprojekt hinzu.
 
 > [!div class="nextstepaction"]
-> [Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio für Mac](testing-library-with-visual-studio-mac.md)
+> [Testen einer .NET-Klassenbibliothek in Visual Studio für Mac](testing-library-with-visual-studio-mac.md)

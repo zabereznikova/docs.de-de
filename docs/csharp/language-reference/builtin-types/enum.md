@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 930efdbdc6a20ea301331c1ce6fc664da43bfc5f
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: a21bdf63247dc5fec95922de017e1d3502e08565
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471849"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599433"
 ---
 # <a name="enumeration-types-c-reference"></a>Enumerationstypen (C#-Referenz)
 
-Ein *Enumerationstyp* (oder *enum-Typ* ) ist ein [Werttyp](value-types.md), der durch eine Reihe benannter Konstanten des zugrunde liegenden [integralen numerischen](integral-numeric-types.md) Typs definiert wird. Um einen Enumerationstyp zu definieren, verwenden Sie das `enum`-Schlüsselwort und geben die Namen von *Enumerationsmembern* an:
+Ein *Enumerationstyp* (oder *enum-Typ*) ist ein [Werttyp](value-types.md), der durch eine Reihe benannter Konstanten des zugrunde liegenden [integralen numerischen](integral-numeric-types.md) Typs definiert wird. Um einen Enumerationstyp zu definieren, verwenden Sie das `enum`-Schlüsselwort und geben die Namen von *Enumerationsmembern* an:
 
 ```csharp
 enum Season
@@ -62,7 +62,7 @@ Weitere Informationen und Beispiele finden Sie auf der Referenzseite zur <xref:S
 
 Der <xref:System.Enum?displayProperty=nameWithType>-Typ ist die abstrakte Basisklasse aller Enumerationstypen. Er bietet eine Reihe von Methoden, um Informationen zu einem Enumerationstyp und seinen Werten abzurufen. Weitere Informationen und Beispiele finden Sie auf der Referenzseite zur <xref:System.Enum?displayProperty=nameWithType>-API.
 
-Ab C# 7.3 können Sie `System.Enum` in einer Basisklasseneinschränkung (die als [enum-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) bezeichnet wird) verwenden, um anzugeben, dass ein Typparameter ein Enumerationstyp ist.
+Ab C# 7.3 können Sie `System.Enum` in einer Basisklasseneinschränkung (die als [enum-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints) bezeichnet wird) verwenden, um anzugeben, dass ein Typparameter ein Enumerationstyp ist. Jeder Enumerationstyp erfüllt auch die `struct`-Einschränkung, die verwendet wird, um anzugeben, dass ein Typparameter ein Non-Nullable-Werttyp ist.
 
 ## <a name="conversions"></a>Konvertierungen
 

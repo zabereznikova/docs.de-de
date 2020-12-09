@@ -3,12 +3,12 @@ title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Erfahren Sie mehr darüber, wie und aus welchen Gründen die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird. Erfahren Sie, wie Sie den Standardwert manuell überschreiben.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634499"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598917"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -41,8 +41,8 @@ Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 
 Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. In dieser Vorschau können Sie die neuesten Features in beliebigen Umgebungen verwenden, ohne Auswirkungen auf Projekte für eine veröffentlichte .NET Core-Version zu haben.
 
-> [!TIP]
-> Wenn Sie wissen möchten, welche Sprachversion Sie derzeit verwenden, fügen Sie `#error version` (Groß-/Kleinschreibung beachten) in Ihren Code ein. Dadurch erzeugt der Compiler eine Diagnose (CS8304) mit einer Nachricht, die die verwendete Compilerversion und die aktuelle ausgewählte Sprachversion enthält.
+> [!IMPORTANT]
+> Visual Studio 2017 hat allen erstellten Projektdateien einen `<LangVersion>latest</LangVersion>`-Eintrag hinzugefügt. Dieser lautete *C# 7.0*, als er hinzugefügt wurde. Wenn Sie jedoch ein Upgrade auf Visual Studio 2019 durchführen, ist dies unabhängig vom Zielframework die neueste veröffentlichte Version. Diese Projekte setzen jetzt [das Standardverhalten außer Kraft](#override-a-default). Bearbeiten Sie die Projektdatei, und entfernen Sie den Knoten. Anschließend verwendet das Projekt die für das Zielframework empfohlene Compilerversion.
 
 ## <a name="override-a-default"></a>Überschreiben eines Standardwerts
 
@@ -51,6 +51,9 @@ Wenn Sie Ihre C#-Version explizit angeben müssen, haben Sie verschiedene Mögli
 - Manuelles Bearbeiten der [Projektdatei](#edit-the-project-file)
 - Festlegen der Sprachversion [für mehrere Projekte in einem Unterverzeichnis](#configure-multiple-projects)
 - Konfigurieren der [Compileroption `-langversion`](compiler-options/langversion-compiler-option.md)
+
+> [!TIP]
+> Wenn Sie wissen möchten, welche Sprachversion Sie derzeit verwenden, fügen Sie `#error version` (Groß-/Kleinschreibung beachten) in Ihren Code ein. Dadurch erzeugt der Compiler eine Diagnose (CS8304) mit einer Nachricht, die die verwendete Compilerversion und die aktuelle ausgewählte Sprachversion enthält.
 
 ### <a name="edit-the-project-file"></a>Bearbeiten der Projektdatei
 

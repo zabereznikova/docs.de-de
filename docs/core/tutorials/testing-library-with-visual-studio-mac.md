@@ -1,21 +1,21 @@
 ---
-title: Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio für Mac
-description: Erstellen Sie ein Komponententestprojekt für eine .NET Core-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET Core-Klassenbibliothek ordnungsgemäß funktioniert.
-ms.date: 06/08/2020
-ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Testen einer .NET-Klassenbibliothek in Visual Studio für Mac
+description: Erstellen Sie ein Komponententestprojekt für eine .NET-Klassenbibliothek. Sie überprüfen mithilfe von Komponententests, ob die .NET-Klassenbibliothek ordnungsgemäß funktioniert.
+ms.date: 11/18/2020
+ms.openlocfilehash: 02d5aa74258ec15c5447b23246a3c7e9c61a6760
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180529"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599525"
 ---
-# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio
+# <a name="test-a-net-class-library-using-visual-studio"></a>Testen einer .NET-Klassenbibliothek mit Visual Studio
 
 In diesem Tutorial wird gezeigt, wie Sie Komponententests automatisieren, indem Sie einer Projektmappe ein Testprojekt hinzufügen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio für Mac](library-with-visual-studio-mac.md) erstellen.
+- In diesem Tutorial wird die Projektmappe verwendet, die Sie in [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio für Mac](library-with-visual-studio-mac.md) erstellen.
 
 ## <a name="create-a-unit-test-project"></a>Ein Komponententestprojekt erstellen
 
@@ -23,17 +23,19 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 1. Starten Sie Visual Studio für Mac.
 
-1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Erstellen einer .NET Standard-Bibliothek mithilfe von Visual Studio für Mac](library-with-visual-studio-mac.md) erstellt haben.
+1. Öffnen Sie die `ClassLibraryProjects`-Projektmappe, die Sie in [Tutorial: Erstellen einer .NET-Standard-Bibliothek in Visual Studio für Mac](library-with-visual-studio-mac.md) erstellt haben.
 
 1. Klicken Sie im Pad **Projektmappe** bei gedrückter <kbd>CTRL-TASTE</kbd> auf die Projektmappe `ClassLibraryProjects`, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-1. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Web und Konsole** die Option **Tests** aus. Wählen Sie das Projekt**MSTest-Projekt** und dann **Weiter** aus.
+1. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Web und Konsole** die Option **Tests** aus. Wählen Sie das Projekt **MSTest-Projekt** und dann **Weiter** aus.
 
    :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
 
-1. Wählen Sie die **.NET Core 3.1** aus. Nennen Sie das neue Projekt „StringLibraryTest“, und wählen Sie **Erstellen** aus.
+1. Wählen Sie **.NET 5.0** als **Zielframework** und anschließend **Weiter** aus.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+1. Nennen Sie das neue Projekt „StringLibraryTest“, und wählen Sie **Erstellen** aus.
+
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Angeben des Projektnamens":::
 
    Visual Studio erstellt eine Klassendatei mit folgendem Code:
 
@@ -69,7 +71,7 @@ Damit das Testprojekt mit der `StringLibrary`-Klasse funktioniert, fügen Sie ei
 
 1. Wählen Sie im Dialogfeld **Verweise** das Projekt **StringLibrary** aus. Klicken Sie auf **OK**.
 
-      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio für Mac, Dialogfeld „Verweise bearbeiten“":::
 
 ## <a name="add-and-run-unit-test-methods"></a>Hinzufügen und Ausführen von Komponententestmethoden
 
@@ -102,7 +104,7 @@ So erstellen Sie die Testmethoden:
 
 1. Wählen Sie auf der Menüleiste **Datei** > **Speichern unter** aus. Stellen Sie im Dialogfeld sicher, dass **Codierung** auf **Unicode (UTF-8)** festgelegt ist.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio-Dialogfeld „Datei speichern unter“":::
 
 1. Wenn Sie gefragt werden, ob Sie die vorhandene Datei ersetzen möchten, wählen Sie **Ersetzen** aus.
 
@@ -112,13 +114,13 @@ So erstellen Sie die Testmethoden:
 
 1. Klicken Sie auf das **Andocksymbol**, um das Panel geöffnet zu lassen.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Visual Studio für Mac, Andocksymbol im Bereich „Komponententests“":::
 
 1. Klicken Sie auf die Schaltfläche **Alle ausführen**.
 
    Alle Tests erfolgreich.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Visual Studio für Mac, erwarteter erfolgreicher Test":::
 
 ## <a name="handle-test-failures"></a>Behandeln von Testfehlern
 
@@ -135,13 +137,13 @@ Bei der testgesteuerten Entwicklung (Test-Driven Development, TDD) schreiben Sie
 
    Das Fenster **Test-Explorer** zeigt nun an, dass zwei Tests erfolgreich waren und einer nicht.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="Test Explorer-Fenster mit fehlschlagenden Tests":::
 
 1. Klicken Sie bei gedrückter <kbd>CTRL-TASTE</kbd> auf den fehlgeschlagenen Test, `TestDoesNotStartWithUpper`. Wählen Sie im Kontextmenü **Ergebnisbereich anzeigen** aus.
 
    Im Pad **Ergebnisse** wird die Meldung angezeigt, die von Assert generiert wurde: „Fehler bei Assert.IsFalse. Für 'Error' erwartet: False; tatsächlich: True“. Wegen des Fehlers wurden keine auf „Error“ folgenden Zeichenfolgen im Array getestet.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="Fenster „Test-Explorer“, das den Assertionsfehler isFalse zeigt":::
 
 1. Entfernen Sie die Zeichenfolge „Error“, die Sie in Schritt 1 hinzugefügt haben. Führen Sie den Test erneut aus. Nun ist er erfolgreich.
 
@@ -153,11 +155,11 @@ So testen Sie die endgültige Produktversion:
 
 1. Ändern Sie in der Symbolleiste von Visual Studio die Buildkonfiguration von **Debuggen** zu **Freigabe**.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Visual Studio-Symbolleiste mit hervorgehobenem Releasebuild":::
 
 1. Klicken Sie im Pad **Projektmappe** bei gedrückter <kbd>CTRL-TASTE</kbd> auf das Projekt **StringLibrary**, und wählen Sie im Kontextmenü **Build** aus, um die Bibliothek erneut zu kompilieren.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="Visual Studio für Mac, Dialogfeld „Neues Projekt“, Erstellen des Testprojekts":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="StringLibrary-Kontextmenü mit Befehl „Erstellen“":::
 
 1. Führen Sie die Komponententests erneut aus.
 
@@ -165,13 +167,13 @@ So testen Sie die endgültige Produktversion:
 
 ## <a name="debug-tests"></a>Debuggen von Tests
 
-Wenn Sie Visual Studio für Mac als IDE verwenden, können Sie den gleichen Prozess wie im [Tutorial: Debuggen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](debugging-with-visual-studio-mac.md) beschrieben zum Debuggen von Code mithilfe Ihres Komponententestprojekts verwenden. Anstatt das App-Projekt *ShowCase* zu starten, klicken Sie bei gedrückter <kbd>STRG-TASTE</kbd> auf das **Projekt StringLibraryTests**. Wählen Sie dann im Kontextmenü die Option **Debuggen des Projekts starten** aus.
+Wenn Sie Visual Studio für Mac als IDE verwenden, können Sie den gleichen Prozess wie im [Tutorial: Debuggen einer .NET-Konsolenanwendung mit Visual Studio für Mac](debugging-with-visual-studio-mac.md) beschrieben zum Debuggen von Code mithilfe Ihres Komponententestprojekts verwenden. Anstatt das App-Projekt *ShowCase* zu starten, klicken Sie bei gedrückter <kbd>STRG-TASTE</kbd> auf das **Projekt StringLibraryTests**. Wählen Sie dann im Kontextmenü die Option **Debuggen des Projekts starten** aus.
 
 Visual Studio startet das Testprojekt mit angefügtem Debugger. Die Ausführung wird an jedem Haltepunkt angehalten, den Sie dem Testprojekt oder zugrunde liegenden Bibliothekscode hinzugefügt haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* [Komponententests in .NET Core und .NET Standard](../testing/index.md)
+* [Komponententests in .NET](../testing/index.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -188,4 +190,4 @@ Wenn Sie eine Bibliothek als NuGet-Paket veröffentlichen, können andere Benutz
 Eine Bibliothek muss nicht als Paket verteilt werden. Sie kann mit einer Konsolen-App gebündelt werden, die sie verwendet. Informationen zum Veröffentlichen einer Konsolen-App finden Sie in einem früheren Tutorial dieser Reihe:
 
 > [!div class="nextstepaction"]
-> [Veröffentlichen einer .NET Core-Konsolenanwendung mit Visual Studio für Mac](publishing-with-visual-studio-mac.md)
+> [Veröffentlichen einer .NET-Konsolenanwendung mit Visual Studio für Mac](publishing-with-visual-studio-mac.md)

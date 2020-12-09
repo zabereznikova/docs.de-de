@@ -4,12 +4,12 @@ description: Erfahren Sie, wie diese Bibliotheken Implementierungen für viele a
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827931"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438195"
 ---
 # <a name="framework-libraries"></a>Frameworkbibliotheken
 

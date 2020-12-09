@@ -9,22 +9,22 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526601"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599101"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
-Ein *Strukturtyp* (oder *struct type* ) ist ein [Werttyp](value-types.md), der Daten und zugehörige Funktionen kapseln kann. Verwenden Sie das `struct`-Schlüsselwort, um einen Strukturtyp zu definieren:
+Ein *Strukturtyp* (oder *struct type*) ist ein [Werttyp](value-types.md), der Daten und zugehörige Funktionen kapseln kann. Verwenden Sie das `struct`-Schlüsselwort, um einen Strukturtyp zu definieren:
 
 [!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-Strukturtypen verfügen über eine *Wertsemantik* . Das heißt, eine Variable eines Strukturtyps enthält eine Instanz des Typs. Standardmäßig werden die Variablenwerte bei der Zuweisung kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Bei Strukturtypvariablen wird eine Instanz des Typs kopiert. Weitere Informationen finden Sie unter [Werttypen](value-types.md).
+Strukturtypen verfügen über eine *Wertsemantik*. Das heißt, eine Variable eines Strukturtyps enthält eine Instanz des Typs. Standardmäßig werden die Variablenwerte bei der Zuweisung kopiert, dabei handelt es sich um die Übergabe eines Arguments an eine Methode oder die Rückgabe eines Methodenergebnisses. Bei Strukturtypvariablen wird eine Instanz des Typs kopiert. Weitere Informationen finden Sie unter [Werttypen](value-types.md).
 
-In der Regel werden Strukturtypen zum Entwerfen kleiner datenorientierter Typen verwendet, die wenig oder gar kein Verhalten bereitstellen. Beispielsweise verwendet .NET Strukturtypen, um Zahlen (sowohl [Integer](integral-numeric-types.md) als auch [reelle](floating-point-numeric-types.md) Zahlen), [boolesche Werte](bool.md), [Unicode-Zeichen](char.md) und [Zeitinstanzen](xref:System.DateTime) darzustellen. Wenn Sie das Verhalten eines Typs verwenden möchten, sollten Sie eine [Klasse](../keywords/class.md) definieren. Klassentypen verfügen über *Verweissemantik* . Das heißt, eine Variable eines Klassentyps enthält einen Verweis auf eine Instanz des Typs, nicht die Instanz selbst.
+In der Regel werden Strukturtypen zum Entwerfen kleiner datenorientierter Typen verwendet, die wenig oder gar kein Verhalten bereitstellen. Beispielsweise verwendet .NET Strukturtypen, um Zahlen (sowohl [Integer](integral-numeric-types.md) als auch [reelle](floating-point-numeric-types.md) Zahlen), [boolesche Werte](bool.md), [Unicode-Zeichen](char.md) und [Zeitinstanzen](xref:System.DateTime) darzustellen. Wenn Sie das Verhalten eines Typs verwenden möchten, sollten Sie eine [Klasse](../keywords/class.md) definieren. Klassentypen verfügen über *Verweissemantik*. Das heißt, eine Variable eines Klassentyps enthält einen Verweis auf eine Instanz des Typs, nicht die Instanz selbst.
 
 Da Strukturtypen eine Wertsemantik nutzen, wird die Definition von *unveränderlichen* Strukturtypen empfohlen.
 
@@ -129,6 +129,10 @@ Kombinieren Sie die `readonly`- und `ref`-Modifizierer in der Typdeklaration (de
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 In .NET sind <xref:System.Span%601?displayProperty=nameWithType> und <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> Beispiele für eine `ref`-Struktur.
+
+## <a name="struct-constraint"></a>struct-Einschränkung
+
+Sie können auch das `struct`-Schlüsselwort in der [`struct`-Einschränkung](../../programming-guide/generics/constraints-on-type-parameters.md) verwenden, um anzugeben, dass ein Typparameter ein Non-Nullable-Werttyp ist. Sowohl Struktur- als auch [Enumerationstypen](enum.md) erfüllen die `struct`-Einschränkung.
 
 ## <a name="conversions"></a>Konvertierungen
 

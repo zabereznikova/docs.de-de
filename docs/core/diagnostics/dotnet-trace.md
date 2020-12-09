@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-trace“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-trace“ installieren und mithilfe der .NET-Komponente „EventPipe“ zum Erfassen von .NET-Ablaufverfolgungen in Bezug auf einen laufenden Prozesses ohne den nativen Profiler verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829309"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549331"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace-Hilfsprogramm für Leistungsanalysen
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  Ein benannter vordefinierter Satz von Anbieterkonfigurationen, mit dem gängige Ablaufverfolgungsszenarien kurz und präzise angegeben werden können.
+  Ein benannter vordefinierter Satz von Anbieterkonfigurationen, mit dem gängige Ablaufverfolgungsszenarien kurz und präzise angegeben werden können. Die folgenden Profile sind verfügbar:
+
+ | Profil | Beschreibung |
+ |---------|-------------|
+ |`cpu-sampling`|Nützlich für die Nachverfolgung der CPU-Auslastung und allgemeine .NET-Laufzeitinformationen. Dies ist die Standardoption, wenn kein Profil oder Anbieter angegeben wird.|
+ |`gc-verbose`|Verfolgt GC-Sammlungen und Beispielobjektzuordnungen.|
+ |`gc-collect`|Verfolgt GC-Sammlungen nur mit sehr geringem Mehraufwand nach.|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

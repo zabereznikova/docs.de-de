@@ -1,7 +1,7 @@
 ---
 title: Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung – .NET
 description: Erfahren Sie, wie Sie benutzerdefinierte Konverter für JSON-Serialisierungsklassen erstellen, die im System.Text.Json-Namespace bereitgestellt werden.
-ms.date: 01/10/2020
+ms.date: 11/30/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: 17671b86dc6d1d7b45a01cb0bf7c5c42f624d99f
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329806"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438123"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung (Marshallen) in .NET
 
@@ -49,17 +49,17 @@ Sie können auch benutzerdefinierte Konverter schreiben, um `System.Text.Json` m
 
 Es gibt zwei Muster zum Erstellen eines benutzerdefinierten Konverters: das grundlegende Muster und das Factorymuster. Das Factorymuster ist für Konverter vorgesehen, die den `Enum`-Typ oder offene generische Typen verarbeiten. Das grundlegende Muster ist für nicht generische und geschlossene generische Typen gedacht.  Konverter für die folgenden Typen erfordern z. B. das Factorymuster:
 
-* `Dictionary<TKey, TValue>`
-* `Enum`
-* `List<T>`
+* <xref:System.Collections.Generic.Dictionary%602>
+* <xref:System.Enum>
+* <xref:System.Collections.Generic.List%601>
 
 Einige Beispiele für Typen, die vom grundlegenden Muster verarbeitet werden können, sind u. a.:
 
 * `Dictionary<int, string>`
 * `WeekdaysEnum`
 * `List<DateTimeOffset>`
-* `DateTime`
-* `Int32`
+* <xref:System.DateTime>
+* <xref:System.Int32>
 
 Das grundlegende Muster erstellt eine Klasse, die einen Typ verarbeiten kann. Das Factorymuster erstellt eine Klasse, die zur Laufzeit bestimmt, welcher spezifische Typ erforderlich ist, und erstellt dynamisch den entsprechenden Konverter.
 
@@ -67,13 +67,13 @@ Das grundlegende Muster erstellt eine Klasse, die einen Typ verarbeiten kann. Da
 
 Das folgende Beispiel ist ein Konverter, der die Standardserialisierung für einen vorhandenen Datentyp außer Kraft setzt. Der Konverter verwendet das Format „mm/dd/yyyy“ für `DateTimeOffset`-Eigenschaften.
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DateTimeOffsetConverter.cs":::
 
 ## <a name="sample-factory-pattern-converter"></a>Factorymusterkonverter – Beispiel
 
 Im folgenden Code wird ein benutzerdefinierter Konverter gezeigt, der mit `Dictionary<Enum,TValue>` arbeitet. Der Code folgt dem Factorymuster, da der erste generische Typparameter `Enum` und der zweite offen ist. Die `CanConvert`-Methode gibt `true` nur für ein `Dictionary` mit zwei generischen Parametern zurück, wobei der erste ein `Enum`-Typ ist. Der innere Konverter ruft einen vorhandenen Konverter ab, um jeglichen Typ zu verarbeiten, der zur Laufzeit für `TValue` bereitgestellt wird.
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 Der vorangehende Code ist identisch mit dem, der weiter unten in diesem Artikel unter [Unterstützung für Wörterbücher mit Schlüsseln, die keine Zeichenfolgen sind](#support-dictionary-with-non-string-key) gezeigt wird.
 
@@ -125,11 +125,11 @@ Wenn Sie eine Meldung angeben (z. B. `throw new JsonException("Error occurred")
 
 Im Folgenden finden Sie ein Beispiel, mit dem der <xref:System.ComponentModel.DateTimeOffsetConverter> zum Standard für Eigenschaften vom Typ <xref:System.DateTimeOffset> gemacht wird:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Serialize":::
 
 Angenommen, Sie serialisieren eine Instanz des folgenden Typs:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWF)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WF":::
 
 Hier sehen Sie ein Beispiel für eine JSON-Ausgabe, die anzeigt, dass der benutzerdefinierte Konverter verwendet wurde:
 
@@ -143,35 +143,35 @@ Hier sehen Sie ein Beispiel für eine JSON-Ausgabe, die anzeigt, dass der benutz
 
 Der folgende Code verwendet denselben Ansatz zum Deserialisieren mithilfe des benutzerdefinierten `DateTimeOffset`-Konverters:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithConvertersCollection.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-property"></a>Registrierungsbeispiel – [JsonConverter]-Attribut für eine Eigenschaft
 
 Im folgenden Code wird ein benutzerdefinierter Konverter für die `Date`-Eigenschaft ausgewählt:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithConverterAttribute)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithConverterAttribute":::
 
 Der Code zum Serialisieren von `WeatherForecastWithConverterAttribute` erfordert nicht die Verwendung von `JsonSerializeOptions.Converters`:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetSerialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Serialize":::
 
 Der Code zum Deserialisieren erfordert ebenfalls nicht die Verwendung von `Converters`:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs?name=SnippetDeserialize)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RegisterConverterWithAttributeOnProperty.cs" id="Deserialize":::
 
 ## <a name="registration-sample---jsonconverter-on-a-type"></a>Registrierungsbeispiel – [JsonConverter]-Attribut für einen Typ
 
 Der folgende Code erstellt eine Struktur und wendet das `[JsonConverter]`-Attribut darauf an:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Temperature.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Temperature.cs":::
 
 Hier sehen Sie den benutzerdefinierten Konverter für die vorangehende Struktur:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/TemperatureConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/TemperatureConverter.cs":::
 
 Das `[JsonConvert]`-Attribut der Struktur registriert den benutzerdefinierten Konverter als Standard für Eigenschaften vom Typ `Temperature`. Der Konverter wird automatisch für die `TemperatureCelsius`-Eigenschaft des folgenden Typs verwendet, wenn Sie sie serialisieren oder deserialisieren:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithTemperatureStruct)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithTemperatureStruct":::
 
 ## <a name="converter-registration-precedence"></a>Rangfolge für die Registrierung von Konvertern
 
@@ -219,15 +219,15 @@ Für Szenarien, die eine Typableitung erfordern, zeigt der folgende Code einen b
 * Zeichenfolgen in `string`
 * Alles andere in `JsonElement`
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs":::
 
 Der folgende Code registriert den Konverter:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DeserializeInferredTypesToObject.cs" id="Register":::
 
 Hier ist ein Beispieltyp mit `object`-Eigenschaften:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithObjectProperties":::
 
 Das folgende Beispiel für zu deserialisierenden JSON-Code enthält Werte, die als `DateTime`, `long` und `string` deserialisiert werden:
 
@@ -251,15 +251,15 @@ Die integrierte Unterstützung für Wörterbuchsammlungen ist für `Dictionary<s
 
 Im folgenden Code wird ein benutzerdefinierter Konverter gezeigt, der mit `Dictionary<Enum,TValue>` arbeitet:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/DictionaryTKeyEnumTValueConverter.cs":::
 
 Der folgende Code registriert den Konverter:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripDictionaryTkeyEnumTValue.cs" id="Register":::
 
 Der Konverter kann die `TemperatureRanges`-Eigenschaft der folgenden Klasse serialisieren und deserialisieren, die die folgende `Enum` verwendet:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithEnumDictionary)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/WeatherForecast.cs" id="WFWithEnumDictionary":::
 
 Die JSON-Ausgabe der Serialisierung sieht wie im folgenden Beispiel aus:
 
@@ -280,19 +280,19 @@ Der Ordner [unit tests](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e
 
 ### <a name="support-polymorphic-deserialization"></a>Unterstützung polymorpher Deserialisierung
 
-Integrierte Funktionen bieten einen begrenzten Funktionsbereich der [polymorphen Serialisierung](system-text-json-how-to.md#serialize-properties-of-derived-classes), aber gar keine Unterstützung für Deserialisierung. Die Deserialisierung erfordert einen benutzerdefinierten Konverter.
+Integrierte Funktionen bieten einen begrenzten Funktionsbereich der [polymorphen Serialisierung](system-text-json-polymorphism.md), aber gar keine Unterstützung für Deserialisierung. Die Deserialisierung erfordert einen benutzerdefinierten Konverter.
 
 Angenommen, Sie verfügen beispielsweise über eine abstrakte Basisklasse `Person` mit den abgeleiteten Klassen `Employee` und `Customer`. Polymorphe Deserialisierung bedeutet, dass Sie zur Entwurfszeit `Person` als Deserialisierungsziel angeben können, und dass die Objekte `Customer` und `Employee` im JSON-Code zur Laufzeit ordnungsgemäß deserialisiert werden. Während der Deserialisierung müssen Sie nach Hinweisen suchen, die den erforderlichen Typ in JSON identifizieren. Die Arten der verfügbaren Hinweise variieren in jedem Szenario. Beispielsweise kann eine Diskriminatoreigenschaft verfügbar sein, oder Sie müssen sich darauf verlassen, dass eine bestimmte Eigenschaft vorhanden oder nicht vorhanden ist. Das aktuelle Release von `System.Text.Json` stellt keine Attribute bereit, um anzugeben, wie polymorphe Deserialisierungsszenarien behandelt werden sollen, sodass benutzerdefinierte Konverter erforderlich sind.
 
 Der folgende Code zeigt eine Basisklasse, zwei abgeleitete Klassen und einen benutzerdefinierten Konverter für diese. Der Konverter verwendet eine Diskriminatoreigenschaft, um die polymorphe Deserialisierung durchzuführen. Der Typdiskriminator befindet sich nicht in den Klassendefinitionen, wird aber während der Serialisierung erstellt und während der Deserialisierung gelesen.
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/Person.cs?name=SnippetPerson)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/Person.cs" id="Person":::
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/PersonConverterWithTypeDiscriminator.cs":::
 
 Der folgende Code registriert den Konverter:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripPolymorphic.cs" id="Register":::
 
 Das JSON kann mit demselben Konverter deserialisiert werde, mit dem es auch serialisiert wurde, z. B.:
 
@@ -327,17 +327,17 @@ Um die Serialisierung und Deserialisierung zu unterstützen, die die ursprüngli
 
 Der folgende Code zeigt einen benutzerdefinierten Konverter, der Roundtrips zu und von `Stack<T>`-Objekten ermöglicht:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/JsonConverterFactoryForStackOfT.cs":::
 
 Der folgende Code registriert den Konverter:
 
-[!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+:::code language="csharp" source="snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs" id="Register":::
 
 ## <a name="handle-null-values"></a>Behandeln von NULL-Werten
 
 Standardmäßig verarbeitet das Serialisierungsmodul NULL-Werte wie folgt:
 
-* Für Verweis- und `Nullable<T>`-Typen:
+* Für Verweis- und <xref:System.Nullable%601>-Typen:
 
   * `null` wird bei der Serialisierung nicht an benutzerdefinierte Konverter übergeben.
   * `JsonTokenType.Null` wird bei der Deserialisierung nicht an benutzerdefinierte Konverter übergeben.
@@ -374,9 +374,7 @@ Wenn Sie einen Konverter erstellen müssen, der das Verhalten eines vorhandenen 
 
 * [Quellcode für integrierte Konverter](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
 * [Unterstützung von „DateTime“ und „DateTimeOffset“ in System.Text.Json](../datetime/system-text-json-support.md)
-* [System.Text.Json – Übersicht](system-text-json-overview.md)
-* [Verwenden von System.Text.Json](system-text-json-how-to.md)
-* [Migrieren von Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Anpassen der Zeichencodierung](system-text-json-character-encoding.md)
+* [Schreiben benutzerdefinierter Serialisierungsmodule und Deserialisierungsmodule](write-custom-serializer-deserializer.md)
 * [System.Text.Json-API-Referenz](xref:System.Text.Json)
 * [System.Text.Json-Serialisierungs-API-Referenz](xref:System.Text.Json.Serialization)
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
