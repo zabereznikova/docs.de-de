@@ -3,19 +3,21 @@ title: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 description: Ein Leitfaden, der eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure bietet.
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284454"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851294"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 
 ![Titelbild des Leitfadens „Entfernen moderner Webanwendungen“](./media/index/web-application-guide-cover-image.png)
 
-**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+**EDITION v5.0:** auf ASP.NET Core 5.0 aktualisiert
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/aspnet-ebook-changelog).
 
 VERÖFFENTLICHT VON
 
@@ -59,7 +61,7 @@ Editoren:
 
 ## <a name="introduction"></a>Einführung
 
-.NET Core und ASP.NET Core bieten mehrere Vorteile gegenüber der traditionellen .NET-Entwicklung. Sie sollten .NET Core für Ihre Serveranwendungen verwenden, wenn einige oder alle der folgenden Punkte für den Erfolg Ihrer Anwendung wichtig sind:
+.NET 5 und ASP.NET Core bieten mehrere Vorteile gegenüber der traditionellen .NET-Entwicklung. Sie sollten .NET 5 für Ihre Serveranwendungen verwenden, wenn einige oder alle der folgenden Punkte für den Erfolg Ihrer Anwendung wichtig sind:
 
 - Plattformübergreifende Unterstützung
 
@@ -71,7 +73,7 @@ Editoren:
 
 - Parallele Versionsverwaltung von .NET-Versionen durch Anwendung auf demselben Server
 
-Traditionelle .NET-Anwendungen können und werden viele dieser Anforderungen unterstützen, aber ASP.NET Core und .NET Core wurden optimiert, um eine verbesserte Unterstützung für die oben genannten Szenarien zu bieten.
+Traditionelle .NET-Anwendungen können und werden viele dieser Anforderungen unterstützen, aber ASP.NET Core und .NET 5 wurden optimiert, um eine verbesserte Unterstützung für die oben genannten Szenarien zu bieten.
 
 Immer mehr Unternehmen entscheiden sich dafür, ihre Webanwendungen in der Cloud zu hosten, indem sie Dienste wie Microsoft Azure nutzen. Sie sollten in Erwägung ziehen, Ihre Anwendung in der Cloud zu hosten, wenn die folgenden Punkte für Ihre Anwendung oder Organisation wichtig sind:
 
@@ -89,7 +91,7 @@ Das Erstellen von Webanwendungen mit ASP.NET Core (gehostet in Azure) bietet ein
 
 ## <a name="version"></a>Version
 
-Dieser Leitfaden wurde für Version **.NET Core 3.1** überarbeitet und enthält viele weitere Updates zu artverwandten Technologien (also Azure und Drittanbietertechnologien), die zeitgleich mit dem.NET Core 3.1-Release veröffentlicht wurden. Aus diesem Grund wurde auch die Versionsnummer des Leitfadens auf Version **3.1** aktualisiert.
+Dieser Leitfaden wurde für Version **.NET 5.0** überarbeitet und enthält viele weitere Updates zu artverwandten Technologien (also Azure und Drittanbietertechnologien), die zeitgleich mit dem.NET 5.0-Release veröffentlicht wurden. Aus diesem Grund wurde auch die Versionsnummer des Leitfadens auf Version **5.0** aktualisiert.
 
 ## <a name="purpose"></a>Zweck
 
@@ -118,7 +120,7 @@ Sie können diesen Leitfaden gerne an Ihr Team weiterleiten, um ein gemeinsames 
 
 ## <a name="references"></a>Verweise
 
-- **Wahl zwischen .NET Core und .NET Framework für Server-Apps**  
+- **.NET 5 für Server-Apps im Vergleich zum .NET Framework**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
