@@ -1,17 +1,17 @@
 ---
 title: Auf NULL festlegbare Werttypen
-description: 'Erfahren Sie, wie Sie Werte zulässt-Werttypen verwenden können, eine Möglichkeit, einen Werttyp darzustellen, der auch NULL sein kann, in F #.'
+description: 'Erfahren Sie, wie Sie auf NULL festleg Bare Werttypen, eine Möglichkeit zur Darstellung von Werttypen, die auch NULL sein können, in F # verwenden.'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740429"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009637"
 ---
 # <a name="nullable-value-types"></a>Auf NULL festlegbare Werttypen
 
-Ein auf NULL festleg _barer Werttyp_ `Nullable<'T>` stellt einen beliebigen Strukturtyp dar, der auch sein könnte [struct](structures.md) `null` Dies ist hilfreich, wenn Sie mit Bibliotheken und Komponenten interagieren, die diese Arten von Typen, wie z. b. ganze Zahlen, mit einem `null` Wert aus Effizienzgründen darstellen können. Der zugrunde liegende Typ, der dieses Konstrukt unterstützt, ist <xref:System.Nullable%601?displayProperty=nameWithType> .
+Ein auf NULL festleg _barer Werttyp_ `Nullable<'T>` stellt einen beliebigen Strukturtyp dar, der auch sein könnte [](structures.md) `null` Dies ist hilfreich, wenn Sie mit Bibliotheken und Komponenten interagieren, die diese Arten von Typen, wie z. b. ganze Zahlen, mit einem `null` Wert aus Effizienzgründen darstellen können. Der zugrunde liegende Typ, der dieses Konstrukt unterstützt, ist <xref:System.Nullable%601?displayProperty=nameWithType> .
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,7 +62,7 @@ Der Grund hierfür ist, dass `Nullable<'T>` nicht über `null` einen geeigneten 
 
 ## <a name="pass-and-assign-to-members"></a>Übergeben und zuweisen an Member
 
-Ein wichtiger Unterschied zwischen der Arbeit mit Membern und F #-Werten besteht darin, dass Werte zulässt-Werttypen implizit abgeleitet werden können, wenn Sie mit Membern arbeiten. Beachten Sie die folgende Methode, die einen Werte zulässt-Werttyp als Eingabe annimmt:
+Ein wichtiger Unterschied zwischen der Arbeit mit Membern und F #-Werten besteht darin, dass Werte zulässt-Werttypen implizit abgeleitet werden können, wenn Sie mit Membern arbeiten. Beachten Sie die folgende Methode, die einen auf NULL festleg baren Werttyp als Eingabe annimmt:
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-Im vorherigen Beispiel können Sie `12` an die-Methode übergeben `M` . Sie können auch `12` der Auto-Eigenschaft zuweisen `NVT` . Der F #-Compiler konvertiert einen oder dieselbe Zuweisung implizit, wenn der Zieltyp mit der Eingabe übereinstimmt, wenn die Eingabe als nulllabel-Werttyp erstellt werden kann.
+Im vorherigen Beispiel können Sie `12` an die-Methode übergeben `M` . Sie können auch `12` der Auto-Eigenschaft zuweisen `NVT` . Wenn die Eingabe als Werte zulässt-Werttyp erstellt werden kann und mit dem Zieltyp übereinstimmt, konvertiert der F #-Compiler solche Aufrufe oder Zuweisungen implizit.
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Überprüfen einer Instanz, die NULL-Werte zulässt
 

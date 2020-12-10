@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851815"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009845"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Übersicht über die Analyse von .NET-Quellcode
 
@@ -40,7 +40,7 @@ Regeln für die *Code Qualitätsanalyse* ("CAXXXX") untersuchen ihren c#-oder Vi
 
 Die folgenden Regeln sind standardmäßig in .net 5,0 aktiviert.
 
-| Diagnose-ID | Kategorie | Schweregrad | Beschreibung |
+| Diagnose-ID | Kategorie | Schweregrad | BESCHREIBUNG |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | Interoperabilität | Warnung | Analysetool für die Plattformkompatibilität |
 | [CA1417](/visualstudio/code-quality/ca1417) | Interoperabilität | Warnung | Nicht `OutAttribute` für Zeichen folgen Parameter für P/Aufrufe verwenden |
@@ -48,8 +48,8 @@ Die folgenden Regeln sind standardmäßig in .net 5,0 aktiviert.
 | [CA2013](/visualstudio/code-quality/ca2013) | Zuverlässigkeit | Warnung | Nicht `ReferenceEquals` mit Werttypen verwenden |
 | [CA2014](/visualstudio/code-quality/ca2014) | Zuverlässigkeit | Warnung | Nicht `stackalloc` in Schleifen verwenden |
 | [CA2015](/visualstudio/code-quality/ca2015) | Zuverlässigkeit | Warnung | Finalizer nicht für Typen definieren, die von abgeleitet sind <xref:System.Buffers.MemoryManager%601> |
-| [CA2200](/visualstudio/code-quality/ca2200) | Verbrauch | Warnung | Erneut ausführen, um Stapeldetails beizubehalten.
-| [CA2247](/visualstudio/code-quality/ca2247) | Verbrauch | Warnung | Argument, das an den TaskCompletionSource-Konstruktor übergeben wurde, sollte <xref:System.Threading.Tasks.TaskCreationOptions> Enumeration anstelle von <xref:System.Threading.Tasks.TaskContinuationOptions> |
+| [CA2200](/visualstudio/code-quality/ca2200) | Verwendung | Warnung | Erneut ausführen, um Stapeldetails beizubehalten.
+| [CA2247](/visualstudio/code-quality/ca2247) | Verwendung | Warnung | Argument, das an den TaskCompletionSource-Konstruktor übergeben wurde, sollte <xref:System.Threading.Tasks.TaskCreationOptions> Enumeration anstelle von <xref:System.Threading.Tasks.TaskContinuationOptions> |
 
 Sie können den Schweregrad dieser Regeln ändern, um Sie zu deaktivieren oder auf Fehler zu erhöhen. Sie können auch [Weitere Regeln aktivieren](#enable-additional-rules).
 
@@ -60,7 +60,7 @@ Sie können den Schweregrad dieser Regeln ändern, um Sie zu deaktivieren oder a
 
 Der *Analysemodus* verweist auf eine vordefinierte Konfiguration der Code Analyse, bei der keine, einige oder alle Regeln aktiviert sind. Im Standardanalyse Modus wird nur eine kleine Anzahl von Regeln [als Buildwarnungen aktiviert](#enabled-rules). Sie können den Analysemodus für Ihr Projekt ändern, indem Sie die [analysismode](../../core/project-sdk/msbuild-props.md#analysismode) -Eigenschaft in der Projektdatei festlegen. Folgende Werte sind zulässig:
 
-| Wert | Beschreibung |
+| Wert | BESCHREIBUNG |
 | - | - |
 | `AllDisabledByDefault` | Dies ist der konservativste Modus. Alle Regeln sind standardmäßig deaktiviert. Sie können einzelne Regeln [aktivieren](configuration-options.md).<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | Dies ist der aggressivste Modus. Alle Regeln werden als Buildwarnungen aktiviert. Sie [können einzelne Regeln selektiv deaktivieren, um](configuration-options.md) Sie zu deaktivieren.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -99,21 +99,20 @@ Standardmäßig erhalten Sie die neuesten Code Analyse Regeln und Standardregel 
 
 - Installieren Sie das [nuget-Paket Microsoft. Code Analysis. netanalyzers](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisnetanalyzers) , um Regel Updates von .NET SDK-Updates zu entkoppeln. Durch das Installieren des Pakets werden die integrierten SDK-Analysen deaktiviert, und es wird eine Buildwarnung generiert, wenn das SDK eine neuere Analyzer-Assemblyversion enthält, als das nuget-Paket.
 
-## <a name="code-style-analysis"></a>Code Format Analyse
+## <a name="code-style-analysis"></a>Analyse im Code Stil
 
-*Code Format Analyse* -Regeln ("idexxxx") ermöglichen es Ihnen, konsistentes Codeformat in Ihrer Codebasis zu definieren und zu verwalten. Die Standardeinstellungen für die Aktivierung lauten:
+*Code-Style-* Regeln ("idexxxx") ermöglichen es Ihnen, konsistentes Codeformat in Ihrer Codebasis zu definieren und zu verwalten. Die Standardeinstellungen für die Aktivierung lauten:
 
-- Befehlszeilenbuild: die Code Format Analyse ist standardmäßig für alle .net-Projekte in Befehlszeilenbuilds deaktiviert.
-- Visual Studio: die Code Format Analyse ist standardmäßig für alle .net-Projekte in Visual Studio aktiviert, wenn [schnelle Aktionen im Code umgestaltet](/visualstudio/ide/code-generation-in-visual-studio)werden.
+- Befehlszeilenbuild: die Analyse im Code Stil ist standardmäßig für alle .net-Projekte in Befehlszeilenbuilds deaktiviert.
+- Visual Studio: die Analyse im Code Stil ist standardmäßig für alle .net-Projekte in Visual Studio aktiviert, wenn [schnelle Aktionen im Code umgestaltet](/visualstudio/ide/code-generation-in-visual-studio)werden.
 
-Ab .net 5,0 können Sie die Code Format Analyse für den Build aktivieren, sowohl in der Befehlszeile als auch in Visual Studio. Code Format Verletzungen werden als Warnungen oder Fehler mit einem Präfix "IDE" angezeigt. Dies ermöglicht es Ihnen, konsistente Code Stile zum Zeitpunkt der Erstellung zu erzwingen.
+Ab .net 5,0 können Sie die Analyse im Code Stil für den Build aktivieren, sowohl in der Befehlszeile als auch in Visual Studio. Code Format Verletzungen werden als Warnungen oder Fehler mit einem Präfix "IDE" angezeigt. Dies ermöglicht es Ihnen, konsistente Code Stile zum Zeitpunkt der Erstellung zu erzwingen.
 
 Eine vollständige Liste der Code Analyse Regeln finden Sie unter Regeln für den [Code Stil](style-rules/index.md).
 
-> [!NOTE]
-> Die Funktion zur Analyse des Code Stils ist experimentell und kann sich zwischen den Versionen von .net 5 und .net 6 ändern.
+### <a name="enable-on-build"></a>Beim Build aktivieren
 
-Schritte zum Aktivieren der Code Format Analyse bei Build:
+Führen Sie die folgenden Schritte aus, um die Code Analyse für den Build zu aktivieren:
 
 1. Legen Sie die MSBuild-Eigenschaft [enforcecodestyleinbuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) auf fest `true` .
 
@@ -137,6 +136,9 @@ Schritte zum Aktivieren der Code Format Analyse bei Build:
    dotnet_diagnostic.IDE0040.severity = silent
    ```
 
+> [!NOTE]
+> Das Code Analyse Feature ist experimentell und kann sich zwischen den Versionen von .net 5 und .net 6 ändern.
+
 ## <a name="suppress-a-warning"></a>Unterdrücken einer Warnung
 
 Legen Sie die Option Schweregrad für diese Regel-ID `none` in einer Editor config-Datei auf fest, um eine Regelverletzung zu unterdrücken. Beispiel:
@@ -153,7 +155,7 @@ Weitere Informationen zu Schweregraden von Regeln finden Sie unter [Konfiguriere
 
 Zusätzlich zu den offiziellen .net-Analysemodulen können Sie auch Drittanbieter-Analyzers installieren, z. b. [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [xUnit](https://www.nuget.org/packages/xunit.analyzers/)Analyzer und [Sonar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Referenz zur Code Qualitätsanalyse Regel](quality-rules/index.md)
 - [Regel Referenz für Code Format Analyse](style-rules/index.md)
