@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825077"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009818"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Bewährte Methoden zum Vergleichen von Zeichenfolgen in .NET
 
@@ -166,9 +166,6 @@ dem nachstehenden Vergleich (ist jedoch schneller):
 [!code-vb[Conceptual.Strings.BestPractices#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]
 
 Diese Vergleiche werden immer noch sehr schnell durchgeführt.
-
-> [!NOTE]
-> Das Zeichenfolgenverhalten von Dateisystem, Registrierungsschlüsseln und -werten sowie Umgebungsvariablen wird am besten von <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>dargestellt.
 
 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> und <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> verwenden die Binärwerte direkt und eignen sich am besten für Vergleiche. Wenn Sie nicht sicher über die Vergleichseinstellungen sind, verwenden Sie einen dieser beiden Werte. Da hier jedoch ein Vergleich auf Byteebene durchgeführt wird, erfolgt die Sortierung nicht anhand einer linguistischen Sortierreihenfolge (analog zu einem englischen Wörterbuch), sondern anhand einer binären Rangfolge. Die Ergebnisse erscheinen Benutzern möglicherweise in den meisten Kontexten seltsam.
 

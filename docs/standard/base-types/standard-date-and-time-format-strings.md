@@ -1,7 +1,7 @@
 ---
 title: Standardformatzeichenfolgen für Datum und Uhrzeit
 description: Erfahren Sie, wie Sie eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwenden, um die Textdarstellung eines Datums- und Uhrzeitwerts in .NET zu definieren.
-ms.date: 11/05/2020
+ms.date: 12/07/2020
 dev_langs:
 - csharp
 - vb
@@ -13,13 +13,14 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
+ms.topic: reference
 ms.custom: contperfq2
-ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 688aaf7a1814e132f3bffa48394873653bf314e8
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831324"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851131"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardformatzeichenfolgen für Datum und Uhrzeit
 
