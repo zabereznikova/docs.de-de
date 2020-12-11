@@ -1,36 +1,34 @@
 ---
-title: Versionsverwaltung für .NET Core-Runtime und SDK
-description: In diesem Artikel erfahren Sie, wie das .NET Core SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
-ms.date: 06/24/2020
-ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: Versionsverwaltung für die .NET-Runtime und das .NET SDK
+description: In diesem Artikel erfahren Sie, wie das .NET SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
+ms.date: 12/07/2020
+ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726703"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009305"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
+# <a name="overview-of-how-net-is-versioned"></a>Übersicht über die .NET-Versionsverwaltung
 
-.NET Core bezieht sich auf die .NET Core Runtime und das .NET Core SDK, das die Tools enthält, die Sie für die Entwicklung von Anwendungen benötigen. .NET Core SDKs sind so konzipiert, dass sie mit jeder früheren Version der .NET Core Runtime funktionieren. Dieser Artikel beschreibt die Runtime und die SDK-Versionsstrategie. Eine Erläuterung der Versionsnummern für .NET Standard finden Sie in dem Artikel, der [.NET Standard](../../standard/net-standard.md#net-implementation-support) vorstellt.
-
-Die .NET Core Runtime und das .NET Core SDK fügen neue Features mit unterschiedlicher Geschwindigkeit hinzu: Im Allgemeinen bietet das .NET Core SDK aktualisierte Tools schneller als .NET Core Runtime die Runtime ändert, die Sie in der Produktion verwenden.
+Mit der [.NET-Runtime und dem .NET SDK](../introduction.md#sdk-and-runtimes) werden neue Features zu unterschiedlichen Frequenzen hinzugefügt. In der Regel wird das SDK häufiger aktualisiert als die Runtime. Dieser Artikel beschreibt die Runtime und die SDK-Versionsnummern.
 
 ## <a name="versioning-details"></a>Versionsinformationen
 
-„.NET Core 2.1“ bezieht sich auf die .NET Core Runtime-Versionsnummer. Die .NET Core Runtime verfolgt einen Hauptversions-/Nebenversions-/Patchansatz für die Versionsverwaltung, der [semantische Versionierung](#semantic-versioning) verwendet.
+Die .NET-Runtime verfolgt einen Hauptversions-/Nebenversions-/Patchansatz für die Versionsverwaltung, der [semantische Versionierung](#semantic-versioning) verwendet.
 
-Das .NET Core SDK folgt keiner semantischen Versionierung. Das .NET Core SDK wird schneller veröffentlicht, und seine Versionen müssen sowohl die angepasste Runtime als auch die eigenen Nebenversions- und Patchreleases des SDK kommunizieren. Die ersten beiden Stellen der .NET Core SDK-Version sind für die .NET Core Runtime reserviert, mit der sie veröffentlicht wurde. Jede Version des SDK kann Anwendungen für diese Runtime bzw. niedrigere Versionen erstellen.
+Das .NET SDK folgt keiner semantischen Versionierung. Das .NET SDK wird schneller veröffentlicht, und seine Versionsnummern müssen sowohl die angepasste Runtime als auch die eigenen Nebenversions- und Patchreleases des SDK kommunizieren.
 
-Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch die Patchnummer an. Die Nebenversion wird mit 100 multipliziert. Nebenversion 1, Patchversion 2 würde als 102 dargestellt. Die letzten zwei Ziffern stehen für die Patchnummer. Das Release von .NET Core 2.2 kann z.B. Releases wie in der folgenden Tabelle gezeigt erstellen:
+Die ersten beiden Stellen der .NET SDK-Versionsnummern sind für die .NET Runtime reserviert, mit der sie veröffentlicht wurde. Jede Version des SDK kann Anwendungen für diese Runtime bzw. niedrigere Versionen erstellen.
 
-| Änderung                | .NET Core Runtime | .NET Core SDK (\*) |
+Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch die Patchnummer an. Die Nebenversion wird mit 100 multipliziert. Nebenversion 1, Patchversion 2 würde als 102 dargestellt. Die letzten zwei Ziffern stehen für die Patchnummer. Im Folgenden ist eine mögliche Sequenz der Runtime- und SDK-Versionsnummern aufgeführt:
+
+| Change                | .Net-Runtime      | .NET SDK (\*)     |
 |-----------------------|-------------------|-------------------|
 | Erstrelease       | 2.2.0             | 2.2.100           |
 | SDK-Patch             | 2.2.0             | 2.2.101           |
 | Runtime und SDK-Patch | 2.2.1             | 2.2.102           |
 | SDK-Featureänderung    | 2.2.1             | 2.2.200           |
-
-(\*) In diesem Diagramm wird die .NET Core-Runtime 2.2 als Beispiel verwendet, da 2.1.300 als erstes SDK für .NET Core 2.1 festgelegt wurde. Weitere Informationen finden Sie unter [.NET Core version selection (.NET Core-Versionsauswahl)](selection.md).
 
 HINWEISE:
 
@@ -41,7 +39,7 @@ Weitere Details finden Sie im ursprünglichen Vorschlag im Repository [dotnet/de
 
 ## <a name="semantic-versioning"></a>Semantische Versionierung
 
-Die .NET Core *Runtime* verwendet im Großen und Ganzen die [semantische Versionierung (SemVer)](https://semver.org/) und übernimmt die Verwendung der `MAJOR.MINOR.PATCH`-Versionierung mithilfe der verschiedenen Teile der Versionsnummer, um den Grad und den Typ der Änderung zu beschreiben.
+Die .NET-*Runtime* verwendet im Großen und Ganzen die [semantische Versionierung (SemVer)](https://semver.org/) und übernimmt die Verwendung der `MAJOR.MINOR.PATCH`-Versionierung mithilfe der verschiedenen Teile der Versionsnummer, um den Grad und den Typ der Änderung zu beschreiben.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -76,11 +74,11 @@ Wenn mehrere Änderungen vorgenommen wurden, wird das höchste Element, was von 
 
 ## <a name="version-numbers-in-file-names"></a>Versionsnummern in Dateinamen
 
-Die für .NET Core heruntergeladenen Dateien tragen die Versionsnummer, zum Beispiel `dotnet-sdk-2.1.300-win10-x64.exe`.
+Die für .NET heruntergeladenen Dateien tragen die Versionsnummer, zum Beispiel `dotnet-sdk-2.1.300-win10-x64.exe`.
 
 ### <a name="preview-versions"></a>Vorschauversionen
 
-Der Version von Vorschauversionen ist ein `-preview[number]-([build]|"final")` angehängt. Beispielsweise `2.0.0-preview1-final`.
+Der Versionsnummer von Vorschauversionen ist ein `-preview[number]-([build]|"final")` angehängt. Beispielsweise `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Wartung von Versionen
 
@@ -88,29 +86,17 @@ Nach Erscheinen eines Release produzieren die Releaseabteilungen im Allgemeinen 
 
 ## <a name="relationship-to-net-standard-versions"></a>Beziehung zu .NET Standard-Versionen
 
-.NET Standard besteht aus einer .NET-Referenzassembly. Es gibt mehrere plattformspezifische Implementierungen. Die Referenzassembly enthält die Definition von .NET-APIs, die Teil einer angegebenen .NET Standard-Version sind. Jede Implementierung erfüllt den .NET Standard-Vertrag für die jeweilige Plattform. Sie können mehr über .NET Standard im Artikel zu [.NET Standard](../../standard/net-standard.md) im .NET-Leitfaden erfahren.
+.NET Standard besteht aus einer .NET-Referenzassembly. Es gibt mehrere plattformspezifische Implementierungen. Die Referenzassembly enthält die Definition von .NET-APIs, die Teil einer angegebenen .NET Standard-Version sind. Jede Implementierung erfüllt den .NET Standard-Vertrag für die jeweilige Plattform.
 
 Die .NET Standard-Referenzassembly verwendet ein `MAJOR.MINOR`-Schema für die Versionsverwaltung. Die `PATCH`-Ebene ist für .NET Standard nicht sinnvoll, da sie nur eine API-Spezifikation bereitstellt (keine Implementierung) und per Definition jede Änderung an der API eine Änderung im Funktionsumfang und damit eine neue `MINOR`-Version darstellen würde.
 
 Die Implementierungen auf jeder Plattform können aktualisiert werden (in der Regel als Teil des Plattformreleases) und sind daher für die Programmierer, die den .NET Standard auf dieser Plattform verwenden, nicht ersichtlich.
 
-Jede Version von .NET Core implementiert eine Version von .NET Standard. Das Implementieren einer Version von .NET Standard bedeutet Unterstützung für frühere Versionen von .NET Standard. .NET Standard -und .NET Core-Version unabhängig voneinander. Es ist Zufall, dass .NET Core 2.0 .NET Standard 2.0 implementiert. .NET Core 2.1 implementiert auch .NET Standard 2.0. .NET Core unterstützt zukünftige Versionen von .NET Standard, sobald diese verfügbar werden.
-
-| .NET Core | .NET-Standard |
-|-----------|---------------|
-| 1.0       | bis zu 1.6     |
-| 2.0       | bis zu 2.0     |
-| 2.1       | bis zu 2.0     |
-| 2.2       | bis zu 2.0     |
-| 3.0       | bis zu 2.1     |
-| 3.1       | bis zu 2.1     |
-
-Eine interaktive Tabelle der .NET Standard-Versionen und deren Entsprechung mit .NET-Implementierungen finden Sie unter [.NET Standard-Versionen](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
+Weitere Informationen finden Sie unter [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Zielframeworks](../../standard/frameworks.md)
-- [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../distribution-packaging.md)
-- [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)
-- [.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)
-- [Docker-Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet/)
+- [Packen einer Verteilung von .NET](../distribution-packaging.md)
+- [Fakten zur Lebensdauer der .NET-Unterstützung](https://dotnet.microsoft.com/platform/support/policy)
+- [Docker-Images für .NET](https://hub.docker.com/_/microsoft-dotnet/)

@@ -1,19 +1,19 @@
 ---
-title: .NET Core-Tutorials
-description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
-author: richlander
-ms.date: 09/09/2020
+title: .NET-Tutorials
+description: Folgen Sie den Tutorials zum Erlernen von .NET, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
+author: tdykstra
+ms.date: 12/07/2020
 titleSuffix: ''
-ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: cf466f7ea004199052c1f02f5860668f2bb2ff28
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656157"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009318"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET Core- und .NET Core SDK-Tools mithilfe der folgenden Tutorials
+# <a name="learn-net-and-the-net-sdk-tools-by-exploring-these-tutorials"></a>Kennenlernen der .NET- und .NET SDK-Tools mithilfe der folgenden Tutorials
 
-Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
+In den folgenden Tutorials wird gezeigt, wie Sie Konsolen-Apps und Konsolenbibliotheken für .NET Core, .NET 5 und spätere Versionen entwickeln. Informationen zu anderen Anwendungstypen finden Sie unter [Tutorials für die ersten Schritte mit .NET](../../standard/get-started.md).
 
 ## <a name="use-visual-studio"></a>Verwenden von Visual Studio
 
@@ -58,7 +58,3 @@ In diesen Tutorials lernen Sie, wie Sie Visual Studio Code oder andere Code-Edit
 - [Vorlagenerstellung für die CLI](cli-templates-create-item-template.md)
 - [Erstellen und Verwenden von Tools für die CLI](../tools/global-tools-how-to-create.md)
 - [Erstellen einer App mit Plug-Ins](creating-app-with-plugin-support.md)
-
-## <a name="create-web-apps"></a>Erstellen von Web-Apps
-
-Tutorials über das Entwickeln von ASP.NET Core-Webanwendungen finden Sie in der [ASP.NET Core-Dokumentation](/aspnet/core/).
