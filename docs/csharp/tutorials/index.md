@@ -2,12 +2,12 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110168"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
@@ -47,7 +47,6 @@ Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind 
 
 ## <a name="explore-new-features-in-c"></a>Erkunden neuer Features in C\#
 
-* [Probieren Sie neue Features in C# 6 interaktiv aus](exploration/csharp-6.yml): Entdecken Sie die in [C# 6](../whats-new/csharp-6.md) hinzugefügten Features interaktiv in Ihrem Browser.
 * [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht die Verwendung von Zeichenfolgeninterpolation zum Erstellen formatierter Zeichenfolgen in C#.
 * [Verweistypen, die NULL-Werte zulassen](nullable-reference-types.md): demonstriert, wie Sie Verweistypen mit Unterstützung von NULL-Werten einsetzen können, um Ihre Entwurfsabsicht auszudrücken.
 * [Aktualisieren eines Projekts zum Verwenden Nullwerte zulassender Verweistypen](upgrade-to-nullable-references.md): veranschaulicht Techniken zum Aktualisieren eines vorhandenen Projekts zur Verwendung Nullwerte zulassender Verweistypen.

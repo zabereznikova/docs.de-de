@@ -2,12 +2,12 @@
 title: Async-Programmierung
 description: 'Erfahren Sie, wie F # eine saubere Unterstützung für Asynchronie basierend auf einem Programmiermodell auf Sprachebene bereitstellt, das aus den Konzepten der Kern funktionalen Programmierung abgeleitet ist.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739326"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366813"
 ---
 # <a name="async-programming-in-f"></a>Async-Programmierung in F\#
 
@@ -33,7 +33,7 @@ Wenn Sie die Etymologie des Worts "asynchron" in Erwägung gezogen haben, sind z
 - "a", d. h. "Not".
 - "synchron", d. h. gleichzeitig.
 
-Wenn Sie diese beiden Begriffe zusammenfassen, sehen Sie, dass "asynchron" bedeutet "nicht gleichzeitig". Das ist alles! In dieser Definition gibt es keine Implikation oder Parallelität. Dies gilt auch in der Praxis.
+Wenn Sie diese beiden Begriffe zusammenfassen, sehen Sie, dass "asynchron" bedeutet "nicht gleichzeitig". Das war's. In dieser Definition gibt es keine Implikation oder Parallelität. Dies gilt auch in der Praxis.
 
 In der Praxis sind asynchrone Berechnungen in F # so geplant, dass Sie unabhängig vom Hauptprogramm Ablauf ausgeführt werden. Diese unabhängige Ausführung impliziert nicht Parallelität oder Parallelität und impliziert nicht, dass eine Berechnung immer im Hintergrund erfolgt. Asynchrone Berechnungen können sogar synchron ausgeführt werden, abhängig von der Art der Berechnung und der Umgebung, in der die Berechnung ausgeführt wird.
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-Wie Sie sehen können, `main` hat die Funktion ziemlich viele weitere Aufrufe. Konzeptionell werden folgende Aktionen durchführt:
+Wie Sie sehen können, `main` verfügt die Funktion über ein paar weitere Elemente. Konzeptionell werden folgende Aktionen durchführt:
 
-1. Transformieren Sie die Befehlszeilenargumente in `Async<unit>` Berechnungen mit `Array.map` .
+1. Transformieren Sie die Befehlszeilenargumente in eine Sequenz von `Async<unit>` Berechnungen mit `Seq.map` .
 2. Erstellen `Async<'T[]>` Sie einen, der die Berechnungen parallel plant und ausführt, `printTotalFileBytes` Wenn Sie ausgeführt wird.
-3. Erstellen Sie einen `Async<unit>` , der die parallele Berechnung ausführt und das Ergebnis ignoriert.
-4. Führen Sie die Letzte Berechnung mit `Async.RunSynchronously` und blockieren, bis der Vorgang abgeschlossen ist.
+3. Erstellen Sie einen `Async<unit>` , der die parallele Berechnung ausführt und das Ergebnis ignoriert (d `unit[]` . h. ein).
+4. Führen Sie die insgesamt zusammengesetzte Berechnung explizit mit aus `Async.RunSynchronously` .
 
-Wenn das Programm ausgeführt wird, wird `printTotalFileBytes` für jedes Befehlszeilenargument parallel ausgeführt. Da asynchrone Berechnungen unabhängig vom Programmablauf ausgeführt werden, gibt es keine Reihenfolge, in der Sie Ihre Informationen ausdrucken und die Ausführung abschließen. Die Berechnungen werden parallel geplant, aber ihre Ausführungsreihenfolge ist nicht sichergestellt.
+Wenn das Programm ausgeführt wird, wird `printTotalFileBytes` für jedes Befehlszeilenargument parallel ausgeführt. Da asynchrone Berechnungen unabhängig vom Programmablauf ausgeführt werden, gibt es keine definierte Reihenfolge, in der Sie Ihre Informationen ausgeben und die Ausführung abschließen. Die Berechnungen werden parallel geplant, aber ihre Ausführungsreihenfolge ist nicht sichergestellt.
 
 ## <a name="sequence-asynchronous-computations"></a>Asynchrone Berechnungen Sequenzieren
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-Dadurch wird die `printTotalFileBytes` Ausführung in der Reihenfolge der Elemente von geplant, `argv` anstatt sie parallel zu planen. Da das nächste Element erst geplant wird, nachdem die Ausführung der letzten Berechnung abgeschlossen ist, werden die Berechnungen so sequenziert, dass Sie sich nicht überlappen.
+Dadurch wird die `printTotalFileBytes` Ausführung in der Reihenfolge der Elemente von geplant, `argv` anstatt sie parallel zu planen. Da jeder aufeinander folgende Vorgang nicht geplant wird, bis die Ausführung der vorherigen Berechnung abgeschlossen ist, werden die Berechnungen so sequenziert, dass Sie sich nicht überlappen.
 
 ## <a name="important-async-module-functions"></a>Wichtige Async-Modulfunktionen
 
-Wenn Sie asynchronen Code in F # schreiben, interagieren Sie in der Regel mit einem Framework, das die Planung von Berechnungen für Sie behandelt. Dies ist jedoch nicht immer der Fall. es ist daher sinnvoll, die verschiedenen Startfunktionen zu erlernen, um asynchrone Aufgaben zu planen.
+Wenn Sie asynchronen Code in F # schreiben, interagieren Sie in der Regel mit einem Framework, das die Planung von Berechnungen für Sie behandelt. Dies ist jedoch nicht immer der Fall, daher ist es gut, die verschiedenen Funktionen zu verstehen, die zum Planen von asynchronen Aufgaben verwendet werden können.
 
 Da es sich bei F #-asynchronen Berechnungen um eine _Spezifikation_ der Arbeit und nicht um eine Darstellung der bereits ausgeführten Arbeit handelt, müssen Sie explizit mit einer Start Funktion gestartet werden. Es gibt viele [Async-Startmethoden](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) , die in unterschiedlichen Kontexten hilfreich sind. Im folgenden Abschnitt werden einige der gängigeren Startfunktionen beschrieben.
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 Verwendung
 
-- Wenn eine .NET-API aufgerufen werden muss, die erwartet, dass <xref:System.Threading.Tasks.Task%601> das Ergebnis einer asynchronen Berechnung darstellt.
+- Wenn eine .NET-API aufgerufen werden muss, die ein- <xref:System.Threading.Tasks.Task%601> Ergebnis darstellt, das das Ergebnis einer asynchronen Berechnung darstellt.
 
 Zu überwachende Elemente:
 
@@ -198,12 +198,12 @@ Zu überwachende Elemente:
 
 ### <a name="asyncparallel"></a>Async. parallel
 
-Plant die parallele Ausführung einer Sequenz von asynchronen Berechnungen. Der Grad an Parallelität kann optional optimiert/gedrosselt werden, indem der-Parameter angegeben wird `maxDegreesOfParallelism` .
+Plant eine Sequenz von asynchronen Berechnungen, die parallel ausgeführt werden, und gibt ein Array von Ergebnissen in der Reihenfolge an, in der Sie angegeben wurden. Der Grad an Parallelität kann optional optimiert/gedrosselt werden, indem der-Parameter angegeben wird `maxDegreeOfParallelism` .
 
 Signatur:
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 Verwendung:
@@ -251,7 +251,7 @@ Verwendung
 
 Zu überwachende Elemente:
 
-- Ausnahmen werden <xref:System.AggregateException> nach der Konvention der Task Parallel Library umschließt, und dieses Verhalten unterscheidet sich von der allgemeinen Verwendung von Ausnahmen in F #.
+- Ausnahmen werden <xref:System.AggregateException> nach der Konvention der Task Parallel Library umschließt. dieses Verhalten unterscheidet sich von der allgemeinen Verwendung von Ausnahmen in F #.
 
 ### <a name="asynccatch"></a>Async. catch
 
@@ -273,7 +273,7 @@ Zu überwachende Elemente:
 
 ### <a name="asyncignore"></a>Async. Ignore
 
-Erstellt eine asynchrone Berechnung, die die angegebene Berechnung ausführt und das Ergebnis ignoriert.
+Erstellt eine asynchrone Berechnung, die die angegebene Berechnung ausführt, aber das Ergebnis löscht.
 
 Signatur:
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 Verwendung
 
-- Wenn eine asynchrone Berechnung vorhanden ist, deren Ergebnis nicht benötigt wird. Dies entspricht dem `ignore` Code für nicht-asynchronen Code.
+- Wenn eine asynchrone Berechnung vorhanden ist, deren Ergebnis nicht benötigt wird. Dies ist analog zur- `ignore` Funktion für nicht-asynchronen Code.
 
 Zu überwachende Elemente:
 
@@ -291,7 +291,7 @@ Zu überwachende Elemente:
 
 ### <a name="asyncrunsynchronously"></a>Async. runsynchron
 
-Führt eine asynchrone Berechnung aus und wartet auf das Ergebnis des aufrufenden Threads. Dieser Befehl blockiert.
+Führt eine asynchrone Berechnung aus und wartet auf das Ergebnis des aufrufenden Threads. Gibt eine Ausnahme weiter, wenn die Berechnung eine ergibt. Dieser Befehl blockiert.
 
 Signatur:
 
@@ -310,7 +310,7 @@ Zu überwachende Elemente:
 
 ### <a name="asyncstart"></a>Async. Start
 
-Startet eine asynchrone Berechnung im Thread Pool, der zurückgibt `unit` . Wartet nicht auf das Ergebnis. Mit gestartete gestartete Berechnungen `Async.Start` werden unabhängig von der übergeordneten Berechnung gestartet, die Sie aufgerufen hat. Ihre Lebensdauer ist nicht an eine übergeordnete Berechnung gebunden. Wenn die übergeordnete Berechnung abgebrochen wird, werden keine untergeordneten Berechnungen abgebrochen.
+Startet eine asynchrone Berechnung, die `unit` im Thread Pool zurückgegeben wird. Wartet nicht auf den Abschluss und/oder es wird ein Ausnahme Ergebnis beobachtet. Mit gestartete geschietete Berechnungen `Async.Start` werden unabhängig von der übergeordneten Berechnung gestartet, die Sie aufgerufen hat. ihre Lebensdauer ist nicht an eine übergeordnete Berechnung gebunden. Wenn die übergeordnete Berechnung abgebrochen wird, werden keine untergeordneten Berechnungen abgebrochen.
 
 Signatur:
 
@@ -323,7 +323,7 @@ Nur verwenden, wenn:
 - Sie verfügen über eine asynchrone Berechnung, die kein Ergebnis ergibt und/oder die Verarbeitung von einem Ergebnis erfordert.
 - Sie müssen nicht wissen, wenn eine asynchrone Berechnung abgeschlossen ist.
 - Der Thread, auf dem eine asynchrone Berechnung ausgeführt wird, ist nicht wichtig.
-- Sie müssen keine Ausnahmen kennen, die sich aus der Aufgabe ergeben, oder Ausnahmen melden.
+- Sie müssen keine Ausnahmen kennen, die sich aus der Ausführung ergeben, oder Ausnahmen melden.
 
 Zu überwachende Elemente:
 
@@ -382,7 +382,7 @@ Eine Berechnung kann z. b. tatsächlich auf dem Thread des Aufrufers ausgeführt
 
 Obwohl F # einige Möglichkeiten bietet, eine asynchrone Berechnung auf dem aktuellen Thread (oder explizit nicht auf dem aktuellen Thread) zu starten, ist Asynchronität in der Regel nicht mit einer bestimmten Threading Strategie verknüpft.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Das asynchrone F #-Programmiermodell](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Leitfaden zu F #-Async in Jet. com](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
