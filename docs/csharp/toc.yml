@@ -52,8 +52,6 @@
       href: tutorials/exploration/top-level-statements.md
     - name: Erkunden von Mustern in Objekten
       href: tutorials/exploration/patterns-objects.md
-    - name: Erkunden von C# 6
-      href: tutorials/exploration/csharp-6.yml
     - name: Erkunden von Zeichenfolgeninterpolation – interakt
       href: tutorials/exploration/interpolated-strings.yml
     - name: Erkunden von Zeichenfolgeninterpolation – in Ihrer Umgebung
@@ -93,8 +91,6 @@
       href: whats-new/csharp-8.md
     - name: C# 7.0–7.3
       href: whats-new/csharp-7.md
-    - name: C# 6
-      href: whats-new/csharp-6.md
     - name: Wichtige Änderungen beim Compiler
       href: whats-new/breaking-changes.md
     - name: C#-Versionsgeschichte
