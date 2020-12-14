@@ -2,12 +2,12 @@
 title: Einführung in die funktionale Programmierung mit F#
 description: Lernen Sie die Grundlagen der funktionalen Programmierung mit F# kennen.
 ms.date: 10/29/2018
-ms.openlocfilehash: fc2aebe80de16b92942c3557c0e03c198883dde1
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 44242a4319a331312a003a555d1483f2a3f1a90d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110584"
 ---
 # <a name="introduction-to-functional-programming-in-f"></a>Einführung in die funktionale Programmierung mit F\#
 
@@ -54,7 +54,7 @@ Warum ist die Signatur denn so wichtig? In der typisierten funktionalen Programm
 
 ### <a name="expressions"></a>Ausdrücke
 
-Ausdrücke sind Konstrukte, die zu einem Wert ausgewertet werden. Im Gegensatz zu Anweisungen, die einfach eine Aktion ausführen, führen Ausdrücke eine Aktion aus, die einen Wert zurückgibt. Ausdrücke werden in der funktionalen Programmierung fast immer Anweisungen vorgezogen.
+Ausdrücke sind Konstrukte, die zu einem Wert ausgewertet werden. Im Gegensatz zu Anweisungen, die einfach eine Aktion ausführen, führen Ausdrücke eine Aktion aus, die einen Wert zurückgibt. In der funktionalen Programmierung werden fast immer Ausdrücke anstelle von Anweisungen verwendet.
 
 Betrachten Sie die obige Funktion `addOne`. Der Text von `addOne` ist ein Ausdruck:
 
