@@ -1,13 +1,13 @@
 ---
 title: Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5
 description: Erfahren Sie mehr über Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5 unter Windows.
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734230"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851750"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>Verhaltensänderungen beim Vergleichen von Zeichenfolgen ab .NET 5
 
@@ -43,16 +43,29 @@ Dieser Abschnitt enthält zwei Optionen für den Umgang mit unerwarteten Verhalt
 
 ### <a name="enable-code-analyzers"></a>Aktivieren von Codeanalysetools
 
-[Codeanalysetools](../../fundamentals/code-analysis/overview.md) können möglicherweise fehlerhafte Aufrufstellen erkennen. Um sich vor überraschenden Verhaltensweisen zu schützen, empfehlen wir die Installation des [NuGet-Pakets __Microsoft.CodeAnalysis.FxCopAnalyzers__](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) in Ihrem Projekt. Dieses Paket enthält die Codeanalyseregeln [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) und [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md), mit deren Hilfe Code markiert werden kann, der möglicherweise versehentlich eine linguistische Vergleichsfunktion verwendet, obwohl wahrscheinlich eine ordinale Vergleichsfunktion beabsichtigt war.
+[Codeanalysetools](../../fundamentals/code-analysis/overview.md) können möglicherweise fehlerhafte Aufrufstellen erkennen. Es wird empfohlen, die Analysetools von .NET Compiler Platform (Roslyn) in Ihrem Projekt zu aktivieren, um unerwünschtem Verhalten vorzubeugen. Mithilfe dieser Analysetools kann Code gekennzeichnet werden, der versehentlich eine linguistische Vergleichsfunktion verwendet, obwohl wahrscheinlich eine ordinale Vergleichsfunktion beabsichtigt war. Die folgenden Regeln sind bei der Kennzeichnung dieser Probleme nützlich:
 
-Zum Beispiel:
+- [CA1307: "StringComparison" zur Verdeutlichung angeben](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309: Ordinal-StringComparison verwenden.](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310: "StringComparison" für Richtigkeit angeben](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+Diese spezifischen Regeln sind standardmäßig nicht aktiviert. Legen Sie die folgenden Eigenschaften in Ihrer Projektdatei fest, um diese zu aktivieren und Verstöße wie Buildfehler anzuzeigen:
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+Der folgende Ausschnitt ist ein Codebeispiel, das die relevanten Warnungen oder Fehlermeldungen des Codeanalysetools erzeugt.
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-Weitere Informationen zu diesen Regeln des Codeanalysetools, einschließlich der Angabe, wann es angebracht sein könnte, diese Regeln in Ihrer eigenen Codebasis zu unterdrücken, finden Sie in den folgenden Artikeln:
-
-* [CA1307: "StringComparison" zur Verdeutlichung angeben](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309: Ordinal-StringComparison verwenden.](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>Zurücksetzen auf NLS-Verhaltensweisen
 
 Um .NET 5-Anwendungen bei Ausführung unter Windows auf ältere NLS-Verhaltensweisen zurückzusetzen, folgen Sie den Anweisungen unter [.NET-Globalisierung und ICU](../globalization-localization/globalization-icu.md). Dieser anwendungsweite Kompatibilitätsschalter muss auf Anwendungsebene festgelegt werden. Einzelne Bibliotheken können dieses Verhalten nicht aktivieren oder deaktivieren.
 
 > [!TIP]
-> Es wird dringend empfohlen, die Codeanalyseregeln [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) und [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) zu aktivieren, um die Codepflege zu verbessern und eventuell vorhandene latente Fehler aufdecken zu können. Weitere Informationen finden Sie unter [Aktivieren von Codeanalysetools](#enable-code-analyzers).
+> Es wird dringend empfohlen, die Codeanalyseregeln [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md), [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) und [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) zu aktivieren, um die Codepflege zu verbessern und eventuell vorhandene latente Fehler aufzudecken. Weitere Informationen finden Sie unter [Aktivieren von Codeanalysetools](#enable-code-analyzers).
 
 ## <a name="affected-apis"></a>Betroffene APIs
 
@@ -196,7 +204,7 @@ Betrachten Sie nochmals die Zeichenfolge `"résumé"` und ihre vier Darstellunge
 
 Ein Sortierungselement entspricht im Großen und Ganzen dem, was Leser als ein einzelnes oder eine Gruppe von Zeichen ansehen würden. Es ist konzeptionell einem [Graphemhaufen](character-encoding-introduction.md#grapheme-clusters) ähnlich, umfasst aber einen etwas größeren Schirm.
 
-Bei einer linguistischen Vergleichsfunktion sind exakte Übereinstimmungen nicht notwendig. Stattdessen werden Sortierungselemente auf Grundlage ihrer semantischen Bedeutung verglichen. Beispielsweise bewertet eine linguistische Vergleichsfunktion die Teilzeichenketten `"\u00E9"` und `"e\u0301"` als gleich, da beide semantisch „ein kleingeschriebenes e mit einem Accent aigu“ bedeuten. Dies ermöglicht es der `IndexOf`-Methode, die Teilzeichenfolge `"e\u0301"` innerhalb einer größeren Zeichenfolge zu finden, die die semantisch äquivalente Teilzeichenfolge `"\u00E9"` enthält (siehe das folgende Codebeispiel).
+Bei einer linguistischen Vergleichsfunktion sind exakte Übereinstimmungen nicht notwendig. Stattdessen werden Sortierungselemente auf Grundlage ihrer semantischen Bedeutung verglichen. Beispielsweise bewertet eine linguistische Vergleichsfunktion die Teilzeichenketten `"\u00E9"` und `"e\u0301"` als gleich, da beide semantisch „ein kleingeschriebenes e mit einem Akut“ bedeuten. Dies ermöglicht es der `IndexOf`-Methode, die Teilzeichenfolge `"e\u0301"` innerhalb einer größeren Zeichenfolge zu finden, die die semantisch äquivalente Teilzeichenfolge `"\u00E9"` enthält (siehe das folgende Codebeispiel).
 
 ```cs
 Console.WriteLine("r\u00E9sum\u00E9".IndexOf("e")); // prints '-1' (not found)

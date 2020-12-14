@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: ed7ef8509d6660bbbbaf194a87aa9d4815143507
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 6d703156d50a3e00a33cea5e15be2df911ed7c1b
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439767"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008811"
 ---
 # <a name="how-to-ignore-properties-with-no-locsystemtextjson"></a>Ignorieren von Eigenschaften mit System.Text.Json
 
@@ -137,12 +137,19 @@ Es gibt keine in . NET Core 3.1 integrierte Möglichkeit, die Serialisierung von
 ## <a name="see-also"></a>Weitere Informationen
 
 * [System.Text.Json – Übersicht](system-text-json-overview.md)
-* [Instanziieren von JsonSerializerOptions](system-text-json-configure-options.md)
+* [Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten](system-text-json-how-to.md)
+* [Instanziieren von JsonSerializerOptions-Instanzen](system-text-json-configure-options.md)
 * [Aktivieren des Abgleichs ohne Berücksichtigung von Groß- und Kleinschreibung](system-text-json-character-casing.md)
 * [Anpassen von Eigenschaftsnamen und -werten](system-text-json-customize-properties.md)
 * [Zulassen von ungültigem JSON-Code](system-text-json-invalid-json.md)
 * [Verarbeiten von Überlauf-JSON](system-text-json-handle-overflow.md)
-* [Beibehalten zirkulärer Verweise](system-text-json-preserve-references.md)
+* [Beibehalten von Verweisen](system-text-json-preserve-references.md)
 * [Unveränderliche Typen und nicht öffentliche Zugriffsmethoden](system-text-json-immutability.md)
 * [Polymorphe Serialisierung](system-text-json-polymorphism.md)
+* [Migrieren von Newtonsoft.Json zu System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Anpassen der Zeichencodierung](system-text-json-character-encoding.md)
+* [Schreiben benutzerdefinierter Serialisierungsmodule und Deserialisierer](write-custom-serializer-deserializer.md)
+* [Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung](system-text-json-converters-how-to.md)
+* [Unterstützung von DateTime und DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json-API-Referenz](xref:System.Text.Json)
+* [System.Text.Json-Serialisierungs-API-Referenz](xref:System.Text.Json.Serialization)

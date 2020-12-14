@@ -1,7 +1,7 @@
 ---
 title: Beibehalten von Verweisen mit System.Text.Json
 description: Erfahren Sie, wie Sie in .NET beim Serialisieren in und Deserialisieren aus JSON Verweise beibehalten und Zirkelbezüge behandeln.
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439789"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008733"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>Behandeln von Zirkelbezügen mit System.Text.Json
-
-In diesem Artikel erfahren Sie, wie Zirkelbezüge mit dem `System.Text.Json`-Namespace behandelt werden.
-
-## <a name="preserve-references-and-handle-circular-references"></a>Beibehalten von Verweisen und Behandeln von Zirkelbezügen
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>Beibehalten von Verweisen und Korrigieren von Zirkelbezügen mit System.Text.Json
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,7 +55,8 @@ System.Text.Json in .NET Core 3.1 unterstützt nur die Serialisierung nach Wert
 ## <a name="see-also"></a>Weitere Informationen
 
 * [System.Text.Json – Übersicht](system-text-json-overview.md)
-* [Instanziieren von JsonSerializerOptions](system-text-json-configure-options.md)
+* [Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten](system-text-json-how-to.md)
+* [Instanziieren von JsonSerializerOptions-Instanzen](system-text-json-configure-options.md)
 * [Aktivieren des Abgleichs ohne Berücksichtigung von Groß- und Kleinschreibung](system-text-json-character-casing.md)
 * [Anpassen von Eigenschaftsnamen und -werten](system-text-json-customize-properties.md)
 * [Ignorieren von Eigenschaften](system-text-json-ignore-properties.md)
@@ -67,4 +64,10 @@ System.Text.Json in .NET Core 3.1 unterstützt nur die Serialisierung nach Wert
 * [Verarbeiten von Überlauf-JSON](system-text-json-handle-overflow.md)
 * [Unveränderliche Typen und nicht öffentliche Zugriffsmethoden](system-text-json-immutability.md)
 * [Polymorphe Serialisierung](system-text-json-polymorphism.md)
+* [Migrieren von Newtonsoft.Json zu System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Anpassen der Zeichencodierung](system-text-json-character-encoding.md)
+* [Schreiben benutzerdefinierter Serialisierungsmodule und Deserialisierer](write-custom-serializer-deserializer.md)
+* [Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung](system-text-json-converters-how-to.md)
+* [Unterstützung von DateTime und DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json-API-Referenz](xref:System.Text.Json)
+* [System.Text.Json-Serialisierungs-API-Referenz](xref:System.Text.Json.Serialization)

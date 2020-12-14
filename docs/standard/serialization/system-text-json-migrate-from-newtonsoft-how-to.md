@@ -13,12 +13,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: bc256c5129cd4a7306e632685474b159a43ce76c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 418637639790199755803bf374ef99af949ae9b3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438052"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009897"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>Migration von Newtonsoft.Json zu System.Text.Json
 
@@ -535,7 +535,7 @@ Der erforderliche Eigenschaftenkonverter würde zusätzliche Logik erfordern, we
 * Die `DateTimeZoneHandling`-Einstellung kann verwendet werden, um alle `DateTime`-Werte als UTC-Datumsangaben zu serialisieren.
 * Die `DateFormatString`-Einstellung und `DateTime`-Konverter können verwendet werden, um das Format von Datumszeichenfolgen anzupassen.
 
-In <xref:System.Text.Json> ist das einzige Format, das über integrierte Unterstützung verfügt, ISO 8601-1:2019, da es weit verbreitet und eindeutig ist und Roundtrips exakt gestaltet. Um ein beliebiges anderes Format zu verwenden, erstellen Sie einen benutzerdefinierten Konverter. Weitere Informationen finden Sie unter [Unterstützung von „DateTime“ und „DateTimeOffset“ in System.Text.Json](../datetime/system-text-json-support.md).
+<xref:System.Text.Json> unterstützt ISO 8601-1:2019 einschließlich des Profils RFC 3339. Dieses Format ist gängig, eindeutig und ermöglicht präzise Roundtrips. Um ein beliebiges anderes Format zu verwenden, erstellen Sie einen benutzerdefinierten Konverter. Weitere Informationen finden Sie unter [Unterstützung von „DateTime“ und „DateTimeOffset“ in System.Text.Json](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Rückrufe
 
@@ -806,10 +806,20 @@ Wenn Sie weiterhin `Newtonsoft.Json` für bestimmte Zielframeworks verwenden mü
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json – Übersicht](system-text-json-overview.md)
-* [Verwenden von System.Text.Json](system-text-json-how-to.md)
-* [Schreiben von benutzerdefinierten Konvertern](system-text-json-converters-how-to.md)
-* [Unterstützung von „DateTime“ und „DateTimeOffset“ in System.Text.Json](../datetime/system-text-json-support.md)
+* [Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten](system-text-json-how-to.md)
+* [Instanziieren von JsonSerializerOptions-Instanzen](system-text-json-configure-options.md)
+* [Aktivieren des Abgleichs ohne Berücksichtigung von Groß- und Kleinschreibung](system-text-json-character-casing.md)
+* [Anpassen von Eigenschaftsnamen und -werten](system-text-json-customize-properties.md)
+* [Ignorieren von Eigenschaften](system-text-json-ignore-properties.md)
+* [Zulassen von ungültigem JSON-Code](system-text-json-invalid-json.md)
+* [Verarbeiten von Überlauf-JSON](system-text-json-handle-overflow.md)
+* [Beibehalten von Verweisen](system-text-json-preserve-references.md)
+* [Unveränderliche Typen und nicht öffentliche Zugriffsmethoden](system-text-json-immutability.md)
+* [Polymorphe Serialisierung](system-text-json-polymorphism.md)
+* [Anpassen der Zeichencodierung](system-text-json-character-encoding.md)
+* [Schreiben benutzerdefinierter Serialisierungsmodule und Deserialisierer](write-custom-serializer-deserializer.md)
+* [Schreiben von benutzerdefinierten Konvertern für die JSON-Serialisierung](system-text-json-converters-how-to.md)
+* [Unterstützung von DateTime und DateTimeOffset](../datetime/system-text-json-support.md)
 * [System.Text.Json-API-Referenz](xref:System.Text.Json)
 * [System.Text.Json-Serialisierungs-API-Referenz](xref:System.Text.Json.Serialization)
