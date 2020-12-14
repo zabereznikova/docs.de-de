@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110727"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -134,17 +134,17 @@ Die eigentlichen Stars dieser Version sind aber `async` und `await`. Als diese F
 
 Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objektorientierten Sprache erweitert. In Version 6.0, die mit Visual Studio 2015 veröffentlicht wurde, lag der Fokus nicht auf einem einzelnen Hauptfeature, sondern auf der Implementierung vieler kleiner Verbesserungen, die das Programmieren mit C# noch effizienter machten. Hier sind einige davon:
 
-- [Statische Importe](./csharp-6.md#using-static)
-- [Ausnahmefilter](./csharp-6.md#exception-filters)
-- [Initialisierer für automatische Eigenschaften](./csharp-6.md#auto-property-initializers)
-- [Ausdruckskörpermember](./csharp-6.md#expression-bodied-function-members)
-- [Nullpropagator](./csharp-6.md#null-conditional-operators)
-- [Zeichenfolgeninterpolation](./csharp-6.md#string-interpolation)
-- [nameof-Operator](./csharp-6.md#the-nameof-expression)
-- [Indexinitialisierer](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [Statische Importe](../language-reference/keywords/using-static.md)
+- [Ausnahmefilter](../language-reference/keywords/when.md)
+- [Initialisierer für automatische Eigenschaften](../properties.md)
+- [Ausdruckskörpermember](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Nullpropagator](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [Zeichenfolgeninterpolation](../language-reference/tokens/interpolated.md)
+- [nameof-Operator](../language-reference/operators/nameof.md)
 
 Zu weiteren neuen Features gehören:
 
+- Indexinitialisierer
 - „Await“ in Catch- und Finally-Blöcken
 - Standardwerte für Getter-exklusive Eigenschaften
 
