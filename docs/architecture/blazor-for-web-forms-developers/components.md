@@ -6,12 +6,12 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267684"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512768"
 ---
 # <a name="build-reusable-ui-components-with-no-locblazor"></a>Erstellen wiederverwendbarer Benutzeroberflächen Komponenten mit Blazor
 
@@ -98,7 +98,7 @@ Razor-Komponenten machen außerdem eine umfassende Verwendung von *direktivenatt
 
 In der folgenden Tabelle werden die verschiedenen Attribute der in verwendeten Razor-Direktiven zusammengefasst Blazor .
 
-|attribute    |BESCHREIBUNG|Beispiel|
+|Attribut    |Beschreibung|Beispiel|
 |-------------|-----------|-------|
 |`@attributes`|Rendert ein Wörterbuch von Attributen.|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Erstellt eine bidirektionale Datenbindung.    |`<input @bind="username" @bind:event="oninput" />`|
@@ -146,7 +146,7 @@ Abgesehen von normalem HTML können Komponenten auch andere Komponenten als Teil
 Im Gegensatz zu ASP.net-Web Forms Komponenten in Blazor :
 
 - Verwenden Sie kein Element Präfix (z `asp:` . b.).
-- Sie müssen nicht auf der Seite oder in der *web.config*registriert werden.
+- Sie müssen nicht auf der Seite oder in der *web.config* registriert werden.
 
 Stellen Sie sich die Razor-Komponenten wie .NET-Typen vor, denn das ist genau das, was Sie sind. Wenn auf die Assembly verwiesen wird, die die Komponente enthält, kann die Komponente verwendet werden. Um den Namespace der Komponente in den Gültigkeitsbereich zu bringen, wenden Sie die- `@using` Anweisung an
 
@@ -474,7 +474,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender` und werden `OnAfterRenderAsync` *nicht aufgerufen, wenn Sie auf dem Server vorab verwendet*werden.
+`OnAfterRender` und werden `OnAfterRenderAsync` *nicht aufgerufen, wenn Sie auf dem Server vorab verwendet* werden.
 
 Der- `firstRender` Parameter ist `true` das erste Mal, wenn die Komponente gerendert wird, andernfalls ist der Wert `false` .
 
@@ -525,7 +525,7 @@ Blazor Komponenten können Verweise auf ein Element erfassen. Im Gegensatz zu HT
 
 ## <a name="templated-components"></a>Komponenten mit Vorlagen
 
-In ASP.net Web Forms können Sie Steuer *Elemente*mit Vorlagen erstellen. Mithilfe von Vorlagen basierten Steuerelementen kann der Entwickler einen Teil des HTML-Code angeben, der zum Rendering eines Container Steuer Elements verwendet wird. Die Mechanismen der Erstellung von Vorlagen basierten Server Steuerelementen sind komplex, aber Sie ermöglichen leistungsstarke Szenarios zum Rendern von Daten auf Benutzer anpassbare Weise. Beispiele für Steuerelemente mit Vorlagen sind `Repeater` und `DataList` .
+In ASP.net Web Forms können Sie Steuer *Elemente* mit Vorlagen erstellen. Mithilfe von Vorlagen basierten Steuerelementen kann der Entwickler einen Teil des HTML-Code angeben, der zum Rendering eines Container Steuer Elements verwendet wird. Die Mechanismen der Erstellung von Vorlagen basierten Server Steuerelementen sind komplex, aber Sie ermöglichen leistungsstarke Szenarios zum Rendern von Daten auf Benutzer anpassbare Weise. Beispiele für Steuerelemente mit Vorlagen sind `Repeater` und `DataList` .
 
 Blazor Komponenten können auch durch Definition von Komponenten Parametern vom Typ oder Vorlagen Weise durch definiert werden `RenderFragment` `RenderFragment<T>` . Ein `RenderFragment` stellt einen Block von Razor-Markup dar, der dann von der Komponente gerendert werden kann. Ein `RenderFragment<T>` ist ein Block von Razor-Markup, das einen Parameter annimmt, der beim Rendern des renderfragments angegeben werden kann.
 
@@ -550,7 +550,9 @@ Eine übergeordnete Komponente kann dann untergeordneten Inhalt mithilfe von nor
 
 ```razor
 <ChildContentComponent>
-    <p>The time is @DateTime.Now</p>
+    <ChildContent>
+        <p>The time is @DateTime.Now</p>
+    </ChildContent>
 </ChildContentComponent>
 ```
 
