@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: cf9b8f4033e6774684b2b7e3b788ef3c157d95df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96592105"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633987"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Konfigurationsdateien für Code Analyse Regeln
 
@@ -68,13 +68,13 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>Globale analyzerconfig
 
-Beginnend mit dem .net 5,0 SDK (das in Visual Studio 2019, Version 16,8 und höheren Versionen unterstützt wird), können Sie auch Analyzer-Optionen mit globalen _analyzerconfig_ -Dateien konfigurieren. Diese Dateien werden verwendet, um Optionen bereitzustellen, **die für alle Quelldateien in einem Projekt gelten**, unabhängig von deren Dateinamen oder Dateipfaden.
+Beginnend mit dem .net 5 SDK (das in Visual Studio 2019, Version 16,8 und höheren Versionen unterstützt wird), können Sie auch Analyzer-Optionen mit globalen _analyzerconfig_ -Dateien konfigurieren. Diese Dateien werden verwendet, um Optionen bereitzustellen, **die für alle Quelldateien in einem Projekt gelten**, unabhängig von deren Dateinamen oder Dateipfaden.
 
 Im Unterschied zu [EditorConfig](#editorconfig) Dateien können globale Konfigurationsdateien nicht verwendet werden, um Editor-Stileinstellungen für IDES zu konfigurieren, wie z. b. die Einzugs Größe oder das Kürzen von nachfolgenden Leerzeichen. Stattdessen sind Sie ausschließlich für die Angabe von Analyzer-Konfigurationsoptionen auf Projektebene vorgesehen.
 
 ### <a name="format"></a>Format
 
-Im Unterschied EditorConfig zu Dateien, die über Abschnitts Header verfügen müssen, z `[*.cs]` . b., um die entsprechenden Dateien und Ordner zu identifizieren, haben globale analyzerconfig-Dateien keine Abschnitts Header. Stattdessen benötigen Sie einen Eintrag der obersten Ebene des Formulars `is_global = true` , um Sie von regulären Dateien zu unterscheiden EditorConfig . Dies gibt an, dass alle Optionen in der Datei auf das gesamte Projekt angewendet werden. Zum Beispiel:
+Im Unterschied EditorConfig zu Dateien, die über Abschnitts Header verfügen müssen, z `[*.cs]` . b., um die entsprechenden Dateien und Ordner zu identifizieren, haben globale analyzerconfig-Dateien keine Abschnitts Header. Stattdessen benötigen Sie einen Eintrag der obersten Ebene des Formulars `is_global = true` , um Sie von regulären Dateien zu unterscheiden EditorConfig . Dies gibt an, dass alle Optionen in der Datei auf das gesamte Projekt angewendet werden. Beispiel:
 
 ```ini
 is_global = true
@@ -141,6 +141,6 @@ Die vorherigen [allgemeinen Rang Folge Regeln](#general-options) gelten für all
 
 - Informationen zu Rang folgen Regeln für Verwandte Schweregrad Optionen mit unterschiedlichen Schlüsseln, z. b. wenn verschiedene Schweregrade für eine einzelne Regel angegeben werden, und für die Kategorie, zu der die Regel fällt, finden Sie unter [Konfigurationsoptionen für die Code Analyse](configuration-options.md#precedence).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [EditorConfig vs Global analyzerconfig-Entwurfsproblem](https://github.com/dotnet/roslyn/issues/47707)

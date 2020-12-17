@@ -2,12 +2,12 @@
 title: DevOps
 description: Devops-Überlegungen für Native Cloud-Anwendungen
 ms.date: 05/13/2020
-ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1a04f5178877f3fdde707753e94718ce0f0bb49d
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163998"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633714"
 ---
 # <a name="devops"></a>DevOps
 
@@ -57,7 +57,7 @@ Die Organisationseinheit der obersten Ebene in Azure devops wird als Projekt bez
 
 Glücklicherweise haben Entwicklungsteams viele Optionen, wenn Sie ein Repository auswählen. Eine davon ist GitHub.
 
-## <a name="github-actions"></a>GitHub-Aktionen
+## <a name="github-actions"></a>GitHub Actions
 
 GitHub, das in 2009 in basiert, ist ein häufig verbreitetes webbasiertes Repository für das Hosting von Projekten, Dokumentationen und Code. Viele große technische Unternehmen, wie z. b. Apple, Amazon, Google und Mainstream-Unternehmen, verwenden GitHub. GitHub verwendet das Open-Source-System für die verteilte Versionskontrolle namens git als Grundlage. Darüber hinaus fügt Sie einen eigenen Satz von Features hinzu, einschließlich der Mängel Nachverfolgung, Features und Pull Requests, Aufgaben Verwaltung und Wikis für jede Codebasis.
 
@@ -118,11 +118,11 @@ Es gibt viele Tools, die eine statische Analyse des Codes durchführen können, 
 
 Es gibt auch viele Nachteile des einzelnen Repository-Ansatzes. Eine der beunruhigendsten Aspekte besteht darin, dass ein einzelnes Repository Sicherheitsprobleme auslöst. Wenn der Inhalt eines Repository in einem Repository pro Dienstmodell kompromittiert wird, ist die Menge des verlorenen Codes minimal. Mit einem einzelnen Repository könnte alles, was das Unternehmen besitzt, verloren gehen. In der Vergangenheit gab es viele Beispiele, die die gesamte Spieleentwicklung Unternehmen konnten. Das vorhanden sein mehrerer Depots macht weniger Oberflächen verfügbar. Dies ist in den meisten Sicherheitsverfahren ein wünschenswert.
 
-Die Größe des einzelnen Repository ist wahrscheinlich schnell nicht mehr verwaltbar. Dies stellt einige interessante Auswirkungen auf die Leistung dar. Es kann erforderlich sein, spezielle Tools zu verwenden, wie z. b. das [virtuelle Datei System für git](https://vfsforgit.org/), das ursprünglich entwickelt wurde, um Entwickler im Windows-Team zu verbessern.
+Die Größe des einzelnen Repository ist wahrscheinlich schnell nicht mehr verwaltbar. Dies stellt einige interessante Auswirkungen auf die Leistung dar. Es kann erforderlich sein, spezielle Tools zu verwenden, wie z. b. das [virtuelle Datei System für git](https://github.com/Microsoft/VFSForGit), das ursprünglich entwickelt wurde, um Entwickler im Windows-Team zu verbessern.
 
 Häufig wird das Argument für die Verwendung eines einzelnen Repository auf ein Argument heruntergefahren, das Facebook oder Google diese Methode für die Quell Code Anordnung verwendet. Wenn der Ansatz für diese Unternehmen gut genug ist, dann ist es sicherlich der richtige Ansatz für alle Unternehmen. Die Wahrheit ist, dass nur wenige Unternehmen mit der Skalierung von Facebook oder Google arbeiten. Die Probleme, die bei diesen Skalierungen auftreten, unterscheiden sich von den meisten Entwicklern. Was für die Goose geeignet ist, ist für den Gander möglicherweise nicht gut geeignet.
 
-Am Ende kann eine der beiden Lösungen zum Hosten des Quellcodes für die-Dienste verwendet werden. In den meisten Fällen ist der Verwaltungsaufwand und der Engineering-Aufwand, der in einem einzigen Repository betrieben wird, jedoch nicht der größte Vorteil. Das Aufteilen von Code in mehreren Depots fördert die Trennung von Bereichen und fördert die Autonomie zwischen Entwicklungsteams.  
+Am Ende kann eine der beiden Lösungen zum Hosten des Quellcodes für die-Dienste verwendet werden. In den meisten Fällen ist der Verwaltungsaufwand und der Engineering-Aufwand, der in einem einzigen Repository betrieben wird, jedoch nicht der größte Vorteil. Das Aufteilen von Code in mehreren Depots fördert die Trennung von Bereichen und fördert die Autonomie zwischen Entwicklungsteams.
 
 ### <a name="standard-directory-structure"></a>Standard Verzeichnisstruktur
 
@@ -199,7 +199,7 @@ variables:
   artifactName: drop
   buildPlatform: any cpu
   buildConfiguration: release
-  
+
 pool:
   name: Hosted VS2017
   demands:
