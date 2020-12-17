@@ -6,12 +6,12 @@ metadata:
   description: 'Vermittlung von C#-Programmierkenntnissen: für angehende Entwickler, Entwickler, die neu in C# sind, und erfahrene C#-/.NET-Entwickler'
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: bc75503b565020fb9966fd756d87890263f63533
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: 584db55455af54bcf7e91771e3598a7349091bee
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599446"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512150"
 landingContent:
 - title: Erlernen des Programmierens in C#
   linkLists:
@@ -71,38 +71,20 @@ landingContent:
     links:
     - text: Neuerungen in C# 9.0
       url: whats-new/csharp-9.md
-- title: Neue Features in C# 8.0
+- title: Neue Features in C# 9.0
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Neues in C# 8.0
-      url: whats-new/csharp-8.md
-  - linkListType: overview
-    links:
-    - text: Musterabgleich
-      url: pattern-matching.md
-    - text: Nullwerte zulassende Verweistypen
-      url: nullable-references.md
-  - linkListType: concept
-    links:
-    - text: Auswählen einer Nullable-Migrationsstrategie
-      url: nullable-migration-strategies.md
+    - text: Neuerungen in C# 9.0
+      url: whats-new/csharp-9.md
   - linkListType: tutorial
     links:
-    - text: Nutzen und Generieren asynchroner Datenströme
-      url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Entwickeln mit Nullable-Verweistypen
-      url: tutorials/nullable-reference-types.md
-    - text: Upgraden vorhandenen Codes zur Verwendung von Verweistypen, die NULL-Werte zulassen
-      url: tutorials/upgrade-to-nullable-references.md
-    - text: Verwenden des Musterabgleichs für ausdrucksstärkere Algorithmen
-      url: tutorials/pattern-matching.md
-    - text: Sicheres Versionieren von Schnittstellen mit Standardschnittstellenmembern
-      url: tutorials/default-interface-methods-versions.md
-    - text: Mixin-Funktionalität mit Standardschnittstellenmembern
-      url: tutorials/mixins-with-default-interface-methods.md
-    - text: Arbeiten mit Teilmengen unter Verwendung von Bereichen und Indizes
-      url: tutorials/ranges-indexes.md
+    - text: Erkunden von Datensatztypen
+      url: tutorials/exploration/records.md
+    - text: Lesen von Top-Level-Anweisungen
+      url: tutorials/exploration/top-level-statements.md
+    - text: Erkunden neuer Muster
+      url: tutorials/exploration/patterns-objects.md
   - linkListType: reference
     links:
     - text: Wichtige Änderungen beim C#-Compiler

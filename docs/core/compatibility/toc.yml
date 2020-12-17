@@ -34,6 +34,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Logik für die Routingrangfolge in Blazor-Apps geändert'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: Aktualisierte Browserunterstützung'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: Unbedeutende Leerzeichen, die vom Compiler entfernt wurden'
@@ -292,6 +294,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: Azure-Integrationspakete mit Präfix „Microsoft“ entfernt
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Logik für die Routingrangfolge in Blazor-Apps geändert'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: Aktualisierte Browserunterstützung'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: Unbedeutende Leerzeichen, die vom Compiler entfernt wurden'
