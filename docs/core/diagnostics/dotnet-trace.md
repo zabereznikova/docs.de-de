@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-trace“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-trace“ installieren und mithilfe der .NET-Komponente „EventPipe“ zum Erfassen von .NET-Ablaufverfolgungen in Bezug auf einen laufenden Prozesses ohne den nativen Profiler verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
-ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
+ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96549331"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009533"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace-Hilfsprogramm für Leistungsanalysen
 
@@ -78,7 +78,7 @@ Sammelt eine Diagnoseablaufverfolgung von einem ausgeführten Prozess.
 ```console
 dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
     [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
-    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [-n, --name <name>] [--diagnostic-port] [-o|--output <trace-file-path>] [-p|--process-id <pid>]
     [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
     [-- <command>] (for target applications running .NET 5.0 or later)
 ```
@@ -104,6 +104,10 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 - **`-n, --name <name>`**
 
   Der Name des Prozesses, von dem die Ablaufverfolgung erfasst werden soll.
+
+- **`--diagnostic-port <path-to-port>`**
+
+  Hierbei handelt es sich um den Namen des zu erstellenden Diagnoseports. Informationen dazu, wie Sie diese Option zum Erfassen einer Überwachung ab dem App-Start verwenden, finden Sie unter [Verwenden von Diagnoseports zum Erfassen einer Überwachung ab dem App-Start](#use-diagnostic-port-to-collect-a-trace-from-app-startup).
 
 - **`-o|--output <trace-file-path>`**
 
@@ -250,6 +254,48 @@ Sie können das Erfassen der Ablaufverfolgung durch Drücken der Taste `<Enter>`
 > Wenn `hello.exe` über „dotnet-trace“ gestartet wird, werden die Eingaben/Ausgaben umgeleitet, und Sie können nicht mit stdin/stdout interagieren.
 > Wenn Sie das Tool über STRG+C oder SIGTERM beenden, werden sowohl das Tool als auch der untergeordnete Prozess sicher beendet.
 > Wenn der untergeordnete Prozess vor dem Tool beendet wird, wird das Tool ebenfalls beendet, und die Ablaufverfolgung sollte sicher angezeigt werden können.
+
+## <a name="use-diagnostic-port-to-collect-a-trace-from-app-startup"></a>Verwenden von Diagnoseports zum Erfassen einer Überwachung ab dem App-Start
+
+  > [!IMPORTANT]
+  > Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
+
+Der Diagnoseport ist ein neues Runtimefeature, das in .NET 5 hinzugefügt wurde und es Ihnen ermöglicht, die Ablaufverfolgung beim Start der App zu starten. Dies können Sie mit `dotnet-trace` einrichten, indem Sie `dotnet-trace collect -- <command>` wie in den Beispielen oben oder die Option `--diagnostic-port` verwenden.
+
+Die Verwendung von `dotnet-trace <collect|monitor> -- <command>` zum Starten der Anwendung als untergeordneter Prozess ist die einfachste Möglichkeit, schnell mit der Überwachung ab dem Start zu beginnen.
+
+Wenn Sie allerdings präzisere Kontrolle über die Lebensdauer der überwachten App wünschen (z. B., damit die App nur in den ersten 10 Minuten überwacht und dann weiterhin ausgeführt wird) oder mithilfe der CLI mit der App interagieren müssen, können Sie die Option `--diagnostic-port` verwenden, um sowohl die überwachte Ziel-App als auch `dotnet-trace` zu steuern.
+
+1. Der folgende Befehl sorgt dafür, dass `dotnet-trace` einen Diagnosesocket namens `myport.sock` erstellt und auf eine Verbindung wartet.
+
+    > ```dotnet-cli
+    > dotnet-trace collect --diagnostic-port myport.sock
+    > ```
+
+    Ausgabe:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. Starten Sie die Zielanwendung in einer separaten Konsole mit der Umgebungsvariable `DOTNET_DiagnosticPorts`, die Sie auf den Wert in der `dotnet-trace`-Ausgabe festlegen.
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    Dadurch sollte `dotnet-trace` die Ablaufverfolgung für `my-dotnet-app` starten können:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > Das Starten Ihrer App mit `dotnet run` kann sich als problematisch erweisen, da die .NET-CLI viele untergeordnete Prozesse erzeugen kann, bei denen es sich nicht um Ihre App handelt. Diese können vor Ihrer App eine Verbindung mit `dotnet-trace` herstellen, wodurch Ihre App zur Laufzeit angehalten wird. Es wird empfohlen, dass Sie direkt eine eigenständige Version der App oder `dotnet exec` verwenden, um die Anwendung zu starten.
 
 ## <a name="view-the-trace-captured-from-dotnet-trace"></a>Anzeigen der von dotnet-trace erfassten Ablaufverfolgung
 

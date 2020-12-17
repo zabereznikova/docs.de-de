@@ -4,12 +4,12 @@ description: In diesem Artikel erhalten Sie Informationen zu den macOS-Versionen
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: f926479227f11def5c8bb8c6bf29ad30a04e6ed2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1434938a8e8e81da81e495a6b99e6c99467aae1
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715133"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009357"
 ---
 # <a name="install-net-on-macos"></a>Installieren von .NET unter macOS
 
@@ -35,6 +35,7 @@ Die folgende Tabelle enthält die derzeit unterstützten .NET-Releases und die m
 
 | Betriebssystem          | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |---------------------------|---------------|---------------|----------------|
+| macOS 11.0 „Big Sur“        | ✔️ 2.1 ([Versionshinweise][release-notes-21]) | ✔️ 3.1 ([Versionshinweise][release-notes-31]) | ✔️ 5.0 ([Versionshinweise][release-notes-50]) |
 | macOS 10.15 Catalina    | ✔️ 2.1 ([Versionshinweise][release-notes-21]) | ✔️ 3.1 ([Versionshinweise][release-notes-31]) | ✔️ 5.0 ([Versionshinweise][release-notes-50]) |
 | macOS 10.14 Mojave      | ✔️ 2.1 ([Versionshinweise][release-notes-21]) | ✔️ 3.1 ([Versionshinweise][release-notes-31]) | ✔️ 5.0 ([Versionshinweise][release-notes-50]) |
 | macOS 10.13 High Sierra | ✔️ 2.1 ([Versionshinweise][release-notes-21]) | ✔️ 3.1 ([Versionshinweise][release-notes-31]) | ✔️ 5.0 ([Versionshinweise][release-notes-50]) |

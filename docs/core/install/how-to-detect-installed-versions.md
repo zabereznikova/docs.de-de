@@ -6,16 +6,16 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687441"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851613"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>Überprüfen, ob .NET bereits installiert ist
 
-In diesem Artikel erfahren Sie, wie Sie überprüfen, welche Versionen der .NET-Runtime und des SDK auf Ihrem Computer installiert sind. .NET wurde möglicherweise bereits installiert, wenn Sie eine integrierte Entwicklungsumgebung wie Visual Studio oder Visual Studio für Mac besitzen.
+In diesem Artikel erfahren Sie, wie Sie überprüfen, welche Versionen der .NET-Runtime und des SDK auf Ihrem Computer installiert sind. Wenn Sie eine integrierte Entwicklungsumgebung wie Visual Studio oder Visual Studio für Mac besitzen, wurde .NET möglicherweise bereits installiert.
 
 Durch das Installieren eines SDK wird die entsprechende Runtime installiert.
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>Überprüfen auf Installationsordner
 
-Es ist möglich, dass .NET installiert ist, für Ihr Betriebssystem oder Benutzerprofil jedoch nicht zur `PATH`-Variable hinzugefügt wurde. Das Ausführen der Befehle aus den vorherigen Abschnitten funktioniert möglicherweise nicht. Alternativ können Sie überprüfen, ob die .NET-Installationsordner vorhanden sind.
+Es ist möglich, dass .NET installiert ist, für Ihr Betriebssystem oder Benutzerprofil jedoch nicht zur `PATH`-Variable hinzugefügt wurde. In diesem Fall funktionieren die Befehle aus den vorherigen Abschnitten möglicherweise nicht. Alternativ können Sie überprüfen, ob die .NET-Installationsordner vorhanden sind.
 
 Wenn Sie .NET über ein Installationsprogramm oder ein Skript installieren, wird es in einem Standardordner installiert. Meistens bietet das Installationsprogramm oder das Skript, das Sie für die Installation von .NET verwenden, die Möglichkeit, in einen anderen Ordner zu installieren. Wenn Sie in einen anderen Ordner installieren möchten, passen Sie den Anfang des Ordnerpfads an.
 
@@ -191,3 +191,7 @@ Sie können sowohl die SDK-Versionen als auch die Runtime-Versionen mit dem `dot
 - [Installieren Sie die .NET-Runtime und das SDK für Windows](windows.md).
 - [Installieren von .NET unter macOS](macos.md)
 - [Installieren Sie die .NET-Runtime und das SDK für Linux](linux.md).
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [Ermitteln der installierten .NET Framework-Versionen](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

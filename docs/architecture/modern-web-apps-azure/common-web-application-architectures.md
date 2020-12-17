@@ -3,20 +3,20 @@ title: Häufig verwendete Webanwendungsarchitekturen
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häufig verwendete Webanwendungsarchitekturen
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/01/2020
+ms.openlocfilehash: c9c593788d4cdbb5a1d4c57ac91880ef965f06fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682041"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851737"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
-> „Wenn Sie denken, dass eine gute Architektur viel Geld kostet, dann haben Sie noch nicht mit einer schlechten gearbeitet.“  
+> „Wenn Sie denken, dass eine gute Architektur viel Geld kostet, dann haben Sie noch nicht mit einer schlechten gearbeitet.“
 > _– Brian Foote und Joseph Yoder_
 
-Die meisten herkömmlichen .NET-Anwendungen werden als einzelne Einheiten bereitgestellt, die einer ausführbaren Datei oder einer Webanwendung entsprechen, die innerhalb einer IIS-Anwendungsdomäne ausgeführt wird. Dabei handelt es sich um das wohl einfachste Bereitstellungsmodell, das sich gut für interne und kleinere öffentliche Anwendungen eignet. Allerdings eignet sich für die meisten wichtigen Geschäftsanwendungen sogar mit dieser einzelnen Bereitstellungseinheit die logische Unterteilung in mehrere Schichten.
+Die meisten herkömmlichen .NET-Anwendungen werden als einzelne Einheiten bereitgestellt, die einer ausführbaren Datei oder einer Webanwendung entsprechen, die innerhalb einer IIS-Anwendungsdomäne ausgeführt wird. Bei diesem Ansatz handelt es sich um das wohl einfachste Bereitstellungsmodell, das sich gut für interne und kleinere öffentliche Anwendungen eignet. Allerdings eignet sich für die meisten wichtigen Geschäftsanwendungen sogar mit dieser einzelnen Bereitstellungseinheit die logische Unterteilung in mehrere Schichten.
 
 ## <a name="what-is-a-monolithic-application"></a>Was sind monolithische Anwendungen?
 
@@ -40,15 +40,15 @@ Um diese Probleme zu umgehen, greifen Entwickler häufig auf die Möglichkeit zu
 
 ## <a name="what-are-layers"></a>Was sind Schichten?
 
-Wenn eine Anwendung immer komplexer wird, können Sie dagegen vorgehen, indem Sie sie anhand ihrer Zuständigkeiten und Aufgaben aufteilen. Dieses Prinzip wird als „Separation of Concerns“ (Trennung von Belangen) bezeichnet und hilft Ihnen dabei, die Codebasis zu ordnen, damit Sie problemlos feststellen können, an welcher Stelle bestimmte Funktionalität implementiert wurde. Die Strukturierung Ihres Codes ist aber nicht der einzige Vorteil einer aus Schichten bestehenden Architektur.
+Wenn eine Anwendung immer komplexer wird, können Sie dagegen vorgehen, indem Sie sie anhand ihrer Zuständigkeiten und Aufgaben aufteilen. Dieser Ansatz befolgt das Prinzip „Separation of Concerns“ (Trennung von Belangen) und hilft Ihnen dabei, die Codebasis zu ordnen, damit Sie problemlos feststellen können, an welcher Stelle eine bestimmte Funktionalität implementiert wurde. Die Strukturierung Ihres Codes ist aber nicht der einzige Vorteil einer aus Schichten bestehenden Architektur.
 
 Wenn Sie Code in Schichten unterteilen, können häufig verwendete grundlegende Funktionen in der gesamten Anwendung wiederverwendet werden. Dies hat den Vorteil, dass Sie weniger Code schreiben müssen und die Anwendung für eine Implementierung standardisiert wird, was dem [Don‘t Repeat Yourself-Prinzip](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) entspricht.
 
-Wenn eine Architektur aus Schichten besteht, können Anwendungen Einschränkungen für die Kommunikation zwischen den einzelnen Schichten erzwingen. Dies erleichtert die Kapselung. Wenn eine Schicht geändert oder ersetzt wird, sollten nur die Schichten betroffen sein, die mit dieser zusammenarbeiten. Wenn Sie einschränken, welche Schichten voneinander abhängig sind, können die Auswirkungen von Änderungen verringert werden, sodass eine einzige Änderung nicht die gesamte Anwendung betrifft.
+Wenn eine Architektur aus Schichten besteht, können Anwendungen Einschränkungen für die Kommunikation zwischen den einzelnen Schichten erzwingen. Diese Architektur erleichtert die Kapselung. Wenn eine Schicht geändert oder ersetzt wird, sollten nur die Schichten betroffen sein, die mit dieser zusammenarbeiten. Wenn Sie einschränken, welche Schichten voneinander abhängig sind, können die Auswirkungen von Änderungen verringert werden, sodass eine einzige Änderung nicht die gesamte Anwendung betrifft.
 
 Schichten (und die Kapselung) vereinfachen das Ersetzen von Funktionen innerhalb der Anwendung. Möglicherweise verwendet z.B. eine Anwendung anfangs ihre eigene SQL Server-Datenbank als Persistenzspeicher. Sie können sich dann später aber immer noch dafür entscheiden, eine cloudbasierte Persistenzstrategie oder eine Web-API zu verwenden. Wenn die Anwendungen ihre Persistenzimplementierungen innerhalb einer logischen Schicht kapseln, kann diese SQL Server-spezifische Schicht durch eine neue Implementierung derselben öffentlichen Schnittstelle ersetzt werden.
 
-Neben der Möglichkeit, Implementierungen auszutauschen, um möglichen zukünftigen Änderungen von Anforderungen vorzubeugen, können diese mithilfe von Anwendungsschichten auch zu Testzwecken ausgetauscht werden. Die Schichten können während der Tests durch falsche Implementierungen ersetzt werden, die bekannte Antworten auf Anforderungen bereitstellen, sodass Sie keine Tests mehr schreiben müssen, die mit der echten Daten- oder Benutzeroberflächenschicht der Anwendung arbeiten. Dadurch können Tests einfacher geschrieben und im Vergleich zu Tests der echten Infrastruktur der Anwendung schneller ausgeführt werden.
+Neben der Möglichkeit, Implementierungen auszutauschen, um möglichen zukünftigen Änderungen von Anforderungen vorzubeugen, können diese mithilfe von Anwendungsschichten auch zu Testzwecken ausgetauscht werden. Die Schichten können während der Tests durch falsche Implementierungen ersetzt werden, die bekannte Antworten auf Anforderungen bereitstellen, sodass Sie keine Tests mehr schreiben müssen, die mit der echten Daten- oder Benutzeroberflächenschicht der Anwendung arbeiten. Mithilfe dieses Ansatzes können Tests in der Regel einfacher geschrieben und im Vergleich zu Tests der echten Infrastruktur der Anwendung schneller ausgeführt werden.
 
 Das Erstellen logischer Schichten ist eine häufig verwendete Technik zum Verbessern der Strukturierung von Code in Unternehmensanwendungen. Es gibt mehrere Möglichkeiten, Code in Schichten zu strukturieren.
 
@@ -101,7 +101,7 @@ Anwendungen, die den Prinzipien der Abhängigkeitsumkehr und des domänengesteue
 
 Die Referenzanwendung eShopOnWeb befolgt den Ansatz der Clean Architecture bei der Aufteilung des Codes in Projekte. Eine Projektmappenvorlage, die Sie als Ausgangspunkt für Ihren eigenen ASP.NET Core-Code verwenden können, finden Sie im GitHub-Repository [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture).
 
-In der Clean Architecture sind die Geschäftslogik und das Anwendungsmodell im Kern der Anwendung enthalten. Es wird dann das Prinzip Dependency Inversion angewendet, bei dem die Geschäftslogik nicht mehr vom Datenzugriff oder anderen Aufgaben, die die Infrastruktur betreffen, abhängig ist. Stattdessen sind die Informationen zur Infrastruktur und Implementierung vom Anwendungskern abhängig. Dafür werden Abstraktionen oder Schnittstellen im Anwendungskern definiert und anschließend anhand von Typen implementiert, die in der Infrastrukturschicht definiert werden. Diese Architektur wird häufig in Kreisringen dargestellt, die dem Aufbau einer Zwiebel ähneln. In Abbildung 5-7 ist ein Beispiel für die Darstellung der Architektur enthalten.
+In der Clean Architecture sind die Geschäftslogik und das Anwendungsmodell im Kern der Anwendung enthalten. Es wird dann das Prinzip Dependency Inversion angewendet, bei dem die Geschäftslogik nicht mehr vom Datenzugriff oder anderen Aufgaben, die die Infrastruktur betreffen, abhängig ist. Stattdessen sind die Informationen zur Infrastruktur und Implementierung vom Anwendungskern abhängig. Für diese Funktionalität werden Abstraktionen oder Schnittstellen im Anwendungskern definiert und anschließend anhand von Typen implementiert, die in der Infrastrukturschicht definiert werden. Diese Architektur wird häufig in Kreisringen dargestellt, die dem Aufbau einer Zwiebel ähneln. In Abbildung 5-7 ist ein Beispiel für die Darstellung der Architektur enthalten.
 
 ![Clean Architecture: „Zwiebelansicht“](./media/image5-7.png)
 
@@ -215,15 +215,15 @@ Das Verwenden von Containern zur Verwaltung monolithischer Anwendungsbereitstell
 
 Die Bereitstellung von Updates, wie Docker-Images, ist wesentlich schneller und effizienter im Netzwerk. Docker-Images starten in der Regel in Sekunden, wodurch Rollouts beschleunigt werden. Das Löschen einer Docker-Instanz ist genauso einfach wie das Ausführen eines `docker stop`-Befehls und in der Regel in weniger als einer Sekunde abgeschlossen.
 
-Da Container unveränderlich sind, müssen Sie sich keine Gedanken über beschädigte VMs machen. Es kann allerdings vorkommen, das Updateskripts bestimmte Konfigurationen oder restliche Dateien auf einem Datenträger erfassen.
+Da Container unveränderlich sind, müssen Sie sich keine Gedanken über beschädigte VMs machen. Updateskripts hingegen berücksichtigen spezifische auf dem Datenträger verbleibende Konfigurationen oder Dateien möglicherweise nicht.
 
-Sie können Docker-Container für die monolithische Bereitstellung einfacherer Webanwendungen verwenden. Dies verbessert die fortlaufende Integration und die fortlaufenden Bereitstellungspipelines und unterstützt Sie bei der erfolgreichen Bereitstellung in der Produktion. Sie müssen sich nie wieder fragen, warum die Anwendung auf Ihrem Computer, aber nicht in der Produktion funktioniert.
+Sie können Docker-Container für die monolithische Bereitstellung einfacherer Webanwendungen verwenden. Dieser Ansatz verbessert die CI/DC-Pipelines (Continuous Integration und Continuous Deployment) und unterstützt Sie bei der erfolgreichen Bereitstellung in der Produktion. Sie müssen sich nie wieder fragen, warum die Anwendung auf Ihrem Computer, aber nicht in der Produktion funktioniert.
 
 Eine auf Microservices basierende Architektur hat viele Vorteile, die jedoch eine erhöhte Komplexität mit sich bringen. In manchen Fällen überwiegen die Kosten die Vorteile. Dann ist die monolithische Bereitstellung einer Anwendung, die in einem einzigen oder in wenigen Containern ausgeführt wird, besser geeignet.
 
 Eine monolithische Anwendung in gut getrennte Microservices zu zerteilen, ist nicht einfach. Microservices sollten unabhängig voneinander funktionieren, um eine widerstandsfähigere Anwendung bereitzustellen. Wenn Sie keine unabhängigen Feature-Slices der Anwendung bereitstellen können, führt das Trennen derselben nur zu erhöhter Komplexität.
 
-Eine Anwendung muss möglicherweise noch keine Features unabhängig voneinander skalieren. Viele Anwendungen können dies mithilfe eines relativ einfachen Prozesses zum Klonen der gesamten Instanz durchführen, wenn sie über eine einzelne Instanz hinaus skaliert werden müssen. Die zusätzliche Arbeit zum Trennen der Anwendung in diskrete Dienste bietet minimale Vorteile, wenn die Skalierung von vollständigen Instanzen der Anwendung einfach und kosteneffizient ist.
+Eine Anwendung muss möglicherweise noch keine Features unabhängig voneinander skalieren. Viele Anwendungen können dies mithilfe eines relativ einfachen Prozesses zum Klonen der gesamten Instanz durchführen, wenn sie über eine einzelne Instanz hinaus skaliert werden müssen. Die zusätzliche Arbeit zum Unterteilen der Anwendung in diskrete Dienste bietet minimale Vorteile, wenn die Skalierung von vollständigen Instanzen der Anwendung einfach und kosteneffizient ist.
 
 Zu einem frühen Zeitpunkt während der Entwicklung einer Anwendung haben Sie möglicherweise noch keine Vorstellung davon, wo die natürlichen funktionalen Grenzen liegen. Beim Entwickeln eines mindestens anwendungsfähigen Produkts könnte die natürliche Trennung noch nicht verfügbar sein. Einige dieser Bedingungen können temporär sein. Sie können mit dem Erstellen einer monolithischen Anwendung beginnen und später einige Features trennen, damit diese als Microservices entwickelt und bereitgestellt werden. Andere Bedingungen können entscheidend für den Problembereich der Anwendung sein. Das bedeutet, dass die Anwendung möglicherweise nicht in mehrere Microservices unterteilt werden kann.
 
@@ -231,17 +231,17 @@ Das Trennen einer Anwendung in viele diskrete Prozesse führt außerdem zu Mehra
 
 Die deutlich einfachere [Referenzanwendung eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) unterstützt die Verwendung einzelner monolithischer Container. Die Anwendung umfasst eine Webanwendung, die herkömmliche MVC-Ansichten, Web-APIs und Razor Pages enthält. Diese Anwendung kann über den Projektmappenstamm mithilfe der Befehle `docker-compose build` und `docker-compose up` gestartet werden. Dieser Befehl konfiguriert mithilfe der `Dockerfile` aus dem Webprojektstamm einen Container für die Webinstanz und führt den Container auf einem angegebenen Port aus. Sie können die Quelle für diese Anwendung von GitHub herunterladen und diese lokal ausführen. Auch die monolithische Anwendung profitiert von der Bereitstellung in einer Containerumgebung.
 
-Durch die Containerumgebung wird jede Instanz der Anwendung in derselben Umgebung ausgeführt. Dies schließt die Entwicklungsumgebung ein, in der das frühe Testen und die Entwicklung stattfinden. Das Entwicklungsteam kann die Anwendung in einer Containerumgebung ausführen, die der Produktionsumgebung entspricht.
+Durch die Containerumgebung wird jede Instanz der Anwendung in derselben Umgebung ausgeführt. Dieser Ansatz schließt die Entwicklungsumgebung ein, in der die ersten Tests und die Entwicklung stattfinden. Das Entwicklungsteam kann die Anwendung in einer Containerumgebung ausführen, die der Produktionsumgebung entspricht.
 
-Zusätzlich können Containeranwendungen zu geringeren Kosten skaliert werden. Die Verwendung einer Containerumgebung ermöglicht eine größere Ressourcenfreigabe als herkömmliche VM-Umgebungen.
+Darüber hinaus können containerisierte Anwendungen zu geringeren Kosten aufskaliert werden. Die Verwendung einer Containerumgebung ermöglicht eine größere Ressourcenfreigabe als herkömmliche VM-Umgebungen.
 
 Schließlich erzwingt das Containerisieren einer Anwendung eine Trennung zwischen der Geschäftslogik und dem Speicherserver. Wenn die Anwendung skaliert wird, verwenden alle Container ein einziges physisches Speichermedium. In der Regel ist dieses Speichermedium ein Hochverfügbarkeitsserver, der eine SQL Server-Datenbank ausführt.
 
 ## <a name="docker-support"></a>Docker-Unterstützung
 
-Das `eShopOnWeb`-Projekt wird auf .NET Core ausgeführt. Darum kann es entweder auf Linux- oder auf Windows-basierten Containern ausgeführt werden. Beachten Sie, dass Sie für die Docker-Bereitstellung den gleichen Hosttyp für SQL Server verwenden sollten. Linux-basierte Container haben einen geringeren Speicherbedarf und werden bevorzugt.
+Der `eShopOnWeb`-Projekt wird mit .NET Core ausgeführt. Darum kann es entweder auf Linux- oder auf Windows-basierten Containern ausgeführt werden. Beachten Sie, dass Sie für die Docker-Bereitstellung den gleichen Hosttyp für SQL Server verwenden sollten. Linux-basierte Container haben einen geringeren Speicherbedarf und werden bevorzugt.
 
-Sie können Visual Studio 2017 (oder höher) verwenden, um einer vorhandenen Anwendung Docker-Unterstützung hinzuzufügen, indem Sie mit der rechten Maustaste auf ein Projekt im **Projektmappen-Explorer** und dann auf **Hinzufügen** > **Docker-Unterstützung** klicken. Dadurch werden die erforderlichen Dateien hinzugefügt, und das Projekt wird so geändert, dass es diese verwendet. Das aktuelle `eShopOnWeb`-Beispiel enthält diese Dateien bereits.
+Sie können Visual Studio 2017 (oder höher) verwenden, um einer vorhandenen Anwendung Docker-Unterstützung hinzuzufügen, indem Sie mit der rechten Maustaste auf ein Projekt im **Projektmappen-Explorer** und dann auf **Hinzufügen** > **Docker-Unterstützung** klicken. Durch diesen Schritt werden die erforderlichen Dateien hinzugefügt, und das Projekt wird so geändert, dass es diese verwendet. Das aktuelle `eShopOnWeb`-Beispiel enthält diese Dateien bereits.
 
 Die Datei auf Projektmappenebene `docker-compose.yml` enthält Informationen darüber, welche Images erstellt und welche Container gestartet werden müssen. Die Datei ermöglicht Ihnen die Verwendung des `docker-compose`-Befehls zum gleichzeitigen Starten mehrerer Anwendungen. In diesem Fall wird nur das Webprojekt gestartet. Sie können sie ebenfalls zum Konfigurieren von Abhängigkeiten verwenden, z.B. für einen separaten Datenbankcontainer.
 
@@ -268,7 +268,7 @@ networks:
 Die `docker-compose.yml`-Datei verweist auf die `Dockerfile` im `Web`-Projekt. Die `Dockerfile`-Datei wird verwendet, um anzugeben, welcher Basiscontainer verwendet und wie die Anwendung darauf konfiguriert wird. Die `Dockerfile`-Datei von `Web`:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -291,7 +291,7 @@ Wenn Sie die Containeranwendung ausführen, wird diese ausgeführt, bis Sie sie 
 
 Beachten Sie, dass ausgeführte Docker-Container an Ports gebunden sein können, die Sie möglicherweise andernfalls in Ihrer Entwicklungsumgebung verwenden. Wenn Sie versuchen, eine Anwendung mit dem gleichen Port auszuführen oder zu debuggen, den ein aktiver Docker-Container verwendet, erhalten Sie eine Fehlermeldung, die angibt, dass der Server nicht an diesen Port gebunden werden kann. Auch hier sollte das Beenden des Containers das Problem beheben.
 
-Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzufügen möchten, stellen Sie sicher, dass Docker Desktop ausgeführt wird, während Sie dies tun. Der Assistent wird nicht ordnungsgemäß ausgeführt, wenn Docker Desktop beim Starten des Assistenten nicht ausgeführt wird. Darüber hinaus überprüft der Assistent Ihre aktuelle Containerwahl, um die richtige Docker-Unterstützung hinzuzufügen. Wenn Sie Unterstützung für Windows-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker Desktop mit der Konfiguration für Windows-Container ausgeführt wird. Wenn Sie Unterstützung für Linux-Container hinzufügen möchten, führen Sie den Assistenten aus, während Docker mit der Konfiguration für Linux-Container ausgeführt wird.
+Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzufügen möchten, stellen Sie sicher, dass Docker Desktop ausgeführt wird, während Sie dies tun. Der Assistent wird nicht ordnungsgemäß ausgeführt, wenn Docker Desktop beim Starten des Assistenten nicht ausgeführt wird. Darüber hinaus überprüft der Assistent Ihre aktuelle Containerwahl, um die richtige Docker-Unterstützung hinzuzufügen. Wenn Sie die Unterstützung von Windows-Containern hinzufügen möchten, müssen Sie den Assistenten ausführen, während Docker Desktop mit konfigurierten Windows-Containern ausgeführt wird. Wenn Sie die Unterstützung von Linux-Containern hinzufügen möchten, führen Sie den Assistenten aus, während Docker mit konfigurierten Linux-Containern ausgeführt wird.
 
 ### <a name="references--common-web-architectures"></a>Ressourcen: Häufig verwendete Webarchitekturen
 

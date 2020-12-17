@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 6241a9a3a51bd4d5228841caeaf3a7b652fc6eaa
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.date: 12/01/2020
+ms.openlocfilehash: 2a9e55250018352c8019d30a4d615ec39e619e31
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608360"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851229"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -42,7 +42,7 @@ ASP.NET Core ist für die Cloud (öffentliche Cloud, private Cloud, jede andere 
 
 ## <a name="cross-platform"></a>Plattformübergreifend
 
-ASP.NET Core ist plattformübergreifend und kann unter Linux, macOS und Windows ausgeführt werden. Dadurch entstehen viele neue Optionen für die Entwicklung und Bereitstellung von Apps, die mit ASP.NET Core erstellt werden. Docker-Container – sowohl unter Linux als auch unter Windows – können ASP.NET Core-Anwendungen ausführen und diesen ermöglichen, die Vorteile von [Containern und Microservices](../microservices/index.md) zu nutzen.
+ASP.NET Core ist plattformübergreifend und kann unter Linux, macOS und Windows ausgeführt werden. Diese Funktion ermöglicht viele neue Optionen für die Entwicklung und Bereitstellung von Apps, die mit ASP.NET Core erstellt werden. Docker-Container – sowohl unter Linux als auch unter Windows – können ASP.NET Core-Anwendungen ausführen und diesen ermöglichen, die Vorteile von [Containern und Microservices](../microservices/index.md) zu nutzen.
 
 ## <a name="modular-and-loosely-coupled"></a>Modular und lose gekoppelt
 

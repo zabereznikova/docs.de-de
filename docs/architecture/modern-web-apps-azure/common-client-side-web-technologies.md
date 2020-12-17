@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 no-loc:
 - Blazor
-ms.date: 12/04/2019
-ms.openlocfilehash: e8ea035c491fad39d2932572255a19c7c1493418
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 12/01/2020
+ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174353"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851665"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
-> „Websites sollten auf der Oberfläche und in ihrem Inneren gut aussehen.“  
+> „Websites sollten auf der Oberfläche und in ihrem Inneren gut aussehen.“
 > _– Paul Cookson_
 
 ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf clientseitigen Webtechnologien wie HTML, CSS oder JavaScript auf. Indem der Inhalt der Seite (die HTML) vom Layout und Format (das CSS) und dessen Verhalten (über JavaScript) getrennt wird, können komplexe Web-Apps dem Prinzip der Separation of Concerns folgen. Die Struktur, das Design und das Verhalten der Anwendung können so unkomplizierter angepasst werden, da sie nicht miteinander verknüpft sind.
@@ -23,7 +23,7 @@ ASP.NET Core-Anwendungen sind Webanwendungen. Sie bauen normalerweise auf client
 Während HTML und CSS verhältnismäßig stabil sind, entwickelt sich JavaScript bezüglich Anwendungsframeworks und Dienstprogrammen, die von Entwicklern zum Erstellen webbasierter Anwendungen verwendet werden, in Rekordgeschwindigkeit weiter. In diesem Artikel erfahren Sie, wie JavaScript von Webentwicklern verwendet wird. Darüber finden Sie einen allgemeinen Überblick über die clientseitigen Bibliotheken Angular und React.
 
 > [!NOTE]
-> Blazor bietet eine Alternative zu JavaScript-Frameworks für die Erstellung komplexer, interaktiver Clientbenutzeroberflächen. Clientseitige Blazor-Unterstützung ist noch immer in der Vorschauphase, weshalb sie in diesem Kapitel nicht berücksichtigt wird.
+> Blazor bietet eine Alternative zu JavaScript-Frameworks für die Erstellung komplexer, interaktiver Clientbenutzeroberflächen.
 
 ## <a name="html"></a>HTML
 
@@ -65,7 +65,7 @@ Diese Aufgaben können Sie alle mit JavaScript alleine durchführen, aber es gib
 
 Obwohl jQuery für JavaScript-Verhältnisse schon sehr alt ist, ist sie immer noch eine häufig verwendete Bibliothek bei der Arbeit mit HTML/CSS und beim Erstellen von Anwendungen, die AJAX-Aufrufe an Web-APIs durchführen. jQuery funktioniert auf Ebene des Dokumentobjektmodells (DOM) des Browsers und bietet nur ein imperatives statt eines deklarativen Modells.
 
-Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird, wenn der Wert eines Textfelds höher als 10 ist. Dies sollte in jQuery normalerweise durch das Schreiben eines Ereignishandlers implementiert werden. Dazu wird Code benötigt, der den Wert des Textfelds untersucht und die Sichtbarkeit des Zielelements basierend auf diesem Wert ändert. Dabei handelt es sich um eine imperative, codebasierte Herangehensweise. In einem anderen Framework wird möglicherweise die Datenbindung verwendet, um die Sichtbarkeit von Elementen deklarativ an den Wert des Textfelds zu binden. Dazu ist das Schreiben von Code nicht nötig. Allerdings müssen Sie stattdessen die betreffenden Elemente mit Datenbindungsattributen versehen. Mit steigender Komplexität des clientseitigen Verhaltens gewährleisten Herangehensweisen, die die Datenbindung einsetzen, oft einfachere Lösungen mit weniger Code und weniger bedingter Komplexität.
+Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird, wenn der Wert eines Textfelds höher als 10 ist. Diese Funktionalität sollte in jQuery normalerweise durch das Schreiben eines Ereignishandlers implementiert werden. Dazu wird Code benötigt, der den Wert des Textfelds untersucht und die Sichtbarkeit des Zielelements basierend auf diesem Wert ändert. Bei diesem Prozess handelt es sich um eine imperative, codebasierte Vorgehensweise. In einem anderen Framework wird möglicherweise die Datenbindung verwendet, um die Sichtbarkeit von Elementen deklarativ an den Wert des Textfelds zu binden. Für diesen Ansatz ist das Schreiben von Code nicht nötig. Allerdings müssen Sie stattdessen die betreffenden Elemente mit Datenbindungsattributen versehen. Mit steigender Komplexität des clientseitigen Verhaltens gewährleisten Herangehensweisen, die die Datenbindung einsetzen, oft einfachere Lösungen mit weniger Code und weniger bedingter Komplexität.
 
 ### <a name="jquery-vs-a-spa-framework"></a>Vergleich: jQuery und ein SPA-Framework
 
@@ -80,7 +80,7 @@ Gehen wir z.B. davon aus, dass ein Element auf einer Seite sichtbar gemacht wird
 
 Die meisten Features, die jQuery fehlen, können durch andere Bibliotheken hinzugefügt werden. Ein SPA-Framework wie Angular stellt diese Features einfacher bereit, da diese von Anfang an bei dessen Entwicklung berücksichtigt wurden. Zudem ist jQuery eine imperative Bibliothek, was bedeutet, dass Sie jQuery-Funktionen aufrufen müssen, um Vorgänge mit jQuery durchführen zu können. Die meiste Arbeit und die meisten Funktionen, die von SPA-Frameworks bereitgestellt werden, können deklarativ durchgeführt werden, sodass kein Code geschrieben werden muss.
 
-Die Datenbindung ist ein gutes Beispiel dafür. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elements oder mehrerer Elemente an ein *ViewModel*-Objekt auf der Seite, und dann werden Änderungen an diesem Objekt automatisch in den gebundenen Elementen widergespiegelt.
+Die Datenbindung ist ein gutes Beispiel für diese Funktionalität. In jQuery ist normalerweise nur eine Codezeile erforderlich, um den Wert eines DOM-Elements abzurufen oder den Wert eines Elements festzulegen. Diesen Code müssen Sie allerdings immer dann schreiben, wenn Sie den Wert eines Elements verändern möchten, und es kann sein, dass dies für mehrere Funktionen auf einer Seite erforderlich ist. Ein weiteres Beispiel ist die Sichtbarkeit von Elementen. In jQuery müssen Sie an verschiedenen Stellen Code schreiben, um zu steuern, welche Elemente sichtbar sein sollen. In allen diesen Fällen muss jedoch beim Gebrauch der Datenbindung kein Code geschrieben werden. Sie binden lediglich den Wert oder die Sichtbarkeit eines Elements oder mehrerer Elemente an ein *ViewModel*-Objekt auf der Seite, und dann werden Änderungen an diesem Objekt automatisch in den gebundenen Elementen widergespiegelt.
 
 ### <a name="angular-spas"></a>Angular-SPAs
 
@@ -105,7 +105,7 @@ Da Angular-Anwendungen mit Komponenten und Vorlagen statt mit DOM-Elementen arbe
 
 Angular-Apps können mithilfe einer CLI entwickelt werden. Um lokal mit der Angular-Entwicklung beginnen zu können (wenn Sie git und npm bereits installiert haben), müssen Sie einfach nur ein Repository von GitHub kopieren und `npm install` und `npm start` ausführen. Darüber hinaus ist eine eigene CLI im Lieferumfang von Angular enthalten, mit der Projekte erstellt, Dateien hinzugefügt und Test-, Bündelungs- und Bereitstellungstasks unterstützt werden können. Durch diese CLI-Fähigkeit ist Angular insbesondere kompatibel mit ASP.NET Core, das ebenfalls CLI-Unterstützung beinhaltet.
 
-Microsoft hat die Beispielanwendung [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
+Microsoft hat die Beispielanwendung eShopOnContainers entwickelt, die eine Angular-SPA-Implementierung enthält. Diese App beinhaltet Angular-Module zum Verwalten von Einkaufswagen in Onlineshops, zum Laden und Anzeigen von Artikeln aus dem Katalog des Shops und zum Verarbeiten einer Bestellung. Sie können die Beispielanwendung von [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA) herunterladen.
 
 ### <a name="react"></a>React
 
@@ -161,9 +161,19 @@ Dies reicht aus, um „Hello Vue!“ auf der Seite zu rendern. Beachten Sie jedo
 
 Freilich kratzt dies nur an der Oberfläche dessen, was Vue zu leisten vermag. Das Framework hat in den letzten Jahren sehr viel an Popularität gewonnen und eine große Community. Es gibt eine [große und wachsende Liste von unterstützenden Komponenten und Bibliotheken](https://github.com/vuejs/awesome-vue#redux), die mit Vue zusammenarbeiten, um das Framework außerdem zu erweitern. Wenn Sie Ihrer Webanwendung clientseitiges Verhalten hinzufügen möchten oder die Einrichtung einer vollständigen SPA in Betracht ziehen, lohnt sich ein Blick auf Vue.
 
+### <a name="no-locblazor-webassembly"></a>Blazor WebAssembly
+
+Im Gegensatz zu anderen JavaScript-Frameworks ist `Blazor WebAssembly` ein SPA-Framework (Single-Page-App) für das Erstellen interaktiver, clientseitiger Web-Apps mit .NET. Blazor WebAssembly verwendet offene Webstandards ohne Plug-Ins und ohne dass Code in anderen Sprachen neu kompiliert werden muss. BlazorWebAssembly funktioniert in allen modernen Webbrowsern, einschließlich mobiler Browser.
+
+Das Ausführen von .NET-Code in einem Webbrowser wird durch WebAssembly (Kurzform: `wasm`) ermöglicht. Es handelt sich um ein Bytecodeformat, das für schnelles Downloaden und die maximale Ausführungsgeschwindigkeit optimiert ist. WebAssembly ist ein offener Webstandard, der in Webbrowsern ohne Plug-Ins unterstützt wird.
+
+WebAssembly-Code kann über JavaScript auf alle Funktionen des Browsers zugreifen. Dies wird als JavaScript-Interoperabilität bezeichnet (häufig als JavaScript Interop oder JS Interop abgekürzt). Über WebAssembly im Browser ausgeführter .NET-Code wird in der JavaScript-Sandbox des Browsers ausgeführt. Hierbei greifen die Schutzmaßnahmen der Sandbox gegen schädliche Aktionen auf dem Clientcomputer.
+
+Ausführliche Informationen finden Sie in der [Einführung in ASP.NET CoreBlazor](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0).
+
 ### <a name="choosing-a-spa-framework"></a>Entscheidung für ein SPA-Framework
 
-Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am besten unterstützt, beachten Sie besonders die folgenden Aspekte:
+Bei der Entscheidung, welche Option sich am besten zur Unterstützung Ihrer SPA eignet, sollten Sie die folgenden Aspekte beachten:
 
 - Kennt sich Ihr Team mit dem Framework und dessen Abhängigkeiten aus (dies umfasst in einigen Fällen auch TypeScript)?
 
@@ -177,7 +187,7 @@ Wenn Sie sich für ein JavaScript-Framework entscheiden müssen, das Ihre SPA am
 
 - Wie aktiv ist das Kernteam? Werden Probleme behoben und regelmäßig neue Versionen veröffentlicht?
 
-JavaScript-Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheiden Sie sich anhand der oben aufgelisteten Fragen für ein geeignetes Framework. Wenn es sein kann, dass sich ein Framework für Sie schnell als ungeeignet herausstellt, entscheiden Sie sich für ein Framework, dass kommerziellen Support anbietet und/oder von einem großen Unternehmen entwickelt wird.
+Frameworks entwickeln sich in Rekordgeschwindigkeit weiter. Entscheiden Sie sich anhand der oben aufgelisteten Fragen für ein geeignetes Framework. Wenn es sein kann, dass sich ein Framework für Sie schnell als ungeeignet herausstellt, entscheiden Sie sich für ein Framework, dass kommerziellen Support anbietet und/oder von einem großen Unternehmen entwickelt wird.
 
 > ### <a name="references--client-web-technologies"></a>Ressourcen: Clientseitige Webtechnologien
 >

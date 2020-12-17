@@ -3,13 +3,13 @@ title: Entwicklungsprozess für Azure
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entwicklungsprozess für Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169036"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851626"
 ---
 # <a name="development-process-for-azure"></a>Entwicklungsprozess für Azure
 
@@ -30,9 +30,9 @@ Egal, ob Sie eine vollständige und leistungsstarke integrierte Entwicklungsumge
 
 [Herunterladen von Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code und DotNet-CLI** (Plattformübergreifende Tools für Mac, Linux und Windows). Wenn Sie einen einfachen und plattformübergreifenden Editor bevorzugen, der jede beliebige Entwicklungssprache unterstützt, können Sie Microsoft Visual Studio Code und die DotNet-CLI verwenden. Diese Produkte bieten eine einfachen aber widerstandsfähigen Prozess, der den Entwicklungsworkflow optimiert. Darüber hinaus unterstützt Visual Studio Code Erweiterung für die C\#- und Webentwicklung durch Bereitstellung von IntelliSense und Verknüpfungen für Aufgaben im Editor.
+**Visual Studio Code und .NET-CLI** (Plattformübergreifende Tools für Mac, Linux und Windows). Wenn Sie einen einfachen und plattformübergreifenden Editor bevorzugen, der jede beliebige Entwicklungssprache unterstützt, können Sie Microsoft Visual Studio Code und die DotNet-CLI verwenden. Diese Produkte bieten eine einfachen aber widerstandsfähigen Prozess, der den Entwicklungsworkflow optimiert. Darüber hinaus unterstützt Visual Studio Code Erweiterung für die C\#- und Webentwicklung durch Bereitstellung von IntelliSense und Verknüpfungen für Aufgaben im Editor.
 
-[.NET Core SDK herunterladen](https://dotnet.microsoft.com/download)
+[Herunterladen des .NET SDK](https://dotnet.microsoft.com/download)
 
 [Visual Studio Code herunterladen](https://code.visualstudio.com/download)
 
@@ -56,17 +56,17 @@ Erstellen Sie einen Azure App Service, in dem Sie Ihre Anwendung bereitstellen. 
 
 **Abbildung 10-1** Erstellen einer neuen Azure App Service-Webanwendung im Azure-Portal.
 
-Der CI-Buildprozess führt einen automatisierten Buildvorgang aus, wenn neuer Code an das Quellcodeverwaltungs-Repository des Projekts committet wird. Dadurch erhalten Sie sofortiges Feedback, dass der Code erstellt wird (und im Idealfall die automatisierten Tests besteht) und bereitgestellt werden kann. Dieser CI-Build erstellt ein Web Deploy-Paketartefakt und veröffentlicht dieses für die Nutzung durch Ihren CD-Prozess.
+Der CI-Buildprozess führt einen automatisierten Buildvorgang aus, wenn neuer Code an das Quellcodeverwaltungs-Repository des Projekts committet wird. Durch diesen Prozess erhalten Sie sofortiges Feedback, dass der Code erstellt wird (und im Idealfall die automatisierten Tests besteht) und bereitgestellt werden kann. Dieser CI-Build erstellt ein Web Deploy-Paketartefakt und veröffentlicht dieses für die Nutzung durch Ihren CD-Prozess.
 
 [Definieren des CI-Buildprozesses](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Achten Sie darauf, dass die Continuous Integration aktiviert ist, damit das System den Buildvorgang der Warteschlange hinzufügt, wenn jemand in Ihrem Team neuen Code committet. Testen Sie den Build und stellen Sie sicher, dass er ein Web Deploy-Paket als eines seiner Artefakte erstellt.
 
-Wenn ein Build erfolgreich ist, werden die Ergebnisse Ihres CI-Builds durch Ihren CD-Prozess für Ihre Azure-Webanwendung bereitgestellt. Erstellen und konfigurieren Sie ein *Release*, das Sie dann für Ihren Azure App Service bereitstellen, um dies zu konfigurieren.
+Wenn ein Build erfolgreich ist, werden die Ergebnisse Ihres CI-Builds durch Ihren CD-Prozess für Ihre Azure-Webanwendung bereitgestellt. Erstellen und konfigurieren Sie ein *Release*, das Sie dann für Ihren Azure App Service bereitstellen, um diesen Schritt zu konfigurieren.
 
 [Bereitstellen einer Azure-Web-App](/azure/devops/pipelines/targets/webapp)
 
-Sobald Ihre CI- und CD-Pipeline konfiguriert ist, können Sie Ihre Webanwendung aktualisieren und dann an die Quellcodeverwaltung committen, um diese bereitzustellen.
+Sobald Ihre CI- und CD-Pipeline konfiguriert ist, können Sie mühelos Updates für Ihre Webanwendung durchführen und dann an die Quellcodeverwaltung committen, um diese bereitzustellen.
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Entwicklungsworkflow für in Azure gehostete ASP.NET Core-Apps
 
@@ -78,7 +78,7 @@ Sobald Sie ihr Azure-Konto und Ihre CI- und CD-Prozesse konfiguriert haben, ist 
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>Schritt 1. Lokale Entwicklungsumgebung – innere Schleife
 
-Die Entwicklung Ihrer ASP.NET Core-Anwendung für die Bereitstellung in Azure unterscheidet sich nicht von anderer Anwendungsentwicklung. Verwenden Sie eine lokale Entwicklungsumgebung, mit der Sie vertraut sind, egal ob es sich dabei um Visual Studio 2017, die DotNet-CLI mit Visual Studio Code oder um Ihren bevorzugten Editor handelt. Sie können Code schreiben, ausführen und Ihre Änderungen debuggen, automatisierte Tests ausführen und lokale Commits zur Quellcodeverwaltung erstellen, bis Sie bereit dazu sind, Ihre Änderungen an Ihr freigegebenes Repository zur Quellcodeverwaltung zu übergeben.
+Die Entwicklung Ihrer ASP.NET Core-Anwendung für die Bereitstellung in Azure unterscheidet sich nicht von anderer Anwendungsentwicklung. Verwenden Sie eine lokale Entwicklungsumgebung, mit der Sie vertraut sind, egal ob es sich dabei um Visual Studio 2019, die .NET-CLI mit Visual Studio Code oder um Ihren bevorzugten Editor handelt. Sie können Code schreiben, ausführen und Ihre Änderungen debuggen, automatisierte Tests ausführen und lokale Commits zur Quellcodeverwaltung erstellen, bis Sie bereit dazu sind, Ihre Änderungen an Ihr freigegebenes Repository zur Quellcodeverwaltung zu übergeben.
 
 #### <a name="step-2-application-code-repository"></a>Schritt 2 Repository für Anwendungscode
 
@@ -90,7 +90,7 @@ Ein neuer Buildvorgang wird auf dem Buildserver ausgelöst, wenn ein neuer Commi
 
 #### <a name="step-4-build-server-continuous-delivery"></a>Schritt 4. Buildserver: Continuous Delivery
 
-Wenn ein Buildvorgang erfolgreich war, übernimmt der CD-Prozess die erstellten Buildartefakte. Ein Web Deploy-Paket wird einbezogen. Der Buildserver stellt dieses Paket für Azure App Service bereit und ersetzt dabei alle vorhandenen Dienste durch die neu erstellten. In der Regel ist dieser Schritt auf eine Stagingumgebung ausgerichtet. Manche Anwendungen führen durch einen CD-Prozess jedoch direkt eine Bereitstellung für die Produktion durch.
+Wenn ein Buildvorgang erfolgreich war, übernimmt der CD-Prozess die erstellten Buildartefakte. Dieser Prozess umfasst ein Web Deploy-Paket. Der Buildserver stellt dieses Paket für Azure App Service bereit und ersetzt dabei alle vorhandenen Dienste durch die neu erstellten. In der Regel ist dieser Schritt auf eine Stagingumgebung ausgerichtet. Manche Anwendungen führen durch einen CD-Prozess jedoch direkt eine Bereitstellung für die Produktion durch.
 
 #### <a name="step-5-azure-app-service-web-app"></a>Schritt 5. Azure App Service-Web-App
 

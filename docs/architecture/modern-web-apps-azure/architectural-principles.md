@@ -3,13 +3,13 @@ title: Architekturprinzipien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 12/01/2020
+ms.openlocfilehash: f4079e0409c1675e8f8a3e494303683daeef29c1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396247"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851411"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -30,7 +30,7 @@ Anwendungen können – architektonisch gesehen – logisch erstellt werden, um 
 
 Unterschiedliche Teile einer Anwendung müssen die **Kapselung** verwenden, um sie von anderen Teile der Anwendung zu isolieren. Anwendungskomponenten und -schichten sollten ihre interne Implementierung anpassen können, ohne dass Fehler bei ihren Komponenten verursacht werden, solange nicht gegen externe Verträge verstoßen wird. Durch die ordnungsgemäße Verwendung der Kapselung kann die lose Kopplung und Modularität in Anwendungsdesigns erreicht werden, da Objekte und Pakete durch alternative Implementierung ersetzt werden können, solange dieselbe Schnittstelle beibehalten wird.
 
-In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen Zustand der Klasse von außerhalb. Wenn ein Akteur von außerhalb den Zustand des Objekts manipulieren will, sollte dies durch eine klar definierte Funktion (oder einen Eigenschaftensetter) erfolgen und nicht über den Direktzugriff auf den privaten Zustand des Objekts. Anwendungskomponenten und Anwendungen selbst müssen ebenso klar definierte Schnittstellen für die Verwendung durch ihre Komponenten vorweisen und nicht zulassen, dass ihr Zustand direkt geändert werden kann. Dadurch kann das interne Design der Anwendung über einen Zeitraum weiterentwickelt werden, ohne dass die Sorge besteht, dass durch diese Aktion Fehler bei Komponenten auftritt, solange die öffentlichen Verträge bestehen.
+In Klassen erfolgt die Kapselung durch Verringern des Zugriffs auf den internen Zustand der Klasse von außerhalb. Wenn ein Akteur von außerhalb den Zustand des Objekts manipulieren will, sollte dies durch eine klar definierte Funktion (oder einen Eigenschaftensetter) erfolgen und nicht über den Direktzugriff auf den privaten Zustand des Objekts. Anwendungskomponenten und Anwendungen selbst müssen ebenso klar definierte Schnittstellen für die Verwendung durch ihre Komponenten vorweisen und nicht zulassen, dass ihr Zustand direkt geändert werden kann. Durch diesen Ansatz kann das interne Design der Anwendung über einen Zeitraum weiterentwickelt werden, ohne dass die Sorge besteht, dass durch diese Aktion Komponentenfehler auftreten, solange die öffentlichen Verträge bestehen.
 
 ### <a name="dependency-inversion"></a>Abhängigkeitsumkehr
 

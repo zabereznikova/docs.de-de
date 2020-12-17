@@ -1,13 +1,13 @@
 ---
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634369"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851696"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- Erstellen Sie eine Projektmappe, eine Konsolen-App und zwei Klassenbibliotheken. Fügen Sie die Projekte zur Projektmappe hinzu, und verwenden Sie die Option `--solution-folder` von `dotnet sln`, um die Klassenbibliotheken in einem Projektmappenordner zu organisieren.
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  Der folgende Screenshot zeigt das Ergebnis im **Projektmappen-Explorer** von Visual Studio 2019:
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="Projektmappen-Explorer mit Klassenbibliotheksprojekten gruppiert in einem Projektmappenordner":::

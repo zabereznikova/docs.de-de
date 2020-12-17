@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-counters“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-counter“ installieren und für die Ad-hoc-Integritätsüberwachung und allgemeine Leistungsuntersuchung verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: 7dd4c06f3abe423552ba1d3eb82f6d0c35a84d0b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822216"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009546"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Untersuchen von Leistungsindikatoren (dotnet-counters)
 
@@ -71,7 +71,7 @@ Mit diesem Befehl werden regelmäßig counter-Werte gesammelt und zur Nachbearbe
 ### <a name="synopsis"></a>Übersicht
 
 ```console
-dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
+dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters <COUNTERS>] [--format] [-o|--output] [-- <command>]
 ```
 
 ### <a name="options"></a>Optionen
@@ -83,6 +83,10 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   Dies ist der Name des Prozesses, von dem die Leistungsindikatordaten erfasst werden sollen.
+
+- **`--diagnostic-port`**
+
+  Hierbei handelt es sich um den Namen des zu erstellenden Diagnoseports. Informationen zur Verwendung dieser Option, um die Überwachung von Leistungsindikatoren beim Start der App zu starten, finden Sie unter [Verwenden von Diagnoseports](#using-diagnostic-port).
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -106,6 +110,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > Wenn Sie diese Option verwenden, wird der erste Prozess von .NET 5.0 überwacht, der mit dem Tool kommuniziert, d. h. der Befehl erfasst nur die erste Anwendung, wenn mehrere .NET-Anwendungen gestartet werden. Sie sollten daher diese Option für eigenständige Anwendungen oder die Option `dotnet exec <app.dll>` verwenden.
+
+  > [!NOTE]
+  > Wenn eine ausführbare .NET-Datei über „dotnet-counters“ gestartet wird, werden die Eingaben/Ausgaben umgeleitet, und Sie können nicht mehr mit „stdin/stdout“ interagieren. Wenn Sie das Tool über STRG+C oder SIGTERM beenden, werden sowohl das Tool als auch der untergeordnete Prozess sicher beendet. Wenn der untergeordnete Prozess vor dem Tool beendet wird, wird das Tool ebenfalls beendet, und die Ablaufverfolgung sollte sicher angezeigt werden können. Wenn Sie „stdin/stdout“ verwenden müssen, können Sie die Option `--diagnostic-port` verwenden. Weitere Informationen finden Sie unter [Verwenden von Diagnoseports](#using-diagnostic-port).
 
 ### <a name="examples"></a>Beispiele
 
@@ -180,7 +187,7 @@ Zeigt regelmäßig aktualisierte Werte ausgewählter Zähler an.
 ### <a name="synopsis"></a>Übersicht
 
 ```console
-dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-interval] [--counters] [-- <command>]
+dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-port] [--refresh-interval] [--counters] [-- <command>]
 ```
 
 ### <a name="options"></a>Optionen
@@ -192,6 +199,10 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 - **`-n|--name <name>`**
 
   Dies ist der Name des Prozesses, der überwacht werden soll.
+
+- **`--diagnostic-port`**
+
+  Hierbei handelt es sich um den Namen des zu erstellenden Diagnoseports. Informationen zur Verwendung dieser Option, um die Überwachung von Leistungsindikatoren beim Start der App zu starten, finden Sie unter [Verwenden von Diagnoseports](#using-diagnostic-port).
 
 - **`--refresh-interval <SECONDS>`**
 
@@ -207,6 +218,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--refresh-int
 
   > [!NOTE]
   > Wenn Sie diese Option verwenden, wird der erste Prozess von .NET 5.0 überwacht, der mit dem Tool kommuniziert, d. h. der Befehl erfasst nur die erste Anwendung, wenn mehrere .NET-Anwendungen gestartet werden. Sie sollten daher diese Option für eigenständige Anwendungen oder die Option `dotnet exec <app.dll>` verwenden.
+
+  > [!NOTE]
+  > Wenn eine ausführbare .NET-Datei über „dotnet-counters“ gestartet wird, werden die Eingaben/Ausgaben umgeleitet, und Sie können nicht mehr mit „stdin/stdout“ interagieren. Wenn Sie das Tool über STRG+C oder SIGTERM beenden, werden sowohl das Tool als auch der untergeordnete Prozess sicher beendet. Wenn der untergeordnete Prozess vor dem Tool beendet wird, wird das Tool ebenfalls beendet, und die Ablaufverfolgung sollte sicher angezeigt werden können. Wenn Sie „stdin/stdout“ verwenden müssen, können Sie die Option `--diagnostic-port` verwenden. Weitere Informationen finden Sie unter [Verwenden von Diagnoseports](#using-diagnostic-port).
 
 ### <a name="examples"></a>Beispiele
 
@@ -313,6 +327,48 @@ dotnet-counters ps [-h|--help]
 ```console
 > dotnet-counters ps
   
-  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  15683 WebApi     /home/user/repos/WebApi/WebApi
   16324 dotnet     /usr/local/share/dotnet/dotnet
 ```
+
+## <a name="using-diagnostic-port"></a>Verwenden des Diagnoseports
+
+  > [!IMPORTANT]
+  > Das funktioniert nur bei Anwendungen mit .NET 5.0 oder höher.
+
+Der Diagnoseport ist ein neues Runtimefeature, das in .NET 5 hinzugefügt wurde und es Ihnen ermöglicht, die Überwachung oder Erfassung von Leistungsindikatoren beim Start der App zu starten. Dies können Sie mit `dotnet-counters` einrichten, indem Sie `dotnet-counters <collect|monitor> -- <command>` wie in den Beispielen oben oder die Option `--diagnostic-port` verwenden.
+
+Die Verwendung von `dotnet-counters <collect|monitor> -- <command>` zum Starten der Anwendung als untergeordneter Prozess ist die einfachste Möglichkeit, schnell mit der Überwachung ab dem Start zu beginnen.
+
+Wenn Sie allerdings präzisere Kontrolle über die Lebensdauer der überwachten App wünschen (z. B., damit die App nur in den ersten 10 Minuten überwacht und dann weiterhin ausgeführt wird) oder mithilfe der CLI mit der App interagieren müssen, können Sie die Option `--diagnostic-port` verwenden, um sowohl die überwachte Ziel-App als auch `dotnet-counters` zu steuern.
+
+1. Der folgende Befehl sorgt dafür, dass „dotnet-counters“ einen Diagnosesocket namens `myport.sock` erstellt und auf eine Verbindung wartet.
+
+    > ```dotnet-cli
+    > dotnet-counters collect --diagnostic-port myport.sock
+    > ```
+
+    Ausgabe:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ```
+
+2. Starten Sie die Zielanwendung in einer separaten Konsole mit der Umgebungsvariable `DOTNET_DiagnosticPorts`, die Sie auf den Wert in der `dotnet-counters`-Ausgabe festlegen.
+
+    > ```bash
+    > export DOTNET_DiagnosticPorts=/home/user/myport.sock
+    > ./my-dotnet-app arg1 arg2
+    > ```
+
+    Dadurch sollte `dotnet-counters` damit beginnen, Leistungsindikatoren von `my-dotnet-app` zu erfassen:
+
+    > ```bash
+    > Waiting for connection on myport.sock
+    > Start an application with the following environment variable: DOTNET_DiagnosticPorts=myport.sock
+    > Starting a counter session. Press Q to quit.
+    > ```
+
+    > [!IMPORTANT]
+    > Das Starten Ihrer App mit `dotnet run` kann sich als problematisch erweisen, da die .NET-CLI viele untergeordnete Prozesse erzeugen kann, bei denen es sich nicht um Ihre App handelt. Diese können vor Ihrer App eine Verbindung mit `dotnet-counters` herstellen, wodurch Ihre App zur Laufzeit angehalten wird. Es wird empfohlen, dass Sie direkt eine eigenständige Version der App oder `dotnet exec` verwenden, um die Anwendung zu starten.

@@ -4,12 +4,12 @@ description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulich
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: b30aa206057107aa17fcd62e0f042f9fe3ad56dc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031929"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851678"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>Installieren des .NET SDK oder der .NET-Runtime unter CentOS
 
@@ -50,14 +50,7 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
-> [!TIP]
-> NET 5.0 ist in den Standardpaketrepositorys noch nicht verfügbar, .NET Core 3.1 jedoch schon. Verwenden Sie zur Installation von .NET Core 3.1 den `dnf install`-Befehl mit dem entsprechenden Paket, z. B. `aspnetcore-runtime-3.1` oder `dotnet-sdk-3.1`. Die folgenden Anweisungen beziehen sich auf .NET 5.0.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm
-```
+.NET 5.0 ist in den Standardpaketrepositorys für CentOS 8 verfügbar.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 

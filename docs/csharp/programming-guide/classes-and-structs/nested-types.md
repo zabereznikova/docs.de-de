@@ -5,16 +5,16 @@ ms.date: 02/08/2020
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 9e1c6c1e8b22b5447d43915ab02984aa13146301
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 0741ae88103b16ce34fd5a38b789beaf428e734a
+ms.sourcegitcommit: 0014aa4d5cb2da56a70e03fc68f663d64df5247a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864942"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96918579"
 ---
 # <a name="nested-types-c-programming-guide"></a>Geschachtelte Typen (C#-Programmierhandbuch)
 
-Ein innerhalb einer [Klasse](../../language-reference/keywords/class.md), [Struktur](../../language-reference/builtin-types/struct.md) oder [Schnittstelle](../../language-reference/keywords/interface.md) definierter Typ wird als geschachtelter Typ bezeichnet. Beispiel:
+Typen, die in einer [Klasse](../../language-reference/keywords/class.md), einer [Struktur](../../language-reference/builtin-types/struct.md), einem [Delegat](../../language-reference/builtin-types/reference-types.md#the-delegate-type) oder einer [Schnittstelle](../../language-reference/keywords/interface.md) definiert werden, werden als geschachtelte Typen bezeichnet. Beispiel:
 
 [!code-csharp[DeclareNestedClass](~/samples/snippets/csharp/objectoriented/nestedtypes.cs#DeclareNestedClass)]
 
