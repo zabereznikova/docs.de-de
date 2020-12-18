@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: cf19b4e4b7a7b9033fb97b2b2736ab0383c11f93
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688175"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598932"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Verwenden von .NET für Apache Spark in Jupyter Notebook
 
@@ -43,7 +43,7 @@ Für die Arbeit mit Jupyter Notebook benötigen Sie zwei Dinge.
         > [!IMPORTANT]
         > Standardmäßig wird die neueste Version des Pakets heruntergeladen. **Stellen Sie sicher, dass die heruntergeladene Version Ihrem Apache Spark .NET-Worker entspricht.**
 
-    1. Klicken Sie im Bereich **Info** auf **Paket herunterladen**, um die neueste Version des Pakets herunterzuladen. Der Name des Pakets ähnelt *microsoft.spark.[PAKETVERSION].nupkg*.
+    1. Klicken Sie im Bereich **Info** auf **Paket herunterladen**, um die neueste Version des Pakets herunterzuladen. Der Name des Pakets hat das Format *microsoft.spark.[PAKETVERSION].nupkg*.
     1. Entpacken Sie das heruntergeladene Paket. Das entpackte Verzeichnis sollte ein Unterverzeichnis namens *jars* enthalten. Notieren Sie sich den Pfad, da Sie ihn später benötigen.
 
 ## <a name="start-net-for-apache-spark"></a>Starten von .NET für Apache Spark

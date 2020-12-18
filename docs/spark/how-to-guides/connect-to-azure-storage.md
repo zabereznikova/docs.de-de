@@ -19,20 +19,20 @@ In diesem Artikel erfahren Sie, wie Sie eine Verbindung mit einem ADLS Gen2- (Az
 
 ## <a name="set-up-the-environment"></a>Einrichten der Umgebung
 
-1. Laden Sie die Apache Spark-Verteilung von der [offiziellen Website](https://archive.apache.org/dist/spark/) herunter, die ohne Hadoop erstellt wurde (wählen Sie eine Version aus, die [von .NET für Apache Spark unterstützt wird](https://github.com/dotnet/spark#supported-apache-spark)), und extrahieren Sie sie in ein Verzeichnis. Legen Sie die Umgebungsvariable `SPARK_HOME` für dieses Verzeichnis fest.
-2. Laden Sie die Apache Hadoop-Binärdatei [hier](http://hadoop.apache.org/releases.html) herunter, extrahieren Sie sie in einen Ordner, und legen Sie die Umgebungsvariable `HADOOP_HOME` für diesen Ordner fest.
+1. Laden Sie die Apache Spark-Distribution ohne Hadoop von der [offiziellen Website](https://archive.apache.org/dist/spark/) herunter (wählen Sie eine Version aus, die [von .NET für Apache Spark unterstützt wird](https://github.com/dotnet/spark#supported-apache-spark)), und extrahieren Sie sie in ein Verzeichnis. Legen Sie die Umgebungsvariable `SPARK_HOME` auf dieses Verzeichnis fest.
+2. Laden Sie die Apache Hadoop-Binärdatei [hier](http://hadoop.apache.org/releases.html) herunter, extrahieren Sie sie in einen Ordner, und legen Sie die Umgebungsvariable `HADOOP_HOME` auf diesen Ordner fest.
 3. Laden Sie die Dateien `winutils.exe` und `hadoop.dll` von [diesem Speicherort](https://github.com/cdarlint/winutils) herunter (abhängig von der Hadoop-Version, die Sie im vorherigen Schritt installiert haben), und fügen Sie diese in den bin-Ordner Ihrer Hadoop-Instanz ein. Diese Binärdateien werden unter Windows benötigt, um alles ordnungsgemäß einzurichten (dies wird im [Apache-Wiki](https://cwiki.apache.org/confluence/display/HADOOP2/WindowsProblems) ausführlich erläutert).
 4. Konfigurieren Sie Ihre Hadoop-Installation, indem Sie die folgenden Änderungen an Ihrer `%HADOOP_HOME%\etc\hadoop\hadoop-env.cmd`-Datei vornehmen:
     1. Legen Sie die `JAVA_HOME`-Eigenschaft mithilfe des DOS-Pfads fest (da Hadoop keine Leerzeichen in `JAVA_HOME` akzeptiert). Dies sollte in etwa wie folgt aussehen: `C:\Progra~1\Java\jdk1.8.0_241` (Verweist auf die jeweilige auf Ihrem lokalen Computer installierte Version von Java).
     2. Fügen Sie `%HADOOP_HOME%\share\hadoop\tools\lib\*` an `HADOOP_CLASSPATH` an.
     Ihre endgültige `hadoop-env.cmd`-Datei sollte in etwa wie folgt aussehen:
 
-    ![Endgültige hadoop-env.cmd-Datei](./media/connect-external-sources/hadoop-env.png)
+    ![Finale Datei „hadoop-env.cmd“](./media/connect-external-sources/hadoop-env.png)
 
 ## <a name="configure-your-storage-account-in-hadoop"></a>Konfigurieren Ihres Speicherkontos in Hadoop
 
-1. Öffnen Sie das ADLS Gen2- oder WASB-Speicherkonto, mit dem Sie eine Verbindung über das [Azure-Portal](https://portal.azure.com) herstellen möchten, öffnen Sie das Panel **Zugriffsschlüssel** auf dem Blatt **Einstellungen** , und kopieren Sie den Wert von **Key** (Schlüssel) unter key1.
-2. Zum Konfigurieren des Zugriffs auf Ihr ADLS Gen2-Konto für Hadoop müssten Sie Ihre `core-site.xml`-Datei bearbeiten (befindet sich unter `%HADOOP_HOME%\etc\hadoop\`), die eine clusterweite Konfiguration enthält. Fügen Sie die folgenden Eigenschaften innerhalb der `<configuration>`-Tags in dieser Datei ein:
+1. Öffnen Sie das ADLS Gen2- oder WASB-Speicherkonto, mit dem Sie eine Verbindung über das [Azure-Portal](https://portal.azure.com) herstellen möchten, öffnen Sie das Panel **Zugriffsschlüssel** auf dem Blatt **Einstellungen**, und kopieren Sie den Wert von **Key** (Schlüssel) unter key1.
+2. Zum Konfigurieren des Zugriffs auf Ihr ADLS Gen2-Konto für Hadoop müssen Sie die unter `%HADOOP_HOME%\etc\hadoop\` gespeicherte Datei „`core-site.xml`“ bearbeiten, die eine clusterweite Konfiguration enthält. Fügen Sie die folgenden Eigenschaften innerhalb der `<configuration>`-Tags in dieser Datei ein:
 
     ```xml
     <configuration>
@@ -50,7 +50,7 @@ In diesem Artikel erfahren Sie, wie Sie eine Verbindung mit einem ADLS Gen2- (Az
     ```
 
     Wenn Sie versuchen, eine Verbindung mit einem WASB-Konto herzustellen, ersetzen Sie `dfs` in den Eigenschaftennamen durch `blob`. Beispiel: `fs.azure.account.auth.type.YOUR_ACCOUNT_NAME.blob.core.windows.net`.
-3. Sie können die Konnektivität Ihres Speicherkontos über Hadoop testen, indem Sie den folgenden Befehl über Ihr `%HADOOP_HOME%`-Verzeichnis ausführen:
+3. Sie können die Konnektivität Ihres Speicherkontos über Hadoop testen, indem Sie den folgenden Befehl in Ihrem `%HADOOP_HOME%`-Verzeichnis ausführen:
 
     ```bash
     bin\hdfs dfs -ls <URI to your account>
