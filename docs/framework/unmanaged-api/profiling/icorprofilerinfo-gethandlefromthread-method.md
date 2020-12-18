@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-ms.openlocfilehash: 632a9070eab227bc48ce76c51ea08f98060d680d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94c2c6e01e4188f1fa13c3b6a9f638d4b79a502f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722535"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678195"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread-Methode
 
@@ -42,11 +42,13 @@ HRESULT GetHandleFromThread(
  `phThread`  
  vorgenommen Ein Zeiger auf ein Win32-Thread handle.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
  Der Profiler muss die Win32- `DuplicateHandle` Funktion für das Handle vor der Verwendung aufruft.  
+
+ Das von dieser Methode zurückgegebene Handle ist im Besitz der Laufzeit, und der Profiler sollte es niemals schließen.
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
 
  **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   

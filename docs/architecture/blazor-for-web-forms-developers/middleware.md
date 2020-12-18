@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267879"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678035"
 ---
 # <a name="modules-handlers-and-middleware"></a>Module, Handler und Middleware
 
-Eine ASP.net Core-App basiert auf einer Reihe von *Middleware*. Middleware ist Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs*und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie, welche Middleware im Kontext einer-APP ist Blazor .
+Eine ASP.net Core-App basiert auf einer Reihe von *Middleware*. Middleware ist Handler, die in einer Pipeline angeordnet sind, um Anforderungen und Antworten zu verarbeiten. In einer Web Forms-App lösen HTTP-Handler und-Module ähnliche Probleme aus. In ASP.net Core werden Module, Handler, *Global.asax.cs* und der Lebenszyklus der app durch Middleware ersetzt. In diesem Kapitel erfahren Sie mehr über Middleware im Kontext einer- Blazor app.
 
 ## <a name="overview"></a>Übersicht
 
