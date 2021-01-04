@@ -45,6 +45,8 @@
           href: tutorials/image-classification.md
         - name: Vorhersage der Nachfrage für Fahrradvermietungen (Zeitreihe)
           href: tutorials/time-series-demand-forecasting.md
+        - name: Spitzen von Aufrufvolumina (Anomalieerkennung)
+          href: tutorials/phone-calls-anomaly-detection.md
         - name: Produktvertriebsanalyse (Anomalieerkennung)
           href: tutorials/sales-anomaly-detection.md
         - name: Erkennen von Objekten in Bildern (Objekterkennung)
