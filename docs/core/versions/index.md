@@ -2,12 +2,12 @@
 title: Versionsverwaltung für die .NET-Runtime und das .NET SDK
 description: In diesem Artikel erfahren Sie, wie das .NET SDK und die Runtime versioniert werden (ähnlich der semantischen Versionierung).
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009305"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633623"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>Übersicht über die .NET-Versionsverwaltung
 
@@ -19,9 +19,9 @@ Die .NET-Runtime verfolgt einen Hauptversions-/Nebenversions-/Patchansatz für d
 
 Das .NET SDK folgt keiner semantischen Versionierung. Das .NET SDK wird schneller veröffentlicht, und seine Versionsnummern müssen sowohl die angepasste Runtime als auch die eigenen Nebenversions- und Patchreleases des SDK kommunizieren.
 
-Die ersten beiden Stellen der .NET SDK-Versionsnummern sind für die .NET Runtime reserviert, mit der sie veröffentlicht wurde. Jede Version des SDK kann Anwendungen für diese Runtime bzw. niedrigere Versionen erstellen.
+Die ersten beiden Stellen der Versionsnummer des .NET SDK sind für die Version der .NET-Runtime reserviert, mit der es veröffentlicht wurde. Jede Version des SDK kann Anwendungen für diese Runtime bzw. niedrigere Versionen erstellen.
 
-Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch die Patchnummer an. Die Nebenversion wird mit 100 multipliziert. Nebenversion 1, Patchversion 2 würde als 102 dargestellt. Die letzten zwei Ziffern stehen für die Patchnummer. Im Folgenden ist eine mögliche Sequenz der Runtime- und SDK-Versionsnummern aufgeführt:
+Die dritte Stelle der SDK-Versionsnummer gibt sowohl die Nebenversions- als auch die Patchnummer an. Die Nebenversion wird mit 100 multipliziert. Die letzten zwei Ziffern stehen für die Patchnummer. Nebenversion 1, Patchversion 2 würde als 102 dargestellt. Im Folgenden ist eine mögliche Sequenz der Runtime- und SDK-Versionsnummern aufgeführt:
 
 | Change                | .Net-Runtime      | .NET SDK (\*)     |
 |-----------------------|-------------------|-------------------|
