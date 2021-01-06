@@ -1,33 +1,33 @@
 ---
 title: Anmelde Informationen anrufen-GrpC für WCF-Entwickler
 description: Vorgehensweise beim Implementieren und Verwenden von GrpC-Anmelde Informationen in ASP.net Core 3,0.
-ms.date: 09/02/2019
-ms.openlocfilehash: 01f21f58ed4235f45509c948c84653cd99d35618
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 66394c75929bf068f83d631e022b467386e59ec5
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711537"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938441"
 ---
 # <a name="call-credentials"></a>Aufrufen von Anmeldeinformationen
 
 Die Anmelde Informationen basieren alle auf einem Token, das mit jeder Anforderung in Metadaten weitergegeben wurde.
 
-## <a name="ws-federation"></a>WS-Federation
+## <a name="ws-federation"></a>WS-Federation-
 
-ASP.net Core unterstützt den WS-Verbund mit dem [wsfederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) -nuget-Paket. WS-Federation ist die nächstgelegene Alternative zur Windows-Authentifizierung, die über http/2 nicht unterstützt wird. Benutzer werden mithilfe Active Directory-Verbunddienste (AD FS) (AD FS) authentifiziert, das ein Token bereitstellt, das für die Authentifizierung mit ASP.net Core verwendet werden kann.
+ASP.net Core unterstützt WS-Federation mit dem [wsfederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) -nuget-Paket. WS-Federation ist die nächstgelegene Alternative zur Windows-Authentifizierung, die über http/2 nicht unterstützt wird. Benutzer werden mithilfe Active Directory-Verbunddienste (AD FS) (AD FS) authentifiziert, das ein Token bereitstellt, das für die Authentifizierung mit ASP.net Core verwendet werden kann.
 
-Weitere Informationen zu den ersten Schritten mit dieser Authentifizierungsmethode finden Sie unter [Authentifizieren von Benutzern mit dem WS-Verbund in ASP.net Core](/aspnet/core/security/authentication/ws-federation).
+Weitere Informationen zu den ersten Schritten mit dieser Authentifizierungsmethode finden Sie unter [Authentifizieren von Benutzern mit WS-Federation in ASP.net Core](/aspnet/core/security/authentication/ws-federation).
 
 ## <a name="jwt-bearer-tokens"></a>JWT-Träger Token
 
 Der [JSON Web Token](https://jwt.io) (JWT)-Standard bietet eine Möglichkeit, Informationen über einen Benutzer und seine Ansprüche in einer codierten Zeichenfolge zu codieren. Außerdem bietet es eine Möglichkeit, das Token zu signieren, damit der Consumer die Integrität des Tokens mithilfe der Kryptografie mit öffentlichem Schlüssel überprüfen kann. Sie können verschiedene Dienste, wie z. b. IdentityServer4, zum Authentifizieren von Benutzern und Generieren von "oidc"-Token (OpenID Connect) für die Verwendung mit GrpC und http-APIs verwenden.
 
-ASP.net Core 3,0 kann jwts mithilfe des JWT-bearerpakets verarbeiten. Die Konfiguration ist für eine GrpC-Anwendung genauso wie für eine ASP.net Core MVC-Anwendung. Hier konzentrieren wir uns auf JWT-bearertoken, da Sie einfacher mit als WS-Federation entwickelt werden können.
+ASP.net Core 5,0 kann jwts mithilfe des JWT-bearerpakets verarbeiten. Die Konfiguration ist für eine GrpC-Anwendung genauso wie für eine ASP.net Core MVC-Anwendung. Hier konzentrieren wir uns auf JWT-bearertoken, da Sie einfacher mit als WS-Federation entwickelt werden können.
 
 ## <a name="add-authentication-and-authorization-to-the-server"></a>Hinzufügen von Authentifizierung und Autorisierung zum Server
 
-Das JWT-Träger Paket ist standardmäßig nicht in ASP.net Core 3,0 enthalten. Installieren Sie das nuget-Paket [Microsoft. aspnetcore. Authentication. jwtträger](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) in Ihrer APP.
+Das JWT-Träger Paket ist standardmäßig nicht in ASP.net Core 5,0 enthalten. Installieren Sie das nuget-Paket [Microsoft. aspnetcore. Authentication. jwtträger](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) in Ihrer APP.
 
 Fügen Sie den Authentifizierungsdienst in der Startup-Klasse hinzu, und konfigurieren Sie den JWT-bearerhandler:
 
@@ -55,7 +55,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Die `IssuerSigningKey`-Eigenschaft erfordert eine Implementierung von `Microsoft.IdentityModels.Tokens.SecurityKey` mit den kryptografischen Daten, die zum Validieren der signierten Token erforderlich sind. Speichern Sie dieses Token sicher in einem *Geheimnisse Server*, wie Azure Key Vault.
+Die- `IssuerSigningKey` Eigenschaft erfordert eine Implementierung von `Microsoft.IdentityModels.Tokens.SecurityKey` mit den kryptografischen Daten, die zum Validieren der signierten Token erforderlich sind. Speichern Sie dieses Token sicher in einem *Geheimnisse Server*, wie Azure Key Vault.
 
 Fügen Sie als nächstes den Autorisierungs Dienst hinzu, der den Zugriff auf das System steuert:
 
@@ -74,7 +74,7 @@ Fügen Sie als nächstes den Autorisierungs Dienst hinzu, der den Zugriff auf da
 > [!TIP]
 > Authentifizierung und Autorisierung sind zwei separate Schritte. Sie verwenden die-Authentifizierung, um die Identität des Benutzers zu bestimmen. Mithilfe der Autorisierung können Sie entscheiden, ob dieser Benutzer auf verschiedene Teile des Systems zugreifen darf.
 
-Fügen Sie nun die Authentifizierungs-und Autorisierungs Middleware der ASP.net Core Pipeline in der `Configure`-Methode hinzu:
+Fügen Sie nun die Authentifizierungs-und Autorisierungs Middleware der ASP.net Core Pipeline in der- `Configure` Methode hinzu:
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -97,7 +97,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-Wenden Sie schließlich das `[Authorize]`-Attribut auf alle zu sichernden Dienste oder Methoden an, und verwenden Sie die `User`-Eigenschaft des zugrunde liegenden `HttpContext`, um die Berechtigungen zu überprüfen.
+Wenden Sie schließlich das `[Authorize]` -Attribut auf alle zu sichernden Dienste oder Methoden an, und verwenden Sie die- `User` Eigenschaft des zugrunde liegenden, um die `HttpContext` Berechtigungen zu überprüfen.
 
 ```csharp
 [Authorize]

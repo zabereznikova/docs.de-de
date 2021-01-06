@@ -1,21 +1,21 @@
 ---
 title: 'Verschlüsselung und Netzwerksicherheit: GrpC für WCF-Entwickler'
 description: Hinweise zur Netzwerksicherheit und-Verschlüsselung in GrpC
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542767"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938623"
 ---
 # <a name="encryption-and-network-security"></a>Verschlüsselung und Netzwerksicherheit
 
-Das Netzwerk Sicherheitsmodell für Windows Communication Foundation (WCF) ist umfangreich und komplex. Sie beinhaltet Sicherheit auf Transport Ebene mithilfe von HTTPS oder TLS-over-TCP und Sicherheit auf Nachrichten Ebene, indem die WS-Security-Spezifikation zum Verschlüsseln einzelner Nachrichten verwendet wird.
+Das Netzwerk Sicherheitsmodell für Windows Communication Foundation (WCF) ist umfangreich und komplex. Er umfasst die Sicherheit auf Transport Ebene mithilfe von HTTPS oder TLS-over-TCP und Sicherheit auf Nachrichten Ebene mithilfe der WS-Security Spezifikation, um einzelne Nachrichten zu verschlüsseln.
 
 GrpC verlässt sicheres Netzwerk auf das zugrunde liegende http/2-Protokoll, das Sie mithilfe von TLS-Zertifikaten sichern können.
 
-Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET-`HttpClient`, kann http/2 über unverschlüsselte Verbindungen verwenden. `HttpClient` erfordert standardmäßig eine Verschlüsselung, Sie können diese jedoch überschreiben, indem Sie einen <xref:System.AppContext>-Schalter verwenden.
+Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET `HttpClient` kann http/2 über unverschlüsselte Verbindungen verwenden. `HttpClient` erfordert standardmäßig Verschlüsselung, aber Sie können dieses Verhalten mithilfe eines-Schalters außer Kraft setzen <xref:System.AppContext> .
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

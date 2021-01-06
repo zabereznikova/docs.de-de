@@ -1,27 +1,27 @@
 ---
 title: Dienst-Netzen-GrpC für WCF-Entwickler
 description: Verwenden eines Dienst Netzes zum Weiterleiten und Ausgleichen von Anforderungen an GrpC-Dienste in einem Kubernetes-Cluster.
-ms.date: 09/02/2019
-ms.openlocfilehash: a29d6893e585c7eb60c847cef0149afeeaebcdab
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: a1c72a4facf1c133af912bbee242328653a051b6
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503386"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938129"
 ---
-# <a name="service-meshes"></a>Dienst-Netzen
+# <a name="service-meshes"></a>Dienstmeshes
 
 Ein Dienst Netz ist eine Infrastrukturkomponente, die die Steuerung der Routing Dienst Anforderungen innerhalb eines Netzwerks übernimmt. Dienst-Netzen können alle Arten von Problemen auf Netzwerkebene in einem Kubernetes-Cluster verarbeiten, einschließlich:
 
-- Dienst Ermittlung
+- Dienstermittlung
 - Lastenausgleich
 - Fehlertoleranz
 - Verschlüsselung
 - Überwachung
 
-Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen. Anschließend können Sie die Konfiguration und Verwaltung von Netzwerken unabhängig von den Anwendungs Containern durchführen. In vielen Fällen erfordern diese Trennung keine Änderungen am Anwendungscode.
+Kubernetes Service-Netzen arbeiten durch Hinzufügen eines zusätzlichen Containers ( *Sidecar Proxy*) zu jedem Pod, der im Mesh enthalten ist. Der Proxy übernimmt die Verarbeitung aller eingehenden und ausgehenden Netzwerk Anforderungen. Anschließend können Sie die Konfiguration und Verwaltung der Netzwerkprobleme getrennt von den Anwendungs Containern behalten. In vielen Fällen erfordern diese Trennung keine Änderungen am Anwendungscode.
 
-Im [Beispiel im vorherigen Kapitel](kubernetes.md#test-the-application)wurden die GrpC-Anforderungen aus der Webanwendung alle an eine einzelne Instanz des GrpC-Diensts weitergeleitet. Dies liegt daran, dass der Hostname des Diensts in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der `HttpClientHandler` Instanz zwischengespeichert wird. Es kann möglich sein, dieses Problem zu umgehen, indem DNS-Suchen manuell verarbeitet oder mehrere Clients erstellt werden. Diese Problem Umgehung erschwert jedoch den Anwendungscode, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
+Im [Beispiel im vorherigen Kapitel](kubernetes.md#test-the-application)wurden die GrpC-Anforderungen aus der Webanwendung alle an eine einzelne Instanz des GrpC-Diensts weitergeleitet. Dies liegt daran, dass der Hostname des Diensts in eine IP-Adresse aufgelöst wird und diese IP-Adresse für die Lebensdauer der Instanz zwischengespeichert wird `HttpClientHandler` . Möglicherweise kann dieses Verhalten umgangen werden, indem DNS-Suchvorgänge manuell verarbeitet oder mehrere Clients erstellt werden. Diese Problem Umgehung erschwert jedoch den Anwendungscode, ohne einen geschäftlichen oder Kunden Wert hinzuzufügen.
 
 Wenn Sie ein Dienst Netz verwenden, werden die Anforderungen aus dem Anwendungs Container an den Sidecar-Proxy gesendet. Der Sidecar-Proxy kann Sie dann intelligent über alle Instanzen des anderen Dienstanbieter verteilen. Das Mesh kann auch folgende Aktionen ausführen:
 
@@ -29,11 +29,11 @@ Wenn Sie ein Dienst Netz verwenden, werden die Anforderungen aus dem Anwendungs 
 - Verarbeiten Sie Wiederholungs Semantik für fehlgeschlagene Aufrufe oder Timeouts.
 - Umleiten fehlgeschlagener Anforderungen an eine Alternative Instanz, ohne zur Client Anwendung zurückzukehren.
 
-Der folgende Screenshot zeigt die stockweb-Anwendung, die mit dem Dienst Netz linkerd ausgeführt wird. Es gibt keine Änderungen am Anwendungscode, und das docker-Image wird nicht verwendet. Die einzige Änderung, die erforderlich war, war das Hinzufügen einer Anmerkung zur Bereitstellung in den YAML-Dateien für die `stockdata`-und `stockweb` Dienste.
+Der folgende Screenshot zeigt die stockweb-Anwendung, die mit dem Dienst Netz linkerd ausgeführt wird. Es gibt keine Änderungen am Anwendungscode, und das docker-Image wird nicht verwendet. Die einzige Änderung, die erforderlich war, war das Hinzufügen einer Anmerkung zur Bereitstellung in den YAML-Dateien für die `stockdata` -und- `stockweb` Dienste.
 
 ![Stockweb mit Service Mesh](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Sie können in der Spalte **Server** sehen, dass die Anforderungen aus der stockweb-Anwendung an beide Replikate des StockData-Diensts weitergeleitet wurden, obwohl Sie aus einer einzelnen `HttpClient` Instanz im Anwendungscode stammen. Wenn Sie den Code überprüfen, sehen Sie, dass alle 100-Anforderungen an den StockData-Dienst gleichzeitig durch die Verwendung derselben `HttpClient` Instanz hergestellt werden. Bei Verwendung des Dienst Netzes sind diese Anforderungen so ausgeglichen, dass viele Dienst Instanzen verfügbar sind.
+Sie können in der Spalte **Server** sehen, dass die Anforderungen aus der stockweb-Anwendung an beide Replikate des StockData-Diensts weitergeleitet wurden, obwohl Sie aus einer einzelnen `HttpClient` Instanz im Anwendungscode stammen. Wenn Sie den Code überprüfen, werden Sie feststellen, dass alle 100-Anforderungen an den StockData-Dienst gleichzeitig mithilfe derselben- `HttpClient` Instanz hergestellt werden. Bei Verwendung des Dienst Netzes sind diese Anforderungen so ausgeglichen, dass viele Dienst Instanzen verfügbar sind.
 
 Dienst-Netzen gelten nur für Datenverkehr innerhalb eines Clusters. Informationen zu externen Clients finden Sie im nächsten Kapitel, [Lastenausgleich](load-balancing.md).
 
@@ -65,7 +65,7 @@ linkerd inject stockweb.yml > stockweb-with-mesh.yml
 
 Sie können die neuen Dateien überprüfen, um festzustellen, welche Änderungen vorgenommen wurden. Bei Bereitstellungs Objekten wird eine metadatenanmerkung hinzugefügt, um linkerd mitzuteilen, dass ein Sidecar-Proxy Container in den Pod eingefügt werden soll, wenn er erstellt wird.
 
-Es ist auch möglich, die Ausgabe des `linkerd inject`-Befehls direkt an `kubectl` zu übergeben. Die folgenden Befehle funktionieren in PowerShell oder einer beliebigen Linux-Shell.
+Es ist auch möglich, die Ausgabe des `linkerd inject` Befehls direkt an die Pipeline zu übergeben `kubectl` . Die folgenden Befehle funktionieren in PowerShell oder einer beliebigen Linux-Shell.
 
 ```console
 linkerd inject stockdata.yml | kubectl apply -f -

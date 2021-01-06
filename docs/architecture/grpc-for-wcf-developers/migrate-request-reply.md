@@ -1,13 +1,13 @@
 ---
 title: Migrieren eines WCF-Anforderungs-/antwortdienstanbieter zu GrpC-GrpC für WCF-Entwickler
 description: Erfahren Sie, wie Sie einen einfachen Anforderungs-Antwort-Dienst von WCF zu GrpC migrieren.
-ms.date: 09/02/2019
-ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/15/2020
+ms.openlocfilehash: 38c6e33e7588dd7c1b263d813d06c088ab484948
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512696"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938571"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrieren eines WCF-Anforderungs-Antwort-Dienstanbieter zu einem unären GrpC-RPC
 
@@ -196,7 +196,7 @@ Die Signatur für alle unären GrpC-Dienst Methoden in ASP.net Core ist konsiste
 
 Der Rückgabetyp der Methode ist ein `Task<T>` , wobei `T` der Antwort Nachrichtentyp ist. Alle GrpC-Dienst Methoden sind asynchron.
 
-## <a name="migrate-the-portfoliodata-library-to-net-core"></a>Migrieren der videodata-Bibliothek zu .net Core
+## <a name="migrate-the-portfoliodata-library-to-net"></a>Migrieren der videodata-Bibliothek zu .net
 
 An diesem Punkt benötigt das Projekt das Portfolio-Repository und die Modelle, die in der `TraderSys.PortfolioData` Klassenbibliothek in der WCF-Lösung enthalten sind. Die einfachste Möglichkeit, Sie zu übernehmen, besteht darin, eine neue Klassenbibliothek zu erstellen, indem Sie entweder das Visual Studio-Dialogfeld " **Neues Projekt** " mit der Vorlage für die Klassenbibliothek (.NET Standard) verwenden, oder über die Befehlszeile in der Befehlszeile, indem Sie .net Core-CLI die folgenden Befehle aus dem Verzeichnis ausführen, das die `TraderSys.sln` Datei enthält:
 
@@ -395,7 +395,7 @@ Nachdem Sie den WCF-Anforderungs-Antwort-Dienst erfolgreich zu GrpC migriert hab
 Erstellen Sie eine .NET Standard-Klassenbibliothek in der gleichen Projekt Mappe, die den-Client enthält. Dies ist in erster Linie ein Beispiel für das Erstellen von Client Code, aber Sie könnten eine solche Bibliothek mithilfe von nuget Verpacken und in einem internen Repository verteilen, damit andere .NET-Teams Sie nutzen können. Fügen Sie der Projekt Mappe eine neue .NET Standard-Klassenbibliothek mit dem Namen hinzu `TraderSys.Portfolios.Client` , und löschen Sie die `Class1.cs` Datei.
 
 > [!CAUTION]
-> Das nuget-Paket " [GrpC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) " erfordert .net Core 3,0 (oder eine andere .NET Standard 2,1-kompatible Laufzeit). Frühere Versionen von .NET Framework und .net Core werden vom nuget-Paket " [GrpC. Core](https://www.nuget.org/packages/Grpc.Core) " unterstützt.
+> Das nuget-Paket " [GrpC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) " erfordert .net Core 3,0 oder höher (oder eine andere .NET Standard 2,1-kompatible Laufzeit). Frühere Versionen von .NET Framework und .net Core werden vom nuget-Paket " [GrpC. Core](https://www.nuget.org/packages/Grpc.Core) " unterstützt.
 
 In Visual Studio 2019 können Sie Verweise auf GrpC-Dienste ähnlich wie in früheren Versionen von Visual Studio zu WCF-Projekten hinzufügen. Dienst Verweise und verbundene Dienste werden jetzt auf der gleichen Benutzeroberfläche verwaltet. Sie können auf die Benutzeroberfläche zugreifen, indem Sie im Projekt in Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Abhängigkeiten** klicken `TraderSys.Portfolios.Client` und **verbundenen Dienst hinzufügen** auswählen. Wählen Sie im angezeigten Tool Fenster den Abschnitt **Dienst Verweise** aus, und wählen Sie dann **neuen GrpC-Dienst Verweis hinzufügen** aus:
 

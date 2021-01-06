@@ -1,46 +1,46 @@
 ---
-title: WCF-Bindungen und -Transporte - gRPC für WCF-Entwickler
-description: Erfahren Sie, wie sich die verschiedenen WCF-Bindungen und -Transporte mit gRPC vergleichen.
-ms.date: 09/02/2019
-ms.openlocfilehash: 3a295268b486578c70c2c98f1d05f89070daaeb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: 'WCF-Bindungen und-Transporte: GrpC für WCF-Entwickler'
+description: Erfahren Sie, wie die verschiedenen WCF-Bindungen und-Transporte mit GrpC verglichen werden.
+ms.date: 12/15/2020
+ms.openlocfilehash: 7a50e3e4468d86a6140066502a765818119642d4
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147723"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938506"
 ---
 # <a name="wcf-bindings-and-transports"></a>WCF-Bindungen und Transporte
 
-Windows Communication Foundation (WCF) verfügt über integrierte Bindungen, die verschiedene Netzwerkprotokolle, Drahtformate und andere *Implementierungsdetails* angeben. gRPC hat effektiv nur ein Netzwerkprotokoll und ein Drahtformat. (Technisch *können* Sie das Drahtformat anpassen, aber das geht über den Rahmen dieses Buches hinaus.) Sie werden wahrscheinlich feststellen, dass gRPC in den meisten Fällen die beste Lösung bietet.
+Windows Communication Foundation (WCF) verfügt über integrierte *Bindungen* , die verschiedene Netzwerkprotokolle, Wire-Formate und andere Implementierungsdetails angeben. GrpC hat praktisch nur ein Netzwerkprotokoll und ein Wire-Format. (Technisch gesehen *können* Sie das Wire-Format anpassen, aber das geht über den Rahmen dieses Buchs hinaus.) Sie werden wahrscheinlich feststellen, dass GrpC in den meisten Fällen die beste Lösung bietet.
 
-Was folgt, ist eine kurze Diskussion über die relevantesten WCF-Bindungen und wie sie mit ihren Äquivalenten in gRPC verglichen werden.
+Im folgenden finden Sie eine kurze Erläuterung der relevantesten WCF-Bindungen und der Art und Weise, wie Sie mit ihren Entsprechungen in GrpC verglichen werden.
 
-## <a name="nettcp"></a>Nettcp
+## <a name="nettcp"></a>NetTCP
 
-Die NetTCP-Bindung von WCF ermöglicht dauerhafte Verbindungen, kleine Nachrichten und zweiwegige Nachrichten. Es funktioniert jedoch nur zwischen .NET-Clients und Servern. gRPC ermöglicht die gleiche Funktionalität, wird aber über mehrere Programmiersprachen und Plattformen hinweg unterstützt.
+Die NetTcp-Bindung von WCF ermöglicht persistente Verbindungen, kleine Nachrichten und bidirektionales Messaging. Dies funktioniert jedoch nur zwischen .NET-Clients und-Servern. GrpC ermöglicht die gleiche Funktionalität, wird aber über mehrere Programmiersprachen und Plattformen hinweg unterstützt.
 
-gRPC verfügt über viele Funktionen der WCF-NetTCP-Bindung, die jedoch nicht immer auf die gleiche Weise implementiert werden. In WCF wird die Verschlüsselung beispielsweise über die Konfiguration gesteuert und im Framework behandelt. In gRPC wird die Verschlüsselung auf Verbindungsebene über HTTP/2 über TLS erreicht.
+GrpC verfügt über viele Features der NetTcp-Bindung von WCF, aber Sie werden nicht immer auf die gleiche Weise implementiert. In WCF wird die Verschlüsselung z. b. durch Konfiguration gesteuert und im Framework behandelt. In GrpC wird die Verschlüsselung auf der Verbindungs Ebene über http/2 über TLS erreicht.
 
 ## <a name="http"></a>HTTP
 
-Die WCF-Bindung namens BasicHttpBinding ist in der Regel textbasiert und verwendet SOAP als Drahtformat. Es ist langsam im Vergleich zur NetTCP-Bindung. Es wird im Allgemeinen verwendet, um plattformübergreifende Interoperabilität oder Verbindung über Internet-Infrastruktur bereitzustellen.
+Die WCF-Bindung namens BasicHttpBinding ist in der Regel Text basiert und verwendet SOAP als Wire-Format. Er ist langsam im Vergleich zur NetTcp-Bindung. Sie wird verwendet, um eine plattformübergreifende Interoperabilität oder eine Verbindung über die Internetinfrastruktur bereitzustellen.
 
-Das Äquivalent in gRPC verwendet HTTP/2 als zugrunde liegende Transportschicht mit dem binären Protobuf-Drahtformat für Nachrichten. So kann es Leistung auf NetTCP-Service-Ebene und vollständige plattformübergreifende Interoperabilität mit allen modernen Programmiersprachen und Frameworks bieten.
+Das Äquivalent in GrpC verwendet http/2 als zugrunde liegende Transportschicht mit dem binären protobuf-Wire-Format für Nachrichten. Damit kann die Leistung auf der NetTcp-Dienst Ebene und die vollständige plattformübergreifende Interoperabilität mit allen modernen Programmiersprachen und-Frameworks erzielt werden.
 
 ## <a name="named-pipes"></a>Named Pipes
 
-WCF stellte eine *Named Pipes-Bindung* für die Kommunikation zwischen Prozessen auf derselben physischen Maschine zur Verfügung. Die erste Version von ASP.NET Core gRPC unterstützt keine Named Pipes. Das Hinzufügen von Client- und Serverunterstützung für Named Pipes (und Unix-Domänensockets) ist ein Ziel für eine zukünftige Version.
+WCF hat eine *Named Pipes* -Bindung für die Kommunikation zwischen Prozessen auf demselben physischen Computer bereitgestellt. Named Pipes werden von der ersten Version von ASP.net Core GrpC nicht unterstützt. Das Hinzufügen von Client-und Serverunterstützung für Named Pipes (und UNIX-Domänen Sockets) ist ein Ziel für eine zukünftige Version.
 
 ## <a name="msmq"></a>MSMQ
 
-MSMQ ist eine proprietäre Windows-Nachrichtenwarteschlange. Die Bindung von WCF an MSMQ ermöglicht "Fire and Forget"-Anforderungen von Clients, die jederzeit in der Zukunft verarbeitet werden können. gRPC bietet keine Nachrichtenwarteschlangenfunktionalität.
+MSMQ ist eine proprietäre Windows-Nachrichten Warteschlange. Die WCF-Bindung an MSMQ ermöglicht "Fire and Forget"-Anforderungen von Clients, die zu einem beliebigen Zeitpunkt in der Zukunft verarbeitet werden können. GrpC stellt keine Funktionen zur Nachrichten Warteschlange bereit.
 
-Die beste Alternative besteht darin, ein Messagingsystem wie Azure Service Bus, RabbitMQ oder Kafka direkt zu verwenden. Sie können dies implementieren, indem der Client Nachrichten direkt in die Warteschlange platziert, oder mit einem gRPC-Client-Streamingdienst, der die Nachrichten in die Warteschlange stellt.
+Die beste Alternative besteht darin, ein Messaging System wie Azure Service Bus, rabbitmq oder Kafka direkt zu verwenden. Sie können diese Funktion implementieren, damit der Client Nachrichten direkt in die Warteschlange eingereiht, oder einen GrpC-clientstreamingdienst, der die Nachrichten in die Warteschlange stellt
 
 ## <a name="webhttpbinding"></a>WebHttpBinding
 
-WebHttpBinding (auch bekannt als WCF `WebGet` `WebInvoke` REST) mit den Attributen ermöglichte es Ihnen, RESTful-APIs zu entwickeln, die JSON zu einem Zeitpunkt sprechen konnten, zu dem dies weniger häufig war. Wenn Sie eine RESTful-API mit WCF REST erstellt haben, sollten Sie sie zu einer regulären ASP.NET Core MVC Web API-Anwendung migrieren. Diese Migration würde die gleiche Funktionalität wie eine Konvertierung in gRPC bieten.
+WebHttpBinding (auch als WCF Rest bezeichnet) mit den `WebGet` Attributen und `WebInvoke` ermöglicht Ihnen die Entwicklung von Rest-APIs, die JSON zu einem Zeitpunkt sprechen, als dieses Verhalten weniger häufig war. Wenn Sie über eine Rest-API verfügen, die mit WCF Rest erstellt wurde, sollten Sie Sie in eine reguläre ASP.net Core MVC-Web-API-Anwendung migrieren Diese Migration bietet die gleiche Funktionalität wie eine Konvertierung in GrpC.
 
 >[!div class="step-by-step"]
->[VorherigeS](wcf-endpoints-grpc-methods.md)
+>[Zurück](wcf-endpoints-grpc-methods.md)
 >[Weiter](rpc-types.md)

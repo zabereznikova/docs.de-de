@@ -1,17 +1,17 @@
 ---
 title: 'Protobuf-Zuordnungen für Wörterbücher: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie protobuf-Zuordnungen verwendet werden, um Wörterbuchtypen in .net darzustellen.
-ms.date: 09/09/2019
-ms.openlocfilehash: 2c2ae76d47b2309227d22235b5acbe2afa794158
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.date: 12/15/2020
+ms.openlocfilehash: d38270d4bc320cf1f758080c18843ed1d716b350
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867464"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938545"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Protobuf-Zuordnungen für Wörterbücher
 
-Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird dies häufig durch Wörterbuchtypen gehandhabt. Die Entsprechung des .net- <xref:System.Collections.Generic.IDictionary%602> Typs in Protokollpuffer (protobuf) ist der- `map<key_type, value_type>` Typ. In diesem Abschnitt wird gezeigt, wie Sie einen `map` Typ in protobuf deklarieren und wie Sie den generierten Code verwenden.
+Es ist wichtig, dass Sie beliebige Auflistungen benannter Werte in Nachrichten darstellen können. In .net wird diese Aktivität häufig durch Wörterbuchtypen verarbeitet. Die Entsprechung des .net- <xref:System.Collections.Generic.IDictionary%602> Typs in Protokollpuffer (protobuf) ist der- `map<key_type, value_type>` Typ. In diesem Abschnitt wird gezeigt, wie Sie einen `map` Typ in protobuf deklarieren und wie Sie den generierten Code verwenden.
 
 ```protobuf
 message StockPrices {

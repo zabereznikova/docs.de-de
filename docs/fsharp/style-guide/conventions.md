@@ -1,13 +1,13 @@
 ---
 title: Codekonventionen für F#
 description: 'Informieren Sie sich über allgemeine Richtlinien und Idiome beim Schreiben von F #-Code.'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739901"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938688"
 ---
 # <a name="f-coding-conventions"></a>Codekonventionen für F#
 
@@ -135,7 +135,7 @@ Es gibt viele Male, wenn ein Wert initialisiert werden kann, z. b. beim Instanzi
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -174,7 +174,7 @@ Die Fehler Verwaltung in großen Systemen ist ein komplexes und differenziertes 
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Darstellen von Fehler Fällen und ungültigen Zuständen in Typen, die in Ihrer Domäne intrinsisch sind
 
-Bei Unterscheidungs- [Unions](../language-reference/discriminated-unions.md)bietet F # Ihnen die Möglichkeit, einen fehlerhaften Programmzustand in Ihrem Typsystem darzustellen. Zum Beispiel:
+Bei Unterscheidungs- [Unions](../language-reference/discriminated-unions.md)bietet F # Ihnen die Möglichkeit, einen fehlerhaften Programmzustand in Ihrem Typsystem darzustellen. Beispiel:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -190,9 +190,9 @@ In diesem Fall gibt es drei bekannte Möglichkeiten, dass das Zurückziehen von 
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -238,7 +238,7 @@ Die Abstimmung von Funktionen, die im Falle einer Ausnahme mit Musterabgleich du
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>Verwenden Sie keine monadische-Fehlerbehandlung zum Ersetzen von Ausnahmen.
 
-Ausnahmen werden bei der funktionalen Programmierung als etwas Tabu betrachtet. Tatsächlich verstoßen Ausnahmen gegen Reinheit, daher ist es sicher, dass Sie nicht Recht funktional betrachtet werden. Dies ignoriert jedoch die Realität, in der der Code ausgeführt werden muss, und dass Laufzeitfehler auftreten können. Schreiben Sie im allgemeinen Code in der Annahme, dass die meisten Dinge weder rein noch Gesamt sind, um unangenehme Überraschungen zu minimieren.
+Ausnahmen werden bei der funktionalen Programmierung häufig als Tabu betrachtet. Tatsächlich verstoßen Ausnahmen gegen Reinheit, daher ist es sicher, dass Sie nicht Recht funktional betrachtet werden. Dies ignoriert jedoch die Realität, in der der Code ausgeführt werden muss, und dass Laufzeitfehler auftreten können. Schreiben Sie im allgemeinen Code in der Annahme, dass die meisten Dinge weder rein noch Gesamt sind, um unangenehme Überraschungen zu minimieren.
 
 Es ist wichtig, die folgenden Hauptstärken/Aspekte von Ausnahmen hinsichtlich ihrer Relevanz und Eignung in der .NET-Laufzeit und im sprachübergreifenden Ökosystem als Ganzes zu berücksichtigen:
 
@@ -317,7 +317,7 @@ Geschweiften Funktionen bezeichnen ihre Argumente nicht. Dies hat Auswirkungen a
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-In Tools wie Visual Studio geben Quick Infos in Tools wie Visual Studio keine aussagekräftigen Informationen dazu, was die `string` `int` Eingabetypen und tatsächlich darstellen.
+An der-Website des Aufrufes gibt Quick Infos in Tools wie Visual Studio die Typsignatur, aber da keine Namen definiert sind, werden keine Namen angezeigt. Namen sind wichtig für einen guten API-Entwurf, da Sie den Aufrufern helfen, die Bedeutung hinter der API besser zu verstehen. Durch die Verwendung von Punkt freiem Code in der öffentlichen API können Aufrufer das Verständnis erschweren.
 
 Wenn Sie auf einen Punkt freien Code wie den öffentlich verwendbaren Code stoßen `funcWithApplication` , empfiehlt es sich, eine vollständige weiterung-Erweiterung durchzuführen, damit die Tools für Argumente aussagekräftige Namen haben können.
 
@@ -657,7 +657,7 @@ F # bietet vollständige Unterstützung für Objekte und objektorientierte Konze
 * Auto-Eigenschaften
 * Implementieren von `IDisposable` und `IEnumerable`
 * Typerweiterungen
-* Ereignisse
+* Events
 * Strukturen
 * Delegaten
 * Enumerationen

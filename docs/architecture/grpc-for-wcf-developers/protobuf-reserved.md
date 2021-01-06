@@ -1,19 +1,19 @@
 ---
-title: Protobuf reservierte Felder - gRPC für WCF-Entwickler
-description: Erfahren Sie mehr über reservierte Felder für die versionsübergreifende Kompatibilität.
-ms.date: 09/09/2019
-ms.openlocfilehash: f89513c4659a02cbc94e1c659baecb9e750acbdc
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+title: 'Reservierte Felder für protobuf: GrpC für WCF-Entwickler'
+description: Erfahren Sie mehr über reservierte Felder für die Versions übergreifende Kompatibilität.
+ms.date: 12/15/2020
+ms.openlocfilehash: d82043d619c5b3b81091ae4ea381e4778c1cf6ba
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111035"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938519"
 ---
 # <a name="protobuf-reserved-fields"></a>Reservierte Protobuf-Felder
 
-Die Abwärtskompatibilitätsgarantien in Protocol Buffer (Protobuf) basieren auf Feldnummern, die immer dasselbe Datenelement darstellen. Wenn ein Feld aus einer Nachricht in einer neuen Version des Dienstes entfernt wird, sollte diese Feldnummer niemals wiederverwendet werden. Sie können dies `reserved` erzwingen, indem Sie das Schlüsselwort verwenden.
+Die Abwärtskompatibilität garantiert in Protokollpuffer (protobuf) basiert auf Feldnummern, die immer das gleiche Datenelement darstellen. Wenn ein Feld aus einer Nachricht in einer neuen Dienst Version entfernt wird, sollte diese Feldzahl nie wieder verwendet werden. Sie können dieses Verhalten erzwingen, indem Sie das- `reserved` Schlüsselwort verwenden.
 
-Wenn `displayName` die `marketId` felder aus `Stock` der zuvor definierten Nachricht entfernt wurden, sollten ihre Feldnummern wie im folgenden Beispiel reserviert werden.
+Wenn das `displayName` -Feld und das- `marketId` Feld aus der `Stock` zuvor definierten Nachricht entfernt wurden, sollten die Feldnummern wie im folgenden Beispiel reserviert werden.
 
 ```protobuf
 syntax "proto3";
@@ -27,7 +27,7 @@ message Stock {
 }
 ```
 
-Sie können das `reserved` Schlüsselwort auch als Platzhalter für Felder verwenden, die in Zukunft hinzugefügt werden könnten. Sie können zusammenhängende Feldnummern als Bereich `to` ausdrücken, indem Sie das Schlüsselwort verwenden.
+Sie können auch das- `reserved` Schlüsselwort als Platzhalter für Felder verwenden, die möglicherweise in der Zukunft hinzugefügt werden. Sie können zusammenhängende Feld Zahlen als Bereich mit dem- `to` Schlüsselwort Ausdrücken.
 
 ```protobuf
 syntax "proto3";
@@ -40,5 +40,5 @@ message Info {
 ```
 
 >[!div class="step-by-step"]
->[VorherigeS](protobuf-repeated.md)
+>[Zurück](protobuf-repeated.md)
 >[Weiter](protobuf-any-oneof.md)

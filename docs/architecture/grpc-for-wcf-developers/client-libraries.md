@@ -1,34 +1,34 @@
 ---
 title: 'Erstellen von GrpC-Client Bibliotheken: GrpC für WCF-Entwickler'
 description: Erörterung von freigegebenen Client Bibliotheken/-Paketen für GrpC-Dienste
-ms.date: 09/02/2019
-ms.openlocfilehash: e47ccd958007f84d633bb9ad5808c5e97c231977
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.date: 12/15/2020
+ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358842"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938428"
 ---
 # <a name="create-grpc-client-libraries"></a>Erstellen von GrpC-Client Bibliotheken
 
-Es ist nicht erforderlich, Client Bibliotheken für eine GrpC-Anwendung zu verteilen. Sie können eine freigegebene Bibliothek von `.proto` Dateien in Ihrer Organisation erstellen, und andere Teams können diese Dateien verwenden, um Client Code in ihren eigenen Projekten zu generieren. Wenn Sie jedoch über ein privates nuget-Repository verfügen und viele andere Teams .net Core verwenden, können Sie Client-nuget-Pakete im Rahmen Ihres Dienst Projekts erstellen und veröffentlichen. Dies kann eine gute Möglichkeit zum Freigeben und herauf Stufen Ihres Dienstanbieter sein.
+Es ist nicht erforderlich, Client Bibliotheken für eine GrpC-Anwendung zu verteilen. Sie können eine freigegebene Bibliothek von `.proto` Dateien in Ihrer Organisation erstellen, und andere Teams können diese Dateien verwenden, um Client Code in ihren eigenen Projekten zu generieren. Wenn Sie jedoch über ein privates nuget-Repository verfügen und viele andere Teams .NET verwenden, können Sie Client-nuget-Pakete im Rahmen Ihres Dienst Projekts erstellen und veröffentlichen. Diese Vorgehensweise kann eine gute Möglichkeit zum Freigeben und herauf Stufen Ihres Dienstanbieter sein.
 
-Ein Vorteil der Verteilung einer Client Bibliothek besteht darin, dass Sie die generierten GrpC-und protobuf-Klassen mit nützlichen Methoden und Eigenschaften verbessern können. Im Client Code, wie auf dem Server, werden alle Klassen als deklariert `partial` , sodass Sie Sie erweitern können, ohne den generierten Code zu bearbeiten. Dies bedeutet, dass es einfach ist, den Grundtypen Konstruktoren, Methoden und berechnete Eigenschaften hinzuzufügen.
+Ein Vorteil der Verteilung einer Client Bibliothek besteht darin, dass Sie die generierten GrpC-und protobuf-Klassen mit nützlichen Methoden und Eigenschaften verbessern können. Im Client Code, wie auf dem Server, werden alle Klassen als deklariert `partial` , sodass Sie Sie erweitern können, ohne den generierten Code zu bearbeiten. Dieses Verhalten bedeutet, dass es einfach ist, den Grundtypen Konstruktoren, Methoden und berechnete Eigenschaften hinzuzufügen.
 
 > [!CAUTION]
 > Sie sollten keinen benutzerdefinierten Code verwenden, um wesentliche Funktionen bereitzustellen. Sie möchten diese wesentlichen Funktionen nicht auf .NET-Teams beschränken, die die freigegebene Bibliothek verwenden, und Sie nicht für Teams bereitstellen, die andere Sprachen oder Plattformen wie Python oder Java verwenden.
 
-Stellen Sie sicher, dass so viele Teams wie möglich auf Ihren GrpC-Dienst zugreifen können. Die beste Möglichkeit hierfür ist die Freigabe von `.proto` Dateien, damit Entwickler ihre eigenen Clients generieren können. Dies gilt insbesondere in einer Umgebung mit mehreren Plattformen, in der unterschiedliche Teams häufig verschiedene Programmiersprachen und-Frameworks verwenden, oder wenn die API Extern zugänglich ist.
+Stellen Sie sicher, dass so viele Teams wie möglich auf Ihren GrpC-Dienst zugreifen können. Die beste Möglichkeit, diese Funktionalität zu nutzen, besteht darin, Dateien gemeinsam zu nutzen, `.proto` damit Entwickler ihre eigenen Clients generieren können. Diese Vorgehensweise gilt besonders für eine Umgebung mit mehreren Plattformen, in der unterschiedliche Teams häufig verschiedene Programmiersprachen und-Frameworks verwenden, oder wenn die API Extern zugänglich ist.
 
 ## <a name="useful-extensions"></a>Nützliche Erweiterungen
 
 Es gibt zwei häufig verwendete Schnittstellen in .net für den Umgang mit Streams von Objekten: <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.IObservable%601> . Ab .net Core 3,0 und c# 8,0 gibt es eine <xref:System.Collections.Generic.IAsyncEnumerable%601> Schnittstelle für die asynchrone Verarbeitung von Streams und eine `await foreach` Syntax für die Verwendung der-Schnittstelle. Dieser Abschnitt enthält wiederverwendbaren Code zum Anwenden dieser Schnittstellen auf GrpC-Streams.
 
-Mit den .net Core-GrpC-Client Bibliotheken gibt es eine `ReadAllAsync` Erweiterungsmethode für, mit der `IAsyncStreamReader<T>` eine `IAsyncEnumerable<T>` Schnittstelle erstellt wird. Für Entwickler, die reaktive Programmierung verwenden, könnte eine äquivalente Erweiterungsmethode zum Erstellen einer `IObservable<T>` Schnittstelle wie im folgenden Abschnitt aussehen.
+Mit den .net-GrpC-Client Bibliotheken gibt es eine `ReadAllAsync` Erweiterungsmethode für, mit der `IAsyncStreamReader<T>` eine `IAsyncEnumerable<T>` Schnittstelle erstellt wird. Für Entwickler, die reaktive Programmierung verwenden, könnte eine äquivalente Erweiterungsmethode zum Erstellen einer `IObservable<T>` Schnittstelle wie im folgenden Abschnitt aussehen.
 
 ### <a name="iobservable"></a>IObservable
 
-Die- `IObservable<T>` Schnittstelle ist die "reaktive" Umkehrung von `IEnumerable<T>` . Anstatt Elemente aus einem Stream abzurufen, ermöglicht der reaktive Ansatz dem Stream das Übertragen von Push-Elementen an einen Abonnenten. Dies ist sehr ähnlich wie bei GrpC-Streams, und es ist einfach, eine `IObservable<T>` Schnittstelle um eine Schnittstelle zu umschließen `IAsyncStreamReader<T>` .
+Die- `IObservable<T>` Schnittstelle ist die "reaktive" Umkehrung von `IEnumerable<T>` . Anstatt Elemente aus einem Stream abzurufen, ermöglicht der reaktive Ansatz dem Stream das Übertragen von Push-Elementen an einen Abonnenten. Dieses Verhalten ähnelt stark den GrpC-Streams, und es ist einfach, eine `IObservable<T>` Schnittstelle um eine `IAsyncStreamReader<T>` Schnittstelle zu umschließen.
 
 Dieser Code ist länger als der `IAsyncEnumerable<T>` Code, da c# nicht über eine integrierte Unterstützung für die Arbeit mit Observables verfügt. Sie müssen die Implementierungs Klasse manuell erstellen. Dabei handelt es sich jedoch um eine generische Klasse, sodass eine einzelne Implementierung über alle Typen hinweg funktioniert.
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Zusammenfassung
 
-Das `IAsyncEnumerable` -und das- `IObservable` Modell sind sowohl gut unterstützte als auch gut dokumentierte Möglichkeiten, mit asynchronen Datenströmen in .net umzugehen. GrpC-Streams sind sowohl für Paradigmen als auch für eine enge Integration mit .net Core und für reaktive und asynchrone Programmier Stile gleich.
+Das <xref:System.IAsyncDisposable> -und das- <xref:System.IObservable%601> Modell sind sowohl gut unterstützte als auch gut dokumentierte Möglichkeiten, mit asynchronen Datenströmen in .net umzugehen. GrpC-Streams sind sowohl für Paradigmen als auch für eine enge Integration mit .net und für reaktive und asynchrone Programmier Stile gleich.
 
 >[!div class="step-by-step"]
 >[Zurück](streaming-versus-repeated.md)

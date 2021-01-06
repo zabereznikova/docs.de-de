@@ -1,17 +1,17 @@
 ---
 title: 'Anwendungs Leistungsverwaltung: GrpC für WCF-Entwickler'
 description: Protokollierung, Metriken und Ablauf Verfolgung für ASP.net Core GrpC-Anwendungen.
-ms.date: 09/02/2019
-ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.date: 12/15/2020
+ms.openlocfilehash: 8a2a89e268e3b2dffdcc945ac71b2de85b4d4964
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982341"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938454"
 ---
 # <a name="application-performance-management"></a>Application Performance Management
 
-In Produktionsumgebungen wie Kubernetes ist es wichtig, Anwendungen zu überwachen, um sicherzustellen, dass Sie optimal ausgeführt werden. Protokollierung und Metriken sind besonders wichtig. ASP.net Core, einschließlich GrpC, bietet integrierte Unterstützung für das Erstellen und Verwalten von Protokollnachrichten und Metrikdaten sowie die Ablauf *Verfolgung* von Daten.
+In Produktionsumgebungen wie Kubernetes ist es wichtig, Anwendungen zu überwachen, um sicherzustellen, dass Sie optimal ausgeführt werden. Die Protokollierung und Metriken sind besonders wichtig. ASP.net Core, einschließlich GrpC, bietet integrierte Unterstützung für das Erstellen und Verwalten von Protokollnachrichten und Metrikdaten sowie die Ablauf *Verfolgung* von Daten.
 
 ## <a name="the-difference-between-logging-and-metrics"></a>Der Unterschied zwischen Protokollierung und Metriken
 
@@ -25,7 +25,7 @@ Bei der *Protokollierung* werden Textnachrichten behandelt, in denen ausführlic
 
 ## <a name="logging-in-aspnet-core-grpc"></a>Anmelden ASP.net Core GrpC
 
-ASP.net Core bietet integrierte Unterstützung für die Protokollierung in Form des [Microsoft. Extensions. Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) -nuget-Pakets. Die Kernteile dieser Bibliothek sind im Web-SDK enthalten, sodass es nicht erforderlich ist, es manuell zu installieren. Standardmäßig werden Protokollmeldungen in die Standardausgabe ("Console") und in einen beliebigen angefügten Debugger geschrieben. Wenn Sie Protokolle in persistente externe Datenspeicher schreiben möchten, müssen Sie möglicherweise [optionale Protokollierungs-senkenpakete](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)importieren.
+ASP.net Core bietet integrierte Unterstützung für die Protokollierung in Form des [Microsoft. Extensions. Logging](https://www.nuget.org/packages/Microsoft.Extensions.Logging) nuget-Pakets. Die Kernteile dieser Bibliothek sind im Web-SDK enthalten, sodass es nicht erforderlich ist, es manuell zu installieren. Standardmäßig werden Protokollmeldungen in die Standardausgabe ("Console") und in einen beliebigen angefügten Debugger geschrieben. Wenn Sie Protokolle in persistente externe Datenspeicher schreiben möchten, müssen Sie möglicherweise [optionale Protokollierungs-senkenpakete](/aspnet/core/fundamentals/logging/?view=aspnetcore-3.0#third-party-logging-providers)importieren.
 
 Das ASP.net Core GrpC-Framework schreibt ausführliche Diagnose Protokollierungs Meldungen in dieses Protokollierungs Framework, sodass Sie zusammen mit den eigenen Nachrichten Ihrer Anwendung verarbeitet und gespeichert werden können.
 
@@ -61,7 +61,7 @@ Die meisten metrikplattformen unterstützen die folgenden Typen:
 
 | Metriktyp | BESCHREIBUNG |
 | ----------- | ----------- |
-| Leistungsindikator     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen und Fehler. |
+| Zähler     | Verfolgt, wie oft etwas passiert, z. b. Anforderungen und Fehler. |
 | Maßstab       | Zeichnet einen einzelnen Wert auf, der sich im Laufe der Zeit ändert, beispielsweise aktive Verbindungen. |
 | Histogramm   | Misst eine Verteilung von Werten über beliebige Grenzen hinweg. Ein Histogramm kann z. b. die Größe des Datasets verfolgen und zählen, wie viele <10 Datensätze enthalten sind, wie viele enthaltene 11-100-Einträge, wie viele enthaltene 101-1000-Einträge und wie viele >1000-Einträge enthalten sind. |
 | Zähler       | Misst die Rate, mit der ein Ereignis in verschiedenen Zeitspannen auftritt. |
@@ -110,7 +110,7 @@ Die numerische Natur von Metrikdaten bedeutet, dass Sie idealerweise für Warnsy
 
 ## <a name="distributed-tracing"></a>Verteilte Ablaufverfolgung
 
-Die verteilte Ablauf Verfolgung ist eine relativ aktuelle Entwicklung in der Überwachung, die aus der zunehmenden Verwendung von microservices und verteilten Architekturen entstanden ist. Eine einzelne Anforderung von einem Client Browser, einer Anwendung oder einem Gerät kann in viele Schritte und untergeordnete Anforderungen aufgeteilt werden und umfasst die Verwendung vieler Dienste in einem Netzwerk. Dadurch wird es schwierig, Protokollmeldungen und Metriken mit der jeweiligen Anforderung zu korrelieren, durch die Sie ausgelöst wurden. Die verteilte Ablauf Verfolgung wendet Bezeichner auf Anforderungen an und ermöglicht das korrelieren von Protokollen und Metriken mit einem bestimmten Vorgang. Dies ist vergleichbar mit [der End-to-End-Ablauf Verfolgung von WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), wird jedoch auf mehrere Plattformen angewendet.
+Die verteilte Ablauf Verfolgung ist eine relativ aktuelle Entwicklung in der Überwachung, die aus der zunehmenden Verwendung von microservices und verteilten Architekturen entstanden ist. Eine einzelne Anforderung von einem Client Browser, einer Anwendung oder einem Gerät kann in viele Schritte und untergeordnete Anforderungen aufgeteilt werden und umfasst die Verwendung vieler Dienste in einem Netzwerk. Durch diese Aktivität ist es schwierig, Protokollmeldungen und Metriken mit der jeweiligen Anforderung zu korrelieren, durch die Sie ausgelöst wurden. Die verteilte Ablauf Verfolgung wendet Bezeichner auf Anforderungen an und ermöglicht das korrelieren von Protokollen und Metriken mit einem bestimmten Vorgang. Diese Ablauf Verfolgung ähnelt [der End-to-End-Ablauf Verfolgung von WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), wird jedoch auf mehrere Plattformen angewendet.
 
 Die verteilte Ablauf Verfolgung hat sich sehr schnell vergrößert und beginnt mit der Standardisierung. Die Cloud Native Computing Foundation erstellte den [offenen Ablauf Verfolgungs Standard](https://opentracing.io)und versuchte, herstellerneutrale Bibliotheken für das Arbeiten mit Back-Ends wie z. b. [Jaeger](https://www.jaegertracing.io/) und [elastisches apm](https://www.elastic.co/products/apm)bereitzustellen. Gleichzeitig hat Google das [opencensus-Projekt](https://opencensus.io/) erstellt, um die gleichen Probleme zu beheben. Diese beiden Projekte werden in einem neuen Projekt ( [opentelemetry](https://opentelemetry.io)) zusammengeführt, das als Branchenstandard für die Zukunft dienen soll.
 
@@ -120,9 +120,9 @@ Die verteilte Ablauf Verfolgung basiert auf dem Konzept der *Spannen*: benannte,
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Verteilte Ablauf Verfolgung mit `DiagnosticSource`
 
-.Net Core verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen zuordnet: [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource` Modul verfügt über das Konzept einer *Aktivität* und bietet eine einfache Möglichkeit, die Diagnose in einem Prozess zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des- `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
+.Net verfügt über ein internes Modul, das sich gut für verteilte Ablauf Verfolgungen und spannen erstreckt: [diagnosticsource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Das `DiagnosticSource` Modul verfügt über das Konzept einer *Aktivität* und bietet eine einfache Möglichkeit, die Diagnose in einem Prozess zu erzeugen und zu nutzen. Bei einer Aktivität handelt es sich tatsächlich um eine Implementierung einer verteilten Ablauf Verfolgung oder um eine Spanne innerhalb einer Ablauf Verfolgung. Die internale des Moduls kümmern sich um über-und untergeordnete Aktivitäten, einschließlich der Zuordnung von bezeichtern. Weitere Informationen zur Verwendung des- `Activity` Typs finden Sie im [Benutzerhandbuch für Aktivitäten auf GitHub](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide).
 
-Da `DiagnosticSource` Teil des Kern-Frameworks ist, wird es von mehreren Kernkomponenten unterstützt. Hierzu gehören <xref:System.Net.Http.HttpClient> , Entity Framework Core und ASP.net Core, einschließlich expliziter Unterstützung im GrpC-Framework. Wenn ASP.net Core eine Anforderung empfängt, überprüft er, ob ein paar von HTTP-Headern mit dem W3C-Ablauf [Verfolgungs Kontext](https://www.w3.org/TR/trace-context) Standard übereinstimmt. Wenn die Header gefunden werden, wird eine Aktivität mithilfe der Identitäts Werte und des Kontexts aus den Headern gestartet. Wenn keine Header gefunden werden, wird eine Aktivität mit generierten Identitäts Werten gestartet, die dem Standardformat entsprechen. Alle Diagnosen, die während der Lebensdauer dieser Aktivität vom Framework oder Anwendungscode generiert werden, können mit der Ablauf Verfolgung und den spannen Bezeichner gekennzeichnet werden. Die `HttpClient` Unterstützung erweitert dies, indem bei jeder Anforderung eine aktuelle Aktivität überprüft und der ausgehenden Anforderung automatisch die Ablauf Verfolgungs Header hinzugefügt werden.
+Da `DiagnosticSource` ein Teil des Core-Frameworks und später ist, wird es von mehreren Kernkomponenten unterstützt. Hierzu gehören <xref:System.Net.Http.HttpClient> , Entity Framework Core und ASP.net Core, einschließlich expliziter Unterstützung im GrpC-Framework. Wenn ASP.net Core eine Anforderung empfängt, überprüft er, ob ein paar von HTTP-Headern mit dem W3C-Ablauf [Verfolgungs Kontext](https://www.w3.org/TR/trace-context) Standard übereinstimmt. Wenn die Header gefunden werden, wird eine Aktivität mithilfe der Identitäts Werte und des Kontexts aus den Headern gestartet. Wenn keine Header gefunden werden, wird eine Aktivität mit generierten Identitäts Werten gestartet, die dem Standardformat entsprechen. Alle Diagnosen, die während der Lebensdauer dieser Aktivität vom Framework oder Anwendungscode generiert werden, können mit der Ablauf Verfolgung und den spannen Bezeichner gekennzeichnet werden. `HttpClient`Diese Funktionalität wird durch die Unterstützung erweitert, indem bei jeder Anforderung eine aktuelle Aktivität überprüft und der ausgehenden Anforderung automatisch die Ablauf Verfolgungs Header hinzugefügt werden.
 
 Die ASP.net Core GrpC-Client und-Server Bibliotheken umfassen explizite Unterstützung für `DiagnosticSource` und `Activity` und erstellen Aktivitäten und übernehmen und verwenden Header Informationen automatisch.
 

@@ -1,13 +1,13 @@
 ---
 title: Protobuf-Nachrichten-GrpC für WCF-Entwickler
 description: Erfahren Sie, wie protobuf-Nachrichten in der IDL definiert und in c# generiert werden.
-ms.date: 09/09/2019
-ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.date: 12/15/2020
+ms.openlocfilehash: c1f2a3071d45dcbe4b98d747f19fed508bad102f
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325039"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938103"
 ---
 # <a name="protobuf-messages"></a>Protobuf-Nachrichten
 
@@ -62,9 +62,9 @@ Die `Stock` Nachrichten Definition gibt vier Felder an. Jede verfügt über eine
 
 ## <a name="field-numbers"></a>Feldnummern
 
-Feldnummern sind ein wichtiger Bestandteil von protobuf. Sie werden verwendet, um Felder in den binär codierten Daten zu identifizieren, d. h., Sie können nicht von Version zu Version Ihres Dienstanbieter wechseln. Der Vorteil besteht darin, dass Abwärtskompatibilität und Vorwärtskompatibilität möglich sind. Von Clients und Diensten werden einfach Feldnummern ignoriert, über die Sie nicht Bescheid wissen, solange fehlende Werte behandelt werden.
+Feldnummern sind ein wichtiger Bestandteil von protobuf. Sie werden verwendet, um Felder in den binär codierten Daten zu identifizieren, d. h., Sie können nicht von Version zu Version Ihres Dienstanbieter wechseln. Der Vorteil besteht darin, dass Abwärtskompatibilität und Vorwärtskompatibilität möglich sind. Von Clients und Diensten werden Feldnummern ignoriert, über die Sie nicht Bescheid wissen, solange fehlende Werte behandelt werden.
 
-Im Binärformat wird die Feldzahl mit einem Typbezeichner kombiniert. Feldzahlen von 1 bis 15 können mit Ihrem Typ als einzelnes Byte codiert werden. Zahlen zwischen 16 und 2.047 nehmen 2 Bytes in Anspruch. Sie können den Wechsel erhöhen, wenn Sie mehr als 2.047 Felder für eine Nachricht aus irgendeinem Grund benötigen. Die Einzel Byte-IDs für die feldzahlen 1 bis 15 bieten eine bessere Leistung, daher sollten Sie Sie für die grundlegendsten, häufig verwendeten Felder verwenden.
+Im Binärformat wird die Feldzahl mit einem Typbezeichner kombiniert. Feldzahlen von 1 bis 15 können mit Ihrem Typ als einzelnes Byte codiert werden. Zahlen zwischen 16 und 2.047 nehmen 2 Bytes in Anspruch. Sie können den Wechsel erhöhen, wenn Sie mehr als 2.047 Felder für eine Nachricht aus irgendeinem Grund benötigen. Die Einzel Byte-IDs für die feldzahlen 1 bis 15 bieten eine bessere Leistung. Sie sollten Sie daher für die grundlegendsten, häufig verwendeten Felder verwenden.
 
 ## <a name="types"></a>Typen
 

@@ -1,13 +1,13 @@
 ---
 title: Lastenausgleich von GrpC-GrpC für WCF-Entwickler
 description: Auswählen eines Load Balancers zum Arbeiten mit GrpC-Diensten.
-ms.date: 09/02/2019
-ms.openlocfilehash: 215c0983146bbf9168f01956d64733f80cea6faf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 55f61608dce1f159b11d7265a47938ba49e9e188
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711173"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938584"
 ---
 # <a name="load-balancing-grpc"></a>Lastenausgleich für GrpC
 
@@ -17,7 +17,7 @@ Lasten Ausgleichs Module werden entsprechend der *Ebene* klassifiziert, auf der 
 
 ## <a name="l4-load-balancers"></a>L4-Lasten Ausgleichs Module
 
-Ein L4-Lasten Ausgleichs Modul akzeptiert eine TCP-Verbindungsanforderung von einem Client, öffnet eine weitere Verbindung mit einer der Back-End-Instanzen und kopiert Daten zwischen den beiden Verbindungen ohne wirkliche Verarbeitung. L4 bietet hervorragende Leistung und geringe Latenz, aber nur sehr wenig Kontrolle oder Intelligenz. Solange der Client die Verbindung geöffnet hält, werden alle Anforderungen an dieselbe Back-End-Instanz weitergeleitet.
+Ein L4-Lasten Ausgleichs Modul akzeptiert eine TCP-Verbindungsanforderung von einem Client, öffnet eine weitere Verbindung mit einer der Back-End-Instanzen und kopiert Daten zwischen den beiden Verbindungen ohne wirkliche Verarbeitung. L4 bietet hervorragende Leistung und geringe Latenz, aber mit wenig Kontrolle oder Intelligenz. Solange der Client die Verbindung geöffnet hält, werden alle Anforderungen an dieselbe Back-End-Instanz weitergeleitet.
 
  [Azure Load Balancer](https://azure.microsoft.com/services/load-balancer/) ist ein Beispiel für einen L4 Load Balancer.
 
@@ -31,7 +31,7 @@ Beispiele für L7-Lasten Ausgleichs Module:
 - [HAProxy](https://www.haproxy.com/)
 - [Traefik](https://traefik.io/)
 
-Als Faustregel sind L7-Lasten Ausgleichs Module die beste Wahl für GrpC und andere http/2-Anwendungen (und in der Regel für HTTP-Anwendungen). L4-Lasten Ausgleichs Module *funktionieren* mit GrpC-Anwendungen, sind aber vor allem dann nützlich, wenn eine geringe Latenz und ein geringer Verwaltungsaufwand wichtig sind.
+Als Faustregel sind L7-Lasten Ausgleichs Module die beste Wahl für GrpC und andere http/2-Anwendungen (und in der Regel für HTTP-Anwendungen). L4-Lasten Ausgleichs Module *funktionieren* mit GrpC-Anwendungen. Sie sind jedoch in erster Linie nützlich, wenn eine geringe Latenz und ein geringer Verwaltungsaufwand wichtig sind.
 
 > [!IMPORTANT]
 > Zum Zeitpunkt der Erstellung dieses Artikels unterstützen einige L7-Lasten Ausgleichs Module nicht alle Teile der http/2-Spezifikation, die für GrpC-Dienste erforderlich sind, wie z. b. nachfolgende Header.
