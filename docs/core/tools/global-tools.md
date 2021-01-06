@@ -4,12 +4,12 @@ description: Informationen zum Installieren, Verwenden, Aktualisieren und Entfer
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 8839fd4fba72c9f973d906eabb72919306a847dd
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556900"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633883"
 ---
 # <a name="how-to-manage-net-tools"></a>Verwalten von .NET-Tools
 
@@ -40,8 +40,6 @@ Es folgen einige Möglichkeiten, Tools zu finden:
 
 * Verwenden Sie den Befehl [dotnet tool search](dotnet-tool-search.md), um nach einem Tool zu suchen, das auf NuGet.org veröffentlicht wird.
 * Durchsuchen Sie die [NuGet](https://www.nuget.org)-Website mithilfe des Pakettypfilters „.NET tool“. Weitere Informationen finden Sie unter [Finding and choosing packages (Suchen und Auswählen von Paketen)](/nuget/consume-packages/finding-and-choosing-packages).
-* Sehen Sie sich die Liste der Tools im GitHub-Repository [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) an.
-* Verwenden Sie [ToolGet](https://www.toolget.net/), um nach .NET-Tools zu suchen.
 * Sehen Sie sich den Quellcode der vom ASP.NET Core-Team im [GitHub-Repository dotnet/aspnetcore im Verzeichnis „Tools“](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) erstellten Tools an.
 * Weitere Informationen zu Diagnosetools finden Sie unter [.NET-Diagnosetools](../diagnostics/index.md#net-core-diagnostic-global-tools).
 

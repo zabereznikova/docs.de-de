@@ -3,13 +3,13 @@ title: 'Tutorial: Erstellen von Algorithmen mit Musterabgleich'
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
-ms.custom: contperfq1
-ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955628"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513223"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Verwenden des Musterabgleichs für buildtypgesteuerte und datengesteuerte Algorithmen
 

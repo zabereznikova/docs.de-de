@@ -2,16 +2,16 @@
 title: Typerweiterungen
 description: 'Erfahren Sie, wie Sie mit F #-Typerweiterungen einem zuvor definierten Objekttyp neue Member hinzufügen können.'
 ms.date: 02/05/2020
-ms.openlocfilehash: 8fdb2d5e527643b23d24a6118e8cef6b11f1a546
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c9adddb3133a4af57a12be0b09c22954a8bff6a7
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559127"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737267"
 ---
 # <a name="type-extensions"></a>Typerweiterungen
 
-Typerweiterungen (auch als _Erweiterungen_bezeichnet) sind eine Reihe von Funktionen, mit denen Sie einem zuvor definierten Objekttyp neue Member hinzufügen können. Die drei Features sind:
+Typerweiterungen (auch als _Erweiterungen_ bezeichnet) sind eine Reihe von Funktionen, mit denen Sie einem zuvor definierten Objekttyp neue Member hinzufügen können. Die drei Features sind:
 
 - Systeminterne Typerweiterungen
 - Optionale Typerweiterungen
@@ -34,7 +34,7 @@ open System.Runtime.CompilerServices
 [<Extension>]
 type Extensions() =
     [<Extension>]
-    static member self-identifier.extension-name (ty: typename, [args]) =
+    static member extension-name (ty: typename, [args]) =
         body
     ...
 ```

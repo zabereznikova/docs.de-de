@@ -2,12 +2,12 @@
 title: Veraltete Features in .NET 5.0 und höher
 description: In diesem Artikel erfahren Sie mehr über APIs, die in .NET 5.0 und höher als veraltet markiert sind und SYSLIB-Compilerwarnungen auslösen.
 ms.date: 10/20/2020
-ms.openlocfilehash: aa5716ba8fe46c7c4ae2faafe7cc963551eecef7
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 336958c93e3db8f66cfbec89476a666e5e103b70
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440763"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593304"
 ---
 # <a name="obsolete-features-in-net-5"></a>Veraltete Features in .NET 5.0
 
@@ -25,18 +25,18 @@ In der folgenden Tabelle finden Sie einen Index für die `SYSLIBxxxx`-Warnungen 
 
 | Diagnose-ID | BESCHREIBUNG |
 | - | - |
-| [SYSLIB0001](syslib0001.md) | Die UTF-7-Codierung ist unsicher und sollte nicht verwendet werden. Verwenden Sie stattdessen UTF-8. |
-| [SYSLIB0002](syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird von der Runtime nicht berücksichtigt und darf nicht verwendet werden. |
-| [SYSLIB0003](syslib0003.md) | Die Codezugriffssicherheit (Code Access Security, CAS) wird von der Runtime nicht unterstützt oder nicht berücksichtigt. |
-| [SYSLIB0004](syslib0004.md) | Das Feature „Eingeschränkte Ausführungsregion (Constrained Execution Region, CER)“ wird nicht unterstützt. |
-| [SYSLIB0005](syslib0005.md) | Der globale Assemblycache (GAC) wird nicht unterstützt. |
-| [SYSLIB0006](syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> wird nicht unterstützt und löst <xref:System.PlatformNotSupportedException> aus. |
-| [SYSLIB0007](syslib0007.md) | Die Standardimplementierung dieses Kryptografiealgorithmus wird nicht unterstützt. |
-| [SYSLIB0008](syslib0008.md) | Die <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>-API wird nicht unterstützt und löst <xref:System.PlatformNotSupportedException>aus. |
-| [SYSLIB0009](syslib0009.md) | Die Methoden <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> und <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> werden nicht unterstützt und lösen <xref:System.PlatformNotSupportedException> aus. |
-| [SYSLIB0010](syslib0010.md) | Einige Remoting-APIs werden nicht unterstützt und lösen <xref:System.PlatformNotSupportedException> aus. |
-| [SYSLIB0011](syslib0011.md) | Die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Serialisierung ist veraltet und sollte nicht verwendet werden. |
-| [SYSLIB0012](syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> sind nur für die .NET Framework-Kompatibilität enthalten. Verwenden Sie stattdessen <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType>. |
+| [SYSLIB0001](syslib-warnings/syslib0001.md) | Die UTF-7-Codierung ist unsicher und sollte nicht verwendet werden. Verwenden Sie stattdessen UTF-8. |
+| [SYSLIB0002](syslib-warnings/syslib0002.md) | <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird von der Runtime nicht berücksichtigt und darf nicht verwendet werden. |
+| [SYSLIB0003](syslib-warnings/syslib0003.md) | Die Codezugriffssicherheit (Code Access Security, CAS) wird von der Runtime nicht unterstützt oder nicht berücksichtigt. |
+| [SYSLIB0004](syslib-warnings/syslib0004.md) | Das Feature „Eingeschränkte Ausführungsregion (Constrained Execution Region, CER)“ wird nicht unterstützt. |
+| [SYSLIB0005](syslib-warnings/syslib0005.md) | Der globale Assemblycache (GAC) wird nicht unterstützt. |
+| [SYSLIB0006](syslib-warnings/syslib0006.md) | <xref:System.Threading.Thread.Abort?displayProperty=nameWithType> wird nicht unterstützt und löst <xref:System.PlatformNotSupportedException> aus. |
+| [SYSLIB0007](syslib-warnings/syslib0007.md) | Die Standardimplementierung dieses Kryptografiealgorithmus wird nicht unterstützt. |
+| [SYSLIB0008](syslib-warnings/syslib0008.md) | Die <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator>-API wird nicht unterstützt und löst <xref:System.PlatformNotSupportedException>aus. |
+| [SYSLIB0009](syslib-warnings/syslib0009.md) | Die Methoden <xref:System.Net.AuthenticationManager.Authenticate%2A?displayProperty=nameWithType> und <xref:System.Net.AuthenticationManager.PreAuthenticate%2A?displayProperty=nameWithType> werden nicht unterstützt und lösen <xref:System.PlatformNotSupportedException> aus. |
+| [SYSLIB0010](syslib-warnings/syslib0010.md) | Einige Remoting-APIs werden nicht unterstützt und lösen <xref:System.PlatformNotSupportedException> aus. |
+| [SYSLIB0011](syslib-warnings/syslib0011.md) | Die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Serialisierung ist veraltet und sollte nicht verwendet werden. |
+| [SYSLIB0012](syslib-warnings/syslib0012.md) | <xref:System.Reflection.Assembly.CodeBase?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.EscapedCodeBase?displayProperty=nameWithType> sind nur für die .NET Framework-Kompatibilität enthalten. Verwenden Sie stattdessen <xref:System.Reflection.Assembly.Location?displayProperty=nameWithType>. |
 
 ## <a name="suppress-warnings"></a>Unterdrücken von Warnungen
 

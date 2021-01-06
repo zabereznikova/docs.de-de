@@ -3,12 +3,12 @@ title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223560"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633909"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -30,7 +30,7 @@ Dieser Artikel beschreibt die formale Spezifikation von .NET-APIs, die in allen 
 [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../tutorials/libraries.md)\
 Dieser Artikel erläutert, wie Sie mithilfe der .NET Core-CLI Bibliotheken schreiben.
 
-[Erweiterungen des *CSPROJ* -Formats für .NET Core](../tools/csproj.md)\
+[Erweiterungen des *CSPROJ*-Formats für .NET Core](../tools/csproj.md)\
 In diesem Artikel werden die Änderungen erläutert, die an die Projektdateien beim Wechsel zu *csproj* und MSBuild hinzugefügt wurden.
 
 [Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern](third-party-deps.md)\
@@ -43,7 +43,7 @@ Wenn Ihr Code nicht .NET Framework 4.7.2 als Ziel festlegt, wird empfohlen, dass
 Führen Sie für jedes Projekt, das Sie portieren möchten, die folgenden Schritte in Visual Studio aus:
 
 1. Klicken Sie mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus.
-1. Klicken Sie in der Dropdownliste **Zielframework** auf **.NET Framework 4.7.2** .
+1. Klicken Sie in der Dropdownliste **Zielframework** auf **.NET Framework 4.7.2**.
 1. Kompilieren Sie das Projekt neu.
 
 Da Ihre Projekte jetzt .NET Framework 4.7.2 als Ziel festgelegt haben, verwenden Sie diese Version von .NET Framework als Grundlage zum Portieren von Code.
@@ -107,8 +107,8 @@ Es ist wahrscheinlich, dass Sie die oben genannten Vorgehensweisen jeweils pro P
 
 Die beste Möglichkeit, um sicherzustellen, dass alles funktioniert, wenn Sie Ihren Code importiert haben, ist das Testen Ihres Codes beim Portieren auf .NET Core. Zu diesem Zweck müssen Sie ein Test-Framework verwenden, das Tests für .NET Core erstellt und ausführt. Derzeit stehen Ihnen drei Optionen zur Verfügung:
 
-- [xUnit](https://xunit.github.io/)
-  - [Erste Schritte](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+- [xUnit](https://xunit.net/)
+  - [Erste Schritte](https://xunit.net/docs/getting-started/netcore/cmdline)
   - [Tool zum Konvertieren eines MSTest-Projekts zu xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
   - [Erste Schritte](https://github.com/nunit/docs/wiki/Installation)
@@ -121,7 +121,7 @@ Die Arbeit für die Portierung hängt letztendlich schwer davon ab, wie Ihr .NET
 
 1. Portieren Sie das Testprojekt, das die Ebene Ihrer Bibliothek testet, die Sie derzeit portieren.
 1. Kopieren Sie die Basis Ihrer Bibliothek in ein neues .NET Core-Projekt, und wählen Sie die Version von .NET Standard aus, die unterstützt werden soll.
-1. Führen Sie alle erforderlichen Änderungen durch, sodass der Code kompiliert werden kann. Vieles davon erfordert möglicherweise das Hinzufügen von NuGet-Paketabhängigkeiten zu ihrer *csproj* -Datei.
+1. Führen Sie alle erforderlichen Änderungen durch, sodass der Code kompiliert werden kann. Vieles davon erfordert möglicherweise das Hinzufügen von NuGet-Paketabhängigkeiten zu ihrer *csproj*-Datei.
 1. Führen Sie die Tests aus, und führen Sie erforderliche Anpassungen durch.
 1. Wählen Sie die nächste Codeebene aus, die portiert werden soll, und wiederholen Sie die vorherigen Schritte.
 

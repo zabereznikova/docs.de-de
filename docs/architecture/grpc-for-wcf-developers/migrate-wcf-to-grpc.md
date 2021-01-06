@@ -1,19 +1,19 @@
 ---
 title: Migrieren einer WCF-Lösung zu GrpC-GrpC für WCF-Entwickler
 description: Vorgehensweise beim Migrieren verschiedener Typen von WCF-Diensten zu den entsprechenden Typen in GrpC.
-ms.date: 09/02/2019
-ms.openlocfilehash: 12e724ab46a33547d352da7a604a5a994e617bc2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 12/15/2020
+ms.openlocfilehash: 3bd35cb6119368ff3db3be9ab5fabf89f2652b29
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628513"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97937960"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>Migrieren einer WCF-Lösung zu gRPC
 
-In diesem Kapitel wird beschrieben, wie Sie mit ASP.net Core 3,0-GrpC-Projekten arbeiten und die Migration verschiedener Typen von Windows Communication Foundation (WCF)-Diensten zu der GrpC-Entsprechung veranschaulichen:
+In diesem Kapitel wird beschrieben, wie Sie mit ASP.net Core 5,0-GrpC-Projekten arbeiten und die Migration verschiedener Typen von Windows Communication Foundation (WCF)-Diensten zu der GrpC-Entsprechung veranschaulichen:
 
-- Erstellen Sie ein ASP.net Core 3,0-GrpC-Projekt.
+- Erstellen Sie ein ASP.net Core 5,0-GrpC-Projekt.
 - Einfache Anforderung/Antwort-Vorgänge an den unären GrpC-RPC.
 - Unidirektionale Vorgänge zum GrpC-clientstreaming von RPC.
 - Vollduplex Dienste für das bidirektionale Streaming von GrpC.

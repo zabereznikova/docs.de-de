@@ -2,12 +2,12 @@
 title: Entwurfsrichtlinien für eine F#-Komponente
 description: 'Erfahren Sie mehr über die Richtlinien zum Schreiben von F #-Komponenten, die von anderen Aufrufern für'
 ms.date: 05/14/2018
-ms.openlocfilehash: 590bda0660d54ea73c590d31e694f3d499e0fd9f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 24be2a422c97b9334f749e3d9dfcccd0feec219b
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209135"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856106"
 ---
 # <a name="f-component-design-guidelines"></a>Entwurfsrichtlinien für eine F#-Komponente
 
@@ -70,11 +70,11 @@ In diesem Abschnitt finden Sie Empfehlungen für die Entwicklung von öffentlich
 
 In der folgenden Tabelle sind die .net-Benennungs-und-groß Schreibung Es gibt kleine Ergänzungen, die auch F #-Konstrukte enthalten.
 
-| Konstrukt | Fall | Teil | Beispiele | Hinweise |
+| Konstrukt | Fall | Teil | Beispiele | Notizen |
 |-----------|------|------|----------|-------|
 | Konkrete Typen | PascalCase | Substantiv/Adjektiv | List, Double, Complex | Konkrete Typen sind Strukturen, Klassen, Enumerationen, Delegaten, Datensätze und Unions. Obwohl Typnamen in ocaml traditionell klein geschrieben werden, hat F # das .net-Benennungs Schema für-Typen übernommen.
-| DLLs           | PascalCase |                 | Fabrikam. Core. dll |  |
-| Union-Tags     | PascalCase | Nomen | Einige, hinzufügen, Erfolg | Verwenden Sie kein Präfix in öffentlichen APIs. Optional ein Präfix verwenden, z. b.`type Teams = TAlpha | TBeta | TDelta.` |
+| DLLs           | PascalCase |                 | Fabrikam.Core.dll |  |
+| Union-Tags     | PascalCase | Nomen | Einige, hinzufügen, Erfolg | Verwenden Sie kein Präfix in öffentlichen APIs. Optional ein Präfix verwenden, z. b. `type Teams = TAlpha | TBeta | TDelta.` |
 | Ereignis          | PascalCase | Verb | ValueChanged/valuechanging |  |
 | Ausnahmen     | PascalCase |      | WebException | Der Name muss auf "Exception" enden. |
 | Feld          | PascalCase | Nomen | Currentname  | |
@@ -191,8 +191,8 @@ Verwenden Sie Schnittstellentypen, um einen Satz von Vorgängen darzustellen. Di
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 Vor:
@@ -222,7 +222,7 @@ Wenn Sie ein solches Modul einschließen, befolgen Sie die Standard Benennungs K
 
 #### <a name="use-a-module-to-group-functions-for-common-canonical-functions-especially-in-math-and-dsl-libraries"></a>Verwenden eines Moduls zum Gruppieren von Funktionen für allgemeine, kanonische Funktionen, insbesondere in mathematischen und DSL-Bibliotheken
 
-Beispielsweise `Microsoft.FSharp.Core.Operators` ist eine automatisch geöffnete Auflistung von Funktionen der obersten Ebene (wie `abs` und), die `sin` von FSharp. Core. dll bereitgestellt werden.
+Beispielsweise `Microsoft.FSharp.Core.Operators` ist eine automatisch geöffnete Auflistung von Funktionen der obersten Ebene (wie `abs` und), die `sin` von FSharp.Core.dll bereitgestellt werden.
 
 Ebenso kann eine Statistik Bibliothek ein Modul mit Funktionen und enthalten `erf` `erfc` , bei denen dieses Modul explizit oder automatisch geöffnet werden soll.
 
@@ -653,7 +653,7 @@ member this.ParamOverload(x: int) = x
 member this.ParamOverload(x: int, y: int) = x + y
 ```
 
-#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Verwenden Sie die .net-Auflistungs Schnittstellentypen IEnumerable \< T \> und IDictionary \< Key, Wert \> für Parameter und Rückgabewerte.
+#### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Verwenden Sie die .net-Sammlungs Schnittstellentypen IEnumerable \<T\> und IDictionary \<Key,Value\> für Parameter und Rückgabewerte.
 
 Vermeiden Sie die Verwendung von konkreten Auflistungs Typen wie .NET-Arrays `T[]` , F #-Typen und und konkreten Auflistungs `list<T>` Typen von .net, `Map<Key,Value>` `Set<T>` wie z `Dictionary<Key,Value>` . b.. Die Entwurfs Richtlinien für .NET-Bibliotheken bieten gute Ratschläge hinsichtlich der Verwendung verschiedener Sammlungs Typen wie `IEnumerable<T>` . Die Verwendung von Arrays ( `T[]` ) ist unter bestimmten Umständen in Leistungsgründen akzeptabel. Beachten Sie insbesondere, dass `seq<T>` es sich bei nur um den F #-Alias für handelt und dass es sich bei der `IEnumerable<T>` .NET-API oft um einen geeigneten Typ handelt.
 
@@ -770,7 +770,7 @@ public class Point1
 }
 ```
 
-Es gibt einige wichtige Punkte zu beachten, wie F # hier Konstrukte repräsentiert. Zum Beispiel:
+Es gibt einige wichtige Punkte zu beachten, wie F # hier Konstrukte repräsentiert. Beispiel:
 
 * Metadaten, wie z. b. Argument Namen, wurden beibehalten.
 

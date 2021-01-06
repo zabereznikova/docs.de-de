@@ -2,12 +2,12 @@
 title: Datensätze
 description: 'Erfahren Sie, wie F #-Datensätze einfache Aggregate benannter Werte darstellen, optional mit Membern.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682028"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899638"
 ---
 # <a name="records"></a>Datensätze
 
@@ -24,7 +24,7 @@ type [accessibility-modifier] typename =
     [ member-list ]
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 In der vorherigen Syntax ist *tykame* der Name des Daten Satz Typs, *Label1* und *Label2* sind Namen von Werten, die als *Bezeichnungen* bezeichnet werden, und *Typ1* und *Typ2* sind die Typen dieser Werte. "Element *-List* " ist die optionale Liste der Member für den Typ.  Mit dem-Attribut können Sie `[<Struct>]` einen Strukturdaten Satz anstelle eines Datensatzes erstellen, bei dem es sich um einen Verweistyp handelt.
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>Unterschiede zwischen Datensätzen und Klassen
 
-Daten Satz Felder unterscheiden sich von Klassen darin, dass Sie automatisch als Eigenschaften verfügbar gemacht werden und beim Erstellen und Kopieren von Datensätzen verwendet werden. Die Daten Satz Erstellung unterscheidet sich auch von der Klassen Erstellung In einem Daten Recordtyp können Sie keinen Konstruktor definieren. Stattdessen gilt die in diesem Thema beschriebene Konstruktions Syntax. Klassen haben keine direkte Beziehung zwischen Konstruktorparametern, Feldern und Eigenschaften.
+Daten Satz Felder unterscheiden sich von den Klassen Feldern insofern, als Sie automatisch als Eigenschaften verfügbar gemacht werden und beim Erstellen und Kopieren von Datensätzen verwendet werden. Die Daten Satz Erstellung unterscheidet sich auch von der Klassen Erstellung In einem Daten Recordtyp können Sie keinen Konstruktor definieren. Stattdessen gilt die in diesem Thema beschriebene Konstruktions Syntax. Klassen haben keine direkte Beziehung zwischen Konstruktorparametern, Feldern und Eigenschaften.
 
 Wie Union-und Strukturtypen haben Datensätze strukturelle Gleichheits Semantik. Klassen verfügen über eine Verweis Gleichheits Semantik. Dies wird im folgenden Codebeispiel veranschaulicht.
 
@@ -179,7 +179,7 @@ Wenn Sie denselben Code mit Klassen schreiben, sind die beiden Klassen Objekte u
 
 Wenn Sie Verweis Gleichheit für Datensätze benötigen, fügen Sie das Attribut `[<ReferenceEquality>]` oberhalb des Datensatzes hinzu.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [F#-Typen](fsharp-types.md)
 - [Klassen](classes.md)

@@ -3,12 +3,12 @@ title: Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktions
 description: Sicherheit in .NET-Microservices und Webanwendungen – Azure Key Vault ist eine hervorragende Möglichkeit, Anwendungsgeheimnisse zu behandeln, die vollständig von Administratoren gesteuert werden. Administratoren können sogar Entwicklungswerte zuweisen und widerrufen, ohne dass Entwickler sie behandeln müssen.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: d2d3690c0c8787ace6bcdfacbdb612f9ef957b98
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 5d024894fe1540df04514031bf0b6e0754ddc75c
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916241"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633922"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Verwenden von Azure Key Vault zum Schutz von Geheimnissen zur Produktionszeit
 
@@ -37,7 +37,7 @@ Beachten Sie, dass das Aufrufen von `AddAzureKeyVault` die Anwendungs-ID erforde
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Verwenden von Azure Key Vault zum Schutz von Anwendungsgeheimnissen** \
-  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/architecture/multitenant-identity](/azure/architecture/multitenant-identity)
 
 - **Sicheres Speichern von App-Geheimnissen während der Entwicklung** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)

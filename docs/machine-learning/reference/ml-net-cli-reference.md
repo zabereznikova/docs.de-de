@@ -3,12 +3,12 @@ title: Befehlsreferenz für die ML.NET-CLI
 description: Übersicht, Beispiele und Verweise für den Befehl „auto-train“ im ML.NET-CLI-Tool
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
-ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
+ms.openlocfilehash: 6f07cd8b4237f8931bbc0ec97bc0bbe18c488f16
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946940"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856067"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Befehlsreferenz für die ML.NET-CLI
 
@@ -99,7 +99,7 @@ mlnet classification
 Durch das Ausführen von `mlnet regression` wird ein Regressionsmodell trainiert. Wählen Sie diesen Befehl aus, wenn Sie möchten, dass ein ML-Modell einen numerischen Wert vorhersagt (z. B. Preisvorhersage).
 
 ```console
-mlnet classification
+mlnet regression
 
 --dataset <path> (REQUIRED)
 
@@ -134,7 +134,7 @@ mlnet classification
 Durch das Ausführen von `mlnet recommendation` wird ein Empfehlungsmodell trainiert.  Wählen Sie diesen Befehl aus, wenn Sie möchten, dass ein ML-Modell Benutzern Artikel auf der Grundlage von Bewertungen (z. B. Produktempfehlungen) empfiehlt.
 
 ```console
-mlnet classification
+mlnet recommendation
 
 --dataset <path> (REQUIRED)
 

@@ -2,12 +2,12 @@
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
 ms.date: 08/07/2020
-ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804769"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633948"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -31,7 +31,7 @@ Konzentrieren Sie sich bei der Durchführung eines Komponententests für Ihre Co
 
 Komponententests werden basierend auf Testframeworks wie xUnit.net, MSTest, Moq oder NUnit implementiert. Für die Beispielanwendung eShopOnContainers wird xUnit verwendet.
 
-Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, und verwenden Sie direkt das New-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Im folgenden Beispiel wird gezeigt, wie dies unter Verwendung von [xUnit](https://xunit.github.io/) als Testframework erfolgt.
+Wenn Sie einen Komponententest für einen Web-API-Controller schreiben, instanziieren Sie die Controllerklasse, und verwenden Sie direkt das New-Schlüsselwort in C\#, damit der Test so schnell wie möglich ausgeführt wird. Im folgenden Beispiel wird gezeigt, wie dies unter Verwendung von [xUnit](https://xunit.net/) als Testframework erfolgt.
 
 ```csharp
 [Fact]
@@ -111,7 +111,7 @@ public class PrimeWebDefaultRequestShould
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Offizielle Website. \
-    <https://xunit.github.io/>
+    <https://xunit.net/>
 
 - **Grundlagen zum Komponententest** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)

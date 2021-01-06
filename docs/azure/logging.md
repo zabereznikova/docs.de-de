@@ -2,15 +2,15 @@
 title: Protokollieren mit dem Azure SDK für .NET
 description: In diesem Artikel erfahren Sie, wie Sie die Protokollierung mit dem Azure SDK für .NET-Clientbibliotheken einrichten.
 ms.date: 03/20/2020
-ms.custom: azure-sdk-dotnet
+ms.custom: devx-track-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 6adc485867e9bad401a15da19e6cb4424d2ddb13
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416031"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700709"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>Protokollieren mit dem Azure SDK für .NET
 

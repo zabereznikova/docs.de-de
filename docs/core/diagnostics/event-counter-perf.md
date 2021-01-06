@@ -3,18 +3,18 @@ title: Messen der Leistung mithilfe von EventCounters in .NET Core
 description: In diesem Tutorial erfahren Sie, wie Sie die Leistung mithilfe von EventCounters messen.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2ed7f234b685dab91ab275105d26b474e3bd1a87
+ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437451"
+ms.lasthandoff: 12/19/2020
+ms.locfileid: "97700742"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Messen der Leistung mithilfe von EventCounters in .NET Core
 
 **Dieser Artikel gilt für: ✔️** .NET Core 3.0 SDK und neuere Versionen
 
-In diesem Tutorial erfahren Sie, wie Sie mit <xref:System.Diagnostics.Tracing.EventCounter> die Leistung mit einer hohen Ereignishäufigkeit messen können. Sie können die [verfügbaren Leistungsindikatoren](event-counters.md#available-counters) verwenden, die von verschiedenen offiziellen .NET Core-Paketen oder von Drittanbietern veröffentlicht werden, oder eigene Metriken für die Überwachung erstellen.
+In diesem Tutorial erfahren Sie, wie Sie mit <xref:System.Diagnostics.Tracing.EventCounter> die Leistung mit einer hohen Ereignishäufigkeit messen können. Sie können die [verfügbaren Leistungsindikatoren](available-counters.md) verwenden, die von verschiedenen offiziellen .NET Core-Paketen oder von Drittanbietern veröffentlicht werden, oder eigene Metriken für die Überwachung erstellen.
 
 In diesem Lernprogramm lernen Sie Folgendes:
 

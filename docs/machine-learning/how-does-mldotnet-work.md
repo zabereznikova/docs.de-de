@@ -4,12 +4,12 @@ description: ML.NET ermöglicht es Ihnen, .NET-Anwendungen in Online- oder Offli
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2c44a83b4d45c95cbe45f125523207811f6368c2
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679663"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97634065"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>Was ist ML.NET, und wie funktioniert es?
 
@@ -236,7 +236,7 @@ Die `CreatePredictionEngine()`-Methode nimmt eine Eingabe- und eine Ausgabeklass
 
 Das Herzstück einer ML.NET-Machine Learning-Pipeline sind [DataView](xref:Microsoft.ML.IDataView)-Objekte.
 
-Jede Transformation in der Pipeline weist ein Eingabeschema (Datennamen, -typen und -größen, die die Transformation bei der Eingabe erwartet) und ein Ausgabeschema (nach der Transformation erzeugte Datennamen, -typen und -größen) auf. Das folgende Dokument enthält eine ausführliche Erläuterung der [Schnittstelle IDataView und deren Typsystem](https://xadupre.github.io/machinelearningext/mlnetdocs/idataviewtypesystem.html).
+Jede Transformation in der Pipeline weist ein Eingabeschema (Datennamen, -typen und -größen, die die Transformation bei der Eingabe erwartet) und ein Ausgabeschema (nach der Transformation erzeugte Datennamen, -typen und -größen) auf.
 
 Wenn das Ausgabeschema einer Transformation in der Pipeline nicht dem Eingabeschema der nächsten Transformation entspricht, löst ML.NET eine Ausnahme aus.
 

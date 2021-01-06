@@ -2,12 +2,12 @@
 title: Richtlinien für das Formatieren von F#-Code
 description: 'Hier finden Sie Richtlinien zum Formatieren von F #'
 ms.date: 08/31/2020
-ms.openlocfilehash: 7e20c76f4cfafa50a15b6501a498b228b526057e
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: 01a5f9ce0c9b5a67bb0c70bce0829ac300032883
+ms.sourcegitcommit: c3093e9d106d8ca87cc86eef1f2ae4ecfb392118
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513067"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97737189"
 ---
 # <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
@@ -180,11 +180,34 @@ Wenn Sie über eine lange Funktionsdefinition verfügen, platzieren Sie die Para
 
 ```fsharp
 module M =
-    let LongFunctionWithLotsOfParameters
+    let longFunctionWithLotsOfParameters
         (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
         =
+        // ... the body of the method follows
+
+    let longFunctionWithLotsOfParametersAndReturnType
+        (aVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        (aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse)
+        : ReturnType =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameter
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) =
+        // ... the body of the method follows
+
+    let longFunctionWithLongTupleParameterAndReturnType
+        (
+            aVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aSecondVeryLongParam: AVeryLongTypeThatYouNeedToUse,
+            aThirdVeryLongParam: AVeryLongTypeThatYouNeedToUse
+        ) : ReturnType =
         // ... the body of the method follows
 ```
 
@@ -588,10 +611,11 @@ type MyRecord =
 
 let foo a =
     a
-    |> Option.map (fun x ->
-        {
-            MyField = x
-        })
+    |> Option.map
+        (fun x ->
+            {
+                MyField = x
+            })
 ```
 
 Die gleichen Regeln gelten für Listen-und Array Elemente.
@@ -802,10 +826,11 @@ Der Musterabgleich von anonymen Funktionen, beginnend mit `function` , sollte in
 
 ```fsharp
 lambdaList
-|> List.map (function
-    | Abs(x, body) -> 1 + sizeLambda 0 body
-    | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
-    | Var v -> 1)
+|> List.map
+    (function
+        | Abs(x, body) -> 1 + sizeLambda 0 body
+        | App(lam1, lam2) -> sizeLambda (sizeLambda 0 lam1) lam2
+        | Var v -> 1)
 ```
 
 Der Musterabgleich in Funktionen `let` , die von oder definiert `let rec` werden, sollte nach dem Start von vier Leerzeichen eingezogen werden `let` , auch wenn das- `function` Schlüsselwort verwendet wird
@@ -838,11 +863,27 @@ with
 
 ## <a name="formatting-function-parameter-application"></a>Formatieren der Funktionsparameter Anwendung
 
-Im Allgemeinen werden die meisten Funktionsparameter Anwendungen in derselben Zeile ausgeführt.
-
-Wenn Sie Parameter auf eine Funktion in einer neuen Zeile anwenden möchten, müssen Sie Sie um einen Bereich einziehen.
+Im Allgemeinen werden die meisten Argumente in derselben Zeile bereitgestellt:
 
 ```fsharp
+let x = sprintf "\t%s - %i\n\r" x.IngredientName x.Quantity
+
+let printListWithOffset a list1 =
+    List.iter (fun elem -> printfn $"%d{a + elem}") list1
+```
+
+Wenn Pipelines betroffen sind, ist das gleiche in der Regel auch true, wenn eine Curry-Funktion als Argument in derselben Zeile angewendet wird:
+
+```
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter (fun elem -> printfn $"%d{a + elem}")
+```
+
+Möglicherweise möchten Sie jedoch Argumente an eine Funktion in einer neuen Zeile übergeben, um die Lesbarkeit zu ermöglichen, oder weil die Liste der Argumente oder der Argument Namen zu lang ist. Einziehen Sie in diesem Fall mit einem Bereich:
+
+```fsharp
+
 // OK
 sprintf "\t%s - %i\n\r"
      x.IngredientName x.Quantity
@@ -860,23 +901,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Die gleichen Richtlinien gelten auch für Lambda-Ausdrücke als Funktionsargumente. Wenn der Text eines Lambda Ausdrucks ist, kann der Text eine andere Zeile enthalten, die von einem Bereich eingezogen wird.
+Bei Lambda-Ausdrücken sollten Sie auch erwägen, den Text eines Lambda-Ausdrucks in einer neuen Zeile einzuordnen, die um einen Bereich eingezogen ist, wenn er lang genug ist:
 
 ```fsharp
-let printListWithOffset a list1 =
-    List.iter
-        (fun elem -> printfn $"%d{a + elem}")
-        list1
-
-// OK if lambda body is long enough
 let printListWithOffset a list1 =
     List.iter
         (fun elem ->
             printfn $"%d{a + elem}")
         list1
+
+let printListWithOffsetPiped a list1 =
+    list1
+    |> List.iter
+        (fun elem ->
+            printfn $"%d{a + elem}")
 ```
 
-Wenn der Text eines Lambda-Ausdrucks jedoch mehr als eine Zeile ist, sollten Sie ihn in eine separate Funktion einbeziehen, anstatt ein mehr zeitiges Konstrukt als einzelnes Argument für eine Funktion anzuwenden.
+Wenn der Text eines Lambda-Ausdrucks mehrere Zeilen lang ist, sollten Sie ihn in eine lokal positionsierte Funktion umgestalten.
 
 ### <a name="formatting-infix-operators"></a>Formatieren von Infixoperatoren
 
