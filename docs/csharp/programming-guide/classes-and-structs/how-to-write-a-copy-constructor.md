@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.topic: how-to
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 85899d2de05312be921199387cc1155fa8e9d2f1
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: dfc702bfe183b3712b20c64f9e82d2d3c3edd6d5
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098982"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512371"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="0f735-103">Gewusst wie: Schreiben eines Kopierkonstruktors (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="0f735-103">How to write a copy constructor (C# Programming Guide)</span></span>
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a><span data-ttu-id="492b2-103">Gewusst wie: Schreiben eines Kopierkonstruktors (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="492b2-103">How to write a copy constructor (C# Programming Guide)</span></span>
 
-<span data-ttu-id="0f735-104">C# stellt keinen Kopierkonstruktor für Objekte bereit. Sie können jedoch selbst einen schreiben.</span><span class="sxs-lookup"><span data-stu-id="0f735-104">C# doesn't provide a copy constructor for objects, but you can write one yourself.</span></span>  
+<span data-ttu-id="492b2-104">C# stellt keinen Kopierkonstruktor für Objekte bereit. Sie können jedoch selbst einen schreiben.</span><span class="sxs-lookup"><span data-stu-id="492b2-104">C# doesn't provide a copy constructor for objects, but you can write one yourself.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0f735-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0f735-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="492b2-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="492b2-105">Example</span></span>  
 
- <span data-ttu-id="0f735-106">Im folgenden Beispiel wird von der `Person`-[Klasse](../../language-reference/keywords/class.md) ein Kopierkonstruktor definiert, der eine Instanz von `Person` als sein Argument annimmt.</span><span class="sxs-lookup"><span data-stu-id="0f735-106">In the following example, the `Person`[class](../../language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="0f735-107">Die Werte der Eigenschaften des Arguments werden den Eigenschaften der neuen Instanz von `Person` zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="0f735-107">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="0f735-108">Der Code enthält einen alternativen Kopierkonstruktor, der die `Name`- und `Age`-Eigenschaften der Instanz sendet, die Sie in den Instanzenkonstruktor der Klasse kopieren möchten.</span><span class="sxs-lookup"><span data-stu-id="0f735-108">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
+ <span data-ttu-id="492b2-106">Im folgenden Beispiel wird von der `Person`-[Klasse](../../language-reference/keywords/class.md) ein Kopierkonstruktor definiert, der eine Instanz von `Person` als sein Argument annimmt.</span><span class="sxs-lookup"><span data-stu-id="492b2-106">In the following example, the `Person`[class](../../language-reference/keywords/class.md) defines a copy constructor that takes, as its argument, an instance of `Person`.</span></span> <span data-ttu-id="492b2-107">Die Werte der Eigenschaften des Arguments werden den Eigenschaften der neuen Instanz von `Person` zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="492b2-107">The values of the properties of the argument are assigned to the properties of the new instance of `Person`.</span></span> <span data-ttu-id="492b2-108">Der Code enthält einen alternativen Kopierkonstruktor, der die `Name`- und `Age`-Eigenschaften der Instanz sendet, die Sie in den Instanzenkonstruktor der Klasse kopieren möchten.</span><span class="sxs-lookup"><span data-stu-id="492b2-108">The code contains an alternative copy constructor that sends the `Name` and `Age` properties of the instance that you want to copy to the instance constructor of the class.</span></span>  
   
  [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
-## <a name="see-also"></a><span data-ttu-id="0f735-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0f735-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="492b2-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="492b2-109">See also</span></span>
 
 - <xref:System.ICloneable>
-- [<span data-ttu-id="0f735-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="0f735-110">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="0f735-111">Klassen und Strukturen</span><span class="sxs-lookup"><span data-stu-id="0f735-111">Classes and Structs</span></span>](./index.md)
-- [<span data-ttu-id="0f735-112">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="0f735-112">Constructors</span></span>](./constructors.md)
-- [<span data-ttu-id="0f735-113">Finalizer</span><span class="sxs-lookup"><span data-stu-id="0f735-113">Finalizers</span></span>](./destructors.md)
+- [<span data-ttu-id="492b2-110">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="492b2-110">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="492b2-111">Klassen und Strukturen</span><span class="sxs-lookup"><span data-stu-id="492b2-111">Classes and Structs</span></span>](./index.md)
+- [<span data-ttu-id="492b2-112">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="492b2-112">Constructors</span></span>](./constructors.md)
+- [<span data-ttu-id="492b2-113">Finalizer</span><span class="sxs-lookup"><span data-stu-id="492b2-113">Finalizers</span></span>](./destructors.md)
