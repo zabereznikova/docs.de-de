@@ -1,13 +1,13 @@
 ---
 title: 'Erstellen eines neuen ASP.net Core GrpC-Projekts: GrpC für WCF-Entwickler'
 description: Erfahren Sie, wie Sie ein GrpC-Projekt mithilfe von Visual Studio oder der Befehlszeile erstellen.
-ms.date: 12/15/2020
-ms.openlocfilehash: 960725a9507797f43b2c15283e384b0ad827c2b1
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c9d66a773f0633c2ae93c42ce3ce53084032cd17
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938654"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970257"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Erstellen eines neuen ASP.NET Core gRPC-Projekts
 
@@ -16,7 +16,7 @@ Das .NET SDK verfügt über ein leistungsfähiges CLI-Tool, `dotnet` das es Ihne
 ## <a name="create-the-project-by-using-visual-studio"></a>Erstellen des Projekts mithilfe von Visual Studio
 
 > [!IMPORTANT]
-> Zum Entwickeln einer ASP.net Core 5,0-App benötigen Sie Visual Studio 2019 Version 16,3 oder höher mit installierter **ASP.net-und Webentwicklungs-** Arbeitsauslastung.
+> Zum Entwickeln einer ASP.net Core 5,0-App benötigen Sie Visual Studio 2019 Version 16,8 oder höher mit installierter **ASP.net-und Webentwicklungs-** Arbeitsauslastung.
 
 Erstellen Sie eine leere Projekt Mappe mit dem Namen **tradersys** aus der Vorlage *leere* Projekt Mappe. Fügen Sie einen Lösungs Ordner mit dem Namen hinzu `src` . Klicken Sie dann mit der rechten Maustaste auf den Ordner , und wählen Sie  >  **Neues Projekt** hinzufügen aus. Geben `grpc` Sie im Feld für die Vorlagen Suche ein, und Sie sollten eine Projektvorlage mit dem Namen sehen `gRPC Service` .
 

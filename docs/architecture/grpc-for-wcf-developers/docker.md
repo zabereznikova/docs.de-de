@@ -1,13 +1,13 @@
 ---
 title: Docker-GrpC für WCF-Entwickler
 description: Erstellen von Docker-Images für ASP.net Core GrpC-Anwendungen
-ms.date: 12/15/2020
-ms.openlocfilehash: f662dbd67f00b828f3e1dfa47359a450dd1c5900
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: f59518a28b0a1dee75c792ba03bd4af826638502
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938415"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970088"
 ---
 # <a name="create-docker-images"></a>Erstellen von Docker-Images
 
@@ -15,7 +15,7 @@ In diesem Abschnitt wird die Erstellung von Docker-Images für ASP.net Core GrpC
 
 ## <a name="microsoft-base-images-for-aspnet-core-applications"></a>Microsoft-Basis Images für ASP.net Core Anwendungen
 
-Microsoft bietet eine Reihe von Basis Images zum entwickeln und Ausführen von .net Core-Anwendungen. Zum Erstellen eines ASP.net Core 3,0-Abbilds verwenden Sie zwei Basis Images:
+Microsoft bietet eine Reihe von Basis Images zum entwickeln und Ausführen von .NET-Anwendungen. Zum Erstellen eines ASP.net Core 5,0-Abbilds verwenden Sie zwei Basis Images:
 
 - Ein SDK-Image zum Erstellen und Veröffentlichen der Anwendung.
 - Ein Lauf Zeit Image für die Bereitstellung.
@@ -29,10 +29,9 @@ Für jedes Image gibt es vier Varianten, die auf verschiedenen Linux-Distributio
 
 | Imagetag (e) | Linux | Notizen |
 | --------- | ----- | ----- |
-| 5,0-Buster, 5,0 | Debian 10 | Das Standardbild, wenn keine Betriebssystem Variante angegeben ist. |
-| 5,0-Alpine | Alpine 3,9 | Alpine Base-Images sind wesentlich kleiner als Debian oder Ubuntu. |
-| 5,0-Disco | Ubuntu 19.04 | |
-| 5,0-Bionic | Ubuntu 18.04 | |
+| 5,0-Buster-schlank, 5,0 | Debian 10 | Das Standardbild, wenn keine Betriebssystem Variante angegeben ist. |
+| 5,0-Alpine | Alpine 3,12 | Alpine Base-Images sind wesentlich kleiner als Debian oder Ubuntu. |
+| 5,0-Fokus| Ubuntu 20.04 | |
 
 Das Alpine Base-Image ist um 100 MB im Vergleich zu 200 MB für die Debian-und Ubuntu-Images. Einige Softwarepakete oder-Bibliotheken sind in der Alpine-Paketverwaltung möglicherweise nicht verfügbar. Wenn Sie nicht sicher sind, welches Image verwendet werden soll, sollten Sie wahrscheinlich das standardmäßige Debian auswählen.
 
@@ -116,7 +115,7 @@ obj/
 Für eine `StockKube.sln` Lösung, die zwei verschiedene Anwendungen `StockData` und enthält `StockWeb` , ist es am einfachsten, die dockerfile-Datei für jede dieser Dateien im Basisverzeichnis zu platzieren. Verwenden Sie in diesem Fall den folgenden Befehl aus dem Verzeichnis, in dem sich die Datei befindet, um das Image zu erstellen `docker build` `.sln` .
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 Das verwirrend benannte `--tag` Flag (das auf gekürzt werden kann `-t` ) gibt den vollständigen Namen des Bilds an, einschließlich des tatsächlichen Tags, wenn angegeben. Der `.` am Ende gibt den Kontext an, in dem der Build ausgeführt wird, das aktuelle Arbeitsverzeichnis für die `COPY` Befehle in der dockerfile-Datei.
@@ -124,7 +123,7 @@ Das verwirrend benannte `--tag` Flag (das auf gekürzt werden kann `-t` ) gibt d
 Wenn Sie mehrere Anwendungen in einer einzelnen Projekt Mappe haben, können Sie die dockerfile-Datei für jede Anwendung in einem eigenen Ordner neben der `.csproj` Datei aufbewahren. Sie sollten weiterhin den `docker build` Befehl aus dem Basisverzeichnis ausführen, um sicherzustellen, dass die Projekt Mappe und alle Projekte in das Image kopiert werden. Sie können eine dockerfile-Datei unterhalb des aktuellen Verzeichnisses angeben, indem Sie das- `--file` Flag (oder `-f` ) verwenden.
 
 ```console
-docker build -t stockdata:1.0.0 -f .\src\StockData\Dockerfile .
+docker build -t stockdata:1.0.0 -f ./src/StockData/Dockerfile .
 ```
 
 ## <a name="run-the-image-in-a-container-on-your-machine"></a>Ausführen des Images in einem Container auf Ihrem Computer

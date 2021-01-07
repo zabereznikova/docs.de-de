@@ -1,13 +1,13 @@
 ---
 title: 'Verschlüsselung und Netzwerksicherheit: GrpC für WCF-Entwickler'
 description: Hinweise zur Netzwerksicherheit und-Verschlüsselung in GrpC
-ms.date: 12/15/2020
-ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: cf4d30ff862e64aadfeacf45ed3768fc14737800
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938623"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970140"
 ---
 # <a name="encryption-and-network-security"></a>Verschlüsselung und Netzwerksicherheit
 
@@ -15,11 +15,7 @@ Das Netzwerk Sicherheitsmodell für Windows Communication Foundation (WCF) ist u
 
 GrpC verlässt sicheres Netzwerk auf das zugrunde liegende http/2-Protokoll, das Sie mithilfe von TLS-Zertifikaten sichern können.
 
-Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET `HttpClient` kann http/2 über unverschlüsselte Verbindungen verwenden. `HttpClient` erfordert standardmäßig Verschlüsselung, aber Sie können dieses Verhalten mithilfe eines-Schalters außer Kraft setzen <xref:System.AppContext> .
-
-```csharp
-AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-```
+Webbrowser sind auf die Verwendung von TLS-Verbindungen für http/2, aber die meisten programmgesteuerten Clients, einschließlich. NET `HttpClient` kann http/2 über unverschlüsselte Verbindungen verwenden.
 
 Für öffentliche APIs sollten Sie immer TLS-Verbindungen verwenden und gültige Zertifikate für ihre Dienste von einer richtigen SSL-Zertifizierungsstelle bereitstellen. [Letsencrypt](https://letsencrypt.org) bietet kostenlose, automatisierte SSL-Zertifikate, und die meisten Hostinginfrastrukturen unterstützen den letsencrypt-Standard mit gängigen Plug-ins oder Erweiterungen.
 

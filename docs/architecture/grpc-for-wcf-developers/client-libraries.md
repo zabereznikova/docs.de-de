@@ -1,13 +1,13 @@
 ---
 title: 'Erstellen von GrpC-Client Bibliotheken: GrpC für WCF-Entwickler'
 description: Erörterung von freigegebenen Client Bibliotheken/-Paketen für GrpC-Dienste
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938428"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970127"
 ---
 # <a name="create-grpc-client-libraries"></a>Erstellen von GrpC-Client Bibliotheken
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Zusammenfassung
 
-Das <xref:System.IAsyncDisposable> -und das- <xref:System.IObservable%601> Modell sind sowohl gut unterstützte als auch gut dokumentierte Möglichkeiten, mit asynchronen Datenströmen in .net umzugehen. GrpC-Streams sind sowohl für Paradigmen als auch für eine enge Integration mit .net und für reaktive und asynchrone Programmier Stile gleich.
+Das <xref:System.Collections.Generic.IAsyncEnumerable%601> -und das- <xref:System.IObservable%601> Modell sind sowohl gut unterstützte als auch gut dokumentierte Möglichkeiten, mit asynchronen Datenströmen in .net umzugehen. GrpC-Streams sind sowohl für Paradigmen als auch für eine enge Integration mit .net und für reaktive und asynchrone Programmier Stile gleich.
 
 >[!div class="step-by-step"]
 >[Zurück](streaming-versus-repeated.md)
