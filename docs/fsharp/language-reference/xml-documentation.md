@@ -2,12 +2,12 @@
 title: XML-Dokumentation
 description: 'Erfahren Sie mehr über die Unterstützung in F # zum Erstellen von Dokumentationen aus Kommentaren.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 2f8788e79ea964143eecfaddbeb039474dd61f8e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099008"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025015"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -101,7 +101,7 @@ type SomeType
 
 ## <a name="limitations"></a>Einschränkungen
 
-Einige Features der XML-Dokumentation in c# und anderen .NET-Sprachen werden in c# nicht unterstützt.
+Einige Features der XML-Dokumentation in c# und anderen .NET-Sprachen werden in F # nicht unterstützt.
 
 - In F # müssen Querverweise die vollständige XML-Signatur des entsprechenden Symbols verwenden, z. b `cref="T:System.Console"` ..
   Einfache Kreuz Verweise im c#-Format, z `cref="Console"` . b., werden nicht vollständig in vollständige XML-Signaturen erläutert, und diese Elemente werden vom F #-Compiler nicht geprüft. Einige Dokumentations Tools können die Verwendung dieser Querverweise durch nachfolgende Verarbeitung zulassen, aber die vollständigen Signaturen sollten verwendet werden.
