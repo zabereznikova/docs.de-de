@@ -2,7 +2,7 @@
   href: index.md
 - name: Kompatibilitätstypen
   href: categories.md
-- name: Referenz
+- name: Verweis
   expanded: true
   items:
     - name: Übersicht
@@ -12,7 +12,7 @@
         - name: Breaking Changes
           href: fx-core.md
         - name: Nicht verfügbare Technologien
-          href: ../porting/net-framework-tech-unavailable.md?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
+          href: ../porting/net-framework-tech-unavailable.md
         - name: 'APIs, die immer Ausnahmen auslösen'
           href: unsupported-apis.md
     - name: Breaking Changes nach Version
