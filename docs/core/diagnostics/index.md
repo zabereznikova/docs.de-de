@@ -3,12 +3,12 @@ title: Übersicht über Diagnosetools – .NET Core
 description: Eine Übersicht über die Tools und Techniken, die zur Diagnose von .NET Core-Anwendungen zur Verfügung stehen.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031916"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753613"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>Welche Diagnosetools sind in .NET Core verfügbar?
 
@@ -24,6 +24,10 @@ Dieser Artikel hilft Ihnen bei der Suche nach den verschiedenen Tools, die Sie b
 
 Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Techniken. Sie beziehen sich auf das Instrumentieren von Code zum Erstellen von Protokolldateien. In den Dateien werden die Details eines Programms aufgezeichnet. Diese Details können zur Diagnose der kompliziertesten Probleme verwendet werden. In Kombination mit Zeitstempeln sind diese Techniken auch für Leistungsuntersuchungen von Bedeutung.
 
+## <a name="metrics"></a>Metriken
+
+Mit [EventCounters](event-counters.md) können Sie Metriken schreiben, um Leistungsprobleme zu identifizieren und zu überwachen. Metriken führen zu einem geringeren Leistungsaufwand im Vergleich zur Ablaufverfolgung, sodass sie für eine Always On-Leistungsüberwachung geeignet sind. Die .NET-Runtime und -Bibliotheken veröffentlichen mehrere [bekannten EventCounters](available-counters.md), die Sie ebenfalls überwachen können.
+
 ## <a name="unit-testing"></a>Komponententest
 
 [Komponententests](../testing/index.md) sind eine wichtige Komponente von Continuous Integration und der Bereitstellung hochwertiger Software. Komponententests sollen Sie früh warnen, wenn Sie etwas unterbrechen.
@@ -32,13 +36,13 @@ Die [Protokollierung und Ablaufverfolgung](logging-tracing.md) sind verwandte Te
 
 Ein [Speicherabbild](./dumps.md) ist eine Datei, die zum eine Momentaufnahme des Prozesses zum Zeitpunkt der Erstellung enthält. Dieses kann hilfreich sein, wenn Sie den Zustand Ihrer Anwendung zu Debuggingzwecken überprüfen möchten.
 
+## <a name="symbols"></a>Symbole
+
+Symbole sind eine grundlegende Anforderung für Debuggen und andere Diagnosetools. Der Inhalt von Symboldateien ist abhängig von Sprachen, Compilern und Plattformen. Symbol sind im Grunde genommen eine Zuordnung zwischen dem Quellcode und der vom Compiler erzeugten Binärdatei. Diese Zuordnungen werden verwendet, um Informationen wie Zeilennummern Informationen und Namen der lokalen Variablen in Diagnosetools wie [Visual Studio](/visualstudio/debugger/what-is-debugging) und [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) bereitzustellen.  Der folgende Link enthält eine ausführliche Erläuterung der [Symbole](/windows/win32/dxtecharts/debugging-with-symbols) für Windows, obwohl viele der Konzepte auch für andere Plattformen gelten. [Portable .NET-Symbole](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) weisen eine PDB-Dateierweiterung ähnlich wie Windows PDB auf, sind jedoch nicht mit dem Windows PDB-Format kompatibel.
+
 ## <a name="collect-diagnostics-in-containers"></a>Sammeln von Diagnosen in Containern
 
 Dieselben Diagnosetools, die in nicht-containerisierten Linux-Umgebungen verwendet werden, können auch verwendet werden, um [Diagnosen in Containern](diagnostics-in-containers.md) zu sammeln. Es sind nur ein paar Nutzungsänderungen erforderlich, um sicherzustellen, dass die Tools in einem Docker-Container funktionieren.
-
-## <a name="debug-linux-dumps"></a>Debuggen von Linux-Abbildern
-
-[Debuggen von Linux-Abbildern](debug-linux-dumps.md) erläutert das Sammeln und Analysieren von Abbildern unter Linux.
 
 ## <a name="net-core-diagnostic-global-tools"></a>Globale .NET Core-Diagnosetools
 
@@ -64,7 +68,7 @@ Mit dem Tool [dotnet-gcdump](dotnet-gcdump.md) können Sie GC-Speicherabbilder (
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) wird verwendet, um die [SOS-Debugerweiterung](../../framework/tools/sos-dll-sos-debugging-extension.md) unter Linux oder MacOS (oder unter Windows, wenn ältere Debugtools verwendet werden) zu installieren.
+[dotnet-sos](dotnet-sos.md) installiert die [SOS-Debuggerweiterung](sos-debugging-extension.md) unter Linux und macOS (und unter Windows, wenn Sie [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) verwenden).
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,14 @@ Mit dem Tool [dotnet-gcdump](dotnet-gcdump.md) können Sie GC-Speicherabbilder (
 ### <a name="debug-deadlock"></a>Debuggen eines Deadlocks
 
 [Tutorial: Debuggen eines Deadlocks](debug-deadlock.md). Hier erfahren Sie, wie Sie das Tool [dotnet-dump](dotnet-dump.md) verwenden, um Threads und Sperren zu untersuchen.
+
+### <a name="debug-a-stackoverflow"></a>Debuggen eines StackOverflow-Fehlers
+
+[Tutorial: Debuggen eines StackOverflow-Fehlers](debug-stackoverflow.md) veranschaulicht, wie ein <xref:System.StackOverflowException> unter Linux debuggt wird.
+
+### <a name="debug-linux-dumps"></a>Debuggen von Linux-Abbildern
+
+[Debuggen von Linux-Abbildern](debug-linux-dumps.md) erläutert das Sammeln und Analysieren von Abbildern unter Linux.
 
 ### <a name="measure-performance-using-eventcounters"></a>Messen der Leistung mithilfe von EventCounters
 
