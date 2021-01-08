@@ -15,5 +15,7 @@
       href: ./fs0009.md
     - name: 'FS0025: Unvollständige Musterübereinstimmung'
       href: ./fs0025.md
+    - name: 'FS0037: Definition duplizieren'
+      href: ./fs0037.md
     - name: 'FS0052: Defensive Kopie'
       href: ./fs0052.md

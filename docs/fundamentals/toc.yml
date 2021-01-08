@@ -328,7 +328,7 @@ items:
             items:
               - name: Übersicht
                 href: ../core/project-sdk/overview.md
-              - name: Verweis
+              - name: Referenz
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -393,14 +393,28 @@ items:
               - name: Übersicht
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: Debuggen eines StackOverflow-Fehlers
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Linux-Dumps
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: SOS-Debuggererweiterung
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: Übersicht
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: Bekannte Zähler in .NET
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: Protokollierung und Ablaufverfolgung
-            href: ../core/diagnostics/logging-tracing.md
+            items:
+              - name: Übersicht
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: Bekannte Ereignisanbieter
+                href: ../core/diagnostics/well-known-event-providers.md
           - name: Laufzeitereignisse
             items:
               - name: Übersicht
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: Dokumentationsregeln
                     items:
                       - name: Übersicht

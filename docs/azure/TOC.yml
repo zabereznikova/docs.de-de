@@ -5,16 +5,18 @@
   items:
     - name: Einführung in Azure und .NET
       href: intro.md
-    - name: Entwicklertools
-      href: tools.md
-    - name: Authentifizierung
-      href: authentication.md
-    - name: Protokollierung
-      href: logging.md
-    - name: Pakete
-      href: packages.md
-    - name: SDK-Beispiel
-      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
+    - name: Wichtige Azure-Dienste für .NET-Entwickler
+      href: key-azure-services.md
+    - name: Konfigurieren der Entwicklungsumgebung
+      items:
+        - name: Erstellen eines Azure-Kontos
+          href: create-azure-account.md
+        - name: Konfigurieren von Visual Studio für die Azure-Entwicklung (Windows)
+          href: configure-visual-studio.md
+        - name: Konfigurieren von VS Code für die Azure-Entwicklung (plattformübergreifend)
+          href: configure-vs-code.md
+        - name: Installieren der Azure CLI
+          href: install-azure-cli.md
 - name: Migrieren zu Azure
   items:
     - name: Auswählen der passenden Azure-Hostingoption
@@ -25,6 +27,20 @@
       href: ./migration/vm.md
     - name: Migrieren einer SQL Server-Datenbank zu Azure
       href: ./migration/sql.md
+- name: Azure SDK für .NET
+  items:
+    - name: Was ist das Azure-SDK für .NET?
+      href: ./sdk/azure-sdk-for-dotnet.md
+    - name: Authentifizierung
+      href: authentication.md
+    - name: Protokollierung
+      href: logging.md
+    - name: Konfigurieren eines Proxyservers
+      href: ./sdk/azure-sdk-configure-proxy.md
+    - name: Paketliste
+      href: packages.md
+    - name: SDK-Beispiel
+      href: /samples/dotnet/samples/azure-identity-resource-management-storage/
 - name: Beispielcode
   items:
     - name: Web-Apps und serverlose Apps
