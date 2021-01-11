@@ -37,6 +37,10 @@ items:
                 href: ../core/install/linux-rhel.md
               - name: SLES
                 href: ../core/install/linux-sles.md
+              - name: Installieren mit Snap
+                href: ../core/install/linux-snap.md
+              - name: Installieren von Skript- und Binärdateien
+                href: ../core/install/linux-scripted-manual.md
           - name: Entfernen veralteter Runtimes und SDKs
             href: ../core/install/remove-runtime-sdk-versions.md
           - name: Verwalten von .NET-Vorlagen
@@ -328,7 +332,7 @@ items:
             items:
               - name: Übersicht
                 href: ../core/project-sdk/overview.md
-              - name: Referenz
+              - name: Verweis
                 items:
                   - name: Microsoft.NET.Sdk
                     href: ../core/project-sdk/msbuild-props.md
@@ -1644,6 +1648,8 @@ items:
                     href: ../standard/serialization/system-text-json-polymorphism.md
               - name: Migration von „Newtonsoft.Json“
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: Unterstützte Auflistungstypen
+                href: ../standard/serialization/system-text-json-supported-collection-types.md
               - name: Erweitert
                 items:
                   - name: Anpassen der Zeichencodierung
@@ -2290,7 +2296,7 @@ items:
           - name: Organisieren von Projekten für .NET Core
             href: ../core/porting/project-structure.md
           - name: Nicht verfügbare Technologien
-            href: ../core/porting/net-framework-tech-unavailable.md
+            href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
           - name: Tools
             href: ../core/porting/tools.md
           - name: Verwenden von Windows Compatibility Pack

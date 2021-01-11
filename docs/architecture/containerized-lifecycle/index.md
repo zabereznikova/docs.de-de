@@ -1,19 +1,19 @@
 ---
 title: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 description: Hier erhalten Sie einen allgemeinen Überblick über den Entwicklungs- und Bereitstellungsprozess für containerisierte Anwendungen mit Docker- und Microsoft-Plattformen und -Tools.
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506661"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970114"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 
 ![Bucheinband](./media/devops-book-cover-large-we.png)
 
-**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+**EDITION v5.0:** auf ASP.NET Core 5.0 aktualisiert
 
 Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/DockerLifecycleEbookChangelog).
 
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2020 Microsoft Corporation
+Copyright &copy; 2021 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 

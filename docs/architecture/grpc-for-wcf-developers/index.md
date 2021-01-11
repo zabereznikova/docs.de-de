@@ -1,17 +1,21 @@
 ---
 title: ASP.NET Core gRPC für WCF-Entwickler – gRPC für WCF-Entwickler
-description: Einführung in die Erstellung von gRPC-Diensten in ASP.NET Core 3.0 für WCF-Entwickler
-ms.date: 09/02/2019
-ms.openlocfilehash: c9cc5ef9c06d5262fb85850f8a3b178d46e5c6fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+description: Einführung in die Erstellung von gRPC-Diensten in ASP.NET Core 5.0 für WCF-Entwickler
+ms.date: 01/06/2021
+ms.openlocfilehash: 26cce6bb784c08a5b59623ff5882fcf2fbb9e9ac
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689276"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970192"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC für WCF-Entwickler
 
 ![Titelbild](./media/cover.png)
+
+EDITION v1.0.1: auf ASP.NET Core 5.0 aktualisiert
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/grpc-ebook-changelog).
 
 VERÖFFENTLICHT VON
 
@@ -23,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -49,15 +53,15 @@ Editor:
 
 ## <a name="introduction"></a>Einführung
 
-gRPC ist ein modernes Framework zur Erstellung vernetzter Dienste und verteilter Anwendungen. Stellen Sie sich die Leistung der NetTCP-Bindungen der Windows Communication Foundation (WCF) in Kombination mit der plattformübergreifenden Interoperabilität von SOAP vor. gRPC baut auf HTTP/2 und dem Protobuf-Nachrichtencodierungsprotokoll auf, um eine hochleistungsfähige, bandbreitenarme Kommunikation zwischen Anwendungen und Diensten zu ermöglichen. Der Dienst unterstützt die Generierung von Server- und Clientcode in den gängigsten Programmiersprachen und Plattformen, einschließlich .NET, Java, Python, Node.js, Go und C++. Mit der erstklassigen Unterstützung für gRPC in ASP.NET Core 3.0, neben den bestehenden gRPC-Tools und -Bibliotheken für .NET Framework 4.x, gilt es als eine ausgezeichnete Alternative zur WCF für Entwicklungsteams, die .NET Core in ihren Organisationen einsetzen möchten.
+gRPC ist ein modernes Framework zur Erstellung vernetzter Dienste und verteilter Anwendungen. Stellen Sie sich die Leistung der NetTCP-Bindungen der Windows Communication Foundation (WCF) in Kombination mit der plattformübergreifenden Interoperabilität von SOAP vor. gRPC baut auf HTTP/2 und dem Protobuf-Nachrichtencodierungsprotokoll auf, um eine hochleistungsfähige, bandbreitenarme Kommunikation zwischen Anwendungen und Diensten zu ermöglichen. Der Dienst unterstützt die Generierung von Server- und Clientcode in den gängigsten Programmiersprachen und Plattformen, einschließlich .NET, Java, Python, Node.js, Go und C++. Mit der erstklassigen Unterstützung für gRPC in ASP.NET Core 5.0, neben den bestehenden gRPC-Tools und -Bibliotheken für .NET Framework 4.x, gilt es als eine ausgezeichnete Alternative zur WCF für Entwicklungsteams, die .NET in ihren Organisationen einsetzen möchten.
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
-Dieser Leitfaden richtet sich an Entwickler, die in .NET Framework oder .NET Core arbeiten, zuvor WCF verwendet haben und ihre Anwendungen auf eine moderne RPC-Umgebung für .NET Core 3.0 und spätere Versionen migrieren möchten. Der Leitfaden ist ebenfalls nützlich, wenn Sie ein Upgrade auf .NET Core 3.0 durchführen oder in Betracht ziehen und die integrierten gRPC-Tools verwenden möchten.
+Dieser Leitfaden richtet sich an Entwickler, die in .NET Framework oder .NET arbeiten, zuvor WCF verwendet haben und ihre Anwendungen auf eine moderne RPC-Umgebung für .NET Core 3.0 und spätere Versionen migrieren möchten. Der Leitfaden ist ebenfalls nützlich, wenn Sie ein Upgrade auf .NET 5 durchführen oder in Betracht ziehen und die integrierten gRPC-Tools verwenden möchten.
 
 ## <a name="how-you-can-use-this-guide"></a>Wie Sie diesen Leitfaden verwenden können
 
-Dies ist eine kurze Einführung in das Erstellen von gRPC-Diensten in ASP.NET Core 3.0 mit einem besonderen Verweis auf die WCF als analoge Plattform. Darin werden die Prinzipien von gRPC erläutert, indem die einzelnen Konzepte den entsprechenden Features von WCF zugeordnet werden, und es wird ein Leitfaden zum Migrieren einer vorhandenen WCF-Anwendung zu gRPC geboten. Sie ist auch für Entwickler nützlich, die WCF-Kenntnisse besitzen und gRPC erlernen möchten, um neue Dienste zu erstellen. Die Beispielanwendungen können Sie als Vorlage oder Verweis für Ihre eigenen Projekte verwenden, zudem können Sie Code aus dem Buch oder den Beispielen kopieren und diesen so wiederverwenden.
+Dies ist eine kurze Einführung in das Erstellen von gRPC-Diensten in ASP.NET Core 5.0 mit einem besonderen Verweis auf die WCF als analoge Plattform. Darin werden die Prinzipien von gRPC erläutert, indem die einzelnen Konzepte den entsprechenden Features von WCF zugeordnet werden, und es wird ein Leitfaden zum Migrieren einer vorhandenen WCF-Anwendung zu gRPC geboten. Sie ist auch für Entwickler nützlich, die WCF-Kenntnisse besitzen und gRPC erlernen möchten, um neue Dienste zu erstellen. Die Beispielanwendungen können Sie als Vorlage oder Verweis für Ihre eigenen Projekte verwenden, zudem können Sie Code aus dem Buch oder den Beispielen kopieren und diesen so wiederverwenden.
 
 Sie können diesen Leitfaden gerne an Ihr Team weiterleiten, um ein gemeinsames Verständnis dieser Überlegungen und Möglichkeiten zu gewährleisten. Wenn alle Beteiligten mit einer gemeinsamen Terminologie und den zugrunde liegenden Prinzipien arbeiten, kann eine konsistente Anwendung der Architekturmuster und -praktiken gewährleistet werden.
 
@@ -65,7 +69,7 @@ Sie können diesen Leitfaden gerne an Ihr Team weiterleiten, um ein gemeinsames 
 
 - **Website zu gRPC**
   <https://grpc.io>
-- **Entscheidung zwischen .NET Core und .NET Framework für Server-Apps**
+- **.NET 5 für Server-Apps im Vergleich zum .NET Framework**
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
