@@ -3,13 +3,13 @@ title: 'Installieren von .NET für SLES: .NET'
 description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulicht, das .NET SDK und die .NET-Runtime für SLES zu installieren.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: f351a9b11ab16910963a1db88d88b6949b56ae11
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 80da69616dd1507b809ef56d439645d569a6a805
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031799"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970784"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>Installieren des .NET SDK oder der .NET-Runtime für SLES
 
@@ -40,10 +40,6 @@ Die folgenden Versionen von .NET Core werden nicht mehr unterstützt. Die Downlo
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="sles-15-"></a>SLES 15 ✔️
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
@@ -72,6 +68,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-p
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
 
 Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET auftreten können.
@@ -99,14 +99,7 @@ Für .NET-Anwendungen, die die Assembly *System.Drawing.Common* verwenden, benö
   > [!WARNING]
   > Sie können eine neuere Version von *libgdiplus* installieren, indem Sie Ihrem System das Mono-Repository hinzufügen. Weitere Informationen finden Sie unter <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Per Skript gesteuerte Installation
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Manuelle Installation
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET-CLI](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

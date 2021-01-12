@@ -3,13 +3,13 @@ title: Installieren von .NET unter openSUSE (.NET)
 description: Veranschaulicht verschiedene Möglichkeiten, das .NET SDK und die NET-Runtime unter openSUSE zu installieren
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a519f19f708e1f12af1e9715bad4f38a607f9c3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031864"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970810"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Installieren des .NET SDK oder der .NET-Runtime unter openSUSE
 
@@ -41,10 +41,6 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="opensuse-15-"></a>openSUSE 15 ✔️
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
@@ -59,6 +55,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
+## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
 
 Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET auftreten können.
@@ -70,10 +70,6 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 ### <a name="failed-to-fetch"></a>Fehler beim Abrufen
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
-
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
 ## <a name="dependencies"></a>Abhängigkeiten
 
@@ -94,14 +90,7 @@ Für .NET-Anwendungen, die die Assembly *System.Drawing.Common* verwenden, benö
   > [!WARNING]
   > Sie können eine neuere Version von *libgdiplus* installieren, indem Sie Ihrem System das Mono-Repository hinzufügen. Weitere Informationen finden Sie unter <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Per Skript gesteuerte Installation
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Manuelle Installation
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET-CLI](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

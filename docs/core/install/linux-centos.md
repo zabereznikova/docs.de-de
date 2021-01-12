@@ -3,13 +3,13 @@ title: Installieren von .NET unter CentOS – .NET
 description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulicht, das .NET SDK und die .NET-Runtime unter CentOS zu installieren.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 2c3453c79a1dc31f01577bc0c1b9e320eb307c0a
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.date: 01/06/2021
+ms.openlocfilehash: 7e73f90a1f1f7e11e592b1b074f243c9f5b32ced
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851678"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970862"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-centos"></a>Installieren des .NET SDK oder der .NET-Runtime unter CentOS
 
@@ -44,10 +44,6 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="centos-8-"></a>CentOS 8 ✔️
 
 .NET 5.0 ist in den Standardpaketrepositorys für CentOS 8 verfügbar.
@@ -64,6 +60,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 
 [!INCLUDE [linux-yum-install-50](includes/linux-install-50-yum.md)]
 
+## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
 ## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
 
 Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET auftreten können.
@@ -76,22 +76,11 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>Abhängigkeiten
 
 [!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
 
-## <a name="scripted-install"></a>Per Skript gesteuerte Installation
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Manuelle Installation
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET-CLI](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

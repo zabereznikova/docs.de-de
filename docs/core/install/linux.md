@@ -3,13 +3,13 @@ title: Installieren von .NET für Linux-Distributionen
 description: Hier erfahren Sie, welche Linux-Distributionen die Installation von .NET unter Linux unterstützen.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 6354ef6f0f9af2126312683893d6705b3b4c70f4
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.date: 01/06/2021
+ms.openlocfilehash: 3834bd7d977bb13e9543d511bee7170161a755ac
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594518"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970732"
 ---
 # <a name="install-net-on-linux"></a>Installieren von .NET unter Linux
 
@@ -36,8 +36,6 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt (❌). Die Downl
 Diese Versionen ohne Support werden in den folgenden Abschnitten nicht näher beschrieben, und Ihre Laufzeit kann variieren, wenn Sie versuchen, sie zu installieren.
 
 ## <a name="alpine"></a>Alpine
-
-Es sind keine Installationsprogramme für Alpine vorhanden. Sie müssen entweder das [Installationsskript](linux-alpine.md#scripted-install) verwenden oder die Anweisungen zur [manuellen Installation](linux-alpine.md#manual-install) befolgen.
 
 Die folgende Tabelle enthält die derzeit unterstützten .NET-Releases und die Alpine-Versionen, die diese unterstützen. Diese Versionen werden weiterhin unterstützt, bis entweder die Version von [.NET das Ende des Supports](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) oder die Version von [Alpine das Ende ihrer Lebensdauer](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases) erreicht.
 
@@ -98,13 +96,13 @@ Die folgende Tabelle enthält die derzeit unterstützten .NET-Releases und Versi
 
 | Fedora                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [33](linux-fedora.md#fedora-33-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ [32](linux-fedora.md#fedora-32-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ [31](linux-fedora.md#fedora-31-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [30](linux-fedora.md#fedora-30-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [29](linux-fedora.md#fedora-29-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [28](linux-fedora.md#fedora-28-) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ [27](linux-fedora.md#fedora-27-) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ✔️ [33](linux-fedora.md#install-net-50) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [32](linux-fedora.md#install-net-50) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [31](linux-fedora.md#install-on-older-distributions) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ [30](linux-fedora.md#install-on-older-distributions) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ [29](linux-fedora.md#install-on-older-distributions) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
+| ❌ [28](linux-fedora.md#install-on-older-distributions) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| ❌ [27](linux-fedora.md#install-on-older-distributions) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
 Weitere Informationen finden Sie unter [Installieren von .NET unter Fedora](linux-fedora.md).
 

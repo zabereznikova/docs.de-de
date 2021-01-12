@@ -3,12 +3,12 @@ title: Vergleich von project.json und csproj
 description: Informationen zur Zuordnung zwischen project.json und csproj-Elementen.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427020"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970875"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -620,7 +620,7 @@ In MSBuild wird dies unter Verwendung von [Elementen](/visualstudio/msbuild/comm
 ```
 
 > [!NOTE]
-> Viele der [Standardglobmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden automatisch durch das .NET Core SDK hinzugefügt. Weitere Informationen finden Sie unter [Standardmäßige Includedateien für die Kompilierung](../project-sdk/overview.md#default-compilation-includes).
+> Viele der [Standardglobmuster](https://en.wikipedia.org/wiki/Glob_(programming)) werden automatisch durch das .NET Core SDK hinzugefügt. Weitere Informationen finden Sie unter [Standardmäßige Includedateien für die Kompilierung](../project-sdk/overview.md#default-includes-and-excludes).
 
 Alle `ItemGroup`-Elemente von MSBuild unterstützen `Include`, `Exclude` und `Remove`.
 
