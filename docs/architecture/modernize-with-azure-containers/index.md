@@ -1,21 +1,25 @@
 ---
-title: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
+title: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
 description: Erfahren Sie in diesem E-Book, wie vorhandene Anwendungen in Azure Cloud und Container übertragen, verschoben und modernisiert werden können.
-ms.date: 04/28/2018
-ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/07/2021
+ms.openlocfilehash: bf6e6dff75c939508947aabeda14955b880f5a89
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705331"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025470"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern (2. Auflage)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
 
 ![Titelbild des Leitfadens zum Modernisieren von .NET-Anwendungen.](./media/index/web-application-guide-cover-image.png)
 
+**EDITION v5.0**
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/modernize-ebook-changelog).
+
 VERÖFFENTLICHT VON DEN Microsoft Press- und Microsoft DevDiv-Geschäftsbereichen der Microsoft Corporation One Microsoft Way Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieser Veröffentlichung dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert werden.
 
@@ -37,7 +41,7 @@ Teilnehmer und Prüfer:
 
 ## <a name="introduction"></a>Einführung
 
-Wenn Sie sich entscheiden, Ihre Webanwendungen oder -dienste zu modernisieren und in die Cloud zu verschieben, müssen Sie Ihre Anwendungen nicht zwangsläufig vollständig neu strukturieren. Die Neustrukturierung einer Anwendung mithilfe eines fortschrittlichen Ansatzes wie Microservices ist aus Kosten- und Zeitgründen nicht immer eine Option. Abhängig von der Art der Anwendung kann es auch sein, dass eine Neustrukturierung einer App nicht notwendig ist. Um die Kosteneffizienz der Cloudmigrationsstrategie Ihres Unternehmens zu optimieren, ist es wichtig, die Bedürfnisse Ihres Unternehmens und die Anforderungen Ihrer Apps zu berücksichtigen. Sie müssen Folgendes ermitteln:
+Wenn Sie sich entscheiden, Ihre Webanwendungen oder -dienste zu modernisieren und in die Cloud zu verschieben, müssen Sie Ihre Anwendungen nicht zwangsläufig vollständig neu strukturieren. Die Neustrukturierung einer Anwendung mithilfe eines fortschrittlichen Ansatzes wie Microservices ist aus Kosten- und Zeitgründen nicht immer eine Option. Abhängig von der Art der Anwendung kann es auch sein, dass eine Neustrukturierung einer App nicht notwendig ist. Wenn Sie die Kosteneffizienz der Cloudmigrationsstrategie Ihres Unternehmens optimieren möchten, ist es wichtig, die Bedürfnisse Ihres Unternehmens und die Anforderungen Ihrer Apps zu berücksichtigen. Sie müssen Folgendes ermitteln:
 
 - Welche Apps erfordern eine Transformation oder Neustrukturierung?
 
@@ -47,7 +51,7 @@ Wenn Sie sich entscheiden, Ihre Webanwendungen oder -dienste zu modernisieren un
 
 ## <a name="about-this-guide"></a>Über diesen Leitfaden
 
-Dieser Leitfaden konzentriert sich in erster Linie auf die anfängliche Modernisierung von vorhandenen Microsoft .NET Framework-Webanwendungen oder dienstorientierten Anwendungen, d.h. die Aktion, eine Workload in eine neuere oder modernere Umgebung zu verschieben, ohne den Code und die grundlegende Architektur der Anwendung wesentlich zu verändern.
+Dieser Leitfaden konzentriert sich in erster Linie auf die anfängliche Modernisierung von vorhandenen Microsoft .NET Framework-Webanwendungen oder dienstorientierten Anwendungen, d. h. auf die Aktion, eine Workload in eine neuere oder modernere Umgebung zu verschieben, ohne den Code und die grundlegende Architektur der Anwendung wesentlich zu verändern.
 
 Dieser Leitfaden hebt auch die Vorteile hervor, die sich aus der Verlagerung Ihrer Anwendungen in die Cloud und der teilweisen Modernisierung von Anwendungen durch die Verwendung einer Reihe spezifischer neuer Technologien und Ansätze ergeben, etwa Windows-Container und verwandte Computeplattformen in Azure, die Windows-Container unterstützen.
 
@@ -89,7 +93,7 @@ Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der ei
 | **Vorteile**|
 | <li>Keine Neustrukturierung, kein neuer Code <li> Geringster Aufwand für eine schnelle Migration. <li> Kleinster gemeinsamen Nenner, der in Azure unterstützt wird. <li> Grundlegende Verfügbarkeitsgarantien. <li> Nach dem Wechsel in die Cloud ist es einfacher, noch mehr zu modernisieren. | <li> Keine Neustrukturierung <li> Minimale Code-/Konfigurationsänderungen <li> Verbesserte Bereitstellung und DevOps-Agilität beim Release aufgrund von Containern. <li> Höhere Dichte und niedrigere Bereitstellungskosten. <li> Portabilität von Apps und Abhängigkeiten. <li> Flexibilität der Hostziele: Paas-Ansätze oder IaaS | <li> Architektur für die Cloud: Sie profitieren von den besten Vorteilen der Cloud, es ist aber neuer Code erforderlich. <li> Cloudnative Microservicesansätze. <li> Moderne unternehmenskritische Anwendungen, cloudrobust, hyperskalierbar <li> Vollständig verwaltete Dienste. <li> Optimiert für die Skalierung. <li> Optimiert für autonome Agilität durch Subsysteme. <li> Basiert auf Bereitstellung und DevOps. |
 | **Herausforderungen** |
-| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Sehr wenig wird verwaltet: Kein Patchen von Betriebssystemen oder Middleware, ggf. werden Infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwendet. | <li> Containerisierung ist ein zusätzlicher erforderlicher Schritt in der Lernkurve für Entwickler und den IT-Betrieb. <li> DevOps und CI/CD-Pipelines sind bei diesem Ansatz in der Regel ein Muss. Wenn sie zurzeit nicht in der Kultur der Organisation vorhanden sind, stellt dies möglicherweise eine weitere Herausforderung dar.| <li> Erfordert eine Neustrukturierung für cloudnative Apps und Microservicearchitekturen und erfordert in der Regel erhebliches Refactoring von Code oder ein Neuschreiben bei der Modernisierung (erhöhter Zeit- und Budgetbedarf)|
+| <li> Geringerer Cloudwert, abgesehen von der Verlagerung der Betriebskosten oder der Schließung von Rechenzentren <li> Sehr wenig wird verwaltet: Kein Patchen von Betriebssystemen oder Middleware, ggf. werden Infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwendet. | <li> Containerisierung ist ein zusätzlicher erforderlicher Schritt in der Lernkurve für Entwickler und den IT-Betrieb. <li> DevOps und CI/CD-Pipelines sind bei diesem Ansatz in der Regel ein Muss. Wenn sie zurzeit nicht in der Kultur der Organisation vorhanden sind, stellt dies möglicherweise eine weitere Herausforderung dar.| <li> Erfordert eine Neustrukturierung für cloudnative Apps, Microservicearchitekturen sowie in der Regel erhebliches Refactoring von Code oder ein Neuschreiben bei der Modernisierung (erhöhter Zeitaufwand und Budgetbedarf)|
 > **Tabelle 1-1.** Vorteile und Herausforderungen von Modernisierungspfaden für vorhandene .NET-Anwendungen und -Dienste
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Schlüsseltechnologien und -architekturen nach Reifegrad
@@ -145,11 +149,11 @@ Im nächsten Schritt (als ideales Szenario für die Migration zahlreicher vorhan
 
 **Abbildung 1-6.** Beispielszenario für Apps, die cloudoptimiert sind, mit Windows-Containern und verwalteten Diensten
 
-Darüber hinaus können Sie Ihre vorhandene cloudoptimierte Anwendung um einige Microservices für bestimmte Szenarien erweitern. Damit würden Sie teilweise die Ebene des cloudnativen Modells erreichen, die aber nicht im Mittelpunkt des vorliegenden Leitfadens steht.
+Darüber hinaus können Sie Ihre vorhandene cloudoptimierte Anwendung um einige Microservices für bestimmte Szenarien erweitern. Mit diesem Ansatz würden Sie teilweise die Ebene des cloudnativen Modells erreichen, die aber nicht im Mittelpunkt des vorliegenden Leitfadens steht.
 
 ## <a name="what-this-guide-does-not-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
-Dieser Leitfaden behandelt eine bestimmte Teilmenge der in Abbildung 1-7 dargestellten Beispielszenarien. Dieser Leitfaden konzentriert sich ausschließlich auf Szenarien mit Übertragung und Verschiebung und letztlich auf das Modell „Cloudoptimiert“. Im Modell „Cloudoptimiert“ wird eine .NET Framework-Anwendung mithilfe von Windows-Containern und zusätzlichen Komponenten wie Überwachung und CI-/CD-Pipelines modernisiert. Jede Komponente ist wesentlich für die schnellere und flexiblere Bereitstellung von Anwendungen in der Cloud.
+Dieser Leitfaden behandelt eine bestimmte Teilmenge der in Abbildung 1-7 dargestellten Beispielszenarien. Dieser Leitfaden konzentriert sich ausschließlich auf Übertragungs- und Verschiebungsszenarios und letztlich auf das Modell „Cloudoptimiert“. Im Modell „Cloudoptimiert“ wird eine .NET Framework-Anwendung mithilfe von Windows-Containern und zusätzlichen Komponenten wie Überwachung und CI-/CD-Pipelines modernisiert. Jede Komponente ist wesentlich für die schnellere und flexiblere Bereitstellung von Anwendungen in der Cloud.
 
 ![Cloudnative Lösungen werden jedoch nicht in diesem Leitfaden behandelt.](./media/image1-7.png)
 
@@ -184,7 +188,7 @@ Im letzten Kapitel dieses Leitfadens werden mehrere exemplarische Vorgehensweise
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>Beispiel-Apps für die Modernisierung von Legacy-Apps: eShopModernizing
 
-Das [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)-Repository auf GitHub bietet zwei Beispielanwendungen, die monolithische Legacywebanwendungen simulieren. Eine Web-App wird mit ASP.NET MVC entwickelt, die zweite Web-App mit ASP.NET Web Forms, und die dritte App ist eine n-schichtige App mit einer WinForms-Clientdesktop-App, die ein Back-End des WCF-Diensts verwendet. Alle diese Web-Apps basieren auf dem traditionellen .NET Framework. Diese Beispiel-Apps verwenden nicht .NET Core oder ASP.NET Core, da es sich dabei um vorhandene bzw. zu modernisierende .NET Framework-Anwendungen handelt.
+Das [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)-Repository auf GitHub bietet zwei Beispielanwendungen, die monolithische Legacywebanwendungen simulieren. Eine Web-App wird mit ASP.NET MVC entwickelt, die zweite Web-App mit ASP.NET Web Forms, und die dritte App ist eine n-schichtige App mit einer WinForms-Clientdesktop-App, die ein Back-End des WCF-Diensts verwendet. Alle diese Web-Apps basieren auf dem traditionellen .NET Framework. Diese Beispiel-Apps verwenden weder .NET Core noch .NET 5.0 oder ASP.NET Core, da es sich hierbei um vorhandene bzw. veraltete .NET Framework-Anwendungen handelt.
 
 Für diese Beispiel-Apps ist eine zweite Version mit modernisiertem Code verfügbar, die recht einfach ist. Der wichtigste Unterschied zwischen den App-Versionen besteht darin, dass die jeweils zweite Version Windows-Container als Bereitstellungsauswahl verwendet. Es gibt auch einige Ergänzungen zu den zweiten Versionen, wie Azure Storage Blobs für die Verwaltung von Images, Azure Active Directory für die Verwaltung der Sicherheit und Azure Application Insights für die Überwachung und Überprüfung der Anwendungen.
 
