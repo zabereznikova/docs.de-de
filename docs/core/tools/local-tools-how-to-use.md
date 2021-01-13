@@ -2,13 +2,13 @@
 title: 'Tutorial: Installieren und Verwenden lokaler .NET-Tools'
 description: Erfahren Sie, wie Sie ein .NET-Tool als lokales Tool installieren und verwenden.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633880"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512462"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Tutorial: Installieren und Verwenden eines lokalen .NET-Tools mithilfe der .NET-CLI
 
@@ -172,7 +172,7 @@ Normalerweise installieren Sie ein lokales Tool im Stammverzeichnis des Reposito
 
 ## <a name="update-a-local-tool"></a>Aktualisieren eines lokalen Tools
 
-Die installierte Version des lokalen Tools `dotnetsay` ist 2.1.3.  Die neueste Version ist 2.1.4. Verwenden Sie den Befehl [dotnet tool update](dotnet-tool-update.md), um das Tool auf die neueste Version zu aktualisieren.
+Die installierte Version des lokalen Tools `dotnetsay` ist 2.1.3.  Verwenden Sie den Befehl [dotnet tool update](dotnet-tool-update.md), um das Tool auf die neueste Version zu aktualisieren.
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 Die Ausgabe gibt die neue Versionsnummer an:
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -205,4 +205,4 @@ Falls im Verlauf des Tutorials eine Fehlermeldung angezeigt wird, finden Sie unt
 
 ## <a name="see-also"></a>Siehe auch
 
-Weitere Informationen finden Sie unter [.NET Core-Tools](global-tools.md).
+Weitere Informationen finden Sie unter [.NET-Tools](global-tools.md).

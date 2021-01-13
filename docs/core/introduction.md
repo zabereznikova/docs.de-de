@@ -4,12 +4,12 @@ description: Hier erfahren Sie mehr über die kostenlose Open-Source-Entwicklung
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687516"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938675"
 ---
 # <a name="introduction-to-net"></a>Einführung in .NET
 
@@ -144,6 +144,13 @@ Beim Download des SDK werden die folgenden Komponenten heruntergeladen:
 * [Laufzeitbibliotheken](#runtime-libraries). Diese umfassen primitive Datentypen und grundlegende Hilfsprogramme.
 * ASP.NET Core-Runtime: Diese bietet grundlegende Dienste für mit dem Internet verbundene Apps (z. B. Web-Apps, IoT-Apps und mobile Back-Ends).
 * Desktopruntime: Hier sind grundlegende Dienste für Windows-Desktop-Apps einschließlich Windows Forms und WPF enthalten.
+
+Beim Download der Runtime werden die folgenden Komponenten heruntergeladen:
+
+* Optional die Desktop- oder ASP.NET Core-Runtime
+* [.NET-Runtime](#clr): Diese bietet ein Typsystem, eine Funktion zum Laden von Assemblys, einen Garbage Collector, native Interoperabilität und andere grundlegende Dienste.
+* [Laufzeitbibliotheken](#runtime-libraries). Diese umfassen primitive Datentypen und grundlegende Hilfsprogramme.
+* `dotnet`-[Treiber](tools/index.md#driver) Dies ist ein CLI-Befehl, der frameworkabhängige Apps ausführt.
 
 Weitere Informationen finden Sie in den folgenden Ressourcen:
 

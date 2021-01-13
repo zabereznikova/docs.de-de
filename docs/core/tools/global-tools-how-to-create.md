@@ -2,13 +2,13 @@
 title: 'Tutorial: Erstellen eines .NET-Tools'
 description: In diesem Artikel erfahren Sie, wie Sie ein .NET-Tool erstellen. Ein Tool ist eine Konsolenanwendung, die über die .NET-CLI installiert wird.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633777"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633896"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: Erstellen eines .NET-Tools mithilfe der .NET-CLI
 
@@ -18,14 +18,14 @@ In diesem Tutorial erfahren Sie, wie Sie ein .NET-Tool erstellen und packen. Die
 
 Das von Ihnen erstellte Tool ist eine Konsolenanwendung, die eine Nachricht als Eingabe verwendet und sie zusammen mit Textzeilen anzeigt, die das Bild eines Roboters erzeugen.
 
-Dies ist das erste in einer Reihe von drei Tutorials. In diesem Tutorial erstellen und packen Sie ein Tool. In den nächsten beiden Tutorials verwenden Sie [das Tool als globales Tool](global-tools-how-to-use.md) und [das Tool als lokales Tool](local-tools-how-to-use.md).
+Dies ist das erste in einer Reihe von drei Tutorials. In diesem Tutorial erstellen und packen Sie ein Tool. In den nächsten beiden Tutorials verwenden Sie [das Tool als globales Tool](global-tools-how-to-use.md) und [das Tool als lokales Tool](local-tools-how-to-use.md). Die Verfahren zum Erstellen eines Tools sind unabhängig davon identisch, ob es als globales oder lokales Tool verwendet wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) oder neuere Version.
+- [.NET SDK 5.0.100](https://dotnet.microsoft.com/download) oder höhere Versionen.
 
-  Dieses Tutorial und das folgende [Tutorial für globale Tools](global-tools-how-to-use.md) gelten für .NET Core SDK 2.1 und neuere Versionen, da globale Tools ab dieser Version verfügbar sind. Dieses Tutorial setzt jedoch voraus, dass Sie mindestens Version 3.1 installiert haben, sodass Sie die Möglichkeit haben, mit dem [Tutorial zu lokalen Tools](local-tools-how-to-use.md) fortzufahren. Lokale .NET Core-Tools sind ab .NET Core SDK 3.0 verfügbar. Die Verfahren zum Erstellen eines Tools sind unabhängig davon identisch, ob es als globales oder lokales Tool verwendet wird.
-  
+  In diesem Tutorial wird .NET SDK 5.0 verwendet, aber die globalen Tools sind ab .NET Core SDK 2.1 verfügbar. Lokale .NET Core-Tools sind ab .NET Core SDK 3.0 verfügbar.
+
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
 
 ## <a name="create-a-project"></a>Erstellen eines Projekts
@@ -35,10 +35,22 @@ Dies ist das erste in einer Reihe von drei Tutorials. In diesem Tutorial erstell
 1. Navigieren Sie zum Ordner *Repository*, und geben Sie den folgenden Befehl ein:
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    Der Befehl erstellt einen neuen Ordner namens *microsoft.botsay* im Ordner *Repository*.
+
+   > [!NOTE]
+   > In diesem Tutorial erfahren Sie, wie Sie ein Tool erstellen, das auf .NET 5.0 ausgerichtet ist. Wenn Sie ein anderes Framework als Ziel verwenden möchten, ändern Sie die Option `-f|--framework`. Wenn Sie mehrere Frameworks als Ziel verwenden möchten, ändern Sie das Element `TargetFramework` wie im folgenden Beispiel gezeigt in ein `TargetFrameworks`-Element in der Projektdatei:
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. Navigieren Sie zum Ordner *microsoft.botsay*.
 
@@ -158,22 +170,22 @@ Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die P
 
    `<ToolCommandName>` ist ein optionales Element, das den Befehl angibt, der das Tool nach seiner Installation aufruft. Wenn dieses Element nicht angegeben wird, ist der Befehlsname für das Tool der Projektdateiname ohne die Erweiterung *.csproj*.
 
-   `<PackageOutputPath>` ist ein optionales Element, das bestimmt, wo das NuGet-Paket erstellt wird. Das NuGet-Paket wird von der .NET Core-CLI zur Installation Ihres Tools verwendet.
+   `<PackageOutputPath>` ist ein optionales Element, das bestimmt, wo das NuGet-Paket erstellt wird. Das NuGet-Paket wird von der .NET-CLI zur Installation Ihres Tools verwendet.
 
    Die Projektdatei sieht wie im folgenden Beispiel aus:
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
-  
+       <TargetFramework>net5.0</TargetFramework>
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ Bevor Sie die Anwendung als Tool packen und verteilen können, müssen Sie die P
    ```
 
    Die Datei *microsoft.botsay.1.0.0.nupkg* wird in dem Ordner erstellt, der mit dem `<PackageOutputPath>`-Wert der Datei *microsoft.botsay.csproj* angegeben wird. In diesem Beispiel handelt es sich dabei um den Ordner *./nupkg*.
-  
+
    Wenn Sie ein Tool veröffentlichen möchten, laden Sie es in `https://www.nuget.org` hoch. Sobald das Tool in NuGet verfügbar ist, können Entwickler es mit dem Befehl [dotnet tool install](dotnet-tool-install.md) installieren. Für dieses Tutorial installieren Sie das Paket direkt aus dem lokalen Ordner *nupkg*, sodass Sie das Paket nicht auf NuGet hochladen müssen.
 
 ## <a name="troubleshoot"></a>Problembehandlung

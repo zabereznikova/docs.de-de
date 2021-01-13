@@ -5,18 +5,18 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 35ba90f978b1993f80451a28a4cd08129afddd85
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 58f650e7932d4f5862d545429376b3e417bb433c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864500"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512241"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
 Wenn Sie E/A-gebundene Anforderungen haben (z. B. Daten aus einem Netzwerk anfordern, auf eine Datenbank zugreifen oder aus einem Dateisystem lesen oder hineinschreiben), sollten Sie asynchrone Programmierung verwenden. Sie könnten auch CPU-gebundenen Code haben, z.B. eine teure Berechnung, bei der es sich auch um ein gutes Szenario zum Schreiben von asynchronem Code handelt.
 
-C# bietet ein auf Sprachebene asynchrones Programmiermodell, das das Schreiben von asynchronem Code problemlos ermöglicht, ohne Rückrufe jonglieren oder eine Bibliothek bestätigen zu müssen, die Asynchronie unterstützt. Es folgt das so genannte [Aufgabenbasierte asynchrone Muster (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
+C# verfügt über ein asynchrones Programmiermodell auf Sprachebene, das ein problemloses Schreiben von asynchronem Code ermöglicht, ohne dass Sie Rückrufe koordinieren oder eine Bibliothek nutzen müssen, die Asynchronität unterstützt. Es folgt das so genannte [Aufgabenbasierte asynchrone Muster (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="overview-of-the-asynchronous-model"></a>Grundlegende Übersicht über das asynchrone Modell
 
@@ -29,7 +29,7 @@ Das Schlüsselwort `await` ist sozusagen der Zauberstab. Es übergibt die Steuer
 
 ### <a name="io-bound-example-download-data-from-a-web-service"></a>E/A-gebundenes Beispiel: Herunterladen von Daten von einem Webdienst
 
-Sie müssen möglicherweise einige Daten von einem Webdienst herunterladen, wenn auf eine Schaltfläche geklickt wird, möchten aber nicht den UI-Thread blockieren. Das können Sie wie folgt erreichen:
+Möglicherweise müssen Sie einige Daten aus einem Webdienst herunterladen, wenn auf eine Schaltfläche geklickt wird, möchten aber den UI-Thread nicht blockieren. Das können Sie wie folgt erreichen:
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
@@ -71,7 +71,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-Dieser Code drückt die Absicht des click-Ereignisses der Schaltfläche sauber aus und benötigt kein manuelles Verwalten eines Hintergrundthreads. Dies geschieht in einer nicht blockierenden Art und Weise.
+Dieser Code drückt die Absicht des Klickereignisses der Schaltfläche deutlich aus, und zwar in einer nicht blockierenden Weise, und erfordert kein manuelles Verwalten eines Hintergrundthreads.
 
 ### <a name="what-happens-under-the-covers"></a>Was im Hintergrund geschieht
 
@@ -91,7 +91,7 @@ Für theorieinteressierte Benutzer: Dies ist eine Implementierung des [Promise-M
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Erkennen von CPU-gebundener und E/A-gebundener Arbeit
 
-Die ersten beiden Beispiele dieser Anleitung zeigen, wie Sie `async` und `await` für E/A-gebundene und CPU-gebundene Arbeit verwenden können. Der Schlüssel, den Sie erkennen können, wenn ein zu erledigender Auftrag E/A-gebunden oder CPU-gebunden ist, kann die Leistung Ihres Codes erheblich beeinträchtigen und möglicherweise zum Missbrauch bestimmter Konstrukte führen.
+Die ersten beiden Beispiele in diesem Leitfaden zeigen, wie Sie `async` und `await` für E/A-gebundene und CPU-gebundene Arbeit verwenden können. Es ist wichtig, dass Sie erkennen können, wenn ein zu erledigender Auftrag E/A-gebunden oder CPU-gebunden ist, da dies die Leistung Ihres Codes erheblich beeinflussen und möglicherweise zum fälschlichen Gebrauch bestimmter Konstrukte führen kann.
 
 Hier sind zwei Fragen, die Sie stellen sollten, bevor Sie Code schreiben:
 
@@ -211,7 +211,7 @@ Auch wenn es weniger Code ist, sollten Sie trotzdem vorsichtig sein, wenn Sie LI
 
 ## <a name="important-info-and-advice"></a>Wichtige Informationen und Hinweise
 
-Bei asynchroner Programmierung sind einige Details zu berücksichtigen, die unerwartetes Verhalten verhindern können.
+Bei asynchroner Programmierung sind einige Details zu berücksichtigen, durch die ein unerwartetes Verhalten verhindert werden kann.
 
 * `async` **-Methoden benötigen ein Schlüsselwort**  `await`  **in Ihrem Textkörper, andernfalls erfolgt niemals eine Rückgabe!**
 
@@ -231,11 +231,11 @@ Mit dieser in .NET verwendeten Konvention kann leichter zwischen synchronen und 
 
 * **Gehen Sie bei der Verwendung von asynchronen Lambdaausdrücken in LINQ-Ausdrücken sorgfältig vor**
 
-Lambdaausdrücke in LINQ verwenden verzögerte Ausführung. Das bedeutet, dass Code zu einem Zeitpunkt ausgeführt werden kann, zu dem Sie es nicht erwarten. Die Einführung von blockierenden Aufgaben kann schnell zu einem Deadlock führen, wenn diese nicht ordnungsgemäß geschrieben werden. Darüber hinaus kann die Schachtelung von asynchronem Code die Ausführung des Codes erschweren. Async und LINQ sind leistungsstark, sollten aber so sorgfältig und genau wie möglich zusammen verwendet werden.
+Lambdaausdrücke in LINQ verwenden verzögerte Ausführung. Das bedeutet, dass Code zu einem Zeitpunkt ausgeführt werden kann, zu dem Sie es nicht erwarten. Die Einführung von blockierenden Aufgaben kann schnell zu einem Deadlock führen, wenn diese nicht ordnungsgemäß geschrieben werden. Darüber hinaus kann die Schachtelung von asynchronem Code die Ausführung des Codes erschweren. Async und LINQ sind leistungsstark, sollten zusammen aber so sorgfältig und deutlich wie möglich verwendet werden.
 
 * **Schreiben Sie Code, der Aufgaben in einer nicht blockierenden Art und Weise erwartet**
 
-Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss eines `Task` zu warten, können Deadlocks und Blockierungen von Kontextthreads auftreten und komplexere Fehlerbehandlung kann erforderlich sein. Die folgende Tabelle enthält Anleitungen zum nicht-blockierenden Warten auf Tasks:
+Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss eines `Task` zu warten, kann dies zu Deadlocks und blockierten Kontextthreads führen, und eine komplexere Fehlerbehandlung kann erforderlich sein. Die folgende Tabelle enthält Anleitungen zum nicht-blockierenden Warten auf Tasks:
 
 | Verwenden Sie...          | Anstatt...           | Wenn Sie dies tun möchten...                 |
 |----------------------|------------------------------|--------------------------------------------|

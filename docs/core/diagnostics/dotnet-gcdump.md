@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-gcdump“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-gcdump“ installieren und zum Erfassen von Garbage Collector-Speicherabbildern (GC) von .NET-Liveprozessen mithilfe von EventPipe im Zusammenhang mit .NET verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826039"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593369"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Heapanalysetool (dotnet-gcdump)
 
@@ -68,6 +68,9 @@ Sie können mehrere `.gcdump`-Dateien erfassen und gleichzeitig in Visual Studio
 ## `dotnet-gcdump collect`
 
 Hiermit wird ein GC-Speicherabbild aus einem derzeit laufenden Prozess erfasst.
+
+> [!WARNING]
+> Dieser Befehl löst eine (vollständige) Garbage Collection (GC) der Generation 2 aus, um den GC-Heap zu durchlaufen. Dadurch kann die Runtime für längere Zeit unterbrochen werden – insbesondere dann, wenn der GC-Heap groß ist. Verwenden Sie diesen Befehl nicht in leistungsabhängigen Umgebungen, wenn der GC-Heap groß ist.
 
 ### <a name="synopsis"></a>Übersicht
 

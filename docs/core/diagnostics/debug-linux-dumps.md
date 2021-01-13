@@ -2,12 +2,12 @@
 title: Debuggen von Linux-Sicherungskopien
 description: In diesem Artikel erfahren Sie, wie Sie Speicherabbilder aus Linux-Umgebungen erfassen und analysieren.
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099145"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753600"
 ---
 # <a name="debug-linux-dumps"></a>Debuggen von Linux-Sicherungskopien
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099145"
 
 ## <a name="collect-dumps-on-linux"></a>Erfassen von Speicherabbildern unter Linux
 
-Die beiden empfohlenen Methoden für das Erfassen von Speicherabbildern unter Linux sind die Tools [`dotnet-dump`](dotnet-dump.md) und [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md).
+Es gibt zwei empfohlene Methoden für das Erfassen von Speicherabbildern unter Linux:
+
+* das CLI-Tool [`dotnet-dump`](dotnet-dump.md)
+* [Umgebungsvariablen](dumps.md#collecting-dumps-on-crash), die Abbilder bei Abstürzen erfassen
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Verwaltete Speicherabbilder mit `dotnet-dump`
 

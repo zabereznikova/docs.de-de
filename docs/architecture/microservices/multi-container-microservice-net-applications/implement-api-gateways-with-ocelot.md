@@ -2,12 +2,12 @@
 title: Implementieren von API-Gateways mit Ocelot
 description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren und Ocelot in einer containerbasierten Umgebung verwenden.
 ms.date: 03/02/2020
-ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718097"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678128"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -39,7 +39,7 @@ Auf der Ebene des API-Gateways kann Granularität beispielsweise für erweiterte
 
 Im vorherigen Abschnitt [Creating composite UI based on microservices (Erstellen einer zusammengesetzten Benutzeroberfläche auf der Grundlage von Microservices)](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md) haben wir uns damit eingehend befasst.
 
-Wichtig ist, dass sich bei vielen mittelgroßen und großen Anwendungen die Verwendung eines kundenspezifischen API-Gatewayprodukts anbietet. Dieses API-Gateway sollte jedoch nur dann als einzelner monolithischer Aggregator oder als exklusives benutzerdefiniertes zentrales API-Gateway eingesetzt werden, wenn es für die verschiedenen Entwicklungsteams, die autonome Microservices erstellen, mehrere unabhängige Konfigurationsbereiche zulässt.
+Wichtig ist, dass bei vielen mittelgroßen und großen Anwendungen die Verwendung eines benutzerdefinierten API-Gatewayprodukts in der Regel ein guter Ansatz ist. Dieses API-Gateway sollte jedoch nur dann als einzelner monolithischer Aggregator oder alleiniges benutzerdefiniertes zentrales API-Gateway eingesetzt werden, wenn es für die verschiedenen Entwicklungsteams, die autonome Microservices erstellen, mehrere unabhängige Konfigurationsbereiche zulässt.
 
 ### <a name="sample-microservicescontainers-to-reroute-through-the-api-gateways"></a>Beispiele für Microservices bzw. Container, die über die API-Gateways umgeleitet werden
 
@@ -155,7 +155,7 @@ In eShopOnContainers ist die API-Gateway-Implementierung ein einfaches ASP.NET C
 
 **Abbildung 6-32**. Das Basisprojekt „OcelotApiGw“ in eShopOnContainers
 
-Dieses ASP.NET Core-WebHost-Projekt besteht im Grunde aus zwei einfachen Dateien: `Program.cs` und `Startup.cs`.
+Dieses ASP.NET Core-WebHost-Projekt wird mit zwei einfachen Dateien erstellt: `Program.cs` und `Startup.cs`.
 
 Mit der Datei „Program.cs“ wird lediglich die typische ASP.NET Core-Methode „BuildWebHost“ erstellt und konfiguriert.
 
@@ -267,7 +267,7 @@ Als Port wird der vom Microservice verwendete interne Port verwendet. Bei Verwen
 
 `Host` ist ein Dienstname, der von der verwendeten Dienstnamensauflösung abhängt. Bei Verwendung von „docker-compose“ werden die Dienstnamen vom Docker-Host bereitgestellt, der die in den „docker-compose“-Dateien bereitgestellten Dienstnamen verwendet. Bei Verwendung eines Orchestrators wie Kubernetes oder Service Fabric sollte dieser Name durch die vom jeweiligen Orchestrator bereitgestellte DNS- oder Namensauflösung aufgelöst werden.
 
-Bei „DownstreamHostAndPorts“ handelt es sich um ein Array, das den Host und Port aller Downstreamdienste enthält, an die Sie Anforderungen weiterleiten möchten. In der Regel ist nur ein Eintrag enthalten. Es kann jedoch vorkommen, dass Sie für Anforderungen einen Lastausgleich in Ihren Downstreamdiensten vornehmen möchten. Mit Ocelot können Sie mehrere Einträge hinzufügen und einen Lastausgleich auswählen. Wenn Sie jedoch Azure und einen Orchestrator verwenden, sollten Sie einen Lastausgleich mit der Cloud- oder Orchestratorinfrastruktur vornehmen.
+Bei „DownstreamHostAndPorts“ handelt es sich um ein Array, das den Host und Port aller Downstreamdienste enthält, an die Sie Anforderungen weiterleiten möchten. In der Regel umfasst diese Konfiguration nur einen Eintrag. Es kann jedoch vorkommen, dass Sie für Anforderungen an Ihre Downstreamdienste einen Lastausgleich vornehmen möchten. Mit Ocelot können Sie mehrere Einträge hinzufügen und einen Lastausgleich auswählen. Wenn Sie jedoch Azure und einen Orchestrator verwenden, sollten Sie einen Lastausgleich mit der Cloud- oder Orchestratorinfrastruktur vornehmen.
 
 „UpstreamPathTemplate“ ist die URL, die von Ocelot verwendet wird, um zu bestimmen, welches DownstreamPathTemplate-Objekt für eine bestimmte Anforderung vom Client verwendet wird. „UpstreamHttpMethod“ wird verwendet, damit Ocelot zwischen unterschiedlichen Anforderungen (GET, POST, PUT) an dieselbe URL unterscheiden kann.
 
@@ -393,7 +393,7 @@ Wenn wir den Geschäftsbereich „Shopping“ in der folgenden Abbildung genauer
 
 **Abbildung 6-38**. Größere Darstellung der Aggregatordienste
 
-Wie Sie sehen, wird das Ganze recht komplex, wenn in der Abbildung die möglichen Anforderungen von den API-Gateways dargestellt werden. Sie können sehen, wie die blauen Pfeile aus der Sicht von Client-Apps bei Verwendung des Aggregatormusters deutlich vereinfacht wurden, indem das Kommunikationsaufkommen und die Latenz in der Kommunikation reduziert wurden. Dadurch wird insbesondere die Benutzerfreundlichkeit für die Remote-Apps (mobile Apps und SPA-Apps) erheblich verbessert.
+Wie Sie sehen, wird das Ganze recht komplex, wenn in der Abbildung die möglichen Anforderungen von den API-Gateways dargestellt werden. Anhand der blauen Pfeile sehen Sie jedoch, wie die Verwendung des Aggregatormusters die Kommunikation für eine Client-App vereinfachen würde. Dieses Muster trägt nicht nur dazu bei, das Kommunikationsaufkommen und die Latenz bei der Kommunikation zu verringern, sondern verbessert auch die Benutzerfreundlichkeit für die Remote-Apps (mobile Apps und SPAs) deutlich.
 
 Beim Geschäftsbereich „Marketing“ und den entsprechenden Microservices geht es um einen einfachen Anwendungsfall. Daher mussten keine Aggregatoren verwendet werden. Bei Bedarf wäre dies jedoch möglich.
 
@@ -527,7 +527,7 @@ Wenn Sie in Kubernetes kein Ingress-Konzept verwenden, können die IPs Ihrer Die
 
 Wenn jedoch ein Ingress-Konzept erkennbar ist, ist zwischen dem Internet und Ihren Diensten (und Ihren API-Gateways) eine mittlere Ebene vorhanden, die als Reverseproxy dient.
 
-Ingress ist als eine Sammlung von Regeln definiert, die es eingehenden Verbindungen ermöglichen, die Clusterdienste zu erreichen. Ingress wird normalerweise konfiguriert, um Diensten extern erreichbare URLs, Lastausgleich für den Datenverkehr, SSL-Terminierung usw. bereitzustellen. Benutzer fordern Ingress an, indem sie die Ingress-Ressource an den API-Server senden.
+Ingress ist als eine Sammlung von Regeln definiert, die es eingehenden Verbindungen ermöglichen, die Clusterdienste zu erreichen. Ingress wird konfiguriert, um Diensten extern erreichbare URLs, Lastausgleich für den Datenverkehr, SSL-Terminierung usw. bereitzustellen. Benutzer fordern Ingress an, indem sie die Ingress-Ressource an den API-Server senden.
 
 Wenn Sie in eShopOnContainers lokal entwickeln und nur Ihren Entwicklungscomputer als Docker-Host verwenden, benötigen Sie Ingress nicht, sondern nur die API-Gateways.
 
@@ -543,7 +543,7 @@ Eine Ingress-Nginx-Ebene in Kubernetes vor den Webanwendungen sowie mehrere Ocel
 
 **Abbildung 6-41**. Die Ingress-Ebene in eShopOnContainers bei Bereitstellung in Kubernetes
 
-Kubernetes Ingress dient als Reverseproxy für den gesamten Datenverkehr zur App. Dies gilt auch für Web-Apps, die normalerweise außerhalb des API-Gateway-Bereichs liegen. Wenn Sie eShopOnContainers in Kubernetes bereitstellen, werden nur wenige Dienste oder Endpunkte über _ingress_ verfügbar gemacht. Hierbei handelt es sich im Wesentlichen um die folgende Liste mit Postfixes in den URLs:
+Ein Kubernetes-Eingangsobjekt fungiert als Reverseproxy für den gesamten Datenverkehr zur App. Dies gilt auch für die Webanwendungen, die außerhalb des Bereichs des API-Gateways liegen. Wenn Sie eShopOnContainers in Kubernetes bereitstellen, werden nur wenige Dienste oder Endpunkte über _ingress_ verfügbar gemacht. Hierbei handelt es sich im Wesentlichen um die folgende Liste mit Postfixes in den URLs:
 
 - `/` für die SPA-Clientwebanwendung
 - `/webmvc` für die MVC-Clientwebanwendung

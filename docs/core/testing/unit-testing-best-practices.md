@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden zum Schreiben von Kompon
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 56f51cde0e52a9e6a38e5291c81470beee61adef
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281648"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678114"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -61,13 +61,13 @@ Ein hoher Code-Coverage-Prozentsatz ist weder ein Erfolgsindikator noch ein Hinw
 
 ## <a name="lets-speak-the-same-language"></a>Begriffsklärung
 
-Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes* , beim Schreiben von Komponententests definiert:
+Der Begriff *Mock* (Deutsch: „Pseudo“) wird leider im Testkontext häufig falsch verwendet. Im Folgenden werden die häufigsten Arten von unechten Objekten, sogenannten *Fakes*, beim Schreiben von Komponententests definiert:
 
-*Fake* : Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
+*Fake*: Fake ist ein generischer Begriff, der sowohl für Stubs als auch für Pseudoobjekte („Mocks“) verwendet wird. Ob es sich um einen Stub oder um einen Mock handelt, hängt vom Kontext ab. Das bedeutet, dass ein Fake entweder ein Stub oder ein Mock sein kann.
 
-*Mock* : Ein Pseudoobjekt ist ein unechtes Objekt im System, das entscheidet, ob ein Komponententest erfolgreich war oder nicht. Ein Mock ist zunächst ein Fake, bis eine Assert-Anweisung ausgeführt wird.
+*Mock*: Ein Pseudoobjekt ist ein unechtes Objekt im System, das entscheidet, ob ein Komponententest erfolgreich war oder nicht. Ein Mock ist zunächst ein Fake, bis eine Assert-Anweisung ausgeführt wird.
 
-*Stub* : Ein Stub ist ein anpassbarer Platzhalter für eine vorhandene Abhängigkeit (oder einen Projektmitarbeiter) im System. Wenn Sie einen Stub verwenden, können Sie Ihren Code testen, ohne sich direkt um die Abhängigkeit kümmern zu müssen. Standardmäßig ist ein Fake immer zunächst ein Stub.
+*Stub*: Ein Stub ist ein anpassbarer Platzhalter für eine vorhandene Abhängigkeit (oder einen Projektmitarbeiter) im System. Wenn Sie einen Stub verwenden, können Sie Ihren Code testen, ohne sich direkt um die Abhängigkeit kümmern zu müssen. Standardmäßig ist ein Stub zunächst ein Fake.
 
 Betrachten Sie den folgenden Codeausschnitt:
 
@@ -143,9 +143,9 @@ Tests sind nicht nur dazu da sicherzustellen, dass Ihr Code funktioniert, sie bi
 
 **Arrange, Act, Assert** ist ein häufiges Muster beim Ausführen von Komponententests. Dieses Muster besteht aus drei Hauptteilen:
 
-- *Arrange* : Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
-- *Act* : Führen Sie eine Aktion für ein Objekt durch.
-- *Assert* : Überprüfen Sie die ordnungsgemäße Funktionsweise.
+- *Arrange*: Ordnen Sie Ihrer Objekte an, und erstellen und planen Sie diese nach Bedarf.
+- *Act*: Führen Sie eine Aktion für ein Objekt durch.
+- *Assert*: Überprüfen Sie die ordnungsgemäße Funktionsweise.
 
 #### <a name="why"></a>Warum?
 

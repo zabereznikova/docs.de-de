@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656943"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899651"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -42,7 +42,7 @@ dotnet new console --name WebAPIClient
 
 Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt. Der Projektname lautet „WebAPIClient“. Da es sich hier um ein neues Projekt handelt, ist keine der Abhängigkeiten vorhanden. Mit der ersten Ausführung wird das .NET Core-Framework heruntergeladen, ein Entwicklungszertifikat installiert und der NuGet-Paket-Manager ausgeführt, um die fehlenden Abhängigkeiten wiederherzustellen.
 
-Bevor Sie beginnen, Änderungen vornehmen, geben Sie `dotnet run` ([siehe Hinweis](#dotnet-restore-note)) zum Ausführen der Anwendung an der Eingabeaufforderung ein. `dotnet run` führt automatisch `dotnet restore` aus, wenn Ihrer Umgebung Abhängigkeiten fehlen. Wenn Ihre Anwendung neu erstellt werden muss, wird auch `dotnet build` ausgeführt.
+Bevor Sie Änderungen vornehmen, geben Sie `cd` in das Verzeichnis „WebAPIClient“ und `dotnet run` ([siehe Hinweis](#dotnet-restore-note)) an der Eingabeaufforderung ein, um die Anwendung auszuführen. `dotnet run` führt automatisch `dotnet restore` aus, wenn Ihrer Umgebung Abhängigkeiten fehlen. Wenn Ihre Anwendung neu erstellt werden muss, wird auch `dotnet build` ausgeführt.
 Nach dem ersten Setup müssen Sie nur dann `dotnet restore` oder `dotnet build` ausführen, wenn es für Ihr Projekt sinnvoll ist.
 
 ## <a name="adding-new-dependencies"></a>Hinzufügen von neuen Abhängigkeiten

@@ -3,12 +3,12 @@ title: Ablaufverfolgung von .NET-Anwendungen mit perfcollect
 description: In diesem Tutorial werden Sie Schritt für Schritt durch das Erfassen einer Ablaufverfolgung mit perfcollect in .NET geleitet.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507240"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593219"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>Ablaufverfolgung von .NET-Anwendungen mit perfcollect
 
@@ -250,3 +250,31 @@ Danach sollten symbolische Namen für die nativen DLLs zurückgegeben werden, we
 ## <a name="collect-in-a-docker-container"></a>Sammeln in einem Docker-Container
 
 Weitere Informationen zur Verwendung von `perfcollect` in Containerumgebungen finden Sie unter [Sammeln von Diagnosen in Containern](./diagnostics-in-containers.md).
+
+## <a name="learn-more-about-collection-options"></a>Weitere Informationen zu Sammlungsoptionen
+
+Mit `perfcollect` können Sie die folgenden optionalen Flags gemäß Ihren Diagnoseanforderungen angeben.
+
+### <a name="collect-for-a-specific-duration"></a>Sammeln für eine bestimmte Dauer
+
+Zum Sammeln einer Ablaufverfolgung für eine bestimmte Dauer ist die Option `-collectsec` geeignet, gefolgt von der Gesamtanzahl der Sekunden für die Sammlung.
+
+### <a name="collect-threadtime-traces"></a>Sammeln von Ablaufverfolgungen der Threadzeit
+
+Wenn Sie threadspezifische Daten zur CPU-Auslastung sammeln möchten, geben Sie `-threadtime` mit `perfcollect` an. Auf diese Weise können Sie die CPU-Zeit pro Thread analysieren.
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>Sammeln von Ablaufverfolgungen für die Leistung des Garbage Collectors und des verwalteten Speichers
+
+Mit den folgenden Optionen können Sie die GC-Ereignisse direkt von der Laufzeit erfassen.
+
+* `perfcollect collect -gccollectonly`
+
+Es wird nur eine minimale Anzahl von GC-Ereignissen gesammelt. Hierbei handelt es sich um das am wenigsten ausführliche Sammlungsprofil von GC-Ereignissen mit den geringsten Auswirkungen auf die Leistung der Ziel-App. Dieser Befehl entspricht dem Befehl `PerfView.exe /GCCollectOnly collect` in PerfView.
+
+* `perfcollect collect -gconly`
+
+Mit JIT-, Ladeprogramm- und Ausnahmeereignissen werden ausführlichere GC-Ereignisse gesammelt. Dies erfordert ausführlichere Ereignisse (z. B. Zuordnungs- und GC-Joininformationen) und wirkt sich stärker auf die Leistung der Ziel-App aus als Option `-gccollectonly`. Dieser Befehl entspricht dem Befehl `PerfView.exe /GCOnly collect` in PerfView.
+
+* `perfcollect collect -gcwithheap`
+
+Hierbei werden die ausführlichsten GC-Ereignisse gesammelt, die auch die beibehaltenen Objekte und Bewegungen des Heaps nachverfolgen. Dies ermöglicht eine detaillierte Analyse des GC-Verhaltens, führt jedoch zu hohen Leistungseinbußen, da jede GC mehr als doppelt so lange dauern kann. Wenn Sie Ablaufverfolgungen in Produktionsumgebungen verwenden möchten, sollten Sie über die Auswirkungen dieser Option auf die Leistung Bescheid wissen.

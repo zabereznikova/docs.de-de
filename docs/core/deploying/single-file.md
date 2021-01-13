@@ -3,13 +3,13 @@ title: Einzeldatei-App
 description: Hier erfahren Sie, was eine Einzeldatei-App ist und warum Sie dieses Anwendungsbereitstellungsmodell wählen sollten.
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050415"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678145"
 ---
 # <a name="single-file-deployment-and-executable"></a>Einzeldateibereitstellung und ausführbare Datei
 
@@ -96,6 +96,39 @@ Fügen Sie z. B. die folgende Eigenschaft in die Projektdatei einer Assembly ei
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>Veröffentlichen einer Einzeldatei-App: Beispielprojektdatei
+
+Hier sehen Sie eine Beispielprojektdatei, in der die Veröffentlichung von Einzeldatei-Apps definiert wird:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+Diese Eigenschaften verfügen über die folgenden Funktionen:
+
+* `PublishSingleFile`: aktiviert die Veröffentlichung von Einzeldateien
+* `SelfContained`: bestimmt, ob die App eigenständig oder frameworkabhängig ist
+* `RuntimeIdentifier`: gibt das [Betriebssystem und den CPU-Typ](../rid-catalog.md) an, den Sie als Ziel verwenden
+* `PublishTrimmed`: ermöglicht das [Kürzen von Assemblys](trim-self-contained.md). Dies wird nur für eigenständige Apps unterstützt.
+* `PublishReadyToRun`: ermöglicht die [Ahead-of-Time-Kompilierung (AOT)](ready-to-run.md)
+
+**Hinweise:**
+
+* Apps sind betriebssystem- und architekturspezifisch. Sie müssen für jede Konfiguration (z. B. Linux x64, Linux ARM64, Windows x64 usw.) eine App veröffentlichen.
+* Konfigurationsdateien (z. B. *\*.runtimeconfig.json*) sind in der Einzeldatei enthalten. Wenn eine zusätzliche Konfigurationsdatei benötigt wird, können Sie sie neben der Einzeldatei platzieren.
+
 ## <a name="publish-a-single-file-app---cli"></a>Veröffentlichen einer Einzeldatei-App (CLI)
 
 Sie können Ihre Einzeldatei-App mit dem Befehl [dotnet publish](../tools/dotnet-publish.md) veröffentlichen. Legen Sie die folgenden Eigenschaften fest, wenn Sie Ihre App veröffentlichen:
@@ -129,7 +162,7 @@ Visual Studio erstellt wiederverwendbare Veröffentlichungsprofile, die steuern,
 
 01. Wählen Sie **Bearbeiten** aus.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Projektmappen-Explorer mit Kontextmenü und markierter Option zum Veröffentlichen":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Visual Studio-Veröffentlichungsprofil mit Bearbeitungsschaltfläche":::
 
 01. Legen Sie im Dialogfeld **Profileinstellungen** die folgenden Optionen fest:
 
@@ -139,7 +172,7 @@ Visual Studio erstellt wiederverwendbare Veröffentlichungsprofile, die steuern,
 
     Klicken Sie auf **Speichern**, um die Einstellungen zu speichern und zum Dialogfeld **Veröffentlichen** zurückzukehren.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Projektmappen-Explorer mit Kontextmenü und markierter Option zum Veröffentlichen":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Dialogfeld für die Profileinstellungen mit Bereitstellungsmodus, Zielruntime und hervorgehobenen Einzeldateioptionen":::
 
 01. Klicken Sie auf **Veröffentlichen**, um Ihre App als Einzeldatei zu veröffentlichen.
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet sln“
 description: Der Befehl dotnet-sln bietet eine praktische Option, Projekte zu einer Projektmappendatei hinzuzufügen, Projekte aus einer Projektmappendatei zu entfernen oder die in einer Projektmappendatei enthaltenen Projekte aufzulisten.
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851696"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633649"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  Dies ist der Zielpfad des Projektmappenordners, dem die Projekte hinzugefügt werden sollen. Verfügbar seit .NET Core 3.0 SDK.
+  Dies ist der Zielpfad des [Projektmappenordners](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder), dem die Projekte hinzugefügt werden sollen. Verfügbar seit .NET Core 3.0 SDK.
 
 ### `remove`
 

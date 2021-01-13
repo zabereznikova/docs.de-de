@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c8caf7e34397faf9f7085d6634287cffcb37eb08
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e0efad959d5212f6c07d4c4b5344761490018a4c
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141880"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899664"
 ---
 # <a name="yield-c-reference"></a>yield (C#-Referenz)
 
@@ -42,7 +42,7 @@ Die Deklaration eines Iterators muss die folgenden Anforderungen erfüllen:
 
 - Der Rückgabetyp muss <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> oder <xref:System.Collections.Generic.IEnumerator%601> sein.
 
-- Die Deklaration darf nicht über [in](in-parameter-modifier.md)-, [ref](ref.md)- oder [out](out-parameter-modifier.md)-Parameter verfügen.
+- Die Deklaration darf keine [in](in-parameter-modifier.md)-, [ref](ref.md)- oder [out](out-parameter-modifier.md)-Parameter aufweisen.
 
 Der `yield`-Typ eines Iterators, der <xref:System.Collections.IEnumerable> oder <xref:System.Collections.IEnumerator> zurückgibt, ist `object`.  Wenn der Iterator <xref:System.Collections.Generic.IEnumerable%601> oder <xref:System.Collections.Generic.IEnumerator%601> zurückgibt, ist eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in den generischen Typparameter erforderlich.
 

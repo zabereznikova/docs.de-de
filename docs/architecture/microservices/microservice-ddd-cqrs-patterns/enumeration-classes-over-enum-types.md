@@ -1,21 +1,21 @@
 ---
 title: Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 description: .NET Microservicesarchitektur für Containerized .NET-Anwendungen | Nutzung von Enumerationsklassen anstelle von Enumerationen als Lösungsmöglichkeit für die Einschränkungen der Enumerationen
-ms.date: 10/08/2018
-ms.openlocfilehash: fb2cbcd744f29c70a86e6f3300721934192eb752
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 11/25/2020
+ms.openlocfilehash: a45347d7cc9c3fc6378198ca1c44ba6fecfd54f5
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847179"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899527"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 
-Bei [Enumerationen](../../../csharp/language-reference/builtin-types/enum.md) (bzw. *Enumerationstypen*) handelt es sich um dünne Sprachwrapper um einen integralen Typ. Sie sollten deren Verwendung darauf beschränken, einen Wert aus einem vollständigen Wertesatz zu speichern. Klassifizierung anhand von Größen (klein, mittel, groß) ist ein gutes Beispiel. Das Verwenden von Enumerationen zur Ablaufsteuerung oder für robustere Abstraktionen kann zu [schlecht strukturiertem Code](https://deviq.com/code-smells/) führen. Diese Art der Verwendung führt zu instabilem Code mit vielen Anweisungen für die Ablaufsteuerung, die die Werte der Enumeration überprüfen.
+Bei [Enumerationen](../../../csharp/language-reference/builtin-types/enum.md) (bzw. *Enumerationstypen*) handelt es sich um dünne Sprachwrapper um einen integralen Typ. Sie sollten deren Verwendung darauf beschränken, einen Wert aus einem vollständigen Wertesatz zu speichern. Klassifizierung anhand von Größen (klein, mittel, groß) ist ein gutes Beispiel. Das Verwenden von Enumerationen zur Ablaufsteuerung oder für robustere Abstraktionen kann zu [schlecht strukturiertem Code](https://deviq.com/antipatterns/code-smells) führen. Diese Art der Verwendung führt zu instabilem Code mit vielen Anweisungen für die Ablaufsteuerung, die die Werte der Enumeration überprüfen.
 
 Sie können stattdessen Enumerationsklassen erstellen, um die umfassenden Features von objektorientierten Sprachen nutzen zu können.
 
-Dabei handelt es sich jedoch nicht um ein kritisches Thema und in vielen Fällen können Sie aus Gründen der Einfachheit dennoch reguläre [Enumerationstypen](../../../csharp/language-reference/builtin-types/enum.md) verwenden, wenn Sie diese bevorzugen. Jedenfalls bezieht sich die Verwendung von Enumerationsklassen mehr auf geschäftliche Konzepte.
+Dabei handelt es sich jedoch nicht um ein kritisches Thema und in vielen Fällen können Sie aus Gründen der Einfachheit dennoch reguläre [Enumerationstypen](../../../csharp/language-reference/builtin-types/enum.md) verwenden, wenn Sie diese bevorzugen. Die Verwendung von Enumerationsklassen steht eher im Bezug zu geschäftlichen Konzepten.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implementieren einer Basisklasse für Enumerationen
 
@@ -28,29 +28,23 @@ public abstract class Enumeration : IComparable
 
     public int Id { get; private set; }
 
-    protected Enumeration(int id, string name)
-    {
-        Id = id;
-        Name = name;
-    }
+    protected Enumeration(int id, string name) => (Id, Name) = (id, name);
 
     public override string ToString() => Name;
 
-    public static IEnumerable<T> GetAll<T>() where T : Enumeration
-    {
-        var fields = typeof(T).GetFields(BindingFlags.Public |
-                                         BindingFlags.Static |
-                                         BindingFlags.DeclaredOnly);
-
-        return fields.Select(f => f.GetValue(null)).Cast<T>();
-    }
+    public static IEnumerable<T> GetAll<T>() where T : Enumeration =>
+        typeof(T).GetFields(BindingFlags.Public |
+                            BindingFlags.Static |
+                            BindingFlags.DeclaredOnly)
+                 .Select(f => f.GetValue(null))
+                 .Cast<T>();
 
     public override bool Equals(object obj)
     {
-        var otherValue = obj as Enumeration;
-
-        if (otherValue == null)
+        if (obj is not Enumeration otherValue)
+        {
             return false;
+        }
 
         var typeMatches = GetType().Equals(obj.GetType());
         var valueMatches = Id.Equals(otherValue.Id);
@@ -67,11 +61,12 @@ public abstract class Enumeration : IComparable
 Sie können diese Klasse als Typ in einem beliebigen Entitäts- oder Wertobjekt verwenden, z.B. für die folgende `CardType`:`Enumeration`-Klasse:
 
 ```csharp
-public class CardType : Enumeration
+public class CardType
+    : Enumeration
 {
-    public static readonly CardType Amex = new CardType(1, "Amex");
-    public static readonly CardType Visa = new CardType(2, "Visa");
-    public static readonly CardType MasterCard = new CardType(3, "MasterCard");
+    public static CardType Amex = new CardType(1, nameof(Amex));
+    public static CardType Visa = new CardType(2, nameof(Visa));
+    public static CardType MasterCard = new CardType(3, nameof(MasterCard));
 
     public CardType(int id, string name)
         : base(id, name)

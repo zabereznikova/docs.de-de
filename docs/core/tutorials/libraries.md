@@ -1,23 +1,23 @@
 ---
-title: Entwickeln von Bibliotheken mit der .NET Core-CLI
-description: Erfahren Sie, wie Sie die .NET Core-CLI verwenden, um .NET-Bibliotheken zu erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
+title: Entwickeln von Bibliotheken mit der .NET-CLI
+description: Hier erfahren Sie, wie Sie mithilfe der .NET-CLI .NET-Bibliotheken erstellen. Sie erstellen damit eine Bibliothek, die mehrere Frameworks unterstützt.
 author: cartermp
 ms.topic: how-to
-ms.date: 05/01/2017
-ms.openlocfilehash: 8a0b1c5645f41a256bfb9d0e5dac74f8706d84e6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/14/2020
+ms.openlocfilehash: 6f4c1feac7630a6a0250e4b0b39ef01152f5a400
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725078"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633675"
 ---
-# <a name="develop-libraries-with-the-net-core-cli"></a>Entwickeln von Bibliotheken mit der .NET Core-CLI
+# <a name="develop-libraries-with-the-net-cli"></a>Entwickeln von Bibliotheken mit der .NET-CLI
 
-Dieser Artikel erläutert, wie Sie mithilfe der .NET Core-CLI Bibliotheken für .NET schreiben. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
+In diesem Artikel wird erläutert, wie Sie mithilfe der .NET-CLI Bibliotheken für .NET schreiben. Die CLI bietet effiziente Funktionalität auf niedriger Stufe, die auf allen unterstützten Betriebssystemen funktioniert. Sie können trotzdem noch Bibliotheken mit Visual Studio erstellen. Wenn das Ihre bevorzugte Methode ist, finden Sie [weitere Informationen im Handbuch für Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-[Das .NET Core SDK und die CLI](https://dotnet.microsoft.com/download) müssen auf Ihrem Computer installiert sein.
+[Das .NET SDK und die -CLI](https://dotnet.microsoft.com/download) müssen auf Ihrem Computer installiert sein.
 
 Für die Abschnitte dieses Dokuments, in denen es um .NET Framework-Versionen geht, muss das [.NET Framework](https://dotnet.microsoft.com) auf einem Windows-Computer installiert sein.
 
@@ -33,35 +33,27 @@ Wenn Sie ältere .NET Framework-Ziele unterstützen möchten, müssen Sie außer
 | 4,0                    | Windows SDK für Windows 7 und .NET Framework 4         |
 | 2.0, 3.0 und 3.5      | .NET Framework 3.5 SP1-Runtime (oder Windows 8+-Version) |
 
-## <a name="how-to-target-net-standard"></a>Verwenden von .NET Standard als Ziel
+## <a name="how-to-target-net-50-or-net-standard"></a>Verwenden von .NET 5.0 oder .NET Standard als Ziel
 
-Wenn Sie noch nicht mit .NET Standard vertraut sind, finden Sie unter [.NET-Standard](../../standard/net-standard.md) weitere Informationen.
+Sie können das Zielframework Ihres Projekts kontrollieren, indem Sie es zu Ihrer Projektdatei hinzufügen ( *.csproj* oder *.fsproj*). Informationen, die Sie bei der Entscheidung zwischen .NET 5.0 oder .NET Standard als Ziel unterstützen sollen, finden Sie unter [.NET 5 und .NET Standard](../../standard/net-standard.md#net-5-and-net-standard).
 
-In diesem Artikel finden Sie eine Tabelle, in der die Versionen von .NET Standard zahlreichen Implementierungen zugeordnet werden:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
 
-Im Folgenden wird erklärt, was diese Tabelle für das Erstellen einer Bibliothek bedeutet:
-
-Die Version von .NET Standard, die Sie auswählen, bildet einen Kompromiss zwischen dem Zugang zu den neuesten APIs und der Möglichkeit, mehr .NET-Implementierungen und .NET Standard-Versionen nutzen zu können. Sie kontrollieren den Bereich der Plattformen und der Versionen, die als Ziel festgelegt werden können, indem Sie eine Version von `netstandardX.X` auswählen (`X.X` steht für eine Versionsnummer) und sie Ihrer Projektdatei (`.csproj` oder `.fsproj`) hinzufügen.
-
-Wenn Sie .NET Standard als Ziel festlegen, stehen Ihnen je nach Bedarf drei Optionen zur Verfügung.
-
-1. Sie können die Standardversion von .NET Standard verwenden, die durch Vorlagen (`netstandard1.4`) bereitgestellt wird. Dadurch erhalten Sie Zugriff auf die meisten APIs unter .NET Standard, wobei UWP, .NET Framework 4.6.1 und .NET Standard 2.0 noch immer kompatibel sind.
-
-    ```xml
-    <Project Sdk="Microsoft.NET.Sdk">
-      <PropertyGroup>
-        <TargetFramework>netstandard1.4</TargetFramework>
-      </PropertyGroup>
-    </Project>
-    ```
-
-2. Sie können eine niedrigere oder höhere Version von .NET Standard verwenden, indem Sie den Wert im `TargetFramework`-Knoten Ihrer Projektdatei bearbeiten.
-
-    .NET Standard-Versionen sind abwärtskompatibel. Das bedeutet, dass `netstandard1.0`-Bibliotheken auf `netstandard1.1`-Plattformen und höher ausgeführt werden können. Es gibt jedoch keine Vorwärtskompatibilität. Frühere .NET Standard Plattformen-können nicht auf höhere Versionen verweisen. Das bedeutet, dass `netstandard1.0`-Bibliotheken nicht auf Bibliotheken verweisen können, die `netstandard1.1` oder höher als Ziel haben. Wählen Sie die Standard-Version aus, die die beste Mischung aus APIs und Plattformunterstützung für Ihre Anforderungen bietet. Wir empfehlen aktuell `netstandard1.4`.
-
-3. Wenn Sie die .NET Framework-Version 4.0 oder niedriger als Ziel festlegen oder eine API verwenden möchten, die in .NET Framework verfügbar ist, aber nicht in .NET Standard (z. B. `System.Drawing`), lesen Sie die folgenden Abschnitte. In ihnen erfahren Sie, wie mehrere Ziele festlegt werden.
+Wenn Sie die .NET Framework-Version 4.0 oder niedriger als Ziel festlegen oder eine API verwenden möchten, die in .NET Framework verfügbar ist, aber nicht in .NET Standard (z. B. `System.Drawing`), lesen Sie die folgenden Abschnitte. In ihnen erfahren Sie, wie mehrere Ziele festlegt werden.
 
 ## <a name="how-to-target-net-framework"></a>Vorgehensweise: .NET Framework als Ziel
 
@@ -104,7 +96,7 @@ Das war’s! Obwohl dieses Beispiel nur für .NET Framework 4 kompiliert wurde, 
 > [!NOTE]
 > In den folgenden Anweisungen wird vorausgesetzt, dass .NET Framework auf Ihrem Computer installiert ist. Im Abschnitt [Erforderliche Komponenten](#prerequisites) finden Sie weitere Informationen darüber, welche Abhängigkeiten Sie installieren müssen, und wo Sie diese herunterladen können.
 
-Sie müssen möglicherweise ältere Versionen von .NET Framework als Ziel festlegen, wenn Ihr Projekt sowohl .NET Framework als auch .NET Core unterstützt. Wenn Sie neuere APIs und Sprachkonstrukte für die neueren Ziele verwenden möchten, verwenden Sie in diesem Szenario `#if`-Anweisungen in Ihrem Code. Sie müssen möglicherweise auch unterschiedliche Pakete und Abhängigkeiten für jede Zielplattform hinzufügen, um verschiedene APIs einzuschließen, die für jeden Fall benötigt werden.
+Sie müssen möglicherweise ältere Versionen des .NET Frameworks als Ziel festlegen, wenn Ihr Projekt sowohl das .NET Framework als auch .NET unterstützt. Wenn Sie neuere APIs und Sprachkonstrukte für die neueren Ziele verwenden möchten, verwenden Sie in diesem Szenario `#if`-Anweisungen in Ihrem Code. Sie müssen möglicherweise auch unterschiedliche Pakete und Abhängigkeiten für jede Zielplattform hinzufügen, um verschiedene APIs einzuschließen, die für jeden Fall benötigt werden.
 
 Nehmen wir z.B. einmal an, dass Sie eine Bibliothek haben, die Netzwerkvorgänge über HTTP ausführt. Für .NET Standard und die .NET Framework-Versionen 4.5 oder höher können Sie die `HttpClient`-Klasse aus dem `System.Net.Http`-Namespace verwenden. Frühere Versionen von .NET Framework verfügen jedoch nicht über die Klasse `HttpClient`, daher können Sie für diese stattdessen die Klasse `WebClient` aus dem Namespace `System.Net` verwenden.
 
@@ -113,7 +105,7 @@ Ihre Projektdatei könnte also Folgendermaßen aussehen:
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net40;net45</TargetFrameworks>
   </PropertyGroup>
 
   <!-- Need to conditionally bring in references for the .NET Framework 4.0 target -->
@@ -207,17 +199,17 @@ Wenn Sie diese Projekt mit `dotnet build` erstellen, bemerken Sie drei Verzeichn
 ```
 net40/
 net45/
-netstandard1.4/
+netstandard2.0/
 ```
 
 Jedes dieser Verzeichnisse enthält die `.dll`-Dateien für jedes Ziel.
 
-## <a name="how-to-test-libraries-on-net-core"></a>So testen Sie die Bibliotheken unter .NET Core
+## <a name="how-to-test-libraries-on-net"></a>So testen Sie die Bibliotheken unter .NET
 
-Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder [xUnit](https://xunit.github.io/) oder MSTest standardmäßig verwenden. Beide sind bestens für Komponententests für Ihre Bibliothek unter .NET Core geeignet. Wie Sie Ihre Lösung mit Testprojekten einrichten, hängt von der [Struktur Ihrer Lösung](#structuring-a-solution) ab. Im folgenden Beispiel wird davon ausgegangen, dass Test- und Quellverzeichnisse im gleichen Verzeichnis auf oberster Ebene vorhanden sind.
+Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder [xUnit](https://xunit.net/) oder MSTest standardmäßig verwenden. Beide sind bestens für Komponententests für Ihre Bibliothek unter .NET geeignet. Wie Sie Ihre Lösung mit Testprojekten einrichten, hängt von der [Struktur Ihrer Lösung](#structuring-a-solution) ab. Im folgenden Beispiel wird davon ausgegangen, dass Test- und Quellverzeichnisse im gleichen Verzeichnis auf oberster Ebene vorhanden sind.
 
 > [!NOTE]
-> Es werden einige [.NET Core-CLI](../tools/index.md)-Befehle verwendet. Weitere Informationen finden Sie unter [dotnet new](../tools/dotnet-new.md) und [dotnet sln](../tools/dotnet-sln.md).
+> Es werden einige [.NET-CLI](../tools/index.md)-Befehle verwendet. Weitere Informationen finden Sie unter [dotnet new](../tools/dotnet-new.md) und [dotnet sln](../tools/dotnet-sln.md).
 
 1. Richten Sie Ihre Projektmappe ein. Verwenden Sie dazu folgende Befehle:
 
@@ -253,8 +245,6 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
    dotnet restore
    dotnet build
    ```
-
-   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
 
@@ -319,7 +309,7 @@ Dadurch werden die drei oben genannten Projekte und eine Projektmappendatei hinz
 
 ### <a name="project-to-project-referencing"></a>Projekt-zu-Projekt-Verweise
 
-Die beste Möglichkeit, auf ein Projekt zu verweisen, ist die Verwendung der .NET Core-CLI, um einen Projektverweis hinzuzufügen. Sie können den folgenden Befehl von den Projektverzeichnissen **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** ausführen:
+Die beste Möglichkeit, auf ein Projekt zu verweisen, ist die Verwendung der .NET-CLI, um einen Projektverweis hinzuzufügen. Sie können den folgenden Befehl von den Projektverzeichnissen **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** ausführen:
 
 ```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
@@ -333,7 +323,7 @@ Die Projektdateien für **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** 
 </ItemGroup>
 ```
 
-Sie können diesen Abschnitt jeder Projektdatei manuell hinzufügen, wenn Sie nicht die .NET Core-CLI verwenden möchten.
+Sie können jeder Projektdatei diesen Abschnitt manuell hinzufügen, wenn Sie nicht die .NET-CLI verwenden möchten.
 
 ### <a name="structuring-a-solution"></a>Strukturieren einer Projektmappe
 

@@ -1,13 +1,13 @@
 ---
 title: .NET Core-RID-Katalog (Runtime Identifier)
 description: Hier erfahren Sie mehr über die Runtime-ID (RID) und wie RIDs in .NET Core verwendet werden.
-ms.date: 02/22/2019
-ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 12/15/2020
+ms.openlocfilehash: f818ab2d503be7960d9eb8450a7dd749766637a6
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "90538223"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633610"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core-RID-Katalog
 
@@ -114,15 +114,15 @@ Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderu
 
 Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) im `dotnet/runtime`-Repository auf die neueste und vollständige Version. Geräte, die unter einer nicht aufgeführten Distribution ausgeführt werden, funktionieren möglicherweise mit einem der portablen RIDs. Beispielsweise können Raspberry Pi-Geräte, die unter einer nicht aufgeführten Linux-Distribution ausgeführt werden, mit `linux-arm` erreicht werden.
 
-- Portabel (.NET Core 2.0 oder höher)
+- Portabel
   - `linux-x64` (Die meisten Desktopdistributionen wie CentOS, Debian, Fedora, Ubuntu und Ableitungen)
   - `linux-musl-x64` (Einfache Distributionen mit [musl](https://wiki.musl-libc.org/projects-using-musl.html) wie Alpine Linux)
   - `linux-arm` (Linux-Distributionen, die auf ARM ausgeführt werden, wie Raspbian auf Raspberry Pi, Modell 2+)
   - `linux-arm64` (Linux-Distributionen, die auf 64-Bit-ARM ausgeführt werden, wie Ubuntu Server, 64-Bit, auf Raspberry Pi, Modell 3+)
 - Red Hat Enterprise Linux
   - `rhel-x64` (Ersetzt durch `linux-x64` für RHEL ab Version 6)
-  - `rhel.6-x64` (.NET Core 2.0 oder höher)
-- Tizen (.NET Core 2.0 oder höher)
+  - `rhel.6-x64`
+- Tizen
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
@@ -133,18 +133,23 @@ Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderu
 
 Relative IDs für macOS verwenden das ältere Branding „OSX“. Nur allgemeine Werte werden aufgeführt. Prüfen Sie die Datei [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) im `dotnet/runtime`-Repository auf die neueste und vollständige Version.
 
-- Portabel (.NET Core 2.0 oder höher)
+- Portabel
   - `osx-x64` (Mindestversion des Betriebssystems ist macOS 10.12 Sierra)
 - macOS 10.10  Yosemite
   - `osx.10.10-x64`
 - macOS 10.11 El Capitan
   - `osx.10.11-x64`
-- macOS 10.12 Sierra (.NET Core 1.1 oder höher)
+- macOS 10.12 Sierra
   - `osx.10.12-x64`
-- macOS 10.13 Sierra (.NET Core 1.1 oder höher)
+- macOS 10.13 High Sierra
   - `osx.10.13-x64`
-- macOS 10.14 Mojave (.NET Core 1.1 oder höher)
+- macOS 10.14 Mojave
   - `osx.10.14-x64`
+- macOS 10.15 Catalina
+  - `osx.10.15-x64`
+- macOS 11.01 Big Sur
+  - `osx.11.0-x64`
+  - `osx.11.0-arm64`
 
 Weitere Informationen finden Sie unter [.NET Core-Abhängigkeiten und -Anforderungen](./install/macos.md#dependencies).
 

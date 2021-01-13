@@ -2,12 +2,12 @@
 title: 'Breaking Change: WinForms- und WPF-Apps verwenden Microsoft.NET.Sdk'
 description: Hier erfahren Sie mehr über den Breaking Change in .NET 5.0, durch den Windows Forms- und Windows Presentation Framework-Apps (WPF) jetzt das .NET SDK anstelle des .NET Core SDK für WinForms und WPF verwenden.
 ms.date: 09/18/2020
-ms.openlocfilehash: 5f25be44c390abc173f155351d8cb007a6b370b0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5eafed03fbf034f6a6457217a8527a877214e239
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759498"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633818"
 ---
 # <a name="winforms-and-wpf-apps-use-microsoftnetsdk"></a>WinForms- und WPF-Apps verwenden Microsoft.NET.Sdk
 
@@ -47,7 +47,7 @@ In .NET 5.0 und höher:
 
 ## <a name="version-introduced"></a>Eingeführt in Version
 
-.NET 5.0
+.NET SDK 5.0.100
 
 ## <a name="recommended-action"></a>Empfohlene Maßnahme
 

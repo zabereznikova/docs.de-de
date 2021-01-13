@@ -2,12 +2,12 @@
 title: Kommunikation in einer Microservicearchitektur
 description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Microservices, und lernen Sie die Auswirkungen synchroner und asynchroner Optionen kennen.
 ms.date: 01/30/2020
-ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a918ea7573d7402a82d2df2c63301e4838fa66dc
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169257"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899599"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -103,7 +103,7 @@ Wie in Abbildung 4-17 zu sehen ist, bedeutet HTTP-Kommunikation in Echtzeit, das
 
 ![Diagramm, das Push- und Echtzeitkommunikation auf Grundlage von SignalR zeigt.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
-**Abbildung 4-17**. Asynchrone 1:1-Nachrichtenkommunikation in Echtzeit
+**Abbildung 4-17**. Asynchrone 1:n-Nachrichtenkommunikation in Echtzeit
 
 SignalR ist ein guter Ansatz für die Echtzeitkommunikation, um Inhalte von einem Back-End-Server an Clients zu übertragen. Da die Kommunikation in Echtzeit erfolgt, werden die Änderungen in Client-Apps praktisch sofort angezeigt. Dies wird normalerweise von einem Protokoll wie WebSockets unter Verwendung vieler WebSockets-Verbindungen (eine pro Client) gesteuert. Ein typisches Beispiel ist, wenn ein Dienst die Bewertungsänderung eines Sportspiels an viele Client-Apps gleichzeitig überträgt.
 

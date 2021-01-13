@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955212"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678232"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>Neuerungen von C# 7.0 bis C# 7.3
 
@@ -235,7 +235,7 @@ Das Attribut `SomeThingAboutFieldAttribute` wird auf das vom Compiler generierte
 
 ## <a name="more-expression-bodied-members"></a>Mehr Ausdruckskörpermember
 
-In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-members) für Memberfunktionen und schreibgeschützte Eigenschaften eingeführt. Mit C# 7.0 werden die zulässigen Member erweitert, die als Ausdrücke implementiert werden können. In C# 7.0 können Sie *Konstruktoren*, *Finalizer* sowie `get`- und `set`-Zugriffsmethoden für *Eigenschaften* und *Indexer* implementieren. Der folgende Code zeigt entsprechende Beispiele:
+In C# 6 wurden Ausdruckskörpermember für Memberfunktionen und schreibgeschützte Eigenschaften eingeführt. Mit C# 7.0 werden die zulässigen Member erweitert, die als Ausdrücke implementiert werden können. In C# 7.0 können Sie *Konstruktoren*, *Finalizer* sowie `get`- und `set`-Zugriffsmethoden für *Eigenschaften* und *Indexer* implementieren. Der folgende Code zeigt entsprechende Beispiele:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 

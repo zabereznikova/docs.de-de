@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Anwendung zur Anomalieerkennung bei Prod
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: cf61f197e4befebdbb1fbf2ca4cbcdc61c48780a
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 48a8b26409b20e2a01aa97425153336b34c9b5b7
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281666"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97594175"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Erkennen von Anomalien in Produktverkäufen mit ML.NET
 
@@ -80,7 +80,7 @@ Fügen Sie dem Projekt eine neue Klasse hinzu:
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie auf **Hinzufügen > Neues Element**.
 
-2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in*ProductSalesData.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
+2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *ProductSalesData.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus.
 
    Die Datei *ProductSalesData.cs* wird im Code-Editor geöffnet.
 
@@ -384,6 +384,6 @@ In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt wer
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Durchsuchen Sie das GitHub-Repository für Machine Learning-Beispiele nach einem Beispiel für die Erkennung von Stromverbrauchsanomalien, damit Sie es untersuchen können.
+Durchsuchen Sie das GitHub-Repository für Machine Learning-Beispiele nach einem Beispiel für die Anomalieerkennung bei Saisondaten, damit Sie dieses untersuchen können.
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples-GitHub-Repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)
+> [dotnet/machinelearning-samples-GitHub-Repository](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls)

@@ -1,20 +1,21 @@
 ---
-title: Erstellen einer Elementvorlage für „dotnet new“ – .NET Core-CLI
+title: Erstellen einer Elementvorlage für „dotnet new“ – .NET-CLI
+titleSuffix: ''
 description: Hier erfahren Sie, wie Sie eine Elementvorlage für den Befehl „dotnet new“ erstellen. Elementvorlagen können beliebig viele Dateien enthalten.
 author: adegeo
-ms.date: 06/25/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: d213646a933c77bd0d9a3f1aa9b6b4948b66439b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324381"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633662"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Erstellen einer Elementvorlage
 
-Mit .NET Core können Sie Vorlagen erstellen und bereitstellen, die Projekte, Dateien und sogar Ressourcen generieren. Dieses Tutorial ist der erste Teil einer Reihe, die zeigt, wie Sie Vorlagen für die Verwendung mit dem Befehl `dotnet new` erstellen, installieren und deinstallieren.
+Mit .NET können Sie Vorlagen erstellen und bereitstellen, die Projekte, Dateien und sogar Ressourcen generieren. Dieses Tutorial ist der erste Teil einer Reihe, in der Sie erfahren, wie Sie Vorlagen für die Verwendung mit dem Befehl `dotnet new` erstellen, installieren und deinstallieren.
 
 In diesem Teil der Reihe wird Folgendes vermittelt:
 
@@ -28,7 +29,7 @@ In diesem Teil der Reihe wird Folgendes vermittelt:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) oder eine höhere Version
+* [.NET 5.0 SDK](https://dotnet.microsoft.com/download) oder höher
 * Lesen Sie den Referenzartikel [Benutzerdefinierte Vorlagen für dotnet new](../tools/custom-templates.md).
 
   Der Referenzartikel enthält grundlegende Informationen zu Vorlagen und zu deren Erstellung. Einige dieser Informationen werden hier wiederholt.
@@ -85,7 +86,7 @@ Nachdem Sie den Inhalt der Vorlage erstellt haben, müssen Sie als Nächstes im 
 
 ## <a name="create-the-template-config"></a>Erstellen der Vorlagenkonfiguration
 
-Vorlagen werden in .NET Core anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\extensions_.
+Vorlagen werden anhand eines speziellen Ordners und einer Konfigurationsdatei am Stamm Ihrer Vorlage erkannt. In diesem Tutorial befindet sich Ihr Vorlagenordner unter _working\templates\extensions_.
 
 Bei der Vorlagenerstellung werden mit Ausnahme des speziellen Konfigurationsordners alle Dateien und Ordner aus dem Vorlagenordner in die Vorlage eingeschlossen. Dieser Konfigurationsordner heißt _.template.config_.
 
@@ -116,7 +117,7 @@ working
 }
 ```
 
-Diese Konfigurationsdatei enthält alle Einstellungen für Ihre Vorlage. Neben Grundeinstellungen wie `name` und `shortName` enthält die Datei auch einen auf `item` festgelegten Wert vom Typ `tags/type`. Dadurch wird die Vorlage als Elementvorlage kategorisiert. Sie können eine beliebige Art von Vorlage erstellen. Die Werte `item` und `project` sind allgemeine Namen, die von .NET Core empfohlen werden, damit Benutzer mühelos nach der Art der gesuchten Vorlage filtern können.
+Diese Konfigurationsdatei enthält alle Einstellungen für Ihre Vorlage. Neben Grundeinstellungen wie `name` und `shortName` enthält die Datei auch einen auf `item` festgelegten Wert vom Typ `tags/type`. Dadurch wird die Vorlage als Elementvorlage kategorisiert. Sie können eine beliebige Art von Vorlage erstellen. Die Werte `item` und `project` sind allgemeine Namen, die von .NET empfohlen werden, damit Benutzer leicht nach der gesuchten Vorlagenart filtern können.
 
 Das Element `classifications` stellt die Spalte **Tags** dar, die angezeigt wird, wenn Sie `dotnet new` ausführen und eine Vorlagenliste abrufen. Benutzer können auch anhand von Klassifizierungstags suchen. Die Eigenschaft `tags` in der JSON-Datei darf nicht mit der Tagliste `classifications` verwechselt werden. Hierbei handelt es sich um zwei unterschiedliche Dinge, die leider ähnlich heißen. Das vollständige Schema für die Datei *template.json* finden Sie im [JSON-Schemaspeicher](http://json.schemastore.org/template). Weitere Informationen zur Datei *template.json* finden Sie im [Wiki zur Erstellung von .NET-Vorlagen](https://github.com/dotnet/templating/wiki).
 
@@ -137,14 +138,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Class library                                     classlib              [C#], F#, VB      Common/Library
-WPF Application                                   wpf                   [C#], VB          Common/WPF
-Windows Forms (WinForms) Application              winforms              [C#], VB          Common/WinForms
-Worker Service                                    worker                [C#]              Common/Worker/Web
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Class library                                     classlib                 [C#], F#, VB      Common/Library
+WPF Application                                   wpf                      [C#], VB          Common/WPF
 ```
 
 ## <a name="test-the-item-template"></a>Testen der Elementvorlage
@@ -209,11 +208,11 @@ Sie erhalten die folgende Ausgabe.
 !dlroW olleH
 ```
 
-Herzlichen Glückwunsch! Sie haben eine Elementvorlage mit .NET Core erstellt und bereitgestellt. Zur Vorbereitung auf den nächsten Teil der Tutorialreihe muss die von Ihnen erstellte Vorlage deinstalliert werden. Löschen Sie außerdem auch alle Dateien aus dem Ordner _test_. Dadurch erhalten Sie eine bereinigte Umgebung, die für den nächsten Hauptabschnitt dieses Tutorials bereit ist.
+Herzlichen Glückwunsch! Sie haben eine Elementvorlage mit .NET erstellt und bereitgestellt. Zur Vorbereitung auf den nächsten Teil der Tutorialreihe muss die von Ihnen erstellte Vorlage deinstalliert werden. Löschen Sie außerdem auch alle Dateien aus dem Ordner _test_. Dadurch erhalten Sie eine bereinigte Umgebung, die für den nächsten Hauptabschnitt dieses Tutorials bereit ist.
 
 ## <a name="uninstall-the-template"></a>Deinstallieren der Vorlage
 
-Da Sie die Vorlage unter Verwendung eines Dateipfads installiert haben, muss sie mit dem **absoluten** Dateipfad deinstalliert werden. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen anzeigen. Ihre Vorlage sollte am Ende der Liste aufgeführt sein. Führen Sie den Befehl `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` mit dem angegebenen Pfad aus, um Ihre Vorlage zu deinstallieren.
+Da Sie die Vorlage unter Verwendung eines Dateipfads installiert haben, muss sie mit dem **absoluten** Dateipfad deinstalliert werden. Mithilfe des Befehls `dotnet new -u` können Sie eine Liste der installierten Vorlagen anzeigen. Ihre Vorlage sollte am Ende der Liste aufgeführt sein. Deinstallieren Sie Ihre Vorlage mit dem aufgeführten Deinstallationsbefehl (`Uninstall Command`).
 
 ```dotnetcli
 dotnet new -u
@@ -225,31 +224,31 @@ Sie erhalten eine Ausgabe ähnlich der folgenden.
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
-  C:\working\templates\extensions
+C:\Test\templatetutorial\working\templates\extensions
     Templates:
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u C:\working\templates\extensions
 ```
 
-Führen Sie den folgenden Befehl aus, um die Vorlage zu deinstallieren.
+Führen Sie den in der Ausgabe gezeigten Deinstallationsbefehl (`Uninstall Command`) aus, um die von Ihnen erstellte Vorlage zu deinstallieren.
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

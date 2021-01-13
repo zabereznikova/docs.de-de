@@ -6,12 +6,12 @@ ms.prod: dotnet
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e0adb69d02fe427dd187c788cba34c0673e97ee6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 93fb10538441d939e95bb48dcdd0e61d9267dde0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822308"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765032"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -57,7 +57,7 @@ Nach Version 2.1 gibt es keine neuen .NET Standard-Versionen. Weitere Informati
 
 ## <a name="specification"></a>Spezifikation
 
-Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungen von .NET verwaltet, insbesondere Microsoft (einschließlich .NET Framework, .NET Core und Mono) und Unity.
+Die Spezifikation von .NET Standard ist ein standardisierter Satz von APIs. Die Spezifikation wird durch Implementierungsprogramme von .NET verwaltet, insbesondere Microsoft (einschließlich des .NET Frameworks, .NET Core und Mono) und Unity.
 
 ### <a name="official-artifacts"></a>Offizielle Artefakte
 

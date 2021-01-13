@@ -2,12 +2,12 @@
 title: Protokollierung und Ablaufverfolgung – .NET Core
 description: Eine Einführung in die Protokollierung und Ablaufverfolgung mit .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820578"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753626"
 ---
 # <a name="net-core-logging-and-tracing"></a>Protokollierung und Ablaufverfolgung mit .NET Core
 
@@ -36,11 +36,11 @@ Welche Ausgabeformat-API Sie verwenden, ist Ihnen überlassen. Hauptunterschiede
   - Nützlich für Informationen, die dem Kunden möglicherweise im Release gezeigt werden müssen.
   - Da es sich um den einfachsten Ansatz handelt, wird er häufig für temporäres Ad-hoc-Debuggen verwendet. Dieser Debugcode wird häufig nicht in die Quellcodeverwaltung eingecheckt.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Nur aktiviert, wenn `TRACE` definiert ist.
+  - Ist nur aktiviert, wenn `TRACE` durch Hinzufügen von `#define TRACE` zur Quelle oder durch Angabe der Option `/d:TRACE` bei der Kompilierung definiert ist.
   - Schreibt in angefügte <xref:System.Diagnostics.Trace.Listeners>, standardmäßig <xref:System.Diagnostics.DefaultTraceListener>.
   - Verwenden Sie diese API zum Erstellen von Protokollen, die in den meisten Builds aktiviert werden.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Nur aktiviert, wenn `DEBUG` definiert ist.
+  - Ist nur aktiviert, wenn `DEBUG` durch Hinzufügen von `#define DEBUG` zur Quelle oder durch Angabe der Option `/d:DEBUG` bei der Kompilierung definiert ist.
   - Schreibt in einen angefügten Debugger.
   - Schreibt bei `*nix` in stderr, wenn `COMPlus_DebugWriteToStdErr` festgelegt ist.
   - Verwenden Sie diese API zum Erstellen von Protokollen, die nur in Debugbuilds aktiviert werden.
@@ -95,6 +95,8 @@ Damit Sie beispielsweise die beste Wahl für Ihre Anwendung treffen können, bie
 - Die [C#-Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) kann das Schreiben von Protokollierungscode vereinfachen.
 
 - [Ereignisliste für Runtimeanbieter](../../fundamentals/diagnostics/runtime-events.md)
+
+- [Bekannte Ereignisanbieter in .NET](well-known-event-providers.md)
 
 - Die <xref:System.Exception.Message?displayProperty=nameWithType>-Eigenschaft ist nützlich für das Protokollieren von Ausnahmen.
 

@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-dump“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-dump“ installieren und zum Erfassen und Analysieren von Windows- und Linux-Speicherabbildern ohne nativen Debugger verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822203"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765045"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (dotnet-dump)
 
@@ -146,34 +146,37 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `clrstack <arguments>`              | Stellt eine Stapelüberwachung ausschließlich für verwalteten Code bereit.                                                  |
 | `clrthreads <arguments>`            | Listet die ausgeführten verwalteten Threads auf.                                                            |
 | `dumpasync <arguments>`             | Zeigt Informationen zu Computern im asynchronen Zustand im Heap der Garbage Collection an.                |
-| `dumpassembly <arguments>`          | Zeigt Details zu einer Assembly an.                                                           |
-| `dumpclass <arguments>`             | Zeigt Informationen zu einer EE-Klassenstruktur an der angegebenen Adresse an.                     |
-| `dumpdelegate <arguments>`          | Zeigt Informationen zu einem Delegaten an.                                                        |
-| `dumpdomain <arguments>`            | Zeigt Informationen zu allen AppDomains und allen Assemblys in den Domänen an.                |
+| `dumpassembly <arguments>`          | Zeigt Details zur Assembly bei der angegebenen Adresse an                                 |
+| `dumpclass <arguments>`             | Zeigt Informationen zu einer `EEClass`-Struktur bei der angegebenen Adresse an                  |
+| `dumpdelegate <arguments>`          | Zeigt Informationen zum Delegaten bei der angegebenen Adresse an                             |
+| `dumpdomain <arguments>`            | Zeigt Informationen zu allen AppDomains und allen Assemblys in der angegebenen Domäne an.       |
 | `dumpheap <arguments>`              | Zeigt Informationen zum Garbage Collector-Heap und Sammlungsstatistiken zu Objekten an.       |
 | `dumpil <arguments>`                | Zeigt die Microsoft Intermediate Language (MSIL) an, die einer verwalteten Methode zugeordnet ist. |
 | `dumplog <arguments>`               | Schreibt den Inhalt eines Belastungsprotokolls im Speicher in die angegebene Datei.                         |
-| `dumpmd <arguments>`                | Zeigt Informationen zu einer MethodDesc-Struktur an der angegebenen Adresse an.                   |
-| `dumpmodule <arguments>`            | Zeigt Informationen zu einer EE-Modulstruktur an der angegebenen Adresse an.                    |
-| `dumpmt <arguments>`                | Zeigt Informationen zu einer Methodentabelle bei der angegebenen Adresse an.                           |
-| `dumpobj <arguments>`               | Zeigt Informationen zu einem Objekt an der angegebenen Adresse an.                                       |
+| `dumpmd <arguments>`                | Zeigt Informationen zu einer `MethodDesc`-Struktur bei der angegebenen Adresse an               |
+| `dumpmodule <arguments>`            | Zeigt Informationen zu einem Modul bei der angegebenen Adresse an                               |
+| `dumpmt <arguments>`                | Zeigt Informationen zum `MethodTable`-Objekt bei der angegebenen Adresse an                        |
+| `dumpobj <arguments>`               | Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an                                      |
 | `dso|dumpstackobjects <arguments>`  | Zeigt alle innerhalb der Grenzen des aktuellen Stapels gefundenen verwalteten Objekte an.                    |
 | `eeheap <arguments>`                | Zeigt Informationen zu dem von internen Laufzeit-Datenstrukturen verwendeten Prozessspeicher an.              |
 | `finalizequeue <arguments>`         | Zeigt alle für den Abschluss registrierten Objekte an.                                             |
-| `gcroot <arguments>`                | Zeigt Informationen zu Verweisen auf ein Objekt (oder Stämmen eines Objekts) an der angegebenen Adresse an.              |
+| `gcroot <arguments>`                | Zeigt Informationen zu Verweisen auf das Objekt (oder Stämmen) bei der angegebenen Adresse an.             |
 | `gcwhere <arguments>`               | Zeigt den Speicherort im GC-Heap des übergebenen Arguments an.                               |
-| `ip2md <arguments>`                 | Zeigt die MethodDesc-Struktur an der angegebenen Adresse in JIT-Code an.                       |
+| `ip2md <arguments>`                 | Zeigt die `MethodDesc`-Struktur bei der angegebenen Adresse in JIT-Code an                     |
 | `histclear <arguments>`             | Gibt alle von der Familie der `hist*`-Befehle verwendeten Ressourcen frei.                                |
 | `histinit <arguments>`              | Initialisiert die SOS-Strukturen aus dem Belastungsprotokoll, die in der zu debuggenden Komponente gespeichert sind.                     |
 | `histobj <arguments>`               | Zeigt die Umsetzungen im Garbage Collection-Belastungsprotokoll im Zusammenhang mit `<arguments>` an.              |
-| `histobjfind <arguments>`           | Zeigt alle Protokolleinträge an, die auf ein Objekt bei der angegebenen Adresse verweisen.               |
+| `histobjfind <arguments>`           | Zeigt alle Protokolleinträge an, die auf das Objekt bei der angegebenen Adresse verweisen              |
 | `histroot <arguments>`              | Zeigt Informationen zu sowohl Heraufstufungen als auch Umsetzungen des angegebenen Stamms an.        |
 | `lm|modules`                        | Zeigt die nativen Module im Prozess an.                                                   |
-| `name2ee <arguments>`               | Zeigt die MethodTable-Struktur und die EEClass-Struktur für `<argument>` an.                |
-| `pe|printexception <arguments>`     | Zeigt ein Objekt an, das von der Ausnahmeklasse an der Adresse `<argument>` abgeleitet wurde.             |
+| `name2ee <arguments>`               | Zeigt die Strukturen `MethodTable` und `EEClass` für das Objekt `<argument>` an                     |
+| `pe|printexception <arguments>`     | Zeigt jedes Objekt an, das von der Klasse <xref:System.Exception> für das Objekt `<argument>`abgeleitet wurde      |
 | `setsymbolserver <arguments>`       | Aktiviert die Symbolserverunterstützung.                                                             |
 | `syncblk <arguments>`               | Zeigt die Informationen zum SyncBlock-Container an.                                                           |
 | `threads|setthread <threadid>`      | Legt die ID des aktuellen Threads für die SOS-Befehle fest oder zeigt diese an.                                  |
+
+> [!NOTE]
+> Weitere Informationen finden Sie unter [SOS-Debuggingerweiterung für .NET](sos-debugging-extension.md).
 
 ## <a name="using-dotnet-dump"></a>Verwenden von `dotnet-dump`
 

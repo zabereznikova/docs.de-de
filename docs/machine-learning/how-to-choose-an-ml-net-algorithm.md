@@ -3,12 +3,12 @@ title: 'Gewusst wie: Auswählen eines ML.NET-Algorithmus'
 description: Erfahren Sie, wie Sie einen ML.NET-Algorithmus für Ihr Machine Learning-Modell auswählen.
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04cf191401c7c25f1fa341acaf9312dc19752260
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679637"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593089"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Gewusst wie: Auswählen eines ML.NET-Algorithmus
 
@@ -20,7 +20,7 @@ Algorithmen arbeiten mit **Features**. Features sind numerische Werte, die aus I
 
 Ein Algorithmus ist die Berechnung, die ausgeführt wird, um ein **Modell** zu erzeugen. Verschiedene Algorithmen schaffen Modelle mit unterschiedlichen Eigenschaften.
 
-Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise kann ein stochastischer dualer koordinierter Anstieg für Binärklassifizierung, Multiklassenklassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen.
+Mit ML.NET kann der gleiche Algorithmus für verschiedene Aufgaben angewendet werden. Beispielsweise kann die Stochastic Dual Coordinate Ascent-Methode für Binärklassifizierung, Multiklassenklassifizierung und Regression verwendet werden. Der Unterschied besteht darin, wie die Ausgabe des Algorithmus interpretiert wird, um der Aufgabe zu entsprechen.
 
 Für jede Kombination von Algorithmus und Aufgabe bietet ML.NET eine Komponente, die den Trainingsalgorithmus und die Interpretation ausführt. Diese Komponenten werden als Trainer bezeichnet. <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> verwendet z.B. den **StochasticDualCoordinatedAscent**-Algorithmus, der auf die **Regression**-Aufgabe angewendet wird.
 

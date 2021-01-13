@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827918"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765058"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Zielframeworks in Projekten im SDK-Format
 
@@ -22,7 +22,7 @@ Eine App oder Bibliothek kann auch eine spezifische .NET-Implementierung als Zie
 
 Für einige Zielframeworks (z. B. das .NET Framework) werden die APIs von den Assemblys definiert, die das Framework in einem System installiert. Zu diesen APIs können auch Anwendungsframework-APIs zählen (z. B. ASP.NET).
 
-Für paketbasierte Zielframeworks (z. B. .NET 5, .NET Core und .NET Standard) werden die APIs von den Paketen definiert, die in der App oder der Bibliothek enthalten sind. Ein *Metapaket* ist ein NuGet-Paket ohne eigenen Inhalt, das aus einer Liste von Abhängigkeiten oder Paketen besteht. Ein Zielframework, das auf einem NuGet-Paket basiert, gibt implizit ein Metapaket an, das auf alle Pakete verweist, aus denen das Framework besteht.
+Für paketbasierte Zielframeworks (z. B. .NET 5, .NET Core und .NET Standard) werden die APIs von den NuGet-Paketen definiert, die in der App oder der Bibliothek enthalten sind.
 
 ## <a name="latest-versions"></a>Neueste Versionen
 

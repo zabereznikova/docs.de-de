@@ -2,12 +2,12 @@
 title: Speicherabbilder – .NET
 description: Eine Einführung in Speicherabbilder in .NET
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242772"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764941"
 ---
 # <a name="dumps"></a>Dumps
 
@@ -53,7 +53,13 @@ Zum Erfassen eines Speicherabbilds zu einem benutzerdefinierten Zeitpunkt könne
 
 ## <a name="analyze-dumps"></a>Analysieren von Speicherabbildern
 
-Speicherabbilder können mit [`dotnet-dump`](dotnet-dump.md) analysiert werden.
+Sie können Speicherabbilder mithilfe des CLI-Tools [`dotnet-dump`](dotnet-dump.md) oder mithilfe von [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files) analysieren.
+
+> [!NOTE]
+> Mithilfe von Visual Studio, Version 16.8 und höher können Sie [Linux-Speicherabbilder öffnen](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/), die unter .NET Core 3.1.7 oder höher erstellt wurden.  
+
+> [!NOTE]
+> Wenn natives Debuggen erforderlich ist, kann die [SOS-Debuggererweiterung](sos-debugging-extension.md) mit [LLDB unter Linux und macOS](debug-linux-dumps.md#analyze-dumps-on-linux)verwendet werden. SOS wird auch für [WinDbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) unter Windows unterstützt, aber die Verwendung von Visual Studio wird empfohlen.
 
 ## <a name="see-also"></a>Siehe auch
 
