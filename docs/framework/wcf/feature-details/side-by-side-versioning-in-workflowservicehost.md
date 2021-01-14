@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 878e610bd1fe0b7e2496f251333a3ad21909788a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245093"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190493"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Parallele Versionsverwaltung in WorkflowServiceHost
 
 Die <xref:System.ServiceModel.Activities.WorkflowServiceHost> in .NET Framework 4,5 eingeführte parallele Versionierung bietet die Möglichkeit, mehrere Versionen eines Workflow Diensts auf einem einzelnen Endpunkt zu hosten. Mit der parallelen Funktionalität lässt sich ein Workflowdienst so konfigurieren, dass neue Instanzen des Workflowdiensts mithilfe der neuen Workflowdefinition erstellt werden, während gegenwärtig ausgeführte Instanzen auf Grundlage der vorhandenen Definition abgeschlossen werden. Dieses Thema bietet eine Übersicht über die parallele Ausführung des Workflowdiensts mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
-  
-> [!NOTE]
-> Wenn Sie ein Beispiel herunterladen und ein Video Exemplarische Vorgehensweise für die parallele Versionsverwaltung von Workflow Diensten ansehen möchten, finden Sie weitere Informationen unter parallele [Versionsverwaltung mit einem Web-Hosted xamlx-Workflow Dienst](https://go.microsoft.com/fwlink/?LinkId=393746).  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>Hosten mehrerer Versionen in einem Workflowdienst  
 

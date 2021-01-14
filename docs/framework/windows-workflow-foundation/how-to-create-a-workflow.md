@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Erstellen eines Workflows'
 description: Führen Sie eine der drei Optionen in diesem Abschnitt aus, um im Rahmen dieses Workflow Foundation-Tutorials einen Workflow zu erstellen.
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: 1b2b03d672f86a351bcf36343d6a17e351d40ed0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ea9fd023ba15ae23a10f5b8cf6f82c49ca9af6c8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248785"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190441"
 ---
 # <a name="how-to-create-a-workflow"></a>Vorgehensweise: Erstellen eines Workflows
 
@@ -16,9 +16,6 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 > [!NOTE]
 > Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema abzuschließen, müssen Sie zunächst Gewusst [wie: Erstellen einer Aktivität durchführen](how-to-create-an-activity.md).  
-  
-> [!NOTE]
-> Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 

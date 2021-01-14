@@ -2,12 +2,12 @@
 title: 'Neues in f # 5,0-f #-Handbuch'
 description: 'Verschaffen Sie sich einen Überblick über die neuen Features, die in F # 5,0 verfügbar sind.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740184"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190727"
 ---
 # <a name="whats-new-in-f-50"></a>Neues in F# 5.0
 
@@ -407,7 +407,7 @@ Diese Funktion implementiert [F # RFC FS-1074](https://github.com/fsharp/fslang-
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>Vereinfachtes Interop mit Werte zulässt-Werttypen
 
-[Typen](https://docs.microsoft.com/dotnet/api/system.nullable-1) , die NULL-Werte zulassen (in der Vergangenheit als Nullable-Typen bezeichnet), wurden schon seit langem von F # unterstützt, aber die Interaktion mit Ihnen war bisher schon etwas komplizierter, da Sie `Nullable` `Nullable<SomeType>` jedes Mal, wenn Sie einen Wert übergeben wollten, einen-oder-Wrapper erstellen mussten. Nun konvertiert der Compiler einen Werttyp implizit in eine, `Nullable<ThatValueType>` Wenn der Zieltyp übereinstimmt. Der folgende Code ist nun möglich:
+[Typen](/dotnet/api/system.nullable-1) , die NULL-Werte zulassen (in der Vergangenheit als Nullable-Typen bezeichnet), wurden schon seit langem von F # unterstützt, aber die Interaktion mit Ihnen war bisher schon etwas komplizierter, da Sie `Nullable` `Nullable<SomeType>` jedes Mal, wenn Sie einen Wert übergeben wollten, einen-oder-Wrapper erstellen mussten. Nun konvertiert der Compiler einen Werttyp implizit in eine, `Nullable<ThatValueType>` Wenn der Zieltyp übereinstimmt. Der folgende Code ist nun möglich:
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"
