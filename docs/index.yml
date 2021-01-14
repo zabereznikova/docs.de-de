@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 10/9/2020
-  ms.openlocfilehash: ceaf08c55fd8119fea0edf427543403df0804413
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.openlocfilehash: e13d608c8840ef6081c6d3d4ecfd975c30b6a3a6
+  ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599667"
+  ms.lasthandoff: 01/14/2021
+  ms.locfileid: "98190792"
 highlightedContent:
   items:
   - title: Herunterladen von .NET
@@ -231,11 +231,11 @@ additionalContent:
         text: .NET für Apache Spark
     - title: Internet der Dinge (IoT)
       links:
-      - url: /dotnet/iot/
+      - url: ./iot/index.yml
         text: .NET-IoT-Bibliotheken
-      - url: /dotnet/iot/quickstarts/sensehat
+      - url: ./iot/quickstarts/sensehat.md
         text: Erste Schritte in fünf Minuten
-      - url: /dotnet/iot/tutorials/blink-led
+      - url: ./iot/tutorials/blink-led.md
         text: Blinken einer LED
       - url: https://aka.ms/IoTNet101
         text: Einführungsvideoserie zu IoT in .NET
