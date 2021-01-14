@@ -4,15 +4,13 @@
     "content": [
       {
         "files": [
-          "api/**/*.md",
-          "test.md"
+          "api/**/*.md"
         ]
       },
       {
         "files": [
           "**/*.md",
-          "**/*.yml",
-          "test.md"
+          "**/*.yml"
         ],
         "src": "docs",
         "dest": ".",
@@ -20,8 +18,7 @@
           "samples/**/*.*",
           "**/includes/**",
           "**/util/**",
-          "***/contributing.md",
-          "test.md"
+          "***/contributing.md"
         ]
       },
       {
@@ -68,8 +65,7 @@
           "csharp-8.0/obsolete-accessor.md",
           "csharp-8.0/shadowing-in-nested-functions.md",
           "csharp-8.0/unconstrained-null-coalescing.md",
-          "csharp-8.0/nullable-reference-types-specification.md",
-          "test.md"
+          "csharp-8.0/nullable-reference-types-specification.md"
         ]
       },
       {
@@ -99,8 +95,7 @@
           "**/*.svg",
           "**/*.jpg",
           "**/*.gif",
-          "**/*.bmp",
-          "test.md"
+          "**/*.bmp"
         ],
         "src": "docs",
         "dest": ".",
@@ -124,7 +119,7 @@
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet",
       "ms.prod":"dotnet",
-      "ms.topic": "test",
+      "ms.topic": "conceptual",
       "_op_documentIdPathDepotMapping": {
         "docs/architecture/containerized-lifecycle/": {
           "folder_relative_path_in_docset": "docs/standard/containerized-lifecycle-architecture/"
@@ -165,8 +160,7 @@
         "docs/framework/wcf/**/**.md": "None",
         "docs/framework/winforms/**/**.md": "None",
         "docs/framework/wpf/**/**.md": "None",
-        "docs/framework/xaml-services/**/**.md": "None",
-        "test.md": "None"
+        "docs/framework/xaml-services/**/**.md": "None"
       },
       "feedback_product_url": {
         "docs/azure/sdk/**/*.*": "https://github.com/azure/azure-sdk-for-net",
@@ -191,8 +185,7 @@
         "docs/standard/design-guidelines/*.md": "dotnet",
         "docs/standard/security/*.md": "dotnet",
         "docs/visual-basic/**/**.md": "dotnet-visualbasic",
-        "docs/spark/**/**.md": "dotnet-spark",
-        "test.md": "test"
+        "docs/spark/**/**.md": "dotnet-spark"
       },
       "ms.topic": {
         "_csharplang/**/*.md": "language-reference",
@@ -215,19 +208,16 @@
         "docs/framework/additional-apis/**/**.md": "managed-reference",
         "docs/framework/unmanaged-api/**/**.md": "reference",
         "docs/fsharp/language-reference/**/**.md": "language-reference",
-        "docs/standard/**/*how-to*.md": "how-to",
-        "test.md": "test"
+        "docs/standard/**/*how-to*.md": "how-to"
       },
       "dev_langs": {
         "docs/fsharp/**/**.md": ["fsharp"],
-        "docs/visual-basic/**/**.md": ["vb"],
-        "test.md": ["test"]
+        "docs/visual-basic/**/**.md": ["vb"]
       },
       "ms.devlang": {
         "docs/csharp/**/*.*": "csharp",
         "docs/fsharp/**/**.md": "fsharp",
-        "docs/visual-basic/**/**.md": "vb",
-        "test.md": "test"
+        "docs/visual-basic/**/**.md": "vb"
       },
       "author": {
         "docs/azure/**/*.*": "camsoper",
@@ -311,8 +301,7 @@
         "docs/standard/threading/**/**.md": "billwagner",
         "docs/standard/whats-new/**/**.md": "gewarren",
         "docs/visual-basic/**/**.md": "KathleenDollard",
-        "docs/whats-new/**/**.md": "billwagner",
-        "test.md": "test"
+        "docs/whats-new/**/**.md": "billwagner"
       },
       "ms.author": {
         "_csharplang/**/*.md": "wiwagn",
@@ -398,8 +387,7 @@
         "docs/standard/serialization/**/**.md": "tdykstra",
         "docs/standard/threading/**/**.md": "wiwagn",
         "docs/standard/whats-new/**/**.md": "dotnetcontent",
-        "docs/visual-basic/**/**.md": "kdollard",
-        "test.md": "test"
+        "docs/visual-basic/**/**.md": "kdollard"
       },
       "ms.date": {
         "_csharplang/spec/*.md": "07/01/2017",
@@ -409,8 +397,7 @@
         "_csharplang/proposals/csharp-7.3/*.md": "11/25/2018",
         "_csharplang/proposals/csharp-8.0/*.md": "09/10/2019",
         "_csharplang/proposals/csharp-9.0/*.md": "07/29/2020",
-        "_vblang/spec/*.md": "07/21/2017",
-        "test.md": "01/01/2021"
+        "_vblang/spec/*.md": "07/21/2017"
       },
       "ms.technology": {
         "_csharplang/**/*.md": "csharp-spec",
@@ -479,8 +466,7 @@
         "docs/standard/design-guidelines/*.md": "dotnet-standard",
         "docs/standard/security/**.md": "dotnet-security",
         "docs/visual-basic/language-reference/error-messages/**/**.md": "vb-diagnostics",
-        "docs/visual-basic/misc/**/**.md": "vb-diagnostics",
-        "test.md": "test"
+        "docs/visual-basic/misc/**/**.md": "vb-diagnostics"
       },
       "title": {
         "_csharplang/spec/introduction.md": "Introduction",
@@ -575,8 +561,7 @@
         "_vblang/spec/statements.md": "Statements",
         "_vblang/spec/expressions.md": "Expressions",
         "_vblang/spec/documentation-comments.md": "Documentation comments",
-        "_vblang/spec/overload-resolution.md": "Overload resolution",
-        "test.md": "test"
+        "_vblang/spec/overload-resolution.md": "Overload resolution"
       },
       "titleSuffix": {
         "_csharplang/spec/*.md": "C# language specification",
@@ -609,8 +594,7 @@
         "docs/machine-learning/**/**.md": "ML.NET",
         "docs/standard/data/sqlite/**/**.md": "Microsoft.Data.Sqlite",
         "docs/standard/design-guidelines/**/**.md": "Framework Design Guidelines",
-        "docs/visual-basic/**/**.md": "Visual Basic",
-        "test.md": "test"
+        "docs/visual-basic/**/**.md": "Visual Basic"
       },
       "open_to_public_contributors": {
         "docs/standard/design-guidelines/**.md": false
@@ -618,12 +602,10 @@
     },
     "dest": "_site",
     "template": [
-      "docs.html",
-      "test.md"
+      "docs.html"
     ],
     "xref": [
-      "_zip/missingapi.yml",
-      "test.md"
+      "_zip/missingapi.yml"
     ],
     "lruSize": 0
   }
