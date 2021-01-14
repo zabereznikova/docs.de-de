@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899625"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970706"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
@@ -81,11 +81,37 @@ Sie können Eigenschaften wie `PackageId`, `PackageVersion`, `PackageIcon`, `Tit
 
 ## <a name="publish-properties-and-items"></a>Veröffentlichen von Eigenschaften und Elementen
 
+- [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
+- [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
+
+Die `AppendTargetFrameworkToOutputPath`-Eigenschaft steuert, ob der [Zielframeworkmoniker (TFM, Target Framework Moniker)](../../standard/frameworks.md) an den Ausgabepfad angehängt wird, der durch [OutputPath](/visualstudio/msbuild/common-msbuild-project-properties#list-of-common-properties-and-parameters) definiert wird. Das .NET SDK fügt automatisch das Zielframework und, falls vorhanden, den Runtimebezeichner an den Ausgabepfad an. Wenn Sie `AppendTargetFrameworkToOutputPath` auf `false` festlegen, wird verhindert, dass der Zielframeworkmoniker an den Ausgabepfad angefügt wird. Jedoch überschreiben sich ohne den Zielframeworkmoniker im Ausgabepfad mehrere Buildartefakte gegenseitig.
+
+Beispielsweise wird für eine .NET 5.0-App der Ausgabepfad von `bin\Debug\net5.0` in `bin\Debug` mit der folgenden Einstellung geändert:
+
+```xml
+<PropertyGroup>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+</PropertyGroup>
+```
+
+### <a name="appendruntimeidentifiertooutputpath"></a>AppendRuntimeIdentifierToOutputPath
+
+Die `AppendRuntimeIdentifierToOutputPath`-Eigenschaft steuert, ob der [Runtimebezeichner (RID, Runtime Identifier)](../rid-catalog.md) an den Ausgabepfad angefügt wird. Das .NET SDK fügt automatisch das Zielframework und, falls vorhanden, den Runtimebezeichner an den Ausgabepfad an. Wenn Sie `AppendRuntimeIdentifierToOutputPath` auf `false` festlegen, wird verhindert, dass der Runtimebezeichner an den Ausgabepfad angefügt wird.
+
+Beispielsweise wird für eine .NET 5.0-App und einen Runtimebezeichner von `win10-x64` der Ausgabepfad von `bin\Debug\net5.0\win10-x64` in `bin\Debug\net5.0` mit der folgenden Einstellung geändert:
+
+```xml
+<PropertyGroup>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+</PropertyGroup>
+```
 
 ### <a name="copylocallockfileassemblies"></a>CopyLocalLockFileAssemblies
 
@@ -181,7 +207,86 @@ Mit der Eigenschaft `LangVersion` können Sie eine bestimmte Version der Program
 
 Weitere Informationen finden Sie unter [C#-Sprachversionsverwaltung](../../csharp/language-reference/configure-language-version.md#override-a-default).
 
+## <a name="default-item-inclusion-properties"></a>Standardeigenschaften für den Elementeinschluss
+
+- [DefaultExcludesInProjectFolder](#defaultexcludesinprojectfolder)
+- [DefaultItemExcludes](#defaultitemexcludes)
+- [EnableDefaultCompileItems](#enabledefaultcompileitems)
+- [EnableDefaultEmbeddedResourceItems](#enabledefaultembeddedresourceitems)
+- [EnableDefaultItems](#enabledefaultitems)
+- [EnableDefaultNoneItems](#enabledefaultnoneitems)
+
+Weitere Informationen finden Sie unter dem Abschnitt zu [standardmäßigen Include- und Excludedateien](overview.md#default-includes-and-excludes).
+
+### <a name="defaultitemexcludes"></a>DefaultItemExcludes
+
+Verwenden Sie die `DefaultItemExcludes`-Eigenschaft, um Globmuster für Dateien und Ordner zu definieren, die aus der Include- und Excludedatei sowie Remove-Globs ausgeschlossen werden sollen. Standardmäßig werden die Ordner *./bin* und *./obj* aus den Globmustern ausgeschlossen.
+
+```xml
+<PropertyGroup>
+  <DefaultItemExcludes>$(DefaultItemExcludes);**/*.myextension</DefaultItemExcludes>
+</PropertyGroup>
+```
+
+### <a name="defaultexcludesinprojectfolder"></a>DefaultExcludesInProjectFolder
+
+Verwenden Sie die `DefaultExcludesInProjectFolder`-Eigenschaft, um Globmuster für Dateien und Ordner im Projektordner zu definieren, die aus der Include- und Excludedatei sowie Remove-Globs ausgeschlossen werden sollen. Standardmäßig werden Ordner, die mit einem Punkt (`.`) beginnen, z. B. *.git* und *.vs*, aus den Globmustern ausgeschlossen.
+
+Diese Eigenschaft ähnelt der `DefaultItemExcludes`-Eigenschaft, mit der Ausnahme, dass sie nur Dateien und Ordner im Projektordner berücksichtigt. Wenn ein Globmuster versehentlich mit Elementen außerhalb des Projektordners mit einem relativen Pfad übereinstimmen würde, verwenden Sie die `DefaultExcludesInProjectFolder`-Eigenschaft anstelle der `DefaultItemExcludes`-Eigenschaft.
+
+```xml
+<PropertyGroup>
+  <DefaultExcludesInProjectFolder>$(DefaultExcludesInProjectFolder);**/myprefix*/**</DefaultExcludesInProjectFolder>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultitems"></a>EnableDefaultItems
+
+Die `EnableDefaultItems`-Eigenschaft steuert, ob Kompilierungselemente, eingebettete Ressourcenelemente und `None`-Elemente implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Um jedes implizite Einbeziehen von Dateien zu deaktivieren, legen Sie die `EnableDefaultItems`-Eigenschaft auf `false` fest.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultItems>false</EnableDefaultItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultcompileitems"></a>EnableDefaultCompileItems
+
+Die `EnableDefaultCompileItems`-Eigenschaft steuert, ob Kompilierungselemente implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultCompileItems`-Eigenschaft auf `false` fest, um die implizite Einbindung von *.cs-Dateien und anderen Spracherweiterungsdateien zu deaktivieren.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
+
+Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Ressourcenelemente implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultEmbeddedResourceItems`-Eigenschaft auf `false` fest, um die implizite Einbindung eingebetteter Ressourcendateien zu deaktivieren.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+</PropertyGroup>
+```
+
+### <a name="enabledefaultnoneitems"></a>EnableDefaultNoneItems
+
+Die `EnableDefaultNoneItems`-Eigenschaft steuert, ob `None`-Elemente (Dateien, die keine Rolle im Buildprozess aufweisen) implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultNoneItems`-Eigenschaft auf `false` fest, um die implizite Einbindung von `None`-Elementen zu deaktivieren.
+
+```xml
+<PropertyGroup>
+  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
+
 ## <a name="code-analysis-properties"></a>Codeanalyseeigenschaften
+
+- [AnalysisLevel-Eigenschaft](#analysislevel)
+- [AnalysisMode](#analysismode)
+- [CodeAnalysisTreatWarningsAsErrors-Eigenschaft](#codeanalysistreatwarningsaserrors)
+- [EnableNETAnalyzers-Eigenschaft](#enablenetanalyzers)
+- [EnforceCodeStyleInBuild](#enforcecodestyleinbuild)
 
 ### <a name="analysislevel"></a>AnalysisLevel-Eigenschaft
 
@@ -471,7 +576,7 @@ Die Eigenschaft `RunArguments` definiert die Argumente, die beim Ausführen an d
 
 ### <a name="runworkingdirectory"></a>RunWorkingDirectory
 
-Die Eigenschaft `RunWorkingDirectory` definiert das Arbeitsverzeichnis für den Anwendungsprozess, in dem diese gestartet werden soll. Wenn Sie kein Verzeichnis angeben, wird `OutDir` als Arbeitsverzeichnis verwendet.
+Die Eigenschaft `RunWorkingDirectory` definiert das Arbeitsverzeichnis für den Anwendungsprozess, in dem diese gestartet werden soll. Dies kann ein absoluter Pfad oder ein Pfad sein, der relativ zum Projektverzeichnis ist. Wenn Sie kein Verzeichnis angeben, wird `OutDir` als Arbeitsverzeichnis verwendet.
 
 ```xml
 <PropertyGroup>
@@ -479,7 +584,7 @@ Die Eigenschaft `RunWorkingDirectory` definiert das Arbeitsverzeichnis für den 
 </PropertyGroup>
 ```
 
-## <a name="hosting-properties-and-items"></a>Hostingeigenschaften und -elemente
+## <a name="hosting-properties"></a>Hostingeigenschaften
 
 - [EnableComHosting](#enablecomhosting)
 - [EnableDynamicLoading](#enabledynamicloading)

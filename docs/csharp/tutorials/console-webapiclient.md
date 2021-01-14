@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899651"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98024976"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -25,7 +25,7 @@ Sie erstellen eine Anwendung, die HTTP-Anforderungen an einen REST-Dienst in Git
 
 In diesem Tutorial werden viele Features abgedeckt. Gehen wir sie einzeln an.
 
-Wenn Sie lieber das [letzte Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) für dieses Thema befolgen möchten, können Sie es herunterladen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#view-and-download-samples).
+Wenn Sie lieber das [letzte Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) für dieses Artikels befolgen möchten, können Sie es herunterladen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -129,7 +129,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-Diese erste Version führt eine Webanforderung aus, um die Liste aller Repositorys unterhalb der dotnet foundation-Organisation einzulesen. (Die GitHub-ID für die .NET Foundation lautet „dotnet“.) In den ersten Zeilen wird <xref:System.Net.Http.HttpClient> für diese Anforderung eingerichtet. Zunächst wird der HttpClient so konfiguriert, dass er die GitHub-JSON-Antworten akzeptiert.
+Diese erste Version führt eine Webanforderung aus, um die Liste aller Repositorys unterhalb der dotnet foundation-Organisation einzulesen. (Die GitHub-ID für die .NET Foundation lautet `dotnet`.) In den ersten Zeilen wird <xref:System.Net.Http.HttpClient> für diese Anforderung eingerichtet. Zunächst wird der HttpClient so konfiguriert, dass er die GitHub-JSON-Antworten akzeptiert.
 Das Format ist einfach JSON. In der nächsten Zeile wird ein Benutzer-Agent-Header für alle Anforderungen von diesem Objekt hinzugefügt. Diese zwei Header werden vom GitHub-Servercode überprüft und sind erforderlich, um Informationen aus GitHub abzurufen.
 
 Nachdem Sie den <xref:System.Net.Http.HttpClient> konfiguriert haben, führen Sie eine Webanforderung aus und rufen die Antwort ab. In dieser ersten Version verwenden Sie die bequeme <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType>-Methode. Diese Hilfsmethode startet einen Task zum Ausführen der Webanforderung. Wenn die Anforderung zurückgegeben wird, liest sie den Antwortstream und extrahiert den Inhalt aus dem Stream. Der Antwortkörper wird als <xref:System.String> zurückgegeben. Die Zeichenfolge ist verfügbar, wenn der Task abgeschlossen wurde.
