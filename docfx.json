@@ -619,11 +619,11 @@
     "dest": "_site",
     "template": [
       "docs.html",
-      "test.md": "test"
+      "test.md"
     ],
     "xref": [
       "_zip/missingapi.yml",
-      "test.md": "test"
+      "test.md"
     ],
     "lruSize": 0
   }
