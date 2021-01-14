@@ -1,7 +1,4 @@
 {
-  "redirection_files": [
-    ".openpublishing.redirection.json"
-  ],
   "branch_target_mapping": {
     "live": [
       "Publish",
