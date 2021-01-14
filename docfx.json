@@ -561,12 +561,6 @@
       "dev_langs": [
         "csharp"
       ],
-      "disable_contribution_on_translation_quality": [
-        "MT",
-        "MTE75",
-        "MTE95",
-        "Blank"
-      ],
       "featureFlags": [
         "enable_uhf_ppe"
       ],
