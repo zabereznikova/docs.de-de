@@ -1,13 +1,13 @@
 ---
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
-ms.date: 04/28/2018
-ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 6bfa25e3eeeecf5a936f378df3ae548d6fa37a30
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172143"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025276"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -117,7 +117,7 @@ Es gibt Vorteile bei der Ausführung Ihrer monolithischen Anwendung in einem Con
 
 Ein zusätzlicher Vorteil besteht darin, dass Entwickler die Anwendung in der konsistenten Umgebung ausführen können, die von Windows-Containern bereitgestellt wird. Probleme, die nur in bestimmten Versionen auftreten, lassen sich sofort feststellen, statt in einer Staging- oder Produktionsumgebung aufzutauchen. Unterschiede zwischen den Entwicklungsumgebungen, die von Mitgliedern des Entwicklungsteams verwendet werden, sind von geringerer Bedeutung, wenn Anwendungen in Containern ausgeführt werden.
 
-Zudem verfügen containerisierte Anwendungen über eine flachere horizontale Skalierungskurve. Containerisierte Apps ermöglichen es Ihnen, mehr Anwendungs- und Dienstinstanzen (basierend auf Containern) auf einem virtuellen oder physischen Computer zu haben, verglichen mit regulären Anwendungsbereitstellungen pro Computer. Daraus ergeben sich eine höhere Dichte und weniger erforderliche Ressourcen, insbesondere wenn Sie Orchestratoren wie Kubernetes verwenden.
+Zudem verfügen containerisierte Anwendungen über eine flachere horizontale Skalierungskurve. Containerisierte Apps ermöglichen es Ihnen, mehr Anwendungs- und Dienstinstanzen (basierend auf Containern) auf einem virtuellen oder physischen Computer zu haben, verglichen mit regulären Anwendungsbereitstellungen pro Computer. Aus diesem Ansatz ergeben sich eine höhere Dichte und weniger erforderliche Ressourcen, insbesondere wenn Sie Orchestratoren wie Kubernetes verwenden.
 
 Containerisierung erfordert im Idealfall keine Änderungen am Anwendungscode (C\#). In den meisten Szenarien benötigen Sie lediglich die Docker-Bereitstellungsmetadatendateien (Dockerfiles und Docker Compose Dateien).
 
@@ -198,7 +198,7 @@ Diese exemplarische Vorgehensweise zeigt Ihnen die wichtigsten Szenarien für di
 
 ### <a name="scenarios"></a>Szenarien
 
-Es können Variationen bei der Bereitstellung der eShopModernizing-Apps in ACI auftreten, z. B. das Bereitstellen von nur einer oder allen Apps (MVC-App, WebForms-App oder WCF-Dienst). Im folgenden, unten dargestellten Szenario sehen Sie die ASP.NET MVC-App sowie den SQL Server-Container, die beide als Container in ACI (Azure Container Instances) bereitgestellt sind.
+Es können Variationen bei der Bereitstellung der eShopModernizing-Apps in ACI auftreten, z. B. das Bereitstellen von nur einer oder allen Apps (MVC-App, WebForms-App oder WCF-Dienst). Im folgenden unten dargestellten Szenario werden die ASP.NET-MVC-App sowie der SQL Server-Container angezeigt, die beide als Container in ACI (Azure Container Instances) bereitgestellt sind.
 
 ![Bereitstellen in ACI aus einer Entwicklungsumgebung](./media/image5-3.5.6.png)
 
@@ -210,7 +210,7 @@ Azure Container Instances erleichtert die Erstellung und Verwaltung von Docker-C
 
 Das Bereitstellen von Windows-Containern mit vollständigem .NET Framework/ASP.NET oder SQL Server in Azure Container Instances (ACI) ist nicht ganz so schnell wie die Bereitstellung auf einem regulären Docker-Host (wie einem Windows Server 2016 mit Windows-Containern), da das Docker-Image jedes Mal heruntergeladen werden muss (aus der Docker-Registrierung abgerufen) und das SQL-Containerimage (15,1 GB) und das ASP.NET-Containerimage (13,9 GB) eine erhebliche Größen aufweisen. Es ist jedoch viel billiger, als Ihren eigenen Docker-Host zu unterhalten (Windows Server 2016 mit Windows-Container-VM in Azure, dauerhaft online), ganz zu schweigen von einem vollständigen Orchestrator wie Kubernetes in Azure (AKS), der andererseits eine gute Wahl für Produktionsbereitstellungen ist.
 
-Als Hauptschluss ergibt sich hieraus, dass die Verwendung von Azure Container Instances eine sehr überzeugende Option für Entwicklungs-/Testszenarien und für CI/CD-Pipelines ist.
+Als wichtigste Schlussfolgerung hieraus ergibt sich, dass die Verwendung von Azure Container Instances eine sehr überzeugende Option für Dev/Test-Szenarios und für CI/CD-Pipelines darstellt.
 
 ### <a name="next-steps"></a>Nächste Schritte
 
@@ -228,7 +228,7 @@ Die vollständige technische exemplarische Vorgehensweise finden Sie im GitHub-R
 
 ### <a name="overview"></a>Übersicht
 
-Eine Anwendung, die auf Windows-Containern basiert, muss schnell Plattformen verwenden, wodurch sie sich noch weiter von virtuellen IaaS-Computern verlagert. Dies ist erforderlich, um auf einfache Weise eine hohe Skalierbarkeit und eine besser automatisierte Skalierbarkeit zu erreichen sowie eine bedeutende Verbesserung bei automatisierten Bereitstellungen und der Versionsverwaltung. Diese Ziele können Sie mithilfe des Orchestrators [Kubernetes](https://kubernetes.io/) erreichen, der in [Azure Container Services-](https://azure.microsoft.com/services/container-service/) verfügbar ist.
+Eine Anwendung, die auf Windows-Containern basiert, muss schnell Plattformen verwenden, wodurch sie sich noch weiter von virtuellen IaaS-Computern verlagert. Dieser Ansatz ist erforderlich, um auf einfache Weise eine hohe Skalierbarkeit und eine bessere automatisierte Skalierbarkeit zu erreichen sowie eine bedeutende Verbesserung bei automatisierten Bereitstellungen und der Versionsverwaltung. Diese Ziele können Sie mithilfe des Orchestrators [Kubernetes](https://kubernetes.io/) erreichen, der in [Azure Container Services-](https://azure.microsoft.com/services/container-service/) verfügbar ist.
 
 ### <a name="goals"></a>Ziele
 
@@ -288,7 +288,7 @@ Die vollständige technische exemplarische Vorgehensweise finden Sie im GitHub-R
 
 ### <a name="overview"></a>Übersicht
 
-Eine einfache containerisierte Anwendung, die Windows-Container verwendet, lässt sich einfach in Azure App Service für Container bereitstellen. Dies ist die empfohlene Vorgehensweise für die meisten Windows-Containerbasierten Anwendungen.
+Eine einfache containerisierte Anwendung, die Windows-Container verwendet, lässt sich einfach in Azure App Service für Container bereitstellen. Dies ist die empfohlene Vorgehensweise für die meisten auf Windows-Containern basierten Anwendungen.
 
 ### <a name="goals"></a>Ziele
 

@@ -1,13 +1,13 @@
 ---
 title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lernen Sie die Schritte für die „äußere Schleife“ des DevOps-Workflows
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271906"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970296"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 
@@ -77,7 +77,7 @@ Sie können diese Vorlagen und Aufgaben verwenden, um Ihre CI/CD-Artefakte für 
 
 Mit diesen Visual Studio Team Services-Aufgaben, einem in Azure bereitgestellten Linux-Docker Host bzw. einer VM und Ihrer bevorzugten Docker-Registrierung (Azure Container Registry, Docker Hub, privatem Docker DTR oder einer beliebigen anderen Docker-Registrierung) können Sie Ihre Docker CI-Pipeline auf sehr konsistente Weise aufbauen.
 
-***Anforderungen:***
+**_Anforderungen:_* _
 
 - Azure DevOps Services oder Team Foundation Server 2015 Update 3 oder höher für lokale Installationen.
 
@@ -90,7 +90,7 @@ Mit diesen Visual Studio Team Services-Aufgaben, einem in Azure bereitgestellten
 > - Ausführen eines Visual Studio Team Services-Agents (jetzt Azure DevOps Services) als Docker-Container: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Erstellen von .NET Core Linux-Docker-Images mit Azure DevOps Services: \
+> - Erstellen von .NET-Linux-Docker-Images mit Azure DevOps Services: \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Erstellen eines Linux-basierten Visual Studio Team Service-Buildcomputers mit Docker-Unterstützung: \
@@ -126,7 +126,7 @@ Normalerweise ist es sinnvoll, private Repositorys für Ihre benutzerdefinierten
 
 ![Diagramm, das den Pushvorgang benutzerdefinierter Images in eine Containerregistrierung zeigt.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**Abbildung 5-4**. Veröffentlichen von benutzerdefinierten Images in der Docker-Registrierung
+_*Abbildung 5-4**. Veröffentlichen von benutzerdefinierten Images in der Docker-Registrierung
 
 Zum Aufbau der Integration und zum Testen (CI) in Schritt 3 können Sie die resultierenden Docker-Images in einer privaten oder öffentlichen Registrierung veröffentlichen. Es gibt viele Angebote für Docker-Registrierungen von Cloudanbietern, wie Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry usw.
 

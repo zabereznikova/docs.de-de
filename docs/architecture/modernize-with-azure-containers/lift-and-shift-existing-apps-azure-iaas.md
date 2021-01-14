@@ -1,13 +1,13 @@
 ---
 title: Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
-ms.date: 04/28/2018
-ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172169"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025393"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migrieren vorhandener .NET-Apps zu Azure-IaaS mittels Lift & Shift (cloudinfrastrukturfähig)
 
@@ -39,7 +39,7 @@ In den nächsten Abschnitten werden „Cloud-Optimized“-Anwendungen behandelt,
 
 Wenn Ihr Ziel einfach darin besteht, bestehende Anwendungen in die Cloud zu verschieben, identifizieren Sie zunächst bestehende Anwendungen, die keine wesentlichen Änderungen erfordern würden, um sie in Azure App Service auszuführen. Diese Apps sollten die ersten Kandidaten für „Cloud-Optimized“ sein.
 
-Migrieren Sie dann die Apps, die nach wie vor nicht in Windows-Container und PaaS verschoben werden können (z. B. App Service oder Orchestratoren wie Azure Kubernetes Service), zu einfachen VMs (IaaS).
+Migrieren Sie dann die Apps, die nach wie vor nicht in Windows-Container und PaaS verschoben werden können (z. B. App Service oder Orchestratoren wie Azure Kubernetes Service), zu einfachen VMs (IaaS).
 
 Beachten Sie jedoch, dass die korrekte Konfiguration, Sicherung und Wartung von VMs viel mehr Zeit und IT-Kenntnisse erfordert, als die Nutzung von PaaS-Diensten in Azure. Wenn Sie die Nutzung von Azure Virtual Machines in Erwägung ziehen, müssen Sie den fortlaufenden Wartungsaufwand berücksichtigen, der für das Patchen, Aktualisieren oder Verwalten der VM-Umgebung erforderlich ist. Virtuelle Azure-Computer sind IaaS.
 

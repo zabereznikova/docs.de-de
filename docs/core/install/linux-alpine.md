@@ -3,13 +3,13 @@ title: 'Installieren von .NET unter Alpine: .NET'
 description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulicht, das .NET SDK und die .NET-Runtime unter Alpine zu installieren.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 29901cc24ddd4bbe8200a36765ddd29f501394c0
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 6adaa905c400b45526ebbc3d8e2606522863eec3
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506816"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970849"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-alpine"></a>Installieren des .NET SDK oder der .NET-Runtime unter Alpine
 
@@ -17,7 +17,13 @@ In diesem Artikel wird beschrieben, wie Sie .NET unter Alpine installieren. Wenn
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
-Es sind keine Installationsprogramme für Alpine vorhanden. Sie müssen entweder das [Installationsskript](#scripted-install) verwenden oder die Anweisungen zur [manuellen Installation](#manual-install) befolgen.
+## <a name="install"></a>Installieren
+
+Installationsprogramme sind für Alpine Linux nicht verfügbar. .NET muss auf eine der folgenden Arten installiert werden:
+
+- [Snap-Paket](linux-snap.md)
+- [Skriptgesteuerte Installation mit _install-dotnet.sh_](linux-scripted-manual.md#scripted-install)
+- [Manuelle binäre Extraktion](linux-scripted-manual.md#manual-install)
 
 ## <a name="supported-distributions"></a>Unterstützte Distributionen
 
@@ -54,14 +60,7 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 - libstdc++
 - zlib
 
-## <a name="scripted-install"></a>Per Skript gesteuerte Installation
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Manuelle Installation
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET-CLI](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

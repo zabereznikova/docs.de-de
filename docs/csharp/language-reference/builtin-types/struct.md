@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599101"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025432"
 ---
 # <a name="structure-types-c-reference"></a>Strukturtypen (C#-Referenz)
 
@@ -30,11 +30,7 @@ Da Strukturtypen eine Wertsemantik nutzen, wird die Definition von *unveränderl
 
 ## <a name="readonly-struct"></a>`readonly`-Struktur
 
-Ab C# 7.2 können Sie mit dem `readonly`-Modifizierer einen Strukturtyp als unveränderlich deklarieren:
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-Alle Datenmember einer `readonly`-Struktur müssen als schreibgeschützt gekennzeichnet sein:
+Ab C# 7.2 können Sie mit dem `readonly`-Modifizierer einen Strukturtyp als unveränderlich deklarieren. Alle Datenmember einer `readonly`-Struktur müssen als schreibgeschützt gekennzeichnet sein:
 
 - Alle Felddeklarationen müssen den [`readonly`-Modifizierer](../keywords/readonly.md) aufweisen.
 - Alle Eigenschaften, auch automatisch implementierte, müssen schreibgeschützt sein. In C# 9.0 und höher kann eine Eigenschaft einen [`init`-Accessor](../../whats-new/csharp-9.md#init-only-setters) aufweisen.
@@ -43,6 +39,10 @@ Auf diese Weise ist garantiert, dass kein Member einer `readonly`-Struktur den S
 
 > [!NOTE]
 > In einer `readonly`-Struktur kann ein Datenmember eines änderbaren Verweistyps weiterhin den eigenen Status ändern. Beispielsweise können Sie eine <xref:System.Collections.Generic.List%601>-Instanz nicht ersetzen, aber neue Elemente zur Instanz hinzufügen.
+
+Der folgende Code definiert eine `readonly`-Struktur mit Nur-init-Eigenschaftensettern, die in C# 9.0 und höher verfügbar sind:
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>`readonly`-Instanzmember
 

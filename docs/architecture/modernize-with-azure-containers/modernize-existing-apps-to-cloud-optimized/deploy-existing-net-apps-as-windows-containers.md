@@ -1,13 +1,13 @@
 ---
 title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Bereitstellen vorhandener .NET-Apps als Windows-Container
-ms.date: 04/29/2018
-ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 12/21/2020
+ms.openlocfilehash: f3f164ca0578d5358f2c5365fd5a1d2e8e22d8c5
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738427"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025347"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
@@ -29,7 +29,7 @@ Da Container von Tag zu Tag etablierter werden, entwickeln Sie sich branchenweit
 
 Das Erstellen von Anwendungen mithilfe von Containern, die auch als schlanke Bausteine definiert werden können, bietet eine deutliche Steigerung der Agilität beim Entwickeln, Versenden und Ausführen beliebiger Anwendungen in allen Infrastrukturen.
 
-Mit Containern können Sie jede App mit nur wenigen oder gar keinen Codeänderungen von der Entwicklung bis zur Produktion bringen, dank der Docker-Integration über Microsoft-Entwicklertools, Betriebssysteme und die Cloud hinweg.
+Mit Containern können Sie jede App dank der Docker-Integration in Microsoft-Entwicklertools, Betriebssystemen und der Cloud mit nur wenigen oder gar keinen Codeänderungen von der Entwicklung bis zur Produktion bringen.
 
 Bei der Bereitstellung auf einfachen VMs verfügen Sie wahrscheinlich bereits über eine etablierte Methode zum Bereitstellen von ASP.NET-Apps auf Ihren VMs. Es ist jedoch wahrscheinlich, dass Ihre Methode mehrere manuelle Schritte oder komplexe automatisierte Prozesse unter Verwendung Bereitstellungstools wie 0Puppet oder eines ähnlichen Tools umfasst. Möglicherweise müssen Sie Aufgaben wie das Ändern von Konfigurationselementen, das Kopieren von Anwendungsinhalten zwischen Servern und das Ausführen interaktiver Setupprogramme auf Grundlage von MSI-Setups ausführen, gefolgt von Tests. Alle diese Schritte in der Bereitstellung erhöhen Zeit und Risiko für Bereitstellungen. Bei jedem Fehlen einer Abhängigkeit in der Zielumgebung treten Fehler auf.
 
@@ -65,11 +65,11 @@ In naher Zukunft sind gemischte Umgebungen, die sowohl Linux- als auch Windows-C
 
 Die Vorteile der Verwendung von Windows-Containern sind im Grunde mit denen identisch, die Sie von Containern im Allgemeinen erhalten. Die Verwendung von Windows-Containern stelle eine deutliche Verbesserung der Agilität, Portierbarkeit und Kontrolle dar.
 
-Vorhandene .NET-Anwendungen verweisen auf diese Anwendungen, die mit dem .NET Framework erstellt wurden. Beispielsweise kann es sich bei ihnen um herkömmliche ASP.NET-Webanwendungen handeln, die kein .NET Core verwenden, das neuer ist und plattformübergreifend unter Linux, Windows und MacOS ausgeführt wird.
+Vorhandene .NET-Anwendungen verweisen auf diese Anwendungen, die mit dem .NET Framework erstellt wurden. Beispielsweise kann es sich bei ihnen um herkömmliche ASP.NET-Webanwendungen handeln, die kein .NET Core oder .NET 5.0 verwenden, das neuer ist und plattformübergreifend unter Linux, Windows und MacOS ausgeführt wird.
 
 Die Hauptabhängigkeit in .NET Framework ist Windows. Es bestehen außerdem sekundäre Abhängigkeiten in herkömmlichem ASP.NET wie IIS und System.Web.
 
-Eine .NET Framework-Anwendung muss unter Windows ausgeführt werden – Punkt. Wenn Sie vorhandene .NET Framework-Anwendungen containerisieren möchten, Sie aber nicht in eine Migration zu .NET Core investieren können oder möchten („Wenn es ordnungsgemäß funktioniert, migrieren Sie es nicht.“), steht Ihnen Container nur die Verwendung von Windows-Containern zur Auswahl.
+Eine .NET Framework-Anwendung muss unter Windows ausgeführt werden – Punkt. Wenn Sie vorhandene .NET Framework-Anwendungen in Containern bereitstellen möchten, Sie aber nicht in eine Migration zu .NET Core oder höher investieren können oder möchten („Wenn alles ordnungsgemäß funktioniert, migrieren Sie nicht.“), stellt die Verwendung von Windows-Containern Ihre einzige Möglichkeit hierfür dar.
 
 Somit besteht einer der Hauptvorteile von Windows-Containern darin, dass sie Ihnen eine Möglichkeit bieten, Ihre vorhandenen .NET Framework-Anwendungen, die unter Windows ausgeführt werden, mittels Containerisierung zu modernisieren. Letztendlich verschaffen Ihnen Windows-Container die Vorteile, nach denen Sie durch die Verwendung von Containern suchen: Agilität, Portierbarkeit und bessere Kontrolle.
 
@@ -77,7 +77,7 @@ Somit besteht einer der Hauptvorteile von Windows-Containern darin, dass sie Ihn
 
 Durch die Vielzahl der von Docker unterstützten Betriebssysteme und die Unterschiede zwischen .NET Framework und .NET Core sollten Sie abhängig von dem Framework, das Sie verwenden, auf ein bestimmtes Betriebssystem und bestimmte Versionen abzielen.
 
-Für Windows können Sie Windows Server Core oder Windows Nano Server verwenden. Diese Windows-Versionen bieten unterschiedliche Eigenschaften (z. B. IIS gegenüber einem selbstgehosteten Webserver wie Kestrel), die jeweils für .NET Framework- oder .NET Core-Anwendungen erforderlich sind.
+Für Windows können Sie Windows Server Core oder Windows Nano Server verwenden. Diese Windows-Versionen bieten unterschiedliche Eigenschaften (z. B. IIS gegenüber einem selbstgehosteten Webserver wie Kestrel), die für .NET Framework- oder .NET-Anwendungen erforderlich sein können.
 
 Für Linux sind mehrere Distributionen (z.B. Debian) verfügbar und werden in offiziellen .NET Docker-Images unterstützt.
 
@@ -93,19 +93,19 @@ Wenn Sie den Namen des Images zu Ihrer Dockerfile-Datei hinzufügen, können Sie
 
 > | **Tag** | **System und Version** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4.x unter Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4.x mit zusätzlicher ASP.NET-Anpassung unter Windows Server Core |
+> | **mcr.microsoft.com/dotnet/framework/runtime:4.x-windowsservercore-20H2** | .NET Framework 4.x unter Windows Server Core |
+> | **mcr.microsoft.com/dotnet/framework/aspnet:4.x-windowsservercore-20H2** | .NET Framework 4.x mit zusätzlicher ASP.NET-Anpassung unter Windows Server Core |
 
-Für .NET Core (plattformübergreifend für Linux und Windows) sähen die Tags wie folgt aus:
+Für .NET (plattformübergreifend für Linux und Windows) würden folgende Tags verwendet:
 
 > | **Tag** | **System und Version**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0-Runtime, nur unter Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0-Runtime, nur unter Windows Nano Server |
+> | **mcr.microsoft.com/dotnet/runtime:5.0** | .NET-Runtime, nur unter Linux |
+> | **mcr.microsoft.com/dotnet/runtime:5.0-nanoserver-20H2** | .NET-Runtime, nur unter Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Images für mehrere Architekturen
 
-Ab Mitte 2017 können Sie auch eine neue Funktion in Docker verwenden, die Images für [mehrere Architekturen](https://github.com/moby/moby/issues/15866) heißt. .NET Core Docker-Images können Tags für mehrere Architekturen verwenden. Die Dockerfile-Dateien müssen nicht mehr das Betriebssystem definieren, auf das Sie abzielen. Die Funktion für mehrere Architekturen ermöglicht die Verwendung eines einzelnen Tags in mehreren Computerkonfigurationen. Beispielsweise können Sie mit der Funktion für mehrere Architekturen ein gemeinsames Tag verwenden: **microsoft/dotnet:2.0.0-runtime**. Wenn Sie dieses Tag aus einer Linux-Containerumgebung abrufen, erhalten Sie das Debian-basierte Image. Wenn Sie dieses Tag aus einer Windows-Containerumgebung abrufen, erhalten Sie das Nano Server-basierte Image.
+Ab Mitte 2017 können Sie auch eine neue Funktion in Docker verwenden, die Images für [mehrere Architekturen](https://github.com/moby/moby/issues/15866) heißt. .NET-Docker-Images können Tags für mehrere Architekturen verwenden. Die Dockerfile-Dateien müssen nicht mehr das Betriebssystem definieren, auf das Sie abzielen. Die Funktion für mehrere Architekturen ermöglicht die Verwendung eines einzelnen Tags in mehreren Computerkonfigurationen. Beispielsweise können Sie mit der Funktion für mehrere Architekturen ein gemeinsames Tag verwenden: **mcr.microsoft.com/dotnet/runtime:5.0**. Wenn Sie dieses Tag aus einer Linux-Containerumgebung abrufen, erhalten Sie das Debian-basierte Image. Wenn Sie dieses Tag aus einer Windows-Containerumgebung abrufen, erhalten Sie das Nano Server-basierte Image.
 
 Da das herkömmliche .NET Framework nur Windows unterstützt, können Sie bei .NET Framework-Images die Funktion für mehrere Architekturen nicht verwenden.
 

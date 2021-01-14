@@ -1,13 +1,13 @@
 ---
 title: Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Erstellen robuster Clouddienste. Beheben vorübergehender Fehler in der Cloud
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172156"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025328"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 
@@ -35,7 +35,7 @@ Sie können diese Verfahren sowohl in HTTP-Ressourcen als auch in Datenbankresso
 
 Bei der Implementierung robuster Kommunikationen, die auf die Datenbank zugreifen, kann dies je nach verwendeter .NET-Version unkompliziert sein (z. B. [mit Entity Framework 6 oder höher](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Es ist nur eine Frage der Konfiguration der Datenbankverbindung.). Oder Sie müssen möglicherweise zusätzliche Bibliotheken verwenden, wie z. B. den [Anwendungsblock zur Handhabung von vorübergehenden Fehlern](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (Transient Fault Handling Application Block; für frühere Versionen von .NET), oder sogar Ihre eigene Bibliothek implementieren.
 
-Bei der Implementierung von HTTP-Wiederholungsversuchen und Trennschaltern empfiehlt es sich bei .NET, die [Polly](https://github.com/App-vNext/Polly)-Bibliothek zu verwenden, die auf .NET Framework 4.0, .NET Framework 4.5 und .NET Standard 1.1 abzielt, was die Unterstützung von .NET Core umfasst.
+Bei der Implementierung von HTTP-Wiederholungen und Sicherungen (Circuit Breakers) wird von .NET die Verwendung der [Polly](https://github.com/App-vNext/Polly)-Bibliothek empfohlen, die auf .NET Standard 1.1 (deckt .NET Core 1.0, Mono, Xamarin, UWP sowie WP8.1 und höher ab) und .NET Standard 2.0 und höher (deckt .NET Core 2.0 und höher, .NET Core 3.0 und höhere Mono-, Xamarin- und UWP-Ziele ab) ausgerichtet ist. Das NuGet-Paket umfasst auch direkte Ziele für .NET Framework 4.6.1 und 4.7.2.
 
 Informationen zum Implementieren von Strategien für die Handhabung von Teilfehlern in der Cloud finden Sie in den folgenden Referenzen.
 

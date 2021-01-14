@@ -1,13 +1,13 @@
 ---
 title: Gründe für die Modernisierung vorhandener .NET-Apps in cloudoptimierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Gründe für die Modernisierung vorhandener .NET-Apps in cloudoptimierte Anwendungen
-ms.date: 04/28/2018
-ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: e9b3ad151cf0591783ada8a1ab87cb0f14423a7e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093636"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025211"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Gründe für die Modernisierung vorhandener .NET-Apps in cloudoptimierte Anwendungen
 
@@ -23,7 +23,7 @@ Das Fazit hieraus ist, dass ein Unternehmen, wenn es Anwendungen entwickelt und 
 
 Verbesserungen in der Cloud konzentrieren sich größtenteils auf die Erfüllung zweier Ziele: Senken von Kosten und Steigern des Geschäftswachstums durch Verbessern der Flexibilität. Diese Ziele werden erreicht, indem Prozesse vereinfacht und Reibung verringert wird, wenn Sie Anwendungen freigeben und ausliefern.
 
-Ihre Anwendung ist cloudoptimiert, wenn Sie Ihre App auf agile Weise autonom gegenüber anderen lokalen Apps entwickeln und dann Ihre App in der Cloud veröffentlichen, bereitstellen, automatisch skalieren, überwachen und Probleme damit beheben können.
+Ihre Anwendung ist cloudoptimiert, wenn Sie Ihre App auf agile Weise autonom gegenüber anderen lokalen Apps entwickeln und dann in der Cloud veröffentlichen, bereitstellen, automatisch skalieren, überwachen und Probleme damit beheben können.
 
 Der Schlüssel hierbei ist *Agilität* (Flexibilität). Sie können nur agil ausliefern, wenn Sie jegliche Probleme bei der Produktionsbereitstellung und der Entwicklungs-/Testumgebung auf ein absolutes Minimum reduzieren. Container (insbesondere Docker als de facto Standard) und verwaltete Dienste wurden speziell für diesen Zweck entwickelt.
 
@@ -53,7 +53,7 @@ In Ihrer Organisation können diese Technologien und Ansätze schrittweise über
 
 Sie kommen in den Genuss der folgenden Vorteile, wenn Sie eine vorhandene Anwendung in eine cloudoptimierte Anwendung (ohne Neuentwurf oder Neuprogrammierung) umwandeln:
 
-- **Niedrigere Kosten, da die verwaltete Infrastruktur vom Cloudanbieter versorgt wird**. Cloudoptimierte Anwendungen profitieren von den Vorteilen der Cloud, indem sie die bereits vorhandene Elastizität, automatische Skalierbarkeit und Hochverfügbarkeit der Cloud nutzen. Vorteile stehen nicht nur mit den Compute-Funktionen (VMs und Container) in Zusammenhang, sondern hängen auch von Ressourcen in der Cloud ab, wie DBaaS, CaaS und jegliche Infrastruktur, die eine Anwendung möglicherweise benötigt.
+- **Niedrigere Kosten, da die verwaltete Infrastruktur vom Cloudanbieter versorgt wird**. Cloudoptimierte Anwendungen profitieren von den Vorteilen der Cloud, indem sie die bereits vorhandene Elastizität, automatische Skalierbarkeit und Hochverfügbarkeit der Cloud nutzen. Vorteile stehen nicht nur mit den Computefunktionen (VMs und Container) in Zusammenhang, sondern hängen auch von den Ressourcen in der Cloud ab, wie DBaaS, CaaS und jegliche Infrastruktur, die eine Anwendung möglicherweise benötigt.
 
 - **Robuste Anwendung und Infrastruktur**. Wenn Sie zur Cloud migrieren, müssen Sie vorübergehende Ausfälle in Kauf nehmen – Ausfälle, die in der Cloud auftreten. Außerdem sind Cloudinfrastruktur und -hardware „austauschbar“, wodurch sich Möglichkeiten für vorübergehende Ausfallzeiten erhöhen. Gleichzeitig erleichtern die inneren Cloudfunktionen und bestimmte Anwendungsentwicklungsverfahren, die Resilienz implementieren und die Wiederherstellung automatisieren, Ihnen die Wiederherstellung nach unerwarteten Ausfällen in der Cloud erheblich.
 

@@ -1,13 +1,13 @@
 ---
 title: Docker-Terminologie
 description: Lernen Sie etwas von der grundlegenden Terminologie kennen, die beim Arbeiten mit Docker alltäglich ist.
-ms.date: 08/06/2020
-ms.openlocfilehash: a323075bdd73a117769913ac59426b5bec5df614
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 640c3481e271b8fe2b7d7eeb7d5eaeb02af1cc21
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686450"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970101"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -35,7 +35,7 @@ docker build
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein **FROM mcr.microsoft.com/dotnet/sdk:3.1**-Basisimage von der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, unter der Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein **FROM mcr.microsoft.com/dotnet/sdk:5.0**-Basisimage von der Registrierung anfordert, erhält es tatsächlich **5.0-nanoserver-20H2**, **5.0-nanoserver-2004** oder **5.0-buster-slim**, je nach Betriebssystem und Version, unter dem bzw. der Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 

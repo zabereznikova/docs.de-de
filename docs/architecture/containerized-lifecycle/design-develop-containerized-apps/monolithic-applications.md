@@ -1,13 +1,13 @@
 ---
 title: Monolithische Anwendungen
 description: Verstehen der grundlegenden Konzepte für das Containerisieren monolithischer Anwendungen.
-ms.date: 08/06/2020
-ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/06/2021
+ms.openlocfilehash: a66c76c473c116b303975040d893348182b96713
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163543"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970537"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
@@ -69,7 +69,7 @@ Ob Sie eine schnelle Überprüfung eines in Azure bereitgestellten Containers w�
 
 Die Verwendung von Azure App Service ist intuitiv, und Sie sind aufgrund der hervorragenden Git-Integration zur Annahme Ihres Codes, seiner Erstellung in Microsoft Visual Studio und der direkten Bereitstellung in Azure schnell betriebsbereit. Aber wenn Sie bei herkömmlicher Bereitstellung (also ohne Docker) andere Funktionen, Frameworks oder Abhängigkeiten benötigten, die in App Services nicht unterstützt werden, mussten Sie warten, bis das Azure-Team ein Update dieser Abhängigkeiten in App Service vornahm oder zu anderen Diensten wechseln, wie Service Fabric, Cloud Services – eventuell sogar zu einfachen VMs, bei denen Sie mehr Kontrolle haben und eine erforderliche Komponente oder ein erforderliches Framework für Ihre Anwendung installieren können.
 
-Jetzt haben Sie, wie in Abbildung 4–4 dargestellt, bei der Verwendung von Visual Studio 2017 dank der Containerunterstützung in Azure App Service die Möglichkeit, Ihre App-Umgebung um beliebige Zusätze zu erweitern. Wenn Sie Ihrer App eine Abhängigkeit hinzugefügt haben, haben Sie die Möglichkeit, diese Abhängigkeiten in Ihr Dockerfile oder Ihr Docker-Image einzuschließen, da Sie Ihre App in einem Container ausführen.
+Jetzt haben Sie, wie in Abbildung 4-4 dargestellt, bei der Verwendung von Visual Studio 2019 dank der Containerunterstützung in Azure App Service die Möglichkeit, Ihre App-Umgebung um beliebige Zusätze zu erweitern. Wenn Sie Ihrer App eine Abhängigkeit hinzugefügt haben, haben Sie die Möglichkeit, diese Abhängigkeiten in Ihr Dockerfile oder Ihr Docker-Image einzuschließen, da Sie Ihre App in einem Container ausführen.
 
 ![Screenshot des Dialogfelds „App Service erstellen“ mit einer Containerregistrierung.](./media/monolithic-applications/publish-azure-app-service-container.png)
 

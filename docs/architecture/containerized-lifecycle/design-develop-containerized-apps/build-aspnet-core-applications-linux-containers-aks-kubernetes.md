@@ -1,13 +1,13 @@
 ---
 title: Erstellen von ASP.NET Core-Anwendungen, die als Linux-Container in AKS-/Kubernetes-Clustern bereitgestellt werden
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-ms.date: 08/06/2020
-ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a8f8272ab2faabd0398aeeb2039b6f034b4dedb
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440828"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970627"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von als Linux-Container in einem AKS-/Kubernetes-Orchestrator bereitgestellten ASP.NET Core-Anwendungen
 
@@ -21,13 +21,13 @@ Dies sind die wichtigsten Features von AKS:
 - Durch den Benutzer konfigurierbare Skalierung
 - Einfacheres Benutzererlebnis sowohl für Entwickler als auch für Clusterbetreiber.
 
-Die folgenden Beispiele untersuchen die Erstellung einer ASP.NET Core 3.1-Anwendung, die unter Linux ausgeführt und auf einem AKS-Cluster in Azure bereitgestellt wird, während die Entwicklung in Visual Studio 2019 erfolgt.
+In den folgenden Beispielen wird die Erstellung einer ASP.NET Core 5.0-Anwendung untersucht, die unter Linux ausgeführt und auf einem AKS-Cluster in Azure bereitgestellt wird, während die Entwicklung in Version 16.8 von Visual Studio 2019 erfolgt.
 
 ## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a>Erstellen des ASP.NET Core 2019-Projekts mithilfe von Visual Studio 2019
 
 ASP.NET Core ist eine universelle Entwicklungsplattform, die von Microsoft und der .NET-Community auf GitHub gepflegt wird. Sie ist plattformübergreifend, d.h. sie unterstützt Windows, macOS und Linux und kann lokal, in der Cloud und in Einbettungs- und IoT-Szenarios verwendet werden.
 
-In diesem Beispiel werden einige einfache Projekte verwendet, die auf Visual Studio-Vorlagen basieren, sodass Sie zum Erstellen des Beispiels nicht viel zusätzliches Wissen benötigen. Sie müssen das Projekt nur mit einer Standardvorlage erstellen, die alle Elemente enthält, um ein kleines Projekt mit einer REST-API und einer Web-App mit Razor Pages unter Verwendung von ASP.NET Core 3.1-Technologie auszuführen.
+In diesem Beispiel werden einige einfache Projekte verwendet, die auf Visual Studio-Vorlagen basieren, sodass Sie zum Erstellen des Beispiels nicht viel zusätzliches Wissen benötigen. Sie müssen das Projekt nur mit einer Standardvorlage erstellen, die alle Elemente enthält, um ein kleines Projekt mit einer REST-API und einer Web-App mit Razor Pages unter Verwendung von ASP.NET Core 5.0-Technologie auszuführen.
 
 ![Fenster zum Hinzufügen eines neuen Projekts in Visual Studio mit ausgewählter ASP.NET Core-Webanwendung.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
@@ -41,11 +41,11 @@ Geben Sie dann den Namen und den Speicherort der Anwendung wie in der nächsten 
 
 **Abbildung 4–36**. Geben Sie den Projektnamen und den Speicherort in Visual Studio 2019 ein.
 
-Vergewissern Sie sich, dass Sie ASP.NET Core 3.1 als Framework ausgewählt haben. .NET Core 3.1 ist im neuesten Release von Visual Studio 2019 enthalten und wird automatisch für Sie installiert und konfiguriert, wenn Sie Visual Studio installieren.
+Vergewissern Sie sich, dass Sie ASP.NET Core 5.0 als Framework ausgewählt haben. .NET 5.0 ist im neuesten Release von Visual Studio 2019 enthalten und wird automatisch für Sie installiert und konfiguriert, wenn Sie Visual Studio installieren.
 
 ![Visual Studio-Dialogfeld zum Auswählen des Typs einer ASP.NET Core-Webanwendung mit ausgewählter API-Option.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-**Abbildung 4–37**. Auswählen von ASP.NET Core 3.1 und des Projekttyps „Web-API“
+**Abbildung 4–37**. Auswählen von ASP.NET Core 5.0 und des Projekttyps „Web-API“
 
 Beachten Sie, dass Docker-Unterstützung jetzt nicht aktiviert ist, um zu zeigen, dass dies nach der Projekterstellung erfolgen kann.
 
@@ -63,7 +63,7 @@ Um das Hinzufügen von Docker-Unterstützung abzuschließen, können Sie Windows
 
 **Abbildung 4–39**. Auswählen von Linux-Containern.
 
-Mit diesen einfachen Schritten haben Sie festgelegt, dass Ihre ASP.NET Core 3.1-Anwendung in einem Linux-Container ausgeführt wird.
+Durch diese einfachen Schritte haben Sie festgelegt, dass Ihre ASP.NET Core 5.0-Anwendung in einem Linux-Container ausgeführt wird.
 
 In ähnlicher Weise können Sie auch ein sehr einfaches **WebApp**-Projekt (Abbildung 4-40) hinzufügen, um den Web-API-Endpunkt zu nutzen, auch wenn die Details hier nicht behandelt werden.
 

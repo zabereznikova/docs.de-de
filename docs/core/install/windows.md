@@ -3,13 +3,13 @@ title: Installieren von .NET unter Windows
 description: In diesem Artikel erhalten Sie Informationen zu den Windows-Versionen, unter denen Sie .NET installieren können.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110233"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025452"
 ---
 # <a name="install-net-on-windows"></a>Installieren von .NET unter Windows
 
@@ -180,30 +180,21 @@ Weitere Informationen zu den von .NET Core 2.1 unterstützten Betriebssystemen,
 
 ### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7/Vista/8.1/Server 2008 R2/Server 2012 R2
 
-Weitere Abhängigkeiten sind erforderlich, wenn Sie das .NET SDK oder die Runtime unter den folgenden Windows-Versionen installieren:
+Weitere Abhängigkeiten sind erforderlich, wenn Sie das .NET SDK oder die .NET-Runtime unter den folgenden Windows-Versionen installieren:
 
-- Windows 7 SP1 [ESU][esu]
-- Windows Vista SP 2
-- Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+| Betriebssystem         | Voraussetzungen                                                                    |
+|--------------------------|----------------------------------------------------------------------------------|
+| Windows 7 SP1 [ESU][esu] | – Microsoft Visual C++ 2015-2019 Redistributable [64-Bit][vcc64] / [32-Bit][vcc32] <br> – KB3063858 [64-Bit][kb64] / [32-Bit][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (nur .NET Core 2.1) |
+| Windows Vista SP 2       | Microsoft Visual C++ 2015-2019 Redistributable [64-Bit][vcc64] / [32-Bit][vcc32] |
+| Windows 8.1              | Microsoft Visual C++ 2015-2019 Redistributable [64-Bit][vcc64] / [32-Bit][vcc32] |
+| Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 Redistributable [64-Bit][vcc64] / [32-Bit][vcc32] |
+| Windows Server 2012 R2   | Microsoft Visual C++ 2015-2019 Redistributable [64-Bit][vcc64] / [32-Bit][vcc32] |
 
-Installieren Sie Folgendes:
+Die vorherigen Anforderungen gelten auch, wenn ein Fehler im Zusammenhang mit einer der folgenden DLLs auftritt:
 
-- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685)
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
-
-Die oben aufgeführten Anforderungen sind auch erforderlich, wenn einer der folgenden Fehler auftritt:
-
-> Das Programm kann nicht gestartet werden, da *api-ms-win-crt-runtime-l1-1-0.dll* auf dem Computer fehlt. Installieren Sie das Programm erneut, um das Problem zu beheben.
->
-> \- oder -
->
-> Das Programm kann nicht gestartet werden, da *api-ms-win-cor-timezone-l1-1-0.dll* auf dem Computer fehlt. Installieren Sie das Programm erneut, um das Problem zu beheben.
->
-> \- oder -
->
-> The library *hostfxr.dll* was found, but loading it from *C:\\\<path_to_app>\\hostfxr.dll* failed. (Die Bibliothek „hostfxr.dll“ wurde gefunden, aber der Ladevorgang aus C:\<Pfad_zu_App>\hostfxr.dll ist fehlgeschlagen.)
+- *api-ms-win-crt-runtime-l1-1-0.dll*
+- *api-ms-win-cor-timezone-l1-1-0.dll*
+- *hostfxr.dll*
 
 ## <a name="install-with-powershell-automation"></a>Installieren mit PowerShell-Automatisierung
 
@@ -318,3 +309,7 @@ Weitere Informationen zur Verwendung von .NET in einem Docker-Container finden S
 - [Tutorial: Containerisieren einer .NET Core-App](../docker/build-container.md)
 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
+[vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
+[vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
+[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409

@@ -1,13 +1,13 @@
 ---
 title: Was gilt für cloudnative Anwendungen?
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Was gilt für cloudnative Anwendungen?
-ms.date: 04/28/2018
-ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: 700d23c6b44f4eb48b3f6ec20569323280682082
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543546"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025185"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
@@ -46,7 +46,7 @@ Eine detaillierte Anleitung zum Entwerfen und Entwickeln cloudnativer Anwendunge
 * [Entwickeln cloudnativer .NET-Anwendungen für Azure](../../cloud-native/introduction.md)
 * [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](../../microservices/index.md).
 
-Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudnativen Modell zu berücksichtigen ist, besteht darin, dass Sie die Architektur vollständig neu auf eine auf Microservices basierende Architektur umstellen müssen. Dies erfordert aufgrund des umfangreichen Refactoring-Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeitsniveaus und langfristige Agilität benötigen. Sie könnten aber auch mit der Umstellung auf Cloud-Native beginnen, indem Sie Microservices nur für ein paar neue Szenarios hinzufügen und schließlich ein vollständiges Refactoring der Anwendung als Microservices durchführen. Dies ist ein inkrementeller Ansatz, der in einigen Szenarien die beste Option darstellt.
+Der wichtigste Faktor, der bei der Migration einer vollständigen Anwendung zum cloudnativen Modell zu berücksichtigen ist, besteht darin, dass Sie die Architektur vollständig neu auf eine auf Microservices basierende Architektur umstellen müssen. Dieser Ansatz erfordert aufgrund des umfangreichen Refactoring-Prozesses natürlich erhebliche Investitionen in die Entwicklung. Diese Option wird in der Regel für unternehmenskritische Anwendungen gewählt, die neue Skalierbarkeitsniveaus und langfristige Agilität benötigen. Sie könnten aber auch mit der Umstellung auf Cloud-Native beginnen, indem Sie Microservices nur für ein paar neue Szenarios hinzufügen und schließlich ein vollständiges Refactoring der Anwendung als Microservices durchführen. Dies ist ein inkrementeller Ansatz, der in einigen Szenarios die beste Option darstellt.
 
 ## <a name="what-about-microservices"></a>Und Microservices...?
 
@@ -56,9 +56,9 @@ Die Microservices-Architektur ist ein komplexer Ansatz, den Sie für Anwendungen
 
 Microservices sind allerdings für keine neue oder moderne Anwendung obligatorisch. Bei Microservices handelt es sich nicht um eine „Wunderwaffe“, und sie sind nicht die einzige, optimale Methode, um jede Anwendung zu erstellen. Wie und wann Sie Microservices verwenden, hängt vom Typ der Anwendung ab, die Sie erstellen müssen.
 
-Die Microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf Microservices basierenden Architektur wird eine Anwendung als Sammlung von Diensten erstellt, die unabhängig voneinander entwickelt, getestet, mit Versionsangaben versehen, bereitgestellt und skaliert werden. Dies kann alle jegliche verwandte, autonome Datenbank pro Microservice einschließen.
+Die Microservices-Architektur wird zum bevorzugten Ansatz für verteilte und große oder komplexe unternehmenskritische Anwendungen, die auf mehreren unabhängigen Subsystemen in Form von autonomen Diensten basieren. In einer auf Microservices basierenden Architektur wird eine Anwendung als Sammlung von Diensten erstellt, die unabhängig voneinander entwickelt, getestet, mit Versionsangaben versehen, bereitgestellt und skaliert werden. Bei diesem Ansatz kann jegliche verwandte, autonome Datenbank pro Microservice eingeschlossen werden.
 
-Einen detaillierten Einblick in eine Microservice-Architektur, die Sie mithilfe von .NET Core implementieren können, finden Sie in dem herunterladbaren PDF-e-Book [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch steht auch [online](../../microservices/index.md) zur Verfügung.
+Einen detaillierten Einblick in eine Microservice-Architektur, die Sie mithilfe von .NET implementieren können, finden Sie in dem herunterladbaren E-Book im PDF-Format [.NET-Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook). Das Handbuch steht auch [online](../../microservices/index.md) zur Verfügung.
 
 Doch selbst in Szenarios, in denen Microservices viele leistungsstarke Funktionen bieten, wie unabhängige Bereitstellung, starke Subsystemgrenzen und technologische Vielfalt, bringen sie auch viele neue Herausforderungen mit sich. Die Herausforderungen stehen im Zusammenhang mit der Entwicklung von verteilten Anwendungen, z. B. fragmentierte und unabhängige Datenmodelle, dem Erzielen von robuster Kommunikation zwischen Microservices, der letztendlichen Notwendigkeit von Konsistenz sowie der operativen Komplexität. Microservices führen einen höheren Komplexitätsgrad ein im Vergleich zu herkömmlichen monolithischen Anwendungen.
 

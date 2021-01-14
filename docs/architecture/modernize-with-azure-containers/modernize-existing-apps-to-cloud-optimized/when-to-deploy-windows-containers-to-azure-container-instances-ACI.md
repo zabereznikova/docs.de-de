@@ -1,17 +1,17 @@
 ---
 title: Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Instances (ACI) erfolgen sollte
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Instances (ACI) erfolgen sollte
-ms.date: 04/29/2018
-ms.openlocfilehash: 6c889db6f0475f24a196144c7fb62faec4c173ed
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 12/21/2020
+ms.openlocfilehash: 556fe7cbec7d259db9ec886b777feda9eed09116
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989154"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025132"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Umstände, unter denen eine Bereitstellung von Windows-Containern in Azure Container Instances (ACI) erfolgen sollte
 
-Der wesentliche Wertbeitrag, den Azure Container Instances bietet, besteht darin, dass Sie Container sofort bereitstellen können und diese Umgebung nicht verwalten müssen. Sie müssen kein Upgrade des zugrunde liegenden Betriebssystems bzw. der VMs durchführen oder diese patchen. Alles ist transparent, und Sie müssen Container lediglich in einer einsatzbereiten Umgebung bereitstellen.
+Das wesentliche Leistungsmerkmal von Azure Container Instances besteht darin, dass Sie Container sofort bereitstellen können und diese Umgebung nicht verwalten müssen. Sie müssen kein Upgrade des zugrunde liegenden Betriebssystems bzw. der VMs durchführen oder diese patchen. Alles ist transparent, und Sie müssen Container lediglich in einer einsatzbereiten Umgebung bereitstellen.
 
 Die Gründe und Szenarien, wann Sie ACI verwenden sollten, ähneln den wesentlichen Szenarien, in denen Sie Azure-VMs mit Containern verwenden. Im Grunde sind also dies die Hauptszenarien für die Verwendung von Azure Container Instances:
 

@@ -1,15 +1,15 @@
 ---
-title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
+title: Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET-Anwendung für Container und anschließendes Bereitstellen in einem Kubernetes-Cluster
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-ms.date: 08/06/2020
-ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: ef994f132716547ee402237016ee71013528d779
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915223"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970485"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET Core-Anwendung für Container und anschließendes Bereitstellen in einem Kubernetes-Cluster
+# <a name="create-cicd-pipelines-in-azure-devops-services-for-a-net-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET-Anwendung für Container und anschließendes Bereitstellen in einem Kubernetes-Cluster
 
 In Abbildung 5–12 können Sie das DevOps-Szenario End-to-End betrachten, das Codeverwaltung, Codekompilierung, das Erstellen von Docker-Images, das Hochladen von Docker-Images in eine Docker-Registrierung und schließlich die Bereitstellung auf einem Kubernetes-Cluster in Azure umfasst.
 

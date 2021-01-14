@@ -1,19 +1,19 @@
 ---
-title: Migrieren Ihrer relationalen Datenbanken zu Azure
+title: Migrieren von relationalen Datenbanken zu Azure
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migrieren Ihrer relationalen Datenbanken zu Azure
-ms.date: 04/28/2018
-ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: c8dc92e1c5c5fb36a68bcad000c10e47c946ca0c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093616"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025380"
 ---
-# <a name="migrate-your-relational-databases-to-azure"></a>Migrieren Ihrer relationalen Datenbanken zu Azure
+# <a name="migrate-your-relational-databases-to-azure"></a>Migrieren von relationalen Datenbanken zu Azure
 
 Vision: Azure bietet die umfassendste Datenbankmigration.
 
-In Azure können Sie Ihre Datenbankserver direkt zu IaaS-VMS (reines Lift & Shift) migrieren, oder Sie können zu Azure SQL-Datenbank migrieren, um weitere Vorteile zu erhalten. Azure SQL-Datenbank bietet Optionen für verwaltete Instanzen und vollständige DBaaS (Database-as-a-Service). Abbildung 3–1 zeigt die verschiedenen in Azure verfügbaren Migrationspfade für die relationale Datenbank.
+In Azure können Sie Ihre Datenbankserver direkt zu IaaS-VMS (reines Lift & Shift) migrieren, oder Sie können zu Azure SQL-Datenbank migrieren, um weitere Vorteile zu erhalten. Azure SQL-Datenbank bietet die Optionen für verwaltete Instanzen und vollständige DBaaS (Database-as-a-Service). Abbildung 3–1 zeigt die verschiedenen in Azure verfügbaren Migrationspfade für die relationale Datenbank.
 
 ![Datenbankmigrationspfade in Azure](./media/image3-1.png)
 
@@ -98,7 +98,7 @@ Der automatisierte Workflow, einschließlich Bewertungsberichten, führt Sie dur
 
 Wann immer Sie ein ursprüngliches RDBMS ändern, müssen Sie es möglicherweise erneut testen. Außerdem müssen Sie eventuell, abhängig von den Testergebnissen, die SQL-Anweisungen oder den ORM-Code (Object-Relational Mapping, objektrelationale Zuordnung) in Ihrer Anwendung ändern.
 
-Wenn Sie über eine andere Datenbank verfügen (z. B. IBM DB2) und sich für einen Ansatz mittels Lift & Shift-Migration entscheiden, sollten Sie diese Datenbanken weiterhin als IaaS-VMs in Azure verwenden, es sei denn, Sie sind bereit, eine komplexere Datenmigration durchzuführen. Eine komplexere Datenmigration erfordert zusätzlichen Aufwand, da Sie zu einem anderen Datenbanktyp mit neuem Schema und anderen Programmierbibliotheken migrieren würden.
+Wenn Sie über eine andere Datenbank verfügen (z. B. IBM DB2) und sich für einen Ansatz mittels Lift & Shift-Migration entscheiden, sollten Sie diese Datenbanken weiterhin als IaaS-VMs in Azure verwenden, es sei denn, Sie sind bereit, eine komplexere Datenmigration durchzuführen. Eine komplexere Datenmigration erfordert zusätzlichen Aufwand, da Sie zu einem anderen Datenbanktyp mit dem neuen Schema und anderen Programmierbibliotheken migrieren würden.
 
 Informationen zum Migrieren von Datenbanken mithilfe von Azure Database Migration Service finden Sie unter [Schneller in die Cloud mit einer verwalteten Azure SQL-Datenbank-Instanz und Azure Database Migration Service](https://channel9.msdn.com/Events/Build/2017/P4008).
 

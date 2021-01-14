@@ -3,21 +3,47 @@ title: 'Installieren von .NET unter Fedora: .NET'
 description: In diesem Artikel werden verschiedene Möglichkeiten veranschaulicht, das .NET SDK und die .NET-Runtime für Fedora zu installieren.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: f7422941af7e39d69d286a0f79920b025c1bf9c0
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 9dd8c6264831e2a9382960be505639f1eba95151
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031903"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970823"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>Installieren des .NET SDK oder der .NET-Runtime unter Fedora
 
-.NET wird unter Fedora unterstützt. In diesem Artikel wird beschrieben, wie Sie .NET unter Fedora installieren. Wenn für eine Fedora-Version kein Support mehr geboten wird, wird .NET mit dieser Version nicht mehr unterstützt. Diese Anweisungen können Ihnen jedoch helfen, .NET in diesen Versionen auszuführen, auch wenn sie nicht unterstützt werden.
+.NET wird unter Fedora unterstützt. In diesem Artikel wird beschrieben, wie Sie .NET unter Fedora installieren. Wenn für eine Fedora-Version kein Support mehr geboten wird, wird .NET mit dieser Version nicht mehr unterstützt.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
+
+## <a name="install-net-50"></a>Installieren von .NET 5.0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+**Fedora 32**
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
+```
+
+**Fedora 33**
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
+
+## <a name="install-net-core-31"></a>Installieren von .NET Core 3.1
+
+Die neueste in den Standardpaketrepositorys für Fedora verfügbare Version von .NET ist .NET Core 3.1.
+
+[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
 
 ## <a name="supported-distributions"></a>Unterstützte Distributionen
 
@@ -27,15 +53,11 @@ Die folgende Tabelle enthält die derzeit unterstützten .NET-Releases und Versi
 - ❌ gibt an, dass die Version von Fedora oder .NET in diesem Fedora-Release nicht unterstützt wird.
 - Wenn sowohl eine Version von Fedora als auch eine Version von .NET mit ✔️ markiert sind, wird diese Kombination aus Betriebssystem und .NET unterstützt.
 
-| Fedora               | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
-|----------------------|---------------|---------------|----------|
-| ✔️ [33](#fedora-33-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ✔️ [32](#fedora-32-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
-| ❌ [31](#fedora-31-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [30](#fedora-30-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [29](#fedora-29-) | ✔️ 2.1        | ✔️ 3.1        | ❌ 5.0 |
-| ❌ [28](#fedora-28-) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
-| ❌ [27](#fedora-27-) | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
+| .NET-Version  | Fedora 33 ✔️ | 32 ✔️ | 31 ❌ | 30 ❌ | 29 ❌ | 28 ❌ | 27 ❌ |
+| ------------  | ---------: | --: | --: | --: | --: | --: | --: |
+| .NET 5.0      | ✔️        | ✔️ | ❌|❌ |❌ |❌  |❌ |
+| .NET Core 3.1 | ✔️        | ✔️ | ✔️|✔️ |✔️ |❌  |❌ |
+| .NET Core 2.1 | ✔️        | ✔️ | ✔️|✔️ |✔️ |✔️  |✔️ |
 
 Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads dafür bleiben weiterhin veröffentlicht:
 
@@ -47,106 +69,43 @@ Die folgenden Versionen von .NET werden nicht mehr unterstützt. Die Downloads d
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
+## <a name="dependencies"></a>Abhängigkeiten
+
+[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
+
+## <a name="install-on-older-distributions"></a>Installieren unter älteren Distributionen
+
+Bei älteren Versionen von Fedora ist .NET Core nicht in den Standardpaketrepositorys enthalten. Sie können .NET mit [Snap](linux-snap.md), über das [_dotnet-install.sh_-Skript](linux-scripted-manual.md#scripted-install) oder über das Microsoft-Repository für die Installation von .NET installieren:
+
+01. Fügen Sie zunächst den Microsoft-Signaturschlüssel zur Liste der vertrauenswürdigen Schlüssel hinzu.
+
+    ```bash
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+    ```
+
+02. Fügen Sie als Nächstes das Microsoft-Paketrepository hinzu. Die Quelle des Repositorys basiert auf Ihrer Fedora-Version.
+
+    | Fedora-Version | Paketrepository |
+    | -------------- | ------- |
+    | 31             | `https://packages.microsoft.com/config/fedora/31/prod.repo` |
+    | 30             | `https://packages.microsoft.com/config/fedora/30/prod.repo` |
+    | 29             | `https://packages.microsoft.com/config/fedora/29/prod.repo` |
+    | 28             | `https://packages.microsoft.com/config/fedora/28/prod.repo` |
+    | 27             | `https://packages.microsoft.com/config/fedora/27/prod.repo` |
+
+    ```bash
+    sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
+    ```
+
+[!INCLUDE [linux-dnf-install-31](./includes/linux-install-31-dnf.md)]
+
 ## <a name="how-to-install-other-versions"></a>Installieren anderer Versionen
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="fedora-33-"></a>Fedora 33 ✔️
-
-> [!TIP]
-> .NET 3.1 ist in den Standardpaketrepositorys für Fedora 33 verfügbar. Verwenden Sie zur Installation von .NET Core 3.1 den `dnf install`-Befehl mit entsprechendem Paket, z. B. `aspnetcore-runtime-3.1` oder `dotnet-sdk-3.1`. NET Core 5.0 ist in den Standardpaketrepositorys noch nicht verfügbar.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/33/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
-
-## <a name="fedora-32-"></a>Fedora 32 ✔️
-
-> [!TIP]
-> NET Core 3.1 in den Standardpaketrepositorys für Fedora 32 verfügbar. Verwenden Sie zur Installation von .NET Core 3.1 den `dnf install`-Befehl mit entsprechendem Paket, z. B. `aspnetcore-runtime-3.1` oder `dotnet-sdk-3.1`. NET Core 5.0 ist in den Standardpaketrepositorys noch nicht verfügbar.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/32/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
-
-## <a name="fedora-31-"></a>Fedora 31 ❌
-
-[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/31/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
-
-## <a name="fedora-30-"></a>Fedora 30 ❌
-
-[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/30/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
-
-## <a name="fedora-29-"></a>Fedora 29 ❌
-
-[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/29/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-30](includes/linux-install-30-dnf.md)]
-
-## <a name="fedora-28-"></a>Fedora 28 ❌
-
-[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/28/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-20](includes/linux-install-20-dnf.md)]
-
-## <a name="fedora-27-"></a>Fedora 27 ❌
-
-[!INCLUDE [linux-not-supported](includes/linux-not-supported-fedora.md)]
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/27/prod.repo
-```
-
-[!INCLUDE [linux-dnf-install-20](includes/linux-install-20-dnf.md)]
-
 ## <a name="troubleshoot-the-package-manager"></a>Problembehandlung des Paket-Managers
 
-Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET Core auftreten können.
+Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwendung des Paket-Managers zur Installation von .NET oder .NET Core auftreten können.
 
 ### <a name="unable-to-find-package"></a>Paket konnte nicht gefunden werden
 
@@ -156,22 +115,7 @@ Dieser Abschnitt enthält Informationen zu häufigen Fehlern, die bei der Verwen
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
-## <a name="dependencies"></a>Abhängigkeiten
-
-[!INCLUDE [linux-rpm-install-dependencies](includes/linux-rpm-install-dependencies.md)]
-
-## <a name="scripted-install"></a>Per Skript gesteuerte Installation
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Manuelle Installation
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Aktivieren der Vervollständigung mit der TAB-TASTE für die .NET-CLI](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Erstellen einer Konsolenanwendung mit dem .NET SDK in Visual Studio Code](../tutorials/with-visual-studio-code.md)

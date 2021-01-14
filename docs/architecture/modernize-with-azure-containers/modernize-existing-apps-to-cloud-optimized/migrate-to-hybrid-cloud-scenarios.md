@@ -1,13 +1,13 @@
 ---
 title: Migrieren zu Hybridcloudszenarios
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Migrieren zu Hybridcloudszenarios
-ms.date: 04/30/2018
-ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: d5bf7f08381f3718061742b37c73604d8e57f1e2
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937364"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025224"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
@@ -15,7 +15,7 @@ Manche Organisationen und Unternehmen können einige Ihrer Anwendungen aufgrund 
 
 Microsoft bietet die beste Hybrid Cloud-Lösung, bei der Sie Ihre vorhandenen Ressourcen lokal und in der öffentlichen Cloud optimieren können, während Sie die Konsistenz in einer Azure Hybrid Cloud gewährleisten. Dank Azure Stack (lokal) und Azure (Public Cloud) können Sie vorhandene Fähigkeiten maximieren und einen flexiblen, einheitlichen Ansatz zum Entwickeln von Apps nutzen, die in der Cloud oder lokal ausgeführt werden können.
 
-Hinsichtlich Sicherheit können Sie die Verwaltung und Sicherheit in der gesamten Hybrid Cloud zentralisieren. Sie können die Kontrolle über alle Ressourcen erhalten, von Ihrem Rechenzentrum bis in die Cloud, indem Sie einmaliges Anmelden für lokale und Cloud-Apps bereitstellen. Dies erreichen Sie, indem Sie Active Directory in eine Hybrid Cloud erweitern und Identitätsverwaltung verwenden.
+Hinsichtlich Sicherheit können Sie die Verwaltung und Sicherheit in der gesamten Hybrid Cloud zentralisieren. Sie können die Kontrolle über alle Ressourcen erhalten, von Ihrem Rechenzentrum bis in die Cloud, indem Sie einmaliges Anmelden für lokale und Cloud-Apps bereitstellen. Dies erreichen Sie, indem Sie Active Directory zu einer Hybrid Cloud erweitern und die Identitätsverwaltung verwenden.
 
 Schließlich können Sie Daten nahtlos verteilen und analysieren, dieselben Abfragesprachen für Cloud- und lokale Ressourcen verwenden sowie Analysen und Deep Learning in Azure anwenden, um Ihre Daten unabhängig von deren Quelle anzureichern.
 
