@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509805"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189088"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>Projektstruktur für Blazor apps
 
@@ -223,7 +223,7 @@ In der Blazor WebAssembly App ist die Hostseite eine einfache statische HTML-Dat
 
 ```
 
-Die Stamm Komponente zum Rendering wird in der-Methode der App konfiguriert `Program.Main` und bietet die Flexibilität, verschiedene Dienste durch Abhängigkeitsinjektion zu registrieren. Weitere Informationen finden Sie unter Hinzufügen von Diensten [ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) zu einer APP in
+Die Stamm Komponente zum Rendering wird in der-Methode der APP angegeben `Program.Main` und bietet die Flexibilität, Dienste über die Abhängigkeitsinjektion zu registrieren. Weitere Informationen finden Sie unter [ASP.net Core- Blazor Abhängigkeitsinjektion](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly).
 
 ```csharp
 public class Program

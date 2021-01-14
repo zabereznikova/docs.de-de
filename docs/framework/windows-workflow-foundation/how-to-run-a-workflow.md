@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: b92385fa169e03254abdf940f2964c1966cbc2ce
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279986"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190090"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
 
@@ -19,9 +19,6 @@ Dieses Thema ist eine Fortsetzung des Tutorials „Windows Workflow Foundation: 
 
 > [!NOTE]
 > Ein Thema im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Themen ab. Um dieses Thema verwenden zu können, müssen Sie zuerst [How to: Create an Activity](how-to-create-an-activity.md) und [How to: Create a Workflow](how-to-create-a-workflow.md)durcharbeiten und abschließen.
-
-> [!NOTE]
-> Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
 ### <a name="to-create-the-workflow-host-project"></a>So erstellen Sie das Workflowhostprojekt  
   

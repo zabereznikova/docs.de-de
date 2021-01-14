@@ -2,12 +2,12 @@
 title: Beispiel für die Migration zu .NET Core 3.1
 description: Es wird gezeigt, wie Sie eine Beispielanwendung, die .NET Framework, auf .net Core 3,1 migrieren.
 ms.date: 05/12/2020
-ms.openlocfilehash: 6a0311e9aaeb25ac39f3394d3a62e17046fe03d8
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: dc0d3d825847bd72a38469615cfc5b2d793f1977
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "97866532"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188776"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>Beispiel für die Migration zu .NET Core 3.1
 
@@ -65,7 +65,7 @@ Ein interessanter Aspekt dieses Tools besteht darin, dass nur die Unterschiede v
 
 In den meisten Fällen sollten Sie Ihr vorhandenes Projekt auf das neue .net Core-Format aktualisieren. Sie können jedoch auch ein neues Projekt erstellen, während Sie das alte Projekt beibehalten. Der Hauptnachteil beim Aktualisieren des alten Projekts ist, dass Sie die Designer Unterstützung verlieren, was für Sie wichtig ist. Wenn Sie den Designer weiterhin verwenden möchten, müssen Sie ein neues .net Core-Projekt parallel zum alten erstellen und Assets freigeben. Wenn Sie Benutzeroberflächen Elemente im Designer ändern müssen, können Sie dazu zum alten Projekt wechseln. Und da Assets verknüpft sind, werden Sie ebenfalls im .net Core-Projekt aktualisiert.
 
-Das [SDK-Stil Projekt](../../core/project-sdk/msbuild-props.md) für .net Core ist viel einfacher als das Projekt Format .NET Framework. Und abgesehen von den zuvor erwähnten `PackageReference` Einträgen müssen Sie nicht viel mehr tun. Das neue Projekt Format schließt [standardmäßig](../../core/tools/csproj.md#default-compilation-includes-in-net-core-projects)bestimmte Dateierweiterungen ein, z `.cs` . b.-und- `.xaml` Dateien, ohne dass diese explizit in die Projektdatei eingeschlossen werden müssen.
+Das [SDK-Stil Projekt](../../core/project-sdk/msbuild-props.md) für .net Core ist viel einfacher als das Projekt Format .NET Framework. Abgesehen von den zuvor erwähnten `PackageReference` Einträgen müssen Sie noch nicht viel mehr tun. Das neue Projekt Format [schließt standardmäßig Dateien mit bestimmten Erweiterungen](../../core/project-sdk/overview.md#default-includes-and-excludes)ein, z `.cs` . b.-Dateien und- `.xaml` Dateien, ohne dass diese explizit in die Projektdatei eingeschlossen werden müssen.
 
 #### <a name="assemblyinfo-considerations"></a>Überlegungen zu Assembly.info
 
@@ -208,7 +208,7 @@ Wenn Sie das Projekt erneut kompilieren und ausführen, werden die Produkt Image
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
-zu
+auf
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;

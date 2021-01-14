@@ -6,31 +6,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 557b3512e534198d47c0c6f6b0a7c5f92bb71739
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 701788ac5575ad671afd56db3af4bd247efac8b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419550"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188464"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Erstellen und Ausführen eines Workflows mit langer Laufzeit
 
 Eines der zentralen Features von Windows Workflow Foundation (WF) ist die Möglichkeit der Laufzeit, Workflows im Leerlauf dauerhaft in einer Datenbank zu speichern und zu entladen. Die Schritte in Gewusst [wie: Ausführen eines Workflows](how-to-run-a-workflow.md) haben die Grundlagen des Workflow-Hosting mithilfe einer Konsolenanwendung veranschaulicht. Anhand von Beispielen wurde gezeigt, wie Workflows und Workflowlebenszyklus-Handler gestartet und Lesezeichen wiederaufgenommen werden. Um die Workflowpersistenz effektiv zu veranschaulichen, ist ein komplexerer Workflowhost erforderlich, der das Starten und Fortsetzen mehrerer Workflowinstanzen unterstützt. In diesem Schritt des Lernprogramms wird veranschaulicht, wie eine Windows-Formularhostanwendung erstellt wird, die das Starten und Fortsetzen mehrerer Workflowinstanzen und die Workflowpersistenz unterstützt sowie die Grundlage für erweiterte Funktionen wie Nachverfolgung und Versionsverwaltung bildet, die in den folgenden Schritten des Lernprogramms veranschaulicht werden.
 
 > [!NOTE]
-> In diesem Schritt des Tutorials und in den nachfolgenden Schritten werden alle drei Workflow Typen aus "Gewusst [wie: Erstellen eines Workflows](how-to-create-a-workflow.md)" verwendet. Wenn Sie nicht alle drei Typen abgeschlossen haben, können Sie eine abgeschlossene Version der Schritte aus [Windows Workflow Foundation (WF45)-Tutorial "Getting Started](https://go.microsoft.com/fwlink/?LinkID=248976)" herunterladen.
-
-> [!NOTE]
-> Informationen zum Herunterladen einer abgeschlossenen Version oder zum Anzeigen einer exemplarischen Vorgehensweise für das Tutorial finden Sie unter [Windows Workflow Foundation (WF45)-Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)für die ersten Schritte.
+> In diesem Schritt des Tutorials und in den nachfolgenden Schritten werden alle drei Workflow Typen aus "Gewusst [wie: Erstellen eines Workflows](how-to-create-a-workflow.md)" verwendet.
 
 ## <a name="to-create-the-persistence-database"></a>So erstellen Sie die Persistenzdatenbank
 
-1. Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung zum lokalen Server her, z. b. **.\sqlexpress**. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** auf dem lokalen Server, und wählen Sie **neue Datenbank**aus. Benennen Sie die neue Datenbank **WF45GettingStartedTutorial**, akzeptieren Sie alle anderen Werte, und wählen Sie **OK**aus.
+1. Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung zum lokalen Server her, z. b. **.\sqlexpress**. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** auf dem lokalen Server, und wählen Sie **neue Datenbank** aus. Benennen Sie die neue Datenbank **WF45GettingStartedTutorial**, akzeptieren Sie alle anderen Werte, und wählen Sie **OK** aus.
 
     > [!NOTE]
     > Stellen Sie sicher, dass Sie die **Create Database** -Berechtigung auf dem lokalen Server haben, bevor Sie die Datenbank erstellen.
 
-2. Wählen Sie im Menü **Datei** die Option **Öffnen**und dann **Datei** aus. Navigieren Sie zum folgenden Ordner: *C:\WINDOWS\Microsoft.Net\Framework\v4.0.30319\sql\en*
+2. Wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei** aus. Navigieren Sie zum folgenden Ordner: *C:\WINDOWS\Microsoft.Net\Framework\v4.0.30319\sql\en*
 
     Wählen Sie die folgenden beiden Dateien aus, und klicken Sie auf **Öffnen**.
 
@@ -55,12 +52,9 @@ Eines der zentralen Features von Windows Workflow Foundation (WF) ist die Mögli
 
 ## <a name="to-create-the-workflow-host-form"></a>So erstellen Sie das Hostformular für den Workflow
 
-> [!NOTE]
-> Durch die Schritte in dieser Prozedur wird veranschaulicht, wie das Formular manuell hinzugefügt und konfiguriert wird. Auf Wunsch können Sie die Projektmappendateien für das Lernprogramm herunterladen und dem Projekt das abgeschlossene Formular hinzufügen. Informationen zum Herunterladen der Lernprogramm Dateien finden Sie unter [Windows Workflow Foundation (WF45): Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)zu den ersten Schritten. Nachdem die Dateien heruntergeladen wurden, klicken Sie mit der rechten Maustaste auf " **numguess Workflow** Message", und wählen Sie **Verweis hinzufügen**. Fügen Sie einen Verweis auf **System. Windows. Forms** und **System. Drawing**hinzu. Diese Verweise werden automatisch hinzugefügt, wenn Sie ein neues Formular aus dem Menü **Hinzufügen**, **Neues Element** hinzufügen. Sie müssen jedoch beim Importieren eines Formulars manuell hinzugefügt werden. Nachdem die Verweise hinzugefügt wurden, klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflowhost** " und wählen **Hinzufügen**, **Vorhandenes Element**. Navigieren Sie zum `Form` Ordner in den Projektdateien, wählen Sie **WorkflowHostForm.cs** (oder **workflowhostform. vb**) aus, und klicken Sie auf **Hinzufügen**. Wenn Sie sich dafür entscheiden, das Formular zu importieren, können Sie mit dem nächsten Abschnitt fortfahren, [um die Eigenschaften und Hilfsmethoden des Formulars hinzuzufügen](#to-add-the-properties-and-helper-methods-of-the-form).
-
 1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflowhost** " und wählen Sie **Hinzufügen**, **Neues Element**.
 
-2. Wählen Sie in der Liste **installierte** Vorlagen die Option **Windows Form**aus, geben Sie `WorkflowHostForm` in das Feld **Name** ein, und klicken Sie auf **Hinzufügen**.
+2. Wählen Sie in der Liste **installierte** Vorlagen die Option **Windows Form** aus, geben Sie `WorkflowHostForm` in das Feld **Name** ein, und klicken Sie auf **Hinzufügen**.
 
 3. Konfigurieren Sie die folgenden Eigenschaften für das Formular.
 
@@ -68,11 +62,11 @@ Eines der zentralen Features von Windows Workflow Foundation (WF) ist die Mögli
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
     |MaximizeBox|False|
-    |Größe|400, 420|
+    |Size|400, 420|
 
 4. Fügen Sie dem Formular die folgenden Steuerelemente in der angegebenen Reihenfolge hinzu, und konfigurieren Sie die Eigenschaften wie angegeben.
 
-    |Control|Eigenschaft: Wert|
+    |Steuerelement|Eigenschaft: Wert|
     |-------------|---------------------|
     |**Schaltfläche**|Name: neues Spiel<br /><br /> Speicherort: 13, 13<br /><br /> Größe: 75, 23<br /><br /> Text: neues Spiel|
     |**Bezeichnung**|Standort: 94, 18<br /><br /> Text: erraten einer Zahl zwischen 1 und|
@@ -85,7 +79,7 @@ Eines der zentralen Features von Windows Workflow Foundation (WF) ist die Mögli
     > [!NOTE]
     > Wenn Sie die folgenden Steuerelemente hinzufügen, platzieren Sie Sie in der GroupBox.
 
-    |Control|Eigenschaft: Wert|
+    |Steuerelement|Eigenschaft: Wert|
     |-------------|---------------------|
     |**Bezeichnung**|Speicherort: 7, 20<br /><br /> Text: Workflow Instanz-ID|
     |**ComboBox**|Name: InstanceId<br /><br /> DropDownStyle: Dropdown List<br /><br /> Speicherort: 121, 17<br /><br /> Größe: 227, 21|
@@ -105,7 +99,7 @@ Eines der zentralen Features von Windows Workflow Foundation (WF) ist die Mögli
 
 Durch die Schritte in diesem Abschnitt werden der Formularklasse Eigenschaften und Hilfsmethoden hinzugefügt, die die Benutzeroberfläche des Formulars so konfigurieren, dass sie das Ausführen und Fortsetzen der Workflows zum Schätzen von Zahlen unterstützen.
 
-1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf **workflowhostform** , und wählen Sie **Code anzeigen**aus.
+1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf **workflowhostform** , und wählen Sie **Code anzeigen** aus.
 
 2. Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.
 
@@ -652,7 +646,7 @@ Durch die Schritte in diesem Abschnitt werden der Formularklasse Eigenschaften u
 
 Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition bereitstellen. In diesem Lernprogramm werden drei Workflowtypen verwendet, von denen in den folgenden Schritten mehrere Versionen vorgestellt werden. `WorkflowIdentity` ermöglicht einer Hostanwendung, einer persistenten Workflowinstanz Identifikationsinformationen zuzuordnen. Die Schritte in diesem Abschnitt veranschaulichen das Erstellen einer Hilfsprogrammklasse, die das Zuordnen der Workflowidentität von einer persistenten Workflowinstanz zur entsprechenden Workflowdefinition unterstützt. Weitere Informationen zu `WorkflowIdentity` und zur Versionsverwaltung finden [Sie unter Verwenden von workflowidentity und Versions](using-workflowidentity-and-versioning.md)Verwaltung.
 
-1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflowhost** **", und**wählen Sie **Hinzufügen**, Geben `WorkflowVersionMap` Sie im Feld **Name** ein, und klicken Sie auf **Hinzufügen**.
+1. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflowhost** **", und** wählen Sie **Hinzufügen**, Geben `WorkflowVersionMap` Sie im Feld **Name** ein, und klicken Sie auf **Hinzufügen**.
 
 2. Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.
 
@@ -1276,7 +1270,7 @@ Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition berei
     }
     ```
 
-4. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflow** Message", und wählen Sie **Eigenschaften**aus. Geben Sie auf der Registerkarte **Anwendung** die **Windows-Anwendung** für den **Ausgabetyp**an. Dieser Schritt ist optional, wird er jedoch nicht ausgeführt, wird zusätzlich zum Formular das Konsolenfenster angezeigt.
+4. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf " **numguess Workflow** Message", und wählen Sie **Eigenschaften** aus. Geben Sie auf der Registerkarte **Anwendung** die **Windows-Anwendung** für den **Ausgabetyp** an. Dieser Schritt ist optional, wird er jedoch nicht ausgeführt, wird zusätzlich zum Formular das Konsolenfenster angezeigt.
 
 5. Drücken Sie STRG+UMSCHALT+B, um die Anwendung zu erstellen.
 
