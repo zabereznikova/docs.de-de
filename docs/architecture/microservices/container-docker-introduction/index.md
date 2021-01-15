@@ -1,13 +1,13 @@
 ---
 title: Einführung in Container und Docker
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Einführung in Container und Docker
-ms.date: 08/31/2018
-ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 5e114ae893176954cae6eb4425459527b248c0ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740064"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189329"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
 
@@ -23,7 +23,7 @@ Jeder Container kann wie in Abbildung 2-1 gezeigt eine gesamte Webanwendung oder
 
 **Abbildung 2-1**. Mehrere Container, die auf einem Containerhost ausgeführt werden
 
-Ein weiterer Vorteil der Containerisierung ist die Skalierbarkeit. Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen. Aus der Sicht einer Anwendung ähnelt das Instanziieren eines Images (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App. Für die Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern sollte jedoch jeder Container (Instanz des Images) auf einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen ausgeführt werden.
+Ein weiterer Vorteil der Containerisierung ist die Skalierbarkeit. Ein schnelles Skalieren ist möglich, indem Sie neue Container für kurzfristige Aufgaben erstellen. Aus der Anwendungsperspektive ähnelt das Instanziieren eines Images (Erstellen eines Containers) dem Instanziieren eines Prozesses wie ein Dienst oder eine Web-App. Für die Zuverlässigkeit beim Ausführen von mehreren Instanzen desselben Images auf mehreren Hostservern sollte jedoch jeder Container (Instanz des Images) auf einem anderen Hostserver oder virtuellen Computer in verschiedenen Fehlerdomänen ausgeführt werden.
 
 Kurz gesagt bieten Container die Vorteile der Isolation, Portabilität, Agilität, Skalierbarkeit und Steuerung des gesamten Workflows des Lebenszyklus der Anwendung. Der wichtigste Vorteil ist die Isolation der Umgebung zwischen Entwicklung und Betrieb (Dev and Ops).
 

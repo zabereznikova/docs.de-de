@@ -1,23 +1,23 @@
 ---
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
-ms.date: 11/10/2020
-ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/13/2021
+ms.openlocfilehash: a9017d2e9acbcbb861a35f0187632dc90c52e171
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507266"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188373"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v3.1** – für ASP.NET Core 3.1 aktualisiert
+**EDITION v5.0:** auf ASP.NET Core 5.0 aktualisiert
 
 Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/MicroservicesEbookChangelog).
 
-Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern.
+Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze für die Verwendung von .NET und Docker-Containern.
 
 Um den Einstieg einfacher zu gestalten, konzentriert sich der Leitfaden auf eine auf Containern und Microservice basierende Referenzanwendung, die Sie erforschen können. Die Referenzanwendung ist im [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)-GitHub-Repository verfügbar.
 
@@ -41,15 +41,15 @@ Darüber hinaus hat sich die [Microservices](https://martinfowler.com/articles/m
 
 ## <a name="about-this-guide"></a>Über diesen Leitfaden
 
-Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern. Um den Einstieg in Container und Microservices einfacher zu gestalten, konzentriert sich der Leitfaden auf eine auf Containern und Microservice basierende Verweisanwendung, die Sie erforschen können. Die Beispielanwendung ist im [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)-GitHub-Repository verfügbar.
+Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze für die Verwendung von .NET und Docker-Containern. Um den Einstieg in Container und Microservices einfacher zu gestalten, konzentriert sich der Leitfaden auf eine auf Containern und Microservice basierende Verweisanwendung, die Sie erforschen können. Die Beispielanwendung ist im [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)-GitHub-Repository verfügbar.
 
-Dieser Leitfaden enthält in erster Linie grundlegende Entwicklungs- und Architekturrichtlinien auf Ebene der Entwicklungsumgebung mit einem Schwerpunkt auf zwei Technologien: Docker und .NET Core. Dieser Leitfaden ist dafür gedacht, dass Sie ihn lesen, wenn Sie über das Design Ihrer Anwendung nachdenken, ohne sich auf die Infrastruktur (Cloud oder lokal) Ihrer Produktionsumgebung zu konzentrieren. Die Entscheidung über Ihre Infrastruktur treffen Sie später, wenn Sie Ihre produktionsbereiten Anwendungen erstellen. Deshalb ignoriert dieser Leitfaden die Infrastruktur und konzentriert sich auf die Entwicklungsumgebung.
+Dieser Leitfaden enthält in erster Linie grundlegende Entwicklungs- und Architekturrichtlinien auf Ebene der Entwicklungsumgebung mit einem Schwerpunkt auf zwei Technologien: Docker und .NET. Dieser Leitfaden ist dafür gedacht, dass Sie ihn lesen, wenn Sie über das Design Ihrer Anwendung nachdenken, ohne sich auf die Infrastruktur (Cloud oder lokal) Ihrer Produktionsumgebung zu konzentrieren. Die Entscheidung über Ihre Infrastruktur treffen Sie später, wenn Sie Ihre produktionsbereiten Anwendungen erstellen. Deshalb ignoriert dieser Leitfaden die Infrastruktur und konzentriert sich auf die Entwicklungsumgebung.
 
 Der nächste Schritt nach dem Durcharbeiten dieses Leitfadens ist der, mehr über produktionsbereite Microservices in Microsoft Azure zu erfahren.
 
 ## <a name="version"></a>Version
 
-Dieser Leitfaden wurde für Version **.NET Core 3.1** überarbeitet und enthält viele weitere Updates zu artverwandten Technologien (also Azure und Drittanbietertechnologien), die zeitgleich mit dem.NET Core 3.1-Release veröffentlicht wurden. Aus diesem Grund wurde auch die Versionsnummer des Leitfadens auf Version **3.1** aktualisiert.
+Dieser Leitfaden wurde für **.NET 5** überarbeitet und enthält viele weitere Updates zu ähnlichen Technologien (also Azure und Drittanbietertechnologien), die zeitgleich mit dem.NET 5-Release veröffentlicht wurden. Aus diesem Grund wurde auch die Versionsnummer des Leitfadens auf **5.0** aktualisiert.
 
 ## <a name="what-this-guide-does-not-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
@@ -62,7 +62,7 @@ Dieser Leitfaden konzentriert sich nicht auf den Lebenszyklus der Anwendung, Dev
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
-Dieser Leitfaden wurde für Entwickler und Lösungsarchitekten geschrieben, die mit der Entwicklung von auf Docker basierenden Anwendungen und mit der auf Microservices basierenden Architektur noch nicht vertraut sind. Dieser Leitfaden ist für Sie geeignet, wenn Sie mehr über das Entwickeln, Entwerfen und Implementieren von Machbarkeitsstudienanwendungen mit den Entwicklungstechnologien von Microsoft (mit Schwerpunkt auf .NET Core) und mit Docker-Containern erfahren möchten.
+Dieser Leitfaden wurde für Entwickler und Lösungsarchitekten geschrieben, die mit der Entwicklung von auf Docker basierenden Anwendungen und mit der auf Microservices basierenden Architektur noch nicht vertraut sind. Dieser Leitfaden ist für Sie geeignet, wenn Sie mehr über das Entwickeln, Entwerfen und Implementieren von Machbarkeitsstudienanwendungen mit den Entwicklungstechnologien von Microsoft (mit Schwerpunkt auf .NET) und mit Docker-Containern erfahren möchten.
 
 Außerdem kann dieser Leitfaden hilfreich für Sie sein, wenn Sie ein technischer Entscheidungsträger sind, z.B. ein Unternehmensarchitekt, der einen Überblick über die Architektur und Technologie erhalten möchte, bevor über einen Ansatz für neue und moderne verteilte Anwendungen entschieden wird.
 
@@ -74,7 +74,7 @@ Der zweite Teil dieses Leitfadens beginnt mit dem Abschnitt [Development Process
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Verknüpfte auf Microservice und Containern basierende Verweisanwendung: eShopOnContainers
 
-Bei der eShopOnContainers-Anwendung handelt es sich um eine Open-Source-Referenz-App für .NET Core und Microservices, die für die Bereitstellung mithilfe von Docker-Containern entwickelt wurde. Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der E-Store-Benutzeroberfläche (eine Web-MVC-App, eine Web-SPA und eine native mobile App). Sie enthält ebenfalls den Back-End-Microservice und Container für alle erforderlichen serverseitigen Vorgänge.
+Bei der eShopOnContainers-Anwendung handelt es sich um eine Open-Source-Referenz-App für .NET und Microservices, die für die Bereitstellung mithilfe von Docker-Containern entwickelt wurde. Die Anwendung besteht aus mehreren Subsystemen, einschließlich mehrerer Front-Ends der E-Store-Benutzeroberfläche (eine Web-MVC-App, eine Web-SPA und eine native mobile App). Sie enthält ebenfalls den Back-End-Microservice und Container für alle erforderlichen serverseitigen Vorgänge.
 
 Der Zweck der Anwendung besteht in der Präsentation von Architekturmustern. **SIE STELLT KEINE PRODUKTIONSBEREITE VORLAGE DAR**, die sich als Ausgangspunkt für reale Anwendungen eignet. Tatsächlich befindet sich die Anwendung in einem dauerhaften Betastadium, da sie ebenfalls zum Testen neuer, potenziell interessanter Technologien direkt bei ihrem Erscheinen verwendet wird.
 
