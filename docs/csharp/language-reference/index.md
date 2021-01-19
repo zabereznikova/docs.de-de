@@ -1,7 +1,8 @@
 ---
 description: C#-Referenz
 title: C#-Referenz
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127190"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235234"
 ---
 # <a name="c-reference"></a>C#-Referenz
 
@@ -61,7 +62,10 @@ Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprac
   
  [Vorschläge für die C# 8.0-Spezifikation](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8.0 wird mit .NET Core 3.0 zur Verfügung gestellt. Zu den Features gehören Nullable-Verweistypen, rekursiver Musterabgleich, Standardschnittstellenmethoden, asynchrone Streams, Bereiche und Indizes, musterbasierte using-Anweisung und using-Deklarationen, NULL-Sammelzuweisungen sowie schreibgeschützte Instanzmember.
-  
+
+ [Vorschläge für die C# 9.0-Spezifikation](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ C# 9.0 wird mit .NET 5.0 zur Verfügung gestellt. Zu den Features zählen Datensätze, Anweisungen auf oberster Ebene, Erweiterungen zum Musterabgleich, Init-Only-Setter, zieltypisierte neue Ausdrücke, Modulinitialisierer, Erweiterungen für partielle Methoden, statische anonyme Funktionen, zieltypisierte bedingte Ausdrücke, kovariante Rückgabetypen, Erweiterungen für GetEnumerator in foreach-Schleifen, Parameter zum Verwerfen von Lambdaausdrücken, Attribute in lokalen Funktionen, Integer mit nativer Größe, Funktionszeiger, die Unterdrückung der Ausgabe des localsinit-Flags und nicht eingeschränkte Typparameteranmerkungen.
+
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
  [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/get-started/csharp)  
