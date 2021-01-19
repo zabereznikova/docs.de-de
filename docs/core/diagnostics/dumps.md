@@ -2,12 +2,12 @@
 title: Speicherabbilder – .NET
 description: Eine Einführung in Speicherabbilder in .NET
 ms.date: 10/12/2020
-ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: f68d9bd804350366625df014df4d9ca0641d5d4d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97764941"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188555"
 ---
 # <a name="dumps"></a>Dumps
 
@@ -19,7 +19,6 @@ Je nachdem, auf welcher Plattform Sie Ihre App ausführen, können Speicherabbil
 
 > [!NOTE]
 > Das Erfassen eines Speicherabbilds in einem Container erfordert die Funktion PTRACE, die über `--cap-add=SYS_PTRACE` oder `--privileged` hinzugefügt werden kann.
-
 > [!NOTE]
 > Speicherabbilder können vertrauliche Informationen aufweisen, da sie die vollständigen Arbeitsspeicherdaten des laufenden Prozesses enthalten. Bedenken Sie beim Arbeiten mit Speicherabbildern alle Sicherheitseinschränkungen und -richtlinien.
 
@@ -53,11 +52,10 @@ Zum Erfassen eines Speicherabbilds zu einem benutzerdefinierten Zeitpunkt könne
 
 ## <a name="analyze-dumps"></a>Analysieren von Speicherabbildern
 
-Sie können Speicherabbilder mithilfe des CLI-Tools [`dotnet-dump`](dotnet-dump.md) oder mithilfe von [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files) analysieren.
+Sie können Speicherabbilder mithilfe des CLI-Tools [`dotnet-dump`](dotnet-dump.md) oder mithilfe von [Visual Studio](/visualstudio/debugger/using-dump-files) analysieren.
 
 > [!NOTE]
 > Mithilfe von Visual Studio, Version 16.8 und höher können Sie [Linux-Speicherabbilder öffnen](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/), die unter .NET Core 3.1.7 oder höher erstellt wurden.  
-
 > [!NOTE]
 > Wenn natives Debuggen erforderlich ist, kann die [SOS-Debuggererweiterung](sos-debugging-extension.md) mit [LLDB unter Linux und macOS](debug-linux-dumps.md#analyze-dumps-on-linux)verwendet werden. SOS wird auch für [WinDbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) unter Windows unterstützt, aber die Verwendung von Visual Studio wird empfohlen.
 

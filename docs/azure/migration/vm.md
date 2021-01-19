@@ -3,12 +3,12 @@ title: Migrieren einer ASP.NET-Web-App zu einer Azure-VM
 description: Hier erfahren Sie, wie Sie eine ASP.NET-Webanwendung aus einer lokalen Umgebung zu einem virtuellen Azure-Computer migrieren.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf591ce0bd02537414527c8f3ba22bd41cf51d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171558"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189212"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Migrieren einer ASP.NET-Webanwendung zu einem virtuellen Azure-Computer
 
@@ -26,7 +26,7 @@ Die folgenden Tutorials zeigen Schritt für Schritt, wie Sie einen virtuellen Co
   - [Erstellen eines neuen virtuellen Computers für ASP.NET-Anwendungen](https://go.microsoft.com/fwlink/?linkid=863237)
   - [Migrieren von VMware-VMs zu Azure (ohne Agent)](/azure/migrate/tutorial-migrate-vmware)
   - [Migrieren von virtuellen Hyper-V-Computern zu Azure](/azure/migrate/tutorial-migrate-hyper-v)
-- [Veröffentlichen Ihrer App mithilfe von Visual Studio](https://go.microsoft.com/fwlink/?linkid=863240)
+- [Veröffentlichen Ihrer App mithilfe von Visual Studio](/azure/virtual-machines/windows/publish-web-app-from-visual-studio)
 - [Erstellen eines sicheren virtuellen Netzwerks für Ihre virtuellen Computer](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [Erstellen einer CI/CD-Pipeline für Ihre Anwendung](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [Verwenden einer VM-Skalierungsgruppe für hohe Verfügbarkeit und Skalierbarkeit](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)

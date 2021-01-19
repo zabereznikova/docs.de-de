@@ -3,12 +3,12 @@ title: 'Übersicht: Generieren von selbstsignierten Zertifikaten'
 description: Eine Übersicht über das Microsoft dotnet dev-certs-Tool, das Funktionen für .NET Core- und ASP.NET Core-Projekte sowie weitere Optionen für die Verwendung selbstsignierter Zertifikate umfasst.
 author: angee
 ms.date: 11/19/2020
-ms.openlocfilehash: b5bf4b719495c2d6ec248e8592367ac452be91c1
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d1675abb7d584b72d981f9db739e02269abe662c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96032176"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189140"
 ---
 # <a name="generate-self-signed-certificates-with-the-net-cli"></a>Generieren von selbstsignierten Zertifikaten mit der .NET-CLI
 
@@ -210,7 +210,7 @@ dotnet dev-certs https --clean
 
 ### <a name="with-powershell"></a>Mit PowerShell
 
-Sie können PowerShell verwenden, um selbstsignierte Zertifikate zu generieren. Dabei hilft Ihnen der [PKI-Client](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps&preserver-view=true).
+Sie können PowerShell verwenden, um selbstsignierte Zertifikate zu generieren. Dabei hilft Ihnen der [PKI-Client](/powershell/module/pkiclient/new-selfsignedcertificate?preserve-view=true&view=win10-ps).
 
 ```powershell
 $cert = New-SelfSignedCertificate -DnsName @("contoso.com", "www.contoso.com") -CertStoreLocation "cert:\LocalMachine\My"

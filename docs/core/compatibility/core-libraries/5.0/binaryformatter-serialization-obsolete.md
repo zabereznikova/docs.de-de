@@ -2,12 +2,12 @@
 title: 'Breaking Change: BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten'
 description: Hier erfahren Sie mehr über den Breaking Change an den .NET-Kernbibliotheken in .NET 5.0, durch den die Serialisierungs- und Deserialisierungsmethoden für BinaryFormatter, Formatter und IFormatter als veraltet gelten.
 ms.date: 11/01/2020
-ms.openlocfilehash: 5807a7d4e6beab26b9848b803922396dd893075b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1dca30d33f2aa0a6fe8f05fe728557092f836b2d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95759469"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189843"
 ---
 # <a name="binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps"></a>BinaryFormatter-Serialisierungsmethoden sind veraltet und in ASP.NET-Apps verboten
 
@@ -75,7 +75,7 @@ Diese Methoden wurden im Rahmen unsere Bemühungen als veraltet markiert, die Nu
   </PropertyGroup>
   ```
 
-Weitere Informationen zu empfohlenen Aktionen finden Sie unter [Resolving BinaryFormatter obsoletion and disablement errors](https://aka.ms/binaryformatter) (Auflösen von Fehlern aufgrund der Veraltung und Deaktivierung von BinaryFormatter).
+Weitere Informationen zu empfohlenen Aktionen finden Sie unter [Resolving BinaryFormatter obsoletion and disablement errors](../../../../standard/serialization/binaryformatter-security-guide.md) (Auflösen von Fehlern aufgrund der Veraltung und Deaktivierung von BinaryFormatter).
 
 ## <a name="affected-apis"></a>Betroffene APIs
 

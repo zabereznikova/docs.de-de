@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dddd10846c5c57c88d23fef6d6851e288bd2d4b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238651"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191091"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 
@@ -316,19 +316,19 @@ In der folgenden Tabelle sind die häufigsten Rückgabecodes für das verteilbar
 
 Fügen Sie den folgenden Inhalt hinzu:
 
-- [Fehlercodes für BITS (Background Intelligent Transfer Service)](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [Fehlercodes für BITS (Background Intelligent Transfer Service)](/windows/win32/bits/bits-return-values)
 
-- [Fehlercodes für URL-Moniker](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [Fehlercodes für URL-Moniker](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
-- [Fehlercodes für WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [Fehlercodes für WinHttp](/windows/win32/winhttp/error-messages)
 
 #### <a name="other-error-codes"></a>Sonstige Fehlercodes
 
 Fügen Sie den folgenden Inhalt hinzu:
 
-- [Fehlercodes für Windows Installer](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Fehlercodes für Windows Installer](/previous-versions/aa368542(v=vs.85))
 
-- [Ergebniscodes für Windows Update Agent](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Ergebniscodes für Windows Update Agent](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="uninstalling-the-net-framework"></a>Deinstallieren von .NET Framework
 

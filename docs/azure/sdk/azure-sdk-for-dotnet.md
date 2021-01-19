@@ -5,12 +5,12 @@ ms.date: 11/30/2020
 ms.custom: devx-track-dotnet
 ms.author: daberry
 author: daberry
-ms.openlocfilehash: 3ec1ee9e8da3a6e03581ce2a29a655ec0d68fe54
-ms.sourcegitcommit: 3d6d6595a03915f617349781f455f838a44b0f44
+ms.openlocfilehash: b547e105b13d380ffae049ab55e76aa25abe8cc3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "97700902"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189199"
 ---
 # <a name="azure-sdk-for-net-overview"></a>Übersicht über das Azure SDK für .NET
 
@@ -32,4 +32,4 @@ Wenn Sie ein Azure SDK-Paket in einer Ihrer .NET-Anwendungen verwenden möchten,
 
 3. **Schreiben von Code mithilfe des SDK in Ihrer Anwendung:** Beim Arbeiten mit Azure-Diensten erstellt der Code zunächst ein Clientobjekt zum Arbeiten mit dem Dienst und ruft dann Methoden für dieses Clientobjekt zum Interagieren mit dem Dienst auf.  Es werden sowohl synchrone als auch asynchrone Methoden bereitgestellt.  Beispiele für die Verwendung der einzelnen SDK-Pakete finden Sie in der Azure-Dokumentation.
 
-4. **Konfigurieren der Protokollierung für das SDK (optional):** Wenn Sie Probleme zwischen Ihrer Anwendung und Azure diagnostizieren müssen, können Sie die [Protokollierung im Azure SDK für .NET aktivieren](./logging.md).
+4. **Konfigurieren der Protokollierung für das SDK (optional):** Wenn Sie Probleme zwischen Ihrer Anwendung und Azure diagnostizieren müssen, können Sie die [Protokollierung im Azure SDK für .NET aktivieren](../logging.md).

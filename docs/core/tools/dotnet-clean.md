@@ -2,12 +2,12 @@
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463701"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189602"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -46,7 +46,7 @@ MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  Das [Framework](../../standard/frameworks.md), das bei der Erstellung angegeben wurde. Das Framework muss in der [Projektdatei](csproj.md) definiert werden. Wenn Sie das Framework bei der Erstellung angegeben haben, müssen Sie das Framework bei der Bereinigung angeben.
+  Das [Framework](../../standard/frameworks.md), das bei der Erstellung angegeben wurde. Das Framework muss in der [Projektdatei](../project-sdk/overview.md) definiert werden. Wenn Sie das Framework bei der Erstellung angegeben haben, müssen Sie das Framework bei der Bereinigung angeben.
 
 * **`-h|--help`**
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 04/29/2020
-ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634382"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189153"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -146,7 +146,7 @@ Wobei `Microsoft.NET.Test.Sdk` der Testhost und `xunit` das Testframework ist. U
 
 - **`-l|--logger <LOGGER>`**
 
-  Gibt eine Protokollierung für die Testergebnisse an. Im Gegensatz zu MSBuild akzeptiert der Befehl „dotnet test“ keine Abkürzungen: verwenden Sie `-l "console;verbosity=detailed"` anstelle von `-l "console;v=d"`.
+  Gibt eine Protokollierung für die Testergebnisse an. Im Gegensatz zu MSBuild akzeptiert der Befehl „dotnet test“ keine Abkürzungen: verwenden Sie `-l "console;verbosity=detailed"` anstelle von `-l "console;v=d"`. Geben Sie den Parameter mehrmals an, um mehrere Protokollierungen zu ermöglichen.
 
 - **`--no-build`**
 

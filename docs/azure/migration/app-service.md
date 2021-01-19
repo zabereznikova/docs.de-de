@@ -3,12 +3,12 @@ title: Migrieren von .NET Web-Apps oder -Diensten zu Azure App Service
 description: Hier erfahren Sie, wie Sie eine .NET-Web-App oder einen .NET-Dienst aus einer lokalen Umgebung zu Azure App Service migrieren.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539085"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189251"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migrieren von .NET Web-Apps oder -Diensten zu Azure App Service
 
@@ -24,7 +24,7 @@ Sind Sie bereit? [Veröffentlichen Sie Ihre ASP.NET- und SQL-Anwendung in Azure 
 
 * Erstellen Sie mithilfe von [Azure Virtual Networks](/azure/app-service/web-sites-integrate-with-vnet) ein VPN für die Verbindung von App Service mit lokalen Ressourcen.
 * Machen Sie lokale Dienste mithilfe von [Azure Relay](/azure/service-bus-relay/relay-what-is-it) ohne Firewall Änderungen sicher in der Cloud verfügbar.
-* Migrieren Sie Abhängigkeiten wie eine [SQL-Datenbank](https://go.microsoft.com/fwlink/?linkid=863217) zu Azure.
+* Migrieren Sie Abhängigkeiten wie eine [SQL-Datenbank](./sql.md) zu Azure.
 * Verwenden Sie Platform-as-a-Service-Angebote in der Cloud, um Abhängigkeiten zu reduzieren. Erwägen Sie beispielsweise die Verwendung von [SendGrid](/azure/sendgrid-dotnet-how-to-send-email) anstatt eine Verbindung mit einem lokalen Mailserver herzustellen.
 
 ### <a name="port-bindings"></a>Portbindungen

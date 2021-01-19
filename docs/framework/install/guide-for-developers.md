@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543710"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190779"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installieren von.NET Framework für Entwickler
 
@@ -134,7 +134,7 @@ Die Web- und Offlineinstaller sind für x86-basierte und x64-basierte Computer (
 
 - .NET Framework 4.0 wird durch .NET Framework 4.5 und höhere Versionen ersetzt. Wenn Sie diese Versionen auf einem System mit .NET Framework 4 installieren, werden die Assemblys ersetzt.
 
-- Durch Deinstallieren von .NET Framework 4.5 oder höheren Versionen werden auch bereits vorhandene .NET Framework 4-Dateien entfernt. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. Weitere Informationen finden Sie in [Installieren von .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
+- Durch Deinstallieren von .NET Framework 4.5 oder höheren Versionen werden auch bereits vorhandene .NET Framework 4-Dateien entfernt. Wenn Sie zu .NET Framework 4 zurückkehren möchten, müssen Sie diese Version und alle Updates für sie neu installieren. Weitere Informationen finden Sie in [Installieren von .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
 - Sie müssen über Administratoranmeldeinformationen verfügen, um .NET Framework 4.5 oder höhere Versionen zu installieren.
 

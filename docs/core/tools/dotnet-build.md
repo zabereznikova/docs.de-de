@@ -2,12 +2,12 @@
 title: Befehl „dotnet build“
 description: Der dotnet build-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 ms.date: 02/14/2020
-ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc8c6ed30dbf8ff0602fb19e5001f618a8380f16
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634480"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189954"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -83,7 +83,7 @@ Die zu erstellende Projekt- oder Projektmappendatei. Wenn Sie keine Projekt- ode
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](csproj.md) definiert werden.
+  Kompiliert für ein bestimmtes [Framework](../../standard/frameworks.md). Das Framework muss in der [Projektdatei](../project-sdk/overview.md) definiert werden.
 
 - **`--force`**
 
