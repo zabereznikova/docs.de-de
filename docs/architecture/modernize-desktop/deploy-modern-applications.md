@@ -2,12 +2,12 @@
 title: Bereitstellen von modernen Desktop-Apps
 description: Alles, was Sie über die Bereitstellung moderner Desktop Anwendungen wissen müssen.
 ms.date: 05/12/2020
-ms.openlocfilehash: 4a4d93caf1c2f8f58d48ee3199bbe6983fa939f4
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866484"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615853"
 ---
 # <a name="deploying-modern-desktop-applications"></a>Bereitstellen von modernen Desktop-Apps
 
@@ -115,7 +115,7 @@ Eine der besten Aspekte von msix besteht darin, dass Sie für den gesamten Anwen
 
 #### <a name="windows-application-packaging-project"></a>Paketerstellungsprojekt für Windows-Anwendungen
 
-Sie können das Projekt Projekt für **Windows-Anwendungspakete**   in Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie das Paket in der Microsoft Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
+Du kannst das **Paketerstellungsprojekt für Windows-Anwendungen** in Visual Studio verwenden, um ein Paket für deine Desktop-App zu generieren. Anschließend können Sie das Paket in der Microsoft Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
 
 #### <a name="msix-packaging-tool"></a>MSIX-Verpackungstool
 
@@ -226,4 +226,4 @@ Msix erstellt eine Benutzeroberfläche für die Installation, die automatisch ei
 Nachdem Sie das neue msix-Paket generiert und auf den Bereitstellungs Server verschoben haben, müssen Sie nur die *appinstaller* -Datei bearbeiten, um diese Änderungen widerzuspiegeln, hauptsächlich die Version und den Pfad zur neuen msix-Datei. Wenn der Benutzer die Anwendung das nächste Mal öffnet, wird die Änderung von dem System erkannt, und die Dateien für die neue Version werden im Hintergrund heruntergeladen. Wenn dies abgeschlossen ist, wird die Installation auf dem neuen Anwendungsstart transparent für den Benutzer ausgeführt.
 
 >[!div class="step-by-step"]
->[Zurück](example-migration-core.md)
+>[Zurück](example-migration.md)

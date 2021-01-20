@@ -1,13 +1,13 @@
 ---
 title: Migration von Windows 10
 description: Ausführliche Einblicke in Windows 10-Features, wie z. b. Verpacken und XAML-Inseln.
-ms.date: 09/16/2019
-ms.openlocfilehash: cd17088b086a32fd3bb37e617d3a1047acedde0e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 139a8f2354803dafeb0178b4dbfb57a95c4ddb34
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866478"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615944"
 ---
 # <a name="windows-10-migration"></a>Migration von Windows 10
 
@@ -19,9 +19,9 @@ Seit der Veröffentlichung von Windows 10 hat Microsoft viele Innovationen einge
 - Verwenden Sie einen Stift, um Text zu zeichnen oder zu schreiben, der automatisch erkannt und digitalisiert wird.
 - Ausführen von lokal angepassten Ki-Modellen, die mit winml in der Cloud erstellt wurden.
 
-Alle diese Features sind für Windows-Entwickler über Windows-Runtime (WinRT)-Bibliotheken aktiviert. Sie können diese Features in Ihren vorhandenen Desktop-Apps nutzen, da die Bibliotheken sowohl für den .NET Framework als auch für .net Core verfügbar gemacht werden. Sie können Ihre Benutzeroberfläche sogar mit der Verwendung von XAML-Inseln modernisieren und die visuellen Elemente und das Verhalten Ihrer apps entsprechend den Zeitpunkten verbessern.
+Alle diese Features sind für Windows-Entwickler über Windows-Runtime (WinRT)-Bibliotheken aktiviert. Sie können diese Features in Ihren vorhandenen Desktop-Apps nutzen, da die Bibliotheken sowohl für den .NET Framework als auch für .net verfügbar gemacht werden. Sie können Ihre Benutzeroberfläche sogar mit der Verwendung von XAML-Inseln modernisieren und die visuellen Elemente und das Verhalten Ihrer apps entsprechend den Zeitpunkten verbessern.
 
-Beachten Sie, dass Sie .NET Framework Technologie nicht verwerfen müssen, um diesem Modernisierungspfad zu folgen. Sie können auf sichere Weise darauf verzichten und alle Vorteile von Windows 10 nutzen, ohne den Druck auf .net Core zu migrieren. So erhalten Sie sowohl die Leistung als auch die Flexibilität, ihren Modernisierungspfad auszuwählen.
+Beachten Sie, dass Sie .NET Framework Technologie nicht verwerfen müssen, um diesem Modernisierungspfad zu folgen. Sie können auf sichere Weise auf dem neuesten Stand bleiben und alle Vorteile von Windows 10 nutzen, ohne den Druck auf .net zu migrieren. So erhalten Sie sowohl die Leistung als auch die Flexibilität, ihren Modernisierungspfad auszuwählen.
 
 ## <a name="winrt-apis"></a>WinRT-APIs
 
@@ -40,19 +40,19 @@ UWP-apps verfügen über ein Bereitstellungs System, in dem das Betriebssystem d
 
 Einige WinRT-APIs erfordern, dass diese Paket Identität erwartungsgemäß funktioniert. Klassische Desktop-Apps wie native C++ oder .net-apps verwenden jedoch unterschiedliche Bereitstellungs Systeme, die keine Paket Identität erfordern. Wenn Sie diese WinRT-APIs in der Desktop Anwendung verwenden möchten, müssen Sie Ihnen eine Paket Identität bereitstellen.
 
-Eine Möglichkeit zum Fortfahren besteht darin, ein zusätzliches Paket Projekt zu erstellen. Innerhalb des Paket Projekts zeigen Sie auf das ursprüngliche Quell Code Projekt und geben die Identitätsinformationen an, die Sie bereitstellen möchten.Wenn Sie das Paket installieren und die installierte app ausführen, erhält es automatisch eine Identifizierung, die dem Code ermöglicht, alle WinRT-APIs aufzurufen, für die eine Identität erforderlich ist.
+Eine Möglichkeit zum Fortfahren besteht darin, ein zusätzliches Paket Projekt zu erstellen. Innerhalb des Paket Projekts zeigen Sie auf das ursprüngliche Quell Code Projekt und geben die Identitätsinformationen an, die Sie bereitstellen möchten. Wenn Sie das Paket installieren und die installierte app ausführen, erhält es automatisch eine Identifizierung, die dem Code ermöglicht, alle WinRT-APIs aufzurufen, für die eine Identität erforderlich ist.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
-    <Identity Name="YOUR-APP-GUID "
-              Publisher="CN=YOUR COMPANY"
-              Version="1.x.x.x" />
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10">
+    <Identity Name="YOUR-APP-GUID "
+              Publisher="CN=YOUR COMPANY"
+              Version="1.x.x.x" />
 </Package>
 ```
 
-Sie können überprüfen, welche APIs eine gepackte Anwendungs Identität benötigen, indem Sie überprüfen, ob der Typ, der die API enthält, mit dem [dualapipartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) -Attribut markiert ist.Wenn dies der Fall ist, können Sie bei einer nicht gepackten, herkömmlichen Desktop-App den Befehl von abrufen. Andernfalls müssen Sie Ihre klassische Desktop-App mithilfe eines Paket Projekts in eine UWP konvertieren.
+Sie können überprüfen, welche APIs eine gepackte Anwendungs Identität benötigen, indem Sie überprüfen, ob der Typ, der die API enthält, mit dem [dualapipartition](xref:Windows.Foundation.Metadata.DualApiPartitionAttribute) -Attribut markiert ist. Wenn dies der Fall ist, können Sie bei einer nicht gepackten, herkömmlichen Desktop-App den Befehl von abrufen. Andernfalls müssen Sie Ihre klassische Desktop-App mithilfe eines Paket Projekts in eine UWP konvertieren.
 
 <https://docs.microsoft.com/windows/desktop/apiindex/uwp-apis-callable-from-a-classic-desktop-app>
 
@@ -78,7 +78,7 @@ Pakete, die Sie für Ihre Desktop Anwendung erstellen, sind Desktop-only-Anwendu
 
 ##### <a name="installation"></a>Installation
 
-App-Pakete werden unter *% Program Files% \\ Windowsapps \\ package_name* installiert, wobei die ausführbare Datei mit dem Titel verwendet wird  `app_name.exe` . Jeder Paket Ordner enthält ein Manifest (mit dem Namen `AppxManifest.xml` ), das einen speziellen XML-Namespace für App-Pakete enthält. Diese Manifest-Datei ist ein  `<EntryPoint>`   Element, das auf die voll vertrauenswürdige App verweist. Wenn diese Anwendung gestartet wird, wird Sie nicht in einem App-Container ausgeführt, sondern stattdessen als Benutzer ausgeführt.
+App-Pakete werden unter *% Program Files% \\ Windowsapps \\ package_name* installiert, wobei die ausführbare Datei mit dem Titel verwendet wird `app_name.exe` . Jeder Paket Ordner enthält ein Manifest (mit dem Namen `AppxManifest.xml` ), das einen speziellen XML-Namespace für App-Pakete enthält. In der Manifestdatei ist ein `<EntryPoint>`-Element enthalten, das auf die vertrauenswürdige App verweist. Wenn diese Anwendung gestartet wird, wird Sie nicht in einem App-Container ausgeführt, sondern stattdessen als Benutzer ausgeführt.
 
 Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und vom Betriebssystem gesperrt. Windows verhindert, dass Apps gestartet werden, wenn diese Dateien manipuliert werden.
 
@@ -90,13 +90,13 @@ Wenn Sie versuchen, auf den *AppData* -Ordner des Benutzers zuzugreifen, erstell
 
 ##### <a name="registry"></a>Registrierung
 
-App-Pakete enthalten die Datei "Registry. dat", die als logische Entsprechung von  `HKLM\Software`   in der tatsächlichen Registrierung fungiert. Zur Laufzeit führt diese virtuelle Registrierung den Inhalt dieser Struktur in der nativen Systemstruktur zusammen, um beide Strukturen in einer Ansicht darzustellen.
+App-Pakete enthalten die Datei "Registry. dat", die als logische Entsprechung von `HKLM\Software` in der tatsächlichen Registrierung fungiert. Zur Laufzeit führt diese virtuelle Registrierung den Inhalt dieser Struktur in der nativen Systemstruktur zusammen, um beide Strukturen in einer Ansicht darzustellen.
 
 Alle Schreibvorgänge werden während des Paket Upgrades aufbewahrt und nur bei der Deinstallation der Anwendung gelöscht.
 
 ##### <a name="uninstallation"></a>Deinstallation
 
-Wenn der Benutzer ein Paket deinstalliert, werden alle Dateien und Ordner entfernt, die sich unter befinden, sowie alle  `C:\Program Files\WindowsApps\package_name` umgeleiteten Schreibvorgänge in APPDATA oder die Registrierung, die während des Prozesses aufgezeichnet wurden.
+Wenn der Benutzer ein Paket deinstalliert, werden alle Dateien und Ordner entfernt, die sich unter befinden, sowie alle `C:\Program Files\WindowsApps\package_name` umgeleiteten Schreibvorgänge in APPDATA oder die Registrierung, die während des Prozesses aufgezeichnet wurden.
 
 Ausführliche Informationen dazu, wie eine Paket Anwendung die Installation, den Dateizugriff, die Registrierung und die Deinstallation übernimmt, finden Sie unter <https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-behind-the-scenes> .
 
@@ -118,7 +118,7 @@ In unserem Beispiel wird die <xref:Windows.UI.Notifications.Notification?display
 
 ![Benachrichtigungs Klasse in der Microsoft-Dokumentation](./media/windows-migration/notification-class-documentation.png)
 
-Um auf die WinRT-API zuzugreifen, fügen Sie einen Verweis auf das `Microsoft.Windows.SDK.Contracts`   nuget-Paket hinzu, und dieses Paket führt die Magie hinter den Kulissen aus (Weitere Informationen finden Sie unter <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ).
+Um auf die WinRT-API zuzugreifen, fügen Sie einen Verweis auf das `Microsoft.Windows.SDK.Contracts` nuget-Paket hinzu, und dieses Paket führt die Magie hinter den Kulissen aus (Weitere Informationen finden Sie unter <https://blogs.windows.com/windowsdeveloper/2019/04/30/calling-windows-10-apis-from-a-desktop-application-just-got-easier/> ).
 
 Sie sind nun bereit, Code hinzuzufügen.
 
@@ -193,11 +193,11 @@ An Build 2018 hat Microsoft eine Möglichkeit für Entwickler angekündigt, die 
 
 ### <a name="how-it-works"></a>Funktionsweise
 
-Das Windows 10 1903-Update führt mehrere XAML-Hosting-APIs ein. Zwei davon sind `WindowsXamlManager`   und  `DesktopWindowXamlSource` .
+Das Windows 10 1903-Update führt mehrere XAML-Hosting-APIs ein. Zwei davon sind `WindowsXamlManager` und `DesktopWindowXamlSource` .
 
-Die-  `WindowsXamlManager`   Klasse behandelt das UWP-XAML-Framework. Die zugehörige- `InitializeForCurrentThread` Methode lädt das UWP-XAML-Framework in den aktuellen Thread der Win32-app.
+Die- `WindowsXamlManager` Klasse behandelt das UWP-XAML-Framework. Die zugehörige- `InitializeForCurrentThread` Methode lädt das UWP-XAML-Framework in den aktuellen Thread der Win32-app.
 
-Der  `DesktopWindowXamlSource`   ist die Instanz des XAML-Insel Inhalts. Sie verfügt über die `Content` -Eigenschaft, die Sie für die Instanziierung und die-Einstellung verantwortlich sind. Das `DesktopWindowXamlSource`   rendert und ruft seine Eingabe von einem HWND ab. Der IT-Bereich muss wissen, welcher andere HWND das Verzeichnis der XAML-Insel anfügt, und Sie sind verantwortlich für die Größenanpassung und Positionierung des HWND des übergeordneten Elements.
+Der `DesktopWindowXamlSource` ist die Instanz des XAML-Insel Inhalts. Sie verfügt über die `Content` -Eigenschaft, die Sie für die Instanziierung und die-Einstellung verantwortlich sind. Das `DesktopWindowXamlSource` rendert und ruft seine Eingabe von einem HWND ab. Der IT-Bereich muss wissen, welcher andere HWND das Verzeichnis der XAML-Insel anfügt, und Sie sind verantwortlich für die Größenanpassung und Positionierung des HWND des übergeordneten Elements.
 
 WPF-oder Windows Forms Entwickler arbeiten in der Regel nicht mit HWND innerhalb Ihres Codes. Daher kann es schwierig sein, die HWND-Zeiger zu verstehen und zu verarbeiten und die zugrunde liegenden Verdrahtungs Möglichkeiten für die Kommunikation zwischen Win32-und UWP-Welten
 
@@ -223,12 +223,12 @@ Fügen `Microsoft.Toolkit.Wpf.UI.Controls` Sie das Paket zu Ihrem Projekt hinzu,
         ...
         xmlns:uwpControls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls">
 <Grid>
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="\*"/>
-    </Grid.RowDefinitions>
-    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
-    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="\*"/>
+    </Grid.RowDefinitions>
+    <uwpControls:InkToolbar TargetInkCanvas="{x:Reference Name=inkCanvas}"/>
+    <uwpControls:InkCanvas Grid.Row="1" x:Name="inkCanvas" />
 </Grid>
 ```
 
@@ -263,7 +263,7 @@ Eine exemplarische Vorgehensweise zur Verwendung von XAML-Inseln finden Sie unte
 
 Ein benutzerdefiniertes XAML-Steuerelement ist ein Steuerelement (oder ein Benutzer Steuerelement), das von Ihnen oder von Dritten (einschließlich WinUI 2. x-Steuerelementen) erstellt wurde Um ein benutzerdefiniertes UWP-Steuerelement in einer Windows Forms-oder WPF-App zu hosten, benötigen Sie Folgendes:
 
-- Um das `WindowsXamlHost` UWP-Steuerelement in Ihrer .net Core 3. x-APP zu verwenden.
+- Um das `WindowsXamlHost` UWP-Steuerelement in Ihrer .net-APP zu verwenden.
 - Zum Erstellen eines UWP-App-Projekts, das ein- `XamlApplication` Objekt definiert.
 
 Ihr WPF-oder Windows Forms Projekt muss Zugriff auf eine Instanz der-Klasse haben, die `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` vom Windows Community Toolkit bereitgestellt wird. Dieses Objekt fungiert als Stamm-Metadatenanbieter zum Laden von Metadaten für benutzerdefinierte UWP-XAML-Typen in Assemblys im aktuellen Verzeichnis der Anwendung. Die empfohlene Vorgehensweise besteht darin, ein leeres App-Projekt (Universal Windows) zur gleichen Projekt Mappe wie das WPF-oder Windows Forms Projekt hinzuzufügen und die Standard-App-Klasse in diesem Projekt zu überarbeiten.
@@ -284,9 +284,9 @@ Der folgende Artikel veranschaulicht das Hosten eines UWP-XAML-Steuer Elements a
 
 ### <a name="do-you-need-xaml-islands"></a>Benötigen Sie XAML-Inseln
 
-XAML-Inseln sind für vorhandene Win32-apps gedacht, die Ihre Benutzer Leistung verbessern möchten, indem Sie neue UWP-Steuerelemente und Verhaltensweisen nutzen, ohne dass die APP vollständig umgeschrieben wird. Sie können bereits [Windows 10-APIs nutzen](/windows/uwp/porting/desktop-to-uwp-enhance), aber bis hin zu XAML-Inseln, nur nicht-UI-bezogene APIs.
+XAML-Inseln sind für vorhandene Win32-apps gedacht, die Ihre Benutzer Leistung verbessern möchten, indem Sie neue UWP-Steuerelemente und Verhaltensweisen nutzen, ohne dass die APP vollständig umgeschrieben wird. Sie können bereits [Windows 10-APIs nutzen](/windows/uwp/porting/desktop-to-uwp-enhance), aber bis hin zu XAML-Inseln, nur nicht-UI-bezogene APIs.
 
-Wenn Sie eine neue Windows-App entwickeln, ist die [UWP-App](/windows/uwp/get-started/universal-application-platform-guide)   wahrscheinlich der richtige Ansatz.
+Wenn Sie eine neue Windows-App entwickeln, ist die [UWP-App](/windows/uwp/get-started/universal-application-platform-guide) wahrscheinlich der richtige Ansatz.
 
 ### <a name="the-road-ahead-xaml-islands-winui-30"></a>The Road Ahead XAML Islands: WinUI 3,0
 
@@ -300,7 +300,7 @@ WinUI 3 befindet sich in der aktiven Entwicklung und erweitert den Bereich von W
 
 ![Struktur von WinUI 3,0](./media/windows-migration/winui3.png)
 
-Das XAML-Framework wird nun auf GitHub entwickelt und als [nuget](/nuget/what-is-nuget)-Pakete out-of-Band ausgeliefert   .
+Das XAML-Framework wird nun auf GitHub entwickelt und als [nuget](/nuget/what-is-nuget) -Pakete out-of-Band ausgeliefert.
 
 Die bestehenden UWP-XAML-APIs, die als Teil des Betriebssystems bereitgestellt werden, erhalten keine neuen Featureupdates mehr. Sie erhalten weiterhin Sicherheitsupdates und wichtige Korrekturen gemäß dem Windows 10-Support-Lebenszyklus.
 
@@ -315,7 +315,7 @@ WinUI 3 behandelt dieses wichtige Feedback zum Hinzufügen von **WinUI in Deskto
 In dieser Aggregation ermöglicht WinUI 3 Entwicklern das einfache kombinieren und Abgleichen der richtigen Kombination aus:
 
 * App-Modell: UWP, Win32
-* Plattform: .net Core oder Native
+* Plattform: .net oder System eigen
 * Sprache: .net (C \# , Visual Basic), Standard C++
 * Verpacken: msix, AppX für den Microsoft Store, nicht gepackt
 * Interop: Verwenden Sie WinUI 3 zum Erweitern vorhandener WPF-, WinForms-und MFC-Apps mithilfe von WinUI-XAML-Inseln.
@@ -324,4 +324,4 @@ Wenn Sie weitere Informationen wünschen, gibt Microsoft diese Roadmap in frei <
 
 >[!div class="step-by-step"]
 >[Zurück](migrate-modern-applications.md)
->[Weiter](example-migration-core.md)
+>[Weiter](example-migration.md)

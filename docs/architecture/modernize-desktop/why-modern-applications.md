@@ -1,13 +1,13 @@
 ---
 title: Gründe für moderne Desktop-Apps
 description: Erfahren Sie mehr über Desktop Technologien wie Windows Forms, WPF und UWP in der modernen Welt.
-ms.date: 09/16/2019
-ms.openlocfilehash: f8b70ba9e0ee97a6e0938e3219ecd0d2324248ae
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 8489e41c973bb472a23bca38e9374c36e4cdd366
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866486"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615892"
 ---
 # <a name="why-modern-desktop-applications"></a>Gründe für moderne Desktop-Apps
 
@@ -25,19 +25,19 @@ Sie finden sich möglicherweise auf demselben Boot, in dem Sie ausgereifte Windo
 
 Vor der Erhöhung des Internets waren Desktop Anwendungen der wichtigste Ansatz zum Entwickeln von Softwaresystemen. Entwickler können eine beliebige Programmiersprache auswählen, z. b. COBOL, Fortran, VB6 oder C++. Aber wo Sie kleine Tools oder komplexe verteilte Architekturen entwickelt haben, waren Sie alle Desktop Anwendungen.
 
-Dann begann Internet Technologien, die Entwicklungswelt zu erschüttern und mehr und mehr Technikern mit Vorteilen wie einfacher Bereitstellung und vereinfachten Verteilungs Prozessen zu gewinnen. Die Tatsache, dass bei der Bereitstellung einer Webanwendung für die Produktion alle Benutzer automatische Updates erhalten haben, hat die Flexibilität der Software enorm beeinträchtigt.
+Dann begann Internet Technologien, die Entwicklungswelt zu erschüttern und mehr Techniker mit Vorteilen wie einfacher Bereitstellung und vereinfachten Verteilungs Prozessen zu gewinnen. Die Tatsache, dass bei der Bereitstellung einer Webanwendung für die Produktion alle Benutzer automatische Updates erhalten haben, hat die Flexibilität der Software enorm beeinträchtigt.
 
-Die Internet Infrastruktur, die zugrunde liegenden Protokolle und Standards wie http und HTML wurden jedoch nicht zum entwickeln komplexer Anwendungen entworfen. Tatsächlich war der größte Entwicklungsaufwand darauf zurückzuführen, dass Webanwendungen die gleichen Funktionen wie Desktop Anwendungen bieten, wie z. b. die schnelle Dateneingabe und die Zustands Verwaltung.
+Die Internet Infrastruktur, die zugrunde liegenden Protokolle und Standards wie http und HTML wurden jedoch nicht zum entwickeln komplexer Anwendungen entworfen. Tatsächlich war der größte Entwicklungsaufwand darauf zurückzuführen:, um Webanwendungen dieselben Funktionen wie Desktop Anwendungen bereitzustellen, wie z. b. schnelle Dateneingabe und Zustands Verwaltung.
 
 Obwohl Web-und Mobile Anwendungen mit einer unglaublichen Geschwindigkeit gewachsen sind, halten Desktop Anwendungen für bestimmte Aufgaben immer noch die Zahl an einer Stelle im Hinblick auf Effizienz und Leistung. Darin wird erläutert, warum Millionen von Entwicklern vorhanden sind, die Ihre Projekte mit WPF und WinForms entwickeln, und die Menge dieser Anwendungen wächst ständig.
 
 Hier sind einige Gründe für die Auswahl von Desktop Anwendungen in ihrer Entwicklung:
 
-- Desktop-apps haben eine bessere Interaktion mit dem PC des Benutzers.
+- Desktop-Apps bieten eine bessere Interaktion mit dem PC des Benutzers.
 - Die Leistung von Desktop Anwendungen für komplexe Berechnungen ist weitaus höher als die Leistung von Webanwendungen.
 - Das Ausführen von benutzerdefinierter Logik auf Clientseite ist zwar möglich, aber mit einer Webanwendung weitaus schwieriger.
 - Die Verwendung von Multithreading ist in einer Desktop Anwendung einfacher und effizienter.
-- Die Lernkurve für das Entwerfen von Benutzeroberflächen (User Interfaces, UIs) ist nicht steil. Und für WinForms ist es mit Drag & Drop der Windows Forms-Designer vollständig intuitiv.
+- Die Lernkurve für das Entwerfen von Benutzeroberflächen (User Interfaces, UIs) ist nicht steil. Und für WinForms ist es intuitiv mit der Drag & Drop-Darstellung des Windows Forms-Designers.
 - Es ist einfach, mit dem Programmieren und Testen Ihrer Algorithmen zu beginnen, ohne eine Serverinfrastruktur einrichten oder Konnektivitätsprobleme, Firewalls und Browserkompatibilität berücksichtigen zu müssen.
 - Das Debuggen ist im Vergleich zum webdebugging leistungsstark.
 - Der Zugriff auf Hardware Geräte wie Kamera, Bluetooth oder Smartcardleser ist einfach.
@@ -102,7 +102,7 @@ UWP enthält ein XAML-basiertes Präsentations Framework, wie z. b. WPF. es gibt
 
 ## <a name="a-tale-of-two-platforms"></a>Eine Geschichte von zwei Plattformen
 
-In den letzten 20 Jahren entwickelte sich während der Entwicklung von UI-Desktop Technologien und der Verwendung des Pfads von Windows Forms zu UWP die Hardware auch von hohen Gewichtungs-PC-Einheiten mit kleinen CRT-Monitoren bis hin zu High-dpi-Monitoren und Lightweight-Tablets und Smartphones mit unterschiedlichen Dateneingabe Techniken wie Fingereingabe und Handschrift. Diese Änderungen führten dazu, zwei verschiedene Konzepte zu erstellen: eine Desktop Anwendung und eine moderne Anwendung. Eine moderne Anwendung ist eine Anwendung, die verschiedene Geräte Formfaktoren, verschiedene Eingabe-und Ausgabemethoden und moderne Desktop Features bei der Ausführung auf einem Sandkasten Ausführungs Modell berücksichtigt. Die (herkömmliche) Desktop Anwendung hingegen ist eine Anwendung, die eine solide Benutzeroberfläche mit hoher Dichte von Steuerelementen benötigt, die am besten mit einer Maus und einer Tastatur betrieben werden.
+In den letzten 20 Jahren entwickelte sich während der Entwicklung von UI-Desktop Technologien und der Verwendung des Pfads von Windows Forms zu UWP die Hardware auch von hohen Gewichtungs-PC-Einheiten mit kleinen CRT-Monitoren bis hin zu High-dpi-Monitoren und Lightweight-Tablets und Smartphones mit unterschiedlichen Dateneingabe Techniken wie Fingereingabe und Handschrift. Diese Änderungen führten dazu, zwei verschiedene Konzepte zu erstellen: eine Desktop Anwendung und eine moderne Anwendung. Eine moderne Anwendung ist eine Anwendung, die verschiedene Geräte Formfaktoren, verschiedene Eingabe-und Ausgabemethoden und moderne Desktop Features bei der Ausführung auf einem Sandkasten Ausführungs Modell berücksichtigt. Die (herkömmliche) Desktop Anwendung hingegen ist eine Anwendung, die eine solide Benutzeroberfläche mit einer hohen Dichte von Steuerelementen benötigt, die am besten mit einer Maus und einer Tastatur betrieben werden.
 
 In der folgenden Tabelle werden die Unterschiede zwischen den beiden Konzepten beschrieben:
 
@@ -143,14 +143,14 @@ Dieser Pfad zeigt Ihnen, wie Sie moderne Desktop Features in Ihrer vorhandenen D
 
 Moderne Entwicklungszyklen haben hervorgehoben, um Agilität zu bieten, wie neue Versionen von Anwendungen für jeden einzelnen Benutzer bereitgestellt werden. Da Windows Forms-und WPF-Anwendungen auf einer bestimmten Version des .NET Framework basieren, die auf dem Computer vorhanden sein muss, können die neuen Features der .NET Framework-Version nicht genutzt werden, ohne dass die IT-Mitarbeiter eine Nebenwirkung für andere apps haben, die auf demselben Computer ausgeführt werden. Sie hat die Innovationsgeschwindigkeit für Entwickler beschränkt, die Sie zwingen, auf veralteten Versionen des .NET Framework zu bleiben.
 
-Seit dem Start von .net Core 3,0 können Sie einen neuen Ansatz für die parallele Bereitstellung mehrerer Versionen von .net Core nutzen und angeben, auf welche Version von .net Core jede Anwendung abzielen soll. Auf diese Weise können Sie die neuesten Features in einer Anwendung verwenden, während Sie sicher sind, dass Sie keine anderen Anwendungen unterbrechen werden.
+Seit dem Start von .net Core 3,0 können Sie einen neuen Ansatz für die parallele Bereitstellung mehrerer Versionen von .net nutzen und angeben, auf welche Version von .net jede Anwendung abzielen soll. Auf diese Weise können Sie die neuesten Features in einer Anwendung verwenden, während Sie sicher sind, dass Sie keine anderen Anwendungen unterbrechen werden.
 
 ### <a name="installation"></a>Installation
 
-Desktop Anwendungen verlassen sich immer auf einen Installationsvorgang, bevor der Benutzer Sie verwenden kann. Diese Tatsache hat eine Reihe von Technologien, von MSI und ClickOnce bis hin zu benutzerdefinierten Installationsprogrammen oder sogar von der XCOPY-Bereitstellung, ins Spiel gebracht. Jede dieser Methoden behandelt empfindliche Probleme, da Anwendungen eine Möglichkeit benötigen, auf freigegebene Ressourcen auf dem Computer zuzugreifen. Manchmal muss die Installation auf die Registrierung zugreifen, um neue Schlüsselwerte einzufügen oder zu aktualisieren, manchmal zum Aktualisieren von freigegebenen DLLs, auf die von der Hauptanwendung verwiesen wird. Dies führt zu einer kontinuierlichen kopfansicht für Benutzer, die diesen Eindruck erzeugt, dass der Computer nach der Installation einer Anwendung nie identisch ist, auch wenn Sie ihn später deinstallieren.
+Desktop Anwendungen verlassen sich immer auf einen Installationsvorgang, bevor der Benutzer Sie verwenden kann. Diese Tatsache hat eine Reihe von Technologien, von MSI und ClickOnce bis hin zu benutzerdefinierten Installationsprogrammen oder sogar von der XCOPY-Bereitstellung, ins Spiel gebracht. Jede dieser Methoden behandelt empfindliche Probleme, da Anwendungen eine Möglichkeit benötigen, auf freigegebene Ressourcen auf dem Computer zuzugreifen. Manchmal muss die Installation auf die Registrierung zugreifen, um neue Schlüsselwerte einzufügen oder zu aktualisieren, manchmal zum Aktualisieren von freigegebenen DLLs, auf die von der Hauptanwendung verwiesen wird. Dieses Verhalten führt zu einer kontinuierlichen kopfansicht für Benutzer. Dadurch wird diese Wahrnehmung erstellt, dass der Computer nach der Installation einer Anwendung nie identisch ist, auch wenn Sie ihn später deinstallieren.
 
-In diesem Buch werden wir eine neue Methode zum Installieren von Anwendungen mit msix vorstellen, die das zuvor beschriebene Problem löst. Sie erfahren, wie Sie problemlos ein verpacken, eine Installation und Updates für Ihre Anwendung einrichten können.
+In diesem Buch werden wir eine neue Methode zum Installieren von Anwendungen mit msix vorstellen, die das zuvor beschriebene Problem löst. Sie erfahren, wie Sie Paket Erstellung, Installation und Updates für Ihre Anwendung problemlos einrichten können.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)
->[Weiter](whats-new-dotnet-core.md)
+>[Weiter](whats-new-dotnet.md)
