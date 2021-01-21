@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-dump“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-dump“ installieren und zum Erfassen und Analysieren von Windows- und Linux-Speicherabbildern ohne nativen Debugger verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765045"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189803"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Hilfsprogramm zum Sammeln und Analysieren von Speicherabbildern (dotnet-dump)
 
@@ -37,6 +37,9 @@ Es gibt zwei Möglichkeiten, `dotnet-dump` herunterzuladen und zu installieren:
   | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
+
+> [!NOTE]
+> Sie benötigen eine entsprechende x86-Version des Tools, um `dotnet-dump` für eine x86-App verwenden zu können.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -114,6 +117,12 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--out
 
   Aktiviert die Diagnoseprotokollierung für die Speicherabbildsammlung.
 
+> [!NOTE]
+> Unter Linux und macOS erwartet dieser Befehl, dass die Zielanwendung und `dotnet-dump` die gleiche `TMPDIR`-Umgebungsvariable verwenden. Andernfalls führt der Befehl zu einem Timeout.
+
+> [!NOTE]
+> Wenn Sie mit `dotnet-dump` ein Speicherabbild erfassen möchten, muss der Befehl vom Rootbenutzer oder dem Benutzer ausgeführt werden, der den Zielprozess ausführt. Andernfalls kann das Tool keine Verbindung mit dem Zielprozess herstellen.
+
 ## <a name="dotnet-dump-analyze"></a>dotnet-dump analyze
 
 Startet eine interaktive Shell zum Durchsuchen eines Speicherabbilds. Die Shell akzeptiert verschiedene [SOS-Befehle](#analyze-sos-commands).
@@ -153,7 +162,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `dumpheap <arguments>`              | Zeigt Informationen zum Garbage Collector-Heap und Sammlungsstatistiken zu Objekten an.       |
 | `dumpil <arguments>`                | Zeigt die Microsoft Intermediate Language (MSIL) an, die einer verwalteten Methode zugeordnet ist. |
 | `dumplog <arguments>`               | Schreibt den Inhalt eines Belastungsprotokolls im Speicher in die angegebene Datei.                         |
-| `dumpmd <arguments>`                | Zeigt Informationen zu einer `MethodDesc`-Struktur bei der angegebenen Adresse an               |
+| `dumpmd <arguments>`                | Zeigt Informationen zur `MethodDesc`-Struktur bei der angegebenen Adresse an.               |
 | `dumpmodule <arguments>`            | Zeigt Informationen zu einem Modul bei der angegebenen Adresse an                               |
 | `dumpmt <arguments>`                | Zeigt Informationen zum `MethodTable`-Objekt bei der angegebenen Adresse an                        |
 | `dumpobj <arguments>`               | Zeigt Informationen zu einem Objekt bei der angegebenen Adresse an                                      |

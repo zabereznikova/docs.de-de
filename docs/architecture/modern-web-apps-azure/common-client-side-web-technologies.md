@@ -6,12 +6,12 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 ms.date: 12/01/2020
-ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 75c696d881ad0586b11cdbd264f3ff90ec3bce8d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851665"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187963"
 ---
 # <a name="common-client-side-web-technologies"></a>Allgemeine clientseitige Webtechnologien
 
@@ -169,7 +169,7 @@ Das Ausführen von .NET-Code in einem Webbrowser wird durch WebAssembly (Kurzfor
 
 WebAssembly-Code kann über JavaScript auf alle Funktionen des Browsers zugreifen. Dies wird als JavaScript-Interoperabilität bezeichnet (häufig als JavaScript Interop oder JS Interop abgekürzt). Über WebAssembly im Browser ausgeführter .NET-Code wird in der JavaScript-Sandbox des Browsers ausgeführt. Hierbei greifen die Schutzmaßnahmen der Sandbox gegen schädliche Aktionen auf dem Clientcomputer.
 
-Ausführliche Informationen finden Sie in der [Einführung in ASP.NET CoreBlazor](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0).
+Weitere Informationen finden Sie unter [Einführung in ASP.NET Core Blazor](/aspnet/core/blazor/).
 
 ### <a name="choosing-a-spa-framework"></a>Entscheidung für ein SPA-Framework
 

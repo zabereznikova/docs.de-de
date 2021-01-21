@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine .NET Core-Anwendung erstellen, die Plug-
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247591"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187898"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Erstellen einer .NET Core-Anwendung mit Plug-Ins
 
@@ -22,7 +22,10 @@ In diesem Tutorial erfahren Sie, wie Sie einen benutzerdefinierten <xref:System.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- Installieren Sie das [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
+- Installieren Sie das [.NET 5 SDK](https://dotnet.microsoft.com/download) oder eine neuere Version.
+
+> [!NOTE]
+> Der Beispielcode ist auf .NET 5 ausgelegt. Alle verwendeten Features wurden jedoch in .NET Core 3.0 eingeführt und sind seitdem in allen höheren .NET-Releases verfügbar.
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
@@ -239,7 +242,7 @@ Führen Sie folgende Schritte im Stammverzeichnis aus:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -287,7 +290,7 @@ Damit wird verhindert, dass die `A.PluginBase`-Assemblys in das Ausgabeverzeichn
 
 ## <a name="plugin-target-framework-recommendations"></a>Empfehlungen für das Plug-In-Zielframework
 
-Da beim Laden der Plug-In-Abhängigkeit die Datei *.deps.json* verwendet wird, gibt es ein Problem im Zusammenhang mit dem Zielframework des Plug-Ins. Genauer gesagt müssen Ihre Plug-Ins für eine Runtime ausgelegt sein, z.B. .NET Core 3.0, anstatt für eine Version von .NET Standard. Die Datei *.deps.json* wird anhand des Zielframeworks des Projekts generiert, und da viele Pakete, die mit .NET Standard kompatibel sind, Verweisassemblys für die Erstellung für .NET Standard und Implementierungsassemblys für spezifische Runtimes enthalten, werden Implementierungsassemblys möglicherweise nicht ordnungsgemäß von *.deps.json* erkannt, oder die .NET Standard-Version kann anstelle der erwarteten .NET Core-Version abgerufen werden.
+Da beim Laden der Plug-In-Abhängigkeit die Datei *.deps.json* verwendet wird, gibt es ein Problem im Zusammenhang mit dem Zielframework des Plug-Ins. Genauer gesagt müssen Ihre Plug-Ins für eine Runtime wie .NET 5 ausgelegt sein, nicht auf eine Version von .NET Standard. Die Datei *.deps.json* wird anhand des Zielframeworks des Projekts generiert, und da viele Pakete, die mit .NET Standard kompatibel sind, Verweisassemblys für die Erstellung für .NET Standard und Implementierungsassemblys für spezifische Runtimes enthalten, werden Implementierungsassemblys möglicherweise nicht ordnungsgemäß von *.deps.json* erkannt, oder die .NET Standard-Version kann anstelle der erwarteten .NET Core-Version abgerufen werden.
 
 ## <a name="plugin-framework-references"></a>Plug-In-Frameworkverweise
 

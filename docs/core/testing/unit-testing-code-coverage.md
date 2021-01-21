@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie die Code-Coverage-Funktionen für .NET-K
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 98652de8e8b5c3765dfee8e1b511399bc5a0be25
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538146"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189654"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Verwenden von Code Coverage für Komponententests
 
@@ -297,7 +297,7 @@ Nachdem Sie diesen Befehl ausgeführt haben, stellt eine HTML-Datei den generier
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Code Coverage in der Visual Studio-Dokumentation](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
+- [Visual Studio: Code Coverage in Komponententests](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)
 - [GitHub-Repository „Coverlet“](https://github.com/coverlet-coverage/coverlet)
 - [GitHub-Repository „ReportGenerator“](https://github.com/danielpalme/ReportGenerator)
 - [Projektwebsite zu ReportGenerator](https://danielpalme.github.io/ReportGenerator)

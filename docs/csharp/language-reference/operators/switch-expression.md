@@ -1,13 +1,13 @@
 ---
 title: switch-Ausdruck – C#-Referenz
 description: Erfahren Sie, wie Sie den C#-Ausdruck „switch“ für einen Musterabgleich und die Selbstprüfung von Daten verwenden.
-ms.date: 03/19/2020
-ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/14/2021
+ms.openlocfilehash: 55fef8d351b178fd0ec23847e81e6c56eb1367b0
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916662"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536085"
 ---
 # <a name="switch-expression-c-reference"></a>switch-Ausdruck (C#-Referenz)
 
@@ -48,10 +48,13 @@ Schließlich können Sie das `_`-Muster und das `null`-Muster hinzufügen, um Ar
 
 Das vorstehende Beispiel fügt ein `null`-Muster hinzu und ändert das `IEnumerable<T>`-Muster in ein `_`-Muster. Das `null`-Muster bietet eine NULL-Überprüfung als switch-Ausdrucksverzweigungsarm. Der Ausdruck für diesen Verzweigungsarm löst eine <xref:System.ArgumentNullException> aus. Das `_`-Muster gleicht alle Eingaben ab, die nicht durch vorherige Verzweigungsarme abgeglichen wurden. Es muss nach der `null`-Überprüfung eingefügt werden, weil es ansonsten die `null`-Eingaben abgleichen würde.
 
-Weitere Informationen finden Sie im C#-Sprachspezifikationsvorschlag für [rekursive Muster](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression).
+## <a name="non-exhaustive-switch-expressions"></a>Unvollständige switch-Ausdrücke
 
-## <a name="see-also"></a>Siehe auch
+Wenn keines der switch-Ausdrucksmuster ein Argument abfängt, löst die Runtime eine Ausnahme aus. In .NET Core 3.0 und höher ist die Ausnahme eine <xref:System.Runtime.CompilerServices.SwitchExpressionException?displayProperty=nameWithType>-Klasse. Im .NET Framework ist die Ausnahme eine <xref:System.InvalidOperationException>-Klasse.
 
+## <a name="see-also"></a>Weitere Informationen
+
+- [C#-Spezifikationsvorschlag für rekursive Muster](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression)
 - [C#-Referenz](../index.md)
 - [C#-Operatoren und -Ausdrücke](index.md)
 - [Mustervergleich](../../pattern-matching.md)

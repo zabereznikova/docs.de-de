@@ -4,12 +4,12 @@ description: In diesem Artikel erhalten Sie Informationen zu den Windows-Version
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025452"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536124"
 ---
 # <a name="install-net-on-windows"></a>Installieren von .NET unter Windows
 
@@ -260,11 +260,31 @@ Zwar verfügt Visual Studio Code im Gegensatz zu Visual Studio über keine autom
 
 Die [Downloadseite](https://dotnet.microsoft.com/download/dotnet-core) für .NET bietet ausführbare Windows Installer-Dateien.
 
-Wenn Sie die MSI-Dateien für die Installation von .NET verwenden, können Sie den Installationspfad durch Einstellung der Parameter `DOTNETHOME_X64` und `DOTNETHOME_X86` anpassen:
+Wenn Sie den Windows Installer für die Installation von .NET verwenden, können Sie den Installationspfad durch Festlegung der Parameter `DOTNETHOME_X64` und `DOTNETHOME_X86` anpassen:
 
 ```console
 dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
 ```
+
+Wenn Sie .NET im Hintergrund installieren möchten (z. B. in einer Produktionsumgebung oder zur Unterstützung von Continuous Integration), sollten Sie die folgenden Optionen verwenden:
+
+- `/install`\
+Installiert .NET
+
+- `/quiet`\
+Verhindert, dass die Benutzeroberfläche und Eingabeaufforderungen angezeigt werden
+
+- `norestart`\
+Unterdrückt alle Neustartversuche.
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
+```
+
+Weitere Informationen finden Sie unter [Standardbefehlszeilenoptionen für Installer](/windows/win32/msi/standard-installer-command-line-options).
+
+> [!TIP]
+> Der Installer gibt bei Erfolg den Exitcode 0 zurück. Wenn ein Neustart erforderlich ist, wird der Exitcode 3010 zurückgegeben. Bei allen anderen Werten handelt es sich um Fehlercodes.
 
 ## <a name="download-and-manually-install"></a>Herunterladen und manuelles Installieren
 

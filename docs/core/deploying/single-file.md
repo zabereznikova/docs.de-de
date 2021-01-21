@@ -4,12 +4,12 @@ description: Hier erfahren Sie, was eine Einzeldatei-App ist und warum Sie diese
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678145"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536137"
 ---
 # <a name="single-file-deployment-and-executable"></a>Einzeldateibereitstellung und ausführbare Datei
 
@@ -56,6 +56,8 @@ Um diese Fehler zu beheben, muss _mscordbi_ neben die ausführbare Datei kopiert
 ## <a name="other-considerations"></a>Weitere Überlegungen
 
 Native Bibliotheken werden nicht standardmäßig in die Einzeldatei gepackt. Unter Linux wird die Runtime im Voraus mit dem Paket verknüpft, und nur anwendungsnative Bibliotheken werden im gleichen Verzeichnis wie die Einzeldatei-App bereitgestellt. Unter Windows wird nur der Hostingcode im Voraus verknüpft, und die Runtime und anwendungsnative Bibliotheken werden im gleichen Verzeichnis wie die Einzeldatei-App bereitgestellt. Dadurch werden Probleme beim Debuggen vermieden, denn dafür wird vorausgesetzt, dass native Dateien nicht in der Einzeldatei enthalten sind. Sie können das Flag `IncludeNativeLibrariesForSelfExtract` festlegen, um native Dateien in das Einzeldateipaket einzufügen. Diese Dateien werden jedoch in ein temporäres Verzeichnis auf dem Clientcomputer extrahiert, wenn die Einzeldatei-App ausgeführt wird.
+
+Wenn Sie `IncludeAllContentForSelfExtract` festlegen, werden alle Dateien extrahiert, bevor die ausführbare Datei ausgeführt wird. Dadurch wird das ursprüngliche Verhalten von .NET Core beibehalten, nur eine Datei bereitzustellen.
 
 Die Einzeldateianwendung verfügt über alle zugehörigen PDB-Dateien und wird standardmäßig nicht gebündelt. Wenn Sie PDBs in die Assembly für Projekte, die Sie erstellen, einschließen möchten, legen Sie `DebugType` auf `embedded` fest, wie [unten](#include-pdb-files-inside-the-bundle) ausführlich beschrieben.
 

@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der Befehl „dotnet pack“ erstellt NuGet-Pakete für ein .NET-Projekt.
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674800"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190077"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,7 +46,7 @@ NuGet-Abhängigkeiten des gepackten Projekts werden der Datei *nuspec* hinzugef�
 > [!NOTE]
 > In einigen Fällen kann die implizierte Kompilierung nicht ausgeführt werden. Dies kann passieren, wenn `GeneratePackageOnBuild` festgelegt ist, um eine zyklische Abhängigkeit zwischen Build und Paketzielen zu vermeiden. Die Kompilierung kann auch fehlschlagen, wenn eine gesperrte Datei oder ein anderes Problem vorliegt.
 
-Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang bereitstellen. Weitere Informationen finden Sie in den [NuGet-Metadateneigenschaften](csproj.md#nuget-metadata-properties) und in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Der Abschnitt [Beispiele](#examples) enthält Informationen darüber, wie der MSBuild-Schalter „-p“ für verschiedene Szenarien verwendet wird.
+Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang bereitstellen. Weitere Informationen finden Sie unter [Zieleigenschaften für nuget pack](/nuget/reference/msbuild-targets#pack-target) und in der [MSBuild-Befehlszeilenreferenz](/visualstudio/msbuild/msbuild-command-line-reference). Der Abschnitt [Beispiele](#examples) enthält Informationen darüber, wie der MSBuild-Parameter `-p` für verschiedene Szenarios verwendet wird.
 
 Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhalten zu überschreiben, fügen Sie Ihrer *.csproj*-Datei die folgende Eigenschaft hinzu:
 
@@ -64,7 +64,7 @@ Webprojekte können standardmäßig nicht verpackt werden. Um das Standardverhal
 
 `PROJECT | SOLUTION`
 
-  Das Projekt oder die Projektmappe, die gepackt werden soll. Es ist entweder ein Pfad zu einer [CSPROJ-Datei](csproj.md), VBPROJ-Datei, FSPROJ-Datei, Projektmappendatei oder einem Verzeichnis. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einem Projekt oder einer Projektmappendatei.
+  Das Projekt oder die Projektmappe, die gepackt werden soll. Es ist entweder ein Pfad zu einer CSPROJ-Datei, VBPROJ-Datei, FSPROJ-Datei, Projektmappendatei oder einem Verzeichnis. Ist dieses Argument nicht angegeben, sucht der Befehl im aktuellen Verzeichnis nach einem Projekt oder einer Projektmappendatei.
 
 ## <a name="options"></a>Optionen
 

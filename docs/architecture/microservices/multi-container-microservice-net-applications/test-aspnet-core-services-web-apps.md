@@ -1,13 +1,13 @@
 ---
 title: Testen von ASP.NET Core-Diensten und -Webanwendungen
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Architektur zum Testen von ASP.NET Core-Diensten und -Webanwendungen in Containern
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633948"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188002"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -15,13 +15,13 @@ Controller sind ein zentraler Bestandteil jedes ASP.NET Core API-Diensts und jed
 
 Sie müssen testen, wie der Controller sich auf Grundlage von gültigen bzw. ungültigen Eingaben verhält, und wie die Testcontroller abhängig vom Ergebnis des durchgeführten Geschäftsvorgangs antworten. Allerdings sollten Sie über diese Arten von Tests für Ihre Microservices verfügen:
 
-- Komponententests. Diese stellen sicher, dass die einzelnen Komponenten der Anwendung erwartungsgemäß funktionieren. Assertionstests für die Komponenten-API.
+- Komponententests. Diese Tests stellen sicher, dass die einzelnen Komponenten der Anwendung erwartungsgemäß funktionieren. Assertionstests für die Komponenten-API.
 
-- Integrationstests. Diese stellen sicher, dass die Komponenteninteraktionen für externe Elemente wie beispielsweise Datenbanken erwartungsgemäß funktionieren. Assertionen können Komponenten-APIs, Benutzeroberflächen oder die Nebeneffekte von Aktionen wie Datenbank-E/A, Protokollierung usw. testen.
+- Integrationstests. Diese Tests stellen sicher, dass die Komponenteninteraktionen für externe Elemente wie Datenbanken erwartungsgemäß funktionieren. Assertionen können Komponenten-APIs, Benutzeroberflächen oder die Nebeneffekte von Aktionen wie Datenbank-E/A, Protokollierung usw. testen.
 
-- Funktionstests für jeden Microservice. Mit diesen wird sichergestellt, dass die Anwendung aus Sicht des Benutzers erwartungsgemäß funktioniert.
+- Funktionstests für jeden Microservice. Diese Tests stellen sicher, dass die Anwendung für Benutzer erwartungsgemäß funktioniert.
 
-- Diensttests. Diese stellen sicher, dass Anwendungsfälle für End-to-End-Dienste, einschließlich der Tests mehrerer Dienste gleichzeitig, getestet werden. Für diese Art von Tests müssen Sie zunächst die Umgebung vorbereiten. In diesem Fall müssen die Dienste gestartet werden (z.B. mit dem Befehl „docker-compose up“).
+- Diensttests. Diese Tests stellen sicher, dass Anwendungsfälle für End-to-End-Dienste, einschließlich der Tests mehrerer Dienste gleichzeitig, überprüft werden. Für diese Art von Tests müssen Sie zunächst die Umgebung vorbereiten. In diesem Fall müssen die Dienste gestartet werden (z.B. mit dem Befehl „docker-compose up“).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementieren von Komponententests für ASP.NET Core-Web-APIs
 
@@ -70,7 +70,7 @@ Da Integrationstests größere Codesegmente ausführen als Komponententests, und
 
 ASP.NET Core bietet einen integrierten Testwebhost, der zum Verarbeiten von HTTP-Anforderungen ohne Netzwerkmehrbelastung verwendet werden kann. Dies bedeutet, dass Sie diese Tests schneller ausführen können als bei Verwendung eines echten Webhosts. Der Testwebhost (TestServer) ist als Microsoft.AspNetCore.TestHost in einer NuGet-Komponente verfügbar. Er kann zu den Integrationstestprojekten hinzugefügt und zum Hosten von ASP.NET Core-Anwendungen verwendet werden.
 
-Wie Sie im folgenden Code sehen können, instanziieren Sie die Controller durch den Testhost, wenn Sie Integrationstest für ASP.NET Core-Controller erstellen. Dies ist vergleichbar mit einer HTTP-Anforderung, aber es wird schneller ausgeführt.
+Wie Sie im folgenden Code sehen können, instanziieren Sie die Controller durch den Testhost, wenn Sie Integrationstest für ASP.NET Core-Controller erstellen. Diese Funktionalität ist mit einer HTTP-Anforderung vergleichbar, wird jedoch schneller ausgeführt.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. Integrationstests** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **Komponententests in .NET Core mit dotnet test** \
+- **Komponententests in .NET mit dotnet test** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Offizielle Website. \
@@ -146,7 +146,7 @@ Während Komponenten- und Integrationstests in einem Testordner innerhalb des Mi
 
 **Abbildung 6-25**. Struktur des Testordners in eShopOnContainers
 
-Funktions- und Integrationstests von Microservices und Anwendungen werden über Visual Studio mit dem regulären Test Runner ausgeführt. Zuerst müssen Sie allerdings die erforderlichen Infrastrukturdienste mithilfe einer Gruppe von „docker-compose“-Dateien starten, die im Testordner der Projektmappe enthalten sind:
+Funktions- und Integrationstests von Microservices und Anwendungen werden über Visual Studio mit dem regulären Test Runner ausgeführt. Zuerst müssen Sie allerdings die erforderlichen Infrastrukturdienste mithilfe der docker-compose-Dateien starten, die im Testordner der Projektmappe enthalten sind:
 
 **docker-compose-test.yml**
 
@@ -194,7 +194,7 @@ Zum Testen von Funktionen und Integrationen müssen Sie also zunächst diesen Be
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-Wie Sie sehen können, starten diese „docker-compose“-Dateien nur die Microservices Redis, RabbitMQ, SQL Server und MongoDB.
+Wie Sie sehen können, starten diese docker-compose-Dateien nur die Microservices Redis, RabbitMQ, SQL Server und MongoDB.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 

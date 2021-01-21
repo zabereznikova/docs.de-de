@@ -1,13 +1,13 @@
 ---
 title: Implementieren der Microservice-Anwendungsschicht mithilfe der Web-API
 description: Übersicht über die Abhängigkeitsinjektion und Vermittlermuster und ihre Implementierung in der Web-API Anwendungsschicht.
-ms.date: 08/17/2020
-ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.date: 01/13/2021
+ms.openlocfilehash: bf37b0bfc7d9438752673d1c617657822b2a48ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437790"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188971"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementieren der Microserviceanwendungsschicht mithilfe der Web-API
 
@@ -27,7 +27,7 @@ ASP.NET Core enthält einen einfachen [integrierten Container](/aspnet/core/fund
 
 In der Regel fügen Sie Abhängigkeiten ein, die Infrastrukturobjekte implementieren. Eine typische einzufügende Abhängigkeit ist ein Repository. Sie können jedoch auch jede andere Infrastrukturabhängigkeit einfügen, die verfügbar ist. Für einfachere Implementierungen können Sie Ihr Arbeitseinheitsmuster-Objekt (EF DbContext-Objekt) direkt einfügen, da der DBContext auch die Implementierung Ihrer Infrastrukturpersistenzobjekte ist.
 
-Im folgenden Beispiel sehen Sie, wie .NET Core die erforderlichen Repositoryobjekte über den Konstruktor einfügt. Die Klasse ist ein Befehlshandler und wird im nächsten Abschnitt beschrieben.
+Im folgenden Beispiel sehen Sie, wie .NET die erforderlichen Repositoryobjekte über den Konstruktor einfügt. Die Klasse ist ein Befehlshandler und wird im nächsten Abschnitt beschrieben.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -111,7 +111,7 @@ Das bekannteste Muster beim Registrieren von Typen in einem IoC-Container ist di
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Verwenden der Scrutor-Bibliothek zur automatischen Typenregistrierung
 
-Bei Verwendung der DI in .NET Core empfiehlt es sich, eine Assembly zu überprüfen und ihre Typen automatisch gemäß Konvention zu registrieren. Dieses Feature ist in ASP.NET Core derzeit nicht verfügbar. Sie können jedoch die [Scrutor](https://github.com/khellang/Scrutor)-Bibliothek zu diesem Zweck verwenden. Dieser Ansatz eignet sich, wenn Sie Dutzende von Typen haben, die im IoC-Container registriert werden müssen.
+Bei Verwendung der DI in .NET empfiehlt es sich, eine Assembly zu überprüfen und ihre Typen automatisch gemäß Konvention zu registrieren. Dieses Feature ist in ASP.NET Core derzeit nicht verfügbar. Sie können jedoch die [Scrutor](https://github.com/khellang/Scrutor)-Bibliothek zu diesem Zweck verwenden. Dieser Ansatz eignet sich, wenn Sie Dutzende von Typen haben, die im IoC-Container registriert werden müssen.
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -503,7 +503,7 @@ In jedem Fall sollte diese Entscheidung auf der Grundlage der geschäftlichen An
 
 Als Beispielimplementierung wird in dieser Anleitung die Verwendung der prozessinternen Pipeline basierend auf dem Vermittlermuster vorgeschlagen, um im Speicher die Befehlserfassung zu steuern und Befehle an die richtigen Befehlshandler weiterzuleiten. In der Anleitung wird außerdem die Anwendung von [Verhaltensweisen](https://github.com/jbogard/MediatR/wiki/Behaviors) vorgeschlagen, um querschnittliche Belange abzutrennen.
 
-Für die Implementierung in .NET Core sind mehrere Open-Source-Bibliotheken verfügbar sind, die das Vermittlermuster implementieren. In dieser Anleitung wird die Open-Source-Bibliothek [MediatR](https://github.com/jbogard/MediatR) verwendet (von Jimmy Bogard erstellt), aber Sie können auch einen anderen Ansatz verwenden. MediatR ist eine kleine und einfache-Bibliothek, die Ihnen ermöglicht, die In-Memory-Nachrichten, z.B. einen Befehl, zu verarbeiten, während Sie Decorator-Elemente oder Verhaltensweisen anwenden.
+Für die Implementierung in .NET sind mehrere Open-Source-Bibliotheken verfügbar sind, die das Vermittlermuster implementieren. In dieser Anleitung wird die Open-Source-Bibliothek [MediatR](https://github.com/jbogard/MediatR) verwendet (von Jimmy Bogard erstellt), aber Sie können auch einen anderen Ansatz verwenden. MediatR ist eine kleine und einfache-Bibliothek, die Ihnen ermöglicht, die In-Memory-Nachrichten, z.B. einen Befehl, zu verarbeiten, während Sie Decorator-Elemente oder Verhaltensweisen anwenden.
 
 Mithilfe des Vermittlermusters können Sie die Kopplung reduzieren und mit den angeforderten Aufgaben verbundene Bedenken isolieren, während automatisch eine Verbindung mit dem Handler herstellt wurde, der die Aufgaben ausführt - in diesem Fall mit Befehlshandlern.
 

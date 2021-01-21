@@ -1,13 +1,13 @@
 ---
 title: Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über Integrationsereignisse zum Implementieren ereignisbasierter Kommunikation zwischen Microservices
-ms.date: 10/02/2018
-ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 65c0414184fdd1bccfbc61ef4df8fdcb88284ebe
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152532"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188204"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
@@ -35,7 +35,7 @@ Als Erinnerung: Die im eShopOnContainers-Beispiel vorgestellten Beispielereignis
 
 ## <a name="integration-events"></a>Integrationsereignisse
 
-Integrationsereignisse werden zum Synchronisieren des Domänenstatus über mehrere Microservices oder externe Systeme hinweg verwendet. Dabei werden Integrationsereignisse außerhalb des Microservices veröffentlicht. Wenn ein Ereignis bei mehreren Empfängermicroservices (bei allen Microservices, die das Integrationsereignis abonniert haben) veröffentlicht wird, wird das Ereignis vom entsprechenden Ereignishandler des jeweiligen Empfängermicroservices verarbeitet.
+Integrationsereignisse werden zum Synchronisieren des Domänenstatus über mehrere Microservices oder externe Systeme hinweg verwendet. Für diese Funktionalität werden Integrationsereignisse außerhalb des Microservices veröffentlicht. Wenn ein Ereignis bei mehreren Empfängermicroservices (bei allen Microservices, die das Integrationsereignis abonniert haben) veröffentlicht wird, wird das Ereignis vom entsprechenden Ereignishandler des jeweiligen Empfängermicroservices verarbeitet.
 
 Bei einem Integrationsereignis handelt es sich im Wesentlichen um eine Klasse zum Speichern von Daten wie im folgenden Beispiel:
 
@@ -76,7 +76,7 @@ Beim [Observer-Muster](https://en.wikipedia.org/wiki/Observer_pattern) versorgt 
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Muster „Veröffentlichen/Abonnieren“
 
-Das [Muster „Veröffentlichen/Abonnieren“](/previous-versions/msp-n-p/ff649664(v=pandp.10)) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Beobachtermuster erfolgt die Übertragung direkt vom Beobachtbaren an die Beobachter, d. h. sie „kennen“ sich. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
+Das [Muster „Veröffentlichen/Abonnieren“](/previous-versions/msp-n-p/ff649664(v=pandp.10)) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Beobachtermuster erfolgt die Übertragung direkt vom Beobachtbaren an die Beobachter, d. h. sie „kennen“ sich. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente: den Broker/Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
 
 ### <a name="the-middleman-or-event-bus"></a>Der Vermittler oder Ereignisbus
 

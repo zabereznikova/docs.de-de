@@ -3,12 +3,12 @@ title: Deinstallationstool
 description: Eine Übersicht über das .NET Core-Deinstallationstool, ein Tool mit Anleitungen, das die kontrollierte Bereinigung von .NET Core SDKs und -Runtimes ermöglicht.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590798"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235351"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core-Deinstallationstool
 
@@ -23,7 +23,7 @@ Unter Windows kann das Tool nur SDKs und Runtimes deinstallieren, die mit einem 
 
 Unter macOS kann das Tool nur SDKs und Runtimes deinstallieren, die sich im Ordner */usr/local/share/dotnet* befinden.
 
-Aufgrund dieser Einschränkungen ist das Tool möglicherweise nicht in der Lage, alle .NET Core SDKs und -Runtimes auf Ihrem Computer zu deinstallieren. Mit dem Befehl `dotnet --info` können Sie alle installierten .NET Core SDKs und -Runtimes ermitteln, einschließlich der SDKs und Runtimes, die dieses Tool nicht entfernen kann. Der Befehl `dotnet-core-uninstall list` zeigt an, welche SDKs mit dem Tool deinstalliert werden können.
+Aufgrund dieser Einschränkungen ist das Tool möglicherweise nicht in der Lage, alle .NET Core SDKs und -Runtimes auf Ihrem Computer zu deinstallieren. Mit dem Befehl `dotnet --info` können Sie alle installierten .NET Core SDKs und -Runtimes ermitteln, einschließlich der SDKs und Runtimes, die dieses Tool nicht entfernen kann. Der Befehl `dotnet-core-uninstall list` zeigt an, welche SDKs mit dem Tool deinstalliert werden können. Ab Version 1.2 und höher können SDKs und Runtimes mit Version 5.0 und früher deinstalliert werden. Auf früheren Versionen des Tools können SDKs und Runtimes mit Version 3.1 und früher deinstalliert werden.
 
 ## <a name="install-the-tool"></a>Installieren des Tools
 
@@ -295,7 +295,7 @@ Notizen:
 
 ### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>Schritt 3: Deinstallieren von .NET Core SDKs und -Runtimes
 
-`dotnet-core-uninstall remove` deinstalliert .NET Core SDKs und -Runtimes, die durch eine Sammlung von Optionen angegeben werden. Das Tool kann nicht zum Deinstallieren von SDKs und Runtimes mit Version 5.0 oder höher verwendet werden.
+`dotnet-core-uninstall remove` deinstalliert .NET Core SDKs und -Runtimes, die durch eine Sammlung von Optionen angegeben werden. Ab Version 1.2 und höher können SDKs und Runtimes mit Version 5.0 und früher deinstalliert werden. Auf früheren Versionen des Tools können SDKs und Runtimes mit Version 3.1 und früher deinstalliert werden.
 
 Da dieses Tool ein destruktives Verhalten aufweist, wird **unbedingt** empfohlen, vor dem Ausführen des Entfernungsbefehls einen Testlauf auszuführen. Der Testlauf zeigt Ihnen, welche .NET Core SDKs und -Runtimes entfernt werden, wenn Sie den Befehl `remove` verwenden. Lesen Sie [Sollte ich eine Version entfernen?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version), um zu erfahren, welche SDKs und Runtimes sicher entfernt werden können.
 

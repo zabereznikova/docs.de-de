@@ -1,13 +1,13 @@
 ---
 title: Erstellen eines einfachen datengesteuerten CRUD-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Grundlagen der Erstellung eines einfachen CRUD-Microservice (datengesteuert) im Kontext einer Microserviceanwendung
-ms.date: 08/14/2020
-ms.openlocfilehash: 27c9b331573ff08ea16c756552818df285156282
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: cf6540347771105ea2ee9cdcab0fa347bf0121cf
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739868"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188353"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Erstellen eines einfachen datengesteuerten CRUD-Microservice
 
@@ -29,19 +29,19 @@ Ein Beispiel für diese Art eines einfachen datengesteuerten Service ist der Mic
 
 Das vorherige Diagramm zeigt den logischen Katalogmicroservice, der seine Katalogdatenbank enthält, die sich im selben Docker-Host befinden kann. Es kann sich für die Entwicklung, aber nicht für die Produktion eignen, wenn sich die Datenbank im selben Docker-Host befindet. Wenn Sie diese Art von Service entwickeln, benötigen Sie nur [ASP.NET Core](/aspnet/core/) und eine Datenzugriffs-API oder eine ORM wie [Entity Framework Core](/ef/core/index). Sie könnten ferner, wie im nächsten Abschnitt erläutert, automatisch [Swagger](https://swagger.io/)-Metadaten über [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) generieren, um eine Beschreibung dessen bereitzustellen, was Ihr Service umfasst.
 
-Beachten Sie, dass sich die Ausführung eines Datenbankservers wie SQL Server in einem Docker-Container gut für Entwicklungsumgebungen eignet, da alle Ihre Abhängigkeiten eingerichtet werden können, ohne dass Sie eine Datenbank in der Cloud oder lokal bereitstellen müssen. Dies ist sehr praktisch bei der Durchführung von Integrationstests. Allerdings wird dies für Produktionsumgebungen, die einen Datenbankserver in einem Container ausführen, nicht empfohlen, da Sie mit diesem Ansatz in der Regel keine Hochverfügbarkeit erzielen. Für eine Produktionsumgebung in Azure empfiehlt es sich, Azure SQL DB oder eine andere Datenbanktechnologie zu verwenden, die eine Hochverfügbarkeit und Skalierbarkeit bereitstellen kann. Für einen NoSQL-Ansatz können Sie beispielsweise CosmosDB auswählen.
+Beachten Sie, dass sich die Ausführung eines Datenbankservers wie SQL Server in einem Docker-Container gut für Entwicklungsumgebungen eignet, da alle Ihre Abhängigkeiten eingerichtet werden können, ohne dass Sie eine Datenbank in der Cloud oder lokal bereitstellen müssen. Dieser Ansatz ist bei der Durchführung von Integrationstests sehr praktisch. Allerdings wird dies für Produktionsumgebungen, die einen Datenbankserver in einem Container ausführen, nicht empfohlen, da Sie mit diesem Ansatz in der Regel keine Hochverfügbarkeit erzielen. Für eine Produktionsumgebung in Azure empfiehlt es sich, Azure SQL DB oder eine andere Datenbanktechnologie zu verwenden, die eine Hochverfügbarkeit und Skalierbarkeit bereitstellen kann. Für einen NoSQL-Ansatz können Sie beispielsweise CosmosDB auswählen.
 
 Und schließlich können Sie durch Bearbeiten der Dockerfile-Datei und der docker-compose.yml-Metadatendateien konfigurieren, wie das Image dieses Containers erstellt wird, d.h. welches Basisimage es verwendet und welche Entwurfseinstellungen wie interne und externe Namen sowie TCP-Ports verwendet werden sollen.
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>Implementieren eines einfachen CRUD-Microservice mit ASP.NET Core
 
-Erstellen Sie zum Implementieren eines einfachen CRUD-Microservice mit .NET Core und Visual Studio zunächst wie in Abbildung 6-6 gezeigt ein einfaches ASP.NET Core-Web-API-Projekt (unter .NET Core, sodass es auf einem Linux-Docker-Host ausgeführt werden kann).
+Erstellen Sie zum Implementieren eines einfachen CRUD-Microservice mit .NET und Visual Studio zunächst wie in Abbildung 6-6 gezeigt ein einfaches ASP.NET Core-Web-API-Projekt (für .NET, sodass es auf einem Linux-Docker-Host ausgeführt werden kann).
 
 ![Screenshot von Visual Studio mit der Einrichtung des Projekts.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **Abbildung 6-6**. Erstellen eines ASP.NET Core-Web-API-Projekts in Visual Studio 2019
 
-Wählen Sie zuerst eine ASP.NET Core-Webanwendung und dann den API-Typ aus, um ein ASP.NET Core-Web-API-Projekt zu erstellen. Nach dem Erstellen des Projekts können Sie Ihre MVC-Controller wie in jedem anderen Web-API-Projekt mit der Entity Framework-API oder einer anderen API implementieren. In einem neuen Web-API-Projekt können Sie sehen, dass die einzige Abhängigkeit im betreffenden Microservice ASP.NET Core selbst betrifft. Intern (innerhalb der Abhängigkeit *Microsoft.AspNetCore.All*) verweist diese wie in Abbildung 6-7 gezeigt auf Entity Framework und viele andere .NET Core NuGet-Pakete.
+Wählen Sie zuerst eine ASP.NET Core-Webanwendung und dann den API-Typ aus, um ein ASP.NET Core-Web-API-Projekt zu erstellen. Nach dem Erstellen des Projekts können Sie Ihre MVC-Controller wie in jedem anderen Web-API-Projekt mit der Entity Framework-API oder einer anderen API implementieren. In einem neuen Web-API-Projekt können Sie sehen, dass die einzige Abhängigkeit im betreffenden Microservice ASP.NET Core selbst betrifft. Intern (innerhalb der Abhängigkeit *Microsoft.AspNetCore.All*) verweist diese wie in Abbildung 6-7 gezeigt auf Entity Framework und viele andere NuGet-Pakete für .NET.
 
 ![Screenshot von VS mit den NuGet-Abhängigkeiten von Catalog.API.](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
@@ -183,7 +183,7 @@ _context.SaveChanges();
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>Abhängigkeitseinfügung in ASP.NET Core- und Web-API-Controllern
 
-In ASP.NET Core können Sie die vorkonfigurierte Abhängigkeitseinfügung (DI, Dependency Injection) verwenden. Sie müssen keinen IoC-Container (Inversion of Control) eines Drittanbieters einrichten, können aber Ihren bevorzugten IoC-Container in die ASP.NET Core-Infrastruktur einbinden, wenn Sie möchten. In diesem Fall können Sie den erforderlichen EF-DBContext oder zusätzliche Repositorys direkt über den Controller-Konstruktor einfügen.
+In ASP.NET Core können Sie die vorkonfigurierte Dependency Injection (DI) verwenden. Sie müssen keinen IoC-Container (Inversion of Control) eines Drittanbieters einrichten, können aber Ihren bevorzugten IoC-Container in die ASP.NET Core-Infrastruktur einbinden, wenn Sie möchten. In diesem Fall können Sie den erforderlichen EF-DBContext oder zusätzliche Repositorys direkt über den Controller-Konstruktor einfügen.
 
 In der zuvor erwähnten Klasse `CatalogController` wird der Typ `CatalogContext` (der von `DbContext` erbt) zusammen mit weiteren erforderlichen Objekten in den Konstruktor `CatalogController()` eingefügt.
 
@@ -270,7 +270,7 @@ Allerdings kann es für Produktionsumgebungen sinnvoll sein, zusätzliche Method
 
 Azure Key Vault dient zum Speichern und Schützen kryptografischer und geheimer Schlüssel, die von Cloudanwendungen und -diensten verwendet werden. Ein Geheimnis ist etwas, das Sie streng überwachen sollten. Es handelt sich dabei z.B. um API-Schlüssel, Verbindungszeichenfolgen, Kennwörter usw. Zu dieser strengen Überwachung gehören *u.a.* die Nutzungsprotokollierung, das Festlegen der Ablaufzeit und das Verwalten des Zugriffs.
 
-Azure Key Vault ermöglicht detaillierte Kontrolle über die Nutzung von Anwendungsgeheimnissen, ohne dass sie jemand kennen muss. Die Geheimnisse können sogar ausgetauscht werden, um die Sicherheit zu erhöhen, ohne Unterbrechung der Entwicklung oder des Betriebs.
+Azure Key Vault ermöglicht detaillierte Kontrolle über die Nutzung von Anwendungsgeheimnissen, ohne dass jemand diese kennen muss. Die Geheimnisse können sogar ausgetauscht werden, um die Sicherheit zu erhöhen, ohne Unterbrechung der Entwicklung oder des Betriebs.
 
 Anwendungen müssen in der Active Directory-Instanz Ihres Unternehmens registriert sein, damit sie den Schlüsseltresor verwenden können.
 
@@ -344,7 +344,7 @@ Microsoft Flow, PowerApps und Azure Logic Apps verwenden die Metadaten von Swagg
 
 Es gibt mehrere Optionen zum Automatisieren der Swagger-Metadatengenerierung für ASP.NET Core-REST-API-Anwendungen in Form von auf *swagger-ui* basierenden funktionalen API-Hilfeseiten.
 
-Die wohl bekannteste Option ist [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), was derzeit in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) verwendet wird und in diesem Leitfaden genauer erläutert wird. Es steht aber auch [NSwag](https://github.com/RSuter/NSwag) zur Verfügung, womit Typescript- und C\#-API-Clients sowie C\#-Controller aus einer Swagger- oder OpenAPI-Spezifikation und auch durch Scannen der DLL-Datei mit [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio), die die Controller enthält, generiert werden können.
+Die wohl bekannteste Option ist [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), was derzeit in [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) verwendet und in diesem Leitfaden genauer erläutert wird. Es steht aber auch [NSwag](https://github.com/RSuter/NSwag) zur Verfügung, womit TypeScript- und C\#-API-Clients sowie C\#-Controller aus einer Swagger-/OpenAPI-Spezifikation oder durch Scannen der DLL-Datei mit [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio), die die Controller enthält, generiert werden können.
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Automatisieren der API-Swagger-Metadatengenerierung mit dem Swashbuckle-NuGet-Paket
 
@@ -354,7 +354,7 @@ Swashbuckle generiert automatisch Swagger-Metadaten für Ihre ASP.NET Web-API-Pr
 
 Swashbuckle kombiniert API Explorer und Swagger oder [swagger-ui](https://github.com/swagger-api/swagger-ui), um Ihren API-Nutzern eine umfassende Ermittlungs- und Dokumentationserfahrung zu bieten. Zusätzlich zu seiner Engine für die Swagger-Metadatengenerierung umfasst Swashbuckle auch eine eingebettete Version von swagger-ui, die nach der Installation von Swashbuckle automatisch bereitsteht.
 
-Dies bedeutet, dass Sie Ihre API um eine benutzerfreundliche Ermittlungs-UI ergänzen können, die es Entwicklern leichter macht, Ihre API zu verwenden. Da aufgrund der automatischen Generierung nur sehr wenig Code benötigt wird und der Wartungsaufwand gering ist, können Sie sich auf die Erstellung Ihrer API konzentrieren. Abbildung 6-8 zeigt das Ergebnis für den API Explorer.
+Dies bedeutet, dass Sie Ihre API um eine benutzerfreundliche Ermittlungs-UI ergänzen können, die es Entwicklern leichter macht, Ihre API zu verwenden. Da aufgrund der automatischen Generierung nur wenig Code benötigt wird und der Wartungsaufwand gering ist, können Sie sich auf die Entwicklung Ihrer API konzentrieren. Abbildung 6-8 zeigt das Ergebnis für den API Explorer.
 
 ![Screenshot des Swagger-API-Explorers mit der eShopOContainers-API.](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
@@ -414,7 +414,7 @@ Anschließend können Sie Ihre Anwendung starten und die folgenden JSON- und UI-
   http://<your-root-url>/swagger/
 ```
 
-Die von Swashbuckle generierte UI für eine URL wie `http://<your-root-url>/swagger` wurde bereits oben gezeigt. In Abbildung 6-9 sehen Sie nun auch, wie Sie eine beliebige API-Methode testen können.
+Die von Swashbuckle generierte UI für eine URL wie `http://<your-root-url>/swagger` wurde bereits oben gezeigt. In Abbildung 6-9 sehen Sie auch, wie Sie eine beliebige API-Methode testen können.
 
 ![Screenshot der Swagger-Benutzeroberfläche mit verfügbaren Testtools.](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 

@@ -1,17 +1,17 @@
 ---
 title: Abonnieren von Ereignissen
 description: '.NET Microservices: Architektur für .NET-Containeranwendungen | Details verstehen zum Veröffentlichen und Abonnieren von Integrationsereignissen.'
-ms.date: 01/30/2020
-ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: c9146ddbdfbf00e743108c07af1f74d7690a17a8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172208"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188724"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
-Wenn Sie den Ereignisbus verwenden möchten, müssen Sie zunächst mit den Microservices die Ereignisse abonnieren, die sie erhalten sollen. Dies sollte im empfangenden Microservice erfolgen.
+Wenn Sie den Ereignisbus verwenden möchten, müssen Sie zunächst mit den Microservices die Ereignisse abonnieren, die sie erhalten sollen. Diese Funktionalität sollte im empfangenden Microservice ausgeführt werden.
 
 Im folgenden einfachen Codebeispiel wird veranschaulicht, was in jedem empfangenden Microservice implementiert werden muss, wenn Sie den Dienst starten (in der `Startup`-Klasse), damit ein Abonnement der nötigen Ereignisse erfolgt. In diesem Fall benötigt der `basket-api`-Microservice ein Abonnement von `ProductPriceChangedIntegrationEvent`- und `OrderStartedIntegrationEvent`-Meldungen.
 
@@ -32,7 +32,7 @@ Nachdem dieser Code ausgeführt wurde, lauscht der Abonnenten-Microservice über
 
 ## <a name="publishing-events-through-the-event-bus"></a>Veröffentlichen von Ereignissen mit dem Ereignisbus
 
-Der Sender der Meldung (der ursprüngliche Microservice) veröffentlicht das Integrationsereignis mit Code wie dem folgenden. Dabei handelt es sich um ein vereinfachtes Beispiel, das die Unteilbarkeit nicht berücksichtigt. Wenn Sie ein Ereignis an mehrere Microservices weitergeben müssen, müssen Sie ähnlichen Code implementieren, normalerweise unmittelbar nach dem Committen von Daten oder Transaktionen vom ursprünglichen Microservice.
+Der Sender der Meldung (der ursprüngliche Microservice) veröffentlicht das Integrationsereignis mit Code wie dem folgenden. Bei diesem Ansatz handelt es sich um ein vereinfachtes Beispiel, das die Unteilbarkeit nicht berücksichtigt. Wenn Sie ein Ereignis an mehrere Microservices weitergeben müssen, müssen Sie ähnlichen Code implementieren, normalerweise unmittelbar nach dem Committen von Daten oder Transaktionen vom ursprünglichen Microservice.
 
 Zunächst wird dann das Ereignisbusimplementierungsobjekt (basierend auf RabbitMQ oder auf einem Service Bus) wie im folgenden Code in den Controllerkonstruktor eingefügt:
 
@@ -91,25 +91,25 @@ In komplexeren Microservices (wenn Sie z.B. CQRS-Ansätze verwenden) kann er in 
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Entwerfen von Unteilbarkeit und Stabilität beim Veröffentlichen im Ereignisbus
 
-Wenn Sie Integrationsereignisse über ein verteiltes Messaging-System wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses (d.h. entweder beide Vorgänge schließen ab oder keiner von beiden). Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)), wird dies nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
+Wenn Sie Integrationsereignisse über ein verteiltes Messaging-System wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses (d.h. entweder beide Vorgänge schließen ab oder keiner von beiden). Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)), wird dieser Ansatz nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
 
 Sie verwenden Microservices, um skalierbare und hochverfügbare Systeme zu erstellen. Einfach ausgedrückt besagt das CAP-Theorem, dass es nicht möglich ist, eine (verteilte) Datenbank (oder einen Microservice, der das Modell besitzt) zu erstellen, die gleichzeitig fortlaufend verfügbar, stark konsistent *und* jeder Partition gegenüber tolerant ist. Sie müssen sich für zwei dieser drei Eigenschaften entscheiden.
 
 In auf Microservices basierenden Architekturen sollten Sie sich für Verfügbarkeit und Toleranz entscheiden und die starke Konsistenz vernachlässigen. Deshalb sollten Sie in modernen, microservice-basierten Anwendungen keine verteilten Transaktionen beim Messaging verwenden, wie Sie es tun würden, wenn Sie [verteilte Transaktionen](/previous-versions/windows/desktop/ms681205(v=vs.85)) auf Grundlage von Microsoft Distributed Transaction Coordinator (DTC) mit [MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)) implementieren.
 
-Kehren wir nun zum ursprünglichen Problem und dem zugehörigen Beispiel zurück. Wenn der Dienst abstürzt, nachdem die Datenbank aktualisiert wurde (in diesem Fall nach der Codezeile mit `_context.SaveChangesAsync()`), aber bevor das Integrationsereignis veröffentlich wurde, besteht die Möglichkeit, dass das Gesamtsystem inkonsistent wird. Dies ist möglicherweise unternehmenskritisch, je nachdem, um welche Unternehmensvorgänge es sich handelt.
+Kehren wir nun zum ursprünglichen Problem und dem zugehörigen Beispiel zurück. Wenn der Dienst abstürzt, nachdem die Datenbank aktualisiert wurde (in diesem Fall nach der Codezeile mit `_context.SaveChangesAsync()`), aber bevor das Integrationsereignis veröffentlich wurde, besteht die Möglichkeit, dass das Gesamtsystem inkonsistent wird. Dieser Ansatz ist möglicherweise unternehmenskritisch, je nachdem, welche betrieblichen Vorgänge einbezogen sind.
 
 Wie bereits im Abschnitt zur Architektur erwähnt, können Sie dieses Problem auf unterschiedliche Arten behandeln:
 
 - Sie können das [Muster „Ereignissourcing“](/azure/architecture/patterns/event-sourcing) verwenden.
 
-- Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Verwenden von Transaktionsprotokollmining.
 
 - Sie können das [Muster „Postausgang“](https://www.kamilgrzybek.com/design/the-outbox-pattern/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
 
 Für dieses Szenario ist das vollständige Muster „Ereignissourcing“ (ES) einer der besten, wenn nicht *der* beste Ansatz. Es gibt jedoch viele Anwendungsszenarios, in denen das Implementieren des vollständigen ES-Systems nicht möglich ist. ES bedeutet, dass nur Domänenereignisse und keine aktuellen Statusdatendaten in Ihrer Transaktionsdatenbank gespeichert werden. Wenn nur Domänenereignisse gespeichert werden, kann dies viele Vorteile haben, wie z.B. die Verfügbarkeit des Systemverlaufs, wodurch Sie den Status Ihres Systems zu jedem zurückliegenden Zeitpunkt nachverfolgen können. Das Implementieren eines vollständigen ES-Systems erfordert jedoch das Neustrukturieren eines Großteils Ihres Systems und geht mit vielen anderen Komplexitäten und Anforderungen einher. Beispielsweise sollten Sie dann eine Datenbank speziell zum Ereignissourcing verwenden, wie z.B. [Event Store](https://eventstore.org/) oder dokumentorientierte Datenbanken wie Azure Cosmos DB, MongoDB, Cassandra, CouchDB oder RavenDB. ES ist eine sinnvolle Herangehensweise an dieses Problem, aber nicht die einfachste Lösung, wenn Sie sich noch nicht mit Ereignissourcing auskennen.
 
-Die Option „Transaktionsprotokollmining“ wirkt zunächst transparent. Wenn Sie diesen Ansatz verwenden, muss der Microservice allerdings mit Ihrem RDBMS-Transaktionsprotokoll verknüpft werden, wie z.B. mit dem SQL Server-Transaktionsprotokoll. Dies ist keine ideale Lösung. Ein weiterer Nachteil besteht darin, dass Updates auf niedriger Ebene,die im Transaktionsprotokoll erfasst werden, sich möglicherweise nicht auf der gleichen Ebene wie die allgemeinen Integrationsereignisse befinden. Wenn dies der Fall ist, kann sich der Prozess des Reverse Engineering (Zurückentwicklung) schwierig gestalten.
+Die Option „Transaktionsprotokollmining“ wirkt zunächst transparent. Wenn Sie diesen Ansatz verwenden, muss der Microservice allerdings mit Ihrem RDBMS-Transaktionsprotokoll verknüpft werden, wie z.B. mit dem SQL Server-Transaktionsprotokoll. Dieser Ansatz ist wahrscheinlich nicht die Ideallösung. Ein weiterer Nachteil besteht darin, dass Updates auf niedriger Ebene,die im Transaktionsprotokoll erfasst werden, sich möglicherweise nicht auf der gleichen Ebene wie die allgemeinen Integrationsereignisse befinden. Wenn dies der Fall ist, kann sich der Prozess des Reverse Engineering (Zurückentwicklung) schwierig gestalten.
 
 Ein ausgewogener Ansatz ist eine Mischung aus einer Transaktionsdatenbanktabelle und einem vereinfachten ES-Muster. Sie können einen Status wie „Ereignis bereit zur Veröffentlichung“ verwenden, den Sie im ursprünglichen Ereignis festlegen, wenn Sie dieses in der Integrationsereignistabelle committen. Dann können Sie das Ereignis im Ereignisbus veröffentlichen. Wenn die Aktion zum Veröffentlichen des Ereignisses erfolgreich durchgeführt wird, starten Sie eine weitere Transaktion im ursprünglichen Dienst, und ändern Sie den Status von „Ereignis bereit zu Veröffentlichung“ in „Ereignis wurde veröffentlicht“.
 

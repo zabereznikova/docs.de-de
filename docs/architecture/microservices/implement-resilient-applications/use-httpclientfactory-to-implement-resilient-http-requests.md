@@ -1,19 +1,19 @@
 ---
 title: Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 description: Erfahren Sie, wie Sie IHttpClientFactory, verfügbar seit .NET Core 2.1, zum Erstellen von `HttpClient`-Instanzen verwenden, damit Sie es mühelos in Ihren Anwendungen verwenden können.
-ms.date: 08/31/2020
-ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/13/2021
+ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804808"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188997"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Verwenden von IHttpClientFactory zur Implementierung robuster HTTP-Anforderungen
 
 <xref:System.Net.Http.IHttpClientFactory> ist ein Vertrag, der von `DefaultHttpClientFactory`, einer Factory, die seit .NET Core 2.1 für das Erstellen von <xref:System.Net.Http.HttpClient>-Instanzen verfügbar ist, die in Ihren Anwendungen verwendet werden sollen.
 
-## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Probleme mit den ursprünglichen HttpClient-Klassen von .NET Core
+## <a name="issues-with-the-original-httpclient-class-available-in-net"></a>Probleme mit den ursprünglichen HttpClient-Klassen von .NET
 
 Die ursprüngliche und bekannte <xref:System.Net.Http.HttpClient>-Klasse kann problemlos verwendet werden, allerdings wird sie von vielen Entwicklern in einigen Fällen nicht richtig verwendet.
 
@@ -190,7 +190,7 @@ Bis zu diesem Punkt hat der obige Codeausschnitt nur das Beispiel zum Ausführen
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Verwenden von HttpClientFactory in .NET Core**  
+- **Verwenden von HttpClientFactory in .NET**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **HttpClientFactory-Quellcode im `dotnet/extensions`-GitHub-Repository**  

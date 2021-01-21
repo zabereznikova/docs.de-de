@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie eine Anwendung zur Erkennung von Anomali
 ms.date: 12/04/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3451a44f8fa7ae85625687b7d52f120c411df1b6
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: f001cb912bb695a7edb0917f3306ca9bfbe311ac
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97634052"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187781"
 ---
 # <a name="tutorial-detect-anomalies-in-time-series-with-mlnet"></a>Tutorial: Erkennen von Anomalien bei Zeitreihen mit ML.NET
 
@@ -28,7 +28,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 * [Visual Studio 2019 Version 16.7.8 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
-* [Dataset „phone-calls.csv“](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv)
+* [Dataset „phone-calls.csv“](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv)
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -50,7 +50,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 1. Laden Sie die das Dataset herunter, und speichern Sie es im Ordner *Data*, den Sie vorher erstellt haben:
 
-    Klicken Sie mit der rechten Maustaste auf [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrCnnDetection/Data/phone-calls.csv) und anschließend auf „Link speichern unter“ oder „Ziel speichern unter“.
+    Klicken Sie mit der rechten Maustaste auf [*phone-calls.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_PhoneCalls/SrEntireDetection/Data/phone-calls.csv) und anschließend auf „Link speichern unter“ oder „Ziel speichern unter“.
 
      Achten Sie darauf, die \*CSV-Datei entweder im Ordner *Data* zu speichern oder sie in den Ordner *Data* zu verschieben, nachdem Sie die \*CSV-Datei an anderer Stelle gespeichert haben.
 

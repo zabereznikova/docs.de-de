@@ -1,17 +1,17 @@
 ---
 title: Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung der Abfrageseite von CQRS im Microservice für Bestellungen in eShopOnContainers mit Dapper
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678802"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188919"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
-Der Microservice für Bestellungen aus der Referenzanwendung eShopOnContainers implementiert für Lesevorgänge/Abfragen die Abfragen unabhängig vom DDD-Modell und Transaktionsbereich. Dies liegt daran, dass sich die Anforderungen an Abfragen und Transaktionen deutlich unterscheiden. Schreibvorgänge führen Transaktionen aus, die mit der Domänenlogik konform sein müssen. Abfragen sind hingegen idempotent und können von den Domänenregeln getrennt werden.
+Der Microservice für Bestellungen aus der Referenzanwendung eShopOnContainers implementiert für Lesevorgänge/Abfragen die Abfragen unabhängig vom DDD-Modell und Transaktionsbereich. Diese Implementierung wurde in erster Linie durchgeführt, weil sich die Anforderungen an Abfragen und Transaktionen deutlich unterscheiden. Schreibvorgänge führen Transaktionen aus, die mit der Domänenlogik konform sein müssen. Abfragen sind hingegen idempotent und können von den Domänenregeln getrennt werden.
 
 Dieser Ansatz ist einfach, wie in Abbildung 7-3 zu sehen ist. Die API-Schnittstelle wird von den Web-API-Controllern implementiert. Diese nutzen eine beliebige Infrastruktur (z.B. einen Micro-ORM (objektrelationaler Mapper) wie Dapper) und geben je nach Anforderungen der Benutzeroberflächenanwendungen dynamische ViewModels zurück.
 
@@ -21,7 +21,7 @@ Dieser Ansatz ist einfach, wie in Abbildung 7-3 zu sehen ist. Die API-Schnittste
 
 Der einfachste Ansatz für die Abfrageseite in einem vereinfachten CQRS-Ansatz kann durch Abfragen der Datenbank mit einem Micro-ORM wie Dapper und Rückgabe dynamischer ViewModels implementiert werden. Durch Abfragedefinitionen wird die Datenbank abgefragt und ein ViewModel dynamisch für jede Abfrage erstellt. Da Abfragen idempotent sind, ändern sie Daten auch bei mehrmaliger Ausführung nicht. Daher sind keine Einschränkungen durch DDD-Muster (beispielsweise Aggregate und andere Muster) notwendig, die auf der Transaktionsseite verwendet werden. Dies ist auch der Grund, weshalb Abfragen vom Transaktionsbereich getrennt sind. Die von der Benutzeroberfläche benötigten Daten können durch eine Abfrage der Datenbank abgerufen werden. Außerdem wird ein dynamisches ViewModel zurückgegeben, das über keine Klasse verfügt und nur in den SQL-Anweisungen statisch definiert werden muss.
 
-Da dieser Ansatz einfach ist, kann der für die Abfrageseite benötigte Code (beispielsweise Code, der auf Micro-ORMs wie [Dapper](https://github.com/StackExchange/Dapper) zurückgreift) [innerhalb desselben Web-API-Projekts](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) implementiert werden. Dies ist in Abbildung 7-4 zu sehen. Die Abfragen werden im **Ordering.API**-Microserviceprojekt in der Projektmappe „eShopOnContainers“ definiert.
+Da dieser Ansatz einfach ist, kann der für die Abfrageseite benötigte Code (beispielsweise Code, der auf Micro-ORMs wie [Dapper](https://github.com/StackExchange/Dapper) zurückgreift) [innerhalb desselben Web-API-Projekts](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs) implementiert werden. Dieser Ansatz wird in Abbildung 7-4 veranschaulicht. Die Abfragen werden im **Ordering.API**-Microserviceprojekt in der Projektmappe „eShopOnContainers“ definiert.
 
 ![Screenshot des Ordners „Queries“ des Ordering.API-Projekts.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-Dies ist ein weiterer Grund, weshalb explizite Rückgabetypen langfristig besser als dynamische Typen sind. Wenn Sie das `ProducesResponseType`-Attribut verwenden, können Sie auch erwartete HTTP-Fehler und Codes (z. B. 200, 400) festlegen.
+Dies ist ein weiterer Grund, weshalb explizite Rückgabetypen langfristig besser als dynamische Typen sind. Wenn Sie das `ProducesResponseType`-Attribut verwenden, können Sie auch erwartete HTTP-Fehler und Codes (z. B. 200 oder 400) festlegen.
 
 In der folgenden Abbildung wird gezeigt, wie ResponseType-Informationen auf der Swagger-Benutzeroberfläche dargestellt werden.
 

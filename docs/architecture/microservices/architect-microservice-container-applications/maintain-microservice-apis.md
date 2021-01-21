@@ -1,13 +1,13 @@
 ---
 title: Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen
 description: Erstellen Sie Microservice-APIs und Verträge unter Berücksichtigung von Weiterentwicklung und Versionsverwaltung angesichts der Tatsache, dass Anforderungen sich ändern.
-ms.date: 09/20/2018
-ms.openlocfilehash: 9164bfd12df18a88ac187c8962f0afc80b702881
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.date: 01/13/2021
+ms.openlocfilehash: 84eeaa9776947abda6171949c730f8473e97b241
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557671"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189459"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Erstellen, Weiterentwickeln und Verwalten von Versionen von Microservice-APIs und -verträgen
 
@@ -19,7 +19,7 @@ Auch wenn Sie den ersten Vertrag gut durchdacht haben, wird sich die Dienst-API 
 
 Wenn die Änderungen an der API klein sind, wenn Sie also Ihrer API zum Beispiel Attribute oder Parameter hinzufügen, sollten Clients, die eine ältere API verwenden, umschalten und mit der neueren Version des Diensts arbeiten. Möglicherweise können Sie Standardwerte für fehlende Attribute bereitstellen, die erforderlich sind, und die Clients können überflüssige Antwortattribute ignorieren.
 
-Allerdings müssen Sie manchmal größere Änderungen an einer Dienst-API vornehmen und verstoßen dadurch gegen die Kompatibilitätsanforderungen. Da Sie möglicherweise nicht dazu in der Lage sind, Clientanwendungen oder Dienste zu einem sofortigen Upgrade auf die neue Version zu zwingen, muss ein Dienst ältere Versionen der API für einen gewissen Zeitraum unterstützen. Wenn Sie einen HTTP-basierten Mechanismus wie REST verwenden, können Sie z.B. die Versionsnummer der API in die URL oder in einen HTTP-Header einbetten. Dann können Sie sich entscheiden, ob Sie beide Versionen des Diensts gleichzeitig in die gleiche Dienstinstanz implementieren, oder ob Sie verschiedene Instanzen bereitstellen, die jeweils eine Version der API verarbeiten. Ein guter Ansatz dafür ist das [Vermittlermuster](https://en.wikipedia.org/wiki/Mediator_pattern) (z.B. die [MediatR-Bibliothek](https://github.com/jbogard/MediatR)) zum Entkoppeln der verschiedenen Implementierungsversionen in unabhängige Handler.
+Allerdings müssen Sie manchmal größere Änderungen an einer Dienst-API vornehmen und verstoßen dadurch gegen die Kompatibilitätsanforderungen. Da Sie möglicherweise nicht dazu in der Lage sind, Clientanwendungen oder Dienste zu einem sofortigen Upgrade auf die neue Version zu zwingen, muss ein Dienst ältere Versionen der API für einen gewissen Zeitraum unterstützen. Wenn Sie einen HTTP-basierten Mechanismus wie REST verwenden, können Sie z.B. die Versionsnummer der API in die URL oder in einen HTTP-Header einbetten. Dann können Sie sich entscheiden, ob Sie beide Versionen des Diensts gleichzeitig in die gleiche Dienstinstanz implementieren, oder ob Sie verschiedene Instanzen bereitstellen, die jeweils eine Version der API verarbeiten. Ein guter Ansatz für diese Funktionalität ist das [Vermittlermuster](https://en.wikipedia.org/wiki/Mediator_pattern) (z. B. die [MediatR-Bibliothek](https://github.com/jbogard/MediatR)) zum Entkoppeln der verschiedenen Implementierungsversionen in unabhängige Handler.
 
 Und wenn Sie eine REST-Architektur verwenden, ist [Hypermedia](https://www.infoq.com/articles/mark-baker-hypermedia) die beste Lösung für die Versionsverwaltung Ihrer Dienste und das Zulassen von APIs, die sich weiterentwickeln lassen.
 

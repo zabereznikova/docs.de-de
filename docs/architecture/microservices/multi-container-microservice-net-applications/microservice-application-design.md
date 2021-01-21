@@ -1,13 +1,13 @@
 ---
 title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übersicht über die Vor- und Nachteile von microserviceorientierten Anwendungen zum Treffen fundierter Entscheidungen
-ms.date: 10/02/2018
-ms.openlocfilehash: 11aa6327a8d870a1ff6356b88695b693c27f99a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 568c55cd8524cd67c311214774391918212e95d8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172338"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188178"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -15,17 +15,17 @@ Dieser Abschnitt konzentriert sich auf das Entwickeln einer hypothetischen serve
 
 ## <a name="application-specifications"></a>Anwendungsspezifikationen
 
-Die hypothetische Anwendung verarbeitet Anforderungen, indem sie Geschäftslogik ausführt, auf Datenbanken zugreift und anschließend HTML-, JSON- oder XML-Antworten zurückgibt. Die Anwendung soll eine Vielzahl von Clients unterstützen, einschließlich Desktopbrowsern, die Einzelseitenanwendungen (Single Page Applications, SPAs) ausführen, herkömmlichen Web-Apps, mobilen Web-Apps und nativen Web-Apps. Die Anwendung könnte auch eine API verfügbar machen, die von Drittanbietern verwendet werden kann. Sie sollte zudem in der Lage sein, ihre Microservices oder externen Anwendungen asynchron zu integrieren, sodass dieser Ansatz im Fall von Teilfehlern für eine bessere Stabilität der Microservices sorgt.
+Die hypothetische Anwendung verarbeitet Anforderungen, indem sie Geschäftslogik ausführt, auf Datenbanken zugreift und anschließend HTML-, JSON- oder XML-Antworten zurückgibt. Die Anwendung muss verschiedenste Clients unterstützen, einschließlich Desktopbrowsern, die Single-Page-Webanwendungen, herkömmliche Web-Apps, mobile Web-Apps und native mobile Apps ausführen. Die Anwendung könnte auch eine API verfügbar machen, die von Drittanbietern verwendet werden kann. Sie sollte zudem in der Lage sein, ihre Microservices oder externen Anwendungen asynchron zu integrieren, sodass dieser Ansatz im Fall von Teilfehlern für eine bessere Stabilität der Microservices sorgt.
 
 Die Anwendung soll aus den folgenden Typen von Komponenten bestehen:
 
-- Präsentationskomponenten. Diese sind für die Verarbeitung der Benutzeroberfläche sowie die Verwendung von Remotediensten verantwortlich.
+- Präsentationskomponenten. Diese Komponenten sind für die Verarbeitung der Benutzeroberfläche sowie die Verwendung von Remotediensten verantwortlich.
 
-- Domänen- oder Geschäftslogik. Hierbei handelt es sich um die Domänenlogik der Anwendung.
+- Domänen- oder Geschäftslogik. Diese Komponente ist die Domänenlogik der Anwendung.
 
-- Datenbankzugriffslogik. Diese besteht aus Datenzugriffskomponenten, die für den Zugriff auf Datenbanken verantwortlich sind (SQL oder NoSQL).
+- Datenbankzugriffslogik. Diese Komponente besteht aus Datenzugriffskomponenten, die für den Zugriff auf Datenbanken verantwortlich sind (SQL oder NoSQL).
 
-- Anwendungsintegrationslogik. Diese beinhaltet einen Nachrichtenkanal, der hauptsächlich auf Nachrichtenbroker basiert.
+- Anwendungsintegrationslogik. Diese Komponente beinhaltet einen Nachrichtenkanal, der auf Nachrichtenbrokern basiert.
 
 Die Anwendung erfordert eine hohe Skalierbarkeit, wobei sie den vertikalen Subsystemen ermöglichen muss, unabhängig horizontal hochzuskalieren, da einige Subsysteme eine höhere Skalierbarkeit erfordern als andere.
 
@@ -55,11 +55,11 @@ Bei diesem Ansatz implementiert jeder Dienst (Container) mehrere zusammenhängen
 
 Microservices kommunizieren mithilfe von Protokollen wie HTTP (REST), nach Möglichkeit jedoch auch asynchron (z.B. über AMQP), insbesondere bei der Weitergabe von Updates bei Integrationsereignissen.
 
-Microservices werden als Container entwickelt und bereitgestellt, die nicht voneinander abhängig sind. Dies bedeutet, dass ein Entwicklungsteam einen bestimmten Microservice ohne Auswirkungen auf andere Subsysteme entwickeln und bereitstellen kann.
+Microservices werden als Container entwickelt und bereitgestellt, die nicht voneinander abhängig sind. Dieser Vorgehensweise bewirkt, dass ein Entwicklungsteam einen bestimmten Microservice ohne Auswirkungen auf andere Subsysteme entwickeln und bereitstellen kann.
 
 Jeder Microservice verfügt über seine eigene Datenbank, wodurch er vollständig von anderen Microservices entkoppelt werden kann. Wenn nötig, kann die Konsistenz zwischen Datenbanken verschiedener Microservices mithilfe von Integrationsereignissen auf Anwendungsebene (über einen logischen Ereignisbus) erreicht werden, wie bei der Command and Query Responsibility Segregation (CQRS). Daher müssen die Geschäftseinschränkungen eine mögliche Konsistenz zwischen den verschiedenen Microservices und verwandten Datenbanken umfassen.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Eine Referenzanwendung für .NET Core und Microservices, die mithilfe von Containern bereitgestellt wurde
+### <a name="eshoponcontainers-a-reference-application-for-net-and-microservices-deployed-using-containers"></a>eShopOnContainers: Eine Referenzanwendung für .NET und Microservices, die mithilfe von Containern bereitgestellt wurde
 
 Damit Sie sich auf die Architektur und die Technologien konzentrieren können, anstatt über eine hypothetische Geschäftsdomäne nachzudenken, mit der Sie sich möglicherweise nicht auskennen, wurde eine bekannte Geschäftsdomäne ausgewählt, nämlich eine vereinfachte E-Commerce-Anwendung (Onlineshop), die einen Katalog von Produkten darstellt, Bestellungen von Kunden entgegennimmt, den Lagerbestand überprüft und weitere Geschäftsfunktionen übernimmt. Dieser containerbasierte Anwendungsquellcode ist im GitHub-Repository [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) verfügbar.
 
@@ -75,15 +75,15 @@ Das obige Diagramm zeigt, dass mobile und SPA-Clients mit einzelnen Endpunkten d
 
 **Kommunikationsarchitektur.** Die Anwendung eShopOnContainers verwendet zwei Kommunikationstypen, abhängig von der Art der funktionalen Aktion (Abfragen im Vergleich zu Updates und Transaktionen):
 
-- HTTP-Kommunikation zwischen Client und Microservice über API-Gateways. Diese wird für Abfragen und bei der Annahme von Update- oder Transaktionsbefehlen von den Client-Apps verwendet. Der API-Gateways verwendende Ansatz wird in späteren Abschnitten ausführlich erläutert.
+- HTTP-Kommunikation zwischen Client und Microservice über API-Gateways. Dieser Ansatz wird für Abfragen und beim Annehmen von Update- oder Transaktionsbefehlen von den Client-Apps verwendet. Der API-Gateways verwendende Ansatz wird in späteren Abschnitten ausführlich erläutert.
 
-- Asynchrone, ereignisbasierte Kommunikation. Diese erfolgt über einen Ereignisbus und dient zur Verteilung von Updates zwischen Microservices oder zur Integration in externen Anwendungen. Der Ereignisbus kann mit jeder beliebigen Infrastrukturtechnologie des Nachrichtenbrokers wie RabbitMQ oder mithilfe von Servicebusses der höheren Ebene (Abstraktionsebene) wie Azure Service Bus, NServiceBus, MassTransit oder Brighter implementiert werden.
+- Asynchrone, ereignisbasierte Kommunikation. Diese Kommunikation erfolgt über einen Ereignisbus und dient zur Verteilung von Updates zwischen Microservices oder zur Integration mit externen Anwendungen. Der Ereignisbus kann mit jeder beliebigen Infrastrukturtechnologie des Nachrichtenbrokers wie RabbitMQ oder mithilfe von Servicebusses der höheren Ebene (Abstraktionsebene) wie Azure Service Bus, NServiceBus, MassTransit oder Brighter implementiert werden.
 
 Die Anwendung wird als eine Reihe von Microservices in der Form von Containern bereitgestellt. Client-Apps können über die öffentlichen URLs, die von den API-Gateways veröffentlicht werden, mit Microservices kommunizieren, die als Container ausgeführt werden.
 
 ### <a name="data-sovereignty-per-microservice"></a>Datensouveränität pro Microservice
 
-Bei der Beispielanwendung besitzt jeder Microservice eine eigene Datenbank oder Datenquelle, obwohl alle SQL Server-Datenbanken als ein einziger Container bereitgestellt werden. Diese Entwurfsentscheidung wurde nur getroffen, um einem Entwickler das Abrufen des Codes aus GitHub, das Klonen dieses Codes und das Öffnen in Visual Studio oder Visual Studio Code zu erleichtern. Alternativ wird dadurch das Kompilieren der benutzerdefinierten Docker-Images mithilfe der .NET Core-CLI und der Docker-CLI sowie die anschließende Bereitstellung und Ausführung dieser in einer Docker-Entwicklungsumgebung erleichtert. So oder so können Entwickler durch die Verwendung von Containern für Datenquellen innerhalb von wenigen Minuten erstellen und bereitstellen, ohne eine externe Datenbank oder eine Datenquelle mit festen Abhängigkeiten von der Infrastruktur (Cloud oder lokal) bereitstellen zu müssen.
+Bei der Beispielanwendung besitzt jeder Microservice eine eigene Datenbank oder Datenquelle, obwohl alle SQL Server-Datenbanken als ein einziger Container bereitgestellt werden. Diese Entwurfsentscheidung wurde nur getroffen, um einem Entwickler das Abrufen des Codes aus GitHub, das Klonen dieses Codes und das Öffnen in Visual Studio oder Visual Studio Code zu erleichtern. Alternativ wird dadurch das Kompilieren der benutzerdefinierten Docker-Images mithilfe der .NET-CLI und der Docker-CLI sowie die anschließende Bereitstellung und Ausführung dieser Images in einer Docker-Entwicklungsumgebung erleichtert. So oder so können Entwickler durch die Verwendung von Containern für Datenquellen innerhalb von wenigen Minuten erstellen und bereitstellen, ohne eine externe Datenbank oder eine Datenquelle mit festen Abhängigkeiten von der Infrastruktur (Cloud oder lokal) bereitstellen zu müssen.
 
 In einer echten Produktionsumgebung sollten die Datenbanken für Hochverfügbarkeit und Skalierbarkeit auf Datenbankservern in der Cloud oder lokal, jedoch nicht auf Containern basieren.
 
@@ -106,7 +106,7 @@ Ein auf Microservices basierender Ansatz wie dieser hat viele Vorteile:
 
 - In einer integrierten Entwicklungsumgebung wie Visual Studio können kleine Projekte schnell geladen werden, wodurch Entwickler produktiv arbeiten können.
 
-- Jeder Microservice kann unabhängig von anderen Microservices entworfen, entwickelt und bereitgestellt werden. Dadurch ergibt sich Flexibilität, da die häufige Bereitstellung neuer Versionen von Microservices einfacher durchzuführen ist.
+- Jeder Microservice kann unabhängig von anderen Microservices entworfen, entwickelt und bereitgestellt werden. Dadurch ergibt sich Agilität, da die häufige Bereitstellung neuer Versionen von Microservices einfacher durchzuführen ist.
 
 **Es ist möglich, einzelne Bereiche der Anwendung horizontal hochzuskalieren**. Beispielsweise könnte es nötig sein, den Katalog- oder den Warenkorbdienst horizontal hochzuskalieren, jedoch nicht den Bestellprozess. Eine Microserviceinfrastruktur ist im Gegensatz zu einer monolithischen Architektur deutlich effizienter hinsichtlich der verwendeten Ressourcen beim horizontalen Hochskalieren.
 
@@ -114,7 +114,7 @@ Ein auf Microservices basierender Ansatz wie dieser hat viele Vorteile:
 
 **Probleme sind isolierter**. Wenn bei einem Dienst ein Problem auftritt, ist zunächst einmal nur dieser Dienst davon betroffen (außer wenn der falsche Entwurf verwendet wird, bei dem direkte Abhängigkeiten zwischen den Microservices bestehen), und andere Dienste können weiterhin Anforderungen verarbeiten. Im Gegensatz dazu kann eine fehlerhafte Komponente bei einer monolithischen Bereitstellungsarchitektur das gesamte System zum Ausfall bringen, insbesondere wenn Ressourcen betroffen sind, wie bei einem Arbeitsspeicherverlust. Zudem können Sie, nachdem eine Lösung für ein Problem bei einem Microservice gefunden wurde, nur den betroffenen Microservice bereitstellen, ohne dass der Rest der Anwendung betroffen ist.
 
-**Sie können die neusten Technologien verwenden**. Da Sie unabhängig mit der Entwicklung von Diensten beginnen und diese parallel ausführen können (dank Containern und .NET Core), können Sie die neusten Technologien und Frameworks sinnvoll einsetzen, und Sie müssen für die gesamte Anwendung weiterhin einen älteren Stapel bzw. ein älteres Framework verwenden.
+**Sie können die neusten Technologien verwenden**. Da Sie unabhängig mit der Entwicklung von Diensten beginnen und diese parallel ausführen können (dank Containern und .NET), können Sie die neusten Technologien und Frameworks sinnvoll einsetzen. Sie müssen ältere Stapel und Frameworks also nicht mehr für die gesamte Anwendung verwenden.
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>Nachteile einer auf Microservices basierenden Lösung
 
@@ -126,7 +126,7 @@ Eine auf Microservices basierende Lösung wie diese hat auch einige Nachteile:
 
 **Atomarische Transaktionen**. Atomarische Transaktionen zwischen mehreren Microservices sind üblicherweise nicht möglich. Die Geschäftsanforderungen müssen die eventuelle Konsistenz zwischen mehreren Microservices umfassen.
 
-**Erhöhter Bedarf an globalen Ressourcen** (Gesamtspeicher-, Laufwerk- und Netzwerkressourcen für alle Server oder Hosts). In vielen Fällen übersteigt beim Wechsel von einer monolithischen Anwendung zu einem Microservicesansatz die Menge der von der neuen microservicebasierten Anwendung benötigten anfänglichen, globalen Ressourcen den Bedarf der Infrastruktur der ursprünglichen monolithischen Anwendung. Dies liegt daran, dass das höhere Maß an Granularität und verteilten Diensten mehr globale Ressourcen erfordert. Betrachtet man jedoch die geringen Kosten für Ressourcen im Allgemeinen und den Vorteil, dass nur bestimmte Bereiche der Anwendung horizontal hochskaliert werden können, im Vergleich zu den langfristigen Kosten bei der Weiterentwicklung monolithischer Anwendungen, stellt die verstärkte Verwendung von Ressourcen üblicherweise die bessere Alternative für große, langfristige Anwendungen dar.
+**Erhöhter Bedarf an globalen Ressourcen** (Gesamtspeicher-, Laufwerk- und Netzwerkressourcen für alle Server oder Hosts). In vielen Fällen übersteigt beim Wechsel von einer monolithischen Anwendung zu einem Microservicesansatz die Menge der von der neuen microservicebasierten Anwendung benötigten anfänglichen, globalen Ressourcen den Bedarf der Infrastruktur der ursprünglichen monolithischen Anwendung. Dieser Ansatz wird angewendet, da das höhere Maß an Granularität und verteilten Diensten mehr globale Ressourcen erfordert. Vergleicht man jedoch die geringen Kosten für Ressourcen im Allgemeinen und den Vorteil, dass nur bestimmte Bereiche der Anwendung aufskaliert werden können, mit den langfristigen Kosten bei der Weiterentwicklung monolithischer Anwendungen, stellt die verstärkte Verwendung von Ressourcen üblicherweise eine gute Alternative für große, langfristige Anwendungen dar.
 
 **Probleme bei der direkten Kommunikation zwischen Client und Microservice**. Bei einer großen Anwendung mit Dutzenden Microservices ergeben sich Herausforderungen und Einschränkungen, wenn die Anwendung direkte Kommunikation zwischen Client und Microservice erfordert. Ein Problem stellt eine mögliche Diskrepanz zwischen den Anforderungen des Clients und den von jedem der Microservices verfügbar gemachten APIs dar. In einigen Fällen könnte es erforderlich sein, dass die Clientanwendung viele separate Anforderungen stellt, um die Benutzeroberfläche zu bilden. Dies kann über das Internet ineffizient sein und wäre über ein mobiles Netzwerk unpraktisch. Daher sollten Anforderungen von der Clientanwendung an das Back-End-System auf ein Minimum begrenzt werden.
 
@@ -136,7 +136,7 @@ Ein weiterer Nachteil bei der direkten Kommunikation zwischen Client und Dienst 
 
 Wie bereits im Abschnitt zur Architektur erwähnt, sollten Sie beim Entwerfen und Erstellen einer komplexen auf Microservices basierenden Anwendung die Verwendung mehrerer differenzierter API-Gateways in Betracht ziehen, anstatt sich für die einfachere direkte Kommunikation zwischen Client und Microservice zu entscheiden.
 
-**Partitionierung der Microservices.** Schließlich stehen Sie unabhängig davon, für welchen Ansatz Sie sich bei der Architektur der Microservices entscheiden, vor der nächsten Herausforderung: nämlich der Entscheidung, wie Sie eine End-to-End-Anwendung in mehrere Microservices partitionieren wollen. Wie bereits im Abschnitt zur Architektur in diesem Handbuch erwähnt, stehen mehrere Methoden und Ansätze zur Auswahl. Im Grunde müssen Sie Bereiche der Anwendung identifizieren, die von den anderen Bereichen entkoppelt sind und über wenige feste Abhängigkeiten verfügen. In vielen Fällen wird dies je nach Anwendungsfall an die Partitionierung von Diensten angepasst. In der Onlineshopanwendung ist ein Bestelldienst enthalten, der für die gesamte Geschäftslogik im Zusammenhang mit dem Bestellprozess verantwortlich ist. Zudem ist ein Katalogdienst und ein Warenkorbdienst verfügbar, die andere Funktionen implementieren. Idealerweise sollte jeder Dienst nur über wenige Verantwortlichkeiten verfügen. Dies entspricht dem Prinzip der einzigen Verantwortung, das auf Klassen angewendet wird und besagt, dass eine Klasse nur einen Grund zur Änderung haben sollte. In diesem Fall handelt es sich jedoch um Microservices, sodass der Umfang größer ist als bei einer einzelnen Klasse. Vor allem muss ein Microservice vollkommen unabhängig sein (End-to-End), einschließlich der Verantwortung für seine eigenen Datenquellen.
+**Partitionierung der Microservices.** Schließlich stehen Sie unabhängig davon, für welchen Ansatz Sie sich bei der Architektur der Microservices entscheiden, vor der nächsten Herausforderung: nämlich der Entscheidung, wie Sie eine End-to-End-Anwendung in mehrere Microservices partitionieren. Wie bereits im Abschnitt zur Architektur in diesem Handbuch erwähnt, stehen mehrere Methoden und Ansätze zur Auswahl. Im Grunde müssen Sie Bereiche der Anwendung identifizieren, die von den anderen Bereichen entkoppelt sind und über wenige feste Abhängigkeiten verfügen. In vielen Fällen wird dieser Ansatz je nach Anwendungsfall an die Partitionierung der Dienste angepasst. In der Onlineshopanwendung ist ein Bestelldienst enthalten, der für die gesamte Geschäftslogik im Zusammenhang mit dem Bestellprozess verantwortlich ist. Zudem ist ein Katalogdienst und ein Warenkorbdienst verfügbar, die andere Funktionen implementieren. Idealerweise sollte jeder Dienst nur über wenige Verantwortlichkeiten verfügen. Dieser Ansatz ähnelt dem Single-Responsibility-Prinzip, das auf Klassen angewendet wird und besagt, dass eine Klasse nur einen Grund zur Änderung haben sollte. In diesem Fall handelt es sich jedoch um Microservices, sodass der Umfang größer ist als bei einer einzelnen Klasse. Vor allem muss ein Microservice unabhängig und konsistent sein. Das bezieht auch die Verantwortung für seine eigenen Datenquellen mit ein.
 
 ## <a name="external-versus-internal-architecture-and-design-patterns"></a>Externe im Vergleich zu internen Architektur- und Entwurfsmuster
 
@@ -168,7 +168,7 @@ Softwarearchitekten und -entwickler verwenden eine Vielzahl von Architekturmuste
 
 - [Ereignisgesteuerte Architektur](https://en.wikipedia.org/wiki/Event-driven_architecture) (Event-Driven Architecture, EDA)
 
-Sie können Microservices auch mit vielen Technologien und Sprachen wie ASP.NET Core-Web-APIs, NancyFx, ASP.NET Core SignalR (verfügbar unter .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang usw. erstellen.
+Sie können Microservices auch mit vielen Technologien und Sprachen wie ASP.NET Core-Web-APIs, NancyFx, ASP.NET Core SignalR (verfügbar unter .NET Core 2 und höher), F\#, Node.js, Python, Java, C++ und GoLang erstellen.
 
 Wichtig ist, dass weder ein bestimmtes Architekturmuster bzw. ein bestimmter Architekturstil noch eine bestimmte Technologie in allen Situationen die richtige Wahl darstellt. Abbildung 6-3 stellt einige Ansätze und Technologien dar (in einer beliebigen Reihenfolge), die in unterschiedlichen Microservices verwendet werden können.
 

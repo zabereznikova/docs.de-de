@@ -1,13 +1,13 @@
 ---
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707763"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189342"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -35,7 +35,7 @@ docker build
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein **FROM mcr.microsoft.com/dotnet/sdk:3.1**-Basisimage von der Registrierung anfordert, erhält es tatsächlich **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** oder **3.1-sdk-buster-slim**, je nach Betriebssystem und Version, unter der Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Die Eignung für mehrere Architekturen ist ein Feature, das die Auswahl des passenden Images je nach Plattform erleichtert, auf der Docker ausgeführt wird. Wenn ein Dockerfile beispielsweise ein **mcr.microsoft.com/dotnet/sdk:5.0**-Basisimage von der Registrierung anfordert, ruft es tatsächlich **5.0-nanoserver-1909**, **5.0-nanoserver-1809** oder **5.0-buster-slim** ab – je nach Betriebssystem und Version, unter dem bzw. der Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 
@@ -43,7 +43,7 @@ docker build
 
 **Docker Trusted Registry (DTR):** Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Er ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker Community Edition (CE):** Entwicklungstools für Windows und macOS zum lokalen Erstellen, Ausführen und Testen von Containern. Docker CE für Windows bietet Entwicklungsumgebungen für Linux- und Windows-Container. Der Linux-Docker-Host auf Windows basiert auf einer [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization)-VM. Der Host für die Windows-Container basiert direkt auf Windows. Docker CE für Mac basiert auf dem Apple Hypervisor-Framework und dem [Xhyve-Hypervisor](https://github.com/mist64/xhyve), der eine Linux-Docker-Host-VM auf Mac OS X bereitstellt. Docker CE für Windows und für Mac ersetzt Docker Toolbox, das auf Oracle VirtualBox basiert.
+**Docker Community Edition (CE):** Entwicklungstools für Windows und macOS zum lokalen Erstellen, Ausführen und Testen von Containern. Docker CE für Windows bietet Entwicklungsumgebungen für Linux- und Windows-Container. Der Linux-Docker-Host auf Windows basiert auf einer [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization)-VM. Der Host für die Windows-Container basiert direkt auf Windows. Docker CE für Mac basiert auf dem Apple Hypervisor-Framework und dem [Xhyve-Hypervisor](https://github.com/mist64/xhyve), der eine Linux-Docker-Host-VM auf macOS X bereitstellt. Docker CE für Windows und für Mac ersetzt die Docker Toolbox, die auf Oracle VirtualBox basiert.
 
 **Docker Enterprise Edition (EE):** Eine Version der Docker-Tools für Unternehmen für die Linux- und Windows-Entwicklung.
 

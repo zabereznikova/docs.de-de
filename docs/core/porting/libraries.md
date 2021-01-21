@@ -3,12 +3,12 @@ title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 09874899018abc09051af17771c9df829b8dbe96
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633909"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189680"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -30,8 +30,8 @@ Dieser Artikel beschreibt die formale Spezifikation von .NET-APIs, die in allen 
 [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](../tutorials/libraries.md)\
 Dieser Artikel erläutert, wie Sie mithilfe der .NET Core-CLI Bibliotheken schreiben.
 
-[Erweiterungen des *CSPROJ*-Formats für .NET Core](../tools/csproj.md)\
-In diesem Artikel werden die Änderungen erläutert, die an die Projektdateien beim Wechsel zu *csproj* und MSBuild hinzugefügt wurden.
+[.NET SDKs für Projekte](../project-sdk/overview.md)\
+In diesem Artikel wird das SDK-Projektdateiformat erläutert.
 
 [Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern](third-party-deps.md)\
 In diesem Artikel wird die Portabilität von Drittanbieterabhängigkeiten behandelt, und es wird gezeigt, wie Sie vorgehen können, wenn die Abhängigkeit eines NuGet-Pakets unter .NET Core nicht ausgeführt wird.

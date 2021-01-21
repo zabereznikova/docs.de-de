@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970706"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189978"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
@@ -79,15 +79,43 @@ Sie können Eigenschaften wie `PackageId`, `PackageVersion`, `PackageIcon`, `Tit
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-and-items"></a>Veröffentlichen von Eigenschaften und Elementen
+## <a name="publish-properties-items-and-metadata"></a>Veröffentlichen von Eigenschaften, Elementen und Metadaten
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+Die `CopyToPublishDirectory`-Metadaten in einem MSBuild-Element steuern, wann das Element in das Veröffentlichungsverzeichnis kopiert wird. Zulässige Werte sind `PreserveNewest`, wodurch das Element nur kopiert wird, wenn es geändert wurde, `Always`, wodurch das Element immer kopiert wird, und `Never`, wodurch das Element nie kopiert wird. Aus Leistungssicht ist `PreserveNewest` zu bevorzugen, da so inkrementelle Builds ermöglicht werden.
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+Wenn ein Element sich außerhalb des Projektverzeichnisses und dessen Unterverzeichnissen befindet, verwendet das Veröffentlichungsziel die [Link-Metadaten](/visualstudio/msbuild/common-msbuild-item-metadata) des Elements, um zu bestimmen, wohin es kopiert werden soll. `Link` legt auch fest, wie Elemente außerhalb der Projektstruktur im Projektmappen-Explorer von Visual Studio angezeigt werden.
+
+Wenn `Link` für ein Element nicht angegeben ist, das sich außerhalb der Projektstruktur befindet, wird standardmäßig der Wert `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` festgelegt. Mit `LinkBase` können Sie einen sinnvollen Basisordner für Elemente außerhalb der Projektstruktur angeben. Die Ordnerhierarchie des Basisordners wird mit `RecursiveDir` beibehalten. Wenn `LinkBase` nicht angegeben wird, wird das Element im `Link`-Pfad weggelassen.
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+Auf der folgenden Abbildung sehen Sie, wie eine Datei, die über das Globmuster des vorherigen Elements `Include` eingefügt wird, im Projektmappen-Explorer dargestellt wird.
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Projektmappen-Explorer zeigt Element mit LinkBase-Metadaten":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -262,7 +290,7 @@ Die `EnableDefaultCompileItems`-Eigenschaft steuert, ob Kompilierungselemente im
 
 ### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
 
-Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Ressourcenelemente implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultEmbeddedResourceItems`-Eigenschaft auf `false` fest, um die implizite Einbindung eingebetteter Ressourcendateien zu deaktivieren.
+Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Ressourcenelemente implizit in das Projekt eingeschlossen werden. Standardwert: `true`. Legen Sie die `EnableDefaultEmbeddedResourceItems`-Eigenschaft auf `false` fest, um die implizite Einbindung eingebetteter Ressourcendateien zu deaktivieren.
 
 ```xml
 <PropertyGroup>
@@ -478,7 +506,7 @@ Mit der `TieredCompilationQuickJitForLoops`-Eigenschaft wird konfiguriert, ob de
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-Mit der Eigenschaft `AssetTargetFallback` können Sie zusätzliche kompatible Frameworkversionen für Projektverweise und NuGet-Pakete angeben. Wenn Sie z. B. mit `PackageReference` eine Paketabhängigkeit angeben, aber das entsprechende Paket keine Assets enthält, die mit dem `TargetFramework` Ihres Projekts kompatibel sind, kommt die Eigenschaft `AssetTargetFallback` ins Spiel. Die Kompatibilität des referenzierten Pakets wird erneut anhand jedes Zielframeworks überprüft, das in `AssetTargetFallback` angegeben ist.
+Mit der Eigenschaft `AssetTargetFallback` können Sie zusätzliche kompatible Frameworkversionen für Projektverweise und NuGet-Pakete angeben. Wenn Sie z. B. mit `PackageReference` eine Paketabhängigkeit angeben, aber das entsprechende Paket keine Assets enthält, die mit dem `TargetFramework` Ihres Projekts kompatibel sind, kommt die Eigenschaft `AssetTargetFallback` ins Spiel. Die Kompatibilität des referenzierten Pakets wird erneut anhand jedes Zielframeworks überprüft, das in `AssetTargetFallback` angegeben ist. Diese Eigenschaft ersetzt die veraltete Eigenschaft `PackageTargetFallback`.
 
 Sie können die Eigenschaft `AssetTargetFallback` auf eine oder mehrere [Zielframeworkversionen](../../standard/frameworks.md#supported-target-frameworks) festlegen.
 
@@ -504,7 +532,7 @@ Legen Sie diese Eigenschaft auf `true` fest, um implizite `FrameworkReference`- 
 
 Das `PackageReference`-Element definiert einen Verweis auf ein NuGet-Paket.
 
-Das `Include`-Attribut gibt die Paket-ID an. Das `Version`-Attribut gibt die Version oder den Versionsbereich an. Informationen, wie Sie eine Mindestversion, Maximalversion, einen Versionsbereich oder eine exakte Versionsübereinstimmung angeben, finden Sie unter [Versionsbereiche](/nuget/concepts/package-versioning#version-ranges). Sie können auch die folgenden Metadaten zu einem Projektverweis hinzufügen: `IncludeAssets`, `ExcludeAssets` und `PrivateAssets`.
+Das `Include`-Attribut gibt die Paket-ID an. Das `Version`-Attribut gibt die Version oder den Versionsbereich an. Informationen, wie Sie eine Mindestversion, Maximalversion, einen Versionsbereich oder eine exakte Versionsübereinstimmung angeben, finden Sie unter [Versionsbereiche](/nuget/concepts/package-versioning#version-ranges). Sie können auch [Objektattribute](#asset-attributes) zu einem Paketverweis hinzufügen.
 
 Der Codeausschnitt für die Projektdatei im folgenden Beispiel verweist auf das Paket [System.Runtime](https://www.nuget.org/packages/System.Runtime/).
 
@@ -515,6 +543,30 @@ Der Codeausschnitt für die Projektdatei im folgenden Beispiel verweist auf das 
 ```
 
 Weitere Informationen finden Sie unter [Paketverweis in Projektdateien](/nuget/consume-packages/package-references-in-project-files).
+
+#### <a name="asset-attributes"></a>Objektattribute
+
+Die Metadaten von `IncludeAssets`, `ExcludeAssets` und `PrivateAssets` können zu einem Paketverweis hinzugefügt werden.
+
+| Attribut | BESCHREIBUNG |
+| - | - |
+| `IncludeAssets` | Dieses Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt werden sollen. Standardmäßig sind alle Paketobjekte enthalten. |
+| `ExcludeAssets`| Dieses Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, nicht genutzt werden sollen. |
+| `PrivateAssets` | Dieses Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt, aber nicht an das nächste Projekt übertragen werden sollen. Die Objekte `Analyzers`, `Build` und `ContentFiles` sind standardmäßig privat, wenn dieses Attribut nicht vorhanden ist. |
+
+Diese Attribute können die folgenden Elemente enthalten, die durch ein `;`-Zeichen getrennt werden, wenn mehr als eines enthalten ist:
+
+- `Compile` gibt an, dass die Inhalte des Ordners *lib* zum Kompilieren verfügbar sind.
+- `Runtime` gibt an, dass die Inhalte des Ordners *runtime* verteilt werden.
+- `ContentFiles`: Gibt an, dass die Inhalte des *contentfiles*-Ordner verwendet werden.
+- `Build` gibt an, dass die Eigenschaften/Ziele im Ordner *build* verwendet werden.
+- `Native` gibt an, dass die Inhalte nativer Objekte für die Runtime in den *Ausgabeordner* kopiert werden.
+- `Analyzers`: Gibt an, dass Analysen verwendet werden
+
+Alternativ kann das Attribut Folgendes enthalten:
+
+- `None`: Keines der Objekte wird verwendet.
+- `All`: Alle Objekte werden verwendet.
 
 ### <a name="projectreference"></a>ProjectReference
 

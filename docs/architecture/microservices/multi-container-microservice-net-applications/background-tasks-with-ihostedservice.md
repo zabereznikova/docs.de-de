@@ -1,19 +1,19 @@
 ---
 title: Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über neue Optionen zum Implementieren von Hintergrundtasks in Microservices in .NET Core mit IHostedService und BackgroundService
-ms.date: 08/14/2020
-ms.openlocfilehash: 279f9e0093deafab51e63d72dce233c8e9466a55
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 26bc06c4a63cddcd32bf7da705f6258fab8eaafa
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173353"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188802"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementieren von Hintergrundtasks in Microservices mit IHostedService und der BackgroundService-Klasse
 
 Hintergrundaufgaben und geplante Aufträge können in jeder beliebigen Anwendung eingesetzt werden, unabhängig davon, ob diese auf einer Microservicearchitektur basiert. Der Unterschied bei Verwendung einer Microservicearchitektur besteht darin, dass Sie die Hintergrundaufgabe in einem separaten Hostingprozess oder -container implementieren können, damit Sie diesen je nach Bedarf hoch- oder herunterskalieren können.
 
-In .NET Core werden diese Tasks als *gehostete Dienste* bezeichnet, da sie Dienste oder Logiken darstellen, die in einem Host, einer Anwendung oder einem Microservice gehostet werden. Beachten Sie, dass in diesem Fall der gehostete Dienst einfach einer Klasse mit der Logik des Hintergrundtasks entspricht.
+In .NET werden diese Tasks als *gehostete Dienste* bezeichnet, da sie Dienste oder Logiken darstellen, die in einem Host, einer Anwendung oder einem Microservice gehostet werden. Beachten Sie, dass in diesem Fall der gehostete Dienst einfach einer Klasse mit der Logik des Hintergrundtasks entspricht.
 
 Seit .NET Core 2.0 stellt das Framework die neue Schnittstelle <xref:Microsoft.Extensions.Hosting.IHostedService> bereit, mit der Sie gehostete Dienste einfach implementieren können. Die Grundidee besteht darin, mehrere Hintergrundtasks (gehostete Dienste) zu registrieren, die neben dem Host oder Webhost im Hintergrund ausgeführt werden (s. Abbildung 6-26).
 
@@ -45,7 +45,7 @@ SignalR ist ein Beispiel für ein Artefakt, das gehostete Dienste verwendet. Sie
 
 Sie können im Grunde jede dieser Aktionen in eine Hintergrundaufgabe auslagern, die `IHostedService` implementiert.
 
-Sie können einem `WebHost` oder `Host` ein oder mehrere `IHostedServices` hinzufügen, indem Sie sie über die <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A> -Erweiterungsmethode in einem ASP.NET Core-`WebHost` (oder in einem `Host` in .NET Core 2.1 oder höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
+Sie können `WebHost`- oder `Host`-Klassen eine oder mehrere `IHostedServices`-Schnittstellen hinzufügen, indem Sie sie über die <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>-Erweiterungsmethode in einer `WebHost`-Klasse von ASP.NET Core (oder in einer `Host`-Klasse in .NET Core 2.1 und höher) registrieren. Dabei müssen Sie die gehosteten Dienste in der bekannten `ConfigureServices()`-Methode der `Startup`-Klasse registrieren, was im folgenden Codeausschnitt einer typischen ASP.NET-WebHost-Klasse demonstriert wird.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -54,8 +54,8 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
     // Register Hosted Services
     services.AddHostedService<GracePeriodManagerService>();
-    services.AddHostedService<MyHostedServiceB>();
-    services.AddHostedService<MyHostedServiceC>();
+    services.AddHostedService<MyHostedServiceB>();
+    services.AddHostedService<MyHostedServiceC>();
     //...
 }
 ```
@@ -68,7 +68,7 @@ Ohne die Nutzung von `IHostedService` ließe sich ein Hintergrundthread erstelle
 
 ## <a name="the-ihostedservice-interface"></a>Die IHostedService-Schnittstelle
 
-Beim Registrieren von `IHostedService` ruft .NET Core die Methoden `StartAsync()` und `StopAsync()` des Typs `IHostedService` während des Anwendungsstarts und -stopps auf. Weitere Informationen finden Sie unter [Schnittstelle „IHostedService“](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface).
+Beim Registrieren einer `IHostedService`-Schnittstelle ruft .NET die Methoden `StartAsync()` und `StopAsync()` des Typs `IHostedService` beim Anwendungsstart und -stopp auf. Weitere Informationen finden Sie unter [Schnittstelle „IHostedService“](/aspnet/core/fundamentals/host/hosted-services?tabs=visual-studio&view=aspnetcore-3.1#ihostedservice-interface).
 
 Sie können mehrere Implementierungen von IHostedService erstellen und wie zuvor gezeigt in der `ConfigureService()`-Methode des Dependency Injection-Containers registrieren. Alle gehosteten Dienste werden zusammen mit der Anwendung und dem Microservice gestartet und beendet.
 
@@ -76,13 +76,13 @@ Als Entwickler sind Sie dafür verantwortlich, die Beendigungsaktion Ihrer Diens
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implementieren von IHostedService mit einer eigenen Klasse für gehostete Dienste, die von der Basisklasse BackgroundService abgeleitet wird
 
-Sie haben die Möglichkeit, eine eigene Klasse für gehostete Dienste neu zu erstellen und `IHostedService` zu implementieren, was im Fall von .NET Core 2.0 sogar unumgänglich ist.
+Sie haben die Möglichkeit, eine eigene Klasse für gehostete Dienste neu zu erstellen und `IHostedService` zu implementieren, was im Fall von .NET Core 2.0 und höher sogar unumgänglich ist.
 
 Da allerdings die meisten Hintergrundtasks ähnliche Anforderungen an die Verwaltung von Abbruchtoken und an weitere typische Vorgänge stellen, gibt es hierfür die praktische abstrakte Basisklasse `BackgroundService` (verfügbar ab NET Core 2.1), von der eigene Klassen abgeleitet werden können.
 
 Diese Klasse fasst die wesentlichen Aufgaben zusammen, die zum Einrichten der Hintergrundtasks erforderlich sind.
 
-Im folgenden Codeausschnitt ist die in .NET Core implementierte abstrakte Basisklasse BackgroundService zu sehen.
+Im folgenden Codeausschnitt ist die in .NET implementierte abstrakte Basisklasse BackgroundService zu sehen.
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
@@ -210,7 +210,7 @@ Klassendiagramm: IWebHost und IHost können viele Dienste hosten, die von Backgr
 
 ### <a name="deployment-considerations-and-takeaways"></a>Überlegungen zur Bereitstellung und wesentliche Erkenntnisse
 
-Sie sollten beachten, dass die konkrete Bereitstellung von ASP.NET Core-`WebHost` oder .NET Core-`Host` Ihre finale Lösung beeinflussen kann. Wenn Sie `WebHost` beispielsweise auf IIS oder in der regulären Azure App Service-Lösung bereitstellen, kann der Host durch den Neustart eines Anwendungspools heruntergefahren werden. Wenn Sie den Host jedoch als Container in einem Orchestrator wie Kubernetes bereitstellen, können Sie die zugesicherte Anzahl der aktiven Hostinstanzen anpassen. Darüber hinaus ist es empfehlenswert, sich mit anderen cloudbasierten Lösungen wie Azure Functions zu befassen, die speziell für derartige Szenarios entworfen wurden. Wenn Sie möchten, dass der Dienst permanent ausgeführt und auf einer Windows Server-Instanz bereitgestellt wird, verwenden Sie einen Windows-Dienst.
+Sie sollten beachten, dass die konkrete Bereitstellung der ASP.NET Core-Klasse `WebHost` oder der .NET Core-Klasse `Host` sich auf Ihre finale Lösung auswirken kann. Wenn Sie `WebHost` beispielsweise auf IIS oder in der regulären Azure App Service-Lösung bereitstellen, kann der Host durch den Neustart eines Anwendungspools heruntergefahren werden. Wenn Sie den Host jedoch als Container in einem Orchestrator wie Kubernetes bereitstellen, können Sie die zugesicherte Anzahl der aktiven Hostinstanzen anpassen. Darüber hinaus ist es empfehlenswert, sich mit anderen cloudbasierten Lösungen wie Azure Functions zu befassen, die speziell für derartige Szenarios entworfen wurden. Wenn Sie möchten, dass der Dienst permanent ausgeführt und auf einer Windows Server-Instanz bereitgestellt wird, verwenden Sie einen Windows-Dienst.
 
 Auch wenn eine `WebHost`-Instanz in einem Anwendungspool bereitgestellt würde, müssten andere Szenarios wie das Leeren oder nochmalige Auffüllen des speicherinternen Anwendungscaches berücksichtigt werden.
 

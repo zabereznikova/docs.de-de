@@ -2,12 +2,12 @@
 title: Diagnosetool „dotnet-gcdump“ – .NET-CLI
 description: Hier erfahren Sie, wie Sie das CLI-Tool „dotnet-gcdump“ installieren und zum Erfassen von Garbage Collector-Speicherabbildern (GC) von .NET-Liveprozessen mithilfe von EventPipe im Zusammenhang mit .NET verwenden.
 ms.date: 11/17/2020
-ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: fe7772eed642daadbd1754627751f58d0ab57b8e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593369"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188568"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Heapanalysetool (dotnet-gcdump)
 
@@ -34,6 +34,9 @@ Es gibt zwei Möglichkeiten, `dotnet-gcdump` herunterzuladen und zu installieren
   | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
+
+> [!NOTE]
+> Sie benötigen eine entsprechende x86-Version des Tools, um `dotnet-gcdump` für eine x86-App verwenden zu können.
 
 ## <a name="synopsis"></a>Übersicht
 
@@ -103,6 +106,12 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 - **`-n|--name <name>`**
 
   Dies ist der Name des Prozesses, von dem das GC-Speicherabbild erfasst werden soll.
+
+> [!NOTE]
+> Unter Linux und macOS erwartet dieser Befehl, dass die Zielanwendung und `dotnet-gcdump` die gleiche `TMPDIR`-Umgebungsvariable verwenden. Andernfalls führt der Befehl zu einem Timeout.
+
+> [!NOTE]
+> Wenn Sie mit `dotnet-gcdump` ein Garbage Collection-Speicherabbild erfassen möchten, muss der Befehl vom Rootbenutzer oder dem Benutzer ausgeführt werden, der den Zielprozess ausführt. Andernfalls kann das Tool keine Verbindung mit dem Zielprozess herstellen.
 
 ## `dotnet-gcdump ps`
 

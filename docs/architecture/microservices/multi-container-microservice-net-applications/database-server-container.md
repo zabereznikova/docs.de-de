@@ -1,13 +1,13 @@
 ---
 title: Verwenden eines als Container ausgeführten Datenbankservers
 description: Informationen zur Bedeutung der Verwendung eines als Container ausgeführten Datenbankservers, der ausschließlich für die Entwicklung, jedoch auf keinen Fall in der Produktion zum Einsatz kommen darf
-ms.date: 01/30/2020
-ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/13/2021
+ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539398"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188737"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Verwenden eines als Container ausgeführten Datenbankservers
 
@@ -270,7 +270,7 @@ In eShopOnContainers verwendet der Microservice `basket-api` einen als Container
       - "6379"
 ```
 
-Dieser Code in der Datei „docker-compose.yml“ definiert einen Container mit dem Namen `basketdata` basierend auf dem Redis-Image. Port 6379 wird intern veröffentlicht. Das bedeutet, dass nur andere Container, die im Docker-Host ausgeführt werden, darauf zugreifen können.
+Dieser Code in der Datei „docker-compose.yml“ definiert einen Container mit dem Namen `basketdata` basierend auf dem Redis-Image. Port 6379 wird intern veröffentlicht. Diese Konfiguration bedeutet, dass nur andere Container, die im Docker-Host ausgeführt werden, darauf zugreifen können.
 
 Und schließlich wird in der Datei *docker-compose.override.yml* im Microservice `basket-api` für das eShopOnContainers-Beispiel die für diesen Redis-Container zu verwendende Verbindungszeichenfolge definiert:
 

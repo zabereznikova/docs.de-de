@@ -1,19 +1,19 @@
 ---
 title: Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Übersicht über Implementierungsdetails für die Infrastrukturpersistenzebene mit Entity Framework Core
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172351"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188893"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
 Bei der Verwendung von relationalen Datenbanken wie SQL Server, Oracle oder PostgreSQL wird empfohlen, die Persistenzebene auf Entity Framework (EF) basierend zu implementieren. EF unterstützt LINQ und stellt stark typisierte Objekte für Ihr Modell sowie eine vereinfachte Persistenz für Ihre Datenbank bereit.
 
-Entity Framework ist bereits seit geraumer Zeit Bestandteil von .NET Framework. Wenn Sie .NET Core verwenden, sollten Sie auch Entity Framework Core verwenden, das unter Windows oder Linux auf die gleiche Weise wie .NET Core ausgeführt wird. Bei EF Core handelt es sich um eine vollständig neue Version von Entity Framework, die einen wesentlich geringeren Speicherbedarf hat und wichtige Leistungsverbesserungen mit sich bringt.
+Entity Framework ist bereits seit geraumer Zeit Bestandteil von .NET Framework. Wenn Sie .NET verwenden, sollten Sie auch die Entity Framework Core-Plattform verwenden, die unter Windows oder Linux auf die gleiche Weise wie .NET ausgeführt wird. Bei EF Core handelt es sich um eine vollständig neue Version von Entity Framework, die einen wesentlich geringeren Speicherbedarf hat und wichtige Leistungsverbesserungen mit sich bringt.
 
 ## <a name="introduction-to-entity-framework-core"></a>Einführung in Entity Framework Core
 

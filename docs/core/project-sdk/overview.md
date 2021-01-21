@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Hier erfahren Sie mehr .NET SDKs für Projekte.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970693"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189667"
 ---
 # <a name="net-project-sdks"></a>.NET SDKs für Projekte
 
@@ -83,7 +83,7 @@ Wenn das Projekt mehrere Zielframeworks umfasst, geben Sie die Ergebnisse des Be
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-includes-and-excludes"></a>Standardmäßige Aufnahmen und Ausschlüsse
+## <a name="default-includes-and-excludes"></a>Standardmäßige Aufnahmen und Ausschlüsse
 
 Die standardmäßigen Aufnahmen und Ausschlüsse für [`Compile`-Elemente](/visualstudio/msbuild/common-msbuild-project-items#compile), [eingebettete Ressourcen](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource) und [`None`-Elemente](/visualstudio/msbuild/common-msbuild-project-items#none) sind im SDK definiert. Im Gegensatz zu SDK-Projekten, die nicht das .NET Framework als Ziel verwenden, müssen Sie diese Elemente nicht in Ihrer Projektdatei angeben, da die Standardwerte die meisten gängigen Anwendungsfälle abdecken. Durch dieses Verhalten wird die Projektdatei kleiner, verständlicher und kann bei Bedarf manuell bearbeitet werden.
 
@@ -98,7 +98,7 @@ Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipe
 > [!NOTE]
 > Die Ordner `./bin` und `./obj` aus, die von den MSBuild-Eigenschaften `$(BaseOutputPath)` und `$(BaseIntermediateOutputPath)` dargestellt werden, sind standardmäßig von den Globs ausgeschlossen. Ausschlüsse werden durch die [DefaultItemExcludes-Eigenschaft](msbuild-props.md#defaultitemexcludes) dargestellt.
 
-#### <a name="build-errors"></a>Buildfehler
+### <a name="build-errors"></a>Buildfehler
 
 Wenn Sie beliebige dieser Elemente explizit in Ihrer Projektdatei definieren, erhalten Sie wahrscheinlich eine „NETSDK1022“-Buildfehlermeldung ähnlich der folgenden:
 
@@ -131,6 +131,31 @@ Zum Beheben der Fehler führen Sie eine der folgenden Aktionen aus:
   ```
 
   Wenn Sie nur `Compile`-Globs deaktivieren, zeigt der Projektmappen-Explorer in Visual Studio die \*.cs-Elemente weiterhin als Teil des Projekts an, eingeschlossen als `None`-Elemente. Um das implizite `None`-Glob zu deaktivieren, legen Sie auch `EnableDefaultNoneItems` auf `false` fest.
+
+## <a name="build-events"></a>Buildereignisse
+
+Verwenden Sie in Projekten im SDK-Format ein MSBuild-Ziel namens `PreBuild` oder `PostBuild`, und legen Sie die Eigenschaft `BeforeTargets` für `PreBuild` oder die Eigenschaft `AfterTargets` für `PostBuild` fest.
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>
+> - Sie können die MSBuild-Ziele beliebig benennen. Die Visual Studio-IDE erkennt jedoch `PreBuild`- und `PostBuild`-Ziele. Wenn Sie diese Namen verwenden, können Sie also Befehle in der IDE bearbeiten.
+> - Die Eigenschaften `PreBuildEvent` und `PostBuildEvent` sollten in SDK-Projekten nicht verwendet werden, da Makros wie `$(ProjectDir)` nicht aufgelöst werden. Beispielsweise wird der folgende Code nicht unterstützt:
+>
+> ```xml
+> <PropertyGroup>
+>   <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+> </PropertyGroup>
+> ```
 
 ## <a name="customize-the-build"></a>Anpassen des Builds
 
@@ -168,7 +193,7 @@ Der XML-Code ist ein Codeausschnitt aus einer *.csproj*-Datei, die den Befehl [`
     </ItemGroup>
   </Target>
   ...
-  
+
 </Project>
 ```
 

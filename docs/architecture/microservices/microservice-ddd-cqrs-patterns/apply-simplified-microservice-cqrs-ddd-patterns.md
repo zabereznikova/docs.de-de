@@ -1,21 +1,21 @@
 ---
 title: Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die allgemeine Beziehung zwischen CQRS- und DDD-Mustern
-ms.date: 10/08/2018
-ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 01/13/2021
+ms.openlocfilehash: c1a990689a446e2efba48beafe4b55d614b54427
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805591"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188958"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Anwenden vereinfachter CQRS- und DDD-Muster in einem Microservice
 
 CQRS ist ein Architekturkonzept, in dem die Modelle zum Lesen und Schreiben von Daten getrennt sind. Der verwandte Begriff [Command Query Separation (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) wurde ursprünglich von Bertrand Meyer in seinem Buch *Objektorientierte Softwareentwicklung* geprägt. Die Grundidee besteht darin, dass die Systemvorgänge in zwei vollständig getrennte Kategorien aufgeteilt werden:
 
-- Abfragen: Sie geben ein Ergebnis zurück und ändern nicht den Zustand des Systems. Außerdem haben sie keine Nebenwirkungen.
+- Abfragen: Diese Abfragen geben ein Ergebnis zurück und ändern nicht den Zustand des Systems. Außerdem haben sie keine Nebenwirkungen.
 
-- Befehle: Sie ändern den Zustand eines Systems.
+- Befehle: Diese Befehle ändern den Zustand eines Systems.
 
 CQS ist ein einfaches Konzept, in dem die Methoden innerhalb desselben Objekts entweder Abfragen oder Befehle sein können. Jede Methode gibt entweder einen Zustand zurück oder ändert ihn, jedoch nicht beides. Selbst ein einzelnes Repositorymusterobjekt kann mit CQS kompatibel sein. CQS ist das grundlegende Prinzip von CQRS.
 

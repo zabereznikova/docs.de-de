@@ -1,13 +1,13 @@
 ---
 title: Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 description: Die Microservicesarchitektur eignet sich nicht nur für das Back-End. Verschaffen Sie sich einen Einblick in der Verwendung für das Front-End.
-ms.date: 09/20/2018
-ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 3d866172cf7d15486dd2cc0d5dbb286c77693cea
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72275741"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189410"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 
@@ -23,7 +23,7 @@ Eine zusammengesetzte Benutzeroberfläche hingegen wird von den Microservices se
 
 Zur Startzeit der Clientanwendung registrieren sich alle Komponenten der Clientbenutzeroberfläche (z.B. TypeScript-Klassen) selbst bei einem Infrastrukturmicroservice, der ViewModels für ein bestimmtes Szenario bereitstellen kann. Wenn der Microservice die Form ändert, wird die Benutzeroberfläche automatisch angepasst.
 
-In Abbildung 4-21 wird ein Beispiel für den Ansatz der zusammengesetzten Benutzeroberfläche gezeigt. Diese Darstellung ist vereinfacht, da Sie möglicherweise über andere Microservices verfügen, die je nach Verfahren wichtige Komponenten zusammenführen. Dies hängt davon ab, ob Sie einen herkömmlichen Webansatz (ASP.NET MVC) oder eine SPA (Single-Page-Webanwendung) erstellen.
+In Abbildung 4-21 wird ein Beispiel für den Ansatz der zusammengesetzten Benutzeroberfläche gezeigt. Dieser Ansatz wird vereinfacht dargestellt, da Sie möglicherweise über andere Microservices verfügen, die auf verschiedenen Verfahren basierende Aufgaben zusammenführen. Dies hängt davon ab, ob Sie einen herkömmlichen Webansatz (ASP.NET MVC) oder eine SPA (Single-Page-Webanwendung) erstellen.
 
 ![Diagramm einer zusammengesetzten Benutzeroberfläche, die aus verschiedenen Ansichtsmodellen zusammengesetzt ist.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 

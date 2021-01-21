@@ -2,12 +2,12 @@
 title: Befehl „dotnet publish“
 description: Der Befehl „dotnet publish“ veröffentlicht ein .NET-Projekt oder eine .NET-Projektmappe in einem Verzeichnis.
 ms.date: 11/11/2020
-ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634428"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190064"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -72,8 +72,8 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
 - **`PROJECT|SOLUTION`**
 
   Das Projekt bzw. die Projektmappe, die veröffentlicht werden soll.
-  
-  * `PROJECT` ist der Pfad und Dateiname einer [C#](csproj.md)-, F#- oder Visual Basic-Projektdatei, oder der Pfad zu einem Verzeichnis, das eine C#-, F#- oder Visual Basic-Projektdatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet.
+
+  * `PROJECT` entspricht dem Pfad und Dateinamen einer C#-, F#- oder Visual Basic-Projektdatei oder dem Pfad zu einem Verzeichnis, das eine C#-, F#- oder Visual Basic-Projektdatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet.
 
   * `SOLUTION` ist der Pfad und Dateiname einer Projektmappendatei (mit der Erweiterung *.sln*), oder der Pfad zu einem Verzeichnis, das eine Projektmappendatei enthält. Wenn das Verzeichnis nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet. Verfügbar seit .NET Core 3.0 SDK.
 
@@ -132,13 +132,13 @@ Weitere Informationen finden Sie in den folgenden Ressourcen:
   ```
 
   - .NET Core 3. x SDK und höher
-  
+
     Wenn beim Veröffentlichen eines Projekts ein relativer Pfad angegeben wird, ist das generierte Ausgabeverzeichnis relativ zum aktuellen Arbeitsverzeichnis statt zum Speicherort der Projektdatei.
 
     Wenn beim Veröffentlichen einer Projektmappe ein relativer Pfad angegeben wird, werden alle Ausgaben für sämtliche Projekte im angegebenen Ordner relativ zum aktuellen Arbeitsverzeichnis gespeichert. Um die Veröffentlichungsausgabe in eigenen Ordnern für jedes Projekt zu speichern, geben Sie einen relativen Pfad an, indem Sie die MSBuild-`PublishDir`-Eigenschaft anstelle der `--output`-Option verwenden. Beispielsweise wird mit `dotnet publish -p:PublishDir=.\publish` die Veröffentlichungsausgabe für jedes Projekt an den Ordner `publish` unter dem Ordner gesendet, der die Projektdatei enthält.
 
   - .NET Core 2.x SDK
-  
+
     Wenn beim Veröffentlichen eines Projekts ein relativer Pfad angegeben wird, ist das generierte Ausgabeverzeichnis relativ zum Speicherort der Projektdatei statt zum aktuellen Arbeitsverzeichnis.
 
     Wenn beim Veröffentlichen einer Projektmappe ein relativer Pfad angegeben wird, wird die Ausgabe jedes Projekts in einem eigenen Ordner relativ zum Speicherort der Projektdatei gespeichert. Wenn beim Veröffentlichen einer Projektmappe ein absoluter Pfad angegeben wird, werden alle Veröffentlichungsausgaben für alle Projekte im angegebenen Ordner gespeichert.

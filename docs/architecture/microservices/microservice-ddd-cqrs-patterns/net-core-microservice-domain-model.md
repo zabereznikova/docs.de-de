@@ -1,17 +1,17 @@
 ---
-title: Implementieren eines Microservicedomänenmodells mit .NET Core
+title: Implementieren eines Microservicedomänenmodells mit .NET
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierungsdetails eines DDD-orientierten Domänenmodells
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152545"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188269"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core
 
-Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt soll dargestellt werden, wie Sie das Domänenmodell mithilfe von .NET Core (einfacher C\#-Code) und EF Core implementieren. Ihr Domänenmodell in diesem Beispiel besteht nur aus Ihrem Code. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
+Im letzten Abschnitt wurden die Prinzipen und Muster zum Design erläutert, die grundlegend für das Erstellen eines Domänenmodells sind. Jetzt wird erläutert, welche Möglichkeiten bestehen, um das Domänenmodell mithilfe von .NET (einfacher C\#-Code) und EF Core zu implementieren. Ihr Domänenmodell in diesem Beispiel besteht nur aus Ihrem Code. Es enthält nur die EF Core-Modellanforderungen, aber keine echten Abhängigkeiten von EF. Es sollten keine festen Abhängigkeiten oder Verweise auf EF Core auf eine objektrelationale Abbildung (Object-relational Mapping, ORM) in Ihrem Domänenmodell enthalten sein.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Domänenmodellstruktur in einer benutzerdefinierten .NET Standard-Bibliothek
 
@@ -46,7 +46,7 @@ Wenn Sie eine der Dateien in einem Aggregatordner öffnen, sehen Sie, dass diese
 Domänenmodelle werden in .NET implementiert, indem POCO-Klassen erstellt werden, die Domänenentitäten implementieren. Im folgenden Beispiel ist die Klasse „Order“ als Entität und als Aggregatstamm definiert. Da die Klasse „Order“ von der Basisklasse „Entity“ abgeleitet wird, kann diese häufig verwendeten Code wiederverwenden, der in Zusammenhang mit den Entitäten steht. Denken Sie daran, dass diese Basisklassen und Schnittstellen von Ihnen im Domänenmodellprojekt definiert werden. Es handelt sich also um Ihren Code und nicht um Infrastrukturcode aus einer ORM wie EF.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {

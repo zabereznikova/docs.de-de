@@ -1,13 +1,13 @@
 ---
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
-ms.date: 09/20/2018
-ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: f9d92e2640721b12d47223902712c420b06a5618
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169244"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189589"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -45,9 +45,9 @@ Wenn Sie die Veröffentlichen/Abonnieren-Kommunikation verwenden, können Sie z.
 
 ## <a name="asynchronous-event-driven-communication"></a>Asynchrone ereignisgesteuerte Kommunikation
 
-Bei Verwendung der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice ein Integrationsereignis, wenn eine Änderung in der zugehörigen Domäne eintritt und ein anderer Microservice darüber informiert werden muss (beispielsweise im Fall einer Preisänderung in einem Microservice für einen Produktkatalog). Zusätzliche Microservices abonnieren die Ereignisse, damit sie sie asynchron empfangen können. In diesem Fall aktualisieren die Empfänger möglicherweise ihre eigenen Domänenentitäten, was dazu führen kann, dass weitere Integrationsereignisse veröffentlicht werden. Dieses System des Veröffentlichens/Abonnierens erfolgt in der Regel über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Abstraktion oder Schnittstelle entworfen werden und verfügt über eine API, die für das Abonnieren bzw. Abbestellen und das Veröffentlichen von Ereignissen benötigt wird. Des Weiteren kann der Ereignisbus über mindestens eine Implementierung verfügen, die auf einem Nachrichtenbroker für die prozessübergreifende Kommunikation basiert. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein Veröffentlichen/Abonnieren-Modell unterstützen.
+Bei Verwendung der asynchronen ereignisgesteuerten Kommunikation veröffentlicht ein Microservice ein Integrationsereignis, wenn eine Änderung in der zugehörigen Domäne eintritt und ein anderer Microservice darüber informiert werden muss (beispielsweise im Fall einer Preisänderung in einem Microservice für einen Produktkatalog). Zusätzliche Microservices abonnieren die Ereignisse, damit sie sie asynchron empfangen können. In diesem Fall aktualisieren die Empfänger möglicherweise ihre eigenen Domänenentitäten, was dazu führen kann, dass weitere Integrationsereignisse veröffentlicht werden. Dieses System des Veröffentlichens/Abonnierens erfolgt über die Implementierung eines Ereignisbusses. Der Ereignisbus kann als Abstraktion oder Schnittstelle entworfen werden und verfügt über eine API, die für das Abonnieren bzw. Abbestellen und das Veröffentlichen von Ereignissen benötigt wird. Des Weiteren kann der Ereignisbus über mindestens eine Implementierung verfügen, die auf einem Nachrichtenbroker für die prozessübergreifende Kommunikation basiert. Beispiele hierfür sind Nachrichtenwarteschlangen oder Service Busse, die die asynchrone Kommunikation und ein Veröffentlichen/Abonnieren-Modell unterstützen.
 
-Wenn ein System letztliche Konsistenz verwendet, die durch Integrationsereignisse gesteuert wird, sollte dieser Ansatz für den Endbenutzer transparent gestaltet werden. Das System sollte keinen Ansatz verwenden, der Integrationsereignisse wie im Fall von SignalR oder beim Abrufen von Systemen vom Client imitiert. Sowohl der Endbenutzer als auch der Geschäftsinhaber müssen die letztliche Konsistenz im System explizit berücksichtigen und erkennen, dass dieser Ansatz in Unternehmen oft kein Problem darstellt, solange er explizit dargelegt wird. Das ist wichtig, weil Benutzer erwarten, dass einige Ergebnisse sofort angezeigt werden, und dies bei letztlicher Konsistenz ggf. nicht der Fall ist.
+Wenn ein System letztliche Konsistenz verwendet, die durch Integrationsereignisse gesteuert wird, sollte dieser Ansatz für den Endbenutzer transparent gestaltet werden. Das System sollte keinen Ansatz verwenden, der Integrationsereignisse wie im Fall von SignalR oder beim Abrufen von Systemen vom Client imitiert. Sowohl der Endbenutzer als auch der Geschäftsinhaber müssen die letztliche Konsistenz im System explizit berücksichtigen und erkennen, dass dieser Ansatz in Unternehmen oft kein Problem darstellt, solange er explizit dargelegt wird. Dieser Ansatz ist wichtig, weil Benutzer erwarten, dass einige Ergebnisse sofort angezeigt werden, und dies letztlich ggf. nicht der Fall ist.
 
 Wie bereits unter [Challenges and solutions for distributed data management (Herausforderungen und Lösungen für die verteilte Datenverwaltung)](distributed-data-management.md) beschrieben wurde, können Sie Integrationsereignisse dazu nutzen, microserviceübergreifende Geschäftsaufgaben zu implementieren. So kommt es zu letztlicher Konsistenz zwischen diesen Diensten. Eine letztlich konsistente Transaktion besteht aus einer Reihe von verteilten Aktionen. Bei jeder Aktion aktualisiert der zugehörige Microservice eine Domänenentität und veröffentlicht ein weiteres Integrationsereignis, das die nächste Aktion innerhalb derselben End-to-End-Geschäftsaufgabe auslöst.
 
@@ -69,11 +69,11 @@ Für unternehmenskritische Systeme und Produktionssysteme, für die eine sehr ho
 
 ## <a name="resiliently-publishing-to-the-event-bus"></a>Resilientes Veröffentlichen im Ereignisbus
 
-Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur für mehrere Microservices besteht darin, den Zustand durch einen unteilbaren Vorgang im ursprünglichen Microservice zu aktualisieren, während das zugehörige Integrationsereignis auf der Grundlage von Transaktionen resilient im Ereignisbus veröffentlicht wird. Die folgende Liste, die allerdings nicht zwangsläufig vollständig ist, enthält mehrere Ansätze zur Lösung dieses Problems:
+Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur für mehrere Microservices besteht darin, den Zustand durch einen unteilbaren Vorgang im ursprünglichen Microservice zu aktualisieren, während das zugehörige Integrationsereignis auf der Grundlage von Transaktionen resilient im Ereignisbus veröffentlicht wird. Die folgende Liste, die allerdings nicht zwangsläufig vollständig ist, enthält mehrere Ansätze, um diese Funktionalität zu erzielen.
 
 - Verwenden einer Transaktionswarteschlange wie MSMQ, die auf DTC basiert (dieser Ansatz ist allerdings bereits älter und wird nicht mehr empfohlen).
 
-- Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Verwenden von Transaktionsprotokollmining.
 
 - Verwenden des [Musters „Ereignissourcing“](/azure/architecture/patterns/event-sourcing).
 

@@ -1,36 +1,38 @@
 ---
-title: Neuerungen der Barrierefreiheit in .NET Framework
+title: 'Neuerungen der Barrierefreiheit in .NET Framework '
+titleSuffix: ''
 description: Hier erfahren Sie, welche Neuigkeiten es bei der Barrierefreiheit in .NET ab .NET Framework 4.7.1 gibt. Barrierefreiheitsfeatures ermöglichen es, dass eine App genau die Servicequalität bietet, die für Benutzer von Hilfstechnologien erforderlich ist.
-ms.date: 04/18/2019
+ms.date: 01/05/2021
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: d204bea7f5ec1ed0c25b7b2dedd04d61c7f3e93d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: c2ebaed8bf347eb8d8764f4bdf76dcc33db86bad
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679546"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536163"
 ---
-# <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
+# <a name="whats-new-in-accessibility-in-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework 
 
-Die Anwendungen von .NET Framework sollen eine bessere Barrierefreiheit für Ihre Benutzer bieten. Durch Barrierefreiheitsfunktionen wird es einer Anwendung ermöglicht, den Benutzern von Hilfstechnologien ein angemessenes Erlebnis zu bieten. Ab .NET Framework 4.7.1 enthält .NET Framework zahlreiche Verbesserungen der Barrierefreiheit, die es den Entwicklern ermöglichen, barrierefreie Anwendungen zu erstellen.
+Mit dem .NET Framework entwickelte Anwendungen bieten mehr Barrierefreiheit für Benutzer. Durch Barrierefreiheitsfunktionen wird es einer Anwendung ermöglicht, den Benutzern von Hilfstechnologien ein angemessenes Erlebnis zu bieten. Ab .NET Framework 4.7.1 enthält das .NET Framework zahlreiche Verbesserungen hinsichtlich der Barrierefreiheit, die es Entwicklern ermöglichen, barrierefreie Anwendungen zu erstellen.
 
 ## <a name="accessibility-switches"></a>Barrierefreiheitsparameter
 
-Wenn Ihre App auf .NET Framework 4.7 oder niedriger ausgerichtet ist, aber auf .NET Framework 4.7.1 oder höher ausgeführt wird, können Sie sie für Barrierefreiheitsfeatures konfigurieren. Sie können auch Ihre App für Legacy-Features konfigurieren (und Barrierefreiheitsfeatures außen vor lassen), wenn diese auf .NET Framework 4.7.1 oder höher ausgerichtet ist. Jede .NET Framework-Version, die Barrierefreiheitsfeatures umfasst, verfügt über einen versionsspezifischen Barrierefreiheitsparameter, den Sie dem [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt des [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Elements in der Konfigurationsdatei der Anwendung hinzufügen. Die folgenden Parameter werden unterstützt:
+Wenn Ihre App auf .NET Framework 4.7 oder niedriger ausgerichtet ist, aber auf .NET Framework 4.7.1 oder höher ausgeführt wird, können Sie sie für Barrierefreiheitsfeatures konfigurieren. Sie können auch Ihre App für Legacy-Features konfigurieren (und Barrierefreiheitsfeatures außen vor lassen), wenn diese auf .NET Framework 4.7.1 oder höher ausgerichtet ist. Jede .NET Framework-Version, die Barrierefreiheitsfeatures umfasst, verfügt über einen versionsspezifischen Barrierefreiheitsparameter, den Sie dem [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im Abschnitt [`<runtime>`](../configure-apps/file-schema/runtime/index.md) der Anwendungskonfigurationsdatei hinzufügen. Die folgenden Parameter werden unterstützt:
 
 |Version|Schalter|
 |---|---|
 |.NET Framework 4.7.1|„Switch.UseLegacyAccessibilityFeatures“|
 |.NET Framework 4.7.2|„Switch.UseLegacyAccessibilityFeatures.2“|
 |.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
+|11. August 2020: Kumulatives Update KB4569746 für .NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.4"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Profitieren von Barrierefreiheitserweiterungen
 
-Die neuen Barrierefreiheitsfunktionen werden standardmäßig für Anwendungen aktiviert, die .NET Framework 4.7.1 oder höher anzielen. Zusätzlich können Anwendungen, die eine frühere Version von .NET Framework anzielen, aber unter .NET Framework 4.7.1 oder höher ausgeführt werden, veraltete Verhaltensweisen für die Barrierefreiheit deaktivieren (und dadurch die Verbesserungen der Barrierefreiheit nutzen), indem Sie dem [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung einen Parameter hinzufügen und deren Wert auf `false` festlegen. Das folgende Beispiel zeigt, wie Sie die in .NET Framework 4.7.1 eingeführten Barrierefreiheitsverbesserungen aktivieren:
+Die neuen Barrierefreiheitsfunktionen werden standardmäßig für Anwendungen aktiviert, die .NET Framework 4.7.1 oder höher anzielen. Zusätzlich können Anwendungen, die eine frühere Version von .NET Framework anzielen, aber unter .NET Framework 4.7.1 oder höher ausgeführt werden, veraltete Verhaltensweisen für die Barrierefreiheit deaktivieren (und dadurch die Verbesserungen der Barrierefreiheit nutzen), indem Sie dem [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung einen Parameter hinzufügen und deren Wert auf `false` festlegen. Der folgende Codeausschnitt veranschaulicht, wie Sie die in .NET Framework 4.7.1 eingeführten Barrierefreiheitsverbesserungen aktivieren:
 
 ```xml
 <runtime>
@@ -39,7 +41,7 @@ Die neuen Barrierefreiheitsfunktionen werden standardmäßig für Anwendungen ak
 </runtime>
 ```
 
-Wenn Sie die Barrierefreiheitsoptionen in einer höheren Version von .NET Framework aktivieren, müssen Sie ebenfalls die Features früherer Versionen aktivieren. Sie benötigen das folgende [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element, um Ihre App so zu konfigurieren, dass Sie die Verbesserungen der Barrierefreiheit sowohl in .NET Framework 4.7.1 als auch in Version 4.7.2 nutzen können:
+Wenn Sie die Barrierefreiheitsoptionen in einer höheren Version des .NET Framework aktivieren, müssen Sie ebenfalls die Features früherer Versionen aktivieren. Sie müssen das folgende [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element hinzufügen, um Ihre App so zu konfigurieren, dass Sie die Verbesserungen der Barrierefreiheit sowohl in .NET Framework 4.7.1 als auch in Version 4.7.2 nutzen können:
 
 ```xml
 <runtime>
@@ -48,18 +50,18 @@ Wenn Sie die Barrierefreiheitsoptionen in einer höheren Version von .NET Framew
 </runtime>
 ```
 
-Sie benötigen das folgende [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element, um Ihre App so zu konfigurieren, dass Sie die Verbesserungen der Barrierefreiheit in NET Framework 4.7.1, 4.7.2 und 4.8 nutzen können:
+Sie müssen das folgende [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element hinzufügen, um Ihre App so zu konfigurieren, dass Sie die Verbesserungen hinsichtlich der Barrierefreiheit in NET Framework 4.7.1, 4.7.2, 4.8 und das kumulative Update von August 2020 für .NET Framework 4.8 nutzen können:
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+    <AppContextSwitchOverrides value=Switch.UseLegacyAccessibilityFeatures=false|Switch.UseLegacyAccessibilityFeatures.2=false|Switch.UseLegacyAccessibilityFeatures.3=false|Switch.UseLegacyAccessibilityFeatures.4=false"/>
 </runtime>
 ```
 
 ### <a name="restoring-legacy-behavior"></a>Wiederherstellen von Legacyverhalten
 
-Anwendungen, die Versionen von .NET Framework ab 4.7.1 anzielen, können die Barrierefreiheitsfeatures deaktivieren, indem folgendes Element zum [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung hinzugefügt und deren Wert auf `true` festgelegt wird. Beispielsweise deaktiviert die folgende Konfiguration die Barrierefreiheitsfeatures, die in .NET Framework 4.7.2 eingeführt wurden:
+Für Anwendungen, die mindestens auf .NET Framework 4.7.1 ausgelegt sind, können die Barrierefreiheitsfeatures deaktiviert werden, indem folgende Optionen mit dem Wert `true` zum [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](../configure-apps/file-schema/runtime/index.md)-Abschnitt der Anwendungskonfigurationsdatei hinzugefügt werden. Beispielsweise deaktiviert die folgende Konfiguration die Barrierefreiheitsfeatures, die in .NET Framework 4.7.2 eingeführt wurden:
 
 ```xml
 <runtime>
@@ -67,6 +69,20 @@ Anwendungen, die Versionen von .NET Framework ab 4.7.1 anzielen, können die Bar
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
 </runtime>
 ```
+
+## <a name="whats-new-in-accessibility-in-the-august-11-2020-cumulative-update-for-net-framework-48"></a>Neuerungen bei den Barrierefreiheitsfeatures im kumulativen Update für .NET Framework 4.8 vom 11. August 2020
+
+Das kumulative Update KB4569746 für .NET Framework 4.8 vom 11. August 2020 führt neue Barrierefreiheitsfeatures für Windows Forms ein:
+
+- Ein Problem mit der Sprachausgabe von `PropertyGrid`-Steuerelementen und dem Status von Kategorien (aufgeklappt/zugeklappt) wurde behoben.
+
+- Die Barrierefreiheitsmuster des Steuerelements `PropertyGrid` und dessen inneren Elementen wurden aktualisiert.
+
+- Die barrierefreien Namen der inneren Elemente des Steuerelements `PropertyGrid` wurden aktualisiert und werden nun korrekt von der Sprachausgabe wiedergegeben.
+
+- Ein Problem mit Begrenzungsrahmen für barrierefreie Eigenschaften des Steuerelements `PropertyGridView` wurde behoben.
+
+- Die Sprachausgabe gibt den Status der Zellen des Kombinationsfelds `DataGridView` (aufgeklappt/zugeklappt) jetzt korrekt wieder.
 
 ## <a name="whats-new-in-accessibility-in-net-framework-48"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.8
 
@@ -149,7 +165,7 @@ if (raiseMethod != null) {
 
 **QuickInfos für den Tastaturzugriff**
 
-In Anwendungen, die auf .NET Framework 4.7.2 und frühere Versionen abzielen, kann ein Steuerelement [tooltip](xref:System.Windows.Forms.ToolTip) nur durch Bewegen eines Mauszeigers in das Steuerelement angezeigt werden. Ab .NET Framework 4.8 kann ein Tastaturbenutzer die QuickInfo eines Steuerelements aufrufen, indem er das Steuerelement mit einer Tabulatortaste oder Pfeiltasten mit oder ohne Zusatztasten fokussiert. Für diese Verbesserungen der Barrierefreiheit ist ein zusätzlicher [AppContext-Schalter](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) erforderlich:
+In Anwendungen, die auf .NET Framework 4.7.2 und frühere Versionen abzielen, kann ein Steuerelement [tooltip](xref:System.Windows.Forms.ToolTip) nur durch Bewegen eines Mauszeigers in das Steuerelement angezeigt werden. Ab .NET Framework 4.8 kann ein Tastaturbenutzer die QuickInfo eines Steuerelements aufrufen, indem das Steuerelement mit einer Tabulatortaste oder Pfeiltasten mit oder ohne Zusatztasten fokussiert wird. Für diese Verbesserungen der Barrierefreiheit ist ein zusätzlicher [AppContext-Schalter](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) erforderlich:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -181,7 +197,7 @@ Elemente mit der Sichtbarkeit „Collapsed“ oder „Hidden“ werden von der S
 
 **SelectionTextBrush-Eigenschaft für die Verwendung mit einer nicht Adorner-basierten Textauswahl**
 
-In .NET Framework 4.7.2.2 hat WPF die Möglichkeit hinzugefügt, eine <xref:System.Windows.Controls.TextBox>- und <xref:System.Windows.Controls.PasswordBox>-Textauswahl zu zeichnen, ohne die Adornerebene zu verwenden. Die Vordergrundfarbe des markierten Texts in diesem Szenario wurde von <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> vorgegeben.
+In .NET Framework 4.7.2 wurde in WPF die Option hinzugefügt, eine <xref:System.Windows.Controls.TextBox>- und <xref:System.Windows.Controls.PasswordBox>-Textauswahl zu zeichnen, ohne die Adorner-Ebene zu verwenden. Die Vordergrundfarbe des markierten Texts in diesem Szenario wurde von <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> vorgegeben.
 
 .NET Framework 4.8 fügt eine neue Eigenschaft, `SelectionTextBrush`, hinzu, die es Entwicklern ermöglicht, den spezifischen Pinsel für den ausgewählten Text auszuwählen, wenn sie eine nicht Adorner-basierte Textauswahl verwenden. Diese Eigenschaft funktioniert nur bei <xref:System.Windows.Controls.Primitives.TextBoxBase>-basierten Steuerelementen und dem <xref:System.Windows.Controls.PasswordBox>-Steuerelement in WPF-Anwendungen, bei denen die nicht auf Adorner basierende Textauswahl aktiviert ist. Sie funktioniert nicht für das <xref:System.Windows.Controls.RichTextBox>-Steuerelement. Wenn die nicht auf Adorner basierende Textauswahl nicht aktiviert ist, wird diese Eigenschaft ignoriert.
 
@@ -445,8 +461,8 @@ Folgende APIs wurden zu WPF hinzugefügt, um dynamische Bereiche zu unterstütze
 
 - Die <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>-Enumeration, die die folgenden möglichen **LiveSetting**-Werte definiert:
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
@@ -562,7 +578,7 @@ In .NET Framework 4.7.1 enthält Windows Forms (WinForms) Verbesserungen der Bar
 
 **Verbesserte Anzeige im Modus mit hohem Kontrast**
 
-Ab .NET Framework 4.7.1 bieten viele WinForms-Steuerelemente ein verbessertes Rendering für die Modi mit hohem Kontrast, die im Betriebssystem verfügbar sind. In Windows 10 wurden die Werte für einige Systemfarbe im Design mit hohem Kontrast geändert, und Windows Forms basiert auf dem Win32-Framework von Windows 10. Führen Sie für die besten Ergebnisse die aktuelle Version von Windows aus, und aktivieren Sie die neuesten Änderungen am Betriebssystem, indem Sie eine app.manifest-Datei zu einer Testanwendung hinzufügen und den Kommentar aus der SupportedOS-Zeile für Windows 10 entfernen, sodass diese folgendermaßen aussieht:
+Ab .NET Framework 4.7.1 bieten viele WinForms-Steuerelemente ein verbessertes Rendering für die Modi mit hohem Kontrast, die im Betriebssystem verfügbar sind. In Windows 10 wurden die Werte für einige Systemfarbe im Design mit hohem Kontrast geändert, und Windows Forms basiert auf dem Win32-Framework von Windows 10. Führen Sie für die besten Ergebnisse die aktuelle Version von Windows aus, und aktivieren Sie die neuesten Änderungen am Betriebssystem, indem Sie eine app.manifest-Datei zu einer Testanwendung hinzufügen und den Kommentar aus der supportedOS-Zeile für Windows 10 entfernen, sodass diese folgendermaßen aussieht:
 
 ```xml
 <!-- Windows 10 -->

@@ -1,13 +1,13 @@
 ---
 title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Hochverfügbarkeit
 description: Entdecken Sie die Optionen zum Orchestrieren von Microservices und Anwendungen mit mehreren Containern, um hohe Skalierbarkeit und Verfügbarkeit zu erzielen, sowie die Möglichkeiten von Azure Dev Spaces für die Entwicklung des Lebenszyklus von Kubernetes-Anwendungen.
-ms.date: 01/30/2020
-ms.openlocfilehash: a61e883ab0d27300e00b177c2621c6521e85ac84
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 7ba0367bca98edbab1be2059ee37e863359edad3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172501"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189417"
 ---
 # <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Hochverfügbarkeit
 
@@ -21,9 +21,9 @@ Abbildung 4-23 veranschaulicht die Bereitstellung einer aus mehreren Microservic
 
 Sie verwenden einen Container für jede Dienstinstanz. Docker-Container sind Bereitstellungseinheiten, und ein Container ist eine Docker-Instanz. Ein Host verwaltet mehrere Container. Dieser Ansatz mag logisch erscheinen. Nicht offensichtlich ist aber, wie der Lastenausgleich, das Routing und die Orchestrierung dieser zusammengesetzten Anwendungen erfolgen soll.
 
-Mit der einfachen Docker-Engine können Instanzen mit nur einem Image auf einem einzelnen Docker-Host leicht verwaltet werden. Die einfache Docker-Engine ist allerdings unzureichend, wenn mehrere Container, die auf mehreren Hosts bereitgestellt werden, für komplexere verteilte Anwendungen verwaltet werden sollen. In den meisten Fällen wird eine Verwaltungsplattform benötigt, die Container automatisch startet, Container mit mehreren Instanzen pro Image horizontal hochskaliert, diese bei Bedarf anhält oder beendet und idealerweise auch steuert, wie Container auf Ressourcen wie Netzwerke oder Datenspeicher zugreifen.
+Mit der einfachen Docker-Engine können Instanzen mit nur einem Image auf einem einzelnen Docker-Host leicht verwaltet werden. Die einfache Docker-Engine ist allerdings unzureichend, wenn mehrere Container, die auf mehreren Hosts bereitgestellt werden, für komplexere verteilte Anwendungen verwaltet werden sollen. In den meisten Fällen wird eine Verwaltungsplattform benötigt, die Container automatisch startet, Container mit mehreren Instanzen pro Image aufskaliert, diese bei Bedarf anhält oder beendet und idealerweise auch steuert, wie Container auf Ressourcen wie Netzwerke oder Datenspeicher zugreifen.
 
-Um anstelle von einzelnen Containern oder einfach zusammengesetzten Anwendungen größere Unternehmensanwendungen mit Microservices verwalten zu können, ist eine Orchestrierung und ein Clustering von Plattformen notwendig.
+Um anstelle von einzelnen Containern oder einfachen zusammengesetzten Anwendungen größere Unternehmensanwendungen mit Microservices verwalten zu können, sind Orchestrierung und Clusteringplattformen notwendig.
 
 Wenn Sie große, auf Microservices basierende Unternehmensanwendungen erstellen möchten, sollten Sie sich hinsichtlich der Architektur und Entwicklung mit den folgenden Plattformen und Produkten vertraut machen, die für komplexere Szenarios geeignet sind:
 
@@ -60,7 +60,7 @@ In Abbildung 4-24 sehen Sie die Struktur eines Kubernetes-Clusters, in dem ein M
 
 ## <a name="development-environment-for-kubernetes"></a>Entwicklungsumgebung für Kubernetes
 
-In der Entwicklungsumgebung [kündigte Docker im Juli 2018 an](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/), dass Kubernetes auch auf einem einzelnen Entwicklungscomputer (Windows 10 oder macOS) ausgeführt werden kann, indem Sie einfach [Docker Desktop](https://docs.docker.com/install/) installieren. Sie können die Bereitstellung später in die Cloud (AKS) ausweiten, um weitere Integrationstests auszuführen, wie in Abbildung 4-25 gezeigt.
+In der Entwicklungsumgebung [kündigte Docker im Juli 2018 an](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/), dass Kubernetes auch auf einem einzelnen Entwicklungscomputer (Windows 10 oder macOS) ausgeführt werden kann, indem Sie [Docker Desktop](https://docs.docker.com/install/) installieren. Sie können die Bereitstellung später in die Cloud (AKS) ausweiten, um weitere Integrationstests auszuführen, wie in Abbildung 4-25 gezeigt.
 
 ![Das Diagramm zeigt Kubernetes auf einem Entwicklungscomputer mit anschließender Bereitstellung für AKS.](./media/scalable-available-multi-container-microservice-applications/kubernetes-development-environment.png)
 
@@ -70,9 +70,9 @@ In der Entwicklungsumgebung [kündigte Docker im Juli 2018 an](https://blog.dock
 
 Um mit der Nutzung von AKS zu beginnen, stellen Sie über das Azure-Portal oder mithilfe der CLI einen AKS-Cluster bereit. Weitere Informationen zum Bereitstellen eines Kubernetes-Clusters in Azure finden Sie unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](/azure/aks/kubernetes-walkthrough-portal).
 
-Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Ressourcen der zugrunde liegenden Infrastruktur, wie z.B. Netzwerkfunktionen und Speicher. Für AKS selbst fallen keine zusätzlichen Gebühren an.
+Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Ressourcenverbrauch durch die zugrunde liegende Infrastruktur, z. B. Netzwerk- und Speicherressourcen. Für AKS selbst fallen keine zusätzlichen Gebühren an.
 
-Die Standardoption für die Bereitstellung von Kubernetes in der Produktion ist die Verwendung von Helm-Charts, was im nächsten Abschnitt vorgestellt wird.
+Die Standardoption für die Bereitstellung von Kubernetes in der Produktion ist die Verwendung von Helm-Charts, die im nächsten Abschnitt vorgestellt werden.
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Bereitstellen mit Helm-Charts in Kubernetes-Clustern
 
@@ -80,7 +80,7 @@ Wenn Sie eine Anwendung in einem Kubernetes-Cluster bereitstellen, können Sie d
 
 Mit Helm-Charts können Sie auch hochkomplexe Kubernetes-Anwendungen definieren, versionieren, installieren, freigeben oder Upgrades oder Rollbacks durchführen.
 
-Darüber hinaus wird die Verwendung von Helm empfohlen, weil zusätzliche Kubernetes-Umgebungen in Azure wie etwa [Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces) ebenfalls auf Helm-Charts basieren.
+Darüber hinaus wird die Verwendung von Helm empfohlen, weil andere Kubernetes-Umgebungen in Azure (z. B. [Azure Dev Spaces](/azure/dev-spaces/azure-dev-spaces)) ebenfalls auf Helm-Charts basieren.
 
 Helm wird von der [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) in Zusammenarbeit mit Microsoft, Google, Bitnami und der Helm-Community verwaltet.
 
@@ -92,7 +92,7 @@ Weitere Informationen zur Implementierung in Helm-Charts und Kubernetes finden S
 
 Wie bereits erwähnt, verwendet Azure Dev Spaces Helm-Charts bei der Bereitstellung der containerbasierten Anwendungen.
 
-Azure Dev Spaces hilft Entwicklungsteams dabei, in Kubernetes produktiver zu arbeiten, da ihnen ermöglicht wird, Code schnell direkt in einem globalen Kubernetes-Cluster in Azure zu durchlaufen und zu debuggen, indem sie ganz einfach Visual Studio 2019 oder Visual Studio Code verwenden. Dieser Kubernetes-Cluster in Azure ist ein freigegebener verwalteter Kubernetes-Cluster, sodass Ihr Team nahtlos zusammenarbeiten kann. Sie können Ihren Code isoliert entwickeln und dann im globalen Cluster bereitstellen und End-to-End-Tests mit anderen Komponenten durchführen, ohne Abhängigkeiten replizieren oder imitieren zu müssen.
+Azure Dev Spaces hilft Entwicklungsteams dabei, in Kubernetes produktiver zu arbeiten, da Code schnell direkt in einem globalen Kubernetes-Cluster in Azure durchlaufen und debuggt werden kann, indem Visual Studio 2019 oder Visual Studio Code verwendet wird. Dieser Kubernetes-Cluster in Azure ist ein freigegebener verwalteter Kubernetes-Cluster, sodass Ihr Team nahtlos zusammenarbeiten kann. Sie können Ihren Code isoliert entwickeln und dann im globalen Cluster bereitstellen und End-to-End-Tests mit anderen Komponenten durchführen, ohne Abhängigkeiten replizieren oder imitieren zu müssen.
 
 Wie in Abbildung 4-26 gezeigt, ist das bemerkenswerteste Feature in Azure Dev Spaces die Möglichkeit, „Bereiche“ zu erstellen, die integriert in den Rest der globalen Bereitstellung im Cluster ausgeführt werden.
 
