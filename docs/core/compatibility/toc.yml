@@ -18,6 +18,14 @@
     - name: Breaking Changes nach Version
       expanded: true
       items:
+        - name: ".NET\_6.0"
+          items:
+            - name: Übersicht
+              href: 6.0.md
+            - name: Windows Forms
+              items:
+                - name: TableLayoutSettings-Eigenschaften lösen eine InvalidEnumArgumentException-Ausnahme aus.
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
         - name: ".NET\_5.0"
           items:
             - name: Übersicht
@@ -551,6 +559,10 @@
               href: visualbasic.md
         - name: Windows Forms
           items:
+            - name: ".NET\_6.0"
+              items:
+                - name: TableLayoutSettings-Eigenschaften lösen eine InvalidEnumArgumentException-Ausnahme aus.
+                  href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
             - name: ".NET\_5.0"
               items:
                 - name: OutputType auf WinExe festgelegt
