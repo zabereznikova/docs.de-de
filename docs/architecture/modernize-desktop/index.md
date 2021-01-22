@@ -1,17 +1,21 @@
 ---
-title: Modernisieren von Desktop-Apps unter Windows 10 mit .NET Core 3.1
-description: Hier erfahren Sie, wie Sie Desktop-Apps mit .NET Core 3.1 modernisieren können.
-ms.date: 05/12/2020
-ms.openlocfilehash: 5861f806a9158ef761c47bc23e51327d4e2d0480
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+title: Modernisieren von Desktop-Apps unter Windows 10 mit .NET 5
+description: Hier erfahren Sie, wie Sie Desktop-Apps mit .NET 5 modernisieren können.
+ms.date: 01/06/2021
+ms.openlocfilehash: de8a451b0598b5eabd99028d377c161dace61623
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83422662"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615702"
 ---
-# <a name="modernizing-desktop-apps-on-windows-10-with-net-core-31"></a>Modernisieren von Desktop-Apps unter Windows 10 mit .NET Core 3.1
+# <a name="modernizing-desktop-apps-on-windows-10-with-net-5"></a>Modernisieren von Desktop-Apps unter Windows 10 mit .NET 5
 
 ![Screenshot: Cover des E-Books „Modernisieren von Desktop-Apps“](./media/modernizing-existing-desktop-apps-ebook-cover.png)
+
+**EDITION v1.0.1**: auf .NET 5 aktualisiert
+
+Informationen zu den Buchaktualisierungen und Communitybeiträgen finden Sie im [Änderungsprotokoll](https://aka.ms/desktop-ebook-changelog).
 
 VERÖFFENTLICHT VON
 
@@ -23,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 by Microsoft Corporation
+Copyright © 2021 by Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -75,13 +79,13 @@ Der Microsoft-Ansatz für die Modernisierung vorhandener Apps ermöglicht es Ihn
 
 ## <a name="who-should-use-the-book"></a>Zielgruppe dieses Buchs
 
-Dieses Buch richtet sich an Entwickler und Lösungsarchitekten, die vorhandene Windows Forms- und WPF-Desktop-Apps modernisieren möchten, um die Vorteile von .NET Core und Windows 10 zu nutzen.
+Dieses Buch richtet sich an Entwickler und Lösungsarchitekten, die vorhandene Windows Forms- und WPF-Desktop-Apps modernisieren möchten, um die Vorteile von .NET und Windows 10 zu nutzen.
 
 Auch Entscheidungsträgern in technischen Abteilungen kann dieses E-Book nützlich sein – zum Beispiel Unternehmensarchitekten, Entwicklungsleitern oder Führungskräften, die sich einen Überblick über die Vorteile verschaffen möchten, die die Aktualisierung vorhandener Desktop-Apps bietet.
 
 ## <a name="how-to-use-the-book"></a>So verwenden Sie dieses Buch
 
-Dieses E-Book befasst sich mit dem „Warum“, das hinter der Modernisierung vorhandener Anwendungen steht, sowie mit den speziellen Vorteilen, die Ihnen .NET Core 3.1 und MSIX bieten, wenn Sie Ihre Desktop-Apps modernisieren. Der Inhalt des E-Books richtet sich an Architekten und technische Entscheidungsträger, die einen Überblick benötigen, sich aber nicht auf die Umsetzung und technische Details konzentrieren müssen.
+Dieses E-Book befasst sich mit dem „Warum“, das hinter der Modernisierung vorhandener Anwendungen steht, sowie mit den speziellen Vorteilen, die Ihnen .NET und MSIX bieten, wenn Sie Ihre Desktop-Apps modernisieren. Der Inhalt des E-Books richtet sich an Architekten und technische Entscheidungsträger, die einen Überblick benötigen, sich aber nicht auf die Umsetzung und technische Details konzentrieren müssen.
 
 In den verschiedenen Kapiteln finden Sie Codeausschnitte und Screenshots für Implementierungsbeispiele. In Kapitel 5 wird sogar ein vollständiger Migrationsprozess für Beispielanwendungen dargestellt.
 
@@ -89,11 +93,11 @@ In den verschiedenen Kapiteln finden Sie Codeausschnitte und Screenshots für Im
 
 In diesem E-Book werden vor allem Lift-&-Shift-Szenarios behandelt, bei denen die Vorteile der Modernisierungsverfahren im Vordergrund stehen, für die Ihr Code nicht umgeschrieben werden muss.
 
-Die Entwicklung moderner Anwendungen mit .NET Core und der Einstieg in Windows Forms und WPF werden in diesem E-Book nicht thematisiert. Der Fokus liegt darauf, wie Sie vorhandene Desktop-Apps mithilfe der neuesten Technologien für die Desktopentwicklung aktualisieren können.
+Die Entwicklung moderner Anwendungen mit .NET und der Einstieg in Windows Forms und WPF werden in diesem E-Book nicht thematisiert. Der Fokus liegt darauf, wie Sie vorhandene Desktop-Apps mithilfe der neuesten Technologien für die Desktopentwicklung aktualisieren können.
 
 ## <a name="samples-used-in-this-book"></a>Beispiele in diesem E-Book
 
-Die Beispielanwendung `eShopModernizing` wird verwendet, um die für eine Modernisierung erforderlichen Schritte zu veranschaulichen. Diese Anwendung ist in zwei Varianten verfügbar: Windows Forms und WPF. Für beide wird ausführlich erläutert, wie der die Modernisierung auf .NET Core abläuft.
+Die Beispielanwendung `eShopModernizing` wird verwendet, um die für eine Modernisierung erforderlichen Schritte zu veranschaulichen. Diese Anwendung ist in zwei Varianten verfügbar: Windows Forms und WPF. Für beide wird ausführlich erläutert, wie der die Modernisierung auf .NET abläuft.
 
 Darüber hinaus finden Sie im GitHub-Repository für dieses E-Book die Ergebnisse des Prozesses, die für Sie relevant werden können, wenn Sie das ausführliche Tutorial befolgen.
 
