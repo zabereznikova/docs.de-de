@@ -15,7 +15,7 @@
       href: containerized-lifecycle/
     - name: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern
       href: modernize-with-azure-containers/
-    - name: "Modernisieren von Desktop-Apps unter Windows\_10 mit .NET Core\_3.1"
+    - name: "Modernisieren von Desktop-Apps unter Windows\_10 mit .NET\_5"
       href: modernize-desktop/
     - name: '.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen'
       href: microservices/
