@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 557f5d9f302b08d32896b462e86ce1d96710ff36
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d800116137e088a54edb221fb4f81ecd47b0278f
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474526"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757862"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Zugriffsmodifizierer (C#-Programmierhandbuch)
 
@@ -22,7 +22,7 @@ Alle Typen und Typmember verfügen über eine Zugriffsebene. Diese Zugriffsebene
 - [protected:](../../language-reference/keywords/protected.md) Der Zugriff auf den Typ oder Member kann nur über Code in derselben `class`- oder in einer `class`-Instanz erfolgen, die von dieser `class`-Instanz abgeleitet wurde.
 - [internal:](../../language-reference/keywords/internal.md) Auf den Typ oder Member kann von jedem Code in der gleichen Assembly zugegriffen werden, jedoch nicht von Code in einer anderen Assembly.
 - [protected internal:](../../language-reference/keywords/protected-internal.md) Der Zugriff auf den Typ oder Member kann über beliebigen Code in der Assembly, in der er deklariert wurde, oder innerhalb einer abgeleiteten `class`-Instanz in einer anderen Assembly erfolgen.
-- [private protected:](../../language-reference/keywords/private-protected.md) Auf den Typ oder Member kann nur innerhalb der deklarierenden Assembly zugegriffen werden, und zwar von Code in derselben `class`-Instanz oder in einem Typ, der von dieser `class`-Instanz abgeleitet ist.
+- [private protected:](../../language-reference/keywords/private-protected.md) Auf den Typ oder Member kann nur innerhalb der deklarierenden Assembly, von Code in derselben `class`-Instanz oder in einem Typ zugegriffen werden, der von dieser `class`-Instanz abgeleitet ist.
 
 Die folgenden Beispiele veranschaulichen, wie Zugriffsmodifizierer für einen Typ und Member angegeben werden:
 
@@ -32,7 +32,7 @@ Nicht alle Zugriffsmodifizierer sind für alle Typen oder Member in allen Kontex
 
 ## <a name="class-and-struct-accessibility"></a>Zugriff auf Klassen und Strukturen  
 
-Klassen und Strukturen, die innerhalb eines Namespace (mit anderen Worten, die nicht in anderen Klassen oder Strukturen geschachtelt sind) direkt deklariert werden, können die Zugriffsebenen `public` oder `internal` aufweisen. Wenn kein Zugriffsmodifizierer angegeben ist, wird standardmäßig `Internal` verwendet.  
+Klassen und Strukturen, die innerhalb eines Namespace (mit anderen Worten, die nicht in anderen Klassen oder Strukturen geschachtelt sind) direkt deklariert werden, können die Zugriffsebenen `public` oder `internal` aufweisen. Wenn kein Zugriffsmodifizierer angegeben ist, wird standardmäßig `internal` verwendet.
 
 Strukturmember, einschließlich geschachtelter Klassen und Strukturen, können als `public`, `internal` oder `private` deklariert werden. Für Klassenmember, einschließlich geschachtelter Klassen und Strukturen, kann `public`, `protected internal`, `protected`, `internal`, `private protected` oder `private` deklariert werden. Klassen und Strukturmember, einschließlich geschachtelter Klassen und Strukturen, weisen standardmäßig `private`-Zugriff auf. Auf private geschachtelte Typen kann nicht von außerhalb des enthaltenden Typs zugegriffen werden.
 
