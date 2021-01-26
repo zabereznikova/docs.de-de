@@ -3,12 +3,12 @@ title: Verarbeiten asynchroner Aufgaben nach Abschluss
 description: In diesem Beispiel wird gezeigt, wie Sie mit Task.WhenAny in C# mehrere Tasks starten und deren Ergebnisse jeweils nach Abschluss der Durchführung verarbeiten, anstatt sie in der Reihenfolge zu verarbeiten, in der sie gestartet wurden.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 860e94a9c3973ce56e7321741a1136f752aa3d18
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 4cdd35af900863895911ea5c2c9772af362951ec
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805238"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615970"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Verarbeiten asynchroner Aufgaben nach Abschluss (C#)
 
@@ -128,13 +128,13 @@ Die `while`-Schleife führt die folgenden Schritte für jede Aufgabe in der Aufl
 1. Es wird ein Aufruf von `WhenAny` erwartet, um die erste Aufgabe in der Auflistung zu identifizieren, die ihren Download beendet hat.
 
     ```csharp
-    Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
+    Task<int> finishedTask = await Task.WhenAny(downloadTasks);
     ```
 
 1. Entfernt die entsprechende Aufgabe aus der Auflistung.
 
     ```csharp
-    downloadTasks.Remove(firstFinishedTask);
+    downloadTasks.Remove(finishedTask);
     ```
 
 1. Erwartet `finishedTask`, das durch einen Aufruf von `ProcessUrlAsync` zurückgegeben wird. Die Variable `finishedTask` ist eine <xref:System.Threading.Tasks.Task%601>, wobei `TResult` eine ganze Zahl ist. Die Aufgabe ist bereits abgeschlossen, aber es darauf gewartet, dass von ihr die Länge der heruntergeladenen Website abgerufen wird, wie im folgenden Beispiel dargestellt. Wenn für die Aufgabe ein Fehler auftritt, löst `await` im Gegensatz zum Lesen der <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>-Eigenschaft, die die `AggregateException` auslösen würde, die erste untergeordnete Ausnahme aus, die in der `AggregateException` gespeichert ist.
