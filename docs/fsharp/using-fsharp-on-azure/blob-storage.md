@@ -1,19 +1,19 @@
 ---
-title: Erste Schritte mit Azure Blob Storage mit F#
-description: Speichern Sie unstrukturierte Daten in der Cloud mit Azure BLOB Storage.
+title: 'Beginnen Sie mit der Azure BLOB Storage mit F #'
+description: Speichern Sie unstrukturierte Daten mit Azure BLOB Storage in der Cloud.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 58c120c26a1e99481b49ae3a0fb096a2188f359e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756246"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794810"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Einstieg in Azure BLOB Storage mit F\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Beginnen Sie mit der Azure BLOB Storage mit F\#
 
-Azure Blob Storage ist ein Dienst, bei dem unstrukturierte Daten in der Cloud als Objekte/Blobs gespeichert werden. In Blob Storage können alle Arten von Text- oder Binärdaten gespeichert werden, z. B. ein Dokument, eine Mediendatei oder ein Installer einer Anwendung. Der Blobspeicher wird auch als Objektspeicher bezeichnet.
+Azure BLOB Storage ist ein Dienst, der unstrukturierte Daten in der Cloud als Objekte/blobspeicher speichert. In Blob Storage können alle Arten von Text- oder Binärdaten gespeichert werden, z. B. ein Dokument, eine Mediendatei oder ein Installer einer Anwendung. Der Blobspeicher wird auch als Objektspeicher bezeichnet.
 
 In diesem Artikel erfahren Sie, wie Sie häufige Aufgaben mit BLOB Storage ausführen. Die Beispiele werden mithilfe von F # geschrieben, wobei die Azure Storage Client Bibliothek für .NET verwendet wird. Die behandelten Aufgaben umfassen das Hochladen, auflisten, herunterladen und Löschen von BLOB.
 
