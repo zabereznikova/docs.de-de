@@ -1,19 +1,19 @@
 ---
-title: Erste Schritte mit Azure File Storage mit F#
-description: Speichern Sie Dateidaten mit Azure File Storage in der Cloud, und stellen Sie Ihre Clouddateifreigabe über eine virtuelle Azure-Maschine (VM) oder eine lokale Anwendung mit Windows bereit.
+title: 'Beginnen Sie mit der Verwendung von Azure File Storage mit F #'
+description: Speichern Sie Datei Daten mit Azure File Storage in der Cloud, und stellen Sie Ihre clouddateifreigabe über einen virtuellen Azure-Computer (VM) oder eine lokale Anwendung unter Windows bereit.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100125"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899424"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Einstieg in Azure File Storage mit F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Beginnen Sie mit der Verwendung von Azure File Storage mit F\#
 
-Azure File Storage ist ein Dienst, bei dem Dateifreigaben in der Cloud unter Verwendung des standardmäßigen [SMB-Protokolls (Server Message Block)](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)angeboten werden. Sowohl SMB 2.1 als auch SMB 3.0 werden unterstützt. Mit Azure File Storage können Sie Legacyanwendungen, für die Dateifreigaben benötigt werden, schnell und ohne teures Umschreiben zu Azure migrieren. Anwendungen, die auf virtuellen Azure-Maschinen, in Clouddiensten oder auf lokalen Clients ausgeführt werden, können eine Dateifreigabe genauso in der Cloud bereitstellen, wie eine Desktopanwendung eine normale SMB-Freigabe bereitstellt. Die File Storage-Freigaben können dann von beliebig vielen Anwendungskomponenten gleichzeitig eingebunden und genutzt werden.
+Bei Azure File Storage handelt es sich um einen Dienst, der Dateifreigaben in der Cloud unter Verwendung des standardmäßigen [SMB-Protokolls (Server Message Block)](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)anbietet. Sowohl SMB 2.1 als auch SMB 3.0 werden unterstützt. Mit Azure File Storage können Sie Legacy Anwendungen, die auf Dateifreigaben basieren, schnell und ohne aufwändige Neuschreibungen migrieren. Anwendungen, die auf virtuellen Azure-Maschinen, in Clouddiensten oder auf lokalen Clients ausgeführt werden, können eine Dateifreigabe genauso in der Cloud bereitstellen, wie eine Desktopanwendung eine normale SMB-Freigabe bereitstellt. Die File Storage-Freigaben können dann von beliebig vielen Anwendungskomponenten gleichzeitig eingebunden und genutzt werden.
 
 Eine konzeptionelle Übersicht über den Dateispeicher finden Sie [im .net-Handbuch für File Storage](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -147,14 +147,14 @@ Weitere Informationen zu Azure File Storage finden Sie unter diesen Links.
 - [Verwenden von AzCopy mit Microsoft Azure Storage](/azure/storage/storage-use-azcopy)
 - [Erstellen, Herunterladen und Auflisten von Blobs mit der Azure-Befehlszeilenschnittstelle](/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>Referenz
+### <a name="reference"></a>Verweis
 
 - [Referenz zur Storage-Clientbibliothek für .NET](/dotnet/api/overview/azure/storage)
 - [Referenz zur REST-API des Dateidiensts](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
 ### <a name="blog-posts"></a>Blogbeiträge
 
-- [Azure-Dateispeicher ist jetzt allgemein verfügbar](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Azure File Storage jetzt allgemein verfügbar](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Azure-Dateispeicher](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Einführung in den Microsoft Azure-Dateidienst](/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service)
 - [Beibehalten von Verbindungen zu Microsoft Azure-Dateien](/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files)

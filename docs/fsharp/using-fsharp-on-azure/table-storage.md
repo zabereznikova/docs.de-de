@@ -1,23 +1,23 @@
 ---
-title: Erste Schritte mit Azure Table Storage mit F#
-description: Speichern Sie strukturierte Daten mit Azure Table Storage oder Azure Cosmos DB in der Cloud.
+title: 'Beginnen Sie mit der Verwendung von Azure Table Storage mit F #'
+description: Speichern Sie strukturierte Daten in der Cloud mithilfe von Azure Table Storage oder Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: bc8e111636013930f7c7d4f59d1ef0720298cb9f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756207"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899281"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit der Verwendung von Azure Table Storage und der Azure Cosmos DB Tabellen-API mit F\#
 
-Azure Table Storage ist ein Dienst, bei dem strukturierte NoSQL-Daten in der Cloud gespeichert werden. Bei Table Storage handelt es sich um einen Schlüssel-/Attributspeicher mit einem schemalosen Design. Aufgrund der Schemalosigkeit von Table Storage ist es einfach, Ihre Daten an die Entwicklung Ihrer Anwendungen anzupassen. Der Datenzugriff ist für alle Arten von Anwendungen schnell und kostengünstig. Table Storage ist in der Regel erheblich günstiger als herkömmliche SQL-Lösungen für ähnliche Datenmengen.
+Bei Azure Table Storage handelt es sich um einen Dienst, der strukturierte nosql-Daten in der Cloud speichert. Bei Table Storage handelt es sich um einen Schlüssel-/Attributspeicher mit einem schemalosen Design. Aufgrund der Schemalosigkeit von Table Storage ist es einfach, Ihre Daten an die Entwicklung Ihrer Anwendungen anzupassen. Der Datenzugriff ist für alle Arten von Anwendungen schnell und kostengünstig. Table Storage ist in der Regel erheblich günstiger als herkömmliche SQL-Lösungen für ähnliche Datenmengen.
 
 Mit Table Storage können Sie flexible Datasets wie Benutzerdaten für Webanwendungen, Adressbücher, Geräteinformationen und jegliche Art von Metadaten speichern, die Ihr Dienst erfordert. Sie können eine beliebige Anzahl von Entitäten in einer Tabelle speichern, und ein Speicherkonto kann eine beliebige Anzahl von Tabellen enthalten (bis zur Speicherkapazitätsgrenze eines Speicherkontos).
 
-Azure Cosmos DB stellt die Tabellen-API für Anwendungen bereit, die für Azure Table Storage geschrieben wurden und die Premium-Funktionen wie z. b.:
+Azure Cosmos DB stellt die Tabellen-API für Anwendungen bereit, die für Azure Table Storage geschrieben wurden und für die Premium-Funktionen erforderlich sind, wie z.b.:
 
 - Globale, sofort einsatzbereite Verteilung
 - Dedizierter Durchsatz weltweit.
@@ -25,13 +25,13 @@ Azure Cosmos DB stellt die Tabellen-API für Anwendungen bereit, die für Azure 
 - Garantierte Hochverfügbarkeit.
 - Automatische sekundäre Indizierung
 
-Anwendungen, die für Azure Table Storage geschrieben sind, können mit der Table-API ohne Codeänderungen zu Azure Cosmos DB migriert werden und Premium-Funktionen nutzen. Die Tabellen-API verfügt über Client-SDKs, die für .NET, Java, Python und Node.js verfügbar sind.
+Anwendungen, die für Azure Table Storage geschrieben wurden, können mithilfe der Tabellen-API ohne Codeänderungen zu Azure Cosmos DB migrieren und die Vorteile von Premium-Funktionen nutzen. Die Tabellen-API verfügt über Client-SDKs, die für .NET, Java, Python und Node.js verfügbar sind.
 
 Weitere Informationen finden Sie unter [Einführung in Azure Cosmos DB Tabellen-API](/azure/cosmos-db/table-introduction).
 
 ## <a name="about-this-tutorial"></a>Informationen zu diesem Tutorial
 
-In diesem Tutorial wird gezeigt, wie Sie F #-Code schreiben können, um einige gängige Aufgaben mithilfe von Azure Table Storage oder der Azure Cosmos DB Tabellen-API auszuführen, einschließlich dem Erstellen und Löschen einer Tabelle sowie dem Einfügen, aktualisieren, löschen und Abfragen von Tabellendaten.
+In diesem Tutorial wird gezeigt, wie Sie F #-Code schreiben, um einige gängige Aufgaben mithilfe von Azure Table Storage oder der Azure Cosmos DB Tabellen-API auszuführen, einschließlich dem Erstellen und Löschen einer Tabelle sowie dem Einfügen, aktualisieren, löschen und Abfragen von Tabellendaten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
