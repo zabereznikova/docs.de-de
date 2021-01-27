@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 27c6353f8f71254a505b434921f4b1e61e64cdda
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83720882"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758163"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>Modernisierung von FolderBrowserDialog
 

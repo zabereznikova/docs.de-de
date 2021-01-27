@@ -4,12 +4,12 @@ description: Referenz für MSBuild-Eigenschaften und -Elemente, die vom .NET SDK
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189978"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692708"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>MSBuild-Referenz für .NET SDK-Projekte
 
@@ -86,6 +86,8 @@ Sie können Eigenschaften wie `PackageId`, `PackageVersion`, `PackageIcon`, `Tit
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [CopyToPublishDirectory](#copytopublishdirectory)
 - [LinkBase](#linkbase)
+- [PreserveCompilationContext](#preservecompilationcontext)
+- [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
@@ -153,6 +155,30 @@ Die Eigenschaft `CopyLocalLockFileAssemblies` ist nützlich für Plug-In-Projekt
 
 > [!TIP]
 > Alternativ können Sie auch `dotnet publish` verwenden, um die Klassenbibliothek zu veröffentlichen. Weitere Informationen finden Sie unter [dotnet publish](../tools/dotnet-publish.md).
+
+### <a name="preservecompilationcontext"></a>PreserveCompilationContext
+
+Die `PreserveCompilationContext`-Eigenschaft ermöglicht es einer erstellten oder veröffentlichten Anwendung, mehr Code zur Laufzeit mit denselben Einstellungen zu kompilieren, die zum Zeitpunkt der Erstellung verwendet wurden. Die Assemblys, auf die zur Buildzeit verwiesen wird, werden in das *ref*-Unterverzeichnis des Ausgabeverzeichnisses kopiert. Die Namen der Verweisassemblys werden in der *.deps.json*-Datei der Anwendung zusammen mit den Optionen gespeichert, die an den Compiler weitergeleitet werden. Sie können diese Informationen mithilfe der Eigenschaften <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries?displayProperty=nameWithType> und <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions?displayProperty=nameWithType> abrufen.
+
+Diese Funktion wird hauptsächlich intern von ASP.NET Core MVC und Razor Pages verwendet, um die Runtime-Kompilierung von Razor-Dateien zu unterstützen.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
+```
+
+### <a name="preservecompilationreferences"></a>PreserveCompilationReferences
+
+Die `PreserveCompilationReferences`-Eigenschaft ähnelt der [PreserveCompilationContext](#preservecompilationcontext)-Eigenschaft, mit der Ausnahme, dass sie nur die referenzierten Assemblys in das Veröffentlichungsverzeichnis kopiert, nicht die *.deps.json*-Datei.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+</PropertyGroup>
+```
+
+Weitere Informationen finden Sie unter [Razor SDK-Eigenschaften](/aspnet/core/razor-pages/sdk#properties).
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
@@ -290,7 +316,7 @@ Die `EnableDefaultCompileItems`-Eigenschaft steuert, ob Kompilierungselemente im
 
 ### <a name="enabledefaultembeddedresourceitems"></a>EnableDefaultEmbeddedResourceItems
 
-Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Ressourcenelemente implizit in das Projekt eingeschlossen werden. Standardwert: `true`. Legen Sie die `EnableDefaultEmbeddedResourceItems`-Eigenschaft auf `false` fest, um die implizite Einbindung eingebetteter Ressourcendateien zu deaktivieren.
+Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Ressourcenelemente implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultEmbeddedResourceItems`-Eigenschaft auf `false` fest, um die implizite Einbindung eingebetteter Ressourcendateien zu deaktivieren.
 
 ```xml
 <PropertyGroup>
@@ -300,7 +326,7 @@ Die `EnableDefaultEmbeddedResourceItems`-Eigenschaft steuert, ob eingebettete Re
 
 ### <a name="enabledefaultnoneitems"></a>EnableDefaultNoneItems
 
-Die `EnableDefaultNoneItems`-Eigenschaft steuert, ob `None`-Elemente (Dateien, die keine Rolle im Buildprozess aufweisen) implizit in das Projekt eingeschlossen werden. Der Standardwert ist `true`. Legen Sie die `EnableDefaultNoneItems`-Eigenschaft auf `false` fest, um die implizite Einbindung von `None`-Elementen zu deaktivieren.
+Die `EnableDefaultNoneItems`-Eigenschaft steuert, ob `None`-Elemente (Dateien, die keine Rolle im Buildprozess aufweisen) implizit in das Projekt eingeschlossen werden. Standardwert: `true`. Legen Sie die `EnableDefaultNoneItems`-Eigenschaft auf `false` fest, um die implizite Einbindung von `None`-Elementen zu deaktivieren.
 
 ```xml
 <PropertyGroup>

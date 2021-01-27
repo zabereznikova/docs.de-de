@@ -3,12 +3,12 @@ title: .NET SDK-Telemetrie
 description: In diesem Artikel lernen Sie die Telemetriefeatures des .NET SDK kennen, die Nutzungsinformationen für die Analyse darüber erfassen, welche Daten gesammelt werden. Sie erfahren außerdem, wie Sie diese Features deaktivieren können.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633868"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757836"
 ---
 # <a name="net-sdk-telemetry"></a>.NET SDK-Telemetrie
 
@@ -33,6 +33,9 @@ Es werden *Telemetriedaten erfasst*, wenn einer der [.NET-CLI-Befehle](index.md)
 Das Telemetriefeature des .NET SDK ist standardmäßig aktiviert. Sie können das Telemetriefeature deaktivieren, indem Sie die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` auf `1` oder `true` festlegen.
 
 Außerdem wird ein einzelner Telemetrieeintrag vom .NET SDK-Installationsprogramm gesendet, wenn eine Installation erfolgreich ist. Sie können zur Deaktivierung die Umgebungsvariable `DOTNET_CLI_TELEMETRY_OPTOUT` festlegen, bevor Sie das .NET SDK installieren.
+
+> [!IMPORTANT]
+> Wenn Sie die Deaktivierung durchführen möchten, nachdem Sie das Installationsprogramm gestartet haben, schließen Sie das Installationsprogramm, legen Sie die Umgebungsvariable fest, und führen Sie das Installationsprogramm dann noch mal mit diesen Werten aus.
 
 ## <a name="disclosure"></a>Offenlegung
 
@@ -98,7 +101,7 @@ Eine Teilmenge der Befehle sendet die ausgewählten Optionen, wenn diese zusamme
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |

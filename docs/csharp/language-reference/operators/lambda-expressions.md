@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556841"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615866"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambdaausdrücke (C#-Referenz)
 
-Ein *Lambdaausdruck* ist ein Ausdruck in einer der beiden folgenden Formen:
+Sie verwenden einen *Lambdaausdruck*, um eine anonyme Funktion zu erstellen. Verwenden Sie den [Lambdadeklarationsoperator `=>`](lambda-operator.md), um die Parameterliste des Lambdas von dessen Text zu trennen. Ein Lambdaausdruck kann eine der folgenden beiden Formen aufweisen:
 
 - Ein [Ausdruckslambda](#expression-lambdas) mit einem Ausdruck als Text:
 
@@ -32,7 +32,7 @@ Ein *Lambdaausdruck* ist ein Ausdruck in einer der beiden folgenden Formen:
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-Verwenden Sie den [Lambdadeklarationsoperator `=>`](lambda-operator.md), um die Parameterliste des Lambdas von dessen Text zu trennen. Geben Sie zum Erstellen eines Lambdaausdrucks Eingabeparameter (falls vorhanden) auf der linken Seite des Lambdaoperators und einen Ausdruck oder Anweisungsblock auf der anderen Seite an.
+Geben Sie zum Erstellen eines Lambdaausdrucks Eingabeparameter (falls vorhanden) auf der linken Seite des Lambdaoperators und einen Ausdruck oder Anweisungsblock auf der anderen Seite an.
 
 Jeder Lambdaausdruck kann in einen [Delegat](../builtin-types/reference-types.md#the-delegate-type)-Typ konvertiert werden. Der Delegattyp, in den ein Lambdaausdruck konvertiert werden kann, wird durch die Typen seiner Parameter und Rückgabewerte definiert. Wenn ein Lambdaausdruck keinen Wert zurückgibt, kann er in einen der `Action`-Delegattypen konvertiert werden. Andernfalls kann er in einen der `Func`-Delegattypen konvertiert werden. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat und keinen Wert zurückgibt, kann in einen <xref:System.Action%602>-Delegat konvertiert werden. Außerdem kann ein Lambdaausdruck, der einen Parameter hat und einen Wert zurückgibt, in einen <xref:System.Func%602>-Delegat konvertiert werden. Im folgenden Beispiel wird der Lambdaausdruck `x => x * x`, der einen Parameter `x` angibt und den Wert von `x` im Quadrat zurückgibt, einer Variablen eines Delegattyps zugewiesen:
 

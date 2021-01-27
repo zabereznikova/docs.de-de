@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: e55b86e5b028fb871f309d80217477cfd164c106
+ms.sourcegitcommit: f0eb7eeedf3ceec726499fa678786d03083214ea
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91173255"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629253"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
 
@@ -54,15 +54,19 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
   
  Weitere Informationen für Methoden zum Generieren von Dokumentation aus Kommentaren in Ihrem Code finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
-  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-2019-development-environment"></a>So legen Sie diese Compileroption in der Entwicklungsumgebung für Visual Studio 2019 fest  
+
 1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+2. Klicken Sie auf die Registerkarte **Erstellen**.
+3. Ändern Sie die Eigenschaft der **XML-Dokumentationsdatei**.
   
-2. Klicken Sie auf die Registerkarte **Erstellen**.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-for-mac-development-environment"></a>So legen Sie diese Compileroption in der Entwicklungsumgebung für Visual Studio für Mac fest  
   
-3. Ändern Sie die Eigenschaft der **XML-Dokumentationsdatei**.  
-  
- Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
+1. Öffnen Sie die Seite **Optionen** des Projekts.
+2. Wählen Sie die Registerkarte **Compiler** aus.
+3. Wählen Sie **XML-Dokumentation generieren** aus, und geben Sie den Dateinamen in das Textfeld ein.
+
+Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
