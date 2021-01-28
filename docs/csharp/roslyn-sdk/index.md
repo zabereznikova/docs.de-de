@@ -3,12 +3,12 @@ title: Das .NET Compiler Platform SDK (Roslyn APIs)
 description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 872bfd388f6974a6d99f769c43e5d341454518cc
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: cd81551234a1bc955323e392f473cd01180f6dc5
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226672"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899242"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
@@ -19,17 +19,18 @@ Anstatt eine nicht transparente Übersetzung von Quellcode in Objektcode bereitz
 
 Das .NET Compiler Platform-SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Dieses schafft viele Möglichkeiten für Innovationen in Bereichen wie Metaprogrammierung, Codegenerierung und -transformation, die interaktive Verwendung der Programmiersprachen C# und Visual Basic und die Einbettung von C# und Visual Basic in domänenspezifische Sprachen.
 
-Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools*** und ***Codefehlerbehebungen*** erstellen, die Codierungsfehler finden und korrigieren. ***Analysetools*** analysieren die Syntax und Struktur des Codes und erkennen Praktiken, die korrigiert werden sollten. ***Codefehlerbehebungen*** stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt.
+Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools** _ und _*_Codefehlerbehebungen_*_ erstellen, die Codierungsfehler finden und korrigieren. _*_Analysetools_*_ analysieren die Syntax (Struktur des Codes) und Semantiken, um Praktiken zu erkennen, die korrigiert werden sollten. _*_Codefehlerbehebungen_*_ stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools und Compilerdiagnosen gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt.
 
 Analysetools und Codefehlerbehebungen verwenden zur Codeanalyse statische Analysen. Sie führen den Code nicht aus oder bieten andere Vorteile in Bezug auf Tests. Sie können jedoch auf Verfahren hinweisen, die häufig zu Fehlern, zu Problemen bei der Codeverwaltung oder zu Verstößen gegen Standardrichtlinien führen.
 
-Das .NET Compiler Platform-SDK stellt eine einzelne Gruppe von APIs zur Verfügung, mit denen Sie eine C#- oder Visual Basic-Codebasis untersuchen und analysieren können. Die Verwendung einer einzelnen Codebasis ermöglicht ein einfacheres Schreiben von Analysetools und Codefehlerbehebungen, indem die Syntax- und Semantikanalyse-APIs des .NET Compiler Platform-SDK genutzt werden. Durch den Wegfall der umfangreichen Aufgabe, die vom Compiler durchgeführte Analyse zu replizieren, können Sie sich auf die spezifischere Aufgabe konzentrieren, häufige Codierungsfehler für Ihr Projekt oder Ihre Bibliothek zu finden und zu beheben.
+In Ergänzung zu Analysetools und Codefehlerbehebungen ermöglicht Ihnen das .NET Compiler Platform-SDK, _*_Coderefactorings_*_ zu erstellen.
+Es stellt eine einzelne Gruppe von APIs zur Verfügung, mit denen Sie eine C#- oder Visual Basic-Codebasis untersuchen und analysieren können. Die Verwendung einer einzelnen Codebasis ermöglicht ein einfacheres Schreiben von Analysetools und Codefehlerbehebungen, indem die Syntax- und Semantikanalyse-APIs des .NET Compiler Platform-SDK genutzt werden. Durch den Wegfall der umfangreichen Aufgabe, die vom Compiler durchgeführte Analyse zu replizieren, können Sie sich auf die spezifischere Aufgabe konzentrieren, häufige Codierungsfehler für Ihr Projekt oder Ihre Bibliothek zu finden und zu beheben.
 
 Ein weiterer nachrangiger Vorteil: Beim Laden in Visual Studio sind Ihre Analysetools und Codefehlerbehebungen kleiner und belegen deutlich weniger Speicher, als wenn Sie eine eigene Codebasis für die Analyse des Codes in einem Projekt schreiben würden. Da dieselben Klassen verwendet werden, die beim Compiler und in Visual Studio zum Einsatz kommen, können Sie eigene statische Analysetools erstellen. Dies bedeutet, dass Ihr Team Analysetools und Codefehlerbehebungen ohne spürbare Auswirkungen auf die Leistung von IDE verwenden kann.
 
 Für das Schreiben von Analysetools und Codefehlerbehebungen gibt es drei Hauptszenarien:
 
-1. [*Erzwingen von Codierungsstandards im Team*](#enforce-team-coding-standards)
+1. [_Erzwingen von Codierungsstandards im Team*](#enforce-team-coding-standards)
 1. [*Bereitstellen von Leitfäden mit Bibliothekspaketen*](#provide-guidance-with-library-packages)
 1. [*Bereitstellen allgemeiner Leitfäden*](#provide-general-guidance)
 
@@ -40,6 +41,9 @@ Viele Teams verfügen über Codierungsstandards, die durch Code Reviews bei ande
 Während ein Entwickler Codes schreibt, werden Analysetools ausgeführt. Er erhält ein unmittelbares Feedback, das ihn direkt dazu animiert, dem Leitfaden zu folgen. Sobald er mit der Prototyperstellung beginnt, schafft er so Gewohnheiten zum Schreiben von konformen Codes. Wenn ein Review für das Feature durchgeführt werden kann, wurden sämtliche Standardrichtlinien erzwungen.
 
 Teams können Analysetools und Codefehlerbehebungen erstellen, die nach den am häufigsten verwendeten Praktiken suchen, die gegen die Codierungspraktiken des Teams verstoßen. Diese können zur Erzwingung von Standards auf jedem Entwicklungscomputer installiert werden.
+
+> [!TIP]
+> Bevor Sie Ihr eigenes Analysetool erstellen, prüfen Sie die integrierten Tools. Weitere Informationen finden Sie unter [Codeformatregeln](../../fundamentals/code-analysis/overview.md#code-style-analysis).
 
 ## <a name="provide-guidance-with-library-packages"></a>Bereitstellen von Leitfäden mit Bibliothekspaketen
 
@@ -52,7 +56,7 @@ Sie können Analysetools und Codefehlerbehebungen mit Ihrer Bibliothek in NuGet 
 
 ## <a name="provide-general-guidance"></a>Bereitstellen von allgemeinen Codierungsleitfäden
 
-Die .NET-Entwicklercommunity hat basierend auf ihrem Erfahrungsschatz gut funktionierende Muster und Muster, die am besten vermieden werden sollten, ermittelt. Mehrere Communitymitglieder haben Analysetools erstellt, die diese empfohlenen Muster erzwingen. Mit fortschreitender Entwicklung haben wir erfahren, dass dem Ideenreichtum keine Grenzen gesetzt sind.
+Die .NET-Entwicklercommunity hat basierend auf ihrem Erfahrungsschatz Muster ermittelt, die gut funktionieren, und solche, die am besten vermieden werden sollten. Mehrere Communitymitglieder haben Analysetools erstellt, die diese empfohlenen Muster erzwingen. Mit fortschreitender Entwicklung haben wir erfahren, dass dem Ideenreichtum keine Grenzen gesetzt sind.
 
 Diese Analysetools können im [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) hochgeladen und von Entwicklern über Visual Studio heruntergeladen werden. Benutzer, die mit der Sprache und Plattform noch nicht vertraut sind, lernen schnell akzeptierte Praktiken und erzielen so früher Produktivität, während sie Erfahrungen mit der .NET-Sprache sammeln. Mit der zunehmenden Verbreitung steigt auch die Wahrscheinlichkeit, dass diese Praktiken von der Community übernommen werden.
 

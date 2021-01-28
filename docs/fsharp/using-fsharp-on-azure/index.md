@@ -4,12 +4,12 @@ description: Anleitung zur Verwendung von Azure-Diensten mit F#
 author: sylvanc
 ms.date: 07/29/2020
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: c3235db9274065f81e5476d8d0e06b99d7c987a0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 16599aa48776acee05edf8201cdd148a87507cdb
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100138"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899409"
 ---
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 
