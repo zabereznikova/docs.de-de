@@ -12,12 +12,12 @@ helpviewer_keywords:
 - language code style rules [EditorConfig]
 - language rules
 - EditorConfig language conventions
-ms.openlocfilehash: b77d9aa2a528a6cf540babd5e5acc148e48c489c
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2aa2261534363f1da6a2109f092e08d210ebd915
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96592121"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957974"
 ---
 # <a name="language-rules"></a>Sprachregeln
 
@@ -31,10 +31,21 @@ Regeln für das codeliterepository beeinflussen, wie verschiedene Konstrukte von
 
 Optionen für Sprachregeln können in einer Editor config-Datei mit folgendem Format angegeben werden:
 
+`option_name = value` (Visual Studio 2019, Version 16,9 Preview 2 und höher)
+
+oder
+
 `option_name = value:severity`
 
-- **Wert**: für jede Sprachregel geben Sie einen Wert an, der festlegt, ob oder wann der Stil bevorzugt werden soll. Viele Regeln akzeptieren den Wert `true` (dieses Format bevorzugen) oder `false` (dieses Format nicht bevorzugen). Andere Regeln akzeptieren Werte wie `when_on_single_line` oder `never`.
-- **Schweregrad**: der zweite Teil der Regel gibt den [Schweregrad](../configuration-options.md#severity-level) für die Regel an. Der Schweregrad Specification als Teil der obigen Options Syntax wird nur in Entwicklungs-IDES (z. b. Visual Studio) beachtet. Diese Einstellung wird von den c#-oder VB-Compilern nicht verstanden und daher während des Builds nicht beachtet. Stattdessen sollten Sie den Schweregrad mithilfe der Regel-ID-basierten Schweregrad Konfigurationssyntax für Analyzers festlegen, um Regeln für den Code Stil für den Build zu erzwingen. Die Syntax sieht wie folgt aus: `dotnet_diagnostic.<rule ID>.severity = <severity>`. Beispiel: `dotnet_diagnostic.IDE0040.severity = silent`. Weitere Informationen finden Sie in diesem [GitHub-Problem](https://github.com/dotnet/roslyn/issues/44201).
+- **Wert**
+
+  Für jede Sprachregel geben Sie einen Wert an, der festlegt, ob oder wann der Stil bevorzugt werden soll. Viele Regeln akzeptieren den Wert `true` (dieses Format bevorzugen) oder `false` (dieses Format nicht bevorzugen). Andere Regeln akzeptieren Werte wie `when_on_single_line` oder `never`.
+
+- **Schweregrad** (optional in Visual Studio 2019, Version 16,9 Preview 2 und höhere Versionen)
+
+  Der zweite Teil der Regel gibt den [Schweregrad](../configuration-options.md#severity-level) für die Regel an. Wenn die Einstellung auf diese Weise festgelegt wird, wird die Einstellung für den Schweregrad nur in Entwicklungs-IDES wie Visual Studio berücksichtigt. Sie wird während des Builds *nicht* beachtet.
+
+  Legen Sie den Schweregrad mithilfe der Regel-ID-basierten Schweregrad Konfigurationssyntax für Analysen fest, um Code Formatregeln zum Zeitpunkt der Erstellung zu erzwingen. Die Syntax sieht wie folgt aus: `dotnet_diagnostic.<rule ID>.severity = <severity>`. Beispiel: `dotnet_diagnostic.IDE0040.severity = silent`. Weitere Informationen finden Sie unter [Schweregrad](../configuration-options.md#severity-level).
 
 > [!TIP]
 >
